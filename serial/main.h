@@ -1,0 +1,8 @@
+//
+// Created by dani2612 on 19/12/20.
+//
+
+#ifndef MINHASHPROJECT_MAIN_H
+#define MINHASHPROJECT_MAIN_H
+
+#endif //MINHASHPROJECT_MAIN_H

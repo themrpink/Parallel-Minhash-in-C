@@ -1,0 +1,8 @@
+//
+// Created by dani2612 on 19/12/20.
+//
+
+#ifndef MINHASHPROJECT_TOKENIZER_H
+#define MINHASHPROJECT_TOKENIZER_H
+
+#endif //MINHASHPROJECT_TOKENIZER_H
