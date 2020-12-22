@@ -1,21 +1,8 @@
 
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <errno.h>
-#include <fcntl.h>
-#include <math.h>
-#include <stdint.h>
 
-#define PRIMES_SIZE 200
-#define K_SHINGLE 20
-#define BANDS 20
+#define K_SHINGLE 54
 
-unsigned long long primes[] = { 1099511628211, 109951181297,   109951192301,   651571110623,   651571122467, 
+unsigned long long primes[] = { 1099511628211,  109951181297,   109951192301,   651571110623,   651571122467, 
                                 1000000000039,  1000000001939,  1000000016339,  109951179061,   109951191323,
                                 1000000001083,  132951242141,   132951254257,   132951251243,   132951415591, 
                                 132951423139,   132991532629,	132991532633,	132991532657,	132991532693,		
@@ -59,26 +46,6 @@ unsigned long long primes[] = { 1099511628211, 109951181297,   109951192301,   6
 
 
 
-int hash_FNV_1(char *shingle, int const prime_i, unsigned long long *hash){
-    
-    unsigned long long FNV_offset_basis = 0xcbf29ce484222325LL;
-    char c;
-
-    if(prime_i >= 200){
-        printf("hash prime index deve essere < 200, era invece %d\n", prime_i);
-        return -1;
-    }
-
-    *hash = FNV_offset_basis;
-
-    for(int i=0; i<K_SHINGLE; i++){
-        (*hash) *= primes[prime_i];
-        (*hash) ^= shingle[i];
-    }
-
-    return 0;
-
-}
 
 
 
