@@ -1,8 +1,10 @@
 //
 // Created by dani2612 on 19/12/20.
 //
+int list_dir(const char *nomeDirectory,char **files,int *numberOfFiles );
 
-#ifndef MINHASHPROJECT_GET_DOCUMENTS_H
-#define MINHASHPROJECT_GET_DOCUMENTS_H
+int exists(const char *path);
 
-#endif //MINHASHPROJECT_GET_DOCUMENTS_H
+int isDirectory(const char *path);
+
+int isRegularFile(const char *path);
