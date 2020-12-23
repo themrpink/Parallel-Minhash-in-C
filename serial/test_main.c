@@ -22,6 +22,8 @@ int main(int argc, char *argv[]){
 
     unsigned long long hash;
     unsigned long long minhash; 
+    unsigned long long *signatures =  (unsigned long long *)malloc(200*sizeof(unsigned long long *));
+    unsigned long long * hashed_shingles; 
     long size;
     long tot_shingles;
     char **shingles;
@@ -31,11 +33,14 @@ int main(int argc, char *argv[]){
 
     FILE * fp = fopen(argv[1], "r");
 
+    //dimensione del file
     fseek(fp, 0, SEEK_END); // seek to end of file
     size = ftell(fp); // get current file pointer
     fseek(fp, 0, SEEK_SET); // seek back to beginning of file
 
+
     tot_shingles = size - K_SHINGLE + 1;
+
 
     //alloca lo spazio per gli shingles
     shingles = malloc(tot_shingles * (sizeof(char*)));
@@ -45,28 +50,41 @@ int main(int argc, char *argv[]){
     
  
 
-    fseek(fp, 0, SEEK_SET);
-    start = omp_get_wtime();
+
+    //estrae gli shingles
     shingle_extract_buf(fp, size, shingles);
-    end = omp_get_wtime();
-    printf("\n\nelapsed time \n serial version witout pipe from buffer\n: %f\n", end - start);
 
 
 
-    printf("\n\n\n\n############## minhash: ##############\n\n");
-    //applica ogni funzione di hash su tutti gli shingle, ricava i minhash
-    for(int i=0; i<PRIMES_SIZE; i++){
+
+    //qua vengono salvati gli shingles passati dalla funzione di hash, che poi verranno a loro volta passati alle altre funzioni di hash
+    hashed_shingles = (unsigned long long *)malloc(tot_shingles*sizeof(unsigned long long *));
+
+
+    for(int j=0; j<tot_shingles; j++){
+        //lancia la prima funzione di hash su ogni shingle 
+        hash_FNV_1(shingles[j], &hash);
+        hashed_shingles[j] = hash;
+
+        if(hash<minhash)
+            minhash=hash;
+    }
+
+    signatures[0]=minhash;
+
+
+    //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
+    for(int i=1; i<PRIMES_SIZE; i++){
+
         minhash = MAX_LONG_LONG;
-
+      
         for(int j=0; j<tot_shingles; j++){
             //lancia la funzione di hash su ogni shingle 
-            hash_FNV_1(shingles[j], i, &hash);
-
+            hash_fun(hashed_shingles[j], &hash, i);
             if(hash<minhash)
                 minhash=hash;
-        }
-        
-        printf("%llu \n", minhash);
+        }       
+        signatures[i]=minhash;
     }
 
     

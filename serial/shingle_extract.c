@@ -37,3 +37,17 @@ void print_shingles(int tot_shingles, char **shingles){
         printf("\n");
     }
 }
+
+
+void store_shingle(char *docname, char **shingles, long numb_shingles){
+
+    //crea id da nome file con un hash nome file + dimensione + timestamp
+    //salva il file con questo id e salva le signatures al suo interno
+    //si può anche creare un file XML con tutti gli id dei documenti.
+    //come tornare dall'id al documento? posso rinominarlo?
+
+}
+
+
+
+//usare un set? 
