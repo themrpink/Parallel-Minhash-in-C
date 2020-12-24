@@ -3,30 +3,75 @@
 
 
 
+char ** get_shingles(FILE *fp,  long *tot_shingles, int thread_count){
 
-int shingle_extract_buf(FILE * fp, const long filesize, int thread_count, char **shingles){
+    double start;
+    double end;
 
-    char *buffer = (char*)malloc( filesize * sizeof(char));
-    fread(buffer, 1, filesize, fp);
+    //dimensione del file
+    fseek(fp, 0, SEEK_END); // seek to end of file
+    long size = ftell(fp); // get current file pointer
+    fseek(fp, 0, SEEK_SET); // seek back to beginning of file
 
-    long numb_shingles = filesize - K_SHINGLE +1;
 
-    for(int count=0; count<numb_shingles; count++){
-        for(int pos=0; pos<K_SHINGLE; pos++)
-            shingles[count][pos]=buffer[count+pos];
-    }
+    //numero di shingles
+    *tot_shingles = size - K_SHINGLE + 1;
 
-   //print_shingles(numb_shingles, shingles);
-    return 0;
+
+    //alloca lo spazio per gli shingles
+    char **shingles = (char **) malloc((*tot_shingles) * (sizeof(char*)));
+    for(int i=0; i<*tot_shingles; i++)
+        shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
+
+
+    //estrare gli shingles in version seriale
+    fseek(fp, 0, SEEK_SET);
+    start = omp_get_wtime();
+    shingle_extract_buf(fp, size, shingles);
+    end = omp_get_wtime();
+    printf("\n\n serial version simple loop\n f: shingle_extract_buf \n number of threads: %d\n time: %f\n", 1 ,  end - start);
+
+
+    //estrare gli shingles in version parallela
+    fseek(fp, 0, SEEK_SET);
+    start = omp_get_wtime();
+    shingle_extract_buf_r(fp, size, shingles, thread_count);
+    end = omp_get_wtime();
+    printf("\n \n opm version parallel for \n f: shingle_extract_buf_r \n number of threads: %d\n time: %f\n",thread_count, end - start);
+
+
+
+    return shingles;
 
 }
 
 
 
+int shingle_extract_buf(FILE * fp, const long filesize, char **shingles){
+
+    //copia il contenuto del file in una buffer
+    char *buffer = (char*)malloc( filesize * sizeof(char));
+    fread(buffer, 1, filesize, fp);
+
+
+    //ricava il numero di shingles
+    long numb_shingles = filesize - K_SHINGLE +1;
+
+    //li estrae e salva in **shingles
+    for(int count=0; count<numb_shingles; count++){
+
+        for(int pos=0; pos<K_SHINGLE; pos++)
+            shingles[count][pos]=buffer[count+pos];   
+    }
+
+  // print_shingles(numb_shingles, shingles);
+   return 0;
+
+}
 
 
 
-int shingle_extract_buf_r(FILE * fp, const long filesize, int thread_count, char **shingles){
+int shingle_extract_buf_r(FILE * fp, const long filesize, char **shingles, int thread_count){
 
     char *buffer = (char*)malloc( filesize * sizeof(char));
     fread(buffer, 1, filesize, fp);
@@ -37,7 +82,7 @@ int shingle_extract_buf_r(FILE * fp, const long filesize, int thread_count, char
 
         for(int count=0; count<numb_shingles; count++){
     
-      //  #pragma omp parallel for num_threads(2)
+      //  #pragma omp for 
             for(int pos=0; pos<K_SHINGLE; pos++)
                 
                 shingles[count][pos]=buffer[count+pos];         

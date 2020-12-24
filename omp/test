@@ -1,0 +1,25 @@
+numero di threads: 16
+
+ 
+ opm version parallel for 
+ f: shingle_extract_buf_r 
+ number of threads: 16
+ time: 0.020695
+
+
+ serial version simple loop
+ f: shingle_extract_buf 
+ number of threads: 1
+ time: 0.074488
+
+
+ serial version hash
+ f: hash 
+ number of threads: 1
+ time: 0.590266
+
+
+ parallel version hash
+ f: hash 
+ number of threads: 16
+ time: 0.101550

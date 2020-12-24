@@ -1,45 +1,121 @@
 #include "hash_FNV_1.h"
 
-int hash_FNV_1(char *shingle, unsigned long long *hash){
-    
-    unsigned long long FNV_offset_basis = 0xcbf29ce484222325LL;
+
+
+int hash_FNV_1a(char *shingle, unsigned long long *hash){
+
+    unsigned long long FNV_offset_basis = MAX_LONG_LONG;
     unsigned long long prime = 1099511628211;
 
     *hash = FNV_offset_basis;
-    //s#pragma omp parallel for num_threads(4)
+
     for(int i=0; i<K_SHINGLE; i++){
         (*hash) *= prime;
         (*hash) ^= shingle[i];
     }
+
     return 0;
-
 }
 
 
-void hash_fun(unsigned long long hashed_shingle, unsigned long long *hash, int i){
+unsigned long long* get_signatures(char **shingles, long tot_shingles, int thread_count){
 
-     *hash = hashed_shingle ^ rands[i];
-}
+    double start;
+    double end;
+    unsigned long long hash;
+    unsigned long long minhash; 
 
+    unsigned long long *hashed_shingles = (unsigned long long *)malloc(tot_shingles*sizeof(unsigned long long *));
+    unsigned long long *signatures = (unsigned long long *)malloc(200*sizeof(unsigned long long *));
 
+    start = omp_get_wtime();
+    #pragma omp parallel for num_threads(thread_count) reduction(min:minhash) 
+        for(int j=0; j < tot_shingles; j++){
 
+                hash_FNV_1a(shingles[j], hashed_shingles+j);
 
-int hash_FNV_200(char *shingle, int const prime_i, unsigned long long *hash){
+                if(hashed_shingles[j]<minhash)
+                    minhash=hashed_shingles[j];
+
+        //    if(j==tot_shingles-1)
+
+        }
+
     
-    unsigned long long FNV_offset_basis = 0xcbf29ce484222325LL;
+    *signatures = minhash;
 
-    if(prime_i >= 200){
-        printf("hash prime index deve essere < 200, era invece %d\n", prime_i);
-        return -1;
+
+    #pragma omp parallel for num_threads(thread_count)// threadprivate(minhash)
+        for(int i=1; i<=PRIMES_SIZE; i++){
+            minhash = MAX_LONG_LONG;
+            
+            
+            #pragma omp parallel for num_threads(thread_count) private(hash) reduction(min:minhash)//copyin(minhash) 
+                for(int j=0; j<tot_shingles; j++){
+
+                    hash = hashed_shingles[j] ^ rands[i];
+
+                        if(hash<minhash)
+                            minhash=hash;
+                }      
+
+                *(signatures+i)=minhash;
+        }
+
+    end = omp_get_wtime();
+    printf("\n \n opm version parallel for \n f: get_signatures \n number of threads: %d\n time: %f\n",thread_count, end - start);
+
+    return signatures;
+}
+
+
+
+
+unsigned long long* get_signatures_s(char **shingles, long tot_shingles, int thread_count){
+
+    double start;
+    double end;
+    unsigned long long hash;
+    unsigned long long minhash = MAX_LONG_LONG; 
+
+    unsigned long long *hashed_shingles = (unsigned long long *)malloc(tot_shingles*sizeof(unsigned long long *));
+    unsigned long long *signatures = (unsigned long long *)malloc(200*sizeof(unsigned long long *));
+
+    start = omp_get_wtime();
+
+    for(int j=0; j < tot_shingles; j++){
+
+        hash_FNV_1a(shingles[j], hashed_shingles+j);
+
+        if(hashed_shingles[j]<minhash)
+        minhash=hashed_shingles[j];
+
+        //    if(j==tot_shingles-1)
+
     }
 
-    *hash = FNV_offset_basis;
+    
+    *signatures = minhash;
 
-    for(int i=0; i<K_SHINGLE; i++){
-        (*hash) *= primes[prime_i];
-        (*hash) ^= shingle[i];
-    }
 
-    return 0;
+        for(int i=1; i<=PRIMES_SIZE; i++){
+            minhash = MAX_LONG_LONG;
+            
+            
+            //#pragma omp parallel for num_threads(thread_count) private(hash) reduction(min:minhash)//copyin(minhash) 
+                for(int j=0; j<tot_shingles; j++){
 
+                    hash = hashed_shingles[j] ^ rands[i];
+
+                        if(hash<minhash)
+                            minhash=hash;
+                }      
+
+                *(signatures+i)=minhash;
+        }
+
+    end = omp_get_wtime();
+    printf("\n \n opm version serial for \n f: get_signatures_s \n number of threads: %d\n time: %f\n",1, end - start);
+
+    return signatures;
 }

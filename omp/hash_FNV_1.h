@@ -1,7 +1,10 @@
+#include <omp.h>
 
-
+#define PRIMES_SIZE 199
 #define K_SHINGLE 54
+#define MAX_LONG_LONG 0xcbf29ce484222325LL
 
+/*
 unsigned long long primes[] = { 1099511628211,  109951181297,   109951192301,   651571110623,   651571122467, 
                                 1000000000039,  1000000001939,  1000000016339,  109951179061,   109951191323,
                                 1000000001083,  132951242141,   132951254257,   132951251243,   132951415591, 
@@ -43,6 +46,8 @@ unsigned long long primes[] = { 1099511628211,  109951181297,   109951192301,   
                                 416473710067,	416473710071,	416473710073,	416473710077,	416473710097,	
                                 416473710127,	416473710157,	416473710223,	416473710269,	416473710281
                             };
+
+*/
 
 unsigned long long rands[] = {13607075548612569373LLU,
                     6724581513526549887LLU,
@@ -246,20 +251,17 @@ unsigned long long rands[] = {13607075548612569373LLU,
                     12224931565145661247LLU};
 
 
+
 /*
     versione originale della funzione di hash FNV_1a
 */
-int hash_FNV_1(char *shingle, unsigned long long *hash);
+int hash_FNV_1a(char *shingle, unsigned long long *hash);
 
 
 /*
     funzione che si limita ad eseguire lo XOR 
 */
-void hash_fun(unsigned long long hashed_shingle, unsigned long long *hash, int i);
+unsigned long long* get_signatures(char **shingles, long tot_shingles, int thread_count);
 
 
-/*
-    funzione di hash su numeri primi passati come parametro
-*/
-int hash_FNV_200(char *shingle, int const prime_i, unsigned long long *hash);
-
+unsigned long long* get_signatures_s(char **shingles, long tot_shingles, int thread_count);

@@ -7,13 +7,7 @@ void print_shingles(int tot_shingles, char **shingles);
 /*
     la versione più semplice e efficiente, con un parallel for.
 */
-int shingle_extract_buf_r(FILE * fp, const long filesize, int thread_count, char **shingles);
-
-/*
-    come sopra in versione seriale
-*/
-int shingle_extract_buf(FILE * fp, const long filesize, int thread_count, char **shingles);
-
+int shingle_extract_buf_r(FILE * fp, const long filesize, char **shingles, int thread_count);
 
 /*
     work in progress
@@ -22,4 +16,6 @@ int shingle_extract_buf(FILE * fp, const long filesize, int thread_count, char *
 */
 int shingle_extract_pthread(char *buffer, const long filesize, char **shingles);
 
+int shingle_extract_buf(FILE * fp, const long filesize, char **shingles);
 
+char** get_shingles(FILE *fp, long *tot_shingles, int  thread_count);
