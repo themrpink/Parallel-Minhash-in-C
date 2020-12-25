@@ -29,24 +29,19 @@ int get_sketches(struct sign_doc *file_sketches, long long unsigned *signatures,
 
 long long unsigned genera_doc_id(char *filename){
 
+    struct stat buf;
     long long unsigned hash;
     int fd = open(filename, O_RDONLY);
-
-    struct stat buf;
     fstat(fd, &buf);
-
     close(fd);
 
-    off_t tsize = buf.st_size;  /* total size, in bytes */
+    off_t tsize = buf.st_size; 
     time_t mtime = buf.st_mtime;
-
     char str[50];
     sprintf(str, "%li", tsize);
     strcat(str, filename);
     sprintf(str,"%ld", mtime);
     strcat(str, filename);
-    //printf("%s\n", str);
-
     hash_FNV_1a(str, &hash, strlen(str));
     FILE *fp2 = fopen("index_file.txt", "a");
     fprintf(fp2, "%llu, %s\n", hash, filename);
@@ -110,9 +105,7 @@ void find_similarity(int numberOfFiles, struct sign_doc **files_sketches){
         }
 
     }
-
     couples = (struct doc_couple*) realloc( couples, index * sizeof(struct doc_couple));
-
 
     for(int i=0; i<index; i++){
         printf("%d) shared_signatures: %d", i, couples[i].shared_signatures);

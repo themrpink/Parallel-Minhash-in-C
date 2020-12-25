@@ -21,18 +21,4 @@ void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
 
 
 
-void print_shingles(long long tot_shingles, char **shingles){
-
-        //stampa gli shingles estratti dal documento
-    printf("\n############## shingles: ##############\n\n");
-    for(long long i=0; i<tot_shingles-1; i++){
-
-        for(int j=0; j<K_SHINGLE; j++){
-            printf("%c", shingles[i][j]);
-        }
-        printf("\n");
-    }
-}
-
-
 
