@@ -3,17 +3,21 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
-#include <errno.h>
-#include "main.h"
-#include <dirent.h>
-#include "hash_FNV_1.c"
-#include "shingle_extract.c"
-#include "documents_getters.c"
-#include "tokenizer.c"
-#include "get_similarities.c"
+#include "hash_FNV_1.h"
+#include "shingle_extract.h"
+#include "documents_getters.h"
+#include "tokenizer.h"
+#include "get_similarities.h"
 
 
+#define  EXITARGUMENTFAIL 20
+#define  EXITNOFILEFOUND  30
+#define COEFFICIENTE_SIMILARITA 0.75
+typedef struct {
+    char filePrimo;
+    char fileSecondo;
+    int simili;
+} InfoFile;
 
 
 
@@ -27,6 +31,9 @@ int main(int argc, char *argv[]) {
     char **files;
     int numberOfFiles = 0;
     int fileNameLength = list_dir(folderName, files, &numberOfFiles);
+    if (fileNameLength==0){
+        exit(EXITNOFILEFOUND);
+    }
     long long unsigned *minhashDocumenti[numberOfFiles];
 
 
@@ -52,6 +59,7 @@ int main(int argc, char *argv[]) {
         for(long long i=0; i<numb_shingles; i++)
             free(shingles[i]);
         free(shingles);
+        free(filesContent);
     }
 
     find_similarity(numberOfFiles, files_sketches);
@@ -59,7 +67,6 @@ int main(int argc, char *argv[]) {
 
     for (int i = 0; i < numberOfFiles; ++i) {
         for (int j = 0; j < numberOfFiles; ++j) {
-            InfoFile infoCoppia;
             long totalSignaturesEquals = 0;
             for (int k = 0; k < N_SIGNATURES; ++k) {
                 if (minhashDocumenti[i][k] == minhashDocumenti[j][k]) {
@@ -68,9 +75,6 @@ int main(int argc, char *argv[]) {
             }
             double coefficient = totalSignaturesEquals / (N_SIGNATURES*2);
             printf("File %s e %s sono simili %s",files[i],files[j],coefficient > COEFFICIENTE_SIMILARITA ? "Si" : "No");
-//            strcpy(infoCoppia.filePrimo, files[i]);
-//            strcpy(infoCoppia.fileSecondo, files[i]);
-//            infoCoppia.simili = coefficient > COEFFICIENTE_SIMILARITA ? 1 : 0;
         }
     }
     return 0;

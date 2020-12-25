@@ -38,12 +38,14 @@ int list_dir(const char *nomeDirectory,char **files,int *numberOfFiles ) {
             char path[PATH_MAX];
             lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
                                      figlio);
-            char (*tmp)[numberOfFiles] =realloc(files,(numberOfFiles+1)*PATH_MAX*sizeof (char));
+            int i=numberOfFiles;
+            char (*tmp)[i] =realloc(files,((i+1) * PATH_MAX)*sizeof (char));
             numberOfFiles++;
+            i=numberOfFiles;
             if (tmp != NULL)
             {
                 files = tmp;
-                strcpy(files[numberOfFiles++],path);
+                strcpy(files[i],path);
             }
         }
         if (closedir(elemento) != 0) {
