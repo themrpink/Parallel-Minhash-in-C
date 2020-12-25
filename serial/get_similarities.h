@@ -48,6 +48,8 @@ void mergesort(struct sign_doc* X, int n, struct sign_doc* tmp);
 /*
     confronta le signatures di tutti i documenti e salva quali hanno signatures in comune e quante. 
     Restituisce anche una percentuale di somiglianza tra i documenti che hanno almeno una signatures in comune.
+    Dal paper: "In the final phase, we produce the complete clustering. We examine each <ID, ID, count> triplet 
+    and decide if the document pair exceeds our threshold for resemblance."
 */
 void find_similarity(int numberOfFiles, struct sign_doc **files_sketches);
 

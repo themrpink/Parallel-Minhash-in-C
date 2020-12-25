@@ -5,7 +5,7 @@
 #define MAX_LONG_LONG 0xcbf29ce484222325LL
 
 
-uint64_t rands[] = {  13607075548612569373LLU,
+unsigned long long rands[] = {  13607075548612569373LLU,
                                 6724581513526549887LLU,
                                 17106295739405559511LLU,
                                 14787585135548641465LLU,
