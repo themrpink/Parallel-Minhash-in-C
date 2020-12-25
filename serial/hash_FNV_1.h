@@ -1,5 +1,6 @@
 
 #define PRIMES_SIZE 199
+#define N_SIGNATURES 200
 #define K_SHINGLE 54
 #define MAX_LONG_LONG 0xcbf29ce484222325LL
 
@@ -209,12 +210,12 @@ uint64_t rands[] = {  13607075548612569373LLU,
 /*
     versione originale della funzione di hash FNV_1a
 */
-int hash_FNV_1a(char *shingle, uint64_t *hash);
+int hash_FNV_1a(char *shingle, long long unsigned *hash, int lenght);
 
 
 /*
     funzione che si limita ad eseguire lo XOR 
 */
-uint64_t * get_signatures(char **shingles, long tot_shingles);
+long long unsigned * get_signatures(char **shingles, long long tot_shingles);
 
 

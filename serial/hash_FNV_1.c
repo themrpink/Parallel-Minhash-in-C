@@ -1,13 +1,13 @@
 #include "hash_FNV_1.h"
 
-int hash_FNV_1a(char *shingle, uint64_t *hash){
+int hash_FNV_1a(char *shingle, long long unsigned *hash, int lenght){
 
-    uint64_t FNV_offset_basis = MAX_LONG_LONG;
-    uint64_t prime = 1099511628211;
+    long long unsigned FNV_offset_basis = MAX_LONG_LONG;
+    long long unsigned prime = 1099511628211;
 
     *hash = FNV_offset_basis;
 
-    for(int i=0; i<K_SHINGLE; i++){
+    for(int i=0; i<lenght; i++){
         (*hash) *= prime;
         (*hash) ^= shingle[i];
     }
@@ -18,20 +18,23 @@ int hash_FNV_1a(char *shingle, uint64_t *hash){
 
 
 
-uint64_t* get_signatures(char **shingles, long tot_shingles){
+long long unsigned* get_signatures(char **shingles, long long tot_shingles){
     
-    uint64_t hash;
-    uint64_t minhash; 
-    uint64_t hashed_shingles[tot_shingles]; 
-    uint64_t *signatures;
-   
-    //qua vengono salvate le signatures
-    signatures = (uint64_t *)malloc(200*sizeof(uint64_t *));
+    long long unsigned hash=0;
+    long long unsigned minhash=MAX_LONG_LONG;
+   // printf("tot : %lld\n", tot_shingles);
+    long long unsigned *hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
 
-    for(int j=0; j < tot_shingles; j++){
+   // printf("tot : %lld\n", tot_shingles);
+    long long unsigned *signatures;
+//    printf("tot : %lld\n", tot_shingles);
+    //qua vengono salvate le signatures
+    signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
+
+    for(long long j=0; j < tot_shingles; j++){
 
         //lancia la prima funzione di hash su ogni shingle 
-        hash_FNV_1a(shingles[j], &hash);
+        hash_FNV_1a(shingles[j], &hash, K_SHINGLE);
         hashed_shingles[j] = hash;
         
         if(hash < minhash)
@@ -45,7 +48,7 @@ uint64_t* get_signatures(char **shingles, long tot_shingles){
     
         minhash = MAX_LONG_LONG;
   
-        for(int j=0; j<tot_shingles; j++){
+        for(long long j=0; j<tot_shingles; j++){
 
             hash = hashed_shingles[j] ^ rands[i];
 
@@ -56,7 +59,7 @@ uint64_t* get_signatures(char **shingles, long tot_shingles){
         *(signatures+i+1)=minhash;
         //printf("%" PRIu64 "\n", *(signatures+i));
     }
-   
+    free(hashed_shingles);
     return signatures;
 }
 
