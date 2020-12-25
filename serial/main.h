@@ -4,11 +4,11 @@
 
 
 #define  EXITARGUMENTFAIL 20
+#define COEFFICIENTE_SIMILARITA 0.75
+typedef struct {
+    char filePrimo;
+    char fileSecondo;
+    int simili;
+} InfoFile;
 
 
-
-struct documentiInfo {
-    long doc_id;
-    char* testo;
-    long lengthTesto;
-};

@@ -6,85 +6,54 @@
 #include <limits.h>
 #include <errno.h>
 #include "main.h"
+#include <dirent.h>
 #include "shingle_extract.h"
 #include "documents_getters.h"
-
+#include "tokenizer.h"
+#include "hash_FNV_1.h"
 
 
 
 
 //folder e ricerca dei file
-int main(int argc, char *argv[]){
-
-    unsigned long long hash;
-    unsigned long long minhash;
-    long size;
-    long tot_shingles;
-    char **shingles;
-
-
-    if (argc!=1){
+int main(int argc, char *argv[]) {
+    if (argc != 1) {
         exit(EXITARGUMENTFAIL);
     }
+    char *folderName = argv[1];
+    char **files;
+    int numberOfFiles = 0;
+    int fileNameLength = list_dir(folderName, &files, &numberOfFiles);
 
-    //for file in files
-    //lettura file and tokenize
-
-
-
-    FILE * fp = fopen(argv[1], "r");
-
-    fseek(fp, 0, SEEK_END); // seek to end of file
-    size = ftell(fp); // get current file pointer
-    fseek(fp, 0, SEEK_SET); // seek back to beginning of file
-
-    tot_shingles = size - K_SHINGLE + 1;
-
-    //alloca lo spazio per gli shingles
-    shingles = malloc(tot_shingles * (sizeof(char*)));
-
-    for(int i=0; i<tot_shingles; i++){
-        shingles[i] = malloc(K_SHINGLE*(sizeof(char)));
+    long minhashDocumenti[numberOfFiles][PRIMES_SIZE];
+    for (int i = 0; i < numberOfFiles; ++i) {
+        long fileSize = 0;
+        char **shingles;
+        long shinglesLength = 0;
+        char *filesContent = get_file_string_cleaned(files[i], &fileSize);
+//      shingle_extract_buf(filesContent,fileSize,shingles,&shinglesLength);
+        for (int j = 0; j < PRIMES_SIZE; ++j) {
+            u_int64_t minhashDocumento = get_signatures(shingles, shinglesLength);
+            minhashDocumenti[i][j] = minhashDocumento;
+        }
     }
 
-    //estrai gli shingles dal file
-    shingle_extract(fp, tot_shingles, shingles);
-
-
-
-
-    printf("\n\n\n\n############## minhash: ##############\n\n");
-    //applica ogni funzione di hash ogni volta su tutti gli shingle, ricava i minhash
-    for(int i=0; i<PRIMES_SIZE; i++){
-
-        minhash = MAX_LONG_LONG;
-
-        for(int j=0; j<tot_shingles; j++){
-            //lancia la funzione di hash su ogni shingle
-            hash_FNV_1(shingles[j], i, &hash);
-
-            if(hash<minhash)
-                minhash=hash;
+    for (int i = 0; i < numberOfFiles; ++i) {
+        for (int j = 0; j < numberOfFiles; ++j) {
+            InfoFile infoCoppia;
+            long totalSignaturesEquals = 0;
+            for (int k = 0; k < PRIMES_SIZE; ++k) {
+                if (minhashDocumenti[i][k] == minhashDocumenti[j][k]) {
+                    totalSignaturesEquals++;
+                }
+            }
+            double coefficient = totalSignaturesEquals / PRIMES_SIZE;
+            printf("File %s e %s sono simili %s",files[i],files[j],coefficient > COEFFICIENTE_SIMILARITA ? "Si" : "No");
+//            strcpy(infoCoppia.filePrimo, files[i]);
+//            strcpy(infoCoppia.fileSecondo, files[i]);
+//            infoCoppia.simili = coefficient > COEFFICIENTE_SIMILARITA ? 1 : 0;
         }
-
-        /*
-        //inserisci il tutto negli struct
-        doc_struct[i].doc_id = id;
-        doc_struct[i].signature=minhash;
-        doc_struct[i].band=count_bands;
-        if(cb==0){
-            count_bands+=1;
-            cb = tot_shingles / BANDS;
-        }
-        cb--;
-        */
-
-        printf("%llu \n", minhash);
     }
 
-    fclose(fp);
-    for(int i=0; i<tot_shingles; i++)
-        free(shingles[i]);
-    free(shingles);
 }
 
