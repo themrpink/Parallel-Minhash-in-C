@@ -51,7 +51,7 @@ int list_dir(const char *nomeDirectory,char **files,int *numberOfFiles ) {
         }
     }
 
-    return 0;
+    return PATH_MAX;
 }
 
 int exists(const char *path) {
