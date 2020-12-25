@@ -1,7 +1,7 @@
 #include <omp.h>
 
 #define PRIMES_SIZE 199
-#define K_SHINGLE 54
+#define K_SHINGLE 63
 #define MAX_LONG_LONG 0xcbf29ce484222325LL
 
 /*

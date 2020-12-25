@@ -1,5 +1,5 @@
 #include "hash_FNV_1.h"
-
+#include <omp.h>
 
 
 int hash_FNV_1a(char *shingle, unsigned long long *hash){
@@ -23,13 +23,15 @@ unsigned long long* get_signatures(char **shingles, long tot_shingles, int threa
     double start;
     double end;
     unsigned long long hash;
-    unsigned long long minhash; 
+    unsigned long long minhash = MAX_LONG_LONG; 
 
     unsigned long long *hashed_shingles = (unsigned long long *)malloc(tot_shingles*sizeof(unsigned long long *));
     unsigned long long *signatures = (unsigned long long *)malloc(200*sizeof(unsigned long long *));
+    //int c =  tot_shingles / thread_count ;
 
     start = omp_get_wtime();
-    #pragma omp parallel for num_threads(thread_count) reduction(min:minhash) 
+    #pragma omp parallel for num_threads(thread_count) reduction(min:minhash) //schedule(static,c)
+
         for(int j=0; j < tot_shingles; j++){
 
                 hash_FNV_1a(shingles[j], hashed_shingles+j);
@@ -37,29 +39,25 @@ unsigned long long* get_signatures(char **shingles, long tot_shingles, int threa
                 if(hashed_shingles[j]<minhash)
                     minhash=hashed_shingles[j];
 
-        //    if(j==tot_shingles-1)
-
         }
 
-    
     *signatures = minhash;
 
-
-    #pragma omp parallel for num_threads(thread_count)// threadprivate(minhash)
+    
+    #pragma omp parallel for num_threads(thread_count)// schedule(static,25) //private(hash) reduction(min:minhash)// threadprivate(minhash)
         for(int i=1; i<=PRIMES_SIZE; i++){
-            minhash = MAX_LONG_LONG;
-            
-            
-            #pragma omp parallel for num_threads(thread_count) private(hash) reduction(min:minhash)//copyin(minhash) 
-                for(int j=0; j<tot_shingles; j++){
+           minhash = MAX_LONG_LONG; 
+            #pragma omp parallel for num_threads(thread_count) private(hash) reduction(min:minhash) //schedule(static,c) //copyin(minhash) 
 
-                    hash = hashed_shingles[j] ^ rands[i];
+            for(int j=0; j<tot_shingles; j++){
 
-                        if(hash<minhash)
-                            minhash=hash;
-                }      
+                hash = hashed_shingles[j] ^ rands[i];
 
-                *(signatures+i)=minhash;
+                if(hash<minhash)
+                    minhash=hash;
+            }      
+                
+        *(signatures+i)=minhash;
         }
 
     end = omp_get_wtime();
@@ -101,17 +99,15 @@ unsigned long long* get_signatures_s(char **shingles, long tot_shingles, int thr
         for(int i=1; i<=PRIMES_SIZE; i++){
             minhash = MAX_LONG_LONG;
             
-            
-            //#pragma omp parallel for num_threads(thread_count) private(hash) reduction(min:minhash)//copyin(minhash) 
-                for(int j=0; j<tot_shingles; j++){
+            for(int j=0; j<tot_shingles; j++){
 
-                    hash = hashed_shingles[j] ^ rands[i];
+                hash = hashed_shingles[j] ^ rands[i];
 
-                        if(hash<minhash)
-                            minhash=hash;
-                }      
+                    if(hash<minhash)
+                        minhash=hash;
+            }      
 
-                *(signatures+i)=minhash;
+            *(signatures+i)=minhash;
         }
 
     end = omp_get_wtime();
