@@ -30,34 +30,6 @@ unsigned long long* get_signatures(char **shingles, long tot_shingles, int threa
     unsigned long long *signatures = (unsigned long long *)malloc(200*sizeof(unsigned long long *));
 
     start = omp_get_wtime();
-
-    #pragma omp parallel num_threads(thread_count) shared(signatures)
-    {
-        #pragma omp for reduction(min:minhash) 
-            for(int j=0; j < tot_shingles; j++){
-                hash_FNV_1a(shingles[j], hashed_shingles+j);
-                if(hashed_shingles[j]<minhash)
-                    minhash=hashed_shingles[j];
-        }
-
-    *signatures = minhash;
-
-    
-    minhash = MAX_LONG_LONG;
-    //omp_set_nested(2) ;
-    //printf("neted: %d\n", omp_get_nested());
-        #pragma omp for reduction(min:minhash) private(hash) //collapse(2)// private (hash)//private(hash)// reduction(min:minhash)// schedule(static,25) //private(hash) reduction(min:minhash)// threadprivate(minhash)
-            for(int i=1; i<=PRIMES_SIZE; i++){ 
-                minhash = MAX_LONG_LONG;  
-                for(int j=0; j<tot_shingles; j++){
-                    hash = hashed_shingles[j] ^ rands[i];
-                    if(hash<minhash)
-                        minhash=hash;
-                }        
-            *(signatures+i)=minhash;
-            }
-    }
-/*
     #pragma omp parallel for num_threads(thread_count) reduction(min:minhash) 
         for(int j=0; j < tot_shingles; j++){
             hash_FNV_1a(shingles[j], hashed_shingles+j);
@@ -80,7 +52,7 @@ unsigned long long* get_signatures(char **shingles, long tot_shingles, int threa
             }        
         *(signatures+i)=minhash;
         }
-*/
+
      /*
 
          int rank = omp_get_num_threads();
