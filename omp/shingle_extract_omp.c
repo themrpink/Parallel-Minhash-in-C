@@ -1,7 +1,6 @@
+#include <omp.h>
 #include "shingle_extract_omp.h"
-
-
-
+#include "time_test.h"
 
 char ** get_shingles(FILE *fp,  long *tot_shingles, int thread_count){
 
@@ -21,37 +20,40 @@ char ** get_shingles(FILE *fp,  long *tot_shingles, int thread_count){
     //alloca lo spazio per gli shingles
     char **shingles = (char **) malloc((*tot_shingles) * (sizeof(char*)));
 
-    //#pragma omp parallel for num_threads(thread_count)
-    for(int i=0; i<*tot_shingles; i++)
-        shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
+    #pragma omp parallel for num_threads(thread_count)
+        for(int i=0; i<*tot_shingles; i++)
+            shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
 
-/*
-    //estrare gli shingles in version seriale
-    fseek(fp, 0, SEEK_SET);
-    start = omp_get_wtime();
-    shingle_extract_buf(fp, size, shingles);
-    end = omp_get_wtime();
-    printf("\n\n serial version simple loop\n f: shingle_extract_buf \n number of threads: %d\n time: %f\n", 1 ,  end - start);
 
-    //estrare gli shingles in version seriale
-    fseek(fp, 0, SEEK_SET);
-    start = omp_get_wtime();
-    shingle_extract_buf_hashmap(fp, size, shingles);
-    end = omp_get_wtime();
-    printf("\n\n serial version hashmap\n f: shingle_extract_buf_hashmap \n number of threads: %d\n time: %f\n", 1 ,  end - start);
-*/
     //estrare gli shingles in version parallela
-    fseek(fp, 0, SEEK_SET);
     start = omp_get_wtime();
     shingle_extract_buf_r(fp, size, shingles, thread_count);
     end = omp_get_wtime();
-    printf("\n \n opm version parallel for \n f: shingle_extract_buf_r \n number of threads: %d\n time: %f\n",thread_count, end - start);
-
-
-
+    exectimes(end - start, Parallel_shingles,0);
     return shingles;
 
 }
+
+
+int shingle_extract_buf_r(FILE * fp, const long filesize, char **shingles, int thread_count){
+
+    char *buffer = (char*)malloc( filesize * sizeof(char));
+    fread(buffer, 1, filesize, fp);
+
+    long numb_shingles = filesize - K_SHINGLE +1;
+
+    #pragma omp parallel for num_threads(thread_count) //collapse(2)//schedule(static,c)  //
+        for(int count=0; count<numb_shingles; count++){
+            for(int pos=0; pos<K_SHINGLE; pos++)    
+                shingles[count][pos]=buffer[count+pos];         
+        }
+   
+   //print_shingles(numb_shingles, shingles);
+    return 0;
+
+}
+
+
 
 char ** get_shingles_serial(FILE *fp,  long *tot_shingles, int thread_count){
 
@@ -77,50 +79,13 @@ char ** get_shingles_serial(FILE *fp,  long *tot_shingles, int thread_count){
 
 
     //estrare gli shingles in version seriale
-    fseek(fp, 0, SEEK_SET);
     start = omp_get_wtime();
     shingle_extract_buf(fp, size, shingles);
     end = omp_get_wtime();
-    printf("\n\n serial version simple loop\n f: shingle_extract_buf \n number of threads: %d\n time: %f\n", 1 ,  end - start);
-
+    exectimes(end - start, Serial_shingles,0);
     return shingles;
 
 }
-
-char ** get_shingles_hashmap(FILE *fp,  long *tot_shingles, int thread_count){
-
-    double start;
-    double end;
-
-    //dimensione del file
-    fseek(fp, 0, SEEK_END); // seek to end of file
-    long size = ftell(fp); // get current file pointer
-    fseek(fp, 0, SEEK_SET); // seek back to beginning of file
-
-
-    //numero di shingles
-    *tot_shingles = size - K_SHINGLE + 1;
-
-
-    //alloca lo spazio per gli shingles
-    char **shingles = (char **) malloc((*tot_shingles) * (sizeof(char*)));
-
-    //#pragma omp parallel for num_threads(thread_count)
-    for(int i=0; i<*tot_shingles; i++)
-        shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
-
-
-    //estrare gli shingles in version seriale
-    fseek(fp, 0, SEEK_SET);
-    start = omp_get_wtime();
-    *tot_shingles = shingle_extract_buf_hashmap(fp, size, shingles, thread_count);
-    end = omp_get_wtime();
-    printf("\n\n serial version hashmap\n f: shingle_extract_buf_hashmap \n number of threads: %d\n time: %f\n", 1 ,  end - start);
-
-    return shingles;
-
-}
-
 
 int shingle_extract_buf(FILE * fp, const long filesize, char **shingles){
 
@@ -134,7 +99,6 @@ int shingle_extract_buf(FILE * fp, const long filesize, char **shingles){
 
     //li estrae e salva in **shingles
     for(int count=0; count<numb_shingles; count++){
-
         for(int pos=0; pos<K_SHINGLE; pos++)
             shingles[count][pos]=buffer[count+pos];   
     }
@@ -143,30 +107,6 @@ int shingle_extract_buf(FILE * fp, const long filesize, char **shingles){
    return 0;
 
 }
-
-
-
-int shingle_extract_buf_r(FILE * fp, const long filesize, char **shingles, int thread_count){
-
-    char *buffer = (char*)malloc( filesize * sizeof(char));
-    fread(buffer, 1, filesize, fp);
-
-    long numb_shingles = filesize - K_SHINGLE +1;
-
-    #pragma omp parallel for num_threads(thread_count) //collapse(2)//schedule(static,c)  //
-
-        for(int count=0; count<numb_shingles; count++){
-    
-            for(int pos=0; pos<K_SHINGLE; pos++)
-                
-                shingles[count][pos]=buffer[count+pos];         
-        }
-   
-   //print_shingles(numb_shingles, shingles);
-    return 0;
-
-}
-
 
 
 
@@ -236,7 +176,7 @@ int shingle_extract_pthread(char *buffer, const long filesize, char **shingles){
 
 */
 
-
+/*
 long shingle_extract_buf_hashmap(FILE * fp, const long filesize, char **shingles, int thread_count){
 
 
@@ -269,9 +209,12 @@ long shingle_extract_buf_hashmap(FILE * fp, const long filesize, char **shingles
             map[i]= (char**) calloc(50,sizeof(char**));
         }
     }
+
+    
     #pragma omp parallel for num_threads(thread_count) collapse(2)
+        
         for(int i=0; i<buckets;i++){
-            for(int j=0; j<50; j++){
+           for(int j=0; j<50; j++){ 
                 map[i][j]= (char*) malloc((K_SHINGLE+1)*sizeof(char));
                 map[i][j][K_SHINGLE]='\0';
             }
@@ -347,8 +290,48 @@ long shingle_extract_buf_hashmap(FILE * fp, const long filesize, char **shingles
         }
     }
 
-    printf("discarded: %d\n", count_disc);
+ //   printf("discarded: %d\n", count_disc);
 
    return tot_shingles;
 
 }
+
+
+*/
+
+
+/*
+char ** get_shingles_hashmap(FILE *fp,  long *tot_shingles, int thread_count){
+
+    double start;
+    double end;
+
+    //dimensione del file
+    fseek(fp, 0, SEEK_END); // seek to end of file
+    long size = ftell(fp); // get current file pointer
+    fseek(fp, 0, SEEK_SET); // seek back to beginning of file
+
+
+    //numero di shingles
+    *tot_shingles = size - K_SHINGLE + 1;
+
+
+    //alloca lo spazio per gli shingles
+    char **shingles = (char **) malloc((*tot_shingles) * (sizeof(char*)));
+
+    //#pragma omp parallel for num_threads(thread_count)
+    for(int i=0; i<*tot_shingles; i++)
+        shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
+
+
+    //estrare gli shingles in version seriale
+    fseek(fp, 0, SEEK_SET);
+    start = omp_get_wtime();
+    *tot_shingles = shingle_extract_buf_hashmap(fp, size, shingles, thread_count);
+    end = omp_get_wtime();
+    exectimes(end - start, Serial_shingles,0);
+    return shingles;
+
+}
+
+*/

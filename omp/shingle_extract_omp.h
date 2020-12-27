@@ -1,7 +1,12 @@
-#include <omp.h>
+
+#ifndef SHINGLE_   /* Include guard */
+#define SHINGLE_
 
 #define BUF 1000   //each thread reads 8kb (8000 bytes) from buffer
 #define K_SHINGLE 63
+//enum Tasks {Serial_signatures, Serial_shingles, Parallel_signatures, Parallel_shingles, Parallel_shingles_hashmap, Parallel_signatures_hashmap};
+
+
 
 void print_shingles(int tot_shingles, char **shingles);
 
@@ -26,3 +31,5 @@ long shingle_extract_buf_hashmap(FILE * fp, const long filesize, char **shingles
 char ** get_shingles_serial(FILE *fp,  long *tot_shingles, int thread_count);
 
 char ** get_shingles_hashmap(FILE *fp,  long *tot_shingles, int thread_count);
+
+#endif

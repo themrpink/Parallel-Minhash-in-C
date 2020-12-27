@@ -1,4 +1,6 @@
-#include <omp.h>
+
+#ifndef HASH_FNV_1_   /* Include guard */
+#define HASH_FNV_1_
 
 #define PRIMES_SIZE 199
 #define K_SHINGLE 63
@@ -265,3 +267,5 @@ unsigned long long* get_signatures(char **shingles, long tot_shingles, int threa
 
 
 unsigned long long* get_signatures_s(char **shingles, long tot_shingles, int thread_count);
+
+#endif
