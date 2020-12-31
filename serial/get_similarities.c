@@ -29,16 +29,16 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
    free(temp_sketches);
 
-   
+   //crea le triple {doc1, doc2, shared_signatures}
    int count = create_triplets(files_sketches, numberOfFiles, couples);
+
    //copia di appoggio per il mergesort
    struct doc_couple* couples_tmp = (struct doc_couple*) malloc( count * sizeof(struct doc_couple));
 
+   //ordina per doc_id
    mergesort_s_doc_id(couples, count, couples_tmp);
-   for(int i=0; i<count; i++){
-      printf("%d\n", couples[i].shared_signatures);
-   }
-   //raccogli e seleziona le coppie di documenti che hanno almeno una signature in comune
+
+   //raccogli le coppie di documenti che hanno almeno una signature in comune
    int index = do_clustering(couples, count);
     
    return index;
