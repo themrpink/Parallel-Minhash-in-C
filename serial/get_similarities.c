@@ -77,7 +77,7 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
     /*
         ridimensiona l'array con ai primi "count" elementi (tutti quelli cioè che hanno shared_signatures=1) 
     */
-   couples = (struct doc_couple*) realloc( couples, count * sizeof(struct doc_couple));
+   couples = (struct doc_couple*) realloc( couples, (--count) * sizeof(struct doc_couple));
 
 
    free(files_sketches);
@@ -109,7 +109,7 @@ int do_clustering(struct doc_couple* couples, int count){
    }
    couples = (struct doc_couple*) realloc( couples, (--index) * sizeof(struct doc_couple));
 
-   for(int i=0; i<index; i++){
+   for(int i=0; i<=index; i++){
         printf("\n%d) shared_signatures: %d", i, couples[i].shared_signatures);
         printf("%15s   doc_id_1:  %llu"," ", couples[i].doc_id);
         printf("%15s   doc_id_2:  %llu "," ", couples[i].doc2_id);
