@@ -11,12 +11,9 @@
 #include <errno.h>
 #include "documents_getters.h"
 
-#define  TYPENOTDEFINED 'n'
 
 
-
-
-int list_dir(const char *nomeDirectory,char **files,int *numberOfFiles ) {
+int list_dir(const char *nomeDirectory, char **files, int *numberOfFiles ) {
     numberOfFiles=0;
 
 

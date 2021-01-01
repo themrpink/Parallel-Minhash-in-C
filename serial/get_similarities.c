@@ -1,6 +1,5 @@
 #include "get_similarities.h"
-#include <omp.h>
-
+#include <stdlib.h>
 
 
 int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *signatures, char *filename){

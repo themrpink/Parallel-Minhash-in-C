@@ -23,7 +23,7 @@
 
 //folder e ricerca dei file
 int main(int argc, char *argv[]) {
-    if (argc != 1) {
+    if (argc != 2) {
         exit(EXITARGUMENTFAIL);
     }
     char *folderName = argv[1];
