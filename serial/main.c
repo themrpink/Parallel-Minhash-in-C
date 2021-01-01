@@ -2,21 +2,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "hash_FNV_1.c"
-#include "shingle_extract.c"
-#include "documents_getters.c"
-#include "tokenizer.c"
-#include "get_similarities.c"
+#include "hash_FNV_1.h"
+#include "shingle_extract.h"
+#include "documents_getters.h"
+#include "tokenizer.h"
+#include "get_similarities.h"
 
 #define  EXITARGUMENTFAIL 20
 #define  EXITNOFILEFOUND  30
 #define COEFFICIENTE_SIMILARITA 0.75
 
-typedef struct {
-    char filePrimo;
-    char fileSecondo;
-    int simili;
-} InfoFile;
+//typedef struct {
+//    char filePrimo;
+//    char fileSecondo;
+//    int simili;
+//} InfoFile;
 
 
 
@@ -61,18 +61,7 @@ int main(int argc, char *argv[]) {
     //quindi per confrontare le signatures basta scorrere il vettore couples, estrarre le id e con queste estrarre le signatures relative
     //a entrambi i documenti in minhashDocumenti e confrontarle.
 
-    for (int i = 0; i < numberOfFiles; ++i) {
-        for (int j = 0; j < numberOfFiles; ++j) {
-            long totalSignaturesEquals = 0;
-            for (int k = 0; k < N_SIGNATURES; ++k) {
-                if (minhashDocumenti[i][k] == minhashDocumenti[j][k]) {
-                    totalSignaturesEquals++;
-                }
-            }
-            double coefficient = totalSignaturesEquals / (N_SIGNATURES);
-            printf("File %s e %s sono simili %s",files[i],files[j],coefficient > COEFFICIENTE_SIMILARITA ? "Si" : "No");
-        }
-    }
+
     return 0;
 }
 
