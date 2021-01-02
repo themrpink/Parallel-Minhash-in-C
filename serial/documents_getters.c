@@ -13,8 +13,8 @@
 
 
 
-int list_dir(const char *nomeDirectory, char **files, int *numberOfFiles ) {
-    numberOfFiles=0;
+int list_dir(const char *nomeDirectory, char ***files) {
+    int numberOfFiles=0;
 
 
     if (!exists(nomeDirectory) && !isDirectory(nomeDirectory)) {
@@ -35,22 +35,39 @@ int list_dir(const char *nomeDirectory, char **files, int *numberOfFiles ) {
             char path[PATH_MAX];
             lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
                                      figlio);
-            int i=numberOfFiles;
-            char (*tmp)[i] =realloc(files,((i+1) * PATH_MAX)*sizeof (char));
-            numberOfFiles++;
-            i=numberOfFiles;
-            if (tmp != NULL)
-            {
-                files = tmp;
-                strcpy(files[i],path);
+            if (!isRegularFile(path)) {
+                continue;
             }
+            numberOfFiles++;
+        }
+
+        rewinddir(elemento);
+        *files = calloc(numberOfFiles , sizeof(char*));
+        int i=0;
+        while ((entry = readdir(elemento)) != NULL) {
+            const char *figlio;
+            figlio = entry->d_name; //
+            if (strcmp(figlio, ".") == 0 || strcmp(figlio, "..") == 0) {
+                continue;
+            }
+            int lunghezzaPath;
+            char path[PATH_MAX];
+            lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
+                                     figlio);
+            if (!isRegularFile(path)) {
+                continue;
+            }
+
+
+            (*files)[i] = strdup(path);
+            i++;
         }
         if (closedir(elemento) != 0) {
             exit(EXITSYSCALLFAIL);
         }
     }
 
-    return PATH_MAX;
+    return numberOfFiles;
 }
 
 int exists(const char *path) {
