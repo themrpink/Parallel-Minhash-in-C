@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
     if (argc != 2) {
         exit(EXITARGUMENTFAIL);
     }
+
     char *folderName = argv[1];
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
@@ -26,11 +27,9 @@ int main(int argc, char *argv[]) {
 
     long long unsigned *minhashDocumenti[numberOfFiles];
 
-
     for (int i = 0; i < numberOfFiles; ++i) {
         long fileSize=0;
         char *filesContent = get_file_string_cleaned(files[i], &fileSize);
-
         long numb_shingles = fileSize - K_SHINGLE +1;
         char **shingles = (char**) malloc(numb_shingles * sizeof(char*));
         shingle_extract_buf(filesContent,numb_shingles,shingles);
@@ -42,16 +41,9 @@ int main(int argc, char *argv[]) {
         free(filesContent);
     }
 
-    struct doc_couple* couples;
-    int num_of_doc_couples = find_similarity(numberOfFiles, files, minhashDocumenti, couples);
-
-    free(files);
-    //find_similarity restituisce un vettore "*couples" con tutte le coppie di documenti che condividono almeno una signature.
-    //queste sono coppie di id di documenti, ma l'id è un intero uguale alla posizione del file in minhashDocumenti.
-    //quindi per confrontare le signatures basta scorrere il vettore couples, estrarre le id e con queste estrarre le signatures relative
-    //a entrambi i documenti in minhashDocumenti e confrontarle.
-
-
+    
+    find_similarity(numberOfFiles, files, minhashDocumenti);
+    
     return 0;
 }
 

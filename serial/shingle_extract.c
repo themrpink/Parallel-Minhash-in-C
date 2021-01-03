@@ -1,6 +1,6 @@
 
 #include "shingle_extract.h"
-
+#include <stdlib.h>
 
 
 
