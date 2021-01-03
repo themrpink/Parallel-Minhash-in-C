@@ -1,7 +1,6 @@
 #include "get_similarities.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include <omp.h>
+
 
 
 int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *signatures, char *filename){
@@ -27,11 +26,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    for(int i=0; i < numberOfFiles; i++)
       get_sketches(i, files_sketches+(i*N_SIGNATURES) , minhashDocumenti[i], files[i]);
 
-   #pragma omp parallel
-   {
-      #pragma omp single
-      mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
-   }
+   mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
    free(temp_sketches);
 
    //crea le triple {doc1, doc2, shared_signatures}

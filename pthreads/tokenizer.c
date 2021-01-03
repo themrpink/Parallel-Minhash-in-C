@@ -1,34 +1,30 @@
+
 #include "tokenizer.h"
 #include "stdio.h"
-#include "string.h"
 #include "ctype.h"
-#include <stdlib.h>
 
 #define EMPTY ""
 
 char* get_file_string_cleaned(const char* file_path,long* fileLength){
-    char * testo = 0;
+    char * buffer = 0;
     FILE * fp = fopen (file_path, "rb");
     if (fp){
         fseek (fp, 0, SEEK_END);
-        long length = ftell (fp);
+        fileLength = ftell (fp);
         fseek (fp, 0, SEEK_SET);
-        testo = malloc (length);
-        if (testo)
+        buffer = malloc (length);
+        if (buffer)
         {
-            fread (testo, 1, length, fp);
+            fread (buffer, 1, fileLength, fp);
         }
-        fclose (fp);
+        fclose (f);
     }
-    if (testo){
+    if (buffer){
        compress_spaces(testo);
-        int i, s = strlen(testo);
-        for (i = 0; i < s; i++)
-            testo[i] = tolower(testo[i]);
-        *fileLength=i;
+       testo=tolower(testo);
        return testo;
     }else{
-        *fileLength=0;
+        fileLength=0;
         return EMPTY;
     }
 }
