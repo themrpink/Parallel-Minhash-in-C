@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
+#define N_SIGNATURES 200
 
 int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *signatures, char *filename){
 
@@ -108,13 +108,13 @@ int do_clustering(struct doc_couple* couples, int count){
       }
 
    }
-   couples = (struct doc_couple*) realloc( couples, (--index) * sizeof(struct doc_couple));
+   couples = (struct doc_couple*) realloc( couples, (index) * sizeof(struct doc_couple));
 
-   for(int i=0; i<=index; i++){
+   for(int i=0; i<index; i++){
         printf("\n%d) shared_signatures: %d", i, couples[i].shared_signatures);
         printf("%15s   doc_id_1:  %llu"," ", couples[i].doc_id);
         printf("%15s   doc_id_2:  %llu "," ", couples[i].doc2_id);
-        printf("%15s   similarity  %.3f\n"," ", (float)couples[i].shared_signatures/400.0);
+        printf("%15s   similarity  %.3f\n"," ", (float)couples[i].shared_signatures/N_SIGNATURES);
    }
 
 

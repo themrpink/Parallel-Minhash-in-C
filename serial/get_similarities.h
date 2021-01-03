@@ -66,5 +66,4 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
 int do_clustering(struct doc_couple* couples, int count);
 
 #endif //MINHASHPROJECT_GET_SIMILARITIES_H
-//modificalo con il valore corretto
-#define N_SIGNATURES 50
+
