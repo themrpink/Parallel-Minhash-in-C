@@ -26,7 +26,11 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    for(int i=0; i < numberOfFiles; i++)
       get_sketches(i, files_sketches+(i*N_SIGNATURES) , minhashDocumenti[i], files[i]);
 
-   mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
+   #pragma omp parallel
+   {
+      #pragma omp single
+      mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
+   }
    free(temp_sketches);
 
    //crea le triple {doc1, doc2, shared_signatures}
