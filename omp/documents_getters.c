@@ -10,12 +10,11 @@
 #include <limits.h>
 #include <errno.h>
 #include "documents_getters.h"
-
+#include <omp.h>
 
 
 int list_dir(const char *nomeDirectory, char ***files) {
     int numberOfFiles=0;
-
 
     if (!exists(nomeDirectory) && !isDirectory(nomeDirectory)) {
         return 0;
@@ -25,31 +24,18 @@ int list_dir(const char *nomeDirectory, char ***files) {
             return 0;
         }
         struct dirent *entry;
-        while ((entry = readdir(elemento)) != NULL) {
-            const char *figlio;
-            figlio = entry->d_name; //
-            if (strcmp(figlio, ".") == 0 || strcmp(figlio, "..") == 0) {
-                continue;
-            }
-            int lunghezzaPath;
-            char path[PATH_MAX];
-            lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
-                                     figlio);
-            if (!isRegularFile(path)) {
-                continue;
-            }
-            numberOfFiles++;
-        }
-
+        numberOfFiles=countNumberOfFiles(nomeDirectory,elemento);
         rewinddir(elemento);
         *files = calloc(numberOfFiles , sizeof(char*));
         int i=0;
+        #pragma omp parallel
         while ((entry = readdir(elemento)) != NULL) {
             const char *figlio;
             figlio = entry->d_name; //
             if (strcmp(figlio, ".") == 0 || strcmp(figlio, "..") == 0) {
                 continue;
             }
+
             int lunghezzaPath;
             char path[PATH_MAX];
             lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
@@ -58,9 +44,12 @@ int list_dir(const char *nomeDirectory, char ***files) {
                 continue;
             }
 
+            #pragma omp critical
+            {
+                (*files)[i] = strdup(path);
+                i++;
+            };
 
-            (*files)[i] = strdup(path);
-            i++;
         }
         if (closedir(elemento) != 0) {
             exit(EXITSYSCALLFAIL);
@@ -94,3 +83,27 @@ int isRegularFile(const char *path) {
     return S_ISREG(statbuf.st_mode);;
 }
 
+int countNumberOfFiles(const char *nomeDirectory,DIR *elemento){
+    int numberOfFiles=0;
+    struct dirent *entry;
+    #pragma omp parallel
+    while ((entry = readdir(elemento)) != NULL) {
+        const char *figlio;
+        figlio = entry->d_name; //
+        if (strcmp(figlio, ".") == 0 || strcmp(figlio, "..") == 0) {
+            continue;
+        }
+        int lunghezzaPath;
+        char path[PATH_MAX];
+        lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
+                                 figlio);
+        if (!isRegularFile(path)) {
+            continue;
+        }
+        #pragma omp critical
+        numberOfFiles++;
+    }
+
+    return numberOfFiles;
+
+}
