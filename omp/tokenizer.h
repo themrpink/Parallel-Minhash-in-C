@@ -5,4 +5,5 @@
 #define MINHASHPROJECT_TOKENIZER_H
 char* get_file_string_cleaned(const char* file_path,long* fileLength);
 void compress_spaces(char *str);
+void removeAt(char* str, int idx);
 #endif //MINHASHPROJECT_TOKENIZER_H

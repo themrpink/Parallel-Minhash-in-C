@@ -3,8 +3,10 @@
 #include "string.h"
 #include "ctype.h"
 #include <stdlib.h>
+#include <omp.h>
 
 #define EMPTY ""
+
 
 char* get_file_string_cleaned(const char* file_path,long* fileLength){
     char * testo = 0;
@@ -34,16 +36,38 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
 }
 
 void compress_spaces(char *str){
-    char *dst = str;
-    for (; *str; ++str) {
-        *dst++ = *str;
+   int stringLength=strlen(str);
+   int deleted=0;
+   #pragma parallel for
+   for (int i = 0; i < stringLength; ++i) {
+       if (isspace(str[i])){
+           #pragma atomic
+           deleted++;
+       }
 
-        if (isspace(*str)) {
-            do ++str;
-            while (isspace(*str));
-
-            --str;
+   }
+    int indexToDelete[deleted];
+    deleted=0;
+    #pragma parallel for
+    for (int i = 0; i < stringLength; ++i) {
+        if (isspace(str[i])){
+            #pragma critical
+            {
+            indexToDelete[deleted]=i;
+            deleted++;
+            }
         }
     }
-    *dst = 0;
+
+    for (int i = 0; i < deleted; ++i) {
+        removeAt(str,indexToDelete[i]);
+    }
+
+
+
 }
+void removeAt(char* str, int idx) {
+    size_t len = strlen(str);
+    memmove(str + idx, str + idx + 1, len - idx);
+}
+
