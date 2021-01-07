@@ -100,7 +100,7 @@ int countNumberOfFiles(const char *nomeDirectory,DIR *elemento){
         if (!isRegularFile(path)) {
             continue;
         }
-        #pragma omp critical
+        #pragma omp atomic
         numberOfFiles++;
     }
 
