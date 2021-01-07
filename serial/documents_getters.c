@@ -25,21 +25,7 @@ int list_dir(const char *nomeDirectory, char ***files) {
             return 0;
         }
         struct dirent *entry;
-        while ((entry = readdir(elemento)) != NULL) {
-            const char *figlio;
-            figlio = entry->d_name; //
-            if (strcmp(figlio, ".") == 0 || strcmp(figlio, "..") == 0) {
-                continue;
-            }
-            int lunghezzaPath;
-            char path[PATH_MAX];
-            lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
-                                     figlio);
-            if (!isRegularFile(path)) {
-                continue;
-            }
-            numberOfFiles++;
-        }
+        numberOfFiles=countNumberOfFiles(nomeDirectory,elemento);
 
         rewinddir(elemento);
         *files = calloc(numberOfFiles , sizeof(char*));
@@ -94,3 +80,25 @@ int isRegularFile(const char *path) {
     return S_ISREG(statbuf.st_mode);;
 }
 
+int countNumberOfFiles(const char *nomeDirectory,DIR *elemento){
+    int numberOfFiles=0;
+    struct dirent *entry;
+    while ((entry = readdir(elemento)) != NULL) {
+        const char *figlio;
+        figlio = entry->d_name; //
+        if (strcmp(figlio, ".") == 0 || strcmp(figlio, "..") == 0) {
+            continue;
+        }
+        int lunghezzaPath;
+        char path[PATH_MAX];
+        lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
+                                 figlio);
+        if (!isRegularFile(path)) {
+            continue;
+        }
+        numberOfFiles++;
+    }
+
+    return numberOfFiles;
+
+}
