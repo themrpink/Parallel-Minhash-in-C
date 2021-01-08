@@ -25,6 +25,7 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
     if (testo){
        compress_spaces(testo);
         int i, s = strlen(testo);
+        #pragma parallel for
         for (i = 0; i < s; i++)
             testo[i] = tolower(testo[i]);
         *fileLength=i;
@@ -36,38 +37,27 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
 }
 
 void compress_spaces(char *str){
-   int stringLength=strlen(str);
-   int deleted=0;
-   #pragma parallel for
-   for (int i = 0; i < stringLength; ++i) {
-       if (isspace(str[i])){
-           #pragma atomic
-           deleted++;
-       }
-
-   }
-    int indexToDelete[deleted];
-    deleted=0;
-    #pragma parallel for
-    for (int i = 0; i < stringLength; ++i) {
-        if (isspace(str[i])){
-            #pragma critical
-            {
-            indexToDelete[deleted]=i;
-            deleted++;
-            }
+    char *tmp=malloc(strlen(str)*sizeof (char));
+    int lunghezzaOriginaria=strlen(str);
+    #pragma parallel  for
+    for (int i = 0; (i+1) < lunghezzaOriginaria; ++i) {
+        if(!(isspace(str[i]) && isspace(str[i+1]))){
+            tmp[i]=str[i];
+        }else{
+            tmp[i]=0;
         }
     }
 
-    for (int i = 0; i < deleted; ++i) {
-        removeAt(str,indexToDelete[i]);
+    int j=0;
+    #pragma parallel for
+    for (int i = 0; i < lunghezzaOriginaria; ++i) {
+        if (tmp[i]!=0){
+            #pragma atomic
+            j++;
+            str[j]=tmp[i];
+        }
     }
-
-
-
+    j++;
+    str[j]=0;
+    free(tmp);
 }
-void removeAt(char* str, int idx) {
-    size_t len = strlen(str);
-    memmove(str + idx, str + idx + 1, len - idx);
-}
-

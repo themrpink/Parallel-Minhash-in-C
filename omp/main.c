@@ -1,7 +1,6 @@
-
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <omp.h>
 #include "hash_FNV_1.h"
 #include "shingle_extract.h"
 #include "documents_getters.h"
@@ -12,12 +11,14 @@
 #define  EXITNOFILEFOUND  30
 #define COEFFICIENTE_SIMILARITA 0.75
 
-//folder e ricerca dei file
+//folder e ricerca dei fileparallel
 int main(int argc, char *argv[]) {
-    if (argc != 2) {
-        exit(EXITARGUMENTFAIL);
-    }
+
+    int thread_count=5;
     char *folderName = argv[1];
+    if (argc>2){
+         thread_count=strtol(argv[2],NULL,10);
+    }
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
     if (numberOfFiles==0){
@@ -35,15 +36,15 @@ int main(int argc, char *argv[]) {
         char **shingles = (char**) malloc(numb_shingles * sizeof(char*));
         shingle_extract_buf(filesContent,numb_shingles,shingles);
 
-        long long unsigned *signatures= get_signatures(shingles, numb_shingles);
+        long long unsigned *signatures= get_signatures(shingles, numb_shingles,thread_count);
         minhashDocumenti[i] = signatures;
-            
+
         free(shingles);
         free(filesContent);
     }
 
     struct doc_couple* couples;
-    int num_of_doc_couples = find_similarity(numberOfFiles, files, minhashDocumenti, couples);
+    int num_of_doc_couples = find_similarity(numberOfFiles, files, minhashDocumenti);
 
     free(files);
     //find_similarity restituisce un vettore "*couples" con tutte le coppie di documenti che condividono almeno una signature.
