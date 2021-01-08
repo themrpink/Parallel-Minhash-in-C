@@ -61,7 +61,7 @@ void mergesort_s_signatures(struct sign_doc* X, int n, struct sign_doc* tmp);
         verso il basso, non vegnono create triple in cui, per una stessa signature, compaiono due volte la stessa coppia di doc_id (in qualsiasi ordine).
 
 */
-int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti,struct doc_couple* couples);
+int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti);
 int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct doc_couple* couples);
 int do_clustering(struct doc_couple* couples, int count);
 

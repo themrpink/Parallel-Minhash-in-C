@@ -18,16 +18,20 @@ int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *sign
 
 
 
-int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti, struct doc_couple* couples ){
+int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti){
 
-   couples = (struct doc_couple*) malloc( numberOfFiles *numberOfFiles* 200*sizeof(struct doc_couple));
+   struct doc_couple* couples = (struct doc_couple*) malloc( numberOfFiles *numberOfFiles* 200*sizeof(struct doc_couple));
    struct sign_doc* files_sketches = (struct sign_doc*) malloc(numberOfFiles * N_SIGNATURES * sizeof(struct sign_doc));
    struct sign_doc* temp_sketches = (struct sign_doc*) malloc(numberOfFiles * N_SIGNATURES * sizeof(struct sign_doc));
 
    for(int i=0; i < numberOfFiles; i++)
       get_sketches(i, files_sketches+(i*N_SIGNATURES) , minhashDocumenti[i], files[i]);
 
-   mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
+ //  #pragma omp parallel
+   {
+    //  #pragma omp single
+      mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
+   }
    free(temp_sketches);
 
    //crea le triple {doc1, doc2, shared_signatures}
@@ -41,9 +45,23 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
 
    //raccogli le coppie di documenti che hanno almeno una signature in comune
    int index = do_clustering(couples, count);
-    
+
+   int doc1;
+   int doc2;
+   int shared=0;
+   printf("\n\n");
+   for(int i=0; i<index;i++){
+      doc1 = couples[i].doc_id;
+      doc2 = couples[i].doc2_id;
+      for(int signature=0; signature<N_SIGNATURES; signature++)
+         if (minhashDocumenti[doc1][signature] == minhashDocumenti[doc2][signature]){
+            shared+=1;
+            }     
+      printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
+      printf("similarità: %.3f\n\n", shared/N_SIGNATURES);
+      shared=0;
+   }
    return index;
- 
 }
 
 
@@ -94,22 +112,23 @@ int do_clustering(struct doc_couple* couples, int count){
 
    int index=0;
    for(int i=0; i<count; i++){
+     // printf("%lld   %lld   %d\n", couples[i].doc_id, couples[i].doc2_id, couples[i].shared_signatures);
       if( couples[i].shared_signatures!=0){
-         for(int j=i; j<count; j++){
+         for(int j=i+1; j<count; j++){
             if (couples[i].doc_id == couples[j].doc_id && couples[i].doc2_id == couples[j].doc2_id){
                couples[i].shared_signatures+=1;
                couples[j].shared_signatures=0;
             }
          }
          couples[index] = couples[i];
-         if(index!=i)
-            couples[i].shared_signatures=0;
+     //    if(index!=i)
+       //     couples[i].shared_signatures=0;
          index+=1;
       }
 
    }
    couples = (struct doc_couple*) realloc( couples, (index) * sizeof(struct doc_couple));
-
+  // printf("index vale: %d\n", index);
    for(int i=0; i<index; i++){
         printf("\n%d) shared_signatures: %d", i, couples[i].shared_signatures);
         printf("%15s   doc_id_1:  %llu"," ", couples[i].doc_id);
@@ -180,13 +199,13 @@ void mergesort_s_signatures(struct sign_doc* X, int n, struct sign_doc* tmp)
 {
    if (n < 2) return;
 
-   #pragma omp task firstprivate (X, n, tmp)
+ //  #pragma omp task firstprivate (X, n, tmp)
    mergesort_s_signatures(X, n/2, tmp);
 
    //#pragma omp task firstprivate (X, n, tmp)
    mergesort_s_signatures(X+(n/2), n-(n/2), tmp);
  
-   #pragma omp taskwait 
+//   #pragma omp taskwait 
    merge_signatures(X, n, tmp);
 }
 
