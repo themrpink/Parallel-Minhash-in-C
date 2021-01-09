@@ -25,7 +25,7 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
     if (testo){
        compress_spaces(testo);
         int i, s = strlen(testo);
-        #pragma parallel for
+        #pragma omp parallel for
         for (i = 0; i < s; i++)
             testo[i] = tolower(testo[i]);
         *fileLength=i;
@@ -39,8 +39,8 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
 void compress_spaces(char *str){
     char *tmp=malloc(strlen(str)*sizeof (char));
     int lunghezzaOriginaria=strlen(str);
-    #pragma parallel  for
-    for (int i = 0; (i+1) < lunghezzaOriginaria; ++i) {
+    #pragma omp parallel for
+    for (int i = 0; i <= lunghezzaOriginaria; ++i) {
         if(!(isspace(str[i]) && isspace(str[i+1]))){
             tmp[i]=str[i];
         }else{
@@ -49,15 +49,19 @@ void compress_spaces(char *str){
     }
 
     int j=0;
-    #pragma parallel for
+    #pragma omp parallel for
     for (int i = 0; i < lunghezzaOriginaria; ++i) {
         if (tmp[i]!=0){
-            #pragma atomic
+            #pragma critical
+            {
             j++;
             str[j]=tmp[i];
+            }
+
         }
     }
     j++;
     str[j]=0;
+    str=realloc(str,(j+1)*sizeof (char));
     free(tmp);
 }

@@ -14,11 +14,8 @@
 //folder e ricerca dei fileparallel
 int main(int argc, char *argv[]) {
 
-    int thread_count=5;
+    omp_set_num_threads(9);
     char *folderName = argv[1];
-    if (argc>2){
-         thread_count=strtol(argv[2],NULL,10);
-    }
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
     if (numberOfFiles==0){
@@ -26,17 +23,14 @@ int main(int argc, char *argv[]) {
     }
 
     long long unsigned *minhashDocumenti[numberOfFiles];
-
-
+    #pragma omp parallel for
     for (int i = 0; i < numberOfFiles; ++i) {
         long fileSize=0;
         char *filesContent = get_file_string_cleaned(files[i], &fileSize);
-
         long numb_shingles = fileSize - K_SHINGLE +1;
         char **shingles = (char**) malloc(numb_shingles * sizeof(char*));
         shingle_extract_buf(filesContent,numb_shingles,shingles);
-
-        long long unsigned *signatures= get_signatures(shingles, numb_shingles,thread_count);
+        long long unsigned *signatures= get_signatures(shingles, numb_shingles,3);
         minhashDocumenti[i] = signatures;
 
         free(shingles);
