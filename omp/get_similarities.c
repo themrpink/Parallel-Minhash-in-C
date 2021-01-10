@@ -18,7 +18,7 @@ int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *sign
    }
    end = omp_get_wtime();
    exectimes(end-start, GET_SKETCHES, SET_TIME);
-    return 0;
+   return 0;
 }
 
 
@@ -41,9 +41,9 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    elapsed = end - start;
 
    start=omp_get_wtime();
- //  #pragma omp parallel
+   //  #pragma omp parallel
    {
-    //  #pragma omp single
+      //  #pragma omp single
       mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
    }
    end = omp_get_wtime();
@@ -75,7 +75,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
       for(int signature=0; signature<N_SIGNATURES; signature++)
          if (minhashDocumenti[doc1][signature] == minhashDocumenti[doc2][signature]){
             shared+=1;
-            }     
+         }
       printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
       printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
       shared=0;
@@ -106,22 +106,22 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
       //fino a che la signature successiva è uguale alla signature corrente:
       while(signature_succ < tot && files_sketches[signature_succ].signature == signature_curr){
 
-        //inserisci in couples una tripla che contiene una coppia di doc_id ed un "1" a indicare che questi condividono una signature
+         //inserisci in couples una tripla che contiene una coppia di doc_id ed un "1" a indicare che questi condividono una signature
          couples[count].doc_id = files_sketches[i].doc_id;
          couples[count].doc2_id = files_sketches[signature_succ].doc_id;
          couples[count].shared_signatures = 1;
          signature_succ++;
 
          //questo count servirà più avanti per sommare le signature condivise
-         count++;            
+         count++;
       }
    }
    end = omp_get_wtime();
    exectimes(end-start, CREATE_TRIPLETS, SET_TIME);
 
-    /*
-        ridimensiona l'array con ai primi "count" elementi (tutti quelli cioè che hanno shared_signatures=1) 
-    */
+   /*
+       ridimensiona l'array con ai primi "count" elementi (tutti quelli cioè che hanno shared_signatures=1)
+   */
    couples = (struct doc_couple*) realloc( couples, (--count) * sizeof(struct doc_couple));
 
 
@@ -142,7 +142,7 @@ int do_clustering(struct doc_couple* couples, int count){
 
    start=omp_get_wtime();
    for(int i=0; i<count; i++){
-     // printf("%lld   %lld   %d\n", couples[i].doc_id, couples[i].doc2_id, couples[i].shared_signatures);
+      // printf("%lld   %lld   %d\n", couples[i].doc_id, couples[i].doc2_id, couples[i].shared_signatures);
       if( couples[i].shared_signatures!=0){
          for(int j=i+1; j<count; j++){
             if (couples[i].doc_id == couples[j].doc_id && couples[i].doc2_id == couples[j].doc2_id){
@@ -151,20 +151,20 @@ int do_clustering(struct doc_couple* couples, int count){
             }
          }
          couples[index] = couples[i];
-     //    if(index!=i)
-       //     couples[i].shared_signatures=0;
+         //    if(index!=i)
+         //     couples[i].shared_signatures=0;
          index+=1;
       }
    }
    end = omp_get_wtime();
    exectimes(end-start, DO_CLUSTERING, SET_TIME);
    couples = (struct doc_couple*) realloc( couples, (index) * sizeof(struct doc_couple));
-  // printf("index vale: %d\n", index);
+   // printf("index vale: %d\n", index);
    for(int i=0; i<index; i++){
-        printf("\n%d) shared_signatures: %d", i, couples[i].shared_signatures);
-        printf("%15s   doc_id_1:  %llu"," ", couples[i].doc_id);
-        printf("%15s   doc_id_2:  %llu "," ", couples[i].doc2_id);
-        printf("%15s   similarity  %.3f\n"," ", (float)couples[i].shared_signatures/N_SIGNATURES);
+      printf("\n%d) shared_signatures: %d", i, couples[i].shared_signatures);
+      printf("%15s   doc_id_1:  %llu"," ", couples[i].doc_id);
+      printf("%15s   doc_id_2:  %llu "," ", couples[i].doc2_id);
+      printf("%15s   similarity  %.3f\n"," ", (float)couples[i].shared_signatures/N_SIGNATURES);
    }
 
 
@@ -196,7 +196,7 @@ void merge_doc_id(struct doc_couple* X, int n, struct doc_couple*  tmp) {
       ti++; j++;
    }
    memcpy(X, tmp, n*sizeof(struct doc_couple));
-} 
+}
 
 
 void merge_signatures(struct sign_doc* X, int n, struct sign_doc*  tmp) {
@@ -222,7 +222,7 @@ void merge_signatures(struct sign_doc* X, int n, struct sign_doc*  tmp) {
       ti++; j++;
    }
    memcpy(X, tmp, n*sizeof(struct sign_doc));
-} 
+}
 
 
 
@@ -230,13 +230,13 @@ void mergesort_s_signatures(struct sign_doc* X, int n, struct sign_doc* tmp)
 {
    if (n < 2) return;
 
- //  #pragma omp task firstprivate (X, n, tmp)
+   //  #pragma omp task firstprivate (X, n, tmp)
    mergesort_s_signatures(X, n/2, tmp);
 
    //#pragma omp task firstprivate (X, n, tmp)
    mergesort_s_signatures(X+(n/2), n-(n/2), tmp);
- 
-//   #pragma omp taskwait 
+
+//   #pragma omp taskwait
    merge_signatures(X, n, tmp);
 }
 
@@ -244,12 +244,12 @@ void mergesort_s_doc_id(struct doc_couple* X, int n, struct doc_couple* tmp)
 {
    if (n < 2) return;
 
-  // #pragma omp task firstprivate (X, n, tmp)
+   // #pragma omp task firstprivate (X, n, tmp)
    mergesort_s_doc_id(X, n/2, tmp);
 
 //   #pragma omp task firstprivate (X, n, tmp)
    mergesort_s_doc_id(X+(n/2), n-(n/2), tmp);
- 
- //  #pragma omp taskwait
+
+   //  #pragma omp taskwait
    merge_doc_id(X, n, tmp);
 }

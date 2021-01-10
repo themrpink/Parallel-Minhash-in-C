@@ -20,7 +20,7 @@
 //folder e ricerca dei fileparallel
 int main(int argc, char *argv[]) {
 
-    omp_set_num_threads(1);
+    omp_set_num_threads(4);
     char *folderName = argv[1];
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
@@ -43,7 +43,6 @@ int main(int argc, char *argv[]) {
         shingle_extract_buf(filesContent,numb_shingles,shingles);
         long long unsigned *signatures= get_signatures(shingles, numb_shingles);
         minhashDocumenti[i] = signatures;
-
         for(int j=0; j<numb_shingles;j++)
             free(shingles[j]);
         free(shingles);

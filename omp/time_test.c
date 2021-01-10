@@ -142,24 +142,19 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
     for(int i=0; i<numberOfFiles; i++)
         for(int j=0; j<200;j++)
             fprintf(results_omp, " %llu", minhashDocumenti[i][j]);
-
+    rewind(results_omp);
     if (results_serial == NULL){
         printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con un solo thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
         return;
     }
 
-    char serial[10];
-    char omp[10];
     int count = 0;
+    int c1;
 
     //confronta i due file
-    while(fread(omp, 1, 10, results_omp)){
-        if (fread(serial, 1, 10, results_serial)==0){
-            count+=1;
-            break;
-        }
-        if(memcmp(serial, omp, 10)!=0)
-            count+=1;
+    while ((c1 = fgetc(results_omp)) != EOF) {
+       if(c1!= fgetc(results_serial))
+        count++;
     }
 
     if(count==0)

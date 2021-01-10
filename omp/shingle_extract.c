@@ -20,5 +20,6 @@ void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
     }
     end = omp_get_wtime();
     exectimes(end-start, SHINGLE_EXTRACT, SET_TIME);
+
 }
 

@@ -30,7 +30,7 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
         int i, s = strlen(testo);
 
         start = omp_get_wtime();
-        #pragma omp parallel for
+        //#pragma omp parallel for
         for (i = 0; i < s; i++)
             testo[i] = tolower(testo[i]);
         *fileLength=s;
@@ -53,7 +53,7 @@ void compress_spaces(char *str){
     int lunghezzaOriginaria=strlen(str);
 
     start=omp_get_wtime();
-    #pragma omp parallel for
+ //   #pragma omp parallel for
     for (int i = 0; i <= lunghezzaOriginaria; ++i) {
         if(!(isspace(str[i]) && isspace(str[i+1]))){
             tmp[i]=str[i];
@@ -66,10 +66,10 @@ void compress_spaces(char *str){
 
     int j=0;
     start=omp_get_wtime();
-    #pragma omp parallel for
+   // #pragma omp parallel for
     for (int i = 0; i < lunghezzaOriginaria; ++i) {
         if (tmp[i]!=0){
-            #pragma omp critical
+           // #pragma omp critical
             {
             j++;
             str[j]=tmp[i];
@@ -84,6 +84,6 @@ void compress_spaces(char *str){
     j++;
     str[j]=0;
     
-    str=realloc(str,(j+1)*sizeof (char));
+//    str=realloc(str,(j+1)*sizeof (char));
     free(tmp);
 }

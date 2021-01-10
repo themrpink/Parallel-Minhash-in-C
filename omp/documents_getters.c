@@ -32,7 +32,7 @@ int list_dir(const char *nomeDirectory, char ***files) {
         *files = calloc(numberOfFiles , sizeof(char*));
         int i=0;
         start = omp_get_wtime();
-        #pragma omp parallel
+        //#pragma omp parallel
         while ((entry = readdir(elemento)) != NULL) {
             const char *figlio;
             figlio = entry->d_name; //
@@ -48,7 +48,7 @@ int list_dir(const char *nomeDirectory, char ***files) {
                 continue;
             }
 
-            #pragma omp critical
+          //  #pragma omp critical
             {
                 (*files)[i] = strdup(path);
                 i++;
@@ -97,7 +97,7 @@ int countNumberOfFiles(const char *nomeDirectory,DIR *elemento){
     struct dirent *entry;
 
     start = omp_get_wtime();
-    #pragma omp parallel
+    //#pragma omp parallel
     while ((entry = readdir(elemento)) != NULL) {
         const char *figlio;
         figlio = entry->d_name; //
@@ -111,7 +111,7 @@ int countNumberOfFiles(const char *nomeDirectory,DIR *elemento){
         if (!isRegularFile(path)) {
             continue;
         }
-        #pragma omp atomic
+       // #pragma omp atomic
         numberOfFiles++;
     }
     end = omp_get_wtime();
