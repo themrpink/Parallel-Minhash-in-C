@@ -11,9 +11,12 @@
 #include <errno.h>
 #include "documents_getters.h"
 #include <omp.h>
-
+#include "time_test.h"
 
 int list_dir(const char *nomeDirectory, char ***files) {
+    double start;
+    double  end;
+
     int numberOfFiles=0;
 
     if (!exists(nomeDirectory) && !isDirectory(nomeDirectory)) {
@@ -28,6 +31,7 @@ int list_dir(const char *nomeDirectory, char ***files) {
         rewinddir(elemento);
         *files = calloc(numberOfFiles , sizeof(char*));
         int i=0;
+        start = omp_get_wtime();
         #pragma omp parallel
         while ((entry = readdir(elemento)) != NULL) {
             const char *figlio;
@@ -54,6 +58,8 @@ int list_dir(const char *nomeDirectory, char ***files) {
         if (closedir(elemento) != 0) {
             exit(EXITSYSCALLFAIL);
         }
+        end = omp_get_wtime();
+        exectimes(end-start, LIST_DIR, SET_TIME);
     }
 
     return numberOfFiles;
@@ -84,8 +90,13 @@ int isRegularFile(const char *path) {
 }
 
 int countNumberOfFiles(const char *nomeDirectory,DIR *elemento){
+    double start;
+    double  end;
+
     int numberOfFiles=0;
     struct dirent *entry;
+
+    start = omp_get_wtime();
     #pragma omp parallel
     while ((entry = readdir(elemento)) != NULL) {
         const char *figlio;
@@ -103,7 +114,8 @@ int countNumberOfFiles(const char *nomeDirectory,DIR *elemento){
         #pragma omp atomic
         numberOfFiles++;
     }
-
+    end = omp_get_wtime();
+    exectimes(end-start, COUNT_NUMBER_OF_FILES, SET_TIME);
     return numberOfFiles;
 
 }

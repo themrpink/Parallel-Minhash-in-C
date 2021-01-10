@@ -1,53 +1,175 @@
 #include "time_test.h"
 #include <stdio.h>
+#include <omp.h>
+#include <string.h>
 
 
+void exectimes(double value, enum Function_name function_name, enum Task task){
 
-void exectimes(double value, enum Tasks task, int print){
+    static double time[NUMBER_OF_FUNCTIONS] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+    static int t0 = 1;
+    static int t1 = 1;
+    static int t2 = 1;
+    static int t3 = 1;
+    static int t4 = 1;
+    static int t5 = 1;
+    static int t6 = 1;
+    static int t7 = 1;
+    static int t8 = 1;
+    static int t9 = 1;
+    static int t10 = 1;
+    static int t11 = 1;
 
-    static double results_shingles[] = {0,0,0};
-    static double results_signatures[] = {0,0,0};
-    static int count1a;
-    static int count2a;
-    static int count1b;
-    static int count2b;
+    if(task == SET_TIME) {
+        switch (function_name) {
+            case MAIN:
+                time[MAIN] += value;
+                t0+=1;
+                break;
+            case LIST_DIR:
+                time[LIST_DIR] += value;
+                t1+=1;
+                break;
+            case COUNT_NUMBER_OF_FILES:
+                time[COUNT_NUMBER_OF_FILES] += value;
+                t2+=1;
+                break;
+            case GET_FILE_STRINGS_CLEANED:
+                time[GET_FILE_STRINGS_CLEANED] += value;
+                t3+=1;
+                break;
+            case COMPRESS_SPACES:
+                time[COMPRESS_SPACES] += value;
+                t4+=1;
+                break;
+            case SHINGLE_EXTRACT:
+                time[SHINGLE_EXTRACT] += value;
+                t5+=1;
+                break;
+            case GET_SIGNATURES:
+                time[GET_SIGNATURES] += value;
+                t6+=1;
+                break;
+            case FIND_SIMILARITY:
+                time[FIND_SIMILARITY] += value;
+                t7+=1;
+                break;
+            case GET_SKETCHES:
+                time[GET_SKETCHES] += value;
+                t8+=1;
+                break;
+            case CREATE_TRIPLETS:
+                time[CREATE_TRIPLETS] += value;
+                t9+=1;
+                break;
+            case DO_CLUSTERING:
+                time[DO_CLUSTERING] += value;
+                t10+=1;
+                break;
+            case MERGE_SORT:
+                time[MERGE_SORT] += value;
+                t11+=1;
+                break;
+            default:
+                break;
+        }
+    }
+    else if(task == EXPORT_LOG){
 
-    if(print==0)
-        switch (task)
-        {
-        case Serial_shingles:
-            results_shingles[0] += value;
-            count1a++;
-            break;
-        case Serial_signatures:
-            results_signatures[0] += value;
-            count1b++;
-            break;
-        case Parallel_shingles:
-            results_shingles[1] += value;
-            count2a++;
-            break;
-        case Parallel_signatures:
-            results_signatures[1] += value;
-            count2b++;
-            break;   
-        default:
-            break;
-        } 
+        char buffer[100];
+        int numb_of_threads = omp_get_num_threads();
+        char *filename = "time_log.txt";
+        FILE *fp = fopen(filename, "a");
+        sprintf(buffer, "Number of threads: %d\n\n Elapsed times: \n\n", numb_of_threads);
+        fwrite(buffer, strlen(buffer), 1, fp);
 
-    else{
-        printf("\n\n########## test versione seriale -- ");
-        printf("esecuzioni: %d\n", print);
-        printf("\nserial version simple loop:\n f: shingle_extract_buf \n number of threads: %d\n time: %f\n\n", 1 ,  results_shingles[0]/count1a);
-        printf("version serial for: \n f: get_signatures_s \n number of threads: %d\n time: %f\n",1, results_signatures[0]/count1b);
+        for (int i=0; i<NUMBER_OF_FUNCTIONS; i++) {
+            switch (i) {
+                case 0:
+                    sprintf(buffer, "MAIN:  %.3f \n\n", time[i]);
+                    break;
+                case 1:
+                    sprintf(buffer, "LIST_DIR:  %.3f \n\n", time[i]);
+                    break;
+                case 2:
+                    sprintf(buffer, "COUNT_NUMBER_OF_FILES:  %.3f \n\n", time[i]);
+                    break;
+                case 3:
+                    sprintf(buffer, "GET_FILE_STRINGS_CLEANED:  %.3f \n\n", time[i]);;
+                    break;
+                case 4:
+                    sprintf(buffer, "COMPRESS_SPACES:  %.3f \n\n", time[i]);
+                    break;
+                case 5:
+                    sprintf(buffer, "SHINGLE_EXTRACT:  %.3f \n\n", time[i]);
+                    break;
+                case 6:
+                    sprintf(buffer, "GET_SIGNATURES:  %.3f \n\n", time[i]);
+                    break;
+                case 7:
+                    sprintf(buffer, "FIND_SIMILARITY:  %.3f \n\n", time[i]);
+                    break;
+                case 8:
+                    sprintf(buffer, "GET_SKETCHES:  %.3f \n\n", time[i]);
+                    break;
+                case 9:
+                    sprintf(buffer, "CREATE_TRIPLETS  %.3f \n\n", time[i]);
+                    break;
+                case 10:
+                    sprintf(buffer, "DO_CLUSTERING:  %.3f \n\n", time[i]);;
+                    break;
+                case 11:
+                    sprintf(buffer, "MERGE_SORT:  %.3f \n\n", time[i]);
+                    break;
+                default:
+                    break;
+            }
 
-        printf("\n\n######## test versione parallela -- ");
-        printf("esecuzioni: %d\n", print);
-        printf("\nomp version parallel for: \n f: shingle_extract_buf_r \n number of threads: %d\n time: %f\n\n",(int)value, results_shingles[1]/count2a);
-        printf("opm version parallel for: \n f: get_signatures \n number of threads: %d\n time: %f\n\n",(int)value,  results_signatures[1]/count2b);
-
+            fwrite(buffer, strlen(buffer), 1, fp);
+        }
+        sprintf(buffer, "################################# \n\n");
+        fwrite(buffer, strlen(buffer), 1, fp);
+        fclose(fp);
     }
 }
 
+void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
 
+    FILE *results_serial = fopen("results_serial.txt", "r");
+    FILE *results_omp = fopen("results_omp.txt", "w+");
+
+    for(int i=0; i<numberOfFiles; i++)
+        for(int j=0; j<200;j++)
+            fprintf(results_omp, " %llu", minhashDocumenti[i][j]);
+
+    if (results_serial == NULL){
+        printf("ERRORE: File seriale mancante:\nrieseguire il programma con un solo thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
+        return;
+    }
+    fseek(results_omp, 0L, SEEK_END);
+    long sz = ftell(results_omp);
+    rewind(results_omp);
+
+    char serial[10];
+    char omp[10];
+    int count = 0;
+
+    //confronta i due file
+    while(--sz>0){
+        fread(serial, 1, 10, results_serial);
+        if (fread(omp, 1, 10, results_omp)==0)
+            break;
+        if(memcmp(serial, omp, 10)!=0)
+            count+=1;
+
+    }
+    if(count==0)
+        printf("OK, nessun problema di coerenza tra signatures\n");
+    else
+        printf("ERRROE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_omp.txt", count);
+    fclose(results_omp);
+    fclose(results_serial);
+
+
+}
 

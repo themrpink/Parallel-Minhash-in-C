@@ -2,15 +2,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <omp.h>
+#include "time_test.h"
+
 #define N_SIGNATURES 200
 
 int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *signatures, char *filename){
+   double start;
+   double  end;
 
+   start=omp_get_wtime();
    for(int s=0; s<N_SIGNATURES; s++){
       file_sketches[s].doc_id = i;
       file_sketches[s].signature = *(signatures+s);
    }
-
+   end = omp_get_wtime();
+   exectimes(end-start, GET_SKETCHES, SET_TIME);
     return 0;
 }
 
@@ -19,19 +26,29 @@ int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *sign
 
 
 int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti){
+   double start;
+   double  end;
+   double elapsed;
 
    struct doc_couple* couples = (struct doc_couple*) malloc( numberOfFiles *numberOfFiles* 200*sizeof(struct doc_couple));
    struct sign_doc* files_sketches = (struct sign_doc*) malloc(numberOfFiles * N_SIGNATURES * sizeof(struct sign_doc));
    struct sign_doc* temp_sketches = (struct sign_doc*) malloc(numberOfFiles * N_SIGNATURES * sizeof(struct sign_doc));
 
+   start=omp_get_wtime();
    for(int i=0; i < numberOfFiles; i++)
       get_sketches(i, files_sketches+(i*N_SIGNATURES) , minhashDocumenti[i], files[i]);
+   end = omp_get_wtime();
+   elapsed = end - start;
 
+   start=omp_get_wtime();
  //  #pragma omp parallel
    {
     //  #pragma omp single
       mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
    }
+   end = omp_get_wtime();
+   exectimes(end-start, MERGE_SORT, SET_TIME);
+
    free(temp_sketches);
 
    //crea le triple {doc1, doc2, shared_signatures}
@@ -50,6 +67,8 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    int doc2;
    int shared=0;
    printf("\n\n");
+
+   start=omp_get_wtime();
    for(int i=0; i<index;i++){
       doc1 = couples[i].doc_id;
       doc2 = couples[i].doc2_id;
@@ -58,9 +77,12 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
             shared+=1;
             }     
       printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
-      printf("similarità: %.3f\n\n", shared/N_SIGNATURES);
+      printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
       shared=0;
    }
+   end = omp_get_wtime();
+   elapsed += (end-start);
+   exectimes(elapsed, FIND_SIMILARITY, SET_TIME);
    return index;
 }
 
@@ -69,11 +91,14 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
 
 
 int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct doc_couple* couples){
+   double start;
+   double  end;
 
    int count=0;
    long tot = numberOfFiles*N_SIGNATURES;
    long long unsigned signature_curr;
 
+   start=omp_get_wtime();
    for(int i=0; i < tot ; i++){
       signature_curr = files_sketches[i].signature;
       int signature_succ = i+1;
@@ -91,7 +116,8 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
          count++;            
       }
    }
-
+   end = omp_get_wtime();
+   exectimes(end-start, CREATE_TRIPLETS, SET_TIME);
 
     /*
         ridimensiona l'array con ai primi "count" elementi (tutti quelli cioè che hanno shared_signatures=1) 
@@ -109,8 +135,12 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
 
 
 int do_clustering(struct doc_couple* couples, int count){
+   double start;
+   double  end;
 
    int index=0;
+
+   start=omp_get_wtime();
    for(int i=0; i<count; i++){
      // printf("%lld   %lld   %d\n", couples[i].doc_id, couples[i].doc2_id, couples[i].shared_signatures);
       if( couples[i].shared_signatures!=0){
@@ -125,8 +155,9 @@ int do_clustering(struct doc_couple* couples, int count){
        //     couples[i].shared_signatures=0;
          index+=1;
       }
-
    }
+   end = omp_get_wtime();
+   exectimes(end-start, DO_CLUSTERING, SET_TIME);
    couples = (struct doc_couple*) realloc( couples, (index) * sizeof(struct doc_couple));
   // printf("index vale: %d\n", index);
    for(int i=0; i<index; i++){

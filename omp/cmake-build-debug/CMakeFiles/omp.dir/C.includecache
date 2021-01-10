@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stefano/Scrivania/Collegamento a uni/terzo anno/multicore 2020/progetto/git/minhash-multicore/omp/time_test.c
+time_test.h
+/home/stefano/Scrivania/Collegamento a uni/terzo anno/multicore 2020/progetto/git/minhash-multicore/omp/time_test.h
+stdio.h
+-
+omp.h
+-
+string.h
+-
+
+/home/stefano/Scrivania/Collegamento a uni/terzo anno/multicore 2020/progetto/git/minhash-multicore/omp/time_test.h
+
