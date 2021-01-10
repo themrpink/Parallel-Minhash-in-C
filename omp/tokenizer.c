@@ -36,7 +36,7 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
         *fileLength=s;
         end = omp_get_wtime();
         exectimes(end-start, GET_FILE_STRINGS_CLEANED, SET_TIME);
-        
+
        return testo;
     }else{
         *fileLength=0;

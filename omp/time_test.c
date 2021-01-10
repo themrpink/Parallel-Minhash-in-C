@@ -129,6 +129,7 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         }
         sprintf(buffer, "################################# \n\n");
         fwrite(buffer, strlen(buffer), 1, fp);
+        printf("--> Tempi di esecuzione salvati in \"time_log.txt\"\n\n");
         fclose(fp);
     }
 }
@@ -143,30 +144,28 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
             fprintf(results_omp, " %llu", minhashDocumenti[i][j]);
 
     if (results_serial == NULL){
-        printf("ERRORE: File seriale mancante:\nrieseguire il programma con un solo thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
+        printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con un solo thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
         return;
     }
-    fseek(results_omp, 0L, SEEK_END);
-    long sz = ftell(results_omp);
-    rewind(results_omp);
 
     char serial[10];
     char omp[10];
     int count = 0;
 
     //confronta i due file
-    while(--sz>0){
-        fread(serial, 1, 10, results_serial);
-        if (fread(omp, 1, 10, results_omp)==0)
+    while(fread(omp, 1, 10, results_omp)){
+        if (fread(serial, 1, 10, results_serial)==0){
+            count+=1;
             break;
+        }
         if(memcmp(serial, omp, 10)!=0)
             count+=1;
-
     }
+
     if(count==0)
-        printf("OK, nessun problema di coerenza tra signatures\n");
+        printf("--> OK, nessun problema di coerenza tra signatures\n");
     else
-        printf("ERRROE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_omp.txt", count);
+        printf("--> ERRROE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_omp.txt", count);
     fclose(results_omp);
     fclose(results_serial);
 

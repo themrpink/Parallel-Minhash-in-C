@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     double  end;
     start = omp_get_wtime();
 
-//#pragma omp parallel for
+#pragma omp parallel for
     for (int i = 0; i < numberOfFiles; ++i) {
 
         long fileSize=0;
