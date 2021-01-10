@@ -64,6 +64,6 @@ void mergesort_s_signatures(struct sign_doc* X, int n, struct sign_doc* tmp);
 int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti);
 int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct doc_couple* couples);
 int do_clustering(struct doc_couple* couples, int count);
-
+void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files);
 #endif //MINHASHPROJECT_GET_SIMILARITIES_H
 

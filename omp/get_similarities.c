@@ -47,8 +47,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
       mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
    }
    end = omp_get_wtime();
-   exectimes(end-start, MERGE_SORT, SET_TIME);
-
+   exectimes(elapsed, FIND_SIMILARITY, SET_TIME);
    free(temp_sketches);
 
    //crea le triple {doc1, doc2, shared_signatures}
@@ -63,31 +62,29 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    //raccogli le coppie di documenti che hanno almeno una signature in comune
    int index = do_clustering(couples, count);
 
-   int doc1;
-   int doc2;
-   int shared=0;
-   printf("\n\n");
 
-   start=omp_get_wtime();
-   for(int i=0; i<index;i++){
-      doc1 = couples[i].doc_id;
-      doc2 = couples[i].doc2_id;
-      for(int signature=0; signature<N_SIGNATURES; signature++)
-         if (minhashDocumenti[doc1][signature] == minhashDocumenti[doc2][signature]){
-            shared+=1;
-         }
-      printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
-      printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
-      shared=0;
-   }
-   end = omp_get_wtime();
-   elapsed += (end-start);
-   exectimes(elapsed, FIND_SIMILARITY, SET_TIME);
-   return index;
+   check_and_print_similarity(minhashDocumenti, couples, index, files);
+   return 0;
 }
 
 
-
+void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files){
+    int doc1;
+    int doc2;
+    int shared=0;
+    printf("\n\n");
+    for(int i=0; i<index;i++){
+        doc1 = couples[i].doc_id;
+        doc2 = couples[i].doc2_id;
+        for(int signature=0; signature<N_SIGNATURES; signature++)
+            if (minhashDocumenti[doc1][signature] == minhashDocumenti[doc2][signature]){
+                shared+=1;
+            }
+        printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
+        printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
+        shared=0;
+    }
+}
 
 
 int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct doc_couple* couples){
@@ -160,12 +157,12 @@ int do_clustering(struct doc_couple* couples, int count){
    exectimes(end-start, DO_CLUSTERING, SET_TIME);
    couples = (struct doc_couple*) realloc( couples, (index) * sizeof(struct doc_couple));
    // printf("index vale: %d\n", index);
-   for(int i=0; i<index; i++){
+   /*for(int i=0; i<index; i++){
       printf("\n%d) shared_signatures: %d", i, couples[i].shared_signatures);
       printf("%15s   doc_id_1:  %llu"," ", couples[i].doc_id);
       printf("%15s   doc_id_2:  %llu "," ", couples[i].doc2_id);
       printf("%15s   similarity  %.3f\n"," ", (float)couples[i].shared_signatures/N_SIGNATURES);
-   }
+   }*/
 
 
    return index;

@@ -23,51 +23,51 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
     if(task == SET_TIME) {
         switch (function_name) {
             case MAIN:
-                time[MAIN] += value;
+                time[MAIN] = value;
                 t0+=1;
                 break;
             case LIST_DIR:
-                time[LIST_DIR] += value;
+                time[LIST_DIR] = value;
                 t1+=1;
                 break;
             case COUNT_NUMBER_OF_FILES:
-                time[COUNT_NUMBER_OF_FILES] += value;
+                time[COUNT_NUMBER_OF_FILES] = value;
                 t2+=1;
                 break;
             case GET_FILE_STRINGS_CLEANED:
-                time[GET_FILE_STRINGS_CLEANED] += value;
+                time[GET_FILE_STRINGS_CLEANED] = value;
                 t3+=1;
                 break;
             case COMPRESS_SPACES:
-                time[COMPRESS_SPACES] += value;
+                time[COMPRESS_SPACES] = value;
                 t4+=1;
                 break;
             case SHINGLE_EXTRACT:
-                time[SHINGLE_EXTRACT] += value;
+                time[SHINGLE_EXTRACT] = value;
                 t5+=1;
                 break;
             case GET_SIGNATURES:
-                time[GET_SIGNATURES] += value;
+                time[GET_SIGNATURES] = value;
                 t6+=1;
                 break;
             case FIND_SIMILARITY:
-                time[FIND_SIMILARITY] += value;
+                time[FIND_SIMILARITY] = value;
                 t7+=1;
                 break;
             case GET_SKETCHES:
-                time[GET_SKETCHES] += value;
+                time[GET_SKETCHES] = value;
                 t8+=1;
                 break;
             case CREATE_TRIPLETS:
-                time[CREATE_TRIPLETS] += value;
+                time[CREATE_TRIPLETS] = value;
                 t9+=1;
                 break;
             case DO_CLUSTERING:
-                time[DO_CLUSTERING] += value;
+                time[DO_CLUSTERING] = value;
                 t10+=1;
                 break;
             case MERGE_SORT:
-                time[MERGE_SORT] += value;
+                time[MERGE_SORT] = value;
                 t11+=1;
                 break;
             default:
@@ -77,7 +77,7 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
     else if(task == EXPORT_LOG){
 
         char buffer[100];
-        int numb_of_threads = omp_get_num_threads();
+        int numb_of_threads = value;
         char *filename = "time_log.txt";
         FILE *fp = fopen(filename, "a");
         sprintf(buffer, "Number of threads: %d\n\n Elapsed times: \n\n", numb_of_threads);

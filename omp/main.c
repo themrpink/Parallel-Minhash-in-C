@@ -20,7 +20,9 @@
 //folder e ricerca dei fileparallel
 int main(int argc, char *argv[]) {
 
-    omp_set_num_threads(4);
+    int threads = 8;
+    omp_set_num_threads(threads);
+
     char *folderName = argv[1];
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
@@ -36,17 +38,21 @@ int main(int argc, char *argv[]) {
 #pragma omp parallel for
     for (int i = 0; i < numberOfFiles; ++i) {
 
-        long fileSize=0;
-        char *filesContent = get_file_string_cleaned(files[i], &fileSize);
-        long numb_shingles = fileSize - K_SHINGLE +1;
-        char **shingles = (char**) malloc(numb_shingles * sizeof(char*));
-        shingle_extract_buf(filesContent,numb_shingles,shingles);
-        long long unsigned *signatures= get_signatures(shingles, numb_shingles);
-        minhashDocumenti[i] = signatures;
-        for(int j=0; j<numb_shingles;j++)
-            free(shingles[j]);
-        free(shingles);
-        free(filesContent);
+            long fileSize = 0;
+            char *filesContent;
+
+            filesContent = get_file_string_cleaned(files[i], &fileSize);
+
+            long numb_shingles = fileSize - K_SHINGLE + 1;
+            char **shingles = (char **) malloc(numb_shingles * sizeof(char *));
+            shingle_extract_buf(filesContent, numb_shingles, shingles);
+            long long unsigned *signatures = get_signatures(shingles, numb_shingles);
+            minhashDocumenti[i] = signatures;
+            for (int j = 0; j < numb_shingles; j++)
+                free(shingles[j]);
+            free(shingles);
+            free(filesContent);
+
     }
     end = omp_get_wtime();
     exectimes(end-start, MAIN, SET_TIME);
@@ -59,7 +65,7 @@ int main(int argc, char *argv[]) {
 
     free(files);
 
-    exectimes(0, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
+    exectimes(threads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
     check_coherence(minhashDocumenti, numberOfFiles);
 
 

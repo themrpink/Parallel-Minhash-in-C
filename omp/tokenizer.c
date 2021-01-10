@@ -53,7 +53,7 @@ void compress_spaces(char *str){
     int lunghezzaOriginaria=strlen(str);
 
     start=omp_get_wtime();
- //   #pragma omp parallel for
+    #pragma omp parallel for
     for (int i = 0; i <= lunghezzaOriginaria; ++i) {
         if(!(isspace(str[i]) && isspace(str[i+1]))){
             tmp[i]=str[i];
@@ -66,7 +66,7 @@ void compress_spaces(char *str){
 
     int j=0;
     start=omp_get_wtime();
-   // #pragma omp parallel for
+    #pragma omp parallel for
     for (int i = 0; i < lunghezzaOriginaria; ++i) {
         if (tmp[i]!=0){
            // #pragma omp critical
