@@ -206,14 +206,14 @@ unsigned long long rands[] = {  13607075548612569373LLU,
 
 
 
-int hash_FNV_1a(char *shingle, long long unsigned *hash, int lenght){
+int hash_FNV_1a(char *shingle, long long unsigned *hash){
 
     long long unsigned FNV_offset_basis = MAX_LONG_LONG;
     long long unsigned prime = 1099511628211;
 
     *hash = FNV_offset_basis;
 
-    for(int i=0; i<lenght; i++){
+    for(int i=0; i<K_SHINGLE; i++){
         (*hash) *= prime;
         (*hash) ^= shingle[i];
     }
@@ -233,14 +233,16 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
     long long unsigned *hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
     long long unsigned *signatures;
 
+
     signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
 
     start=omp_get_wtime();
+    //#pragma omp parallel for reduction(min:minhash)
     for(long long j=0; j < tot_shingles; j++){
-        //lancia la prima funzione di hash su ogni shingle 
-        hash_FNV_1a(shingles[j], &hash, K_SHINGLE);
+        //lancia la prima funzione di hash su ogni shingle
+        hash_FNV_1a(shingles[j], &hash);
         hashed_shingles[j] = hash;
-        
+
         if(hash < minhash)
             minhash = hash;
     }
@@ -250,6 +252,7 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
 
 
     //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
+    //#pragma omp parallel for reduction(min:minhash)
     for(int i=0; i<PRIMES_SIZE; i++){
         minhash = MAX_LONG_LONG;
         for(long long j=0; j<tot_shingles; j++){
@@ -257,7 +260,7 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
 
             if(hash < minhash)
                 minhash = hash;
-        }     
+        }
         *(signatures+i+1)=minhash;
     }
     end = omp_get_wtime();
@@ -267,6 +270,3 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
     free(hashed_shingles);
     return signatures;
 }
-
-
-

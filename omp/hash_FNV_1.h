@@ -12,7 +12,7 @@ extern unsigned long long rands[];
 /*
     versione originale della funzione di hash FNV_1a
 */
-int hash_FNV_1a(char *shingle, long long unsigned *hash, int lenght);
+int hash_FNV_1a(char *shingle, long long unsigned *hash);
 
 
 /*

@@ -20,9 +20,10 @@
 //folder e ricerca dei fileparallel
 int main(int argc, char *argv[]) {
 
-    int threads = 8;
+    int threads = 4;
     omp_set_num_threads(threads);
-
+    omp_set_nested(4);
+    
     char *folderName = argv[1];
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
@@ -35,7 +36,7 @@ int main(int argc, char *argv[]) {
     double  end;
     start = omp_get_wtime();
 
-#pragma omp parallel for
+    #pragma omp parallel for
     for (int i = 0; i < numberOfFiles; ++i) {
 
             long fileSize = 0;

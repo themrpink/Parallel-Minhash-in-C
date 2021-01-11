@@ -41,11 +41,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    elapsed = end - start;
 
    start=omp_get_wtime();
-   //  #pragma omp parallel
-   {
-      //  #pragma omp single
-      mergesort_s_signatures(files_sketches, N_SIGNATURES*numberOfFiles, temp_sketches);
-   }
+   mergesort_s_signatures(files_sketches, 0, N_SIGNATURES*numberOfFiles-1);
    end = omp_get_wtime();
    exectimes(elapsed, FIND_SIMILARITY, SET_TIME);
    free(temp_sketches);
@@ -53,11 +49,8 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    //crea le triple {doc1, doc2, shared_signatures}
    int count = create_triplets(files_sketches, numberOfFiles, couples);
 
-   //copia di appoggio per il mergesort
-   struct doc_couple* couples_tmp = (struct doc_couple*) malloc( count * sizeof(struct doc_couple));
-
    //ordina per doc_id
-   mergesort_s_doc_id(couples, count, couples_tmp);
+   mergesort_s_doc_id(couples,0, count-1);
 
    //raccogli le coppie di documenti che hanno almeno una signature in comune
    int index = do_clustering(couples, count);
@@ -69,6 +62,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
 
 
 void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files){
+    double some_results[20] = {0};
     int doc1;
     int doc2;
     int shared=0;
@@ -82,8 +76,18 @@ void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct d
             }
         printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
         printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
+        if(i<20)
+            some_results[i] =(float)shared/N_SIGNATURES;
         shared=0;
     }
+
+    printf("--> alcuni risultati di somiglianza tra files:\n");
+
+    for(int i=0; i<20; i++)
+        if(some_results[i]>0){
+            printf("%.3f  ", some_results[i]);
+        }
+    printf("\n\n");
 }
 
 
@@ -170,83 +174,104 @@ int do_clustering(struct doc_couple* couples, int count){
 
 
 
-void merge_doc_id(struct doc_couple* X, int n, struct doc_couple*  tmp) {
-   int i = 0;
-   int j = n/2;
-   int ti = 0;
-
-   while (i<n/2 && j<n) {
-      if (X[i].doc_id < X[j].doc_id ) {
-         tmp[ti] = X[i];
-         ti++; i++;
-      } else {
-         tmp[ti] = X[j];
-         ti++; j++;
-      }
-   }
-   while (i<n/2) { /* finish up lower half */
-      tmp[ti] = X[i];
-      ti++; i++;
-   }
-   while (j<n) { /* finish up upper half */
-      tmp[ti] = X[j];
-      ti++; j++;
-   }
-   memcpy(X, tmp, n*sizeof(struct doc_couple));
+void merge_doc_id(struct doc_couple* X, int l, int m, int r) {
+    struct doc_couple temp[m-l+1], temp2[r-m];
+    //copy first part to temporary array
+    for(int i=0; i<(m-l+1); i++)
+        temp[i]=X[l+i];
+    //copy second part to temporary array
+    for(int i=0; i<(r-m); i++)
+        temp2[i]=X[m+1+i];
+    int i=0, j=0, k=l;
+    //combine the arrays on the basis of order
+    while(i<(m-l+1) && j<(r-m))
+    {
+        if(temp[i].doc_id<temp2[j].doc_id)
+            X[k++]=temp[i++];
+        else
+            X[k++]=temp2[j++];
+    }
+    //to combine the remainder of the two arrays
+    while(i<(m-l+1))
+        X[k++]=temp[i++];
+    while(j<(r-m))
+        X[k++]=temp2[j++];
 }
 
 
-void merge_signatures(struct sign_doc* X, int n, struct sign_doc*  tmp) {
-   int i = 0;
-   int j = n/2;
-   int ti = 0;
+void merge_signatures(struct sign_doc* X, int l, int m, int r) {
 
-   while (i<n/2 && j<n) {
-      if (X[i].signature < X[j].signature) {
-         tmp[ti] = X[i];
-         ti++; i++;
-      } else {
-         tmp[ti] = X[j];
-         ti++; j++;
-      }
-   }
-   while (i<n/2) { /* prima metà */
-      tmp[ti] = X[i];
-      ti++; i++;
-   }
-   while (j<n) { /* seconda metà */
-      tmp[ti] = X[j];
-      ti++; j++;
-   }
-   memcpy(X, tmp, n*sizeof(struct sign_doc));
+    struct sign_doc temp[m-l+1], temp2[r-m];
+    //copy first part to temporary array
+    for(int i=0; i<(m-l+1); i++)
+        temp[i]=X[l+i];
+    //copy second part to temporary array
+    for(int i=0; i<(r-m); i++)
+        temp2[i]=X[m+1+i];
+    int i=0, j=0, k=l;
+    //combine the arrays on the basis of order
+    while(i<(m-l+1) && j<(r-m))
+    {
+        if(temp[i].signature<temp2[j].signature)
+            X[k++]=temp[i++];
+        else
+            X[k++]=temp2[j++];
+    }
+    //to combine the remainder of the two arrays
+    while(i<(m-l+1))
+        X[k++]=temp[i++];
+        while(j<(r-m))
+            X[k++]=temp2[j++];
 }
 
 
 
-void mergesort_s_signatures(struct sign_doc* X, int n, struct sign_doc* tmp)
+void mergesort_s_signatures(struct sign_doc* X, int l, int n)
 {
-   if (n < 2) return;
+   if (l < n) {
+       int m=(l+n)/2;
+        #pragma omp parallel sections num_threads(2)
+         {
 
-   //  #pragma omp task firstprivate (X, n, tmp)
-   mergesort_s_signatures(X, n/2, tmp);
+            #pragma omp section
+           {
+               mergesort_s_signatures(X, l, m);
+           }
 
-   //#pragma omp task firstprivate (X, n, tmp)
-   mergesort_s_signatures(X+(n/2), n-(n/2), tmp);
+            #pragma omp section
+           {
+               mergesort_s_signatures(X, m+1, n);
+           }
 
+       }
+
+       merge_signatures(X, l, m, n);
+
+   }
+
+}
+
+void mergesort_s_doc_id(struct doc_couple*  X, int l, int n)
+{
+    if (l < n) {
+        int m=(l+n)/2;
+        #pragma omp parallel sections num_threads(2)
+        {
+
+            #pragma omp section
+            {
+                mergesort_s_doc_id(X, l, m);
+            }
+
+            #pragma omp section
+            {
+                mergesort_s_doc_id(X, m+1, n);
+            }
+
+        }
 //   #pragma omp taskwait
-   merge_signatures(X, n, tmp);
-}
+        merge_doc_id(X, l, m, n);
 
-void mergesort_s_doc_id(struct doc_couple* X, int n, struct doc_couple* tmp)
-{
-   if (n < 2) return;
+    }
 
-   // #pragma omp task firstprivate (X, n, tmp)
-   mergesort_s_doc_id(X, n/2, tmp);
-
-//   #pragma omp task firstprivate (X, n, tmp)
-   mergesort_s_doc_id(X+(n/2), n-(n/2), tmp);
-
-   //  #pragma omp taskwait
-   merge_doc_id(X, n, tmp);
 }

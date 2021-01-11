@@ -6,7 +6,7 @@
 
 void exectimes(double value, enum Function_name function_name, enum Task task){
 
-    static double time[NUMBER_OF_FUNCTIONS] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+    static double time[NUMBER_OF_FUNCTIONS] = {0.0};
     static int t0 = 1;
     static int t1 = 1;
     static int t2 = 1;
@@ -126,12 +126,15 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
             }
 
             fwrite(buffer, strlen(buffer), 1, fp);
+
         }
         sprintf(buffer, "################################# \n\n");
         fwrite(buffer, strlen(buffer), 1, fp);
         printf("--> Tempi di esecuzione salvati in \"time_log.txt\"\n\n");
         fclose(fp);
     }
+
+
 }
 
 void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
@@ -144,7 +147,7 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
             fprintf(results_omp, " %llu", minhashDocumenti[i][j]);
     rewind(results_omp);
     if (results_serial == NULL){
-        printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con un solo thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
+        printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con 0 thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
         return;
     }
 
