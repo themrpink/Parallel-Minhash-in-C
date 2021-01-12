@@ -237,7 +237,7 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
     signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
 
     start=omp_get_wtime();
-    //#pragma omp parallel for reduction(min:minhash)
+    #pragma omp parallel for reduction(min:minhash) private(hash)
     for(long long j=0; j < tot_shingles; j++){
         //lancia la prima funzione di hash su ogni shingle
         hash_FNV_1a(shingles[j], &hash);
@@ -252,7 +252,7 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
 
 
     //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
-    //#pragma omp parallel for reduction(min:minhash)
+    #pragma omp parallel for reduction(min:minhash) private(hash)
     for(int i=0; i<PRIMES_SIZE; i++){
         minhash = MAX_LONG_LONG;
         for(long long j=0; j<tot_shingles; j++){

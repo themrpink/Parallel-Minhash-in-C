@@ -81,13 +81,17 @@ void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct d
         shared=0;
     }
 
-    printf("--> alcuni risultati di somiglianza tra files:\n");
+    FILE *fp = fopen("similarity_results.txt", "a");
+    printf("--> alcuni risultati di somiglianza tra files: (salvati anche in \"similarity_results.txt\")\n");
 
     for(int i=0; i<20; i++)
         if(some_results[i]>0){
             printf("%.3f  ", some_results[i]);
+            fprintf(fp, "%.3f    ", some_results[i]);
         }
     printf("\n\n");
+    fprintf(fp, "\n");
+    fclose(fp);
 }
 
 

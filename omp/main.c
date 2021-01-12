@@ -22,8 +22,8 @@ int main(int argc, char *argv[]) {
 
     int threads = 4;
     omp_set_num_threads(threads);
-    omp_set_nested(4);
-    
+    omp_set_nested(3);
+
     char *folderName = argv[1];
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
@@ -46,6 +46,10 @@ int main(int argc, char *argv[]) {
 
             long numb_shingles = fileSize - K_SHINGLE + 1;
             char **shingles = (char **) malloc(numb_shingles * sizeof(char *));
+
+            //#pragma omp parallel for
+            for(long i=0; i<numb_shingles; i++)
+                shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
             shingle_extract_buf(filesContent, numb_shingles, shingles);
             long long unsigned *signatures = get_signatures(shingles, numb_shingles);
             minhashDocumenti[i] = signatures;

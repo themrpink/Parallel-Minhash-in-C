@@ -11,9 +11,7 @@ void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
     double end;
 
     start=omp_get_wtime();
-   // #pragma omp parallel for
-    for(long long i=0; i<numb_shingles; i++)
-        shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
+
     //li estrae e salva in **shingles
     #pragma omp parallel for collapse(2)
         for (long count = 0; count < numb_shingles; count++) {
