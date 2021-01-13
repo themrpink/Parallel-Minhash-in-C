@@ -11,39 +11,51 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
     if(task == SET_TIME) {
         switch (function_name) {
             case MAIN:
+                if(value>time[MAIN])
                 time[MAIN] = value;
                 break;
             case LIST_DIR:
+                if(value>time[LIST_DIR])
                 time[LIST_DIR] = value;
                 break;
             case COUNT_NUMBER_OF_FILES:
-                time[COUNT_NUMBER_OF_FILES] = value;
+                if(value>time[COUNT_NUMBER_OF_FILES])
+                    time[COUNT_NUMBER_OF_FILES] = value;
                 break;
             case GET_FILE_STRINGS_CLEANED:
+                if(value>time[GET_FILE_STRINGS_CLEANED])
                 time[GET_FILE_STRINGS_CLEANED] = value;
                 break;
             case COMPRESS_SPACES:
+                if(value>time[COMPRESS_SPACES])
                 time[COMPRESS_SPACES] = value;
                 break;
             case SHINGLE_EXTRACT:
+                if(value>time[SHINGLE_EXTRACT])
                 time[SHINGLE_EXTRACT] = value;
                 break;
             case GET_SIGNATURES:
+                if(value>time[GET_SIGNATURES])
                 time[GET_SIGNATURES] = value;
                 break;
             case FIND_SIMILARITY:
+                if(value>time[FIND_SIMILARITY])
                 time[FIND_SIMILARITY] = value;
                 break;
             case GET_SKETCHES:
+                if(value>time[GET_SKETCHES])
                 time[GET_SKETCHES] = value;
                 break;
             case CREATE_TRIPLETS:
+                if(value>time[CREATE_TRIPLETS] )
                 time[CREATE_TRIPLETS] = value;
                 break;
             case DO_CLUSTERING:
+                if(value>time[DO_CLUSTERING])
                 time[DO_CLUSTERING] = value;
                 break;
             case MERGE_SORT:
+                if(value>time[MERGE_SORT])
                 time[MERGE_SORT] = value;
                 break;
             default:
@@ -104,11 +116,13 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
             fwrite(buffer, strlen(buffer), 1, fp);
 
         }
+        //salva i tempi dettagliati nel file TXT
         sprintf(buffer, "################################# \n\n");
         fwrite(buffer, strlen(buffer), 1, fp);
         printf("--> Tempi di esecuzione salvati in \"time_log.txt e in time_log.csv\"\n\n");
         fclose(fp);
 
+        //salva i tempi nel file CSV
         fp = fopen("time_log.csv", "a");
         //csv format: functions time 1-12 + numb_of_threads
         for(int i=0; i<NUMBER_OF_FUNCTIONS;i++)
@@ -146,7 +160,7 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
     }
 
     if(count==0)
-        printf("--> OK, nessun problema di coerenza tra signatures  (tra file results_serial.txt e results_omp.txt\n");
+        printf("--> OK, nessun problema di coerenza tra signatures  (tra file results_serial.txt e results_omp.txt)\n");
     else
         printf("--> ERRROE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_omp.txt", count);
     fclose(results_omp);
@@ -155,3 +169,6 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
 
 }
 
+void check_similarity_coherence(){
+
+}

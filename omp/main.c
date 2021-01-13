@@ -20,9 +20,9 @@
 //folder e ricerca dei fileparallel
 int main(int argc, char *argv[]) {
 
-    int threads = 4;
+    int threads = 32;
     omp_set_num_threads(threads);
-    omp_set_nested(3);
+    omp_set_nested(4);
 
     char *folderName = argv[1];
     char **files;
@@ -72,7 +72,7 @@ int main(int argc, char *argv[]) {
 
     exectimes(threads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
     check_coherence(minhashDocumenti, numberOfFiles);
-
+//    check_similarity_coherence(void);
 
     return 0;
 }
