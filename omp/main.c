@@ -15,12 +15,14 @@
 #define  EXITNOFILEFOUND  30
 #define COEFFICIENTE_SIMILARITA 0.75
 //gcc -Wall -fopenmp -o main main.c documents_getters.c get_similarities.c hash_FNV_1.c  tokenizer.c shingle_extract.c
-///mnt/OS/Users/Stefano/Desktop/uni/terzo anno/multicore 2020/progetto/git/minhash-multicore/docs
+
+//funzione di supporto per il quick sort
+int cmpfunc (const void * a, const void * b);
 
 //folder e ricerca dei fileparallel
 int main(int argc, char *argv[]) {
 
-    int threads = 32;
+    int threads = 8;
     omp_set_num_threads(threads);
     omp_set_nested(4);
 
@@ -30,12 +32,13 @@ int main(int argc, char *argv[]) {
     if (numberOfFiles==0){
         exit(EXITNOFILEFOUND);
     }
-    long long unsigned *minhashDocumenti[numberOfFiles];
+    //ordina i nomi dei file giusto per far funzionare il test sulle signatures
+    qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc  );
 
+    long long unsigned *minhashDocumenti[numberOfFiles];
     double start;
     double  end;
     start = omp_get_wtime();
-
     #pragma omp parallel for
     for (int i = 0; i < numberOfFiles; ++i) {
 
@@ -47,9 +50,6 @@ int main(int argc, char *argv[]) {
             long numb_shingles = fileSize - K_SHINGLE + 1;
             char **shingles = (char **) malloc(numb_shingles * sizeof(char *));
 
-            //#pragma omp parallel for
-            for(long i=0; i<numb_shingles; i++)
-                shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
             shingle_extract_buf(filesContent, numb_shingles, shingles);
             long long unsigned *signatures = get_signatures(shingles, numb_shingles);
             minhashDocumenti[i] = signatures;
@@ -62,7 +62,6 @@ int main(int argc, char *argv[]) {
     end = omp_get_wtime();
     exectimes(end-start, MAIN, SET_TIME);
 
-
     start = omp_get_wtime();
     find_similarity(numberOfFiles, files, minhashDocumenti);
     end = omp_get_wtime();
@@ -70,9 +69,15 @@ int main(int argc, char *argv[]) {
 
     free(files);
 
+    //test
     exectimes(threads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
     check_coherence(minhashDocumenti, numberOfFiles);
-//    check_similarity_coherence(void);
 
     return 0;
+}
+
+
+
+int cmpfunc (const void * a, const void * b) {
+    return strcmp( *(const char**)a, *(const char**)b );
 }
