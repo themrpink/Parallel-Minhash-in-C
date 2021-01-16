@@ -1,30 +1,45 @@
-
 #include "tokenizer.h"
 #include "stdio.h"
+#include "string.h"
 #include "ctype.h"
-
+#include <stdlib.h>
+#include <omp.h>
+#include "time_test.h"
 #define EMPTY ""
 
+
 char* get_file_string_cleaned(const char* file_path,long* fileLength){
-    char * buffer = 0;
+    double start;
+    double  end;
+
+    char * testo = 0;
     FILE * fp = fopen (file_path, "rb");
     if (fp){
         fseek (fp, 0, SEEK_END);
-        fileLength = ftell (fp);
+        long length = ftell (fp);
         fseek (fp, 0, SEEK_SET);
-        buffer = malloc (length);
-        if (buffer)
+        testo = malloc (length);
+        if (testo)
         {
-            fread (buffer, 1, fileLength, fp);
+            fread (testo, 1, length, fp);
         }
-        fclose (f);
+        fclose (fp);
     }
-    if (buffer){
-       compress_spaces(testo);
-       testo=tolower(testo);
-       return testo;
+    if (testo){
+        compress_spaces(testo);
+        int i, s = strlen(testo);
+
+        start = omp_get_wtime();
+        //#pragma omp parallel for
+        for (i = 0; i < s; i++)
+            testo[i] = tolower(testo[i]);
+        *fileLength=s;
+        end = omp_get_wtime();
+        exectimes(end-start, GET_FILE_STRINGS_CLEANED, SET_TIME);
+
+        return testo;
     }else{
-        fileLength=0;
+        *fileLength=0;
         return EMPTY;
     }
 }
