@@ -45,45 +45,16 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
 }
 
 void compress_spaces(char *str){
-    double start;
-    double  end;
-    double elapsed;
+    char *dst = str;
+    for (; *str; ++str) {
+        *dst++ = *str;
 
-    char *tmp=malloc(strlen(str)*sizeof (char));
-    int lunghezzaOriginaria=strlen(str);
+        if (isspace(*str)) {
+            do ++str;
+            while (isspace(*str));
 
-    start=omp_get_wtime();
-    //#pragma omp parallel for
-    for (int i = 0; i <= lunghezzaOriginaria; ++i) {
-        if(!(isspace(str[i]) && isspace(str[i+1]))){
-            tmp[i]=str[i];
-        }else{
-            tmp[i]=0;
+            --str;
         }
     }
-    end = omp_get_wtime();
-    elapsed = end - start;
-
-    int j=0;
-    start=omp_get_wtime();
-    //#pragma omp parallel for
-    for (int i = 0; i < lunghezzaOriginaria; ++i) {
-        if (tmp[i]!=0){
-           // #pragma omp critical
-            {
-            j++;
-            str[j]=tmp[i];
-            }
-
-        }
-    }
-    end = omp_get_wtime();
-    elapsed += (end-start);
-    exectimes(elapsed, COMPRESS_SPACES, SET_TIME);
-
-    j++;
-    str[j]=0;
-    
-//    str=realloc(str,(j+1)*sizeof (char));
-    free(tmp);
+    *dst = 0;
 }
