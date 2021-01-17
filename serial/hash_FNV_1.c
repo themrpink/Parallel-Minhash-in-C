@@ -1,5 +1,7 @@
 #include "hash_FNV_1.h"
 #include <stdlib.h>
+#include <omp.h>
+#include "time_test.h"
 
 unsigned long long rands[] = {  13607075548612569373LLU,
                                        6724581513526549887LLU,
@@ -223,14 +225,17 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash, int lenght){
 
 
 long long unsigned* get_signatures(char **shingles, long long tot_shingles){
-    
+    double start;
+    double  end;
+    double elapsed;
     long long unsigned hash=0;
     long long unsigned minhash=MAX_LONG_LONG;
     long long unsigned *hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
     long long unsigned *signatures;
 
     signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
-
+    
+    start=omp_get_wtime();
     for(long long j=0; j < tot_shingles; j++){
         //lancia la prima funzione di hash su ogni shingle 
         hash_FNV_1a(shingles[j], &hash, K_SHINGLE);
@@ -252,7 +257,9 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
         }     
         *(signatures+i+1)=minhash;
     }
-
+    end = omp_get_wtime();
+    exectimes(end-start), GET_SIGNATURES, SET_TIME);
+    
     free(hashed_shingles);
     return signatures;
 }

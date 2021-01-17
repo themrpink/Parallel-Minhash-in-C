@@ -1,6 +1,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <omp.h>
+#include "time_test.h"
 
 #include "hash_FNV_1.h"
 #include "shingle_extract.h"
@@ -26,7 +28,10 @@ int main(int argc, char *argv[]) {
     }
 
     long long unsigned *minhashDocumenti[numberOfFiles];
+    double start;
+    double  end;
 
+    start = omp_get_wtime();
     for (int i = 0; i < numberOfFiles; ++i) {
         long fileSize=0;
         char *filesContent = get_file_string_cleaned(files[i], &fileSize);
@@ -36,14 +41,21 @@ int main(int argc, char *argv[]) {
 
         long long unsigned *signatures= get_signatures(shingles, numb_shingles);
         minhashDocumenti[i] = signatures;
-            
+
+        for (int j = 0; j < numb_shingles; j++)
+            free(shingles[j]);  
         free(shingles);
         free(filesContent);
     }
-
+    end = omp_get_wtime();
+    exectimes(end-start, MAIN, SET_TIME);
     
+    start = omp_get_wtime();
     find_similarity(numberOfFiles, files, minhashDocumenti);
+    end = omp_get_wtime();
+    exectimes(end-start, FIND_SIMILARITY, SET_TIME);
     
+    exectimes(1, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
     return 0;
 }
 
