@@ -71,18 +71,18 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         sprintf(buffer, "Number of threads: %d\n\n Elapsed times: \n\n", numb_of_threads);
         fwrite(buffer, strlen(buffer), 1, fp);
 
-        fprintf(fp, "MAIN:  %.4f \n\n", time[MAIN]);
-        fprintf(fp, "LIST_DIR:  %.4f \n\n", time[LIST_DIR]);
-        fprintf(fp, "COUNT_NUMBER_OF_FILES:  %.4f \n\n", time[COUNT_NUMBER_OF_FILES]);
+        fprintf(fp, "MAIN:                      %.4f \n\n", time[MAIN]);
+        fprintf(fp, "LIST_DIR:                  %.4f \n\n", time[LIST_DIR]);
+        fprintf(fp, "COUNT_NUMBER_OF_FILES:     %.4f \n\n", time[COUNT_NUMBER_OF_FILES]);
         fprintf(fp, "GET_FILE_STRINGS_CLEANED:  %.4f \n\n", time[GET_FILE_STRINGS_CLEANED]);
-        fprintf(fp, "COMPRESS_SPACES:  %.4f \n\n", time[COMPRESS_SPACES]);
-        fprintf(fp, "SHINGLE_EXTRACT:  %.4f \n\n", time[SHINGLE_EXTRACT]);
-        fprintf(fp, "GET_SIGNATURES:  %.4f \n\n", time[GET_SIGNATURES]);
-        fprintf(fp, "FIND_SIMILARITY:  %.4f \n\n", time[FIND_SIMILARITY]);
-        fprintf(fp, "GET_SKETCHES:  %.4f \n\n", time[GET_SKETCHES]);
-        fprintf(fp, "CREATE_TRIPLETS:  %.4f \n\n", time[CREATE_TRIPLETS]);
-        fprintf(fp, "DO_CLUSTERING:  %.4f \n\n", time[DO_CLUSTERING]);
-        fprintf(fp, "MERGE_SORT:  %.4f \n\n", time[MERGE_SORT]);
+        fprintf(fp, "COMPRESS_SPACES:           %.4f \n\n", time[COMPRESS_SPACES]);
+        fprintf(fp, "SHINGLE_EXTRACT:           %.4f \n\n", time[SHINGLE_EXTRACT]);
+        fprintf(fp, "GET_SIGNATURES:            %.4f \n\n", time[GET_SIGNATURES]);
+        fprintf(fp, "FIND_SIMILARITY:           %.4f \n\n", time[FIND_SIMILARITY]);
+        fprintf(fp, "GET_SKETCHES:              %.4f \n\n", time[GET_SKETCHES]);
+        fprintf(fp, "CREATE_TRIPLETS:           %.4f \n\n", time[CREATE_TRIPLETS]);
+        fprintf(fp, "DO_CLUSTERING:             %.4f \n\n", time[DO_CLUSTERING]);
+        fprintf(fp, "MERGE_SORT:                %.4f \n\n", time[MERGE_SORT]);
         
         //salva i tempi dettagliati nel file TXT
         sprintf(buffer, "################################# \n\n");
@@ -123,20 +123,14 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
 
     //confronta i due file
     while ((c1 = fgetc(results_omp)) != EOF) {
-       if(c1!= fgetc(results_serial))
+       if(c1 != fgetc(results_serial))
         count++;
     }
 
     if(count==0)
         printf("--> OK, nessun problema di coerenza tra signatures  (tra file results_serial.txt e results_omp.txt)\n");
     else
-        printf("--> ERRROE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_omp.txt", count);
+        printf("--> ERRORE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_omp.txt\n\n", count);
     fclose(results_omp);
     fclose(results_serial);
-
-
-}
-
-void check_similarity_coherence(){
-
 }
