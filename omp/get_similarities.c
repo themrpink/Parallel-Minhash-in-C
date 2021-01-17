@@ -31,9 +31,8 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    double  end;
    double elapsed;
 
-   struct doc_couple* couples = (struct doc_couple*) malloc( numberOfFiles *numberOfFiles* 200*sizeof(struct doc_couple));
+   struct doc_couple* couples = (struct doc_couple*) malloc( ((numberOfFiles *(numberOfFiles+1))/2)* 200*sizeof(struct doc_couple));
    struct sign_doc* files_sketches = (struct sign_doc*) malloc(numberOfFiles * N_SIGNATURES * sizeof(struct sign_doc));
-   struct sign_doc* temp_sketches = (struct sign_doc*) malloc(numberOfFiles * N_SIGNATURES * sizeof(struct sign_doc));
 
    start=omp_get_wtime();
    #pragma omp parallel for
@@ -46,7 +45,6 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    mergesort_s_signatures(files_sketches, 0, N_SIGNATURES*numberOfFiles-1);
    end = omp_get_wtime();
    exectimes(elapsed, FIND_SIMILARITY, SET_TIME);
-   free(temp_sketches);
 
    //crea le triple {doc1, doc2, shared_signatures}
    int count = create_triplets(files_sketches, numberOfFiles, couples);

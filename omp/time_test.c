@@ -71,51 +71,19 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         sprintf(buffer, "Number of threads: %d\n\n Elapsed times: \n\n", numb_of_threads);
         fwrite(buffer, strlen(buffer), 1, fp);
 
-        for (int i=0; i<NUMBER_OF_FUNCTIONS; i++) {
-            switch (i) {
-                case 0:
-                    sprintf(buffer, "MAIN:  %.4f \n\n", time[i]);
-                    break;
-                case 1:
-                    sprintf(buffer, "LIST_DIR:  %.4f \n\n", time[i]);
-                    break;
-                case 2:
-                    sprintf(buffer, "COUNT_NUMBER_OF_FILES:  %.4f \n\n", time[i]);
-                    break;
-                case 3:
-                    sprintf(buffer, "GET_FILE_STRINGS_CLEANED:  %.4f \n\n", time[i]);;
-                    break;
-                case 4:
-                    sprintf(buffer, "COMPRESS_SPACES:  %.4f \n\n", time[i]);
-                    break;
-                case 5:
-                    sprintf(buffer, "SHINGLE_EXTRACT:  %.4f \n\n", time[i]);
-                    break;
-                case 6:
-                    sprintf(buffer, "GET_SIGNATURES:  %.4f \n\n", time[i]);
-                    break;
-                case 7:
-                    sprintf(buffer, "FIND_SIMILARITY:  %.4f \n\n", time[i]);
-                    break;
-                case 8:
-                    sprintf(buffer, "GET_SKETCHES:  %.4f \n\n", time[i]);
-                    break;
-                case 9:
-                    sprintf(buffer, "CREATE_TRIPLETS  %.4f \n\n", time[i]);
-                    break;
-                case 10:
-                    sprintf(buffer, "DO_CLUSTERING:  %.4f \n\n", time[i]);;
-                    break;
-                case 11:
-                    sprintf(buffer, "MERGE_SORT:  %.4f \n\n", time[i]);
-                    break;
-                default:
-                    break;
-            }
-
-            fwrite(buffer, strlen(buffer), 1, fp);
-
-        }
+        fprintf(fp, "MAIN:  %.4f \n\n", time[MAIN]);
+        fprintf(fp, "LIST_DIR:  %.4f \n\n", time[LIST_DIR]);
+        fprintf(fp, "COUNT_NUMBER_OF_FILES:  %.4f \n\n", time[COUNT_NUMBER_OF_FILES]);
+        fprintf(fp, "GET_FILE_STRINGS_CLEANED:  %.4f \n\n", time[GET_FILE_STRINGS_CLEANED]);
+        fprintf(fp, "COMPRESS_SPACES:  %.4f \n\n", time[COMPRESS_SPACES]);
+        fprintf(fp, "SHINGLE_EXTRACT:  %.4f \n\n", time[SHINGLE_EXTRACT]);
+        fprintf(fp, "GET_SIGNATURES:  %.4f \n\n", time[GET_SIGNATURES]);
+        fprintf(fp, "FIND_SIMILARITY:  %.4f \n\n", time[FIND_SIMILARITY]);
+        fprintf(fp, "GET_SKETCHES:  %.4f \n\n", time[GET_SKETCHES]);
+        fprintf(fp, "CREATE_TRIPLETS:  %.4f \n\n", time[CREATE_TRIPLETS]);
+        fprintf(fp, "DO_CLUSTERING:  %.4f \n\n", time[DO_CLUSTERING]);
+        fprintf(fp, "MERGE_SORT:  %.4f \n\n", time[MERGE_SORT]);
+        
         //salva i tempi dettagliati nel file TXT
         sprintf(buffer, "################################# \n\n");
         fwrite(buffer, strlen(buffer), 1, fp);
