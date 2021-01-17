@@ -35,6 +35,7 @@ void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
         pthread_join(thread_handles[i],NULL);
     }
     shingles=argomenti->shingles;
+    free(thread_handles);
     free(argomenti);
     exectimes(end-start, SHINGLE_EXTRACT, SET_TIME);
 
@@ -45,13 +46,22 @@ void create_shingles(void* args){
     long count;
     int local_numb_shingles=((Create_shingles_args*)args)->numb_shingles/thread_count;
     long firstRow=numThread*local_numb_shingles;
-    long lastRow=(numThread+1)*local_numb_shingles-1;
+    long lastRow;
+    if ((numThread+1)==thread_count){
+        int resto=((Create_shingles_args*)args)->numb_shingles%thread_count;
+         lastRow=(numThread+1)*local_numb_shingles-1+resto;
+    }else{
+         lastRow=(numThread+1)*local_numb_shingles-1;
+    }
+
 
 
     for(count=firstRow; count <= lastRow; count++) {
        ((Create_shingles_args*)args)->shingles[count] = (char *)malloc(K_SHINGLE*(sizeof(char)));
-        for (int pos = 0; pos < K_SHINGLE; pos++)
+        for (int pos = 0; pos < K_SHINGLE; pos++){
             ((Create_shingles_args*)args)->shingles[count][pos] =((Create_shingles_args*)args)->buf[count + pos];
+        }
+
     }
 }
 
