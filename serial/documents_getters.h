@@ -1,7 +1,7 @@
 #ifndef MINHASHPROJECT_GET_DOCUMENTS_H
 #define MINHASHPROJECT_GET_DOCUMENTS_H
 #include <dirent.h>
-int list_dir(const char *nomeDirectory,char ***files);
+int list_dir(const char *nomeDirectory,char **files);
 
 int exists(const char *path);
 

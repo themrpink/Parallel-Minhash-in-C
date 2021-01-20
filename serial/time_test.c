@@ -71,19 +71,18 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         sprintf(buffer, "Number of threads: %d\n\n Elapsed times: \n\n", numb_of_threads);
         fwrite(buffer, strlen(buffer), 1, fp);
         
-        fprintf(fp, "MAIN:  %.4f \n\n", time[MAIN]);
-        fprintf(fp, "LIST_DIR:  %.4f \n\n", time[LIST_DIR]);
-        fprintf(fp, "COUNT_NUMBER_OF_FILES:  %.4f \n\n", time[COUNT_NUMBER_OF_FILES]);
+        fprintf(fp, "MAIN:                      %.4f \n\n", time[MAIN]);
+        fprintf(fp, "LIST_DIR:                  %.4f \n\n", time[LIST_DIR]);
+        fprintf(fp, "COUNT_NUMBER_OF_FILES:     %.4f \n\n", time[COUNT_NUMBER_OF_FILES]);
         fprintf(fp, "GET_FILE_STRINGS_CLEANED:  %.4f \n\n", time[GET_FILE_STRINGS_CLEANED]);
-        fprintf(fp, "COMPRESS_SPACES:  %.4f \n\n", time[COMPRESS_SPACES]);
-        fprintf(fp, "SHINGLE_EXTRACT:  %.4f \n\n", time[SHINGLE_EXTRACT]);
-        fprintf(fp, "GET_SIGNATURES:  %.4f \n\n", time[GET_SIGNATURES]);
-        fprintf(fp, "FIND_SIMILARITY:  %.4f \n\n", time[FIND_SIMILARITY]);
-        fprintf(fp, "GET_SKETCHES:  %.4f \n\n", time[GET_SKETCHES]);
-        fprintf(fp, "CREATE_TRIPLETS:  %.4f \n\n", time[CREATE_TRIPLETS]);
-        fprintf(fp, "DO_CLUSTERING:  %.4f \n\n", time[DO_CLUSTERING]);
-        fprintf(fp, "MERGE_SORT:  %.4f \n\n", time[MERGE_SORT]);
-        fprintf(fp, "MAIN:  %.4f \n\n", time[MAIN]);
+        fprintf(fp, "COMPRESS_SPACES:           %.4f \n\n", time[COMPRESS_SPACES]);
+        fprintf(fp, "SHINGLE_EXTRACT:           %.4f \n\n", time[SHINGLE_EXTRACT]);
+        fprintf(fp, "GET_SIGNATURES:            %.4f \n\n", time[GET_SIGNATURES]);
+        fprintf(fp, "FIND_SIMILARITY:           %.4f \n\n", time[FIND_SIMILARITY]);
+        fprintf(fp, "GET_SKETCHES:              %.4f \n\n", time[GET_SKETCHES]);
+        fprintf(fp, "CREATE_TRIPLETS:           %.4f \n\n", time[CREATE_TRIPLETS]);
+        fprintf(fp, "DO_CLUSTERING:             %.4f \n\n", time[DO_CLUSTERING]);
+        fprintf(fp, "MERGE_SORT:                %.4f \n\n", time[MERGE_SORT]);
 
         //salva i tempi dettagliati nel file TXT
         sprintf(buffer, "################################# \n\n");
@@ -111,8 +110,11 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
     FILE *results_omp = fopen("results_omp.txt", "w+");
 
     for(int i=0; i<numberOfFiles; i++)
-        for(int j=0; j<200;j++)
-            fprintf(results_omp, " %llu", minhashDocumenti[i][j]);
+        for(int j=0; j<200;j++){
+            fprintf(results_omp, "%llu\n", minhashDocumenti[i][j]);
+        }
+
+
     rewind(results_omp);
     if (results_serial == NULL){
         printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con 0 thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
@@ -135,9 +137,5 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
     fclose(results_omp);
     fclose(results_serial);
 
-
-}
-
-void check_similarity_coherence(){
 
 }
