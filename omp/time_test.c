@@ -110,8 +110,11 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
     FILE *results_omp = fopen("results_omp.txt", "w+");
 
     for(int i=0; i<numberOfFiles; i++)
-        for(int j=0; j<200;j++)
-            fprintf(results_omp, " %llu", minhashDocumenti[i][j]);
+        for(int j=0; j<200;j++){
+            fprintf(results_omp, "%llu\n", minhashDocumenti[i][j]);
+
+        }
+
     rewind(results_omp);
     if (results_serial == NULL){
         printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con 0 thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");

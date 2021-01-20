@@ -22,7 +22,8 @@ int cmpfunc (const void * a, const void * b);
 //folder e ricerca dei fileparallel
 int main(int argc, char *argv[]) {
 
-    int threads = 8;
+    int threads=atoi(argv[2]);
+    printf("threads: %d\n", threads);
     omp_set_num_threads(threads);
     omp_set_nested(4);
 
@@ -33,14 +34,15 @@ int main(int argc, char *argv[]) {
         exit(EXITNOFILEFOUND);
     }
     //ordina i nomi dei file giusto per far funzionare il test sulle signatures
-    qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc  );
+    qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc);
 
-    long long unsigned *minhashDocumenti[numberOfFiles];
+    long long unsigned **minhashDocumenti = (long long unsigned **)malloc(numberOfFiles*sizeof (long long unsigned *));
+
     double start;
     double  end;
     start = omp_get_wtime();
-    #pragma omp parallel for
-    for (int i = 0; i < numberOfFiles; ++i) {
+  //  #pragma omp parallel for
+    for (int i = 0; i < numberOfFiles; i++) {
 
             long fileSize = 0;
             char *filesContent;
@@ -49,15 +51,17 @@ int main(int argc, char *argv[]) {
 
             long numb_shingles = fileSize - K_SHINGLE + 1;
             char **shingles = (char **) malloc(numb_shingles * sizeof(char *));
-
+            if(shingles==NULL)
+                exit(1);
             shingle_extract_buf(filesContent, numb_shingles, shingles);
-            long long unsigned *signatures = get_signatures(shingles, numb_shingles);
+
+            long long unsigned *signatures= get_signatures(shingles, numb_shingles);
             minhashDocumenti[i] = signatures;
+
             for (int j = 0; j < numb_shingles; j++)
                 free(shingles[j]);
             free(shingles);
             free(filesContent);
-
     }
     end = omp_get_wtime();
     exectimes(end-start, MAIN, SET_TIME);
@@ -67,16 +71,19 @@ int main(int argc, char *argv[]) {
     end = omp_get_wtime();
     exectimes(end-start, FIND_SIMILARITY, SET_TIME);
 
-    free(files);
 
     //test
     exectimes(threads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
     check_coherence(minhashDocumenti, numberOfFiles);
 
+    for (int i = 0; i < numberOfFiles; i++) {
+        free(files[i]);
+        free(minhashDocumenti[i]);
+    }
+    free(files);
+    free(minhashDocumenti);
     return 0;
 }
-
-
 
 int cmpfunc (const void * a, const void * b) {
     return strcmp( *(const char**)a, *(const char**)b );

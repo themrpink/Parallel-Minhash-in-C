@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <omp.h>
 #include "time_test.h"
-
+#include <stdio.h>
 unsigned long long rands[] = {  13607075548612569373LLU,
                                        6724581513526549887LLU,
                                        17106295739405559511LLU,
@@ -208,8 +208,8 @@ unsigned long long rands[] = {  13607075548612569373LLU,
 
 int hash_FNV_1a(char *shingle, long long unsigned *hash){
 
-    long long unsigned FNV_offset_basis = MAX_LONG_LONG;
-    long long unsigned prime = 1099511628211;
+    long long unsigned FNV_offset_basis = FNV_OFFSET_BASIS;
+    long long unsigned prime = FNV_PRIME;
 
     *hash = FNV_offset_basis;
 
@@ -223,21 +223,20 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash){
 
 
 
-
 long long unsigned* get_signatures(char **shingles, long long tot_shingles){
     double start;
     double  end;
-    double elapsed;
     long long unsigned hash=0;
-    long long unsigned minhash=MAX_LONG_LONG;
+    long long unsigned minhash=MAX_LONG_LONG_U;
     long long unsigned *hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
     long long unsigned *signatures;
 
-
     signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
+    if(signatures==NULL || hashed_shingles==NULL)
+        exit(1);
 
     start=omp_get_wtime();
-    #pragma omp parallel for reduction(min:minhash) private(hash)
+#pragma omp parallel for reduction(min:minhash) private(hash)
     for(long long j=0; j < tot_shingles; j++){
         //lancia la prima funzione di hash su ogni shingle
         hash_FNV_1a(shingles[j], &hash);
@@ -247,14 +246,11 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
             minhash = hash;
     }
     *signatures=minhash;
-    end = omp_get_wtime();
-    elapsed = end - start;
-
 
     //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
-    #pragma omp parallel for reduction(min:minhash) private(hash)
+     #pragma omp parallel for reduction(min:minhash) private(hash)
     for(int i=0; i<PRIMES_SIZE; i++){
-        minhash = MAX_LONG_LONG;
+        minhash = MAX_LONG_LONG_U;
         for(long long j=0; j<tot_shingles; j++){
             hash = hashed_shingles[j] ^ rands[i];
 
@@ -264,9 +260,9 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
         *(signatures+i+1)=minhash;
     }
     end = omp_get_wtime();
-    elapsed += (end-start);
-    exectimes(elapsed, GET_SIGNATURES, SET_TIME);
+    exectimes(end-start, GET_SIGNATURES, SET_TIME);
 
     free(hashed_shingles);
     return signatures;
 }
+
