@@ -7,7 +7,7 @@
 int thread_count=10;
 
 typedef struct {
-    long rank;
+    long* rank;
     char* buf;
     char** shingles;
     long numb_shingles;
@@ -20,24 +20,29 @@ void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
 
     void(*create_shingles_ptr)(void*)=create_shingles;
     pthread_t* thread_handles=malloc(thread_count*sizeof (pthread_t));
-    Create_shingles_args *argomenti=(Create_shingles_args*)malloc(sizeof(Create_shingles_args));
-    argomenti->buf=buf;
-    argomenti->shingles=shingles;
-    argomenti->numb_shingles=numb_shingles;
-
-
+    Create_shingles_args argomenti[thread_count];
     for (int i = 0; i < thread_count; ++i) {
-        argomenti->rank=i;
-        pthread_create(&thread_handles[i],NULL,create_shingles_ptr,(void*)argomenti);
+        argomenti[i].buf=buf;
+        argomenti[i].shingles=shingles;
+        argomenti[i].numb_shingles=numb_shingles;
+        argomenti[i].rank=i;
+    }
+
+    int j=0;
+    while(j<thread_count){
+       int thread_created=pthread_create(&thread_handles[j],NULL,create_shingles_ptr,(void*)&argomenti[j]);
+       if (thread_created==0){
+            j++;
+       }
     }
 
     for (int i = 0; i < thread_count; ++i) {
         pthread_join(thread_handles[i],NULL);
     }
-    shingles=argomenti->shingles;
-    free(argomenti);
-    exectimes(end-start, SHINGLE_EXTRACT, SET_TIME);
 
+    shingles=argomenti[0].shingles;
+    free(thread_handles);
+    exectimes(end-start, SHINGLE_EXTRACT, SET_TIME);
 }
 
 void create_shingles(void* args){
@@ -45,13 +50,22 @@ void create_shingles(void* args){
     long count;
     int local_numb_shingles=((Create_shingles_args*)args)->numb_shingles/thread_count;
     long firstRow=numThread*local_numb_shingles;
-    long lastRow=(numThread+1)*local_numb_shingles-1;
+    long lastRow;
+    if ((numThread+1)==thread_count){
+        int resto=((Create_shingles_args*)args)->numb_shingles%thread_count;
+         lastRow=(numThread+1)*local_numb_shingles-1+resto;
+    }else{
+         lastRow=(numThread+1)*local_numb_shingles-1;
+    }
+
 
 
     for(count=firstRow; count <= lastRow; count++) {
        ((Create_shingles_args*)args)->shingles[count] = (char *)malloc(K_SHINGLE*(sizeof(char)));
-        for (int pos = 0; pos < K_SHINGLE; pos++)
+        for (int pos = 0; pos < K_SHINGLE; pos++){
             ((Create_shingles_args*)args)->shingles[count][pos] =((Create_shingles_args*)args)->buf[count + pos];
+        }
+
     }
 }
 

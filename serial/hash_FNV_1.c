@@ -256,8 +256,13 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
         *(signatures+i+1)=minhash;
     }
     end = omp_get_wtime();
+<<<<<<< HEAD
     exectimes(end-start, GET_SIGNATURES, SET_TIME);
 
+=======
+    exectimes(end-start), GET_SIGNATURES, SET_TIME);
+    
+>>>>>>> 23e3dbc070a926d2f3f3464fcc0a049a15d0d6b0
     free(hashed_shingles);
     return signatures;
 }
