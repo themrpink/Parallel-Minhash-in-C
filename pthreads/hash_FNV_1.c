@@ -206,10 +206,11 @@ unsigned long long rands[] = {  13607075548612569373LLU,
                                 13211065264639032347LLU,
 };
 //endregion
-
+#define MUTEX_GROUP 20
 #define THREAD_COUNT 10
 pthread_t threads[THREAD_COUNT];
 pthread_mutex_t lock;
+pthread_mutex_t lockhashes[MUTEX_GROUP];
 
 typedef struct {
     long* rank;
@@ -217,6 +218,7 @@ typedef struct {
     long tot_shingles;
     long long unsigned *hashed_shingles;
     long long unsigned *minhash;
+    long long unsigned *minhashes[PRIMES_SIZE];
 } create_hash_args ;
 
 int hash_FNV_1a(char *shingle, long long unsigned *hash){
@@ -235,11 +237,10 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash){
 }
 
 
-void* create_hash(void* args){
+
+void *create_hash(void *args) {
     long numThread=((create_hash_args*)args)->rank;
     long count;
-    long long unsigned hash=0;
-    long long unsigned minhash=MAX_LONG_LONG;
     int local_numb_shingles=((create_hash_args*)args)->tot_shingles/THREAD_COUNT;
     long firstRow=numThread*local_numb_shingles;
     long lastRow;
@@ -250,21 +251,54 @@ void* create_hash(void* args){
         lastRow=(numThread+1)*local_numb_shingles-1;
     }
 
-
+    long long unsigned hash=0;
+    long long unsigned minhash=MAX_LONG_LONG;
     for(count=firstRow; count < lastRow; count++){
         //lancia la prima funzione di hash su ogni shingle
         hash_FNV_1a(((create_hash_args*)args)->shingles[count], &hash);
         ((create_hash_args*)args)->hashed_shingles[count] = hash;
         pthread_mutex_lock(&lock);
         if(hash < minhash)
-            minhash = hash;
+            ((create_hash_args*)args)->minhash = hash;
         pthread_mutex_unlock(&lock);
     }
 
 
 }
+/*
+ * applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
+ */
+void *get_all_minashes(void *args){
+    long numThread=((create_hash_args*)args)->rank;
+    long count;
+    int local_numb_shingles=((create_hash_args*)args)->tot_shingles/THREAD_COUNT;
+    long firstRow=numThread*local_numb_shingles;
+    long lastRow;
+    if ((numThread+1)==THREAD_COUNT){
+        int resto=((create_hash_args*)args)->tot_shingles%THREAD_COUNT;
+        lastRow=(numThread+1)*local_numb_shingles-1+resto;
+    }else{
+        lastRow=(numThread+1)*local_numb_shingles-1;
+    }
 
-long long unsigned* get_signatures(char **shingles, long long tot_shingles){
+    long long unsigned hash=0;
+
+    for(int i=0; i<PRIMES_SIZE; i++){
+        ((create_hash_args*)args)->minhash = MAX_LONG_LONG;
+        for(count=firstRow; count<lastRow; count++){
+            hash = ((create_hash_args*)args)->hashed_shingles[count] ^ rands[i];
+
+            pthread_mutex_lock(&lockhashes[(i/MUTEX_GROUP)]);
+            if(hash < ((create_hash_args*)args)->minhashes[i])
+                ((create_hash_args*)args)->minhashes[i] = hash;
+            pthread_mutex_unlock(&lockhashes[(i/MUTEX_GROUP)]);
+        }
+
+    }
+}
+
+
+long long unsigned *get_signatures(char **shingles, long long int tot_shingles) {
     double start;
     double  end;
     double elapsed;
@@ -276,16 +310,17 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
     create_hash_args args[THREAD_COUNT];
     signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
 
-
-    if (pthread_mutex_init(&lock, NULL) != 0){
-        return 1;
-    }
+    create_mutex();
     for (int i = 0; i < THREAD_COUNT; ++i) {
         args[i].shingles=shingles;
         args[i].tot_shingles=tot_shingles;
         args[i].rank=i;
         args[i].hashed_shingles=hashed_shingles;
         args[i].minhash=minhash;
+        for (int j = 0; j <PRIMES_SIZE ; ++j) {
+            args[i].minhashes[j] = MAX_LONG_LONG;
+        }
+
     }
     int i=0;
     while(i < THREAD_COUNT)
@@ -296,31 +331,46 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
         }
     }
 
-
-
-    *signatures=minhash;
-
-    pthread_mutex_destroy(&lock);
-//    elapsed = end - start;
-
-
-    //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
-    for(int i=0; i<PRIMES_SIZE; i++){
-        minhash = MAX_LONG_LONG;
-        for(long long j=0; j<tot_shingles; j++){
-            hash = hashed_shingles[j] ^ rands[i];
-
-            if(hash < minhash)
-                minhash = hash;
+    i=0;
+    for (int j = 0; j < THREAD_COUNT; ++j) {
+        pthread_join(threads[j],NULL);
+        while(i < j)
+        {
+            int err = pthread_create(&(threads[i]), NULL, &create_hash, (void*)&args[i]);
+            if(err==0){
+                i++;
+            }
         }
-        *(signatures+i+1)=minhash;
     }
-
-
-    end = omp_get_wtime();
-    elapsed += (end-start);
+    *signatures=args[i].minhash;
+    for (int j = 0; j < THREAD_COUNT ; ++j) {
+        pthread_join(threads[j],NULL);
+    }
+    for (int i = 0; i < PRIMES_SIZE; ++i) {
+        *(signatures+i+1)=args[i].minhashes[i];
+    }
+    destroy_mutex();
     exectimes(elapsed, GET_SIGNATURES, SET_TIME);
 
     free(hashed_shingles);
     return signatures;
+}
+
+int create_mutex(){
+    if (pthread_mutex_init(&lock, NULL) != 0){
+        return 1;
+    }
+    for (int i = 0; i < MUTEX_GROUP; ++i) {
+        if (pthread_mutex_init(&lockhashes[i], NULL) != 0){
+            return 1;
+        }
+    }
+    return 0;
+}
+
+void destroy_mutex(){
+    for (int j = 0; j < MUTEX_GROUP; ++j) {
+        pthread_mutex_destroy(&lockhashes[j]);
+    }
+    pthread_mutex_destroy(&lock);
 }
