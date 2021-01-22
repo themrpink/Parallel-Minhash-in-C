@@ -336,7 +336,7 @@ long long unsigned *get_signatures(char **shingles, long long int tot_shingles) 
         pthread_join(threads[j],NULL);
         while(i < j)
         {
-            int err = pthread_create(&(threads[i]), NULL, &create_hash, (void*)&args[i]);
+            int err = pthread_create(&(threads[i]), NULL, &get_all_minashes, (void*)&args[i]);
             if(err==0){
                 i++;
             }
