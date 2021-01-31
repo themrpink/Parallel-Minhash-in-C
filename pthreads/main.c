@@ -9,13 +9,13 @@
 #include "time_test.h"
 #include "string.h"
 #include <pthread.h>
-
+#include <omp.h>
 
 #define  EXITARGUMENTFAIL 20
 #define  EXITNOFILEFOUND  30
 #define COEFFICIENTE_SIMILARITA 0.75
 
-
+//gcc -Wall -fopenmp -lpthread -o main main.c documents_getters.c get_similarities.c hash_FNV_1.c  tokenizer.c shingle_extract.c time_test.c
 int cmpfunc (const void * a, const void * b);
 
 
@@ -27,20 +27,21 @@ int main(int argc, char *argv[]) {
     if (numberOfFiles==0){
         exit(EXITNOFILEFOUND);
     }
-    //ordina i nomi dei file giusto per far funzionare il test sulle signatures
-//    qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc  );
 
+    //ordina i nomi dei file giusto per far funzionare il test sulle signatures
+    qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc  );
+    printf("ok2\n");
     long long unsigned *minhashDocumenti[numberOfFiles];
     double start;
     double  end;
-
+    start = omp_get_wtime();
     for (int i = 0; i < numberOfFiles; ++i) {
 
         long fileSize = 0;
         char *filesContent;
 
         filesContent = get_file_string_cleaned(files[i], &fileSize);
-
+        printf("ok3\n");
         long numb_shingles = fileSize - K_SHINGLE + 1;
         char **shingles = (char **) malloc(numb_shingles * sizeof(char *));
 
@@ -53,9 +54,12 @@ int main(int argc, char *argv[]) {
         free(filesContent);
 
     }
+    end = omp_get_wtime();
     exectimes(end-start, MAIN, SET_TIME);
 
+    start = omp_get_wtime();
     find_similarity(numberOfFiles, files, minhashDocumenti);
+    end = omp_get_wtime();
     exectimes(end-start, FIND_SIMILARITY, SET_TIME);
 
     free(files);
