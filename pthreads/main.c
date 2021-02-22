@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
     char *folderName = argv[1];
     char **files;
 
-    struct timespec begin, end; 
+    struct timespec begin, end;
     clock_gettime(CLOCK_REALTIME, &begin);
     int numberOfFiles = list_dir(folderName, &files);
     if (numberOfFiles==0){
@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
     int thread;
 
     for (thread=0; thread< thread_count; thread++)
-            pthread_create(&thread_handles[thread], NULL, minHash, (void*) &argomenti[thread]);
+        pthread_create(&thread_handles[thread], NULL, minHash, (void*) &argomenti[thread]);
 
     for ( thread = 0; thread<thread_count; thread++)
         pthread_join(thread_handles[thread], NULL);
@@ -107,7 +107,7 @@ void* minHash( void *args){
 
         shingle_extract_buf(filesContent, numb_shingles, shingles);
         long long unsigned *signatures = get_signatures(shingles, numb_shingles);
-     
+
         argomenti->minhashDocumenti[i] = signatures;
         for (int j = 0; j < numb_shingles; j++)
             free(shingles[j]);
