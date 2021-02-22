@@ -22,4 +22,14 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash);
 */
 long long unsigned * get_signatures(char **shingles, long long tot_shingles);
 
+
+/*
+ * funzione che crea il primo minhash e
+ * crea la base per calcolare tutti gli hash
+ */
+void* create_hash(void* args);
+
+long long unsigned* get_signatures(char **shingles, long long tot_shingles);
+int create_mutex();
+void destroy_mutex();
 #endif //MINHASHPROJECT_HASH_FNV_1_H
