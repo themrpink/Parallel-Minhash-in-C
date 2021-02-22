@@ -1,5 +1,12 @@
+
+
 #ifndef MINHASHPROJECT_GET_SIMILARITIES_H
 #define MINHASHPROJECT_GET_SIMILARITIES_H
+/*
+    in questo file vengono salvate le coppie id_documento - nome_documento
+*/
+#define DOC_ID_INDEX_FILE "index_file.txt"
+
 
 /*
     coppia signature - documento_id. Ogni documento ne ha 200.
@@ -33,7 +40,7 @@ int get_sketches(int i, struct sign_doc *files_sketches, long long unsigned *sig
 
 
 /*
-    merge sort con impostazione parallelizzabile.
+    merge sort.
 */
 void mergesort_s_doc_id(struct doc_couple*  X, int l, int n);
 void merge_signatures(struct sign_doc* X, int l, int m, int r);

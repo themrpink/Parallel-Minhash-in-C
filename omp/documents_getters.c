@@ -13,12 +13,17 @@
 #include <omp.h>
 #include "time_test.h"
 
+#define NUMB_THREADS 8
+
+
+
+
 int list_dir(const char *nomeDirectory, char ***files) {
     double start;
     double  end;
 
     int numberOfFiles=0;
-
+    int i=0;
     if (!exists(nomeDirectory) && !isDirectory(nomeDirectory)) {
         return 0;
     } else {
@@ -27,32 +32,35 @@ int list_dir(const char *nomeDirectory, char ***files) {
             return 0;
         }
         struct dirent *entry;
-        numberOfFiles=countNumberOfFiles(nomeDirectory,elemento);
+       numberOfFiles=countNumberOfFiles(nomeDirectory,elemento);
         rewinddir(elemento);
-        *files = calloc(numberOfFiles , sizeof(char*));
-        int i=0;
+        *files = (char**)calloc(numberOfFiles, sizeof(char*));
+
+
         start = omp_get_wtime();
         #pragma omp parallel
         while ((entry = readdir(elemento)) != NULL) {
             const char *figlio;
-            figlio = entry->d_name; //
+            figlio = entry->d_name; 
             if (strcmp(figlio, ".") == 0 || strcmp(figlio, "..") == 0) {
                 continue;
             }
 
-            int lunghezzaPath;
             char path[PATH_MAX];
-            lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
-                                     figlio);
+            snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
+                     figlio);
             if (!isRegularFile(path)) {
+
                 continue;
             }
 
-            #pragma omp critical
-            {
-                (*files)[i] = strdup(path);
-                i++;
-            };
+                #pragma omp critical
+               {
+   
+            (*files)[i] = strdup(path);
+            i++;
+
+               }
 
         }
         if (closedir(elemento) != 0) {
@@ -61,7 +69,7 @@ int list_dir(const char *nomeDirectory, char ***files) {
         end = omp_get_wtime();
         exectimes(end-start, LIST_DIR, SET_TIME);
     }
-
+   printf("numb file: %d\n", i);
     return numberOfFiles;
 }
 
@@ -89,33 +97,33 @@ int isRegularFile(const char *path) {
     return S_ISREG(statbuf.st_mode);;
 }
 
-int countNumberOfFiles(const char *nomeDirectory,DIR *elemento){
+int countNumberOfFiles(const char *nomeDirectory,DIR *elemento) {
     double start;
-    double  end;
+    double end;
 
-    int numberOfFiles=0;
+    int numberOfFiles = 0;
     struct dirent *entry;
 
     start = omp_get_wtime();
-    #pragma omp parallel
+
+ #pragma omp parallel
     while ((entry = readdir(elemento)) != NULL) {
         const char *figlio;
         figlio = entry->d_name; //
         if (strcmp(figlio, ".") == 0 || strcmp(figlio, "..") == 0) {
             continue;
         }
-        int lunghezzaPath;
+
         char path[PATH_MAX];
-        lunghezzaPath = snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
-                                 figlio);
+        snprintf(path, PATH_MAX, "%s/%s", nomeDirectory,
+                 figlio);
         if (!isRegularFile(path)) {
             continue;
         }
-        #pragma omp atomic
+#pragma omp atomic
         numberOfFiles++;
     }
     end = omp_get_wtime();
-    exectimes(end-start, COUNT_NUMBER_OF_FILES, SET_TIME);
+    exectimes(end - start, COUNT_NUMBER_OF_FILES, SET_TIME);
     return numberOfFiles;
-
 }

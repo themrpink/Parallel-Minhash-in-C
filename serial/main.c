@@ -14,10 +14,11 @@
 #define  EXITARGUMENTFAIL 20
 #define  EXITNOFILEFOUND  30
 #define COEFFICIENTE_SIMILARITA 0.75
-//gcc -Wall -fopenmp -o main main.c documents_getters.c get_similarities.c hash_FNV_1.c  tokenizer.c shingle_extract.c
+//gcc -Wall -fopenmp -o main main.c documents_getters.c get_similarities.c hash_FNV_1.c  tokenizer.c shingle_extract.c time_test.c
 
 
-//folder e ricerca dei fileparallel
+
+//folder e ricerca dei fileparalleli
 int main(int argc, char *argv[]) {
 
 

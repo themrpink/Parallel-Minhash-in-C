@@ -2,46 +2,38 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <omp.h>
+#include <time.h>>
 #include "time_test.h"
 
 #define N_SIGNATURES 200
 
-int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *signatures, char *filename){
-    double start;
-    double  end;
 
-    start=omp_get_wtime();
+int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *signatures, char *filename){
+
     for(int s=0; s<N_SIGNATURES; s++){
         file_sketches[s].doc_id = i;
         file_sketches[s].signature = *(signatures+s);
-
     }
-    end = omp_get_wtime();
-    exectimes(end-start, GET_SKETCHES, SET_TIME);
     return 0;
 }
 
 
 
 int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti){
-    double start;
-    double  end;
-    double elapsed;
+
 
     struct doc_couple* couples = (struct doc_couple*) malloc( ((numberOfFiles *(numberOfFiles+1))/2)* 200*sizeof(struct doc_couple));
     struct sign_doc* files_sketches = (struct sign_doc*) malloc(numberOfFiles * N_SIGNATURES * sizeof(struct sign_doc));
 
-    start=omp_get_wtime();
+    struct timespec begin, end; 
+    clock_gettime(CLOCK_REALTIME, &begin);
     for(int i=0; i < numberOfFiles; i++)
         get_sketches(i, files_sketches+(i*N_SIGNATURES) , *(minhashDocumenti+i), files[i]);
-    end = omp_get_wtime();
-    elapsed = end - start;
+    exectimes(getElapsedTime(&begin, &end), GET_SKETCHES, SET_TIME);
 
-    start=omp_get_wtime();
+    clock_gettime(CLOCK_REALTIME, &begin);
     mergesort_s_signatures(files_sketches, 0, N_SIGNATURES*numberOfFiles-1);
-    end = omp_get_wtime();
-    exectimes(elapsed, FIND_SIMILARITY, SET_TIME);
+    exectimes(getElapsedTime(&begin, &end), MERGE_SORT, SET_TIME);
 
     //crea le triple {doc1, doc2, shared_signatures}
     int count = create_triplets(files_sketches, numberOfFiles, couples);
@@ -52,16 +44,15 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
     //raccogli le coppie di documenti che hanno almeno una signature in comune
     int index = do_clustering(couples, count);
 
-
     check_and_print_similarity(minhashDocumenti, couples, index, files);
     return 0;
 }
 
 
 int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct doc_couple* couples){
-    double start;
-    double  end;
-    start = omp_get_wtime();
+
+    struct timespec begin, end; 
+    clock_gettime(CLOCK_REALTIME, &begin);
 
     int count = 0;
     long tot = numberOfFiles * N_SIGNATURES;
@@ -72,25 +63,22 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
         signature_curr = files_sketches[i].signature;
         int signature_succ = i + 1;
 
-            //fino a che la signature successiva è uguale alla signature corrente:
+        //fino a che la signature successiva è uguale alla signature corrente:
         while (signature_succ < tot && files_sketches[signature_succ].signature == signature_curr) {
-                //inserisci in couples una tripla che contiene una coppia di doc_id ed un "1" a indicare che questi condividono una signature
+            //inserisci in couples una tripla che contiene una coppia di doc_id ed un "1" a indicare che questi condividono una signature
             couples[count].doc_id = files_sketches[i].doc_id;
             couples[count].doc2_id = files_sketches[signature_succ].doc_id;
             couples[count].shared_signatures = 1;
             signature_succ++;
-
-                //questo count servirà più avanti per sommare le signature condivise
             count++;
         }
     }
 
-    end = omp_get_wtime();
-    exectimes(end-start, CREATE_TRIPLETS, SET_TIME);
+    exectimes(getElapsedTime(&begin, &end), CREATE_TRIPLETS, SET_TIME);
     /*
         ridimensiona l'array con ai primi "count" elementi (tutti quelli cioè che hanno shared_signatures=1)
     */
-    void * a = realloc( couples, (--count) * sizeof(struct doc_couple));
+    realloc( couples, (--count) * sizeof(struct doc_couple));
 
     free(files_sketches);
     return count;
@@ -100,11 +88,10 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
 
 
 int do_clustering(struct doc_couple* couples, int count) {
-    double start;
-    double end;
+    struct timespec begin, end; 
+    clock_gettime(CLOCK_REALTIME, &begin);
 
     int index = 0;
-    start = omp_get_wtime();
     for (int i = 0; i < count; i++) {
         if (couples[i].shared_signatures != 0) {
             for (int j = i + 1; j < count; j++) {
@@ -118,9 +105,9 @@ int do_clustering(struct doc_couple* couples, int count) {
         }
     }
 
-    end = omp_get_wtime();
-    exectimes(end-start, DO_CLUSTERING, SET_TIME);
-    void* a = realloc( couples, (index) * sizeof(struct doc_couple));
+
+    exectimes(getElapsedTime(&begin, &end), DO_CLUSTERING, SET_TIME);
+    realloc( couples, (index) * sizeof(struct doc_couple));
     return index;
 }
 
@@ -197,7 +184,6 @@ void mergesort_s_doc_id(struct doc_couple*  X, int l, int n)
         merge_doc_id(X, l, m, n);
     }
 }
-
 
 
 void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files){

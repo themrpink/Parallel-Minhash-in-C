@@ -9,7 +9,7 @@
 #include "time_test.h"
 #include "string.h"
 #include <pthread.h>
-#include <omp.h>
+#include <time.h>
 
 #define  EXITARGUMENTFAIL 20
 #define  EXITNOFILEFOUND  30
@@ -33,18 +33,19 @@ int main(int argc, char *argv[]) {
 
     char *folderName = argv[1];
     char **files;
+
+    struct timespec begin, end; 
+    clock_gettime(CLOCK_REALTIME, &begin);
     int numberOfFiles = list_dir(folderName, &files);
     if (numberOfFiles==0){
         exit(EXITNOFILEFOUND);
     }
+    exectimes(getElapsedTime(&begin, &end), LIST_DIR, SET_TIME);
 
     //ordina i nomi dei file giusto per far funzionare il test sulle signatures
     qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc  );
-
     long long unsigned **minhashDocumenti = (long long unsigned **) malloc(numberOfFiles*sizeof (long long unsigned*));
-    double start;
-    double  end;
-    start = omp_get_wtime();
+
 
     int thread_count = NUMB_THREADS;
     if(NUMB_THREADS>numberOfFiles)
@@ -70,13 +71,12 @@ int main(int argc, char *argv[]) {
         pthread_join(thread_handles[thread], NULL);
 
 
-    end = omp_get_wtime();
-    exectimes(end-start, MAIN, SET_TIME);
+    exectimes(getElapsedTime(&begin, &end), MAIN, SET_TIME);
 
-    start = omp_get_wtime();
+    clock_gettime(CLOCK_REALTIME, &begin);
     find_similarity(numberOfFiles, files, minhashDocumenti);
-    end = omp_get_wtime();
-    exectimes(end-start, FIND_SIMILARITY, SET_TIME);
+    exectimes(getElapsedTime(&begin, &end), FIND_SIMILARITY, SET_TIME);
+
 
     free(files);
 
@@ -90,28 +90,25 @@ int main(int argc, char *argv[]) {
 void* minHash( void *args){
 
     MinHashParameters *argomenti = (MinHashParameters*) args;
-    int numberOfFiles = argomenti->numberOfFiles;
-    int rank = argomenti->rank;
-    int numberOfThreads = argomenti->numberOfThreads;
-    char **files = argomenti->files;
-    long long unsigned **minhashDocumenti = argomenti->minhashDocumenti;
-    int start_loop = (numberOfFiles / numberOfThreads) * rank;
-    int end_loop = (numberOfFiles / numberOfThreads) * (rank+1);
-    if (rank == numberOfThreads-1)
-        end_loop = numberOfFiles;
+
+    int start_loop = (argomenti->numberOfFiles / argomenti->numberOfThreads) * argomenti->rank;
+    int end_loop = (argomenti->numberOfFiles / argomenti->numberOfThreads) * (1+argomenti->rank);
+    if (1+argomenti->rank == argomenti->numberOfThreads-1)
+        end_loop = argomenti->numberOfFiles;
 
     for (int i = start_loop; i < end_loop; ++i) {
 
         long fileSize = 0;
         char *filesContent;
 
-        filesContent = get_file_string_cleaned(files[i], &fileSize);
+        filesContent = get_file_string_cleaned(argomenti->files[i], &fileSize);
         long numb_shingles = fileSize - K_SHINGLE + 1;
         char **shingles = (char **) malloc(numb_shingles * sizeof(char *));
 
         shingle_extract_buf(filesContent, numb_shingles, shingles);
         long long unsigned *signatures = get_signatures(shingles, numb_shingles);
-        minhashDocumenti[i] = signatures;
+     
+        argomenti->minhashDocumenti[i] = signatures;
         for (int j = 0; j < numb_shingles; j++)
             free(shingles[j]);
         free(shingles);

@@ -3,7 +3,9 @@
 #define PRIMES_SIZE 199
 #define N_SIGNATURES 200
 #define K_SHINGLE 54
-#define MAX_LONG_LONG 0xcbf29ce484222325LL
+#define MAX_LONG_LONG_U 0xffffffffffffffffLLU
+#define FNV_PRIME 1099511628211LLU
+#define FNV_OFFSET_BASIS 14695981039346656037LLU
 
 
 extern unsigned long long rands[];

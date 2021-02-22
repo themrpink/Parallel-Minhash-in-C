@@ -85,9 +85,9 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         fprintf(fp, "MERGE_SORT:                %.4f \n\n", time[MERGE_SORT]);
         
         //salva i tempi dettagliati nel file TXT
-        sprintf(buffer, "################################# \n\n");
+        sprintf(buffer, "##############omp################ \n\n");
         fwrite(buffer, strlen(buffer), 1, fp);
-        printf("--> Tempi di esecuzione salvati in \"time_log.txt e in time_log.csv\"\n\n");
+        
         fclose(fp);
 
         //salva i tempi nel file CSV
@@ -97,7 +97,8 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
             fprintf(fp, "%.4f,", time[i]);
         fprintf(fp, "%d\n", numb_of_threads
         );
-        fclose(fp);
+        fclose(fp); 
+        printf("--> Tempi di esecuzione salvati in \"time_log.txt e in time_log.csv\"\n\n");
 
     }
 

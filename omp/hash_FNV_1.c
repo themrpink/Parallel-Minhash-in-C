@@ -236,30 +236,35 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
         exit(1);
 
     start=omp_get_wtime();
-#pragma omp parallel for reduction(min:minhash) private(hash)
-    for(long long j=0; j < tot_shingles; j++){
-        //lancia la prima funzione di hash su ogni shingle
-        hash_FNV_1a(shingles[j], &hash);
-        hashed_shingles[j] = hash;
-
-        if(hash < minhash)
-            minhash = hash;
-    }
-    *signatures=minhash;
-
-    //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
-     #pragma omp parallel for reduction(min:minhash) private(hash)
-    for(int i=0; i<PRIMES_SIZE; i++){
-        minhash = MAX_LONG_LONG_U;
-        for(long long j=0; j<tot_shingles; j++){
-            hash = hashed_shingles[j] ^ rands[i];
+#pragma omp parallel private(hash)
+    {
+    long long unsigned hash_temp=0;
+    #pragma omp for reduction(min:minhash) schedule(static)
+        for(long long j=0; j < tot_shingles; j++){
+            //lancia la prima funzione di hash su ogni shingle
+            hash_FNV_1a(shingles[j], &hash);
+            hashed_shingles[j] = hash;
 
             if(hash < minhash)
                 minhash = hash;
         }
-        *(signatures+i+1)=minhash;
-    }
-    end = omp_get_wtime();
+        *signatures=minhash;
+        #pragma  omp barrier
+        //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
+        #pragma omp for private(hash_temp) reduction(min:minhash) schedule(static) 
+        for(int i=0; i<PRIMES_SIZE; i++){
+            minhash = MAX_LONG_LONG_U;
+            hash_temp=hash;
+            for(long long j=0; j<tot_shingles; j++){
+                hash_temp = hashed_shingles[j] ^ rands[i];
+
+                if(hash_temp < minhash)
+                    minhash = hash_temp;
+            }
+            *(signatures+i+1)=minhash;
+        }
+}
+end = omp_get_wtime();
     exectimes(end-start, GET_SIGNATURES, SET_TIME);
 
     free(hashed_shingles);

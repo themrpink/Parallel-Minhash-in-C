@@ -2,7 +2,12 @@
 #include <stdlib.h>
 #include <omp.h>
 #include "time_test.h"
+#include "prod_cons.h"
+#include <pthread.h>
+#include "queue.h"
 #include <stdio.h>
+#include <semaphore.h> 
+#include <unistd.h> 
 unsigned long long rands[] = {  13607075548612569373LLU,
                                 6724581513526549887LLU,
                                 17106295739405559511LLU,
@@ -204,7 +209,7 @@ unsigned long long rands[] = {  13607075548612569373LLU,
                                 13211065264639032347LLU,
 };
 
-
+static int files = -11;
 
 int hash_FNV_1a(char *shingle, long long unsigned *hash){
 
@@ -222,45 +227,77 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash){
 }
 
 
+void *get_signatures(void *args){
 
-long long unsigned* get_signatures(char **shingles, long long tot_shingles){
-    double start;
-    double  end;
-    long long unsigned hash=0;
-    long long unsigned minhash=MAX_LONG_LONG_U;
-    long long unsigned *hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
+    struct timespec begin, end; 
+    clock_gettime(CLOCK_REALTIME, &begin);
+
+    args_getSignatures * argomenti = (args_getSignatures *) args;   
+    Prod_Cons_Data *getSignatures_struct = argomenti->signatures_struct;
+    if (files==-11)
+        files=argomenti->numberOfFiles;
+
+    long long unsigned hash;
+    long long unsigned minhash;
+    char **shingles;
+    long tot_shingles;
+    long long unsigned *hashed_shingles;
     long long unsigned *signatures;
+    struct getSignatures_args minHash_args;
+    struct getSignatures_args *minHash_args_p;
 
     signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
+    sem_wait(argomenti->mutex); 
+    while(0<files--){
+        sem_post(argomenti->mutex); 
+        clock_gettime(CLOCK_REALTIME, &begin);
+        hash=0;
+        minhash=MAX_LONG_LONG_U;
+        signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
+         
+        minHash_args_p = (struct getSignatures_args*)consumer(getSignatures_struct);
+        
+        //minHash_args = *((struct getSignatures_args*)consumer(getSignatures_struct));
+        minHash_args = *minHash_args_p;
 
-    start=omp_get_wtime();
-    for(long long j=0; j < tot_shingles; j++){
-        //lancia la prima funzione di hash su ogni shingle
-        hash_FNV_1a(shingles[j], &hash);
-        hashed_shingles[j] = hash;
+        //printf("hf cons, data: %p , item: %p,  item2_p: %p\n",getSignatures_struct, minHash_args_p, &minHash_args); 
+        shingles = minHash_args.shingles;
+        tot_shingles = minHash_args.numb_shingles;
+        hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
 
-        if(hash < minhash)
-            minhash = hash;
-    }
-    *signatures=minhash;
-
-    //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
-    for(int i=0; i<PRIMES_SIZE; i++){
-        minhash = MAX_LONG_LONG_U;
-        //lo xor viene applicato per ogni numero random [i] e tra valore di hash ottenuto degli shingle ottenuti con hash_FNV_1a
-        for(long long j=0; j<tot_shingles; j++){
-            hash = hashed_shingles[j] ^ rands[i];
-
+        //printf("tot shingle %ld  data: %p\n", tot_shingles, getSignatures_struct);
+        for(long j=0; j < tot_shingles; j++){
+            //lancia la prima funzione di hash su ogni shingle
+            hash_FNV_1a(shingles[j], &hash);
+            hashed_shingles[j] = hash;
+            
             if(hash < minhash)
                 minhash = hash;
         }
-        *(signatures+i+1)=minhash;
+        *signatures=minhash;
+        
+        //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
+        for(int i=0; i<PRIMES_SIZE; i++){
+            minhash = MAX_LONG_LONG_U;
+            for(long j=0; j<tot_shingles; j++){
+                hash = hashed_shingles[j] ^ rands[i];
+
+                if(hash < minhash)
+                    minhash = hash;
+            }
+            *(signatures+i+1)=minhash;
+        }
+        
+        minHash_args.minhashDocumenti[0] = signatures;
+        exectimes(getElapsedTime(&begin, &end), GET_SIGNATURES, SET_TIME);
+       // printf("hf signature: %llu,  rank: %d,  data: %p\n", minHash_args.minhashDocumenti[0][0], argomenti->rank, getSignatures_struct);
+        for (int j = 0; j < tot_shingles; j++)
+            free(shingles[j]);
+        free(shingles);
+
+        free(hashed_shingles);
+        sem_wait(argomenti->mutex); 
     }
-    end = omp_get_wtime();
-
-    exectimes(end-start, GET_SIGNATURES, SET_TIME);
-
-    free(hashed_shingles);
-    return signatures;
+    sem_post(argomenti->mutex);
+    //printf("closed while loop\n");
 }
-

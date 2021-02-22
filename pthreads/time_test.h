@@ -2,6 +2,8 @@
 #ifndef TIME_TEST_  /* Include guard */
 #define TIME_TEST_
 
+#include <time.h>
+
 enum Task{
     SET_TIME,
     EXPORT_LOG
@@ -35,4 +37,5 @@ void exectimes(double value, enum Function_name function_name, enum Task task);
 */
 void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles);
 
+double getElapsedTime(struct timespec *begin, struct timespec *end);
 #endif

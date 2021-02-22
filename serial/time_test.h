@@ -23,7 +23,16 @@ enum Function_name {
     NUMBER_OF_FUNCTIONS
 };
 
+/*
+    raccoglie i tempi di tutte le funzioni (specificate nel terzo parametro).
+    Utilizzando come terzo parametro EXPORT_LOG, salva su file "time_log.txt" e "time_log.csv" tutti i tempi.
+*/
 void exectimes(double value, enum Function_name function_name, enum Task task);
+
+/*
+    esegue dei controlli per verificare che i risultati del programma se eseguito piú volte sugli stessi documenti dia
+    risultati coerenti.
+*/
 void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles);
 
 #endif

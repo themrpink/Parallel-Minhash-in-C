@@ -14,12 +14,14 @@
 #define  EXITARGUMENTFAIL 20
 #define  EXITNOFILEFOUND  30
 #define COEFFICIENTE_SIMILARITA 0.75
-//gcc -Wall -fopenmp -o main main.c documents_getters.c get_similarities.c hash_FNV_1.c  tokenizer.c shingle_extract.c
+//gcc -Wall -fopenmp -o main main.c documents_getters.c get_similarities.c hash_FNV_1.c  tokenizer.c shingle_extract.c time_test.c
+//sudo perf stat -e L1-dcache-load-misses ./main "/home/stefano/Scrivania/Collegamento a uni/terzo anno/multicore 2020/progetto/git/minhash-multicore/docs" 16
+//./main "/home/stefano/Scrivania/Collegamento a uni/terzo anno/multicore 2020/progetto/git/minhash-multicore/docs" 16
 
 //funzione di supporto per il quick sort
 int cmpfunc (const void * a, const void * b);
 
-//folder e ricerca dei fileparallel
+
 int main(int argc, char *argv[]) {
 
     int threads=atoi(argv[2]);
@@ -33,7 +35,8 @@ int main(int argc, char *argv[]) {
     if (numberOfFiles==0){
         exit(EXITNOFILEFOUND);
     }
-    //ordina i nomi dei file giusto per far funzionare il test sulle signatures
+
+    //il quick sort ordina i nomi dei file giusto per far funzionare il test sulle signatures
     qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc);
 
     long long unsigned **minhashDocumenti = (long long unsigned **)malloc(numberOfFiles*sizeof (long long unsigned *));
@@ -41,7 +44,8 @@ int main(int argc, char *argv[]) {
     double start;
     double  end;
     start = omp_get_wtime();
-  //  #pragma omp parallel for
+
+    #pragma omp parallel for schedule(static, 8)
     for (int i = 0; i < numberOfFiles; i++) {
 
             long fileSize = 0;
@@ -63,6 +67,7 @@ int main(int argc, char *argv[]) {
             free(shingles);
             free(filesContent);
     }
+    
     end = omp_get_wtime();
     exectimes(end-start, MAIN, SET_TIME);
 
@@ -70,7 +75,6 @@ int main(int argc, char *argv[]) {
     find_similarity(numberOfFiles, files, minhashDocumenti);
     end = omp_get_wtime();
     exectimes(end-start, FIND_SIMILARITY, SET_TIME);
-
 
     //test
     exectimes(threads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);

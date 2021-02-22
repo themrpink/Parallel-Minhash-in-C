@@ -3,34 +3,36 @@
 #include <stdio.h>
 #include "time_test.h"
 #include <pthread.h>
+#include "omp.h"
 
-int thread_count=10;
+int thread_count=4;
 
 typedef struct {
-    long* rank;
+    long rank;
     char* buf;
     char** shingles;
     long numb_shingles;
 } Create_shingles_args;
 
 
+
 void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
     double start;
     double end;
 
-    void(*create_shingles_ptr)(void*)=create_shingles;
+    //void(*create_shingles_ptr)(void*)=create_shingles;
     pthread_t* thread_handles=malloc(thread_count*sizeof (pthread_t));
     Create_shingles_args argomenti[thread_count];
     for (int i = 0; i < thread_count; ++i) {
         argomenti[i].buf=buf;
         argomenti[i].shingles=shingles;
         argomenti[i].numb_shingles=numb_shingles;
-        argomenti[i].rank=i;
+        argomenti[i].rank=(long)i;
     }
 
     int j=0;
     while(j<thread_count){
-       int thread_created=pthread_create(&thread_handles[j],NULL,create_shingles_ptr,(void*)&argomenti[j]);
+       int thread_created=pthread_create(&thread_handles[j],NULL,create_shingles,(void*)&argomenti[j]);
        if (thread_created==0){
             j++;
        }
@@ -45,7 +47,7 @@ void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
     exectimes(end-start, SHINGLE_EXTRACT, SET_TIME);
 }
 
-void create_shingles(void* args){
+void *create_shingles(void* args){
     long numThread=((Create_shingles_args*)args)->rank;
     long count;
     int local_numb_shingles=((Create_shingles_args*)args)->numb_shingles/thread_count;
@@ -71,3 +73,23 @@ void create_shingles(void* args){
 
 
 
+
+
+/*
+void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
+    double start;
+    double end;
+
+    start=omp_get_wtime();
+    for(long long i=0; i<numb_shingles; i++)
+        shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
+
+    //li estrae e salva in **shingles
+    for(int count=0; count<numb_shingles; count++){
+        for(int pos=0; pos<K_SHINGLE; pos++)
+            shingles[count][pos]=buf[count+pos];   
+    }
+    end = omp_get_wtime();
+    exectimes(end-start, SHINGLE_EXTRACT, SET_TIME);
+}
+*/

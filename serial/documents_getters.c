@@ -15,7 +15,7 @@
 
 
 
-int list_dir(const char *nomeDirectory, char **files) {
+int list_dir(const char *nomeDirectory, char ***files) {
     int numberOfFiles=0;
     double start;
     double  end;
