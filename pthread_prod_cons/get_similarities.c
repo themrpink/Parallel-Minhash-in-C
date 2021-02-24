@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <time.h>>
+#include <time.h>
 #include "time_test.h"
 
 #define N_SIGNATURES 200

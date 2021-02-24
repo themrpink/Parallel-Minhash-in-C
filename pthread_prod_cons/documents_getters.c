@@ -28,7 +28,7 @@ void *list_dir(void * args) {
 
     args_list_dir* args_list = (args_list_dir*) args;
     Prod_Cons_Data *files_struct = (Prod_Cons_Data *)args_list->files_struct;
-    char ***files = args_list->files;
+  //  char ***files = args_list->files;
     char *nomeDirectory =  args_list->nomeDirectory;
     int numberOfFiles = args_list->numberOfFiles;;
 
@@ -38,7 +38,7 @@ void *list_dir(void * args) {
     if ((elemento = opendir(nomeDirectory)) == NULL)
         return 0;
     
-    *files = (char**)calloc(numberOfFiles, sizeof(char*));
+   // *files = (char**)calloc(numberOfFiles, sizeof(char*));
 
     int thread_count = NUMB_THREADS;
     if(NUMB_THREADS>numberOfFiles)
@@ -52,7 +52,7 @@ void *list_dir(void * args) {
     for (thread=0; thread< thread_count; thread++){
         getFileName_args[thread].elemento = elemento;
         getFileName_args[thread].nomeDirectory = nomeDirectory;
-        getFileName_args[thread].files = files;
+     //   getFileName_args[thread].files = files;
         getFileName_args[thread].numberOfFiles = numberOfFiles;
         getFileName_args[thread].numberOfThreads = thread_count;
         getFileName_args[thread].files_struct = files_struct;
@@ -128,7 +128,6 @@ void *getFileName(void* args){
     Prod_Cons_Data *files_struct = (Prod_Cons_Data *) arg->files_struct;
     int rank = arg->rank;
     
-    int numberOfFiles = arg->numberOfFiles;
     int start_loop = (totNumbOfFiles / arg->numberOfThreads) * rank;
     int end_loop = (totNumbOfFiles / arg->numberOfThreads) * (rank+1);
     

@@ -61,7 +61,7 @@ typedef struct args_list_dir {
     un'altra apposita coda.
 */
 typedef struct args_minHash {
-    char *files;
+    char **files;
     int numberOfFiles;
     int rank;
     int numberOfThreads;
@@ -73,18 +73,27 @@ typedef struct args_minHash {
 /*
     argomenti della funzione getSignatures(). Questa consuma dalla coda degli shingles e restituisce le signatures di ogni file.
 */
-typedef struct args_getSignatures {
+typedef struct args_getSignatures_consumer {
     int rank;
     int numberOfFiles;
     sem_t *mutex; 
     Prod_Cons_Data *signatures_struct;
-}args_getSignatures;
+}args_getSignatures_consumer;
 
+
+/*
+    contiene gli argomenti da passare alla funzione get_signatures
+*/
+struct getSignatures_producer_args{
+    long numb_shingles;
+    char **shingles;
+    long long unsigned **minhashDocumenti;
+};
 
 /*
     inizializza gli agormenti di getSignatures()
 */
-struct getSignatures_args* init_getSignatures_args(long numb_shingles, char **shingles, long long unsigned **minhashDocumenti);
+struct getSignatures_producer_args* init_getSignatures_args(long numb_shingles, char **shingles, long long unsigned **minhashDocumenti);
 
 
 #endif //OMP_PROD_CONS_H

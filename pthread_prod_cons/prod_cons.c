@@ -24,6 +24,7 @@ void * producer (Prod_Cons_Data *data, void* item){
     enqueue(data->queue, item);                                 //inserisce l`elemento nella coda (produce)
     pthread_cond_signal(&data->full);                           // segnala che un elemento è stato inserito nella coda
     pthread_mutex_unlock(&data->queue_mutex);                   // rilascia il lock
+    return 0;
 }
 
 void * consumer (Prod_Cons_Data *data){
@@ -32,10 +33,10 @@ void * consumer (Prod_Cons_Data *data){
 
     while (isEmpty(data->queue))                               // controlla se la coda è vuota
         pthread_cond_wait(&data->full, &data->queue_mutex);    // aspetta che ci sia un elemento nella coda 
-    void *tmp = dequeue(data->queue);                           // consuma l'elemento rimuovendolo dalla coda
+    void *item = dequeue(data->queue);                           // consuma l'elemento rimuovendolo dalla coda
     
     pthread_cond_signal(&data->empty);                          // segnala che un elemento è stato rimosso
     pthread_mutex_unlock(&data->queue_mutex);                   // rilascia il lock
-    return tmp;
+    return item;
 }
 

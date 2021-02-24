@@ -107,17 +107,17 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
 void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
 
     FILE *results_serial = fopen("results_serial.txt", "r");
-    FILE *results_omp = fopen("results_omp.txt", "w+");
+    FILE *results_pthreads = fopen("results_pthreads.txt", "w+");
 
     for(int i=0; i<numberOfFiles; i++)
         for(int j=0; j<200;j++){
-            fprintf(results_omp, "%llu\n", minhashDocumenti[i][j]);
+            fprintf(results_pthreads, "%llu\n", minhashDocumenti[i][j]);
 
         }
 
-    rewind(results_omp);
+    rewind(results_pthreads);
     if (results_serial == NULL){
-        printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con 0 thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
+        printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con 0 thread, rinominare il file \"results_pthreads.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
         return;
     }
 
@@ -125,16 +125,16 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
     int c1;
 
     //confronta i due file
-    while ((c1 = fgetc(results_omp)) != EOF) {
+    while ((c1 = fgetc(results_pthreads)) != EOF) {
        if(c1 != fgetc(results_serial))
         count++;
     }
 
     if(count==0)
-        printf("--> OK, nessun problema di coerenza tra signatures  (tra file results_serial.txt e results_omp.txt)\n");
+        printf("--> OK, nessun problema di coerenza tra signatures  (tra file results_serial.txt e results_pthreadsp.txt)\n");
     else
-        printf("--> ERRORE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_omp.txt\n\n", count);
-    fclose(results_omp);
+        printf("--> ERRORE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_pthreads.txt\n\n", count);
+    fclose(results_pthreads);
     fclose(results_serial);
 }
 

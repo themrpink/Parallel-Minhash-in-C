@@ -232,7 +232,7 @@ void *get_signatures(void *args){
     struct timespec begin, end; 
     clock_gettime(CLOCK_REALTIME, &begin);
 
-    args_getSignatures * argomenti = (args_getSignatures *) args;   
+    args_getSignatures_consumer *argomenti = (args_getSignatures_consumer*) args;   
     Prod_Cons_Data *getSignatures_struct = argomenti->signatures_struct;
     if (files==-11)
         files=argomenti->numberOfFiles;
@@ -243,8 +243,8 @@ void *get_signatures(void *args){
     long tot_shingles;
     long long unsigned *hashed_shingles;
     long long unsigned *signatures;
-    struct getSignatures_args minHash_args;
-    struct getSignatures_args *minHash_args_p;
+    struct getSignatures_producer_args minHash_args;
+ //   struct getSignatures_producer_args *minHash_args_p;
 
     signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
     sem_wait(argomenti->mutex); 
@@ -255,10 +255,10 @@ void *get_signatures(void *args){
         minhash=MAX_LONG_LONG_U;
         signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
          
-        minHash_args_p = (struct getSignatures_args*)consumer(getSignatures_struct);
+        minHash_args = *(struct getSignatures_producer_args*)consumer(getSignatures_struct);
         
         //minHash_args = *((struct getSignatures_args*)consumer(getSignatures_struct));
-        minHash_args = *minHash_args_p;
+       // minHash_args = *minHash_args_p;
 
         //printf("hf cons, data: %p , item: %p,  item2_p: %p\n",getSignatures_struct, minHash_args_p, &minHash_args); 
         shingles = minHash_args.shingles;
@@ -300,4 +300,5 @@ void *get_signatures(void *args){
     }
     sem_post(argomenti->mutex);
     //printf("closed while loop\n");
+    return 0;
 }

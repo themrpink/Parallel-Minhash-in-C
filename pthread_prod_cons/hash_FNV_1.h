@@ -11,15 +11,6 @@
 extern unsigned long long rands[];
 
 /*
-    contiene gli argomenti da passare alla funzione get_signatures
-*/
-struct getSignatures_args{
-    long numb_shingles;
-    char **shingles;
-    long long unsigned **minhashDocumenti;
-};
-
-/*
     versione originale della funzione di hash FNV_1a, dalla quale si ottiene la prima signature di ogni documento
 */
 int hash_FNV_1a(char *shingle, long long unsigned *hash);
