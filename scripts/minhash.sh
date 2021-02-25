@@ -93,25 +93,25 @@ done
 for arg in "${arr[@]}"; do
 
     if [ "$arg" = "c" ]; then
-        main_path="../pthread_prod_cons/main"
+        main_path="./pthread_prod_cons"
         time_file="pthread_prod_cons_time_log.txt"   
         echo "pthread producer-consumer"
         esegui_in_parallelo $time_file $main_path
 
     elif [ "$arg" = "s" ]; then
-        main_path="../serial/main"
+        main_path="./serial"
         time_file="serial_time_log.txt"  
         echo "serial"
         esegui_in_serie $time_file $main_path
     
     elif [ "$arg" = "p" ]; then
-        main_path="../pthreads/main"
+        main_path="./pthread"
         time_file="pthread_time_log.txt"
         echo "pthread"
         esegui_in_parallelo $time_file $main_path
 
     elif [ $arg = "o" ]; then
-        main_path="../omp/main"
+        main_path="./omp"
         time_file="omp_time_log.txt"
         echo "omp"
         esegui_in_parallelo $time_file $main_path
