@@ -1,0 +1,610 @@
+==References==
+{{Reflist|30em}}
+
+==External links==
+{{Commons category|Phased arrays}}
+* [https://web.archive.org/web/20120204094857/http://www.nssl.noaa.gov/par/ Radar Research and Development - Phased Array Radar]—[[National Severe Storms Laboratory]] 
+* [http://www.harpoonhq.com/waypoint/articles/Article_044.pdf Shipboard Phased Array Radars]
+* [https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19870018450_1987018450.pdf NASA Report: MMICs For Multiple Scanning Beam Antennas for Space Applications]
+* [http://www.radartutorial.eu/06.antennas/Phased%20Array%20Antenna.en.html Principle of Phased Array]
+* [http://www.sengpielaudio.com/TonyFaulknerPhasedArray06.htm 'Phased Array' microphone system of Tony Faulkner]
+* [https://antennaarraycalculator.blogspot.com/p/calculator.html Software tool to predict the radiation pattern of an antenna array]
+
+{{Antenna Types}}
+
+{{DEFAULTSORT:Phased Array}}
+[[Category:Antennas (radio)]]
+[[Category:Broadcast engineering]]
+[[Category:Domes]]
+[[Category:Radar]]
+[[Category:Radio frequency antenna types]]
+[[Category:Wireless locating]]</text>
+      <sha1>gs48elwx57ckd5pvxacbr57o34gtpwo</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Phase distortion</title>
+    <ns>0</ns>
+    <id>41510</id>
+    <revision>
+      <id>923432340</id>
+      <parentid>922988558</parentid>
+      <timestamp>2019-10-28T14:49:43Z</timestamp>
+      <contributor>
+        <username>Kvng</username>
+        <id>910180</id>
+      </contributor>
+      <comment>[[MOS:ORDER]]. cleanup.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1843" xml:space="preserve">{{Short description|Nonlinear phase response to filters}}
+{{for|the method of sound synthesis|Phase distortion synthesis}}
+{{Use American English|date = March 2019}}
+
+In [[signal processing]], '''phase distortion''' or '''phase-frequency distortion''' is [[distortion]], that is, change in the shape of the waveform,  that occurs when (a) a filter's [[phase response]] is not linear over the [[frequency range]] of interest, that is, the [[Phase (waves)|phase shift]] introduced by a [[electrical network|circuit]] or device is not directly proportional to frequency, or (b) the zero-frequency intercept of the phase-frequency characteristic is not 0 or an integral multiple of 2π radians.
+
+==Audibility of phase distortion==
+Grossly changed phase relationships, without changing amplitudes, can be audible but the degree of audibility of the type of phase shifts expected from typical sound systems remains debated.&lt;ref&gt;{{cite web |author1=Arthur C Ludwig Sr. |title=Audibility of Phase Distortion |url=http://www.silcom.com/~aludwig/Phase_audibility.htm |accessdate=15 February 2016 |date=1997}}&lt;/ref&gt;&lt;ref&gt;{{cite journal |author1=Lipshitz, Stanley P. |author2=Pocock, Mark |author3=Vanderkooy, John |title=On the Audibility of Midrange Phase Distortion in Audio Systems |journal=[[Journal of the Audio Engineering Society]] |date=1 September 1982 |volume=30 |issue=9 |pages=580–595 |url=http://www.aes.org/e-lib/browse.cfm?elib=3824}}&lt;/ref&gt;&lt;ref&gt;{{cite web |title=Human Hearing - Phase Distortion Audibility |url=http://www.audioholics.com/room-acoustics/human-hearing-phase-distortion-audibility-part-2}}&lt;/ref&gt;
+
+==See also== 
+*[[Audio system measurements]]
+*[[Phase noise]]
+
+==References==
+{{Reflist}}
+{{FS1037C MS188}}
+
+[[Category:Electrical parameters]]
+[[Category:Audio amplifier specifications]]
+
+
+{{physics-stub}}
+{{Sound-tech-stub}}</text>
+      <sha1>swg1p91ue8rjoqyhqpazaaaqeerpvn8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Phase inversion</title>
+    <ns>0</ns>
+    <id>41511</id>
+    <revision>
+      <id>939671149</id>
+      <parentid>939670872</parentid>
+      <timestamp>2020-02-07T23:08:58Z</timestamp>
+      <contributor>
+        <username>Eburris12</username>
+        <id>37562132</id>
+      </contributor>
+      <minor />
+      <comment>Fixed terminology</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2746" xml:space="preserve">'''Phase Inversion''' when referring to sound acoustics, is incorrect terminology and is sometimes used incorrectly interchangeably to mean '''Polarity inversion. Polarity Inversion''' is the swapping of the two poles of an [[alternating current]] source. A polarity inversion is neither a time shift nor a phase shift, but simply a swap of plus and minus.
+
+For example, in a [[Push–pull output|push–pull]] [[power amplifier]] using [[vacuum tube]]s, the signal is most often ''split'' by a [[phase splitter]] (aka phase inverter) stage which produces two signals, one ''in phase'', and the other ''out of phase'', that is, phase inverted. These two complementary signals then drive the two halves of the first push–pull stage, which may be either the output stage or the driver stage. The other common arrangements for driving a push-pull stage are by using an [[isolation transformer]] to produce the split signals, or by using the in-phase half of the first push-pull stage to drive the other half. A common circuit using this last technique is the [[long-tailed pair]], often seen in [[television set]]s and [[oscilloscope]]s. 
+[[Image:NegativeI2Root.svg|thumb|right|For ''t = ''&lt;math&gt; 3 \pi \over 4&lt;/math&gt;, the values of &lt;math&gt;f(t)&lt;/math&gt; and &lt;math&gt;f_1(t)&lt;/math&gt; would be the two blue points shown above.]]
+In [[solid-state electronics]] all of these techniques can be used, and phase inversion can also be produced by the use of NPN/PNP complementary circuitry, which has no corresponding technique in vacuum tube designs.       
+
+Polarity inversion may occur with a random or periodic, symmetrical or non-symmetrical [[waveform]], although it is usually produced by the inversion of a symmetrical periodic [[Signaling (telecommunications)|signal]], resulting in a change in sign. 
+
+A symmetrical periodic signal represented by &lt;math&gt;f(t) = A e^{j \omega t}&lt;/math&gt;, after polarity inversion, becomes &lt;math&gt;f_1(t) = Ae^{j(\omega t + \pi)}&lt;/math&gt;
+where:
+:* ''t'' = the ''[[time]]''
+:* ''A'' = the ''[[amplitude|magnitude]]'' of the vector.
+:* ''ω'' = 2π''f'', the ''[[angular frequency]]'', the rate of change of the function argument in units of [[radian]]s per second
+:* ''f'' = the ''[[frequency|ordinary frequency]]'', the ''number'' of oscillations (cycles) that occur each second of time.
+:** Note that the algebraic sum of &lt;math&gt;f(t)&lt;/math&gt; and &lt;math&gt;f_1(t)&lt;/math&gt; will always equal zero.
+
+==In emulsions==
+* In [[emulsion]]s a '''phase inversion''' is when the dispersed phase becomes the dispersion medium and the dispersion medium becomes the dispersed phase, for example when [[cream]] becomes [[butter]].
+
+
+
+
+{{FS1037C}}
+
+[[Category:Electrical circuits]]
+[[Category:Wave mechanics]]
+
+{{electronics-stub}}
+{{telecomm-stub}}</text>
+      <sha1>pnafnrsu0s7ceo16g4up3dvvc4pjlmi</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Voivodeships of Poland</title>
+    <ns>0</ns>
+    <id>41512</id>
+    <revision>
+      <id>986304315</id>
+      <parentid>986303880</parentid>
+      <timestamp>2020-10-31T00:58:50Z</timestamp>
+      <contributor>
+        <ip>120.16.92.71</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="45946" xml:space="preserve">{{Short description|Highest-level administrative divisions of Poland}}
+
+{{Infobox subdivision type
+| name               = Voivodeships of Poland&lt;br&gt;''Województwa Polski'' ([[Polish language|Polish]])
+| alt_name           = province, state
+| map                = {{Polish Voivodeships/infobox}}
+| category           = [[Province|Unitary local government states]]
+| territory          = [[Poland|Republic of Poland]]
+| start_date         = 
+| current_number     = 16 Voivodeships
+| number_date        = 
+| population_range   = 984,345 ([[Opole Voivodeship|Opole]]) – 5,411,446([[Masovian Voivodeship|Masovian]])
+| area_range         = {{Convert|3634.2|sqmi|km2|order=flip|abbr=on}} ([[Opole Voivodeship|Opole]]) - {{Convert|13737|sqmi|km2|order=flip|abbr=on}} ([[Masovian Voivodeship|Masovian]]) 
+| government         = Voivodeship government, [[Politics of Poland|National government]]
+| subdivision        = [[Powiat]] (county)
+}}
+
+A '''[[voivodeship]]''' ({{IPAc-en|ˈ|v|ɔɪ|v|oʊ|d|ʃ|ɪ|p}}; {{lang-pl|województwo}} {{IPAc-pl|w|o|j|e|'|w|u|c|t|f|o}}; plural: ''województwa'') is the highest-level [[administrative division]] of Poland, corresponding to a &quot;'''[[province]]'''&quot; in many other countries. The term has been in use since the 14th century, and is commonly translated in English as &quot;province&quot; or &quot;state&quot;.&lt;ref&gt;The word &quot;voivodeship&quot;, as an equivalent for &quot;''województwo''&quot;, appears in some large English dictionaries such as the [[OED]] and [[Webster's Third New International Dictionary]] but is not in common [[English language|English]] usage.  Hence the word &quot;province&quot; is a recommended translation: &quot;''Jednostki podziału administracyjnego Polski tłumaczymy tak: województwo''—province...&quot; (&quot;Polish administrative units are translated as follows:  ''województwo''—[[province]]...&quot;).  Arkadiusz Belczyk, [http://serwistlumacza.com/content/view/27/32/ ''&quot;Tłumaczenie polskich nazw geograficznych na język angielski&quot;''] {{Webarchive|url=https://web.archive.org/web/20160303203627/http://serwistlumacza.com/content/view/27/32/ |date=2016-03-03 }} (&quot;[[Translation]] of Polish Geographical Names into English&quot;), 2002-2006. Examples: [http://www.staff.amu.edu.pl/~zbzw/ph/pro/plpro.html New Provinces of Poland (1998)] {{Webarchive|url=https://web.archive.org/web/20110608133233/http://www.staff.amu.edu.pl/~zbzw/ph/pro/plpro.html |date=2011-06-08 }}, [http://www.map-of-Poland.co.uk/ Map of Poland], [http://serwistlumacza.com/content/view/78/ English names of Polish provinces]. More examples:
+
+* &quot;Following the reform of the administrative structure in 1973-1975, the number of '''provinces''' (''województwa'') was increased from 22 to 49...  [I]ncreasing the number of '''provinces''' meant the reduction of each in size.  In this way Warsaw was able to dilute the political importance of the '''provincial''' party chiefs.&quot;  &quot;Poland&quot;, ''[[The Encyclopedia Americana]]'', 1986, volume 22, p. 312.
+* &quot;Poland is divided into 49 '''provinces'''.&quot;  &quot;Poland&quot;, ''[[The Columbia Encyclopedia]]'', sixth edition, edited by Paul Lagassé, [[Columbia University Press]], 2000, p. 2256.
+* &quot;Local government in Poland is organized on three levels.  The largest units, at the regional level, are the ''województwa'' ('''provinces''')...&quot;  &quot;Poland&quot;, ''[[Encyclopædia Britannica]]'', 15th edition, 2010, ''[[Macropaedia]]'', volume 25, p. 937.
+* &quot;'''GOVERNMENT'''... '''Administrative divisions''':  16 '''provinces''' (wojewodztwa, singular–wojewodztwo)...&quot;  &quot;Poland,&quot; in [[Central Intelligence Agency]], ''[[The CIA World Factbook]] 2010'', New York, Skyhorse Publishing, Inc., 2009, {{ISBN|9781602397279}}, p. 546.  The same information appears in the current online [https://www.cia.gov/library/publications/the-world-factbook/geos/pl.html ''CIA World Factbook'' --&gt; &quot;Poland --&gt; Administrative divisions&quot;.]  Note that in this source, where &quot;English translations&quot; of province names are given, they are in the [[noun]] (&quot;Silesia&quot;), not the [[adjective]] (&quot;Silesia'''''n'''''&quot;), form.
+* Professor Paul Best, of [[Southern Connecticut State University]], writes:  &quot;[I]n standard dictionaries the Polish word [''województwo''] is translated as 'province.'&quot;  Paul Best, review of Bogdan Horbal, ''Lemko Studies:  A Handbook'' (2010), in ''[[The Polish Review]]'', vol. 58, no. 4 (2013), pp. 125–26.&lt;/ref&gt;
+
+The [[administrative divisions of Poland|Polish local government reforms]] adopted in 1998, which went into effect on 1 January 1999, created 16 new voivodeships. These replaced the 49 [[subdivisions of the Polish People's Republic|former voivodeships]] that had existed from 1 July 1975, and bear greater resemblance (in territory but not in name) to the voivodeships that existed between 1950 and 1975.
+
+Today's voivodeships are mostly named after historical and geographical regions, while those prior to 1998 generally took their names from the cities on which they were centered. The new units range in area from under {{convert|10000|km2|sqmi|abbr=on}} ([[Opole Voivodeship]]) to over {{convert|35000|km2|sqmi|abbr=on}} ([[Masovian Voivodeship]]), and in population from nearly one million ([[Opole Voivodeship]]) to over five million (Masovian Voivodeship).
+
+Administrative authority at the voivodeship level is shared between a government-appointed governor called a [[voivode]] (''wojewoda''), an elected assembly called a [[Voivodeship sejmik|sejmik]], and an [[Voivodeship executive board|executive board]] (''zarząd województwa'') chosen by that assembly, headed by a [[voivodeship marshal]] (''marszałek województwa''). Voivodeships are further divided into [[powiat]]s (counties) and [[gmina]]s (communes or municipalities): see [[Administrative divisions of Poland]].
+
+{{Politics of Poland}}
+
+== Etymology and use of &quot;voivodeship&quot; ==
+Some English-language sources, in historic contexts, speak of &quot;[[count palatine|palatinate]]s&quot; rather than &quot;voivodeships&quot;.  The term &quot;palatinate&quot; traces back to the [[Latin]] ''palatinus'' (&quot;[[:wiktionary:palatine|palatine]]&quot;).
+
+More commonly used now is &quot;province&quot; or &quot;voivodeship&quot;.  The latter is a [[loanword]]-[[calque]] [[hybrid word|hybrid]] formed on the Polish &quot;''województwo''&quot;.
+
+Some writers argue against rendering &quot;''województwo''&quot; in English as &quot;province&quot; on historic grounds.  Before the Third and last  [[Partitions of Poland|Partition of the Polish–Lithuanian Commonwealth]], which occurred in 1795, each of the main constituent Regions of the [[Polish–Lithuanian Commonwealth]]—[[Greater Poland]], [[Lesser Poland]], [[Lithuania]], and [[Royal Prussia]]—was sometimes [[idiosyncrasy|idiosyncratically]] referred to as a &quot;Province&quot; (&quot;''[[prowincja]]''&quot;).  According to the argument, a &quot;Province&quot; (such as Greater Poland) cannot consist of a number of subdivisions (&quot;''województw'''''a'''''&quot;, ''the plural of &quot;''województw'''''o'''''&quot;'') that are likewise called &quot;provinces&quot;.  However, this is an antiquarian consideration, since &quot;province&quot; has not been used in this sense in Poland for over two centuries, and in any case the former larger political units—all now obsolete—can be referred to in English as &quot;Regions&quot; (which, in English parlance, is what they were).
+
+The [[Poland|Polish]] &quot;''województwo''&quot;, designating a second-tier Polish or Polish–Lithuanian administrative unit, derives from &quot;''wojewoda''&quot; (etymologically, a &quot;[[warlord]]&quot;, &quot;war leader&quot; or &quot;leader of warriors&quot;, but now simply the [[governor]] of a ''województwo'') and the [[suffix]] &quot;''-ztwo''&quot; (a &quot;state or condition&quot;).
+
+The English &quot;voivodeship&quot;, which is a [[hybrid word|hybrid]] of the [[loanword]] &quot;voivode&quot; and &quot;-ship&quot; (the latter a [[suffix]] that [[calque]]s the Polish suffix &quot;''-ztwo''&quot;), has never been much used and is absent from many dictionaries. According to the ''[[Oxford English Dictionary]]'', it first appeared in 1792, spelled &quot;woiwodship&quot;, in the sense of &quot;the district or province governed by a voivode.&quot;  The word subsequently appeared in 1886 also in the sense of &quot;the office or dignity of a voivode.&quot;&lt;ref&gt;&quot;Voivodeship,&quot; ''[[The Oxford English Dictionary]]'', second edition, volume XIX, Oxford, [[Clarendon Press]], 1989, p. 739.&lt;/ref&gt;
+
+Poland's Commission on Standardization of Geographic Names outside the Republic of Poland, recommends the spelling &quot;voivodship&quot;, without the ''e''.[http://ksng.gugik.gov.pl/pliki/topon_inte.doc.pdf]  [http://ksng.gugik.gov.pl/english/sopgn.php] [http://ksng.gugik.gov.pl/pliki/gegn22wp18.pdf]
+
+== Voivodeships since 1999 ==
+[[File:Poland administrative division 1999 literki.png|thumb|Map of Polish voivodeships since 1999 (abbreviations)|left]]
+
+=== Administrative powers ===
+Competences and powers at voivodeship level are shared between the voivode (governor), the [[Voivodeship sejmik|sejmik]] (regional assembly) and the [[voivodeship marshal|marshal]]. In most cases these institutions are all based in one city, but in [[Kuyavian-Pomeranian Voivodeship|Kuyavian-Pomeranian]] and [[Lubusz Voivodeship]] the voivode's offices are in a different city from those of the executive and the sejmik. Voivodeship capitals are listed in the table below.
+
+The '''voivode''' is appointed by the [[Prime Minister of Poland|Prime Minister]] and is the regional representative of the central government. The voivode acts as the head of central government institutions at regional level (such as the police and fire services, passport offices, and various inspectorates), manages central government property in the region, oversees the functioning of local government, coordinates actions in the field of public safety and environment protection, and exercises special powers in emergencies. The voivode's offices collectively are known as the ''urząd wojewódzki''.{{citation needed|date=December 2016}}
+
+The '''sejmik''' is elected every five years (2018 was the start of the first 5-years term; previous terms lasted four years&lt;ref&gt;{{Cite web | url=https://www.portalsamorzadowy.pl/prawo-i-finanse/samorzadowcy-dostali-dodatkowy-rok-jak-wykorzystaja-5-letnia-kadencje,113514.html |title = Samorządowcy dostali dodatkowy rok. Jak wykorzystają 5-letnią kadencję? - Prawo i finanse}}&lt;/ref&gt;), at the same time as the local authorities at [[powiat]] and [[gmina]] level. It passes [[bylaw]]s, including the voivodeship's development strategies and budget. It also elects the ''marszałek'' and other members of the executive, and holds them to account.
+
+The '''executive''' (''zarząd województwa''), headed by the ''marszałek'' drafts the budget and development strategies, implements the resolutions of the sejmik, manages the voivodeship's property, and deals with many aspects of regional policy, including management of [[European Union]] funding. The marshal's offices are collectively known as the ''urząd marszałkowski''.
+
+=== List of voivodeships ===
+{|width=&quot;100%&quot; class=&quot;wikitable sortable&quot;
+|+style=&quot;text-align:center&quot;| '''Polish voivodeships since 1999'''
+|-
+!scope=&quot;col&quot;| [[ISO 3166-2:PL|Abbr.]]
+! class=&quot;unsortable&quot; scope=&quot;col&quot;| Flag
+!scope=&quot;col&quot;| Coat of&lt;br /&gt; arms
+!scope=&quot;col&quot;| Teryt.&lt;br /&gt; code
+!scope=&quot;col&quot;| [[Polish car number plates|Car&lt;br /&gt; plates]]
+!scope=&quot;col&quot;| Voivodeship
+!scope=&quot;col&quot;| Polish name
+!scope=&quot;col&quot;| Capital cities
+!scope=&quot;col&quot;| Area&lt;br /&gt; &lt;small&gt;(km²)&lt;/small&gt;
+!scope=&quot;col&quot;| Population&lt;br /&gt; &lt;small&gt;(2019)&lt;/small&gt;
+!scope=&quot;col&quot;| Pop.&lt;br /&gt;per km²
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| DS
+|align=&quot;center&quot;| [[File:POL województwo dolnośląskie flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo dolnośląskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 02
+|align=&quot;center&quot;| D
+| [[Lower Silesian Voivodeship|Lower Silesian]]
+| ''dolnośląskie''
+| [[Wrocław]]
+|align=&quot;right&quot;| 19,947
+|align=&quot;right&quot;| 2,899,986
+|align=&quot;right&quot;| 145
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| KP
+|align=&quot;center&quot;| [[File:POL_województwo_kujawsko-pomorskie_flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo kujawsko-pomorskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 04
+|align=&quot;center&quot;| C
+| [[Kuyavian-Pomeranian Voivodeship|Kuyavian-Pomeranian]]
+| ''kujawsko-pomorskie''
+| [[Bydgoszcz]]{{sup|1}},&lt;br /&gt; [[Toruń]]{{sup|2}}
+|align=&quot;right&quot;| 17,972
+|align=&quot;right&quot;| 2,074,517
+|align=&quot;right&quot;| 116
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| LU
+|align=&quot;center&quot;| [[File:POL województwo lubelskie flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo lubelskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 06
+|align=&quot;center&quot;| L
+| [[Lublin Voivodeship|Lublin]]
+| ''lubelskie''
+| [[Lublin]]
+|align=&quot;right&quot;| 25,122
+|align=&quot;right&quot;| 2,112,216
+|align=&quot;right&quot;| 84
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| LB
+|align=&quot;center&quot;| [[File:POL województwo lubuskie flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo lubuskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 08
+|align=&quot;center&quot;| F
+| [[Lubusz Voivodeship|Lubusz]]
+| ''lubuskie''
+| [[Gorzów Wielkopolski]]{{sup|1}},&lt;br /&gt; [[Zielona Góra]]{{sup|2}}
+|align=&quot;right&quot;| 13,988
+|align=&quot;right&quot;| 1,013,031
+|align=&quot;right&quot;| 73
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| LD
+|align=&quot;center&quot;| [[File:POL województwo łódzkie 1 flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo łódzkie COA.svg|50x59px]]
+|align=&quot;center&quot;| 10
+|align=&quot;center&quot;| E
+| [[Łódź Voivodeship|Łódź]]
+| ''łódzkie''
+| [[Łódź]]
+|align=&quot;right&quot;| 18,219
+|align=&quot;right&quot;| 2,460,170
+|align=&quot;right&quot;| 136
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| MA
+|align=&quot;center&quot;| [[File:POL województwo małopolskie 1 flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo małopolskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 12
+|align=&quot;center&quot;| K
+| [[Lesser Poland Voivodeship|Lesser Poland]]
+| ''małopolskie''
+| [[Kraków]]
+|align=&quot;right&quot;| 15,183
+|align=&quot;right&quot;| 3,404,863
+|align=&quot;right&quot;| 224
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| MZ
+|align=&quot;center&quot;| [[File:POL województwo mazowieckie flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo mazowieckie COA.svg|50x59px]]
+|align=&quot;center&quot;| 14
+|align=&quot;center&quot;| W
+| [[Masovian Voivodeship|Masovian]]
+| ''mazowieckie''
+| [[Warsaw]]
+|align=&quot;right&quot;| 35,558
+|align=&quot;right&quot;| 5,411,446
+|align=&quot;right&quot;| 152
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| OP
+|align=&quot;center&quot;| [[File:POL województwo opolskie flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo opolskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 16
+|align=&quot;center&quot;| O
+| [[Opole Voivodeship|Opole]]
+| ''opolskie''
+| [[Opole]]
+|align=&quot;right&quot;| 9,412
+|align=&quot;right&quot;| 984,345
+|align=&quot;right&quot;| 105
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| PK
+|align=&quot;center&quot;| [[File:POL województwo podkarpackie flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo podkarpackie COA.svg|50x59px]]
+|align=&quot;center&quot;| 18
+|align=&quot;center&quot;| R
+| [[Podkarpackie Voivodeship|Subcarpathian]]
+| ''podkarpackie''
+| [[Rzeszów]]
+|align=&quot;right&quot;| 17,846
+|align=&quot;right&quot;| 2,127,462
+|align=&quot;right&quot;| 119
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| PD
+|align=&quot;center&quot;| [[File:POL województwo podlaskie flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo podlaskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 20
+|align=&quot;center&quot;| B
+| [[Podlaskie Voivodeship|Podlaskie]]
+| ''podlaskie''
+| [[Białystok]]
+|align=&quot;right&quot;| 20,187
+|align=&quot;right&quot;| 1,179,430
+|align=&quot;right&quot;| 59
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| PM
+|align=&quot;center&quot;| [[File:POL_województwo_pomorskie_flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo pomorskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 22
+|align=&quot;center&quot;| G
+| [[Pomeranian Voivodeship|Pomeranian]]
+| ''pomorskie''
+| [[Gdańsk]]
+|align=&quot;right&quot;| 18,310
+|align=&quot;right&quot;| 2,337,769
+|align=&quot;right&quot;| 127
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| SL
+|align=&quot;center&quot;| [[File:POL_województwo_śląskie_flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo śląskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 24
+|align=&quot;center&quot;| S
+| [[Silesian Voivodeship|Silesian]]
+| ''śląskie''
+| [[Katowice]]
+|align=&quot;right&quot;| 12,333
+|align=&quot;right&quot;| 4,524,091
+|align=&quot;right&quot;| 368
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| SK
+|align=&quot;center&quot;| [[File:POL_województwo_świętokrzyskie_flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL wojewodztwo świętokrzyskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 26
+|align=&quot;center&quot;| T
+| [[Świętokrzyskie Voivodeship|Holy Cross]]
+| ''świętokrzyskie''
+| [[Kielce]]
+|align=&quot;right&quot;| 11,711
+|align=&quot;right&quot;| 1,237,369
+|align=&quot;right&quot;| 106
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| WN
+|align=&quot;center&quot;| [[File:POL województwo warmińsko-mazurskie flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:Warminsko-mazurskie herb.svg|50x59px]]
+|align=&quot;center&quot;| 28
+|align=&quot;center&quot;| N
+| [[Warmian-Masurian Voivodeship|Warmian-Masurian]]
+| ''warmińsko-mazurskie''
+| [[Olsztyn]]
+|align=&quot;right&quot;| 24,173
+|align=&quot;right&quot;| 1,425,967
+|align=&quot;right&quot;| 59
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| WP
+|align=&quot;center&quot;| [[File:POL województwo wielkopolskie flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo wielkopolskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 30
+|align=&quot;center&quot;| P
+| [[Greater Poland Voivodeship|Greater Poland]]
+| ''wielkopolskie''
+| [[Poznań]]
+|align=&quot;right&quot;| 29,826
+|align=&quot;right&quot;| 3,495,470
+|align=&quot;right&quot;| 117
+|-
+!scope=&quot;row&quot; align=&quot;center&quot;| ZP
+|align=&quot;center&quot;| [[File:POL_województwo_zachodniopomorskie_flag.svg|border|50x59px]]
+|align=&quot;center&quot;| [[File:POL województwo zachodniopomorskie COA.svg|50x59px]]
+|align=&quot;center&quot;| 32
+|align=&quot;center&quot;| Z
+| [[West Pomeranian Voivodeship|West Pomeranian]]
+| ''zachodniopomorskie''
+| [[Szczecin]]
+|align=&quot;right&quot;| 22,892
+|align=&quot;right&quot;| 1,698,344
+|align=&quot;right&quot;| 74
+|-class=&quot;sortbottom&quot;
+|align=&quot;center&quot; colspan=&quot;12&quot;| &lt;small&gt;'''{{sup|1}}''' Seat of voivode. '''{{sup|2}}''' Seat of sejmik and marszałek.&lt;/small&gt;
+|}
+
+=== Economies of Voivodeships ===
+(See: [[List of Polish voivodeships by GDP per capita]])
+
+According to 2017 Eurostat data, the GDP per capita of Polish voivodeships varies notably and there is a large gap between the richest per capita voivodeship (being the Masovian Voivodeship at 33,500 EUR) and the poorest per capita (being the Lublin Voivodeship at 14,400 EUR).&lt;ref&gt;{{Cite web|url=http://ec.europa.eu/eurostat/tgm/mapToolClosed.do?tab=map&amp;init=1&amp;plugin=1&amp;language=en&amp;pcode=tgs00005&amp;toolbox=types|title=Eurostat - Tables, Graphs and Maps Interface (TGM) map|website=ec.europa.eu|access-date=2017-02-16}}&lt;/ref&gt;
+
+{{multiple image |direction=vertical |width=220
+|header= Outline of Poland |header_background=#A6D4E9
+|image1= Podział administracyjny I RP.png |caption1=Polish–Lithuanian Commonwealth in 1619, around the time of Commonwealth's greatest extent
+|image2= Administrative_divisions_of_Congress_Poland_in_1830_ENG.png |caption2=Voivodeships of [[Congress Poland]]
+|image3= Curzon line en.svg|thumb |caption3=Poland's prewar and postwar borders, 1939–1945
+|image4= Poland administrative division 1922 literki.png |caption4=Map of Polish voivodeships (1921–1939)
+|image5= Poland administrative division 1957 literki.PNG |caption5=Map of Polish voivodeships (1957–1975)
+|image6= Poland administrative division 1975 literki.png |caption6=Map of Polish voivodeships (1975–1998)
+}}
+
+==  Historical development ==
+=== [[Polish–Lithuanian Commonwealth]] ===
+{{further|Administrative division of the Polish–Lithuanian Commonwealth|Voivodes of the Polish–Lithuanian Commonwealth}}
+
+==== [[Greater Poland]] (''Wielkopolska'') ====
+* [[Poznań Voivodeship]] (''województwo poznańskie'', [[Poznań]])
+* [[Kalisz Voivodeship]] (''województwo kaliskie'', [[Kalisz]])
+* [[Gniezno Voivodeship]] (''województwo gnieźnieńskie'', [[Gniezno]]) from 1768
+* [[Sieradz Voivodeship]] (''województwo sieradzkie'', [[Sieradz]])
+* [[Łęczyca Voivodeship]] (''województwo łęczyckie'', [[Łęczyca]])
+* [[Brześć Kujawski Voivodeship]] (''województwo brzesko-kujawskie'', [[Brześć Kujawski]])
+* [[Inowrocław Voivodeship]] (''województwo inowrocławskie'', [[Inowrocław]])
+* [[Chełmno Voivodeship]] (''województwo chełmińskie'', [[Chełmno]])
+* [[Malbork Voivodeship]] (''województwo malborskie'', [[Malbork]])
+* [[Pomeranian Voivodeship]] (''województwo pomorskie'', [[Gdańsk]])
+* [[Warmia|Duchy of Warmia]] (''Księstwo Warmińskie'', [[Lidzbark Warmiński]])
+* [[Duchy of Prussia]] (''Księstwo Pruskie'', [[Königsberg|Królewiec]])
+* [[Płock Voivodeship]] (''województwo płockie'', [[Płock]])
+* [[Rawa Voivodeship]] (''województwo rawskie'', [[Rawa Mazowiecka]])
+* [[Masovian Voivodeship]] (''województwo mazowieckie'', [[Warsaw|Warszawa]])
+
+==== [[Lesser Poland]] (''Małopolska'') ====
+* [[Kraków Voivodeship]] (''województwo krakowskie'', [[Kraków]])
+* [[Sandomierz Voivodeship]] (''województwo sandomierskie'', [[Sandomierz]])
+* [[Lublin Voivodeship]] (''województwo lubelskie'', [[Lublin]])
+* [[Podlaskie Voivodeship (1513–1795)|Podlaskie Voivodeship]] (''województwo podlaskie'', [[Drohiczyn]])
+* [[Ruthenian Voivodeship]] (''województwo ruskie'', Lwów [today [[Lviv]], Ukraine])
+* [[Bełz Voivodeship]] (''województwo belzkie'', Bełz [&lt;nowiki/&gt;[[Belz]], Ukraine])
+* [[Wołyń Voivodeship (1569–1795)|Volhynian Voivodeship]] (''województwo wołyńskie'', Łuck [&lt;nowiki/&gt;[[Lutsk]], Ukraine])
+* [[Podole Voivodeship]] (''województwo podolskie'', Kamieniec Podolski [&lt;nowiki/&gt;[[Kamianets-Podilskyi]], Ukraine])
+* [[Bracław Voivodeship]] (''województwo bracławskie'', Bracław [&lt;nowiki/&gt;[[Bratslav]], Ukraine])
+* [[Kijów Voivodeship]] (''województwo kijowskie'', Kijów [&lt;nowiki/&gt;[[Kyiv]], Ukraine, or Kiev])
+* [[Czernihów Voivodeship]] (''województwo czernichowskie'', Czernihów [&lt;nowiki/&gt;[[Chernihiv]], Ukraine])
+
+==== [[Grand Duchy of Lithuania]] ====
+* [[Vilnius Voivodeship|Wilno Voivodship]] (''województwo wileńskie'', Wilno [&lt;nowiki/&gt;[[Vilnius]], Lithuania])
+* [[Troki Voivodship]] (''województwo trockie'', Troki [&lt;nowiki/&gt;[[Trakai]], Lithuania])
+* [[Nowogródek Voivodeship (1507–1795)|Nowogrodek Voivodship]] (''województwo nowogrodzkie'', Nowogródek [&lt;nowiki/&gt;[[Novogrudok]], Belarus])
+* [[Brest-Litovsk Voivodship]] (''województwo brzesko-litewskie'', Brześć Litewski [&lt;nowiki/&gt;[[Brest, Belarus|Brest]], Belarus])
+* [[Minsk Voivodship]] (''województwo mińskie'', Mińsk [&lt;nowiki/&gt;[[Minsk]], Belarus])
+* [[Mscislaw Voivodship]] (''województwo mścisławskie'', Mścisław [&lt;nowiki/&gt;[[Mstsislaw]], Belarus])
+* [[Smolensk Voivodship]] (''województwo smoleńskie'', Smoleńsk [&lt;nowiki/&gt;[[Smolensk]], Russia])
+* [[Vitebsk Voivodship]] (''województwo witebskie'', Witebsk [&lt;nowiki/&gt;[[Vitebsk]], Belarus])
+* [[Polock Voivodship]] (''województwo połockie'', Połock [&lt;nowiki/&gt;[[Polotsk]], Belarus])
+* [[Eldership of Samogitia|Duchy of Samogita]] (''księstwo żmudzkie'', Miedniki-Wornie [&lt;nowiki/&gt;[[Varniai]], Lithuania])
+
+==== [[Duchy of Livonia]] ====
+* [[Wenden Voivodship]] (''województwo wendeńskie'', Wenden [&lt;nowiki/&gt;[[Cēsis]], Latvia]) since 1598 till the 1620s
+* [[Dorpat Voivodship]] (''województwo dorpackie'', Dorpat [&lt;nowiki/&gt;[[Tartu]], Estonia]) since 1598 till the 1620s
+* [[Parnawa Voivodship]] (''województwo parnawskie'', Parnava [&lt;nowiki/&gt;[[Pärnu]], Estonia]) since 1598 till the 1620s
+* [[Inflanty Voivodeship]] (''województwo inflanckie'' Dyneburg [&lt;nowiki/&gt;[[Daugavpils]], Latvia]) since the 1620s
+* [[Duchy of Courland and Semigalia]] (''księstwo Kurlandii i Semigalii''), Mitawa [&lt;nowiki/&gt;[[Jelgava]], Latvia])
+
+=== [[Congress Poland]] ===
+{{further|Administrative division of Congress Poland}}
+From 1816 to 1837 there were 8 voivodeships in [[Congress Poland]].
+
+* [[Augustów Voivodeship]]
+* [[Kalisz Voivodeship]]
+* [[Kraków Voivodeship]]
+* [[Lublin Voivodeship]]
+* [[Mazowsze Voivodeship]]
+* [[Płock Voivodeship]]
+* [[Podlaskie Voivodeship]]
+* [[Sandomierz Voivodeship]]
+
+=== Second Polish Republic ===
+{{further|Administrative division of Second Polish Republic}}
+
+The administrative division of Poland in the interwar period included 16 voivodeships and Warsaw (with voivodeship rights). The voivodeships that remained in Poland after World War II as a result of [[Polish–Soviet border agreement of August 1945]] were very similar to the current voivodeships.
+
+&lt;small&gt;'''Collapsed list of [[car plates]] since 1937, please use table-sort buttons.'''&lt;/small&gt;
+{| class=&quot;wikitable sortable mw-collapsible mw-collapsed&quot;  style=&quot;width:95%; float:center; background:#fff; font-size:92%; border:0 solid #a3bfb1; color:#000;&quot;
+|-
+! scope=&quot;col&quot; | [[Car plates]]&lt;br&gt;{{small|(since 1937)}}
+! scope=&quot;col&quot; | Voivodeship&lt;ref&gt;data as per April 1, 1937&lt;/ref&gt;
+! scope=&quot;col&quot; | Polish name
+! scope=&quot;col&quot; | Capital city&lt;br&gt;{{small|modern name in parentheses}}
+! scope=&quot;col&quot; | Area in km² (1930)
+! scope=&quot;col&quot; | Population  (1931)
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 20–24
+| [[Białystok Voivodeship (1919-1939)|Białystok]]
+| ''białostockie''
+| [[Białystok]]
+| align=&quot;right&quot; | 26,000
+| align=&quot;right&quot; | 1,263,300
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 25–29
+| [[Kielce Voivodeship (1919-1939)|Kielce]]
+| ''kieleckie''
+| [[Kielce]]
+| align=&quot;right&quot; | 22,200
+| align=&quot;right&quot; | 2,671,000
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 30–34
+| [[Kraków Voivodeship (1919-1939)|Kraków]]
+| ''krakowskie''
+| [[Kraków]]
+| align=&quot;right&quot; | 17,600
+| align=&quot;right&quot; | 2,300,100
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 35–39
+| [[Lublin Voivodeship (1919-1939)|Lublin]]
+| ''lubelskie''
+| [[Lublin]]
+| align=&quot;right&quot; | 26,600
+| align=&quot;right&quot; | 2,116,200
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 40–44
+| [[Lwów Voivodeship|Lwów]]
+| ''lwowskie''
+| Lwów ([[Lviv]])
+| align=&quot;right&quot; | 28,400
+| align=&quot;right&quot; | 3,126,300
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 45–49
+| [[Łódź Voivodeship (1919-1939)|Łódź]]
+| ''łódzkie''
+| [[Łódź]]
+| align=&quot;right&quot; | 20,400
+| align=&quot;right&quot; | 2,650,100
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 50–54
+| [[Nowogródek Voivodeship (1919-1939)|Nowogródek]]
+| ''nowogródzkie''
+| Nowogródek ([[Navahrudak]])
+| align=&quot;right&quot; | 23,000
+| align=&quot;right&quot; | 1,057,200
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 55–59
+| [[Polesie Voivodeship|Polesie]]
+| ''poleskie''
+| Brześć nad Bugiem ([[Brest, Belarus|Brest]])
+| align=&quot;right&quot; | 36,700
+| align=&quot;right&quot; | 1,132,200
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 60–64
+| [[Pomeranian Voivodeship (1919-1939)|Pomeranian]]
+| ''pomorskie''
+| [[Toruń]]
+| align=&quot;right&quot; | 25,700
+| align=&quot;right&quot; | 1,884,400
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 65–69
+| [[Poznań Voivodeship (1921-1939)|Poznań]]
+| ''poznańskie''
+| [[Poznań]]
+| align=&quot;right&quot; | 28,100
+| align=&quot;right&quot; | 2,339,600
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 70–74
+| [[Stanisławów Voivodeship|Stanisławów]]
+| ''stanisławowskie''
+| Stanisławów ([[Ivano-Frankivsk]])
+| align=&quot;right&quot; | 16,900
+| align=&quot;right&quot; | 1,480,300
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 75–79?
+| [[Silesian Voivodeship (1920–1939)|Silesian]]
+| ''śląskie''
+| [[Katowice]]
+| align=&quot;right&quot; | 5,100
+| align=&quot;right&quot; | 1,533,500
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 80–84
+| [[Tarnopol Voivodeship|Tarnopol]]
+| ''tarnopolskie''
+| Tarnopol ([[Ternopil]])
+| align=&quot;right&quot; | 16,500
+| align=&quot;right&quot; | 1,600,400
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 85–89
+| [[Warsaw Voivodeship (1919-1939)|Warsaw]] (voivodeship)
+| ''warszawskie''
+| [[Warsaw]]
+| align=&quot;right&quot; | 31,700
+| align=&quot;right&quot; | 2,460,900
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 00–19
+| [[Warsaw]] (city)
+| ''Warszawa''
+| [[Warsaw]]
+| align=&quot;right&quot; | 140
+| align=&quot;right&quot; | 1,179,500
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 90–94
+| [[Wilno Voivodeship (1926–1939)|Wilno]]
+| ''wileńskie''
+| Wilno ([[Vilnius]])
+| align=&quot;right&quot; | 29,000
+| align=&quot;right&quot; | 1,276,000
+|-
+! scope=&quot;row&quot; style=&quot;text-align:center&quot; | 95–99
+| [[Wołyń Voivodeship (1921–1939)|Wołyń]]
+| ''wołyńskie''
+| Łuck ([[Lutsk]])
+| align=&quot;right&quot; | 35,700
+| align=&quot;right&quot; | 2,085,600
+|}

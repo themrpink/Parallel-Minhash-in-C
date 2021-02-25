@@ -40,10 +40,10 @@ int main(int argc, char *argv[]) {
         numberOfThreads = numberOfFiles;
     printf("numero di file: %d\n", numberOfFiles);
     char **files = (char**)calloc(numberOfFiles, sizeof(char*));
+
     //per misurare il tempo effettivo di computazione
     struct timespec begin, end; 
     clock_gettime(CLOCK_REALTIME, &begin);
-
 
     long long unsigned **minhashDocumenti = (long long unsigned **) malloc(numberOfFiles*sizeof (long long unsigned*));
 
