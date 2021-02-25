@@ -1,0 +1,191 @@
+For an inductor consisting of a coil with &lt;math&gt;N&lt;/math&gt; loops this gives:
+
+:&lt;math&gt;\mathcal{E} = -N{d\Phi_B \over dt}\quad&lt;/math&gt;
+
+The back-emf is the source of the opposition to current flow. A constant [[direct current]] has a zero rate-of-change, and sees an inductor as a [[short-circuit]] (it is typically made from a material with a low [[resistivity]]). An [[alternating current]] has a time-averaged rate-of-change that is proportional to frequency, this causes the increase in inductive reactance with frequency.
+
+==== Total reactance ====
+
+The total reactance is given by
+
+:&lt;math&gt;{X = X_L + X_C}&lt;/math&gt; (note that &lt;math&gt;X_C&lt;/math&gt; is negative)
+
+so that the total impedance is
+
+:&lt;math&gt;\ Z = R + jX&lt;/math&gt;
+
+== Combining impedances ==
+{{Main|Series and parallel circuits}}
+
+The total impedance of many simple networks of components can be calculated using the rules for combining impedances in series and parallel. The rules are identical to those for combining resistances, except that the numbers in general are [[complex number]]s. The general case, however, requires [[equivalent impedance transforms]] in addition to series and parallel.
+
+=== Series combination ===
+
+For components connected in series, the current through each circuit element is the same; the total impedance is the sum of the component impedances.
+
+[[File:Impedances in series.svg]]
+
+:&lt;math&gt;\ Z_{\text{eq}} = Z_1 + Z_2 + \cdots + Z_n \quad&lt;/math&gt;
+
+Or explicitly in real and imaginary terms:
+:&lt;math&gt;\ Z_{\text{eq}} = R + jX = (R_1 + R_2 + \cdots + R_n) + j(X_1 + X_2 + \cdots + X_n) \quad&lt;/math&gt;
+
+=== Parallel combination ===
+
+For components connected in parallel, the voltage across each circuit element is the same; the ratio of currents through any two elements is the inverse ratio of their impedances.
+
+:[[File:Impedances in parallel.svg]]
+
+Hence the inverse total impedance is the sum of the inverses of the component impedances:
+:&lt;math&gt;\frac{1}{Z_{\text{eq}}} = \frac{1}{Z_1} + \frac{1}{Z_2} + \cdots + \frac{1}{Z_n}&lt;/math&gt;
+
+or, when n = 2:
+:&lt;math&gt;\frac{1}{Z_{\text{eq}}} = \frac{1}{Z_1} + \frac{1}{Z_2} = \frac{Z_1 + Z_2}{Z_1 Z_2}&lt;/math&gt;
+:&lt;math&gt;\ Z_{\text{eq}} = \frac{Z_1 Z_2}{Z_1 + Z_2}&lt;/math&gt;
+
+The equivalent impedance &lt;math&gt;Z_{\text{eq}}&lt;/math&gt; can be calculated in terms of the equivalent series resistance &lt;math&gt;R_{\text{eq}}&lt;/math&gt; and reactance &lt;math&gt;X_{\text{eq}}&lt;/math&gt;.&lt;ref&gt;[http://hyperphysics.phy-astr.gsu.edu/hbase/electric/imped.html#c3 Parallel Impedance Expressions], Hyperphysics&lt;/ref&gt;
+
+:&lt;math&gt;\begin{align}
+  Z_{\text{eq}} &amp;= R_{\text{eq}} + j X_{\text{eq}} \\
+  R_{\text{eq}} &amp;= \frac{(X_1 R_2 + X_2 R_1) (X_1 + X_2) + (R_1 R_2 - X_1 X_2) (R_1 + R_2)}{(R_1 + R_2)^2 + (X_1 + X_2)^2} \\
+  X_{\text{eq}} &amp;= \frac{(X_1 R_2 + X_2 R_1) (R_1 + R_2) - (R_1 R_2 - X_1 X_2) (X_1 + X_2)}{(R_1 + R_2)^2 + (X_1 + X_2)^2}
+\end{align}&lt;/math&gt;
+
+== Measurement ==
+The measurement of the impedance of devices and transmission lines is a practical problem in [[radio]] technology and other fields. Measurements of impedance may be carried out at one frequency, or the variation of device impedance over a range of frequencies may be of interest. The impedance may be measured or displayed directly in ohms, or other values related to impedance may be displayed; for example, in a [[radio antenna]], the [[standing wave ratio]] or [[reflection coefficient]] may be more useful than the impedance alone. The measurement of impedance requires the measurement of the magnitude of voltage and current, and the phase difference between them. Impedance is often measured by [[Bridge circuit|&quot;bridge&quot; methods]], similar to the direct-current [[Wheatstone bridge]]; a calibrated reference impedance is adjusted to balance off the effect of the impedance of the device under test. Impedance measurement in power electronic devices may require simultaneous measurement and provision of power to the operating device.
+
+The impedance of a device can be calculated by complex division of the voltage and current. The impedance of the device can be calculated by applying a sinusoidal voltage to the device in series with a resistor, and measuring the voltage across the resistor and across the device. Performing this measurement by sweeping the frequencies of the applied signal provides the impedance phase and magnitude.&lt;ref name=&quot;LewisJr&quot;&gt;{{cite journal |author=George Lewis Jr. |author2=George K. Lewis Sr. |author3=William Olbricht |name-list-style=amp |date=August 2008 |title=Cost-effective broad-band electrical impedance spectroscopy measurement circuit and signal analysis for piezo-materials and ultrasound transducers |journal=Measurement Science and Technology |volume=19 |issue= 10|page=105102 |doi=10.1088/0957-0233/19/10/105102 |pmid=19081773 |pmc=2600501 |bibcode = 2008MeScT..19j5102L }}&lt;/ref&gt;
+
+The use of an impulse response may be used in combination with the [[fast Fourier transform]] (FFT) to rapidly measure the electrical impedance of various electrical devices.&lt;ref name=&quot;LewisJr&quot;/&gt;
+
+The [[LCR meter]] (Inductance (L), Capacitance (C), and Resistance (R)) is a device commonly used to measure the inductance, resistance and capacitance of a component; from these values, the impedance at any frequency can be calculated.
+
+===Example===
+Consider an LC [[LC circuit|tank]] circuit. 
+The complex impedance of the circuit is
+:&lt;math&gt;Z(\omega) = {j\omega L\over 1-\omega^2 LC}.&lt;/math&gt;
+It is immediately seen that the value of &lt;math&gt;{1\over |Z|}&lt;/math&gt; is minimal (actually equal to 0 in this case) whenever 
+:&lt;math&gt;\omega^2LC = 1.&lt;/math&gt;
+Therefore, the fundamental resonance angular frequency is  
+:&lt;math&gt;\omega = {1\over \sqrt{LC}}.&lt;/math&gt;
+
+== Variable impedance ==
+{{see also|Network analysis (electrical circuits)#Time-varying components}}
+
+In general, neither impedance nor admittance can vary with time, since they are defined for complex exponentials in which {{math|1= -∞ &lt; ''t'' &lt; +∞}}. If the complex exponential voltage to current ratio changes over time or amplitude, the circuit element cannot be described using the frequency domain. However, many components and systems (e.g., [[varicap]]s that are used in [[Tuner (radio)|radio tuners]]) may exhibit non-linear or time-varying voltage to current ratios that seem to be [[LTI system theory|linear time-invariant (LTI)]] for small signals and over small observation windows, so they can be roughly described as-if they had a time-varying impedance. This description is an approximation: Over large signal swings or wide observation windows, the voltage to current relationship will not be LTI and cannot be described by impedance.
+
+== See also ==
+*{{annotated link|Bioelectrical impedance analysis}} 
+*{{annotated link|Characteristic impedance}} 
+*{{annotated link|Electrical characteristics of dynamic loudspeakers}} 
+*{{annotated link|High impedance}} 
+*{{annotated link|Immittance}} 
+*{{annotated link|Impedance analyzer}} 
+*{{annotated link|Impedance bridging}} 
+*{{annotated link|Impedance cardiography}} 
+*{{annotated link|Impedance control}} 
+*{{annotated link|Impedance matching}} 
+*{{annotated link|Impedance microbiology}} 
+*{{annotated link|Negative impedance converter}} 
+*{{annotated link|Resistance distance}} 
+*{{annotated link|Reflections of signals on conducting lines#trasm line imp equn|Transmission line impedance}} 
+*{{annotated link|Universal dielectric response}}
+
+== References ==
+{{reflist|25em}}
+
+== External links ==
+*[http://hyperphysics.phy-astr.gsu.edu/hbase/electric/imped.html Explaining Impedance]
+*[http://www.antenna-theory.com/basics/impedance.php Antenna Impedance]
+*[http://www.tedpavlic.com/teaching/osu/ece209/support/circuits_sys_review.pdf ECE 209: Review of Circuits as LTI Systems]&amp;nbsp;&amp;ndash; Brief explanation of Laplace-domain circuit analysis; includes a definition of impedance.
+
+{{Authority control}}
+
+{{DEFAULTSORT:Impedance}}
+[[Category:Electrical resistance and conductance]]
+[[Category:Physical quantities]]
+[[Category:Antennas (radio)]]</text>
+      <sha1>e216hfyb2eqaj6sgy51g2e9196q74x6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Lidar</title>
+    <ns>0</ns>
+    <id>41958</id>
+    <revision>
+      <id>991310607</id>
+      <parentid>991173853</parentid>
+      <timestamp>2020-11-29T11:38:40Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 143 templates: del empty params (55×); hyphenate params (58×); del |url-status= (4×); del |&lt;name-list&gt;-link= (1×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="123975" xml:space="preserve">{{other uses|Lidar (disambiguation)}}
+{{short description|Method of spatial measurement using laser scanning}}
+&lt;!--Please see talk page before changing the spelling of lidar to LIDAR--&gt;
+[[File:Effigy mounds lidar.jpg|thumb|Lidar-derived image of Marching Bears Mound Group, [[Effigy Mounds National Monument]].]]
+[[File:Starfire Optical Range - sodium laser.jpg|thumb|upright|A [[FASOR (laser physics)|FASOR]] used at the [[Starfire Optical Range]] for lidar and [[laser guide star]] experiments is tuned to the [[Fraunhofer lines|sodium D2a line]] and used to excite [[sodium]] atoms [[sodium layer|in the upper atmosphere]].]]
+[[File:Lidar P1270901.jpg|thumb|upright|This lidar may be used to scan buildings, rock formations, etc., to produce a 3-D model. The lidar can aim its laser beam in a wide range: its head rotates horizontally; a mirror tilts vertically. The laser beam is used to measure the distance to the first object on its path.]]
+{{multiple image
+ | width = 200
+ | footer = This visualization shows an airplane collecting a 50-kilometer swath of lidar data over the Brazilian rainforest. For ground-level features, colors range from deep brown to tan. Vegetation heights are depicted in shades of green, where dark greens are closest to the ground and light greens are the highest.
+ | image1 = 50 Kilometers of Brazilian Forest Canopy.webm | caption1 = An airplane collecting treetop data over a Brazilian rainforest.
+| image2 = Flying Through LIDAR Canopy Data.webm | caption2 = In this view, the viewer flies down to the rainforest canopy and flies through the virtual leaves.
+ }}
+
+'''Lidar''' ({{IPAc-en|ˈ|l|aɪ|d|ɑːr}}, also '''LIDAR''', '''LiDAR''', and '''LADAR''') is a method for measuring distances ([[ranging]]) by illuminating the target with [[laser]] light and measuring the reflection with a sensor. Differences in laser return times and wavelengths can then be used to make digital [[3D modeling|3-D representations]] of the target.  It has terrestrial, airborne, and mobile applications.
+
+The term ''lidar'' was originally a [[portmanteau]] of ''[[light]]'' and ''[[radar]]''.&lt;ref name=Oxford/&gt;&lt;ref name=&quot;James Ring p. 672-3&quot;&gt;James Ring, &quot;The Laser in Astronomy.&quot; pp. 672–73, ''New Scientist'' June 20, 1963.&lt;/ref&gt;
+It is now also used as an acronym of ''&quot;light detection and ranging&quot;''&lt;ref name=&quot;NOAA&quot;&gt;{{cite web|title=LIDAR—Light Detection and Ranging—is a remote sensing method used to examine the surface of the Earth |url=http://oceanservice.noaa.gov/facts/lidar.html |publisher=NOAA |access-date=June 4, 2013 |archive-url=https://web.archive.org/web/20130530144617/http://oceanservice.noaa.gov/facts/lidar.html |archive-date=May 30, 2013 |url-status=dead }}&lt;/ref&gt;
+and ''&quot;laser imaging, detection, and ranging&quot;''.&lt;ref&gt;Travis S. Taylor (2019), ''Introduction to Laser Science and Engineering'', CRC Press. [https://books.google.com.br/books?id=nWytDwAAQBAJ&amp;lpg=PA239&amp;dq=laser%20imaging%2C%20detection%2C%20and%20ranging&amp;pg=PA239#v=onepage&amp;q&amp;f=false]
+&lt;/ref&gt;&lt;ref&gt;Jie Shan and Charles K. Toth (2018), ''Topographic Laser Ranging and Scanning: Principles and Processing'', Second Edition, CRC Press, [https://books.google.com.br/books?id=N_ErDwAAQBAJ&amp;lpg=SA9-PA39&amp;dq=laser%20imaging%2C%20detection%2C%20and%20ranging&amp;pg=SA9-PA39#v=onepage&amp;q=laser%20imaging,%20detection,%20and%20ranging&amp;f=false]&lt;/ref&gt;
+Lidar sometimes is called '''3-D laser scanning''', a special combination of a [[3-D scanning]] and [[laser scanning]].
+
+Lidar is commonly used to make high-resolution maps, with applications in [[surveying]], [[geodesy]], [[geomatics]], [[archaeology]], [[geography]], [[geology]], [[geomorphology]], [[seismology]], [[forestry]], [[atmospheric physics]],&lt;ref name=&quot;cracknell&quot;&gt;{{Cite book| last1 = Cracknell| first1 = Arthur P. | last2 = Hayes| first2 = Ladson| title = Introduction to Remote Sensing| place=London| publisher = Taylor and Francis| year = 2007| orig-year = 1991| edition = 2| oclc = 70765252| isbn = 978-0-8493-9255-9}}&lt;/ref&gt; [[laser guidance]], airborne laser swath mapping (ALSM), and [[Mars Orbiter Laser Altimeter|laser altimetry]]. The technology is also used in control and navigation for some [[autonomous car]]s.&lt;ref name=&quot;:13&quot;&gt;{{Cite journal|last1=Lim|first1=Hazel Si Min|last2=Taeihagh|first2=Araz|date=2019|title=Algorithmic Decision-Making in AVs: Understanding Ethical and Technical Concerns for Smart Cities|journal=Sustainability|language=en|volume=11|issue=20|pages=5791|doi=10.3390/su11205791|arxiv=1910.13122|doi-access=free}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://futurism.com/self-driving-car-video|title=Want to Ride in a Self-Driving Car? This Is What It's Like.|website=futurism.com|access-date=28 April 2020|date=2018-02-28}}&lt;/ref&gt;
+{{toclimit|3}}
+
+==History and etymology==
+Under the direction of [[Malcolm Stitch]], the [[Hughes Aircraft Company]] introduced the first lidar-like system in 1961,&lt;ref&gt;{{cite news |title=New Radar System |work=Odessa American |date=28 Feb 1961}}&lt;/ref&gt;&lt;ref name=&quot;Macomber&quot;&gt;{{cite news |last1=Macomber |first1=Frank |title=Space Experts Seek Harness for Powerful LASER Light |url=https://0-access.newspaperarchive.com.alec.icpl.org/us/california/bakersfield/bakersfield-californian/1963/06-03/page-5/?pep=colidar-mark&amp;psb=dateasc&amp;page=3&amp;pci=7 |access-date=11 July 2019 |work=Bakersfield Californian |agency=Copley News Service |issue=p. 5 |date=June 3, 1963}}&lt;/ref&gt; shortly after the invention of the [[laser]]. Intended for satellite tracking, this system combining laser-focused imaging with the ability to calculate distances by measuring the time for a signal to return using appropriate sensors and data acquisition electronics. It was originally called &quot;Colidar&quot; an acronym for &quot;COherent Light Detecting And Ranging,&quot;&lt;ref name=&quot;stitch&quot;&gt;{{cite journal |last1=Stitch |journal=Electronics |date=21 April 1961 |volume=51 |page=2 }}&lt;/ref&gt; derived from the term &quot;[[radar]]&quot;, itself an acronym for &quot;Radio Detection And Ranging&quot;. From the early colidar systems all laser [[rangefinder]]s, laser altimeters and lidar units are derived. The first practical terrestrial application of a colidar system was the &quot;Colidar Mark II&quot;, a large rifle-like laser rangefinder produced in 1963 which had a range of 7 miles and an accuracy of 15 feet, to be used for military targeting.&lt;ref&gt;{{cite news |title=Laser Measures Distance |work=Lincoln Journal Star |issue=p. 6 |date=29 March 1963}}&lt;/ref&gt;&lt;ref name=&quot;Macomber&quot; /&gt;
+The first mention of lidar as a stand-alone word in 1963 suggests it originated as a portmanteau of &quot;[[light]]&quot; and &quot;radar&quot;: &quot;Eventually the laser may provide an extremely sensitive detector of particular wavelengths from distant objects. Meanwhile, it is being used to study the moon by 'lidar' (light radar)&amp;nbsp;...&quot;&lt;ref name=&quot;James Ring p. 672-3&quot;/&gt; The ''[[Oxford English Dictionary]]'' supports this etymology.&lt;ref name=Oxford&gt;{{cite book|title= Oxford English Dictionary|year=2013|page=Entry for &quot;lidar&quot;|url= http://www.oed.com/}}&lt;/ref&gt;
+
+Lidar's first applications came in meteorology, where the [[National Center for Atmospheric Research]] used it to measure [[clouds]] and pollution.&lt;ref name=Goyer&gt;{{cite journal|last= Goyer|first= G. G.|author2=R. Watson |title= The Laser and its Application to Meteorology|journal= Bulletin of the American Meteorological Society|date= September 1963|volume=44|issue= 9|pages= 564–575 [568]|doi= 10.1175/1520-0477-44.9.564|bibcode= 1963BAMS...44..564G|doi-access= free}}&lt;/ref&gt; The general public became aware of the accuracy and usefulness of lidar systems in 1971 during the [[Apollo 15]] mission, when astronauts used a laser altimeter to map the surface of the moon.
+Although the English language no longer treats &quot;radar&quot; as an acronym, and printed texts universally present the word uncapitalized, the word &quot;lidar&quot; became capitalized as &quot;LIDAR&quot; or &quot;LiDAR&quot; in some publications beginning in the 1980s. Currently, no consensus exists on capitalization, reflecting uncertainty about whether or not &quot;lidar&quot; is an acronym, and if it is an acronym, whether it should appear in lower case, like &quot;radar&quot; and &quot;[[sonar]]&quot;. Various publications refer to lidar as &quot;LIDAR&quot;, &quot;LiDAR&quot;, &quot;LIDaR&quot;, or &quot;Lidar&quot;. The [[USGS]] uses both &quot;LIDAR&quot; and &quot;lidar&quot;, sometimes in the same document;&lt;ref&gt;{{cite web|url=http://lidar.cr.usgs.gov/ |title=CLICK |website=Lidar.cr.usgs.gov |date=2015-09-16 |access-date=2016-02-22 |url-status=dead |archive-url=https://web.archive.org/web/20160219045753/http://lidar.cr.usgs.gov/ |archive-date=2016-02-19 }}&lt;/ref&gt; the ''[[New York Times]]'' predominantly uses &quot;lidar&quot; for staff-written articles,&lt;ref&gt;{{cite web|url=https://query.nytimes.com/search/sitesearch/?action=click&amp;contentCollection=Science&amp;region=TopBar&amp;WT.nav=searchWidget&amp;module=SearchSubmit&amp;pgtype=article#/lidar/since1851/document_type%3A%22article%22/ |title=NYTimes.com search |website=nytimes.com |access-date=2017-04-07}}&lt;/ref&gt; although contributing news feeds such as Reuters may use Lidar.&lt;ref&gt;{{cite web|url=https://www.nytimes.com/reuters/2017/03/29/technology/29reuters-uber-tech-alphabet-lawsuit.html |title=Waymo Self-Driving Unit Sought Arbitration Over Engineer Now at Uber|website=nytimes.com |date=2017-03-29 |access-date=2017-04-07}}&lt;/ref&gt;
+
+==General description==
+Lidar uses [[ultraviolet]], [[Interferometric visibility|visible]], or [[near infrared]] light to image objects. It can target a wide range of materials, including non-metallic objects, rocks, rain, chemical compounds, [[aerosols]], clouds and even single [[molecule]]s.&lt;ref name=&quot;cracknell&quot; /&gt; A narrow laser beam can map physical features with very high [[Optical resolution|resolutions]]; for example, an aircraft can map terrain at {{convert|30|cm|adj=on}} resolution or better.&lt;ref&gt;{{cite web|author1=Carter, Jamie|author2=Keil Schmid|author3=Kirk Waters|author4=Lindy Betzhold|author5=Brian Hadley|author6=Rebecca Mataosky|author7=Jennifer Halleran|title=Lidar 101: An Introduction to Lidar Technology, Data, and Applications.&quot; (NOAA) Coastal Services Center|date=2012|page=14| url=https://coast.noaa.gov/data/digitalcoast/pdf/lidar-101.pdf |website=Coast.noaaa.gov|access-date=2017-02-11}}&lt;/ref&gt;
+{{
+multiple image | align = right | direction = horizontal | total_width = 700
+| image1 = 20200501 Time of flight.svg | caption1 =Basic time-of-flight principles applied to laser range-finding
+| image2 = Amazon Canopy Comes to Life through Laser Data.webm| caption2= Flying over the Brazilian Amazon with a LIDAR instrument.
+| image3 =  Collecting LIDAR data over the Ganges and Brahmaputra River Basin.ogg| caption3=Animation of a satellite collecting digital elevation map data over the Ganges and Brahmaputra River basin using lidar.
+}}
+The essential concept of lidar was originated by [[EH Synge]] in 1930, who envisaged the use of powerful searchlights to probe the atmosphere.&lt;ref&gt;Philosophical Magazine and Journal of Science, 1930, Series 7, Volume 9, Issue 60, pp. 1014–1020&lt;/ref&gt;&lt;ref&gt;Donegan, J.F.; ''[https://www.livingedition.at/en/isbn/9783901585173/ The Life and Works of Edward Hutchinson Synge]'' pp. 31, 67, (co-edited with D. Weaire and [[Petros Serghiou Florides|P. Florides]]), Pöllauberg, Austria : Living Edition, {{ISBN|3901585176}}&lt;/ref&gt; Indeed, lidar has since been used extensively for atmospheric research and [[meteorology]]. Lidar instruments fitted to [[aircraft]] and [[satellite]]s carry out [[surveying]] and mapping – a recent example being the U.S. Geological Survey Experimental Advanced Airborne Research Lidar.&lt;ref&gt;'Experimental Advanced Advanced Research Lidar', ''USGS.gov''. Retrieved 8 August 2007.&lt;/ref&gt; [[NASA]] has identified lidar as a key technology for enabling autonomous precision safe landing of future robotic and crewed lunar-landing vehicles.&lt;ref name=&quot;auto&quot;&gt;{{cite journal|author1=Amzajerdian, Farzin |author2=Pierrottet, Diego F. |author3=Petway, Larry B. |author4=Hines, Glenn D. |author5=Roback, Vincent E. |title=Lidar Systems for Precision Navigation and Safe Landing on Planetary Bodies|url=https://ntrs.nasa.gov/search.jsp?R=20110012163|journal=International Symposium on Photoelectronic Detection and Imaging 2011: Laser Sensing and Imaging; and Biological and Medical Applications of Photonics Sensing and Imaging|volume=8192 |pages=819202 |access-date=May 24, 2011|date=2011-05-24 |bibcode=2011SPIE.8192E..02A |doi=10.1117/12.904062 |hdl=2060/20110012163 |s2cid=28483836 |hdl-access=free }}&lt;/ref&gt;
+
+Wavelengths vary to suit the target: from about 10 [[micrometer (unit)|micrometer]]s ([[infrared]]) to approximately 250 [[nanometer|nm]] ([[Ultraviolet|UV]]). Typically, light is reflected via [[backscatter]]ing, as opposed to pure reflection one might find with a mirror. Different types of scattering are used for different lidar applications: most commonly [[Rayleigh scattering]], [[Mie scattering]], [[Raman scattering]], and [[fluorescence]].&lt;ref name=&quot;cracknell&quot; /&gt; Suitable combinations of wavelengths can allow for remote mapping of atmospheric contents by identifying wavelength-dependent changes in the intensity of the returned signal.&lt;ref&gt;{{Cite book|url=https://books.google.com/books?id=zGlQDwAAQBAJ&amp;pg=PA678|title=Handbook of Optoelectronics: Concepts, Devices, and Techniques (Volume One)|last1=P. Dakin|first1=John|last2=Brown|first2=Robert|publisher=CRC Press|year=2017|isbn=978-1-4822-4179-2|page=678}}&lt;/ref&gt;
+
+==Design==
+{{more citations needed section|date=April 2017}}
+[[File:LIDAR-scanned-SICK-LMS-animation.gif|thumb|'''Click image to see the animation.''' A basic lidar system involves a laser range finder reflected by a rotating mirror (top). The laser is scanned around the scene being digitized, in one or two dimensions (middle), gathering distance measurements at specified angle intervals (bottom).]]
+The two kinds of lidar detection schemes are &quot;incoherent&quot; or direct energy detection (which principally measures amplitude changes of the reflected light) and [[Coherence (physics)|coherent]] detection (best for measuring [[Doppler effect|Doppler]] shifts, or changes in the phase of the reflected light). Coherent systems generally use [[optical heterodyne detection]].&lt;ref&gt;{{cite book|title=Laser - Surface Interactions|last=Rashid A. Ganeev|publisher=Springer Science &amp; Business Media,2013|url= https://books.google.com/books?id=H8DEBAAAQBAJ&amp;pg=PR2|page=32|isbn=9789400773417|date=2013-10-17}}&lt;/ref&gt; This is more sensitive than direct detection and allows them to operate at much lower power, but requires more complex transceivers.
+
+Both types employ pulse models: either ''micropulse or'' ''high energy''. Micropulse systems utilize intermittent bursts of energy. They developed as a result of ever-increasing computer power, combined with advances in laser technology. They use considerably less energy in the laser, typically on the order of one [[Joule#Microjoule|microjoule]], and are often &quot;eye-safe&quot;, meaning they can be used without safety precautions. High-power systems are common in atmospheric research, where they are widely used for measuring atmospheric parameters: the height, layering and densities of clouds, cloud particle properties ([[refractive index#Dispersion and absorption|extinction coefficient]], backscatter coefficient, [[depolarization]]), temperature, pressure, wind, humidity, and trace gas concentration (ozone, methane, nitrous oxide, etc.).&lt;ref name=&quot;Cracknell&quot; /&gt;
+
+== Components ==
+
+Lidar systems consist of several major components.
+
+=== Laser ===
+600–1000 [[nanometre|nm]] [[laser]]s are most common for non-scientific applications. The maximum power of the laser is limited, or an automatic shut-off system which turns the laser off at specific altitudes is used in order to make it eye-safe for the people on the ground.
+
+One common alternative, 1550&amp;nbsp;nm lasers, are eye-safe at relatively high power levels since this wavelength is not strongly absorbed by the eye, but the detector technology is less advanced and so on these wavelengths are generally used at longer ranges with lower accuracies. They are also used for military applications because 1550&amp;nbsp;nm is not visible in [[Night vision device|night vision goggles]], unlike the shorter 1000&amp;nbsp;nm infrared laser.
+
+Airborne topographic mapping lidars generally use 1064&amp;nbsp;nm diode-pumped [[YAG]] lasers, while [[bathymetric]] (underwater depth research) systems generally use 532&amp;nbsp;nm frequency-doubled diode pumped YAG lasers because 532&amp;nbsp;nm penetrates water with much less [[attenuation]] than does 1064&amp;nbsp;nm. Laser settings include the laser repetition rate (which controls the data collection speed). Pulse length is generally an attribute of the laser cavity length, the number of passes required through the gain material (YAG, [[YLF]], etc.), and [[Q-switch]] (pulsing) speed. Better target resolution is achieved with shorter pulses, provided the lidar receiver detectors and electronics have sufficient bandwidth.&lt;ref name=&quot;Cracknell&quot; /&gt;
+
+==== Phased arrays ====
+A [[phased array]] can illuminate any direction by using a microscopic array of individual antennas. Controlling the timing (phase) of each antenna steers a cohesive signal in a specific direction.
+
+Phased arrays have been used in radar since the 1950s. The same technique can be used with light. On the order of a million optical antennas are used to see a radiation pattern of a certain size in a certain direction. The system is controlled by timing the precise flash. A single chip (or a few) replace a US$75,000 electromechanical system, drastically reducing costs.&lt;ref name=&quot;:11&quot;&gt;{{Cite news |last=Mokey |first=Nick |date=2018-03-15 |title=A self-driving car in every driveway? Solid-state lidar is the key |language=en-US |work=Digital Trends |url=https://www.digitaltrends.com/cars/solid-state-lidar-for-self-driving-cars/ |access-date=2018-06-15}}&lt;/ref&gt;

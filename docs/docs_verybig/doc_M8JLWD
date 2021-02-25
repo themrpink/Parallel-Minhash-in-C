@@ -1,0 +1,259 @@
+=== Cited references ===
+{{Reflist|30em}}
+
+=== General references ===
+{{refbegin|2}}
+* ''Principles of Optics'', 7th edition, M. Born &amp; E. Wolf, Cambridge University, 1999, {{ISBN|0-521-64222-1}}.
+* ''Fundamentals of polarized light: a statistical optics approach'', C. Brosseau, Wiley, 1998, {{ISBN|0-471-14302-2}}.
+* ''Polarized Light, second edition'', Dennis Goldstein, Marcel Dekker, 2003, {{ISBN|0-8247-4053-X}}
+* ''Field Guide to Polarization'', Edward Collett, SPIE Field Guides vol. '''FG05''', SPIE, 2005, {{ISBN|0-8194-5868-6}}.
+* ''Polarization Optics in Telecommunications'', Jay N. Damask, Springer 2004, {{ISBN|0-387-22493-9}}.
+* ''Polarized Light in Nature'', G. P. Können, Translated by G. A. Beerling, Cambridge University, 1985, {{ISBN|0-521-25862-6}}.
+* ''Polarised Light in Science and Nature'', [[David Pye (zoologist)|D. Pye]], Institute of Physics, 2001, {{ISBN|0-7503-0673-4}}.
+* ''Polarized Light, Production and Use'', William A. Shurcliff, Harvard University, 1962.
+* ''Ellipsometry and Polarized Light'', R. M. A. Azzam and N. M. Bashara, North-Holland, 1977, {{ISBN|0-444-87016-4}}
+* ''Secrets of the Viking Navigators—How the Vikings used their amazing sunstones and other techniques to cross the open oceans'', Leif Karlsen, One Earth Press, 2003.
+{{refend}}
+
+== External links ==
+* [https://www.feynmanlectures.caltech.edu/I_33.html Feynman's lecture on polarization]
+* [http://polarization.com/ Polarized Light in Nature and Technology]
+* [http://micro.magnet.fsu.edu/primer/techniques/polarized/gallery/index.html Polarized Light Digital Image Gallery]: Microscopic images made using polarization effects
+* [https://web.archive.org/web/20050405221855/http://www.colorado.edu/physics/2000/polarization/index.html Polarization by the University of Colorado Physics 2000]: Animated explanation of polarization
+* [http://mathpages.com/rr/s9-04/9-04.htm MathPages: The relationship between photon spin and polarization]
+* [http://gerdbreitenbach.de/crystal/crystal.html A virtual polarization microscope]
+* [http://www.satsig.net/polangle.htm Polarization angle in satellite dishes].
+* [http://bobatkins.com/photography/tutorials/polarizers.html Using polarizers in photography]
+* [http://micro.magnet.fsu.edu/primer/java/scienceopticsu/polarizedlight/filters/ Molecular Expressions: Science, Optics and You — Polarization of Light]: Interactive Java tutorial
+* [http://groups.google.com/group/Polarization?lnk=gschg SPIE technical group on polarization]
+* [http://www.antenna-theory.com/basics/polarization.php Antenna Polarization]
+* [https://www.youtube.com/watch?v=Q0qrU4nprB0 Animations of Linear, Circular and Elliptical Polarizations on YouTube]
+
+{{Authority control}}
+
+[[Category:Polarization (waves)| ]]
+[[Category:Electromagnetic radiation]]
+[[Category:Antennas (radio)]]
+[[Category:Broadcast engineering]]</text>
+      <sha1>e2bhohxbw75qmonq1zj1s6b4izmwwu6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Polarization-maintaining optical fiber</title>
+    <ns>0</ns>
+    <id>41565</id>
+    <revision>
+      <id>984962480</id>
+      <parentid>984799458</parentid>
+      <timestamp>2020-10-23T03:55:16Z</timestamp>
+      <contributor>
+        <username>Srleffler</username>
+        <id>252195</id>
+      </contributor>
+      <comment>/* Applications */ Move misplaced sentence.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="7492" xml:space="preserve">[[File:Panda fiber2.jpg|thumb|Image of the cross section of a polarization-maintaining optical fiber patch cord, taken with an illuminated microscopic viewer called a [[fiberscope]]. The two small, eye-like circles are the stress rods and the tiny circle between them is the core. The larger circle surrounding them is the cladding, usually 125 [[Micrometre|microns]] in diameter.]]
+In [[fiber optics]], '''polarization-maintaining optical fiber''' ('''PMF''' or '''PM fiber''') is a single-mode [[optical fiber]] in which [[linear polarization|linearly polarized]] [[light]], if properly launched into the fiber, maintains a linear polarization during [[Wave propagation|propagation]], exiting the fiber in a specific linear polarization state; there is little or no cross-coupling of optical [[Power (physics)|power]] between the two polarization [[Normal mode|mode]]s. Such fiber is used in special applications where preserving polarization is essential.
+
+==Polarization crosstalk==
+In an ordinary (non-polarization-maintaining) fiber, two polarization modes (say vertical and horizontal polarization) have the same nominal [[phase velocity]] due to the fiber's circular symmetry. However tiny amounts of random [[birefringence]] in such a fiber, or bending in the fiber, will cause a tiny amount of crosstalk from the vertical to the horizontal polarization mode. And since even a short portion of fiber, over which a tiny coupling coefficient may apply, is many thousands of wavelengths long, even that small coupling between the two polarization modes, applied coherently, can lead to a large power transfer to the horizontal mode, completely changing the wave's net state of polarization. Since that coupling coefficient was unintended and a result of arbitrary stress or bending applied to fiber, the output state of polarization will itself be random, and will vary as those stresses or bends vary; it will also vary with wavelength. 
+
+==Principle of operation==
+Polarization-maintaining fibers work by ''intentionally'' introducing a systematic linear [[birefringence]] in the fiber, so that there are two well defined polarization modes which propagate along the fiber with very distinct phase velocities. The '''beat length''' L&lt;sub&gt;b&lt;/sub&gt; of such a fiber (for a particular wavelength) is the distance (typically a few millimeters) over which the wave in one mode will experience an additional delay of one wavelength compared to the other polarization mode. Thus a length L&lt;sub&gt;b&lt;/sub&gt; /2 of such fiber is equivalent to a [[Waveplate#Half-wave_plate|half-wave plate]]. Now consider that there might be a random coupling between the two polarization states over a significant length of such fiber. At point 0 along the fiber, the wave in polarization mode 1 induces an amplitude into mode 2 at some phase. However at point  1/2 L&lt;sub&gt;b&lt;/sub&gt;  along the fiber, the same coupling coefficient between the polarization modes induces an amplitude into mode 2 which is now 180 degrees ''out of phase'' with the wave coupled at point zero, leading to [[Interference (wave propagation)|cancellation]]. At point L&lt;sub&gt;b&lt;/sub&gt; along the fiber the coupling is again in the original phase, but at 3/2 L&lt;sub&gt;b&lt;/sub&gt; it is again out of phase and so on. The possibility of coherent addition of wave amplitudes through crosstalk over distances much larger than L&lt;sub&gt;b&lt;/sub&gt; is thus eliminated. Most of the wave's power remains in the original polarization mode, and exits the fiber in that mode's polarization as it is oriented at the fiber end. [[Optical fiber connector]]s used for PM fibers are specially keyed so that the two polarization modes are aligned and exit in a specific orientation.
+
+Note that a polarization-maintaining fiber does not polarize light as a [[polarizer]] does. Rather, PM fiber maintains the linear polarization of linearly polarized light provided that it is launched into the fiber aligned with one of the fiber's polarization modes. Launching linearly polarized light into the fiber at a different angle will excite both polarization modes, conducting the same wave at slightly different phase velocities. At most points along the fiber the net polarization will be an [[elliptical polarization|elliptically polarized]] state, with a return to the original polarization state after an integer number of beat lengths. Consequently, if visible laser light is launched into the fiber exciting both polarization modes, scattering of propagating light viewed from the side, is observed with a light and dark pattern periodic over each beat length, since scattering is preferentially perpendicular to the polarization direction.
+
+==Designs==
+[[Image:PM optical fibres.svg|thumb|300px|right|Cross sections of three types of PM fiber.]]
+Several different designs are used to create birefringence in a fiber.&lt;ref&gt;{{cite journal |title=PANDA-style fibers move beyond telecom |journal=Laser Focus World |date=August 2004 |first=Adrian |last=Carter |author2=Samson, Bryce}}&lt;/ref&gt; The fiber may be geometrically asymmetric or have a refractive index profile which is asymmetric such as the design using an elliptical [[Cladding (fiber optics)|cladding]] as shown in the diagram. Alternatively, [[Stress (physics)|stress]] permanently induced in the fiber will produce [[Birefringence#Stress induced birefringence|stress birefringence]]; this may be accomplished using rods of another material included within the cladding. Several different shapes of rod are used, and the resulting fiber is sold under brand names such as &quot;PANDA&quot; and &quot;Bow-tie&quot;. (&quot;PANDA&quot; refers to the resemblance of the fiber's cross-section to the face of a [[panda]], and is also an acronym for &quot;Polarization-maintaining AND Absorption-reducing&quot;.) 
+
+It is possible to create a [[Optical rotation#Theory|circularly birefringent]] optical fiber just using an ordinary (circularly symmetric) single-mode fiber and twisting it, thus creating internal torsional stress. That causes the phase velocity of right and left hand circular polarizations to significantly differ. Thus the two circular polarizations propagate with little crosstalk in between them
+
+==Applications==
+Polarization-maintaining optical fibers are used in special applications, such as in [[Fiber optic sensor|fiber optic sensing]], [[interferometry]] and [[quantum key distribution]]. They are also commonly used in [[telecommunication]]s for the connection between a source [[laser]] and a [[modulator]], since the modulator requires polarized light as input. They are rarely used for long-distance transmission, because PM fiber is expensive and has higher [[Absorption (optics)|attenuation]] than [[singlemode fiber]]. Another important application is [[fiber-optic gyroscope]]s, which are widely used in the aerospace industry. 
+
+The output of a PM fiber is typically characterized by its [[polarization extinction ratio]] (PER)—the ratio of correctly to incorrectly polarized light, expressed in [[decibel]]s. The quality of PM [[patchcord]]s and [[Fiber pigtail|pigtail]]s can be characterized with a [[PER meter]]. Good PM fibers have extinction ratios in excess of 20 dB.
+
+==References==
+&lt;references/&gt;
+*{{FS1037C}}
+*MIL-STD-2196
+
+==External links==
+*[http://www.fujikura.co.jp/eng/resource/pdf/16pnb04.pdf Fujikura's PANDA Fiber] Specs for the most common type of PM fiber
+*[http://www.generalphotonics.com/downloads/techpubs/Polarization-Crosstalk-in-PM-Fiber.pdf Polarization Crosstaik in PM Fiber]
+
+[[Category:Optical fiber]]</text>
+      <sha1>qvm7cbaenfuuwsnuudt753vosliejb9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Polling, Mühldorf</title>
+    <ns>0</ns>
+    <id>41566</id>
+    <revision>
+      <id>911602428</id>
+      <parentid>910989884</parentid>
+      <timestamp>2019-08-19T22:56:21Z</timestamp>
+      <contributor>
+        <username>Darwinek</username>
+        <id>107928</id>
+      </contributor>
+      <minor />
+      <comment>/* References */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1279" xml:space="preserve">{{Infobox German location
+|name              = Polling
+|image_coa            = DEU Polling (Mühldorf) COA.svg
+|image_photo = Kirche Mariä Heimsuchung Polling.JPG
+|image_caption = Church of the Visitation of the Virgin Mary
+|coordinates       = {{coord|48|13|N|12|34|E|format=dms|display=inline,title}}
+|image_plan = Polling in MÜ.svg
+|state        = Bayern
+|region  = Oberbayern
+|district         = Mühldorf
+|Verwaltungsgemeinschaft = [[Polling (Verwaltungsgemeinschaft)|Polling]]
+|elevation              = 410
+|area            = 43.83
+|postal_code               = 84570
+|area_code           = 08633
+|licence               = MÜ
+|Gemeindeschlüssel = 09 1 83 136
+|Adresse           = Gemeinde Polling&lt;br /&gt;Monhamer Weg 1 &lt;br /&gt;84570 Polling
+|mayor     = Lorenz Kronberger
+|party            = CSU
+|website = {{official|http://polling.lra-mue.de/de/gde/gemeinde_polling/die_gemeinde.htm}}
+}}
+
+'''Polling''' is a municipality in the district of [[Mühldorf (district)|Mühldorf]] in [[Bavaria]] in [[Germany]]. It lies on the [[Inn River]].
+
+==References==
+{{Reflist}}
+
+{{Cities and towns in Mühldorf (district)}}
+
+{{Authority control}}
+{{DEFAULTSORT:Polling, Muhldorf}}
+[[Category:Mühldorf (district)]]
+[[Category:Populated places on the Inn (river)]]
+
+{{Mühldorf-geo-stub}}</text>
+      <sha1>rjymo5dlg6pmyjdiq57kironchdp38i</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Power budget</title>
+    <ns>0</ns>
+    <id>41567</id>
+    <redirect title="Link budget" />
+    <revision>
+      <id>926501236</id>
+      <parentid>502908359</parentid>
+      <timestamp>2019-11-16T20:43:35Z</timestamp>
+      <contributor>
+        <username>Chetvorno</username>
+        <id>1030826</id>
+      </contributor>
+      <comment>Merged page into [[Link budget]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="42" xml:space="preserve">#REDIRECT [[Link budget]] {{R from merge}}</text>
+      <sha1>jzwskqvjgy7h65x25fitcpkfkc3hai7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Power factor</title>
+    <ns>0</ns>
+    <id>41568</id>
+    <revision>
+      <id>991016826</id>
+      <parentid>986944088</parentid>
+      <timestamp>2020-11-27T20:45:29Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 38 templates: del empty params (3×); hyphenate params (13×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="43778" xml:space="preserve">{{for|the firearms cartridge ranking system|Power factor (shooting sports)}}
+
+In [[electrical engineering]], the '''power factor''' of an [[alternating current|AC]] electrical power system is defined as the [[ratio]] of the ''[[real power]]'' absorbed by the [[electrical load|load]] to the ''[[apparent power]]'' flowing in the circuit, and is a [[dimensionless number]] in the [[closed interval]] of −1 to 1. A power factor of less than one indicates the voltage and current are not in phase, reducing the average [[Product (mathematics)|product]] of the two. Real power is the instantaneous product of voltage and current and represents the capacity of the electricity for performing work. Apparent power is the product of [[Root mean square|RMS]] current and voltage. Due to energy stored in the load and returned to the source, or due to a non-linear load that distorts the wave shape of the current drawn from the source, the apparent power may be greater than the real power. A negative power factor occurs when the device (which is normally the load) generates power, which then flows back towards the source.
+
+In an electric power system, a load with a low power factor draws more current than a load with a high power factor for the same amount of useful power transferred. The higher currents increase the energy lost in the distribution system, and require larger wires and other equipment. Because of the costs of larger equipment and wasted energy, electrical utilities will usually charge a higher cost to industrial or commercial customers where there is a low power factor.
+
+'''Power-factor correction''' increases the power factor of a load, improving efficiency for the distribution system to which it is attached. Linear loads with low power factor (such as [[induction motor]]s) can be corrected with a passive network of [[capacitor]]s or [[inductor]]s. Non-linear loads, such as [[rectifier]]s, distort the current drawn from the system. In such cases, active or passive power factor correction may be used to counteract the distortion and raise the power factor. The devices for correction of the power factor may be at a central [[electrical substation|substation]], spread out over a distribution system, or built into power-consuming equipment.
+
+== Linear circuits ==
+
+[[File:Power factor 0.svg|right|thumb|upright=1.36|Power flow calculated from AC voltage and current entering a load having a zero power factor ({{mvar|ϕ}}&amp;nbsp;=&amp;nbsp;90°, cos({{mvar|ϕ}})&amp;nbsp;=&amp;nbsp;0). The blue line shows the instantaneous power entering the load: all of the energy received during the first (or third) quarter cycle is returned to the grid during the second (or fourth) quarter cycle, resulting in an ''average'' power flow (light blue line) of zero.]]
+
+[[File:Power factor 0.7.svg|right|thumb|upright=1.36|Instantaneous and average power calculated from AC voltage and current for a load with a lagging power factor ({{mvar|ϕ}}&amp;nbsp;{{=}}&amp;nbsp;45°, cos({{mvar|ϕ}})&amp;nbsp;≈&amp;nbsp;0.71). The blue line (instantaneous power) shows that a portion of the energy received by the load is returned to the grid during the part of the cycle labeled {{mvar|ϕ}}.]]
+
+[[Linear circuit]]s have a sinusoidal response to the sinusoidal line voltage. A linear load does not change the shape of the input waveform but may change the relative timing (phase) between voltage and current, due to its inductance or capacitance. 
+
+In a purely resistive AC circuit, voltage and current waveforms are in step (or [[Phase (waves)|in phase]]), changing polarity at the same instant in each cycle. All the power entering the load is consumed (or dissipated).
+
+Where [[Reactance (electronics)|reactive]] loads are present, such as with [[capacitor]]s or [[inductor]]s, energy storage in the loads results in a phase difference between the current and voltage waveforms. During each cycle of the AC voltage, extra energy, in addition to any energy consumed in the load, is temporarily stored in the load in [[Electric field|electric]] or [[magnetic field]]s then returned to the power grid a fraction of the period later.
+
+Electrical circuits containing predominantly resistive loads (incandescent lamps, heating elements) have a power factor of almost 1, but circuits containing inductive or capacitive loads (electric motors, [[solenoid]] valves, transformers, [[Electrical ballast|fluorescent lamp ballasts]], and others) can have a power factor well below 1.
+
+In the [[electric power grid]], reactive loads cause a continuous &quot;ebb and flow&quot; of nonproductive power.  A circuit with a low power factor will use a greater amount of current to transfer a given quantity of real power than a circuit with a high power factor thus causing increased losses due to [[Joule heating|resistive heating]] in power lines, and requiring the use of higher-rated conductors and transformers.  
+
+=== Definition and calculation ===
+[[AC power]] flow has two components:
+* Real power or active power (&lt;math&gt;P&lt;/math&gt;) (sometimes called average power&lt;ref&gt;{{Cite book|title=Introductory Circuit Analysis|last=Boylestad|first=Robert|isbn=978-0-13-097417-4|edition=10th|date=2002-03-04|page=857}}&lt;/ref&gt;), expressed in [[watt]]s (W)
+* Reactive power (&lt;math&gt;Q&lt;/math&gt;), usually expressed in [[volt-ampere reactive|reactive volt-amperes]] (var)&lt;ref&gt;{{cite web |title=SI Units – Electricity and Magnetism |publisher = International Electrotechnical Commission |url=http://www.iec.ch/zone/si/si_elecmag.htm | place = [[Switzerland|CH]] | archive-url = https://web.archive.org/web/20071211234311/http://www.iec.ch/zone/si/si_elecmag.htm#si_epo |archive-date = 2007-12-11 |access-date= 14 June 2013}}&lt;/ref&gt;
+
+Together, they form the complex power (&lt;math&gt;S&lt;/math&gt;) expressed as [[volt-amperes]] (VA). The magnitude of the complex power is the apparent power (&lt;math&gt;|S|&lt;/math&gt;), also expressed in volt-amperes (VA).
+
+The VA and var are non-SI units mathematically identical to the watt, but are used in engineering practice instead of the watt to state what [[physical quantity|quantity]] is being expressed. The [[SI]] explicitly disallows using units for this purpose or as the only source of information about a physical quantity as used.&lt;ref&gt;{{cite book|title=The International System of Units (SI) [SI brochure]|url=http://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf|year=2006|publisher=[[BIPM]]|location=§&amp;nbsp;5.3.2 (p.&amp;nbsp;132, 40 in the [[PDF]] file)}}&lt;/ref&gt;
+
+The power factor is defined as the ratio of real power to apparent power. As power is transferred along a transmission line, it does not consist purely of real power that can do work once transferred to the load, but rather consists of a combination of real and reactive power, called apparent power. The power factor describes the amount of real power transmitted along a transmission line relative to the total apparent power flowing in the line.&lt;ref&gt;{{Citation | publisher = [[Institute of Electrical and Electronics Engineers|IEEE]] | id = Std. 100 | title = Authoritative Dictionary of Standards Terms | edition = 7th | isbn = 978-0-7381-2601-2| year = 2000 }}&lt;/ref&gt;&lt;ref&gt;{{Citation | publisher = IEEE | id = Std. 1459–2000 | title = Trial-Use Standard Definitions for the Measurement of Electric Power Quantities Under Sinusoidal, Nonsinusoidal, Balanced, or Unbalanced Conditions | year = 2000 | isbn = 978-0-7381-1963-2}}.  Note 1, section 3.1.1.1, when defining the quantities for power factor, asserts that real power only flows to the load and can never be negative. As of 2013, one of the authors acknowledged that this note was incorrect, and is being revised for the next edition. See http://powerstandards.com/Shymanski/draft.pdf&lt;/ref&gt;
+
+==== Power triangle ====
+[[File:Power triangle diagram.jpg|frameless|upright=1.68]]
+
+One can relate the various components of AC power by using the power triangle in vector space. Real power extends horizontally in the î direction as it represents a purely real component of AC power. Reactive power extends in the direction of ĵ as it represents a purely imaginary component of AC power. Complex power (and its magnitude, Apparent power) represents a combination of both real and reactive power, and therefore can be calculated by using the vector sum of these two components. We can conclude that the mathematical relationship between these components is:
+
+:&lt;math&gt;\begin{align}
+                               S &amp;= P + jQ \\
+                               |S|^2 &amp;= P^2 + Q^2 \\[3pt]
+                               |S| &amp;= \sqrt{P^2 + Q^2} \\
+  \cos\theta\text{, power factor} &amp;= \frac{P\text{, real power}}{|S|\text{, apparent power}} \\
+  \text{or} \\
+  \text{power factor} &amp;= \cos(\arctan(Q/P)) \\
+  \text{it follows that. . .} \\
+  Q&amp;=P*\tan(\arccos(\text{power factor}))
+\end{align}&lt;/math&gt;
+
+==== Increasing the power factor ====
+[[File:Increased power factor.jpg|frameless|upright=1.8]]
+
+As the power factor (i.e. cos ''θ'') increases, the ratio of real power to apparent power (which = cos ''θ''), increases and approaches unity (1), while the angle ''θ'' decreases and the reactive power decreases. [As cos ''θ'' → 1, its maximum possible value, ''θ'' → 0 and so Q → 0, as the load becomes less reactive and more purely resistive].
+
+==== Decreasing the power factor ====
+[[File:Decreased power factor.jpg|frameless|upright=1.85]]
+
+As the power factor decreases, the ratio of real power to apparent power also decreases, as the angle θ increases and reactive power increases.
+
+==== Lagging and leading power factors ====
+There is also a difference between a lagging and leading power factor. The terms refer to whether the phase of the current is lagging or leading the phase of the voltage. A lagging power factor signifies that the load is inductive, as the load will “consume” reactive power, and therefore the reactive component &lt;math&gt;Q&lt;/math&gt; is positive as reactive power travels through the circuit and is “consumed” by the inductive load. A leading power factor signifies that the load is capacitive, as the load “supplies” reactive power, and therefore the reactive component &lt;math&gt;Q&lt;/math&gt; is negative as reactive power is being supplied to the circuit.
+
+[[File:Lagging-Leading.jpg|frameless|upright=2.66]]
+
+If θ is the [[phase (waves)|phase angle]] between the current and voltage, then the power factor is equal to the [[Trigonometric functions|cosine]] of the angle, &lt;math&gt;\cos\theta&lt;/math&gt;:
+:&lt;math&gt;|P| = |S| \cos\theta&lt;/math&gt;
+
+Since the units are consistent, the power factor is by definition a [[dimensionless number]] between −1 and 1. When power factor is equal to 0, the energy flow is entirely reactive and stored energy in the load returns to the source on each cycle. When the power factor is 1, all the energy supplied by the source is consumed by the load. Power factors are usually stated as &quot;leading&quot; or &quot;lagging&quot; to show the sign of the phase angle. Capacitive loads are leading (current leads voltage), and inductive loads are lagging (current lags voltage).
+
+If a purely resistive load is connected to a power supply, current and voltage will change polarity in step, the power factor will be 1, and the electrical energy flows in a single direction across the network in each cycle. Inductive loads such as induction motors (any type of wound coil) consume reactive power with current waveform lagging the voltage. Capacitive loads such as capacitor banks or buried cable generate reactive power with current phase leading the voltage. Both types of loads will absorb energy during part of the AC cycle, which is stored in the device's magnetic or electric field, only to return this energy back to the source during the rest of the cycle.
+
+For example, to get 1&amp;nbsp;kW of real power, if the power factor is unity, 1&amp;nbsp;kVA of apparent power needs to be transferred (1&amp;nbsp;kW ÷ 1 = 1&amp;nbsp;kVA). At low values of power factor, more apparent power needs to be transferred to get the same real power. To get 1&amp;nbsp;kW of real power at 0.2 power factor, 5&amp;nbsp;kVA of apparent power needs to be transferred (1&amp;nbsp;kW ÷ 0.2 = 5&amp;nbsp;kVA). This apparent power must be produced and transmitted to the load, and is subject to the losses in the production and transmission processes.
+
+Electrical loads consuming [[AC power|alternating current power]] consume both real power and reactive power. The vector sum of real and reactive power is the apparent power. The presence of reactive power causes the real power to be less than the apparent power, and so, the electric load has a power factor of less than 1.
+
+A negative power factor (0 to −1) can result from returning power to the source, such as in the case of a building fitted with solar panels when surplus power is fed back into the supply.&lt;ref&gt;{{Citation | title = On the resistance and electromotive forces of the electric arc |first=W. | last = Duddell | journal = Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences|volume=203 |issue=359–371 |doi=10.1098/rsta.1904.0022  | pages = 512–15 | year = 1901 | quote = The fact that the solid arc has, at low frequencies, a negative power factor, indicates that the arc is supplying power to the alternator…| doi-access = free }}&lt;/ref&gt;&lt;ref&gt;{{Citation |title=Analysis of some measurement issues in bushing power factor tests in the field |first=S. |last=Zhang |journal= IEEE Transactions on Power Delivery|volume=21 |issue=3 |pages=1350–56 |date=July 2006 |quote=…(the measurement) gives both negative power factor and negative resistive current (power loss) |doi=10.1109/tpwrd.2006.874616}}&lt;/ref&gt;&lt;ref&gt;{{Citation | title = Performance of Grid-Connected Induction Generator under Naturally Commutated AC Voltage Controller |first=A. F. |last=Almarshoud |display-authors=etal |journal=Electric Power Components and Systems |volume=32 |issue=7 |pages=691–700 |year=2004 |quote=Accordingly, the generator will consume active power from the grid, which leads to negative power factor.|doi=10.1080/15325000490461064 }}&lt;/ref&gt;

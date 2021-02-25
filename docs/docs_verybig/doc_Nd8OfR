@@ -1,0 +1,276 @@
+* where a limited ability to contact one entity (but no ability to make outside calls) is desired.
+:''Example: a &quot;house phone&quot; in a hotel lobby to the live operator at the hotel's switchboard''
+
+* where the public, or users that are not trained in using a specific office telephone system, must place calls.
+:''Example: the after-hours phone to reach the watchman from the front door at a warehouse.''
+
+* in locations where emergencies are handled and the time required to dial digits would cause an unacceptable delay in handling of an emergency.
+:''Example: an airport [[control tower]] to the airport's fire station or fire dispatch center.''
+:''Example: [[Independent System Operator]] (ISO) communication to a power plant.''
+
+* in situations where the called party needs to be certain of who is calling.
+:''Example: a hospital emergency department and an ambulance dispatch center.''
+
+In some cases, automatic ringdown circuits have one-to-many configurations. When one phone goes off-hook, a group of phones is made to ring simultaneously.
+
+In cases where one or both ends of the circuit terminate in a key telephone system, a well-designed system will have no hold feature on the ringdown circuit unless supervision provides a [[Calling Party Control]] (CPC) signal.
+
+==PLAR==
+{{Main|Private line}}
+'''Private line automatic ringdown''' ('''PLAR''') is a type of analog signaling often used in telephone based  systems.  When a device is taken off-hook, ringing voltage is automatically applied to a circuit to alert other stations on the line.  When answered on another station, a call is maintained over the circuit.  The telephone company switch is not involved in the process, making this a private line.
+
+==See also==
+*[[Courtesy phone]]
+*[[Dedicated line]]
+
+==References==
+{{reflist}}
+*{{FS1037C MS188}}
+
+==External links==
+*[http://oldfilm.org/store/index.php?main_page=product_info&amp;products_id=20 The Last Ringdown], 1980 documentary on the [[Woodstock, Maine|Bryant Pond]] Telephone Company
+*[http://sipstar.com.au/voip/configuring-plar-on-cucm-v6-1/ PLAR Configuration Example], on [[Cisco]] [[Call Manager]] ([[Cisco Unified Communications Manager|CUCM]]) v.6
+
+{{Telecommunications}}
+
+[[Category:Communication circuits]]
+[[Category:Telephony equipment]]</text>
+      <sha1>h7mutmhov7f6huhu6q2epewbhymv7z9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Ringer equivalence number</title>
+    <ns>0</ns>
+    <id>41670</id>
+    <revision>
+      <id>982987296</id>
+      <parentid>982987149</parentid>
+      <timestamp>2020-10-11T15:48:55Z</timestamp>
+      <contributor>
+        <username>Kbrose</username>
+        <id>3938795</id>
+      </contributor>
+      <comment>/* International usage */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4103" xml:space="preserve">{{short description|Indication of the electrical load on a telephone line}}
+The '''ringer equivalence number''' ('''REN''') is a [[telecommunications]] [[measurement|measure]] that represents the [[electrical load]]ing effect of a [[telephone]] ringer on a [[telephone line]]. In the United States, '''ringer equivalence''' was first defined by [[U.S. Code of Federal Regulations]], [[Title 47 CFR Part 68|Title 47, Part 68]], based on the load that a standard [[Bell System]] [[model 500 telephone]] represented, and was later determined in accordance with specification ''ANSI/TIA-968-B'' (August 2009).  Measurement systems analogous to the REN exist internationally.
+
+==Definition==
+The ringer equivalence of 1 represents the loading effect of a single traditional telephone ringing [[electrical network|circuit]], such as that within the Western Electric [[model 500 telephone]]. The ringer equivalence of modern telephone equipment may be significantly lower than 1. For example, externally powered electronic ringing telephones may have a value as low as 0.1, while modern [[analog (signal)|analog]]-ringing telephones, in which the ringer is powered from the telephone line, typically have a REN of approximately 0.8.
+
+In the United States, the FCC Part 68 specification defined REN 1 as equivalent to a 6930 [[Ohm (unit)|Ω]] [[resistor]] [[Series and parallel circuits|in series]] with an {{gaps|8|µF}} ([[Farad|microfarad]]) [[capacitor]].  The modern ANSI/TIA-968-B specification (August 2009) defines it as an [[electrical impedance|impedance]] of {{gaps|7000|Ω}} at {{gaps|20|Hz}} (type A ringer), or {{gaps|8000|Ω}} from {{gaps|15|Hz}} to {{gaps|68|Hz}} (type B ringer).
+
+==Maximum ringer equivalence==
+The total ringer load on a [[subscriber]] line is the sum of the ringer equivalences of all [[information appliance|device]]s (phone, fax, a separate answerphone, etc.) connected to the line. This represents the overall loading effect of the subscriber equipment on the [[telephone exchange|central office]] ringing [[current (electricity)|current]] source. Subscriber telephone lines are usually limited to support a ringer equivalence of 5, per the federal specifications.
+
+If the total allowable ringer load is exceeded, the phone circuit may fail to ring or otherwise malfunction. For example, [[call waiting]], [[caller ID]], and [[ADSL]] services are often affected by high ringer load.
+
+Some [[analog telephone adapter]]s for [[Internet telephony]] require analog telephones with low REN, for example, the AT&amp;T 210 is a basic phone which does not require an external electrical connection and has a REN of 0.9B.
+
+==International specifications==
+[[File:Aansluitfactor.jpg|thumb|In the Netherlands all telephone equipment shall carry a blue label with the ringer equivalence number - in this case 1.5]]
+In the [[United Kingdom]] a maximum of 4 is allowed on any [[British Telecom]] (BT) line.&lt;ref&gt;{{cite web|url=http://www.britishtelephones.com/ren.htm|title=Ringer Equivalence Number (REN)|last=Anon|publisher=BOBS TELEPHONE FILE|accessdate=28 May 2015}}&lt;/ref&gt;
+
+In [[Australia]] a maximum of 3 is allowed on any [[Telstra]] or [[Optus]] Line.&lt;ref&gt;{{Cite book|url=https://www.telstra.com.au/content/dam/tcom/personal/help/pdf-b/017153a00-complete-home-cabling-guide.pdf|title=Cabling of premises for telecommunications – A complete guide to home cabling|date=26 August 2013|publisher=Telstra Corporation|isbn=|location=|page=182}}&lt;/ref&gt;
+
+In Canada it is called a ''load number'' (LN); which must not exceed 100.  The LN of each device represents the percentage of total load allowed.{{citation needed|date=January 2014}}
+
+In Europe 1 REN used to be equivalent to an 1800 Ω resistor in series with a 1 µF capacitor.  The latest [[ETSI]] specification (2003–09) calls for 1 REN to be greater than 16 kΩ at 25&amp;nbsp;Hz and 50&amp;nbsp;Hz.
+
+==References==
+{{Reflist}}
+* {{FS1037C}}
+* [[American National Standards Institute|ANSI]]/[[TIA-968-B]]
+* [[European Telecommunications Standards Institute|ETSI]] TS 103 021
+
+[[Category:Telephony equipment]]
+[[Category:Equivalent units]]</text>
+      <sha1>p2xvm6na0r8kf6d9gfc7x9xumigfaam</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Ring latency</title>
+    <ns>0</ns>
+    <id>41671</id>
+    <revision>
+      <id>785540697</id>
+      <parentid>767161165</parentid>
+      <timestamp>2017-06-14T03:09:46Z</timestamp>
+      <contributor>
+        <username>Natg 19</username>
+        <id>3492060</id>
+      </contributor>
+      <minor />
+      <comment>Disambiguating links to [[Cable]] (link changed to [[Electrical cable]]) using [[User:Qwertyytrewqqwerty/DisamAssist|DisamAssist]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="554" xml:space="preserve">In a ring [[computer network|network]], such as [[IBM token ring|Token Ring]], '''ring latency''' is the time required for a [[signal processing|signal]] to propagate once around the ring. Ring latency may be measured in seconds or in bits at the [[data transmission]] rate. Ring latency includes signal [[propagation delay]]s in the ring [[Transmission medium|medium]], the [[Electrical cable|drop cable]]s, and the data stations connected to the ring network. 
+
+==References==
+*{{FS1037C MS188}}
+
+[[Category:Network protocols]]
+
+
+{{compu-network-stub}}</text>
+      <sha1>39epvfoopnwc6gh2klohw8w5fmsjeyx</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Round-trip delay</title>
+    <ns>0</ns>
+    <id>41672</id>
+    <revision>
+      <id>984323402</id>
+      <parentid>981898876</parentid>
+      <timestamp>2020-10-19T14:23:54Z</timestamp>
+      <contributor>
+        <ip>81.197.12.205</ip>
+      </contributor>
+      <comment>time is calculated in amount not length</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2991" xml:space="preserve">{{short description|time required to receive a response to a query across a communication system}}
+
+In [[telecommunication]]s, the '''round-trip delay''' ('''RTD''') or '''round-trip time''' ('''RTT''') is the amount of time it takes for a signal to be sent plus the amount of time it takes for an acknowledgement of that signal to be received. This time delay includes the [[propagation time]]s for the paths between the two [[communication endpoint]]s.&lt;ref&gt;[http://www.its.bldrdoc.gov/fs-1037/dir-031/_4641.htm Definition by the [[National Telecommunications and Information Administration]]'s Institute for Telecommunication Sciences in [[Boulder, Colorado]]]&lt;/ref&gt;
+
+In the context of computer networks, the signal is generally a [[Network packet|data packet]], and the RTT is also known as the '''ping time'''.  An internet user can determine the RTT by using the [[ping command]].
+
+[[End-to-end delay]] is the length of time it takes for a signal to travel in one direction and is often approximated by half the RTT.
+
+==Protocol design==
+Network links with both a high [[bandwidth (computing)|bandwidth]] and a high RTT (and thus high [[bandwidth-delay product]]) can have a very large amount of data &quot;in flight&quot; at any given time.  Such &quot;long fat pipes&quot; require a special protocol design.&lt;ref&gt;{{citation |url=http://www.networkworld.com/article/2176641/tech-primers/are-your-pipes-too-big-.html |title=Are your pipes too big? |author=Brian Heder |work=[[Network World]] |date=May 6, 2014 |accessdate=2016-01-09}}&lt;/ref&gt; One example is the [[TCP window scale option]].
+
+The RTT was originally estimated in TCP by:
+
+:&lt;math&gt;\mathrm{RTT} = \alpha \cdot \mathrm{old\_RTT} + (1 - \alpha) \cdot \mathrm{new\_round\_trip\_sample}&lt;/math&gt;
+
+where α is constant weighting factor (&lt;math&gt;0 \leq \alpha &lt; 1&lt;/math&gt;).&lt;ref&gt;{{cite book |author=Douglas E. Comer |author-link=Douglas Comer |year=2000 |title=Internetworking with TCP/IP - Principles, Protocols and Architecture |edition=4th |publisher=Prentice Hall |isbn=978-0-13-018380-4 |page=226}}&lt;/ref&gt; Choosing a value for α close to 1 makes the weighted average immune to changes that last a short time (e.g., a single segment that encounters long delay). Choosing a value for α close to 0 makes the weighted average respond to changes in delay very quickly. This was improved by the [[Jacobson/Karels algorithm]], which takes standard deviation into account as well. Once a new RTT is calculated, it is entered into the equation above to obtain an average RTT for that connection, and the procedure continues for every new calculation.
+
+== Wi-Fi ==
+Accurate round-trip time measurements over [[Wi-Fi]] using [[IEEE 802.11mc]] is the basis for the [[Wi-Fi positioning system]].
+
+== See also ==
+* [[End-to-end delay]]
+* [[Lag]]
+* [[Latency (engineering)]]
+* [[Minimum-Pairs Protocol]]
+* [[Network delay]]
+* [[Time of flight]]
+
+==References==
+{{Reflist}}
+
+{{DEFAULTSORT:Round-Trip Delay Time}}
+[[Category:Telecommunication theory]]
+[[Category:Light]]</text>
+      <sha1>iidx17c4zridwycfq37zn3i5mb7evgb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Routing indicator</title>
+    <ns>0</ns>
+    <id>41673</id>
+    <revision>
+      <id>936866464</id>
+      <parentid>828408433</parentid>
+      <timestamp>2020-01-21T14:02:36Z</timestamp>
+      <contributor>
+        <username>Bellowhead678</username>
+        <id>23824585</id>
+      </contributor>
+      <minor />
+      <comment>letter,identifies-&gt;letter, identifies - [[Wikipedia:Correct typos in one click|Fix a typo in one click]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2609" xml:space="preserve">In [[telecommunication]], the term '''routing indicator''' (RI) has the following meanings:
+
+#In a [[message]] [[header (computing)|header]], an [[Network address|address]], ''i.e.,'' group of characters, that specifies routing instructions for the [[transmission (telecommunications)|transmission]] of the message to its final destination.
+
+A Routing Indicator is a group of letters assigned to identify a station within a [[tape relay]] network to facilitate  routing of traffic. It indicates the status of the station and may indicate its geographical area. The following factors are reflected in routing indicator assignment:
+
+* (a) National or international affiliation and service (when required) of the station.
+* (b) The geographical area in which the station is located or area from which it is served.
+* (c) Network status of the station, i.e., major or minor relay, or tributary stations.
+
+Routing indicators consist of not less than four, and not more than seven
+letters, including suffixes. The intent of allocated letters and of letter position is as follows:
+
+* First Letter - The letter R or the letter “Q” appears as the first letter and distinguishes strategic/worldwide routing indicators from call signs, address groups and theater routing indicators. 
+* Second Letter - this letter, in conjunction with the first letter, identifies the nation or international alliance to which allotted. 
+* Third Letter - This letter position serves the following purposes:
+# Normally identifies the geographical area in which a station is located or from which it is served.
+# Exceptionally, may be used by nations or international alliances irrespective of geographical area for specific alternative purposes, such as when the capacity of assigned second letters is insufficient to meet the requirement, or when more than one geographical area is involved as in the case of a tributary actively connected to two different major relay stations. In conjunction with the second letter “J”, may be reallocated, on a national basis, to a country not listed. 
+* Fourth Letter - This letter position serves a dual purpose as follows:
+# Indicates major relay stations, as generated by assignment requirements.
+# Identifies the service or other national/international entity, as shown in the delineation table.
+
+* (e) Fifth and Following Letters - These letters and positions, when added to the four letters of a major relay routing indicator, designate the minor relay or tributary stations of that major relay station.
+
+== References ==
+* {{FS1037C MS188}}
+* {{DODDIC}}
+
+[[Category:Data transmission]]</text>
+      <sha1>faw8d1360wowkpqfyozmjl8cekgffpb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Rubidium standard</title>
+    <ns>0</ns>
+    <id>41674</id>
+    <revision>
+      <id>980297131</id>
+      <parentid>980285796</parentid>
+      <timestamp>2020-09-25T18:18:35Z</timestamp>
+      <contributor>
+        <username>Anastrophe</username>
+        <id>473822</id>
+      </contributor>
+      <comment>Reverted 3 edits by [[Special:Contributions/Fransiscosan1000|Fransiscosan1000]] ([[User talk:Fransiscosan1000|talk]]): Unexplained changes. please use edit summary, and use sources.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2470" xml:space="preserve">{{no footnotes|date=August 2014}}
+[[File:Rb oscillator.jpg|thumb|right|Rb oscillator]]
+A '''rubidium standard''' or '''rubidium atomic clock''' is a [[frequency standard]] in which a specified [[Hyperfine_structure#Use_in_defining_the_SI_second_and_meter|hyperfine transition]] of [[electron]]s in [[rubidium]]-87 atoms is used to control the output frequency. It is the most inexpensive, compact, and widely produced [[atomic clock]], used to control the frequency of [[television station]]s, [[cellular base station|cell phone base stations]], in test equipment, and [[global navigation satellite system]]s like [[Global Positioning System|GPS]]. Commercial rubidium clocks are less accurate than [[Caesium standard|caesium atomic clock]]s, which serve as [[Primary standard|primary frequency standards]], so the rubidium clock is a [[secondary frequency standard]]. 
+
+All commercial rubidium frequency standards operate by disciplining a [[crystal oscillator]] to the rubidium hyperfine transition of {{val|6834682610.904|u=Hz}}. The intensity of light from a rubidium [[discharge lamp]] that reaches a [[photodetector]] through a resonance cell will drop by about 0.1% when the rubidium vapor in the resonance cell is exposed to [[microwave]] power near the [[Hyperfine structure|transition frequency]]. The crystal oscillator is stabilized to the rubidium transition by detecting the light dip while sweeping an [[Radio frequency|RF]] [[frequency synthesizer|synthesizer]] (referenced to the crystal) through the transition frequency.
+
+==See also==
+* [[Hydrogen maser]]
+
+== References ==
+* Stanford Research Systems documentation on the PRS10 frequency standard: https://www.thinksrs.com/downloads/pdfs/catalog/PRS10c.pdf
+* {{NIST-PD|http://tf.nist.gov/general/enc-re.htm#resonancefrequency}}
+*{{FS1037C}}
+
+== External links ==
+* [https://web.archive.org/web/20090130083728/http://tf.nist.gov/general/enc-re.htm#resonancefrequency NIST Time &amp; Frequency A-Z Glossary - Resonance Frequency]
+* [http://www.npl.co.uk/server.php?show=ConWebDoc.1727 Secondary Representation of the SI Second]
+* [http://www.ptb.de/en/org/4/44/441/info2_e.htm PTB &quot;Unit of Time&quot;]
+* [http://tycho.usno.navy.mil/clockdev/RubidiumFountain.html USNO Rubidium Fountain Project]
+* [http://www.npl.co.uk/science-technology/time-frequency/microwave-frequency-standards/research/rb-fountain NPL Rubidium Fountain]
+
+[[Category:Electronics standards]]
+[[Category:Atomic clocks]]
+[[Category:Rubidium]]</text>
+      <sha1>5kmkn72azmsay1ioc9cnjdrgc3du7z4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Rural radio service</title>
+    <ns>0</ns>
+    <id>41675</id>
+    <revision>
+      <id>635335906</id>
+      <parentid>546465653</parentid>
+      <timestamp>2014-11-25T04:11:19Z</timestamp>
+      <contributor>
+        <username>Dawynn</username>
+        <id>6655086</id>
+      </contributor>
+      <comment>/* References */[[Wikipedia:WikiProject Stub sorting|stub sorting]] using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1546" xml:space="preserve">'''Rural Radiotelephone Service''' (RRTS) provides basic, analog communications service between locations deemed so remote that traditional wireline service or service by other means is not feasible. &lt;ref name=FCC&gt;{{cite web |url=http://www.fcc.gov/encyclopedia/rural-radiotelephone-service |title=Rural Radiotelephone Service |work=FCC Encyclopedia |publisher=Federal Communications Commission |accessdate=2012-04-24}}&lt;/ref&gt; RRTS uses channelized radio to provide [[radiotelephone]] services such as [[Basic Exchange Telephone Radio Service]] between a fixed subscriber location and a remote [[telephone exchange|central office]], [[private line]] service between a two fixed locations or interconnection between two or more central offices. RRTS does not enable [[mobile communication]]s.

@@ -1,0 +1,308 @@
+If ''m''&amp;nbsp;−&amp;nbsp;4 or ''m''&amp;nbsp;+&amp;nbsp;6 is also prime then the three primes are called a [[prime triplet]].
+
+For a twin prime pair of the form (6''n'' − 1, 6''n'' + 1) for some natural number ''n'' &gt; 1, ''n'' must have units digit 0, 2, 3, 5, 7, or 8 ({{OEIS2C|id=A002822}}).
+
+==Isolated prime==
+An '''isolated prime''' (also known as '''single prime''' or '''non-twin prime''') is a prime number ''p'' such that neither ''p''&amp;nbsp;−&amp;nbsp;2 nor ''p''&amp;nbsp;+&amp;nbsp;2 is prime. In other words, ''p'' is not part of a twin prime pair. For example, 23 is an isolated prime, since 21 and 25 are both [[composite number|composite]].
+
+The first few isolated primes are
+
+:[[2 (number)|2]], [[23 (number)|23]], [[37 (number)|37]], [[47 (number)|47]], [[53 (number)|53]], [[67 (number)|67]], [[79 (number)|79]], [[83 (number)|83]], [[89 (number)|89]], [[97 (number)|97]], ... {{OEIS2C|id=A007510}}
+
+It follows from [[Brun's theorem]] that [[Almost_all#Meaning_in_number_theory|almost all]] primes are isolated in the sense that
+the ratio of the number of isolated primes less than a given threshold ''n'' and the number of all primes less than ''n'' tends to 1 as ''n'' tends to infinity.
+
+==See also==
+* [[Cousin prime]]
+* [[Prime gap]]
+* [[Prime k-tuple|Prime ''k''-tuple]]
+* [[Prime quadruplet]]
+* [[Prime triplet]]
+* [[Sexy prime]]
+
+==References==
+{{Reflist|30em}}
+* {{cite book | first1=Paul T. | last1=Bateman | author1-link=Paul T. Bateman | first2=Harold G. | last2=Diamond | title=Analytic Number Theory | publisher=World Scientific | year=2004 | isbn=981-256-080-7 | zbl=1074.11001 }}
+
+==Further reading==
+* {{cite book |authorlink=Neil Sloane |first=Neil |last=Sloane |authorlink2=Simon Plouffe |first2=Simon |last2=Plouffe |title=The Encyclopedia of Integer Sequences |publisher=Academic Press |location=San Diego, CA |year=1995 |isbn=0-12-558630-2 }}
+
+==External links==
+* {{springer|title=Twins|id=p/t094470}}
+* [http://primes.utm.edu/top20/page.php?id=1 Top-20 Twin Primes] at Chris Caldwell's [[Prime Pages]]
+* Xavier Gourdon, Pascal Sebah: [http://numbers.computation.free.fr/Constants/Primes/twin.html ''Introduction to Twin Primes and Brun's Constant'']
+* [http://mersenneforum.org/showpost.php?p=96237&amp;postcount=51 &quot;Official press release&quot;] of 58711-digit twin prime record
+* {{MathWorld | urlname=TwinPrimes | title=Twin Primes}}
+* [http://arnflo.se/~site_files/Other/twinprimes The 20 000 first twin primes]
+* [http://michaelnielsen.org/polymath1/index.php?title=Bounded_gaps_between_primes#World_records Polymath: Bounded gaps between primes]
+* [https://www.wired.com/wiredscience/2013/11/prime/ Sudden Progress on Prime Number Problem Has Mathematicians Buzzing]
+{{Prime number classes}}
+{{Prime number conjectures}}
+
+[[Category:Classes of prime numbers]]
+[[Category:Unsolved problems in mathematics]]</text>
+      <sha1>6g52i5z6jvbnb4w6qfyoo8xd5s5poqi</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Franz Mertens</title>
+    <ns>0</ns>
+    <id>41999</id>
+    <revision>
+      <id>923158042</id>
+      <parentid>922533407</parentid>
+      <timestamp>2019-10-26T19:10:27Z</timestamp>
+      <contributor>
+        <username>Ruyter</username>
+        <id>9554377</id>
+      </contributor>
+      <minor />
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4032" xml:space="preserve">{{Infobox scientist
+| name              = Franz Mertens
+| image             = Franz Mertens.jpg
+| image_size        =
+| caption           =
+| birth_date        = {{birth date|1840|3|20|df=y}}
+| birth_place       = [[Środa Wielkopolska|Schroda]], [[Kingdom of Prussia|Prussia]]
+| death_date        = {{death date and age|1927|3|5|1840|3|20|df=y}}
+| death_place       = [[Vienna]], [[Republic of Austria (1919–1934)|Austria]]
+| nationality       = [[Poland|Polish]]
+| fields            = [[Mathematics]]
+| workplaces        = [[University of Vienna]] &lt;br&gt; [[Graz University of Technology|Graz Polytechnic]] &lt;br&gt; [[Jagiellonian University]]
+| alma_mater        = [[University of Berlin]]
+| doctoral_advisor  = [[Ernst Eduard Kummer]]&lt;br&gt;[[Leopold Kronecker]]
+| doctoral_students = [[Ernst Sigismund Fischer|Ernst S. Fischer]]&lt;br&gt;[[Eduard Helly]]&lt;br&gt;
+| known_for         = [[Mertens conjecture]]&lt;br&gt;[[Mertens function]]&lt;br&gt;[[Meissel–Mertens constant]]&lt;br&gt;[[Mertens's theorems]]
+| awards            =
+}}
+'''Franz Mertens''' (20 March 1840 – 5 March 1927) (also Franciszek Mertens) was a [[Poland|Polish]] [[mathematician]]. He was born in [[Środa Wielkopolska|Schroda]] in the [[Grand Duchy of Posen]], [[Kingdom of Prussia]] (now [[Środa Wielkopolska]], [[Poland]]) and died in [[Vienna]], [[Austria]].
+
+The [[Mertens function]] ''M''(''x'') is the sum function for the [[Möbius function]], in the theory of [[arithmetic function]]s. The [[Mertens conjecture]] concerning its growth, conjecturing it bounded by ''x''&lt;sup&gt;1/2&lt;/sup&gt;, which would have implied the [[Riemann hypothesis]], is now known to be false ([[Andrew Odlyzko|Odlyzko]] and [[Herman te Riele|te Riele]], 1985).  The [[Meissel–Mertens constant]] is analogous to the [[Euler–Mascheroni constant]], but the [[harmonic series (mathematics)|harmonic series]] sum in its definition is only over the [[prime number|primes]] rather than over all integers and the logarithm is taken twice, not just once. [[Mertens's theorems]] are three 1874 results related to the density of prime numbers.
+
+[[Erwin Schrödinger]] was taught calculus and algebra by Mertens.&lt;ref&gt;{{cite web|title=Erwin Schrödinger biography|url=http://www-history.mcs.st-andrews.ac.uk/Biographies/Schrodinger.html}}&lt;/ref&gt;
+
+His memory is honoured by the Franciszek Mertens Scholarship granted to those outstanding pupils of foreign secondary schools who wish to study at the Faculty of Mathematics and Computer Science of the [[Jagiellonian University]] in [[Kraków]] and were finalists of the [[List of mathematics competitions#National mathematics olympiads|national-level mathematics]], or computer science olympiads, or they have participated in one of the following international olympiads: in [[International Mathematical Olympiad|mathematics]] (IMO), [[International Olympiad in Informatics|computer science]] (IOI), [[International Astronomy Olympiad|astronomy]] (IAO), [[International Physics Olympiad|physics]] (IPhO), [[International Linguistics Olympiad|linguistics]] (IOL), or they were participants of the [[European Girls' Mathematical Olympiad]] (EGMO).&lt;ref&gt;{{Cite web|url=http://www.matinf.uj.edu.pl/en_GB/kandydaci/oferta-dla-najlepszych/stypendium-mertensa|title=Franciszek Mertens Scholarship|access-date=2019-01-20}}&lt;/ref&gt;
+ 
+==See also==
+* [[Mertens's theorems]]
+* [[Cauchy product]]
+
+==References==
+{{reflist}}
+
+==External links==
+* {{MacTutor Biography|id=Mertens}}
+* {{MathGenealogy|id=49524}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Mertens, Franz}}
+[[Category:1840 births]]
+[[Category:1927 deaths]]
+[[Category:People from Środa Wielkopolska]]
+[[Category:People from the Province of Posen]]
+[[Category:Polish mathematicians]]
+[[Category:Austro-Hungarian mathematicians]]
+[[Category:Austrian mathematicians]]
+[[Category:19th-century German mathematicians]]
+[[Category:20th-century German mathematicians]]
+[[Category:Humboldt University of Berlin alumni]]
+[[Category:Jagiellonian University faculty]]
+[[Category:University of Vienna faculty]]
+[[Category:Number theorists]]</text>
+      <sha1>qhp34o51o8h773kx1o7ujaxja7i02i0</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Émile Picard</title>
+    <ns>0</ns>
+    <id>42000</id>
+    <revision>
+      <id>986889271</id>
+      <parentid>985590144</parentid>
+      <timestamp>2020-11-03T16:15:03Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Add: s2cid. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by Abductive | [[Category:Foreign Members of the Royal Society]] | via #UCB_Category 190/731</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="8067" xml:space="preserve">{{Infobox scientist
+| name              = Émile Picard
+| honorific_suffix  = [[Royal Society of London|FRS(For)]] [[FRSE]]
+| image             = Charles Émile Picard.jpg
+| birth_date        = {{birth date|df=yes|1856|07|24}}
+| birth_place       = [[Paris]], [[Second French Empire|France]]
+| death_date        = {{death date and age|df=yes|1941|12|11|1856|07|24}}
+| death_place       = Paris, France
+| nationality       = French
+| fields            = [[Mathematics]]
+| workplaces        = [[University of Paris]]&lt;br&gt;[[École Centrale Paris]]
+| alma_mater        = [[École normale supérieure (Paris)|École Normale Supérieure]] (Paris)
+| thesis_title      = Applications des complexes lineaires a l'etude des surfaces et des courbes gauches 
+| doctoral_advisor  = [[Gaston Darboux]]
+| doctoral_students = [[Sergei Natanovich Bernstein|Sergei Bernstein]]&lt;br&gt;[[Paul Dubreil]]&lt;br&gt;[[Jacques Hadamard]]&lt;br&gt;[[Gaston Julia]]&lt;br&gt;[[Traian Lalescu]]&lt;br&gt;[[Philippe Le Corbeiller]]&lt;br&gt;[[Paul Painlevé]]&lt;br&gt;[[Mihailo Petrović]]&lt;br&gt;[[Simion Stoilow]]&lt;br&gt;[[Ernest Vessiot]]&lt;br&gt;[[Henri Villat]]&lt;br&gt;[[André Weil]]&lt;br&gt;[[Stanisław Zaremba (mathematician)|Stanisław Zaremba]]
+| known_for         = [[Picard functor]]&lt;br&gt;[[Picard group]]&lt;br&gt;[[Picard theorem]]&lt;br&gt;[[Picard variety]]&lt;br&gt;[[Picard–Lefschetz formula]]&lt;br&gt;[[Picard–Lindelöf theorem]]&lt;br&gt;[[Painlevé transcendents]]
+| awards            = [[Fellow of the Royal Society]]&lt;ref name=&quot;frs&quot;/&gt;
+}}
+'''Charles Émile Picard''' {{post-nominals|post-noms=[[Royal Society of London|FRS(For)]]&lt;ref name=&quot;frs&quot;&gt;{{Cite journal | last1 = Hadamard | first1 = J. | authorlink = Jacques Hadamard| title = Emile Picard. 1856–1941 | doi = 10.1098/rsbm.1942.0012 | journal = [[Obituary Notices of Fellows of the Royal Society]] | volume = 4 | issue = 11 | pages = 129–150| year = 1942 | pmid =  | pmc = | s2cid = 162244074 }}&lt;/ref&gt; [[FRSE]]}} ({{IPA-fr|ʃaʁl emil pikaʁ|lang}}; 24 July 1856 – 11 December 1941) was a French [[mathematician]]. He was elected the fifteenth member to occupy seat 1 of the [[Académie française]] in 1924.&lt;ref&gt;{{MacTutor Biography|id= Picard_Emile}}&lt;/ref&gt;
+
+==Life==
+
+He was born in [[Paris]] on 24 July 1856 and educated there at the [[Lycée Henri-IV]]. He then studied Mathematics at the [[École normale supérieure (Paris)|École Normale Supérieure]].&lt;ref&gt;{{cite book|title=Biographical Index of Former Fellows of the Royal Society of Edinburgh 1783–2002|date=July 2006|publisher=The Royal Society of Edinburgh|isbn=0-902-198-84-X| url=https://www.royalsoced.org.uk/cms/files/fellows/biographical_index/fells_indexp2.pdf}}&lt;/ref&gt;
+
+Picard's mathematical papers, textbooks, and many popular writings exhibit an extraordinary range of interests, as well as an impressive mastery of the mathematics of his time. Modern students of [[Complex analysis|complex variables]] are probably familiar with two of his named theorems. [[Picard's little theorem]] states that every nonconstant [[entire function]] takes every value in the [[complex plane]], with perhaps one exception. [[Picard's great theorem]] states that an [[analytic function]] with an [[essential singularity]] takes every value infinitely often, with perhaps one exception, in any neighborhood of the singularity. He made important contributions in the theory of [[differential equation]]s, including work on [[Picard–Vessiot theory]], [[Painlevé transcendents]] and his introduction of a kind of [[symmetry group]] for a [[linear differential equation]]. He also introduced the [[Picard group]] in the theory of [[algebraic surface]]s, which describes the classes of [[algebraic curve]]s on the surface modulo linear equivalence. In connection with his work on function theory, he was one of the first mathematicians to use the emerging ideas of [[algebraic topology]]. In addition to his theoretical work, Picard made contributions to [[applied mathematics]], including the theories of [[telegraphy]] and [[Elasticity (physics)|elasticity]]. His collected papers run to four volumes.
+
+[[Louis Couturat]] studied [[integral calculus]] with Picard in 1891 and 2, taking detailed notes of the lectures. These notes were preserved and now are available in three cahiers from [[Internet Archive]].&lt;ref&gt;[[Louis Couturat]] notes (1891,2) [https://archive.org/details/ENS01_Ms0124_01/page/n1 Cours de Calcul Integral par M. Picard, cahier 1], [https://archive.org/details/ENS01_Ms0124_02/page/n2 cahier 2], [https://archive.org/details/ENS01_Ms0124_03/page/n2 cahier 3]&lt;/ref&gt;
+
+Like his contemporary, [[Henri Poincaré]], Picard was much concerned with the training of mathematics, physics, and engineering students.
+He wrote a classic textbook on [[Mathematical analysis|analysis]] and one of the first textbooks on the [[theory of relativity]]. Picard's popular writings include biographies of many leading French mathematicians, including his father in law, [[Charles Hermite]].
+
+==Family==
+
+In 1881 he married Marie, the daughter of [[Charles Hermite]].
+
+==Works==
+* 1891–96: {{cite book | title=Traité d'Analyse | year=1891 | url=https://archive.org/details/traitdanalyse07picagoog | location=Paris | publisher=Gauthier-Villars et fils | oclc=530823}}&lt;ref&gt;{{cite journal|author=Craig, T.|authorlink=Thomas Craig (mathematician)|title=Picard's ''Traité d'Analyse''|journal=[[Bulletin of the American Mathematical Society]]|year=1893|volume=3|issue=2|pages=39–65|url=http://www.ams.org/journals/bull/1893-03-02/S0002-9904-1893-00166-3/|doi=10.1090/s0002-9904-1893-00166-3|doi-access=free}}&lt;/ref&gt;
+* 1905: {{cite book | title=La science Moderne et son état Actuel | year=1914 | url=https://archive.org/details/lasciencemodern01picagoog | location=Paris | publisher=E. Flammarion | oclc=43307396}}
+* 1906 : (with Georges Simart) [https://archive.org/details/thoriedesfoncti00simagoog/page/n7 Theorie des Fonctions Algebrique de deux Variables Independente] volume 2, via [[Internet Archive]]
+* 1922: {{cite book | title=La Théorie de la Relativité et ses Applications à l'astronomie | year=1922 | url=https://archive.org/details/lathoriedelare00picauoft | location=Paris | publisher=Gauthier-Villars | oclc=1025334}}
+* 1922: {{cite book | title=Discours et Mélanges | year=1922 | url=https://archive.org/details/discoursetmlan00picauoft | location=Paris | publisher=Gauthier-Villars | oclc=4855336}}
+* 1931: {{cite book | title=Éloges et Discours Académiques | location=Paris | publisher=s.n. | oclc=13473598}}
+* 1978–81: {{cite book| title=Œuvres de Ch.-É. Picard | location=Paris  | publisher=Centre National de la Recherche Scientifique | volume=vol. I–IV | oclc=4615520}}
+
+==See also==
+* [[Émile Picard Medal]]
+* [[Picard modular group]]
+* [[Picard modular surface]]
+* [[Picard horn]]
+
+==References==
+{{Reflist}}
+
+==External links==
+* {{MathGenealogy|id=34266}}
+* {{Gutenberg author | id=Picard,+Émile | name=Émile Picard}}
+* {{Internet Archive author |sname=Émile Picard |sopt=w}}
+
+{{Académie française Seat 1}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Picard, Charles Emile}}
+[[Category:1856 births]]
+[[Category:1941 deaths]]
+[[Category:Scientists from Paris]]
+[[Category:19th-century French mathematicians]]
+[[Category:20th-century French mathematicians]]
+[[Category:Lycée Henri-IV alumni]]
+[[Category:École Normale Supérieure alumni]]
+[[Category:Mathematical analysts]]
+[[Category:Grand Croix of the Légion d'honneur]]
+[[Category:Members of the Académie Française]]
+[[Category:Members of the French Academy of Sciences]]
+[[Category:Foreign Members of the Royal Society]]
+[[Category:Members of the Pontifical Academy of Sciences]]
+[[Category:Members of the Hungarian Academy of Sciences]]
+[[Category:Fellows of the American Academy of Arts and Sciences]]
+[[Category:Foreign associates of the National Academy of Sciences]]
+[[Category:Corresponding Members of the St Petersburg Academy of Sciences]]
+[[Category:Honorary Members of the Russian Academy of Sciences (1917–1925)]]
+[[Category:Grand Crosses of the Order of Saint James of the Sword]]
+[[Category:Members of the Ligue de la patrie française]]</text>
+      <sha1>963u8mu1iebsbhitxfq24c5kt5nb4ne</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Antonie van Leeuwenhoek</title>
+    <ns>0</ns>
+    <id>42001</id>
+    <revision>
+      <id>987645529</id>
+      <parentid>986343837</parentid>
+      <timestamp>2020-11-08T11:28:58Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: url, pages. URLs might have been internationalized/anonymized. Add: chapter-url. Removed or converted URL. Formatted [[WP:ENDASH|dashes]]. Some additions/deletions were actually parameter name changes. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by AManWithNoPlan | All pages linked from cached copy of User:AManWithNoPlan/sandbox2 | via #UCB_webform_linked 1401/3821</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="42392" xml:space="preserve">{{for|the eponymous microbiology journal|Antonie van Leeuwenhoek (journal)}}
+{{redirect|Leeuwenhoek|other uses|Leeuwenhoek (disambiguation)}}
+{{pp-vandalism|small=yes}}
+{{pp-semi-indef}}
+{{short description|Dutch tradesman and scientist}}
+{{Family name hatnote|lang=Dutch|van Leeuwenhoek|wrong=Leeuwenhoek}}
+{{Use dmy dates|date=August 2019}}
+{{Infobox scientist
+|name              = Antonie van Leeuwenhoek
+|image             = Anthonie van Leeuwenhoek (1632-1723). Natuurkundige te Delft Rijksmuseum SK-A-957.jpeg
+|caption           = A portrait of Antonie van Leeuwenhoek (1632–1723) by [[Jan Verkolje]]
+|birth_date        = {{Birth date|df=y|1632|10|24}}
+|birth_place       = [[Delft]], [[Dutch Republic]]
+|death_date        = {{Death date and age|df=y|1723|08|26|1632|10|24}}
+|death_place       = Delft, Dutch Republic
+|citizenship       =
+|nationality       = Dutch
+|ethnicity         =
+|fields            = [[Microscopy]]&lt;br /&gt;[[Microbiology]]
+|workplaces        =
+|alma_mater        =
+|doctoral_advisor  =
+|academic_advisors =
+|doctoral_students =
+|notable_students  =
+|known_for         = The first acknowledged [[microscopist]] and [[microbiology|microbiologist]]{{#tag:ref|Van Leeuwenhoek is universally acknowledged as the [[List of people considered father or mother of a scientific field|father of microbiology]] because he was the first to undisputedly discover/observe, describe, study, conduct scientific experiments with [[microscopic organisms]] (microbes), and relatively determine their size, using single-lensed microscopes of his own design.&lt;ref&gt;[[Nick Lane|Lane, Nick]] (6 March 2015). &quot;The Unseen World: Reflections on Leeuwenhoek (1677) 'Concerning Little Animal'.&quot; ''Philos Trans R Soc Lond B Biol Sci''. 2015 Apr; 370 (1666): {{doi|10.1098/rstb.2014.0344}}&lt;/ref&gt; Leeuwenhoek is also considered to be the father of [[bacteriology]] and [[protozoology]] (recently known as [[protistology]]).&lt;ref&gt;{{cite journal | author-link = Clifford Dobell | last=Dobell | first=Clifford | year = 1923 | title = A Protozoological Bicentenary: Antony van Leeuwenhoek (1632–1723) and Louis Joblot (1645–1723) | journal = Parasitology | volume = 15 | issue = 3| pages = 308–19 | doi= 10.1017/s0031182000014797| title-link=Louis Joblot }}&lt;/ref&gt;&lt;ref&gt;{{cite journal | last1 = Corliss | first1 = John O | year = 1975 | title = Three Centuries of Protozoology: A Brief Tribute to its Founding Father, A. van Leeuwenhoek of Delft | journal = The Journal of Protozoology | volume = 22 | issue = 1| pages = 3–7 | doi= 10.1111/j.1550-7408.1975.tb00934.x| pmid = 1090737 }}&lt;/ref&gt;|group=&quot;note&quot;}}&lt;br /&gt;[[Microscopic scale|Microscopic]] discovery of [[microorganisms]] ([[animalcule]])
+|author_abbrev_bot =
+|author_abbrev_zoo =
+|influences        = [[Robert Hooke]]&lt;br /&gt;[[Regnier de Graaf]]
+|influenced        = History of [[history of biology|biology]] and [[life sciences]]&lt;br /&gt;[[Natural history]]&lt;br /&gt;[[Scientific Revolution]]&lt;br /&gt;[[Age of Enlightenment|Age of Reason]]
+|awards            =
+|signature         = Antonie van Leeuwenhoek Signature.svg
+|footnotes         =
+}}
+
+'''Antonie Philips van Leeuwenhoek'''{{#tag:ref|The spelling of van Leeuwenhoek's name is exceptionally varied. He was christened as ''Thonis'', but always went by ''Antonj'' (corresponding with the English ''Antony''). The final ''j'' of his given name is the Dutch tense ''i''. Until 1683 he consistently used the spelling ''Antonj Leeuwenhoeck'' (ending in ''–oeck'') when signing his letters. Throughout the mid-1680s he experimented with the spelling of his surname, and after 1685 settled on the most recognized spelling, ''van Leeuwenhoek''.&lt;ref&gt;Dobell, pp. 300–05.&lt;/ref&gt;|group=&quot;note&quot;}} {{post-nominals|post-noms=[[Fellow of the Royal Society|FRS]]}} ({{IPAc-en|ˈ|ɑː|n|t|ə|n|i|_|v|ɑː|n|_|ˈ|l|eɪ|v|ən|h|uː|k|,_|-|h|ʊ|k}} {{respell|AHN|tə|nee|_|vahn|_|LAY|vən|hook|,_|-|huuk}}; {{IPA-nl|ɑnˈtoːni vɑn ˈleːuə(n)ˌɦuk|lang|Antonie_van_Leeuwenhoek.ogg}};&lt;ref&gt;{{cite web |title= How to pronounce Anton van Leeuvenhoek |url= https://www.howtopronounce.com/anton-van-leeuwenhoek |publisher=howtopronounce.com |year= 2018 |accessdate= 12 July 2018}}&lt;/ref&gt; 24 October 1632 – 26 August 1723) was a [[Dutch Republic|Dutch]] businessman and scientist in the [[Dutch Golden Age|Golden Age of Dutch science and technology]]. A largely self-taught man in science, he is commonly known as &quot;[[List of people considered father or mother of a scientific field|the Father of Microbiology]]&quot;, and one of the first [[Microscopist|microscopists]]&lt;!--preceded by Robert Hooke--&gt; and [[microbiologist]]s.&lt;ref&gt;Chung, King-thom; Liu, Jong-kang: ''Pioneers in Microbiology: The Human Side of Science''. (World Scientific Publishing, 2017,  {{ISBN|978-9813202948}}). &quot;We may fairly call Leeuwenhoek &quot;The first microbiologist&quot; because he was the first individual to actually culture, see, and describe a large array of microbial life. He actually measured the multiplication of the bugs. What is more amazing is that he published his discoveries.&quot;&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=http://www.hup.harvard.edu/catalog.php?isbn=9780674975910|title=Life at the Edge of Sight |author=Scott Chimileski, Roberto Kolter |website=hup.harvard.edu|publisher= Harvard University Press|access-date=26 January 2018}}&lt;/ref&gt; Van Leeuwenhoek is best known for his pioneering work in microscopy and for his contributions toward the establishment of microbiology as a [[Discipline (academia)|scientific discipline]].
+
+Raised in [[Delft]], [[Dutch Republic]], van Leeuwenhoek worked as a [[draper]] in his youth and founded his own shop in 1654. He became well recognized in municipal politics and developed an interest in lensmaking. In the 1670s, he started to explore [[microbial life]] with his microscope.{{#tag:ref|Note that the existence of [[microscopic organism]]s (microbes, microorganisms) was predicted or hypothesized many centuries before they were first observed by van Leeuwenhoek.|group=&quot;note&quot;}} This was one of the notable achievements of the Golden Age of Dutch exploration and discovery (c. 1590s–1720s).
+
+Using single-lensed microscopes of his own design, van Leeuwenhoek was the first to experiment with [[microbes]], which he originally referred to as ''dierkens'', ''diertgens'' or ''diertjes'' ([[Dutch language|Dutch]] for &quot;small animals&quot; [translated into English as ''[[animalcules]]'', from Latin ''animalculum'' = &quot;tiny animal&quot;]).&lt;ref name=lens&gt;{{cite web|first=Douglas|last=Anderson|title=Animalcules|url=https://lensonleeuwenhoek.net/content/animalcules|website=Lens on Leeuwenhoek|accessdate=9 October 2019}}&lt;/ref&gt; Through his experiments, he was the first to relatively determine their size. Most of the &quot;animalcules&quot; are now referred to as [[unicellular organism]]s, although he observed multicellular organisms in pond water. He was also the first to document [[microscopic scale|microscopic observations]] of [[muscle]] fibers, [[bacterium|bacteria]], [[Spermatozoon|spermatozoa]], [[red blood cell]]s, [[crystal]]s in [[gouty tophus|gouty tophi]], and blood flow in [[capillary|capillaries]]. Although van Leeuwenhoek did not write any books, his discoveries came to light through correspondence with the [[Royal Society]], which published his letters.
+
+==Early life and career==
+[[File:Antony van Leeuwenhoek and his &quot;Little animals&quot;; being some account of the father of protozoology and bacteriology and his multifarious discoveries in these disciplines; (1932) (19122164704).jpg|thumb|Van Leeuwenhoek's birth house in Delft, in the Netherlands, in 1926 before it was demolished]]
+
+Antonie van Leeuwenhoek was born in [[Delft]], [[Dutch Republic]], on 24 October 1632. On 4 November, he was baptized as ''Thonis''. His father, Philips Antonisz van Leeuwenhoek, was a basket maker who died when Antonie was only five years old. His mother, Margaretha (Bel van den Berch), came from a well-to-do brewer's family. She remarried Jacob Jansz Molijn, a painter. Antonie had four older sisters: Margriet, Geertruyt, Neeltje, and Catharina.&lt;ref&gt;Dobell, pp. 19–21.&lt;/ref&gt; When he was around ten years old his step-father died. He attended school in [[Warmond]] for a short time before being sent to live in [[Benthuizen]] with his uncle, an attorney. &lt;!--and town clerk. Benthuizen was not a town, but a village. --&gt; At the age of 16 he became a bookkeeper's apprentice at a linen-draper's shop in Amsterdam,&lt;ref&gt;Dobell, pp. 23–24.&lt;/ref&gt; which was owned by the Scot [[William Davidson of Curriehill|William Davidson]]. Van Leeuwenhoek left there after six years.&lt;ref&gt;[http://lensonleeuwenhoek.net/biography.htm The curious observer. Events of the first half of van Leeuwenhoek's life]. Lens on Leeuwenhoek (1 September 2009). Retrieved 20 April 2013.&lt;/ref&gt;&lt;ref&gt;Huerta, p. 31.&lt;/ref&gt;
+
+Van Leeuwenhoek married Barbara de Mey in July 1654, with whom he fathered one surviving daughter, Maria (four other children died in infancy). That same year he returned to Delft, where he would live and study for the rest of his life. He opened a draper's shop, which he ran throughout the 1650s. His wife died in 1666, and in 1671, van Leeuwenhoek remarried to Cornelia Swalmius with whom he had no children.&lt;ref&gt;Dobell, pp. 27–31.&lt;/ref&gt; His status in Delft had grown throughout the years. In 1660 he received a lucrative job as [[chamberlain (office)|chamberlain]] for the assembly chamber of the Delft [[schepen|sheriffs]] in the [[City Hall (Delft)|city hall]], a position which he would hold for almost 40 years. In 1669 he was appointed as a [[land surveyor]] by the court of [[Holland]]; at some time he combined it with another municipal job, being the official &quot;wine-gauger&quot; of Delft and in charge of the city wine imports and taxation.&lt;ref&gt;Dobell, pp. 33–37.&lt;/ref&gt;
+
+[[Image:The Geographer.jpg|thumb|right|alt=Painting of man with scroll and compass, standing by sunlit window|''[[The Geographer]]'' by [[Johannes Vermeer]]]]
+
+Van Leeuwenhoek was a contemporary of another famous Delft citizen, the painter [[Johannes Vermeer]], who was baptized just four days earlier. It has been suggested that he is the man portrayed in two Vermeer paintings of the late 1660s, ''[[The Astronomer (Vermeer)|The Astronomer]]'' and ''[[The Geographer]]'', but others argue that there appears to be little physical similarity. Because they were both relatively important men in a city with only 24,000 inhabitants, it is likely that they were at least acquaintances; van Leeuwenhoek acted as the [[executor]] of Vermeer's will after the painter died in 1675.&lt;ref&gt;Van Berkel, K. (24 February 1996). ''Vermeer, Van Leeuwenhoek en De Astronoom''. Vrij Nederland (Dutch magazine), p. 62–67.&lt;/ref&gt;{{#tag:ref|In ''[[A Short History of Nearly Everything]]'' (p.&amp;nbsp;236) [[Bill Bryson]] alludes to rumors that Vermeer's mastery of light and perspective came from use of a [[camera obscura]] produced by van Leeuwenhoek. This is one of the examples of the controversial [[Hockney–Falco thesis]], which claims that some of the [[Old Master]]s used optical aids to produce their masterpieces.|group=&quot;note&quot;}}
+
+==Microscopic study==
+{{See also|Microscopic discovery of microorganisms}}
+[[Image:Leeuwenhoek Eschenholz.jpg|thumb|upright|alt=See caption|A microscopic section of a one-year-old [[ash tree]] (''Fraxinus'') wood, drawing made by van Leeuwenhoek]]
+
+While running his draper shop, van Leeuwenhoek wanted to see the quality of the thread better than what was possible using the magnifying lenses of the time. He developed an interest in lensmaking, although few records exist of his early activity. Van Leeuwenhoek's interest in microscopes and a familiarity with glass processing led to one of the most significant, and simultaneously well-hidden, technical insights in the history of science: By placing the middle of a small rod of soda lime glass in a hot flame, van Leeuwenhoek could pull the hot section apart to create two long whiskers of glass. Then, by reinserting the end of one whisker into the flame, he could create a very small, high-quality glass sphere. These spheres became the lenses of his microscopes, with the smallest spheres providing the highest magnifications.&lt;ref&gt;{{Cite web|url=http://www.history-of-the-microscope.org/anton-van-leeuwenhoek-microscope-history.php|title=Anton van Leeuwenhoek – History of the compound microscope|website=history-of-the-microscope.org|access-date=29 September 2017}}&lt;/ref&gt;
+
+===Recognition by the Royal Society===
+After developing his method for creating powerful lenses and applying them to the study of the microscopic world,&lt;ref&gt;{{Cite book|url=http://atena.beic.it/webclient/DeliveryManager?pid=13349171&amp;search_terms=DTL184|title=Observationes microscopicae Antonii Lewenhoeck, circa particulas liquorum globosa et animalia|last=|first=|work=Acta Eruditorum|year=1682|isbn=|location=Leipzig|pages=321}}&lt;/ref&gt; van Leeuwenhoek introduced his work to his friend, the prominent Dutch physician [[Reinier de Graaf]]. When the [[Royal Society]] in London published the groundbreaking work of an Italian lensmaker in their journal ''[[Philosophical Transactions of the Royal Society]]'', de Graaf wrote to the editor of the journal, [[Henry Oldenburg]], with a ringing endorsement of van Leeuwenhoek's microscopes which, he claimed, &quot;far surpass those which we have hitherto seen&quot;. In response, in 1673 the society published a letter from van Leeuwenhoek that included his microscopic observations on mold, bees, and lice.&lt;ref&gt;Dobell, pp. 37–41.&lt;/ref&gt;
+
+[[File:Antoni van Leeuwenhoek letters to the Royal Society 3.jpg|thumb|upright|alt=Page in a handwritten manuscript volume|A 1677 letter from van Leeuwenhoek to Oldenburg, with the latter's English translation behind, the full correspondence remains in the [[Royal Society]] Library]]
+
+Van Leeuwenhoek's work fully captured the attention of the Royal Society, and he began corresponding regularly with the society regarding his observations. At first he had been reluctant to publicize his findings, regarding himself as a businessman with little scientific, artistic, or writing background, but de Graaf urged him to be more confident in his work.&lt;ref&gt;Dobell, pp. 41–42.&lt;/ref&gt; By the time van Leeuwenhoek died in 1723, he had written some 190 letters to the Royal Society, detailing his findings in a wide variety of fields, centered on his work in microscopy. He only wrote letters in his own colloquial Dutch; he never published a proper scientific paper in Latin. He strongly preferred to work alone, distrusting the sincerity of those who offered their assistance.&lt;ref&gt;Dobell, pp. 43–44.&lt;/ref&gt; The letters were translated into Latin or English by [[Henry Oldenburg]], who had learned Dutch for this very purpose. He was also the first to use the word ''[[animalcules]]'' to translate the Dutch words that Leeuwenhoek used to describe microorganisms.&lt;ref name=lens/&gt; Despite the initial success of van Leeuwenhoek's relationship with the Royal Society, soon relations became severely strained. His credibility was questioned when he sent the Royal Society a copy of his first observations of microscopic single-celled organisms dated 9 October 1676.&lt;ref&gt;{{cite web |last1=Anderson |first1=Douglas|title=Wrote Letter 18 of 1676-10-09 (AB 26) to Henry Oldenburg |url= http://lensonleeuwenhoek.net/content/wrote-letter-18-1676-10-09-ab-26-henry-oldenburg |website=Lens on Leeuwenhoek |accessdate=3 March 2016}}&lt;/ref&gt; Previously, the existence of single-celled organisms was entirely unknown. Thus, even with his established reputation with the Royal Society as a reliable observer, his observations of microscopic life were initially met with some skepticism.&lt;ref name=&quot;NickLane_RS&quot;&gt;{{cite journal|author-link=Nick Lane |last=Lane |first=Nick |title=The Unseen World: Reflections on Leeuwenhoek (1677) 'Concerning Little Animal' |journal=Philosophical Transactions of the Royal Society B: Biological Sciences |volume=370 |issue=1666 |pages=20140344 |publisher=Philos Trans R Soc Lond B Biol Sci 2015 Apr 19; 370(1666) |date=6 March 2015 |doi=10.1098/rstb.2014.0344 |pmid=25750239 |pmc=4360124 }}&lt;/ref&gt;
+
+[[File:Acta Eruditorum - XVIII zoologia, 1682 – BEIC 13349171.jpg|thumb|upright|Illustration of critique of ''Observationes microscopicae Antonii Levvenhoeck...'' published in [[Acta Eruditorum]], 1682 ]]
+
+Eventually, in the face of van Leeuwenhoek's insistence, the Royal Society arranged for Alexander Petrie, minister to the English Reformed Church in Delft; Benedict Haan, at that time Lutheran minister at Delft; and Henrik Cordes, then Lutheran minister at the Hague, accompanied by [[Sir Robert Gordon, 3rd Baronet|Sir Robert Gordon]] and four others, to determine whether it was in fact van Leeuwenhoek's ability to observe and reason clearly, or perhaps, the Royal Society's theories of life that might require reform. Finally in 1677,&lt;ref&gt;Schierbeek, A.: &quot;The Disbelief of the Royal Society&quot;. Measuring the Invisible World. London and New York: Abelard-Schuman, 1959. N. pag. Print.&lt;/ref&gt; van Leeuwenhoek's observations were fully acknowledged by the Royal Society.&lt;ref&gt;[http://recall.archive.org/stream/antonyvanleeuwen00dobe/antonyvanleeuwen00dobe_djvu.txt Full text of &quot;Antony van Leeuwenhoek and his &quot;Little animals&quot;; being some account of the father of protozoology and bacteriology and his multifarious discoveries in these disciplines;&quot;]. Recall.archive.org. Retrieved 20 April 2013.&lt;/ref&gt;
+
+Antonie van Leeuwenhoek was elected to the Royal Society in February 1680 on the nomination of [[William Croone]], a then-prominent physician.{{#tag:ref|He was also nominated as a &quot;corresponding member&quot; of the [[French Academy of Sciences]] in 1699, but there is no evidence that the nomination was accepted, nor that he was ever aware of it.&lt;ref&gt;Dobell, pp. 53–54.&lt;/ref&gt;|group=&quot;note&quot;}} Van Leeuwenhoek was &quot;taken aback&quot; by the nomination, which he considered a high honor, although he did not attend the induction ceremony in London, nor did he ever attend a Royal Society meeting.&lt;ref&gt;Dobell, pp. 46–50.&lt;/ref&gt;
+
+===Scientific fame===
+By the end of the seventeenth century, van Leeuwenhoek had a virtual monopoly on microscopic study and discovery. His contemporary [[Robert Hooke]], an early microscope pioneer, bemoaned that the field had come to rest entirely on one man's shoulders.&lt;ref&gt;Dobell, pp. 52–53.&lt;/ref&gt; He was visited over the years by many notable individuals, such as the Russian Tsar [[Peter the Great]]. To the disappointment of his guests, van Leeuwenhoek refused to reveal the cutting-edge microscopes he relied on for his discoveries, instead showing visitors a collection of average-quality lenses.&lt;ref&gt;Dobell, pp. 54–61.&lt;/ref&gt;
+
+Van Leeuwenhoek was visited by [[Gottfried Wilhelm Leibniz|Leibniz]], [[William III of England|William III of Orange]] and his wife, [[Mary II of England]], and the burgemeester (mayor) [[Joan Huydecoper II|Johan Huydecoper]] of Amsterdam, the latter being very interested in collecting and growing plants for the [[Hortus Botanicus Amsterdam]], and all gazed at the ''tiny creatures''. In 1698, van Leeuwenhoek was invited to visit the Tsar [[Peter the Great]] on his boat. On this occasion van Leeuwenhoek presented the Tsar with an &quot;eel-viewer&quot;, so Peter could study blood circulation whenever he wanted.&lt;ref&gt;{{cite book |first1=Bill |last1=Mesler |first2=H. James |last2=Cleaves |title=A Brief History of Creation: Science and the Search for the Origin of Life |date=7 December 2015 |publisher=[[W. W. Norton &amp; Company]] |isbn=978-0-393-24854-8 |page=45}}&lt;/ref&gt;

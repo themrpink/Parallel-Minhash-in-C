@@ -22,7 +22,7 @@ int list_dir(char *nomeDirectory, char ***files) {
 
         if (!exists(nomeDirectory) && !isDirectory(nomeDirectory))
             return 0;
-        printf("ok\n");
+
         DIR *elemento;
         if ((elemento = opendir(nomeDirectory)) == NULL)
             return 0;
@@ -30,7 +30,6 @@ int list_dir(char *nomeDirectory, char ***files) {
         int numberOfFiles=0;
         numberOfFiles=countNumberOfFiles(nomeDirectory,elemento);
         *files = (char**)calloc(numberOfFiles, sizeof(char*));
-        printf("ok\n");
 
         int thread_count = NUMB_THREADS;
         if(NUMB_THREADS>numberOfFiles)

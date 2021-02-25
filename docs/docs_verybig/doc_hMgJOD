@@ -1,0 +1,322 @@
+It may also be desirable to block X10 signals from leaving the local area so, for example, the X10 controls in one house do not interfere with the X10 controls in a neighboring house. In this situation, [[Inductor|inductive]] [[Electronic filter|filters]] can be used to [[attenuator (electronics)|attenuate]] the X10 signals coming into or going out of the local area.
+
+=== Protocol ===
+Whether using power line or radio communications, packets transmitted using the X10 control protocol consist of a four [[bit]] ''house code'' followed by one or more four bit ''unit codes'', finally followed by a four bit command. For the convenience of users configuring a system, the four bit house code is selected as a letter from A through P while the four bit unit code is a number 1 through 16.
+
+When the system is installed, each controlled device is configured to respond to one of the 256 possible addresses (16 house codes × 16 unit codes); each device reacts to commands specifically addressed to it, or possibly to several broadcast commands.
+
+The protocol may transmit a message that says &quot;select code A3&quot;, followed by &quot;turn on&quot;, which commands unit &quot;A3&quot; to turn on its device. Several units can be addressed before giving the command, allowing a command to affect several units simultaneously. For example, &quot;select A3&quot;, &quot;select A15&quot;, &quot;select A4&quot;, and finally, &quot;turn on&quot;, causes units A3, A4, and A15 to all turn on.
+
+Note that there is no restriction that prevents using more than one house code within a single house. The &quot;all lights on&quot; command and &quot;all units off&quot; commands will only affect a single house code, so an installation using multiple house codes effectively has the devices divided into separate zones.
+
+==== One way vs two way ====
+Inexpensive X10 devices only receive commands and do not acknowledge their status to the rest of the network. Two-way controller devices allow for a more robust network but cost two to four times more and require two-way X10 devices.&lt;ref&gt;{{Cite web|url=http://automation.hmtech.info/onetwoway.php|title=One way vs two way modules - Home Technology Information - hmtech.info|website=automation.hmtech.info|access-date=2016-03-08}}&lt;/ref&gt;
+
+==== List of X10 commands ====
+{| class=&quot;wikitable&quot; border=&quot;1&quot;
+|-
+! Code
+! Function
+! Description
+! One Way
+! Two Way
+|-
+| 0 0 0 0
+| All units off
+| Switch off all devices with the house code indicated in the message
+| X
+|
+|-
+| 0 0 0 1
+| All lights on
+| Switches on all lighting devices (with the ability to control brightness)
+| X
+|
+|-
+| 0 1 1 0
+| All lights off
+| Switches off all lighting devices
+| X
+|
+|-
+| 0 0 1 0
+| On
+| Switches on a device
+| X
+|
+|-
+| 0 0 1 1
+| Off
+| Switches off a device
+| X
+|
+|-
+| 0 1 0 0
+| Dim
+| Reduces the light intensity
+| X
+|
+|-
+| 0 1 0 1
+| Bright
+| Increases the light intensity
+| X
+|
+|-
+| 0 1 1 1
+| Extended code
+| Extension code
+| 
+| X
+|-
+| 1 0 0 0
+| Hail request
+| Requests a response from the device(s) with the house code indicated in the message
+| 
+| X
+|-
+| 1 0 0 1
+| Hail acknowledgement
+| Response to the previous command
+| 
+| X
+|-
+| 1 0 1 0
+| Pre-set dim
+| Allows the selection of two predefined levels of light intensity
+| 
+| X
+|-
+| 1 1 0 1
+| Status is on
+| Response to the Status Request indicating that the device is switched on
+| 
+| X
+|-
+| 1 1 1 0
+| Status is off
+| Response indicating that the device is switched off
+| 
+| X
+|-
+| 1 1 1 1
+| Status request
+| Request requiring the status of a device
+| 
+| X
+|}
+
+==== List of X10 house and unit code encodings ====
+Note that the binary values for the house and unit codes correspond, but they are not a straight binary sequence. Also remember that a unit code will be followed by one additional &quot;0&quot; bit to distinguish from a command code (detailed above).
+
+{| class=&quot;wikitable&quot; border=&quot;1&quot;
+|-
+! House Code
+! Device Code
+! Binary Value
+|-
+| A
+| 1
+| 0 1 1 0
+|-
+| B
+| 2
+| 1 1 1 0
+|-
+| C
+| 3
+| 0 0 1 0
+|-
+| D 
+| 4
+| 1 0 1 0
+|-
+| E 
+| 5
+| 0 0 0 1
+|-
+| F
+| 6
+| 1 0 0 1
+|-
+| G
+| 7
+| 0 1 0 1
+|-
+| H
+| 8
+| 1 1 0 1
+|-
+| I
+| 9
+| 0 1 1 1
+|-
+| J
+| 10
+| 1 1 1 1
+|-
+| K
+| 11
+| 0 0 1 1
+|-
+| L
+| 12
+| 1 0 1 1
+|-
+| M
+| 13
+| 0 0 0 0
+|-
+| N
+| 14
+| 1 0 0 0
+|-
+| O
+| 15
+| 0 1 0 0
+|-
+| P 
+| 16
+| 1 1 0 0
+|}
+
+=== Physical layer details ===
+In the 60&amp;nbsp;Hz [[alternating current|AC]] current flow, each [[bit]] transmitted requires two zero crossings. A &quot;1&quot; bit is represented by an active zero crossing followed by an inactive zero crossing. A &quot;0&quot; bit is represented by an inactive zero crossing followed by an active zero crossing. An active zero crossing is represented by a 1 millisecond burst of 120&amp;nbsp;kHz at the zero crossing point (nominally 0°, but within 200 microseconds of the zero crossing point). An inactive zero crossing will not have a pulse of 120&amp;nbsp;kHz signal. 
+
+In order to provide a predictable start point, every data frame transmitted always begins with a ''start code'' of three active zero crossings followed by an inactive crossing. Since all data bits are sent as one active and one inactive (or one inactive and one active) zero crossing, the start code, possessing three active crossings in a row, can be uniquely detected. Many X10 protocol charts represent this start code as &quot;1110&quot;, but it is important to realize that is in terms of zero crossings, &lt;i&gt;not&lt;/i&gt; data bits.
+
+Immediately after the start code, a 4-bit ''house code'' (normally represented by the letters A to P on interface units) appears, and after the house code comes a 5-bit ''function code''. Function codes may specify a unit number code (1–16) or a command code. The unit number or command code occupies the first 4 of the 5 bits. The final bit is a 0 for a unit code and a 1 for a command code. Multiple unit codes may be transmitted in sequence before a command code is finally sent. The command will be applied to all unit codes sent. It is also possible to send a message with no unit codes, just a house code and a command code. This will apply to the command to the last group of units codes previously sent.
+
+One start code, one house code, and one function code is known as an X10 frame and represent the minimum components of a valid X10 data packet.
+
+Each frame is sent twice in succession to make sure the receivers understand it over any power line [[electronic noise|noise]] for purposes of redundancy, reliability, and to accommodate line repeaters. After allowing for retransmission, line control, etc., data rates are around 20 [[bit/s]], making X10 data transmission so slow that the technology is confined to turning devices on and off or other very simple operations.
+
+Whenever the data changes from one address to another address, from an address to a command, or from one command to another command, the data frames must be separated by at least 6 clear zero crossings (or &quot;000000&quot;). The sequence of six zeros resets the device decoder hardware.
+
+Later developments (1997) of hardware are improvements of the native X10 hardware. In Europe (2001) for the 230 VAC 50&amp;nbsp;Hz market. All improved products use the same X10 protocol and are compatible.
+
+=== RF protocol ===
+[[File:X10 3.jpg|thumb|A four-channel radio switch and radio-to-power-line transponder]]
+
+To allow for wireless keypads, remote switches, motion sensors, et cetera, an RF protocol is also defined. X10 wireless devices send data packets that are nearly identical to the [[NEC]] [[Infrared|IR]] protocol used by many IR remotes, and a radio receiver then provides a [[Network bridge|bridge]] which translates these radio packets to ordinary X10 power line control packets. The wireless protocol operates at a frequency of 310&amp;nbsp;[[Megahertz|MHz]] in the [[United States|U.S.]] and 433.92&amp;nbsp;MHz in [[Europe]]an systems.
+
+The devices available using the radio protocol include:
+
+* Keypad controllers (&quot;clickers&quot;)
+* Keychain controllers that can control one to four X10 devices
+* Burglar alarm modules that can transmit sensor data
+* Passive [[infrared]] switches to control lighting and X-10 chimes
+* Non-passive information bursts
+
+== Hardware support ==
+
+=== Device modules ===
+[[File:X10 4.jpg|thumb|X10 modules: A lamp socket module]]
+
+Depending on the load that is to be controlled, different modules must be used. For [[Incandescent light bulb|incandescent lamp]] loads, a ''lamp module'' or ''wall switch'' module can be used. These modules switch the power using a [[TRIAC]] [[solid state (electronics)|solid state]] switch and are also capable of [[Dimmer|dimming]] the lamp load. Lamp modules are almost silent in operation, and generally rated to control loads ranging from approximately 40 to 500 [[watt]]s.
+
+For loads other than incandescent lamps, such as [[fluorescent lamp]]s, [[high-intensity discharge lamp]]s, and electrical [[home appliance]]s, the triac-based electronic switching in the lamp module is unsuitable and an ''appliance module'' must be used instead. These modules switch the power using an [[impulse relay]]. In the U.S., these modules are generally rated to control loads up to 15 [[ampere]]s (1800 [[watt]]s at 120 V).
+
+Many device modules offer a feature called ''local control''. If the module is switched off, operating the power switch on the lamp or appliance will cause the module to turn on. In this way, a lamp can still be lit or a coffee pot turned on without the need to use an X10 controller. Wall switch modules may not offer this feature. As a result, older Appliance modules may fail to work with, for example, a very low load such as a 5W LED table lamp.
+
+Some wall switch modules offer a feature called ''local dimming''. Ordinarily, the local push button of a wall switch module simply offers on/off control with no possibility of locally dimming the controlled lamp. If local dimming is offered, holding down the push button will cause the lamp to cycle through its brightness range.
+
+Higher end modules have more advanced features such as programmable on levels, customizable fade rates, the ability to transmit commands when used (referred to as 2-way devices), and ''scene'' support.
+
+There are sensor modules that sense and report temperature, light, infra-red, motion, or contact openings and closures. Device modules include thermostats, audible alarms and controllers for low voltage switches.
+
+=== Controllers ===
+[[File:X10 2.jpg|thumb|X10 controllers: A simple controller (bottom left), a radio controller (top center), and an original controller (bottom right) usable with an [[Ultrasound|ultrasonic]] remote control]]
+X10 controllers range from extremely simple to very sophisticated.
+
+The simplest controllers are arranged to control four X10 devices at four sequential addresses (1–4 or 5–8). The controllers typically contain the following buttons:
+* Unit 1 on/off
+* Unit 2 on/off
+* Unit 3 on/off
+* Unit 4 on/off
+* Brighten/dim (last selected unit)
+* All lights on/all units off
+More sophisticated controllers can control more units and/or incorporate timers that perform preprogrammed functions at specific times each day. Units are also available that use passive [[infrared]] motion detectors or [[photocell]]s to turn lights on and off based on external conditions.
+
+Finally, very sophisticated units are available that can be fully programmed or, like the [[X10 Firecracker]], use a program running in an external computer. These systems can execute many different timed events, respond to external sensors, and execute, with the press of a single button, an entire ''scene'', turning lights on, establishing brightness levels, and so on. Control programs are available for computers running [[Microsoft Windows]], [[Apple Computer|Apple's]] [[Apple Macintosh|Macintosh]], [[Linux]] and [[FreeBSD]] operating systems.
+
+[[Burglar alarm]] systems are also available. These systems contain door/window sensors, as well as motion sensors that use a coded radio frequency (RF) signal to identify when they are tripped or just to routinely check-in and give a heart-beat signal to show that the system is still active. Users can arm and disarm their system via several different remote controls that also use a coded RF signal to ensure security. When an alarm is triggered the console will make an outbound telephone call with a recorded message. The console will also use X10 protocols to flash lights when an alarm has been triggered while the security console sounds an external siren. Using X10 protocols, signals will also be sent to remote sirens for additional security.
+
+=== Bridges ===
+There are bridges to translate X10 to other domotic standards (e.g., [[KNX (standard)|KNX]]). [[IObridge|ioBridge]] can be used to translate the X10 protocol to a web service API via the X10 PSC04 Powerline Interface Module. The magDomus home controller from magnocomp allows interconnection and inter-operation between most home automation technologies.
+
+== Limitations ==
+{{Original research|section|date=November 2016}}
+
+=== Compatibility ===
+Solid-state switches used in X10 controls pass a very small leakage current. Compact fluorescent lamps may display nuisance blinking when switched off; CFL manufacturers recommend against controlling lamps with solid-state timers or remote controls.
+
+Some X10 controllers with [[TRIAC|triac]] solid-state outputs may not work well with low power devices (below 50 watts) or devices like fluorescent bulbs due to the leakage current of the device.  An appliance module, using a relay with metallic contacts may resolve this problem. Many older appliance units have a 'local control' feature whereby the relay is intentionally bypassed with a high value resistor; the module can then sense the appliance's own switch and turn on the relay when the local switch is operated. This sense current may be incompatible with LED or CFL lamps. 
+
+Not all devices can be used on a dimmer. [[Fluorescent lamps]] are not dimmable with incandescent lamp dimmers; certain models of [[Compact Fluorescent#Dimmable|compact fluorescent lamps]] are dimmable but cost more. Motorized appliances such as fans, etc. generally will not operate as expected on a dimmer.
+
+=== Wiring and interfering sources ===
+One problem with X10 is excessive attenuation of signals between the two live conductors in the [[Split-phase electric power|3-wire 120/240 volt system]] used in typical [[North America]]n residential construction. Signals from a transmitter on one live conductor may not propagate through the high impedance of the distribution [[transformer]] winding to the other live conductor. Often, there's simply no reliable path to allow the X10 signals to propagate from one transformer leg wire to the other; this failure may come and go as large 240 volt devices such as stoves or dryers are turned on and off. (When turned on, such devices provide a low-impedance bridge for the X10 signals between the two leg wires.) This problem can be permanently overcome by installing a [[capacitor]] between the leg wires as a path for the X10 signals; manufacturers commonly sell signal couplers that plug into 240 volt sockets that perform this function. More sophisticated installations install an active [[repeater]] device between the legs, while others combine signal amplifiers with a coupling device. A repeater is also needed for inter-phase communication in homes with [[three-phase electric power]]. In many countries outside North America, entire houses are typically wired from a single 240 volt single-phase wire, so this problem does not occur.
+
+Television receivers or household wireless devices may cause spurious &quot;off&quot; or &quot;on&quot; signals. Noise filtering (as installed on computers as well as many modern appliances) may help keep external noise out of X10 signals, but noise filters not designed for X10 may also attenuate X10 signals traveling on the branch circuit to which the appliance is connected.
+
+Certain types of [[power supplies]] used in modern electronic equipment, such as computers, television receivers and satellite receivers, attenuate passing X10 signals by providing a low impedance path to high frequency signals. Typically, the capacitors used on the inputs to these power supplies short the X10 signal from line to neutral, suppressing any hope of X10 control on the circuit near that device. Filters are available that will block the X10 signals from ever reaching such devices; plugging offending devices into such filters can cure mysterious X10 intermittent failures.
+
+Having a backup power supply or standby power supply such as used with computers or other electronic devices can totally kill that leg in a household installation because of the filtering used in the power supply.
+
+=== Commands getting lost ===
+X10 signals can only be transmitted one command at a time, first by addressing the device to control, and then sending an operation for that device to perform. If two X10 signals are transmitted at the same time they may [[Collision#Telecommunications|collide]] or interleave, leading to commands that either cannot be decoded or that trigger incorrect operations. The CM15A and RR501 Transceiver can avoid these signal collisions that can sometimes occur with other models.
+
+=== Lack of speed ===
+The X10 protocol is slow. It takes roughly three quarters of a second to transmit a device address and a command. While generally not noticeable when using a tabletop controller, it becomes a noticeable problem when using 2-way switches or when utilizing some sort of computerized controller. The apparent delay can be lessened somewhat by using slower device dim rates. With more advanced modules another option is to use group control (lighting scene) extended commands. These allow adjusting several modules at once by a single command.
+
+=== Limited functionality ===
+X10 protocol does support more advanced control over the dimming speed, direct dim level setting and group control (scene settings). This is done via extended message set, which is an official part of X10 standard. However support for all extended messages is not mandatory, and many cheaper modules implement only the basic message set. These require adjusting each lighting circuit one after the other, which can be visually unappealing and also very slow.
+
+=== Interference and lack of encryption ===
+The standard X10 power line and RF protocols lack support for encryption, and can only address 256 devices. Unfiltered power line signals from close neighbors using the same X10 device addresses may interfere with each other. Interfering RF wireless signals may similarly be received, with it being easy for anyone nearby with an X10 RF remote to wittingly or unwittingly cause mayhem if an RF to power line device is being used on a premises.
+
+==See also==
+* [[Insteon]]
+* [[Home automation]]
+* [[Power-line communication]]
+
+== References ==
+{{reflist}}
+
+== External links ==
+* [http://kbase.x10.com X10 Knowledge Base]
+* [http://www.laureanno.com X10 Schematics and Modifications]
+* [http://www.hometoys.com/htinews/feb99/articles/kingery/kingery13.htm#Digital%20X-10 Digital X-10, Which One Should I Use?].
+
+{{Home automation}}
+
+[[Category:Home automation]]
+[[Category:Remote control]]
+[[Category:Architectural lighting design]]
+[[Category:Lighting]]</text>
+      <sha1>f4epgz4nx6bklwkrph2y89yo8x8pl0e</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Electrical cable</title>
+    <ns>0</ns>
+    <id>42418</id>
+    <revision>
+      <id>990887190</id>
+      <parentid>990002185</parentid>
+      <timestamp>2020-11-27T02:30:13Z</timestamp>
+      <contributor>
+        <username>MusikBot II</username>
+        <id>29539620</id>
+      </contributor>
+      <minor />
+      <comment>Removing protection templates from unprotected page ([[User:MusikBot II/FixPP/FAQ|more info]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12335" xml:space="preserve">{{short description|Assembly of one or more wires running side by side or bundled}}
+{{other uses|Cable (disambiguation)}}
+{{refimprove|date=September 2017}}
+[[File:Leitungsende Abisoliert en.svg|thumb|Electrical cable diagram]]
+[[File:Electric guide 3×2.5 mm.jpg|thumb|Flexible [[Mains electricity|mains]] cable with three 2.5&amp;nbsp;mm&lt;sup&gt;2&lt;/sup&gt; solid [[copper conductor]]s]]
+An '''electrical cable''' is an assembly of one or more [[wire]]s running side by side or bundled, which is used to carry [[electric current]].

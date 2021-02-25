@@ -1,0 +1,474 @@
+This inference rule is ''schematic'': ''A'' and ''B'' can be instantiated with any expression. The general form of an inference rule is:
+
+:&lt;math&gt;\frac{J_1 \qquad J_2 \qquad \cdots \qquad J_n}{J}\ \hbox{name}&lt;/math&gt;
+
+where each &lt;math&gt;J_i&lt;/math&gt; is a judgment and the inference rule is named &quot;name&quot;. The judgments above the line are known as ''premises'', and those below the line are ''conclusions''. Other common logical propositions are disjunction (&lt;math&gt;A \vee B&lt;/math&gt;), negation (&lt;math&gt;\neg A&lt;/math&gt;), implication (&lt;math&gt;A \supset B&lt;/math&gt;), and the logical constants truth (&lt;math&gt;\top&lt;/math&gt;) and falsehood (&lt;math&gt;\bot&lt;/math&gt;). Their formation rules are below.
+
+:&lt;math&gt;
+\frac{A\hbox{ prop} \qquad B\hbox{ prop}}{A \vee B\hbox{ prop}}\ \vee_F
+\qquad
+\frac{A\hbox{ prop} \qquad B\hbox{ prop}}{A \supset B\hbox{ prop}}\ \supset_F
+&lt;/math&gt;
+
+:&lt;math&gt;
+\frac{\hbox{ }}{\top\hbox{ prop}}\ \top_F
+\qquad
+\frac{\hbox{ }}{\bot\hbox{ prop}}\ \bot_F
+\qquad
+\frac{A\hbox{ prop}}{\neg A\hbox{ prop}}\ \neg_F
+&lt;/math&gt;
+
+==Introduction and elimination==
+Now we discuss the &quot;''A'' true&quot; judgment. Inference rules that introduce a [[logical connective]] in the conclusion are known as ''introduction rules''. To introduce conjunctions, ''i.e.'', to conclude &quot;''A and B'' true&quot; for propositions ''A'' and ''B'', one requires evidence for &quot;''A'' true&quot; and &quot;''B'' true&quot;. As an inference rule:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\frac{A\hbox{ true} \qquad B\hbox{ true}}{(A \wedge B)\hbox{ true}}\ \wedge_I
+&lt;/math&gt;
+&lt;/div&gt;
+It must be understood that in such rules the objects are propositions. That is, the above rule is really an abbreviation for:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\frac{A\hbox{ prop} \qquad B\hbox{ prop} \qquad A\hbox{ true} \qquad B\hbox{ true}}{(A \wedge B) \hbox{ true}}\ \wedge_I
+&lt;/math&gt;
+&lt;/div&gt;
+This can also be written:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\frac{A \wedge B\hbox{ prop} \qquad A\hbox{ true} \qquad B\hbox{ true}}{(A \wedge B)\hbox{ true}}\ \wedge_I
+&lt;/math&gt;
+&lt;/div&gt;
+In this form, the first premise can be satisfied by the &lt;math&gt;\wedge_F&lt;/math&gt; formation rule, giving the first two premises of the previous form. In this article we shall elide the &quot;prop&quot; judgments where they are understood. In the nullary case, one can derive truth from no premises.
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\frac{\ }{\top\hbox{ true}}\ \top_I
+&lt;/math&gt;
+&lt;/div&gt;
+If the truth of a proposition can be established in more than one way, the corresponding connective has multiple introduction rules.
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\frac{A\hbox{ true}}{A \vee B\hbox{ true}}\ \vee_{I1}
+\qquad
+\frac{B\hbox{ true}}{A \vee B\hbox{ true}}\ \vee_{I2}
+&lt;/math&gt;
+&lt;/div&gt;
+Note that in the nullary case, ''i.e.'', for falsehood, there are ''no'' introduction rules. Thus one can never infer falsehood from simpler judgments.
+
+Dual to introduction rules are ''elimination rules'' to describe how to deconstruct information about a compound proposition into information about its constituents. Thus, from &quot;''A ∧ B'' true&quot;, we can conclude &quot;''A'' true&quot; and &quot;''B'' true&quot;:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\frac{A \wedge B\hbox{ true}}{A\hbox{ true}}\ \wedge_{E1}
+\qquad
+\frac{A \wedge B\hbox{ true}}{B\hbox{ true}}\ \wedge_{E2}
+&lt;/math&gt;
+&lt;/div&gt;
+As an example of the use of inference rules, consider commutativity of conjunction. If ''A'' ∧ ''B'' is true, then ''B'' ∧ ''A'' is true; this derivation can be drawn by composing inference rules in such a fashion that premises of a lower inference match the conclusion of the next higher inference.
+
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;!-- there are serious vertical spacing issues here, but since Wikipedia's texvc parser doesn't support \displaystyle, our hands are tied somewhat --&gt;
+&lt;math&gt;
+ \cfrac{\cfrac{A \wedge B\hbox{ true}}{B\hbox{ true}}\ \wedge_{E2} 
+ \qquad
+ \cfrac{A \wedge B\hbox{ true}}{A\hbox{ true}}\ \wedge_{E1}}
+ {B \wedge A\hbox{ true}}\ \wedge_I
+&lt;/math&gt;
+&lt;/div&gt;
+
+The inference figures we have seen so far are not sufficient to state the rules of [[implication introduction]] or [[disjunction elimination]]; for these, we need a more general notion of ''hypothetical derivation''.
+
+==Hypothetical derivations==
+A pervasive operation in mathematical logic is ''reasoning from assumptions''. For example, consider the following derivation:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\cfrac{A \wedge \left ( B \wedge C \right ) \hbox{ true}}{\cfrac{B \wedge C \hbox{ true}}{B \hbox{ true}}\ \wedge_{E1}}\ \wedge_{E2}
+&lt;/math&gt;
+&lt;/div&gt;
+This derivation does not establish the truth of ''B'' as such; rather, it establishes the following fact:
+:If ''A ∧ (B ∧ C) is true'' then ''B is true''.
+In logic, one says &quot;''assuming A ∧ (B ∧ C) is true, we show that B is true''&quot;; in other words, the judgment &quot;''B'' true&quot; depends on the assumed judgment &quot;''A ∧ (B ∧ C)'' true&quot;. This is a ''hypothetical derivation'', which we write as follows:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\begin{matrix}
+A \wedge \left ( B \wedge C \right ) \hbox{ true} \\
+\vdots \\
+B \hbox{ true}
+\end{matrix}
+&lt;/math&gt;
+&lt;/div&gt;
+The interpretation is: &quot;''B true'' is derivable from ''A ∧ (B ∧ C) true''&quot;. Of course, in this specific example we actually know the derivation of &quot;''B'' true&quot; from &quot;''A ∧ (B ∧ C)'' true&quot;, but in general we may not ''a priori'' know the derivation. The general form of a hypothetical derivation is:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\begin{matrix}
+D_1 \quad D_2 \ \cdots \ D_n \\
+\vdots \\
+J
+\end{matrix}
+&lt;/math&gt;
+&lt;/div&gt;
+Each hypothetical derivation has a collection of ''antecedent'' derivations (the ''D&lt;sub&gt;i&lt;/sub&gt;'') written on the top line, and a ''succedent'' judgment (''J'') written on the bottom line. Each of the premises may itself be a hypothetical derivation. (For simplicity, we treat a judgment as a premise-less derivation.)
+
+The notion of hypothetical judgment is ''internalised'' as the connective of implication. The introduction and elimination rules are as follows.
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\cfrac{
+ \begin{matrix}
+ \cfrac{}{A \hbox{ true}}\ u \\
+ \vdots \\
+ B \hbox{ true}
+ \end{matrix}
+}{A \supset B \hbox{ true}}\ \supset_{I^u}
+\qquad \cfrac{A \supset B \hbox{ true} \quad A \hbox{ true}}{B \hbox{ true}}\ \supset_E
+&lt;/math&gt;
+&lt;/div&gt;
+
+In the introduction rule, the antecedent named ''u'' is ''discharged'' in the conclusion. This is a mechanism for delimiting the ''scope'' of the hypothesis: its sole reason for existence is to establish &quot;''B'' true&quot;; it cannot be used for any other purpose, and in particular, it cannot be used below the introduction. As an example, consider the derivation of &quot;''A ⊃ (B ⊃ (A ∧ B))'' true&quot;:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+ \cfrac{\cfrac{\cfrac{}{A \hbox{ true}}\ u \quad \cfrac{}{B \hbox{ true}}\ w}{A \wedge B \hbox{ true}}\ \wedge_I}{
+ \cfrac{B \supset \left ( A \wedge B \right ) \hbox{ true}}{
+ A \supset \left ( B \supset \left ( A \wedge B \right ) \right ) \hbox{ true}
+ }\ \supset_{I^u}
+ }\ \supset_{I^w}
+ &lt;/math&gt;
+&lt;/div&gt;
+This full derivation has no unsatisfied premises; however, sub-derivations ''are'' hypothetical. For instance, the derivation of &quot;''B ⊃ (A ∧ B)'' true&quot; is hypothetical with antecedent &quot;''A'' true&quot; (named ''u'').
+
+With hypothetical derivations, we can now write the elimination rule for disjunction:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\cfrac{
+ A \vee B \hbox{ true}
+ \quad
+ \begin{matrix}
+ \cfrac{}{A \hbox{ true}}\ u \\
+ \vdots \\
+ C \hbox{ true}
+ \end{matrix}
+ \quad
+ \begin{matrix}
+ \cfrac{}{B \hbox{ true}}\ w \\
+ \vdots \\
+ C \hbox{ true}
+ \end{matrix}
+}{C \hbox{ true}}\ \vee_{E^{u,w}}
+&lt;/math&gt;
+&lt;/div&gt;
+In words, if ''A ∨ B'' is true, and we can derive &quot;''C'' true&quot; both from &quot;''A'' true&quot; and from &quot;''B'' true&quot;, then ''C'' is indeed true. Note that this rule does not commit to either &quot;''A'' true&quot; or &quot;''B'' true&quot;. In the zero-ary case, ''i.e.'' for falsehood, we obtain the following elimination rule:
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\frac{\perp \hbox{ true}}{C \hbox{ true}}\ \perp_E
+&lt;/math&gt;
+&lt;/div&gt;
+This is read as: if falsehood is true, then any proposition ''C'' is true.
+
+Negation is similar to implication.
+&lt;div style=&quot;margin-left: 2em&quot;&gt;
+&lt;math&gt;
+\cfrac{
+ \begin{matrix}
+ \cfrac{}{A \hbox{ true}}\ u \\
+ \vdots \\
+ p \hbox{ true}
+ \end{matrix}
+}{\lnot A \hbox{ true}}\ \lnot_{I^{u,p}}
+\qquad
+\cfrac{\lnot A \hbox{ true} \quad A \hbox{ true}}{C \hbox{ true}}\ \lnot_E
+&lt;/math&gt;
+&lt;/div&gt;
+The introduction rule discharges both the name of the hypothesis ''u'', and the succedent ''p'', ''i.e.'', the proposition ''p'' must not occur in the conclusion ''A''. Since these rules are schematic, the interpretation of the introduction rule is: if from &quot;''A'' true&quot; we can derive for every proposition ''p'' that &quot;''p'' true&quot;, then ''A'' must be false, ''i.e.'', &quot;''not A'' true&quot;. For the elimination, if both ''A'' and ''not A'' are shown to be true, then there is a contradiction, in which case every proposition ''C'' is true. Because the rules for implication and negation are so similar, it should be fairly easy to see that ''not A'' and ''A ⊃ ⊥'' are equivalent, i.e., each is derivable from the other.
+
+==Consistency, completeness, and normal forms==
+A [[theory (mathematical logic)|theory]] is said to be consistent if falsehood is not provable (from no assumptions) and is complete if every theorem or its negation is provable using the inference rules of the logic. These are statements about the entire logic, and are usually tied to some notion of a [[model theory|model]]. However, there are local notions of consistency and completeness that are purely syntactic checks on the inference rules, and require no appeals to models. The first of these is local consistency, also known as local reducibility, which says that any derivation containing an introduction of a connective followed immediately by its elimination can be turned into an equivalent derivation without this detour. It is a check on the ''strength'' of elimination rules: they must not be so strong that they include knowledge not already contained in their premises. As an example, consider conjunctions.
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ ────── u   ────── w
+ A true     B true
+ ────────────────── ∧I
+     A ∧ B true
+     ────────── ∧E&lt;sub&gt;1&lt;/sub&gt;
+       A true
+| width=&quot;30&quot; align=&quot;center&quot; | ⇒ || 
+ ────── u
+ A true
+|}
+
+Dually, local completeness says that the elimination rules are strong enough to decompose a connective into the forms suitable for its introduction rule. Again for conjunctions:
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ ────────── u
+ A ∧ B true
+| width=&quot;30&quot; align=&quot;center&quot; | ⇒ || 
+ ────────── u    ────────── u
+ A ∧ B true      A ∧ B true
+ ────────── ∧E&lt;sub&gt;1&lt;/sub&gt;  ────────── ∧E&lt;sub&gt;2&lt;/sub&gt;
+   A true          B true
+   ─────────────────────── ∧I
+        A ∧ B true
+|}
+
+These notions correspond exactly to [[Lambda calculus#.CE.B2-reduction|β-reduction (beta reduction)]] and [[Lambda calculus#.CE.B7-conversion|η-conversion (eta conversion)]] in the [[lambda calculus]], using the [[Curry&amp;ndash;Howard isomorphism]]. By local completeness, we see that every derivation can be converted to an equivalent derivation where the principal connective is introduced. In fact, if the entire derivation obeys this ordering of eliminations followed by introductions, then it is said to be ''normal''. In a normal derivation all eliminations happen above introductions. In most logics, every derivation has an equivalent normal derivation, called a ''[[normal form (abstract rewriting)|normal form]]''. The existence of normal forms is generally hard to prove using natural deduction alone, though such accounts do exist in the literature, most notably by [[Dag Prawitz]] in 1961.&lt;ref&gt;See also his book {{harvnb|Prawitz|1965}}, {{harvnb|Prawitz|2006}}.&lt;/ref&gt; It is much easier to show this indirectly by means of a [[cut elimination|cut-free]] [[sequent calculus]] presentation.
+
+==First and higher-order extensions==
+[[File:first order natural deduction.png|thumb|right|Summary of first-order system]]
+
+The logic of the earlier section is an example of a ''single-sorted'' logic, ''i.e.'', a logic with a single kind of object: propositions. Many extensions of this simple framework have been proposed; in this section we will extend it with a second sort of ''individuals'' or ''[[term (logic)|terms]]''. More precisely, we will add a new kind of judgment, &quot;''t is a term''&quot; (or &quot;''t term''&quot;) where ''t'' is schematic. We shall fix a [[countable]] set ''V'' of ''variables'', another countable set ''F'' of ''function symbols'', and construct terms with the following formation rules:
+
+:&lt;math&gt;
+\frac{v\in V}{v\hbox{ term}} \hbox{ var}_F
+&lt;/math&gt;
+
+and
+:&lt;math&gt;
+\frac{f\in F\qquad t_1\hbox{ term}\qquad   t_2\hbox{ term}\qquad \cdots \qquad t_n\hbox{ term}}{f(t_1, t_2,\cdots,t_n)\hbox{ term}} \hbox{ app}_F
+&lt;/math&gt;
+
+For propositions, we consider a third countable set ''P'' of ''[[Predicate (mathematical logic)|predicates]]'', and define ''atomic predicates over terms'' with the following formation rule:
+
+:&lt;math&gt;
+\frac{\phi\in P\qquad t_1\hbox{ term}\qquad   t_2\hbox{ term}\qquad \cdots \qquad t_n\hbox{ term}}{\phi(t_1, t_2,\cdots,t_n)\hbox{ prop}} \hbox{ pred}_F
+&lt;/math&gt;
+
+The first two rules of formation provide a definition of a term that is effectively the same as that defined in [[term algebra]] and [[model theory]], although the focus of those fields of study is quite different from natural deduction. The third rule of formation effectively defines an [[atomic formula]], as in [[first-order logic]], and again in model theory.
+
+To these are added a pair of formation rules, defining the notation for ''[[quantifier (logic)|quantified]]'' propositions; one for universal (∀) and existential (∃) quantification:
+
+:&lt;math&gt;
+\frac{x\in V \qquad A \hbox{ prop}}{\forall x.A \hbox{ prop}} \;\forall_F
+\qquad\qquad
+\frac{x\in V \qquad A \hbox{ prop}}{\exists x.A \hbox{ prop}} \;\exists_F
+&lt;/math&gt;
+
+The [[universal quantifier]] has the introduction and elimination rules:
+
+:&lt;math&gt;
+\begin{matrix}
+\cfrac{}{a \hbox{ term}}\hbox{ u} \\
+\vdots \\
+\cfrac{[a/x]A \hbox{ true}}{\forall x.A \hbox{ true}}\;\forall_{I^{u,a}}
+\end{matrix}
+\qquad \qquad
+\frac{\forall x.A \hbox{ true}\qquad t \hbox{ term}}{[t/x]A\hbox{ true}}\;\forall_{E}
+&lt;/math&gt;
+
+The [[existential quantifier]] has the introduction and elimination rules:
+:&lt;math&gt;
+\frac{[t/x]A \hbox{ true}}{\exists x.A\hbox{ true}}\;\exists_{I}
+\qquad\qquad
+\cfrac{
+\begin{matrix}
+ \\
+ \\
+ \\
+ \\
+\exists x.A\hbox{ true} \\
+\end{matrix}
+\qquad
+
+\begin{matrix}
+\cfrac{}{a \hbox{ term}}\hbox{ u} \qquad \cfrac{}{[a/x]A \hbox{ true}}\hbox{ v}\\
+\vdots \\
+C\hbox{ true} \\
+\end{matrix}
+}
+{C \hbox{ true}}\exists_{E^{a,u,v}}
+&lt;/math&gt;
+
+In these rules, the notation [''t''/''x''] ''A'' stands for the substitution of ''t'' for every (visible) instance of ''x'' in ''A'', avoiding capture.&lt;ref&gt;See the article on [[lambda calculus]] for more detail about the concept of substitution.&lt;/ref&gt; As before the superscripts on the name stand for the components that are discharged: the term ''a'' cannot occur in the conclusion of ∀I (such terms are known as ''eigenvariables'' or ''parameters''), and the hypotheses named ''u'' and ''v'' in ∃E are localised to the second premise in a hypothetical derivation. Although the propositional logic of earlier sections was [[Decidability (logic)|decidable]], adding the quantifiers makes the logic undecidable.
+
+So far, the quantified extensions are ''first-order'': they distinguish propositions from the kinds of objects quantified over. [[Higher-order logic]] takes a different approach and has only a single sort of propositions. The quantifiers have as the domain of quantification the very same sort of propositions, as reflected in the formation rules:
+
+:&lt;math&gt;
+\cfrac{
+\begin{matrix}
+\cfrac{}{p \hbox{ prop}}\hbox{ u} \\
+\vdots \\
+A\hbox{ prop} \\
+\end{matrix}}
+{\forall p.A \hbox{ prop}} \;\forall_{F^u}
+\qquad\qquad
+
+\cfrac{
+\begin{matrix}
+\cfrac{}{p \hbox{ prop}}\hbox{ u} \\
+\vdots \\
+A\hbox{ prop} \\
+\end{matrix}}
+{\exists p.A \hbox{ prop}} \;\exists_{F^u}
+&lt;/math&gt;
+
+A discussion of the introduction and elimination forms for higher-order logic is beyond the scope of this article. It is possible to be in-between first-order and higher-order logics. For example, [[second-order logic]] has two kinds of propositions, one kind quantifying over terms, and the second kind quantifying over propositions of the first kind.
+
+==Different presentations of natural deduction==
+
+===Tree-like presentations===
+Gentzen's discharging annotations used to internalise hypothetical judgments can be avoided by representing proofs as a tree of [[sequent]]s ''Γ ⊢A'' instead of a tree of ''A true'' judgments.
+
+===Sequential presentations===
+Jaśkowski's representations of natural deduction led to different notations such as [[Fitch-style calculus]] (or Fitch's diagrams) or [[Patrick Suppes|Suppes]]' method, of which [[John Lemmon|Lemmon]] gave a variant called [[system L]]. Such presentation systems, which are more accurately described as tabular, include the following.
+* 1940: In a textbook, Quine&lt;ref&gt;{{harvtxt|Quine|1981}}. See particularly pages 91–93 for Quine's line-number notation for antecedent dependencies.&lt;/ref&gt; indicated antecedent dependencies by line numbers in square brackets, anticipating Suppes' 1957 line-number notation. 
+* 1950: In a textbook, {{harvtxt|Quine|1982|pp=241–255}} demonstrated a method of using one or more asterisks to the left of each line of proof to indicate dependencies. This is equivalent to Kleene's vertical bars. (It is not totally clear if Quine's asterisk notation appeared in the original 1950 edition or was added in a later edition.)
+* 1957: An introduction to practical logic theorem proving in a textbook by {{harvtxt|Suppes|1999|pp=25–150}}. This indicated dependencies (i.e. antecedent propositions) by line numbers at the left of each line.
+* 1963: {{harvtxt|Stoll|1979|pp=183–190, 215–219}} uses sets of line numbers to indicate antecedent dependencies of the lines of sequential logical arguments based on natural deduction inference rules.
+* 1965: The entire textbook by {{harvtxt|Lemmon|1965}} is an introduction to logic proofs using a method based on that of Suppes.
+* 1967: In a textbook, {{harvtxt|Kleene|2002|pp=50–58, 128–130}} briefly demonstrated two kinds of practical logic proofs, one system using explicit quotations of antecedent propositions on the left of each line, the other system using vertical bar-lines on the left to indicate dependencies.&lt;ref&gt;A particular advantage of Kleene's tabular natural deduction systems is that he proves the validity of the inference rules for both propositional calculus and predicate calculus. See {{harvnb|Kleene|2002|pp=44–45, 118–119}}.&lt;/ref&gt;
+
+==Proofs and type theory==
+The presentation of natural deduction so far has concentrated on the nature of propositions without giving a formal definition of a ''proof''. To formalise the notion of proof, we alter the presentation of hypothetical derivations slightly. We label the antecedents with ''proof variables'' (from some countable set ''V'' of variables), and decorate the succedent with the actual proof. The antecedents or ''hypotheses'' are separated from the succedent by means of a ''[[Turnstile (symbol)|turnstile]]'' (⊢). This modification sometimes goes under the name of ''localised hypotheses''. The following diagram summarises the change.
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ ──── u&lt;sub&gt;1&lt;/sub&gt; ──── u&lt;sub&gt;2&lt;/sub&gt; ... ──── u&lt;sub&gt;n&lt;/sub&gt;
+  J&lt;sub&gt;1&lt;/sub&gt;      J&lt;sub&gt;2&lt;/sub&gt;          J&lt;sub&gt;n&lt;/sub&gt;
+               ⋮
+               J
+| width=&quot;10%&quot; align=&quot;center&quot; | ⇒ || 
+ u&lt;sub&gt;1&lt;/sub&gt;:J&lt;sub&gt;1&lt;/sub&gt;, u&lt;sub&gt;2&lt;/sub&gt;:J&lt;sub&gt;2&lt;/sub&gt;, ..., u&lt;sub&gt;n&lt;/sub&gt;:J&lt;sub&gt;n&lt;/sub&gt; ⊢ J
+|}
+The collection of hypotheses will be written as Γ when their exact composition is not relevant.
+To make proofs explicit, we move from the proof-less judgment &quot;''A true''&quot; to a judgment: &quot;π ''is a proof of (A true)''&quot;, which is written symbolically as &quot;π : ''A true''&quot;. Following the standard approach, proofs are specified with their own formation rules for the judgment &quot;π ''proof''&quot;. The simplest possible proof is the use of a labelled hypothesis; in this case the evidence is the label itself.
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ u ∈ V
+ ─────── proof-F
+ u proof
+| width=&quot;10%&quot; |  || 
+ ───────────────────── hyp
+ u:A true ⊢ u : A true
+|}
+For brevity, we shall leave off the judgmental label ''true'' in the rest of this article, ''i.e.'', write &quot;Γ ⊢ π : ''A''&quot;. Let us re-examine some of the connectives with explicit proofs. For conjunction, we look at the introduction rule ∧I to discover the form of proofs of conjunction: they must be a pair of proofs of the two conjuncts. Thus:
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ π&lt;sub&gt;1&lt;/sub&gt; proof    π&lt;sub&gt;2&lt;/sub&gt; proof
+ ──────────────────── pair-F
+ (π&lt;sub&gt;1&lt;/sub&gt;, π&lt;sub&gt;2&lt;/sub&gt;) proof
+| width=&quot;10%&quot; |  || 
+ Γ ⊢ π&lt;sub&gt;1&lt;/sub&gt; : A    Γ ⊢ π&lt;sub&gt;2&lt;/sub&gt; : B
+ ───────────────────────── ∧I
+ Γ ⊢ (π&lt;sub&gt;1&lt;/sub&gt;, π&lt;sub&gt;2&lt;/sub&gt;) : A ∧ B
+|}
+The elimination rules ∧E&lt;sub&gt;1&lt;/sub&gt; and ∧E&lt;sub&gt;2&lt;/sub&gt; select either the left or the right conjunct; thus the proofs are a pair of projections&amp;mdash;first ('''fst''') and second ('''snd''').
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ π proof
+ ─────────── '''fst'''-F
+ '''fst''' π proof
+| width=&quot;10%&quot; |  || 
+ Γ ⊢ π : A ∧ B
+ ───────────── ∧E&lt;sub&gt;1&lt;/sub&gt;
+ Γ ⊢ '''fst''' π : A
+|-
+|
+ π proof
+ ─────────── '''snd'''-F
+ '''snd''' π proof
+| width=&quot;10%&quot; |  || 
+ Γ ⊢ π : A ∧ B
+ ───────────── ∧E&lt;sub&gt;2&lt;/sub&gt;
+ Γ ⊢ '''snd''' π : B
+|}
+For implication, the introduction form localises or ''binds'' the hypothesis, written using a λ; this corresponds to the discharged label. In the rule, &quot;Γ, ''u'':''A''&quot; stands for the collection of hypotheses Γ, together with the additional hypothesis ''u''.
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ π proof
+ ──────────── λ-F
+ λu. π proof
+| width=&quot;10%&quot; |  || 
+ Γ, u:A ⊢ π : B
+ ───────────────── ⊃I
+ Γ ⊢ λu. π : A ⊃ B
+|-
+|
+ π&lt;sub&gt;1&lt;/sub&gt; proof   π&lt;sub&gt;2&lt;/sub&gt; proof
+ ─────────────────── app-F
+ π&lt;sub&gt;1&lt;/sub&gt; π&lt;sub&gt;2&lt;/sub&gt; proof
+| width=&quot;10%&quot; |  || 
+ Γ ⊢ π&lt;sub&gt;1&lt;/sub&gt; : A ⊃ B    Γ ⊢ π&lt;sub&gt;2&lt;/sub&gt; : A
+ ──────────────────────────── ⊃E
+ Γ ⊢ π&lt;sub&gt;1&lt;/sub&gt; π&lt;sub&gt;2&lt;/sub&gt; : B
+|}
+With proofs available explicitly, one can manipulate and reason about proofs. The key operation on proofs is the substitution of one proof for an assumption used in another proof. This is commonly known as a ''substitution theorem'', and can be proved by [[mathematical induction|induction]] on the depth (or structure) of the second judgment.
+
+; Substitution theorem : ''If'' Γ ⊢ π&lt;sub&gt;1&lt;/sub&gt; : ''A'' ''and'' Γ, ''u'':''A'' ⊢ π&lt;sub&gt;2&lt;/sub&gt; : ''B'', ''then'' Γ ⊢ [π&lt;sub&gt;1&lt;/sub&gt;/''u''] π&lt;sub&gt;2&lt;/sub&gt; : B.
+
+So far the judgment &quot;Γ ⊢ π : ''A''&quot; has had a purely logical interpretation. In [[type theory]], the logical view is exchanged for a more computational view of objects. Propositions in the logical interpretation are now viewed as ''types'', and proofs as programs in the [[lambda calculus]]. Thus the interpretation of &quot;π : ''A''&quot; is &quot;''the program'' π has type ''A''&quot;. The logical connectives are also given a different reading: conjunction is viewed as [[product type|product]] (×), implication as the function [[function type|arrow]] (→), etc. The differences are only cosmetic, however. Type theory has a natural deduction presentation in terms of formation, introduction and elimination rules; in fact, the reader can easily reconstruct what is known as ''simple type theory'' from the previous sections.
+
+The difference between logic and type theory is primarily a shift of focus from the types (propositions) to the programs (proofs). Type theory is chiefly interested in the convertibility or reducibility of programs. For every type, there are canonical programs of that type which are irreducible; these are known as ''canonical forms'' or ''values''. If every program can be reduced to a canonical form, then the type theory is said to be ''[[normalization property (abstract rewriting)|normalising]]'' (or ''weakly normalising''). If the canonical form is unique, then the theory is said to be ''strongly normalising''. Normalisability is a rare feature of most non-trivial type theories, which is a big departure from the logical world. (Recall that almost every logical derivation has an equivalent normal derivation.) To sketch the reason: in type theories that admit recursive definitions, it is possible to write programs that never reduce to a value; such looping programs can generally be given any type. In particular, the looping program has type ⊥, although there is no logical proof of &quot;⊥ ''true''&quot;. For this reason, the ''propositions as types; proofs as programs'' paradigm only works in one direction, if at all: interpreting a type theory as a logic generally gives an inconsistent logic.
+
+===Example: Dependent Type Theory===
+Like logic, type theory has many extensions and variants, including first-order and higher-order versions. One branch, known as [[dependent type theory]], is used in a number of [[computer-assisted proof]] systems.  Dependent type theory allows quantifiers to range over programs themselves. These quantified types are written as Π and Σ instead of ∀ and ∃, and have the following formation rules:
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ Γ ⊢ A type    Γ, x:A ⊢ B type
+ ───────────────────────────── Π-F
+ Γ ⊢ Πx:A. B type
+| width=&quot;10%&quot; |  || 
+ Γ ⊢ A type  Γ, x:A ⊢ B type
+ ──────────────────────────── Σ-F
+ Γ ⊢ Σx:A. B type
+|}
+These types are generalisations of the arrow and product types, respectively, as witnessed by their introduction and elimination rules.
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ Γ, x:A ⊢ π : B
+ ──────────────────── ΠI
+ Γ ⊢ λx. π : Πx:A. B
+| width=&quot;10%&quot; |  || 
+ Γ ⊢ π&lt;sub&gt;1&lt;/sub&gt; : Πx:A. B   Γ ⊢ π&lt;sub&gt;2&lt;/sub&gt; : A
+ ───────────────────────────── ΠE
+ Γ ⊢ π&lt;sub&gt;1&lt;/sub&gt; π&lt;sub&gt;2&lt;/sub&gt; : [π&lt;sub&gt;2&lt;/sub&gt;/x] B
+|}
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ Γ ⊢ π&lt;sub&gt;1&lt;/sub&gt; : A    Γ, x:A ⊢ π&lt;sub&gt;2&lt;/sub&gt; : B
+ ───────────────────────────── ΣI
+ Γ ⊢ (π&lt;sub&gt;1&lt;/sub&gt;, π&lt;sub&gt;2&lt;/sub&gt;) : Σx:A. B
+| width=&quot;10%&quot; |  || 
+ Γ ⊢ π : Σx:A. B
+ ──────────────── ΣE&lt;sub&gt;1&lt;/sub&gt;
+ Γ ⊢ '''fst''' π : A
+| width=&quot;10%&quot; |  || 
+ Γ ⊢ π : Σx:A. B
+ ──────────────────────── ΣE&lt;sub&gt;2&lt;/sub&gt;
+ Γ ⊢ '''snd''' π : ['''fst''' π/x] B
+|}
+Dependent type theory in full generality is very powerful: it is able to express almost any conceivable property of programs directly in the types of the program. This generality comes at a steep price &amp;mdash; either typechecking is undecidable ([[extensional type theory]]), or extensional reasoning is more difficult ([[intensional type theory]]). For this reason, some dependent type theories do not allow quantification over arbitrary programs, but rather restrict to programs of a given decidable ''index domain'', for example integers, strings, or linear programs.
+
+Since dependent type theories allow types to depend on programs, a natural question to ask is whether it is possible for programs to depend on types, or any other combination. There are many kinds of answers to such questions. A popular approach in type theory is to allow programs to be quantified over types, also known as ''[[parametric polymorphism]]''; of this there are two main kinds: if types and programs are kept separate, then one obtains a somewhat more well-behaved system called ''[[predicative polymorphism]]''; if the distinction between program and type is blurred, one obtains the type-theoretic analogue of higher-order logic, also known as ''[[impredicative polymorphism]]''. Various combinations of dependency and polymorphism have been considered in the literature, the most famous being the [[lambda cube]] of [[Henk Barendregt]].
+
+The intersection of logic and type theory is a vast and active research area. New logics are usually formalised in a general type theoretic setting, known as a [[logical framework]]. Popular modern logical frameworks such as the [[calculus of constructions]] and [[LF (logical framework)|LF]] are based on higher-order dependent type theory, with various trade-offs in terms of decidability and expressive power. These logical frameworks are themselves always specified as natural deduction systems, which is a testament to the versatility of the natural deduction approach.
+
+==Classical and modal logics==
+For simplicity, the logics presented so far have been [[intuitionistic logic|intuitionistic]]. [[Classical logic]] extends intuitionistic logic with an additional [[axiom]] or principle of [[excluded middle]]:
+
+:''For any proposition p, the proposition p ∨ ¬p is true.''
+
+This statement is not obviously either an introduction or an elimination; indeed, it involves two distinct connectives. Gentzen's original treatment of excluded middle prescribed one of the following three (equivalent) formulations, which were already present in analogous forms in the systems of [[David Hilbert|Hilbert]] and [[Arend Heyting|Heyting]]:
+{| style=&quot;margin-left: 2em;&quot;
+|-
+|
+ ────────────── XM&lt;sub&gt;1&lt;/sub&gt;
+ A ∨ ¬A true
+| width=&quot;5%&quot; |  || 
+ ¬¬A true
+ ────────── XM&lt;sub&gt;2&lt;/sub&gt;
+ A true
+| width=&quot;5%&quot; |  || 
+ ──────── ''u''
+ ¬A true
+ ⋮
+ ''p'' true
+ ────── XM&lt;sub&gt;3&lt;/sub&gt;&lt;sup&gt;''u, p''&lt;/sup&gt;
+ A true
+|}
+
+(XM&lt;sub&gt;3&lt;/sub&gt; is merely XM&lt;sub&gt;2&lt;/sub&gt; expressed in terms of E.) This treatment of excluded middle, in addition to being objectionable from a purist's standpoint, introduces additional complications in the definition of normal forms.
+
+A comparatively more satisfactory treatment of classical natural deduction in terms of introduction and elimination rules alone was first proposed by [[Michel Parigot|Parigot]] in 1992 in the form of a classical [[lambda calculus]] called [[Lambda-mu calculus|λμ]]. The key insight of his approach was to replace a truth-centric judgment ''A true'' with a more classical notion, reminiscent of the [[sequent calculus]]: in localised form, instead of Γ ⊢ ''A'', he used Γ ⊢ Δ, with Δ a collection of propositions similar to Γ. Γ was treated as a conjunction, and Δ as a disjunction. This structure is essentially lifted directly from classical [[sequent calculus|sequent calculi]], but the innovation in λμ was to give a computational meaning to classical natural deduction proofs in terms of a [[callcc]] or a throw/catch mechanism seen in [[LISP]] and its descendants. (See also: [[first class control]].)

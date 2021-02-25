@@ -1,0 +1,196 @@
+[[Richard P. Stanley]] calls the same choice of representation the &quot;standard representation&quot; of a permutation.&lt;ref name=&quot;Stanley2012&quot;&gt;{{cite book|first=Richard P.|last= Stanley|title=Enumerative Combinatorics: Volume I, Second Edition|year=2012|publisher=Cambridge University Press|isbn=978-1-107-01542-5|page=23}}&lt;/ref&gt; and Martin Aigner uses the term &quot;standard form&quot; for the same notion.&lt;ref name=&quot;Aigner2007&quot;&gt;{{cite book|first=Martin|last= Aigner|title=A Course in Enumeration|url=https://archive.org/details/courseenumeratio00aign_007|url-access=limited|year=2007|publisher=Springer GTM 238|isbn=978-3-540-39035-0|pages=[https://archive.org/details/courseenumeratio00aign_007/page/n32 24]–25}}&lt;/ref&gt; Sergey Kitaev also uses the &quot;standard form&quot; terminology, but reverses both choices; that is, each cycle lists its least element first and the cycles are sorted in decreasing order of their least, that is, first elements.&lt;ref name=&quot;Kitaev2011&quot;&gt;{{cite book|first=Sergey |last=Kitaev|title=Patterns in Permutations and Words|year=2011|publisher=Springer Science &amp; Business Media|isbn=978-3-642-17333-2|page=119}}&lt;/ref&gt;
+
+===Composition of permutations===
+There are two ways to denote the composition of two permutations. &lt;math&gt;\sigma\cdot \pi&lt;/math&gt; is the function that maps any element ''x'' of the set to &lt;math&gt;\sigma(\pi(x))&lt;/math&gt;. The rightmost permutation is applied to the argument first,&lt;ref&gt;
+{{cite book | last1=Biggs | first1=Norman L. | last2=White | first2=A. T.
+|year=1979
+|publisher=Cambridge University Press
+|title=Permutation groups and combinatorial structures
+|isbn=978-0-521-22287-7
+}}
+&lt;/ref&gt;
+because of the way the function application is written. 
+
+Since [[function composition]] is [[Associative property|associative]], so is the composition operation on permutations: &lt;math&gt;(\sigma\pi)\tau = \sigma(\pi\tau)&lt;/math&gt;. Therefore, products of more than two permutations are usually written without adding parentheses to express grouping; they are also usually written without a dot or other sign to indicate composition.
+
+Some authors prefer the leftmost factor acting first,&lt;ref&gt;
+{{cite book | last1=Dixon | first1=John D. | last2=Mortimer | first2=Brian
+|title =Permutation Groups
+| url=https://archive.org/details/permutationgroup0000dixo | url-access=registration |isbn=978-0-387-94599-6
+|publisher=Springer
+|year=1996
+}}
+&lt;/ref&gt;&lt;ref&gt;
+{{cite book | last1=Cameron | first1= Peter J.
+|year=1999
+|publisher=Cambridge University Press
+|title=Permutation groups
+| url=https://archive.org/details/permutationgroup0000came | url-access=registration |isbn=978-0-521-65302-2
+}}
+&lt;/ref&gt;&lt;ref&gt;
+{{cite journal | first1=M. | last1=Jerrum
+|journal = J. Algorithms
+|volume=7
+|number=1
+|title=A compact representation of permutation groups
+|pages=60–78
+|year=1986
+ |doi=10.1016/0196-6774(86)90038-6
+| s2cid=18896625
+}}
+&lt;/ref&gt;
+but to that end permutations must be written to the ''right'' of their argument, often as an exponent, where ''σ'' acting on ''x'' is written ''x''&lt;sup&gt;''σ''&lt;/sup&gt;; then the product is defined by {{nowrap|''x''&lt;sup&gt;''σ·π''&lt;/sup&gt; {{=}} (''x''&lt;sup&gt;''σ''&lt;/sup&gt;)&lt;sup&gt;''π''&lt;/sup&gt;}}. However this gives a ''different'' rule for multiplying permutations; this article uses the definition where the rightmost permutation is applied first.
+
+==Other uses of the term ''permutation''==
+The concept of a permutation as an ordered arrangement admits several generalizations that are not permutations, but have been called permutations in the literature.
+
+===''k''-permutations of ''n''===
+A weaker meaning of the term ''permutation'', sometimes used in elementary combinatorics texts, designates those ordered arrangements in which no element occurs more than once, but without the requirement of using all the elements from a given set. These are not permutations except in special cases, but are natural generalizations of the ordered arrangement concept. Indeed, this use often involves considering arrangements of a fixed length&amp;nbsp;''k'' of elements taken from a given set of size ''n'', in other words, these '''''k''-permutations of ''n''''' are the different ordered arrangements of a ''k''-element subset of an ''n''-set (sometimes called '''variations'''  or '''arrangements''' in the older literature{{efn|More precisely, ''variations without repetition''. The term is still common in other languages and appears in modern English most often in translation.}}). These objects are also known as '''[[Partial permutation#Restricted partial permutations|partial permutations]]''' or as '''sequences without repetition''', terms that avoid confusion with the other, more common, meaning of &quot;permutation&quot;. The number of such &lt;math&gt;k&lt;/math&gt;-permutations of &lt;math&gt;n&lt;/math&gt; is denoted variously by such symbols as &lt;math&gt;P^n_k&lt;/math&gt;,  &lt;math&gt;_nP_k&lt;/math&gt;, &lt;math&gt;^nP_k&lt;/math&gt;, &lt;math&gt;P_{n,k}&lt;/math&gt;, or &lt;math&gt;P(n,k)&lt;/math&gt;, and its value is given by the product&lt;ref&gt;{{cite book|author=Charalambides, Ch A.|title=Enumerative Combinatorics|publisher=CRC Press|year=2002|isbn=978-1-58488-290-9|page=42|url=https://books.google.com/books?id=PDMGA-v5G54C&amp;pg=PA42}}&lt;/ref&gt;
+
+: &lt;math&gt;P(n,k) = \underbrace{n\cdot(n-1)\cdot(n-2)\cdots(n-k+1)}_{k\ \mathrm{factors}}&lt;/math&gt;,
+which is 0 when {{nowrap|''k'' &amp;gt; ''n''}}, and otherwise is equal to
+: &lt;math&gt;\frac{n!}{(n-k)!}.&lt;/math&gt;
+
+The product is well defined without the assumption that &lt;math&gt;n&lt;/math&gt; is a non-negative integer, and is of importance outside combinatorics as well; it is known as the [[Pochhammer symbol]] &lt;math&gt;(n)_k&lt;/math&gt; or as the &lt;math&gt;k&lt;/math&gt;-th falling factorial power &lt;math&gt;n^{\underline k}&lt;/math&gt; of &lt;math&gt;n&lt;/math&gt;.
+
+This usage of the term ''permutation'' is closely related to the term ''[[combination]]''. A ''k''-element combination of an ''n''-set ''S'' is a ''k'' element subset of ''S'', the elements of which are not ordered. By taking all the ''k'' element subsets of ''S'' and ordering each of them in all possible ways, we obtain all the ''k''-permutations of ''S''. The number of ''k''-combinations of an ''n''-set, ''C''(''n'',''k''), is therefore related to the number of ''k''-permutations of ''n'' by:
+: &lt;math&gt;C(n,k) = \frac{P(n,k)}{P(k,k)} = \frac{\tfrac{n!}{(n-k)!}}{\tfrac{k!}{0!}} = \frac{n!}{(n-k)!\,k!}.&lt;/math&gt;
+
+These numbers are also known as [[binomial coefficient]]s and are denoted by &lt;math&gt;\binom{n}{k}&lt;/math&gt;.
+&lt;!--
+
+--- Duplicate of above ... hold for possible inclusion
+
+===Counting sequences without repetition===
+In this section, a ''k''-permutation of a set ''S'' is an ordered sequence of ''k'' distinct elements of ''S''. For example, given the set of letters {&lt;tt&gt;C&lt;/tt&gt;, &lt;tt&gt;E&lt;/tt&gt;, &lt;tt&gt;G&lt;/tt&gt;, &lt;tt&gt;I&lt;/tt&gt;, &lt;tt&gt;N&lt;/tt&gt;, &lt;tt&gt;R&lt;/tt&gt;}, the sequence &lt;tt&gt;ICE&lt;/tt&gt; is a 3-permutation, &lt;tt&gt;RING&lt;/tt&gt; and  &lt;tt&gt;RICE&lt;/tt&gt; are 4-permutations, &lt;tt&gt;NICER&lt;/tt&gt; and &lt;tt&gt;REIGN&lt;/tt&gt; are 5-permutations, and &lt;tt&gt;CRINGE&lt;/tt&gt; is a 6-permutation; since the latter uses all letters, it is a permutation of the given set in the ordinary combinatorial sense. &lt;tt&gt;ENGINE&lt;/tt&gt; on the other hand is not a permutation, because of the repetitions: it uses the elements &lt;tt&gt;E&lt;/tt&gt; and &lt;tt&gt;N&lt;/tt&gt; twice.
+
+Let ''n'' be the size of ''S'', the number of elements available for selection. In constructing a ''k''-permutation, there are ''n''&amp;nbsp; possible choices for the first element of the sequence, and this is then number of 1-permutations. Once it has been chosen, there are {{nowrap|''n'' − 1}} elements of ''S'' left to choose from, so a second element can be chosen in {{nowrap|''n'' − 1}} ways, giving a total ''n'' × (''n'' − 1) possible 2-permutations. For each successive element of the sequence, the number of possibilities decreases by 1&amp;nbsp; which leads to the number of
+:''n'' × (''n'' − 1) × (''n'' − 2)  ... × (''n'' − ''k'' + 1) possible ''k''-permutations.
+This gives in particular the number of ''n''-permutations (which contain all elements of ''S'' once, and are therefore simply permutations of ''S''):
+:''n'' × (''n'' − 1) × (''n'' − 2) × ... × 2 × 1,
+a number that occurs so frequently in mathematics that it is given a compact notation &quot;''n''!&quot;, and is called &quot;''n'' [[factorial]]&quot;. These ''n''-permutations are the longest sequences without repetition of elements of ''S'', which is reflected by the fact that the above formula for the number of ''k''-permutations gives zero whenever ''k''&amp;nbsp;&amp;gt;&amp;nbsp;''n''.
+
+The number of ''k''-permutations of a set of ''n'' elements is sometimes denoted by ''P''(''n'',''k'') or a similar notation (usually accompanied by a notation for the number of ''k''-[[combination]]s of a set of ''n'' elements in which the &quot;''P''&quot; is replaced by &quot;''C''&quot;). That notation is rarely used in other contexts than that of counting ''k''-permutations, but the expression for the number does arise in many other situations. Being a product of ''k'' factors starting at ''n'' and decreasing by unit steps, it is called the ''k''-th falling factorial power of ''n'':
+:&lt;math&gt;n^{\underline k}=n\times(n-1)\times(n-2)\times\cdots\times(n-k+1),&lt;/math&gt;
+though many other names and notations are in use, as detailed at [[Pochhammer symbol]]. When ''k''&amp;nbsp;≤&amp;nbsp;''n'' the factorial power can be completed by additional factors: ''n''&lt;sup&gt;&lt;u&gt;''k''&lt;/u&gt;&lt;/sup&gt;&amp;nbsp;×&amp;nbsp;(''n''&amp;nbsp;−&amp;nbsp;''k'')!&amp;nbsp;=&amp;nbsp;''n''!, which allows writing
+:&lt;math&gt;n^{\underline k}=\frac{n!}{(n-k)!}.&lt;/math&gt;
+The right hand side is often given as expression for the number of ''k''-permutations, but its main merit is using the compact factorial notation. Expressing a product of ''k'' factors as a quotient of potentially much larger products, where all factors in the denominator are also explicitly present in the numerator, is not particularly efficient; as a method of computation there is the additional danger of overflow or rounding errors. It should also be noted that the expression is undefined when ''k''&amp;nbsp;&amp;gt;&amp;nbsp;''n'', whereas in those cases the number ''n''&lt;sup&gt;&lt;u&gt;''k''&lt;/u&gt;&lt;/sup&gt; of ''k''-permutations is just&amp;nbsp;0.
+--&gt;
+
+===Permutations with repetition===
+Ordered arrangements of ''n'' elements of a set ''S'', where repetition is allowed, are called [[Tuple|''n''-tuples]].  They have sometimes been referred to as '''permutations with repetition''', although they are not permutations in general. They are also called [[word (mathematics)|words]] over the alphabet ''S'' in some contexts. If the set ''S'' has ''k'' elements, the number of ''n''-tuples over ''S'' is &lt;math&gt;k^n.&lt;/math&gt;
+There is no restriction on how often an element can appear in an ''n''-tuple, but if restrictions are placed on how often an element can appear, this formula is no longer valid.
+
+===Permutations of multisets===
+[[File:Permutations with repetition.svg|thumb|Permutations of multisets]]
+
+If ''M'' is a finite [[multiset]], then a '''multiset permutation''' is an ordered arrangement of elements of ''M'' in which each element appears a number of times equal exactly to its multiplicity in ''M''. An [[anagram]] of a word having some repeated letters is an example of a multiset permutation.{{efn|The natural order in this example is the order of the letters in the original word.}} If the multiplicities of the elements of ''M'' (taken in some order) are &lt;math&gt;m_1&lt;/math&gt;, &lt;math&gt;m_2&lt;/math&gt;, ..., &lt;math&gt;m_l&lt;/math&gt; and their sum (that is, the size of ''M'') is ''n'', then the number of multiset permutations of ''M'' is given by the [[Multinomial coefficient#Multinomial coefficients|multinomial coefficient]],&lt;ref&gt;{{harvnb|Brualdi|2010|loc=p. 46, Theorem 2.4.2}}&lt;/ref&gt;
+:&lt;math&gt;
+  {n \choose m_1, m_2, \ldots, m_l} =
+  \frac{n!}{m_1!\, m_2!\, \cdots\, m_l!} =
+  \frac{\left(\sum_{i=1}^l{m_i}\right)!}{\prod_{i=1}^l{m_i!}}.
+&lt;/math&gt;
+
+For example, the number of distinct anagrams of the word MISSISSIPPI is:&lt;ref&gt;{{harvnb|Brualdi|2010|p=47}}&lt;/ref&gt;
+:&lt;math&gt;\frac{11!}{1!\, 4!\, 4!\, 2!} = 34650&lt;/math&gt;.
+
+A '''k-permutation''' of a multiset ''M'' is a sequence of length ''k'' of elements of ''M'' in which each element appears ''a number of times less than or equal to'' its multiplicity in ''M'' (an element's ''repetition number'').
+
+===Circular permutations===
+Permutations, when considered as arrangements, are sometimes referred to as ''linearly ordered'' arrangements. In these arrangements there is a first element, a second element, and so on. If, however, the objects are arranged in a circular manner this distinguished ordering no longer exists, that is, there is no &quot;first element&quot; in the arrangement, any element can be considered as the start of the arrangement. The arrangements of objects in a circular manner are called '''circular permutations'''.&lt;ref&gt;{{harvnb|Brualdi|2010|p=39}}&lt;/ref&gt;{{efn|In older texts ''circular permutation'' was sometimes used as a synonym for [[cyclic permutation]], but this is no longer done. See {{harvtxt|Carmichael|1956|p=7}}}} These can be formally defined as [[equivalence classes]] of ordinary permutations of the objects, for the [[equivalence relation]] generated by moving the final element of the linear arrangement to its front.
+
+Two circular permutations are equivalent if one can be rotated into the other (that is, cycled without changing the relative positions of the elements). The following two circular permutations on four letters are considered to be the same.
+
+&lt;pre&gt;
+     1           4
+   4   3       2   1
+     2           3&lt;/pre&gt;
+
+The circular arrangements are to be read counterclockwise, so the following two are not equivalent since no rotation can bring one to the other.
+&lt;pre&gt;
+     1          1
+   4   3      3   4
+     2          2&lt;/pre&gt;
+
+The number of circular permutations of a set ''S'' with ''n'' elements is (''n''&amp;thinsp;–&amp;thinsp;1)!.
+
+==Properties==
+The number of permutations of {{math|''n''}} distinct objects is {{math|''n''}}!.
+
+The number of {{math|''n''}}-permutations with {{math|''k''}} disjoint cycles is the signless [[Stirling number of the first kind]], denoted by {{math|''c''(''n'', ''k'')}}.{{sfn|Bona|2012|pp=97–103}}
+
+===Permutation type===
+The cycles of a permutation partition the set &lt;math&gt;S_n&lt;/math&gt; so the lengths of the cycles of a permutation &lt;math&gt;\sigma&lt;/math&gt; form a [[partition (number theory)|partition]] of ''n'' called the [[cycle type]] of &lt;math&gt;\sigma&lt;/math&gt;. There is a &quot;1&quot; in the cycle type for every fixed point of σ, a &quot;2&quot; for every transposition, and so on. The cycle type of &lt;math&gt;\beta = (\,1\,2\,5\,)(\,3\,4\,)(6\,8\,)(\,7\,)&lt;/math&gt; is (3,2,2,1) which is sometimes written in a more compact form as [1&lt;sup&gt;1&lt;/sup&gt;2&lt;sup&gt;2&lt;/sup&gt;3&lt;sup&gt;1&lt;/sup&gt;]. &lt;!-- Biggs notation --&gt;
+
+The general form is &lt;math&gt;[1^{\alpha_1}2^{\alpha_2}\dotsm n^{\alpha_n}]&lt;/math&gt;, where &lt;math&gt;\alpha_1,\ldots,\alpha_n&lt;/math&gt; are the numbers of cycles of respective length. The number of permutations of a certain type is&lt;ref&gt;{{citation|last = Sagan|first = Bruce|title = The Symmetric Group|publisher = Springer | date = 2001 | edition = 2 | page = 3}}&lt;/ref&gt;
+: &lt;math&gt;\frac{n!}{1^{\alpha_1}2^{\alpha_2}\dotsm n^{\alpha_n}\alpha_1!\alpha_2!\dotsm \alpha_n!}&lt;/math&gt;.
+
+===Conjugating permutations===
+In general, composing permutations written in cycle notation follows no easily described pattern – the cycles of the composition can be different from those being composed. However the cycle structure is preserved in the special case of [[conjugacy class|conjugating]] a permutation &lt;math&gt;\sigma&lt;/math&gt; by another permutation &lt;math&gt;\pi&lt;/math&gt;, which means forming the product &lt;math&gt;\pi\sigma\pi^{-1}&lt;/math&gt;. Here, &lt;math&gt;\pi\sigma\pi^{-1}&lt;/math&gt; is the ''conjugate'' of &lt;math&gt;\sigma&lt;/math&gt; and its cycle notation can be obtained by taking the cycle notation for &lt;math&gt;\sigma&lt;/math&gt; and applying &lt;math&gt;\pi&lt;/math&gt; to all the entries in it.{{sfn|Humphreys|1996|p=84}} It follows that two permutations are conjugate exactly when they have the same type.
+
+===Permutation order===
+The order of a permutation &lt;math&gt;\sigma&lt;/math&gt; is the smallest positive integer ''m'' so that &lt;math&gt;\sigma^m = \mathrm{id}&lt;/math&gt;. It is the [[least common multiple]] of its cycles lengths. For example, the order of &lt;math&gt;(\,1\,3\,2)(\,4\,5\,)&lt;/math&gt; is &lt;math&gt;2\cdot3 = 6&lt;/math&gt;.
+
+===Parity of a permutation===
+Every permutation of a finite set can be expressed as the product of transpositions.&lt;ref&gt;{{harvnb|Hall|1959|p=60}}&lt;/ref&gt;
+Although many such expressions for a given permutation may exist, either they all contain an even or an odd number of transpositions. Thus all permutations can be classified as [[Even and odd permutations|even or odd]] depending on this number.
+
+This result can be extended so as to assign a ''sign'', written &lt;math&gt;\operatorname{sgn}\sigma&lt;/math&gt;, to each permutation. &lt;math&gt;\operatorname{sgn}\sigma = +1&lt;/math&gt; if &lt;math&gt;\sigma&lt;/math&gt; is even and &lt;math&gt;\operatorname{sgn}\sigma = -1&lt;/math&gt; if &lt;math&gt;\sigma&lt;/math&gt; is odd. Then for two permutations &lt;math&gt;\sigma&lt;/math&gt; and &lt;math&gt;\pi&lt;/math&gt;
+
+: &lt;math&gt;\operatorname{sgn}(\sigma\pi) = \operatorname{sgn}\sigma\cdot\operatorname{sgn}\pi.&lt;/math&gt;
+
+It follows that &lt;math&gt;\operatorname{sgn}\left(\sigma\sigma^{-1}\right) = +1.&lt;/math&gt;
+
+===Matrix representation===
+[[File:Symmetric group 3; Cayley table; matrices.svg|thumb|Composition of permutations corresponds to multiplication of permutation matrices.]]
+One can represent a permutation of {1, 2, ..., ''n''} as an ''n''×''n'' [[matrix (mathematics)|matrix]]. There are two natural ways to do so, but only one for which multiplications of matrices corresponds to multiplication of permutations in the same order: this is the one that associates to ''σ'' the matrix ''M'' whose entry ''M''&lt;sub&gt;''i'',''j''&lt;/sub&gt; is 1 if ''i'' = ''σ''(''j''), and 0 otherwise. The resulting matrix has exactly one entry 1 in each column and in each row, and is called a ''[[permutation matrix]]''. &lt;br /&gt;
+[[:File:Symmetric group 4; permutation list with matrices.svg|Here]] is a list of these matrices for permutations of 4 elements. The [[Cayley table]] on the right shows these matrices for permutations of 3 elements.
+
+=== Foata's transition lemma ===
+There is a relationship between the one-line and the canonical cycle notation. Consider the permutation &lt;math&gt;(\,2\,)(\,3\,1\,)&lt;/math&gt;, in canonical cycle notation, if we erase its cycle parentheses, we obtain the permutation &lt;math&gt;(2, 3, 1)&lt;/math&gt; in one-line notation. [[Dominique Foata|Foata]]'s transition lemma establishes the nature of this correspondence as a bijection on the set of ''n''-permutations (to itself).{{sfn|Bona|2012|pp=109–110}}  Richard P. Stanley calls this correspondence the ''fundamental bijection''.&lt;ref name=&quot;Stanley2012&quot;/&gt; 
+
+Let &lt;math&gt;f&lt;/math&gt; be the parentheses-erasing transformation. The inverse of &lt;math&gt;q = f(p)&lt;/math&gt; is a bit less intuitive. Starting with the one-line notation &lt;math&gt;q = q_1q_2\cdots q_n&lt;/math&gt;, the first cycle in canonical cycle notation must start with &lt;math&gt;q_1&lt;/math&gt;. As long as the subsequent elements are smaller than &lt;math&gt;q_1&lt;/math&gt;, we are in the same cycle. The second cycle starts at the smallest index &lt;math&gt;j&lt;/math&gt; such that &lt;math&gt;q_j &gt; q_1&lt;/math&gt;. In other words, &lt;math&gt;q_j&lt;/math&gt; is larger than everything else to its left, so it is called a ''left-to-right maximum''. Every cycle in the canonical cycle notation starts with a left-to-right maximum.{{sfn|Bona|2012|pp=109–110}}
+
+For example, in the one-line notation &lt;math&gt;(3, 1, 2, 5, 4, 8, 9, 7, 6)&lt;/math&gt;, 5 is the first element larger than 3, so the first cycle must be &lt;math&gt;(\,3\,1\,2\,)&lt;/math&gt;. Then 8 is the next element larger than 5, so the second cycle is &lt;math&gt;(\,5\,4\,)&lt;/math&gt;. Since 9 is larger than 8, &lt;math&gt;(\,8\,)&lt;/math&gt; is a cycle by itself. Finally, 9 is larger than all the remaining elements to its right, so the last cycle is &lt;math&gt;(\,9\,7\,6\,)&lt;/math&gt;.
+
+As a first corollary, the number of n-permutations with exactly ''k'' left-to-right maxima is also equal to the signless [[Stirling number of the first kind]], &lt;math&gt;c(n, k)&lt;/math&gt;. Furthermore, Foata's mapping takes an ''n''-permutation with ''k''-weak excedances to an ''n''-permutations with {{nowrap|''k'' − 1}} ascents.{{sfn|Bona|2012|pp=109–110}}  For example, (2)(31) = 321 has two weak excedances (at index 1 and 2), whereas {{nowrap|''f''(321) {{=}} 231}} has one ascent (at index 1; that is, from 2 to 3).
+
+==Permutations of totally ordered sets==
+In some applications, the elements of the set being permuted will be compared with each other. This requires that the set ''S'' has a [[total order]] so that any two elements can be compared. The set {1, 2, ..., ''n''} is totally ordered by the usual &quot;≤&quot; relation and so it is the most frequently used set in these applications, but in general, any totally ordered set will do. In these applications, the ordered arrangement view of a permutation is needed to talk about the ''positions'' in a permutation.
+
+There are a number of properties that are directly related to the total ordering of ''S''.
+
+===Ascents, descents, runs and excedances===
+{{anchor|Descents}}
+An ''ascent'' of a permutation&amp;nbsp;''σ'' of ''n'' is any position ''i''&amp;nbsp;&amp;lt;&amp;nbsp;''n'' where the following value is bigger than the current one. That is, if  ''σ''&amp;nbsp;=&amp;nbsp;''σ''&lt;sub&gt;1&lt;/sub&gt;''σ''&lt;sub&gt;2&lt;/sub&gt;...''σ''&lt;sub&gt;''n''&lt;/sub&gt;, then ''i'' is an ascent if ''σ''&lt;sub&gt;''i''&lt;/sub&gt;&amp;nbsp;&amp;lt;&amp;nbsp;''σ''&lt;sub&gt;''i''+1&lt;/sub&gt;.
+
+For example, the permutation 3452167 has ascents (at positions) 1, 2, 5, and 6.
+
+Similarly, a ''descent'' is a position ''i''&amp;nbsp;&amp;lt;&amp;nbsp;''n'' with ''σ''&lt;sub&gt;''i''&lt;/sub&gt;&amp;nbsp;&amp;gt;&amp;nbsp;''σ''&lt;sub&gt;''i''+1&lt;/sub&gt;, so every ''i'' with &lt;math&gt;1 \leq i&lt;n&lt;/math&gt; either is an ascent or  is a descent of&amp;nbsp;''σ''.
+
+An ''ascending run'' of a permutation is a nonempty increasing contiguous subsequence of the permutation that cannot be extended at either end; it corresponds to a maximal sequence of successive ascents (the latter may be empty: between two successive descents there is still an ascending run of length&amp;nbsp;1). By contrast an ''increasing subsequence'' of a permutation is not necessarily contiguous: it is an increasing sequence of elements obtained from the permutation by omitting the values at some positions.
+For example, the permutation 2453167 has the ascending runs 245, 3, and 167, while it has an increasing subsequence 2367.
+
+If a permutation has ''k''&amp;nbsp;−&amp;nbsp;1 descents, then it must be the union of ''k'' ascending runs.{{sfn|Bóna|2004|p=4f}}
+
+The number of permutations of ''n'' with ''k'' ascents is (by definition) the [[Eulerian number]] &lt;math&gt;\textstyle\left\langle{n\atop k}\right\rangle&lt;/math&gt;; this is also the number of permutations of ''n'' with ''k'' descents. Some authors however define the Eulerian number &lt;math&gt;\textstyle\left\langle{n\atop k}\right\rangle&lt;/math&gt; as the number of permutations with ''k'' ascending runs, which corresponds to {{nowrap|''k'' − 1}} descents.{{sfn|Bona|2012|pages=4–5}}
+
+An excedance of a permutation ''σ''&lt;sub&gt;1&lt;/sub&gt;''σ''&lt;sub&gt;2&lt;/sub&gt;...''σ''&lt;sub&gt;''n''&lt;/sub&gt; is an index ''j'' such that {{nowrap|''σ''&lt;sub&gt;''j''&lt;/sub&gt; &gt; ''j''}}. If the inequality is not strict (that is, {{nowrap|''σ''&lt;sub&gt;''j''&lt;/sub&gt; ≥ ''j''}}), then ''j'' is called a ''weak excedance''. The number of ''n''-permutations with ''k'' excedances coincides with the number of ''n''-permutations with ''k'' descents.{{sfn|Bona|2012|page=25}}
+
+===Inversions===
+{{main|Inversion (discrete mathematics)}}
+[[Image:15-Puzzle.jpg|thumb|In the [[15 puzzle]] the goal is to get the squares in ascending order.  Initial positions which have an odd number of inversions are impossible to solve.&lt;ref name=&quot;Slocum&quot;&gt;{{cite web
+  | last1     = Slocum
+  | first1    = Jerry
+  | last2     = Weisstein
+  | first2    = Eric W.
+  | title = 15 – puzzle
+  | work = MathWorld
+  | publisher = Wolfram Research, Inc.
+  | date = 1999
+  | url = http://mathworld.wolfram.com/15Puzzle.html
+  | doi =
+  | accessdate = October 4, 2014
+}}&lt;/ref&gt;]]
+
+An ''[[inversion (discrete mathematics)|inversion]]'' of a permutation&amp;nbsp;''σ'' is a pair {{nowrap|(''i'',''j'')}} of positions where the entries of a permutation are in the opposite order: {{nowrap|''i'' &lt; ''j''}} and {{nowrap|''σ_i'' &gt; ''σ_j''}}.{{sfn|Bóna|2004|p=43}}  So a descent is just an inversion at two adjacent positions. For example, the permutation {{nowrap|''σ'' {{=}} 23154}} has three inversions: (1,3), (2,3), (4,5), for the pairs of entries (2,1), (3,1), (5,4).

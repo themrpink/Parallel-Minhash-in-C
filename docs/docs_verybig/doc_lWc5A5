@@ -1,0 +1,475 @@
+
+{{telecomm-stub}}</text>
+      <sha1>is4xvzf7etomcfhl58fynpv55t4ho88</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>TAT-14</title>
+    <ns>0</ns>
+    <id>42603</id>
+    <revision>
+      <id>971898774</id>
+      <parentid>939000889</parentid>
+      <timestamp>2020-08-08T22:58:15Z</timestamp>
+      <contributor>
+        <username>JJMC89 bot III</username>
+        <id>35936988</id>
+      </contributor>
+      <minor />
+      <comment>Moving [[:Category:SoftBank]] to [[:Category:SoftBank Group]] per [[Wikipedia:Categories for discussion/Speedy]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6061" xml:space="preserve">{{Infobox Submarine communications cable
+| cable_name       = TAT-14
+| map              =Map TAT-14.png
+| owners           =&lt;ref&gt;{{cite web|title=TAT-14 General Committee|url=https://www.tat-14.com/tat14/gclist.jsp|website=TAT-14 Cable System|publisher=Sprint Corporation|accessdate=18 November 2017}}&lt;/ref&gt;&lt;ref&gt;{{cite web|title=TAT-14|url=http://www.insworldwide.com/project/tat-14/|website=International Network Systems|accessdate=18 November 2017}}&lt;/ref&gt; {{hlist
+ | [[BT Group]]
+ | [[AT&amp;T]]
+ | [[Deutsche Telekom]]
+ | [[Vodafone]]
+ | [[Verizon Communications]]
+ | [[Sprint Corporation]]
+ | [[KPN]]
+ | [[Orange S.A.]]
+ | [[Telia Company]]
+ | [[Telenor]]
+ | [[Etisalat]]
+ | [[Level 3 Communications]]
+ | [[OTEGlobe]]
+ | [[Singtel]]
+ | [[KDDI]]
+ | [[StarHub]]
+ | [[SoftBank Group]]
+ | [[Zayo Group]]
+ | [[Telesur (Suriname)|Telesur]]
+ | [[Portugal Telecom]]
+ | [[Slovak Telekom]]
+ | [[Türk Telekom]]
+ | [[TDC A/S]]
+ | [[Tele2]]
+ | [[Telus]]
+ | [[Tata Communications]]
+ | [[Telefónica]]
+ | [[Belgacom ICS|BICS]]
+ | [[Elisa (company)|Elisa]]
+ | [[CYTA]]
+ | [[Rostelecom]]
+}}
+| technology       = Fiber optics with [[EDFA]] repeaters
+| design_capacity  = 9.38 [[Terabit|Tbit]]/s
+| current_capacity = 3.15 Tbit/s
+| length           = {{convert|15428|km|mi|abbr=on}}
+| topology         = [[Self-healing ring]]
+| first_use_date   = {{Start date|2001|03|21|df=y}} &lt;!--source is German article and heise.de news--&gt;
+| landing_points   =
+{{unbulleted list
+| {{flagicon|Denmark}} [[Blaabjerg]], Denmark
+| {{flagicon|Germany}} [[Norden, Lower Saxony|Norden]], Germany
+| {{flagicon|Netherlands}} [[Katwijk]], Netherlands
+| {{flagicon|France}} [[Saint-Valery-en-Caux|St-Valery-en-Caux]], France
+| {{flagicon|UK}} [[Widemouth Bay]], UK
+| {{flagicon|United States}} [[Tuckerton, New Jersey|Tuckerton]]{{\}}[[Manasquan, New Jersey|Manasquan]], [[New Jersey]], United States
+}}
+}}
+'''TAT-14''' is the 14th consortium [[transatlantic telecommunications cable]] system. In operation from 2001, it uses [[wavelength division multiplexing]].  The cable system is built from multiple pairs of fibres—one fibre in each pair is used for data carried in one direction and the other in the opposite direction.  Although optical fibre can be used in both directions simultaneously, for reliability it is better not to require splitting equipment at the end of the individual fibre to separate transmit and receive signals—hence a fibre pair is used.  TAT-14 uses four pairs of fibres—two pairs as active and two as backup. Each fibre in each pair carries 16 wavelengths in one direction, and each wavelength carries up to an [[Synchronous optical networking|STM-256]] (38,486,016 kbit/s as payload).&lt;ref&gt;https://www.tat-14.com/tat14/&lt;/ref&gt;  The fibres are bundled into submarine cables connecting the United States and the European Union (United Kingdom, France, the Netherlands, Germany, and Denmark) in a [[ring topology]].&lt;ref&gt;{{cite web
+| url=http://transition.fcc.gov/Bureaus/International/Orders/1999/da992042.txt
+| title=CABLE LANDING LICENSE
+| date=1999-10-01
+| publisher=U.S. [[Federal Communications Commission]]
+| accessdate=2013-08-09}}&lt;/ref&gt;
+
+By the time this cable went into operation, the expected ''[[1990s United States boom|long boom]]'' (term coined by [[Wired (magazine)|''Wired'' magazine]]) was already ending in the ''[[Dot-com bubble|dot-com]] death''. The overinvestment in transcontinental [[optical fiber]] capacity led to a financial crisis in private cable operators like [[Global Crossing]].
+
+In the [[Contents of the United States diplomatic cables leak#Europe|cables leak]] released by [[WikiLeaks]], it is revealed that the landing point in [[Katwijk|Katwijk, the Netherlands]] is included in a [[Federal government of the United States|US Government]] list of [[critical infrastructure]] susceptible to [[Terrorism|terrorist attack]].&lt;ref&gt;{{cite web
+| url=http://www.rtlnieuws.nl/nieuws/binnenland/vs-wijst-knelpunten-nederland-aan
+| title=VS wijst knelpunten Nederland aan
+| date=2010-12-06
+| publisher=[[RTL Nieuws]]
+| language=Dutch
+| accessdate=2013-08-09}}&lt;/ref&gt;
+
+== Cable failure ==
+
+In November 2003, TAT-14 suffered two breaks within weeks of each other, first on the southern link between the US and UK, then on the link between France and the Netherlands which had been providing redundant service to the UK via the northern link through Denmark, resulting in disruption to Internet services in the United Kingdom.&lt;ref&gt;{{cite news
+| url=http://www.zdnet.com/cable-failure-hits-uk-internet-traffic-3039118125/
+| title=Cable failure hits UK Internet traffic
+| first=Graeme
+| last=Wearden
+| date=2003-11-26
+| work=[[ZDNet]]
+| accessdate=2013-08-09}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+| url=http://www.webuser.co.uk/news/top-stories/376427/net-failure-hits-uk
+| title=Net failure hits UK
+| first=Andrew
+| last=Craig
+| date=2003-11-26
+| publisher=webuser.co.uk
+| accessdate=2013-08-09}}&lt;/ref&gt;
+
+On May 19, 2014 preliminary reports from hosting provider Digital Ocean suggested that TAT-14 was the cause for the disrupted services between the EU and the US.&lt;ref&gt;{{cite web
+| url=https://status.digitalocean.com/incidents/6782mtcjgxg9
+| title=Network Outage in EU affecting AMS1 and AMS2
+| date=2014-05-19
+| publisher=[[DigitalOcean]]
+| accessdate=2018-01-30}}&lt;/ref&gt;
+
+==References==
+{{reflist}}
+
+==External links==
+{{Portal|Cornwall}}
+* [https://www.tat-14.com/ TAT-14 Cable System]
+
+{{Transatlantic telecommunications cables}}
+
+{{DEFAULTSORT:Tat-14}}
+[[Category:Transatlantic communications cables]]
+[[Category:Infrastructure completed in 2001]]
+[[Category:British Telecom buildings and structures]]
+[[Category:AT&amp;T buildings]]
+[[Category:Deutsche Telekom]]
+[[Category:Vodafone buildings and structures]]
+[[Category:Verizon Communications]]
+[[Category:Sprint Corporation]]
+[[Category:KPN]]
+[[Category:Orange S.A.]]
+[[Category:Telenor]]
+[[Category:Level 3 Communications]]
+[[Category:KDDI]]
+[[Category:SoftBank Group]]
+[[Category:Telus]]
+[[Category:Tata Group]]
+[[Category:Telefónica]]
+[[Category:Rostelecom]]
+[[Category:Science and technology in Cornwall]]</text>
+      <sha1>0ifu0tq63347rhli3enqth82kpr830m</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>CANTAT-1</title>
+    <ns>0</ns>
+    <id>42604</id>
+    <revision>
+      <id>957960400</id>
+      <parentid>939071385</parentid>
+      <timestamp>2020-05-21T09:06:47Z</timestamp>
+      <contributor>
+        <username>The Anome</username>
+        <id>76</id>
+      </contributor>
+      <comment>{{Submarine communications cables in the Atlantic Ocean}}</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3706" xml:space="preserve">'''CANTAT-1''' was the first [[Canada|Canadian]] [[transatlantic telephone cable]], between [[Hampden, Newfoundland and Labrador|Hampden]], [[Newfoundland]] and eventually [[Grosses-Roches|Grosses-Roches, Quebec]] and [[Oban]], [[United Kingdom]], which followed on from the success of [[TAT-1]].&lt;ref name=HATCANTAT&gt;{{cite web |url=https://atlantic-cable.com/Cables/1961CANTAT/index.htm |title=1961 CANTAT Cable |last=Glover |first=Bill |website=History of the Atlantic Cable &amp; Undersea Communications |access-date=13 January 2020}}&lt;/ref&gt;&lt;ref name=HATtime&gt;{{cite web |url=https://atlantic-cable.com/Cables/CableTimeLine/index1951.htm |title=Cable Timeline: 1951-2000 |last=Glover |first=Bill |website=History of the Atlantic Cable &amp; Undersea Communications |access-date=13 January 2020}}&lt;/ref&gt; It was conceived and approved as stage one of a proposed commonwealth round the world cable and was done at a cost of $8,500,000.&lt;ref name=Hills&gt;{{cite book|author=Jill Hills|title=Telecommunications and Empire|url=https://books.google.com/books?id=Gc9oTZsiM10C&amp;pg=PA57|year=2007|publisher=University of Illinois Press|isbn=978-0-252-03258-5|lccn=2007023284 |pages=33, 57–58}}&lt;/ref&gt; The system was jointly owned by [[Cable &amp; Wireless plc|Cable &amp; Wireless]] and the [[VSNL International Canada|Canadian Overseas Telecommunication Corporation]] (COTC).
+
+The system, involving the first commercial use of a new lightweight deep sea cable with a weight in water of about one-fifth that of armored deep sea cable, was laid in two phases. The first, CANTAT A, was the {{cvt|2072|nmi| mi km}} ocean section laid by HMTS [[CS Monarch (1945)|''Monarch'']] with the U.K. shore end laid by HMTS ''Ariel''&lt;ref group=note&gt;Built 1939 by Swan, Hunter and Wigham Richardson Ltd.&lt;/ref&gt; and the Canadian end laid by the U.S. Army CS [[USNS Albert J. Myer|''Albert J. Myer'']]. The second phase, linked by overland cable from Hampden to [[Corner Brook]], Newfoundland, was the {{cvt|400|nmi| mi km}} segment laid by HMTS CS ''Alert''&lt;ref group=note&gt;Fourth ''Alert'', built in 1961 by Fairfield Ship Building &amp; Engineering.&lt;/ref&gt; with both shore ends laid by CS ''Hadsund''.&lt;ref name=HATCANTAT/&gt;&lt;ref name=HATtime/&gt;
+
+The new Trans Atlantic cables, TAT-1, CANTAT-1 and [[TAT-2]], with their high capacity brought about a major change in regulations, with specific changes in the [[U.S. Federal Communications Commission]] policies regarding lease of foreign cable channels by U.S. international record carriers.&lt;ref group=note&gt;Companies had been divided by the [[Communications Act of 1934]] according to the technology used.&lt;/ref&gt;&lt;ref name=Hills/&gt; CANTAT-1 operated from 1961 to 1986, initially carrying 60 telephone circuits, later modified from 4&amp;nbsp;kHz channels to 3&amp;nbsp;kHz channels, expanding capacity to 80 telephone circuits.&lt;ref name=HATCANTAT/&gt;&lt;ref name=HATtime/&gt;
+
+== Footnotes ==
+{{reflist|group=note}}
+
+==References==
+{{reflist}}
+
+==External links==
+*[https://atlantic-cable.com/Cableships/Alert/index.htm HMTS/CS ''Alert'' (4)]
+*[https://atlantic-cable.com/Cableships/Ariel/index.htm HMTS ''Ariel'' and Ron Woodland]
+*[https://collection.sciencemuseumgroup.org.uk/objects/co33335/specimen-of-lightweight-transatlantic-telephone-cable-1961-armoured-cables Specimen of lightweight transatlantic telephone cable, 1961]
+
+{{Transatlantic telephone cables}}
+{{Submarine communications cables in the Atlantic Ocean}}
+
+{{DEFAULTSORT:Cantat-1}}
+[[Category:1986 disestablishments in Canada]]
+[[Category:Submarine communications cables in the North Atlantic Ocean]]
+[[Category:Transatlantic communications cables]]
+[[Category:Infrastructure completed in 1961]]
+[[Category:Canada–United Kingdom relations]]
+
+
+{{Telecomm-stub}}</text>
+      <sha1>04o9ogyofpvd2cqfd0xlctmwxkmc7l6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>CANTAT-2</title>
+    <ns>0</ns>
+    <id>42605</id>
+    <revision>
+      <id>991370811</id>
+      <parentid>990556722</parentid>
+      <timestamp>2020-11-29T18:23:01Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 3 templates: del empty params (2×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2383" xml:space="preserve">'''CANTAT-2''' was the second Canadian [[transatlantic telephone cable]],
+in operation from 1974 to 1992.
+It could carry 1,840 simultaneous telephone calls
+between [[Beaver Harbour, Nova Scotia|Beaver Harbour]], [[Nova Scotia]] and England. The parties involved were [[Canadian Overseas Telecommunication Corporation]] (now [[Teleglobe]]) and the British [[General Post Office]]. The cable was rerouted to [[Sable Island]] as [[Sitifofog 2000]] for a period, and was eventually decommissioned.&lt;ref&gt;{{cite web |last=Glover |first=Bill |title=History of the Atlantic Cable &amp; Undersea Communications — Atlantic Cables: 1856-2018 |publisher=History of the Atlantic Cable &amp; Undersea Communications |date=5 March 2019 |url=https://atlantic-cable.com/Cables/CableTimeLine/atlantic.htm |accessdate=2 February 2020}}&lt;/ref&gt; 
+
+The work on the U.K. end of the cable involved an accident in which [[Pisces-class deep submergence vehicle#1973_Pisces_III_rescue|''Pisces III'']], engaged in repeater burial of the newly laid cable on the shelf off Ireland, sank. The submersible sank in {{cvt|1575|ft|m|1|abbr=on}} of water and was recovered with the crew safe after 76 hours.&lt;ref&gt;{{cite journal |last=Pass |first=H. |title=The Sinking and Rescue of ''Pisces III'' |journal=The Seventh Undersea Medical Society Workshop — Medical Aspects of Small Submersible Operations 19—20 November 1974 |pages=II-11 |publisher=Undersea Medical Society |url=https://apps.dtic.mil/dtic/tr/fulltext/u2/a018474.pdf |accessdate=2 February 2020}}&lt;/ref&gt;&lt;ref&gt;{{cite magazine |last=Scott |first=David |year=1974 |title= Way Out Machines Lay New High-Traffic Cable |journal=[[Popular Science]] |volume=204 |issue=1 |pages=82–85|publisher=Times Mirror Magazines |url=https://books.google.com/books?id=1X1hL2LFT0AC&amp;pg=PA82 |accessdate=2 February 2020}}&lt;/ref&gt;
+
+==References==
+{{reflist}}
+* [http://www.mar.dfo-mpo.gc.ca/oceans/e/essim/atlas/other-e.html Scotian Shelf: An Atlas of Human Activities]
+
+{{Transatlantic telephone cables}}
+{{Submarine communications cables in the Atlantic Ocean}}
+
+[[Category:Submarine communications cables in the North Atlantic Ocean]]
+[[Category:Transatlantic communications cables]]
+[[Category:British Telecom buildings and structures]]
+[[Category:1992 disestablishments]]
+[[Category:Infrastructure completed in 1974]]
+[[Category:Canada–United Kingdom relations]]
+
+{{Telecom-stub}}</text>
+      <sha1>93qukombrxhzfobm8f06khda044dx3r</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>CANTAT-3</title>
+    <ns>0</ns>
+    <id>42606</id>
+    <revision>
+      <id>981124770</id>
+      <parentid>966989141</parentid>
+      <timestamp>2020-09-30T12:35:48Z</timestamp>
+      <contributor>
+        <username>Graeme Bartlett</username>
+        <id>38427</id>
+      </contributor>
+      <minor />
+      <comment>northern most fix</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6723" xml:space="preserve">{{Infobox Submarine communications cable
+| cable_name     = CANTAT-3
+| owners         = STC Submarine Networks,&lt;br&gt;[[Portland, Oregon]], [[United States|USA]]&lt;br&gt;and STC Submarine Networks in [[Southampton]], [[Hampshire]], [[United Kingdom|UK]]
+| operator       = [[VSNL International Canada]]
+| map            = CANTAT-3-route.png
+| landing_points =
+{{unbulleted list
+| '''1.''' [[Pennant Point, Nova Scotia|Pennant Point]], [[Nova Scotia]], [[Canada]]
+| '''2.''' [[Vestmannaeyjar]], [[Iceland]]
+| '''3.''' [[Tjørnuvík]], [[Faroe Islands]]
+| '''4.''' [[Redcar]], [[North Yorkshire]], [[United Kingdom|UK]]
+| '''5.''' [[Blaabjerg]], [[Denmark]]
+| '''6.''' [[Sylt]], Germany
+}}
+| technology      = NL-16 laser regenerative
+| design_capacity = 2.5 Gigabit/Second
+| first_use_date  = 1994
+}}
+&lt;!---- {{Start date|2001|04|08}} ----&gt;
+'''CANTAT-3''' was the third [[Canada|Canadian]] [[transatlantic telecommunications cable]], in operation from 1994 to 2010, initially carrying 3 x 2.5 Gbit/s between [[Canada]] and [[Europe]]. It branches to both [[Iceland]] and the [[Faroe Islands]].&lt;ref name=&quot;farice&quot;&gt;[http://www.farice.is/about-us/company-history/ Farice: The background of the FARICE-1 cable]&lt;/ref&gt;
+
+On December 17, 2006, CANTAT-3 services were disrupted due to damage to the [[submarine communications cable|submarine cable]], resulting in degradation of service to hundreds of thousands of users connecting via internet and media providers ([[Síminn]], [[Vodafone]] and [[HIVE (ISP)|Hive]]). The country was however backed up by the second submarine cable, [[FARICE-1]] The most notable effect of the event was a temporary shut-down of data communications by Iceland's universities and hospitals, which relied exclusively on CANTAT-3's services. Although it was predicted that a full recovery of the cable would take ten days, starting from midnight on January 13, 2007, it actually took until July 29, 2007 before service was fully restored. During that time, the Icelandic universities and hospitals in [[Akureyri]] and [[Reykjavík]] relied on emergency connectivity obtained via local internet providers [[Síminn]] and [[Vodafone]]. The Icelandic government decided not to buy extra bandwidth for the university network through the functioning [[FARICE-1]] cable, despite being a large shareholder in FARICE-1.&lt;ref&gt;[http://www.siminn.is/um-simann/frettasetur/nanar/item31135/ Press release by Síminn at 2006-12-17 about failure of CANTAT-3] {{Webarchive|url=https://archive.is/20130918001907/http://www.siminn.is/um-simann/frettasetur/nanar/item31135/ |date=2013-09-18 }} (Icelandic)&lt;/ref&gt;
+
+[[Cable landing point|Landing points]] are:
+#[[Pennant Point, Nova Scotia|Pennant Point]], [[Nova Scotia]], [[Canada]]
+#[[Vestmannaeyjar]], [[Iceland]]&lt;ref&gt;{{Cite web |url=http://mila.is/english/about-us/news/detail/item17504/# |title=Press release by Míla ehf. and Føroya Tele about CANTAT-3 operations in Iceland |access-date=2013-09-18 |archive-url=https://archive.is/20130918001932/http://mila.is/english/about-us/news/detail/item17504/# |archive-date=2013-09-18 |url-status=dead }}&lt;/ref&gt;
+#[[Tjørnuvík]], [[Faroe Islands]]
+#[[Redcar]], [[North Yorkshire]], UK
+#[[Blaabjerg]], [[Denmark]]
+#[[Sylt]], Germany
+
+CANTAT-3 was operated by [[India]]'s [[VSNL International Canada|Teleglobe]].
+
+CANTAT-3 was the only NL-16 laser regenerative 2.5 Gig/s submarine system built in the world.&lt;ref&gt;{{Cite web|url=https://sites.google.com/site/greenlandtheory/greenland/odin-cable-system?tmpl=%2Fsystem%2Fapp%2Ftemplates%2Fprint%2F&amp;showPrintDialog=1|title=12.17 ODIN Cable System|website=Greenland Theory|access-date=31 December 2018}}&lt;/ref&gt; Part of this huge system was built at STC Submarine Networks, [[Portland, Oregon]], [[United States|USA]], from 1993-1994 (which later became [[Alcatel Submarine Networks]]). STC Submarine Networks in [[Southampton]], [[Hampshire]], [[United Kingdom|UK]]. made the rest of the system. The Canadian portion (shore end system) was laid off [[Nova Scotia]] by the [[VSNL International Canada|Teleglobe]] cable ship CS John Cabot. The main-lay portion was deployed off Nova Scotia towards the Faroes on board the [[AT&amp;T Corporation|AT&amp;T]] ship Global Mariner. Other cable ships were involved in the completion of this system. This was the northernmost cable system ever deployed at the time.
+
+Given that CANTAT-3 suffered multiple&lt;ref name=&quot;farice&quot;/&gt;&lt;ref&gt;[http://www.siminn.is/um-simann/frettasetur/nanar/store63/item4304/ Press release by Síminn at 2003-11-05 about failure of CANTAT-3] {{Webarchive|url=https://archive.is/20130918001914/http://www.siminn.is/um-simann/frettasetur/nanar/store63/item4304/ |date=2013-09-18 }} (Icelandic)&lt;/ref&gt; interruptions, the alternative cables [[FARICE-1]], [[DANICE]] and [[Greenland Connect]] were established and/or expanded&lt;ref name=&quot;farice&quot;/&gt; to ensure cabled telecommunication connectivity in Iceland. CANTAT-3 also had too little capacity by 2007 for domestic Internet usage  and became outdated as soon as the DANICE cable came into operation by 2009. The Iceland, Denmark and Germany portion of CANTAT-3 is still in use (2016) and is powered from Iceland and connected to Sylt in Germany and Blaabjerg in Denmark. This portion of the cable is now connected to several oil platforms in the North Sea and that is the primary function of CANTAT-3. The current owner of CANTAT-3 is the Farose Telecom (Föroya Tele). The transatlantic portion is no longer in operation and has not been replaced.
+
+==Notes==
+{{reflist}}
+
+== References ==
+*[http://www.hafro.is/Bokasafn/Timarit/fjolr-109.pdf The Iceland Basin, -Topography and Oceanographic Features-, Svend-Aage Malmberg, Marine Research Institute, Reykjavík 2004.] Accessed 13 January 2006. Map of CANTAT-3 cable route on p13.
+
+== External links ==
+*[http://www.nordunet2003.is/smasidur/yves.ppt 2003 Nordunet Annual Conference]
+*[http://www.telegeography.com/cu/article.php?article_id=2879 TeleGeography.com: ''New submarine cable to dramatically increase Iceland’s data transmission capacity'', Monday, 9 February 2004]
+*[https://web.archive.org/web/20121030061410/http://www.islandsofresilience.eu/pdf/ior_full.pdf Islands of Resilience: Comparative Model for Energy, Connectivity and Jurisdiction - Realizing European ICT possibilities through a case study of Iceland] Accessed 30 January 2013.
+
+{{Telecommunications in Iceland}}
+{{Transatlantic telecommunications cables}}
+{{Submarine communications cables in the Atlantic Ocean}}
+
+{{DEFAULTSORT:Cantat-3}}
+[[Category:Infrastructure completed in 1994]]
+[[Category:Submarine communications cables in the North Atlantic Ocean]]
+[[Category:Submarine communications cables in the North Sea]]
+[[Category:Transatlantic communications cables]]</text>
+      <sha1>37xoxgzkzozcnel4dr2x0st5qqi5153</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Wiesbaden</title>
+    <ns>0</ns>
+    <id>42607</id>
+    <revision>
+      <id>991692394</id>
+      <parentid>990991915</parentid>
+      <timestamp>2020-12-01T10:05:01Z</timestamp>
+      <contributor>
+        <username>LouisAlain</username>
+        <id>14909828</id>
+      </contributor>
+      <comment>/* Notable residents */ link to new article</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="81149" xml:space="preserve">{{For|the ship|SMS Wiesbaden}}
+{{Short description|Capital of Hesse, Germany}}
+{{More citations needed|date=March 2014}}
+{{Use mdy dates|date=February 2012}}
+{{Infobox German location
+|name               = Wiesbaden
+|type               = Town
+|image_photo        = Wiesbaden Montage.jpg
+|image_caption      =
+|image_flag         = Flagge Wiesbaden.svg
+|image_coa          = Wappen Wiesbaden.svg
+|coordinates        = {{coord|50|04|57|N|08|14|24|E|display=inline,title}}
+|image_plan         = Hessen WI.png
+|state              = Hessen
+|region   = Darmstadt
+|district = urban
+|elevation          = 115
+|area               = 203.9
+&lt;!--
+|population         = 290955 
+|Stand              = 2020-06-30
+|pop_ref            = &lt;ref name=&quot;population&quot;/&gt;
+filled via Gemeindeschlüssel --&gt;
+|postal_code        = 65183–65207&lt;br/&gt;55246 (Mainz-Kostheim)&lt;br/&gt;55252 (Mainz-Kastel)
+|area_code          = 0611, 06122, 06127, 06134
+|licence            = WI
+|Gemeindeschlüssel  = 06 4 14 000
+|divisions          = 26 boroughs
+|website            = [https://www.wiesbaden.de/ wiesbaden.de]
+|mayor      = [[Gert-Uwe Mende]]
+|Bürgermeistertitel = Oberbürgermeister
+|party             = SPD
+|ruling_party1      = CDU
+|ruling_party2      = SPD
+|year               =
+}}
+[[File:Wiesbaden Luftbild Rathaus Landtag Marktkirche Wilhelmstraße Kurhaus Neroberg Opelbad Griechische Kapelle.jpg|thumbnail|Aerial view of Wiesbaden]]
+
+'''Wiesbaden''' ({{IPA-de|ˈviːsˌbaːdn̩|-|Wiesbaden.ogg}}) is a [[List of cities and towns in Germany|city]] in central western [[Germany]] and the capital of the [[States of Germany|federal state]] of [[Hesse]]. {{As of |2020 |June}}, it had 290,955 inhabitants,&lt;ref&gt;{{Cite web |url=http://www.wiesbaden.de/leben-in-wiesbaden/stadtportrait/wiesbaden-in-zahlen/content/statistik-bevoelkerung.php |title=Statistiken zur Bevölkerung |access-date=August 24, 2020 |archive-url=https://web.archive.org/web/20180411174248/https://www.wiesbaden.de/leben-in-wiesbaden/stadtportrait/wiesbaden-in-zahlen/content/statistik-bevoelkerung.php |archive-date=April 11, 2018 |url-status=dead |df=mdy-all }}&lt;/ref&gt; plus approximately 19,000&lt;ref&gt;{{cite web|url=http://www.wiesbadener-kurier.de/nachrichten/politik/hessen/13496600.htm|archive-url=https://archive.is/20131008010738/http://www.wiesbadener-kurier.de/nachrichten/politik/hessen/13496600.htm|url-status=dead|archive-date=2013-10-08|title=Shutdown: US-Armee korrigiert Zahl betroffener Angestellter in Wiesbaden nach oben - Wiesbadener Kurier|author=Verlagsgruppe Rhein Main GmbH &amp; Co. KG}}&lt;/ref&gt; [[United States]] citizens (mostly associated with the [[United States Army]]). The Wiesbaden urban area is home to approx. 560,000 people.
+
+The city, together with nearby [[Frankfurt am Main]], [[Darmstadt]], and [[Mainz]], is part of the [[Frankfurt Rhine Main Region]], a [[metropolitan area]] with a combined population of about 5.8&amp;nbsp;million people.
+
+Wiesbaden is one of the oldest [[spa town]]s in Europe. Its name translates to &quot;meadow baths&quot;, a reference to its famed [[hot springs]]. It is also internationally famous for its architecture and climate—it is also called the &quot;[[Nice]] of the North&quot; in reference to the city in France.&lt;ref&gt;{{cite book |title= Wiesbaden: For Old Friends and New|last= Heinrich-Verlag GmBH|year= 2011|publisher= Heinrich-Verlag GmBH|isbn= 978-3-89889-167-7|page= 4}}&lt;/ref&gt; At one time, Wiesbaden boasted 26 hot springs. {{As of|2008}}, fourteen of the springs are still flowing.&lt;ref&gt;''Wiesbadener Tagblatt''. September 18, 2008&lt;/ref&gt;
+
+In 1970, the town hosted the tenth ''[[Hessentag]] Landesfest'' (English: Hessian Day, a state festival).
+
+The city is considered the tenth richest in Germany (2014) boasting 110.3% of the national average [[gross domestic product]] in 2017. The average annual buying power per citizen is €24,783.&lt;ref&gt;{{Cite web |url=https://www.ihk-wiesbaden.de/blob/wiihk24/standort/downloads/3673134/a84f4bcc1fe3be9ec5f85c8a5dfa7b96/Kaufkraft-2016-IHK-Wiesbaden-data.pdf |title=Archived copy |access-date=August 24, 2017 |archive-url=https://web.archive.org/web/20170825021228/https://www.ihk-wiesbaden.de/blob/wiihk24/standort/downloads/3673134/a84f4bcc1fe3be9ec5f85c8a5dfa7b96/Kaufkraft-2016-IHK-Wiesbaden-data.pdf |archive-date=August 25, 2017 |url-status=dead }}&lt;/ref&gt;
+
+==Geographical setting==
+[[File:Sattelite Wiesbaden Mainz.jpg|thumb|left|Satellite view of Wiesbaden (north of the [[Rhine]]) and Mainz]]
+
+Wiesbaden is situated on the right (northern) bank of the [[Rhine]], below the confluence of the [[Main (river)|Main]], where the Rhine's main direction changes from north to west. The city is across the Rhine from Mainz, the capital of the federal state of [[Rhineland-Palatinate]]. Frankfurt am Main is located about {{convert|38|km|mi|1}} east. To the north of the city are the [[Taunus]] Mountains, which trend in a northeasterly direction.
+
+The city center, the ''Stadtmitte'', is located in the north-easternmost part of the [[Upper Rhine Valley]] at the spurs of the Taunus mountains, about {{convert|5|km|mi|1}} from the Rhine. The landscape is formed by a wide lowland between the Taunus heights in the north, the Bierstadter Höhe and the Hainerberg in the east, the Mosbacher Mountain in the south, and the Schiersteiner Mountain in the west, an offshoot of the Taunus range. The downtown is drained only by the narrow valley of the Salzbach, a tributary of the Rhine, on the eastern flanks of the Mosbacher Mountain. The city's main railway line and the Mainz road (''Mainzer Straße'') follow this valley. Several other streams drain into the Salzbach within the city center: the Wellritzbach, the Kesselbach, the Schwarzbach, the Dambach, and the Tennelbach, as well as the outflow of many thermal and mineral springs in the ''Kurhaus'' (spa) district. Above the city center, the Salzbach is better known as the Rambach.
+
+[[File:Wiesbaden De Merian Hassiae.jpg|thumb|left|View of Wiesbaden from the ''Topographia Hassiae'' by [[Matthäus Merian]] in 1655.|295px]]The highest point of the Wiesbaden municipality is located northwest of the city center near the summit of the Hohe Wurzel, with an elevation of {{convert|608|m|ft|0}} [[above mean sea level|above sea level]]. The lowest point is the harbour entrance of Schierstein at {{convert|83|m|ft|0}} above sea level. The central square (the ''Schlossplatz'', or palace square) is at an elevation of {{convert|115|m|ft|0}}.
+
+Wiesbaden covers an area of {{convert|204|km2|0|abbr=on}}. It is {{convert|17.6|km|mi|1}} from north to south and {{convert|19.7|km|mi|1}} from west to east. In the north are vast forest areas, which cover 27.4% of the urban area. In the west and east are [[vineyards]] and agricultural land, which cover 31.1% of the area. Of the municipality's {{convert|79|km|mi|1}}-long border, the Rhine makes up {{convert|10.3|km|mi|1}}.
+
+===Climate===
+Wiesbaden has a [[temperate climate|temperate]]-[[oceanic climate]] ([[Köppen climate classification|Köppen]]: Cfb) with relatively cold winters and warm summers. Its average annual temperature is {{convert|9.8|°C|1}}, with monthly mean temperatures ranging from {{convert|1.0|°C|1}} in January to {{convert|18.6|°C|1}} in July.
+
+{{Weather box
+|location = Wiesbaden
+|metric first = Y
+|single line = Y
+|Jan high C = 4
+|Feb high C = 6
+|Mar high C = 11
+|Apr high C = 15
+|May high C = 20
+|Jun high C = 23
+|Jul high C = 25
+|Aug high C = 25
+|Sep high C = 20
+|Oct high C = 14
+|Nov high C = 8
+|Dec high C = 5
+|year high C= 14.7
+|Jan mean C = 1.0
+|Feb mean C = 2.2
+|Mar mean C = 5.5
+|Apr mean C = 9.4
+|May mean C = 13.8
+|Jun mean C = 17.0
+|Jul mean C = 18.6
+|Aug mean C = 18.0
+|Sep mean C = 14.6
+|Oct mean C = 10.0
+|Nov mean C = 4.9
+|Dec mean C = 2.1
+|year mean C = 9.8
+|Jan low C = −1
+|Feb low C = −1
+|Mar low C = 2
+|Apr low C = 5
+|May low C = 9
+|Jun low C = 12
+|Jul low C = 14
+|Aug low C = 14
+|Sep low C = 11
+|Oct low C = 7
+|Nov low C = 3
+|Dec low C = 1
+|year low C = 6.3
+|precipitation colour= green
+|Jan precipitation mm = 48
+|Feb precipitation mm = 41
+|Mar precipitation mm = 46
+|Apr precipitation mm = 41
+|May precipitation mm = 55
+|Jun precipitation mm = 68
+|Jul precipitation mm = 66
+|Aug precipitation mm = 63
+|Sep precipitation mm = 49
+|Oct precipitation mm = 49
+|Nov precipitation mm = 57
+|Dec precipitation mm = 55
+|unit precipitation days = 1 mm
+|Jan precipitation days = 10
+|Feb precipitation days = 8
+|Mar precipitation days = 8
+|Apr precipitation days = 9
+|May precipitation days = 10
+|Jun precipitation days = 10
+|Jul precipitation days = 10
+|Aug precipitation days = 10
+|Sep precipitation days = 8
+|Oct precipitation days = 8
+|Nov precipitation days = 10
+|Dec precipitation days = 10
+|source 1 = Sonnenlaender.de&lt;ref&gt;{{cite web
+|url=http://www.sonnenlaender.de/deutschland/klima-deutschland/klimatabellen-Wiesbaden/
+|title=Weather Information for Wiesbaden
+|access-date= April 8, 2012}}&lt;/ref&gt;
+|date=August 2010
+}}
+
+==History==
+[[File:Heidenmauer in Wiesbaden.jpg|thumb|The ''Heidenmauer'' (&quot;Heathen Wall&quot;) of ''Aquae Mattiacorum''&lt;ref&gt;The hypothesis of the Heidenmauer being a remainder of an aquaeduct now has been definitely proven wrong. Further reading see: Klee, Margot: Sperrmauer oder Aquädukt? Zur Deutung der Heidenmauer in Wiesbaden. (Blocking wall or aquaeduct. Re. Interpretation of the Heidenmauer in Wiesbaden). In: NA (Nassauische Annalen) 2014. Eck Werner: Ein praefectus Aquen(sium), kein praefectus aqu(a)e. Zur Inschrift CIL XIII 7279 aus Mainz Kastel (A praefectus Aquen(sium), not a praefectus aqu(a)e. Re. Inscription CIL XIII 7279 from Mainz Kastel). In: NA (Nassauische Annalen) 2014.&lt;/ref&gt;|175px]]
+
+===Classical antiquity===
+While evidence of settlement at present-day Wiesbaden dates back to the [[Neolithic]] era, historical records document continuous occupancy after the erection of a [[Roman empire|Roman]] fort in 6&amp;nbsp;AD which housed an auxiliary cavalry unit. The [[hot spring|thermal springs]] of Wiesbaden are first mentioned in [[Pliny the Elder]]'s ''[[Naturalis Historia]]''. They were famous for their recreation pools for Roman army horses and possibly as the source of a mineral used for red hair dye (which was very fashionable around the turn of BC/AD among women in Rome).&lt;ref&gt;Csysz, Walter: Wiesbaden in der Römerzeit. Aalen: Theiss editors, 2000&lt;/ref&gt;
+
+The Roman settlement is first mentioned using the name ''Aquae Mattiacorum'' ([[Latin]] for &quot;Waters of the Mattiaci&quot;) in 121. The [[Mattiaci]] were a [[Germanic peoples|Germanic tribe]], possibly a branch of the neighboring [[Chatti]], who lived in the vicinity at that time. The town also appears as Mattiacum in [[Ptolemy]]'s [[Geographia]] (2.10). The Roman Empire built the [[Limes Germanicus]], which was a line of Roman frontier fortifications in the [[Taunus]]. Wiesbaden is just south of the Taunus.
+
+The capital of the province of [[Germania Superior]], [[Mogontiacum]] (present-day [[Mainz]]), base of 2 (at times 3) Roman legions, was just over the Rhine and connected by a bridge at the present-day borough of [[Mainz-Kastel]] (Roman &quot;''castellum''&quot;), a strongly fortified bridgehead.
+
+The [[Alamanni]], a coalition of Germanic tribes from beyond the ''Limes'', captured the fort around 260. Later, in the 370s, when the Romans and Alamanni were allied, the Alemanni gained control of the Wiesbaden area and were in charge of its defense against other Germanic tribes.

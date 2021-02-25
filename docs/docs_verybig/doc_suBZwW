@@ -1,0 +1,218 @@
+Production of consumer hand-held devices by Psion has now ceased; the company, after corporate changes, now concentrates on hardware and software for industrial and commercial data-collection applications.
+
+On an episode of ''[[The Gadget Show]]'' (first aired on 30 March 2009), the Psion was pitted against the [[BlackBerry]] for a place on the show's Hall of Fame.&lt;ref&gt;{{cite web | url = http://fwd.five.tv/videos/wall-of-fame-blackberry-vs-psion | title = Wall of Fame - Blackberry vs Psion | accessdate = 2009-04-01 | date = 2009-04-30 | format = swf | work = The Gadget Show | publisher = Channel 5 Broadcasting Ltd | location = United Kingdom | quote = Each week on the Wall of Fame, we look at one particular area of gadgetry and choose the most iconic gadget from that category to join our Wall of Fame.  ...  And this week we're putting the Psion Organiser up against the ubiquitous BlackBerry. | archive-url = https://archive.is/20120709173648/http://fwd.five.tv/videos/wall-of-fame-blackberry-vs-psion | archive-date = 2012-07-09 | url-status = dead }}&lt;/ref&gt;  Whilst the Psion was highly praised as a device that pioneered portable computing, the accolade was ultimately given (by host [[Jon Bentley (TV presenter)|Jon Bentley]]) to the BlackBerry.
+
+As of autumn 2017 several software features and hardware devices are still being developed and are available including a Javascript Emulator, Parallel Interface, USB Commslink, 32k and 256k RamPaks, and 512k FlashPak.
+
+==Organiser I==
+Launched in 1984,&lt;ref name=&quot;pountain198411&quot;&gt;{{cite news | url=https://archive.org/stream/byte-magazine-1984-11/1984_11_BYTE_09-12_New_Chips#page/n411/mode/2up | title=A Plethora of Portables | work=BYTE | date=November 1984 | accessdate=23 October 2013 | author=Pountain, Dick | pages=413}}&lt;/ref&gt;  the Psion Organiser was the &quot;world's first practical pocket computer&quot;.&lt;ref&gt;[http://www.bioeddie.co.uk/models/psion-organiser-1.htm Canadian &amp; UK Psion Advertisements 1984].&lt;/ref&gt; Based on an [[8-bit]] [[HitachI 6301|Hitachi 6301]]-family processor, running at 0.9&amp;nbsp;MHz, with 4&amp;nbsp;[[kilobyte|kB]] of ROM and 2&amp;nbsp;kB of [[static RAM]] and had a single-row monochrome LCD screen. The size with the case closed is 142 × 78 × 29.3&amp;nbsp;mm, and the mass is 225&amp;nbsp;grams.
+
+''[[BYTE]]''{{'}}s reviewer described the Organiser's software as a &quot;clever design ... for fast and foolproof use&quot;. He approved of the consistent user interface across applications and reported that without documentation he was able to figure out how to do everything except program in 15 minutes.{{r|pountain198411}} The machine provided a simple [[flat-file]] database, calculator and clock, and had no operating system. The Organiser I supported removable storage [[Write once read many|write-once]] devices, which used [[EPROM]] storage. The machine could host two of these so-called DATAPAKs (or simply PAKs), to which it could write data, but which needed to be removed from the machine and erased by being exposed to [[ultraviolet]] light before they could be re-used. As Psion had patented the use of EPROMS as storage device, it was impossible for other device manufacturers to copy this unusual approach to mobile storage.
+
+Software supplied on DATAPAK included a crude programming language called POPL, in which end-users could write their own programs.{{r|pountain198411}} Software DATAPAKs titled Science, Maths and Finance contained the POPL programming language editor, [[interpreter (computing)|interpreter]] and runtime and extended the built-in calculator by adding named functions. These DATAPAKs also contained different sets of application programs written in the POPL language.
+
+A far more sophisticated programming tool was later made available with the implementation of the [[Forth (programming language)|Forth]] programming language, but was available to registered professional developers rather than end users. The Psion Forth Development System for the Organiser I was a powerful set of IBM PC-based [[cross compiler|cross-development]] tools for producing Forth application programs, including a Forth [[compiler]]. The Forth system on the Organiser I itself had a compiler to [[intermediate code]], interpreter and runtime, and had a number of unusual design features one being that it could interpret – that is, read and execute – Forth intermediate code directly in place on a DATAPAK, rather than needing to copy it into precious RAM first, despite the DATAPAKs not being [[execute in place|execute-in-place]] memory-mapped.
+
+Software developed by Psion as part of the Organiser I project and application software after its launch was written in 6301 [[assembler language]], in POPL, and in other custom-designed languages. Assembler language development at Psion itself was carried out using cross-development tools, including a [[cross assembler]] and linker, all of which ran on a [[DEC VAX]].
+
+Application developers writing in 6301 assembler struggled with the small amount of RAM (2&amp;nbsp;kB) and the lack of an operating system. Another difficulty for developers was with the performance limitations of the earliest DATAPAKs, which used a serial-access internal architecture, as opposed to [[random access]]. Retrieving, for example, byte 2000 from a DATAPAK meant issuing successive hardware commands to either step from the current read position one address place at time until position 2000 was reached or, in the worst case, resetting the read position to zero and then issuing a step-forward command 2000 times.{{citation needed|date=November 2012}}
+
+The Hitachi 6301 processor is an enhanced development based on the [[Motorola 6800|Motorola 6801]] implemented in [[CMOS]], with a number of extra [[instruction set|instructions]], various hardware system-on-single chip facilities on-chip, power management and support for a sleep state. The particular variant chosen also had 4&amp;nbsp;KiB of masked ROM on-chip, so an external ROM was not needed on the board.
+
+Having fully [[static RAM]] and a processor whose [[clock signal|clock]] could be frozen without losing state meant spectacular battery life, measured in weeks or even months. Minimal battery consumption was aided by the processor being frozen whenever there was no work to do, plus a deeper [[sleep mode]], which turned off the display.
+
+The machine lacked a full independently battery-backed, date-time real-time hardware clock, instead it had a simple hardware [[counter (digital)|counter]]. While the machine was sleeping, the counter counted 1024 seconds and then woke the machine very briefly, so that software could add 1024 seconds to a record of the time held in RAM. This meant that when sleeping the machine woke very fleetingly every 17&amp;nbsp;min 4&amp;nbsp;s.
+
+The original 1984 price was 99&amp;nbsp;[[Pound sterling|GBP]] or 199&amp;nbsp;[[Canadian dollar|CAD]] and included one Datapak and one software DATAPAK, the &quot;Utility&quot; pack.  This latter adds scientific and trigonometric functions to the otherwise basic calculator routines.
+
+==Organiser II==
+
+[[Image:Psion Organiser II - 270404 - Modified.jpg|thumb|Psion Organiser II with cover]]
+[[Image:Psion organiser 2 17o06.jpg|right|thumb|Psion Organiser II (open &amp; closed) – Models XP &amp; LZ are shown on 5&amp;nbsp;cm squares]]
+[[Image:Psion organiser memory 10n06.jpg|thumb|Memory modules for the Psion Organiser (on 5&amp;nbsp;cm squares)]]
+
+In 1986, the successful Organiser II introduced a number of hardware improvements, a better keyboard and display, a much larger ROM and either 8 KiB (CM Model), 16 or 32 KiB (XP Model), 32 or 64 KiB (later LZ Model) of battery-backed RAM, and featured a capable newly designed single-tasking operating system. The first Organiser II models featured a two-line display. The new model supported a number of different types of improved DATAPAKs, containing either [[EPROM]] or battery-backed RAM storage, each storing between 8&amp;nbsp;KiB and 128&amp;nbsp;KiB of data. Later flashpaks ([[EEPROM]]) and [[Random-access memory|RAMpaks]] were added to the range, capable of storing up to 256&amp;nbsp;KiB on each extension slot.
+
+The machine had vastly more application functionality, including a number of built-in application programs, an easy-to-use database, a diary and an alarm clock and featured end-user programmability in the form of the successful [[Organiser Programming Language]] (OPL), a BASIC-like language, which was [[compiled]] to [[intermediate code]], in contrast to the [[interpreter (computing)|interpreters]], which were commonly available for other consumer computers of the time. More advanced users could reach into the system machine-code routines, either by direct machine code or by calls from OPL, and could manipulate the built-in address database, as well as create their own.
+
+The Organiser II was widely used for commercial applications in companies such as Marks and Spencer, where it was used on the shop floor, with their branding as opposed to PSION's and with only limited keys visible to the end user. It was also used in the world's first large-scale application of mobile technology in government, where over 3000 were used for benefit calculations by the Employment Services department of the UK government. It proved popular with surveyors who interfaced it with their electronic [[Theodolite|theodolites]], which proved to be the precursor to the now popular '[[total station]]'.
+
+The Organiser II also had an external device slot, into which various plug-in modules could be fitted, including a device that provided an [[RS232]] port (called &quot;CommsLink&quot;), thus enabling it to communicate with other devices or computers. This &quot;top slot&quot; also supported various other hardware additions, such as telephone dialers, a speech synthesiser, barcode reader and even a dedicated thermal printer. This latter was used by several banks as a counter-top exchange-rate calculator for some years. As it was easy to get hardware specifications, numerous bespoke devices were developed by small companies such as A/D converters and even an interface to the entire range of Mitutoyo measuring equipment, allowing it to be used in quality control for various car manufacturers.  Later models in the Organiser II range offered other hardware improvements, with 4-line displays, and also models were introduced with 32, 64 and 96&amp;nbsp;KiB RAM.
+
+=== Post production enthusiasts and developments ===
+
+[[File:Psi2Win.png|74px|thumb|right|''Psi2Win'' Windows PC Comms Link Server]]
+
+In the autumn of 1996 when [[Psion (company)|Psion PLC]] had moved their focus away from the Organiser II onto the newer clamshell series devices (below) and had almost ceased support for the Organiser II. Dave Woolnough created the 'Psion Organiser II Homepage'  (www.org2.com) to fill the gap. Stating “Considering that more than 500,000 series II Organisers were produced, there must be many people still using this wonderful machine”. Although the original Org2.com&lt;ref&gt;{{cite web |title=Org2.com |url=http://archive.psion2.org/org2/org2.htm}}&lt;/ref&gt; no longer exists the site was captured by waybackmachine and is still searchable [http://archive.psion2.org/org2/org2.htm here]. In the summer of 1997 Jaap Scherphuis joined the site as software specialist and soon became fully responsible for maintaining the web pages on a day-to-day basis. Dave wrote about Jaap &quot;A Remarkable Psion Programmer&quot;. The Psion 2 archive has a large proportion of programmes written by Jaap many written in machine code showing his unique trademark as master programmer of the Psion Organiser II. In the spring of 2002 Boris Cornet (RIP) took over as site maintainer/editor. Later that year Boris replaced the chat (bulletin board) with the now defunct Psion Organiser II Forum. When Boris passed away in 2012 the administrative duties for the forum were taken over by a power user mikesan who ran it until the spring of 2020 when he developed a terminal illness and the site became inaccessible. Another legacy that Boris left Organiser II users is ''Psi2Win'' the Windows PC comms link server. This Windows friendly server developed utilising Jaaps reverse engineered Comms Link protocol. In the winter of 2013 Jaap created his web site with the aim &quot;to be an archive of Psion Organiser II information and software that might otherwise be abandoned and lost&quot;. Hardware developments have continued with Olivier Gossuin&lt;ref&gt;{{cite web |last1=Gossuin |first1=Olivier |title=PSION Organiser Products |url=http://www.gossuin.be/index.php/shop#PSION |accessdate=26 September 2020}}&lt;/ref&gt; - A Belgium enthusiast who has created a microUSB CommsLink, 256K RamPak, 512K FlashPak, and microUSB Power Supply. These along with other Organiser II hardware and software still available from the West Yorkshire Psion Store. Massimo Cellin created the PSION facebook group&lt;ref&gt;{{cite web |title=Psion Facebook Group |url=https://www.facebook.com/groups/2111753558965708/ |accessdate=26 September 2020}}&lt;/ref&gt; in the autumn of 2015 servicing all the PSION products including the Organiser II. Members of the facebook group include the former editor of IPSO FACTO - The 1980’s and 90’s newsletters of the International Psion Pocket Computers User Group - of course copies of which are still available from Jaaps archive.&lt;ref&gt;{{cite web |last1=Scherphuis |first1=Jaap |title=Other Documents - IPSO FACTO |url=https://www.jaapsch.net/psion/ |website=The Psion Organiser Series II |accessdate=26 September 2020}}&lt;/ref&gt;
+
+==Subsequent hand-held devices==
+
+The name &quot;Organiser&quot; was not used for later Psion handhelds, such as the &quot;SIBO&quot; family [[Psion MC400]] laptop, the [[Psion 3|Psion Series 3]] and the 32-bit [[Psion 5|Psion Series 5]] machines, which were of a clamshell design with a QWERTY keyboard. In terms of hardware architecture and operating system, these had no links to the earlier &quot;Organiser&quot; range, other than the end-user programming language, which shared a great deal of structure with OPL.
+
+The &quot;SIBO&quot; family name stood for &quot;'''SI'''xteen-'''B'''it '''O'''rganiser&quot;, and the improved version of the OPL language (with window and focus controls) was replaced in 1997 by a new ARM-based operating system EPOC32 written in C++; the latter was later sold as the [[Symbian|Symbian operating system]], which until 2010 was the most widely used OS in smartphones, being in 2011 displaced by [[Google]]'s [[Android (operating system)|Android OS]].&lt;ref&gt;{{cite news| url=http://www.gartner.com/it/page.jsp?id=1764714 | work=Gartner | date=2011-08-11 | title=Gartner Says Sales of Mobile Devices in Second Quarter of 2011 Grew 16.5 Percent Year-on-Year; Smartphone Sales Grew 74 Percent}}&lt;/ref&gt;  This change was more significant than appeared at the time.  The {{clarify span|consumer level &quot;high&quot; programming language|date=March 2017}} still shares features with OPL, but the developer toolkits were from then on focused on programmers familiar with C and only the Symbian operating system remains.
+
+The first similar device made in the USA didn't appear until 1985 and was manufactured by [[Validec]].&lt;ref&gt;{{cite news| url=http://articles.latimes.com/1985-03-10/local/me-25812_1_computer-terminal | work=Los Angeles Times | date=1985-03-10 | title=Waiters Trade Pad for Computer: 'Hold the Mayo' Note Goes to the Chef on a Printout}}&lt;/ref&gt;
+
+==See also==
+* [[Psion Series 7]]
+
+==References==
+{{reflist|30em}}
+
+==External links==
+*[http://www.computinghistory.org.uk/det/898/Psion/ Psion PLC] at The Centre for Computing History
+*[http://stevelitchfield.com/historyofpsion.htm Psion Organiser History] - website by Steve Litchfield
+*[https://www.theregister.co.uk/2007/06/26/psion_special/ A detailed history of Psion around the time of the Series 5] at The Register
+*[http://www.psion.com/ Psion] - the operational division of Psion PLC. [only the Psion name is preserved; no longer has any information related to the Psion Organiser II or any other Psion [[PDA]]]
+
+[[Category:Psion devices]]
+[[Category:Computer-related introductions in 1984]]
+[[Category:Personal information managers]]
+
+[[de:Psion#Psion Organiser]]</text>
+      <sha1>41kkrnin3ltw98cn305ahsjm4r6hx7u</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Psion (company)</title>
+    <ns>0</ns>
+    <id>46016</id>
+    <revision>
+      <id>989451463</id>
+      <parentid>987231220</parentid>
+      <timestamp>2020-11-19T01:47:29Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>[[Category:CS1 errors: empty unknown parameters]]; [[WP:GenFixes]] on</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="23281" xml:space="preserve">{{About|the mobile computers company, Psion PLC|other uses|Psion (disambiguation)}}
+{{Multiple issues|
+{{more citations needed|date=July 2012}}
+{{POV|date=July 2012}}
+{{peacock|date=July 2012}}
+{{one source|date=July 2012}}
+{{advert|date=July 2012}}
+}}
+
+{{Infobox company 
+| name = Psion
+| logo = [[Image:Psionlogo.PNG]]
+| type =
+| key_people = John Hawkins, ([[Chairman]])&lt;br&gt;John Conoley ([[CEO]])&lt;br&gt;David Potter
+| industry = [[Computer]]s
+| products = Workabout Pro 3, NEO, Ikôn, Omnii XT10,&lt;ref&gt;{{cite web |last1=Blickenstorfer |first1=Conrad |title=Psion Teklogix Omnii XT10 |url=https://www.ruggedpcreview.com/3_handhelds_psion_omnii.html |website=ruggedpcreview.com |publisher=Rugged PC review |accessdate=30 October 2020}}&lt;/ref&gt;&lt;ref&gt;{{cite web |title=OMNII XT10 SUPPORT |url=https://www.zebra.com/us/en/support-downloads/mobile-computers/handheld/omnii-xt10.html |website=zebra.com |publisher=Zebra |accessdate=29 October 2020}}&lt;/ref&gt;&lt;ref&gt;{{cite web |title=Motorola Omnii XT15 Mobile Handheld Computer |url=https://www.barcodesinc.com/motorola/xt15.htm |website=barcodesinc.com |publisher=Barcodes, Inc.}}&lt;/ref&gt; EP10,&lt;ref&gt;{{cite web |title=Psion EP10 Specifications Sheet [English] |url=http://www.pulster.de/info/psion/ep10/psion-ep10-specifications-sheet-english.pdf |website=pulster.de |publisher=Psion |accessdate=30 October 2020}}&lt;/ref&gt;&lt;ref&gt;{{cite web |first1=Conrad |last1=Blickenstorfer |title=Psion Teklogix Omnii EP10 |url=https://www.ruggedpcreview.com/3_handhelds_psion_ep10.html |website=ruggedpcreview.com |publisher=Rugged PC review |accessdate=29 October 2020}}&lt;/ref&gt; 8500 Series vehicle mount devices 
+| revenue = [[Pound sterling|£]]170 million (2009)
+| num_employees = 900 (2010)
+| parent = 
+| subsid =
+| footnotes =
+| foundation = 1980
+| location = [[London]], England
+| homepage = [https://web.archive.org/web/20140203003643/http://www.motorolasolutions.com/XU-EN/Product+Lines/Psion]
+}}
+'''Psion''' was a designer and manufacturer of mobile handheld computers for commercial and industrial applications. The company was headquartered in [[London]], England with major operations in [[Mississauga]], Ontario, Canada and additional company offices in Europe, the United States, Asia, Latin America, and the Middle East. It was a public company listed on the London Stock Exchange ({{lse|PON}}) and was once a constituent of the [[FTSE 100 Index]].
+
+Psion's operational business was formed in September 2000 from a merger of Psion and Canadian-based Teklogix Inc. and was a global provider of solutions for mobile computing and wireless data collection. The Group's products and services include rugged mobile hardware, secure wireless networks, robust software, professional services and support programs. Psion works with its clients in the area of new and emerging technologies including image capture, voice recognition and RFID. Psion has customers in more than 80 countries around the world, as well as operations in 14 countries.
+
+Formed in 1980, Psion achieved its first successes as a consumer hardware company that developed the revolutionary [[Psion Organiser]] as well as a whole range of more advanced, clamshell-design [[Personal Digital Assistant]]s. Psion closed, or disposed of, all its previous operations and is now focused on rugged mobile computing solutions. It withdrew from the consumer devices marketplace in 2001. It was announced on 15 June 2012 that [[Motorola Solutions]] had agreed to buy the company for $200 million.&lt;ref&gt;{{cite web|last=Figas|first=Jon|title=Motorola Solutions buys Psion for $200 million|url=https://www.engadget.com/2012/06/15/motorola-buys-psion-for-200-million/|publisher=Engadget|accessdate=15 June 2012}}&lt;/ref&gt;
+
+==History==
+
+===Early development===
+[[Image:Psion 5mx 17o06.jpg|thumb|right|320px|Psion 5mx]]
+Psion was established in 1980 as a software house with a close relationship with [[Sinclair Research]].  The company developed games and other software for the [[Sinclair ZX81|ZX81]] and [[ZX Spectrum]] [[home computer]]s, released under the Sinclair/Psion brand.  Psion's games for the ZX Spectrum included ''Chess'', ''[[Chequered Flag (video game)|Chequered Flag]]'', ''[[Flight Simulation (Psion software)|Flight Simulation]]'' and the [[Horace series|''Horace'' series]].&lt;ref name = &quot;history&quot;&gt;{{cite news 
+| first= Steve
+| last= Litchfield
+| title= The History of Psion
+| origyear= 1998| year= 2005
+| publisher= UK Online
+| url =http://stevelitchfield.com/historyofpsion.htm
+| work = Palmtop Magazine
+| accessdate = 2008-12-27}}
+&lt;/ref&gt;
+[[Image:2005-04-16 Psion Serie 5mx PRO 24MB beschn unscharf scharf.JPG|thumb|left|320px|Psion 5mx Pro]]
+Early software releases for the ZX Spectrum included titles such as VU-Calc, VU-File and [[VU-3D]] along with dozens of other titles.&lt;ref&gt;http://www.worldofspectrum.org/infoseekpub.cgi?regexp=^Psion+Software+Ltd$&amp;loadpics=1&lt;/ref&gt;
+
+The company name is an acronym standing for &quot;Potter Scientific Instruments&quot;, after the company's founder, [[David E. Potter|David Potter]]. The acronym [[PSI (disambiguation)#As an abbreviation|PSI]] was already in use elsewhere in the world so &quot;ON&quot; was added to make the name PSION unique. David Potter remained managing director until 1999 and was chairman of the company until late 2009.
+
+In early 1983, Sinclair approached Psion regarding the development of a suite of office applications for the forthcoming [[Sinclair QL]] [[personal computer]]. Psion were already working on a project in this area and the QL was launched in 1984, bundled with ''Quill'', ''Archive'', ''Abacus'' and ''Easel''; respectively a [[word processor]], [[database]], [[spreadsheet]] and business graphics application. These were later ported to [[MS-DOS]] and were made available for the IBM PC and ACT Sirius and Apricot computers, collectively called ''PC-Four'', or ''Xchange''&lt;ref name=&quot;pcw198410&quot;&gt;{{ cite news | url=https://archive.org/details/PersonalComputerWorld1984-10/page/180/mode/2up | title=Straight Xchange | work=Personal Computer World | date=October 1984 | accessdate=4 November 2020 | last1=Bright | first1=Peter | pages=180–182 }}&lt;/ref&gt; in an enhanced version.&lt;ref name= history /&gt;
+
+===The Psion Organiser===
+[[Image:Psion Organiser 2.gif|thumb|right|140px|Psion Organiser II]]
+{{main article|Psion Organiser}}
+
+1984 also marked Psion's first foray into hardware; the [[Psion Organiser]], an early handheld computer, in appearance resembling a pocket calculator with an alphanumeric keyboard. In 1986, the vastly improved Psion Organiser II was released, and was assembled by [http://www.speedboard.co.uk Speedboard Assembly Services].&lt;ref&gt;http://www.speedboard.co.uk/about/30-years-quality-electronic-manufacturing-services/&lt;/ref&gt; Its success led the company into a decade long period of &quot;Psion&quot; Computer and operating system development. It included a simple-to-use database programming language, OPL, which sparked a large independent software market. In 1987, Psion began development of its &quot;SIBO&quot; (&quot;SIxteen Bit Organiser&quot;) family of devices and its own new multitasking operating system called [[EPOC (computing)|EPOC]] to run its third generation product, Laptops (MC), industrial handhelds (HC and Workabout) and PDA (Series 3) products.&lt;ref name=history/&gt; It is often rumoured that EPOC stands for &quot;Electronic Piece Of Cheese&quot; however Colly Myers, who was Symbian's CEO from founding until 2002,&lt;ref&gt;{{cite news 
+| first= Elliot
+| last= Frankal
+| title= Ask and it shall be texted to you
+| date= 2005-09-04
+| publisher= 
+| url =https://www.theguardian.com/business/2005/sep/04/theobserver.observerbusiness8 
+| work = The Observer
+| pages = 
+| accessdate = 2008-12-27 
+}}
+&lt;/ref&gt; said in an interview that it stood for 'epoch' and nothing more.  This development effort produced the clamshell QWERTY-based [[Psion Series 3]] palmtops (1993–98), which sold in the hundreds of thousands, and the Psion MC-series laptops, which sold poorly compared to the DOS-based laptops of the era.
+A second effort, dubbed Project Protea, produced the Psion [[Psion 5|Series 5]] for sale in 1997, a completely new product from the 32-bit hardware upwards through the OS, UI, and applications.&lt;ref name=history/&gt; It is still remembered for its high quality keyboard which, despite its size, allowed for touch-typing. However, the new feel of the product, and the removal of certain familiar quirks, alienated loyal Series 3 users, who tended to stick with their PDAs rather than upgrade. In 1999, Psion released the [[Psion Series 7]], which was much like a larger version of the Series 5, but with a double-size VGA-resolution screen that featured 256 colours (the Series 5 had a half-VGA screen with 16 grey shades). It was followed by the very similar [[Psion netBook]].
+
+Psion was being challenged by the arrival of cheaper PDAs such as the [[Palm Pilot]], and PocketPCs running Microsoft's [[Windows CE]], and in 2003, Psion released a Netbook Pro running Windows CE .NET 4.2 instead of EPOC.
+
+===Software===
+The 32-bit EPOC developed by Project Protea resulted in the eventual formation of [[Symbian Ltd.]] in June 1998 in conjunction with [[Nokia]], [[Ericsson]] and [[Motorola]].&lt;ref name=history /&gt; The OS was renamed the [[Symbian OS|Symbian Operating System]] and was envisioned as the base for a new range of [[smartphone]]s. Psion gave 130 key staff to the new company and retained a 31% shareholding in the spun-out business. The Symbian operating system {{As of|2007|lc=on}} powered around 125 million mobile phones such as the [[Sony Ericsson P900]] series.
+
+The development of new and updated products by Psion slowed after the Symbian spin-off. Other products failed or had limited success — a Psion Siemens' GSM device, a Series 5 based STB, the [[Psion Wavefinder|Wavefinder]] DAB radio, an attempt to add Dragon's speech recognition software to a PDA, Ericsson cancelled a Series 5MX derived smartphone project in 2001.
+
+Psion had sold its sole manufacturing plant in 1999 and started to withdraw from its PDA markets in late 2001,&lt;ref&gt;
+{{cite web
+| first= Mark
+| last= Needham
+| title= We Remembered Psion and Wept 
+| date= February 19, 2004
+| publisher= PC Pro
+| url = https://docs.google.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0B2I-pNO-pfhoMjk5MTkwZTgtMzFmNC00NWRhLTg3YTQtYzVlYjNmNWQ1YzM3&amp;hl=en_GB
+| accessdate = 2012-02-22
+|format=PDF}}&lt;/ref&gt; shedding 250 of 1,200 staff and writing-off £40 million. The PDA, which was once a niche market, had become a global horizontal marketplace where it was difficult for Psion to compete. The final blow for Psion's Organiser and PDA business came in January 2001 when Motorola pulled out of a joint project with Psion, Samsung, and Parthus, to create &quot;Odin&quot;, an ARM-based PDA-phone.&lt;ref name= history/&gt;
+
+In 2000, Psion acquired [[Teklogix]] in [[Canada]] for £240 million, and merged its business-to-business division, Psion Enterprise, with the newly acquired company. [[Teklogix]] was re-branded [[Psion Teklogix]]. This division now forms the core of Psion Plc's business.&lt;ref&gt;{{cite news 
+| first= 
+| last= 
+| title= Psion buys Teklogix
+| date= 2000-07-12
+| publisher= 
+| url =http://news.bbc.co.uk/1/hi/business/830005.stm 
+| work = BBC News
+| pages = 
+| accessdate = 2008-12-27 
+}}
+&lt;/ref&gt; 	
+
+In 2002, Psion created a new division called Psion Software. This business developed push email solutions for Symbian smartphones, Microsoft Exchange and Lotus Notes. This business was sold to Visto (USA) in 2003. 	
+
+In 2004, Psion announced its intention to dispose of the company's remaining Symbian shareholding to [[Nokia]], as they no longer regarded it as a core part of their strategy.&lt;ref name=history/&gt;
+
+=== 2010 onward ===
+
+Psion intends to tailor and customize modular variants of its products through its online community, Ingenuity Working. Launched in March 2010, Ingenuity Working had more than 35,000 visitors per month within its first six months.&lt;ref&gt;{{cite news
+ |title=Psion Launches IngenuityLive! as IngenuityWorking.com Marks Six Month Anniversary with Huge Industry Participation Rates 
+ |date=2010-10-19 
+ |url=http://www.psion.com/uk/resource-centre/news_2010_psion-launches-ingenuitylive.htm 
+ |accessdate=2011-10-19 
+ |archiveurl=https://archive.is/20130201014310/http://www.psion.com/uk/resource-centre/news_2010_psion-launches-ingenuitylive.htm 
+ |archivedate=2013-02-01 
+ |url-status=dead 
+}}
+&lt;/ref&gt;
+
+In January 2011, the company refreshed its corporate identity and developed a new logo, which it describes as an icon. It claims it did this to &quot;demonstrate its new business model in action and to signal that it is no longer a consumer products company, which was symbolized by the old Psion logo&quot;.&lt;ref name=&quot;psion.com&quot;&gt;{{cite news
+ |title=Psion Removes &quot;Teklogix&quot; Name and Refreshes Corporate Identity 
+ |date=2011-01-31 
+ |url=http://www.psion.com/resource-centre/news_2011_psion-removes-teklogix-name-and-refreshes-corporate-identity.htm 
+ |accessdate=2011-01-31 
+ |archiveurl=https://archive.is/20130201065000/http://www.psion.com/resource-centre/news_2011_psion-removes-teklogix-name-and-refreshes-corporate-identity.htm 
+ |archivedate=2013-02-01 
+ |url-status=dead 
+}}&lt;/ref&gt;

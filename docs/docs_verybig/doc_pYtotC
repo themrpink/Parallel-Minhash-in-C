@@ -1,0 +1,199 @@
+Recently cepstrum based deconvolution was used to remove the effect of the stochastic impulse trains, which originates an [[Electromyography#Surface and intramuscular EMG recording electrodes|sEMG]] signal, from the power spectrum of sEMG signal itself. In this way, only information on motor unit action potential (MUAP) shape and amplitude were maintained, and then, used to estimate the parameters of a time-domain model of the MUAP itself.&lt;ref&gt;G. Biagetti, P. Crippa, S. Orcioni, and C. Turchetti, “Homomorphic deconvolution for muap estimation from surface emg signals,” IEEE Journal of Biomedical and Health Informatics, vol. 21, no. 2, pp. 328– 338, March 2017.&lt;/ref&gt;
+
+=={{anchor|Quefrency}}Cepstral concepts==
+The [[Dependent and independent variables|independent variable]] of a cepstral graph is called the '''quefrency'''.&lt;ref name=&quot;Steinbuch-Weber_1974&quot;&gt;{{cite book |title=Taschenbuch der Informatik - Band III - Anwendungen und spezielle Systeme der Nachrichtenverarbeitung |language=German |editor-first1=Karl W. |editor-last1=Steinbuch |editor-link1=Karl W. Steinbuch |editor-first2=Wolfgang |editor-last2=Weber |editor-first3=Traute |editor-last3=Heinemann |date=1974 |orig-year=1967 |edition=3 |volume=3 |work=Taschenbuch der Nachrichtenverarbeitung |publisher=[[Springer Verlag]] |location=Berlin, Germany |isbn=3-540-06242-4 |lccn=73-80607 |pages=272–274}}&lt;/ref&gt; The quefrency is a measure of time, though not in the sense of a signal in the [[time domain]]. For example, if the sampling rate of an audio signal is 44100&amp;nbsp;Hz and there is a large peak in the cepstrum whose quefrency is 100 samples, the peak indicates the presence of a fundamental frequency that is 44100/100 = 441&amp;nbsp;Hz. This peak occurs in the cepstrum because the harmonics in the spectrum are periodic and the period corresponds to the fundamental frequency, since harmonics are integer multiples of the fundamental frequency.
+
+Note that a pure sine wave can not be used to test the cepstrum for its pitch determination from quefrency as a pure sine wave does not contain any harmonics and does not lead to quefrency peaks. Rather, a test signal containing harmonics should be used (such as the sum of at least two sines where the second sine is some harmonic (multiple) of the first sine, or better, a signal with a square or triangle waveform, as such signals provide many overtones in the spectrum.).
+
+=={{anchor|Filter}}Filtering==
+Playing further on the anagram theme, a filter that operates on a cepstrum might be called a ''lifter''. A low-pass lifter is similar to a low-pass filter in the [[frequency domain]]. It can be implemented by multiplying by a window in the quefrency domain and then converting back to the frequency domain, resulting in a modified signal, i.e. with signal echo being reduced.
+
+==Convolution==
+An important property of the cepstral domain is that the [[convolution]] of two signals can be expressed as the addition of their complex cepstra:
+: &lt;math&gt;x_1 * x_2 \mapsto x'_1 + x'_2.&lt;/math&gt;
+
+==References==
+{{Reflist}}
+
+==Further reading==
+* D. G. Childers, D. P. Skinner, R. C. Kemerait, &quot;[http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1455016 The Cepstrum: A Guide to Processing]&quot;, ''Proceedings of the IEEE'', Vol. 65, No. 10, October 1977, pp.&amp;nbsp;1428–1443.
+* &quot;[http://www.phon.ucl.ac.uk/courses/spsci/matlab/lect10.html Speech Signal Analysis]&quot;
+* &quot;[http://www.advsolned.com/example_speech_coding.html Speech analysis: Cepstral analysis vs. LPC]&quot;, www.advsolned.com
+* &quot;[http://www.practicalcryptography.com/miscellaneous/machine-learning/tutorial-cepstrum-and-lpccs/ A tutorial on Cepstrum and LPCCs]&quot;
+* Alan V. Oppenheim and Ronald W. Schafer, &quot;From Frequency to Quefrency: A History of the Cepstrum&quot;, IEEE SIGNAL PROCESSING MAGAZINE, Sep. 2004, pp.&amp;nbsp;95–99
+
+[[Category:Frequency-domain analysis]]
+[[Category:Signal processing]]</text>
+      <sha1>469m4zoctjx91816fcz4ygwuxawscc4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Quefrency</title>
+    <ns>0</ns>
+    <id>46957</id>
+    <redirect title="Cepstrum" />
+    <revision>
+      <id>783876272</id>
+      <parentid>684756367</parentid>
+      <timestamp>2017-06-05T06:04:20Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="88" xml:space="preserve">#REDIRECT [[Cepstrum#Quefrency]]
+
+{{Redirect category shell|1=
+{{R to related topic}}
+}}</text>
+      <sha1>h66u4erwhb74j1715uzme5ewhtgarzq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Lifter</title>
+    <ns>0</ns>
+    <id>46958</id>
+    <revision>
+      <id>881287275</id>
+      <parentid>881286436</parentid>
+      <timestamp>2019-02-01T16:10:12Z</timestamp>
+      <contributor>
+        <username>Leschnei</username>
+        <id>27335766</id>
+      </contributor>
+      <comment>Adding [[Lifter (album)]] and [[Lifter (comics)]] and cleanup using [[tools:~dispenser/cgi-bin/dabfix.py|Dabfix]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="532" xml:space="preserve">{{wiktionary|lifter}}
+'''Lifter''' may refer to:
+* [[Ion-propelled aircraft]], a device that can generate thrust using ionised air with no moving parts
+* [[Lifter (album)|''Lifter'' (album)]], 2001 album by the American band Edgewater
+* [[Lifter (comics)]], a Marvel Comics character
+* [[Liquid fluoride thorium reactor]], shortened to &quot;LFTR&quot; and pronounced &quot;lifter&quot;
+* [[Tappet]], part of an internal combustion engine
+* A filter that operates on a [[cepstrum]], in signal processing
+
+==See also==
+* {{in title}}
+
+{{disambiguation}}</text>
+      <sha1>i1w7n6ilzczcizw4tyim7f5gxby8e8u</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Koch snowflake</title>
+    <ns>0</ns>
+    <id>46959</id>
+    <revision>
+      <id>990500584</id>
+      <parentid>985772209</parentid>
+      <timestamp>2020-11-24T20:53:25Z</timestamp>
+      <contributor>
+        <ip>69.76.13.26</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="19418" xml:space="preserve">{{short description|Fractal and mathematical curve}}
+[[File:KochFlake.svg|thumb|upright=1.2|The first four [[iteration]]s of the Koch snowflake]]
+[[File:Von Koch curve.gif|thumb|upright=1.35|The first seven iterations in animation]]
+[[File:Kochsim.gif|thumb|Zooming into the Koch curve]]
+{{multiple image
+| align    =right
+| direction=vertical
+| width    =200
+| header   =Koch antisnowflake 
+| image1   =Koch antisnowflake 1 through 4.svg
+| caption1 =First four iterations
+| image2   =KochAntiSnowflake.svg
+| caption2 =Sixth iteration
+}}
+
+The '''Koch snowflake''' (also known as the '''Koch curve''', '''Koch star''', or '''Koch island'''&lt;ref&gt;{{cite book|last=Addison |first=Paul S. |title=Fractals and Chaos: An Illustrated Course |publisher=Institute of Physics |date=1997 |isbn=0-7503-0400-6 |page=19}}&lt;/ref&gt;&lt;ref&gt;{{cite book|last=Lauwerier |first=Hans |title=Fractals: Endlessly Repeated Geometrical Figures |publisher=Princeton University Press |date=1991 |isbn=0-691-02445-6 |page=36 |quote=Mandelbrot called this a Koch island. |translator-last1=Gill-Hoffstädt |translator-first1=Sophia }}&lt;!--Original 1987 in Dutch.--&gt;&lt;/ref&gt;) is a [[fractal curve]] and one of the earliest [[fractal]]s to have been described. It is based on the Koch curve, which appeared in a 1904 paper titled &quot;On a Continuous Curve Without Tangents, Constructible from Elementary Geometry&quot;&lt;ref&gt;{{cite journal|url=https://babel.hathitrust.org/cgi/pt?id=inu.30000100114564;view=1up;seq=673|last=von Koch |first=Helge|title=Sur une courbe continue sans tangente, obtenue par une construction géométrique élémentaire|journal=[[Arkiv för Matematik]]|volume=1|year=1904|pages=681–704 |language=fr |jfm=35.0387.02}}&lt;/ref&gt; by the Swedish mathematician [[Helge von Koch]].
+
+The Koch snowflake can be built up iteratively, in a sequence of stages.  The first stage is an equilateral triangle, and each successive stage is formed from adding outward bends to each side of the previous stage, making smaller equilateral triangles.  The areas enclosed by the successive stages in the construction of the snowflake converge to {{sfrac|8|5}} times the area of the original triangle, while the perimeters of the successive stages increase without bound. Consequently, the snowflake encloses a finite area, but has an [[Arc length#Curves with infinite length|infinite perimeter]].
+
+==Construction==
+The Koch snowflake can be constructed by starting with an [[equilateral triangle]], then recursively altering each line segment as follows:
+# divide the line segment into three segments of equal length.
+# draw an equilateral triangle that has the middle segment from step 1 as its base and points outward.
+# remove the line segment that is the base of the triangle from step 2.
+
+The first [[iteration]] of this process produces the outline of a [[hexagram]].
+
+The Koch snowflake is the limit approached as the above steps are followed indefinitely. The Koch curve originally described by [[Helge von Koch]] is constructed using only one of the three sides of the original triangle. In other words, three Koch curves make a Koch snowflake.
+
+A Koch curve–based representation of a nominally flat surface can similarly be created by repeatedly segmenting each line in a sawtooth pattern of segments with a given angle.&lt;ref&gt;{{cite journal |last1=Alonso-Marroquin |first1=F. |last2=Huang |first2=P. |last3=Hanaor |first3=D. |last4=Flores-Johnson |first4=E. |last5=Proust |first5=G. |last6=Gan |first6=Y. |last7=Shen |first7=L. |title=Static friction between rigid fractal surfaces |journal=Physical Review E |year=2015 |volume=92 |issue=3 |pages=032405 |doi=10.1103/PhysRevE.92.032405 |pmid=26465480 |hdl=2123/13835 |url=https://ses.library.usyd.edu.au/bitstream/2123/13835/2/F%20Alonso-Marroquin%202015%20Static%20friction%20between%20rigid%20fractal%20surfaces.pdf }} — Study of fractal surfaces using Koch curves.&lt;/ref&gt; 
+[[File:Koch rough surface.png|thumb|A fractal rough surface built from multiple Koch curve iterations]]
+
+==Properties==
+
+===Perimeter of the Koch snowflake===
+
+Each iteration multiplies the number of sides in the Koch snowflake by four, so the number of sides after {{mvar|n}} iterations is given by:
+
+:&lt;math&gt;N_{n} = N_{n-1} \cdot 4 = 3 \cdot 4^{n}\, .&lt;/math&gt;
+
+If the original equilateral triangle has sides of length {{mvar|s}}, the length of each side of the snowflake after {{mvar|n}} iterations is:
+
+:&lt;math&gt;S_{n} = \frac{S_{n-1}}{3} = \frac{s}{3^{n}}\, ,&lt;/math&gt;
+
+an inverse [[power of three]] multiple of the original length.
+The perimeter of the snowflake after {{mvar|n}} iterations is:
+
+:&lt;math&gt; P_{n} = N_{n} \cdot S_{n} = 3 \cdot s \cdot {\left(\frac{4}{3}\right)}^n\, .&lt;/math&gt;
+
+The Koch curve has an [[infinite length]], because the total length of the curve increases by a factor of {{sfrac|4|3}} with each iteration. Each iteration creates four times as many line segments as in the previous iteration, with the length of each one being {{sfrac|1|3}} the length of the segments in the previous stage. Hence, the length of the curve after {{mvar|n}} iterations will be ({{sfrac|4|3}})&lt;sup&gt;{{mvar|n}}&lt;/sup&gt; times the original triangle perimeter and is unbounded, as {{mvar|n}} tends to infinity.
+
+====Limit of perimeter====
+
+As the number of iterations tends to infinity, the limit of the perimeter is:
+
+:&lt;math&gt;\lim_{n \rightarrow \infty} P_n = \lim_{n \rightarrow \infty} 3 \cdot s \cdot \left(\frac{4}{3} \right)^n = \infty\, ,&lt;/math&gt;
+
+since &lt;big&gt;|&lt;/big&gt;{{sfrac|4|3}}&lt;big&gt;|&lt;/big&gt;&amp;nbsp;&gt;&amp;nbsp;1.
+
+An {{sfrac|[[Natural logarithm|ln]] 4|ln 3}}-dimensional measure exists, but has not been calculated so far. Only upper and lower bounds have been invented.&lt;ref&gt;{{cite journal |first1=Zhi Wei |last1=Zhu |first2=Zuo Ling |last2=Zhou |first3=Bao Guo |last3=Jia |date=October 2003 |title=On the Lower Bound of the Hausdorff Measure of the Koch Curve |journal=Acta Mathematica Sinica |volume=19 |issue=4 |pages=715–728 |doi=10.1007/s10114-003-0310-2 |s2cid=122517792 }}&lt;/ref&gt;
+
+===Area of the Koch snowflake===
+
+{ It would be helpful if you gave the actual number of triangles for the first four iterations. }
+
+In each iteration a new triangle is added on each side of the previous iteration, so the number of new triangles added in iteration {{mvar|n}} is:
+
+:&lt;math&gt;T_{n} = N_{n-1} = 3 \cdot 4^{n-1} = \frac{3}{4} \cdot 4^n\, .&lt;/math&gt;
+
+The area of each new triangle added in an iteration is {{sfrac|1|9}} of the area of each triangle added in the previous iteration, so the area of each triangle added in iteration {{mvar|n}} is:
+
+:&lt;math&gt;a_{n} = \frac{a_{n-1}}{9} = \frac{a_{0}}{9^n}\, .&lt;/math&gt;
+
+where {{math|''a''&lt;sub&gt;0&lt;/sub&gt;}} is the area of the original triangle. The total new area added in iteration {{mvar|n}} is therefore:
+
+:&lt;math&gt;b_{n} = T_{n} \cdot a_{n} = \frac{3}{4} \cdot {\left(\frac{4}{9}\right)}^{n} \cdot a_{0}&lt;/math&gt;
+
+The total area of the snowflake after {{mvar|n}} iterations is:
+
+:&lt;math&gt;A_{n} = a_0 + \sum_{k=1}^{n} b_k = a_0\left(1 + \frac{3}{4} \sum_{k=1}^{n} \left(\frac{4}{9}\right)^{k} \right)= a_0\left(1 + \frac{1}{3} \sum_{k=0}^{n-1} \left(\frac{4}{9}\right)^{k} \right)\, .&lt;/math&gt;
+
+Collapsing the geometric sum gives:
+
+:&lt;math&gt;A_{n} = a_0 \left( 1 + \frac{3}{5} \left( 1 - \left(\frac{4}{9}\right)^{n} \right) \right) = \frac{a_0}{5} \left( 8 - 3 \left(\frac{4}{9}\right)^{n} \right)\, .&lt;/math&gt;
+
+====Limits of area====
+
+The limit of the area is:
+
+:&lt;math&gt;\lim_{n \rightarrow \infty} A_n = \lim_{n \rightarrow \infty} \frac{a_{0}}{5} \cdot \left(8 - 3 \left(\frac{4}{9} \right)^n \right) = \frac{8}{5} \cdot a_{0}\, ,&lt;/math&gt;
+
+since &lt;big&gt;|&lt;/big&gt;{{sfrac|4|9}}&lt;big&gt;|&lt;/big&gt;&amp;nbsp;&lt;&amp;nbsp;1.
+
+Thus, the area of the Koch snowflake is {{sfrac|8|5}} of the area of the original triangle. Expressed in terms of the side length {{mvar|s}} of the original triangle, this is:&lt;ref&gt;{{cite web|url=http://ecademy.agnesscott.edu/~lriddle/ifs/ksnow/ksnow.htm|title=Koch Snowflake|website=ecademy.agnesscott.edu}}&lt;/ref&gt; 
+:&lt;math&gt;\frac{2s^2\sqrt{3}}{5}.&lt;/math&gt;
+
+==== Solid of revolution ====
+The volume of the [[solid of revolution]] of the Koch snowflake about an axis of symmetry of the initiating equilateral triangle of unit side is &lt;math&gt;\frac{11\sqrt{3}}{135} \pi.&lt;/math&gt;&lt;ref&gt;{{Cite journal|last=McCartney|first=Mark|date=2020-04-16|title=The area, centroid and volume of revolution of the Koch curve|journal=International Journal of Mathematical Education in Science and Technology|volume=0|pages=1–5|doi=10.1080/0020739X.2020.1747649|issn=0020-739X}}&lt;/ref&gt;
+
+===Other properties===
+The Koch snowflake is self-replicating &lt;!-- (insert image here!) --&gt; with six smaller copies surrounding one larger copy at the center. Hence, it is an irrep-7 irrep-tile (see [[Rep-tile]] for discussion).

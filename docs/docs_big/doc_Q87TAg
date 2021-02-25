@@ -1,0 +1,207 @@
+In financial applications, e.g. [[portfolio optimization]], an investor chooses financial portfolio which maximizes his/her own utility function, or, equivalently, minimizes his/her [[risk measure]]. For example, [[modern portfolio theory]] selects variance as a measure of risk; other popular theories are [[expected utility theory]],&lt;ref name=&quot;exputility&quot;&gt;{{cite book |last=Von Neumann |first=J. |last2=Morgenstern |first2=O. |year=1953 |title=Theory of Games and Economic Behavior |url=https://archive.org/details/theoryofgameseco00vonn |url-access=registration |edition=3rd |location= |publisher=Princeton University Press }}&lt;/ref&gt; and [[prospect theory]].&lt;ref name=&quot;prosp&quot;&gt;{{cite journal |last=Kahneman |first=D. |authorlink=Daniel Kahneman |last2=Tversky |first2=A. |authorlink2=Amos Tversky |year=1979 |title=Prospect Theory: An Analysis of Decision Under Risk |journal=[[Econometrica]] |volume=47 |issue=2 |pages=263–292 |doi=10.2307/1914185 |url=http://www.immagic.com/eLibrary/ARCHIVES/GENERAL/JOURNALS/E790301K.pdf |jstor=1914185 }}&lt;/ref&gt; To determine specific utility function for any given investor, one could design a questionnaire procedure with questions in the form: How much would you pay for ''x%'' chance of getting ''y''? Revealed preference theory suggests a more direct  approach: observe a portfolio ''X*'' which an investor currently holds, and then find a utility function/risk measure such that ''X*'' becomes an optimal portfolio.&lt;ref name=&quot;riskinverse&quot;&gt;{{cite journal |last=Grechuk |first=B. |last2=Zabarankin |first2=M. |year=2016 |title=Inverse Portfolio Problem with Coherent Risk Measures |journal=[[European Journal of Operational Research]] |volume=249 |issue=2 |pages=740–750 |doi=10.1016/j.ejor.2015.09.050 |hdl=2381/36136 |hdl-access=free }}&lt;/ref&gt;
+
+===Examples===
+
+In order to simplify calculations, various alternative assumptions have been made concerning details of human preferences, and these imply various alternative utility functions such as:
+
+* [[constant elasticity of substitution|CES]] (''constant elasticity of substitution'', or ''[[isoelastic utility|isoelastic]]'') utility
+* [[Isoelastic utility]]
+* [[Exponential utility]]
+* [[Quasilinear utility]]
+* [[Homothetic preferences]]
+* [[Stone–Geary utility function]]
+* [[Gorman polar form]]
+** [[Greenwood–Hercowitz–Huffman preferences]]
+** [[King–Plosser–Rebelo preferences]]
+* [[Hyperbolic absolute risk aversion]]
+
+Most utility functions used in modeling or theory are '''well-behaved.''' They are usually monotonic and quasi-concave. However, it is possible for preferences not to be representable by a utility function. An example is [[lexicographic preferences]] which are not continuous and cannot be represented by a continuous utility function.&lt;ref&gt;{{cite book |first=Jonathan E., Jr. |last=Ingersoll |title=Theory of Financial Decision Making |url=https://archive.org/details/theoryoffinancia1987inge |url-access=registration |location=Totowa |publisher=Rowman and Littlefield |year=1987 |page=[https://archive.org/details/theoryoffinancia1987inge/page/21 21] |isbn=0-8476-7359-6 }}&lt;/ref&gt;
+
+==Expected utility==
+{{Main|Expected utility hypothesis}}
+
+The expected utility theory deals with the analysis of choices among '''risky''' projects with multiple (possibly multidimensional) outcomes.
+
+The [[St. Petersburg paradox]] was first proposed by [[Nicolaus I Bernoulli|Nicholas Bernoulli]] in 1713 and solved by [[Daniel Bernoulli]] in 1738. D. Bernoulli argued that the paradox could be resolved if decision-makers displayed [[risk aversion]] and argued for a logarithmic cardinal utility function. (Analysis of international survey data in the 21st century have shown that insofar as utility represents happiness, as in [[utilitarianism]], it is indeed proportional to log income.)
+
+The first important use of the expected utility theory was that of [[John von Neumann]] and [[Oskar Morgenstern]], who used the assumption of expected utility maximization in their formulation of [[game theory]].
+
+===von Neumann–Morgenstern===
+{{Main|Von Neumann–Morgenstern utility theorem}}
+
+Von Neumann and Morgenstern addressed situations in which the outcomes of choices are not known with certainty, but have probabilities attached to them.
+
+A notation for a ''[[Lottery (probability)|lottery]]'' is as follows: if options A and B have probability ''p'' and 1&amp;nbsp;−&amp;nbsp;''p'' in the lottery, we write it as a linear combination:
+:&lt;math&gt;
+L = p A + (1-p) B
+&lt;/math&gt;
+
+More generally, for a lottery with many possible options:
+
+:&lt;math&gt;
+L = \sum_i p_i A_i,
+&lt;/math&gt;
+
+where &lt;math&gt;\sum_i p_i =1&lt;/math&gt;.
+
+By making some reasonable assumptions about the way choices behave, von Neumann and Morgenstern showed that if an agent can choose between the lotteries, then this agent has a utility function such that the desirability of an arbitrary lottery can be calculated as a linear combination of the utilities of its parts, with the weights being their probabilities of occurring.
+
+This is called the ''expected utility theorem''. The required assumptions are four axioms about the properties of the agent's [[Preference (economics)|preference relation]] over 'simple lotteries', which are lotteries with just two options. Writing &lt;math&gt;B\preceq A&lt;/math&gt; to mean 'A is weakly preferred to B' ('A is preferred at least as much as B'), the axioms are:
+
+# completeness: For any two simple lotteries &lt;math&gt;L&lt;/math&gt; and &lt;math&gt;M&lt;/math&gt;, either &lt;math&gt;L\preceq M&lt;/math&gt; or &lt;math&gt;M\preceq L&lt;/math&gt; (or both, in which case they are viewed as equally desirable).
+# transitivity: for any three lotteries &lt;math&gt;L,M,N&lt;/math&gt;, if &lt;math&gt;L\preceq M&lt;/math&gt; and &lt;math&gt;M\preceq N&lt;/math&gt;, then &lt;math&gt;L\preceq N&lt;/math&gt;.
+# convexity/continuity (Archimedean property): If &lt;math&gt;L \preceq M\preceq N&lt;/math&gt;, then there is a &lt;math&gt;p&lt;/math&gt; between 0 and 1 such that the lottery &lt;math&gt;pL + (1-p)N&lt;/math&gt; is equally desirable as &lt;math&gt;M&lt;/math&gt;.
+# independence: for any three lotteries &lt;math&gt;L,M,N&lt;/math&gt; and any probability ''p'', &lt;math&gt;L \preceq M&lt;/math&gt; if and only if &lt;math&gt;pL+(1-p)N \preceq pM+(1-p)N&lt;/math&gt;. Intuitively, if the lottery formed by the probabilistic combination of &lt;math&gt;L&lt;/math&gt; and &lt;math&gt;N&lt;/math&gt; is no more preferable than the lottery formed by the same probabilistic combination of &lt;math&gt;M&lt;/math&gt; and &lt;math&gt;N,&lt;/math&gt; then and only then &lt;math&gt;L \preceq M&lt;/math&gt;.
+
+Axioms 3 and 4 enable us to decide about the relative utilities of two assets or lotteries.
+
+In more formal language: A von Neumann–Morgenstern utility function is a function from choices to the real numbers:
+:&lt;math&gt; u\colon X\to \R&lt;/math&gt;
+which assigns a real number to every outcome in a way that captures the agent's preferences over simple lotteries. Under the four assumptions mentioned above, the agent will prefer a lottery &lt;math&gt;L_2&lt;/math&gt; to a lottery &lt;math&gt;L_1&lt;/math&gt; if and only if, for the utility function characterizing that agent, the expected utility of &lt;math&gt;L_2&lt;/math&gt; is greater than the expected utility of &lt;math&gt;L_1&lt;/math&gt;:
+:&lt;math&gt;L_1\preceq L_2 \text{ iff } u(L_1)\leq u(L_2)&lt;/math&gt;.
+
+Of all the axioms, independence is the most often discarded. A variety of [[generalized expected utility]] theories have arisen, most of which drop or relax the independence axiom.
+
+===As probability of success===
+Castagnoli and LiCalzi (1996) and Bordley and LiCalzi (2000) provided another interpretation for Von Neumann and Morgenstern's theory.  Specifically for any utility function, there exists a hypothetical reference lottery with the expected utility of an arbitrary lottery being its probability of performing no worse than the reference lottery. Suppose success is defined as getting an outcome no worse than the outcome of the reference lottery.  Then this mathematical equivalence means that maximizing expected utility is equivalent to maximizing the probability of success. In many contexts, this makes the concept of utility easier to justify and to apply. For example, a firm's utility might be the probability of meeting uncertain future customer expectations.&lt;ref&gt;{{cite journal |last=Castagnoli |first=E. |first2=M. |last2=LiCalzi |title=Expected Utility Without Utility |journal=Theory and Decision |volume=41 |issue=3 |pages=281–301 |year=1996 |doi=10.1007/BF00136129 |url=https://iris.unive.it/bitstream/10278/4143/1/LiCalzi-96-ExpectedUtilityWithoutUtility.pdf |hdl=10278/4143 }}&lt;/ref&gt;&lt;ref&gt;{{cite journal |last=Bordley |first=R. |first2=M. |last2=LiCalzi |title=Decision Analysis Using Targets Instead of Utility Functions |journal=Decisions in Economics and Finance |year=2000 |volume=23 |issue=1 |pages=53–74 |doi=10.1007/s102030050005 |hdl=10278/3610 |hdl-access=free }}&lt;/ref&gt;&lt;ref&gt;{{cite journal |last=Bordley |first=R. |first2=C. |last2=Kirkwood |title=Multiattribute preference analysis with Performance Targets |journal=Operations Research |year=2004 |volume=52 |issue=6 |pages=823–835 |doi=10.1287/opre.1030.0093 }}&lt;/ref&gt;&lt;ref&gt;{{cite journal |last=Bordley |first=R. |first2=S. |last2=Pollock |title=A Decision-Analytic Approach to Reliability-Based Design Optimization |journal=Operations Research |volume=57 |issue=5 |pages= 1262–1270|year=2009 |doi=10.1287/opre.1080.0661 |url=https://semanticscholar.org/paper/594eb3a0185f468c93d8da60c695b0fb7aa81d3f }}&lt;/ref&gt;
+
+==Indirect utility==
+{{Main|Indirect utility}}
+
+An indirect utility function gives the [[Value function|optimal attainable value]] of a given utility function, which depends on the prices of the goods and the income or wealth level that the individual possesses.
+
+===Money===
+
+One use of the indirect utility concept is the notion of the utility of money.  The (indirect) utility function for money is a nonlinear function that is [[bounded function|bounded]] and asymmetric about the origin. The utility function is [[concave function|concave]] in the positive region, reflecting the phenomenon of [[diminishing marginal utility]].  The boundedness reflects the fact that beyond a certain point money ceases being useful at all, as the size of any economy at any point in time is itself bounded.  The asymmetry about the origin reflects the fact that gaining and losing money can have radically different implications both for individuals and businesses.  The non-linearity of the utility function for money has profound implications in decision making processes: in situations where outcomes of choices influence utility through gains or losses of money, which are the norm in most business settings, the optimal choice for a given decision depends on the possible outcomes of all other decisions in the same time-period.&lt;ref&gt;{{cite book |first=J. O. |last=Berger |title=Statistical Decision Theory and Bayesian Analysis |location=Berlin |publisher=Springer-Verlag |edition=2nd |year=1985 |chapter=Utility and Loss |isbn=3-540-96098-8 }}&lt;/ref&gt;
+
+==Discussion and criticism==
+Cambridge economist [[Joan Robinson]] famously criticized utility for being a circular concept: &quot;Utility is the quality in [[commodities]] that makes individuals want to buy them, and the fact that individuals want to buy commodities shows that they have utility.&quot;&lt;ref&gt;{{cite book |first=Joan |last=Robinson |year=1962 |title=Economic Philosophy |location=Harmondsworth, Middle-sex, UK |publisher=Penguin Books }}&lt;/ref&gt;{{rp|48}} Robinson also pointed out that because the theory assumes that preferences are fixed this means that utility is not a [[testability|testable]] assumption. This is so because if we take changes in peoples' behavior in relation to a change in prices or a change in the underlying budget constraint we can never be sure to what extent the change in behavior was due to the change in price or budget constraint and how much was due to a change in preferences.&lt;ref&gt;{{cite web |last=Pilkington |first=Philip |title=Joan Robinson's Critique of Marginal Utility Theory |work=Fixing the Economists |date=17 February 2014 |url=https://fixingtheeconomists.wordpress.com/2014/02/17/joan-robinsons-critique-of-marginal-utility-theory/ |url-status=live |archiveurl=https://web.archive.org/web/20150713112846/https://fixingtheeconomists.wordpress.com/2014/02/17/joan-robinsons-critique-of-marginal-utility-theory/ |archivedate=13 July 2015 |df=dmy-all }}&lt;/ref&gt; This criticism is similar to that of the philosopher [[Hans Albert]] who argued that the ''[[ceteris paribus]]'' conditions on which the [[marginalist]] theory of demand rested rendered the theory itself an empty [[tautology (language)|tautology]] and completely closed to experimental testing.&lt;ref&gt;{{cite web |last=Pilkington |first=Philip |title=utility Hans Albert Expands Robinson's Critique of Marginal Utility Theory to the Law of Demand |work=Fixing the Economists |date=27 February 2014 |url=https://fixingtheeconomists.wordpress.com/2014/02/27/hans-albert-expands-robinsons-critique-of-marginal-utility-theory-to-the-law-of-demand/ |url-status=live |archiveurl=https://web.archive.org/web/20150719164628/https://fixingtheeconomists.wordpress.com/2014/02/27/hans-albert-expands-robinsons-critique-of-marginal-utility-theory-to-the-law-of-demand/ |archivedate=19 July 2015 |df=dmy-all }}&lt;/ref&gt; In essence, demand and supply curve (theoretical line of quantity of a product which would have been offered or requested for given price) is purely [[ontological]] and could never have been demonstrated [[empirically]].
+
+Another criticism comes from the assertion that neither [[cardinal utility|cardinal]] nor [[ordinal utility|ordinal]] utility are empirically observable in the real world. In the case of cardinal utility it is impossible to measure the level of satisfaction &quot;quantitatively&quot; when someone consumes or purchases an apple. In case of ordinal utility, it is impossible to determine what choices were made when someone purchases, for example, an orange. Any act would involve preference over a vast [[set (mathematics)|set]] of choices (such as apple, orange juice, other vegetable, vitamin C tablets, exercise, not purchasing, etc.).&lt;ref&gt;{{cite web |url=http://www.societies.cam.ac.uk/cujif/ABSTRACT/980606.htm |title=Revealed Preference Theory |accessdate=2009-12-11 |url-status=dead |archiveurl=https://web.archive.org/web/20110716090409/http://www.societies.cam.ac.uk/cujif/ABSTRACT/980606.htm |archivedate=16 July 2011 |df=dmy-all }}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://elsa.berkeley.edu/~botond/mistakeschicago.pdf |title=Archived copy |accessdate=2008-08-09 |url-status=dead |archiveurl=https://web.archive.org/web/20081015203300/http://elsa.berkeley.edu/~botond/mistakeschicago.pdf |archivedate=15 October 2008 |df=dmy-all }}&lt;/ref&gt;
+
+Other questions of what arguments ought to enter into a utility function are difficult to answer, yet seem necessary to understanding utility. Whether people gain utility from coherence of [[wants]], [[beliefs]] or a sense of [[duty]] is key to understanding their behavior in the utility [[organon]].&lt;ref&gt;{{cite journal|last1=Klein|first1=Daniel|title=Professor|journal=Econ Journal Watch|date=May 2014|volume=11|issue=2|pages=97–105|url=http://econjwatch.org/file_download/826/CompleteIssueMay2014.pdf|accessdate=November 15, 2014|url-status=live|archiveurl=https://web.archive.org/web/20141005153234/http://econjwatch.org/file_download/826/CompleteIssueMay2014.pdf|archivedate=5 October 2014|df=dmy-all}}&lt;/ref&gt; Likewise, choosing between alternatives is itself a process of determining what to consider as alternatives, a question of choice within uncertainty.&lt;ref&gt;{{cite book|last1=Burke|first1=Kenneth|title=Towards a Better Life|date=1932|publisher=University of California Press|location=Berkeley, Calif}}&lt;/ref&gt;
+
+An [[evolutionary psychology]] perspective is that utility may be better viewed as due to preferences that maximized evolutionary [[Fitness (biology)|fitness]] in the ancestral environment but not necessarily in the current one.&lt;ref name=AEP&gt;{{cite book |last1=Capra |first1=C. Monica |last2=Rubin |first2=Paul H. |title=Applied Evolutionary Psychology |date=2011 |publisher=Oxford University Press |isbn=9780191731358 |chapter=The Evolutionary Psychology of Economics|doi=10.1093/acprof:oso/9780199586073.003.0002}}&lt;/ref&gt;
+
+==See also==
+{{Portal|Business and Economics}}
+* [[Law of demand]]
+* [[Marginal utility]]
+* [[Utility maximization problem]]
+* [[Decision-making software]]
+
+==References==
+{{Reflist|30em}}
+
+==Further reading==
+* {{cite book |last=Anand |first=Paul |title=Foundations of Rational Choice Under Risk |location=Oxford |publisher=Oxford University Press |year=1993 |isbn=0-19-823303-5 |url-access=registration |url=https://archive.org/details/foundationsofrat00anan }}
+* {{cite book |authorlink=Peter C. Fishburn |last=Fishburn |first=Peter C. |title=Utility Theory for Decision Making |location=Huntington, NY |publisher=Robert E. Krieger |year=1970 |isbn=0-88275-736-9 }}
+* {{cite journal|last=Georgescu-Roegen|first=Nicholas|title=The Pure Theory of Consumer's Behavior|journal=Quarterly Journal of Economics|date=Aug 1936|volume=50|issue=4|pages=545–593|jstor=1891094|doi=10.2307/1891094}}
+* {{cite book |authorlink=Itzhak Gilboa|last=Gilboa |first=Itzhak |title=Theory of Decision under Uncertainty |location=Cambridge |publisher=Cambridge University Press |year=2009 |isbn=978-0-521-74123-1 }}
+* {{cite book |authorlink=David M. Kreps |last=Kreps |first=David M. |title=Notes on the Theory of Choice |location=Boulder, CO |publisher=West-view Press |year=1988 |isbn=0-8133-7553-3 }}
+* {{cite journal |authorlink=John Forbes Nash, Jr. |last=Nash |first=John F. |title=The Bargaining Problem |journal=[[Econometrica]] |volume=18 |issue=2 |pages=155–162 |jstor=1907266 |year=1950 |doi=10.2307/1907266}}
+* {{cite book |authorlink=John von Neumann |last=Neumann |first=John von |authorlink2=Oskar Morgenstern |last2=Morgenstern |first2=Oskar |name-list-style=amp |title=Theory of Games and Economic Behavior |url=https://archive.org/details/in.ernet.dli.2015.215284 |location=Princeton, NJ |publisher=Princeton University Press |year=1944 }}
+* {{cite book |last=Nicholson |first=Walter |title=Micro-economic Theory |location=Hinsdale |publisher=Dryden Press |year=1978 |edition=Second |isbn=0-03-020831-9 |pages=53–87 }}
+* {{cite book |last=Plous |first=S. |title=The Psychology of Judgement and Decision Making |location=New York |publisher=McGraw-Hill |year=1993 |isbn=0-07-050477-6 }}
+
+==External links==
+{{commonscat|Utility (decision theory)}}
+*[http://www.investopedia.com/terms/u/utility.asp#axzz1eGQlDNsr Definition of Utility by Investopedia]
+*[http://www2.hawaii.edu/~fuleky/anatomy/anatomy.html Anatomy of Cobb-Douglas Type Utility Functions in 3D]
+*[http://www2.hawaii.edu/~fuleky/anatomy/anatomy2.html Anatomy of CES Type Utility Functions in 3D]
+*[http://www.investopedia.com/university/economics/economics5.asp Simpler Definition with example from Investopedia]
+*[http://philpapers.org/rec/BRAMOO-2 Maximization of Originality - redefinition of classic utility]
+*[http://smallbusiness.chron.com/four-types-utility-marketing-24420.html Utility Model of [[Marketing]]] - [http://www.businessdictionary.com/definition/form-utility.html Form], [http://www.businessdictionary.com/definition/place-utility.html Place], [http://www.businessdictionary.com/definition/time-utility.html Time], [http://www.allbusiness.com/glossaries/possession-utility/4957292-1.html Possession] and perhaps also [http://www.witiger.com/marketing/5utilities.htm Task]
+
+{{Commodity}}
+{{microeconomics}}
+{{Economics}}
+
+[[Category:Utility| ]]
+[[Category:Choice modelling]]
+[[Category:Ethical principles]]</text>
+      <sha1>t2ds5vl7tk1tmtvz9ib0be8tsdgzy2f</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Soylent Green</title>
+    <ns>0</ns>
+    <id>45481</id>
+    <revision>
+      <id>991583714</id>
+      <parentid>979418395</parentid>
+      <timestamp>2020-11-30T20:37:00Z</timestamp>
+      <contributor>
+        <username>Ender's Shadow Snr</username>
+        <id>8438638</id>
+      </contributor>
+      <comment>/* Awards and honors */ Direct to list of Hugo and Nebula Dramatic Presentations winners and nominees rather than just to generic awards. Correct Nebula to refer to script</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="17973" xml:space="preserve">{{for|for the American extreme metal band|Soilent Green}}
+{{short description|1973 dystopian science fiction movie}}
+{{Use mdy dates|date=August 2019}}
+
+{{Infobox film
+| name           = Soylent Green
+| image          = Soylent green.jpg
+| caption        = Theatrical release poster by John Solie
+| director       = [[Richard Fleischer]]
+| producer       = [[Walter Seltzer]]&lt;br /&gt;[[Russell Thacher]]
+| based_on       = {{based on|''[[Make Room! Make Room!]]''|[[Harry Harrison (writer)|Harry Harrison]]}}
+| screenplay     = [[Stanley R. Greenberg]]
+| starring       = [[Charlton Heston]]&lt;br /&gt;[[Leigh Taylor-Young]]&lt;br /&gt;[[Edward G. Robinson]]
+| music          = [[Fred Myrow]]
+| cinematography = [[Richard H. Kline]]
+| editing        = [[Samuel E. Beetley]]
+| distributor    = [[Metro-Goldwyn-Mayer]]
+| released       = {{Film date|1973|4|19|''US''}}
+| runtime        = 97 minutes
+| country        = United States
+| language       = English
+| budget         = 
+| gross          = $3.6 million &lt;small&gt;(rentals)&lt;/small&gt;&lt;ref&gt;&quot;Big Rental Films of 1973&quot;, ''[[Variety (magazine)|Variety]]'', January 9, 1974 p 19&lt;/ref&gt;
+}}
+
+'''''Soylent Green''''' is a 1973 American ecological [[dystopian]] [[thriller film]] directed by [[Richard Fleischer]] and starring [[Charlton Heston]] and [[Leigh Taylor-Young]]. [[Edward G. Robinson]] appears in his final film. Loosely based on the 1966 science fiction novel ''[[Make Room! Make Room!]]'' by [[Harry Harrison (writer)|Harry Harrison]], it combines both [[police procedural]] and science fiction genres: the investigation into the murder of a wealthy businessman; and a [[dystopia]]n future of dying oceans and year-round [[humidity]] due to the [[greenhouse effect]], resulting in suffering from [[pollution]], [[poverty]], [[Human overpopulation|overpopulation]], [[euthanasia]] and [[resource depletion|depleted resources]].&lt;ref name=&quot;Shirley 2007&quot;&gt;{{cite web | last=Shirley | first=John | title=Locus Online: John Shirley on Soylent Green | website=Locus Online | date=September 23, 2007 | url=http://www.locusmag.com/2007/Shirley_SoylentGreen.html | accessdate=November 17, 2016}}&lt;/ref&gt;
+
+In 1973, it won the [[Nebula Award]] for Best Dramatic Presentation and the [[Saturn Award for Best Science Fiction Film]].
+
+==Plot==
+In the year 2022, the cumulative effects of [[Human overpopulation|overpopulation]], [[pollution]] and some apparent climate catastrophe have caused severe worldwide shortages of food, [[Water scarcity|water]] and housing. There are 40 million people in [[New York City]] alone, where only the city's elite can afford spacious apartments, clean water and natural food, and even then at horrendously high prices. The homes of the elite usually include [[concubinage|concubine]]s who are referred to as &quot;furniture&quot; and serve the tenants as slaves.
+
+Within the city lives [[New York City Police Department|NYPD]] detective Frank Thorn and his aged friend Sol Roth, a highly intelligent analyst, referred to as a &quot;Book&quot;. Roth remembers the world when it had animals and real food, and possesses a small library of reference materials to assist Thorn. Thorn is tasked with investigating the murder of the wealthy and influential William R. Simonson, and quickly learns that Simonson had been assassinated and was a board member of Soylent Industries.
+
+Soylent Industries, which derives its name from a combination of &quot;[[soy]]&quot; and &quot;[[lentil]]&quot;, controls the food supply of half of the world and sells the artificially produced wafers, including &quot;Soylent Red&quot; and &quot;Soylent Yellow&quot;. Their latest product is the far more flavorful and nutritious &quot;Soylent Green&quot;, advertised as being made from ocean [[plankton]], but is in short supply. As a result of the weekly supply bottlenecks, the hungry masses regularly riot, and they are brutally removed from the streets by means of police vehicles that scoop the rioters with large shovels and dump them within the vehicle's container.
+
+With the help of &quot;furniture&quot; Shirl, with whom Thorn begins a relationship, his investigation leads to a priest that Simonson had visited and confessed to shortly before his death. The priest is only able to hint at a gruesome truth before he himself is murdered. By order of the governor, Thorn is instructed to end the investigation, but he presses on. He is attacked during a riot, by the same assassin who killed Simonson, but the killer is crushed by a police vehicle.
+
+Roth brings two volumes of oceanographic reports Thorn had procured from Simonson's apartment to the team of Books at the Supreme Exchange. The books confirm that the oceans no longer produce plankton, and deduce that Soylent Green is produced from some inconceivable supply of [[protein]]. They also deduce that Simonson's murder was ordered by his fellow Soylent Industries board members, knowing he was increasingly troubled by the truth. 
+
+Roth is so disgusted with his life in a degraded world that he decides to &quot;return to the home of God&quot; and seeks [[assisted suicide]] at a government clinic. Thorn finds a message left by Roth and rushes to stop him, but arrives too late. Roth and Thorn are mesmerized by the [[euthanasia]] process's visual and musical [[Montage (filmmaking)|montage]]—long-gone forests, wild animals, rivers and ocean life. Before dying, Roth whispers what he has learned to Thorn, begging him to find proof, so that the Council of Nations can take action.
+
+Thorn boards a truck transporting bodies from the euthanasia center to a recycling plant, where the secret is revealed{{snd}}human corpses are being converted into Soylent Green. Thorn is spotted and kills his attackers, but is himself wounded. As Thorn is tended to by paramedics, he urges his police chief to spread the truth he has discovered and initiate proceedings against the company. While being taken away, Thorn shouts out to the surrounding crowd, &quot;Soylent Green is people!&quot;
+
+==Cast==
+* [[Charlton Heston]] as Thorn
+* [[Leigh Taylor-Young]] as Shirl
+* [[Chuck Connors]] as Tab
+* [[Joseph Cotten]] as Simonson
+* [[Brock Peters]] as Hatcher
+* [[Paula Kelly (actress)|Paula Kelly]] as Martha
+* [[Edward G. Robinson]] as Sol Roth
+* [[Stephen Young (actor)|Stephen Young]] as Gilbert
+* [[Mike Henry (football)|Mike Henry]] as Kulozik
+* [[Lincoln Kilpatrick]] as The Priest
+* [[Roy Jenson]] as Donovan
+* [[Leonard Stone]] as Charles
+* [[Whit Bissell]] as Santini
+* [[Celia Lovsky]] as the Exchange Leader
+* [[Dick Van Patten]] as Usher #1
+
+==Production==
+The screenplay was based on [[Harry Harrison (writer)|Harry Harrison's]] novel ''[[Make Room! Make Room!]]'' (1966), which is set in the year 1999 with the theme of overpopulation and overuse of resources leading to increasing poverty, food shortages, and social disorder.  Harrison was contractually denied control over the screenplay and was not told during negotiations that  [[Metro-Goldwyn-Mayer]] was buying the film rights.&lt;ref name=&quot;tcm&quot;/&gt;  He discussed the adaptation in ''Omni's Screen Flights/Screen Fantasies'' (1984),&lt;ref name=&quot;tcm&quot;&gt;{{cite web| title= Soylent Green (1973) | url= http://www.tcm.com/tcmdb/title/2061/Soylent-Green/articles.html | publisher= [[Turner Classic Movies]]| author= Jeff Stafford| accessdate= June 12, 2011}}&lt;/ref&gt;&lt;ref&gt;{{cite book|title=Omni's Screen Flights/Screen Fantasies|date=1984|isbn=0-385-19202-9|editor=[[Danny Peary]]|url=https://archive.org/details/omnisscreenfligh00pear}}&lt;/ref&gt; noting, the &quot;murder and chase sequences [and] the 'furniture' girls are not what the film is about — and are completely irrelevant&quot;, and answered his own question, &quot;Am I pleased with the film? I would say fifty percent&quot;.&lt;ref name=&quot;tcm&quot;/&gt;
+
+While the book refers to &quot;soylent steaks&quot;, it makes no reference to &quot;Soylent Green&quot;, the processed food rations depicted in the film. The book's title was not used for the movie on grounds that it might have confused audiences into thinking it a big-screen version of ''[[Make Room for Daddy]]''.&lt;ref&gt;{{cite web|author= Harry Harrison| url=http://www.iol.ie/~carrollm/hh/soycann.htm |title=A Cannibalised Novel Becomes ''Soylent Green'' |publisher=[[Ireland On-Line]] |work=Omni's Screen Flights/Screen Fantasies| year= 1984 |accessdate=September 7, 2009}}&lt;/ref&gt;
+
+This was the 101st and last movie in which [[Edward G. Robinson]] appeared; he died of [[bladder cancer]] twelve days after the completion of filming, on January 26, 1973. Robinson had previously worked with Heston in ''[[The Ten Commandments (1956 film)|The Ten Commandments]]'' (1956) and the make-up tests for ''[[Planet of the Apes (1968 film)|Planet of the Apes]]'' (1968). In his book ''The Actor's Life: Journal 1956-1976'', Heston wrote &quot;He knew while we were shooting, though we did not, that he was terminally ill. He never missed an hour of work, nor was late to a call. He never was less than the consummate professional he had been all his life. I'm still haunted, though, by the knowledge that the very last scene he played in the picture, which he knew was the last day's acting he would ever do, was his death scene. I know why I was so overwhelmingly moved playing it with him.&quot;&lt;ref&gt;{{cite book|title=The Actor's Life: Journal 1956-1976|page=395|author=[[Charlton Heston]]|editor=[[Hollis Alpert]]|publisher=E.P. Dutton|year=1978|isbn=0525050302}}&lt;/ref&gt;

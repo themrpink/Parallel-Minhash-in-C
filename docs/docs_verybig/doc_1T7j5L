@@ -1,0 +1,296 @@
+The Apple [[iOS]] operating system used on the iPhone, iPad and iPod Touch uses [[VoiceOver]] speech synthesis for accessibility.&lt;ref name=&quot;configure&quot;&gt;{{cite web|title=iPhone: Configuring accessibility features (Including VoiceOver and Zoom)|url=http://support.apple.com/kb/ht3577|url-status=dead|archive-url=https://web.archive.org/web/20090624092136/http://support.apple.com/kb/ht3577|archive-date=June 24, 2009|access-date=2011-01-29|publisher=Apple}}&lt;/ref&gt; Some third party applications also provide speech synthesis to facilitate navigating, reading web pages or translating text.
+
+=== Amazon ===
+Used in [[Amazon Alexa|Alexa]] and as [[Software as a service|Software as a Service]] in AWS&lt;ref&gt;{{Cite web|url=https://aws.amazon.com/polly/|title=Amazon Polly|website=Amazon Web Services, Inc.|language=en-US|access-date=2020-04-28}}&lt;/ref&gt; (from 2017).
+
+=== AmigaOS ===
+[[File:Amiga speech synthesis.flac|thumb|Example of speech synthesis with the included Say utility in Workbench 1.3]]
+[[File:SoftVoice.svg|right|upright]]
+The second operating system to feature advanced speech synthesis capabilities was [[AmigaOS]], introduced in 1985. The voice synthesis was licensed by [[Commodore International]] from SoftVoice, Inc., who also developed the original MacinTalk text-to-speech system. It featured a complete system of voice emulation for American English, with both male and female voices and &quot;stress&quot; indicator markers, made possible through the [[Amiga]]'s audio [[chipset]].&lt;ref&gt;{{Cite book |author=Miner, Jay |year=1991 |title=Amiga Hardware Reference Manual |edition=3rd |publisher=[[Addison-Wesley]] Publishing Company, Inc. |isbn=978-0-201-56776-2|display-authors=etal|author-link=Jay Miner }}&lt;/ref&gt; The synthesis system was divided into a translator library which converted unrestricted English text into a standard set of phonetic codes and a narrator device which implemented a formant model of speech generation.. AmigaOS also featured a high-level &quot;[[AmigaOS#Speech synthesis|Speak Handler]]&quot;, which allowed command-line users to redirect text output to speech. Speech synthesis was occasionally used in third-party programs, particularly word processors and educational software. The synthesis software remained largely unchanged from the first AmigaOS release and Commodore eventually removed speech synthesis support from AmigaOS 2.1 onward.
+
+Despite the American English phoneme limitation, an unofficial version with multilingual speech synthesis was developed. This made use of an enhanced version of the translator library which could translate a number of languages, given a set of rules for each language.&lt;ref&gt;{{cite web|url=http://uk.aminet.net/util/libs/translator42.readme |title=Translator Library (Multilingual-speech version) |last1=Devitt |first1=Francesco |date=30 June 1995 |access-date=9 April 2013 |url-status=dead |archive-url=https://web.archive.org/web/20120226143859/https://uk.aminet.net/util/libs/translator42.readme |archive-date=26 February 2012 }}&lt;/ref&gt;
+
+=== Microsoft Windows ===
+{{See also|Microsoft Agent}}
+
+Modern [[Microsoft Windows|Windows]] desktop systems can use [[Speech Application Programming Interface#SAPI 1-4 API family|SAPI 4]] and [[Speech Application Programming Interface#SAPI 5 API family|SAPI 5]] components to support speech synthesis and [[speech recognition]]. SAPI 4.0 was available as an optional add-on for [[Windows 95]] and [[Windows 98]]. [[Windows 2000]] added [[Microsoft Narrator|Narrator]], a text-to-speech utility for people who have visual impairment. Third-party programs such as JAWS for Windows, Window-Eyes, Non-visual Desktop Access, Supernova and System Access can perform various text-to-speech tasks such as reading text aloud from a specified website, email account, text document, the Windows clipboard, the user's keyboard typing, etc. Not all programs can use speech synthesis directly.&lt;ref name=&quot;Narrator&quot;&gt;{{cite web|date=2011-01-29|title=Accessibility Tutorials for Windows XP: Using Narrator|url=http://www.microsoft.com/enable/training/windowsxp/usingnarrator.aspx|url-status=dead|archive-url=https://web.archive.org/web/20030621002716/http://www.microsoft.com/enable/training/windowsxp/usingnarrator.aspx|archive-date=June 21, 2003|access-date=2011-01-29|publisher=Microsoft}}&lt;/ref&gt; Some programs can use plug-ins, extensions or add-ons to read text aloud. Third-party programs are available that can read text from the system clipboard.
+
+[[Microsoft Speech Server]] is a server-based package for voice synthesis and recognition. It is designed for network use with [[web applications]] and [[call centers]].
+
+=== Texas Instruments TI-99/4A ===
+
+{{main article|Texas Instruments LPC Speech Chips}}
+[[File:Texas Instruments TI-99 4A speech demo.flac|thumb|TI-99/4A speech demo using the built-in vocabulary]]
+In the early 1980s, TI was known as a pioneer in speech synthesis, and a highly popular plug-in speech synthesizer module was available for the TI-99/4 and 4A. Speech synthesizers were offered free with the purchase of a number of cartridges and were used by many TI-written video games (notable titles offered with speech during this promotion were [[Alpiner (video game)|Alpiner]] and [[Parsec (video game)|Parsec]]). The synthesizer uses a variant of linear predictive coding and has a small in-built vocabulary. The original intent was to release small cartridges that plugged directly into the synthesizer unit, which would increase the device's built-in vocabulary. However, the success of software text-to-speech in the Terminal Emulator II cartridge canceled that plan.
+
+==Text-to-speech systems==
+'''Text-to-Speech''' ('''TTS''') refers to the ability of computers to read text aloud. A '''TTS Engine''' converts written text to a phonemic representation, then converts the phonemic representation to waveforms that can be output as sound. TTS engines with different languages, dialects and specialized vocabularies are available through third-party publishers.&lt;ref name=&quot;microsoft.com&quot;&gt;{{cite web|url=http://support.microsoft.com/kb/306902 |title=How to configure and use Text-to-Speech in Windows XP and in Windows Vista |publisher=Microsoft  |date=2007-05-07 |access-date=2010-02-17}}&lt;/ref&gt;
+
+=== Android ===
+
+Version 1.6 of [[Android (operating system)|Android]] added support for speech synthesis (TTS).&lt;ref&gt;{{cite web |author = Jean-Michel Trivi |date=2009-09-23 |url=http://android-developers.blogspot.com/2009/09/introduction-to-text-to-speech-in.html |title=An introduction to Text-To-Speech in Android |publisher=Android-developers.blogspot.com |access-date=2010-02-17}}&lt;/ref&gt;
+
+=== Internet ===
+Currently, there are a number of [[application software|applications]], [[Plug-in (computing)|plugins]] and [[gadget]]s that can read messages directly from an [[e-mail client]] and web pages from a [[web browser]] or [[Google Toolbar]]. Some specialized [[software]] can narrate [[RSS|RSS-feeds]]. On one hand, online RSS-narrators simplify information delivery by allowing users to listen to their favourite news sources and to convert them to [[podcast]]s. On the other hand, on-line RSS-readers are available on almost any [[Personal computer|PC]] connected to the Internet. Users can download generated audio files to portable devices, e.g. with a help of [[podcast]] receiver, and listen to them while walking, jogging or commuting to work.
+
+A growing field in Internet based TTS is web-based [[assistive technology]], e.g. 'Browsealoud' from a UK company and [[Readspeaker]]. It can deliver TTS functionality to anyone (for reasons of accessibility, convenience, entertainment or information) with access to a web browser. The [[non-profit]] project [[Wikipedia:WikiProject Spoken Wikipedia/Pediaphon|Pediaphon]] was created in 2006 to provide a similar web-based TTS interface to the [[Wikipedia]].&lt;ref&gt;Andreas Bischoff, [http://www.dr-bischoff.de/research/pdf/bischoff_pediaphon_uwsi2007_final.pdf The Pediaphon – Speech Interface to the free Wikipedia Encyclopedia for Mobile Phones], PDA's and MP3-Players, Proceedings of the 18th International Conference on Database and Expert Systems Applications,  Pages: 575–579 {{ISBN|0-7695-2932-1}}, 2007&lt;/ref&gt;
+
+Other work is being done in the context of the [[W3C]]  through the [http://www.w3.org/2010/04/audio/audio-incubator-charter.html W3C Audio Incubator Group] with the involvement of The BBC and Google Inc.
+
+===Open source===
+Some [[open-source software]] systems are available, such as:
+* [[Festival Speech Synthesis System]] which uses diphone-based synthesis, as well as more modern and better-sounding techniques.
+* [[eSpeak]] which supports a broad range of languages.
+* [[gnuspeech]] which uses articulatory synthesis&lt;ref&gt;{{cite web|url=https://www.gnu.org/software/gnuspeech/ |title=gnuspeech |publisher=Gnu.org |access-date=2010-02-17}}&lt;/ref&gt; from the [[Free Software Foundation]].
+
+=== Others ===
+* Following the commercial failure of the hardware-based Intellivoice, gaming developers sparingly used software synthesis in later games{{Citation needed|date=April 2020}}. Earlier systems from Atari, such as the [[Atari 5200]] (Baseball) and the [[Atari 2600]] ([[Quadrun]] and Open Sesame), also had games utilizing software synthesis.{{Citation needed|date=April 2020}}
+* Some [[e-book readers]], such as the [[Amazon Kindle]], [[Samsung]] E6, [[PocketBook eReader]] Pro, [[enTourage eDGe]], and the Bebook Neo.
+* The [[BBC Micro]] incorporated the Texas Instruments TMS5220 speech synthesis chip,
+* Some models of Texas Instruments home computers produced in 1979 and 1981 ([[TI-99/4A|Texas Instruments TI-99/4 and TI-99/4A]]) were capable of text-to-phoneme synthesis or reciting complete words and phrases (text-to-dictionary), using a very popular Speech Synthesizer peripheral. TI used a proprietary [[codec]] to embed complete spoken phrases into applications, primarily video games.&lt;ref&gt;{{cite web |url=http://www.mindspring.com/~ssshp/ssshp_cd/ss_home.htm |title=Smithsonian Speech Synthesis History Project (SSSHP) 1986–2002 |publisher=Mindspring.com |access-date=2010-02-17 |archive-url=https://web.archive.org/web/20131003104852/http://amhistory.si.edu/archives/speechsynthesis/ss_home.htm |archive-date=2013-10-03 |url-status=dead }}&lt;/ref&gt;
+* [[IBM]]'s [[OS/2 Warp|OS/2 Warp 4]] included VoiceType, a precursor to [[IBM ViaVoice]].
+* [[Global Positioning System|GPS]] Navigation units produced by [[Garmin]], [[Magellan Navigation|Magellan]], [[TomTom]] and others use speech synthesis for automobile navigation.
+* [[Yamaha]] produced a music synthesizer in 1999, the [[Yamaha FS1R]] which included a Formant synthesis capability. Sequences of up to 512 individual vowel and consonant formants could be stored and replayed, allowing short vocal phrases to be synthesized.
+
+=== Digital sound-alikes ===
+With the 2016 introduction of [[Adobe Voco]] audio editing and generating software prototype slated to be part of the [[Adobe Creative Suite]] and the similarly enabled [[DeepMind WaveNet]], a [[deep neural network]] based audio synthesis software from [[Google]] &lt;ref name=&quot;deepmind.com2016&quot;&gt;{{cite web
+ |url= https://deepmind.com/blog/wavenet-generative-model-raw-audio/
+ |title= WaveNet: A Generative Model for Raw Audio
+ |date= 2016-09-08
+ |website= Deepmind.com
+ |access-date= 2017-05-24
+ }}
+&lt;/ref&gt; speech synthesis is verging on being completely indistinguishable from a real human's voice.
+
+Adobe Voco takes approximately 20 minutes of the desired target's speech and after that it can generate sound-alike voice with even [[phonemes]] that were not present in the [[training material]]. The software poses ethical concerns as it allows to steal other peoples voices and manipulate them to say anything desired.&lt;ref name=&quot;BBC2016&quot;&gt;{{cite web
+ |url= https://www.bbc.com/news/technology-37899902
+ |title= Adobe Voco 'Photoshop-for-voice' causes concern
+ |date= 2016-11-07
+ |website= [[BBC.com]]
+ |publisher= [[BBC]]
+ |access-date= 2017-06-18
+ }}
+&lt;/ref&gt;
+
+At the 2018 [[Conference on Neural Information Processing Systems]] (NeurIPS) researchers from [[Google]] presented the work [http://papers.nips.cc/paper/7700-transfer-learning-from-speaker-verification-to-multispeaker-text-to-speech-synthesis 'Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synthesis'], which [[Transfer learning|transfers learning]] from [[speaker recognition|speaker verification]] to achieve text-to-speech synthesis, that can be made to sound almost like anybody from a speech sample of only 5 seconds [https://google.github.io/tacotron/publications/speaker_adaptation/ (listen)].&lt;ref name=&quot;GoogleLearningTransferToTTS2018&quot;&gt;
+
+{{Citation
+ | last1 = Jia
+ | first1 = Ye
+ | last2 = Zhang
+ | first2 = Yu
+ | last3 = Weiss
+ | first3 = Ron J.
+ | title = Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synthesis
+ | journal = [[Advances in Neural Information Processing Systems]]
+ | volume = 31
+ | pages = 4485–4495
+ | date = 2018-06-12
+ | language = en
+ | arxiv = 1806.04558
+ }}
+
+&lt;/ref&gt;
+
+Also researchers from [[Baidu Research]] presented an [[voice cloning]] [http://papers.nips.cc/paper/8206-neural-voice-cloning-with-a-few-samples system] with similar aims at the 2018 NeurIPS conference&lt;ref name=&quot;Baidu2018&quot;&gt;
+
+{{Citation
+ | last1 =  Arık
+ | first1 = Sercan Ö.
+ | last2 = Chen
+ | first2 = Jitong
+ | last3 = Peng
+ | first3 = Kainan
+ | last4 = Ping
+ | first4 = Wei
+ | last5 = Zhou
+ | first5 = Yanqi
+ | title = Neural Voice Cloning with a Few Samples
+ | journal = [[Advances in Neural Information Processing Systems]]
+ | volume = 31
+ | year =2018
+ | url = http://papers.nips.cc/paper/8206-neural-voice-cloning-with-a-few-samples
+ | arxiv = 1802.06006
+ }}
+
+&lt;/ref&gt;, though the result is rather unconvincing. [https://audiodemos.github.io/ (listen)]
+
+By 2019 the digital sound-alikes found their way to the hands of criminals as [[NortonLifeLock|Symantec]] researchers know of 3 cases where digital sound-alikes technology has been used for [[crime]].&lt;ref name=&quot;BBC2019&quot;&gt;
+{{cite web
+ |url= https://www.bbc.com/news/technology-48908736
+ |title= Fake voices 'help cyber-crooks steal cash'
+ |date= 2019-07-08
+ |website= [[bbc.com]]
+ |publisher= [[BBC]]
+ |access-date= 2019-09-11
+ }}
+&lt;/ref&gt;&lt;ref name=&quot;WaPo2019&quot;&gt;
+{{cite web
+ |url= https://www.washingtonpost.com/technology/2019/09/04/an-artificial-intelligence-first-voice-mimicking-software-reportedly-used-major-theft/
+ |title= An artificial-intelligence first: Voice-mimicking software reportedly used in a major theft
+ |last= Drew
+ |first= Harwell
+ |date= 2019-09-04
+ |website= [[washingtonpost.com]]
+ |publisher= [[Washington Post]]
+ |access-date= 2019-09-08
+ }}
+&lt;/ref&gt;
+
+This increases the stress on the [[disinformation]] situation coupled with the facts that 
+* [[Human image synthesis]] since the early [[2000s (decade)|2000s]] has improved beyond the point of human's inability to tell a real human imaged with a real camera from a simulation of a human imaged with a simulation of a camera.
+*  2D video forgery techniques were presented in 2016 that allow [[Real-time computing#Near real-time|near real-time]] [[forgery|counterfeiting]] of [[facial expressions]] in existing 2D video.&lt;ref name=&quot;Thi2016&quot;&gt;{{cite web
+  | last = Thies
+  | first = Justus
+  | title = Face2Face: Real-time Face Capture and Reenactment of RGB Videos
+  | publisher = Proc. Computer Vision and Pattern Recognition (CVPR), IEEE
+  | year = 2016
+  | url = http://www.graphics.stanford.edu/~niessner/thies2016face.html
+  | access-date =  2016-06-18}}
+&lt;/ref&gt;
+* In [[SIGGRAPH]] 2017 an audio driven digital look-alike of upper torso of Barack Obama was presented by researchers from [[University of Washington]]. [http://grail.cs.washington.edu/projects/AudioToObama/ (view)] It was driven only by a voice track as source data for the animation after the training phase to acquire [[lip sync]] and wider facial information from [[training material]] consisting of 2D videos with audio had been completed.&lt;ref name=&quot;Suw2017&quot;&gt;{{Citation
+ | last1 = Suwajanakorn | first1 = Supasorn 
+ | last2 = Seitz | first2 = Steven 
+ | last3 = Kemelmacher-Shlizerman | first3 = Ira 
+ | title = Synthesizing Obama: Learning Lip Sync from Audio
+ | publisher = [[University of Washington]]
+ | year = 2017 
+ | url = http://grail.cs.washington.edu/projects/AudioToObama/
+ | access-date = 2018-03-02 }}
+&lt;/ref&gt;
+In March 2020, a [[freeware]] [https://fifteen.ai web application] that generates high-quality voices from an assortment of fictional characters from a variety of media sources called '''15.ai''' was released.&lt;ref name=&quot;Batch042020&quot;&gt;
+{{cite web
+ |url= https://blog.deeplearning.ai/blog/the-batch-ai-against-coronavirus-datasets-voice-cloning-for-the-masses-finding-unexploded-bombs-seeing-see-through-objects-optimizing-training-parameters
+ |title= Voice Cloning for the Masses
+ |last= Ng
+ |first= Andrew
+ |date= 2020-04-01
+ |website= [[deeplearning.ai]]
+ |publisher= [[The Batch]]
+ |access-date= 2020-04-02
+ }}
+&lt;/ref&gt; Initial characters included [[GLaDOS]] from ''[[Portal (series)|Portal]]'', [[Twilight Sparkle]] and [[Fluttershy]] from the show ''[[My Little Pony: Friendship Is Magic]]'', and the [[Tenth Doctor]] from ''[[Doctor Who]]''. Subsequent updates included [[Wheatley (Portal)|Wheatley]] from ''[[Portal 2]]'', the Soldier from ''[[Team Fortress 2]]'', and the remaining main cast of ''My Little Pony: Friendship Is Magic''.&lt;ref name=&quot;15ai&quot;&gt;
+{{cite web
+ |url= https://fifteen.ai/
+ |title= 15.ai
+ |date= 2020-03-02
+ |website= [[fifteen.ai]]
+ |access-date= 2020-04-02
+ }}
+&lt;/ref&gt;&lt;ref name=&quot;EQD042020&quot;&gt;
+{{cite web
+ |url= https://www.equestriadaily.com/2020/04/pinkie-pie-added-to-15ai.html
+ |title= Pinkie Pie Added to 15.ai
+ |date= 2020-04-02
+ |website= equestriadaily.com
+ |publisher= [[Equestria Daily]]
+ |access-date= 2020-04-02
+ }}
+&lt;/ref&gt;
+
+== Speech synthesis markup languages ==
+
+A number of [[markup language]]s have been established for the rendition of text as speech in an [[XML]]-compliant format. The most recent is [[Speech Synthesis Markup Language]] (SSML), which became a [[W3C recommendation]] in 2004. Older speech synthesis markup languages include Java Speech Markup Language ([[JSML]]) and [[SABLE]]. Although each of these was proposed as a standard, none of them have been widely adopted.
+
+Speech synthesis markup languages are distinguished from dialogue markup languages. [[VoiceXML]], for example, includes tags related to speech recognition, dialogue management and touchtone dialing, in addition to text-to-speech markup.
+
+== Applications ==
+
+Speech synthesis has long been a vital [[assistive technology]] tool and its application in this area is significant and widespread. It allows environmental barriers to be removed for people with a wide range of disabilities. The longest application has been in the use of [[screen reader]]s for people with [[visual impairment]], but text-to-speech systems are now commonly used by people with [[dyslexia]] and other reading difficulties as well as by pre-literate children. They are also frequently employed to aid those with severe [[speech impairment]] usually through a dedicated [[voice output communication aid]].
+
+Speech synthesis techniques are also used in entertainment productions such as games and animations. In 2007, Animo Limited announced the development of a software application package based on its speech synthesis software FineSpeech, explicitly geared towards customers in the entertainment industries, able to generate narration and lines of dialogue according to user specifications.&lt;ref&gt;{{cite news|url=http://www.animenewsnetwork.com/news/2007-05-02/speech-synthesis-software |title=Speech Synthesis Software for Anime Announced |work=Anime News Network |date=2007-05-02 |access-date=2010-02-17}}&lt;/ref&gt; The application reached maturity in 2008, when NEC [[Biglobe]] announced a web service that allows users to create phrases from the voices of [[Code Geass: Lelouch of the Rebellion R2]] characters.&lt;ref&gt;{{cite web|url=http://www.animenewsnetwork.com/news/2008-09-09/code-geass-voice-synthesis-service-offered-in-japan |title=Code Geass Speech Synthesizer Service Offered in Japan |publisher=Animenewsnetwork.com |date=2008-09-09 |access-date=2010-02-17}}&lt;/ref&gt;
+
+In recent years, text-to-speech for disability and handicapped communication aids have become widely deployed in Mass Transit. Text-to-speech is also finding new applications outside the disability market. For example, speech synthesis, combined with [[speech recognition]], allows for interaction with mobile devices via [[natural language processing]] interfaces.
+
+Text-to-speech is also used in second language acquisition. Voki, for instance, is an educational tool created by Oddcast that allows users to create their own talking avatar, using different accents. They can be emailed, embedded on websites or shared on social media.
+
+In addition, speech synthesis is a valuable computational aid for the analysis and assessment of speech disorders. A [[voice quality]] synthesizer, developed by Jorge C. Lucero et al. at [[University of Brasília|University of Brasilia]], simulates the physics of [[phonation]] and includes models of vocal frequency jitter and tremor, airflow noise and laryngeal asymmetries.&lt;ref name=&quot;:0&quot; /&gt; The synthesizer has been used to mimic the [[timbre]] of [[dysphonic]] speakers with controlled levels of roughness, breathiness and strain.&lt;ref name=&quot;:1&quot; /&gt;
+
+[[File:Stephen Hawking.StarChild.jpg|thumb|[[Stephen Hawking]] was one of the most famous people using a speech computer to communicate]]
+
+== See also ==
+
+{{columns-list|colwidth=30em|
+* [[Chinese speech synthesis]]
+* [[Comparison of screen readers]]
+* [[Comparison of speech synthesizers]]
+* [[Euphonia (device)]]
+* [[Orca (assistive technology)]]
+* [[Paperless office]]
+* [[Speech processing]]
+* [[Speech-generating device]]
+* [[Silent speech interface]]
+* [[Text to speech in digital television]]
+
+}}
+
+== References ==
+{{reflist|30em}}
+
+== External links ==
+*{{dmoz|Computers/Speech_Technology/Speech_Synthesis/}}
+*[https://www.youtube.com/watch?v=CE6zy8aUwtQ Simulated singing with the singing robot Pavarobotti] or a description from the [[BBC]] on [https://www.youtube.com/watch?v=SNqNM6Ccck8 how the robot synthesized the singing].
+{{sound synthesis types}}
+{{Speech synthesis}}
+{{Natural Language Processing}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Speech Synthesis}}
+[[Category:Speech synthesis| ]]
+[[Category:Artificial intelligence applications]]
+[[Category:Assistive technology]]
+[[Category:Auditory displays]]
+[[Category:Computational linguistics]]
+[[Category:History of human–computer interaction]]</text>
+      <sha1>h2tn7dbzsurqgp83olgnk9oohse4fy9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>374</title>
+    <ns>0</ns>
+    <id>42800</id>
+    <revision>
+      <id>852845480</id>
+      <parentid>852845342</parentid>
+      <timestamp>2018-07-31T19:27:18Z</timestamp>
+      <contributor>
+        <ip>124.106.246.195</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4339" xml:space="preserve">{{Use mdy dates|date=February 2011}}
+{{Year dab|374}}
+{{Year nav|374}}
+{{M1 year in topic}}
+[[File:Francisco de Zurbarán 032.jpg|thumb|[[Ambrose|Ambrosius]] by [[Francisco de Zurbarán]]]]
+__NOTOC__
+Year '''374''' ('''[[Roman numerals|CCCLXXIV]]''') was a [[common year starting on Wednesday]] (link will display the full calendar) of the [[Julian calendar]]. At the time, it was known as the '''Year of the Consulship of Augustus and Equitius''' (or, less frequently, '''year 1127 ''[[Ab urbe condita]]'''''). The denomination 374 for this year has been used since the early medieval period, when the [[Anno Domini]] [[calendar era]] became the prevalent method in Europe for naming years.
+
+== Events ==
+&lt;onlyinclude&gt;
+=== By place ===
+==== Roman Empire ====
+* The [[Quadi]] cross the [[Danube]] and begin ravaging [[Pannonia]]. They avoid the fortified cities, and [[looting|plunder]] the unprotected countryside.&lt;ref name=&quot;Late Empire&quot;&gt;{{cite book|last=Cameron|first=Averil|last2=Garnsey|first2=Peter|title=The late Empire, A.D. 337–425|year=1998|publisher=Cambridge University Press|isbn=978-0-521-30200-5|page=85|url=https://books.google.com/books?id=zdoUNivK_hsC&amp;pg=PA85&amp;dq=Quadi+Danube+374&amp;hl=en&amp;sa=X&amp;ei=86wyT5f-FoOaiQfnh62FBQ&amp;ved=0CDUQuwUwAA#v=onepage&amp;q=Quadi%20Danube%20374&amp;f=false|edition=2nd}}&lt;/ref&gt;
+
+==== America ====
+* [[May 4]] &amp;ndash; [[Spearthrower Owl]] ascends to the throne and becomes ruler of [[Teotihuacan]] ([[Mexico]]).&lt;ref&gt;{{cite book|last=Martin|first=Simon|last2=Grube|first2=Nikolai|title=Chronicle of the Maya kings and queens: deciphering the dynasties of the ancient Maya|year=2008|publisher=Thames &amp; Hudson|isbn=978-0-500-28726-2|page=31|url=https://books.google.com/books?ei=2qcyT-zrEsqaiQf68rnuBA&amp;id=mSIcAQAAIAAJ&amp;dq=Spearthrower+Owl+4+May+374&amp;q=4+May+374#search_anchor|edition=2nd}}&lt;/ref&gt;
+
+=== By topic ===
+==== Religion ====
+* [[December 7]] &amp;ndash; The people of [[Milan]] astonish [[Ambrose|Ambrosius]], governor of [[Emilia (region of Italy)|Aemilia]]-[[Liguria]], by acclaiming him [[bishop]]. He is the second son of the former [[Praetorian prefecture of Gaul|praetorian prefect of Gaul]], and becomes a creative thinker whose ideas will provide the [[paradigm]] for [[Middle Ages|medieval]] church-state relations.&lt;ref&gt;{{cite book|last=Guiley|first=Rosemary|title=The encyclopedia of saints|year=2001|publisher=Infobase Publishing|isbn=978-0-8160-4134-3|page=14|url=https://books.google.com/books?id=ABkgU0GOBbcC&amp;pg=PA14&amp;dq=Ambrosius+Milan+7+December+374&amp;hl=en&amp;sa=X&amp;ei=9agyT6nxGM6giQfSu-3iBA&amp;ved=0CFYQuwUwBQ#v=onepage&amp;q=Ambrosius%20Milan%207%20December%20374&amp;f=false}}&lt;/ref&gt;
+&lt;/onlyinclude&gt;
+== Births ==
+* [[Fu Liang]], official of the [[Liu Song Dynasty]] (d. [[426]])&lt;ref&gt;{{cite book|last=Hyŏngnyŏn|first=Chŏng|last2=Buzo|first2=Adrian|last3=Prince|first3=Tony|title=Kyunyŏ-jŏn: the life, times and songs of a tenth century Korean monk|year=1993|publisher=Wild Peony|isbn=978-0-646-14772-7|page=52|url=https://books.google.com/books?ei=j6kyT_yBOumRiQfQ6uCNBQ&amp;id=cznYAAAAMAAJ&amp;dq=Fu+Liang+born+374&amp;q=%22Fu+Liang%22#search_anchor}}&lt;/ref&gt;
+* [[Gwanggaeto the Great]], king of [[Goguryeo]] (d. [[413]])&lt;ref&gt;{{cite book|last=McIlwraith|first=C. Wayne|last2=Rollin|first2=Bernard E.|title=Equine Welfare|year=2011|publisher=John Wiley &amp; Sons|isbn=978-1-4051-8763-3|page=47|url=https://books.google.com/books?id=bPMJKvJRYZ4C&amp;pg=PT51&amp;dq=Gwanggaeto+the+Great+374&amp;hl=en&amp;sa=X&amp;ei=fqoyT-CYGYihiAeep-SHBQ&amp;ved=0CDwQuwUwAg#v=onepage&amp;q=Gwanggaeto%20the%20Great%20374&amp;f=false}}&lt;/ref&gt;
+
+== Deaths ==
+* [[January 2]] &amp;ndash;  [[Gregory of Nazianzus the Elder|Gregory the Elder]], bishop of [[Nazianzus]] and saint (b. [[276]])&lt;ref&gt;{{cite book|last=Van Dam|first=Raymond|title=Families and friends in late Roman Cappadocia|year=2003|publisher=University of Pennsylvania Press|isbn=978-0-8122-3712-2|page=200|url=https://books.google.com/books?id=ctkgOjpJWSQC&amp;pg=PA200&amp;dq=Gregory+the+Elder+died+374&amp;hl=en&amp;sa=X&amp;ei=WKwyT9iEIeuNiAfU3PmRBQ&amp;ved=0CDYQuwUwAA#v=onepage&amp;q=Gregory%20the%20Elder%20died%20374&amp;f=false}}&lt;/ref&gt;
+* [[April 20]] &amp;ndash; [[Marcellinus of Gaul]], [[Roman Catholic]] bishop and saint
+* [[November 17]] &amp;ndash; [[Pap of Armenia]], [[King of Armenia]]
+
+=== Date Unknown ===
+* Gabinius, king of the [[Quadi]]&lt;ref name=&quot;Late Empire&quot;/&gt;
+
+== References ==
+{{Reflist}}

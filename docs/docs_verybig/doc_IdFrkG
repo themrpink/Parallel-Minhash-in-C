@@ -1,0 +1,187 @@
+=== Comparison of properties with compactness ===
+
+Paracompactness is similar to compactness in the following respects:
+
+* Every closed subset of a paracompact space is paracompact.
+* Every paracompact [[Hausdorff space]] is [[normal space|normal]].
+
+It is different in these respects:
+
+* A paracompact subset of a Hausdorff space need not be closed. In fact, for metric spaces, all subsets are paracompact.
+* A product of paracompact spaces need not be paracompact. The [[Sorgenfrey plane|square of the real line '''R''' in the lower limit topology]] is a classical example for this.
+
+== Variations ==
+
+There are several variations of the notion of paracompactness. To define them, we first need to extend the list of terms above:
+
+A topological space is:
+
+* '''[[metacompact space|metacompact]]''' if every open cover has an open pointwise finite refinement.
+* '''[[orthocompact space|orthocompact]]''' if every open cover has an open refinement such that the intersection of all the open sets about any point in this refinement is open.
+* '''fully normal''' if every open cover has an open [[star refinement]], and '''fully T&lt;sub&gt;4&lt;/sub&gt;''' if it is fully normal and [[T1 space|T&lt;sub&gt;1&lt;/sub&gt;]] (see [[separation axioms]]).
+
+The adverb &quot;'''countably'''&quot; can be added to any of the adjectives &quot;paracompact&quot;, &quot;metacompact&quot;, and &quot;fully normal&quot; to make the requirement apply only to [[countable]] open covers.
+
+Every paracompact space is metacompact, and every metacompact space is orthocompact.
+
+=== Definition of relevant terms for the variations ===
+
+* Given a cover and a point, the ''star'' of the point in the cover is the union of all the sets in the cover that contain the point. In symbols, the star of ''x'' in '''U''' = {''U''&lt;sub&gt;α&lt;/sub&gt; : α in ''A''} is
+
+: &lt;math&gt;\mathbf{U}^{*}(x) := \bigcup_{U_{\alpha} \ni x}U_{\alpha}.&lt;/math&gt;
+
+: The notation for the star is not standardised in the literature, and this is just one possibility.
+* A ''[[star refinement]]'' of a cover of a space ''X'' is a new cover of the same space such that, given any point in the space, the star of the point in the new cover is a subset of some set in the old cover. In symbols, '''V''' is a star refinement of '''U''' = {''U''&lt;sub&gt;α&lt;/sub&gt; : α in ''A''} if and only if, for any ''x'' in ''X'', there exists a ''U''&lt;sub&gt;α&lt;/sub&gt; in ''U'', such that '''V'''&lt;sup&gt;*&lt;/sup&gt;(''x'') is contained in ''U''&lt;sub&gt;α&lt;/sub&gt;.
+* A cover of a space ''X'' is ''pointwise finite'' if every point of the space belongs to only finitely many sets in the cover. In symbols, '''U''' is pointwise finite if and only if, for any ''x'' in ''X'', the set &lt;math&gt;\left\{\alpha \in A : x \in U_{\alpha} \right\}&lt;/math&gt; is finite.
+
+As the name implies, a fully normal space is [[normal space|normal]]. Every fully T&lt;sub&gt;4&lt;/sub&gt; space is paracompact. In fact, for Hausdorff spaces, paracompactness and full normality are equivalent. Thus, a fully T&lt;sub&gt;4&lt;/sub&gt; space is the same thing as a paracompact Hausdorff space.
+
+Without the Hausdorff property, paracompact spaces are not necessarily fully normal.  Any compact space that is not regular provides an example.
+
+As an historical note: fully normal spaces were defined before paracompact spaces.
+The proof that all metrizable spaces are fully normal is easy. When it was proved by A.H. Stone that for Hausdorff spaces fully normal and paracompact are equivalent, he implicitly proved that all metrizable spaces are paracompact. Later  [[Mary Ellen Rudin|M.E. Rudin]] gave a direct proof of the latter fact.
+
+== See also ==
+
+* [[a-paracompact space]]
+* [[Paranormal space]]
+
+== Notes ==
+
+&lt;references/&gt;
+
+== References ==
+
+* {{Citation | last1=Dieudonné | first1=Jean | author1-link=Jean Dieudonné | title=Une généralisation des espaces compacts | mr=0013297 | year=1944 | journal=[[Journal de Mathématiques Pures et Appliquées]]|series= Neuvième Série | issn=0021-7824 | volume=23 | pages=65–76}}
+* [[Lynn Arthur Steen]] and [[J. Arthur Seebach, Jr.]], ''[[Counterexamples in Topology]] (2 ed)'', [[Springer Verlag]], 1978, {{isbn|3-540-90312-7}}.  P.23.
+* {{cite book | last = Willard | first = Stephen | title = General Topology | url = https://archive.org/details/generaltopology00will_0 | url-access = registration | publisher = Addison-Wesley | location = Reading, Massachusetts | year = 1970 | isbn = 0-486-43479-6 }}
+* {{cite web | title=Topology/Paracompactness | last=Mathew | first=Akhil | url=http://amathew.wordpress.com/2010/08/17/paracompactness/}}
+
+== External links ==
+
+* {{springer|title=Paracompact space|id=p/p071300}}
+{{authority control}}
+{{DEFAULTSORT:Paracompact Space}}
+[[Category:Separation axioms]]
+[[Category:Compactness (mathematics)]]
+[[Category:Properties of topological spaces]]</text>
+      <sha1>c5s4dk9wlzex0utvdl7uvsbgl92rxyw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Locally compact space</title>
+    <ns>0</ns>
+    <id>48632</id>
+    <revision>
+      <id>979719237</id>
+      <parentid>978812965</parentid>
+      <timestamp>2020-09-22T11:23:04Z</timestamp>
+      <contributor>
+        <username>Rqndom</username>
+        <id>40090672</id>
+      </contributor>
+      <minor />
+      <comment>/* Formal definition */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="13093" xml:space="preserve">In [[topology]] and related branches of [[mathematics]], a [[topological space]] is called '''locally compact''' if, roughly speaking, each small portion of the space looks like a small portion of a [[compact space]].
+
+==Formal definition==
+Let ''X'' be a [[topological space]]. Most commonly ''X'' is called '''locally compact''' if every point ''x'' of ''X'' has a compact [[neighbourhood (topology)|neighbourhood]], i.e., there exists an open set ''U'' and a compact set ''K'', such that &lt;math&gt;x\in U\subseteq K&lt;/math&gt;.
+
+There are other common definitions: They are all '''equivalent if ''X'' is a [[Hausdorff space]]''' (or preregular). But they are '''not equivalent''' in general:
+:1. every point of ''X'' has a compact [[neighbourhood (topology)|neighbourhood]].
+:2. every point of ''X'' has a [[closed set|closed]] compact neighbourhood.
+:2′. every point of ''X'' has a [[relatively compact]] neighbourhood.
+:2″. every point of ''X'' has a [[local base]] of [[relatively compact]] neighbourhoods.
+:3. every point of ''X'' has a [[local base]] of compact neighbourhoods.
+:3′. for every point ''x'' of ''X'', every neighbourhood of ''x'' contains a compact neighbourhood of ''x''.
+:4. ''X'' is Hausdorff and satisfies any (or equivalently, all) of the previous conditions.
+
+Logical relations among the conditions:
+*Conditions (2), (2′), (2″) are equivalent.
+*Conditions (3), (3′) are equivalent.
+*Neither of conditions (2), (3) implies the other.
+*Each condition implies (1).
+*Compactness implies conditions (1) and (2), but not (3).
+
+Condition (1) is probably the most commonly used definition, since it is the least restrictive and the others are equivalent to it when ''X'' is [[Hausdorff space|Hausdorff]]. This equivalence is a consequence of the facts that compact subsets of Hausdorff spaces are closed, and closed subsets of compact spaces are compact.
+
+As they are defined in terms of relatively compact sets, spaces satisfying (2), (2'), (2&quot;) can more specifically be called '''locally relatively compact'''.&lt;ref&gt;https://projecteuclid.org/download/pdf_1/euclid.pjm/1102720477&lt;/ref&gt;&lt;ref&gt;https://arxiv.org/pdf/2002.05943.pdf&lt;/ref&gt; Steen &amp; Seebach&lt;ref&gt;Steen &amp; Seebach, p. 20&lt;/ref&gt; calls (2), (2'), (2&quot;) '''strongly locally compact''' to contrast with property (1), which they call ''locally compact''.
+
+Condition (4) is used, for example, in Bourbaki.&lt;ref&gt;{{cite book|last1=Bourbaki|first1=Nicolas|title=General Topology, Part I|date=1989|publisher=Springer-Verlag|location=Berlin|isbn=3-540-19374-X|edition=reprint of the 1966}}&lt;/ref&gt; 
+In almost all applications, locally compact spaces are indeed also Hausdorff.  These locally compact Hausdorff (LCH) spaces are thus the spaces that this article is primarily concerned with.
+
+== Examples and counterexamples ==
+
+=== Compact Hausdorff spaces ===
+Every compact Hausdorff space is also locally compact, and many examples of compact spaces may be found in the article [[compact space]].
+Here we mention only:
+* the [[unit interval]] [0,1];
+* the [[Cantor set]];
+* the [[Hilbert cube]].
+
+=== Locally compact Hausdorff spaces that are not compact ===
+*The [[Euclidean space]]s '''R'''&lt;sup&gt;&lt;var&gt;n&lt;/var&gt;&lt;/sup&gt; (and in particular the [[real line]] '''R''') are locally compact as a consequence of the [[Heine–Borel theorem]].
+*[[Topological manifold]]s share the local properties of Euclidean spaces and are therefore also all locally compact. This even includes [[paracompact|nonparacompact]] manifolds such as the [[long line (topology)|long line]].
+*All [[discrete space]]s are locally compact and Hausdorff (they are just the [[0 (number)|zero]]-dimensional manifolds). These are compact only if they are finite.
+*All [[open subset|open]] or [[closed subset]]s of a locally compact Hausdorff space are locally compact in the [[subspace topology]]. This provides several examples of locally compact subsets of Euclidean spaces, such as the [[unit disc]] (either the open or closed version).
+*The space '''Q'''&lt;sub&gt;''p''&lt;/sub&gt; of [[p-adic number|''p''-adic numbers]] is locally compact, because it is [[homeomorphic]] to the [[Cantor set]] minus one point. Thus locally compact spaces are as useful in [[p-adic analysis|''p''-adic analysis]] as in classical [[mathematical analysis|analysis]].
+
+=== Hausdorff spaces that are not locally compact ===
+As mentioned in the following section, if a Hausdorff space is locally compact, then it is also a [[Tychonoff space]]; there are some examples of Hausdorff spaces that are not Tychonoff spaces in that article.
+But there are also examples of Tychonoff spaces that fail to be locally compact, such as:
+
+* the space '''Q''' of [[rational number]]s (endowed with the topology from '''R'''), since any neighborhood contains a [[Cauchy sequence]] corresponding to an irrational number, which has no convergent subsequence in '''Q''';
+* the subspace {(0,0)} [[union (set theory)|union]] {(''x'',''y'') : ''x'' &gt; 0} of '''R'''&lt;sup&gt;2&lt;/sup&gt;, since the origin does not have a compact neighborhood;
+* the [[lower limit topology]] or [[upper limit topology]] on the set '''R''' of real numbers (useful in the study of [[one-sided limit]]s);
+* any [[T0 space|T&lt;sub&gt;0&lt;/sub&gt;]], hence Hausdorff, [[topological vector space]] that is [[Infinity|infinite]]-[[dimension]]al, such as an infinite-dimensional [[Hilbert space]].
+
+The first two examples show that a subset of a locally compact space need not be locally compact, which contrasts with the open and closed subsets in the previous section.
+The last example contrasts with the Euclidean spaces in the previous section; to be more specific, a Hausdorff topological vector space is locally compact if and only if it is finite-dimensional (in which case it is a Euclidean space).
+This example also contrasts with the [[Hilbert cube]] as an example of a compact space; there is no contradiction because the cube cannot be a neighbourhood of any point in Hilbert space.
+
+===Non-Hausdorff examples===
+* The [[one-point compactification]] of the [[rational number]]s '''Q''' is compact and therefore locally compact in senses (1) and (2) but it is not locally compact in sense (3).
+* The [[particular point topology]] on any infinite set is locally compact in senses (1) and (3) but not in sense (2), because the closure of any neighborhood is the entire non-compact space. The same holds for the real line with the upper topology.
+* The [[disjoint union (topology)|disjoint union]] of the above two examples is locally compact in sense (1) but not in senses (2) or (3).
+* The [[Sierpiński space]] is locally compact in senses (1), (2), and (3), and compact as well, but it is not Hausdorff (or even preregular) so it is not locally compact in sense (4). The disjoint union of countably many copies of Sierpiński space ([[homeomorphic]] to the [[Hjalmar Ekdal topology]]) is a non-compact space which is still locally compact in senses (1), (2), and (3), but not (4).
+
+== Properties ==
+Every locally compact [[preregular space]] is, in fact, [[completely regular space|completely regular]]. It follows that every locally compact Hausdorff space is a [[Tychonoff space]]. Since straight regularity is a more familiar condition than either preregularity (which is usually weaker) or complete regularity (which is usually stronger), locally compact preregular spaces are normally referred to in the mathematical literature as ''locally compact regular spaces''. Similarly locally compact Tychonoff spaces are usually just referred to as ''locally compact Hausdorff spaces''.
+
+Every locally compact Hausdorff space is a [[Baire space]].
+That is, the conclusion of the [[Baire category theorem]] holds: the [[interior (topology)|interior]] of every [[union (set theory)|union]] of [[countable|countably many]] [[nowhere dense]] [[subset]]s is [[empty set|empty]].
+
+A [[topological subspace|subspace]] ''X'' of a locally compact Hausdorff space ''Y'' is locally compact [[if and only if]] ''X'' can be written as the [[complement (set theory)|set-theoretic difference]] of two [[closed set|closed]] [[subset]]s of ''Y''.
+As a corollary, a [[dense (topology)|dense]] subspace ''X'' of a locally compact Hausdorff space ''Y'' is locally compact if and only if ''X'' is an [[open subset]] of ''Y''.
+Furthermore, if a subspace ''X'' of ''any'' Hausdorff space ''Y'' is locally compact, then ''X'' still must be the difference of two closed subsets of ''Y'', although the [[converse (logic)|converse]] needn't hold in this case.
+
+[[Quotient space (topology)|Quotient space]]s of locally compact Hausdorff spaces are [[compactly generated space|compactly generated]].
+Conversely, every compactly generated Hausdorff space is a quotient of some locally compact Hausdorff space.
+
+For locally compact spaces [[local uniform convergence]] is the same as [[compact convergence]].
+
+=== The point at infinity ===
+Since every locally compact Hausdorff space ''X'' is Tychonoff, it can be [[embedding (topology)|embedded]] in a compact Hausdorff space b(''X'') using the [[Stone–Čech compactification]].
+But in fact, there is a simpler method available in the locally compact case; the [[one-point compactification]] will embed ''X'' in a compact Hausdorff space a(''X'') with just one extra point.
+(The one-point compactification can be applied to other spaces, but a(''X'') will be Hausdorff [[if and only if]] ''X'' is locally compact and Hausdorff.)
+The locally compact Hausdorff spaces can thus be characterised as the [[open subset]]s of compact Hausdorff spaces.
+
+Intuitively, the extra point in a(''X'') can be thought of as a '''point at infinity'''.
+The point at infinity should be thought of as lying outside every compact subset of ''X''.
+Many intuitive notions about tendency towards infinity can be formulated in locally compact Hausdorff spaces using this idea.
+For example, a [[continuous function (topology)|continuous]] [[real number|real]] or [[complex number|complex]] valued [[function (mathematics)|function]] ''f'' with [[domain (function)|domain]] ''X'' is said to ''[[vanish at infinity]]'' if, given any [[positive number]] ''e'', there is a compact subset ''K'' of ''X'' such that |''f''(''x'')| &lt; ''e'' whenever the [[Point (geometry)|point]] ''x'' lies outside of ''K''. This definition makes sense for any topological space ''X''. If ''X'' is locally compact and Hausdorff, such functions are precisely those extendable to a continuous function ''g'' on its one-point compactification a(''X'') = ''X'' ∪ {∞} where ''g''(∞) = 0.
+
+The set C&lt;sub&gt;0&lt;/sub&gt;(''X'') of all continuous complex-valued functions that vanish at infinity is a [[C-star algebra|C*-algebra]]. In fact, every [[commutative]] C*-algebra is [[isomorphic]] to C&lt;sub&gt;0&lt;/sub&gt;(''X'') for some [[unique (mathematics)|unique]] ([[up to]] [[homeomorphism]]) locally compact Hausdorff space ''X''. More precisely, the [[category theory|categories]] of locally compact Hausdorff spaces and of commutative C*-algebras are [[duality (category theory)|dual]]; this is shown using the [[Gelfand representation]]. Forming the one-point compactification a(''X'') of ''X'' corresponds under this duality to adjoining an [[identity element]] to C&lt;sub&gt;0&lt;/sub&gt;(''X'').
+
+=== Locally compact groups ===
+The notion of local compactness is important in the study of [[topological group]]s mainly because every Hausdorff [[locally compact group]] ''G'' carries natural [[measure theory|measures]] called the [[Haar measure]]s which allow one to [[integral|integrate]] [[measurable function]]s defined on ''G''.
+The [[Lebesgue measure]] on the [[real line]] '''R''' is a special case of this.
+
+The [[Pontryagin dual]] of a [[topological abelian group]] ''A'' is locally compact [[if and only if]] ''A'' is locally compact.
+More precisely, Pontryagin duality defines a self-[[duality (category theory)|duality]] of the [[category theory|category]] of locally compact abelian groups.
+The study of locally compact abelian groups is the foundation of [[harmonic analysis]], a field that has since spread to non-abelian locally compact groups.
+
+==Notes==
+{{reflist}}

@@ -1,0 +1,376 @@
+In order to determine which probability intervals to apply, the decoder needs to look at the current value of &lt;code&gt;code&lt;/code&gt; within the interval [low, low+range) and decide which symbol this represents.
+
+&lt;syntaxhighlight lang=&quot;csharp&quot;&gt;
+void Run()
+{
+	int start = 0;
+	int size;
+	int total = 10;
+	AppendDigit();                    // need to get range/total &gt;0
+	while (start &lt; 8)                 // stop when receive EOM
+	{
+		int v = GetValue(total);  // code is in what symbol range?
+		switch (v)                // convert value to symbol
+		{
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5: start=0; size=6; Console.Write(&quot;A&quot;); break;
+			case 6:
+			case 7: start=6; size=2; Console.Write(&quot;B&quot;); break;
+			default: start=8; size=2; Console.WriteLine(&quot;&quot;);
+		}
+		Decode(start, size, total);
+	}
+}
+
+int GetValue(int total)
+{
+        return (code - low) / (range / total);
+}
+&lt;/syntaxhighlight&gt;
+
+For the &lt;nowiki&gt;AABA&lt;EOM&gt;&lt;/nowiki&gt; example above, this would return a value in the range 0 to 9. Values 0 through 5 would represent A, 6 and 7 would represent B, and 8 and 9 would represent &lt;nowiki&gt;&lt;EOM&gt;&lt;/nowiki&gt;.
+
+== Relationship with arithmetic coding ==
+[[Arithmetic coding]] is the same as range encoding, but with the integers taken as being the numerators of [[Fraction (mathematics)|fractions]]. These fractions have an implicit, common denominator, such that all the fractions fall in the range &lt;nowiki&gt;[0,1)&lt;/nowiki&gt;. Accordingly, the resulting arithmetic code is interpreted as beginning with an implicit &quot;0&quot;. As these are just different interpretations of the same coding methods, and as the resulting arithmetic and range codes are identical, each arithmetic coder is its corresponding range encoder, and vice versa. In other words, arithmetic coding and range encoding are just two, slightly different ways of understanding the same thing.
+
+In practice, though, so-called range ''encoders'' tend to be implemented pretty much as described in Martin's paper,&lt;ref name=compressconsult/&gt; while arithmetic coders more generally tend not to be called range encoders. An often noted feature of such range encoders is the tendency to perform renormalization a byte at a time, rather than one bit at a time (as is usually the case). In other words, range encoders tend to use bytes as encoding digits, rather than bits. While this does reduce the amount of compression that can be achieved by a very small amount, it is faster than when performing renormalization for each bit.
+
+== See also ==
+* [[Arithmetic coding]]
+* [[Asymmetric Numeral Systems]]
+* [[Data compression]]
+* [[Entropy encoding]]
+* [[Huffman coding]]
+* [[Multiscale Electrophysiology Format]]
+* [[Shannon–Fano coding]]
+
+== References ==
+&lt;references/&gt;
+
+== External links ==
+* [https://web.archive.org/web/20041014083730/http://www.compressconsult.com/rangecoder/ Range Encoder]
+* [https://web.archive.org/web/20020615100728/http://www.arturocampos.com/ac_range.html &quot;Range coder&quot; by Arturo Campos]
+* [http://www.ezcodesample.com/reanatomy.html &quot;Anatomy of Range Encoder&quot; by Andrew Polar]
+* [https://github.com/jkbonfield/rans_static Fast implementation of range coding and rANS of James K. Bonfield]
+
+{{Compression Methods}}
+
+{{DEFAULTSORT:Range Encoding}}
+[[Category:Lossless compression algorithms]]
+[[Category:Articles with example C code]]</text>
+      <sha1>ickb8n1eo99e74gcuno73ddt9x6fom1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Entropy coder</title>
+    <ns>0</ns>
+    <id>46121</id>
+    <redirect title="Entropy encoding" />
+    <revision>
+      <id>15941343</id>
+      <parentid>228035</parentid>
+      <timestamp>2002-09-19T01:32:34Z</timestamp>
+      <contributor>
+        <username>Stec</username>
+        <id>4065</id>
+      </contributor>
+      <minor />
+      <comment>redirect to [[Entropy encoding]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30" xml:space="preserve">#REDIRECT [[Entropy encoding]]</text>
+      <sha1>tjjg6tqa7i59rxehz4q05ykg3azornd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Karl Brandt</title>
+    <ns>0</ns>
+    <id>46122</id>
+    <revision>
+      <id>991368839</id>
+      <parentid>991367128</parentid>
+      <timestamp>2020-11-29T18:09:58Z</timestamp>
+      <contributor>
+        <username>Retal</username>
+        <id>2920822</id>
+      </contributor>
+      <minor />
+      <comment>/* Life in the inner circle */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="17561" xml:space="preserve">{{Short description|German physician, Nazi criminal, SS-Gruppenführer}}
+{{other people}}
+{{Infobox person
+|name          = Karl Brandt
+|image         = Karl Brandt SS-Arzt.jpg
+|image_size    = 220px
+|caption       = Brandt as a defendant at the [[Doctors' trial]]
+|birth_name    = 
+|birth_date    = {{birth date|1904|1|08|df=y}}
+|birth_place   = [[Mulhouse]], [[Alsace-Lorraine]]
+|death_date    = {{death date and age|1948|06|02|1904|01|08|df=y}}
+|death_place   = [[Landsberg Prison]], [[Landsberg am Lech]]
+|death_cause   = Execution by hanging
+|resting_place = 
+|resting_place_coordinates = 
+|residence     = 
+|nationality   = German
+|other_names   = 
+|known_for     = Reich Commissioner for Health and Sanitation
+|education     = 
+|alma_mater    = 
+|employer      = [[Adolf Hitler]]
+|occupation    = Personal physician of German dictator Adolf Hitler
+|home_town     = 
+|title         = [[Gruppenführer|SS-Gruppenführer]] in the [[Allgemeine SS]] /&lt;br/&gt;[[Brigadeführer|SS-Brigadeführer]] and [[Generalmajor]] of the [[Waffen-SS]]
+|salary        = 
+|networth      = 
+|height        = 
+|weight        = 
+|term          = 
+|predecessor   = 
+|successor     = 
+|party         = [[Nazi Party|National Socialist German Workers' Party]]
+|boards        = 
+|religion      = 
+|spouse        = {{marriage |[[Anni Rehborn]] |17 March 1934 | }}
+|partner       = 
+|children      = Karl Adolf Brandt (born 4 October 1935)
+|parents       = 
+|relatives     = 
+|signature     = 
+|website       = 
+|footnotes     = 
+}}
+
+'''Karl Brandt''' (8 January 1904 – 2 June 1948) was a German [[physician]] and ''[[Schutzstaffel]]'' (SS) officer in [[Nazi Germany]]. Trained in surgery, Brandt joined the Nazi Party in 1932 and became [[Adolf Hitler]]'s escort doctor in August 1934.&lt;ref name=review&gt;{{cite web|last1=Ben-Amos|first1=Batsheva|title=Karl Brandt: The Nazi Doctor. Medicine and Power in the Third Reich (review)|url=http://muse.jhu.edu/journals/hgs/summary/v023/23.2.ben-amos.html|accessdate=10 November 2014}}&lt;/ref&gt;  A member of Hitler's inner circle at the [[Berghof (residence)|Berghof]], he was selected by [[Philipp Bouhler]], the head of [[Hitler's Chancellery (Kanzlei des Führers)|Hitler's Chancellery]], to administer the [[Aktion T4|''Aktion T4'' euthanasia program]]. Brandt was later appointed the Reich Commissioner of Sanitation and Health (''Bevollmächtigter für das Sanitäts- und Gesundheitswesen''). Accused of involvement in [[Nazi human experimentation|human experimentation]] and other war crimes, Brandt was indicted in late 1946 and faced trial before a U.S. [[military tribunal]] along with 22 others in ''[[United States of America v. Karl Brandt, et al.]]'' He was convicted, sentenced to death, and later hanged on 2 June 1948.{{sfn|Hamilton|1984|p=138}}
+
+==Early life==
+Brandt was born in [[Mulhouse]] in the then [[German Empire|German]] [[Alsace-Lorraine]] territory (now in [[Haut-Rhin]], [[France]]) into the family of a Prussian Army officer.&lt;ref&gt;Schmidt: Hitlers Arzt, Berlin 2009, {{ISBN|978-3-351-02671-4}}&lt;/ref&gt; He became a medical doctor and surgeon in 1928, specializing in head and spinal injuries.&lt;ref&gt;{{cite book |title=The Nazi Doctors: Medical Killing and the Psychology of Genocide |last=Lifton |first=Robert Jay |year=1986 |publisher=Basic Books |location=United States |isbn= 0-465-04905-2 |page=[https://archive.org/details/nazidoctorsmedic0000lift/page/114 114] |url=https://archive.org/details/nazidoctorsmedic0000lift |url-access=registration |quote=karl brandt surgeon. |accessdate=2013-03-23}}&lt;/ref&gt; He joined the [[Nazi Party]] in January 1932, and first met Hitler in the summer of 1932.{{sfn|Joachimsthaler|1999|p=296}} He became a member of the [[Sturmabteilung|SA]] in 1933 and a member of the [[SS]] on 29 July 1934; appointed the officer rank of ''[[Untersturmführer]]''.{{sfn|Joachimsthaler|1999|p=296}} From the summer of 1934 forward, he was Hitler's &quot;escort physician&quot;. Karl Brandt married [[Anni Rehborn]] (born 1907), a champion swimmer, on 17 March 1934. They had one son, Karl Adolf Brandt (born 4 October 1935).
+
+==Career in Nazi Germany==
+In the context of the 1933 Nazi law ''Gesetz zur Verhütung erbkranken Nachwuchses'' ([[Law for the Prevention of Hereditarily Diseased Offspring]]), Brandt was one of the medical scientists who performed [[abortion]]s in great numbers on women deemed genetically disordered, mentally or physically handicapped or racially deficient, or whose unborn fetuses were expected to develop such genetic &quot;defects&quot;. These abortions had been legalized, as long as no healthy [[Aryan race|Aryan]] fetuses were aborted.&lt;ref&gt;[http://strafrecht-soforthilfe.de/wikipedia-recht/schwangerschaftsabbruch-abtreibung 1935: Das Gesetz zur Änderung des Gesetzes zur Verhütung erbkranken Nachwuchses] {{webarchive|url=https://web.archive.org/web/20120210184406/http://www.strafrecht-soforthilfe.de/wikipedia-recht/schwangerschaftsabbruch-abtreibung |date=2012-02-10 }} führt eine von der nationalsozialistischen Haltung zu Eugenik und Sterilisation motivierte Option auf Schwangerschaftsabbruch bei einer zu Sterilisierenden (Sechs-Monats-Fristenregelung) ein. Formale Bedingung für eine straffreie Abtreibung war unter anderem die &quot;Einwilligung der Schwangeren&quot;; in der Praxis dürften die Wünsche und Vorbehalte von als &quot;minderwertig&quot; definierten Frauen allerdings oft missachtet worden sein.&lt;/ref&gt;
+
+On 1 September 1939, Brandt was appointed by Hitler co-head of the [[Aktion T4|''Aktion T4'' euthanasia program]], with [[Philipp Bouhler]].&lt;ref name=&quot;thompson&quot;&gt;Thompson, D.: ''[http://forum.axishistory.com/viewtopic.php?p=406436&amp;sid=bf18758337b16321164ffcd382a557aa#406436 The Nazi Euthanasia Program]'', Axis History Forum, March 14, 2004. URL last accessed April 24, 2006.&lt;/ref&gt; Additional power was afforded Brandt when on 28 July 1942, he was appointed Commissioner of Sanitation and Health (''Bevollmächtigter für das Sanitäts- und Gesundheitswesen'') by Hitler and was thereafter only bound by the Führer's instructions.&lt;ref&gt;Götz Aly, Peter Chroust, and Christian Pross, eds., ''Cleansing the Fatherland: Nazi Medicine and Racial Hygiene'' (Baltimore: Johns Hopkins University Press, 1994), p. 76.&lt;/ref&gt; He received regular promotions in the SS; by April 1944, Brandt was a SS-''[[Gruppenführer]]'' in the ''Allgemeine SS'' and a SS-''[[Brigadeführer]]'' in the Waffen-SS.{{sfn|Hamilton|1984|p=138}} On 16 April 1945, he was arrested by the [[Gestapo]] for moving his family out of Berlin so they could surrender to American forces. Brandt was condemned to death by a military court and then sent to Kiel.{{sfn|Joachimsthaler|1999|p=296}} He was released from arrest by order of [[Karl Dönitz]] on 2 May. He was placed under arrest by the British on 23 May.
+
+==Brandt's medical ethics==
+{{see also|Action T4}}
+Brandt's medical ethics, particularly regarding euthanasia, were influenced by [[Alfred Hoche]], whose courses he attended. Like many other German doctors of the period, Brandt came to believe that the health of society as a whole should take precedence over that of its individual members. Because society was viewed as an organism that had to be cured, its weakest, most invalid and incurable members were only parts that should be removed. Such hapless creatures should therefore be granted a &quot;merciful death&quot; (''Gnadentod'').&lt;ref&gt;Lifton (1986). ''The Nazi Doctors: Medical Killing and the Psychology of Genocide'', p. 64&lt;/ref&gt; In addition to these considerations, Brandt's explanation at his trial for his criminal actions – particularly ordering experimentation on human beings – was that &quot;...&amp;nbsp;Any personal code of ethics must give way to the total character of the war&quot;.{{sfn|Hamilton|1984|p=138}} Historian Horst Freyhofer asserts that, in the absence of at least Brandt's &quot;tacit&quot; approval, it is highly unlikely that the grotesque and cruel medical experiments for which the Nazi doctors are infamous, could have been performed.&lt;ref&gt;Horst Freyhofer, ''Nuremberg Medical Trial'' (New York: Peter Lang Publishing, 2004), 51.&lt;/ref&gt; Brandt and Hitler discussed multiple killing techniques during the initial planning of the euthanasia program, during which Hitler asked Brandt, &quot;which is the most humane way?&quot; Brandt suggested the use of carbon monoxide gas, to which Hitler gave his approval. Hitler instructed Brandt to get in touch with other physicians and begin to coordinate the mass killings.&lt;ref&gt;NARA, RG 238: Interrogation of Karl Brandt, 1 October 1945 p.m., p. 7. As found in ''Origins of Nazi Genocide: From Euthanasia to the Final Solution'' by Henry Friedlander (Chapel Hill: University of North Carolina Press, 1997), p. 86.&lt;/ref&gt;
+
+== Life in the inner circle ==
+[[File:Bundesarchiv Bild 183-H0422-0502-001, Berlin, Beisetzung Oberst Werner Mölders.jpg|300px|thumb|Brandt at right, following [[Hitler]] and [[Martin Bormann]] and behind Field Marshall [[Erhard Milch|Milch]]]]
+Karl Brandt and his wife Anni were members of Hitler's inner circle at [[Berchtesgaden]] where Hitler maintained his private residence known as the [[Berghof (Hitler)|Berghof]].{{sfn|Hamilton|1984|p=138}} This very exclusive group functioned as Hitler's de facto family circle. It included [[Eva Braun]], [[Albert Speer]], his wife Margarete, [[Theodor Morell]], [[Martin Bormann]], Hitler's photographer [[Heinrich Hoffmann (photographer)|Heinrich Hoffmann]], Hitler's adjutants and his secretaries. Brandt and Hitler's chief architect Albert Speer were good friends as the two shared technocratic dispositions about their work. Brandt looked at killing &quot;useless eaters&quot; and the handicapped as a means to an end, namely in the interest of public health. Similarly, Speer viewed the use of concentration camp labor for his defense and building projects in much the same way.&lt;ref&gt;Lifton, (1986) ''The Nazi Doctors: Medical Killing and the Psychology of Genocide'', p. 115.&lt;/ref&gt; As members of this inner circle, the Brandts had a residence near the Berghof and spent considerable time there when Hitler was present.  In his memoirs, Speer described the numbing lifestyle of Hitler's inner circle, forced to stay up most of the night listening to the [[insomnia]]c Nazi leader's repetitive monologues or to an unvarying selection of music.  Despite Brandt's closeness to Hitler, the dictator was furious when he learned shortly before the end of the war that the doctor had sent Anni and their son toward the American lines in hopes of evading capture by the Russians.{{sfn|Hamilton|1984|p=138}} Only the intervention of [[Heinrich Himmler]], Speer, and the direct order of Admiral Doenitz after Brandt had been captured by the Gestapo and sent to Kiel in the war's closing days, saved him from execution, at that time.{{sfn|Hamilton|1984|p=138}}
+
+==Trial and execution==
+{{See|Doctors' trial}}
+[[Image:Karl-Brandt.jpg|300px|thumb|Brandt on trial, 20 August 1947]]
+
+Brandt was tried along with twenty-two others at the Palace of Justice in [[Nuremberg trials|Nuremberg]], Germany. The trial was officially titled ''United States of America v. Karl Brandt et al.'', but is more commonly referred to as the &quot;[[Doctors' Trial]]&quot;; it began on 9 December 1946. He was charged with four counts:
+
+#Conspiracy to commit war crimes and [[crimes against humanity]] as described in counts 2 and 3; 
+#War crimes: performing medical experiments, without the subjects' consent, on prisoners of war and civilians of occupied countries, in the course of which experiments the defendants committed murders, brutalities, cruelties, tortures, atrocities, and other inhuman acts.  Also planning and performing the mass murder of prisoners of war and civilians of occupied countries, stigmatized as aged, insane, incurably ill, deformed, and so on, by gas, lethal injections, and diverse other means in nursing homes, hospitals, and asylums during the [[involuntary euthanasia|Euthanasia]] Program and participating in the mass murder of concentration camp inmates; 
+#Crimes against humanity: committing crimes described under count 2 also on German nationals; 
+#Membership in a criminal organization, the SS. The charges against him included special responsibility for, and participation in, Freezing, [[Malaria]], [[Mustard gas|LOST Gas]], [[Sulfanilamide]], Bone, Muscle and Nerve Regeneration and Bone Transplantation, Sea-Water, Epidemic [[Jaundice]], Sterilization, and [[Typhus]] Experiments.&lt;ref&gt;National Archives and Records Administration, Records of the United States Nuremberg War Crimes Trials, 15 vols. See vol 1 and 2, ''Karl Brandt: The Medical Case'' (Washington DC: National Archives and Records Service, 1951-1952).&lt;/ref&gt;
+
+After a defence led by [[Robert Servatius]], on 19 August 1947, Brandt was found guilty on counts 2-4 of the indictment. With six others, he was sentenced to death by hanging, and all were executed at [[Landsberg Prison]] on 2 June 1948.{{sfn|Hamilton|1984|p=138}} Nine other defendants received prison terms of between fifteen years and [[life imprisonment|life]], while a further seven were found not guilty.&lt;ref&gt;{{cite web|publisher=U.S. Library of Congress|title= Nuremberg Tribunal Indictments |url=https://www.loc.gov/rr/frd/Military_Law/pdf/NT_Indictments.pdf}}&lt;/ref&gt;
+
+While on the gallows, Brandt remarked: &quot;It is no shame to stand upon the scaffold. This is nothing but political revenge. I have served my Fatherland as others before me.&quot; He refused to end his speech, a hood was placed over his head while he continued to talk and he was hanged.&lt;ref&gt;{{cite book |title=The Nazi Doctors and the Nuremberg Code |last=Annas |first=George J. |year=1995 |publisher=Oxford University Press |location=United States |isbn= 0-19-507042-9 |page=106 |url=https://books.google.com/books?id=4P04DuPIfAYC&amp;q=karl+brandt+political+revenge&amp;pg=PA106 |accessdate=2015-03-03}}&lt;/ref&gt;
+
+==See also==
+{{Commons category|Karl Brandt}}
+{{wikiquote|Karl Brandt}}
+* [[Register of SS-Leaders in general's rank#List SS-Gruppenführer|List SS-Gruppenführer]]
+* [[Action 14f13]]
+* [[Nazi Germany]]
+* [[Nazi human experimentation]]
+
+==Notes==
+{{reflist}}
+{{refbegin}}
+
+==References==
+* Aly, Götz, Peter Chroust, and Christian Pross, eds. ''Cleansing the Fatherland: Nazi Medicine and Racial Hygiene''. Baltimore: Johns Hopkins University Press, 1994. 
+* [[Michael Burleigh|Burleigh, Michael]], and [[:de:Wolfgang Wippermann|Wolfgang Wippermann]]. ''The Racial State: Germany 1933-1945''. Cambridge &amp; New York: Cambridge University Press, 1991.
+* Dawidowicz, Lucy S. ''The War Against the Jews: 1933-1945''. New York: Bantam Books Inc., 1975.
+* Ehrenreich, Eric. ''The Nazi Ancestral Proof: Genealogy, Racial Science, and the Final Solution''. Bloomington: Indiana University Press, 2007. 
+* Freyhofer, Horst. ''Nuremberg Medical Trial''. New York: Peter Lang Publishing, 2004.
+* Friedlander, Henry. ''Origins of Nazi Genocide: From Euthanasia to the Final Solution''. Chapel Hill: University of North Carolina Press, 1997.
+* Fritz, Stephen G. ''Ostkrieg: Hitler's War of Extermination in the East''. Lexington: The University Press of Kentucky, 2011. 
+* {{cite book | last = Hamilton | first = Charles | title = Leaders &amp; Personalities of the Third Reich, Vol. 1 | year = 1984 | publisher = R. James Bender Publishing | isbn = 0-912138-27-0 | ref = harv }}
+* Hutton, Christopher. ''Race and the Third Reich: Linguistics, Racial Anthropology and Genetics in the Dialectic of Volk''. Cambridge: Cambridge University Press, 2005.
+* {{cite book | last = Joachimsthaler | first = Anton |authorlink=Anton Joachimsthaler | others = Trans. Helmut Bögler | title = The Last Days of Hitler: The Legends, the Evidence, the Truth | year = 1999 | origyear = 1995 | publisher = Brockhampton Press | location = London | isbn = 978-1-86019-902-8 | ref = harv }}
+* Koonz, Claudia. ''The Nazi Conscience''. Cambridge, MA: Belknap Press of Harvard University Press, 2005.
+* Lifton, Robert Jay. ''The Nazi Doctors: Medical Killing and the Psychology of Genocide''. New York: Basic Books, 1986.
+* Mayer, Arno. ''Why Did the Heavens Not Darken?: The &quot;Final Solution&quot; in History''. London &amp; New York: Verso Publishing, 2012.
+* Proctor, Robert. ''Racial Hygiene: Medicine under the Nazis''. Cambridge, MA: Harvard University Press, 1988.
+* Schafft, Gretchen E. ''From Racism to Genocide: Anthropology in the Third Reich''. Urbana and Chicago: University of Illinois Press, 2004.
+* Schmidt, Ulf. ''Karl Brandt: The Nazi Doctor: Medicine and Power in the Third Reich''. London, Hambledon Continuum, 2007.
+* Skopp, Douglas R., ''Shadows Walking, A Novel'' (CreateSpace, Charleston, South Carolina, 2010) {{ISBN|1439231990}}
+* Spitz, Vivien. ''Doctors from Hell: The Horrific Account of Nazi Experiments on Humans''. Boulder, CO: Sentient Publications, 2005. 
+{{refend}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Brandt, Karl}}
+[[Category:1904 births]]
+[[Category:1948 deaths]]
+[[Category:People from Mulhouse]]
+[[Category:Aktion T4 personnel]]
+[[Category:Executions by the United States Nuremberg Military Tribunals]]
+[[Category:SS-Gruppenführer]]
+[[Category:Physicians in the Nazi Party]]
+[[Category:People from Alsace-Lorraine]]
+[[Category:Medical practitioners convicted of murdering their patients]]
+[[Category:Executed German people]]
+[[Category:Nazi human subject research]]
+[[Category:Nazi Party officials]]
+[[Category:German people convicted of crimes against humanity]]
+[[Category:German surgeons]]
+[[Category:Executed people from Alsace]]
+[[Category:Waffen-SS personnel]]
+[[Category:People executed for crimes against humanity]]
+[[Category:20th-century surgeons]]</text>
+      <sha1>irbwfur27wt8bkr9i3r8u5fwxbfysr2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>ACIS</title>
+    <ns>0</ns>
+    <id>46124</id>
+    <revision>
+      <id>991688559</id>
+      <parentid>991488326</parentid>
+      <timestamp>2020-12-01T09:33:45Z</timestamp>
+      <contributor>
+        <username>WikiCleanerBot</username>
+        <id>18872885</id>
+      </contributor>
+      <minor />
+      <comment>v2.04b - [[User:WikiCleanerBot#T20|Bot T20 CW#61]] - Fix errors for [[WP:WCW|CW project]] (Reference before punctuation)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="15292" xml:space="preserve">{{other uses}}
+{{advert|date=October 2014}}
+
+{{Infobox Software
+| name = 3D ACIS Modeler
+| logo =
+| caption =
+| developer = [[Spatial Corp]]oration
+| latest_release_version = Version 2019 1.0.2 &lt;ref&gt;[http://www.spatial.com/news/spatial-releases-2017-10-delivering-technology-enhancements-aimed-innovation-and &quot;Spatial Releases 2017 1.0, Delivering Technology Enhancements Aimed at Innovation and Industrialization&quot;]. Dassault Systèmes, Spatial Corp. Retrieved 9 August 2016.&lt;/ref&gt;&lt;ref&gt;https://www.spatial.com/news/spatial-releases-2018-101-enhance-3d-modeling-and-interoperability-workflows&lt;/ref&gt;
+| latest_release_date =  2018-09-21
+| operating_system = [[Windows 7]] (and [[Microsoft Windows|above]]), [[macOS]] and [[Linux]] ([[Red Hat]])
+| genre = [[3D modeler]]
+| license = [[Proprietary software]]
+| website = [http://www.spatial.com www.spatial.com]
+}}
+
+The 3D ACIS Modeler ('''ACIS''') is a [[geometric modeling kernel]] developed by [[Spatial Corp]]oration (formerly Spatial Technology), part of [[Dassault Systemes]]. ACIS is used by many software developers in industries such as [[computer-aided design]] (CAD), [[computer-aided manufacturing]] (CAM), [[computer-aided engineering]] (CAE), architecture, engineering and construction (AEC), [[coordinate-measuring machine]] (CMM), [[3D animation]], and shipbuilding. ACIS provides software developers and manufacturers the underlying 3D modeling functionality.
+
+ACIS features an open,{{citation needed|date=May 2013}} [[object-oriented]] C++ architecture that enables robust, 3D modelling capabilities. ACIS is used to construct applications with hybrid modeling features, since it integrates [[wireframe model]], [[Surface (topology)|surface]], and [[solid modeling]] functionality with both [[List of manifolds|manifold and non-manifold topology]], and a rich set of geometric operations.
+
+== History ==
+
+As a geometric kernel, ACIS is a second generation system, coming after the first generation [[Romulus (b-rep solid modeler)|Romulus]].&lt;ref name=&quot;cadazz&quot;&gt;
+{{cite web
+ | title= CAD software history CAD CAM computer aided design 1980 to 1985
+ | url= http://www.cadazz.com/
+ | accessdate= 2007-03-14
+ | url-status= live
+ | archiveurl= https://web.archive.org/web/20070203084236/http://www.cadazz.com/
+ | archivedate= 3 February 2007
+}}
+&lt;/ref&gt;
+
+&lt;!-- Since there are several versions about ACIS name, a reference would be best to sort it out for good. --&gt;
+There are several versions about what the word ACIS actually stands for, or whether it is an [[acronym]] at all. The most popular version is that ACIS stands for ''Alan, Charles, Ian's System'' (Alan Grayer, Charles Lang and Ian Braid as part of Three-Space Ltd.), or ''Alan, Charles, Ian and Spatial'' (as the system was later on sold to Spatial Technology, now [[Spatial Corp]]). According to a close source the name actually stands for ''Alan, Charles, Ian, Sowar'', with Sowar coming from Dick Sowar, founder of Spatial Technology. However, when asked,{{by whom|date=March 2012}} the creators of ACIS would simply suggest that its name was derived from [[Greek mythology]] (See also [[Acis]]).{{citation needed|date=March 2012}}
+
+In 1985 Charles Lang and Ian Braid (creators of [[Romulus (b-rep solid modeler)|Romulus]] and Romulus-D) formed Three-Space Ltd. ([[Cambridge]], [[England]]) which had been retained by Dick Sowar's Spatial Technology (which had been founded by Sowar in 1986) to develop the ACIS solid modeling kernel for Spatial Technology's Strata CAM software. The first version of ACIS was released in 1989 and was quickly licensed by [[Hewlett-Packard|HP]] for integration into its ME CAD software.
+
+In late 2000, around the time when Spatial was acquired by [[Dassault Systemes]], the ACIS file format changed slightly and was no longer openly published.
+
+== Architecture ==
+
+A [[software component]] is a functionally specialized unit of software—a collection of software items (functions, classes, etc.) grouped together to serve some distinct purpose. It serves as a constituent part of a whole software system or product. A product is one or more software components that are assembled together and sold as a package. Components can be arranged in different combinations to form different products.
+
+The ACIS product line is designed using software component technology, which allows an application to use only the components it requires. In some cases, more than one component is available (either from Spatial or third party vendors) for a given purpose, so application developers can use the component that best meets their needs. For example, several rendering components are available from Spatial, and developers use the one that works best for their platform or application.
+
+=== Supported Platforms and Operating Systems ===
+{|class=&quot;wikitable&quot;
+|-
+! Platform
+! Operating System
+! Compiler
+! 32-bit
+! 64-bit
+|-
+| Microsoft
+| Windows 7
+| Visual C++ 2010, Visual C++ 2013, Visual C++ 2013, Visual C++ 2015
+| {{yes}}
+| {{yes}}
+|-
+| Microsoft
+| Windows 8, Windows 8.1, Windows 10
+| Visual C++ 2010, Visual C++ 2013, Visual C++ 2013, Visual C++ 2015, VC++ 2017
+| {{no}}
+| {{yes}}
+|-
+| Red Hat
+| Enterprise Linux, Version 5.0, Enterprise Linux, Version 6.0, Enterprise Linux, Version 7.0 
+| GNU C++ gcc 4.1.2
+| {{yes}}
+| {{yes}}
+|-
+| Apple
+| OS X 10.7.5, OS X 10.10
+| Clang version 4.1 compiler 64-bit
+| {{no}}
+| {{yes}}
+|-
+|}
+
+== Functionality ==
+
+=== ACIS Modeler ===
+ACIS core functionality&lt;ref name=&quot;acis_functionality&quot;&gt;{{cite web | url=http://www.spatial.com/products/acis.html| title=ACIS Functionality | accessdate=2007-03-16 |archiveurl = https://web.archive.org/web/20070309194852/http://www.spatial.com/products/acis.html  |archivedate = 2007-03-09}}&lt;/ref&gt; can be subclassified into three categories, namely:
+
+==== 3D Modelling ====
+* Extrude/revolve/sweep sets of 2D curves into complex surfaces or solids.
+* Fillet and chamfer between faces and along edges in surface and solid models.
+* Fit surfaces to a closed network of curves.
+* Generate patterns of repetitive shapes.
+* Hollow solids and thicken surfaces.
+* Interactively bend, twist, stretch, and warp combinations of curves, surfaces, and solids.
+* Intersect/subtract/unite any combination of curves, surfaces, and solids.
+* Loft surfaces to fit a set of profile curves.
+* Taper/offset/move surfaces in a model.
+
+==== 3D Model Management ====
+
+* Attach user-defined data to any level of a model.
+* Track geometry and topology changes.
+* Calculate mass and volume.
+* Model sub-regions of a solid using cellular topology.
+* Unlimited undo/redo with independent history streams.
+
+==== 3D Model Visualization ====
+* Tessellate surface geometry into polygonal mesh representation.
+* Create advanced surfacing capabilities with the optional Deformable Modeling component.
+* Generate precise 2D projections with hidden line removal using optional PHL V5 component.
+* Develop graphical applications
+
+=== ACIS Modeler Extensions ===
+; CGM Polyhedra: CGM Polyhedra is an add-on to the 3D ACIS Modeler combining polyhedral and B-rep modeling. Utilizing the same interfaces that 3D ACIS Modeler users are already familiar with, existing and new customers can integrate approximated polyhedral data to their 3D printing, subtractive manufacturing, analysis, and other workflows.
+
+; 3D Deformable Modeling: 3D Deformable Modeling is an interactive sculpting tool for shaping 3D models. Included as part of Spatial's suite of 3D modeling development technologies, 3D Deformable Modeling uses local and global editing features that allow for the easy creation and manipulation of free-form [[B-spline]] and [[NURBS]] curves and surfaces.
+
+; Advanced Covering: Advanced Covering is a feature of Deformable Modeling that is now available as a standalone add-on for the 3D ACIS Modeler. This single API uses sophisticated algorithms to create high-quality n-sided surfaces that meet user-specified tolerances for position and continuity on boundaries and on optional internal guiding geometry. Advanced Covering allows a surface to be fit onto circuits (collections of edges that form closed loops) in solid or wire bodies, which is useful in consumer product design. Among other uses, Advanced Covering can be used for end-capping, post-translation corrections, and surface definition from curve data.
+
+; Defeaturing: Defeaturing automatically identifies and removes small features that CAE analysts typically want to eliminate from the 3D model prior to meshing. Analysts frequently work from the same models that are used for design and manufacture, but these models often carry much more detail than is necessary for [[simulation]] or analysis purposes. By removing unnecessary detail, Defeaturing simplifies the model, a process that typically is done manually at significant cost.
+
+; CGM HLR: CGM HLR is a hidden line removal (HLR) solution from Spatial based on [[CATIA]] V6 technology. CGM HLR is an ACIS-dependent development technology - an ACIS license is required.  Though 3D is now the de facto CAD standard in most engineering disciplines, 2D still has a place in industries such as technical illustration, [[manufacturing]], and [[architecture]]. Since 3D models are the typical primary output for CAD design, users in these industries require an efficient and accurate method of generating 2D computational drawings directly from the 3D models. Hidden line removal (HLR) is an important aspect of creating an accurate 2D representation from a 3D model. Using HLR, the converted model only displays those parts visible from a given perspective; hidden (or occluded) edges normally included in a 3D model representation are removed, or drawn in a line style that indicates their obscured position.

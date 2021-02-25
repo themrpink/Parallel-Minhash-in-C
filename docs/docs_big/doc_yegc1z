@@ -1,0 +1,149 @@
+In both cases, for an applied sinusoidal voltage, the resulting current is also sinusoidal, but in [[quadrature phase|quadrature]], 90 degrees out of phase with the voltage. However, the phases have opposite signs: in an inductor, the current is ''lagging''; in a capacitor the current is ''leading''.
+
+Note the following identities for the imaginary unit and its reciprocal:
+
+:&lt;math&gt;\begin{align}
+                      j &amp;\equiv \cos{\left( \frac{\pi}{2}\right)} + j\sin{\left( \frac{\pi}{2}\right)} \equiv e^{j \frac{\pi}{2}} \\
+  \frac{1}{j} \equiv -j &amp;\equiv \cos{\left(-\frac{\pi}{2}\right)} + j\sin{\left(-\frac{\pi}{2}\right)} \equiv e^{j(-\frac{\pi}{2})}
+\end{align}&lt;/math&gt;
+
+Thus the inductor and capacitor impedance equations can be rewritten in polar form:
+
+:&lt;math&gt;\begin{align}
+  Z_L &amp;= \omega Le^{j\frac{\pi}{2}} \\
+  Z_C &amp;= \frac{1}{\omega C}e^{j\left(-\frac{\pi}{2}\right)}
+\end{align}&lt;/math&gt;
+
+The magnitude gives the change in voltage amplitude for a given current amplitude through the impedance, while the exponential factors give the phase relationship.
+
+=== Deriving the device-specific impedances ===
+What follows below is a derivation of impedance for each of the three basic [[Electrical network|circuit]] elements: the resistor, the capacitor, and the inductor. Although the idea can be extended to define the relationship between the voltage and current of any arbitrary [[Signal (electrical engineering)|signal]], these derivations assume [[sinusoidal]] signals. In fact, this applies to any arbitrary periodic signals, because these can be approximated as a sum of sinusoids through [[Fourier analysis]].
+
+====Resistor====
+For a resistor, there is the relation
+:&lt;math&gt;v_{\text{R}} \left( t \right) = {i_{\text{R}} \left( t \right)}R&lt;/math&gt;
+
+which is [[Ohm's law]].
+
+Considering the voltage signal to be
+:&lt;math&gt;v_{\text{R}}(t) = V_p \sin(\omega t)&lt;/math&gt;
+
+it follows that
+:&lt;math&gt;\frac{v_{\text{R}} \left( t \right)}{i_{\text{R}} \left( t \right)} = \frac{V_p \sin(\omega t)}{I_p \sin \left( \omega t \right)} = R&lt;/math&gt;
+
+This says that the ratio of AC voltage amplitude to [[alternating current]] (AC) amplitude across a resistor is &lt;math&gt;R&lt;/math&gt;, and that the AC voltage leads the current across a resistor by 0 degrees.
+
+This result is commonly expressed as
+:&lt;math&gt;Z_{\text{resistor}} = R&lt;/math&gt;
+
+====Capacitor====
+For a capacitor, there is the relation:
+:&lt;math&gt;i_{\text{C}}(t) = C \frac{\operatorname{d}v_{\text{C}}(t)}{\operatorname{d}t}&lt;/math&gt;
+
+Considering the voltage signal to be
+:&lt;math&gt;v_{\text{C}}(t) = V_p e^{j\omega t} \,&lt;/math&gt;
+
+it follows that
+:&lt;math&gt;\frac{\operatorname{d}v_{\text{C}}(t)}{\operatorname{d}t} = j\omega V_p e^{j\omega t}&lt;/math&gt;
+
+and thus, as previously,
+:&lt;math&gt;Z_{\text{capacitor}} = \frac{v_{\text{C}} \left( t \right)}{i_{\text{C}} \left( t \right)} = {1\over j\omega C}.&lt;/math&gt;
+
+Conversely, if the current through the circuit is assumed to be sinusoidal, its complex representation being 
+:&lt;math&gt;i_{\text{C}}(t) = I_p e^{j\omega t} \,&lt;/math&gt;
+then integrating the differential equation 
+:&lt;math&gt;i_{\text{C}}(t) = C \frac{\operatorname{d}v_{\text{C}}(t)}{\operatorname{d}t}&lt;/math&gt;
+leads to 
+:&lt;math&gt;v_C(t) = {1\over j\omega C}I_p e^{j\omega t} + \text{Const}= {1\over j\omega C} i_C(t) + \text{Const}.&lt;/math&gt;
+The ''Const'' term represents a fixed potential bias superimposed to the AC sinusoidal potential, that plays no role in AC analysis. For this purpose, this term can be assumed to be 0, hence again the impedance  
+:&lt;math&gt;Z_{\text{capacitor}} = {1\over j\omega C}.&lt;/math&gt;
+
+====Inductor====
+For the inductor, we have the relation (from [[Faraday's law of induction|Faraday's law]]):
+:&lt;math&gt;v_{\text{L}}(t) = L \frac{\operatorname{d}i_{\text{L}}(t)}{\operatorname{d}t}&lt;/math&gt;
+
+This time, considering the current signal to be:
+:&lt;math&gt;i_{\text{L}}(t) = I_p \sin(\omega t)&lt;/math&gt;
+
+it follows that:
+:&lt;math&gt;\frac{\operatorname{d}i_{\text{L}}(t)}{\operatorname{d}t} = \omega I_p \cos \left( \omega t \right)&lt;/math&gt;
+
+This result is commonly expressed in polar form as
+:&lt;math&gt;\ Z_{\text{inductor}} = \omega L e^{j \frac{\pi}{2}}&lt;/math&gt;
+
+or, using Euler's formula, as
+:&lt;math&gt;\ Z_{\text{inductor}} = j \omega L&lt;/math&gt;
+
+As in the case of capacitors, it is also possible to derive this formula directly from the complex representations of the voltages and currents, or by assuming a sinusoidal voltage between the two poles of the inductor. 
+In this later case, integrating the differential equation above leads to a ''Const'' term for the current, that represents a fixed DC bias flowing through the inductor. This is set to zero because AC analysis using frequency domain impedance considers one frequency at a time and DC represents a separate frequency of zero hertz in this context.
+
+==Generalised s-plane impedance==
+Impedance defined in terms of ''jω'' can strictly be applied only to circuits that are driven with a steady-state AC signal. The concept of impedance can be extended to a circuit energised with any arbitrary signal by using [[complex frequency]] instead of ''jω''. Complex frequency is given the symbol ''s'' and is, in general, a complex number. Signals are expressed in terms of complex frequency by taking the [[Laplace transform]] of the [[time domain]] expression of the signal. The impedance of the basic circuit elements in this more general notation is as follows:
+
+{|class=&quot;wikitable&quot; style=&quot;margin-left:3em;&quot;
+|-
+!Element||Impedance expression
+|-
+|Resistor||&lt;math&gt;R \,&lt;/math&gt;
+|-
+|Inductor||&lt;math&gt;sL \,&lt;/math&gt;
+|-
+|Capacitor||&lt;math&gt;\frac{1}{sC} \,&lt;/math&gt;
+|}
+
+For a DC circuit, this simplifies to {{nowrap|1=''s'' = 0}}. For a steady-state sinusoidal AC signal {{nowrap|1=''s'' = ''jω''}}.
+
+== Resistance vs reactance ==
+
+Resistance and reactance together determine the magnitude and phase of the impedance through the following relations:
+
+:&lt;math&gt;\begin{align}
+     |Z| &amp;= \sqrt{Z Z^*} = \sqrt{R^2 + X^2} \\
+  \theta &amp;= \arctan{\left(\frac{X}{R}\right)}
+\end{align}&lt;/math&gt;
+
+In many applications, the relative phase of the voltage and current is not critical so only the magnitude of the impedance is significant.
+
+=== Resistance ===
+&lt;!--[[File:Resistors.jpg|thumb|right|200px|A pack of resistors. [[Media:Resistors.jpg|Actual size]]]]--&gt;
+{{Main|Electrical resistance}}
+
+Resistance &lt;math&gt;R&lt;/math&gt; is the real part of impedance; a device with a purely resistive impedance exhibits no phase shift between the voltage and current.
+
+:&lt;math&gt;\ R = |Z| \cos{\theta} \quad&lt;/math&gt;
+
+=== Reactance ===
+{{Main|Electrical reactance}}
+
+Reactance &lt;math&gt; X&lt;/math&gt; is the imaginary part of the impedance; a component with a finite reactance induces a phase shift &lt;math&gt; \theta&lt;/math&gt; between the voltage across it and the current through it.
+
+:&lt;math&gt;\ X = |Z| \sin{\theta} \quad&lt;/math&gt;
+
+A purely reactive component is distinguished by the sinusoidal voltage across the component being in quadrature with the sinusoidal current through the component. This implies that the component alternately absorbs energy from the circuit and then returns energy to the circuit. A pure reactance does not dissipate any power.
+
+==== Capacitive reactance ====
+&lt;!--[[File:Photo-SMDcapacitors.jpg|thumb|right|200px|Capacitors: [[Surface-mount technology|SMD]] ceramic at top left; SMD tantalum at bottom left; [[through-hole]] tantalum at top right; through-hole electrolytic at bottom right. Major scale divisions are cm. [[Media:Resistors.jpg|Actual size]]]]--&gt;
+{{Main|Capacitance}}
+
+A capacitor has a purely reactive impedance that is [[Inversely proportional#Inverse proportionality|inversely proportional]] to the signal [[frequency]]. A capacitor consists of two [[Electrical conduction|conductor]]s separated by an [[Electrical insulation|insulator]], also known as a [[dielectric]].
+
+:&lt;math&gt;X_C = -(\omega C)^{-1} = -(2\pi f C)^{-1}\quad&lt;/math&gt;
+
+The minus sign indicates that the imaginary part of the impedance is negative.
+
+At low frequencies, a capacitor approaches an open circuit so no current flows through it.
+
+A DC voltage applied across a capacitor causes [[Electrical charge|charge]] to accumulate on one side; the [[electric field]] due to the accumulated charge is the source of the opposition to the current. When the [[potential]] associated with the charge exactly balances the applied voltage, the current goes to zero.
+
+Driven by an AC supply, a capacitor accumulates only a limited charge before the potential difference changes sign and the charge dissipates. The higher the frequency, the less charge accumulates and the smaller the opposition to the current.
+
+==== Inductive reactance ====
+{{Main|Inductance}}
+
+Inductive reactance &lt;math&gt;X_L&lt;/math&gt; is [[Proportionality (mathematics)|proportional]] to the signal [[frequency]] &lt;math&gt;f&lt;/math&gt; and the [[inductance]] &lt;math&gt;L&lt;/math&gt;.
+
+:&lt;math&gt;X_L = \omega L = 2\pi f L\quad&lt;/math&gt;
+
+An inductor consists of a coiled conductor. [[Faraday's law of induction|Faraday's law]] of electromagnetic induction gives the back [[Electromotive force|emf]] &lt;math&gt;\mathcal{E}&lt;/math&gt; (voltage opposing current) due to a rate-of-change of [[magnetic flux density]] &lt;math&gt;B&lt;/math&gt; through a current loop.
+
+:&lt;math&gt;\mathcal{E} = -{{d\Phi_B} \over dt}\quad&lt;/math&gt;

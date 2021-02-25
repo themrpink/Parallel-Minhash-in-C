@@ -66,7 +66,7 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
 
         char buffer[100];
         int numb_of_threads = value;
-        char *filename = "time_log.txt";
+        char *filename = "omp_time_log.txt";
         FILE *fp = fopen(filename, "a");
         sprintf(buffer, "Number of threads: %d\n\n Elapsed times: \n\n", numb_of_threads);
         fwrite(buffer, strlen(buffer), 1, fp);
@@ -91,14 +91,14 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         fclose(fp);
 
         //salva i tempi nel file CSV
-        fp = fopen("time_log.csv", "a");
+        fp = fopen("omp_time_log.csv", "a");
         //csv format: functions time 1-12 + numb_of_threads
         for(int i=0; i<NUMBER_OF_FUNCTIONS;i++)
             fprintf(fp, "%.4f,", time[i]);
         fprintf(fp, "%d\n", numb_of_threads
         );
         fclose(fp); 
-        printf("--> Tempi di esecuzione salvati in \"time_log.txt e in time_log.csv\"\n\n");
+        printf("--> Tempi di esecuzione salvati in \"omp_time_log.txt e in omp_time_log.csv\"\n\n");
 
     }
 

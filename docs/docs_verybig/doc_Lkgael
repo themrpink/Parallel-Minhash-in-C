@@ -1,0 +1,220 @@
+Note that by the last expression and the [[binomial series]], for every {{nowrap|0 ≤ ''p'' &lt; 1}} and &lt;math&gt;q=1-p&lt;/math&gt;,
+
+:&lt;math&gt;
+p^{-r} = (1-q)^{-r} = \sum_{k=0}^\infty \binom{-r}{k}(-q)^k = \sum_{k=0}^\infty \binom{k+r-1}{k}q^k
+&lt;/math&gt;
+
+hence the terms of the probability mass function indeed add up to one as below.
+:&lt;math&gt;
+\sum_{k=0}^\infty \binom{k+r-1}{k}(1-p)^kp^r = p^{-r}p^r = 1
+&lt;/math&gt;
+
+To understand the above definition of the probability mass function, note that the probability for every specific sequence of ''r''&amp;nbsp;successes and ''k''&amp;nbsp;failures is {{nowrap|''p''&lt;sup&gt;''r''&lt;/sup&gt;(1 − ''p'')&lt;sup&gt;''k''&lt;/sup&gt;}}, because the outcomes of the ''k''&amp;nbsp;+&amp;nbsp;''r'' trials are supposed to happen [[independence (probability theory)|independently]]. Since the ''r''th success always comes last, it remains to choose the ''k''&amp;nbsp;trials with failures out of the remaining ''k''&amp;nbsp;+&amp;nbsp;''r''&amp;nbsp;−&amp;nbsp;1 trials. The above binomial coefficient, due to its combinatorial interpretation, gives precisely the number of all these sequences of length ''k''&amp;nbsp;+&amp;nbsp;''r''&amp;nbsp;−&amp;nbsp;1.
+
+===Cumulative distribution function===
+
+The [[cumulative distribution function]] can be expressed in terms of the [[regularized incomplete beta function]]:
+: &lt;math&gt;
+    F(k; r, p) \equiv \Pr(X\le k) = 1 - I_{p}(k+1, r) = I_{1-p}(r,k+1).
+  &lt;/math&gt;
+
+It can also be expressed in terms of the [[cumulative distribution function]] of the [[binomial distribution]]:&lt;ref&gt;Morris K W (1963),A note on direct and inverse sampling, Biometrika, 50, 544--545.&lt;/ref&gt;
+: &lt;math&gt;
+    F(k; r, p) = F_{binomial}(k;n=k+r,p).
+  &lt;/math&gt;
+
+===Alternative formulations===
+Some sources may define the negative binomial distribution slightly differently from the primary one here. The most common variations are where the random variable ''X'' is counting different things. These variations can be seen in the table here:
+{| class=&quot;wikitable&quot;
+|
+|''X'' is counting...
+|Probability mass function
+|Formula
+|Alternate formula
+(using equivalent binomial)
+|Alternate formula
+(simplified using: &lt;math display=&quot;inline&quot;&gt;n=k+r
+&lt;/math&gt;)
+|Support
+|-
+|1
+|''k'' failures, given ''r'' successes
+|&lt;math display=&quot;inline&quot;&gt;f(k; r, p) \equiv \Pr(X = k) =
+&lt;/math&gt;
+|&lt;math display=&quot;inline&quot;&gt;\binom{k+r-1}{k} p^r(1-p)^k
+&lt;/math&gt;&lt;ref&gt;{{Cite web|url=http://www.mathworks.com/help/stats/negative-binomial-distribution.html|title=Mathworks: Negative Binomial Distribution|last=|first=|date=|website=|publisher=|access-date=}}&lt;/ref&gt;&lt;ref name=&quot;:1&quot;&gt;{{Cite web|url=http://www.johndcook.com/negative_binomial.pdf|title=Notes on the Negative Binomial Distribution|last=Cook|first=John D.|date=|website=|publisher=|access-date=}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=http://www.stat.ufl.edu/~abhisheksaha/sta4321/lect14.pdf|title=Introduction to Probability / Fundamentals of Probability: Lecture 14|last=Saha|first=Abhishek|date=|website=|publisher=|access-date=}}&lt;/ref&gt;
+|&lt;math display=&quot;inline&quot;&gt;\binom{k+r-1}{r-1} p^r(1-p)^k
+&lt;/math&gt;&lt;ref&gt;{{cite web|url=http://mathworld.wolfram.com/NegativeBinomialDistribution.html|title=Negative Binomial Distribution|first=Weisstein, Eric|last=W.|website=mathworld.wolfram.com}}&lt;/ref&gt;&lt;ref&gt;[[SAS Institute]], &quot;[http://support.sas.com/documentation/cdl/en/lefunctionsref/67960/HTML/default/viewer.htm#n0n7cce4a3gfqkn1vr0p1x0of99s.htm#n1olto4j49wrc3n11tnmuq2zibj6 Negative Binomial Distribution]&quot;, ''SAS(R) 9.4 Functions and CALL Routines: Reference, Fourth Edition'', SAS Institute, Cary, NC, 2016.&lt;/ref&gt;&lt;ref name=&quot;Crawley 2012&quot;&gt;{{cite book|url=https://books.google.com/books?id=XYDl0mlH-moC|title=The R Book|last=Crawley|first=Michael J.|publisher=Wiley|year=2012|isbn=978-1-118-44896-0|location=}}&lt;/ref&gt;&lt;ref name=&quot;:0&quot;&gt;{{Cite web|url=http://www.math.ntu.edu.tw/~hchen/teaching/StatInference/notes/lecture16.pdf|title=Set theory: Section 3.2.5 – Negative Binomial Distribution|last=|first=|date=|website=|publisher=|access-date=}}&lt;/ref&gt;
+| rowspan=&quot;2&quot; |&lt;math display=&quot;inline&quot;&gt;\binom{n-1}{k} p^r(1-p)^k
+&lt;/math&gt;
+|&lt;math&gt;\text{for }k = 0, 1, 2, \ldots&lt;/math&gt;
+|-
+|2
+|''n'' trials, given ''r'' successes
+|&lt;math display=&quot;inline&quot;&gt;f(n; r, p) \equiv \Pr(X = n) =
+&lt;/math&gt;
+|&lt;math display=&quot;inline&quot;&gt;\binom{n-1}{r-1} p^r(1-p)^{n-r}
+&lt;/math&gt;&lt;ref name=&quot;:1&quot; /&gt;&lt;ref name=&quot;:0&quot; /&gt;&lt;ref&gt;{{Cite web|url=http://www.randomservices.org/random/bernoulli/NegativeBinomial.html|title=Randomservices.org, Chapter 10: Bernoulli Trials, Section 4: The Negative Binomial Distribution}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=http://stattrek.com/probability-distributions/negative-binomial.aspx|title=Stat Trek: Negative Binomial Distribution|last=|first=|date=|website=|publisher=|access-date=}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=http://www.stat.purdue.edu/~zhanghao/STAT511/handout/Stt511%20Sec3.5.pdf|title=Distinguishing Between Binomial, Hypergeometric and Negative Binomial Distributions|last=Wroughton|first=Jacqueline|date=|website=|publisher=|access-date=}}&lt;/ref&gt;
+|&lt;math display=&quot;inline&quot;&gt;\binom{n-1}{n-r} p^r(1-p)^{n-r}
+&lt;/math&gt;
+| rowspan=&quot;2&quot; |&lt;math&gt;\text{for }n = r, r+1, r+2, \dotsc&lt;/math&gt;
+|-
+|3
+|''n'' trials, given ''r'' failures
+|&lt;math display=&quot;inline&quot;&gt;f(n; r, p) \equiv \Pr(X = n) =
+&lt;/math&gt;
+|&lt;math display=&quot;inline&quot;&gt;\binom{n-1}{r-1} p^{n-r}r(1-p)^{r}
+&lt;/math&gt;
+|&lt;math display=&quot;inline&quot;&gt;\binom{n-1}{n-r} p^{n-r}(1-p)^{r}
+&lt;/math&gt;
+|&lt;math display=&quot;inline&quot;&gt;\binom{n-1}{k} p^{k}(1-p)^{r}
+&lt;/math&gt;
+|-
+|4
+|''r'' successes, given ''n'' trials
+|&lt;math display=&quot;inline&quot;&gt;f(r; n, p) \equiv \Pr(X = r) = &lt;/math&gt;
+| colspan=&quot;3&quot; |This is the [[binomial distribution]]:  &lt;math display=&quot;inline&quot;&gt;\binom{n}{r} p^r(1-p)^{n-r}&lt;/math&gt;
+|&lt;math&gt;\text{for }r = 0, 1, 2, \dotsc, n&lt;/math&gt;
+|}
+Each of these definitions of the negative binomial distribution can be expressed in slightly different but equivalent ways. The first alternative formulation is simply an equivalent form of the binomial coefficient, that is: &lt;math display=&quot;inline&quot;&gt; \binom ab = \binom a{a-b} \quad \text{for }\ 0\leq b\leq a&lt;/math&gt;.  The second alternate formulation somewhat simplifies the expression by recognizing that the total number of trials is simply the number of successes and failures, that is: &lt;math display=&quot;inline&quot;&gt;n=r+k
+&lt;/math&gt;.  These second formulations may be more intuitive to understand, however they are perhaps less practical as they have more terms.
+# The definition where ''X'' is the number of ''k'' '''failures''' that occur for a given number of ''r'' '''successes'''.  This definition is very similar to the primary definition used in this article, only that ''k'' successes and ''r'' failures are switched when considering what is being counted and what is given.  Note however, that ''p'' still refers to the probability of &quot;success&quot;.
+# The definition where ''X'' is the number of ''n'' '''trials''' that occur for a given number of ''r'' '''successes'''.  This definition is very similar to definition #2, only that ''r'' successes is given instead of ''k'' failures.  Note however, that ''p'' still refers to the probability of &quot;success&quot;.
+* The definition of the negative binomial distribution can be extended to the case where the parameter ''r'' can take on a positive [[real number|real]] value.  Although it is impossible to visualize a non-integer number of &quot;failures&quot;, we can still formally define the distribution through its probability mass function.  The problem of extending the definition to real-valued (positive) ''r'' boils down to extending the binomial coefficient to its real-valued counterpart, based on the [[gamma function]]:
+:: &lt;math&gt;
+   \binom{k+r-1}{k} = \frac{(k+r-1)(k+r-2)\dotsm(r)}{k!} = \frac{\Gamma(k+r)}{k!\,\Gamma(r)}
+  &lt;/math&gt;
+: After substituting this expression in the original definition, we say that ''X'' has a negative binomial (or '''Pólya''') distribution if it has a [[probability mass function]]:
+:: &lt;math&gt;
+    f(k; r, p) \equiv \Pr(X = k) = \frac{\Gamma(k+r)}{k!\,\Gamma(r)} (1-p)^r p^k \quad\text{for }k = 0, 1, 2, \dotsc
+  &lt;/math&gt; 
+: Here ''r'' is a real, positive number.
+
+In negative binomial regression,&lt;ref name=&quot;neg bin reg2&quot;&gt;{{cite book|url=https://books.google.com/books?id=0Q_ijxOEBjMC|title=Negative Binomial Regression|last=Hilbe|first=Joseph M.|publisher=Cambridge University Press|year=2011|isbn=978-0-521-19815-8|edition=Second|location=Cambridge, UK}}&lt;/ref&gt; the distribution is specified in terms of its mean, &lt;math display=&quot;inline&quot;&gt;m=\frac{pr}{1-p}&lt;/math&gt;, which is then related to explanatory variables as in [[linear regression]] or other [[generalized linear model]]s.  From the expression for the mean ''m'', one can derive &lt;math display=&quot;inline&quot;&gt;p=\frac{m}{m+r}&lt;/math&gt; and &lt;math display=&quot;inline&quot;&gt;1-p=\frac{r}{m+r}&lt;/math&gt;.  Then, substituting these expressions in [[Negative binomial distribution#Extension to real-valued r|the one for the probability mass function when ''r'' is real-valued]], yields this parametrization of the probability mass function in terms of&amp;nbsp;''m'':
+
+:&lt;math&gt;
+    \Pr(X = k) = \frac{\Gamma(r+k)}{k! \, \Gamma(r)} \left(\frac{r}{r+m}\right)^r \left(\frac{m}{r+m}\right)^k \quad\text{for }k = 0, 1, 2, \dotsc
+  &lt;/math&gt;
+The variance can then be written as &lt;math display=&quot;inline&quot;&gt;m+\frac{m^2}{r}&lt;/math&gt;.  Some authors prefer to set &lt;math display=&quot;inline&quot;&gt;\alpha = \frac{1}{r}&lt;/math&gt;, and express the variance as &lt;math display=&quot;inline&quot;&gt;m+\alpha m^2&lt;/math&gt;.  In this context, and depending on the author, either the parameter ''r'' or its reciprocal ''α'' is referred to as the &quot;dispersion parameter&quot;, &quot;shape parameter&quot; or &quot;clustering coefficient&quot;,&lt;ref&gt;{{cite journal|last=Lloyd-Smith|first=J. O.|year=2007|title=Maximum Likelihood Estimation of the Negative Binomial Dispersion Parameter for Highly Overdispersed Data, with Applications to Infectious Diseases|journal=[[PLoS ONE]]|volume=2|issue=2|pages=e180|doi=10.1371/journal.pone.0000180|pmid=17299582|pmc=1791715|bibcode=2007PLoSO...2..180L}} {{open access}}&lt;/ref&gt; or the &quot;heterogeneity&quot;&lt;ref name=&quot;neg bin reg2&quot; /&gt; or &quot;aggregation&quot; parameter.&lt;ref name=&quot;Crawley 2012&quot;/&gt; The term &quot;aggregation&quot; is particularly used in ecology when describing counts of individual organisms. Decrease of the aggregation parameter ''r'' towards zero corresponds to increasing aggregation of the organisms; increase of ''r'' towards infinity corresponds to absence of aggregation, as can be described by [[Poisson regression]].
+* Sometimes the distribution is parameterized in terms of its mean ''μ'' and variance ''σ''&lt;sup&gt;2&lt;/sup&gt;:
+:: &lt;math&gt;
+\begin{align}
+&amp; p =\frac{\sigma^2 - \mu}{\sigma^2}, \\[6pt]
+&amp; r =\frac{\mu^2}{\sigma^2-\mu}, \\[3pt]
+&amp; \Pr(X=k) = {k+\frac{\mu^2}{\sigma^2-\mu}-1 \choose k}  \left(\frac{\sigma^2-\mu}{\sigma^2}\right)^k \left(\frac \mu {\sigma^2}\right)^{\mu^2/(\sigma^2-\mu)}.
+\end{align}
+&lt;/math&gt;
+
+===Examples===
+
+====Selling candy====
+Pat Collis is required to sell candy bars to raise money for the 6th grade field trip.  There are thirty houses in the neighborhood, and Pat is not supposed to return home until five candy bars have been sold.  So the child goes door to door, selling candy bars. At each house, there is a 0.6 probability of selling one candy bar and a 0.4 probability of selling nothing.
+
+''What's the probability of selling the last candy bar at the'' ''n''th ''house?''
+
+Successfully selling candy enough times is what defines our stopping criterion (as opposed to failing to sell it), so ''k'' in this case represents the number of failures and ''r'' represents the number of successes.  Recall that the NegBin(''r'', ''p'') distribution describes the probability of ''k'' failures and ''r'' successes in ''k''&amp;nbsp;+&amp;nbsp;''r'' Bernoulli(''p'') trials with success on the last trial.  Selling five candy bars means getting five successes.  The number of trials (i.e. houses) this takes is therefore ''k''&amp;nbsp;+&amp;nbsp;5&amp;nbsp;=&amp;nbsp;''n''.  The random variable we are interested in is the number of houses, so we substitute ''k''&amp;nbsp;=&amp;nbsp;''n''&amp;nbsp;−&amp;nbsp;5 into a NegBin(5,&amp;nbsp;0.4) mass function and obtain the following mass function of the distribution of houses (for ''n''&amp;nbsp;≥&amp;nbsp;5):
+
+:&lt;math&gt; f(n) = {(n-5) + 5 - 1 \choose n-5} \; (1-0.4)^5 \; 0.4^{n-5} = {n-1 \choose n-5} \; 3^5 \; \frac{2^{n-5}}{5^n}. &lt;/math&gt;
+
+''What's the probability that Pat finishes on the tenth house?''
+
+:&lt;math&gt; f(10) = 0.1003290624. \, &lt;/math&gt;
+
+''What's the probability that Pat finishes on or before reaching the eighth house?''
+
+To finish on or before the eighth house, Pat must finish at the fifth, sixth, seventh, or eighth house. Sum those probabilities:
+:&lt;math&gt; f(5) = 0.07776 \, &lt;/math&gt;
+:&lt;math&gt; f(6) = 0.15552 \, &lt;/math&gt;
+:&lt;math&gt; f(7) = 0.18662 \, &lt;/math&gt;
+:&lt;math&gt; f(8) = 0.17418 \, &lt;/math&gt;
+:&lt;math&gt;\sum_{j=5}^8 f(j) = 0.59408.&lt;/math&gt;
+
+''What's the probability that Pat exhausts all 30 houses in the neighborhood?''
+
+This can be expressed as the probability that Pat [[Complementary event|does not]] finish on the fifth through the thirtieth house:
+:&lt;math&gt;1-\sum_{j=5}^{30} f(j) = 1 - I_{0.4}(5, 30-5+1) \approx 1 - 0.99999342 = 0.00000658. &lt;/math&gt;
+
+Because of the rather high probability that Pat will sell to each house (60 percent), the probability of her NOT fulfilling her quest is vanishingly slim.
+
+====Length of hospital stay====
+Hospital [[length of stay]] is an example of real-world data that can be modelled well with a negative binomial distribution.&lt;ref name=carter&gt;{{cite journal
+ | author     = Carter, E.M., Potts, H.W.W.
+ | title      = Predicting length of stay from an electronic patient record system: a primary total knee replacement example
+ | journal    = BMC Medical Informatics and Decision Making
+ | volume     = 14
+ | issue      = 
+ | pages      = 26
+ | date       = 4 April 2014
+ | doi       = 10.1186/1472-6947-14-26
+ | pmid      = 24708853
+ | pmc      = 3992140
+ }} {{open access}} &lt;/ref&gt;
+
+==Properties==
+
+
+===Expectation===
+The expected total number of successes in a negative binomial distribution with parameters {{math|(''r'', ''p'')}} is ''rp''/(1&amp;nbsp;−&amp;nbsp;''p''). To see this, imagine an experiment simulating the negative binomial is performed many times. That is, a set of trials is performed until {{math|''r''}} failures are obtained, then another set of trials, and then another etc. Write down the number of trials performed in each experiment: {{math|''a'', ''b'', ''c'', …}} and set {{math|''a''&amp;nbsp;+&amp;nbsp;''b''&amp;nbsp;+&amp;nbsp;''c''&amp;nbsp;+&amp;nbsp;… {{=}}&amp;nbsp;''N''}}. Now we would expect about {{math|''Np''}} successes in total. Say the experiment was performed {{math|''n''}} times. Then there are {{math|''nr''}} failures in total. So we would expect {{math|''nr'' {{=}} ''N''(1&amp;nbsp;−&amp;nbsp;''p'')}}, so {{math|''N''/''n'' {{=}}&amp;nbsp;''r''/(1&amp;nbsp;−&amp;nbsp;''p'')}}. See that {{math|''N''/''n''}} is just the average number of trials per experiment. That is what we mean by &quot;expectation&quot;. The average number of successes per experiment is {{math|1=''N''/''n''&amp;nbsp;−&amp;nbsp;''r'' =&amp;nbsp;''r''/(1&amp;nbsp;−&amp;nbsp;''p'')&amp;nbsp;−&amp;nbsp;''r'' = ''rp''/(1&amp;nbsp;−&amp;nbsp;''p'')}}. This agrees with the mean given in the box on the right-hand side of this page.
+
+=== Variance ===
+When counting the number of successes given the number ''r'' of failures, the variance is&amp;nbsp;''rp''/(1&amp;nbsp;−&amp;nbsp;''p'')&lt;sup&gt;2&lt;/sup&gt;.
+When counting the number of failures before the ''r''-th success, the variance is&amp;nbsp;''r''(1&amp;nbsp;−&amp;nbsp;''p'')/''p''&lt;sup&gt;2&lt;/sup&gt;.
+
+===Relation to the binomial theorem===
+
+Suppose ''Y'' is a random variable with a [[binomial distribution]] with parameters ''n'' and ''p''.  Assume ''p''&amp;nbsp;+&amp;nbsp;''q''&amp;nbsp;=&amp;nbsp;1, with ''p'',&amp;nbsp;''q''&amp;nbsp;≥&amp;nbsp;0, then
+
+:&lt;math&gt;1=1^n=(p+q)^n.&lt;/math&gt;
+
+Using [[Newton's binomial theorem]], this can equally be written as:
+
+:&lt;math&gt;(p+q)^n=\sum_{k=0}^\infty {n \choose k} p^k q^{n-k},&lt;/math&gt;
+
+in which the upper bound of summation is infinite.  In this case, the [[binomial coefficient]]
+
+: &lt;math&gt;{n \choose k}={n(n-1)(n-2)\cdots(n-k+1) \over k! }.&lt;/math&gt;
+
+is defined when ''n'' is a real number, instead of just a positive integer.  But in our case of the binomial distribution it is zero when ''k'' &gt; ''n''.  We can then say, for example
+
+: &lt;math&gt;(p+q)^{8.3}=\sum_{k=0}^\infty {8.3 \choose k} p^k q^{8.3 - k}.&lt;/math&gt;
+
+Now suppose ''r'' &gt; 0 and we use a negative exponent:
+
+:&lt;math&gt;1=p^r\cdot p^{-r}=p^r (1-q)^{-r}=p^r \sum_{k=0}^\infty {-r \choose k} (-q)^k.&lt;/math&gt;
+
+Then all of the terms are positive, and the term
+
+:&lt;math&gt;p^r {-r \choose k} (-q)^k&lt;/math&gt;
+
+is just the probability that the number of failures before the ''r''th success is equal to ''k'', provided ''r'' is an integer.  (If ''r'' is a negative non-integer, so that the exponent is a positive non-integer, then some of the terms in the sum above are negative, so we do not have a probability distribution on the set of all nonnegative integers.)
+
+Now we also allow non-integer values of ''r''.  Then we have a proper negative binomial distribution, which is a generalization of the Pascal distribution, which coincides with the Pascal distribution when ''r'' happens to be a positive integer.
+
+Recall from above that
+
+:The sum of independent negative-binomially distributed random variables ''r''&lt;sub&gt;1&lt;/sub&gt; and ''r''&lt;sub&gt;2&lt;/sub&gt; with the same value for parameter ''p'' is negative-binomially distributed with the same ''p'' but with ''r''-value&amp;nbsp;''r''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;+&amp;nbsp;''r''&lt;sub&gt;2&lt;/sub&gt;.
+
+This property persists when the definition is thus generalized, and affords a quick way to see that the negative binomial distribution is [[Infinite divisibility (probability)|infinitely divisible]].
+
+=== Recurrence relation ===
+
+The following [[recurrence relation]] holds:
+
+: &lt;math&gt; \begin{cases}
+(k+1) \Pr (k+1)-p \Pr (k) (k+r)=0, \\[5pt]
+\Pr (0)=(1-p)^r
+\end{cases}
+&lt;/math&gt;
+
+==Related distributions==
+* The [[geometric distribution]] (on {&amp;nbsp;0,&amp;nbsp;1,&amp;nbsp;2,&amp;nbsp;3,&amp;nbsp;...&amp;nbsp;}) is a special case of the negative binomial distribution, with
+::&lt;math&gt;\operatorname{Geom}(p) = \operatorname{NB}(1,\, 1-p).\,&lt;/math&gt;
+
+* The negative binomial distribution is a special case of the [[discrete phase-type distribution]].
+* The negative binomial distribution is a special case of discrete [[Compound Poisson distribution]].
+
+===Poisson distribution===
+Consider a sequence of negative binomial random variables where the stopping parameter ''r'' goes to infinity, whereas the probability of success in each trial, ''p'', goes to zero in such a way as to keep the mean of the distribution constant. Denoting this mean as ''λ'', the parameter ''p'' will be ''p''&amp;nbsp;=&amp;nbsp;''λ''/(''r''&amp;nbsp;+&amp;nbsp;''λ'')
+: &lt;math&gt;
+    \lambda = r\,\frac{p}{1- p} \quad \Rightarrow \quad p = \frac{\lambda}{r+\lambda}.
+  &lt;/math&gt;

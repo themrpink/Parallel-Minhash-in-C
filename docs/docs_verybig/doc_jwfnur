@@ -1,0 +1,303 @@
+{{Antennas|expanded=Common Types}}
+
+A '''log-periodic antenna''' ('''LP'''), also known as a '''log-periodic array''' or '''log-periodic aerial''', is a multi-element, [[directional antenna]] designed to operate over a wide band of [[Frequency|frequencies]]. It was invented by John Dunlavy in 1952.
+
+The most common form of log-periodic antenna is the '''log-periodic dipole array''' or '''LPDA''', The LPDA consists of a number of [[half-wave dipole]] [[driven element]]s of gradually increasing length, each consisting of a pair of metal rods. The dipoles are mounted close together in a line, connected in parallel to the [[feedline]] with alternating [[phase (waves)|phase]]. Electrically, it simulates a series of two or three-element [[Yagi antenna]]s connected together, each set tuned to a different frequency.
+
+LPDA antennas look somewhat similar to Yagi antennas, in that they both consist of dipole rod elements mounted in a line along a support boom, but they work in very different ways. Adding elements to a Yagi increases its directionality, or [[Antenna gain|gain]], while adding elements to a LPDA increases its frequency response, or [[bandwidth (signal processing)|bandwidth]]. 
+
+One large application for LPDAs is in rooftop terrestrial [[television antenna]]s, since they must have large bandwidth to cover the wide television bands of roughly 54&amp;ndash;88 and 174&amp;ndash;216&amp;nbsp;MHz in the [[Very high frequency|VHF]] and 470&amp;ndash;890&amp;nbsp;MHz in the [[Ultra high frequency|UHF]]  while also having high gain for adequate fringe reception. One widely used design for television reception combined a Yagi for UHF reception in front of a larger LPDA for VHF.
+
+== Basic concept ==
+
+The LPDA normally consists of a series of [[dipole antenna|half wave dipole]] &quot;elements&quot; each consisting of a pair of metal rods, positioned along a support boom lying along the antenna axis. The elements are spaced at intervals following a logarithmic function of the [[frequency]], known as ''d'' or ''sigma''.  The successive elements gradually decrease in length along the boom. The relationship between the lengths is a function known as ''tau''. ''Sigma'' and ''tau'' are the key design elements of the LPDA design.&lt;ref&gt;[http://www.salsburg.com/Log-Periodic.pdf The Log-Periodic Dipole Array&quot;]&lt;/ref&gt;&lt;ref name=d&gt;{{Cite web|url=http://www.ewh.ieee.org/soc/es/Nov1998/13/LPARRAY/LPDA.HTM|title=Log Periodic Dipole Array (LPDA)|website=www.ewh.ieee.org}}&lt;/ref&gt;  The [[radiation pattern]] of the antenna is unidirectional, with the [[main lobe]] along the axis of the boom, off the end with the shortest elements.  Each dipole element is [[resonance|resonant]] at a [[wavelength]] approximately equal to twice its length. The [[bandwidth (signal processing)|bandwidth]] of the antenna, the [[frequency]] range over which it has maximum [[antenna gain|gain]], is approximately between the [[resonant frequency|resonant frequencies]] of the longest and shortest element.
+
+Every element in the LPDA antenna is a [[driven element]], that is, connected electrically to the [[feedline]].  A parallel wire [[transmission line]] usually runs along the central boom, and each successive element is connected in ''opposite'' [[phase (waves)|phase]] to it.  The feedline can often be seen zig-zagging across the support boom holding the elements.&lt;ref name=d/&gt;  Another common construction method is to use two parallel central support booms that also acts as the transmission line, mounting the dipoles on the alternate booms. Other forms of the log-periodic design replace the dipoles with the transmission line itself, forming the log-periodic zig-zag antenna.&lt;ref&gt;[http://www.google.ca/patents/US3355740 &quot;Log-periodic zig zag antenna&quot;], US Patent 3355740&lt;/ref&gt; Many other forms using the transmission wire as the active element also exist.&lt;ref&gt;[http://www.ece.illinois.edu/about/history/antenna/photos.html Photo Archive Of Antennas], Illinois Historic Archive&lt;/ref&gt;
+
+The [[Yagi–Uda antenna|Yagi]] and the LPDA designs look very similar at first glance, as they both consist of a number of dipole elements mounted along a support boom. The Yagi, however, has only a single [[driven element]] connected to the transmission line, usually the second one from the back of the array, the remaining elements are [[parasitic element|parasitic]]. The Yagi antenna differs from the LPDA in having a very narrow bandwidth.
+
+In general terms, at any given frequency the log-periodic design operates somewhat similar to a three-element Yagi antenna; the dipole element closest to resonant at the operating frequency acts as a driven element, with the two adjacent elements on either side as director and reflector to increase the gain, the shorter element in front acting as a director and the longer element behind as a reflector. However, the system is somewhat more complex than that, and all the elements contribute to some degree, so the gain for any given frequency is higher than a Yagi of the same dimensions as any one section of the log-periodic. However, a Yagi with the same number of elements as a log-periodic would have ''far'' higher gain, as all of those elements are improving the gain of a single driven element. In its use as a television antenna, it was common to combine a log-periodic design for VHF with a Yagi for UHF, with both halves being roughly equal in size. This resulted in much higher gain for UHF, typically on the order of 10 to 14&amp;nbsp;dB on the Yagi side and 6.5&amp;nbsp;dB for the log-periodic.&lt;ref&gt;{{cite book |url=https://books.google.com/books?id=jDCs1Ckne_EC&amp;pg=PA177 |page=178 |title= Computational Electromagnetics for RF and Microwave Engineering |first=David |last=Davidson |publisher=Cambridge University Press |date=2010|isbn=9781139492812 }}&lt;/ref&gt; But this extra gain was needed anyway in order to make up for a number of problems with [[UHF television broadcasting#UHF vs VHF|UHF signals]].
+
+It should be strictly noted that the log-periodic shape, according to the IEEE definition,&lt;ref&gt;“''Log-periodic antenna'' Any one of a class of antennas having a structural geometry such that its impedance and radiation characteristics repeat periodically as the logarithm of frequency.” (see ''The new IEEE Standard Dictionary of Electrical and Electronics Terms'', 1993 ⓒ IEEE.) &lt;/ref&gt;&lt;ref&gt;“''Log-periodic antenna'' Any one of a class of antennas having a structural geometry such that its impedance and radiation characteristics repeat periodically as the logarithm of frequency.” (see Acknowledgments, and footnote in page 1), ''Self-Complementary Antennas―Principle of Self-Complementarity for Constant Impedance''―, by Y. Mushiake, Springer-Verlag London Ltd., London, 1996&lt;/ref&gt; does not align with broadband property for antennas.&lt;ref&gt;Y. Mushiake, “Constant-impedance antennas&quot;, ''J. IECE Japan'', 48, 4, pp. 580-584, April 1965. (in Japanese)&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.sm.rim.or.jp/~ymushiak/sub.non-const.htm|title=Y. Mushiake, ''' Log-periodic structure provides no broad-band property for antennas.&quot;' ''J. IEE Japan'', 69, 3, p. 88, March 1949. |publisher=Sm.rim.or.jp |accessdate=15 January 2014}}&lt;/ref&gt; The broadband property of log-periodic antennas comes from its [[self-similarity]]. A planar log-periodic antenna can also be made [[self-complementary antenna|self-complementary]], such as logarithmic [[spiral antenna]]s (which are not classified as log-periodic ''per se'' but among the [[frequency independent antennas]] that are also self-similar) or the log-periodic toothed design. Y. Mushiake found, for what he termed &quot;the simplest self-complementary planar antenna,&quot; a driving point impedance of [[Impedance of free space|η&lt;sub&gt;0&lt;/sub&gt;]]/2=188.4&amp;nbsp;Ω at frequencies well within its bandwidth limits.&lt;ref&gt;{{cite web|url=http://www.sm.rim.or.jp/~ymushiak/sub.docu.1.htm##%% |title=Y. Mushiake, '''Origination of self-complementary structure and discovery of its constant-impedance property.' ''J. IEE Japan'', 69, 3, p. 88, March 1949. (in Japanese) |publisher=Sm.rim.or.jp |accessdate=31 January 2014}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.sm.rim.or.jp/~ymushiak/sub.sca.htm|title=Y. Mushiake, ''' Infinite freedom.&quot;' |publisher=Sm.rim.or.jp |accessdate=15 January 2014}}&lt;/ref&gt;&lt;ref name=&quot;Rumsey Frequency&quot;&gt;V. H. Rumsey, ''Frequency independent antennas'', Academic Press, New York and London. 1966. [p. 55]&lt;/ref&gt;
+{{multiple image
+| align    = center
+| direction = horizontal
+| header   =
+| image1   = Schwarzbeck UHALP 9108 A.jpg
+| caption1 = Log-periodic antenna, 250&amp;ndash;2400 MHz
+| width1   = 200
+| image2   = VHF UHF LP-antenna closeup.JPG
+| caption2 = Log periodic mounted for vertical polarization, covers 140&amp;ndash;470&amp;nbsp;MHz
+| width2   = 150
+| image3   = Log periodic VHF TV antenna 1963.jpg
+| caption3 = LP television antenna 1963. Covers 54&amp;ndash;88&amp;nbsp;MHz and 174&amp;ndash;218&amp;nbsp;MHz. Slanted elements were used because on the upper band they operate at the 3rd harmonic.
+| width3   = 262
+| image4   = Log-periodic monopole antenna.png
+| caption4 = Wire Log-periodic monopole antenna.
+| width4   = 202
+}}
+
+== History ==
+The log periodic antenna was invented by John Dunlavy in 1952 while working for the United States Air Force, but was not credited with it due to its &quot;Secret&quot; classification.&lt;ref&gt;https://www.stereophile.com/content/loudspeaker-designer-john-dunlavy-numbers-page-4&lt;/ref&gt; The [[University of Illinois at Urbana–Champaign]] had patented the Isbell and Mayes-Carrel antennas and licensed the design as a package exclusively to JFD Electronics in New York. [[Channel Master]] and [[Blonder Tongue Labs]] ignored the patents and produced a wide range of antennas based on this design. Lawsuits regarding the antenna patent which the UI Foundation lost, evolved into the 1971 Blonder-Tongue Doctrine.&lt;ref&gt;{{Cite web|url=https://definitions.uslegal.com/b/blonder-tongue-doctrine/|title=Blonder–Tongue Doctrine Law and Legal Definition &amp;#124; USLegal, Inc.|website=definitions.uslegal.com}}&lt;/ref&gt; This precedent governs patent litigation.{{Citation needed|date=July 2018}}
+
+== Short wave broadcast antennas ==
+{{multiple image
+| align = right
+| direction = horizontal
+| header   =
+| image1   = Moosbrunn drehbare logarithmisch-periodische Antenne (2).JPG
+| caption1 = Wire log periodic transmitting antenna at international shortwave broadcasting station, Moosbrunn, Austria. Covers 6.1&amp;ndash;23&amp;nbsp;MHz
+| width1   = 288
+| image2   = LPA_antenna_suitable_for_short_wave_broadcast.png
+| caption2 = Diagram of a zig-zag shortwave LPA antenna, black shows metallic conductors, red shows insulating supports
+| width2   = 180
+}}
+
+The log periodic is commonly used as a transmitting antenna in high power [[International broadcasting|shortwave broadcasting]]&lt;ref&gt;{{Cite web|url=https://www.antenna.be/art1.html|title=Antennas for the Shortwave Broadcaster|website=www.antenna.be}}&lt;/ref&gt; stations because its broad bandwidth allows a single antenna to transmit on frequencies in multiple [[Shortwave bands#International broadcast bands|bands]]. The log-periodic zig-zag design with up to 16 sections has been used. These large antennas are typically designed to cover 6 to 26&amp;nbsp;MHz but even larger ones have been built which operate as low as 2&amp;nbsp;MHz. Power ratings are available up to 500&amp;nbsp;kW. Instead of the elements being driven in parallel, attached to a central transmission line, the elements are driven in series, adjacent elements connected at the outer edges. The antenna shown here would have about 14&amp;nbsp;dBi [[antenna gain|gain]]. An [[antenna array]] consisting of two such antennas, one above the other and driven in phase has a gain of up to 17&amp;nbsp;dBi. Being log-periodic, the antenna's main characteristics ([[radiation pattern]], gain, [[driving point impedance]]) are almost constant over its entire frequency range, with the match to a 300&amp;nbsp;Ω feed line achieving a [[standing wave ratio]] of better than 2:1 over that range.
+
+== References ==
+{{Reflist|30em}}
+
+== Notes ==
+{{FS1037C MS188}}
+
+== See also ==
+*[[Self-complementary antenna]]
+
+== External links ==
+*[http://www.antenna-theory.com/antennas/wideband/log-periodic.php Antenna-Theory.com Log-Periodic Tooth Antenna Page]
+*[http://definitions.uslegal.com/b/blonder-tongue-doctrine/ Blonder-Tongue Doctrine]
+*[http://www.changpuak.ch/electronics/lpda.php LPDA Online Calculation]
+*[http://www.members.westnet.com.au/impeh/log%20periodic_A.htm Some thoughts on Log-Periodic Antennas]
+*[http://www.com-power.com/log_periodic_antennas.html Com-Power Corporation - Log Periodic Antennas for EMC testing]
+*[https://www.allaboutcircuits.com/technical-articles/wi-fi-antennas-part-1-fundamentals/ All About Circuits - The Fundamentals of Wi-Fi Antennas]
+*[https://www.electronicspoint.com/forums/threads/antenna.103577/ Electronics Point - Forum / Antenna]
+*[https://maker.pro/  Maker Pro]
+*[https://eepower.com/ EE Power]
+{{Antenna Types}}
+
+[[Category:Radio frequency antenna types]]
+[[Category:Antennas (radio)]]</text>
+      <sha1>5aozhqveotl69nybick3u2vu2waznzw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Long-haul communications</title>
+    <ns>0</ns>
+    <id>41333</id>
+    <revision>
+      <id>804624397</id>
+      <parentid>728320059</parentid>
+      <timestamp>2017-10-10T05:23:22Z</timestamp>
+      <contributor>
+        <ip>14.139.107.194</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3102" xml:space="preserve">In [[telecommunication]], the term '''long-haul communications''' has the following meanings:
+
+'''1.'''  In public switched networks, pertaining to circuits that span large distances, such as the circuits in [[Interexchange carrier|inter-LATA]], interstate, and international [[telecommunication|communications]].  See also [[Long line (telecommunications)]]
+
+'''2.'''  In the military community, communications among users on a national or worldwide basis.
+
+''Note 1:''  Compared to [[tactical communications]], long-haul communications are characterized by (a) higher levels of users, such as the [[National Command Authority]], (b) more stringent performance requirements, such as higher quality circuits, (c) longer distances between users, including worldwide distances, (d) higher [[traffic]] volumes and densities, (e) larger [[telephone exchange|switch]]es and [[trunking|trunk]] cross sections, and (f) fixed and recoverable assets.
+
+''Note 2:''  ''&quot;Long-haul communications&quot;'' usually pertains to the U.S. Defense [[Communications System]].
+
+'' Note 3:'' ''&quot;Long-haul telecommunications technicians&quot;'' can be translated into many fields of IT work within the corporate industry (Information Technology, Network Technician, Telecommunication Specialist, It Support, and so on). While the term is used in military most career fields that are in communications such as 3D1X2 - Cyber Transport Systems (the career field has been renamed so many times over the course of many years but essentially it is the same job (Network Infrastructure Tech., Systems Control Technician, and Cyber Transport Systems)) or may work in areas that require the &quot;in between&quot; (cloud networking) for networks (MSPP, ATM, Routers, Switches), phones (VOIP, DS0 - DS4 or higher, and so on), encryption (configuring encryption devices or monitoring), and video support data transfers. The &quot;bulk data transfer&quot; or aggregation networking.
+
+The Long-haul telecommunication technicians is considered a &quot;jack of all&quot; but it is much in the technician's interest to gather greater education with certifications to qualify for certain jobs outside the military. The Military provides an avenue but does not make the individual a master of the career field. The technician will find that the job out look outside of military requires many things that aren't required of them within the career field while in the military. So it is best to find the job that is similar to the AFSC and also view the companies description of the qualification to fit that job. Also at least get an associate degree, over 5 years experience, and all of the required &quot;certs&quot; (Network +, Security +, CCNA, CCNP and so on) to acquire the job or at least an interview. The best time to apply or get a guaranteed job is the last three months before you leave the military. Military personnel that are within the career field 3D1X2 require a Secret, TS, or TS with SCI clearance in order to do the job.
+
+==See also==
+
+*[[Long-distance calling]]
+*[[Meteor burst communications]]
+
+{{FS1037C MS188}}
+{{Telecommunications}}
+
+[[Category:Communication circuits]]</text>
+      <sha1>ousam4wu7u45qyvo2gn3nuvo4fszgr9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Longitudinal redundancy check</title>
+    <ns>0</ns>
+    <id>41334</id>
+    <revision>
+      <id>932248613</id>
+      <parentid>931340440</parentid>
+      <timestamp>2019-12-24T13:15:49Z</timestamp>
+      <contributor>
+        <username>Frap</username>
+        <id>612852</id>
+      </contributor>
+      <comment>/* Pseudocode */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3838" xml:space="preserve">In telecommunication, a '''longitudinal redundancy check''' (LRC), or '''horizontal redundancy check''', is a form of [[redundancy check]] that is applied independently to each of a parallel group of bit streams.  The data must be divided into [[transmission block]]s, to which the additional check data is added.
+
+The term usually applies to a single [[parity bit]] per bit stream, calculated independently of all the other bit streams ([[BIP-8]]),&lt;ref name=&quot;rfc935&quot;&gt;
+{{IETF RFC|935}}: &quot;Reliable link layer protocols&quot;.
+&lt;/ref&gt;&lt;ref&gt;
+[http://www.slideshare.net/angelgdiaz_ut/errors-error-detection-and-error-control-8600677 &quot;Errors, Error Detection, and Error Control:  Data Communications and ComputerNetworks: A Business User's Approach&quot;].&lt;/ref&gt; although it could also be used to refer to a larger [[Hamming code]].
+{{citation needed|date=August 2012}}
+
+This &quot;extra&quot; LRC word at the end of a block of data is very similar to [[checksum]] and [[cyclic redundancy check]] (CRC).
+
+== Optimal rectangular code ==
+While simple longitudinal [[parity bit|parity]] can only [[error detection|detect]] errors, it can be combined with additional error-control coding, such as a [[transverse redundancy check]] (TRC), to [[error correction|correct]] errors. The transverse redundancy check is stored on a dedicated &quot;parity track&quot;.
+
+Whenever any single-bit error occurs in a transmission block of data, such two-dimensional parity checking, or &quot;two-coordinate parity checking&quot;,&lt;ref&gt;
+[http://personal.cityu.edu.hk/~dcykcho/dco2310/Chapter7.htm ].
+&lt;/ref&gt;
+enables the receiver to use the TRC to detect which byte the error occurred in, and the LRC to detect exactly which track the error occurred in, to discover exactly which bit is in error, and then correct that bit by flipping it.&lt;ref&gt;
+Gary H. Kemmetmueller.
+[http://www.google.com/patents/US4183463 &quot;RAM error correction using two dimensional parity checking&quot;].
+&lt;/ref&gt;&lt;ref&gt;
+Oosterbaan.
+[http://www.patentgenius.com/patent/4433388.html &quot;Longitudinal parity&quot;].
+&lt;/ref&gt;&lt;ref&gt;
+[ftp://mail.im.tku.edu.tw/Prof_Liang/DataComunication&amp;ComputerNetwork/5th%20Edi/Instructor's%20Manual_PDF/9781423903031_IM_PDF/9781423903031_IM_ch06.pdf &quot;Errors, Error Detection, and Error Control&quot;].
+&lt;/ref&gt;
+
+== Pseudocode ==
+
+International standard '''ISO 1155'''&lt;ref&gt;[http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=5723 ISO 1155:1978 ''Information processing -- Use of longitudinal parity to detect errors in information messages''].&lt;/ref&gt; states that a longitudinal redundancy check for a sequence of bytes may be computed in [[software]] by the following algorithm:
+
+ ''lrc'' := 0
+ '''for each''' byte ''b'' in the buffer '''do'''
+     ''lrc'' := (''lrc'' + ''b'') '''and''' 0xFF
+ ''lrc'' := (((''lrc'' XOR 0xFF) + 1) '''and''' 0xFF)
+
+which can be expressed as &quot;the 8-bit two's-complement value of the sum of all bytes modulo 2&lt;sup&gt;8&lt;/sup&gt;&quot; (&lt;code&gt;x AND 0xFF&lt;/code&gt; is equivalent to &lt;code&gt;x MOD 2&lt;sup&gt;8&lt;/sup&gt;&lt;/code&gt;).
+
+== Other Forms ==
+
+Many protocols use an XOR-based longitudinal redundancy check byte (often called [[block check character]] or BCC), including the [[serial line internet protocol]] (SLIP),&lt;ref&gt;
+{{IETF RFC|914}}.
+&quot;A Thinwire Protocol for connecting personal computers to the INTERNET&quot;.
+Appendix D: &quot;Serial Line Interface Protocol (SLIP)&quot;.
+&lt;/ref&gt;
+the [[IEC 62056]]-21 standard for electrical-meter reading, smart cards as defined in [[ISO/IEC 7816]], and the [[ACCESS.bus]] protocol.
+
+An 8-bit LRC such as this is equivalent to a [[cyclic redundancy check]] using the polynomial ''x''&lt;sup&gt;8&lt;/sup&gt; + 1, but the independence of the bit streams is less clear when looked at in that way.
+
+==References==
+{{reflist}}
+*{{FS1037C MS188}}
+
+{{ISO standards}}
+
+[[Category:Error detection and correction]]
+[[Category:Articles with example pseudocode]]
+[[Category:ISO standards]]</text>
+      <sha1>a17g44ad6shty2snlvjib3sbs0sddnl</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Longitudinal voltage</title>
+    <ns>0</ns>
+    <id>41335</id>
+    <redirect title="Common-mode signal" />
+    <revision>
+      <id>502491719</id>
+      <parentid>502490161</parentid>
+      <timestamp>2012-07-15T20:19:20Z</timestamp>
+      <contributor>
+        <username>Srleffler</username>
+        <id>252195</id>
+      </contributor>
+      <comment>Merge to [[Common-mode signal]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="32" xml:space="preserve">#REDIRECT [[Common-mode signal]]</text>
+      <sha1>jh84073ifxn1woc3wq1bgh60w8r8lu7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Long-term stability</title>
+    <ns>0</ns>
+    <id>41336</id>
+    <revision>
+      <id>639031897</id>
+      <parentid>514291485</parentid>
+      <timestamp>2014-12-21T10:34:09Z</timestamp>
+      <contributor>
+        <username>Paul1andrews</username>
+        <id>17260316</id>
+      </contributor>
+      <comment>Corrected semantics of opening statement.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="557" xml:space="preserve">The '''long-term stability''' of an [[electronic oscillator|oscillator]] is the degree of uniformity of [[frequency]] over [[time]], when the frequency is measured under identical environmental conditions, such as supply [[voltage]], [[Electrical load|load]], and [[temperature]]. Long-term frequency changes are caused by changes in the oscillator elements that determine frequency, such as crystal [[drift (telecommunication)|drift]], [[inductance]] changes, and [[capacitance]] changes. 
+
+{{FS1037C MS188}}
+
+[[Category:Timekeeping]]
+
+{{electronics-stub}}</text>
+      <sha1>6de39g9zpcb9tcou2vgvb6h0lwmjf11</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Loop-back</title>
+    <ns>0</ns>
+    <id>41337</id>
+    <redirect title="Loopback" />
+    <revision>
+      <id>136124970</id>
+      <parentid>126284712</parentid>
+      <timestamp>2007-06-05T19:24:37Z</timestamp>
+      <contributor>
+        <username>Pb30</username>
+        <id>375502</id>
+      </contributor>
+      <comment>cleanup</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="22" xml:space="preserve">#REDIRECT [[loopback]]</text>
+      <sha1>edvk6l11l53q9uz652d94495y8r3u6i</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Loop gain</title>
+    <ns>0</ns>
+    <id>41338</id>
+    <revision>
+      <id>952241186</id>
+      <parentid>887422044</parentid>
+      <timestamp>2020-04-21T07:13:26Z</timestamp>
+      <contributor>
+        <username>Raymie</username>
+        <id>575347</id>
+      </contributor>
+      <comment>Adding [[Wikipedia:Short description|short description]]: &quot;Sum of the gain around a feedback loop&quot; ([[Wikipedia:Shortdesc helper|Shortdesc helper]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4111" xml:space="preserve">{{short description|Sum of the gain around a feedback loop}}
+In [[electronics]] and [[Control Systems Engineering|control system theory]], '''loop gain''' is the sum of the [[Gain (electronics)|gain]], expressed as a ratio or in [[decibel]]s, around a [[feedback loop]].   Feedback loops are widely used in electronics in [[amplifier]]s and [[electronic oscillator|oscillators]], and more generally in both electronic and nonelectronic industrial [[control system]]s to control industrial plant and equipment.  The concept is also used in [[biology]].  In a feedback loop, the output of a device, process or plant is sampled and applied to alter the input, to better control the output.  The loop gain, along with the related concept of loop [[phase shift]], determines the behavior of the device, and particularly whether the output is [[BIBO stability|stable]], or unstable, which can result in [[oscillation]].  The importance of loop gain as a parameter for characterizing electronic feedback amplifiers was first recognized by [[Heinrich Barkhausen]] in 1921, and was developed further by [[Hendrik Wade Bode]] and [[Harry Nyquist]] at [[Bell Labs]] in the 1930s.
+
+[[Image:Block Diagram for Feedback.svg|thumb|A block diagram of an electronic amplifier with feedback.]]
+A [[block diagram]] of an electronic amplifier with [[negative feedback]] is shown at right.  The input signal is applied to the amplifier with [[open-loop gain]] ''A'' and amplified.  The output of the amplifier is applied to a feedback network with gain ''β'', and subtracted from the input to the amplifier.  The loop gain is calculated by imagining the feedback loop is broken at some point, and calculating the net gain if a signal is applied.  In the diagram shown, the loop gain is the product of the gains of the amplifier and the feedback network, ''−Aβ''.  The minus sign is because the feedback signal is subtracted from the input.  
+
+The gains ''A'' and ''β'', and therefore the loop gain, generally vary with the [[frequency]] of the input signal, and so are usually expressed as functions of the [[angular frequency]] ''ω'' in [[radians per second]].  It is often displayed as a graph with the horizontal axis frequency ''ω'' and the vertical axis gain.     In amplifiers, the loop gain is the difference between the open-loop gain curve and the closed-loop gain curve (actually, the 1/β curve) on a dB scale.&lt;ref&gt;{{Cite web|url = https://training.ti.com/system/files/docs/1332%20-%20Stability%202%20-%20slides.pdf|title = TI Precision Labs - Op-amps - Stability 2|date = |accessdate = |website = |publisher = |last = |first = |quote = To find the magnitude of AolB, we can simply subtract 1/B from Aol.}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url = http://www.analog.com/media/en/training-seminars/tutorials/MT-033.pdf|title = MT-033 TUTORIAL Voltage Feedback Op Amp Gain and Bandwidth|date = |accessdate = |website = |publisher = |last = |first = |quote = The difference between the open-loop gain and the closed-loop gain is known as the loop gain}}&lt;/ref&gt;&lt;ref&gt;{{Cite web
+| url = http://www.ti.com/lit/an/slyt374/slyt374.pdf
+| title = Operational amplifier gain stability, Part 2: DC gain-error analysis
+| last = 
+| first = 
+| date = 
+| website = 
+| publisher = 
+| quote = ... shows the simplified open-loop gain ... along with the closed-loop gain ... The difference between these two curves is the loop gain, β×AOL.
+| accessdate = 
+}}&lt;/ref&gt;  
+
+== See also ==
+* [[Phase margin]] and [[gain margin]]
+* [[Nyquist plot]]
+* In telecommunications, the term &quot;loop gain&quot; can refer to the total usable [[Power (physics)|power]] gain of a [[carrier signal|carrier]] [[terminal (telecommunication)|terminal]] or two-wire [[repeater]]. The maximum usable gain is determined by, and may not exceed, the losses in the closed path. 
+*[[Negative-feedback amplifier#Summary of terms|Summary of negative feedback amplifier terms]]
+
+== References ==
+&lt;references /&gt;

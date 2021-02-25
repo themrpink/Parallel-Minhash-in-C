@@ -1,0 +1,217 @@
+To differentiate between the two games, for the [[#firstExample|first example game]], we'll label its starting position &lt;math&gt;\color{blue}S&lt;/math&gt;, and color it blue:
+
+&lt;math&gt;\color{blue}S = \Big\{
+    \big\{*1, \{*1\}, *2\big\},
+    \big\{*2, \{*1, \{*1\},*2\} \big\},
+    \big\{\{*1\}, \{\{*1\}\}, \{*1, \{*1\}, *2\}\big\}
+\Big\}&lt;/math&gt;
+
+For the [[#secondExample|second example game]], we'll label the starting position &lt;math&gt;\color{red}S'&lt;/math&gt; and color it red:
+
+&lt;math&gt;
+\color{red}S' = \Big\{\{*1\}\Big\}
+&lt;/math&gt;.
+
+To compute the starting position of the [[#thirdExample|combined game]], remember that a player can either make a move in the first game, leaving the second game untouched, or make a move in the second game, leaving the first game untouched.  So the combined game's starting position is:
+
+&lt;math&gt;
+\color{blue}S \color{black} + \color{red}S' \color{black}= 
+\Big\{
+    \color{blue}S\color{black} + \color{red} \{*1\} \color{black}
+\Big\} \cup \Big\{
+     \color{red}S'\color{black} + \color{blue}\{*1, \{*1\}, *2\} \color{black}, 
+     \color{red}S'\color{black} + \color{blue} \{*2, \{*1, \{*1\},*2\} \} \color{black},
+     \color{red}S'\color{black} + \color{blue} \{\{*1\}, \{\{*1\}\}, \{*1, \{*1\}, *2\}\} \color{black}
+\Big\}
+&lt;/math&gt;
+
+The explicit formula for adding positions is: &lt;math&gt;S+S'=\{S+s'\mid s'\in S'\}\cup\{s+S'\mid s\in S\}&lt;/math&gt;, which means that addition is both commutative and associative.
+
+===Equivalence=== 
+Positions in impartial games fall into two '''''outcome classes''''': either the next player (the one whose turn it is) wins (an &lt;math&gt;\boldsymbol{\mathcal{N}}&lt;/math&gt;'''''- position'''''), or the previous player wins (a &lt;math&gt;\boldsymbol{\mathcal{P}}&lt;/math&gt;'''''- position''''').  So, for example, &lt;math&gt;*0&lt;/math&gt; is a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position, while &lt;math&gt;*1&lt;/math&gt; is an &lt;math&gt;\mathcal{N}&lt;/math&gt;-position.
+
+Two positions &lt;math&gt;G&lt;/math&gt; and &lt;math&gt;G'&lt;/math&gt; are '''''equivalent''''' if, no matter what position &lt;math&gt;H&lt;/math&gt; is added to them, they are always in the same outcome class.  
+Formally,
+&lt;math&gt;G \approx G' &lt;/math&gt; if and only if &lt;math&gt;\forall H &lt;/math&gt;, &lt;math&gt;G + H&lt;/math&gt; is in the same outcome class as &lt;math&gt;G' + H&lt;/math&gt;.
+
+To use our running examples, notice that in both the [[#firstExample|first]] and [[#secondExample|second]] games above, we can show that on every turn, Alice has a move that forces Bob into a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position. Thus, both &lt;math&gt;\color{blue}S&lt;/math&gt; and  &lt;math&gt;\color{red}S'&lt;/math&gt; are &lt;math&gt;\mathcal{N}&lt;/math&gt;-positions.  (Notice that in the combined game, ''Bob'' is the player with the &lt;math&gt;\mathcal{N}&lt;/math&gt;-positions. In fact, &lt;math&gt;\color{blue}S \color{black} + \color{red}S' &lt;/math&gt; is a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position, which as we will see in Lemma 2, means &lt;math&gt; \color{blue} S \color{black} \approx \color{red} S'&lt;/math&gt;.)
+
+==First Lemma==
+As an intermediate step to proving the main theorem, we show that for every position &lt;math&gt;G&lt;/math&gt; and every &lt;math&gt;\mathcal{P}&lt;/math&gt;-position &lt;math&gt;A&lt;/math&gt;, the equivalence &lt;math&gt;G\approx A+G&lt;/math&gt; holds.  By the above definition of equivalence, this amounts to showing that &lt;math&gt;G+H&lt;/math&gt; and &lt;math&gt;A+G+H&lt;/math&gt; share an outcome class for all &lt;math&gt;H&lt;/math&gt;.
+
+Suppose that &lt;math&gt;G+H&lt;/math&gt; is a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position.  Then the previous player has a winning strategy for &lt;math&gt;A+G+H&lt;/math&gt;: respond to moves in &lt;math&gt;A&lt;/math&gt; according to their winning strategy for &lt;math&gt;A&lt;/math&gt; (which exists by virtue of &lt;math&gt;A&lt;/math&gt; being a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position), and respond to moves in &lt;math&gt;G+H&lt;/math&gt; according to their winning strategy for &lt;math&gt;G+H&lt;/math&gt; (which exists for the analogous reason).  So &lt;math&gt;A+G+H&lt;/math&gt; must also be a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position.
+
+On the other hand, if &lt;math&gt;G+H&lt;/math&gt; is an &lt;math&gt;\mathcal{N}&lt;/math&gt;-position, then &lt;math&gt;A+G+H&lt;/math&gt; is also an &lt;math&gt;\mathcal{N}&lt;/math&gt;-position, because the next player has a winning strategy: choose a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position from among the &lt;math&gt;G+H&lt;/math&gt; options, and we conclude from the previous paragraph that adding &lt;math&gt;A&lt;/math&gt; to that position is still a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position.  Thus, in this case, &lt;math&gt;A+G+H&lt;/math&gt; must be a &lt;math&gt;\mathcal{N}&lt;/math&gt;-position, just like &lt;math&gt;G+H&lt;/math&gt;.
+
+As these are the only two cases, the lemma holds.
+
+==Second Lemma==
+As a further step, we show that &lt;math&gt;G\approx G'&lt;/math&gt; if and only if &lt;math&gt;G+G'&lt;/math&gt; is a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position.
+
+In the forward direction, suppose that &lt;math&gt;G\approx G'&lt;/math&gt;.  Applying the definition of equivalence with &lt;math&gt;H=G&lt;/math&gt;, we find that &lt;math&gt;G'+G&lt;/math&gt; (which is equal to &lt;math&gt;G+G'&lt;/math&gt; by [[commutativity]] of addition) is in the same outcome class as &lt;math&gt;G+G&lt;/math&gt;.  But &lt;math&gt;G+G&lt;/math&gt; must be a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position: for every move made in one copy of &lt;math&gt;G&lt;/math&gt;, the previous player can respond with the same move in the other copy, and so always make the last move.
+
+In the reverse direction, since &lt;math&gt;A=G+G'&lt;/math&gt; is a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position by hypothesis, it follows from the first lemma, &lt;math&gt;G\approx G+A&lt;/math&gt;, that &lt;math&gt;G\approx G+(G+G')&lt;/math&gt;.   Similarly, since &lt;math&gt;B=G+G&lt;/math&gt; is also a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position, it follows from the first lemma in the form  &lt;math&gt;G'\approx G'+B&lt;/math&gt; that &lt;math&gt;G'\approx G'+(G+G)&lt;/math&gt;.  By [[associativity]] and commutativity, the right-hand sides of these results are equal.  Furthermore, &lt;math&gt;\approx&lt;/math&gt; is an [[equivalence relation]] because equality is an equivalence relation on outcome classes.  Via the [[Transitive relation|transitivity]] of &lt;math&gt;\approx&lt;/math&gt;, we can conclude that &lt;math&gt;G\approx G'&lt;/math&gt;.
+
+==Proof==
+We prove that all positions are equivalent to a nimber by [[structural induction]].  The more specific result, that the given game's initial position must be equivalent to a nimber, shows that the game is itself equivalent to a nimber.
+
+Consider a position &lt;math&gt;G = \{G_1, G_2, \ldots, G_k\}&lt;/math&gt;. By the induction hypothesis, all of the options are equivalent to nimbers, say &lt;math&gt;G_i \approx *n_i&lt;/math&gt;. So let &lt;math&gt;G'=\{*n_1, *n_2, \ldots, *n_k\}&lt;/math&gt;.  We will show that &lt;math&gt;G \approx *m&lt;/math&gt;, where &lt;math&gt;m&lt;/math&gt; is the [[mex (mathematics)|mex (minimum exclusion)]] of the numbers &lt;math&gt;n_1, n_2, \ldots, n_k&lt;/math&gt;, that is, the smallest non-negative integer not equal to some &lt;math&gt;n_i&lt;/math&gt;.
+
+The first thing we need to note is that &lt;math&gt;G \approx G'&lt;/math&gt;, by way of the second lemma. If &lt;math&gt;k&lt;/math&gt; is zero, the claim is trivially true.  Otherwise, consider &lt;math&gt;G+G'&lt;/math&gt;. If the next player makes a move to &lt;math&gt;G_i&lt;/math&gt; in &lt;math&gt;G&lt;/math&gt;, then the previous player can move to &lt;math&gt;*n_i&lt;/math&gt; in &lt;math&gt;G'&lt;/math&gt;, and conversely if the next player makes a move in &lt;math&gt;G'&lt;/math&gt;. After this, the position is a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position by the lemma's forward implication. Therefore, &lt;math&gt;G+G'&lt;/math&gt; is a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position, and, citing the lemma's reverse implication, &lt;math&gt;G \approx G'&lt;/math&gt;.
+
+Now let us show that &lt;math&gt;G'+*m&lt;/math&gt; is a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position, which, using the second lemma once again, means that &lt;math&gt;G'\approx *m&lt;/math&gt;. We do so by giving an explicit strategy for the previous player.
+
+Suppose that &lt;math&gt;G'&lt;/math&gt; and &lt;math&gt;*m&lt;/math&gt; are empty.  Then &lt;math&gt;G'+*m&lt;/math&gt; is the null set, clearly a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position.
+
+Or consider the case that the next player moves in the component &lt;math&gt;*m&lt;/math&gt; to the option &lt;math&gt;*m'&lt;/math&gt; where &lt;math&gt;m'&lt;m&lt;/math&gt;. Because &lt;math&gt;m&lt;/math&gt; was the ''minimum'' excluded number, the previous player can move in &lt;math&gt;G'&lt;/math&gt; to &lt;math&gt;*m'&lt;/math&gt;.  And, as shown before, any position plus itself is a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position.
+
+Finally, suppose instead that the next player moves in the component &lt;math&gt;G'&lt;/math&gt; to the option &lt;math&gt;*n_i&lt;/math&gt;. If &lt;math&gt;n_i &lt; m&lt;/math&gt; then the previous player moves in &lt;math&gt;*m&lt;/math&gt; to &lt;math&gt;*n_i&lt;/math&gt;; otherwise, if &lt;math&gt;n_i &gt; m&lt;/math&gt;, the previous player moves in &lt;math&gt;*n_i&lt;/math&gt; to &lt;math&gt;*m&lt;/math&gt;; in either case the result is a position plus itself. (It is not possible that &lt;math&gt;n_i = m&lt;/math&gt; because &lt;math&gt;m&lt;/math&gt; was defined to be different from all the &lt;math&gt;n_i&lt;/math&gt;.)
+
+In summary, we have &lt;math&gt;G\approx G'&lt;/math&gt; and &lt;math&gt;G'\approx *m&lt;/math&gt;.  By transitivity, we conclude that &lt;math&gt;G \approx *m&lt;/math&gt;, as desired.
+
+==Development==
+If &lt;math&gt;G&lt;/math&gt; is a position of an impartial game, the unique integer &lt;math&gt;m&lt;/math&gt; such that &lt;math&gt;G \approx *m&lt;/math&gt; is called its Grundy value, or Grundy number, and the function which assigns this value to each such position is called the Sprague–Grundy function.  R.L.Sprague and P.M.Grundy independently gave an explicit definition of this function, not based on any concept of equivalence to nim positions, and showed that it had the following properties:
+*The Grundy value of a single nim pile of size &lt;math&gt;m&lt;/math&gt; (i.e. of the position &lt;math&gt;*m&lt;/math&gt;) is &lt;math&gt;m&lt;/math&gt;;
+* A position is a loss for the next player to move (i.e. a &lt;math&gt;\mathcal{P}&lt;/math&gt;-position) if and only if its Grundy value is zero; and
+*The Grundy value of the sum of a finite set of positions is just the [[nim-sum]] of the Grundy values of its summands.
+It follows straightforwardly from these results that if a position &lt;math&gt;G&lt;/math&gt; has a Grundy value of &lt;math&gt;m&lt;/math&gt;, then &lt;math&gt;G + H&lt;/math&gt; has the same Grundy value as  &lt;math&gt;*m + H&lt;/math&gt;, and therefore belongs to the same outcome class, for any position &lt;math&gt;H&lt;/math&gt;.   Thus, although Sprague and Grundy never explicitly stated the theorem described in this article, it follows directly from their results and is credited to them.&lt;ref&gt;{{citation
+| last= Smith
+| first = Cedric A.B.
+| title = Patrick Michael Grundy, 1917–1959
+| journal = Journal of the Royal Statistical Society, Series A
+| year = 1960
+| volume = 123
+| issue = 2
+| pages = 221–22
+}}&lt;/ref&gt;&lt;ref&gt;{{Cite journal|author1=Schleicher, Dierk |author2=Stoll, Michael | title = An introduction to Conway's games and numbers
+ |journal=Moscow Mathematical Journal
+
+ |volume=6 |issue=2 |pages=359–388 | year = 2006
+
+ | arxiv = math.CO/0410026|doi=10.17323/1609-4514-2006-6-2-359-388 }}&lt;/ref&gt;
+These results have subsequently been developed into the field of [[combinatorial game theory]], notably by [[Richard K. Guy|Richard Guy]], [[E. R. Berlekamp|Elwyn Berlekamp]], [[John Horton Conway]] and others, where they are now encapsulated in the Sprague–Grundy theorem and its proof in the form described here. The field is presented in the books ''[[Winning Ways for your Mathematical Plays]]'' and ''[[On Numbers and Games]]''.
+
+==See also==
+*[[Genus theory]]
+*[[Indistinguishability quotient]]
+
+==References==
+{{Reflist}}
+
+==External links==
+* [http://www.cut-the-knot.org/Curriculum/Games/Grundy.shtml Grundy's game] at [[cut-the-knot]]
+* [https://www.math.ucla.edu/~tom/Game_Theory/comb.pdf Easily readable, introductory account from the UCLA Math Department]
+* [http://sputsoft.com/blog/2009/04/the-game-of-nim.html The Game of Nim] at [http://sputsoft.com sputsoft.com]
+* {{citation
+ | title = Combinatorial Games, Theory and Applications| url = http://www.itu.dk/people/brit/Brits%20thesis.pdf
+ | year = 2000
+ | author = Milvang-Jensen, Brit C. A.
+ | citeseerx = 10.1.1.89.805
+ }}
+
+{{DEFAULTSORT:Sprague-Grundy theorem}}
+[[Category:Combinatorial game theory]]
+[[Category:Theorems in discrete mathematics]]</text>
+      <sha1>q3k3s99bfsqj2jjgl6u5asrkym3y1y6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Mode field diameter</title>
+    <ns>0</ns>
+    <id>41373</id>
+    <revision>
+      <id>971107995</id>
+      <parentid>925019233</parentid>
+      <timestamp>2020-08-04T06:17:13Z</timestamp>
+      <contributor>
+        <username>C.Sarabalis</username>
+        <id>14118882</id>
+      </contributor>
+      <comment>I eliminated some redundant and imprecise information. MFD is similar to beam diameter, so I added a link.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1373" xml:space="preserve">In [[fiber optics]], the '''mode field diameter''' (MFD) is a measure of the width of an [[irradiance]] distribution, i.e., the optical [[Power (physics)|power]] per unit area, across the end face of a [[Single-mode optical fiber|single-mode fiber]]. It is similar to the &lt;math&gt;1/e^2&lt;/math&gt; measure of [[beam diameter]]. 
+
+The mode field diameter is defined as the distance from the center at which the [[electric field|electric]] and [[magnetic field]] strengths are reduced to &lt;math&gt;1/e&lt;/math&gt; of their maximum values. Since the intensity (given by the [[Poynting vector]]) is proportional to the square of the field amplitude, the MFD is also the distance at which the intensity drops by &lt;math&gt;1/e^2 = 0.135&lt;/math&gt; or -8.69 dB. For a [[Normal distribution|Gaussian distribution]], the mode field diameter is twice the [[standard deviation]] of the intensity.
+
+The MFD is typically slightly larger than the [[Core (optical fiber)|core]] of an optical fiber extending slightly into the [[Cladding (fiber optics)|cladding]].&lt;ref&gt;[https://learnfibernetworks.com/types-of-optical-fibers/] Types of Optical Fiber&lt;/ref&gt;
+
+==See also==
+* [[Beam diameter]]
+
+==References==
+{{Reflist}}
+
+==External links==
+* [https://www.rp-photonics.com/mode_radius.html Mode Radius] on the [[Encyclopedia of Laser Physics and Technology]]
+
+{{FS1037C}}
+
+[[Category:Fiber optics]]
+
+
+{{optics-stub}}</text>
+      <sha1>51k8go57t1s67xpmilgoo0gvhi7hnmm</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Mode partition noise</title>
+    <ns>0</ns>
+    <id>41374</id>
+    <revision>
+      <id>757276100</id>
+      <parentid>280143966</parentid>
+      <timestamp>2016-12-29T20:02:47Z</timestamp>
+      <contributor>
+        <username>Fayenatic london</username>
+        <id>1639942</id>
+      </contributor>
+      <comment>[[Help:Cat-a-lot|Cat-a-lot]]: Moving from [[Category:Noise]] to [[Category:Noise (electronics)]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="705" xml:space="preserve">'''Mode partition noise''':  In an [[optical communication]] link, is [[Jitter|phase jitter]] of the [[Signalling (telecommunication)|signal]] caused by the combined effects of [[Normal mode|mode]] hopping in the [[optical source]] and [[intramodal distortion]] in the fiber. 
+
+Mode hopping causes random [[wavelength]] changes which in turn affect the [[group velocity]], ''i.e.'', the [[wave propagation|propagation]] [[time]]. Over a long length of fiber, the cumulative effect is to create jitter, ''i.e.'' mode partition [[noise]]. The variation of group velocity creates the mode partition noise.
+
+==References==
+{{FS1037C}}
+
+[[Category:Noise (electronics)]]
+
+
+{{telecomm-stub}}
+{{electronics-stub}}</text>
+      <sha1>iqndmk09bo9mavoancmp5oluqbzkr9p</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Mode scrambler</title>
+    <ns>0</ns>
+    <id>41375</id>
+    <revision>
+      <id>911020741</id>
+      <parentid>843314039</parentid>
+      <timestamp>2019-08-16T01:54:48Z</timestamp>
+      <contributor>
+        <username>BigDwiki</username>
+        <id>9813908</id>
+      </contributor>
+      <minor />
+      <comment>clean up</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4124" xml:space="preserve">In [[telecommunications]], a '''mode scrambler''' '''mode mixer''' is a device for inducing [[mode coupling]] in an [[optical fiber]], or a device that, itself, exhibits a uniform output intensity profile independent of the input mode volume or modal excitation condition. Mode scramblers are used to provide a [[modal distribution]] that is independent of the [[optical source]] for purposes of laboratory, manufacturing, or field measurements or tests. Mode scramblers are primarily used to improve reproducibility of multimode fiber bandwidth measurements.
+
+If multimode fiber bandwidth is measured using a laser diode directly coupled to its input, the resulting measurement can vary by as much as an order of magnitude. This measurement variability is due to the combination of differences in laser output characteristics (emitted mode power distribution) and the differential mode delay of the fiber. Differential mode delay is the difference in the time delays amongst the fiber's propagating modes caused by imperfections or nonideality of the fiber refractive index profile.
+
+The primary purpose of a mode scrambler is to create a uniform, [[overfill]]ed launch condition that can be easily reproduced on multiple measurement systems, so that measurement systems have essentially the same launch conditions and can measure approximately the same bandwidth despite having different laser sources. These were used for this purpose in the first U.S. NIST round-robins on multimode fiber.&lt;ref name=&quot;nist&quot;&gt;http://nvlpubs.nist.gov/nistpubs/sp958-lide/297-299.pdf&lt;/ref&gt; The overfilled launch (OFL) was created to reduce measurement variability, and improve concatenation estimates for multimode fibers, used at that time for telecom 'long haul' (e.g., 7–10&amp;nbsp;km 850&amp;nbsp;nm or 20–30&amp;nbsp;km 1300&amp;nbsp;nm) systems.&lt;ref name=&quot;nist&quot;/&gt;
+
+When the telecom industry converted to near-exclusive use of single-mode fiber ca. 1984, multimode fiber was re-purposed for use in LANs, such as Fiber Distributed Date Interface (FDDI), then under development.  The output modal power distribution of a mode scrambler is similar to the surface-emitters used in those first LAN transmitters, but this was fortuitous coincidence.  On average, but not in every case, the OFL bandwidth measured using a mode scrambler is lower than that produced by excitation of a partial mode volume (restricted mode launch or RML), such as occurs with directly coupled laser diodes.
+
+There are two common types of mode scramblers: the &quot;Step-Graded-Step&quot; (S-G-S) and the &quot;step index with bends&quot;. The S-G-S mode scrambler is actually an assembly, a fusion-spliced concatenation of a step-index profile, a graded-index profile and another step-index profile fiber.&lt;ref&gt;https://patentimages.storage.googleapis.com/d2/08/c7/9eb780e387fdbb/US4229067.pdf&lt;/ref&gt; Typically, each segment is approximately 1 meter long, and may use segments of unconventional size to produce the distribution required according to core size of fiber to be tested.  Unconventional fiber size was not an issue, as they were developed by fiber manufacturers, but some test equipment has difficulty complying with revised qualification standards, and now use &quot;Step Index with Bends&quot; mode scramblers, which can be adjusted to purpose. Step Index with Bend mode scramblers are created simply by routing a specially designed step-index multimode fiber through a series of small radius bends, or by compressing fiber against surfaces with specific roughness.  The implementations are simple, but generally less reproducible, and require care to avoid over-stressing the fiber.
+
+A mode scrambler can be characterized and qualified by measuring its near-field and far-field distributions, as well as by measuring one of these distributions while restricting the other. Guidelines for constructing a mode scrambler and qualifying its output can be found in the ANSI/TIA/EIA-455-54 fiber optic test procedure ('''FOTP''').
+
+==See also==
+*[[Equilibrium mode distribution]]
+*[[Mandrel wrapping]]

@@ -1,0 +1,247 @@
+where the test/weight functions are irrotational. Any conforming scalar finite element may be used. However, the pressure gradient field may also be of interest. In this case one can use scalar Hermite elements for the pressure. For the test/weight functions {{math|'''g'''&lt;sub&gt;''i''&lt;/sub&gt;}} one would choose the irrotational vector elements obtained from the gradient of the pressure element.
+
+==Non-inertial frame of reference==
+
+The rotating frame of reference introduces some interesting pseudo-forces into the equations through the [[material derivative]] term. Consider a stationary inertial frame of reference {{mvar|K}}, and a non-inertial frame of reference {{mvar|K′}}, which is translating with velocity {{math|'''U'''(''t'')}} and rotating with angular velocity {{math|Ω(''t'')}} with respect to the stationary frame. The Navier–Stokes equation observed from the non-inertial frame then becomes
+
+{{Equation box 1
+|indent=:
+|title='''Navier–Stokes momentum equation in non-inertial frame''' 
+|equation=&lt;math&gt; \rho \frac{D \mathbf{u}}{D t}  = - \nabla \bar{p} + \mu \, \nabla^2 \mathbf u + \tfrac13 \mu \, \nabla (\nabla\cdot\mathbf{u}) + \rho\mathbf{g}  - \rho \left(2\mathbf\Omega\times\mathbf u + \mathbf\Omega\times(\mathbf\Omega\times\mathbf x)+ \frac{d\mathbf U}{dt} + \frac{d\mathbf \Omega}{dt}\times\mathbf x\right).&lt;/math&gt;
+|cellpadding
+|border
+|border colour = #FF0000
+|background colour = #ECFCF4
+}}
+
+Here {{math|'''x'''}} and {{math|'''u'''}} are measured in the non-inertial frame. The first term in the parenthesis represents [[Coriolis acceleration]], the second term is due to [[centrifugal force|centrifugal acceleration]], the third is due to the linear acceleration of {{mvar|K′}} with respect to {{mvar|K}} and the fourth term is due to the angular acceleration of {{mvar|K′}} with respect to {{mvar|K}}.
+
+==Other equations==
+The Navier–Stokes equations are strictly a statement of the balance of momentum. To fully describe fluid flow, more information is needed, how much depending on the assumptions made. This additional information may include boundary data ([[no-slip condition|no-slip]], [[capillary surface]], etc.), conservation of mass, balance of energy, and/or an [[equation of state]].
+
+===Continuity equation for incompressible fluid===
+{{main|Continuity equation}}
+
+Regardless of the flow assumptions, a statement of the [[conservation of mass]] is generally necessary. This is achieved through the mass [[continuity equation]], given in its most general form as:
+:&lt;math&gt;\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) = 0&lt;/math&gt;
+
+or, using the [[substantive derivative]]:
+:&lt;math&gt;\frac{D\rho}{Dt} + \rho (\nabla \cdot \mathbf{u}) = 0.&lt;/math&gt;
+
+For incompressible fluid, density along the line of flow remains constant over time, 
+:&lt;math&gt;\frac{D\rho}{Dt} = 0.&lt;/math&gt;
+
+therefore divergence of velocity is null all the time:
+:&lt;math&gt;\nabla \cdot \mathbf{u} = 0.&lt;/math&gt;
+
+==Stream function for incompressible 2D fluid==
+Taking the [[Curl (mathematics)|curl]] of the incompressible Navier–Stokes equation results in the elimination of pressure. This is especially easy to see if 2D Cartesian flow is assumed (like in the degenerate 3D case with {{math|''u&lt;sub&gt;z&lt;/sub&gt;'' {{=}} 0}} and no dependence of anything on {{mvar|z}}), where the equations reduce to:
+
+:&lt;math&gt;\begin{align}
+ \rho \left(\frac{\partial u_x}{\partial t} + u_x \frac{\partial u_x}{\partial x} + u_y \frac{\partial u_x}{\partial y}\right)
+ &amp;= -\frac{\partial p}{\partial x} + \mu \left(\frac{\partial^2 u_x}{\partial x^2} + \frac{\partial^2 u_x}{\partial y^2}\right) + \rho g_x \\
+ \rho \left(\frac{\partial u_y}{\partial t} + u_x \frac{\partial u_y}{\partial x} + u_y \frac{\partial u_y}{\partial y}\right)
+ &amp;= -\frac{\partial p}{\partial y} + \mu \left(\frac{\partial^2 u_y}{\partial x^2} + \frac{\partial^2 u_y}{\partial y^2}\right) + \rho g_y.
+\end{align}&lt;/math&gt;
+
+Differentiating the first with respect to {{mvar|y}}, the second with respect to {{mvar|x}} and subtracting the resulting equations will eliminate pressure and any [[conservative force]]. 
+For incompressible flow, defining the [[stream function]] {{mvar|ψ}} through
+
+:&lt;math&gt;u_x = \frac{\partial \psi}{\partial y}; \quad u_y = -\frac{\partial \psi}{\partial x}&lt;/math&gt;
+
+results in mass continuity being unconditionally satisfied (given the stream function is continuous), and then incompressible Newtonian 2D momentum and mass conservation condense into one equation:
+
+:&lt;math&gt;\frac{\partial}{\partial t}\left(\nabla^2 \psi\right) + \frac{\partial \psi}{\partial y} \frac{\partial}{\partial x}\left(\nabla^2 \psi\right) - \frac{\partial \psi}{\partial x} \frac{\partial}{\partial y}\left(\nabla^2 \psi\right) = \nu \nabla^4 \psi&lt;/math&gt;
+
+where {{math|∇&lt;sup&gt;4&lt;/sup&gt;}} is the 2D [[biharmonic operator]] and {{mvar|ν}} is the [[kinematic viscosity]], {{math|''ν'' {{=}} {{sfrac|''μ''|''ρ''}}}}. We can also express this compactly using the [[Jacobian matrix and determinant|Jacobian determinant]]:
+
+:&lt;math&gt;\frac{\partial}{\partial t}\left(\nabla^2 \psi\right) + \frac{\partial\left(\psi, \nabla^2\psi \right)}{\partial(y,x)} = \nu \nabla^4 \psi.&lt;/math&gt;
+
+This single equation together with appropriate boundary conditions describes 2D fluid flow, taking only kinematic viscosity as a parameter. Note that the equation for [[creeping flow]] results when the left side is assumed zero.
+
+In [[axisymmetric]] flow another stream function formulation, called the [[Stokes stream function]], can be used to describe the velocity components of an incompressible flow with one [[scalar (mathematics)|scalar]] function.
+
+The incompressible Navier–Stokes equation is a [[differential algebraic equation]], having the inconvenient feature that there is no explicit mechanism for advancing the pressure in time. Consequently, much effort has been expended to eliminate the pressure from all or part of the computational process. The stream function formulation eliminates the pressure but only in two dimensions and at the expense of introducing higher derivatives and elimination of the velocity, which is the primary variable of interest.
+
+==Properties==
+===Nonlinearity===
+
+The Navier–Stokes equations are [[nonlinear]] [[partial differential equations]] in the general case and so remain in almost every real situation.&lt;ref&gt;{{cite book |title=Fluid Mechanics |first1=M. |last1=Potter |first2=D. C. |last2=Wiggert |series=Schaum's Outlines |publisher=McGraw-Hill |year=2008 |isbn=978-0-07-148781-8}}&lt;/ref&gt;&lt;ref&gt;{{cite book |title=Vectors, Tensors, and the basic Equations of Fluid Mechanics |first=R. |last=Aris |publisher=Dover Publications |year=1989 |isbn=0-486-66110-5 }}&lt;/ref&gt; In some cases, such as one-dimensional flow and [[Stokes flow]] (or creeping flow), the equations can be simplified to linear equations. The nonlinearity makes most problems difficult or impossible to solve and is the main contributor to the [[turbulence]] that the equations model.
+
+The nonlinearity is due to [[convective]] acceleration, which is an acceleration associated with the change in velocity over position. Hence, any convective flow, whether turbulent or not, will involve nonlinearity. An example of convective but [[laminar flow|laminar]] (nonturbulent) flow would be the passage of a viscous fluid (for example, oil) through a small converging [[nozzle]]. Such flows, whether exactly solvable or not, can often be thoroughly studied and understood.&lt;ref&gt;{{cite book |title=McGraw Hill Encyclopaedia of Physics |edition=2nd |first=C. B. |last=Parker |year=1994 |isbn=0-07-051400-3 }}&lt;/ref&gt;
+
+===Turbulence===
+
+[[Turbulence]] is the time-dependent [[Chaos theory|chaotic]] behavior seen in many fluid flows. It is generally believed that it is due to the [[inertia]] of the fluid as a whole: the culmination of time-dependent and convective acceleration; hence flows where inertial effects are small tend to be laminar (the [[Reynolds number]] quantifies how much the flow is affected by inertia). It is believed, though not known with certainty, that the Navier–Stokes equations describe turbulence properly.&lt;ref&gt;Encyclopaedia of Physics (2nd Edition), R.G. Lerner, G.L. Trigg, VHC publishers, 1991, ISBN (Verlagsgesellschaft) 3-527-26954-1, ISBN (VHC Inc.) 0-89573-752-3&lt;/ref&gt;
+
+The numerical solution of the Navier–Stokes equations for turbulent flow is extremely difficult, and due to the significantly different mixing-length scales that are involved in turbulent flow, the stable solution of this requires such a fine mesh resolution that the computational time becomes significantly infeasible for calculation or [[direct numerical simulation]]. Attempts to solve turbulent flow using a laminar solver typically result in a time-unsteady solution, which fails to converge appropriately. To counter this, time-averaged equations such as the [[Reynolds-averaged Navier–Stokes equations]] (RANS), supplemented with turbulence models, are used in practical [[computational fluid dynamics]] (CFD) applications when modeling turbulent flows. Some models include the [[Spalart–Allmaras turbulence model|Spalart–Allmaras]], [[k-omega turbulence model|{{mvar|k}}–{{mvar|ω}}]], [[turbulence kinetic energy|{{mvar|k}}–{{mvar|ε}}]], and [[SST (Menter’s Shear Stress Transport)|SST]] models, which add a variety of additional equations to bring closure to the RANS equations. [[Large eddy simulation]] (LES) can also be used to solve these equations numerically. This approach is computationally more expensive—in time and in computer memory—than RANS, but produces better results because it explicitly resolves the larger turbulent scales.
+
+===Applicability===
+{{further|Discretization of Navier–Stokes equations}}
+Together with supplemental equations (for example, conservation of mass) and well formulated boundary conditions, the Navier–Stokes equations seem to model fluid motion accurately; even turbulent flows seem (on average) to agree with real world observations.
+
+The Navier–Stokes equations assume that the fluid being studied is a [[Continuum mechanics|continuum]] (it is infinitely divisible and not composed of particles such as atoms or molecules), and is not moving at [[Special relativity#Relativistic mechanics|relativistic velocities]]. At very small scales or under extreme conditions, real fluids made out of discrete molecules will produce results different from the continuous fluids modeled by the Navier–Stokes equations. For example, [[capillarity]] of internal layers in fluids appears for flow with high gradients.&lt;ref&gt;{{Citation
+| last1    = Gorban
+| first1   = A.N.
+| last2   = Karlin
+| first2  = I. V.
+| year     = 2016
+| title    = Beyond Navier–Stokes equations: capillarity of ideal gas
+| type    = Review article
+| journal = Contemporary Physics
+| volume   = 58
+| issue   = 1
+| pages   = 70–90
+| pmid =
+| pmc  =
+| doi = 10.1080/00107514.2016.1256123 
+| url = https://www.researchgate.net/publication/310825466 
+| arxiv= 1702.00831
+| bibcode= 2017ConPh..58...70G| s2cid = 55317543
+}}&lt;/ref&gt;  For large [[Knudsen number]] of the problem, the [[Boltzmann equation]] may be a suitable replacement.&lt;ref&gt;{{Citation
+| last    = Cercignani
+| first   = C.
+| year     = 2002
+| title    = Handbook of mathematical fluid dynamics 
+| chapter  = The Boltzmann equation and fluid dynamics 
+| volume  = 1
+| publisher = North-Holland
+| place    = Amsterdam
+| pages = 1–70
+| editor-last   = Friedlander
+| editor-first  = S.
+| editor2-last  = Serre
+| editor2-first = D.
+| isbn = 978-0444503305
+| bibcode =
+| doi =
+| accessdate  =
+}};&lt;/ref&gt; 
+Failing that, one may have to resort to [[molecular dynamics]] or various hybrid methods.&lt;ref&gt;{{Citation
+| last1    = Nie
+| first1   = X.B.
+| last2   = Chen
+| first2  = S.Y.
+| last3   = Robbins
+| first3  = M.O.
+| year     = 2004
+| title    =  A continuum and molecular dynamics hybrid method for micro-and nano-fluid flow
+| type    = Research article
+| journal = Journal of Fluid Mechanics
+| volume  = 500
+| issue   =  
+| pages = 55–64 
+| pmid =
+| pmc  =
+| doi = 10.1017/S0022112003007225
+| url = https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/a-continuum-and-molecular-dynamics-hybrid-method-for-micro-and-nano-fluid-flow/BE0D4513A0F90F844CD21D64F6D3F9EF
+| bibcode= 2004JFM...500...55N
+}}&lt;/ref&gt;
+
+Another limitation is simply the complicated nature of the equations. Time-tested formulations exist for common fluid families, but the application of the Navier–Stokes equations to less common families tends to result in very complicated formulations and often to open research problems. For this reason, these equations are usually written for [[Newtonian fluid]]s where the viscosity model is [[linear]]; truly general models for the flow of other kinds of fluids (such as blood) do not exist.&lt;ref&gt;{{Citation
+| last    = Öttinger 
+| first   = H.C.
+| year     = 2012
+| title    = Stochastic processes in polymeric fluids
+| publisher = Springer Science &amp; Business Media
+| place    = Berlin, Heidelberg
+| isbn = 9783540583530
+| bibcode =
+| doi = 10.1007/978-3-642-58290-5
+}}&lt;/ref&gt;
+
+==Application to specific problems==
+The Navier–Stokes equations, even when written explicitly for specific fluids, are rather generic in nature and their proper application to specific problems can be very diverse. This is partly because there is an enormous variety of problems that may be modeled, ranging from as simple as the distribution of static pressure to as complicated as [[multiphase flow]] driven by [[surface tension]].
+
+Generally, application to specific problems begins with some flow assumptions and initial/boundary condition formulation, this may be followed by [[Scale analysis (mathematics)|scale analysis]] to further simplify the problem.
+
+[[Image:NSConvection vectorial.svg|thumb|400px|Visualization of '''(a)''' parallel flow and '''(b)''' radial flow.]]
+
+===Parallel flow===
+Assume steady, parallel, one dimensional, non-convective pressure-driven flow between parallel plates, the resulting scaled (dimensionless) [[boundary value problem]] is:
+:&lt;math&gt;\frac{d^2 u}{d y^2} = -1; \quad u(0) = u(1) = 0.&lt;/math&gt;
+
+The boundary condition is the [[no slip condition]]. This problem is easily solved for the flow field:
+:&lt;math&gt;u(y) = \frac{y - y^2}{2}.&lt;/math&gt;
+
+From this point onward more quantities of interest can be easily obtained, such as viscous drag force or net flow rate.
+
+===Radial flow===
+Difficulties may arise when the problem becomes slightly more complicated. A seemingly modest twist on the parallel flow above would be the ''radial'' flow between parallel plates; this involves convection and thus non-linearity. The velocity field may be represented by a function {{math|''f''(''z'')}} that must satisfy:
+:&lt;math&gt;\frac{d^2 f}{d z^2} + R f^2 = -1; \quad f(-1) = f(1) = 0.&lt;/math&gt;
+
+This [[ordinary differential equation]] is what is obtained when the Navier–Stokes equations are written and the flow assumptions applied (additionally, the pressure gradient is solved for). The [[nonlinear]] term makes this a very difficult problem to solve analytically (a lengthy [[Implicit function|implicit]] solution may be found which involves [[elliptic integrals]] and [[Cubic formula|roots of cubic polynomials]]). Issues with the actual existence of solutions arise for {{math|''R'' &gt; 1.41}} (approximately; this is not [[square root of 2|{{sqrt|2}}]]), the parameter {{mvar|R}} being the Reynolds number with appropriately chosen scales.&lt;ref name=&quot;TM Shah&quot;&gt;{{Cite journal|last=Shah |first=Tasneem Mohammad|title=Analysis of the multigrid method|journal=NASA Sti/Recon Technical Report N|volume=91|pages=23418|bibcode=1989STIN...9123418S|year=1972}}&lt;/ref&gt; This is an example of flow assumptions losing their applicability, and an example of the difficulty in &quot;high&quot; Reynolds number flows.&lt;ref name=&quot;TM Shah&quot;/&gt;
+
+===Convection===
+A type of natural convection which can be described by the Navier–Stokes equation is the [[Rayleigh–Bénard convection]]. It is one of the most commonly studied convection phenomena because of its analytical and experimental accessibility.
+
+==Exact solutions of the Navier–Stokes equations==
+Some exact solutions to the Navier–Stokes equations exist. Examples of degenerate cases—with the non-linear terms in the Navier–Stokes equations equal to zero—are [[Hagen-Poiseuille equation|Poiseuille flow]], [[Couette flow]] and the oscillatory [[Stokes boundary layer]]. But also, more interesting examples, solutions to the full non-linear equations, exist, such as [[Jeffery–Hamel flow]], [[Von Kármán swirling flow]], [[stagnation point flow]], [[Landau–Squire jet]], and [[Taylor–Green vortex]].&lt;ref&gt;
+{{citation
+| journal=Annual Review of Fluid Mechanics
+| volume=23
+| pages=159–177
+| year=1991
+| doi=10.1146/annurev.fl.23.010191.001111
+| title=Exact solutions of the steady-state Navier–Stokes equations
+| first=C. Y.
+| last=Wang
+|bibcode = 1991AnRFM..23..159W
+}}&lt;/ref&gt;&lt;ref&gt;
+Landau &amp; Lifshitz (1987) pp. 75–88.
+&lt;/ref&gt;&lt;ref&gt;
+{{citation
+ | last1=Ethier
+ | first1=C. R.
+ | last2=Steinman
+ | first2=D. A.
+ | title = Exact fully 3D Navier–Stokes solutions for benchmarking
+ | journal=International Journal for Numerical Methods in Fluids
+ | year=1994
+ | volume=19
+ | issue=5
+ | pages=369–375
+ | doi=10.1002/fld.1650190502
+ |bibcode = 1994IJNMF..19..369E
+}}&lt;/ref&gt;
+Note that the existence of these exact solutions does not imply they are stable: turbulence may develop at higher Reynolds numbers.
+
+Under additional assumptions, the component parts can be separated.&lt;ref&gt;[http://www.claudino.webs.com/Navier%20Stokes%20Equations.pps]&lt;/ref&gt;
+
+{{hidden
+|A two dimensional example
+|For example, in the case of an unbounded planar domain with '''two-dimensional''' — incompressible and stationary — flow in [[polar coordinates]] {{math|(''r'',''φ'')}}, the velocity components {{math|(''u&lt;sub&gt;r&lt;/sub&gt;'',''u&lt;sub&gt;φ&lt;/sub&gt;'')}} and pressure {{mvar|p}} are:&lt;ref&gt;{{citation
+| first=O. A.
+| last= Ladyzhenskaya
+| year=1969
+| title=The Mathematical Theory of viscous Incompressible Flow
+| edition=2nd
+| page=preface, xi
+}}&lt;/ref&gt;
+
+:&lt;math&gt;\begin{align}
+u_r &amp;= \frac{A}{r}, \\
+u_\varphi &amp;= B\left(\frac{1}{r} - r^{\frac{A}{\nu} + 1}\right), \\
+p &amp;= -\frac{A^2 + B^2}{2r^2} - \frac{2B^2 \nu r^\frac{A}{\nu}}{A} + \frac{B^2 r^\left(\frac{2A}{\nu} + 2\right)}{\frac{2A}{\nu} + 2}
+\end{align}&lt;/math&gt;
+
+where {{mvar|A}} and {{mvar|B}} are arbitrary constants. This solution is valid in the domain {{math|''r'' ≥ 1}} and for {{math|''A'' &lt; −2''ν''}}.
+
+In Cartesian coordinates, when the viscosity is zero ({{math|''ν'' {{=}} 0}}), this is:
+:&lt;math&gt;\begin{align}
+\mathbf{v}(x,y) &amp;= \frac{1}{x^2 + y^2}\begin{pmatrix} Ax + By \\ Ay - Bx \end{pmatrix}, \\
+p(x,y) &amp;= -\frac{A^2 + B^2}{2\left(x^2 + y^2\right)} \end{align}&lt;/math&gt;
+
+|style = border: 1px solid lightgray; width: 90%;
+|headerstyle = text-align:left
+}}
+
+{{hidden
+|A three-dimensional example
+|For example, in the case of an unbounded Euclidean domain with '''three-dimensional''' — incompressible, stationary and with zero viscosity ({{math|''ν'' {{=}} 0}}) — radial flow in [[Cartesian coordinates]] {{math|(''x'',''y'',''z'')}}, the velocity vector {{math|'''v'''}} and pressure {{mvar|p}} are:{{citation needed|date=January 2014}}
+
+:&lt;math&gt;\begin{align}
+\mathbf{v}(x, y, z) &amp;= \frac{A}{x^2 + y^2 + z^2}\begin{pmatrix} x \\ y\\ z \end{pmatrix}, \\
+p(x, y, z) &amp;= -\frac{A^2}{2\left(x^2 + y^2 + z^2\right)}. \end{align}&lt;/math&gt;
+
+There is a singularity at {{math|''x'' {{=}} ''y'' {{=}} ''z'' {{=}} 0}}.

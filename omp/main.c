@@ -32,6 +32,7 @@ int main(int argc, char *argv[]) {
     char *folderName = argv[1];
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
+    printf("numero di file: %d\n", numberOfFiles);
     if (numberOfFiles==0){
         exit(EXITNOFILEFOUND);
     }
@@ -78,7 +79,7 @@ int main(int argc, char *argv[]) {
 
     //test
     exectimes(threads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
-    check_coherence(minhashDocumenti, numberOfFiles);
+    //check_coherence(minhashDocumenti, numberOfFiles);
 
     for (int i = 0; i < numberOfFiles; i++) {
         free(files[i]);

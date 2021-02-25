@@ -1,0 +1,173 @@
+==Economy of the backbone==
+===Peering agreements===
+Backbone providers of roughly equivalent market share regularly create agreements called [[Peering#Peering agreement|peering agreements]], which allow the use of another's network to hand off traffic where it is ultimately delivered. Usually they do not charge each other for this, as the companies get revenue from their customers regardless.&lt;ref name=crossroads /&gt;&lt;ref name=topbits&gt;{{cite web|title=Internet Backbone|url=http://www.tech-faq.com/internet-backbone.html|publisher=Topbits Website|accessdate=9 February 2011|url-status=live|archiveurl=https://web.archive.org/web/20110716200149/http://www.tech-faq.com/internet-backbone.html|archivedate=16 July 2011}}&lt;/ref&gt;
+
+===Regulation===
+[[Competition law|Antitrust]] authorities have acted to ensure that no provider grows large enough to dominate the backbone market. In the United States, the [[Federal Communications Commission]] has decided not to monitor the competitive aspects of the Internet backbone interconnection relationships as long as the market continues to function well.&lt;ref name=&quot;crossroads&quot; /&gt;
+
+===Transit agreements===
+Backbone providers of unequal market share usually create agreements called [[Internet transit|transit agreements]], and usually contain some type of monetary agreement.&lt;ref name=crossroads /&gt;&lt;ref name=topbits /&gt;
+
+==Regional backbone==
+
+===Egypt===
+During the [[Egyptian revolution of 2011]], the government of [[Egypt]] shut down the four major ISPs on January&amp;nbsp;27,&amp;nbsp;2011 at approximately 5:20&amp;nbsp;p.m.&amp;nbsp;EST.&lt;ref name=wired&gt;{{cite magazine|last=Singel|first=Ryan|title=Egypt Shut Down Its Net With a Series of Phone Calls|url=https://www.wired.com/threatlevel/2011/01/egypt-isp-shutdown/|magazine=Wired|accessdate=30 April 2011|date=28 January 2011|url-status=live|archiveurl=https://web.archive.org/web/20110501183804/http://www.wired.com/threatlevel/2011/01/egypt-isp-shutdown|archivedate=1 May 2011}}&lt;/ref&gt; Evidently the networks had not been physically interrupted, as the Internet transit traffic through Egypt was unaffected. Instead, the government shut down the [[Border Gateway Protocol]]&amp;nbsp;(BGP) sessions announcing local routes. BGP is responsible for routing traffic between ISPs.&lt;ref&gt;{{cite web|last=Van Beijnum|first=Iljitsch|title=How Egypt did (and your government could) shut down the Internet|url=https://arstechnica.com/tech-policy/news/2011/01/how-egypt-or-how-your-government-could-shut-down-the-internet.ars|website=Ars Technica|accessdate=30 April 2011|url-status=live|archiveurl=https://web.archive.org/web/20110426155523/http://arstechnica.com/tech-policy/news/2011/01/how-egypt-or-how-your-government-could-shut-down-the-internet.ars|archivedate=26 April 2011}}&lt;/ref&gt;
+
+Only one of Egypt's ISPs was allowed to continue operations. The ISP Noor Group provided connectivity only to Egypt's stock exchange as well as some government ministries.&lt;ref name=wired /&gt; Other ISPs started to offer free dial-up Internet access in other countries.&lt;ref&gt;{{cite web|last=Murphy|first=Kevin|title=DNS not to blame for Egypt blackout|url=http://domainincite.com/dns-not-to-blame-for-egypt-blackout/|publisher=Domain Incite|accessdate=30 April 2011|url-status=live|archiveurl=https://web.archive.org/web/20110404013457/http://domainincite.com/dns-not-to-blame-for-egypt-blackout/|archivedate=4 April 2011}}&lt;/ref&gt;
+
+===Europe===
+[[Europe]] is a major contributor to the growth of the international backbone as well as a contributor to the growth of Internet bandwidth. In 2003, Europe was credited with 82 percent of the world's international cross-border bandwidth.&lt;ref&gt;{{cite journal|title=Global Internet backbone back up to speed for 2003 after dramatic slow down in 2002|journal=TechTrends|year=2003|volume=47|issue=5|pages=47}}&lt;/ref&gt; The company [[Level&amp;nbsp;3 Communications]] began to launch a line of dedicated Internet access and [[virtual private network]] services in 2011, giving large companies direct access to the tier&amp;nbsp;3 backbone. Connecting companies directly to the backbone will provide enterprises faster Internet service which meets a large market demand.&lt;ref&gt;{{cite news|title=Europe - Level 3 launches DIA, VPN service portfolios in Europe|newspaper=Europe Intelligence Wire|date=28 January 2011}}&lt;/ref&gt;
+
+===Caucasus===
+Certain countries around the Caucasus have very simple backbone networks; for example, in 2011, a woman in [[Georgia (country)|Georgia]] pierced a [[Optical fiber|fiber backbone]] line with a shovel and left the neighboring country of [[Armenia]] without Internet access for 12 hours. The country has since made major developments to the fiber backbone infrastructure, but progress is slow due to lack of government funding.&lt;ref&gt;{{cite news|last=Lomsadze|first=Giorgi|title=A Shovel Cuts Off Armenia's Internet|url=https://www.wsj.com/articles/SB10001424052748704630004576249013084603344|accessdate=16 April 2011|newspaper=The Wall Street Journal|date=8 April 2011|url-status=live|archiveurl=https://web.archive.org/web/20141225063937/http://www.wsj.com/articles/SB10001424052748704630004576249013084603344|archivedate=25 December 2014}}&lt;/ref&gt;
+
+===Japan===
+[[Japan]]'s Internet backbone needs to be very efficient due to high demand for the Internet and technology in general. Japan had over 86&amp;nbsp;million Internet users in 2009, and was projected to climb to nearly 91&amp;nbsp;million Internet users by&amp;nbsp;2015. Since Japan has a demand for fiber to the home, Japan is looking into tapping a [[Fiber-optic communication|fiber-optic]] backbone line of [[Nippon Telegraph and Telephone]]&amp;nbsp;(NTT), a domestic backbone carrier, in order to deliver this service at cheaper prices.&lt;ref&gt;{{cite journal|title=Japan telecommunications report - Q2 2011|journal=Japan Telecommunications Report|year=2011|issue=1}}&lt;/ref&gt;
+
+=== China ===
+In some instances, the companies that own certain sections of the Internet backbone's physical infrastructure depend on competition in order to keep the Internet market profitable. This can be seen most prominently in [[China]]. Since [[China Telecommunications Corporation|China Telecom]] and [[China Unicom]] have acted as the sole Internet service providers to China for some time, smaller companies cannot compete with them in negotiating the interconnection settlement prices that keep the Internet market profitable in China. This imposition of discriminatory pricing by the large companies then results in market inefficiencies and stagnation, and ultimately affects the efficiency of the Internet backbone networks that service the nation.&lt;ref&gt;{{Cite journal|last1=Li|first1=Meijuan|last2=Zhu|first2=Yajie|date=2018|title=Research on the problems of interconnection settlement in China's Internet backbone network|url=https://www.sciencedirect.com/science/article/pii/S1877050918305738|journal=Procedia Computer Science|volume=131|pages=153–157|doi=10.1016/j.procs.2018.04.198|via=Elsevier Science Direct|doi-access=free}}&lt;/ref&gt;
+
+==See also==
+{{Portal|Internet}}
+* [[Default-free zone]]
+* [[Internet2]]
+* [[Mbone]]
+* [[Network service provider]]
+* [[Root name server]]
+* [[Packet switching]]
+* [[Trunking]]
+
+==Further reading==
+
+* Greenstein, Shane. 2020. &quot;[https://www.aeaweb.org/articles?id=10.1257/jep.34.2.192 The Basic Economics of Internet Infrastructure.]&quot; ''Journal of Economic Perspectives'', 34 (2): 192-214. DOI: 10.1257/jep.34.2.192
+
+==References==
+{{reflist}}
+
+==External links==
+{{commons category|Maps of Internet backbone networks}}
+* [http://www.level3.com/en/about-us/ About Level 3]
+* [http://navigators.com/isp.html Russ Haynal's ISP Page]
+* [https://web.archive.org/web/20060411203358/http://www.nthelp.com/maps.htm US Internet backbone maps]
+* [http://www.opte.org/maps/ Automatically generated backbone map of the Internet]
+* [https://web.archive.org/web/20181028124233/http://ipv6.nlsde.buaa.edu.cn/ IPv6 Backbone Network Topology]
+
+[[Category:Internet architecture|Backbone, Internet]]
+[[Category:IT infrastructure]]</text>
+      <sha1>q5v3ye61g0pbcb4pdxcwb72en0ob51f</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Ring (mathematics)</title>
+    <ns>0</ns>
+    <id>48404</id>
+    <revision>
+      <id>991627702</id>
+      <parentid>990676146</parentid>
+      <timestamp>2020-12-01T01:18:22Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: template type. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by AManWithNoPlan | All pages linked from cached copy of User:AManWithNoPlan/sandbox3 | via #UCB_webform_linked 620/848</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="95192" xml:space="preserve">{{short description|Algebraic structure with addition and multiplication}}
+{{about|an algebraic structure|geometric rings|Annulus (mathematics)|the set theory concept|Ring of sets}}
+
+{{Ring theory sidebar}}
+
+In [[mathematics]], a '''ring''' is one of the fundamental [[algebraic structure]]s used in [[abstract algebra]]. It consists of a [[Set (mathematics)|set]] equipped with two [[binary operation]]s that generalize the [[arithmetic operation]]s of [[addition]] and [[multiplication]]. Through this generalization, theorems from [[arithmetic]] are extended to non-numerical objects such as [[polynomial]]s, [[series (mathematics)|series]], [[matrix (mathematics)|matrices]] and [[function (mathematics)|functions]].
+{{algebraic structures|ring}}
+
+A ring is an [[abelian group]] with a second binary operation that is [[Associative property|associative]], is [[Distributive property|distributive]] over the abelian group operation, and has an [[identity element]] (this last property is not required by some authors, see {{slink||Notes on the definition}}). By extension from the [[integer]]s, the abelian group operation is called ''addition'' and the second binary operation is called ''multiplication''.
+
+Whether a ring is commutative or not (that is, whether the order in which two elements are multiplied changes the result or not) has profound implications on its behavior as an abstract object. As a result, commutative ring theory, commonly known as [[commutative algebra]], is a key topic in [[ring theory]]. Its development has been greatly influenced by problems and ideas occurring naturally in [[algebraic number theory]] and [[algebraic geometry]]. Examples of [[commutative ring]]s include the set of integers equipped with the addition and multiplication operations, the set of polynomials equipped with their addition and multiplication, the [[coordinate ring]] of an [[affine algebraic variety]], and the [[ring of integers]] of a number field. Examples of noncommutative rings include the ring of ''n'' × ''n'' real [[square matrix|square matrices]] with ''n'' ≥ 2, [[group ring]]s in [[representation theory]], [[operator algebra]]s in [[functional analysis]], [[ring of differential operators|rings of differential operators]] in the theory of [[differential operator]]s, and the [[cohomology ring]] of a [[topological space]] in [[topology]].
+
+The conceptualization of rings began in the 1870s and was completed in the 1920s. Key contributors include [[Richard Dedekind|Dedekind]], [[David Hilbert|Hilbert]], [[Abraham Fraenkel|Fraenkel]], and [[Emmy Noether|Noether]]. Rings were first formalized as a generalization of [[Dedekind domain]]s that occur in [[number theory]], and of [[polynomial ring]]s and rings of invariants that occur in [[algebraic geometry]] and [[invariant theory]]. Afterward, they also proved to be useful in other branches of mathematics such as [[geometry]] and [[mathematical analysis]].
+
+== Definition and illustration ==
+[[File:Number-line.svg|alt=|thumb|410x410px|The [[integer]]s, along with the two operations of [[addition]] and [[multiplication]], form the prototypical example of a ring.]]
+
+The most familiar example of a ring is the set of all integers, &lt;math&gt;\mathbb{Z}&lt;/math&gt;, consisting of the [[number]]s
+
+: …&amp;nbsp;, −5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5,&amp;nbsp;…
+
+The familiar properties for addition and multiplication of integers serve as a model for the axioms for rings.
+
+=== Definition ===
+A '''ring''' is a [[Set (mathematics)|set]] ''R'' equipped with two binary operations&lt;ref&gt;This means that each operation is defined and produces a unique result in ''R'' for each ordered pair of elements of ''R''.&lt;/ref&gt; + and '''·''' satisfying the following three sets of axioms, called the '''ring axioms'''&lt;ref&gt;{{cite book|author=Nicolas Bourbaki|title=Algebra|publisher=Springer-Verlag|section=§I.8|year=1970}}&lt;/ref&gt;&lt;ref&gt;{{cite book|title=Algebra|author1=Saunders MacLane|author2=Garrett Birkhoff|publisher=AMS Chelsea|page=85|year=1967|author1-link=Saunders MacLane}}&lt;/ref&gt;&lt;ref&gt;{{cite book|author=Serge Lang|title=Algebra|publisher=Springer-Verlag|page=83|year=2002|edition=Third|author-link=Serge Lang}}&lt;/ref&gt;
+
+# ''R'' is an [[abelian group]] under addition, meaning that:
+#* (''a'' + ''b'') + ''c'' = ''a'' + (''b'' + ''c'') for all ''a'', ''b'', ''c'' in ''R''&amp;nbsp;&amp;nbsp;&amp;nbsp;(that is, + is [[associativity|associative]]).
+#* ''a'' + ''b'' = ''b'' + ''a'' for all ''a'', ''b'' in ''R''&amp;nbsp;&amp;nbsp;&amp;nbsp;(that is, + is [[commutativity|commutative]]).
+#* There is an element 0 in ''R'' such that ''a'' + 0 = ''a'' for all ''a'' in ''R''&amp;nbsp;&amp;nbsp;&amp;nbsp;(that is, 0 is the [[additive identity]]).
+#* For each ''a'' in ''R'' there exists −''a'' in ''R'' such that ''a'' + (−''a'') = 0&amp;nbsp;&amp;nbsp;&amp;nbsp;(that is, −''a'' is the [[additive inverse]] of ''a'').
+# ''R'' is a [[monoid]] under multiplication, meaning that:
+#* (''a'' · ''b'') · ''c'' = ''a'' · (''b'' · ''c'') for all ''a'', ''b'', ''c'' in ''R''&amp;nbsp;&amp;nbsp;&amp;nbsp;(that is, · is associative).
+#* There is an element 1 in ''R'' such that ''a'' · 1 = ''a'' and 1 · ''a'' = ''a'' for all ''a'' in ''R''&amp;nbsp;&amp;nbsp;&amp;nbsp;(that is, 1 is the [[multiplicative identity]]).&lt;ref&gt;The existence of 1 is not assumed by some authors; here, the term ''[[rng (algebra)|rng]]'' is used if existence of a multiplicative identity is not assumed.&lt;!-- This is the most common convention, and is adopted throughout wikipedia, please do not change --&gt; See [[Ring (mathematics)#Notes on the definition|next subsection]]&lt;/ref&gt;
+# Multiplication is [[distributive law|distributive]] with respect to addition, meaning that:
+#* ''a'' ⋅ (''b'' + ''c'') = (''a'' · ''b'') + (''a'' · ''c'') for all ''a'', ''b'', ''c'' in ''R''&amp;nbsp;&amp;nbsp;&amp;nbsp;(left distributivity).
+#* (''b'' + ''c'') · ''a'' = (''b'' · ''a'') + (''c'' · ''a'') for all ''a'', ''b'', ''c'' in ''R''&amp;nbsp;&amp;nbsp;&amp;nbsp;(right distributivity).
+
+=== Notes on the definition ===
+As explained in {{section link||History}} below, many authors follow an alternative convention in which a ring is not defined to have a multiplicative identity. This article adopts the convention that, unless otherwise stated, a ring is assumed to have such an identity.&lt;!--- This is also the convention in [[Wikipedia:Manual of Style/Mathematics]]. ---&gt; Authors who follow this convention sometimes refer to a structure satisfying all the axioms ''except'' the requirement that there exists a multiplicative identity element as a [[rng (algebra)|rng]] (commonly pronounced ''rung'') and sometimes as a [[pseudo-ring]]. For example, the set of even integers with the usual + and ⋅ is a rng, but not a ring.
+
+The operations + and ⋅ are called ''addition'' and ''multiplication'', respectively. The multiplication symbol ⋅ is usually omitted; for example, ''xy'' means {{nowrap|''x'' ⋅ ''y''}}.
+
+Although ring addition is [[commutative law|commutative]], ring multiplication is not required to be commutative: ''ab'' need not necessarily equal ''ba''. Rings that also satisfy commutativity for multiplication (such as the ring of integers) are called ''[[commutative ring]]s''. Books on commutative algebra or algebraic geometry often adopt the convention that ''ring'' means ''commutative ring'', to simplify terminology.
+
+In a ring, multiplicative inverses are not required to exist. A non[[zero ring|zero]] commutative ring in which every nonzero element has a [[multiplicative inverse]] is called a [[field (mathematics)|field]].
+
+The additive group of a ring is the underlying set equipped with only the operation of addition. Although the definition assumes that the additive group is abelian, this can be inferred from the other ring axioms.&lt;ref&gt;I. M. Isaacs, Algebra: A Graduate Course, AMS, 1994, p. 160.&lt;/ref&gt; The proof makes use of the &quot;1&quot;, so does not work in a rng. (In the rng case, deleting the assumption of addition-commutativity leaves it inferable (from the remaining rng assumptions) for elements that are products: ''ab''&amp;nbsp;+&amp;nbsp;''cd''&amp;nbsp;=&amp;nbsp;''cd''&amp;nbsp;+&amp;nbsp;''ab''.)
+
+Although most modern authors require multiplication in a ring to be associative, there are a few who do not.&lt;ref&gt;{{cite web |url=https://www.encyclopediaofmath.org/index.php/Non-associative_rings_and_algebras |title=Non-associative rings and algebras |website=Encyclopedia of Mathematics}}&lt;/ref&gt; For these others, every [[algebra over a field|algebra]] is a ring.
+
+=== Basic properties ===
+Some basic properties of a ring follow immediately from the axioms:
+* The additive identity, the additive inverse of each element, and the multiplicative identity are unique.
+* For any element ''x'' in a ring ''R'', one has ''x''0 = 0 = 0''x'' (zero is an [[absorbing element]] with respect to multiplication) and (–1)''x'' = –''x''.
+* If 0 = 1 in a ring ''R'' (or more generally, 0 is a unit element), then ''R'' has only one element, and is called the [[zero ring]].
+* The [[binomial formula]] holds for any commuting pair of elements (that is, any ''x'' and ''y'' such that ''xy'' = ''yx'').
+
+=== Example: Integers modulo 4 ===
+{{see also| Modular arithmetic}}
+
+Equip the set &lt;math&gt;\mathbf{Z}_4 = \left\{\overline{0}, \overline{1}, \overline{2}, \overline{3}\right\}&lt;/math&gt; with the following operations:
+
+* The sum &lt;math&gt;\overline{x} + \overline{y}&lt;/math&gt; in '''Z'''&lt;sub&gt;4&lt;/sub&gt; is the remainder when the integer ''x'' + ''y'' is divided by 4 (as ''x'' + ''y'' is always smaller than 8, this remainder is either ''x'' + ''y'' or ''x'' + ''y'' – 4). For example, &lt;math&gt;\overline{2} + \overline{3} = \overline{1}&lt;/math&gt; and &lt;math&gt;\overline{3} + \overline{3} = \overline{2}&lt;/math&gt;.
+* The product &lt;math&gt;\overline{x} \cdot \overline{y}&lt;/math&gt; in '''Z'''&lt;sub&gt;4&lt;/sub&gt; is the remainder when the integer ''xy'' is divided by 4. For example, &lt;math&gt;\overline{2} \cdot \overline{3} = \overline{2}&lt;/math&gt; and &lt;math&gt;\overline{3} \cdot \overline{3} = \overline{1}&lt;/math&gt;.
+
+Then '''Z'''&lt;sub&gt;4&lt;/sub&gt; is a ring: each axiom follows from the corresponding axiom for '''Z'''. If ''x'' is an integer, the remainder of ''x'' when divided by 4 may be considered as an element of '''Z'''&lt;sub&gt;4&lt;/sub&gt;, and this element is often denoted by {{nowrap|&quot;''x'' mod 4&quot;}} or &lt;math&gt;\overline{x}&lt;/math&gt;, which is consistent with the notation for 0, 1, 2, 3. The additive inverse of any &lt;math&gt;\overline{x}&lt;/math&gt; in '''Z'''&lt;sub&gt;4&lt;/sub&gt; is &lt;math&gt;\overline{-x}&lt;/math&gt;. For example, &lt;math&gt;-\overline{3} = \overline{-3} = \overline{1}.&lt;/math&gt;
+
+=== Example: 2-by-2 matrices ===
+{{main|Matrix ring}}
+The set of 2-by-2 [[Matrix (mathematics)|matrices]] with [[real number]] entries is written
+
+:&lt;math&gt;\mathcal{M}_2(\mathbb{R}) = \left\{ \left.\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \right|\  a, b, c, d \in \mathbb{R} \right\}. &lt;/math&gt;
+
+With the operations of matrix addition and [[matrix multiplication]], this set satisfies the above ring axioms. The element &lt;math&gt; \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}&lt;/math&gt; is the multiplicative identity of the ring. If &lt;math&gt;A = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}&lt;/math&gt; and &lt;math&gt;B = \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix}&lt;/math&gt;, then &lt;math&gt;AB = \begin{pmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}&lt;/math&gt; while &lt;math&gt;BA = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}&lt;/math&gt;; this example shows that the ring is noncommutative.
+
+More generally, for any ring ''R'', commutative or not, and any nonnegative integer ''n'', one may form the ring of ''n''-by-''n'' matrices with entries in ''R'': see [[Matrix ring]].
+
+== History ==
+{{See also|Ring theory#History}}
+[[File:Dedekind.jpeg|thumb|100px|right|[[Richard Dedekind]], one of the founders of [[ring theory]].]]
+
+=== Dedekind ===
+The study of rings originated from the theory of [[polynomial ring]]s and the theory of [[algebraic integer]]s.&lt;ref name=&quot;history&quot;&gt;[http://www-gap.dcs.st-and.ac.uk/~history/HistTopics/Ring_theory.html The development of Ring Theory]&lt;/ref&gt; In 1871, [[Richard Dedekind]] defined the concept of the ring of integers of a number field.&lt;ref&gt;Kleiner 1998, p.&amp;nbsp;27.&lt;/ref&gt; In this context, he introduced the terms &quot;ideal&quot; (inspired by [[Ernst Kummer]]'s notion of ideal number) and &quot;module&quot; and studied their properties. But Dedekind did not use the term &quot;ring&quot; and did not define the concept of a ring in a general setting.
+
+=== Hilbert ===
+The term &quot;Zahlring&quot; (number ring) was coined by [[David Hilbert]] in 1892 and published in 1897.&lt;ref&gt;Hilbert 1897.&lt;/ref&gt; In 19th century German, the word &quot;Ring&quot; could mean &quot;association&quot;, which is still used today in English in a limited sense (for example, spy ring),&lt;ref&gt;[https://mathoverflow.net/q/117292 Why is a ring called a &quot;ring&quot;? - MathOverflow]&lt;/ref&gt; so if that were the etymology then it would be similar to the way &quot;group&quot; entered mathematics by being a non-technical word for &quot;collection of related things&quot;. According to Harvey Cohn, Hilbert used the term for a ring that had the property of &quot;circling directly back&quot; to an element of itself.&lt;ref&gt;{{Citation|last=Cohn|first=Harvey|title=Advanced Number Theory|publisher=Dover Publications|location=New York|year=1980|page=[https://archive.org/details/advancednumberth00cohn_0/page/49 49]|isbn=978-0-486-64023-5|url=https://archive.org/details/advancednumberth00cohn_0/page/49}}&lt;/ref&gt; Specifically, in a ring of algebraic integers, all high powers of an algebraic integer can be written as an integral combination of a fixed set of lower powers, and thus the powers &quot;cycle back&quot;. For instance, if {{nowrap|1=''a''&lt;sup&gt;3&lt;/sup&gt; − 4''a'' + 1 = 0}} then {{nowrap|1=''a''&lt;sup&gt;3&lt;/sup&gt; = 4''a'' − 1}}, {{nowrap|1=''a''&lt;sup&gt;4&lt;/sup&gt; = 4''a''&lt;sup&gt;2&lt;/sup&gt; − ''a''}}, {{nowrap|1=''a''&lt;sup&gt;5&lt;/sup&gt; = −''a''&lt;sup&gt;2&lt;/sup&gt; + 16''a'' − 4}}, {{nowrap|1=''a''&lt;sup&gt;6&lt;/sup&gt; = 16''a''&lt;sup&gt;2&lt;/sup&gt; − 8''a'' + 1}}, {{nowrap|1=''a''&lt;sup&gt;7&lt;/sup&gt; = −8''a''&lt;sup&gt;2&lt;/sup&gt; + 65''a'' − 16}}, and so on; in general, ''a''&lt;sup&gt;''n''&lt;/sup&gt; is going to be an integral linear combination of 1, ''a'', and ''a''&lt;sup&gt;2&lt;/sup&gt;.
+
+=== Fraenkel and Noether ===
+The first axiomatic definition of a ring was given by [[Abraham Fraenkel|Adolf Fraenkel]] in 1915,&lt;ref&gt;Fraenkel, pp.&amp;nbsp;143–145&lt;/ref&gt;&lt;ref&gt;Jacobson (2009), p. 86, footnote 1.&lt;/ref&gt; but his axioms were stricter than those in the modern definition. For instance, he required every [[zero divisor|non-zero-divisor]] to have a [[multiplicative inverse]].&lt;ref&gt;Fraenkel, p.&amp;nbsp;144, axiom&amp;nbsp;''R''&lt;sub&gt;8)&lt;/sub&gt;.&lt;/ref&gt; In 1921, [[Emmy Noether]] gave the modern axiomatic definition of (commutative) ring and developed the foundations of commutative ring theory in her paper ''Idealtheorie in Ringbereichen''.&lt;ref name=&quot;Noether, p. 29&quot;&gt;Noether, p.&amp;nbsp;29.&lt;/ref&gt;
+
+=== Multiplicative identity: mandatory vs. optional ===
+Fraenkel required a ring to have a multiplicative identity 1,&lt;ref&gt;Fraenkel, p.&amp;nbsp;144, axiom&amp;nbsp;''R''&lt;sub&gt;7)&lt;/sub&gt;.&lt;/ref&gt; whereas Noether did not.&lt;ref name=&quot;Noether, p. 29&quot;/&gt;
+
+Most or all books on algebra&lt;ref&gt;Van der Waerden, 1930.&lt;/ref&gt;&lt;ref&gt;Zariski and Samuel, 1958.&lt;/ref&gt; up to around 1960 followed Noether's convention of not requiring a 1. Starting in the 1960s, it became increasingly common to see books including the existence of 1 in the definition of ring, especially in advanced books by notable authors such as Artin,&lt;ref&gt;Artin, p.&amp;nbsp;346.&lt;/ref&gt; Atiyah and MacDonald,&lt;ref&gt;Atiyah and MacDonald, p.&amp;nbsp;1.&lt;/ref&gt; Bourbaki,&lt;ref&gt;Bourbaki, p.&amp;nbsp;96.&lt;/ref&gt; Eisenbud,&lt;ref&gt;Eisenbud, p.&amp;nbsp;11.&lt;/ref&gt; and Lang.&lt;ref&gt;Lang, p.&amp;nbsp;83.&lt;/ref&gt; But there are books published as late as 2006 that do not require a 1.&lt;ref&gt;Gallian, p.&amp;nbsp;235.&lt;/ref&gt;&lt;ref&gt;Hungerford, p.&amp;nbsp;42.&lt;/ref&gt;&lt;ref&gt;Warner, p.&amp;nbsp;188.&lt;/ref&gt;
+
+Faced with this terminological ambiguity, some authors have tried to impose their views, while others have tried to adopt more precise terms.
+
+In the first category, we find for instance Gardner and Wiegandt, who argue that if one requires all rings to have a 1, then some consequences include the lack of existence of infinite direct sums of rings, and the fact that proper direct summands of rings are not subrings. They conclude that &quot;in many, maybe most, branches of ring theory the requirement of the existence of a unity element is not sensible, and therefore unacceptable.&quot;&lt;ref&gt;Gardner and Wiegandt 2003.&lt;/ref&gt;  [[Bjorn Poonen|Poonen]] makes the counterargument that rings without a multiplicative identity are not totally associative (the product of any finite sequence of ring elements, including the empty sequence, is well-defined, independent of the order of operations) and writes &quot;the natural extension of associativity demands that rings should contain an empty product, so it is natural to require rings to have a 1&quot;.&lt;ref&gt;Poonen 2018.&lt;/ref&gt;

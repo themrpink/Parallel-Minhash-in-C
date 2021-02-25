@@ -1,0 +1,236 @@
+===Periodic continued fractions===
+{{main|Periodic continued fraction}}
+The numbers with periodic continued fraction expansion are precisely the [[quadratic irrational|irrational solutions]] of [[quadratic equation]]s with rational coefficients; rational solutions have finite continued fraction expansions as previously stated. The simplest examples are the [[golden ratio]] φ = [1;1,1,1,1,1,...] and {{sqrt|2}} = [1;2,2,2,2,...], while {{sqrt|14}} = [3;1,2,1,6,1,2,1,6...] and {{sqrt|42}} = [6;2,12,2,12,2,12...]. All irrational square roots of integers have a special form for the period; a symmetrical string, like the empty string (for {{sqrt|2}}) or 1,2,1 (for {{sqrt|14}}), followed by the double of the leading integer.
+
+===A property of the golden ratio φ===
+Because the continued fraction expansion for [[golden ratio|φ]] doesn't use any integers greater than 1, φ is one of the most &quot;difficult&quot; real numbers to approximate with rational numbers. [[Hurwitz's theorem (number theory)|Hurwitz's theorem]]&lt;ref&gt;Theorem 193: {{Cite book | last = Hardy | first = G.H. | last2 = Wright | first2 = E.M. | title = An Introduction to the Theory of Numbers | publisher = Oxford | year = 1979 | edition = Fifth}}&lt;/ref&gt; states that any irrational number {{mvar|k}} can be approximated by infinitely many rational {{sfrac|''m''|''n''}} with
+
+:&lt;math&gt;\left| k - {m \over n}\right| &lt; {1 \over n^2 \sqrt 5}.&lt;/math&gt;
+
+While virtually all real numbers {{mvar|k}} will eventually have infinitely many convergents {{sfrac|''m''|''n''}} whose distance from {{mvar|k}} is significantly smaller than this limit, the convergents for φ (i.e., the numbers {{sfrac|5|3}}, {{sfrac|8|5}}, {{sfrac|13|8}}, {{sfrac|21|13}}, etc.) consistently &quot;toe the boundary&quot;, keeping a distance of almost exactly &lt;math&gt;{\scriptstyle{1 \over n^2 \sqrt 5}}&lt;/math&gt; away from φ, thus never producing an approximation nearly as impressive as, for example, [[Milü|{{sfrac|355|113}}]] for [[pi|{{pi}}]]. It can also be shown that every real number of the form {{sfrac|''a'' + ''b''φ|''c'' + ''d''φ}}, where {{mvar|a}}, {{mvar|b}}, {{mvar|c}}, and {{mvar|d}} are integers such that {{math|1=''a'' ''d'' − ''b'' ''c'' = ±1}}, shares this property with the golden ratio φ; and that all other real numbers can be more closely approximated.
+
+===Regular patterns in continued fractions===
+While there is no discernable pattern in the simple continued fraction expansion of {{pi}}, there is one for {{math|''e''}}, the [[e (mathematical constant)|base of the natural logarithm]]:
+
+:&lt;math&gt;e = e^1 = [2; 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8, 1, 1, 10, 1, 1, 12, 1, 1, \dots],&lt;/math&gt;
+
+which is a special case of this general expression for positive integer {{mvar|n}}:
+
+:&lt;math&gt;e^{1/n} = [1; n-1, 1, 1, 3n-1, 1, 1, 5n-1, 1, 1, 7n-1, 1, 1, \dots] \,\!.&lt;/math&gt;
+
+Another, more complex pattern appears in this continued fraction expansion for positive odd {{mvar|n}}:
+
+:&lt;math&gt;e^{2/n} = \left[1; \frac{n-1}{2}, 6n, \frac{5n-1}{2}, 1, 1, \frac{7n-1}{2}, 18n, \frac{11n-1}{2}, 1, 1, \frac{13n-1}{2}, 30n, \frac{17n-1}{2}, 1, 1, \dots \right] \,\!,&lt;/math&gt;
+
+with a special case for {{math|1=''n'' = 1}}:
+
+:&lt;math&gt;e^2 = [7; 2, 1, 1, 3, 18, 5, 1, 1, 6, 30, 8, 1, 1, 9, 42, 11, 1, 1, 12, 54, 14, 1, 1 \dots, 3k, 12k+6, 3k+2, 1, 1 \dots] \,\!.&lt;/math&gt;
+
+Other continued fractions of this sort are
+
+:&lt;math&gt;\tanh(1/n) = [0; n, 3n, 5n, 7n, 9n, 11n, 13n, 15n, 17n, 19n, \dots] &lt;/math&gt;
+
+where {{mvar|n}} is a positive integer; also, for integer {{mvar|n}}:
+
+:&lt;math&gt;\tan(1/n) = [0; n-1, 1, 3n-2, 1, 5n-2, 1, 7n-2, 1, 9n-2, 1, \dots]\,\!,&lt;/math&gt;
+
+with a special case for {{math|1=''n'' = 1}}:
+
+:&lt;math&gt;\tan(1) = [1; 1, 1, 3, 1, 5, 1, 7, 1, 9, 1, 11, 1, 13, 1, 15, 1, 17, 1, 19, 1, \dots]\,\!.&lt;/math&gt;
+
+If {{math|''I''&lt;sub&gt;''n''&lt;/sub&gt;(''x'')}} is the modified, or hyperbolic, [[Bessel function]] of the first kind, we may define a function on the rationals {{sfrac|''p''|''q''}} by
+
+:&lt;math&gt;S(p/q) = \frac{I_{p/q}(2/q)}{I_{1+p/q}(2/q)},&lt;/math&gt;
+
+which is defined for all rational numbers, with {{mvar|p}} and {{mvar|q}} in lowest terms. Then for all nonnegative rationals, we have
+
+:&lt;math&gt;S(p/q) = [p+q; p+2q, p+3q, p+4q, \dots],&lt;/math&gt;
+
+with similar formulas for negative rationals; in particular we have
+
+:&lt;math&gt;S(0) = S(0/1) = [1; 2, 3, 4, 5, 6, 7, \dots].&lt;/math&gt;
+
+Many of the formulas can be proved using [[Gauss's continued fraction]].
+
+===Typical continued fractions===
+Most irrational numbers do not have any periodic or regular behavior in their continued fraction expansion. Nevertheless, [[Aleksandr Khinchin|Khinchin]] proved that for [[almost all]] real numbers {{mvar|x}}, the {{math|''a''&lt;sub&gt;''i''&lt;/sub&gt;}} (for {{math|1=''i'' = 1, 2, 3, ...}}) have an astonishing property: their [[geometric mean]] tends to a constant (known as [[Khinchin's constant]], {{math|''K'' ≈ 2.6854520010...}}) independent of the value of {{mvar|x}}. [[Paul Lévy (mathematician)|Paul Lévy]] showed that the {{mvar|n}}th root of the denominator of the {{mvar|n}}th convergent of the continued fraction expansion of almost all real numbers approaches an asymptotic limit, approximately 3.27582, which is known as [[Lévy's constant]]. [[Lochs' theorem]] states that {{mvar|n}}th convergent of the continued fraction expansion of almost all real numbers determines the number to an average accuracy of just over {{mvar|n}} decimal places.
+
+==Applications==
+===Square roots===
+Generalized continued fractions are used in a [[methods of computing square roots#Continued fraction expansion|method for computing square roots]].
+
+The identity
+{{NumBlk|:|&lt;math&gt;\sqrt{x} = 1+\frac{x-1}{1+\sqrt{x}}&lt;/math&gt;|{{EquationRef|1}}}}
+leads via recursion to the generalized continued fraction for any square root:&lt;ref&gt;Ben Thurston, [http://benpaulthurstonblog.blogspot.com/2012/05/estimating-square-roots.html &quot;Estimating square roots, generalized continued fraction expression for every square root&quot;], ''The Ben Paul Thurston Blog''&lt;/ref&gt;
+{{NumBlk|:|&lt;math&gt;\sqrt{x}=1+\cfrac{x-1}{2 + \cfrac{x-1}{2 + \cfrac{x-1}{2+{\ddots}}}}&lt;/math&gt;|{{EquationRef|2}}}}'''
+
+===Pell's equation===
+Continued fractions play an essential role in the solution of [[Pell's equation]]. For example, for positive integers {{mvar|p}} and {{mvar|q}}, and non-square {{mvar|n}}, it is true that if {{math|1=''p''&lt;sup&gt;2&lt;/sup&gt; − ''nq''&lt;sup&gt;2&lt;/sup&gt; = ±1}}, then {{math|{{sfrac|''p''|''q''}}}} is a convergent of the regular continued fraction for {{sqrt|{{mvar|n}}}}.  The converse holds if the period of the regular continued fraction for {{sqrt|{{mvar|n}}}} is 1, and in general the period describes which convergents give solutions to Pell's equation.&lt;ref&gt;{{cite book|last1=Niven|first1=Ivan|last2=Zuckerman|first2=Herbert S.|last3=Montgomery|first3=Hugh L.|title=An introduction to the theory of numbers|url=https://archive.org/details/introductiontoth0000nive|url-access=registration|edition=Fifth|location=New York|publisher=[[John Wiley &amp; Sons|Wiley]]|date=1991|isbn=0-471-62546-9}}&lt;/ref&gt;
+
+===Dynamical systems===
+Continued fractions also play a role in the study of [[dynamical system]]s, where they tie together the [[Farey sequence|Farey fractions]] which are seen in the [[Mandelbrot set]] with [[Minkowski's question mark function]] and the [[modular group]] Gamma.
+
+The backwards [[shift operator]] for continued fractions is the map {{math|''h''(''x'') {{=}} 1/{{mvar|x}} − ⌊1/{{mvar|x}}⌋}} called the '''Gauss map''', which lops off digits of a continued fraction expansion: {{math|''h''([0; ''a''{{sub|1}}, ''a''{{sub|2}}, ''a''{{sub|3}}, ...]) {{=}} [0; ''a''{{sub|2}}, ''a''{{sub|3}}, ...]}}. The [[transfer operator]] of this map is called the [[Gauss–Kuzmin–Wirsing operator]]. The distribution of the digits in continued fractions is given by the zero'th [[eigenvector]] of this operator, and is called the [[Gauss–Kuzmin distribution]].
+
+===Eigenvalues and eigenvectors===
+The [[Lanczos algorithm]] uses a continued fraction expansion to iteratively approximate the eigenvalues and eigenvectors of a large sparse matrix.&lt;ref&gt;{{citation|title=Electronic Structure: Basic Theory and Practical Methods|first=Richard M.|last=Martin|publisher=Cambridge University Press|year=2004|isbn=9781139643658|page=557|url=https://books.google.com/books?id=v1YhAwAAQBAJ&amp;pg=PA557}}.&lt;/ref&gt;
+
+=== Networking applications ===
+Continued fractions have also been used in modelling optimization problems for wireless [[network virtualization]] to find a route between a source and a destination.&lt;ref&gt;{{Cite journal|last=Afifi|first=Haitham|display-authors=et al|date=April 2018|title=MARVELO: Wireless Virtual Network Embedding for Overlay Graphs with Loops|journal=2018 IEEE Wireless Communications and Networking Conference (WCNC)}}&lt;/ref&gt;
+
+==Examples of rational and irrational numbers==
+{{Continued fraction examples}}
+
+==History==
+* 300 BCE ''[[Euclid's Elements]]'' contains an algorithm for the [[greatest common divisor]] which generates a continued fraction as a by-product
+* 499 The ''[[Aryabhatiya]]'' contains the solution of indeterminate equations using continued fractions
+* 1572 [[Rafael Bombelli]], ''L'Algebra Opera'' – method for the extraction of square roots which is related to continued fractions
+* 1613 [[Pietro Cataldi]], ''Trattato del modo brevissimo di trovar la radice quadra delli numeri'' – first notation for continued fractions
+:Cataldi represented a continued fraction as &lt;math&gt;a_0&lt;/math&gt; &amp; &lt;math&gt;\frac{n_1}{d_1 \cdot}&lt;/math&gt; &amp; &lt;math&gt;\frac{n_2}{d_2 \cdot}&lt;/math&gt; &amp; &lt;math&gt;\frac{n_3}{d_3 \cdot}&lt;/math&gt; with the dots indicating where the following fractions went.
+* 1695 [[John Wallis]], ''Opera Mathematica'' – introduction of the term &quot;continued fraction&quot;
+* 1737 [[Leonhard Euler]], ''De fractionibus continuis dissertatio'' – Provided the first then-comprehensive account of the properties of continued fractions, and included the first proof that the number [[e (mathematical constant)|e]] is irrational.&lt;ref name=sandifer&gt;{{cite journal | last = Sandifer | first = Ed | title = How Euler Did It: Who proved e is irrational? | journal = MAA Online |date=February 2006 | url = http://www.maa.org/editorial/euler/How%20Euler%20Did%20It%2028%20e%20is%20irrational.pdf|format=PDF}}&lt;/ref&gt;
+* 1748 Euler, ''[[List of important publications in mathematics#Introductio in analysin infinitorum|Introductio in analysin infinitorum]]''. Vol. I, Chapter 18 – proved the equivalence of a certain form of continued fraction and a generalized [[infinite series]], proved that every rational number can be written as a finite continued fraction, and proved that the continued fraction of an irrational number is infinite.&lt;ref name=IntroductioI&gt;{{cite web | title=E101 – Introductio in analysin infinitorum, volume 1|url=http://math.dartmouth.edu/~euler/pages/E101.html| accessdate=2008-03-16}}&lt;/ref&gt;
+* 1761 [[Johann Lambert]] – gave the first proof of the irrationality of [[Pi|{{pi}}]] using a continued fraction for [[Trigonometric functions|tan(x)]].
+* 1768 [[Joseph-Louis Lagrange]] – provided the general solution to Pell's equation using continued fractions similar to Bombelli's
+* 1770 Lagrange – proved that [[quadratic irrational number|quadratic irrationals]] expand to [[periodic continued fraction]]s.
+* 1813 [[Carl Friedrich Gauss]], ''Werke'', Vol. 3, pp.&amp;nbsp;134–138 – derived a very general [[Gauss's continued fraction|complex-valued continued fraction]] via a clever identity involving the [[hypergeometric function]]
+* 1828 [[Évariste Galois]] proved the periodicity of continued fractions for quadratic irrationals.&lt;ref&gt;{{cite book|last=Wolfram|first=Stephen|title=A New Kind of Science|publisher=Wolfram Media, Inc.|year=2002|page=[https://archive.org/details/newkindofscience00wolf/page/915 915]|isbn=1-57955-008-8|url-access=registration|url=https://archive.org/details/newkindofscience00wolf/page/915}}&lt;/ref&gt;  
+* 1892 [[Henri Padé]] defined [[Padé approximant]]
+* 1972 [[Bill Gosper]] – First exact algorithms for continued fraction arithmetic.
+
+==See also==
+*[[Complete quotient]]
+*[[Methods of computing square roots#Continued fraction expansion|Computing continued fractions of square roots]]
+*[[Egyptian fraction]]
+*[[Engel expansion]]
+*[[Euler's continued fraction formula]]
+*[[Generalized continued fraction]]
+*[[Infinite compositions of analytic functions]]
+*[[Infinite product]]
+*[[Infinite series]]
+*[[Iterated binary operation]]
+*[[Mathematical constants by continued fraction representation]]
+*[[Restricted partial quotients]]
+*[[Stern–Brocot tree]]
+*[[Śleszyński–Pringsheim theorem]]
+
+==Notes==
+{{Reflist}}
+
+==References==
+* {{cite news|first1=H. | last1=Siebeck | year=1846 | title= Ueber periodische Kettenbrüche
+ |journal= J. Reine Angew. Math. | volume=33 | pages=68–70 | url=http://www.digizeitschriften.de/dms/resolveppn/?PID=PPN243919689_0033}}
+* {{cite news|first1=J. B. H. | last1=Heilermann | title=Ueber die Verwandlung von Reihen in Kettenbrüche
+ |journal =J. Reine Angew. Math. | volume=33 | pages=174–188 | url=http://www.digizeitschriften.de/dms/img/?PID=PPN243919689_0033| year=1846}}
+* {{cite news| first1=Arne | last1=Magnus | title=Continued fractions associated with the Padé Table
+ |journal=Math. Z. | volume=78 | pages=361–374 | year=1962}}
+* {{cite news | first1=Chen-Fan | last1=Chen |first2=Leang-San | last2=Shieh
+ |title=Continued fraction inversion by Routh's Algorithm | journal = IEEE Trans. Circuit Theory
+ | volume=16 | number=2 | pages=197–202 | doi=10.1109/TCT.1969.1082925 | year=1969}}
+* {{cite news|first1=William B. | last1=Gragg | title=Matrix interpretations and applications of the continued fraction algorithm
+ |journal= Rocky Mountain J. Math. | volume=4 | number=2 | doi=10.1216/RJM-1974-4-2-213 | page=213 |year=1974}}
+*{{Cite book | last = Jones | first = William B. | last2 = Thron | first2 = W. J. | title = Continued Fractions: Analytic Theory and Applications. Encyclopedia of Mathematics and its Applications. | publisher = Addison-Wesley Publishing Company | year = 1980 | location = Reading. Massachusetts | volume = 11 | isbn = 0-201-13510-8 | url-access = registration | url = https://archive.org/details/continuedfractio0000jone }}
+*{{cite book |title = Continued Fractions |url = https://archive.org/details/continuedfractio00khin_0 |url-access = registration | year = 1964 | last1 = Khinchin | first1 = A. Ya. | author-link = Aleksandr Khinchin | orig-year = Originally published in Russian, 1935 | publisher = [[University of Chicago Press]] | ISBN= 0-486-69630-8 }}
+* {{citation | first1 = Calvin T. | last1 = Long | year = 1972 | title = Elementary Introduction to Number Theory | edition = 2nd | publisher = [[D. C. Heath and Company]] | location = Lexington | lccn = 77-171950 }}
+* {{cite book | first=Oskar | last= Perron | author-link=Oskar Perron | title =Die Lehre von den Kettenbrüchen | publisher=Chelsea Publishing Company | place=New York, NY | year= 1950}}
+* {{citation | first1 = Anthony J. | last1 = Pettofrezzo | first2 = Donald R. | last2 = Byrkit | year = 1970 | title = Elements of Number Theory | publisher = [[Prentice Hall]] | location = Englewood Cliffs | lccn = 77-81766 }}
+*{{cite book | title = Continued Fractions | url = https://archive.org/details/continuedfractio0000rock | url-access = registration | last1 = Rockett | first1 = Andrew M. | last2 = Szüsz | first2 = Peter| year = 1992 | publisher = World Scientific Press | ISBN = 981-02-1047-7 }}
+*H. S. Wall, ''Analytic Theory of Continued Fractions'', D. Van Nostrand Company, Inc., 1948 {{isbn|0-8284-0207-8}}
+*{{cite book|first1=A. |last1= Cuyt |first2= V. | last2= Brevik Petersen |first3= B. |last3= Verdonk
+ |first4= H. |last4= Waadeland |first5 = W. B. |last5=Jones |title =Handbook of Continued fractions for Special functions
+ |publisher= Springer Verlag |year=2008 |isbn=978-1-4020-6948-2}}
+* {{cite news | last1=Rieger |first1=G. J. | title =A new approach to the real numbers (motivated by continued fractions)
+ |journal= Abh. Braunschweig.Wiss. Ges. | volume= 33 |year=1982 |pages=205–217}}
+
+==External links==
+* {{springer|title=Continued fraction|id=p/c025540}}
+* [http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/cfINTRO.html An Introduction to the Continued Fraction]
+* Linas Vepstas [http://www.linas.org/math/chap-gap/chap-gap.html Continued Fractions and Gaps] (2004) reviews chaotic structures in continued fractions.
+* [http://www.cut-the-knot.org/blue/ContinuedFractions.shtml Continued Fractions on the Stern-Brocot Tree] at [[cut-the-knot]]
+* [http://www.math.sunysb.edu/~tony/whatsnew/column/antikytheraI-0400/kyth3.html The Antikythera Mechanism I: Gear ratios and continued fractions]
+* [http://wims.unice.fr/~wims/en_tool~number~contfrac.en.html Continued fraction calculator], WIMS.
+* [https://web.archive.org/web/20030202011209/http://www.tweedledum.com/rwg/cfup.htm Continued Fraction Arithmetic] Gosper's first continued fractions paper, unpublished. Cached on the [[Internet Archive]]'s [[Internet Archive#Wayback Machine|Wayback Machine]]
+* {{MathWorld |title=Continued Fraction |urlname=ContinuedFraction}}
+* [http://demonstrations.wolfram.com/ContinuedFractions/ Continued Fractions] by [[Stephen Wolfram]] and [http://demonstrations.wolfram.com/ContinuedFractionApproximationsOfTheTangentFunction/ Continued Fraction Approximations of the Tangent Function] by Michael Trott, [[Wolfram Demonstrations Project]].
+* {{OEIS el|1=A133593|2=&quot;Exact&quot; continued fraction for Pi}}
+* [http://go.helms-net.de/math/tetdocs/FracIterAltGeom.htm A view into &quot;fractional interpolation&quot; of a continued fraction {{math|{1; 1, 1, 1, ...}}} ]
+* [http://www.ams.org/publicoutreach/feature-column/fcarc-irrational3 Best rational approximation through continued fractions]
+
+{{Wiktionary}}
+{{Fractions and ratios}}
+
+{{Authority control}}
+
+[[Category:Continued fractions| ]]
+[[Category:Mathematical analysis]]</text>
+      <sha1>43l4g3hqjsw326vmkgf34wctyll6he9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Basel, Switzerland</title>
+    <ns>0</ns>
+    <id>46809</id>
+    <redirect title="Basel" />
+    <revision>
+      <id>15941940</id>
+      <parentid>41912</parentid>
+      <timestamp>2002-03-31T19:56:46Z</timestamp>
+      <contributor>
+        <ip>208.187.51.43</ip>
+      </contributor>
+      <comment>Redirect ==&amp;gt; Basel</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="19" xml:space="preserve">#REDIRECT [[Basel]]</text>
+      <sha1>j9ng5c98tipe1334dlpz88iq7oonzub</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Long Valley Caldera</title>
+    <ns>0</ns>
+    <id>46811</id>
+    <revision>
+      <id>987062935</id>
+      <parentid>966652352</parentid>
+      <timestamp>2020-11-04T17:52:50Z</timestamp>
+      <contributor>
+        <ip>217.209.22.226</ip>
+      </contributor>
+      <comment>Reference for location of eruptive vents provided</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="20861" xml:space="preserve">{{Infobox valley
+| name = Long Valley Caldera
+| photo = Long Valley caldera NE rim.jpg
+| photo_caption = View from northeast rim of caldera
+| location = [[Mono County, California]]&lt;br /&gt;United States
+| elevation = {{convert|6500|-|8500|ft|m|-2}}
+|coordinates = {{coord|37|43|00|N|118|53|03|W|type:landmark|format=dms|display=inline,title}}
+| coordinates_ref = &lt;ref&gt;{{cite gnis|id=274650|name=Long Valley Caldera}}&lt;/ref&gt;
+| length = {{convert|20|mi|km|0}}
+| direction = EW
+| width = {{convert|11|mi|km|0}}
+| depth = up to {{convert|3000|ft|m|-2}}
+| type = [[Caldera]]
+| age = 760,000 yrs
+}}
+[[File:CalderaRelief large.png|thumb|upright=1.15|Map of the Long Valley Caldera]]
+[[File:Long Valley early winter 2017.jpg|thumb|Early winter in Long Valley, 2017]]
+'''Long Valley Caldera''' is a depression in [[eastern California]] that is adjacent to [[Mammoth Mountain]]. The valley is one of the Earth's largest [[caldera]]s, measuring about {{convert|20|mi}} long (east-west), {{convert|11|mi}} wide (north-south), and up to {{convert|3000|ft}} deep.
+
+Long Valley was formed 760,000 years ago when a [[Ultra-Plinian|very large]] eruption released hot ash that later cooled to form the [[Bishop tuff]] that is common to the area. The eruption emptied the [[magma chamber]] under the area to the point of collapse. The second phase of the eruption released [[pyroclastic flow]]s that burned and buried thousands of square miles. Ash from this eruption blanketed much of the [[Western United States|western part]] of what is now the [[United States]].
+
+==Geography==
+{{see also|Volcanic crater}}
+
+The caldera is a giant bowl-shaped depression, approximately {{convert|20|mi}} wide, surrounded by mountains except to the southeast. The elevation of the bottom of the bowl ranges from {{convert|6500|to|8500|ft}}, being higher in the west.&lt;ref name=volcanoworld&gt;{{cite web | title=Long Valley Caldera and Mono-Inyo Craters Volcanic Field, California | work=Volcano World | archiveurl=https://web.archive.org/web/20080114043639/http://volcano.und.nodak.edu/vwdocs/volc_images/north_america/california/long_valley.html | archivedate=14 January 2008 | url=http://volcano.und.nodak.edu/vwdocs/volc_images/north_america/california/long_valley.html}}&lt;/ref&gt;
+
+Near the center of the bowl, there is a [[resurgent dome]] formed by [[magma]]tic uplift. The southeastern slope from the caldera down towards [[Bishop, California]], is filled with the [[Bishop Tuff]], solidified ash that was ejected during the eruption that created the caldera. The Bishop tuff is thousands of feet thick and is cut by the [[Owens River]] Gorge, formed during the Pleistocene when the caldera filled with water and overtopped its rim.
+
+The rim of the caldera is formed from pre-existing rock, rising about {{convert|3000|ft}} above the caldera floor.&lt;ref name=volcanoworld/&gt; However, the eastern rim is lower, only about {{convert|500|ft}}.&lt;ref name=volcanoworld/&gt;
+
+[[Mammoth Mountain]] is a [[lava dome]] complex west of the structural rim of the caldera,&lt;ref&gt;{{cite web|url=https://volcanoes.usgs.gov/volcanoes/mammoth_mountain/|title=Mammoth Mountain|work=California Volcano Observatory|publisher=USGS|accessdate=2017-10-11}}&lt;/ref&gt; consisting of about 12 [[rhyodacite]] and [[dacite]] overlapping domes.&lt;ref name=volcanoworld/&gt;&lt;ref name=Hill&gt;{{cite book | last=Hill | first=Mary | year=2006 | title=Geology of the Sierra Nevada | edition=revised | location=Berkeley, California | publisher=University of California Press | isbn=978-0-520-23696-7 | page=277}}&lt;/ref&gt; These domes formed in a long series of eruptions from 110,000 to 57,000 years ago, building a volcano that reaches {{convert|11059|ft}} in elevation.&lt;ref&gt;{{cite journal | first=Jennifer L. | last=Lewicki |author2=Jens Birkholzer |author3=Chin-Fu Tsang | title=Natural and Industrial Analogues for Release of {{CO2}} from Storage Reservoirs: Identification of Features, Events, and Processes and Lessons Learned | publisher=[[United States Department of Energy]]/[[Office of Scientific and Technical Information]] | date=February 2006 | url=http://www.osti.gov/bridge/servlets/purl/891824-4U1cp4/891824.pdf | accessdate=18 August 2008}}&lt;/ref&gt;
+
+The [[Mono–Inyo Craters]] are a {{convert|25|mi|km|abbr=on|adj=on}}-long volcanic chain situated along a narrow, north–south-trending fissure system extending along the western rim of the caldera from Mammoth Mountain to the north shore of Mono Lake.&lt;ref name=&quot;USGSGeoHis&quot;&gt;{{cite web|title = Geologic History of Long Valley Caldera and the Mono–Inyo Craters volcanic chain, California|url = http://pubs.usgs.gov/dds/dds-81/Intro/GeologicMaps/GeologicHistory.html|year=1999|publisher=United States Geological Survey|location=Menlo Park, California}}&lt;/ref&gt; The Mono-Inyo Craters erupted from 40,000 to 600 years ago, from a magma source separate from the Long Valley Caldera.&lt;ref name=&quot;long_valley_overview&quot;&gt;{{cite journal|last1=Hill|first1=D.P.|first2=R.A.|last2=Bailey|first3=A.S.|last3=Ryall|year=1985|title=Active Tectonic and Magmatic Processes Beneath Long Valley Caldera, Eastern California: An Overview|journal=J. Geophys. Res.|volume=90|issue=B13|pages=11,111–11,120|doi=10.1029/JB090iB13p11111|bibcode=1985JGR....9011111H}}&lt;/ref&gt;
+
+The caldera has an extensive [[hydrothermal]] system. [[Casa Diablo Hot Springs, California|Casa Diablo Hot Springs]] at the base of the resurgent dome hosts a [[Mammoth Geothermal Complex|geothermal power plant]]. [[Hot Creek (Mono County, California)|Hot Creek]] cuts into part of the resurgent dome and passes through hot springs. The warm water of Hot Creek supports many trout, and is used at the Hot Creek Fish Hatchery.&lt;ref name=&quot;hotcreek&quot;&gt;{{cite web|url=http://pubs.usgs.gov/fs/2007/3045/fs2007-3045.pdf|title=Boiling Water at Hot Creek|work=Our Volcanic Public Lands|publisher=USGS and USFS|accessdate=2007-09-16}}&lt;/ref&gt;  The creek was closed to swimming in 2006 after geothermal activity in the area increased.&lt;ref name=&quot;hotcreek&quot;/&gt;&lt;ref&gt;{{cite web|url=http://www.fs.fed.us/r5/inyo/news/2006/07/nr_hot_creek.shtml|archiveurl=https://web.archive.org/web/20081208121353/http://www.fs.fed.us/r5/inyo/news/2006/07/nr_hot_creek.shtml|archivedate=2008-12-08|title=New Activity at Hot Creek Geologic Site|accessdate=2007-05-05|work=Inyo National Forest Press Release}}&lt;/ref&gt; There are a number of other hot springs in the area, some of which are open to bathers.

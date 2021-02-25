@@ -1,0 +1,281 @@
+| designers      = 
+| publish date   = 
+
+| series         = 
+| derived from   = 
+| derived to     = 
+| related to     = 
+| certification  =
+
+| key size       = 
+| security claim = 
+| block size     = 
+| structure      = [[substitution cipher]]
+| rounds         = 
+| cryptanalysis  = Susceptible to [[frequency analysis]] and brute force attacks.
+}}
+--&gt;
+In [[cryptography]], a '''Caesar cipher''', also known as '''Caesar's cipher''', the '''shift cipher''', '''Caesar's code''' or '''Caesar shift''', is one of the simplest and most widely known [[encryption]] techniques. It is a type of [[substitution cipher]] in which each letter in the [[plaintext]] is replaced by a letter some fixed number of positions down the [[alphabet]]. For example, with a left shift of 3, {{mono|D}} would be replaced by {{mono|A}}, {{mono|E}} would become {{mono|B}}, and so on. The method is named after [[Julius Caesar]], who used it in his private correspondence.&lt;ref&gt;Suetonius, ''[http://thelatinlibrary.com/suetonius/suet.caesar.html#56 Vita Divi Julii]'' 56.6&lt;/ref&gt;
+
+The encryption step performed by a Caesar cipher is often incorporated as part of more complex schemes, such as the [[Vigenère cipher]], and still has modern application in the [[ROT13]] system. As with all single-alphabet substitution ciphers, the Caesar cipher is easily broken and in modern practice offers essentially no [[communications security]].
+
+==Example==
+The transformation can be represented by aligning two alphabets; the cipher alphabet is the plain alphabet rotated left or right by some number of positions. For instance, here is a Caesar cipher using a left rotation of three places, equivalent to a right shift of 23 (the shift parameter is used as the [[key (cryptography)|key]]):
+
+ Plain:    ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ Cipher:   XYZABCDEFGHIJKLMNOPQRSTUVW
+
+When encrypting, a person looks up each letter of the message in the &quot;plain&quot; line and writes down the corresponding letter in the &quot;cipher&quot; line.
+ 
+ Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+ Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
+
+Deciphering is done in reverse, with a right shift of 3.
+
+The encryption can also be represented using [[modular arithmetic]] by first transforming the letters into numbers, according to the scheme, A → 0, B → 1, ..., Z → 25.&lt;ref&gt;{{cite journal |last=Luciano |first=Dennis |author2=Gordon Prichett |date=January 1987 |title=Cryptology: From Caesar Ciphers to Public-Key Cryptosystems |journal=The College Mathematics Journal |volume=18 |issue=1 |pages=2–17 |doi=10.2307/2686311 |jstor=2686311 |citeseerx=10.1.1.110.6123 }}&lt;/ref&gt; Encryption of a letter ''x'' by a shift ''n'' can be described mathematically as,&lt;ref&gt;{{cite book |title=Cryptology Unlocked |url=https://archive.org/details/Cryptology_Unlocked |last=Wobst |first=Reinhard |year=2001 |publisher=Wiley |isbn=978-0-470-06064-3 |page=19 }}&lt;/ref&gt;
+
+: &lt;math&gt;E_n(x) = (x + n) \mod {26}.&lt;/math&gt;
+
+Decryption is performed similarly,
+
+: &lt;math&gt;D_n(x) = (x - n) \mod {26}.&lt;/math&gt;
+
+(There are different definitions for the [[modulo operation]]. In the above, the result is in the range 0 to 25; i.e., if {{nowrap|''x'' + ''n''}} or {{nowrap|''x'' − ''n''}} are not in the range 0 to 25, we have to subtract or add 26.)
+
+The replacement remains the same throughout the message, so the cipher is classed as a type of ''[[monoalphabetic substitution]]'', as opposed to ''[[polyalphabetic substitution]]''.
+
+==History and usage==
+{{See also|History of cryptography}}
+[[Image:Gaius Julius Caesar (100-44 BC).JPG|thumbnail|The Caesar cipher is named for [[Julius Caesar]], who used an alphabet where decrypting would shift three letters to the left.]]
+The Caesar cipher is named after [[Julius Caesar]], who, according to [[Lives of the Twelve Caesars|Suetonius]], used it with a shift of three (A becoming D when encrypting, and D becoming A when decrypting) to protect messages of military significance. While Caesar's was the first recorded use of this scheme, other substitution ciphers are known to have been used earlier.&lt;ref&gt;{{cite web|title=Cracking the Code|url=https://www.cia.gov/news-information/featured-story-archive/2007-featured-story-archive/cracking-the-code.html|website=Central Intelligence Agency|accessdate=21 February 2017}}&lt;/ref&gt;&lt;ref&gt;{{cite book |title=[[The Code Book]] |last=Singh |first=Simon |authorlink=Simon Singh |year=2000 |publisher=Anchor |isbn=0-385-49532-3 |pages=[https://archive.org/details/codebook00simo/page/289 289-290] }}&lt;/ref&gt;
+{{Quote|&quot;If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out. If anyone wishes to decipher these, and get at their meaning, he must substitute the fourth letter of the alphabet, namely D, for A, and so with the others.&quot;|[[Suetonius]]|''[[Life of Julius Caesar]]'' 56}}
+His nephew, [[Augustus Caesar|Augustus]], also used the cipher, but with a right shift of one, and it did not wrap around to the beginning of the alphabet:
+{{Quote|&quot;Whenever he wrote in cipher, he wrote B for A, C for B, and the rest of the letters on the same principle, using AA for Z.&quot;|[[Suetonius]]|''[[Life of Augustus]]'' 88}}
+Evidence exists that Julius Caesar also used more complicated systems,&lt;ref&gt;{{cite journal |last=Reinke |first=Edgar C. |date=December 1962 |title=Classical Cryptography |journal=The Classical Journal |volume=58 |issue=3 |page=114 }}&lt;/ref&gt; and one writer, [[Aulus Gellius]], refers to a (now lost) treatise on his ciphers:
+{{Quote|&quot;There is even a rather ingeniously written treatise by the grammarian Probus concerning the secret meaning of letters in the composition of Caesar's epistles.&quot;|[[Aulus Gellius]]|''Attic Nights 17.9.1–5''}}
+
+It is unknown how effective the Caesar cipher was at the time, but it is likely to have been reasonably secure, not least because most of Caesar's enemies would have been [[literacy|illiterate]] and others would have assumed that the messages were written in an unknown foreign language.&lt;ref&gt;{{cite book |title=Fundamentals of Computer Security |last=Pieprzyk |first=Josef |author2=Thomas Hardjono |author3=Jennifer Seberry  |year=2003 |publisher=Springer |isbn=3-540-43101-2 |page=6 }}&lt;/ref&gt; There is no record at that time of any techniques for the solution of simple substitution ciphers. The earliest surviving records date to the 9th-century works of [[Al-Kindi]] in the [[Arab]] world with the discovery of [[frequency analysis]].&lt;ref&gt;{{cite book |title=[[The Code Book]] |last=Singh |first=Simon |authorlink=Simon Singh |year=2000 |publisher=Anchor |isbn=0-385-49532-3 |pages=[https://archive.org/details/codebook00simo/page/14 14–20] }}&lt;/ref&gt;
+
+A Caesar cipher with a shift of one is used on the back of the [[mezuzah]] to encrypt the [[Names of God in Judaism|names of God]]. This may be a holdover from an earlier time when Jewish people were not allowed to have mezuzot. The letters of the cryptogram themselves comprise a religiously significant &quot;divine name&quot; which [[Orthodox Judaism|Orthodox]] belief holds keeps the forces of evil in check.&lt;ref&gt;{{cite web |url=http://www.chabad.org/library/article_cdo/aid/312102/jewish/Mezuzah-and-Astrology.htm |title= Mezuzah and Astrology |accessdate=2008-06-13 |author=Alexander Poltorak |publisher=[[chabad.org]]}}&lt;/ref&gt;
+
+In the 19th century, the personal advertisements section in newspapers would sometimes be used to exchange messages encrypted using simple cipher schemes. [[David Kahn (writer)|Kahn]] (1967) describes instances of lovers engaging in secret communications enciphered using the Caesar cipher in ''[[The Times]]''.&lt;ref&gt;{{cite book |title=The Codebreakers |last=Kahn |first=David |authorlink=David Kahn (writer) |year=1967 |isbn=978-0-684-83130-5 |pages=775–6 }}&lt;/ref&gt; Even as late as 1915, the Caesar cipher was in use: the Russian army employed it as a replacement for more complicated ciphers which had proved to be too difficult for their troops to master; German and Austrian [[Cryptanalysis|cryptanalysts]] had little difficulty in decrypting their messages.&lt;ref&gt;{{cite book |title=The Codebreakers |last=Kahn |first=David |authorlink=David Kahn (writer) |year=1967 |isbn=978-0-684-83130-5 |pages=631–2 }}&lt;/ref&gt;
+
+[[File:CipherDisk2000.jpg|thumb|A construction of two rotating disks with a Caesar cipher can be used to encrypt or decrypt the code.]]
+Caesar ciphers can be found today in children's toys such as [[secret decoder ring]]s. A Caesar shift of thirteen is also performed in the [[ROT13]] [[algorithm]], a simple method of obfuscating text widely found on [[Usenet]] and used to obscure text (such as joke punchlines and story [[Spoiler (media)|spoilers]]), but not seriously used as a method of encryption.&lt;ref&gt;{{cite book |title=Cryptology Unlocked |url=https://archive.org/details/Cryptology_Unlocked |last=Wobst |first=Reinhard |year=2001 |publisher=Wiley |isbn=978-0-470-06064-3 |page=20 }}&lt;/ref&gt;
+
+The [[Vigenère cipher]] uses a Caesar cipher with a different shift at each position in the text; the value of the shift is defined using a repeating keyword. If the keyword is as long as the message, is chosen at [[randomly|random]], never becomes known to anyone else, and is never reused, this is the [[one-time pad]] cipher, proven unbreakable. The conditions are so difficult they are, in practical effect, never achieved. Keywords shorter than the message (e.g., &quot;[[Vigenère cipher#History|Complete Victory]]&quot; used by the [[Confederate States of America|Confederacy]] during the [[American Civil War]]), introduce a cyclic pattern that might be detected with a statistically advanced version of frequency analysis.&lt;ref&gt;{{cite book |title=The Codebreakers |last=Kahn |first=David |authorlink=David Kahn (writer) |year=1967 |isbn=978-0-684-83130-5 }}&lt;/ref&gt;
+
+In April 2006, fugitive [[Sicilian Mafia|Mafia]] boss [[Bernardo Provenzano]] was captured in [[Sicily]] partly because some of his messages, clumsily written in a variation of the Caesar cipher, were broken. Provenzano's cipher used numbers, so that &quot;A&quot; would be written as &quot;4&quot;, &quot;B&quot; as &quot;5&quot;, and so on.&lt;ref&gt;{{cite news |first=John |last=Leyden |title=Mafia boss undone by clumsy crypto |url=https://www.theregister.co.uk/2006/04/19/mafia_don_clueless_crypto/ |work=[[The Register]] |date=2006-04-19 |accessdate=2008-06-13 }}&lt;/ref&gt;
+
+In 2011, Rajib Karim was convicted in the United Kingdom of &quot;terrorism offences&quot; after using the Caesar cipher to communicate with Bangladeshi Islamic activists discussing plots to blow up [[British Airways]] planes or disrupt their IT networks.  Although the parties had access to far better encryption techniques (Karim himself used [[Pretty Good Privacy|PGP]] for data storage on computer disks), they chose to use their own scheme (implemented in [[Microsoft Excel]]), rejecting a more sophisticated code program called Mujahedeen Secrets &quot;because 'kaffirs', or non-believers, know about it, so it must be less secure&quot;.&lt;ref&gt;{{cite news |title=BA jihadist relied on Jesus-era encryption |url=https://www.theregister.co.uk/2011/03/22/ba_jihadist_trial_sentencing/ |work=[[The Register]] |date=2011-03-22 |accessdate=2011-04-01 }}&lt;/ref&gt; This constituted an application of [[security through obscurity]].
+
+==Breaking the cipher==
+{| class=&quot;wikitable&quot; align=&quot;right&quot; style=&quot;margin: 0 0 1em 1em&quot;
+! Decryption&lt;br&gt;shift
+! Candidate plaintext
+|- align=&quot;center&quot;
+| 0
+| {{mono|exxegoexsrgi}}
+|- align=&quot;center&quot;
+| 1
+| {{mono|dwwdfndwrqfh}}
+|- align=&quot;center&quot; 
+| 2
+| {{mono|cvvcemcvqpeg}}
+|- align=&quot;center&quot;
+| 3
+| {{mono|buubdlbupodf}}
+|- align=&quot;center&quot;
+| bgcolor=&quot;#ffebad&quot; | 4
+| bgcolor=&quot;#ffebad&quot; | {{mono|attackatonce}}
+|- align=&quot;center&quot; 
+| 5
+| {{mono|zsszbjzsnmbd}}
+|- align=&quot;center&quot;
+| 6
+| {{mono|yrryaiyrmlac}}
+|- align=&quot;center&quot;
+| colspan=&quot;2&quot; | ...
+|- align=&quot;center&quot;
+|  23
+| {{mono|haahjrhavujl}}
+|- align=&quot;center&quot;
+| 24
+| {{mono|gzzgiqgzutik}}
+|- align=&quot;center&quot;
+| 25
+| {{mono|fyyfhpfytshj}}
+|}
+The Caesar cipher can be easily broken even in a [[ciphertext-only attack|ciphertext-only scenario]]. Two situations can be considered: 
+# an attacker knows (or guesses) that some sort of simple substitution cipher has been used, but not specifically that it is a Caesar scheme;
+# an attacker knows that a Caesar cipher is in use, but does not know the shift value.
+
+In the first case, the cipher can be broken using the same techniques as for a general simple substitution cipher, such as [[frequency analysis]]  or pattern words.&lt;ref&gt;{{cite book |title=Cryptology |last=Beutelspacher |first=Albrecht |authorlink=Albrecht Beutelspacher |year=1994 |publisher=[[Mathematical Association of America]] |isbn=0-88385-504-6 |pages=9–11 }}&lt;/ref&gt; While solving, it is likely that an attacker will quickly notice the regularity in the solution and deduce that a Caesar cipher is the specific algorithm employed.
+[[File:English letter frequency (alphabetic).svg|alt=|left|thumb|The distribution of letters in a typical sample of English language text has a distinctive and predictable shape. A Caesar shift &quot;rotates&quot; this distribution, and it is possible to determine the shift by examining the resultant frequency graph.]]
+In the second instance, breaking the scheme is even more straightforward. Since there are only a limited number of possible shifts (25 in English), they can each be tested in turn in a [[brute force attack]].&lt;ref&gt;{{cite book |title=Cryptology |last=Beutelspacher |first=Albrecht |authorlink=Albrecht Beutelspacher |year=1994 |publisher=[[Mathematical Association of America]] |isbn=0-88385-504-6 |pages=8–9 }}&lt;/ref&gt; One way to do this is to write out a snippet of the ciphertext in a table of all possible shifts&lt;ref&gt;{{cite journal |last=Leighton |first=Albert C. |date=April 1969 |title=Secret Communication among the Greeks and Romans |journal=Technology and Culture |volume=10 |issue=2 |pages=139–154 |doi=10.2307/3101474 |jstor=3101474 }}&lt;/ref&gt; – a technique sometimes known as &quot;completing the plain component&quot;.&lt;ref&gt;{{cite book |title=Elementary Cryptanalysis: A Mathematical Approach |last=Sinkov |first=Abraham |authorlink=Abraham Sinkov |author2=Paul L. Irwin |year=1966 |publisher=Mathematical Association of America |isbn=0-88385-622-0 |pages=13–15 }}&lt;/ref&gt; The example given is for the ciphertext &quot;{{mono|EXXEGOEXSRGI}}&quot;; the plaintext is instantly recognisable by eye at a shift of four. Another way of viewing this method is that, under each letter of the ciphertext, the entire alphabet is written out in reverse starting at that letter. This attack can be accelerated using a set of strips prepared with the alphabet written down in reverse order. The strips are then aligned to form the ciphertext along one row, and the plaintext should appear in one of the other rows.
+
+Another brute force approach is to match up the frequency distribution of the letters. By graphing the frequencies of letters in the ciphertext, and by knowing the expected distribution of those letters in the original language of the plaintext, a human can easily spot the value of the shift by looking at the displacement of particular features of the graph. This is known as [[frequency analysis]]. For example, in the English language the plaintext frequencies of the letters {{mono|E}}, {{mono|T}}, (usually most frequent), and {{mono|Q}}, {{mono|Z}} (typically least frequent) are particularly distinctive.&lt;ref&gt;{{cite book |title=The Code Book |last=Singh |first=Simon |authorlink=Simon Singh |year=2000 |publisher=Anchor |isbn=0-385-49532-3 |pages=[https://archive.org/details/codebook00simo/page/72 72–77] |url=https://archive.org/details/codebook00simo/page/72 }}&lt;/ref&gt; Computers can also do this by measuring how well the actual frequency distribution matches up with the expected distribution; for example, the [[chi-squared statistic]] can be used.&lt;ref&gt;{{cite web |url=http://www.cs.trincoll.edu/~crypto/historical/caesar.html |title=The Caesar Cipher |accessdate=2008-07-16 |last=Savarese |first=Chris |author2=Brian Hart |date=2002-07-15 }}&lt;/ref&gt;
+
+For natural language plaintext, there will typically be only one plausible decryption, although for extremely short plaintexts, multiple candidates are possible. For example, the ciphertext {{mono|MPQY}} could, plausibly, decrypt to either &quot;{{mono|[[aden]]}}&quot; or &quot;{{mono|know}}&quot; (assuming the plaintext is in English); similarly, &quot;{{mono|ALIIP}}&quot; to &quot;{{mono|dolls}}&quot; or &quot;{{mono|wheel}}&quot;; and &quot;{{mono|AFCCP}}&quot; to &quot;{{mono|jolly}}&quot; or &quot;{{mono|cheer}}&quot; (see also [[unicity distance]]).
+
+With the Caesar cipher, encrypting a text multiple times provides no additional security. This is because two encryptions of, say, shift ''A'' and shift ''B'', will be equivalent to a single encryption with shift {{nowrap|''A'' + ''B''}}. In mathematical terms, the set of encryption operations under each possible key forms a [[group (mathematics)|group]] under [[Function composition|composition]].&lt;ref&gt;{{cite book |title=Cryptology Unlocked |url=https://archive.org/details/Cryptology_Unlocked |last=Wobst |first=Reinhard |year=2001 |publisher=Wiley |isbn=978-0-470-06064-3 |page=31}}&lt;/ref&gt;
+{{clearleft}}
+
+==See also==
+* [[Scytale]]
+
+==Notes==
+{{reflist}}
+
+==Bibliography==
+* [[F. L. Bauer]], ''Decrypted Secrets'', 2nd edition, 2000, Springer. {{ISBN|3-540-66871-3}}.
+* [[David Kahn (writer)|David Kahn]], ''The Codebreakers: The Story of Secret Writing'', Revised ed. 1996. {{ISBN|0-684-83130-9}}.
+*  Chris Savarese and Brian Hart, ''[http://www.cs.trincoll.edu/~crypto/historical/caesar.html The Caesar Cipher]'', 1999
+
+==External links==
+{{commons category|Caesar ciphers}}
+{{Spoken Wikipedia|Caesar_cipher.ogg|date=2005-04-14}}
+* {{MathWorld | urlname=CaesarsMethod | title=Caesar's Method}}
+
+{{Cryptography navbox | classical}}
+
+[[Category:Classical ciphers]]
+[[Category:Group theory]]</text>
+      <sha1>4qs0ss2l3ifss0alxdx21eito2bn3tk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Factor of production</title>
+    <ns>0</ns>
+    <id>48406</id>
+    <redirect title="Factors of production" />
+    <revision>
+      <id>15943430</id>
+      <parentid>49184</parentid>
+      <timestamp>2002-04-09T13:35:55Z</timestamp>
+      <contributor>
+        <username>Enchanter</username>
+        <id>1104</id>
+      </contributor>
+      <comment>Redirecting to preexisting article</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="35" xml:space="preserve">#REDIRECT [[Factors of production]]</text>
+      <sha1>mte8vog19pr654sltb2dxjpp597l9ws</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>367</title>
+    <ns>0</ns>
+    <id>48407</id>
+    <revision>
+      <id>989255144</id>
+      <parentid>989255001</parentid>
+      <timestamp>2020-11-17T22:56:51Z</timestamp>
+      <contributor>
+        <username>LizardJr8</username>
+        <id>5320876</id>
+      </contributor>
+      <minor />
+      <comment>Reverted edits by [[Special:Contributions/62.201.219.245|62.201.219.245]] ([[User talk:62.201.219.245|talk]]): [[WP:SANDBOX|editing tests]] ([[WP:HG|HG]]) (3.4.10)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4015" xml:space="preserve">{{Use mdy dates|date=February 2011}}
+{{Year dab|367}}
+{{refimprove|date=November 2017}}
+{{Year nav|367}}
+{{M1 year in topic}}
+__NOTOC__
+Year '''367''' ('''[[Roman numerals|CCCLXVII]]''') was a [[common year starting on Monday]] (link will display the full calendar) of the [[Julian calendar]]. At the time, it was known as the '''Year of the Consulship of Lupicinus and Iovanus''' (or, less frequently, '''year 1120 ''[[Ab urbe condita]]'''''). The denomination 367 for this year has been used since the early medieval period, when the [[Anno Domini]] [[calendar era]] became the prevalent method in Europe for naming years.
+
+== Events ==
+&lt;onlyinclude&gt;
+=== By place ===
+==== Roman Empire ====
+* [[Battle of Solicinium]]: Emperor [[Valentinian I]] launches a [[punitive expedition]] against the [[Alamanni]], due to the crises in [[Britannia]] and [[Gaul]]. The Alamanni re-cross the [[Rhine]] and plunder [[Moguntiacum]] (modern [[Mainz]]). 
+* Valentinian I declares that Christians will not be forced into gladiator training schools.&lt;ref&gt;{{cite book| author =Rachael Hanel| title =Gladiators| publisher =The Creative Company| year =2007| page =[https://archive.org/details/gladiators0000hane/page/38 38]| isbn =1583415351| url =https://archive.org/details/gladiators0000hane/page/38}}&lt;/ref&gt;
+* [[Great Conspiracy]]: The Roman garrison on [[Hadrian's Wall]] revolts and allows [[Picts]] from [[Caledonia]] to devastate [[Roman Britain|Britain]]. Simultaneously [[Attacotti]], the  [[Scoti|Scotti]] from [[Hibernia]] ([[Ireland]]), and the [[Saxons]] from [[Germania]] invade the island's mid-western and south-eastern borders. They sack the cities and murder, rape or enslave [[Romano-British culture|Romano-British]] civilians.
+* [[Eunomius of Cyzicus]] is banished to [[Mauretania]] for harbouring the usurper [[Procopius (usurper)|Procopius]].
+* [[August 4]] &amp;ndash; [[Gratian]] receives the title of ''[[Augustus (title)|Augustus]]'' under his father, Valentinian I.
+* Winter &amp;ndash; Valentinian I mobilises a massive army for his campaign against the Alamanni and the [[Franks]]. He summons the Italian and Illyrian [[Roman legion|legions]] for a spring offensive.
+
+==== Asia ====
+* The first [[Korea]]n envoy arrives in [[Japan]], emissary of the government of [[Baekje|Kudara]]. 
+
+=== By topic ===
+==== Religion ====
+* First Listing of the [[New Testament]] ([[Christian biblical canons|Bible]]) by [[Athanasius of Alexandria|St. Athanasius of Alexandria]].
+* [[November 16]] &amp;ndash; [[Antipope Ursicinus]] is banished by the ''[[Praefectus urbi|praefecti]]'' to Gaul.
+* [[Epiphanius of Salamis]] becomes [[bishop]] of [[Salamis, Cyprus]].&lt;ref&gt;{{cite web|title=Saint Epiphanius of Constantia - bishop of Salamis|url=https://www.britannica.com/biography/Saint-Epiphanius-of-Constantia|website=Encyclopedia Britannica|accessdate=7 November 2017|language=en}}&lt;/ref&gt;
+* Emperor [[Valens]] is [[baptism|baptized]] by [[Eudoxius of Antioch]].
+
+==== Science ====
+*In the region of the constellation ''Perseus'', a star not visible to the naked eye, and 1,533 light years distant from Earth, explodes in a [[nova]].  The light from the star, now called [[GK Persei]], was first detected on Earth on [[February 1901|February 21, 1901]] &lt;ref&gt;Peter O. K. Krehl, ''History of Shock Waves, Explosions and Impact: A Chronological and Biographical Reference'' (Springer, 2008) p425&lt;/ref&gt;
+
+== Births ==
+{{empty section|date=November 2017}}
+
+== Deaths ==
+[[File:Hilaryofpoitiers.jpg|thumb|100px|Saint [[Hilary of Poitiers]]]]
+* [[January 13]] &amp;ndash; [[Hilary of Poitiers]], Byzantine [[bishop]], [[Doctor of the Church]] and saint (b. [[315|c. 315]])&lt;ref&gt;{{cite web|title=Saint Hilary of Poitiers - bishop of Poitiers|url=https://www.britannica.com/biography/Saint-Hilary-of-Poitiers|website=Encyclopedia Britannica|accessdate=7 November 2017|language=en}}&lt;/ref&gt;
+
+=== Date Unknown ===
+* [[Murong Ke]], general and [[Politician|statesman]] of [[Former Yan]]
+
+== References ==
+{{Reflist}}
+
+{{DEFAULTSORT:367}}
+[[Category:367| ]]</text>
+      <sha1>6dety1mdzpumxdtj1s2mxkplie9bqfn</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>368</title>
+    <ns>0</ns>
+    <id>48408</id>
+    <revision>
+      <id>905174096</id>
+      <parentid>848880442</parentid>
+      <timestamp>2019-07-07T11:06:05Z</timestamp>
+      <contributor>
+        <username>Lady Ruby Tuesday</username>
+        <id>32817972</id>
+      </contributor>
+      <comment>/* Roman Empire */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2216" xml:space="preserve">{{Use mdy dates|date=February 2011}}
+{{Year dab|368}}
+{{unreferenced|date=November 2017}}
+{{Year nav|368}}
+{{M1 year in topic}}
+Year '''368''' ('''[[Roman numerals|CCCLXVIII]]''') was a [[leap year starting on Tuesday]] (link will display the full calendar) of the [[Julian calendar]]. At the time, it was known as the '''Year of the Consulship of Augustus and Valens''' (or, less frequently, '''year 1121 ''[[Ab urbe condita]]'''''). The denomination 368 for this year has been used since the early medieval period, when the [[Anno Domini]] [[calendar era]] became the prevalent method in Europe for naming years.
+
+== Events ==
+&lt;onlyinclude&gt;
+
+=== By place ===
+
+==== Roman Empire ====
+* Spring &amp;ndash; Emperor [[Valentinian I]] and his 8-year-old son, [[Gratian the Elder|Gratian]], cross the [[Rhine]] with an army into Alamannic territory. He defeats the [[Alemanni]] and burns food stores along the border. A temporary peace is signed  with [[Macrian]], king of the [[Bucinobantes]], and Valentinian returns to his capital ''[[History of Trier|Augusta Treverorum]]'' (modern [[Trier]]).
+* [[Great Conspiracy]]: [[Picts]], [[Scoti|Scotti]] and [[Saxons]] reach [[Roman London]] and plunder the city. [[Count Theodosius|Theodosius]], a general (''[[Comes Britanniarum]]''), is sent with a relief force to [[Britannia]]. He marches from [[Richborough]], [[Kent]], to deal with the invaders.
+* Winter &amp;ndash; The barbarians are driven back to their homelands, [[Hadrian's Wall]] is retaken and order returns to the [[Roman diocese]]. Theodosius reorganises the abandoned forts and mounts punitive expeditions in [[Hibernia]] ([[Ireland]]).
+
+====Asia====
+* An [[earthquake]] strikes [[İznik|Nicaea]] ([[Turkey]]).
+&lt;/onlyinclude&gt;
+
+== Births ==
+* [[Eustochium]], [[Desert Mother]] and [[Saint]] (approximate date)
+* [[Juqu Mengxun]], prince of the [[Xiongnu]] state [[Northern Liang]] (d. [[433]])
+* [[Philostorgius]], [[Anomoeanism|Anomoean]] church historian
+
+== Deaths ==
+* [[July 7]] &amp;ndash; [[Maternien]], [[Roman Catholic]] bishop and saint
+
+=== Date Unknown===
+* [[Caesarius of Nazianzus]], [[physician]] and [[politician]] (approximate date)
+
+== References ==
+{{Reflist}}

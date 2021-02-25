@@ -1,0 +1,236 @@
+{| class=&quot;wikitable&quot;
+|+Example routing table contents
+|-
+! Network destination
+! Netmask
+! Gateway
+! Interface
+! Metric
+|-
+| 0.0.0.0
+| 0.0.0.0
+| 192.168.0.1
+| 192.168.0.100
+| 10
+|-
+| 127.0.0.0
+| 255.0.0.0
+| 127.0.0.1
+| 127.0.0.1
+| 1
+|-
+| 192.168.0.0
+| 255.255.255.0
+| 192.168.0.100
+| 192.168.0.100
+| 10
+|-
+| 192.168.0.100
+| 255.255.255.255
+| 127.0.0.1
+| 127.0.0.1
+| 10
+|-
+| 192.168.0.1
+| 255.255.255.255
+| 192.168.0.100
+| 192.168.0.100
+| 10
+|}
+
+* The columns '''Network destination''' and '''Netmask''' together describe the '''Network identifier''' as mentioned earlier. For example, destination '''192.168.0.0''' and netmask '''255.255.255.0''' can be written as '''192.168.0.0/24'''. 
+* The '''Gateway''' column contains the same information as the '''Next hop''', i.e. it points to the gateway through which the network can be reached. 
+* The '''Interface''' indicates what locally available interface is responsible for reaching the gateway. In this example, gateway '''192.168.0.1''' (the internet router) can be reached through the local network card with address '''192.168.0.100'''. 
+* Finally, the '''Metric''' indicates the associated cost of using the indicated route. This is useful for determining the efficiency of a certain route from two points in a network. In this example, it is more efficient to communicate with the computer itself through the use of address '''127.0.0.1''' (called “localhost”) than it would be through '''192.168.0.100''' (the IP address of the local network card).&lt;!--[[User:Kvng/RTH]]--&gt;
+
+==Forwarding table==
+Routing tables are generally not used directly for [[packet forwarding]] in modern router architectures; instead, they are used to generate the information for a smaller [[forwarding table]]. This forwarding table contains only the routes which are chosen by the [[routing algorithm]] as preferred routes for packet forwarding. It is often in a compressed or pre-compiled format that is [[Optimisation (computer science)|optimized]] for hardware storage and [[lookup]].
+
+This router architecture separates the [[Control Plane]] function of the routing table from the [[Forwarding Plane]] function of the forwarding table.&lt;ref&gt;[http://www.ietf.org/rfc/rfc3746.txt Forwarding and Control Element Separation (ForCES) Framework], L. Yang ''et al.'', RFC3746,April 2004.&lt;/ref&gt; This separation of control and forwarding provides uninterrupted  performance.
+
+== See also ==
+* [[Luleå algorithm]]
+
+== References ==
+{{reflist}}
+
+==External links==
+* [http://www.faqs.org/docs/linux_network/x-087-2-issues.routing.html IP Routing]
+
+{{DEFAULTSORT:Routing Table}}
+[[Category:Internet architecture]]
+[[Category:Routing]]</text>
+      <sha1>jqlef3w5w6prmioiieonw9y5quud8wv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Transcendental argument for the existence of God</title>
+    <ns>0</ns>
+    <id>48044</id>
+    <revision>
+      <id>965133728</id>
+      <parentid>952872045</parentid>
+      <timestamp>2020-06-29T16:13:38Z</timestamp>
+      <contributor>
+        <username>ShelfSkewed</username>
+        <id>1152308</id>
+      </contributor>
+      <comment>Fixed/updated link</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10471" xml:space="preserve">{{Redirect|Transcendental argument|arguments that deduce conclusions from some accepted aspect of experience|Transcendental arguments}}
+The '''Transcendental Argument for the Existence of God (TAG)''' is the [[argument]] that attempts to prove the [[existence of God]] by arguing that [[logic]], [[morality|morals]], and [[science]] ultimately [[presupposition|presuppose]] a supreme being and that [[God]] must therefore be the source of logic and morals.&lt;ref&gt;{{cite web |url=http://www.infidels.org/library/modern/michael_martin/induction.html |title=Does Induction Presume the Existence of the Christian God? |accessdate=21 April 2011 |author=Michael Martin |authorlink=Michael Martin (philosopher) |year=1997 |work= |publisher=Infidels |quote=But what about The Transcendental Argument for the Existence of God (TAG)--the argument that logic, science, and objective ethical standards presuppose the existence of God? }}&lt;/ref&gt; 
+
+A version was formulated by [[Immanuel Kant]] in his 1763 work ''[[The Only Possible Argument in Support of a Demonstration of the Existence of God]]'', and most contemporary formulations of the transcendental argument have been developed within the [[logical framework|framework]] of [[Christianity|Christian]] [[presuppositional apologetics]].&lt;ref name=Martin&gt;{{cite journal|last=Martin|first=Michael|year=1997|title=Does Induction Presuppose the Existence of the Christian God?|journal=Skeptic|volume=5|issue=2|pages=71–75}}&lt;/ref&gt;
+
+==Transcendental reasoning==
+[[Transcendence (philosophy)|Transcendental]] arguments should not be confused with arguments for the existence of something [[Transcendence (religion)|transcendent]]. In other words, they are distinct from both arguments that appeal to a transcendent [[intuition]] or [[sense]] as evidence, and [[Christian apologetics#Historical and legal evidentialism|classical apologetics]] arguments that move from direct evidence to the existence of a transcendent thing.
+
+They are also sometimes said to be distinct from standard [[Deductive reasoning|deductive]] and [[Inductive reasoning|inductive]] forms of [[reason|reasoning]], although this has been disputed, for instance by Anthony Genova
+&lt;ref&gt;Anthony C. Genova, &quot;Transcendental Form,&quot; Southwestern Journal of Philosophy 11 (1980): 25-34.&lt;/ref&gt; and Graham Bird.&lt;ref&gt;Graham Bird, The Revolutionary Kant: A Commentary on the Critique of Pure Reason (2006).&lt;/ref&gt;
+
+==The argument==
+The TAG is a transcendental argument that attempts to prove that God is the precondition for logic, reason, or morality. The argument proceeds as follows:&lt;ref&gt;{{Cite book|last1=Meister|first1=Chad V.|last2=Mittelberg|first2=Mark|last3=McDowell|first3=Josh|author4=Montgomery, John F.|title=Reasons for Faith: Making a Case for the Christian Faith|url=https://books.google.com/books?id=N3OJ0sz35dsC&amp;lpg=PA231&amp;ots=PEWHUcys_B&amp;dq=Greg%20Bahnsen%20transcendental%20argument&amp;pg=PA236|year=2007|publisher=Crossway Books|location=Wheaton, Illinois|isbn=1-58134-787-1}}{{Page needed|date=September 2010}}&lt;/ref&gt;
+# God is a necessary precondition for logic and morality (because these are immaterial, yet real universals).
+# People depend upon logic and morality, showing that they depend upon the universal, immaterial, and abstract realities which could not exist in a materialist universe but presupposes (presumes) the existence of an immaterial and absolute God. 
+# Therefore, God exists. If He didn't, we could not rely upon logic, reason, morality, and other absolute universals (which are required and assumed to live in this universe, let alone to debate), and could not exist in a materialist universe where there are no absolute standards or an absolute Lawgiver.
+
+[[Cornelius Van Til]] likewise wrote:
+
+{{quote|We must point out ... that univocal reasoning itself leads to self-contradiction, not only from a theistic point of view, but from a non-theistic point of view as well... It is this that we ought to mean when we say that we reason from the impossibility of the contrary. The contrary is impossible only if it is self-contradictory when operating on the basis of its own assumptions.|(''A Survey of Christian Epistemology'' [Philadelphia: Presbyterian and Reformed, 1969], p. 204).}}
+
+Therefore, the TAG differs from [[thomistic]] and [[evidentialist]] arguments, which posit the existence of God in order to avoid an infinite regress of causes or motions.
+
+==Reception==
+Some reject the validity of the argument pointing out various flaws, such as a category error involved in the first premise of the argument, namely that just because there's a statement that's universally true it won't make that statement a part of reality in itself.&lt;ref&gt;{{Cite web|url=https://friendlyatheist.patheos.com/2011/12/27/responding-to-the-most-common-arguments-for-gods-existence/|title=Responding to the Most Common Arguments for God's Existence|last=Atheist|first=Friendly|website=Friendly Atheist|language=en|access-date=2019-08-27}}&lt;/ref&gt; Another issue pointed out is that it's not needed to have a god to have logic or morality.&lt;ref&gt;{{Cite web|url=https://www.patheos.com/blogs/crossexamined/2013/12/a-dozen-responses-to-the-transcendental-argument-for-god-3-of-3/|title=A Dozen Responses to the Transcendental Argument for God (3 of 3)|last=Examined|first=Cross|date=2013-12-09|website=Cross Examined|language=en|access-date=2019-08-27}}&lt;/ref&gt; In particular the existence of multiple logic systems with differing axioms such as [[non-classical logic]]&lt;ref&gt;{{Cite web|url=https://www.logic.at/emcl2016/agataemcl2016.pdf|title=Non-classical Logics: Theory, Applications and Tools|last=Ciabattoni|first=Agata}}&lt;/ref&gt; as well as multiple radically different moral systems&lt;ref&gt;{{Citation|last=Alexander|first=Larry|title=Deontological Ethics|date=2016|url=https://plato.stanford.edu/archives/win2016/entries/ethics-deontological/|work=The Stanford Encyclopedia of Philosophy|editor-last=Zalta|editor-first=Edward N.|edition=Winter 2016|publisher=Metaphysics Research Lab, Stanford University|access-date=2019-08-27|last2=Moore|first2=Michael}}&lt;/ref&gt;&lt;ref&gt;{{Citation|last=Wong|first=David|title=Chinese Ethics|date=2018|url=https://plato.stanford.edu/archives/fall2018/entries/ethics-chinese/|work=The Stanford Encyclopedia of Philosophy|editor-last=Zalta|editor-first=Edward N.|edition=Fall 2018|publisher=Metaphysics Research Lab, Stanford University|access-date=2019-08-27}}&lt;/ref&gt;&lt;ref&gt;{{Citation|last=Hursthouse|first=Rosalind|title=Virtue Ethics|date=2018|url=https://plato.stanford.edu/archives/win2018/entries/ethics-virtue/|work=The Stanford Encyclopedia of Philosophy|editor-last=Zalta|editor-first=Edward N.|edition=Winter 2018|publisher=Metaphysics Research Lab, Stanford University|access-date=2019-08-27|last2=Pettigrove|first2=Glen}}&lt;/ref&gt;&lt;ref&gt;{{Citation|last=Sinnott-Armstrong|first=Walter|title=Consequentialism|date=2019|url=https://plato.stanford.edu/archives/sum2019/entries/consequentialism/|work=The Stanford Encyclopedia of Philosophy|editor-last=Zalta|editor-first=Edward N.|edition=Summer 2019|publisher=Metaphysics Research Lab, Stanford University|access-date=2019-08-27}}&lt;/ref&gt; constitutes evidence against the idea that logic and morality are actually universals. Furthermore, the existence of theorems like [[Gödel's completeness theorem|Goedel's completeness theorem]] and the [[Soundness|soundness theorems]] for classical logic provide justification for some logic systems like [[Propositional calculus|classical propositional logic]] without using any god hypotheses thus contradicting the first premise of the argument. {{Citation needed|date=January 2020}}
+
+==See also==
+*[[Christian apologetics]]
+*[[Argument from morality]] (some forms of which are TAGs)
+
+==References==
+{{Reflist}}
+;Notes
+{{refbegin}}
+*E. R. Geehan, ed., ''Jerusalem and Athens: Critical Discussions on the Philosophy and Apologetics of Cornelius Van Til'' (Phillipsburg: Presbyterian and Reformed, 1980).
+*Greg L. Bahnsen, ''Van Til's Apologetic: Readings and Analysis'' (Phillipsburg: Presbyterian and Reformed, 1998).
+*John M. Frame, ''Cornelius Van Til: An Analysis of His Thought'' (Phillipsburg: Presbyterian and Reformed, 1995).
+*Steven M. Schlissel, ed., ''The Standard Bearer: A Festschrift for Greg L. Bahnsen'' (Nacogdoches: Covenant Media Press, 2002).
+*Greg L. Bahnsen, ''Always Ready: Directions for Defending the Faith&quot;. Robert R. Booth, ed. (Nacogdoches: Covenant Media Press, 1996).
+*John M. Frame, ''Apologetics to the Glory of God: An Introduction'' (Phillipsburg: Presbyterian and Reformed, 1994).
+*John M. Frame, ''The Doctrine of the Knowledge of God'' (Phillipsburg: Presbyterian and Reformed, 1987).
+{{refend}}
+
+==External links==
+
+===Articles===
+*[http://www.reformed.org/apologetics/index.html?mainframe=/apologetics/martin_TAG.html Responses to Atheist Philosopher, Michael Martin]
+*[http://thirdmill.org/files/reformedperspectives/hall_of_frame/HOF.Hale.Derrida%20and%20VanTil.6.30.04.html Derrida, Van Til and the Metaphysics of Postmodernism] An appraisal of Postmodernism, specifically Deconstruction, in light of Van Til by Jacob Gabriel Hale.
+*[http://carm.org/transcendental-argument The Transcendental Argument for the Existence of God] by Matt Slick.
+
+===Debates===
+* [http://veritasdomain.wordpress.com/2006/12/05/greg-bahnsen-vs-gordon-stein-the-great-debate/ &quot;The Great Debate: Does God Exist?&quot;] Audio (listen/download format) of a formal debate between Christian Greg Bahnsen and skeptic Gordon Stein from the [[University of California, Irvine]].
+* [https://web.archive.org/web/20081211120552/http://www.infidels.org/library/modern/michael_martin/martin-frame/index.shtml The Martin-Frame Debate] A written debate between skeptic [[Michael Martin (philosopher)|Michael Martin]] and Christian John Frame about the transcendental argument for the existence of God.
+* [https://web.archive.org/web/20081211120630/http://www.infidels.org/library/modern/theodore_drange/drange-wilson/index.shtml The Drange-Wilson Debate] A written debate between skeptic Theodore Drange and Christian Douglas Wilson.
+* [http://reformed.org/webfiles/antithesis/v2n4/ &quot;Is Non-Christian Thought Futile?&quot;] A written debate between Christian Doug Jones and skeptics Keith Parsons and Michael Martin in ''Antithesis'' magazine (vol. 2, no. 4).
+
+{{philosophy of religion}}
+{{Theology}}
+
+{{DEFAULTSORT:Transcendental Argument For The Existence Of God}}
+[[Category:Christian philosophy]]
+[[Category:Arguments for the existence of God]]</text>
+      <sha1>pjnvknreos3j9p1586xx82oynj7j3d2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Syllogism</title>
+    <ns>0</ns>
+    <id>48046</id>
+    <revision>
+      <id>990770725</id>
+      <parentid>990770719</parentid>
+      <timestamp>2020-11-26T11:58:21Z</timestamp>
+      <contributor>
+        <username>ClueBot NG</username>
+        <id>13286072</id>
+      </contributor>
+      <minor />
+      <comment>Reverting possible vandalism by [[Special:Contribs/2A00:23C6:C890:2700:DA9:3AFD:7166:AFB4|2A00:23C6:C890:2700:DA9:3AFD:7166:AFB4]] to version by Chenopodiaceous. [[WP:CBFP|Report False Positive?]] Thanks, [[WP:CBNG|ClueBot NG]]. (3832297) (Bot)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="46577" xml:space="preserve">{{short description|Type of logical argument that applies deductive reasoning}}
+{{Redirect|Epagoge|the genus of moth|Epagoge (genus)}}
+{{Redirect|Minor premise|the 2020 thriller film|Minor Premise (film)}}
+A '''syllogism''' ({{lang-grc-gre|συλλογισμός}}, ''syllogismos'', 'conclusion, inference') is a kind of [[logical argument]] that applies [[deductive reasoning]] to arrive at a [[Logical consequence|conclusion]] based on two or more [[propositions]] that are asserted or assumed to be true.
+
+In a form, defined by [[Aristotle]], from the combination of a general statement (the major premise) and a specific statement (the minor premise), a conclusion is deduced. For example, knowing that all men are mortal (major premise) and that [[Socrates]] is a man (minor premise), we may validly conclude that Socrates is mortal. Syllogistic arguments are usually represented in a three-line form:
+	
+&lt;blockquote&gt;&lt;poem&gt;All men are mortal.
+Socrates is a man.
+Therefore, Socrates is mortal.&lt;/poem&gt;&lt;/blockquote&gt;In antiquity, two rival syllogistic theories existed: Aristotelian syllogism and Stoic syllogism.&lt;ref name=&quot;:0&quot; /&gt; From the [[Middle Ages]] onwards, ''categorical syllogism'' and ''syllogism'' were usually used interchangeably. This article is concerned only with this historical use. The syllogism was at the core of historical [[deductive reasoning]], whereby facts are determined by combining existing statements, in contrast to [[inductive reasoning]] in which facts are determined by repeated observations.
+
+Within an academic context, the syllogism was superseded by [[First-order logic|first-order predicate logic]] following the work of [[Gottlob Frege]], in particular his ''[[Begriffsschrift]]'' (''Concept Script''; 1879). However, syllogisms remain useful in some circumstances, and for general-audience introductions to logic.&lt;ref&gt;Hurley, Patrick J. 2011. ''A Concise Introduction to Logic''. Cengage Learning. {{ISBN|9780840034175}}&lt;/ref&gt;&lt;ref&gt;Zegarelli, Mark. 2010. ''Logic for Dummies''. John Wiley &amp; Sons. {{ISBN|9781118053072}}.&lt;/ref&gt;
+
+==Early history==
+
+{{Main|History of logic}}
+In antiquity, two rival syllogistic theories existed: Aristotelian syllogism and Stoic syllogism.&lt;ref name=&quot;:0&quot;&gt;[[Michael Frede|Frede, Michael]]. 1975. &quot;Stoic vs. Peripatetic Syllogistic.&quot; ''Archive for the History of Philosophy'' 56:99–124.&lt;/ref&gt;
+
+===Aristotle===
+{{main|Term logic}}
+[[Aristotle]] defines the syllogism as &quot;a discourse in which certain (specific) things having been supposed, something different from the things supposed results of necessity because these things are so.&quot;&lt;ref&gt;[[Aristotle]], ''[[Prior Analytics]]'', 24b18–20&lt;/ref&gt; Despite this very general definition, in ''[[Prior Analytics]]'', Aristotle limits himself to categorical syllogisms that consist of three [[categorical proposition]]s, including categorical [[modal logic|modal]] syllogisms.&lt;ref&gt;[[Susanne Bobzien|Bobzien, Susanne]]. [2006] 2020. &quot;[http://plato.stanford.edu/entries/logic-ancient/ Ancient Logic].&quot; ''[[Stanford Encyclopedia of Philosophy]]''. § [https://plato.stanford.edu/entries/logic-ancient/#Ari Aristotle].&lt;/ref&gt;
+
+The use of syllogisms as a tool for understanding can be dated back to the logical reasoning discussions of [[Aristotle]]. Prior to the mid-12th century, medieval logicians were only familiar with a portion of Aristotle's works, including such titles as ''[[Categories (Aristotle)|Categories]]'' and ''[[On Interpretation]]'', works that contributed heavily to the prevailing Old Logic, or ''[[logica vetus]]''. The onset of a New Logic, or ''[[logica nova]]'', arose alongside the reappearance of ''[[Prior Analytics]]'', the work in which Aristotle developed his theory of the syllogism.
+
+''Prior Analytics'', upon re-discovery, was instantly regarded by logicians as &quot;a closed and complete body of doctrine,&quot; leaving very little for thinkers of the day to debate and reorganize. Aristotle's theory on the syllogism for ''[[assertoric]]'' sentences was considered especially remarkable, with only small systematic changes occurring to the concept over time. This theory of the syllogism would not enter the context of the more comprehensive logic of consequence until logic began to be reworked in general in the mid-14th century by the likes of [[John Buridan]].
+
+Aristotle's ''Prior Analytics'' did not, however, incorporate such a comprehensive theory on the '''modal syllogism'''—a syllogism that has at least one [[Modal logic|modalized]] premise, that is, a premise containing the modal words 'necessarily', 'possibly', or 'contingently'. Aristotle's terminology, in this aspect of his theory, was deemed vague and in many cases unclear, even contradicting some of his statements from ''On Interpretation''. His original assertions on this specific component of the theory were left up to a considerable amount of conversation, resulting in a wide array of solutions put forth by commentators of the day. The system for modal syllogisms laid forth by Aristotle would ultimately be deemed unfit for practical use, and would be replaced by new distinctions and new theories altogether.
+
+=== Medieval syllogism ===
+
+====Boethius====
+
+[[Boethius]] (c. 475&amp;nbsp;– 526) contributed an effort to make the ancient Aristotelian logic more accessible. While his Latin translation of ''[[Prior Analytics]]'' went primarily unused before the 12th century, his textbooks on the categorical syllogism were central to expanding the syllogistic discussion. Rather than in any additions that he personally made to the field, Boethius' logical legacy lies in his effective transmission of prior theories to later logicians, as well as his clear and primarily accurate presentations of Aristotle's contributions.
+
+====Peter Abelard====
+
+Another of medieval logic's first contributors from the Latin West, [[Peter Abelard]] (1079–1142), gave his own thorough evaluation of the syllogism concept and accompanying theory in the ''Dialectica''—a discussion of logic based on Boethius' commentaries and monographs. His perspective on syllogisms can be found in other works as well, such as ''Logica Ingredientibus''. With the help of Abelard's distinction between ''[[de dicto]]'' modal sentences and ''[[de re]]'' modal sentences, medieval logicians began to shape a more coherent concept of Aristotle's modal syllogism model.
+
+====John Buridan====
+
+[[John Buridan]] (c. 1300&amp;nbsp;– 1361), whom some consider the foremost logician of the later Middle Ages, contributed two significant works: ''Treatise on Consequence'' and ''Summulae de Dialectica'', in which he discussed the concept of the syllogism, its components and distinctions, and ways to use the tool to expand its logical capability. For 200 years after Buridan's discussions, little was said about syllogistic logic. Historians of logic have assessed that the primary changes in the post-Middle Age era were changes in respect to the public's awareness of original sources, a lessening of appreciation for the logic's sophistication and complexity, and an increase in logical ignorance—so that logicians of the early 20th century came to view the whole system as ridiculous.&lt;ref&gt;{{cite web|last=Lagerlund|first=Henrik|title=Medieval Theories of the Syllogism|url=http://plato.stanford.edu/archives/win2012/entries/medieval-syllogism/|work=The Stanford Encyclopedia of Philosophy|publisher=Edward N. Zalta|accessdate=17 February 2014}}&lt;/ref&gt;
+
+==Modern history==
+
+The Aristotelian syllogism dominated Western philosophical thought for many centuries. Syllogism itself is about drawing valid conclusions from assumptions ([[axiom]]s), rather than about verifying the assumptions. However, people over time focused on the logic aspect, forgetting the importance of verifying the assumptions.
+
+In the 17th century, [[Francis Bacon]] emphasized that experimental verification of axioms must be carried out rigorously, and cannot take syllogism itself as the best way to draw conclusions in nature.&lt;ref name=&quot;instauration&quot;&gt;[[Francis Bacon|Bacon, Francis]]. [1620] 2001. ''[https://web.archive.org/web/20190413000330/http://www.constitution.org/bacon/instauration.htm The Great Instauration]''. – via ''[[The Constitution Society|Constitution Society]]''. Archived from the [http://www.constitution.org/bacon/instauration.htm original] on 13 April 2019.&lt;/ref&gt; Bacon proposed a more inductive approach to the observation of nature, which involves experimentation and leads to discovering and building on axioms to create a more general conclusion.&lt;ref name=&quot;instauration&quot; /&gt; Yet, a full method of drawing conclusions in nature is not the scope of logic or syllogism.
+
+In the 19th century, modifications to syllogism were incorporated to deal with [[Disjunctive syllogism|disjunctive]] (&quot;A or B&quot;) and [[Conditional syllogism|conditional]] (&quot;if A then B&quot;) statements. [[Immanuel Kant]] famously claimed, in ''Logic'' (1800), that logic was the one completed science, and that Aristotelian logic more or less included everything about logic that there was to know. (This work is not necessarily representative of Kant's mature philosophy, which is often regarded as an innovation to logic itself.) Although there were alternative systems of logic elsewhere, such as [[Logic in Islamic philosophy|Avicennian logic]] or [[Indian logic]], Kant's opinion stood unchallenged in the West until 1879, when [[Gottlob Frege]] published his ''[[Begriffsschrift]]'' (''Concept Script''). This introduced a calculus, a method of representing categorical statements (and statements that are not provided for in syllogism as well) by the use of quantifiers and variables.
+
+A noteworthy exception is the logic developed in [[Bernard Bolzano]]'s work ''[[Bernard Bolzano#Wissenschaftslehre (Theory of Science)|Wissenschaftslehre]]'' (''Theory of Science'', 1837), the principles of which were applied as a direct critique of Kant, in the posthumously published work ''New Anti-Kant'' (1850). The work of Bolzano had been largely overlooked until the late 20th century, among other reasons, due to the intellectual environment at the time in [[Bohemia]], which was then part of the [[Austrian Empire]]. In the last 20 years, Bolzano's work has resurfaced and become subject of both translation and contemporary study.
+
+This led to the rapid development of [[sentential logic]] and first-order [[predicate logic]], subsuming syllogistic reasoning, which was, therefore, after 2000 years, suddenly considered obsolete by many.{{original research inline|date=January 2013}} The Aristotelian system is explicated in modern fora of academia primarily in introductory material and historical study.
+
+One notable exception, to this modern relegation, is the continued application of Aristotelian logic by officials of the [[Congregation for the Doctrine of the Faith]], and the Apostolic Tribunal of the [[Roman Rota]], which still requires that any arguments crafted by Advocates be presented in syllogistic format.
+ &lt;!--
+What follows is at best *very* obscure and desultory.  I'll have a go at rewriting it when I can.
+You can simply put list of rules for validity&amp;nbsp;— as in Russian wp --&gt;
+
+===Boole's acceptance of Aristotle===
+[[George Boole]]'s unwavering acceptance of Aristotle's logic is emphasized by the historian of logic [[John Corcoran (logician)|John Corcoran]] in an accessible introduction to ''[[Laws of Thought]]''.&lt;ref&gt;[[George Boole|Boole, George]]. [1854] 2003. ''[[The Laws of Thought]]'', with an introduction by J. Corcoran. Buffalo: [[Prometheus Books]].&lt;/ref&gt;&lt;ref&gt;van Evra, James. 2004. &quot;'The Laws of Thought' by George Boole&quot; (review). ''[[Philosophy in Review]]'' 24:167–69.&lt;/ref&gt; Corcoran also wrote a point-by-point comparison of ''[[Prior Analytics]]'' and ''[[The Laws of Thought|Laws of Thought]]''.&lt;ref name=&quot;:1&quot;&gt;[[John Corcoran (logician)|Corcoran, John]]. 2003. &quot;Aristotle's 'Prior Analytics' and Boole's 'Laws of Thought'.&quot; ''History and Philosophy of Logic'' 24:261–88.&lt;/ref&gt; According to Corcoran, Boole fully accepted and endorsed Aristotle's logic. Boole's goals were &quot;to go under, over, and beyond&quot; Aristotle's logic by:&lt;ref name=&quot;:1&quot; /&gt;
+
+# providing it with mathematical foundations involving equations;
+# extending the class of problems it could treat, as solving equations was added to assessing [[Validity (logic)|validity]]; and
+# expanding the range of applications it could handle, such as expanding propositions of only two terms to those having arbitrarily many.
+
+More specifically, Boole agreed with what [[Aristotle]] said; Boole's 'disagreements', if they might be called that, concern what Aristotle did not say. First, in the realm of foundations, Boole reduced Aristotle's four propositional forms to one form, the form of equations, which by itself was a revolutionary idea. Second, in the realm of logic's problems, Boole's addition of equation solving to logic—another revolutionary idea—involved Boole's doctrine that Aristotle's rules of inference (the &quot;perfect syllogisms&quot;) must be supplemented by rules for equation solving. Third, in the realm of applications, Boole's system could handle multi-term propositions and arguments, whereas Aristotle could handle only two-termed subject-predicate propositions and arguments. For example, Aristotle's system could not deduce: &quot;No quadrangle that is a square is a rectangle that is a rhombus&quot; from &quot;No square that is a quadrangle is a rhombus that is a rectangle&quot; or from &quot;No rhombus that is a rectangle is a square that is a quadrangle.&quot;
+
+==Basic structure==
+A categorical syllogism consists of three parts:
+# Major premise
+# Minor premise
+# Conclusion
+
+Each part is a [[categorical proposition]], and each categorical proposition contains two categorical terms.&lt;ref&gt;{{cite web|url=http://www.philosophypages.com/dy/c.htm#capro |title=Philosophical Dictionary: Caird-Catharsis |publisher=Philosophypages.com |date=2002-08-08 |accessdate=2009-12-14}}&lt;/ref&gt; In Aristotle, each of the premises is in the form &quot;All A are B,&quot; &quot;Some A are B&quot;, &quot;No A are B&quot; or &quot;Some A are not B&quot;, where &quot;A&quot; is one term and &quot;B&quot; is another:

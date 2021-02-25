@@ -1,0 +1,157 @@
+&lt;!-- It may be more informative if an actual example is given: e1/M, e2/M, ... might be shown as .05/4, .061/4, .033/4.  Then showing the actual calculations using these three terms in the summation. --&gt;
+
+===Parametric formulation===
+
+By parameterizing the space of models, the belief in all models may be updated in a single step. The distribution of belief over the model space may then be thought of as a distribution of belief over the parameter space. The distributions in this section are expressed as continuous, represented by probability densities, as this is the usual situation. The technique is however equally applicable to discrete distributions.
+
+Let the vector &lt;math&gt;\mathbf{\theta}&lt;/math&gt; span the parameter space. Let the initial prior distribution over &lt;math&gt;\mathbf{\theta}&lt;/math&gt; be &lt;math&gt;p(\mathbf{\theta} \mid \mathbf{\alpha})&lt;/math&gt;, where &lt;math&gt;\mathbf{\alpha}&lt;/math&gt; is a set of parameters to the prior itself, or ''[[hyperparameter]]s''. Let &lt;math&gt;\mathbf{E} = (e_1, \dots, e_n)&lt;/math&gt; be a sequence of [[Independent and identically distributed random variables|independent and identically distributed]] event observations, where all &lt;math&gt;e_i&lt;/math&gt; are distributed as &lt;math&gt;p(e \mid \mathbf{\theta})&lt;/math&gt; for some  &lt;math&gt;\mathbf{\theta}&lt;/math&gt;.   [[Bayes' theorem]] is applied to find the [[posterior distribution]] over &lt;math&gt;\mathbf{\theta}&lt;/math&gt;:
+
+:&lt;math&gt;
+\begin{align}
+p(\mathbf{\theta} \mid \mathbf{E},\mathbf{\alpha}) &amp;= \frac{p(\mathbf{E} \mid \mathbf{\theta},\mathbf{\alpha})}{p(\mathbf{E} \mid \mathbf{\alpha})} \cdot p(\mathbf{\theta}\mid\mathbf{\alpha}) \\
+&amp;= \frac{p(\mathbf{E} \mid \mathbf{\theta},\mathbf{\alpha})}{\int p(\mathbf{E}|\mathbf{\theta},\mathbf{\alpha}) p(\mathbf{\theta} \mid \mathbf{\alpha}) \, d\mathbf{\theta}} \cdot p(\mathbf{\theta} \mid \mathbf{\alpha})
+\end{align}
+&lt;/math&gt;
+
+Where
+
+:&lt;math&gt;p(\mathbf{E} \mid \mathbf{\theta},\mathbf{\alpha}) = \prod_k p(e_k \mid \mathbf{\theta})&lt;/math&gt;
+
+==Mathematical properties==
+{{More footnotes|section|date=February 2012}}
+
+===Interpretation of factor===
+
+&lt;math&gt;\textstyle \frac{P(E \mid M)}{P(E)} &gt; 1 \Rightarrow \textstyle P(E \mid M) &gt; P(E)&lt;/math&gt;. That is, if the model were true, the evidence would be more likely than is predicted by the current state of belief. The reverse applies for a decrease in belief. If the belief does not change, &lt;math&gt;\textstyle \frac{P(E \mid M)}{P(E)} = 1 \Rightarrow \textstyle P(E \mid M) = P(E)&lt;/math&gt;. That is, the evidence is independent of the model. If the model were true, the evidence would be exactly as likely as predicted by the current state of belief.
+
+===Cromwell's rule===
+
+{{Main|Cromwell's rule}}
+
+If &lt;math&gt;P(M)=0&lt;/math&gt; then &lt;math&gt;P(M \mid E)=0&lt;/math&gt;. If &lt;math&gt;P(M)=1&lt;/math&gt;, then &lt;math&gt;P(M|E)=1&lt;/math&gt;. This can be interpreted to mean that hard convictions are insensitive to counter-evidence.
+
+The former follows directly from Bayes' theorem. The latter can be derived by applying the first rule to the event &quot;not &lt;math&gt;M&lt;/math&gt;&quot; in place of &quot;&lt;math&gt;M&lt;/math&gt;&quot;, yielding &quot;if &lt;math&gt;1 - P(M)=0&lt;/math&gt;, then &lt;math&gt;1 - P(M \mid E)=0&lt;/math&gt;&quot;, from which the result immediately follows.
+
+===Asymptotic behaviour of posterior===
+
+Consider the behaviour of a belief distribution as it is updated a large number of times with [[independent and identically distributed]] trials. For sufficiently nice prior probabilities, the [[Bernstein–von Mises theorem|Bernstein-von Mises theorem]] gives that in the limit of infinite trials, the posterior converges to a [[Gaussian distribution]] independent of the initial prior under some conditions firstly outlined and rigorously proven by [[Joseph L. Doob]] in 1948, namely if the random variable in consideration has a finite [[probability space]]. The more general results were obtained later by the statistician [[David A. Freedman (statistician)|David A. Freedman]] who published in two seminal research papers in 1963 &lt;ref&gt;{{cite journal|last1=Freedman|first1=DA|title=On the asymptotic behavior of Bayes' estimates in the discrete case|journal=The Annals of Mathematical Statistics|volume=34|issue=4|date=1963|pages=1386–1403|jstor=2238346|doi=10.1214/aoms/1177703871|doi-access=free}}&lt;/ref&gt; and 1965 &lt;ref&gt;{{cite journal|last1=Freedman|first1=DA|title=On the asymptotic behavior of Bayes estimates in the discrete case II|journal=The Annals of Mathematical Statistics|date=1965|volume=36|issue=2|pages=454–456|jstor=2238150|doi=10.1214/aoms/1177700155|doi-access=free}}&lt;/ref&gt; when and under what circumstances the asymptotic behaviour of posterior is guaranteed. His 1963 paper treats, like Doob (1949), the finite case and comes to a satisfactory conclusion. However, if the random variable has an infinite but countable [[probability space]] (i.e., corresponding to a die with infinite many faces) the 1965 paper demonstrates that for a dense subset of priors the [[Bernstein–von Mises theorem|Bernstein-von Mises theorem]] is not applicable. In this case there is [[almost surely]] no asymptotic convergence. Later in the 1980s and 1990s [[David A. Freedman (statistician)|Freedman]] and [[Persi Diaconis]] continued to work on the case of infinite countable probability spaces.&lt;ref&gt;{{cite journal|first2=Larry|last2= Wasserman |first1 = James|last1 =Robins|journal = JASA |date = 2000|title = Conditioning, likelihood, and coherence: A review of some foundational concepts|doi=10.1080/01621459.2000.10474344|volume=95|issue=452|pages=1340–1346|s2cid= 120767108 }}&lt;/ref&gt; To summarise, there may be insufficient trials to suppress the effects of the initial choice, and especially for large (but finite) systems the convergence might be very slow.
+
+===Conjugate priors===
+{{Main|Conjugate prior}}
+
+In parameterized form, the prior distribution is often assumed to come from a family of distributions called [[conjugate prior]]s. The usefulness of a conjugate prior is that the corresponding posterior distribution will be in the same family, and the calculation may be expressed in [[Closed-form expression|closed form]].
+
+===Estimates of parameters and predictions===
+It is often desired to use a posterior distribution to estimate a parameter or variable. Several methods of Bayesian estimation select [[central tendency|measurements of central tendency]] from the posterior distribution.
+
+For one-dimensional problems, a unique median exists for practical continuous problems. The posterior median is attractive as a [[robust statistics|robust estimator]].&lt;ref&gt;{{cite book|title=Pitman's measure of closeness: A comparison of statistical estimators|first1=Pranab K.|last1=Sen|author-link1=Pranab K. Sen|first2=J. P.|last2=Keating|first3=R. L.|last3= Mason |publisher=SIAM|location=Philadelphia|year=1993}}&lt;/ref&gt;
+
+If there exists a finite mean for the posterior distribution, then the posterior mean is a method of estimation.&lt;ref&gt;{{Cite book|last1=Choudhuri|first1=Nidhan|last2=Ghosal|first2=Subhashis|last3=Roy|first3=Anindya|date=2005-01-01|title=Bayesian Methods for Function Estimation|journal=Handbook of Statistics|series=Bayesian Thinking|volume=25|pages=373–414|doi= 10.1016/s0169-7161(05)25013-7 |isbn=9780444515391|citeseerx=10.1.1.324.3052}}&lt;/ref&gt;
+:&lt;math&gt;\tilde \theta = \operatorname{E}[\theta] = \int \theta \, p(\theta \mid \mathbf{X},\alpha) \, d\theta&lt;/math&gt;
+
+Taking a value with the greatest probability defines [[maximum a posteriori estimation|maximum ''a&amp;nbsp;posteriori'' (MAP)]] estimates:&lt;ref&gt;{{Cite web|url=https://www.probabilitycourse.com/chapter9/9_1_2_MAP_estimation.php|title=Maximum A Posteriori (MAP) Estimation|website=www.probabilitycourse.com|language=en|access-date=2017-06-02}}&lt;/ref&gt;
+
+:&lt;math&gt;\{ \theta_{\text{MAP}}\} \subset \arg \max_\theta p(\theta \mid \mathbf{X},\alpha) .&lt;/math&gt;
+
+There are examples where no maximum is attained, in which case the set of MAP estimates is [[empty set|empty]].
+
+There are other methods of estimation that minimize the posterior ''[[risk]]'' (expected-posterior loss) with respect to a [[loss function]], and these are of interest to [[statistical decision theory]] using the sampling distribution (&quot;frequentist statistics&quot;).&lt;ref&gt;{{Cite web|url=http://www.cogsci.ucsd.edu/~ajyu/Teaching/Tutorials/bayes_dt.pdf|title=Introduction to Bayesian Decision Theory|last=Yu|first=Angela|website=cogsci.ucsd.edu/|archive-url=https://web.archive.org/web/20130228060536/http://www.cogsci.ucsd.edu/~ajyu/Teaching/Tutorials/bayes_dt.pdf|archive-date=2013-02-28|url-status=dead}}&lt;/ref&gt;
+
+The [[posterior predictive distribution]] of a new observation &lt;math&gt;\tilde{x}&lt;/math&gt; (that is independent of previous observations) is determined by&lt;ref&gt;{{Cite web|url=http://people.stat.sc.edu/Hitchcock/stat535slidesday18.pdf|title=Posterior Predictive Distribution Stat Slide|last=Hitchcock|first=David|website=stat.sc.edu}}&lt;/ref&gt;
+
+:&lt;math&gt;p(\tilde{x}|\mathbf{X},\alpha) = \int p(\tilde{x},\theta \mid \mathbf{X},\alpha) \, d\theta = \int p(\tilde{x} \mid \theta) p(\theta \mid \mathbf{X},\alpha) \, d\theta .&lt;/math&gt;
+
+==Examples==
+
+===Probability of a hypothesis===
+{| class=&quot;infobox wikitable&quot; style=&quot;font-size:100%;&quot;
+|+ [[Contingency table]]
+! rowspan=&quot;2&quot; colspan=&quot;2&quot;{{diagonal split header|&lt;br /&gt;Cookie|Bowl}}
+! #1 !! #2 !! rowspan=&quot;6&quot; style=&quot;padding:0;&quot;| !! rowspan=&quot;2&quot;|&lt;br /&gt;Total
+|-
+! ''H''&lt;sub&gt;1&lt;/sub&gt; !! ''H''&lt;sub&gt;2&lt;/sub&gt;
+|-
+! Plain !! ''E''
+| '''30''' || 20 || '''50'''
+|-
+! Chocolate !! &amp;not;''E''
+| 10 || 20 || 30
+|-
+| colspan=&quot;5&quot; style=&quot;padding:0;&quot;|
+|-
+! colspan=&quot;2&quot;|Total
+| 40 || 40 || 80
+|-
+| colspan=&quot;6&quot;|''P''&amp;thinsp;(''H''&lt;sub&gt;1&lt;/sub&gt;|''E'') = 30 / 50 = 0.6
+|}
+Suppose there are two full bowls of cookies. Bowl #1 has 10 chocolate chip and 30 plain cookies, while bowl #2 has 20 of each. Our friend Fred picks a bowl at random, and then picks a cookie at random. We may assume there is no reason to believe Fred treats one bowl differently from another, likewise for the cookies. The cookie turns out to be a plain one. How probable is it that Fred picked it out of bowl #1?
+
+Intuitively, it seems clear that the answer should be more than a half, since there are more plain cookies in bowl #1. The precise answer is given by Bayes' theorem. Let &lt;math&gt;H_1&lt;/math&gt; correspond to bowl #1, and &lt;math&gt;H_2&lt;/math&gt; to bowl #2.
+It is given that the bowls are identical from Fred's point of view, thus &lt;math&gt;P(H_1)=P(H_2)&lt;/math&gt;, and the two must add up to 1, so both are equal to 0.5.
+The event &lt;math&gt;E&lt;/math&gt; is the observation of a plain cookie. From the contents of the bowls, we know that &lt;math&gt;P(E \mid H_1) = 30/40 = 0.75&lt;/math&gt; and &lt;math&gt;P(E \mid H_2) = 20/40 = 0.5.&lt;/math&gt; Bayes' formula then yields
+
+: &lt;math&gt;\begin{align} P(H_1 \mid E) &amp;= \frac{P(E \mid H_1)\,P(H_1)}{P(E \mid H_1)\,P(H_1)\;+\;P(E \mid H_2)\,P(H_2)} \\  \\  \ &amp; = \frac{0.75 \times 0.5}{0.75 \times 0.5 + 0.5 \times 0.5} \\  \\  \ &amp; = 0.6 \end{align}
+&lt;/math&gt;
+
+Before we observed the cookie, the probability we assigned for Fred having chosen bowl #1 was the prior probability, &lt;math&gt;P(H_1)&lt;/math&gt;, which was 0.5. After observing the cookie, we must revise the probability to &lt;math&gt;P(H_1 \mid E)&lt;/math&gt;, which is 0.6.
+
+===Making a prediction===
+[[File:Bayesian inference archaeology example.jpg|thumb|Example results for archaeology example. This simulation was generated using c=15.2.]]
+
+An archaeologist is working at a site thought to be from the medieval period, between the 11th century to the 16th century. However, it is uncertain exactly when in this period the site was inhabited. Fragments of pottery are found, some of which are glazed and some of which are decorated. It is expected that if the site were inhabited during the early medieval period, then 1% of the pottery would be glazed and 50% of its area decorated, whereas if it had been inhabited in the late medieval period then 81% would be glazed and 5% of its area decorated. How confident can the archaeologist be in the date of inhabitation as fragments are unearthed?
+
+The degree of belief in the continuous variable &lt;math&gt;C&lt;/math&gt; (century) is to be calculated, with the discrete set of events &lt;math&gt;\{GD,G \bar D, \bar G D, \bar G \bar D\}&lt;/math&gt; as evidence. Assuming linear variation of glaze and decoration with time, and that these variables are independent,
+
+:&lt;math&gt;P(E=GD \mid C=c) = (0.01 + \frac{0.81-0.01}{16-11}(c-11))(0.5 - \frac{0.5-0.05}{16-11}(c-11))&lt;/math&gt;
+:&lt;math&gt;P(E=G \bar D \mid C=c) = (0.01 + \frac{0.81-0.01}{16-11}(c-11))(0.5 + \frac{0.5-0.05}{16-11}(c-11))&lt;/math&gt;
+:&lt;math&gt;P(E=\bar G D \mid C=c) = ((1-0.01) - \frac{0.81-0.01}{16-11}(c-11))(0.5 - \frac{0.5-0.05}{16-11}(c-11))&lt;/math&gt;
+:&lt;math&gt;P(E=\bar G \bar D \mid C=c) = ((1-0.01) - \frac{0.81-0.01}{16-11}(c-11))(0.5 + \frac{0.5-0.05}{16-11}(c-11))&lt;/math&gt;
+
+Assume a uniform prior of &lt;math&gt;\textstyle f_C(c) = 0.2&lt;/math&gt;, and that trials are [[independent and identically distributed]]. When a new fragment of type &lt;math&gt;e&lt;/math&gt; is discovered, Bayes' theorem is applied to update the degree of belief for each &lt;math&gt;c&lt;/math&gt;:
+
+&lt;math&gt;f_C(c \mid E=e) = \frac{P(E=e \mid C=c)}{P(E=e)}f_C(c) = \frac{P(E=e \mid C=c)}{\int_{11}^{16}{P(E=e \mid C=c)f_C(c)dc}}f_C(c)&lt;/math&gt;
+
+A computer simulation of the changing belief as 50 fragments are unearthed is shown on the graph. In the simulation, the site was inhabited around 1420, or &lt;math&gt;c=15.2&lt;/math&gt;. By calculating the area under the relevant portion of the graph for 50 trials, the archaeologist can say that there is practically no chance the site was inhabited in the 11th and 12th centuries, about 1% chance that it was inhabited during the 13th century, 63% chance during the 14th century and 36% during the 15th century. The [[Bernstein–von Mises theorem|Bernstein-von Mises theorem]] asserts here the asymptotic convergence to the &quot;true&quot; distribution because the [[probability space]] corresponding to the discrete set of events &lt;math&gt;\{GD,G \bar D, \bar G D, \bar G \bar D\}&lt;/math&gt; is finite (see above section on asymptotic behaviour of the posterior).
+
+==In frequentist statistics and decision theory==
+
+A [[statistical decision theory|decision-theoretic]] justification of the use of Bayesian inference was given by [[Abraham Wald]], who proved that every unique Bayesian procedure is [[admissible decision rule|admissible]]. Conversely, every [[admissible decision rule|admissible]] statistical procedure is either a Bayesian procedure or a limit of Bayesian procedures.&lt;ref name=&quot;Bickel &amp; Doksum 2001, page 32&quot;&gt;Bickel &amp; Doksum (2001, p. 32)&lt;/ref&gt;
+
+Wald characterized admissible procedures as Bayesian procedures (and limits of Bayesian procedures), making the Bayesian formalism a central technique in such areas of [[frequentist inference]] as [[parameter estimation]], [[hypothesis testing]], and computing [[confidence intervals]].&lt;ref&gt;{{cite journal
+|doi=10.1214/aoms/1177700051|author=Kiefer, J. |author2=Schwartz R. |title=Admissible Bayes Character of T&lt;sup&gt;2&lt;/sup&gt;-, R&lt;sup&gt;2&lt;/sup&gt;-, and Other Fully Invariant Tests for Multivariate Normal Problems|journal=Annals of Mathematical Statistics| volume=36|issue=3 |year=1965|pages=747–770|author-link=Jack Kiefer (mathematician) |doi-access=free}}&lt;/ref&gt;&lt;ref&gt;{{cite journal |doi= 10.1214/aoms/1177697822| author=Schwartz, R.|title=Invariant Proper Bayes Tests for Exponential Families |journal=Annals of Mathematical Statistics| volume=40 |year=1969| pages=270–283|doi-access=free}}&lt;/ref&gt;&lt;ref&gt;{{cite journal|doi=10.1214/aos/1176345877|author1=Hwang, J. T.  |author2=Casella, George  |name-list-style=amp |title=Minimax Confidence Sets for the Mean of a Multivariate Normal Distribution|journal=Annals of Statistics| volume=10|issue=3 | pages=868–881|year=1982|url= http://ecommons.cornell.edu/bitstream/1813/32852/1/BU-750-M.pdf}}&lt;/ref&gt; For example:
+* &quot;Under some conditions, all admissible procedures are either Bayes procedures or limits of Bayes procedures (in various senses). These remarkable results, at least in their original form, are due essentially to Wald. They are useful because the property of being Bayes is easier to analyze than admissibility.&quot;&lt;ref name=&quot;Bickel &amp; Doksum 2001, page 32&quot;/&gt;
+* &quot;In decision theory, a quite general method for proving admissibility consists in exhibiting a procedure as a unique Bayes solution.&quot;&lt;ref&gt;{{cite book|author=Lehmann, Erich| title=Testing Statistical Hypotheses|edition=Second|year=1986| author-link=Erich Leo Lehmann}} (see p. 309 of Chapter 6.7 &quot;Admissibility&quot;, and pp. 17–18 of Chapter 1.8 &quot;Complete Classes&quot;&lt;/ref&gt;
+*&quot;In the first chapters of this work, prior distributions with finite support and the corresponding Bayes procedures were used to establish some of the main theorems relating to the comparison of experiments. Bayes procedures with respect to more general prior distributions have played a very important role in the development of statistics, including its asymptotic theory.&quot; &quot;There are many problems where a glance at posterior distributions, for suitable priors, yields immediately interesting information. Also, this technique can hardly be avoided in sequential analysis.&quot;&lt;ref&gt;{{cite book
+|author=Le Cam, Lucien
+|title=Asymptotic Methods in Statistical Decision Theory|year=1986|publisher=Springer-Verlag
+|isbn=978-0-387-96307-5|author-link=Lucien Le Cam}} (From &quot;Chapter 12 Posterior Distributions and Bayes Solutions&quot;, p. 324)&lt;/ref&gt;
+
+*&quot;A useful fact is that any Bayes decision rule obtained by taking a proper prior over the whole parameter space must be admissible&quot;&lt;ref&gt;{{cite book
+|author=Cox, D. R. |author2=Hinkley, D.V.
+|title=Theoretical Statistics
+|year=1974
+|publisher=Chapman and Hall
+|isbn=978-0-04-121537-3
+|page = 432
+|author-link=David R. Cox
+}}&lt;/ref&gt;
+*&quot;An important area of investigation in the development of admissibility ideas has been that of conventional sampling-theory procedures, and many interesting results have been obtained.&quot;&lt;ref&gt;{{cite book|author=Cox, D. R. |author2=Hinkley, D.V. |title=Theoretical Statistics|year=1974 |publisher=Chapman and Hall|isbn=978-0-04-121537-3|page = 433|author-link=David R. Cox }})&lt;/ref&gt;
+
+===Model selection===
+{{main|Bayesian model selection}}
+Bayesian methodology also plays a role in [[model selection]] where the aim is to select one model from a set of competing models that represents most closely the underlying process that generated the observed data. In Bayesian model comparison, the model with the highest [[posterior probability]] given the data is selected. The posterior probability of a model depends on the evidence, or [[marginal likelihood]], which reflects the probability that the data is generated by the model, and on the [[Prior probability|prior belief]] of the model. When two competing models are a priori considered to be equiprobable, the ratio of their posterior probabilities corresponds to the [[Bayes factor]]. Since Bayesian model comparison is aimed on selecting the model with the highest posterior probability, this methodology is also referred to as the maximum a posteriori (MAP) selection rule &lt;ref&gt;{{cite journal|first1= P.|last1= Stoica |first2 = Y.|last2 =Selen|journal = IEEE Signal Processing Magazine |date = 2004|title = A review of information criterion rules|doi=10.1109/MSP.2004.1311138|volume=21|issue=4|pages=36–47|s2cid= 17338979 }}&lt;/ref&gt; or the MAP probability rule.&lt;ref&gt;{{cite journal|first1= J.|last1= Fatermans |first2 = S.|last2 =Van Aert |first3=A.J. |last3=den Dekker|journal = Ultramicroscopy |date = 2019|title = The maximum a posteriori probability rule for atom column detection from HAADF STEM images|doi=10.1016/j.ultramic.2019.02.003|volume=201|pages=81–91|pmid= 30991277 |arxiv=1902.05809|s2cid= 104419861 }}&lt;/ref&gt;
+
+==Probabilistic programming==
+{{main|Probabilistic programming}}
+
+While conceptually simple, Bayesian methods can be mathematically and numerically challenging. Probabilistic programming languages (PPLs) implement functions to easily build Bayesian models together with efficient automatic inference methods. This helps separate the model building from the inference, allowing practitioners to focus on their specific problems and leaving PPLs to handle the computational details for them.&lt;ref&gt;Bessiere, P., Mazer, E., Ahuactzin, J. M., &amp; Mekhnacha, K. (2013). Bayesian Programming (1 edition) Chapman and Hall/CRC.&lt;/ref&gt;&lt;ref&gt;{{cite journal|author=Daniel Roy|date=2015|title=Probabilistic Programming|website=probabilistic-programming.org}} 
+ {{Webarchive|url=https://web.archive.org/web/20160110035042/http://probabilistic-programming.org/wiki/Home |date=2016-01-10 }}&lt;/ref&gt;&lt;ref&gt;{{cite journal | last1 = Ghahramani | first1 = Z | year = 2015 | title = Probabilistic machine learning and artificial intelligence | url = https://www.repository.cam.ac.uk/handle/1810/248538| journal = Nature | volume = 521 | issue = 7553| pages = 452–459 | doi = 10.1038/nature14541 | pmid = 26017444 | s2cid = 216356 }}&lt;/ref&gt;
+
+==Applications==
+
+===Computer applications===
+Bayesian inference has applications in [[artificial intelligence]] and [[expert system]]s.  Bayesian inference techniques have been a fundamental part of computerized [[pattern recognition]] techniques since the late 1950s. There is also an ever-growing connection between Bayesian methods and simulation-based [[Monte Carlo method|Monte Carlo]] techniques since complex models cannot be processed in closed form by a Bayesian analysis, while a [[graphical model]] structure ''may'' allow for efficient simulation algorithms like the [[Gibbs sampling]] and other [[Metropolis–Hastings algorithm]] schemes.&lt;ref&gt;{{cite book|author=Jim Albert|year=2009|title= Bayesian Computation with R, Second edition|publisher=Springer|location=New York, Dordrecht, etc.|isbn= 978-0-387-92297-3}}&lt;/ref&gt; Recently{{when|date=September 2018}} Bayesian inference has gained popularity among the [[phylogenetics]] community for these reasons; a number of applications allow many demographic and evolutionary parameters to be estimated simultaneously.
+
+As applied to [[statistical classification]], Bayesian inference has been used to develop algorithms for identifying [[e-mail spam]]. Applications which make use of Bayesian inference for spam filtering include [[CRM114 (program)|CRM114]], [[DSPAM]], [[Bogofilter]], [[SpamAssassin]], [[SpamBayes]], [[Mozilla]], XEAMS, and others. Spam classification is treated in more detail in the article on the [[naïve Bayes classifier]].
+
+[[Solomonoff's theory of inductive inference|Solomonoff's Inductive inference]] is the theory of prediction based on observations; for example, predicting the next symbol based upon a given series of symbols. The only assumption is that the environment follows some unknown but computable probability distribution. It is a formal inductive framework that combines two well-studied principles of inductive inference: Bayesian statistics and [[Occam’s Razor]].&lt;ref&gt;{{cite journal |doi= 10.3390/e13061076 |arxiv=1105.5721 |bibcode=2011Entrp..13.1076R |title=A Philosophical Treatise of Universal Induction|journal=Entropy|volume=13 |issue=6|pages=1076–1136|year=2011|last1=Rathmanner|first1=Samuel|last2=Hutter|first2=Marcus|last3=Ormerod|first3=Thomas C|s2cid=2499910 }}&lt;/ref&gt;{{rs inline|date=September 2018}} Solomonoff's universal prior probability of any prefix ''p'' of a computable sequence ''x'' is the sum of the probabilities of all programs (for a universal computer) that compute something starting with ''p''. Given some ''p'' and any computable but unknown probability distribution from which ''x'' is sampled, the universal prior and Bayes' theorem can be used to predict the yet unseen parts of ''x'' in optimal fashion.&lt;ref&gt;{{Cite journal |bibcode = 2007arXiv0709.1516H |title = On Universal Prediction and Bayesian Confirmation|journal = Theoretical Computer Science |volume = 384 |issue = 2007|pages = 33–48|last1 = Hutter|first1 = Marcus|last2 = He|first2 = Yang-Hui|last3 = Ormerod|first3 = Thomas C|year = 2007|arxiv = 0709.1516|doi = 10.1016/j.tcs.2007.05.016|s2cid = 1500830}}&lt;/ref&gt;&lt;ref&gt;{{cite journal|title = Raymond J. Solomonoff 1926-2009|first1= Peter|last1= Gács|first2 = Paul M.&amp;nbsp;B. |last2=Vitányi|date = 2 December 2010| publisher = CiteSeerX|citeseerx = 10.1.1.186.8268}}&lt;/ref&gt;

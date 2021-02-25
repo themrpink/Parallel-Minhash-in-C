@@ -1,0 +1,175 @@
+The diode design has some design trade-offs. Increasing the area of the intrinsic region increases its stored charge reducing its RF on-state resistance while also increasing reverse bias capacitance and increasing the drive current required to remove the charge during a fixed switching time, with no effect on the minimum time required to sweep the charge from the I region. Increasing the thickness of the intrinsic region increases the total stored charge, decreases the minimum RF frequency, and decreases the reverse-bias capacitance, but doesn't decrease the forward-bias RF resistance and increases the minimum time required to sweep the drift charge and transition from low to high RF resistance. Diodes are sold commercially in a variety of geometries for specific RF bands and uses.
+
+== Applications ==
+
+PIN diodes are useful as [[RF switch]]es, [[attenuator (electronics)|attenuators]], [[photodetector]]s, and phase shifters.&lt;ref&gt;https://srmsc.org/pdf/004430p0.pdf (transcript version: http://www.alternatewars.com/WW3/WW3_Documents/ABM_Bell/ABM_Ch8.htm)&lt;/ref&gt;
+
+===RF and microwave switches ===
+[[File:Microwave Switch.png|thumb|right|A PIN diode RF microwave switch]]
+
+Under zero- or reverse-bias (the &quot;off&quot; state), a PIN diode has a low [[capacitance]]. The low capacitance will not pass much of an [[RF signal]]. Under a forward bias of 1 mA (the &quot;on&quot; state), a typical PIN diode will have an RF resistance of about {{nowrap|1 [[ohm]]}}, making it a good conductor of RF. Consequently, the PIN diode makes a good RF switch.
+
+Although RF relays can be used as switches, they switch relatively slowly (on the order of {{nowrap|10s of milliseconds}}). A PIN diode switch can switch much more quickly (e.g., {{nowrap|1 microsecond}}), although at lower RF frequencies it isn't reasonable to expect switching times in the same order of magnitude as the RF period.
+
+For example, the capacitance of an &quot;off&quot;-state discrete PIN diode might be {{nowrap|1 pF}}. At {{nowrap|320 MHz}}, the capacitive reactance of {{nowrap|1 pF}} is {{nowrap|497 ohms}}:
+
+:&lt;math&gt;Z_{diode} = \frac {1} {2 \pi f C} = \frac {1} {2 \cdot \pi \cdot 320 \times 10^6 \cdot 1 \times 10^{-12}} = {497}\ \Omega&lt;/math&gt;
+
+As a series element in a {{nowrap|50 ohm}} system, the off-state attenuation in dB is:
+:&lt;math&gt;A = 20\log_{10}\left(\frac {Z_{load}} {Z_{source} + Z_{diode} + Z_{load}}\right) = 20\log_{10}\left(\frac {50} {50 + 497 + 50}\right) = {21.5}\ dB&lt;/math&gt;
+
+This attenuation may not be adequate. In applications where higher isolation is needed, both shunt and series elements may be used, with the shunt diodes biased in complementary fashion to the series elements. Adding shunt elements effectively reduces the source and load impedances, reducing the impedance ratio and increasing the off-state attenuation. However, in addition to the added complexity, the on-state attenuation is increased due to the series resistance of the on-state blocking element and the capacitance of the off-state shunt elements.
+
+PIN diode switches are used not only for signal selection, but also component selection. For example, some low-[[phase noise|phase-noise]] oscillators use them to range-switch inductors.&lt;ref&gt;{{cite web |url=http://www.herley.com/index.cfm?act=app_notes&amp;notes=switches |title=Microwave Switches: Application Notes |website=Herley General Microwave |url-status=unfit |archive-url=https://web.archive.org/web/20131030102546/http://www.herley.com/index.cfm?act=app_notes&amp;notes=switches |archive-date=2013-10-30}}&lt;/ref&gt;
+
+=== RF and microwave variable attenuators ===
+[[File:General Microwave Modulator.png|thumb|right|An RF microwave PIN diode attenuator]]
+
+By changing the bias current through a PIN diode, it is possible to quickly change its RF resistance.
+
+At high frequencies, the PIN diode appears as a resistor whose resistance is an inverse function of its forward current. Consequently, PIN diode can be used in some variable attenuator designs as amplitude modulators or output leveling circuits.
+
+PIN diodes might be used, for example, as the bridge and shunt resistors in a bridged-T attenuator. Another common approach is to use PIN diodes as terminations connected to the 0 degree and -90 degree ports of a quadrature hybrid. The signal to be attenuated is applied to the input port, and the attenuated result is taken from the isolation port. The advantages of this approach over the bridged-T and pi approaches are (1) complementary PIN diode bias drives are not needed—the same bias is applied to both diodes—and (2) the loss in the attenuator equals the return loss of the terminations, which can be varied over a very wide range.
+
+=== Limiters ===
+
+PIN diodes are sometimes designed for use as input protection devices for high-frequency test probes and other circuits. If the input signal is small, the PIN diode has negligible impact, presenting only a small parasitic capacitance. Unlike a rectifier diode, it does not present a nonlinear resistance at RF frequencies, which would give rise to harmonics and intermodulation products. If the signal is large, then when the PIN diode starts to rectify the signal, the forward current charges the drift region and the device RF impedance is a resistance inversely proportional to the signal amplitude. That signal amplitude varying resistance can be used to terminate some predetermined portion the signal in a resistive network dissipating the energy or to create an impedance mismatch that reflects the incident signal back toward the source. The latter may be combined with an isolator, a device containing a circulator which uses a permanent magnetic field to break reciprocity and a resistive load to separate and terminate the backward traveling wave. When used as a shunt limiter the PIN diode is a low impedance over the entire RF cycle, unlike paired rectifier diodes that would swing from a high resistance to a low resistance during each RF cycle clamping the waveform and not reflecting it as completely. The ionization recovery time of gas molecules that permits the creation of the higher power spark gap input protection device ultimately relies on similar physics in a gas.
+
+=== Photodetector and photovoltaic cell ===
+The PIN photodiode was invented by [[Jun-ichi Nishizawa]] and his colleagues in 1950.&lt;ref&gt;{{cite book|url=https://books.google.com/books?id=PbYgBQAAQBAJ&amp;pg=PA137|title=Electronic Inventions and Discoveries: Electronics from Its Earliest Beginnings to the Present Day|first=G. W. A.|last=Dummer|date=22 October 2013|publisher=Elsevier|isbn=9781483145211|accessdate=14 April 2018|via=Google Books}}&lt;/ref&gt;
+
+PIN photodiodes are used in fibre optic network cards and switches. As a photodetector, the PIN diode is reverse-biased. Under reverse bias, the diode ordinarily does not conduct (save a small dark current or I&lt;sub&gt;s&lt;/sub&gt; leakage). When a [[photon]] of sufficient energy enters the depletion region of the diode, it creates an [[electron-hole pair]]. The reverse-bias field sweeps the carriers out of the region, creating current. Some detectors can use [[avalanche photodiode|avalanche multiplication]].
+
+The same mechanism applies to the PIN structure, or '''p-i-n junction''', of a [[solar cell]]. In this case, the advantage of using a PIN structure over conventional semiconductor [[p–n junction]] is better long-wavelength response of the former. In case of long wavelength irradiation, photons penetrate deep into the cell. But only those electron-hole pairs generated in and near the depletion region contribute to current generation. The depletion region of a PIN structure extends across the intrinsic region, deep into the device. This wider depletion width enables electron-hole pair generation deep within the device, which increases the [[quantum efficiency]] of the cell.
+
+Commercially available PIN photodiodes have quantum efficiencies above 80-90% in the telecom wavelength range (~1500&amp;nbsp;nm), and are typically made of [[germanium]] or [[indium gallium arsenide|InGaAs]]. They feature fast response times (higher than their p-n counterparts), running into several tens of gigahertz,&lt;ref&gt;{{Cite web |url= https://www.discoverysemi.com/Product%20Pages/40G_Products/40G_Modules.php |title= Discovery semiconductor 40G InGaAs photodetector modules}}&lt;/ref&gt; making them ideal for high speed optical telecommunication applications. Similarly, [[silicon]] p-i-n photodiodes&lt;ref&gt;{{cite web |title = Si photodiodes {{!}} Hamamatsu Photonics |url= http://www.hamamatsu.com/eu/en/product/category/3100/4001/4103/index.html#sipd5=2 |website= hamamatsu.com |accessdate= 2015-09-27}}&lt;/ref&gt; have even higher quantum efficiencies, but can only detect wavelengths below the bandgap of silicon, i.e. ~1100&amp;nbsp;nm.
+
+Typically, [[amorphous silicon]] [[thin film solar cell|thin-film cells]] use PIN structures. On the other hand, [[CdTe]] cells use NIP structure, a variation of the PIN structure. In a NIP structure, an intrinsic CdTe layer is sandwiched by n-doped CdS and p-doped ZnTe; the photons are incident on the n-doped layer, unlike in a PIN diode.
+
+A PIN photodiode can also detect X-ray and gamma ray photons.
+
+In modern fiber-optical communications, the speed of optical transmitters and receivers is one of the most important parameters. Pin photodiodes are constructed to have very small size (few micrometers diamater or surface area, e.g. 16um*16um), thus compatible to the core of monomode fiber optical cables. Due to the small surface of the photodiode, its parasitic (unwanted) capacity is reduced. The bandwidth of modern pin photodiodes is reaching the microwave and millimeter waves range. A systematic microwave measurement of a pin photodiode is given in [7.]. Please note, that at these very high GHz range frequencies, the bonding wire or ribbon that connects the pin diode semiconductor to the external electrical circuit, has a parasitic inductance that may also reduce the overall bandwidth of the photoreceiver.&lt;ref&gt;Attila Hilt, Gábor Járó, Attila Zólomy, Béatrice Cabon, Tibor Berceli, Tamás Marozsák: &quot;Microwave Characterization of High-Speed pin Photodiodes&quot;, Proc. of the 9th Conference on Microwave Techniques COMITE’97, pp.21-24, Pardubice, Czech Republic, 16-17 Oct. 1997.&lt;/ref&gt;
+
+== Example PIN photodiodes ==
+SFH203 and BPW43 are cheap general purpose PIN diodes in 5&amp;nbsp;mm clear plastic cases with bandwidths over 100&amp;nbsp;MHz. [[RONJA]] telecommunication systems are an example application.
+
+==See also==
+* [[Fiber-optic cable]]
+* [[Interconnect bottleneck]]
+* [[Optical communication]]
+* [[Optical interconnect]]
+* [[Parallel optical interface]]
+* [[Step recovery diode]]
+
+==References==
+{{Reflist}}
+
+==External links==
+*[https://www.ieee.li/pdf/essay/pin_diode_handbook.pdf The PIN Diode Designers' Handbook]
+*[https://www.skyworksinc.com/-/media/SkyWorks/Documents/Products/1-100/200480C.pdf PIN Limiter Diodes in Receiver Protectors], Skyworks application note
+
+{{Electronic components}}
+{{Authority control}}
+
+[[Category:Diodes]]
+[[Category:Microwave technology]]
+[[Category:Optical diodes]]
+[[Category:Power electronics]]
+[[Category:Japanese inventions]]
+
+[[ja:PINダイオード]]</text>
+      <sha1>4h9resi8byltprruc7cp75y30v2n03j</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Planar array</title>
+    <ns>0</ns>
+    <id>41557</id>
+    <redirect title="Antenna array" />
+    <revision>
+      <id>867304135</id>
+      <parentid>820111759</parentid>
+      <timestamp>2018-11-04T22:47:31Z</timestamp>
+      <contributor>
+        <username>Chetvorno</username>
+        <id>1030826</id>
+      </contributor>
+      <comment>Merged content to [[Antenna array]]. See [[Talk:Planar array]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="44" xml:space="preserve">#REDIRECT [[Antenna array]] {{R from merge}}</text>
+      <sha1>bacji7s7afha1n4sw7l9gndunkk5eoo</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Plane wave</title>
+    <ns>0</ns>
+    <id>41559</id>
+    <revision>
+      <id>977480719</id>
+      <parentid>976744314</parentid>
+      <timestamp>2020-09-09T03:06:23Z</timestamp>
+      <contributor>
+        <username>ShohagS</username>
+        <id>39555549</id>
+      </contributor>
+      <minor />
+      <comment>Reverted 1 edit by [[Special:Contributions/88.23.141.27|88.23.141.27]] ([[User talk:88.23.141.27|talk]]) to last revision by Myxomatosis57</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6627" xml:space="preserve">{{Use American English|date=January 2019}}{{Short description|Type of wave propagating in 3 dimensions
+}}
+
+In [[physics]], a '''plane wave''' is a special case of [[wave (physics)|wave]] or [[field (physics)|field]]: a physical quantity whose value, at any moment, is constant over any plane that is perpendicular to a fixed direction in space.{{sfn|Brekhovskikh|1980|p=1-3}}  
+
+For any position &lt;math&gt;\vec x&lt;/math&gt; in space and any time &lt;math&gt;t&lt;/math&gt;, the value of such a field can be written as
+:&lt;math&gt;F(\vec x,t) = G(\vec x \cdot \vec n, t),&lt;/math&gt;
+where &lt;math&gt;\vec n&lt;/math&gt; is a [[unit vector|unit-length vector]], and &lt;math&gt;G(d,t)&lt;/math&gt; is a function that gives the field's value as from only two [[real number|real]] parameters: the time &lt;math&gt;t&lt;/math&gt;, and the displacement &lt;math&gt;d = \vec x \cdot \vec n&lt;/math&gt; of the point &lt;math&gt;\vec x&lt;/math&gt; along the direction &lt;math&gt;\vec n&lt;/math&gt;. The latter is constant over each plane perpendicular to &lt;math&gt;\vec n&lt;/math&gt;.
+
+The values of the field &lt;math&gt;F&lt;/math&gt; may be scalars, vectors, or any other physical or mathematical quantity.  They can be [[complex numbers]], as in a [[complex exponential plane wave]].  
+
+When the values of &lt;math&gt;F&lt;/math&gt; are vectors, the wave is said to be a [[longitudinal wave]] if the vectors are always  collinear with the vector &lt;math&gt;\vec n&lt;/math&gt;, and a [[transverse wave]] if they are always orthogonal (perpendicular) to it.
+
+==Special types==
+
+===Traveling plane wave===
+
+[[File:Plane wave wavefronts 3D.svg|thumb|right|300px|The [[wavefront]]s of a plane wave traveling in [[3-space]]]]
+Often the term &quot;plane wave&quot; refers specifically to a [[traveling plane wave]], whose evolution in time can be described as simple translation of the field at a constant '''wave speed''' &lt;math&gt;c&lt;/math&gt; along the direction perpendicular to the wavefronts.  Such a field can be written as  
+:&lt;math&gt;F(\vec x, t)=G\left(\vec x \cdot \vec n - c t\right)\,&lt;/math&gt;
+where &lt;math&gt;G(u)&lt;/math&gt; is now a function of a single real parameter &lt;math&gt;u = d - c t&lt;/math&gt;, that describes the &quot;profile&quot; of the wave, namely the value of the field at time &lt;math&gt;t = 0&lt;/math&gt;, for each displacement &lt;math&gt;d = \vec x \cdot \vec n&lt;/math&gt;.  In that case, &lt;math&gt;\vec n&lt;/math&gt; is called the '''direction of propagation'''. For each displacement &lt;math&gt;d&lt;/math&gt;, the moving plane perpendicular to &lt;math&gt;\vec n&lt;/math&gt; at distance &lt;math&gt;d + c t&lt;/math&gt; from the origin is called a  &quot;[[wavefront]]&quot;.  This plane travels along the direction of propagation &lt;math&gt;\vec n&lt;/math&gt; with velocity &lt;math&gt;c&lt;/math&gt;; and the value of the field is then the same, and constant in time, at every one of its points.{{sfn|Jackson|1998|p=296}} 
+
+===Sinusoidal plane wave===
+
+The term is also used, even more specifically, to mean a &quot;monochromatic&quot; or [[sinusoidal plane wave]]: a travelling plane wave whose profile &lt;math&gt;G(u)&lt;/math&gt;is a [[sinusoidal]] function.  That is,
+:&lt;math&gt;F(\vec x, t)=A \sin\left(2\pi f (\vec x \cdot \vec n - c t) + \varphi\right)\,&lt;/math&gt;
+The parameter &lt;math&gt;A&lt;/math&gt;, which may be a scalar or a vector, is called the [[amplitude]] of the wave; the scalar coefficient &lt;math&gt;f&lt;/math&gt; is its &quot;spatial frequency&quot;; and the scalar &lt;math&gt;\varphi&lt;/math&gt; is its &quot;phase&quot;.
+
+A true plane wave cannot physically exist, because it would have to fill all space.  Nevertheless, the plane wave model is important and widely used in physics. The waves emitted by any source with finite extent into a large homogeneous region of space can be well approximated by plane waves when viewed over any part of that region that is sufficiently small compared to its distance from the source.  That is the case, for example, of the [[light wave]]s from a distant star that arrive at a telescope.
+
+===Plane standing wave ===
+
+A [[standing wave]] is a field whose value can be expressed as the product of two functions, one depending only on position, the other only on time.  A [[plane standing wave]], in particular, can be expressed as
+:&lt;math&gt;F(\vec x, t) = G(\vec x \cdot \vec n)\,S(t)&lt;/math&gt;
+where &lt;math&gt;G&lt;/math&gt; is a function of one scalar parameter (the displacement &lt;math&gt;d = \vec x \cdot \vec n&lt;/math&gt;) with scalar or vector values, and &lt;math&gt;S&lt;/math&gt; is a scalar function of time.  
+
+This representation is not unique, since the same field values are obtained if &lt;math&gt;S&lt;/math&gt; and &lt;math&gt;G&lt;/math&gt; are scaled by reciprocal factors. If &lt;math&gt;|S(t)|&lt;/math&gt; is bounded in the time interval of interest (which is usually the case in physical contexts), &lt;math&gt;S&lt;/math&gt; and &lt;math&gt;G&lt;/math&gt; can be scaled so that the maximum value of &lt;math&gt;|S(t)|&lt;/math&gt; is 1.  Then &lt;math&gt;|G(\vec x \cdot \vec n)|&lt;/math&gt; will be the maximum field magnitude seen at the point &lt;math&gt;\vec x&lt;/math&gt;.
+
+==Properties==
+
+A plane wave can be studied by ignoring the directions perpendicular to the direction vector &lt;math&gt;\vec n&lt;/math&gt;; that is, by considering the function &lt;math&gt;G(z,t) = F(z \vec n, t)&lt;/math&gt; as a wave in a one-dimensional medium. 
+
+Any [[local operator]], [[linear operator|linear]] or not, applied to a plane wave yields a plane wave.  Any linear combination of plane waves with the same normal vector &lt;math&gt;\vec n&lt;/math&gt; is also a plane wave.
+
+For a scalar plane wave in two or three dimensions, the gradient of the field is always collinear with the direction &lt;math&gt;\vec n&lt;/math&gt;; specifically, &lt;math&gt;\nabla F(\vec x,t) = \vec n\partial_1 G(\vec x \cdot \vec n, t)&lt;/math&gt;, where &lt;math&gt;\partial_1 G&lt;/math&gt; is the partial derivative of &lt;math&gt;G&lt;/math&gt; with respect to the first argument. 
+
+The [[Divergence|divergence]] of a vector-valued plane wave depends only on the projection of the vector &lt;math&gt;G(d,t)&lt;/math&gt; in the direction &lt;math&gt;\vec n&lt;/math&gt;. Specifically,
+:&lt;math&gt; (\nabla \cdot F)(\vec x, t) \;=\; \vec n \cdot\partial_1G(\vec x \cdot \vec n, t)&lt;/math&gt;
+In particular, a transverse planar wave satisfies &lt;math&gt;\nabla \cdot F = 0&lt;/math&gt; for all &lt;math&gt;\vec x&lt;/math&gt; and &lt;math&gt;t&lt;/math&gt;.&lt;!-- More: curl, laplacian...--&gt;
+
+== See also ==
+{{Wiktionary}}
+*[[Plane wave expansion]]
+*[[Rectilinear propagation]]
+*[[Wave equation]]
+*[[Weyl expansion]]

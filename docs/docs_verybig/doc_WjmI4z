@@ -1,0 +1,192 @@
+== Related asymptotic notations ==
+Big ''O'' is the most commonly used asymptotic notation for comparing functions.{{cn|date=December 2017}} Together with some  other related notations it forms the family of Bachmann–Landau notations.
+
+===Little-o notation=== &lt;!-- [[Little-o notation]] redirects here --&gt;
+{{redirect|Little o|the baseball player|Omar Vizquel}}
+Intuitively, the assertion &quot;{{math|''f''(''x'')}} is {{math|''o''(''g''(''x''))}}&quot; (read &quot;{{math|''f''(''x'')}} is little-o of {{math|''g''(''x'')}}&quot;) means that {{math|''g''(''x'')}} grows much faster than {{math|''f''(''x'')}}. Let as before ''f'' be a real or complex valued function and ''g'' a real valued function, both defined on some unbounded subset of the positive [[real number]]s, such that ''g''(''x'') is strictly positive for all large enough values of ''x''. One writes
+:&lt;math&gt;f(x) = o(g(x)) \quad \text{ as } x \to \infty&lt;/math&gt;
+if for every positive constant {{math|''ε''}} there exists a constant {{math|''N''}} such that
+:&lt;math&gt;|f(x)| \leq \varepsilon g(x) \quad \text{ for all } x \geq N.&lt;/math&gt;&lt;ref name=Landausmallo&gt;{{cite book |first=Edmund |last=Landau |authorlink=Edmund Landau |title=Handbuch der Lehre von der Verteilung der Primzahlen |publisher=B. G. Teubner |date=1909 |location=Leipzig |trans-title=Handbook on the theory of the distribution of the primes |language=de |page=61 | url=https://archive.org/stream/handbuchderlehre01landuoft#page/61/mode/2up}}&lt;/ref&gt;
+For example, one has
+: &lt;math&gt;2x = o(x^2)&lt;/math&gt; and &lt;math&gt;1/x = o(1).&lt;/math&gt;
+
+The difference between the earlier [[#Formal definition|definition]] for the big-O notation and the present definition of little-o is that while the former has to be true for ''at least one'' constant ''M'', the latter must hold for ''every'' positive constant {{math|''ε''}}, however small.&lt;ref name=&quot;Introduction to Algorithms&quot;&gt;Thomas H. Cormen et al., 2001, [http://highered.mcgraw-hill.com/sites/0070131511/ Introduction to Algorithms, Second Edition]{{page needed|date=February 2016}}&lt;/ref&gt; In this way, little-o notation makes a ''stronger statement'' than the corresponding big-O notation: every function that is little-o of ''g'' is also big-O of ''g'', but not every function that is big-O of ''g'' is also little-o of ''g''.  For example, &lt;math&gt;2x^2 = O(x^2) &lt;/math&gt; but &lt;math&gt;2x^2 \neq o(x^2). &lt;/math&gt;
+
+As ''g''(''x'') is nonzero, or at least becomes nonzero beyond a certain point, the relation &lt;math&gt;f(x) = o(g(x))&lt;/math&gt; is equivalent to
+:&lt;math&gt;\lim_{x \to \infty}\frac{f(x)}{g(x)} = 0&lt;/math&gt; (and this is in fact how Landau&lt;ref name=Landausmallo /&gt; originally defined the little-o notation).
+
+Little-o respects a number of arithmetic operations.  For example,
+: if {{mvar|c}} is a nonzero constant and &lt;math&gt;f = o(g)&lt;/math&gt; then &lt;math&gt;c \cdot f = o(g)&lt;/math&gt;, and
+: if &lt;math&gt;f = o(F)&lt;/math&gt; and &lt;math&gt;g = o(G)&lt;/math&gt; then &lt;math&gt; f \cdot g = o(F \cdot G).&lt;/math&gt;
+It also satisfies a [[Transitive relation|transitivity]] relation:
+: if &lt;math&gt;f = o(g)&lt;/math&gt; and &lt;math&gt; g = o(h)&lt;/math&gt; then &lt;math&gt;f = o(h).&lt;/math&gt;
+
+=== Big Omega notation ===
+Another asymptotic notation is &lt;math&gt;\Omega&lt;/math&gt;, read &quot;big Omega&quot;. Unfortunately, there are two widespread and incompatible definitions of the statement
+
+:&lt;math&gt;f(x)=\Omega(g(x))&lt;/math&gt; as &lt;math&gt;x\rightarrow a,&lt;/math&gt;,
+
+where ''a'' is some real number, ∞,  or −∞, where ''f'' and ''g'' are real functions defined in a neighbourhood of ''a'', and where ''g'' is positive in this neighbourhood.
+
+The first one (chronologically) is used in [[analytic number theory]], and the other one in [[computational complexity theory]]. When the two subjects meet, this situation is bound to generate confusion.
+
+==== The Hardy–Littlewood definition ====
+In 1914 [[Godfrey Harold Hardy]] and [[John Edensor Littlewood]] introduced the new symbol &lt;math&gt;\Omega&lt;/math&gt;,&lt;ref name=&quot;HL&quot;&gt;{{cite journal|last1=Hardy|first1=G. H.|last2=Littlewood|first2=J. E.|title=Some problems of diophantine approximation: Part II. The trigonometrical series associated with the elliptic ϑ-functions|journal=Acta Mathematica|date=1914|volume=37|page=225|doi=10.1007/BF02401834|url=http://projecteuclid.org/download/pdf_1/euclid.acta/1485887376|doi-access=free}}&lt;/ref&gt; which is defined as follows:
+
+:&lt;math&gt;f(x) = \Omega(g(x))&lt;/math&gt; as &lt;math&gt;x\rightarrow\infty&lt;/math&gt; if &lt;math&gt;\limsup_{x \to \infty} \left|\frac{f(x)}{g(x)}\right| &gt; 0.&lt;/math&gt;
+
+Thus &lt;math&gt;f(x)=\Omega(g(x))&lt;/math&gt; is the negation of &lt;math&gt;f(x)=o(g(x))&lt;/math&gt;.
+
+In 1916 the same authors introduced the two new symbols &lt;math&gt;\Omega_R&lt;/math&gt; and &lt;math&gt;\Omega_L&lt;/math&gt;, defined as:&lt;ref name=&quot;HL2&quot;&gt;G. H. Hardy and J. E. Littlewood, « Contribution to the theory of the Riemann zeta-function and the theory of the distribution of primes », ''[[Acta Mathematica]]'', vol. 41, 1916.&lt;/ref&gt;
+
+:&lt;math&gt;f(x)=\Omega_R(g(x))&lt;/math&gt; as &lt;math&gt;x\rightarrow\infty&lt;/math&gt; if &lt;math&gt;\limsup_{x \to \infty} \frac{f(x)}{g(x)}&gt; 0&lt;/math&gt;;
+
+:&lt;math&gt;f(x)=\Omega_L(g(x))&lt;/math&gt; as &lt;math&gt;x\rightarrow\infty&lt;/math&gt; if &lt;math&gt;\liminf_{x \to \infty} \frac{f(x)}{g(x)}&lt; 0. &lt;/math&gt;
+
+These symbols were used by [[Edmund Landau]], with the same meanings, in 1924.&lt;ref name=&quot;landau&quot;&gt;E. Landau, &quot;Über die Anzahl der Gitterpunkte in gewissen Bereichen. IV.&quot; Nachr. Gesell. Wiss. Gött. Math-phys. Kl. 1924, 137–150.&lt;/ref&gt;  After Landau, the notations were never used again exactly thus; &lt;math&gt;\Omega_R&lt;/math&gt; became &lt;math&gt;\Omega_+&lt;/math&gt; and &lt;math&gt;\Omega_L&lt;/math&gt; became &lt;math&gt;\Omega_-&lt;/math&gt;.{{cn|date=December 2018}}
+
+These three symbols &lt;math&gt;\Omega, \Omega_+, \Omega_-&lt;/math&gt;, as well as &lt;math&gt;f(x)=\Omega_\pm(g(x))&lt;/math&gt; (meaning that &lt;math&gt;f(x)=\Omega_+(g(x))&lt;/math&gt; and &lt;math&gt;f(x)=\Omega_-(g(x))&lt;/math&gt; are both satisfied), are now currently used in [[analytic number theory]].&lt;ref name=Ivic&gt;Aleksandar Ivić. The Riemann zeta-function, chapter 9. John Wiley &amp; Sons 1985.&lt;/ref&gt;&lt;ref&gt;Gérald Tenenbaum, Introduction to analytic and probabilistic number theory, Chapter I.5. American Mathematical Society, Providence RI, 2015.&lt;/ref&gt;
+
+===== Simple examples =====
+We have
+
+:&lt;math&gt;\sin x=\Omega(1)&lt;/math&gt; as &lt;math&gt;x\rightarrow\infty,&lt;/math&gt;
+
+and more precisely
+
+:&lt;math&gt;\sin x=\Omega_\pm(1)&lt;/math&gt; as &lt;math&gt;x\rightarrow\infty.&lt;/math&gt;
+
+We have
+
+:&lt;math&gt;\sin x+1=\Omega(1)&lt;/math&gt; as &lt;math&gt;x\rightarrow\infty,&lt;/math&gt;
+
+and more precisely
+
+:&lt;math&gt;\sin x+1=\Omega_+(1)&lt;/math&gt; as &lt;math&gt;x\rightarrow\infty;&lt;/math&gt;
+
+however
+
+:&lt;math&gt;\sin x+1\not=\Omega_-(1)&lt;/math&gt; as &lt;math&gt;x\rightarrow\infty.&lt;/math&gt;
+
+==== The Knuth definition ====
+In 1976 [[Donald Knuth]] published a paper to justify his use of the &lt;math&gt;\Omega&lt;/math&gt;-symbol to describe a stronger property. Knuth wrote: &quot;For all the applications I have seen so far in computer science, a stronger requirement ... is much more appropriate&quot;. He defined
+
+:&lt;math&gt;f(x)=\Omega(g(x))\Leftrightarrow g(x)=O(f(x))&lt;/math&gt;
+
+with the comment: &quot;Although I have changed Hardy and Littlewood's definition of &lt;math&gt;\Omega&lt;/math&gt;, I feel justified in doing so because their definition is by no means in wide use, and because there are other ways to say what they want to say in the comparatively rare cases when their definition applies.&quot;&lt;ref name=&quot;knuth&quot;&gt;{{cite journal |first=Donald |last=Knuth |url=http://www.phil.uu.nl/datastructuren/10-11/knuth_big_omicron.pdf |title=Big Omicron and big Omega and big Theta |journal=SIGACT News |date=April–June 1976 |page=18–24}}&lt;/ref&gt;
+
+=== Family of Bachmann–Landau notations ===
+{| class=&quot;wikitable&quot;
+|-
+! Notation
+! Name&lt;ref name=&quot;knuth&quot; /&gt;
+! Description
+! Formal Definition
+! Limit Definition&lt;ref name=Balcázar&gt;{{cite journal |last1=Balcázar |first1=José L. |last2=Gabarró |first2=Joaquim |title=Nonuniform complexity classes specified by lower and upper bounds |journal=RAIRO – Theoretical Informatics and Applications – Informatique Théorique et Applications |volume=23 |issue=2 |page=180 |url=http://archive.numdam.org/article/ITA_1989__23_2_177_0.pdf |access-date=14 March 2017 |language=en |issn=0988-3754}}&lt;/ref&gt;&lt;ref name=Cucker&gt;{{cite book |last1=Cucker |first1=Felipe |last2=Bürgisser |first2=Peter |title=Condition: The Geometry of Numerical Algorithms |year=2013 |publisher=Springer |location=Berlin, Heidelberg |isbn=978-3-642-38896-5 |pages=467–468 |chapter=A.1 Big Oh, Little Oh, and Other Comparisons |doi=10.1007/978-3-642-38896-5}}&lt;/ref&gt;&lt;ref name=Wild&gt;{{cite journal |first1=Paul |last1=Vitányi |author1-link=Paul Vitanyi |first2=Lambert |last2=Meertens |author2-link=Lambert Meertens |title=Big Omega versus the wild functions |journal=ACM SIGACT News |volume=16 |issue=4 |date=April 1985 |pages=56–59 |doi=10.1145/382242.382835 |url=http://www.kestrel.edu/home/people/meertens/publications/papers/Big_Omega_contra_the_wild_functions.pdf |citeseerx=10.1.1.694.3072}}&lt;/ref&gt;&lt;ref name=&quot;knuth&quot;/&gt;&lt;ref name=&quot;HL&quot;/&gt;
+|-
+| &lt;math&gt;f(n) = O(g(n))&lt;/math&gt;
+| Big O; Big Oh; Big Omicron
+| &lt;math&gt;|f|&lt;/math&gt; is bounded above by {{mvar|g}} (up to constant factor) asymptotically
+| &lt;math&gt;\exists k &gt; 0  \exists n_0  \forall n&gt;n_0\colon  |f(n)| \leq k\cdot g(n)&lt;/math&gt;
+| &lt;math&gt;\limsup_{n \to \infty} \frac{\left|f(n)\right|}{g(n)} &lt; \infty&lt;/math&gt;
+|-
+| &lt;math&gt;f(n) = \Theta(g(n))&lt;/math&gt;
+| Big Theta
+| {{mvar|f}} is bounded both above and below by {{mvar|g}} asymptotically
+| &lt;math&gt;\exists k_1 &gt; 0  \exists k_2&gt;0  \exists n_0  \forall n &gt; n_0\colon&lt;/math&gt;  &lt;math&gt;k_1 \cdot g(n) \leq f(n) \leq k_2 \cdot g(n)&lt;/math&gt;
+| &lt;math&gt;f(n) = O(g(n))&lt;/math&gt; and &lt;math&gt;f(n) = \Omega(g(n))&lt;/math&gt; (Knuth version)
+|-
+| &lt;math&gt;f(n) = \Omega(g(n))&lt;/math&gt;
+| Big Omega in complexity theory (Knuth)
+| {{mvar|f}} is bounded below by {{mvar|g}} asymptotically
+| &lt;math&gt;\exists k &gt; 0  \exists n_0  \forall  n&gt;n_0\colon   f(n) \geq k\cdot g(n)&lt;/math&gt;
+| &lt;math&gt;\liminf_{n \to \infty} \frac{f(n)}{g(n)} &gt; 0 &lt;/math&gt;
+|- style=&quot;border-top: 2px solid gray;&quot;
+| &lt;math&gt;f(n) = o(g(n))&lt;/math&gt;
+| Small O; Small Oh
+| {{mvar|f}} is dominated by {{mvar|g}} asymptotically
+| &lt;math&gt;\forall k&gt;0  \exists n_0  \forall n &gt; n_0\colon  |f(n)| &lt; k\cdot g(n)&lt;/math&gt;
+| &lt;math&gt;\lim_{n \to \infty} \frac{\left|f(n)\right|}{g(n)} = 0&lt;/math&gt;
+|-
+| &lt;math&gt;f(n)\sim g(n)&lt;/math&gt;
+| On the order of
+| {{mvar|f}} is equal to {{mvar|g}} asymptotically
+| &lt;math&gt;\forall \varepsilon &gt; 0 \exists n_0\forall n &gt; n_0\colon \left|{f(n) \over g(n)} - 1 \right| &lt; \varepsilon&lt;/math&gt;
+| &lt;math&gt;\lim_{n \to \infty} {f(n) \over g(n)} = 1&lt;/math&gt;
+|-
+| &lt;math&gt;f(n) = \omega(g(n))&lt;/math&gt;
+| Small Omega
+| {{mvar|f}} dominates {{mvar|g}} asymptotically
+| &lt;math&gt;\forall k &gt; 0 \exists n_0 \forall n &gt; n_0 \colon  |f(n)| &gt; k\cdot |g(n)|&lt;/math&gt;
+| &lt;math&gt;\lim_{n \to \infty} \left|\frac{f(n)}{g(n)}\right| = \infty&lt;/math&gt;
+|- style=&quot;border-top: 2px solid gray;&quot;
+| &lt;math&gt;f(n) = \Omega(g(n))&lt;/math&gt;
+| Big Omega in number theory (Hardy–Littlewood)
+| &lt;math&gt;|f|&lt;/math&gt; is not dominated by {{mvar|g}} asymptotically
+| &lt;math&gt;\exists k&gt;0 \forall n_0 \exists n &gt; n_0\colon |f(n)| \geq k\cdot g(n)&lt;/math&gt;
+| &lt;math&gt;\limsup_{n \to \infty} \left|\frac{f(n)}{g(n)}\right| &gt; 0 &lt;/math&gt;
+|}
+
+The limit definitions assume &lt;math&gt;g(n) &gt; 0&lt;/math&gt; for sufficiently large {{mvar|n}}. The table is (partly) sorted from smallest to largest, in the sense that o, O, Θ, ∼, (Knuth's version of) Ω, ω on functions correspond to &lt;, ≤, ≈, =, ≥, &gt; on the real line&lt;ref name=Wild/&gt; (the Hardy-Littlewood version of Ω, however, doesn't correspond to any such description).
+
+Computer science uses the big ''O'', big Theta Θ, little ''o'', little omega ω and Knuth's big Omega Ω notations.&lt;ref&gt;{{Introduction to Algorithms|edition=2|pages=41–50}}&lt;/ref&gt; Analytic number theory often uses the big ''O'', small ''o'', Hardy–Littlewood's big Omega Ω (with or without the +, - or ± subscripts) and &lt;math&gt;\sim&lt;/math&gt; notations.&lt;ref name=Ivic/&gt; The small omega ω notation is not used as often in analysis.&lt;ref&gt;for example it is omitted in: {{cite web |last1=Hildebrand |first1=A.J. |title=Asymptotic Notations |url=http://www.math.uiuc.edu/~ajh/595ama/ama-ch2.pdf |website=Asymptotic Methods in Analysis |series=Math&amp;nbsp;595, Fall 2009 |publisher=University of Illinois |place=Urbana, IL  |department=Department of Mathematics |access-date=14 March 2017}}&lt;/ref&gt;
+
+=== Use in computer science ===
+{{details|Analysis of algorithms}}
+Informally, especially in computer science, the big ''O'' notation often can be used somewhat differently to describe an asymptotic [[Upper and lower bounds#Tight bounds|tight]] bound where using big Theta Θ notation might be more factually appropriate in a given context.{{Citation needed|reason=Wording (weasel-words) suggest a primarily opinion-based posit.|date=May 2015}} For example, when considering a function ''T''(''n'') = 73''n''&lt;sup&gt;3&lt;/sup&gt; + 22''n''&lt;sup&gt;2&lt;/sup&gt; + 58, all of the following are generally acceptable, but tighter bounds (such as numbers 2 and 3 below) are usually strongly preferred over looser bounds (such as number 1 below).
+#''T''(''n'')&amp;nbsp;=&amp;nbsp;''O''(''n''&lt;sup&gt;100&lt;/sup&gt;)
+#''T''(''n'')&amp;nbsp;=&amp;nbsp;''O''(''n''&lt;sup&gt;3&lt;/sup&gt;)
+#''T''(''n'')&amp;nbsp;=&amp;nbsp;Θ(''n''&lt;sup&gt;3&lt;/sup&gt;)
+The equivalent English statements are respectively:
+#''T''(''n'') grows asymptotically no faster than ''n''&lt;sup&gt;100&lt;/sup&gt;
+#''T''(''n'') grows asymptotically no faster than ''n''&lt;sup&gt;3&lt;/sup&gt;
+#''T''(''n'') grows asymptotically as fast as ''n''&lt;sup&gt;3&lt;/sup&gt;.
+So while all three statements are true, progressively more information is contained in each. In some fields, however, the big O notation (number 2 in the lists above) would be used more commonly than the big Theta notation (items numbered 3 in the lists above). For example, if ''T''(''n'') represents the running time of a newly developed algorithm for input size ''n'', the inventors and users of the algorithm might be more inclined to put an upper asymptotic bound on how long it will take to run without making an explicit statement about the lower asymptotic bound.
+
+=== Other notation ===
+In their book ''[[Introduction to Algorithms]]'', [[Thomas H. Cormen|Cormen]], [[Charles E. Leiserson|Leiserson]], [[Ronald L. Rivest|Rivest]] and [[Clifford Stein|Stein]] consider the set of functions ''f'' which satisfy
+
+:&lt;math&gt; f(n) = O(g(n))\quad(n\rightarrow\infty)~.&lt;/math&gt;
+
+In a correct notation this set can, for instance, be called ''O''(''g''), where
+
+:&lt;math&gt;O(g) = \{ f :&lt;/math&gt; there exist positive constants ''c'' and &lt;math&gt;n_0&lt;/math&gt; such that &lt;math&gt;0 \le f(n) \le c g(n)&lt;/math&gt; for all &lt;math&gt;n \ge n_0 \}&lt;/math&gt;.&lt;ref&gt;{{cite book |  isbn=978-0-262-53305-8 |author1=Cormen, Thomas H. |author2=Leiserson,  Charles E. |author3=Rivest, Ronald L. |title=Introduction to Algorithms |location=Cambridge/MA |publisher=MIT Press |edition=3rd |year=2009 |page=47 |quote=When we have only an asymptotic upper bound, we use O-notation. For a given function ''g''(''n''), we denote by ''O''(''g''(''n'')) (pronounced &quot;big-oh of ''g'' of ''n''&quot; or sometimes just &quot;oh of ''g'' of ''n''&quot;) the set of functions ''O''(''g''(''n'')) = { ''f''(''n'') : there exist positive constants ''c'' and ''n''&lt;sub&gt;0&lt;/sub&gt; such that 0 ≤ ''f''(''n'') ≤ ''cg''(''n'') for all ''n'' ≥ ''n''&lt;sub&gt;0&lt;/sub&gt;} }}&lt;/ref&gt;
+
+The authors state that the use of equality operator (=) to denote set membership rather than the set membership operator (∈) is an abuse of notation, but that doing so has advantages.&lt;ref name=&quot;clrs3&quot;&gt;{{cite book |isbn=978-0-262-53305-8 |author1=Cormen,Thomas H. |author2=Leiserson, Charles E. |author3=Rivest, Ronald L. |title=Introduction to Algorithms |url=https://archive.org/details/introductiontoal00corm_805 |url-access=limited |location=Cambridge/MA |publisher=MIT Press |edition=3rd |year=2009 |page=[https://archive.org/details/introductiontoal00corm_805/page/n65 45] |quote=Because ''θ''(''g''(''n'')) is a set, we could write &quot;''f''(''n'') ∈ ''θ''(''g''(''n''))&quot; to indicate that ''f''(''n'') is a member of ''θ''(''g''(''n'')). Instead, we will usually write ''f''(''n'') = ''θ''(''g''(''n'')) to express the same notion. You might be confused because we abuse equality in this way, but we shall see later in this section that doing so has its advantages.}}&lt;/ref&gt; Inside an equation or inequality, the use of asymptotic notation stands for an anonymous function in the set ''O''(''g''), which eliminates lower-order terms, and helps to reduce inessential clutter in equations, for example:&lt;ref&gt;{{cite book |isbn=978-0-262-53305-8 |author1=Cormen,Thomas H. |author2=Leiserson, Charles E. |author3=Rivest, Ronald L. |title=Introduction to Algorithms |url=https://archive.org/details/introductiontoal00corm_805 |url-access=limited |location=Cambridge/MA |publisher=MIT Press |edition=3rd |year=2009 |page=[https://archive.org/details/introductiontoal00corm_805/page/n69 49] |quote=When the asymptotic notation stands alone (that is, not within a larger formula) on the right-hand side of an equation (or inequality), as in n = O(n²), we have already defined the equal sign to mean set membership: n ∈ O(n²). In general, however, when asymptotic notation appears in a formula, we interpret it as standing for some anonymous function that we do not care to name. For example, the formula 2''n''&lt;sup&gt;2&lt;/sup&gt; + 3''n'' + 1 = 2''n''&lt;sup&gt;2&lt;/sup&gt; + ''θ''(''n'') means that 2''n''&lt;sup&gt;2&lt;/sup&gt; + 3''n'' + 1 = 2''n''&lt;sup&gt;2&lt;/sup&gt; + ''f''(''n''), where ''f''(''n'') is some function in the set ''θ''(''n''). In this case, we let ''f''(''n'') = 3''n'' + 1, which is indeed in ''θ''(''n''). Using asymptotic notation in this manner can help eliminate inessential detail and clutter in an equation.}}&lt;/ref&gt;
+
+:&lt;math&gt; 2n^2 + 3n + 1=2n^2 + O(n).&lt;/math&gt;
+
+=== Extensions to the Bachmann–Landau notations ===
+Another notation sometimes used in computer science is Õ (read ''soft-O''): ''f''(''n'')&amp;nbsp;=&amp;nbsp;''Õ''(''g''(''n'')) is shorthand
+for ''f''(''n'')&amp;nbsp;=&amp;nbsp;''O''(''g''(''n'')&amp;nbsp;log&lt;sup&gt;''k''&lt;/sup&gt;&amp;nbsp;''g''(''n'')) for some ''k''.&lt;ref&gt;{{Cite book|title=Introduction to algorithms|url=https://archive.org/details/introductiontoal00corm_805|url-access=limited|date=2009|publisher=MIT Press|others=Cormen, Thomas H.|isbn=978-0-262-27083-0|edition=Third|location=Cambridge, Mass.|oclc=676697295|page=[https://archive.org/details/introductiontoal00corm_805/page/n83 63]}}&lt;/ref&gt; Essentially, it is big O notation, ignoring logarithmic factors because the growth-rate effects of some other super-logarithmic function indicate a growth-rate explosion for large-sized input parameters that is more important to predicting bad run-time performance than the finer-point effects contributed by the logarithmic-growth factor(s). This notation is often used to obviate the &quot;nitpicking&quot; within growth-rates that are stated as too tightly bounded for the matters at hand (since log&lt;sup&gt;''k''&lt;/sup&gt;&amp;nbsp;''n'' is always ''o''(''n''&lt;sup&gt;ε&lt;/sup&gt;) for any constant ''k'' and any ε&amp;nbsp;&gt;&amp;nbsp;0).
+
+Also the [[L-notation|L notation]], defined as
+:&lt;math&gt;L_n[\alpha,c]=e^{(c + o(1))(\ln n)^\alpha(\ln\ln n)^{1-\alpha}}&lt;/math&gt;
+is convenient for functions that are between [[Time complexity#Polynomial time|polynomial]] and [[Time complexity#Exponential time|exponential]] in terms of &lt;math&gt;\ln n&lt;/math&gt;.
+
+== Generalizations and related usages ==
+The generalization to functions taking values in any [[normed vector space]] is straightforward (replacing absolute values by norms), where ''f'' and ''g'' need not take their values in the same space. A generalization to functions ''g'' taking values in any [[topological group]] is also possible{{Citation needed|date=May 2017}}.
+The &quot;limiting process&quot; ''x''&amp;nbsp;→&amp;nbsp;''x''&lt;sub&gt;o&lt;/sub&gt; can also be generalized by introducing an arbitrary [[filter base]], i.e. to directed [[net (mathematics)|nets]] ''f'' and&amp;nbsp;''g''.
+The ''o'' notation can be used to define [[derivative]]s and [[differentiability]] in quite general spaces, and also (asymptotical) equivalence of functions,
+:&lt;math&gt; f\sim g \iff (f-g) \in o(g) &lt;/math&gt;
+which is an [[equivalence relation]] and a more restrictive notion than the relationship &quot;''f'' is Θ(''g'')&quot; from above. (It reduces to lim ''f'' / ''g'' = 1 if ''f'' and ''g'' are positive real valued functions.)  For example, 2''x'' is Θ(''x''), but 2''x''&amp;nbsp;−&amp;nbsp;''x'' is not ''o''(''x'').
+
+== History (Bachmann–Landau, Hardy, and Vinogradov notations) ==
+
+The symbol O was first introduced by number theorist [[Paul Bachmann]] in 1894, in the second volume of his book ''Analytische Zahlentheorie'' (&quot;[[analytic number theory]]&quot;).&lt;ref name=Bachmann&gt;{{cite book |first=Paul |last=Bachmann |authorlink=Paul Bachmann |title=Analytische Zahlentheorie |trans-title=Analytic Number Theory |language=de |volume=2 |location=Leipzig |publisher=Teubner |date=1894 |url=https://archive.org/stream/dieanalytischeza00bachuoft#page/402/mode/2up}}&lt;/ref&gt; The number theorist [[Edmund Landau]] adopted it, and was thus inspired to introduce in 1909 the notation o;&lt;ref name=Landau&gt;{{cite book |first=Edmund |last=Landau |authorlink=Edmund Landau |title=Handbuch der Lehre von der Verteilung der Primzahlen |publisher=B. G. Teubner |date=1909 |location=Leipzig |trans-title=Handbook on the theory of the distribution of the primes |language=de |page=883 | url=https://archive.org/details/handbuchderlehre01landuoft}}&lt;/ref&gt; hence both are now called Landau symbols. These notations were used in applied mathematics during the 1950s for asymptotic analysis.&lt;ref&gt;{{cite book |title=Asymptotic Expansions |last=Erdelyi |first=A. |year=1956 |isbn=978-0-486-60318-6}}&lt;/ref&gt;
+The symbol &lt;math&gt;\Omega&lt;/math&gt; (in the sense &quot;is not an ''o'' of&quot;) was introduced in 1914 by Hardy and Littlewood.&lt;ref name=&quot;HL&quot; /&gt; Hardy and Littlewood also introduced in 1918 the symbols &lt;math&gt;\Omega_R&lt;/math&gt; (&quot;right&quot;) and &lt;math&gt;\Omega_L&lt;/math&gt; (&quot;left&quot;),&lt;ref name=&quot;HL2&quot; /&gt;  precursors of the modern symbols &lt;math&gt;\Omega_+&lt;/math&gt; (&quot;is not smaller than a small o of&quot;) and &lt;math&gt;\Omega_-&lt;/math&gt; (&quot;is not larger than a small o of&quot;). Thus the Omega symbols (with their original meanings) are sometimes also referred to as &quot;Landau symbols&quot;. This notation &lt;math&gt;\Omega&lt;/math&gt; became commonly used in number theory at least since the 1950s.&lt;ref name=&quot;titchmarsh&quot;&gt;E. C. Titchmarsh, The Theory of the Riemann Zeta-Function (Oxford; Clarendon Press, 1951)&lt;/ref&gt;
+In the 1970s the big O was popularized in computer science by [[Donald Knuth]], who introduced the related Theta notation, and proposed a different definition for the Omega notation.&lt;ref name=&quot;knuth&quot; /&gt;
+
+Landau never used the big Theta and small omega symbols.
+
+Hardy's symbols were (in terms of the modern ''O'' notation)
+:&lt;math&gt; f \preccurlyeq g\iff f \in O(g) &lt;/math&gt; &amp;nbsp; and &amp;nbsp; &lt;math&gt; f\prec g\iff f\in o(g); &lt;/math&gt;
+
+(Hardy however never defined or used the notation &lt;math&gt;\prec\!\!\prec&lt;/math&gt;, nor &lt;math&gt;\ll&lt;/math&gt;, as it has been sometimes reported).
+Hardy introduced the symbols &lt;math&gt;\preccurlyeq &lt;/math&gt; and &lt;math&gt;\prec &lt;/math&gt; (as well as some other symbols) in his 1910 tract &quot;Orders of Infinity&quot;, and made use of them only in three papers (1910–1913). In his nearly 400 remaining papers and books he consistently used the Landau symbols O and o.
+
+Hardy's notation is not used anymore. On the other hand, in the 1930s,&lt;ref&gt;See for instance &quot;A new estimate for ''G''(''n'') in Waring's problem&quot; (Russian). Doklady Akademii Nauk SSSR 5, No 5-6 (1934), 249–253. Translated in English in: Selected works / Ivan Matveevič Vinogradov; prepared by the Steklov Mathematical Institute of the Academy of Sciences of the USSR on the occasion of his 90th birthday. Springer-Verlag, 1985.&lt;/ref&gt; the Russian number theorist  [[Ivan Matveyevich Vinogradov]]  introduced his notation	&lt;math&gt;\ll&lt;/math&gt;, which  has been increasingly used in number theory instead of  the &lt;math&gt;O&lt;/math&gt; notation. We have
+:&lt;math&gt; f\ll g \iff f \in O(g), &lt;/math&gt;
+and frequently both notations are used in the same paper.
+
+The big-O originally stands for &quot;order of&quot; (&quot;Ordnung&quot;, Bachmann 1894), and is thus a Latin letter. Neither Bachmann nor Landau ever call it &quot;Omicron&quot;. The symbol was much later on (1976) viewed by Knuth as a capital [[omicron]],&lt;ref name=&quot;knuth&quot; /&gt; probably in reference to his definition of the symbol [[Omega]]. The digit [[0 (number)|zero]] should not be used.

@@ -1,0 +1,282 @@
+&lt;syntaxhighlight lang=&quot;css&quot;&gt;
+ {Curl 7.0, 8.0 applet}
+ {text
+    color = &quot;blue&quot;,
+    font-size = 16pt,
+    Hello World}
+&lt;/syntaxhighlight&gt;
+
+This code will run if the user has at least one of the Curl versions 7.0 or 8.0 installed.
+
+Curl provides both [[Macro (computer science)|macro]]s and text-procedures in addition to anonymous procedures and named methods.
+An alternative using the text-procedure ''paragraph'' would be:
+
+&lt;syntaxhighlight lang=&quot;css&quot;&gt;
+ {paragraph
+    paragraph-left-indent=0.5in,
+    {text color = &quot;red&quot;, font-size = 12pt,
+      Hello}
+    {text color = &quot;green&quot;, font-size = 12pt,
+      World}}
+&lt;/syntaxhighlight&gt;
+
+Recently this style of layout has been adopted by &quot;builders&quot; in the [[Groovy (programming language)|Groovy]] language for the JVM, but is also familiar to users of CSS or Tcl/Tk.  Most features for web applications now implemented through combinations of JavaScript libraries + HTML + CSS  are already found within the Curl language, including features usually associated with [[Prototype JavaScript Framework|Prototype]] + [[script.aculo.us]] such as accordion panes.
+
+Curl sets callbacks in the manner also adopted by Groovy:
+
+&lt;syntaxhighlight lang=&quot;css&quot;&gt;
+ {CommandButton width=100pt,
+    height = 50pt,
+    label = {center {bold Invokes an event handler when clicked}},
+    control-color = &quot;orange&quot;,
+    || Attach the following event handler to this CommandButton
+    {on Action do
+        {popup-message
+            title = &quot;Your Message&quot;,
+            &quot;This is a user message dialog.&quot;
+        }
+    }}
+&lt;/syntaxhighlight&gt;
+
+Curl comments use the vertical bar in several variations.  The simplest is as follows:
+
+&lt;syntaxhighlight lang=&quot;text&quot;&gt;
+ {text A comment can be on a line by itself,
+ || A comment on a line by itself
+ or it can be at the end || A comment on the same line as code
+ of a line.}
+&lt;/syntaxhighlight&gt;
+
+== Curl as lightweight markup ==
+
+Because Curl provides for both user-defined text procedures and stylesheets, Curl can be used readily as domain-specific lightweight markup. A major advantage over plain text HTML markup is that the text encoding can be set to UTF-8, and text entered in a Unicode-enabled editor without any escaping of characters (like JavaScript, Curl is Unicode friendly). A poetry example would be:
+
+&lt;syntaxhighlight lang=&quot;text&quot;&gt;
+ {poem || wraps entire poem
+    {stanza  || first verse here in any language
+    }
+    {stanza  || another verse here in any language
+    }
+ }
+&lt;/syntaxhighlight&gt;
+
+which can initially be implemented by defining the poem and stanza markup as paragraph text formats. Stanza could be further refined to include a hidden navigation anchor for page navigation using the Curl {destination} which is itself a text procedure.
+
+The same markup can be used for different results, as one can style text to be visible in one context and invisible in another. Curl also permits top-level file inclusion so that a source text in markup can be included in different parent files. In education, for example, one could create a source file of test questions, and include it in both a student and a teacher version of the text.
+
+==See also==
+*[[Homoiconicity]]: Curl is both a programming language and a data format{{citation needed|date=January 2013}}
+
+==References==
+{{Reflist}}
+
+==External links==
+{{Wikibooks|Curl}}
+*[https://web.archive.org/web/20050714074659/http://www.cag.lcs.mit.edu/curl/ MIT Curl Project], the results of the Curl research project at [[Massachusetts Institute of Technology|MIT's]] Laboratory for Computer Science.
+*[http://www.curl.com Curl, Inc.] and [http://curlap.com Curl International Corp.] develop and distribute a suite of commercial products which are based on the results of the MIT research.  Owned by [http://www.scsk.jp/index_en.html SCSK Corporation] a majority-owned unit of [http://www.sumitomocorp.co.jp/english/ Sumitomo Corp.]
+*[https://www.infoworld.com/article/2649798/application-development/product-review--curl-6-0-enrichens-the-rich-internet-toolkit-.html InfoWorld review of Curl 6.0] by Martin Heller. [[InfoWorld]] awarded Curl its 2008 Technology of the Year award in the [[Rich Internet Application]] category.
+
+{{Rich Internet applications}}
+
+[[Category:Declarative programming languages]]
+[[Category:Functional languages]]
+[[Category:Lightweight markup languages]]
+[[Category:Markup languages]]
+[[Category:Rich Internet application frameworks]]
+[[Category:Homoiconic programming languages]]</text>
+      <sha1>i7wre7a5q4d42zu6h6aygw1v1fe054b</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Council of the Baltic Sea States</title>
+    <ns>0</ns>
+    <id>42539</id>
+    <revision>
+      <id>986882278</id>
+      <parentid>986880910</parentid>
+      <timestamp>2020-11-03T15:26:41Z</timestamp>
+      <contributor>
+        <username>Tammbeck</username>
+        <id>23228310</id>
+      </contributor>
+      <comment>Moved logo to infobox</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="13671" xml:space="preserve">{{redirect|Baltic Sea States|text=For the region in general, see [[Baltic region]]. It is not to be confused with [[Baltic states]]}}
+{{Use dmy dates|date=March 2020}}
+{{Infobox organization
+| image               = 
+| logo                = File:CBSS logo.jpg
+| logo_size           = 180px
+| caption             = Council of the Baltic Sea States
+| map                 = CBSS-members.png
+| motto               = 
+| formation           = 1992
+| extinction          = 
+| type                = Regional/Intergovernmental Organization
+| status              = 
+| purpose             = 
+| headquarters        = [[Stockholm]], [[Sweden]]
+| language            = [[English language|English]]
+| leader_title        = CBSS current Presidency
+| leader_name         = [[Lithuania]]
+| leader_title2       = Director General (Secretariat)
+| leader_name2        = Ambassador Grzegorz Marek Poznański.
+| main_organ          = CBSS Secretariat
+| parent_organization = 
+| affiliations        = 
+| remarks             = 
+| name                = Council of the Baltic Sea States
+| mcaption            = 
+| abbreviation        = CBSS
+| location            = 
+| region_served       = 
+| membership          = 
+| num_staff           = 
+| num_volunteers      = 
+| website             = {{URL|http://www.cbss.org/}}
+}}
+[[File:Reenstiernsa malmgård, dec 2018d.jpg|alt=|thumb|250x250px|CBSS Secretariat, Momma Reenstiernas Palats, Wollmar Yxkullsgatan 23]]
+[[File:CBSS Reykjavík Ministerial 2017.jpg|thumb|Official family photo from the CBSS Reykjavík Ministerial 2017]]
+
+The '''Council of the Baltic Sea States''' ('''CBSS''') is a regional intergovernmental organisation working on three priority areas: Regional Identity, Safe &amp; Secure Region and Sustainable &amp; Prosperous Region. These three priority areas aim to address the themes of environment, [[economic development]], [[entrepreneurship]], education, culture, civil security, children's rights and [[Human trafficking|trafficking in human beings]].
+
+==History==
+The CBSS was established by the region's Foreign Ministers in Copenhagen in 1992 as a response to the geopolitical changes that took place in the Baltic Sea region with the end of the Cold War. The CBSS founders were [[Hans-Dietrich Genscher]], [[Uffe Ellemann-Jensen]], [[Thorvald Stoltenberg]], [[Lennart Meri]], [[Jānis Jurkāns|Janis Jurkans]], [[Algirdas Saudargas]], [[Henning Christophersen]], [[Paavo Väyrynen]], [[Andrei Kozyrev]], [[Margaretha af Ugglas]], and [[Krzysztof Skubiszewski]].&lt;ref name=history/&gt; Since its founding, the CBSS has contributed to ensuring positive developments within the Baltic Sea region and has served as a driving force for multilateral cooperation.
+
+Since 1998 the CBSS has been served by a permanent international Secretariat that is located in Stockholm, Sweden and funded by the Member States. The highest institution of CBSS is the conference of foreign ministers, which convenes every two years.&lt;ref name=history&gt;http://www.cbss.org/council/&lt;/ref&gt;
+
+===Member states===
+
+The CBSS has 11 [[member state]]s as well as the [[European Union]]:
+
+*{{flag|Denmark}}
+*{{flag|Estonia}}
+*{{flag|Finland}}
+*{{flag|Germany}}
+*{{flag|Iceland}} (1995)
+*{{flag|Latvia}}
+*{{flag|Lithuania}}
+*{{flag|Norway}}
+*{{flag|Poland}}
+*{{flag|Russia}}
+*{{flag|Sweden}}
+
+===Observer states===
+11 other countries have observer status:&lt;ref&gt;{{Cite web|title=Annual Briefing of the CBSS Observer States|url=https://www.cbss.org/the-annual-briefing-of-the-cbss-observer-states-took-place/|date=2019-11-13|website=cbss.org|language=en-US|access-date=2020-05-05}}&lt;/ref&gt;
+
+* {{flag|Belarus}}
+* {{flag|France}}
+* {{flag|Hungary}}
+* {{flag|Italy}}
+* {{flag|Netherlands}}
+* {{flag|Romania}}
+* {{flag|Slovakia}}
+* {{flag|Spain}}
+* {{flag|Ukraine}}
+* {{flag|United Kingdom}}
+* {{flag|United States of America}}
+
+===Presidencies===
+The Council Presidency rotates between the eleven Member States on an annual basis. Each Presidency lays down a set of specific priorities to guide the works of the Council for the Presidency year and lasts for one year from 1 July until 30 June.&lt;ref name=&quot;history&quot;/&gt;
+*{{flag|Lithuania}} 2020–2021
+* {{flag|Denmark}}   2019–2020 – Priorities of the presidency: Making the CBSS a More Flexible Organization&lt;ref&gt;{{Cite web|title=Danish Presidency 2019-2020|url=https://www.cbss.org/danish-presidency-2019-2020/|date=2019-07-02|website=cbss.org|language=en-US|access-date=2020-05-05}}&lt;/ref&gt;
+* {{flag|Latvia}}   2018–2019 – Priorities of the presidency: Integrity &amp; Social Security, Dialogue and Responsibility
+*{{flag|Sweden}}   2017–2018 – Priorities of the presidency: Sustainability, Continuity and Adaptability
+* {{flag|Iceland}}   2016–2017 – Priorities of the presidency: Children, Equality and Democracy
+* {{flag|Poland}}    2015–2016 – Priorities of the presidency: Sustainability, Creativity and Safety
+* {{flag|Estonia}}   2014–2015 – Priorities of the presidency: Practicality, Efficiency and Cooperation 
+* {{flag|Finland}}   2013–2014 – Priorities of the presidency: Maritime Policy, Civil Protection and People-to-people Contacts
+* {{flag|Russia}}    2012–2013
+* {{flag|Germany}}   2011–2012
+* {{flag|Norway}}    2010–2011
+* {{flag|Lithuania}} 2009–2010
+* {{flag|Denmark}}   2008–2009
+* {{flag|Latvia}}    2007–2008
+* {{flag|Sweden}}    2006–2007
+* {{flag|Iceland}}   2005–2006
+* {{flag|Poland}}    2004–2005
+* {{flag|Estonia}}   2003–2004
+* {{flag|Finland}}   2002–2003
+* {{flag|Russia}}    2001–2002
+* {{flag|Germany}}   2000–2001
+* {{flag|Norway}}    1999–2000
+* {{flag|Lithuania}} 1998–1999
+* {{flag|Denmark}}   1997–1998
+* {{flag|Latvia}}    1996–1997
+* {{flag|Sweden}}    1995–1996
+* {{flag|Poland}}    1994–1995
+* {{flag|Estonia}}   1993–1994
+* {{flag|Finland}}   1992–1993
+
+==Structure==
+
+===Committee of Senior Officials===
+The Committee of Senior Officials (CSO) consists of high-ranking representatives of the Ministries of Foreign Affairs of the 11 CBSS Member States as well as of a high-level representative of the European Union. The CSO serves as the main discussion forum and decision-making body for matters related to the work of the Council between Ministerial Sessions. The CSO monitors, facilitates and aims to coordinate the work of all CBSS structures.
+
+The period chaired by each country rotates on an annual basis and follows the Council Presidency. The CSO Chairman is a representative, usually at ambassadorial level, appointed by the Ministry of Foreign Affairs of the country which holds the Council Presidency.
+
+A number of CBSS structures are operating under the auspices of the CSO.
+
+In accordance with the Riga Declaration on the Reform of the CBSS from June 2008 one of the former working groups has been transformed into an Expert Group and the two other working groups have been dissolved.
+
+The CSO monitors the work of the Expert Group on Nuclear and Radiation Safety, the Task Force against Trafficking in Human Beings (TF-THB), the [http://www.childrenatrisk.eu/ Expert Group on Children at Risk], and coordinates the work undertaken in the agreed three long-term priorities 'Regional Identity', 'Sustainable &amp; Prosperous Region' and 'Safe &amp; Secure Region'.
+
+===Expert Groups===
+
+* CBSS Expert Group on Nuclear and Radiation Safety
+* CBSS Expert Group on Maritime Policy
+* CBSS Expert Group on Sustainable Development – manages [[Baltic 21|Baltic 2030 Action Plan]]&lt;ref&gt;{{Cite web |url=http://www.cbss.org/sustainable-prosperous-region/egsd-baltic-2030-2/ |title=Baltic 2030 |access-date=2 August 2017 |archive-url=https://web.archive.org/web/20171115220914/http://www.cbss.org/sustainable-prosperous-region/egsd-baltic-2030-2/ |archive-date=15 November 2017 |url-status=dead }}&lt;/ref&gt;
+* CBSS Expert Group on Children at Risk
+* The Task Force against Trafficking in Human Beings
+
+===Secretariat===
+A Permanent International Secretariat of the CBSS was established following a decision taken at the 7th Ministerial Session of the CBSS in 1998 in [[Nyborg]], Denmark. The Secretariat was officially inaugurated at its premises on the island of [[Strömsborg]] in Stockholm on 20 October 1998. In November 2010, the Secretariat moved into its new premises located in Räntmästarhuset at Slussplan 9, Stockholm, Sweden.
+
+The mandate of the Secretariat is as follows:
+
+* to provide technical and organisational support to the Chairman of the CBSS and the structures and working bodies of the Council;
+* to ensure continuity and enhanced coordination of CBSS activities;
+* to implement the CBSS Information and Communication Strategy;
+* to maintain the CBSS archives and information database;
+* to maintain contacts with other organisations operating in and around the Baltic Sea region, the national authorities of Member States and the media.&lt;ref name=&quot;history&quot;/&gt;
+
+===Strategic Partners===
+Since the 10th Ministerial Session of the CBSS in 2001, the Council has intensified efforts to coordinate CBSS activities with other organisations actively working to advance regional cooperation in the Baltic Sea Region. The CBSS has taken the initiative to organise annual coordination meetings, (organised and presided over by the CSO Chair), with the participation of Baltic Sea regional organisations, thus providing a more structured channel for involving the strategic partners to voice their concerns and coordinate their efforts with the CBSS and other organisations such as:
+
+* B7 Baltic Seven Islands
+* [[Baltic Sea Trade Union Network|BASTUN]]
+* BCCA
+* Baltic Sea Forum
+* [[Baltic Sea Parliamentary Conference|BSPC]]
+* BSRUN
+* BSSSC
+* [[Baltic University Programme|BUP]]
+* Business Advisory Council
+* CPMR
+* [[HELCOM]]
+* [[International Organization for Migration|IOM]]
+* NGO Forum
+* [[Organisation for Economic Co-operation and Development|OECD]]
+* ScanBalt
+* [[Union of the Baltic Cities|UBC]]
+
+{{See also|Baltic sea countries}}
+
+===Long Term Priorities===
+
+In June 2014, the Council decided, after an evaluation and review of the CBSS five long-term priorities, to mainstream three renewed long-term priorities for the Council of the Baltic Sea States – ''Regional Identity, Sustainable &amp; Prosperous Region and Safe &amp; Secure Region.''
+
+;Regional Identity: Goal: To foster a Baltic Sea Region identity and intensify contacts supporting its further development; &lt;br /&gt;Objective: To develop the concept of Baltic Sea Region identity for and a sense of belonging to the Baltic Sea Region through engagement, participation and multilevel governance, in a community spirit and to create a notion of regional unity across borders by developing people-to-people contacts through dialogue, macro-regional networks and institutions;
+
+;Sustainable and Prosperous Region: Goals: To develop the Baltic Sea Region as a model region of sustainable societies able to manage and use resources efficiently, to tap the economic, technological, ecological and social innovation potential of the region in order to ensure its prosperity, environmental protection and social cohesion; To contribute to the eradication of obstacles hampering the comprehensive and sustainable development of the region; &lt;br /&gt;Objectives: To improve the overall competitiveness of the Baltic Sea region through sustainable economic growth and labour markets, research and development, innovative infrastructure, an integrated maritime policy, transport and communications; To support the transition of the Baltic Sea region towards a competitive, green and [[low-carbon economy]] thereby ensuring [[sustainable development]] and [[inclusive growth]]; To support further action to reach a good environmental status and a healthy ecosystem supporting a prosperous Baltic Sea Region; To strengthen the region's capacity to adapt to climate change and the resilience capacity of ecosystems and societies; To ensure further mainstreaming of sustainable development at all levels and in all policy sectors, integrating economic, social and environmental aspects; To promote sustainable and green technologies and initiatives in order to protect the ecosystem and biodiversity of the Baltic Sea region;
+
+;Safe and Secure Region: Goal: To enhance societal security and safety in the Baltic Sea Region and to ensure that people of the Region are protected from and resilient to violence, accidents and emergencies through preparedness, and safeguarded against harm caused by criminal exploitation and human trafficking;
+
+Objectives: To counteract all forms of trafficking in human beings, in the Baltic Sea Region via preventive and protective activities and projects based on a coherent and multidisciplinary approach; To promote comprehensive and sustainable child protection in order to prevent and respond to all forms of violence against children through a multi-sectorial approach and increased cooperation between relevant authorities and other stakeholders in the Baltic Sea Region; To strengthen societal resilience to disasters and hazards in all stages of crises through adequate prevention, preparedness, response and recovery; To enhance interoperability and strategic macro-regional cooperation enabling assistance and rapid response to cross-border accidents and emergencies, including disasters that may have cross-border consequences and impact;
+
+==See also==
+*[[World NGO Day]]
+
+==References==
+{{reflist}}

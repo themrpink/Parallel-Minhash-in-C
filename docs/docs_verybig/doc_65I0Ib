@@ -1,0 +1,268 @@
+As a link-state routing protocol, OSPF establishes and maintains neighbor relationships for exchanging routing updates with other routers. The neighbor relationship table is called an ''adjacency database''. Two OSPF routers are neighbors if they are members of the same subnet and share the same area ID, subnet mask, timers and authentication. In essence, OSPF neighborship is a relationship between two routers that allow them to see and understand each other but nothing more. OSPF neighbors do not exchange any routing information – the only packets they exchange are Hello packets.  OSPF adjacencies are formed between selected neighbors and allow them to exchange routing information. Two routers must first be neighbors and only then, can they become adjacent. Two routers become adjacent if at least one of them is Designated Router or Backup Designated Router (on multiaccess type networks), or they are interconnected by a point-to-point or point-to-multipoint network type. For forming a neighbor relationship between, the interfaces used to form the relationship must be in the same OSPF area. While an interface may be configured to belong to multiple areas, this is generally not practiced. When configured in a second area, an interface must be configured as a secondary interface.
+
+===Adjacency state machine===
+Each OSPF router within a network communicates with other neighboring routers on each connecting interface to establish the states of all adjacencies. Every such communication sequence is a separate ''conversation'' identified by the pair of router IDs of the communicating neighbors. RFC 2328 specifies the protocol for initiating these conversations (''Hello Protocol'') and for establishing full adjacencies (''Database Description Packets'', ''Link State Request Packets''). During its course, each router conversation transitions through a maximum of eight conditions defined by a state machine:&lt;ref name=&quot;rfc2328&quot;/&gt;&lt;ref&gt;{{cite web |url=http://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/13685-13.html |title=OSPF Neighbor States |website=Cisco |access-date=2018-10-28}}&lt;/ref&gt;
+#Down: The state ''down'' represents the initial state of a conversation when no information has been exchanged and retained between routers with the Hello Protocol.
+#Attempt: The ''Attempt'' state is similar to the ''Down'' state, except that a router is in the process of efforts to establish a conversation with another router, but is only used on [[Non-broadcast multiple-access network|NBMA]] networks.
+#Init: The ''Init'' state indicates that a HELLO packet has been received from a neighbor, but the router has not established a two-way conversation.
+#2-Way: The ''2-Way'' state indicates the establishment of a bidirectional conversation between two routers. This state immediately precedes the establishment of adjacency. This is the lowest state of a router that may be considered as a Designated Router.
+#ExStart: The ''ExStart'' state is the first step of adjacency of two routers.
+#Exchange: In the ''Exchange'' state, a router is sending its link-state database information to the adjacent neighbor. At this state, a router is able to exchange all OSPF routing protocol packets. 
+#Loading: In the ''Loading'' state, a router requests the most recent [[Link-state advertisement]]s (LSAs) from its neighbor discovered in the previous state.
+#Full: The ''Full'' state concludes the conversation when the routers are fully adjacent, and the state appears in all router- and network-LSAs. The link state databases of the neighbors are fully synchronized.
+
+===OSPF messages===
+Unlike other routing protocols, OSPF does not carry data via a transport protocol, such as the [[User Datagram Protocol]] (UDP) or the [[Transmission Control Protocol]] (TCP). Instead, OSPF forms IP datagrams directly, packaging them using protocol number 89 for the [[List of IP protocol numbers|IP Protocol field]]. OSPF defines five different message types, for various types of communication:
+;Hello: ''Hello'' messages are used as a form of greeting, to allow a router to discover other adjacent routers on its local links and networks. The messages establish relationships between neighboring devices (called adjacencies) and communicate key parameters about how OSPF is to be used in the autonomous system or area. During normal operation, routers send hello messages to their neighbors at regular intervals (the ''hello interval''); if a router stops receiving hello messages from a neighbor, after a set period (the ''dead interval'') the router will assume the neighbor has gone down.
+;{{anchor|Database description}}Database Description (''DBD''): ''Database description'' messages contain descriptions of the topology of the autonomous system or area. They convey the contents of the link-state database (LSDB) for the area from one router to another. Communicating a large LSDB may require several messages to be sent by having the sending device designated as a master device and sending messages in sequence, with the slave (recipient of the LSDB information) responding with acknowledgments.
+;Link State Request (''LSR''): ''Link state request'' messages are used by one router to request updated information about a portion of the LSDB from another router. The message specifies the link(s) for which the requesting device wants more current information.
+;Link State Update (''LSU''): ''Link-state update'' messages contain updated information about the state of certain links on the LSDB. They are sent in response to a Link State Request message, and also broadcast or multicast by routers on a regular basis. Their contents are used to update the information in the LSDBs of routers that receive them.
+;Link State Acknowledgment (''LSAck''): ''Link-state acknowledgment'' messages provide reliability to the link-state exchange process, by explicitly acknowledging receipt of a Link State Update message.
+
+==OSPF areas ==
+An OSPF network can be divided into ''areas'' that are logical groupings of hosts and networks. An area includes its connecting router having interfaces connected to the network. Each area maintains a separate link-state database whose information may be summarized towards the rest of the network by the connecting router. Thus, the topology of an area is unknown outside the area. This reduces the routing traffic between parts of an autonomous system.
+
+Areas are uniquely identified with 32-bit numbers. The area identifiers are commonly written in the dot-decimal notation, familiar from IPv4 addressing. However, they are not IP addresses and may duplicate, without conflict, any IPv4 address. The area identifiers for IPv6 implementations (OSPFv3) also use 32-bit identifiers written in the same notation. When dotted formatting is omitted, most implementations expand area ''1'' to the area identifier ''0.0.0.1'', but some have been known to expand it as ''1.0.0.0''.{{citation needed|reason=which implementations?|date=January 2017}}
+
+OSPF defines several special area types:
+
+===Backbone area===
+The backbone area (also known as ''area 0'' or ''area 0.0.0.0'') forms the core of an OSPF network. All other areas are connected to it, either directly or through other routers. Inter-area routing happens via routers connected to the backbone area and to their own associated areas. It is the logical and physical structure for the 'OSPF domain' and is attached to all nonzero areas in the OSPF domain. Note that in OSPF the term Autonomous System Boundary Router (ASBR) is historic, in the sense that many OSPF domains can coexist in the same Internet-visible autonomous system, RFC 1996.&lt;ref&gt;{{Harv|ASGuidelines|1996|p=25}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+  | last = Hawkinson
+  | first = J
+  |author2=T. Bates
+  | title = Guidelines for creation, selection, and registration of an Autonomous System
+  | publisher = Internet Engineering Task Force
+  |date=March 1996
+  | url = http://tools.ietf.org/html/rfc1930
+  | id = ASguidelines
+  | accessdate =  2007-09-28}}&lt;/ref&gt;
+
+The backbone area is responsible for distributing routing information between non-backbone areas. The backbone must be contiguous, but it does not need to be physically contiguous; backbone connectivity can be established and maintained through the configuration of virtual links.
+
+All OSPF areas must connect to the backbone area. This connection, however, can be through a virtual link. For example, assume area 0.0.0.1 has a physical connection to area 0.0.0.0. Further assume that area 0.0.0.2 has no direct connection to the backbone, but this area does have a connection to area 0.0.0.1. Area 0.0.0.2 can use a virtual link through the ''transit area'' 0.0.0.1 to reach the backbone.  To be a transit area, an area has to have the transit attribute, so it cannot be stubby in any way.
+
+===Stub area===
+A stub area is an area that does not receive route advertisements external to the AS and routing from within the area is based entirely on a default route. An ABR deletes type 4, 5 LSAs from internal routers, sends them a default route of 0.0.0.0 and turns itself into a default gateway. This reduces LSDB and routing table size for internal routers.
+
+Modifications to the basic concept of stub area have been implemented by systems vendors, such as the ''totally stubby area'' (TSA) and the ''not-so-stubby area'' (NSSA), both an extension in [[Cisco Systems]] routing equipment.
+
+====Not-so-stubby area====
+A ''not-so-stubby area'' (NSSA) is a type of stub area that can import autonomous system external routes and send them to other areas, but still cannot receive AS-external routes from other areas.&lt;ref name=&quot;rfc3101&quot;&gt;{{cite web
+  | last = Murphy
+  | first = P.
+  | title = The OSPF Not-So-Stubby Area (NSSA) Option
+  | publisher = The Internet Society
+  | date=January 2003
+  | url = https://tools.ietf.org/html/rfc3101
+  | accessdate =  2014-06-22
+}}&lt;/ref&gt; NSSA is an extension of the stub area feature that allows the injection of external routes in a limited fashion into the stub area. A case study simulates an NSSA getting around the Stub Area problem of not being able to import external addresses. It visualizes the following activities: the ASBR imports external addresses with a type 7 LSA, the ABR converts a type 7 LSA to type 5 and floods it to other areas, the ABR acts as an &quot;ASBR&quot; for other areas.
+The ASBRs do not take type 5 LSAs and then convert to type 7 LSAs for the area.
+
+====Proprietary extensions====
+Several vendors (Cisco, Allied Telesis, Juniper, Alcatel-Lucent, Huawei, Quagga), implement the two extensions below for stub and not-so-stubby areas. Although not covered by RFC standards, they are considered by many to be standard features in OSPF implementations.
+
+;Totally stubby area: A ''totally stubby area'' is similar to a stub area. However, this area does not allow ''summary'' routes in addition to not having ''external'' routes, that is, ''inter-area'' (IA) routes are not summarized into totally stubby areas.  The only way for traffic to get routed outside the area is a default route which is the only Type-3 LSA advertised into the area.  When there is only one route out of the area, fewer routing decisions have to be made by the route processor, which lowers system resource utilization.
+
+:Occasionally, it is said that a TSA can have only one ABR.&lt;ref&gt;{{cite web|url=http://www.groupstudy.com/bookstore/samples/thomas/|title=Stub Area Design Golden Rules|publisher=Groupstudy.com|accessdate=2011-11-30|archive-url=https://web.archive.org/web/20000831182105/http://www.groupstudy.com/bookstore/samples/thomas/|archive-date=August 31, 2000|url-status=dead}}. Note: This is not necessarily true. If there are multiple ABRs, as might be required for high availability, routers interior to the TSA will send non-intra-area traffic to the ABR with the lowest intra-area metric (the &quot;closest&quot; ABR) but that requires special configuration.&lt;/ref&gt;
+
+;NSSA totally stubby area: An addition to the standard functionality of an NSSA, the ''totally stubby NSSA'' is an NSSA that takes on the attributes of a TSA, meaning that type 3 and 4 summary routes are not flooded into this type of area.  It is also possible to declare an area both totally stubby and not-so-stubby, which means that the area will receive only the default route from area 0.0.0.0, but can also contain an autonomous system boundary router (ASBR) that accepts external routing information and injects it into the local area, and from the local area into area 0.0.0.0.
+
+:Redistribution into an NSSA area creates a special type of LSA known as type 7, which can exist only in an NSSA area. An NSSA ASBR generates this LSA, and an NSSA ABR router translates it into type 5 LSA which gets propagated into the OSPF domain.
+
+A newly acquired subsidiary is one example of where it might be suitable for an area to be simultaneously not-so-stubby and totally stubby if the practical place to put an ASBR is on the edge of a totally stubby area. In such a case, the ASBR does send externals into the totally stubby area, and they are available to OSPF speakers within that area. In Cisco's implementation, the external routes can be summarized before injecting them into the totally stubby area. In general, the ASBR should not advertise default into the TSA-NSSA, although this can work with extremely careful design and operation, for the limited special cases in which such an advertisement makes sense.
+
+By declaring the totally stubby area as NSSA, no external routes from the backbone, except the default route, enter the area being discussed. The externals do reach area 0.0.0.0 via the TSA-NSSA, but no routes other than the default route enter the TSA-NSSA. Routers in the TSA-NSSA send all traffic to the ABR, except to routes advertised by the ASBR.
+
+===Transit area===
+A transit area is an area with two or more OSPF border routers and is used to pass network traffic from one adjacent area to another. The transit area does not originate this traffic and is not the destination of such traffic.
+
+==Router types==
+OSPF defines the following overlapping categories of routers:
+;Internal router (IR): An ''internal router'' has all its interfaces belonging to the same area.
+;Area border router (ABR): An ''area border router''  is a router that connects one or more areas to the main backbone network.  It is considered a member of all areas it is connected to.  An ABR keeps multiple [[Instance (computer science)|instances]] of the link-state database in memory, one for each area to which that router is connected.
+;Backbone router (BR): A ''backbone router'' has an interface to the backbone area. Backbone routers may also be area routers, but do not have to be.
+;Autonomous system boundary router (ASBR):  An ''autonomous system boundary router'' is a router that is connected by using more than one routing protocol and that exchanges routing information with routers autonomous systems.  ASBRs typically also run an exterior routing protocol (e.g., [[BGP]]), or use static routes, or both.  An ASBR is used to [[Route redistribution|distribute routes]] received from other, external ASs throughout its own autonomous system. An ASBR creates External LSAs for external addresses and floods them to all areas via ABR. Routers in other areas use ABRs as next hops to access external addresses. Then ABRs forward packets to the ASBR that announces the external addresses.
+
+The router type is an attribute of an OSPF process. A given physical router may have one or more OSPF processes. For example, a router that is connected to more than one area, and which receives routes from a BGP process connected to another AS, is both an area border router and an autonomous system boundary router.
+
+Each router has an identifier, customarily written in the dotted-decimal format (e.g., 1.2.3.4) of an IP address. This identifier must be established in every OSPF instance. If not explicitly configured, the highest logical IP address will be duplicated as the router identifier. However, since the router identifier is not an IP address, it does not have to be a part of any routable subnet in the network, and often isn't to avoid confusion.
+
+==Router attributes==
+In addition to the four router types, OSPF uses the terms ''designated router'' (DR) and ''backup designated router'' (BDR), which are attributes of a router interface.
+;Designated router: A ''designated router'' (DR) is the router interface elected among all routers on a particular multiaccess network segment, generally assumed to be broadcast multiaccess. Special techniques, often vendor-dependent, may be needed to support the DR function on non-broadcast multiaccess (NBMA) media.  It is usually wise to configure the individual virtual circuits of an NBMA subnet as individual point-to-point lines; the techniques used are implementation-dependent.
+;Backup designated router: A ''backup designated router'' (BDR) is a router that becomes the designated router if the current designated router has a problem or fails.  The BDR is the OSPF router with the second-highest priority at the time of the last election.
+
+A given router can have some interfaces that are designated (DR) and others that are backup designated (BDR), and others that are non-designated. If no router is a DR or a BDR on a given subnet, the BDR is first elected, and then a second election is held for the DR.&lt;ref name=&quot;rfc2328&quot;&gt;&lt;/ref&gt;{{rp|75}} The DR is elected based on the following default criteria:
+*  If the priority setting on an OSPF router is set to 0, that means it can NEVER become a DR or BDR.
+*  When a DR fails and the BDR takes over, there is another election to see who becomes the replacement BDR.
+*  The router sending the Hello packets with the highest priority wins the election.
+*  If two or more routers tie with the highest priority setting, the router sending the Hello with the highest RID (Router ID) wins. NOTE: a RID is the highest logical (loopback) IP address configured on a router, if no logical/loopback IP address is set then the router uses the highest IP address configured on its active interfaces (e.g. {{IPaddr|192.168.0.1}} would be higher than {{IPaddr|10.1.1.2}}).
+*  Usually the router with the second-highest priority number becomes the BDR.
+*  The priority values range between 0 – 255,&lt;ref&gt;{{cite web |url=http://www.cisco.com/en/US/docs/ios/iproute_ospf/command/reference/iro_cr_book.pdf |title=Cisco IOS IP Routing: OSPF Command Reference |date=April 2011 |url-status=dead |archiveurl=https://web.archive.org/web/20120425041808/http://www.cisco.com/en/US/docs/ios/iproute_ospf/command/reference/iro_cr_book.pdf |archivedate=April 25, 2012 |df=mdy-all |publisher=[[Cisco Systems]]}}&lt;/ref&gt; with a higher value increasing its chances of becoming DR or BDR.
+*  If a higher priority OSPF router comes online after the election has taken place, it will not become DR or BDR until (at least) the DR and BDR fail.
+*  If the current DR 'goes down' the current BDR becomes the new DR and a new election takes place to find another BDR. If the new DR then 'goes down' and the original DR is now available, still previously chosen BDR will become DR.
+
+DR's exist for the purpose of reducing network traffic by providing a source for routing updates. The DR maintains a complete topology table of the network and sends the updates to the other routers via multicast. All routers in a multi-access network segment will form a slave/master relationship with the DR. They will form adjacencies with the DR and BDR only. Every time a router sends an update, it sends it to the DR and BDR on the multicast address {{IPaddr|224.0.0.6}}. The DR will then send the update out to all other routers in the area, to the multicast address {{IPaddr|224.0.0.5}}. This way all the routers do not have to constantly update each other, and can rather get all their updates from a single source.  The use of multicasting further reduces the network load.  DRs and BDRs are always setup/elected on OSPF broadcast networks.  DR's can also be elected on NBMA (Non-Broadcast Multi-Access) networks such as Frame Relay or ATM.  DRs or BDRs are not elected on point-to-point links (such as a point-to-point WAN connection) because the two routers on either side of the link must become fully adjacent and the bandwidth between them cannot be further optimized. DR and non-DR routers evolve from 2-way to full adjacency relationships by exchanging DD, Request, and Update.
+
+==Routing metrics==
+OSPF uses ''path cost'' as its basic routing metric, which was defined by the standard not to equate to any standard value such as speed, so the network designer could pick a metric important to the design. In practice, it is determined by the speed (bandwidth) of the interface addressing the given route, although that tends to need network-specific scaling factors now that links faster than 25&amp;nbsp;Mbit/s are common. Cisco uses a metric like (10&lt;sup&gt;8&lt;/sup&gt;&amp;nbsp;bit/s)/bandwidth (the reference value, 10&lt;sup&gt;8&lt;/sup&gt;&amp;nbsp;bit/s by default, can be adjusted). So, a 100&amp;nbsp;Mbit/s link will have a cost of 1, a 10&amp;nbsp;Mbit/s a cost of 10 and so on. But for links faster than 100&amp;nbsp;Mbit/s, the cost would be &lt;1.
+
+Metrics, however, are only directly comparable when of the same type. Four types of metrics are recognized. In decreasing preference, these types are (for example, an intra-area route is always preferred to an external route regardless of metric):
+# Intra-area
+# Inter-area
+# External Type 1, which includes both the external path cost and the sum of internal path costs to the ASBR that advertises the route,&lt;ref&gt;Whether an external route is based on a Type-5 LSA or a Type-7 LSA (NSSA) does not affect its preference. See RFC 3101, section 2.5.&lt;/ref&gt;
+# External Type 2, the value of which is solely that of the external path cost,
+
+==OSPF v3==
+OSPF version 3 introduces modifications to the IPv4 implementation of the protocol.&lt;ref name=&quot;rfc5340&quot; /&gt; Except for virtual links, all neighbor exchanges use IPv6 link-local addressing exclusively. The IPv6 protocol runs per link, rather than based on the [[Subnetwork|subnet]]. All IP prefix information has been removed from the link-state advertisements and from the ''hello'' discovery packet making OSPFv3 essentially protocol-independent.  Despite the expanded IP addressing to 128-bits in IPv6, area and router identifications are still based on 32-bit numbers.
+
+==OSPF extensions==
+
+===Traffic engineering===
+OSPF-TE is an extension to OSPF extending the expressivity to allow for traffic engineering and use on non-IP networks.&lt;ref&gt;{{cite IETF
+  | last = Katz
+  | first = D
+  |author2=D. Yeung
+  | title = Traffic Engineering (TE) Extensions to OSPF Version 2
+  | publisher = The Internet Society
+  | date=September 2003
+  | url = http://datatracker.ietf.org/doc/rfc3630/
+  | id = OSPF-TEextensions
+  | rfc = 3630
+  | accessdate =  2007-09-28
+}}&lt;/ref&gt; Using OSPF-TE, more information about the topology can be exchanged using opaque LSA carrying [[type-length-value]] elements. These extensions allow OSPF-TE to run completely out of band of the data plane network. This means that it can also be used on non-IP networks, such as optical networks.
+
+OSPF-TE is used in [[GMPLS]] networks as a means to describe the topology over which GMPLS paths can be established. GMPLS uses its own path setup and forwarding protocols, once it has the full network map.
+
+In the [[Resource Reservation Protocol]] (RSVP), OSPF-TE is used for recording and flooding RSVP signaled bandwidth reservations for [[label switched path]]s within the link-state database.
+
+===Optical routing===
+{{IETF RFC|3717}} documents work in optical routing for IP based on extensions to OSPF and IS-IS.&lt;ref&gt;{{cite IETF
+  | author1 = B. Rajagopalan
+  | author2=J. Luciani
+  | author3=D. Awduche
+  | title = IP over Optical Networks: A Framework
+  | publisher = Internet Engineering Task Force
+  | date=March 2004
+  | rfc = 3717
+}}&lt;/ref&gt;
+
+=== Multicast Open Shortest Path First ===
+The Multicast Open Shortest Path First (MOSPF) protocol is an extension to OSPF to support multicast routing. MOSPF allows routers to share information about group memberships.
+
+==OSPF in broadcast and non-broadcast networks==
+In broadcast multiple-access networks, neighbor adjacency is formed dynamically using multicast hello packets to {{IPaddr|224.0.0.5}}. A DR and BDR are elected normally, and function normally.
+
+For [[non-broadcast multiple-access network]]s (NBMA), the following two official modes are defined:&lt;ref name=&quot;rfc2328&quot;/&gt;
+* non-broadcast
+* point-to-multipoint
+
+Cisco has defined the following three additional modes for OSPF in NBMA topologies:&lt;ref&gt;{{citation |url=https://www.oreilly.com/library/view/cisco-ios-cookbook/0596527225/ch08s15.html |title=Changing the Network Type on an Interface |access-date=2019-03-01}}&lt;/ref&gt;
+* point-to-multipoint non-broadcast
+* broadcast
+* point-to-point
+
+==Notable implementations==
+* [[Allied Telesis]] implements OSPFv2 &amp; OSPFv3 in Allied Ware Plus (AW+)
+* [[Arista Networks]] implements OSPFv2 and OSPFv3
+* [[Bird Internet routing daemon|BIRD]] implements both OSPFv2 and OSPFv3
+* [[Cisco IOS]]
+* [[Cisco Meraki]]
+* [[D-Link]] implements OSPFv2 on Unified Services Router.
+* [[Force10 Networks|Dell's FTOS]] implements OSPFv2 and OSPFv3
+* [[ExtremeXOS]]
+* [[GNU Zebra]], a [[GNU General Public License|GPL]] routing suite for [[Unix-like]] systems supporting OSPF
+* [[Juniper Junos]]
+* [[NetWare]] implements OSPF in its Multi Protocol Routing module.
+* [[OpenBSD]] includes [[OpenOSPFD]], an OSPFv2 implementation.
+* [[Quagga (Software)|Quagga]], a fork of [[GNU Zebra]] for [[Unix-like]] systems
+* [[XORP]], a routing suite implementing RFC2328 (OSPFv2) and RFC2740 (OSPFv3) for both IPv4 and IPv6
+* [[Windows NT 4.0]] Server, [[Windows 2000]] Server and [[Windows Server 2003]] implemented OSPFv2 in the [[Routing and Remote Access Service]], although the functionality was removed in [[Windows Server 2008]].
+
+==Applications==
+OSPF is a widely deployed routing protocol that can converge a network in a few seconds and guarantee loop-free paths. It has many features that allow the imposition of policies about the propagation of routes that it may be appropriate to keep local, for load sharing, and for selective route importing. IS-IS, in contrast, can be tuned for lower overhead in a stable network, the sort more common in ISP than enterprise networks. There are some historical accidents that made IS-IS the preferred IGP for ISPs, but ISPs today may well choose to use the features of the now-efficient implementations of OSPF,&lt;ref&gt;{{Cite conference
+  | first = Howard
+  | last = Berkowitz
+  | title = OSPF Goodies for ISPs
+  | url = https://www.nanog.org/meetings/abstract?id=1149
+  | archive-url = https://web.archive.org/web/20160612140344/https://www.nanog.org/meetings/abstract?id=1149
+  | archive-date = 2016-06-12
+  | conference = North American Network Operators Group NANOG 17
+  | year = 1999
+  | place = Montreal
+}}&lt;/ref&gt; after first considering the pros and cons of IS-IS in service provider environments.&lt;ref&gt;{{Cite conference
+  | first = Dave
+  | last = Katz
+  | title = OSPF and IS-IS: A Comparative Anatomy
+  | url = https://www.nanog.org/meetings/abstract?id=1084
+  | archive-url = https://web.archive.org/web/20180620232619/https://www.nanog.org/meetings/abstract?id=1084
+  | archive-date = 2018-06-20
+  | conference = North American Network Operators Group NANOG 19
+  | year = 2000
+  | place = Albuquerque
+}}&lt;/ref&gt;
+
+OSPF can provide better load-sharing on external links than other IGPs.{{citation needed|date=October 2019}} When the default route to an ISP is injected into OSPF from multiple ASBRs as a Type I external route and the same external cost specified, other routers will go to the ASBR with the least path cost from its location. This can be tuned further by adjusting the external cost. If the default route from different ISPs is injected with different external costs, as a Type II external route, the lower-cost default becomes the primary exit and the higher-cost becomes the backup only.
+
+The only real limiting factor that may compel major ISPs to select IS-IS over OSPF is if they have a network with more than 850 routers.{{Citation needed|reason=Is there some source of this number? Or a reasonable method how to obtain it? Anyway, router count is a factor in single-area networks (like the one with 1000 routers [http://www.groupstudy.com/archives/cisco/200011/msg01985.html]), but with multiple areas, the number of routers can be much greater.|date=February 2012}}
+
+==See also==
+* [[Fabric Shortest Path First]]
+* [[Mesh networking]]
+* [[Route analytics]]
+* [[Routing]]
+* [[Shortest Path Bridging]]
+* [[Shortest path problem]]
+
+==References==
+{{Reflist}}
+
+==Further reading==
+* {{cite book | first = Andrew | last = Colton | isbn = 978-0972286213 | title = OSPF for Cisco Routers | publisher = [[Rocket Science Press]] | date = October 2003 }}
+* {{cite book | first1 = Jeff | last1 = Doyle | first2 = Jennifer | last2 = Carroll | url = http://www.ciscopress.com/bookstore/product.asp?isbn=1587052024 | isbn = 978-1-58705-202-6 | title = Routing TCP/IP | year = 2005 | volume = 1 | edition = 2nd | publisher = [[Cisco Press]] }}
+* {{cite book | first = John T. | last = Moy | isbn = 978-0201634723 | title = OSPF: Anatomy of an Internet Routing Protocol | publisher = [[Addison-Wesley]] | year = 1998 }}
+* {{cite book | first = William R. | last = Parkhurst | title = Cisco OSPF Command and Configuration Handbook | isbn = 978-1-58705-071-8 | year = 2002 }}
+* {{Cite book| last1 = Basu | first1 = Anindya| last2 = Riecke | first2 = Jon| doi = 10.1145/383059.383077 | chapter = Stability issues in OSPF routing | title = Proceedings of the 2001 conference on Applications, technologies, architectures, and protocols for computer communications| conference = [[SIGCOMM|SIGCOMM '01]]| pages = 225–236| year = 2001 | isbn = 978-1-58113-411-7| pmid =  | pmc = | citeseerx = 10.1.1.99.6393| s2cid = 7555753}}
+* {{cite book|last1 = Valadas | first1 = Rui | title= OSPF and IS-IS: From Link State Routing Principles to Technologies | publisher = CRC Press | isbn = 9780429027543 | year = 2019 | doi=10.1201/9780429027543}}
+
+==External links==
+* [https://datatracker.ietf.org/wg/ospf/charter/ IETF OSPF Working Group]
+* [https://www.cisco.com/c/en/us/products/ios-nx-os-software/open-shortest-path-first-ospf/index.html Cisco OSPF]
+* [https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/13703-8.html Cisco OSPF Areas and Virtual Links]
+* [https://www.freesoft.org/CIE/Topics/89.htm Summary of OSPF v2]
+* [http://www.eventhelix.com/RealtimeMantra/Networking/ospf-router-startup/ospf-router-startup-and-link-state-update.pdf OSPF Router Startup Flow]
+* {{cite web | url = http://www.netcordia.com/resources/tech-tips/configuring-ospf-authentication.asp | title = Configuring OSPF Authentication | work = Tech Tips | publisher = [[Netcordia]] | archive-url = https://web.archive.org/web/20130226033246/http://www.netcordia.com/resources/tech-tips/configuring-ospf-authentication.asp | archive-date = 2013-02-26}}
+
+[[Category:Internet protocols]]
+[[Category:Internet Standards]]
+[[Category:Routing protocols]]
+[[Category:Link protocols]]</text>
+      <sha1>6kyxdoe9zbjyo7ik7wkxdq1m9iqegnr</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Routing Information Protocol</title>
+    <ns>0</ns>
+    <id>43389</id>
+    <revision>
+      <id>986602952</id>
+      <parentid>980786587</parentid>
+      <timestamp>2020-11-01T21:43:35Z</timestamp>
+      <contributor>
+        <username>Bender the Bot</username>
+        <id>28903366</id>
+      </contributor>
+      <minor />
+      <comment>/* top */HTTP → HTTPS for [[Internet Assigned Numbers Authority]], replaced: http://www.iana.org/ → https://www.iana.org/</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18171" xml:space="preserve">{{short description|Computer network protocol}}
+{{IPstack}}
+{{Use dmy dates|date=September 2020}}
+
+The '''Routing Information Protocol''' ('''RIP''') is one of the oldest [[distance-vector routing protocols]] which employs the [[Hopcount|hop count]] as a [[Metrics (networking)|routing metric]]. RIP prevents [[Routing loop problem|routing loops]] by implementing a limit on the number of [[Hop (telecommunications)|hops]] allowed in a path from source to destination. The largest number of hops allowed for RIP is 15, which limits the size of networks that RIP can support.
+
+RIP implements the [[split horizon]], [[route poisoning]] and [[holddown]] mechanisms to prevent incorrect routing information from being propagated.
+
+In RIPv1 routers broadcast updates with their routing table every 30 seconds. In the early deployments, [[routing table]]s were small enough that the traffic was not significant. As networks grew in size, however, it became evident there could be a massive traffic burst every 30 seconds, even if the routers had been initialized at random times.

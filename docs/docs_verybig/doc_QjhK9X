@@ -1,0 +1,121 @@
+The capacitive effect of long underground or undersea cables in AC transmission applications also applies to AC overhead lines, although to a much lesser extent. Nevertheless, for a long AC overhead transmission line, the current flowing just to charge the line capacitance can be significant, and this reduces the capability of the line to carry useful current to the load at the remote end. Another factor that reduces the useful current-carrying ability of AC lines is the [[skin effect]], which causes a nonuniform distribution of current over the cross-sectional area of the conductor. Transmission line conductors operating with direct current suffer from neither constraint. Therefore, for the same conductor losses (or heating effect), a given conductor can carry more power to the load when operating with HVDC than AC.
+
+Finally, depending upon the environmental conditions and the performance of overhead line insulation operating with HVDC, it may be possible for a given transmission line to operate with a constant HVDC voltage that is approximately the same as the peak AC voltage for which it is designed and insulated. The power delivered in an AC system is defined by the [[root mean square]] (RMS) of an AC voltage, but RMS is only about 71% of the peak voltage. Therefore, if the HVDC line can operate continuously with an HVDC voltage that is the same as the peak voltage of the AC equivalent line, then for a given current (where HVDC current is the same as the RMS current in the AC line), the power transmission capability when operating with HVDC is approximately 40% higher than the capability when operating with AC.
+
+==== Asynchronous connections ====
+
+Because HVDC allows power transmission between unsynchronized AC distribution systems, it can help increase system stability, by preventing [[cascading failure]]s from propagating from one part of a wider power transmission grid to another. Changes in load that would cause portions of an AC network to become unsynchronized and to separate, would not similarly affect a DC link, and the power flow through the DC link would tend to stabilize the AC network. The magnitude and direction of power flow through a DC link can be directly controlled, and changed as needed to support the AC networks at either end of the DC link. This has caused many power system operators to contemplate wider use of HVDC technology for its stability benefits alone.
+
+=== Disadvantages ===
+
+The disadvantages of HVDC are in conversion, switching, control, availability, and maintenance.
+
+HVDC is less reliable and has lower [[Availability factor|availability]] than alternating current (AC) systems, mainly due to the extra conversion equipment. Single-pole systems have availability of about 98.5%, with about a third of the downtime unscheduled due to faults. Fault-tolerant bipole systems provide high availability for 50% of the link capacity, but availability of the full capacity is about 97% to 98%.&lt;ref&gt;{{cite web|url=http://www.abb.com/industries/ap/db0003db004333/eb8b4075fb41252ec12574aa00409424.aspx |title=HVDC Classic reliability and availability |publisher=[[ABB Group|ABB]] |accessdate=2019-06-14 |url-status=dead |archiveurl=https://web.archive.org/web/20100330012511/http://www.abb.com/industries/ap/db0003db004333/eb8b4075fb41252ec12574aa00409424.aspx |archivedate=March 30, 2010 }}&lt;/ref&gt;
+
+The required [[HVDC converter station|converter stations]] are expensive and have limited overload capacity. At smaller transmission distances, the losses in the converter stations may be bigger than in an AC transmission line for the same distance.&lt;ref&gt;{{Cite web|url=http://www.lib.ncsu.edu/resolver/1840.16/10105|title=Design, Modeling and Control of Modular Multilevel Converter based HVDC Systems. - NCSU Digital Repository|website=www.lib.ncsu.edu|access-date=2016-04-17}}&lt;/ref&gt; The cost of the converters may not be offset by reductions in line construction cost and lower line loss.
+
+Operating an HVDC scheme requires many spare parts to be kept, often exclusively for one system, as HVDC systems are less standardized than AC systems and technology changes faster.
+
+In contrast to AC systems, realizing multi-terminal systems is complex (especially with line commutated converters), as is expanding existing schemes to multi-terminal systems. Controlling power flow in a multi-terminal DC system requires good communication between all the terminals; power flow must be actively regulated by the converter control system instead of relying on the inherent impedance and phase angle properties of an AC transmission line.&lt;ref&gt;{{cite book
+ | title = Standard Handbook for Electrical Engineers
+ | url = https://archive.org/details/standardhandbook00fink
+ | url-access = limited
+ | publisher = McGraw-Hill Professional
+ | date = August 25, 2006
+ | pages = [https://archive.org/details/standardhandbook00fink/page/n860 14]–37 equation 14–56
+ | isbn = 978-0-07-144146-9
+ | author = Donald G. Fink and H. Wayne Beaty
+}}&lt;/ref&gt; Multi-terminal systems are rare. As of 2012 only two are in service: the [[Quebec &amp;ndash; New England Transmission|Hydro Québec – New England transmission]] between Radisson, Sandy Pond, and Nicolet&lt;ref&gt;{{cite web|url=http://www.abb.com/industries/ap/db0003db004333/87f88a41a0be97afc125774b003e6109.aspx |title=The HVDC Transmission Québec–New England |publisher=[[ABB Asea Brown Boveri]] |accessdate=2008-12-12 |url-status=dead |archiveurl=https://web.archive.org/web/20110305134714/http://www.abb.com/industries/ap/db0003db004333/87f88a41a0be97afc125774b003e6109.aspx |archivedate=March 5, 2011 }}&lt;/ref&gt; and the [[HVDC Italy&amp;ndash;Corsica&amp;ndash;Sardinia|Sardinia&amp;ndash;mainland Italy]] link which was modified in 1989 to also provide power to the island of [[Corsica]].&lt;ref&gt;''The Corsican tapping: from design to commissioning tests of the third terminal of the Sardinia-Corsica-Italy HVDC''
+Billon, V.C.; Taisne, J.P.; Arcidiacono, V.; Mazzoldi, F.;
+Power Delivery, IEEE Transactions on
+Volume 4,  Issue 1,  Jan. 1989 Page(s):794–799&lt;/ref&gt;
+
+====High-voltage DC circuit breaker====
+HVDC [[circuit breaker]]s are difficult to build because of [[Electric arc|arcing]]: under AC the voltage inverts, and in doing so crosses zero volts, dozens of times a second. An AC arc will &quot;self-extinguish&quot; at one of these zero-crossing points, because there cannot be an arc where there is no potential difference. DC will never cross zero volts and never self-extinguish, so arc distance and duration is far greater with DC than the same voltage AC. This means some mechanism must be included in the circuit breaker to force current to zero and extinguish the arc, otherwise arcing and contact wear would be too great to allow reliable switching. 
+
+In November 2012, ABB announced development of the world's first ultrafast HVDC circuit breaker.&lt;ref&gt;{{cite web|url=http://www.abb.com/cawp/seitp202/65df338284e41b3dc1257aae0045b7de.aspx|title=ABB solves 100-year-old electrical puzzle – new technology to enable future DC grid|publisher=ABB|date=7 November 2012|accessdate=11 November 2012}}&lt;/ref&gt;&lt;ref name=&quot;hvdc-breaker&quot;&gt;{{Citation|url=http://new.abb.com/docs/default-source/default-document-library/hybrid-hvdc-breaker---an-innovation-breakthrough-for-reliable-hvdc-gridsnov2012finmc20121210_clean.pdf?sfvrsn=2|title=The Hybrid HVDC Breaker: An innovation breakthrough for reliable HVDC grids|first1=Magnus|last1=Callavik|first2=Anders|last2=Blomberg|first3=Jürgen|last3=Häfner|first4=Björn|last4=Jacobson|publisher=ABB Grid Systems|date=November 2012|accessdate=18 November 2012}}&lt;/ref&gt; Mechanical circuit breakers are too slow for use in HVDC grids, although they have been used for years in other applications. Conversely, semiconductor breakers are fast enough but have a high resistance when conducting, wasting energy and generating heat in normal operation. The ABB breaker combines semiconductor and mechanical breakers to produce a &quot;hybrid breaker&quot; with both a fast break time and a low resistance in normal operation.
+
+The hybrid breaker is based on a conventional semiconductor breaker (the &quot;main breaker&quot;), with the characteristic rapid break time, full voltage and current tolerance but also the characteristic resistance when conducting. This main breaker is placed in parallel with a &quot;load commutator&quot;: a small semiconductor breaker (the &quot;load commutation switch&quot;) in series with a fast mechanical switch (the &quot;ultra fast disconnector&quot;). While neither element of the load commutator can break the full voltage of the line, the load commutator can safely carry the normal operating current with lower resistive losses than the main breaker. Finally, there is a slow mechanical switch to fully disconnect the line. It can't be opened when the line is energised, but will fully disconnect the line with no current leakage and no heat generation. In normal operation, all switches are closed (on), and most current flows through the low-resistance load commutator instead of the higher resistance main breaker.
+
+When disconnection is required, the first step is disconnecting the load commutator: the low-voltage semiconductor breaker opens, and this diverts almost all of the current through the main breaker. The main breaker is still conducting, so the load commutator does not see the whole voltage of the line, only the voltage drop caused by the high-voltage main breaker not being a perfect conductor. Because the load commutation switch is open, the ultra-fast disconnector is not exposed to high current, and can open without being damaged by arcing. The mechanical switch being opened, the load commutator is now fully disconnected: no heat is being generated in the semiconductor switch, and even the full line voltage cannot pass through it. All current is now passing through the main breaker.
+
+Now the main breaker opens, breaking the current. This drops the current to near-zero, but increases the voltage across the main breaker and load commutator to nearly the entire line voltage. Had the load commutation switch not been mechanically disconnected earlier, this voltage would damage it. Because the main breaker is a semiconductor breaker, it cuts off almost all the current, but not all of it, so to perform the final isolation, a slow mechanical switch disconnects the line. Because almost all the current is being blocked by the main breaker, it can be opened without damage.&lt;ref name=&quot;hvdc-breaker&quot;/&gt;
+
+== Costs ==
+&lt;!-- this is pretty specific and meaningless in the general case...better a cost comparison.--&gt;
+Generally, providers of HVDC systems, such as [[Alstom]], [[Siemens AG|Siemens]] and [[Asea Brown Boveri|ABB]], do not specify cost details of particular projects. It may be considered a commercial matter between the provider and the client.
+
+Costs vary widely depending on the specifics of the project (such as power rating,  circuit length, overhead vs. cabled route, land costs, and AC network improvements required at either terminal). A detailed comparison of DC vs. AC transmission costs may be required in situations where there is no clear technical advantage to DC, and economical reasoning alone drives the selection.
+
+However, some practitioners have provided some information:
+
+{{quote|1=For an 8&amp;nbsp;GW 40&amp;nbsp;km link laid under the [[English Channel]], the following are approximate primary equipment costs for a 2000&amp;nbsp;MW 500&amp;nbsp;kV bipolar conventional HVDC link (exclude way-leaving, on-shore reinforcement works, consenting, engineering, insurance, etc.)
+
+* Converter stations ~£110M (~€120M or $173.7M)
+* Subsea cable + installation ~£1M/km (~€1.2M or ~$1.6M/km)
+
+So for an 8&amp;nbsp;GW capacity between [[United Kingdom|Britain]] and [[France]] in four links, little is left over from £750M for the installed works. Add another £200–300M for the other works depending on additional onshore works required.&lt;ref&gt;Source works for a prominent UK engineering consultancy but has asked to remain anonymous and is a member of [http://www.claverton-energy.com/ Claverton Energy Research Group ]&lt;/ref&gt;}}
+
+An April 2010 announcement for a 2,000&amp;nbsp;MW, 64&amp;nbsp;km line between Spain and France is estimated at €700&amp;nbsp;million. This includes the cost of a tunnel through the Pyrenees.&lt;ref&gt;[http://social.csptoday.com/qa/spain-invest-heavily-transmisson-grid-upgrades-over-next-five-years Spain to invest heavily in transmission grid upgrades over next five years|CSP Today] {{webarchive|url=https://web.archive.org/web/20111005233257/http://social.csptoday.com/qa/spain-invest-heavily-transmisson-grid-upgrades-over-next-five-years |date=2011-10-05 }}. Social.csptoday.com (2010-04-01). Retrieved on 2011-04-09.&lt;/ref&gt;
+
+== Conversion process ==
+
+=== Converter ===
+
+{{Main|HVDC converter}}
+At the heart of an [[HVDC converter station]], the equipment which performs the conversion between AC and DC is referred to as the ''converter''. Almost all HVDC converters are inherently capable of converting from AC to DC (''[[Rectifier|rectification]]'') and from DC to AC (''[[Power inverter|inversion]]''), although in many HVDC systems, the system as a whole is optimized for power flow in only one direction. Irrespective of how the converter itself is designed, the station that is operating (at a given time) with power flow from AC to DC is referred to as the ''rectifier'' and the station that is operating with power flow from DC to AC is referred to as the ''inverter''.
+
+Early HVDC systems used electromechanical conversion (the Thury system) but all HVDC systems built since the 1940s have used electronic (static) converters. Electronic converters for HVDC are divided into two main categories:
+* Line-commutated converters (LCC)
+* Voltage-sourced converters, or current-source converters.
+
+==== Line-commutated converters ====
+
+Most of the HVDC systems in operation today are based on line-commutated converters.
+
+The basic LCC configuration uses a three-phase [[bridge rectifier#Polyphase diode bridges|bridge rectifier]] or ''six-pulse bridge'', containing six electronic switches, each connecting one of the three phases to one of the two DC rails.  A complete switching element is usually referred to as a ''valve'', irrespective of its construction.  However, with a phase change only every 60°, considerable [[Total harmonic distortion|harmonic distortion]] is produced at both the DC and AC terminals when this arrangement is used.
+
+[[File:12 pulse bridge.png|thumb|A twelve-pulse bridge rectifier]]
+An enhancement of this arrangement uses 12 valves in a ''twelve-pulse bridge''. The AC is split into two separate three phase supplies before transformation. One of the sets of supplies is then configured to have a star (wye) secondary, the other a delta secondary, establishing a 30° phase difference between the two sets of three phases. With twelve valves connecting each of the two sets of three phases to the two DC rails, there is a phase change every 30°, and harmonics are considerably reduced. For this reason the twelve-pulse system has become standard on most line-commutated converter HVDC systems built since the 1970s.
+
+With line commutated converters, the converter has only one degree of freedom – the ''firing angle'', which represents the time delay between the voltage across a valve becoming positive (at which point the valve would start to conduct if it were made from diodes) and the thyristors being turned on.  The DC output voltage of the converter steadily becomes less positive as the firing angle is increased:  firing angles of up to 90° correspond to rectification and result in positive DC voltages, while firing angles above 90° correspond to inversion and result in negative DC voltages.  The practical upper limit for the firing angle is about 150–160° because above this, the valve would have insufficient ''turnoff time''.
+
+Early LCC systems used [[mercury-arc valve]]s, which were rugged but required high maintenance. Because of this, many mercury-arc HVDC systems were built with bypass switchgear across each six-pulse bridge so that the HVDC scheme could be operated in six-pulse mode for short periods of maintenance.  The last mercury arc system was shut down in 2012.
+
+The [[thyristor]] valve was first used in HVDC systems in 1972. The thyristor is a solid-state [[semiconductor]] device similar to the [[diode]], but with an extra control terminal that is used to switch the device on at a particular instant during the AC cycle. Because the voltages in HVDC systems, up to 800&amp;nbsp;kV in some cases, far exceed the [[breakdown voltage]]s of the thyristors used, HVDC thyristor valves are built using large numbers of thyristors in series. Additional passive components such as grading [[capacitor]]s and [[resistor]]s need to be connected in parallel with each thyristor in order to ensure that the voltage across the valve is evenly shared between the thyristors.  The thyristor plus its grading circuits and other auxiliary equipment is known as a ''thyristor level''.
+[[File:Pole 2 Thyristor Valve.jpg|thumb|upright=1.4|Thyristor valve stacks for Pole 2 of the [[HVDC Inter-Island]] between the North and South Islands of [[New Zealand]]. The man at the bottom gives scale to the size of the valves.]]
+
+Each thyristor valve will typically contain tens or hundreds of thyristor levels, each operating at a different (high) potential with respect to earth.  The command information to turn on the thyristors therefore cannot simply be sent using a wire connection – it needs to be isolated.  The isolation method can be magnetic but is usually optical.  Two optical methods are used:  indirect and direct optical triggering.  In the indirect optical triggering method, low-voltage control electronics send light pulses along optical fibres to the ''high-side'' control electronics, which derives its power from the voltage across each thyristor.  The alternative direct optical triggering method dispenses with most of the high-side electronics, instead using light pulses from the control electronics to switch [[thyristor#Light triggered thyristor|light-triggered thyristors]] (LTTs), although a small monitoring electronics unit may still be required for protection of the valve.
+
+In a line-commutated converter, the DC current (usually) cannot change direction; it flows through a large inductance and can be considered almost constant.  On the AC side, the converter behaves approximately as a current source, injecting both grid-frequency and harmonic currents into the AC network.  For this reason, a line commutated converter for HVDC is also considered as a ''current-source inverter''.
+
+==== Voltage-sourced converters ====
+
+Because thyristors can only be turned on (not off) by control action, the control system has only one degree of freedom – when to turn on the thyristor.  This is an important limitation in some circumstances.
+
+With some other types of semiconductor device such as the [[IGBT transistor|insulated-gate bipolar transistor]] (IGBT), both turn-on and turn-off can be controlled, giving a second degree of freedom. As a result, they can be used to make ''self-commutated converters''. In such converters, the polarity of DC voltage is usually fixed and the DC voltage, being smoothed by a large capacitance, can be considered constant.  For this reason, an HVDC converter using IGBTs is usually referred to as a ''voltage sourced converter''.  The additional controllability gives many advantages, notably the ability to switch the IGBTs on and off many times per cycle in order to improve the harmonic performance. Being self-commutated, the converter no longer relies on synchronous machines in the AC system for its operation.  A voltage sourced converter can therefore feed power to an AC network consisting only of passive loads, something which is impossible with LCC HVDC.
+
+HVDC systems based on voltage sourced converters normally use the six-pulse connection because the converter produces much less harmonic distortion than a comparable LCC and the twelve-pulse connection is unnecessary.
+
+Most of the VSC HVDC systems built until 2012 were based on the ''two level converter'', which can be thought of as a six pulse bridge in which the thyristors have been replaced by IGBTs with inverse-parallel diodes, and the DC smoothing reactors have been replaced by DC smoothing capacitors.  Such converters derive their name from the discrete, two voltage levels at the AC output of each phase that correspond to the electrical potentials of the positive and negative DC terminals. [[Pulse-width modulation]] (PWM) is usually used to improve the harmonic distortion of the converter.
+
+Some HVDC systems have been built with ''three level converters'', but today most new VSC HVDC systems are being built with some form of  ''multilevel converter'', most commonly the ''Modular Multilevel Converter'' (MMC), in which each valve consists of a number of independent converter submodules, each containing its own storage capacitor.  The IGBTs in each submodule either bypass the capacitor or connect it into the circuit, allowing the valve to synthesize a stepped voltage with very low levels of harmonic distortion.
+
+=== Converter transformers ===
+
+[[File:Transformateur du complexe La Grande.jpg|thumb|right|A single-phase, three-winding converter transformer.  The long valve-winding bushings, which project through the wall of the [[valve hall]], are shown on the left.  The line-winding bushing projects vertically upwards at center-right]]
+At the AC side of each converter, a bank of transformers, often three physically separated single-phase transformers, isolate the station from the AC supply, to provide a local earth, and to ensure the correct eventual DC voltage. The output of these transformers is then connected to the converter.
+
+Converter transformers for LCC HVDC schemes are quite specialized because of the high levels of harmonic currents which flow through them, and because the secondary winding insulation experiences a permanent DC voltage, which affects the design of the insulating structure (valve side requires more solid insulation) inside the tank.  In LCC systems, the transformers also need to provide the 30° phase shift needed for harmonic cancellation.
+
+Converter transformers for VSC HVDC systems are usually simpler and more conventional in design than those for LCC HVDC systems.
+
+=== Reactive power ===
+
+A major drawback of HVDC systems using line-commutated converters is that the converters inherently consume [[Real power|reactive power]].  The AC current flowing into the converter from the AC system lags behind the AC voltage so that, irrespective of the direction of active power flow, the converter always absorbs reactive power, behaving in the same way as a shunt [[Inductor|reactor]].  The reactive power absorbed is at least 0.5&amp;nbsp;Mvar/MW under ideal conditions and can be higher than this when the converter is operating at higher than usual firing or extinction angle, or reduced DC voltage.
+
+Although at [[HVDC converter station]]s connected directly to [[power station]]s some of the reactive power may be provided by the generators themselves, in most cases the reactive power consumed by the converter must be provided by banks of shunt [[capacitor]]s connected at the AC terminals of the converter.  The shunt capacitors are usually connected directly to the grid voltage but in some cases may be connected to a lower voltage via a tertiary winding on the converter transformer.
+
+Since the reactive power consumed depends on the active power being transmitted, the shunt capacitors usually need to be subdivided into a number of switchable banks (typically four per converter) in order to prevent a surplus of reactive power being generated at low transmitted power.
+
+The shunt capacitors are almost always provided with tuning reactors and, where necessary, damping resistors so that they can perform a dual role as [[harmonic]] filters.

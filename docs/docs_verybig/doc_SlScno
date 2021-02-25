@@ -1,0 +1,592 @@
+{{chem|HCO|3|−}} is known as the [[bicarbonate]] ion. [[Calcium bicarbonate]] is many times more soluble in water than calcium carbonate—indeed it exists ''only'' in solution.
+
+Some of the {{chem|HCO|3|−}} combines with H&lt;sup&gt;+&lt;/sup&gt; in solution according to
+
+:{| width=&quot;500&quot;
+| style=&quot;width:50%; height:25px;&quot;|H&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt; {{eqm}} H&lt;sup&gt;+&lt;/sup&gt; + {{chem|HCO|3|−}} &amp;nbsp;&amp;nbsp;
+| ''K''&lt;sub&gt;a1&lt;/sub&gt; = {{val|2.5e-4}} at 25&amp;nbsp;°C
+|}
+
+Some of the H&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt; breaks up into water and dissolved carbon dioxide according to
+
+:{| width=&quot;500&quot;
+| style=&quot;width:50%; height:25px;&quot;| H&lt;sub&gt;2&lt;/sub&gt;O + CO&lt;sub&gt;2&lt;/sub&gt;({{abbr|aq|aqueous}}) {{eqm}} H&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt; &amp;nbsp;&amp;nbsp;
+| ''K''&lt;sub&gt;h&lt;/sub&gt; = {{val|1.70e-3}} at 25&amp;nbsp;°C
+|}
+
+And dissolved carbon dioxide is in equilibrium with atmospheric carbon dioxide according to
+
+:{| width=&quot;500&quot;
+| style=&quot;width:45%;&quot;|&lt;math chem&gt;\frac{P_{\ce{CO2}}}{[\ce{CO2}]}\ =\ k_\ce{H}&lt;/math&gt;
+| where ''k''&lt;sub&gt;H&lt;/sub&gt; = 29.76 atm/(mol/L) at 25&amp;nbsp;°C ([[Henry's law|Henry constant]]), ''P''&lt;sub&gt;CO&lt;sub&gt;2&lt;/sub&gt;&lt;/sub&gt; being the CO&lt;sub&gt;2&lt;/sub&gt; partial pressure.
+|}
+
+For ambient air, ''P''&lt;sub&gt;CO&lt;sub&gt;2&lt;/sub&gt;&lt;/sub&gt; is around {{val|3.5e-4}} atmospheres (or equivalently 35&amp;nbsp;[[Pascal (unit)|Pa]]). The last equation above fixes the concentration of dissolved CO&lt;sub&gt;2&lt;/sub&gt; as a function of ''P''&lt;sub&gt;CO&lt;sub&gt;2&lt;/sub&gt;&lt;/sub&gt;, independent of the concentration of dissolved CaCO&lt;sub&gt;3&lt;/sub&gt;. At atmospheric partial pressure of CO&lt;sub&gt;2&lt;/sub&gt;, dissolved CO&lt;sub&gt;2&lt;/sub&gt; concentration is {{val|1.2e-5}} moles per liter. The equation before that fixes the concentration of H&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt; as a function of CO&lt;sub&gt;2&lt;/sub&gt; concentration. For [CO&lt;sub&gt;2&lt;/sub&gt;] = {{val|1.2e-5}}, it results in [H&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt;] = {{val|2.0e-8}} moles per liter. When [H&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt;] is known, the remaining three equations together with
+{| class=&quot;wikitable floatright&quot;
+|+ Calcium ion solubility as a function of [[carbon dioxide|CO&lt;sub&gt;2&lt;/sub&gt;]] [[partial pressure]] at 25&amp;nbsp;°C (''K''&lt;sub&gt;sp&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;{{val|4.47e-9}})
+|-
+!''P''&lt;sub&gt;CO&lt;sub&gt;2&lt;/sub&gt;&lt;/sub&gt; (atm)
+![[pH]]
+![Ca&lt;sup&gt;2+&lt;/sup&gt;] (mol/L)
+|-
+| 10&lt;sup&gt;−12&lt;/sup&gt; ||12.0||{{val|5.19e-3}}
+|-
+| 10&lt;sup&gt;−10&lt;/sup&gt; ||11.3||{{val|1.12e-3}}
+|-
+| 10&lt;sup&gt;−8&lt;/sup&gt; ||10.7||{{val|2.55e-4}}
+|-
+| 10&lt;sup&gt;−6&lt;/sup&gt; ||9.83||{{val|1.20e-4}}
+|-
+| 10&lt;sup&gt;−4&lt;/sup&gt; ||8.62||{{val|3.16e-4}}
+|-
+| {{val|3.5e-4}}||8.27||{{val|4.70e-4}}
+|-
+| 10&lt;sup&gt;−3&lt;/sup&gt; ||7.96||{{val|6.62e-4}}
+|-
+| 10&lt;sup&gt;−2&lt;/sup&gt; ||7.30||{{val|1.42e-3}}
+|-
+| 10&lt;sup&gt;−1&lt;/sup&gt; ||6.63||{{val|3.05e-3}}
+|-
+| 1 ||5.96||{{val|6.58e-3}}
+|-
+| 10 ||5.30||{{val|1.42e-2}}
+|}
+
+:{| width=&quot;450&quot;
+| style=&quot;width:50%; height:25px;&quot;| H&lt;sub&gt;2&lt;/sub&gt;O {{eqm}} H&lt;sup&gt;+&lt;/sup&gt; + OH&lt;sup&gt;−&lt;/sup&gt;
+| ''K'' = 10&lt;sup&gt;−14&lt;/sup&gt; at 25&amp;nbsp;°C
+|}
+
+(which is true for all aqueous solutions), and the fact that the solution must be electrically neutral,
+
+:2&amp;nbsp;[Ca&lt;sup&gt;2+&lt;/sup&gt;] + [H&lt;sup&gt;+&lt;/sup&gt;] = [{{chem|HCO|3|−}}] + 2&amp;nbsp;[{{chem|CO|3|2−}}] + [OH&lt;sup&gt;−&lt;/sup&gt;]
+
+make it possible to solve simultaneously for the remaining five unknown concentrations (note that the above form of the neutrality equation is valid only if calcium carbonate has been put in contact with pure water or with a neutral pH solution; in the case where the initial water solvent pH is not neutral, the equation is modified).
+
+The adjacent table shows the result for [Ca&lt;sup&gt;2+&lt;/sup&gt;] and [H&lt;sup&gt;+&lt;/sup&gt;] (in the form of pH) as a function of ambient partial pressure of CO&lt;sub&gt;2&lt;/sub&gt; (''K''&lt;sub&gt;sp&lt;/sub&gt; = {{val|4.47e-9}} has been taken for the calculation).
+* At atmospheric levels of ambient CO&lt;sub&gt;2&lt;/sub&gt; the table indicates that the solution will be slightly alkaline with a maximum CaCO&lt;sub&gt;3&lt;/sub&gt; solubility of 47&amp;nbsp;mg/L.
+* As ambient CO&lt;sub&gt;2&lt;/sub&gt; partial pressure is reduced below atmospheric levels, the solution becomes more and more alkaline. At extremely low ''P''&lt;sub&gt;CO&lt;sub&gt;2&lt;/sub&gt;&lt;/sub&gt;, dissolved CO&lt;sub&gt;2&lt;/sub&gt;, bicarbonate ion, and carbonate ion largely evaporate from the solution, leaving a highly alkaline solution of [[calcium hydroxide]], which is more soluble than CaCO&lt;sub&gt;3&lt;/sub&gt;. Note that for ''P''&lt;sub&gt;CO&lt;sub&gt;2&lt;/sub&gt;&lt;/sub&gt; = 10&lt;sup&gt;−12&lt;/sup&gt;&amp;nbsp;atm, the {{nowrap|[Ca&lt;sup&gt;2+&lt;/sup&gt;][OH&lt;sup&gt;−&lt;/sup&gt;]&lt;sup&gt;2&lt;/sup&gt;}} product is still below the solubility product of Ca(OH)&lt;sub&gt;2&lt;/sub&gt; ({{val|8e-6}}). For still lower CO&lt;sub&gt;2&lt;/sub&gt; pressure, Ca(OH)&lt;sub&gt;2&lt;/sub&gt; precipitation will occur before CaCO&lt;sub&gt;3&lt;/sub&gt; precipitation.
+* As ambient CO&lt;sub&gt;2&lt;/sub&gt; partial pressure increases to levels above atmospheric, pH drops, and much of the carbonate ion is converted to bicarbonate ion, which results in higher solubility of Ca&lt;sup&gt;2+&lt;/sup&gt;.
+
+The effect of the latter is especially evident in day-to-day life of people who have hard water. Water in aquifers underground can be exposed to levels of CO&lt;sub&gt;2&lt;/sub&gt; much higher than atmospheric. As such water percolates through calcium carbonate rock, the CaCO&lt;sub&gt;3&lt;/sub&gt; dissolves according to the second trend. When that same water then emerges from the tap, in time it comes into equilibrium with CO&lt;sub&gt;2&lt;/sub&gt; levels in the air by outgassing its excess CO&lt;sub&gt;2&lt;/sub&gt;. The calcium carbonate becomes less soluble as a result, and the excess precipitates as lime scale. This same process is responsible for the formation of [[stalactites]] and [[stalagmite]]s in limestone caves.
+
+Two hydrated phases of calcium carbonate, [[monohydrocalcite]] CaCO&lt;sub&gt;3&lt;/sub&gt;·H&lt;sub&gt;2&lt;/sub&gt;O and [[ikaite]] CaCO&lt;sub&gt;3&lt;/sub&gt;·6H&lt;sub&gt;2&lt;/sub&gt;O, may [[precipitate]] from water at ambient conditions and persist as metastable phases.
+
+=== With varying pH, temperature and salinity: CaCO&lt;sub&gt;3&lt;/sub&gt; scaling in swimming pools ===
+[[File:CaCO3-pH.gif|thumb|alt=Effects of salinity and pH on the maximum calcium ion level before scaling is anticipated at 25 C and 1 mM bicarbonate (e.g. in swimming pools)]]
+[[File:CaCO3-Temp.gif|thumb|alt=Effects of temperature and bicarbonate concentration on the maximum calcium ion level before scaling is anticipated at pH&amp;nbsp;7 and 5,000&amp;nbsp;ppm salinity (such as in swimming pools)]]
+In contrast to the open equilibrium scenario above, many swimming pools are managed by addition of [[sodium bicarbonate]] (NaHCO&lt;sub&gt;3&lt;/sub&gt;) to about 2 mM as a buffer, then control of pH through use of HCl, NaHSO&lt;sub&gt;4&lt;/sub&gt;, Na&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt;, NaOH or chlorine formulations that are acidic or basic. In this situation, dissolved inorganic carbon ([[total inorganic carbon]]) is far from equilibrium with atmospheric CO&lt;sub&gt;2&lt;/sub&gt;. Progress towards equilibrium through outgassing of CO&lt;sub&gt;2&lt;/sub&gt; is slowed by
+{{ordered list
+|the slow reaction
+:[[Carbonic acid|H&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt;]] {{eqm}} CO&lt;sub&gt;2&lt;/sub&gt;({{abbr|aq|aqueous solution}}) + H&lt;sub&gt;2&lt;/sub&gt;O;&lt;ref&gt;{{Cite journal | doi = 10.1021/jp909019u| pmid = 20039712| title = Comprehensive Study of the Hydration and Dehydration Reactions of Carbon Dioxide in Aqueous Solution| journal = The Journal of Physical Chemistry A| volume = 114| issue = 4| pages = 1734–40| year = 2010| last1 = Wang | first1 = X. | last2 = Conway | first2 = W. | last3 = Burns | first3 = R. | last4 = McCann | first4 = N. | last5 = Maeder | first5 = M. | bibcode = 2010JPCA..114.1734W}}&lt;/ref&gt;
+|limited aeration in a deep water column; and
+|periodic replenishment of bicarbonate to maintain buffer capacity (often estimated through measurement of [[alkalinity|‘total alkalinity’]]).}}
+
+In this situation, the dissociation constants for the much faster reactions
+:H&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt; {{eqm}} H&lt;sup&gt;+&lt;/sup&gt; + {{chem|HCO|3|−}} {{eqm}} 2 H&lt;sup&gt;+&lt;/sup&gt; + {{chem|CO|3|2−}}
+allow the prediction of concentrations of each dissolved inorganic carbon species in solution, from the added concentration of {{chem|HCO|3|−}} (which constitutes more than 90% of [[Bjerrum plot]] species from pH&amp;nbsp;7 to pH&amp;nbsp;8 at 25&amp;nbsp;°C in fresh water).&lt;ref name=&quot;Mook 2000&quot;&gt;{{cite book|last=Mook|first=W.|date=2000|url=http://www-naweb.iaea.org/napc/ih/documents/global_cycle/vol%20I/cht_i_09.pdf|contribution=Chemistry of carbonic acid in water|pages=143–165|title=Environmental Isotopes in the Hydrological Cycle: Principles and Applications|publisher=INEA/UNESCO|location=Paris|access-date=18 March 2014|archive-url=https://web.archive.org/web/20140318074927/http://www-naweb.iaea.org/napc/ih/documents/global_cycle/vol%20I/cht_i_09.pdf|archive-date=18 March 2014|url-status=dead}}&lt;/ref&gt; Addition of {{chem|HCO|3|−}} will increase {{chem|CO|3|2−}} concentration at any pH. Rearranging the equations given above, we can see that [Ca&lt;sup&gt;2+&lt;/sup&gt;] = {{sfrac|''K''&lt;sub&gt;sp&lt;/sub&gt;|[{{chem|CO|3|2−}}]}}, and [{{chem|CO|3|2−}}] = {{sfrac|''K''&lt;sub&gt;a2&lt;/sub&gt; [{{chem|HCO|3|−}}]|[H&lt;sup&gt;+&lt;/sup&gt;]}}. Therefore, when {{chem|HCO|3|−}} concentration is known, the maximum concentration of Ca&lt;sup&gt;2+&lt;/sup&gt; ions before scaling through CaCO&lt;sub&gt;3&lt;/sub&gt; precipitation can be predicted from the formula:
+
+:&lt;math chem&gt;[\ce{Ca^2+}]_\max = \frac{K_\mathrm{sp}}{K_{\mathrm{a}2}} \times \frac{[\ce{H+}]}{[\ce{HCO3-}]}&lt;/math&gt;
+
+The solubility product for CaCO&lt;sub&gt;3&lt;/sub&gt; (''K''&lt;sub&gt;sp&lt;/sub&gt;) and the dissociation constants for the dissolved inorganic carbon species (including ''K''&lt;sub&gt;a2&lt;/sub&gt;) are all substantially affected by temperature and [[salinity]],&lt;ref name=&quot;Mook 2000&quot; /&gt; with the overall effect that [Ca&lt;sup&gt;2+&lt;/sup&gt;]&lt;sub&gt;max&lt;/sub&gt; increases from freshwater to saltwater, and decreases with rising temperature, pH, or added bicarbonate level, as illustrated in the accompanying graphs.
+
+The trends are illustrative for pool management, but whether scaling occurs also depends on other factors including interactions with [[magnesium|Mg&lt;sup&gt;2+&lt;/sup&gt;]], [[Tetrahydroxyborate|{{chem|B(OH)|4|−}}]] and other ions in the pool, as well as supersaturation effects.&lt;ref&gt;{{cite journal |last=Wojtowicz |first=J. A. |year=1998 |title=Factors affecting precipitation of calcium carbonate |journal=Journal of the Swimming Pool and Spa Industry |volume=3 |issue=1 |pages=18–23 |url=http://jspsi.poolhelp.com/ARTICLES/JSPSI_V3N1_pp18-23.pdf |access-date=18 March 2014 |archive-url=https://web.archive.org/web/20140318061934/http://jspsi.poolhelp.com/ARTICLES/JSPSI_V3N1_pp18-23.pdf |archive-date=18 March 2014 |url-status=dead }}&lt;/ref&gt;&lt;ref&gt;{{cite journal|last=Wojtowicz|first=J. A.|year=1998|title=Corrections, potential errors, and significance of the saturation index|journal=Journal of the Swimming Pool and Spa Industry|volume=3|issue=1|pages=37–40|url=http://jspsi.poolhelp.com/ARTICLES/JSPSI_V3N1_pp37-40.pdf|access-date=18 March 2014|archive-url=https://web.archive.org/web/20120824152654/http://jspsi.poolhelp.com/ARTICLES/JSPSI_V3N1_pp37-40.pdf|archive-date=24 August 2012|url-status=dead}}&lt;/ref&gt; Scaling is commonly observed in electrolytic chlorine generators, where there is a high pH near the cathode surface and scale deposition further increases temperature. This is one reason that some pool operators prefer borate over bicarbonate as the primary pH buffer, and avoid the use of pool chemicals containing calcium.&lt;ref&gt;{{cite web|last=Birch |first=R. G. |date=2013 |url=https://scithings.id.au/BABES.pdf |title=BABES: a better method than &quot;BBB&quot; for pools with a salt-water chlorine generator |website=scithings.id.au}}&lt;/ref&gt;
+
+===Solubility in a strong or weak acid solution===
+Solutions of [[strong acid|strong]] ([[hydrochloric acid|HCl]]), moderately strong ([[sulfamic acid|sulfamic]]) or [[weak acid|weak]] ([[acetic acid|acetic]], [[citric acid|citric]], [[sorbic acid|sorbic]], [[lactic acid|lactic]], [[phosphoric acid|phosphoric]]) acids are commercially available. They are commonly used as [[descaling agent]]s to remove [[limescale]] deposits. The maximum amount of CaCO&lt;sub&gt;3&lt;/sub&gt; that can be &quot;dissolved&quot; by one liter of an acid solution can be calculated using the above equilibrium equations.
+* In the case of a strong monoacid with decreasing acid concentration [A] = [A&lt;sup&gt;−&lt;/sup&gt;], we obtain (with CaCO&lt;sub&gt;3&lt;/sub&gt; molar mass = 100&amp;nbsp;g/mol):
+
+::{| class=&quot;wikitable&quot;
+|-
+! width=&quot;160&quot; |[A] (mol/L)
+| 1
+| 10&lt;sup&gt;−1&lt;/sup&gt;
+| 10&lt;sup&gt;−2&lt;/sup&gt;
+| 10&lt;sup&gt;−3&lt;/sup&gt;
+| 10&lt;sup&gt;−4&lt;/sup&gt;
+| 10&lt;sup&gt;−5&lt;/sup&gt;
+| 10&lt;sup&gt;−6&lt;/sup&gt;
+| 10&lt;sup&gt;−7&lt;/sup&gt;
+| 10&lt;sup&gt;−10&lt;/sup&gt;
+|-
+! width=&quot;160&quot; |Initial pH
+| 0.00||1.00||2.00||3.00||4.00||5.00||6.00||6.79||7.00
+|-
+! width=&quot;160&quot; |Final pH
+| 6.75||7.25||7.75||8.14||8.25||8.26||8.26||8.26||8.27
+|-
+! width=&quot;160&quot; |Dissolved CaCO&lt;sub&gt;3&lt;/sub&gt;&lt;br /&gt;([[g/L]] of acid)
+| 50.0||5.00||0.514||0.0849||0.0504||0.0474||0.0471||0.0470||0.0470
+|}
+
+:where the initial state is the acid solution with no Ca&lt;sup&gt;2+&lt;/sup&gt; (not taking into account possible CO&lt;sub&gt;2&lt;/sub&gt; dissolution) and the final state is the solution with saturated Ca&lt;sup&gt;2+&lt;/sup&gt;. For strong acid concentrations, all species have a negligible concentration in the final state with respect to Ca&lt;sup&gt;2+&lt;/sup&gt; and A&lt;sup&gt;−&lt;/sup&gt; so that the neutrality equation reduces approximately to 2[Ca&lt;sup&gt;2+&lt;/sup&gt;] = [A&lt;sup&gt;−&lt;/sup&gt;] yielding {{nowrap|[Ca&lt;sup&gt;2+&lt;/sup&gt;] ≈ {{sfrac|1|2}} [A&lt;sup&gt;−&lt;/sup&gt;]}}. When the concentration decreases, [{{chem|HCO|3|−}}] becomes non-negligible so that the preceding expression is no longer valid. For vanishing acid concentrations, one can recover the final pH and the solubility of CaCO&lt;sub&gt;3&lt;/sub&gt; in pure water.
+* In the case of a weak monoacid (here we take acetic acid with [[pKa|p''K''&lt;sub&gt;a&lt;/sub&gt;]] = 4.76) with decreasing total acid concentration {{nowrap|1=[A] = [A&lt;sup&gt;−&lt;/sup&gt;] + [AH]}}, we obtain:
+
+::{| class=&quot;wikitable&quot;
+|-
+! width=&quot;160&quot; |[A] (mol/L)
+| 1
+| 10&lt;sup&gt;−1&lt;/sup&gt;
+| 10&lt;sup&gt;−2&lt;/sup&gt;
+| 10&lt;sup&gt;−3&lt;/sup&gt;
+| 10&lt;sup&gt;−4&lt;/sup&gt;
+| 10&lt;sup&gt;−5&lt;/sup&gt;
+| 10&lt;sup&gt;−6&lt;/sup&gt;
+| 10&lt;sup&gt;−7&lt;/sup&gt;
+| 10&lt;sup&gt;−10&lt;/sup&gt;
+|-
+! width=&quot;160&quot; |Initial pH
+| 2.38||2.88||3.39||3.91||4.47||5.15||6.02||6.79||7.00
+|-
+! width=&quot;160&quot; |Final pH
+| 6.75||7.25||7.75||8.14||8.25||8.26||8.26||8.26||8.27
+|-
+! width=&quot;160&quot; |Dissolved CaCO&lt;sub&gt;3&lt;/sub&gt;&lt;br /&gt;([[g/L]] of acid)
+| 49.5||4.99||0.513||0.0848||0.0504||0.0474||0.0471||0.0470||0.0470
+|}
+:For the same total acid concentration, the initial pH of the weak acid is less acid than the one of the strong acid; however, the maximum amount of CaCO&lt;sub&gt;3&lt;/sub&gt; which can be dissolved is approximately the same. This is because in the final state, the pH is larger than the p''K''&lt;sub&gt;a&lt;/sub&gt;, so that the weak acid is almost completely dissociated, yielding in the end as many H&lt;sup&gt;+&lt;/sup&gt; ions as the strong acid to &quot;dissolve&quot; the calcium carbonate.
+* The calculation in the case of [[phosphoric acid]] (which is the most widely used for domestic applications) is more complicated since the concentrations of the four dissociation states corresponding to this acid must be calculated together with [{{chem|HCO|3|−}}], [{{chem|CO|3|2−}}], [Ca&lt;sup&gt;2+&lt;/sup&gt;], [H&lt;sup&gt;+&lt;/sup&gt;] and [OH&lt;sup&gt;−&lt;/sup&gt;]. The system may be reduced to a seventh degree equation for [H&lt;sup&gt;+&lt;/sup&gt;] the numerical solution of which gives
+
+::{| class=&quot;wikitable&quot;
+|-
+! width=&quot;160&quot; |[A] (mol/L)
+| 1
+| 10&lt;sup&gt;−1&lt;/sup&gt;
+| 10&lt;sup&gt;−2&lt;/sup&gt;
+| 10&lt;sup&gt;−3&lt;/sup&gt;
+| 10&lt;sup&gt;−4&lt;/sup&gt;
+| 10&lt;sup&gt;−5&lt;/sup&gt;
+| 10&lt;sup&gt;−6&lt;/sup&gt;
+| 10&lt;sup&gt;−7&lt;/sup&gt;
+| 10&lt;sup&gt;−10&lt;/sup&gt;
+|-
+! width=&quot;160&quot; |Initial pH
+| 1.08||1.62||2.25||3.05||4.01||5.00||5.97||6.74||7.00
+|-
+! width=&quot;160&quot; |Final pH
+| 6.71||7.17||7.63||8.06||8.24||8.26||8.26||8.26||8.27
+|-
+! width=&quot;160&quot; |Dissolved CaCO&lt;sub&gt;3&lt;/sub&gt;&lt;br /&gt;([[g/L]] of acid)
+| 62.0||7.39||0.874||0.123||0.0536||0.0477||0.0471||0.0471||0.0470
+|}
+
+:where [A] = [H&lt;sub&gt;3&lt;/sub&gt;PO&lt;sub&gt;4&lt;/sub&gt;] + [{{chem|H|2|PO|4|−}}] + [{{chem|HPO|4|2−}}] + [{{chem|PO|4|3−}}] is the total acid concentration. Thus phosphoric acid is more efficient than a monoacid since at the final almost neutral pH, the second dissociated state concentration [{{chem|HPO|4|2−}}] is not negligible (see [[phosphoric acid#pH and composition of a phosphoric acid aqueous solution|phosphoric acid]]).
+
+== See also ==
+[[File:Vodní kámen.jpg|thumb|Electron micrograph of needle-like calcium carbonate crystals formed as limescale in a kettle]]
+{{div col|colwidth=22em}}
+* [[Cuttlebone]]
+* [[Cuttlefish]]
+* [[Gesso]]
+* [[Limescale]]
+* [[Marble]]
+* [[Ocean acidification]]
+* [[ Whiting event]]
+* [[List of climate engineering topics]]
+* [[Lysocline]]{{div col end}}
+
+==References==
+{{reflist}}
+
+==External links==
+* {{ICSC|1193|11}}
+* {{PubChemLink|516889}}
+* [[ATC codes]]: {{ATC|A02|AC01}} and {{ATC|A12|AA04}}
+* [http://calcium-carbonate.org.uk/calcium-carbonate.asp The British Calcium Carbonate Association – What is calcium carbonate]
+* [https://www.cdc.gov/niosh/npg/npgd0090.html CDC – NIOSH Pocket Guide to Chemical Hazards – Calcium Carbonate]
+
+{{Calcium compounds}}
+{{Antacids}}
+{{Drugs for treatment of hyperkalemia and hyperphosphatemia}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Calcium Carbonate}}
+[[Category:Calcium compounds]]
+[[Category:Carbonates]]
+[[Category:Limestone]]
+[[Category:Phosphate binders]]
+[[Category:Excipients]]
+[[Category:Antacids]]
+[[Category:Food stabilizers]]
+[[Category:E-number additives]]</text>
+      <sha1>d2w7fgo5cbxq2z0esf237xq8jpi1ufn</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>History of Serbia and Montenegro</title>
+    <ns>0</ns>
+    <id>44732</id>
+    <redirect title="Serbia and Montenegro" />
+    <revision>
+      <id>950704313</id>
+      <parentid>59017709</parentid>
+      <timestamp>2020-04-13T12:23:59Z</timestamp>
+      <contributor>
+        <username>1234qwer1234qwer4</username>
+        <id>20836525</id>
+      </contributor>
+      <comment>Redirecting to [[Serbia and Montenegro#History]] ([[User:Wugapodes/Capricorn|♑]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="108" xml:space="preserve">#REDIRECT [[Serbia and Montenegro#History]]
+
+{{Redirect category shell|
+{{R from merge}}
+{{R to section}}
+}}</text>
+      <sha1>pwfgygp25aje6pu32hvm8tnwmtzklqz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Emmanuelle Seigner</title>
+    <ns>0</ns>
+    <id>44733</id>
+    <revision>
+      <id>981466939</id>
+      <parentid>977548528</parentid>
+      <timestamp>2020-10-02T13:54:40Z</timestamp>
+      <contributor>
+        <username>Dawnseeker2000</username>
+        <id>1544984</id>
+      </contributor>
+      <minor />
+      <comment>date format audit, minor formatting</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="9383" xml:space="preserve">{{short description|French actress}}
+{{BLP sources|date=March 2013}}
+{{Use dmy dates|date=October 2020}}
+{{Infobox person
+| name                      = Emmanuelle Seigner
+| image                     = Emmanuelle Seigner Cannes 2013 2.jpg
+| image_size                = 220
+| alt                       = Emmanuelle Seigner at 2013 Cannes Film Festival
+| caption                   = Seigner at the [[2013 Cannes Film Festival]].
+| birth_date                = {{Birth date and age|1966|6|22|df=y}}
+| birth_place               = [[Paris]], France
+| birth_name                = 
+| occupation                = Actress, model, singer
+| years_active              = 1984–present
+| spouse                    = {{marriage|[[Roman Polanski]] | 1989}}
+| children                  = 2, including [[Morgane Polanski]]
+}} 
+'''Emmanuelle Seigner''' (born 22 June 1966)&lt;ref name=&quot;filmreference1&quot; /&gt; is a French actress, former fashion model, and singer. She is known for her roles in ''[[The Diving Bell and the Butterfly (film)|The Diving Bell and the Butterfly]]'' (2007), ''[[The Ninth Gate]]'' (1999) and ''[[Frantic (film)|Frantic]]'' (1988). She has been nominated for a [[César Award]] for [[César Award for Best Actress|Best Actress]] for ''[[Venus in Fur (film)|Venus in Fur]]'' (2013), and for two César Awards for [[César Award for Best Supporting Actress|Best Supporting Actress]] in ''[[Place Vendôme (film)|Place Vendôme]]'' (1998) and ''[[La Vie En Rose (film)|La Vie En Rose]]'' (2007).&lt;ref name=&quot;filmreference1&quot;&gt;{{cite web |url=http://www.filmreference.com/film/45/Emmanuelle-Seigner.html\ |title=Emmanuelle Seigner Biography (1966-) |publisher=Filmreference.com |accessdate=23 April 2013}}&lt;/ref&gt; She has been married to Polish film director [[Roman Polanski]] since 30 August 1989.
+
+== Life and career ==
+[[File:Roman Polanski Emmanuelle Seigner Césars 2011.jpg|thumb|Seigner with husband [[Roman Polanski]] at the [[César Awards 2011]].]]
+Seigner was born in Paris to a photographer father and a journalist mother.&lt;ref name=&quot;filmreference1&quot; /&gt; She is the granddaughter of the actor [[Louis Seigner]] and sister of the actress [[Mathilde Seigner]]. She was educated at a Catholic convent school and began modelling at the age of fourteen.&lt;ref&gt;{{Cite web|date=2014-04-08|title=Encore! - Modelling, music and movies: Emmanuelle Seigner on her eclectic career|url=https://www.france24.com/en/20140408-emmanuelle-seigner-distant-lovers-music-roman-polanski|access-date=2020-09-09|website=France 24|language=en}}&lt;/ref&gt;
+
+She married Roman Polanski on 30 August 1989, and they have two children: daughter [[Morgane Polanski|Morgane]] and son Elvis. Polanski is 33 years her senior. Her husband directed her in ''[[Frantic (film)|Frantic]]'' (1988), ''[[Bitter Moon]]'' (1992) and ''[[The Ninth Gate]]'' (1999). In 2010, Seigner was featured in [[Jerzy Skolimowski]]'s ''[[Essential Killing]]'', which went on to win the Special Jury Prize at the Venice Film Festival. In 2012, she played the principal role of Vanda in Polanski's French film adaption of [[David Ives]]'s two-character play ''[[Venus in Fur]]'', based on the [[Venus in Furs|Austrian novel of the near-same name]], for which she received praise as Vanda, an actress, playing against writer and theatre director Thomas played by [[Mathieu Amalric]].&lt;ref&gt;[http://www.premiere.fr/film/La-Venus-a-la-Fourrure-3513636 La Vénus à la Fourrure]. Premiere (in French). Retrieved 21 November 2013.&lt;/ref&gt;
+
+Seigner appears as the main character in the music video &quot;Hands Around My Throat&quot; by [[Death in Vegas]]. In 2006, she became the lead singer of the pop rock band Ultra Orange, and the group's name was changed to [[Ultra Orange &amp; Emmanuelle]].&lt;ref name=&quot;Premiere 2007 p. 114&quot;&gt;{{cite book |title=Premiere |issue=nos. 359-364 |year=2007 |url=https://books.google.com/books?id=ILYqAQAAIAAJ |language=fr |access-date=12 November 2018 |page=114}}&lt;/ref&gt; They released a self-titled album in 2007.&lt;ref name=&quot;LExpress.fr 2014&quot;&gt;{{cite web |title=Bourges: les filles du printemps |website=LExpress.fr |date=23 April 2014 |url=https://www.lexpress.fr/culture/musique/bourges-les-filles-du-printemps_1510486.html |language=fr |access-date=12 November 2018}}&lt;/ref&gt;&lt;ref name=&quot;Les inrockuptibles 2007&quot;&gt;{{cite book |title=Les inrockuptibles |publisher=Editions Indépendantes |issue=nos. 588-595 |year=2007 |url=https://books.google.com/books?id=eqAmAQAAIAAJ |language=fr |access-date=12 November 2018 |page=61}}&lt;/ref&gt; Seigner released a solo album called '' Distant Lover'' in 2014. She and Polanski live with their two children in Paris. She was an ambassadress of the [[Poland|Polish]] brand ''Dr Irena Eris''.
+
+== Filmography ==
+{| class=&quot;wikitable sortable&quot;
+|-
+! Year
+! Title
+! Role
+! Director
+! class=&quot;unsortable&quot;| Notes
+|-
+| rowspan=&quot;1&quot; | 1984
+| ''[[Year of the Jellyfish]]''
+|
+| [[Christopher Frank]]
+|
+|-
+| rowspan=&quot;1&quot; | 1985
+| ''[[Détective (1985 film)|Détective]]''
+| Princess of the Bahamas
+| [[Jean-Luc Godard]]
+|
+|-
+| rowspan=&quot;1&quot; | 1986
+| ''Cours privé''
+| Zanon
+| [[Pierre Granier-Deferre]]
+|
+|-
+| rowspan=&quot;1&quot; | 1988
+| ''[[Frantic (film)|Frantic]]''
+| Michelle
+| [[Roman Polanski]]
+|
+|-
+| rowspan=&quot;1&quot; | 1990
+| ''[[Dark Illness]]''
+| The Girl
+| [[Mario Monicelli]]
+|
+|-
+| rowspan=&quot;1&quot; | 1992
+| ''[[Bitter Moon]]''
+| Micheline &quot;Mimi&quot; Bouvier
+| Roman Polanski
+|
+|-
+| rowspan=&quot;1&quot; | 1994
+| ''[[The Smile (film)|Le Sourire]]''
+| Odile
+| [[Claude Miller]]
+|
+|-
+| rowspan=&quot;1&quot; | 1996
+| ''[[Let's Hope it Lasts]]''
+| Julie Neyrac
+| Michel Thibaud
+|
+|-
+| rowspan=&quot;2&quot; | 1997
+| ''[[Nirvana (film)|Nirvana]]''
+| Lisa
+| [[Gabriele Salvatores]]
+|
+|-
+| ''La divine poursuite''
+| Bobbi
+| [[Michel Deville]]
+|
+|-
+| rowspan=&quot;2&quot; | 1998
+| ''[[RPM (film)|RPM]]''
+| Michelle Claire
+| [[Ian Sharp]]
+|
+|-
+| ''[[Place Vendôme (film)|Place Vendôme]]''
+| Nathalie
+| [[Nicole Garcia]]
+| Nominated – [[César Award for Best Supporting Actress]]
+|-
+| rowspan=&quot;2&quot; | 1999
+| ''[[The Ninth Gate]]''
+| The Girl
+| Roman Polanski
+|
+|-
+| ''[[Buddy Boy]]''
+| Gloria
+| [[Mark Hanlon]]
+|
+|-
+| rowspan=&quot;2&quot; | 2001
+| ''Laguna''
+| Thelma Pianon
+| [[Dennis Berry (director)|Dennis Berry]]
+|
+|-
+| ''[[Witches to the North]]''
+| Lucilla
+| [[Giovanni Veronesi]]
+|
+|-
+| rowspan=&quot;2&quot; | 2003
+| ''[[Corps à corps]]''
+| Laura Bartelli
+| François Hanss
+|
+|-
+| ''Os Imortais''
+| Madeleine Durand
+| [[António-Pedro Vasconcelos]]
+|
+|-
+| rowspan=&quot;2&quot; | 2004
+| ''[[Happily Ever After (2004 film)|Happily Ever After]]''
+| Nathalie
+| [[Yvan Attal]]
+|
+|-
+| ''Sans toi''
+| Armelle
+| Liria Bégéja
+| Short
+|-
+| rowspan=&quot;1&quot; | 2005
+| ''[[Backstage (2005 film)|Backstage]]''
+| Lauren Waks
+| [[Emmanuelle Bercot]]
+|
+|-
+| rowspan=&quot;3&quot; | 2007
+| ''[[La Vie en rose (film)|La Vie en rose]]''
+| Titine
+| [[Olivier Dahan]]
+| Nominated – [[Satellite Award for Best Supporting Actress – Motion Picture]]
+|-
+| ''[[The Diving Bell and the Butterfly (film)|The Diving Bell and the Butterfly]]''
+| Céline Desmoulins
+| [[Julian Schnabel]]
+|
+|-
+| ''[[Four Last Songs (film)|Four Last Songs]]''
+| Helena
+| Francesca Joseph
+|
+|-
+| rowspan=&quot;2&quot; | 2009
+| ''[[Giallo (film)|Giallo]]''
+| Linda
+| [[Dario Argento]]
+|
+|-
+| ''[[Change of Plans]]''
+| Sarah Mattei
+| [[Danièle Thompson]]
+|
+|-
+| rowspan=&quot;2&quot; | 2010
+| ''[[Essential Killing]]''
+| Margaret
+| [[Jerzy Skolimowski]]
+|
+|-
+| ''Chicas''
+| Nuria
+| [[Yasmina Reza]]
+|
+|-
+| rowspan=&quot;3&quot; | 2012
+| ''[[A Few Hours of Spring]]''
+| Clémence
+| [[Stéphane Brizé]]
+|
+|-
+| ''[[In the House (film)|In the House]]''
+| Esther Artole
+| [[François Ozon]]
+|
+|-
+| ''[[The Man Who Laughs (2012 film)|The Man Who Laughs]]''
+| Duchess Josiane
+| [[Jean-Pierre Améris]]
+|
+|-
+| rowspan=&quot;2&quot; | 2013
+| ''[[Venus in Fur (film)|Venus in Fur]]''
+| Vanda Jourdain
+| Roman Polanski
+| International Cinephile Society Award – Best Actress&lt;br /&gt;Nominated – [[César Award for Best Actress]]&lt;br /&gt;Nominated – [[Globes de Cristal Award for Best Actress]]&lt;br /&gt;Nominated – [[Lumières Award for Best Actress]]
+|-
+| ''Croire''
+| Isabelle
+| [[Nicolas Cazalé]]
+| Short
+|-
+| rowspan=&quot;3&quot; | 2016
+| ''[[Heal the Living]]''
+| Marianne
+| [[Katell Quillévéré]]
+|
+|-
+| ''Le divan de Staline''
+| Lidia
+| [[Fanny Ardant]]
+|
+|-
+| ''[[The Siege of Jadotville (film)|The Siege of Jadotville]]''
+| Madame LaFontagne
+| Richie Smyth
+|
+|-
+| rowspan=&quot;1&quot; | 2017
+| ''[[Based on a True Story (film)|Based on a True Story]]''
+| Delphine
+| Roman Polanski
+|
+|-
+| rowspan=&quot;1&quot; | 2018
+| ''[[At Eternity's Gate (film)|At Eternity's Gate]]''
+| The Woman from Arles / Madame Ginoux
+| Julian Schnabel
+|
+|-
+| 2019
+| ''[[An Officer and a Spy (film)|An Officer and a Spy]]''
+| Pauline Monnier
+| Roman Polanski
+|
+|}
+
+== Discography ==
+[[File:Emmanuelle Seigner.jpg|thumb|Seigner in concert at the Mermaid Theatre London, 7 July 2008]]
+
+=== Studio albums ===
+* ''Ultra Orange &amp; Emmanuelle'' (2007) Sony
+* ''Dingue'' (2010)
+* ''Distant Lover'' (2014)
+* ''Diabolique'' (as L'épée) (2019) (with Anton Newcombe &amp; The Liminanas)
+
+== References ==
+{{reflist}}
+
+== External links ==
+{{Commons category}}
+* {{IMDb name}}
+* {{FMD model}}
+* {{AllMovie name}}
+* {{AlloCiné name}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Seigner, Emmanuelle}}
+[[Category:1966 births]]
+[[Category:Living people]]
+[[Category:Actresses from Paris]]
+[[Category:French female models]]
+[[Category:French female singers]]
+[[Category:French film actresses]]
+[[Category:20th-century French actresses]]
+[[Category:21st-century French actresses]]</text>
+      <sha1>ozth5jpwdjc8qpjqklk49f8hpno9ir9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Chalk</title>
+    <ns>0</ns>
+    <id>44734</id>
+    <revision>
+      <id>991658867</id>
+      <parentid>988710892</parentid>
+      <timestamp>2020-12-01T05:00:38Z</timestamp>
+      <contributor>
+        <username>MusikBot II</username>
+        <id>29539620</id>
+      </contributor>
+      <minor />
+      <comment>removing {{pp-pc}} as page is not pending changes-protected ([[User:MusikBot II/FixPP/FAQ|more info]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12350" xml:space="preserve">{{about|the sedimentary rock}}{{short description|A soft, white, porous sedimentary rock made of calcium carbonate}}
+{{more citations needed|date=May 2017}}
+{{Infobox rock
+|name=Chalk
+|type=Sedimentary
+|image=The_Needles.jpg
+|caption=[[The Needles]], situated off the [[Isle of Wight]], are part of the extensive [[Southern England Chalk Formation]].
+|composition=[[Calcite]] ([[calcium carbonate]])
+}}
+
+'''Chalk''' is a soft, white, porous, [[sedimentary rock|sedimentary]] [[carbonate rock]], a form of [[limestone]] composed of the [[mineral]] [[calcite]]. Calcite is an ionic salt called [[calcium carbonate]] or CaCO&lt;sub&gt;3&lt;/sub&gt;. It forms under reasonably deep marine conditions from the gradual accumulation of minute [[calcite]] shells ([[coccoliths]]) shed from micro-organisms called [[coccolithophores]]. [[Flint]] (a type of [[chert]]) is very common as bands parallel to the [[Bed (geology)|bedding]] or as [[Nodule (geology)|nodule]]s embedded in chalk. It is probably derived from [[Spicule (sponge)|sponge spicule]]s or other [[Silica|siliceous]] organisms as water is expelled upwards during compaction. Flint is often deposited around larger [[fossil]]s such as [[Echinoidea]] which may be [[Silicification|silicified]] (i.e. replaced molecule by molecule by flint).
+
+Chalk, as seen in Cretaceous deposits of Western Europe, is unusual among sedimentary limestones in the thickness of the beds. Most cliffs of chalk have very few obvious bedding planes unlike most thick sequences of limestone such as the [[Carboniferous Limestone]] or the Jurassic [[oolitic limestone]]s. This may indicate very stable conditions over tens of millions of years.
+[[File:Nitzana chalk curves (2), Western Negev, Israel.jpg|thumb|&quot;Nitzana Chalk curves&quot; situated at Western [[Negev]], [[Israel]] are chalk deposits formed in the [[Mesozoic]] era's [[Tethys Ocean]]]]
+
+Chalk has greater resistance to [[weathering]] and slumping than the [[clay]]s with which it is usually associated, thus forming tall, steep [[cliff]]s where chalk ridges meet the sea. Chalk [[hill]]s, known as chalk [[downland]], usually form where bands of chalk reach the surface at an angle, so forming a [[escarpment|scarp]] slope. Because chalk is well jointed it can hold a large volume of [[ground water]], providing a natural reservoir that releases water slowly through dry seasons.
+
+==Mining==
+[[File:Carrieres de Meudon.jpg|thumb|right|Former underground [[chalk mine]] in [[Meudon]], France]]
+{{Main|Chalk mining}}
+Chalk is [[chalk mining|mined]] from chalk deposits both above ground and [[underground mining (hard rock)|underground]]. Chalk mining boomed during the [[Industrial Revolution]], due to the need for chalk products such as [[quicklime]] and [[brick]]s. Some abandoned chalk mines remain tourist destinations due to their massive expanse and natural beauty.{{citation needed|date=May 2017}}
+
+==Deposits==
+The [[Chalk Group]] is a [[Europe]]an stratigraphic unit deposited during the late [[Cretaceous]] Period. It forms the famous [[White Cliffs of Dover]] in [[Kent]], England, as well as their counterparts of the [[Cap Blanc Nez]] on the other side of the [[Dover Strait]]. The [[Champagne region]] of France is mostly underlain by chalk deposits, which contain artificial caves used for [[wine storage]]. Some of the highest chalk cliffs in the world occur at [[Jasmund National Park]] in [[Germany]] and at [[Møns Klint]] in [[Denmark]] – both once formed a single island.
+
+==Formation==
+Ninety million years ago what is now the chalk downland of Northern Europe was ooze accumulating at the bottom of a great sea. Chalk was one of the earliest rocks made up of microscopic particles to be studied under the microscope, when it was found to be composed almost entirely of coccoliths. Their shells were made of calcite extracted from the rich seawater. As they died, a substantial layer gradually built up over millions of years and, through the weight of overlying sediments, eventually became consolidated into rock. Later earth movements related to the formation of the Alps raised these former sea-floor deposits above sea level.
+
+==Composition==
+The chemical composition of chalk is calcium carbonate, with minor amounts of [[silt]] and [[Clay minerals|clay]].&lt;ref&gt;Huxley, T. H.  1868.  On a piece of chalk.  Macmillan's Magazine
+{{cite web |url=http://aleph0.clarku.edu/huxley/CE8/Chalk.html |title=Archived copy |accessdate=2015-06-11 |url-status=live |archiveurl=http://archive.wikiwix.com/cache/20110718150141/http://aleph0.clarku.edu/huxley/CE8/Chalk.html |archivedate=2011-07-18 }}&lt;/ref&gt; It is formed in the sea by sub-microscopic plankton, which fall to the sea floor and are then consolidated and compressed during [[diagenesis]] into chalk rock.

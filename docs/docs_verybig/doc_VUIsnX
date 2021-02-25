@@ -1,0 +1,258 @@
+Its attractions include Eiben Forest near Dermbach, an unusual sandstone cave at Walldorf, the deepest lake in Germany formed by subsidence (near Bernshausen), and the &quot;[[Krayenburg]]&quot;, the ruins of a castle.
+
+Its towns and main settlements are [[Hildburghausen]], [[Meiningen]], [[Bad Salzungen]], [[Tiefenort]], [[Merkers-Kieselbach]], [[Heringen]], [[Philippsthal (Werra)|Philippsthal]], [[Gerstungen]], [[Wanfried]], [[Eschwege]], [[Bad Sooden-Allendorf]], [[Witzenhausen]] and Hannoversch Münden.
+
+==Gallery==
+&lt;gallery mode=packed &gt;
+File:Werra Treffurt.JPG|The Werra near Treffurt
+File:Werra bei Creuzburg.JPG|The Werra near Creuzburg
+File:Eschwege - Houses on the river Werra.jpg|The Werra in Eschwege
+&lt;/gallery&gt;
+
+==See also==
+*[[Werra Viaduct, Hedemünden]]
+*[[List of rivers of Thuringia]]
+*[[List of rivers of Hesse]]
+*[[List of rivers of Lower Saxony]]
+
+== References ==
+{{reflist}}
+
+== External links ==
+*{{Commons-inline}}
+
+{{Authority control}}
+
+[[Category:Werra basin| ]]
+[[Category:Rivers of Hesse]]
+[[Category:Rivers of Lower Saxony]]
+[[Category:Rivers of Thuringia]]
+[[Category:Federal waterways in Germany]]
+[[Category:Rivers of Germany]]</text>
+      <sha1>0rm4lmjzykeve2yb9neuih6ewybavjt</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Gain (electronics)</title>
+    <ns>0</ns>
+    <id>41968</id>
+    <revision>
+      <id>990918668</id>
+      <parentid>990916724</parentid>
+      <timestamp>2020-11-27T07:12:38Z</timestamp>
+      <contributor>
+        <username>Camden Ink</username>
+        <id>40659179</id>
+      </contributor>
+      <comment>/* Logarithmic units and decibels */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="9315" xml:space="preserve">{{short description|Ability of a circuit to increase the power or amplitude of a signal}}
+{{distinguish|Antenna gain}}
+
+In [[electronics]], '''gain''' is a measure of the ability of a [[two-port]] [[electrical network|circuit]] (often an [[amplifier]]) to increase the [[Electric power|power]] or [[amplitude]] of a [[Signal (electrical engineering)|signal]] from the input to the output port&lt;ref name=&quot;Graf&quot;&gt;{{cite book
+ | last1  = Graf
+ | first1 = Rudolf F. 
+ | title  = Modern Dictionary of Electronics
+ | publisher = Newnes
+ | edition = 7
+ | date   = 1999
+ | location = 
+ | pages  = 314
+ | language = 
+ | url    = https://books.google.com/books?id=AYEKAQAAQBAJ&amp;pg=PA314&amp;dq=amplifier+gain
+ | doi    = 
+ | id     = 
+ | isbn   = 0080511988
+ }}&lt;/ref&gt;&lt;ref name=&quot;Basu&quot;&gt;{{cite book
+ | last1  = Basu
+ | first1 = Dipak 
+ | title  = Dictionary of Pure and Applied Physics
+ | publisher = CRC Press
+ | date   = 2000
+ | location = 
+ | pages  = 157
+ | language = 
+ | url    = https://books.google.com/books?id=-QhAkBSk7IUC&amp;pg=PA157&amp;dq=gain
+ | doi    = 
+ | id     = 
+ | isbn   = 1420050222
+ }}&lt;/ref&gt;&lt;ref name=&quot;Bahl&quot;&gt;{{cite book
+ | last1  = Bahl
+ | first1 = Inder  
+ | title  = Fundamentals of RF and Microwave Transistor Amplifiers
+ | publisher = John Wiley and Sons 
+ | date   = 2009
+ | location = 
+ | pages  = 34
+ | language = 
+ | url    = https://books.google.com/books?id=u9kVm8RG4k4C&amp;pg=PA34&amp;dq=gain+%22two-port
+ | doi    = 
+ | id     = 
+ | isbn   = 0470462310
+ }}&lt;/ref&gt;&lt;ref name=&quot;White&quot;&gt;{{cite book
+ | last1  = White
+ | first1 = Glenn  
+ | last2  = Louie
+ | first2 = Gary J
+ | title  = The Audio Dictionary
+ | publisher = University of Washington Press
+ | edition = 3
+ | date   = 2005
+ | location = 
+ | pages  = 18
+ | language = 
+ | url    = https://books.google.com/books?id=DulVm8t88QkC&amp;pg=PA18&amp;dq=amplifier+%22voltage+gain%22+%22current+gain%22++%22power+gain%22
+ | doi    = 
+ | id     = 
+ | isbn   = 0295984988
+ }}&lt;/ref&gt; by adding energy converted from some [[power supply]] to the signal. It is usually defined as the mean [[ratio]] of the [[Signalling (telecommunication)|signal]] amplitude or power at the output [[port (circuit theory)|port]] to the amplitude or power at the input port.&lt;ref name=&quot;Graf&quot; /&gt; It is often expressed using the [[logarithm]]ic  [[decibel]] (dB) units (&quot;dB gain&quot;).&lt;ref name=&quot;White&quot; /&gt;  A gain greater than one (greater than zero dB), that is amplification, is the defining property of an [[active component]] or circuit, while a [[passive circuit]] will have a gain of less than one.&lt;ref name=&quot;White&quot; /&gt;
+
+The term ''gain'' alone is ambiguous, and can refer to the ratio of output to input  [[voltage]] (''voltage gain''), [[Electric current|current]] (''current gain'') or electric power (''power gain'').&lt;ref name=&quot;White&quot; /&gt;  In the field of audio and general purpose amplifiers, especially [[operational amplifier]]s, the term usually refers to voltage gain,&lt;ref name=&quot;Basu&quot; /&gt;  but in [[radio frequency]] amplifiers it usually refers to power gain.  Furthermore, the term gain is also applied in systems such as [[sensor]]s where the input and output have different units; in such cases the gain units must be specified, as in &quot;5 microvolts per photon&quot; for the [[responsivity]] of a [[photosensor]]. The &quot;gain&quot; of a [[bipolar transistor]] normally refers to forward current transfer ratio, either ''h''&lt;sub&gt;FE&lt;/sub&gt; (&quot;beta&quot;, the static ratio of ''I''&lt;sub&gt;''c''&lt;/sub&gt; divided by ''I''&lt;sub&gt;b&lt;/sub&gt; at some operating point), or sometimes ''h''&lt;sub&gt;fe&lt;/sub&gt; (the small-signal current gain, the slope of the graph of ''I''&lt;sub&gt;''c''&lt;/sub&gt; against ''I''&lt;sub&gt;''b''&lt;/sub&gt; at a point).
+
+The gain of an electronic device or circuit generally varies with the [[frequency]] of the applied signal.  Unless otherwise stated, the term refers to the gain for frequencies in the [[passband]], the intended operating frequency range of the equipment. 
+The term ''gain'' has a different meaning in [[antenna (radio)|antenna]] design; [[antenna gain]] is the ratio of [[radiation intensity]] from a directional antenna to &lt;math&gt;P_\text{in}/4\pi&lt;/math&gt; (mean radiation intensity from a lossless antenna).
+
+[[File:Amplification2.svg|thumb|Graph of the input &lt;math&gt;v_i(t)&lt;/math&gt; ''&lt;span style=&quot;color:blue;&quot;&gt;(blue)&lt;/span&gt;'' and output voltage &lt;math&gt;v_o(t)&lt;/math&gt; ''&lt;span style=&quot;color:red;&quot;&gt;(red)&lt;/span&gt;'' of an ideal linear [[amplifier]] with a voltage gain of 3 with an arbitrary input signal.   At any instant the output voltage is three times the input voltage.]]
+
+==Logarithmic units and decibels==
+
+===Power gain===
+[[Power gain]], in [[decibel]]s (dB), is defined as follows:
+
+:&lt;math&gt;\text{gain-db}=10 \log_{10} \left(\frac{P_\text{out}}{P_\text{in}}\right)~\text{dB},&lt;/math&gt;
+
+where &lt;math&gt;P_\text{in}&lt;/math&gt; is the power applied to the input, &lt;math&gt;P_\text{out}&lt;/math&gt; is the power from the output.
+
+A similar calculation can be done using a [[natural logarithm]] instead of a decimal logarithm, resulting in [[neper]]s instead of decibels:
+
+:&lt;math&gt;\text{gain-np} = \frac{1}{2} \ln\left(\frac{P_\text{out}}{P_\text{in}}\right)~\text{Np}.&lt;/math&gt;
+
+===Voltage gain===
+The power gain can be calculated using voltage instead of power using [[Joule's first law]] &lt;math&gt;P = V^2/R&lt;/math&gt;; the formula is:
+
+:&lt;math&gt;\text{gain-db} = 10 \log{\frac{\frac{V_\text{out}^2}{R_\text{out}}}{\frac{V_\text{in}^2}{R_\text{in}}}}~\mathrm{dB}.&lt;/math&gt;
+
+In many cases, the input impedance &lt;math&gt;R_\text{in}&lt;/math&gt; and output impedance &lt;math&gt;R_\text{out}&lt;/math&gt; are equal, so the above equation can be simplified to:
+
+:&lt;math&gt;\text{gain-db} = 10 \log \left(\frac{V_\text{out}}{V_\text{in}}\right)^2~\text{dB},&lt;/math&gt;
+
+:&lt;math&gt;\text{gain-db} = 20 \log \left(\frac{V_\text{out}}{V_\text{in}}\right)~\text{dB}.&lt;/math&gt;
+
+This simplified formula, the [[20 log rule]], is used to calculate a '''voltage gain''' in decibels and is equivalent to a power gain if and only if the [[Electrical impedance|impedances]] at input and output are equal.
+
+===Current gain===
+In the same way, when power gain is calculated using current instead of power, making the substitution &lt;math&gt;P = I^2 R&lt;/math&gt;, the formula is:
+
+:&lt;math&gt;\text{gain-db} = 10 \log{\left(\frac{I_\text{out}^2 R_\text{out}}{I_\text{in}^2 R_\text{in}}\right)}~\text{dB}.&lt;/math&gt;
+
+In many cases, the input and output impedances are equal, so the above equation can be simplified to:
+
+:&lt;math&gt;\text{gain-db} = 10 \log \left(\frac{I_\text{out}}{I_\text{in}}\right)^2~\text{dB},&lt;/math&gt;
+
+:&lt;math&gt;\text{gain-db} = 20 \log \left(\frac{I_\text{out}}{I_\text{in}}\right)~\text{dB}.&lt;/math&gt;
+
+This simplified formula is used to calculate a '''current gain''' in decibels and is equivalent to the power gain if and only if the [[Electrical impedance|impedances]] at input and output are equal.
+
+The &quot;current gain&quot; of a [[bipolar transistor]],  &lt;math&gt;h_\text{FE}&lt;/math&gt; or &lt;math&gt;h_\text{fe}&lt;/math&gt;, is normally given as a dimensionless number, the ratio of &lt;math&gt;I_\text{c}&lt;/math&gt; to &lt;math&gt;I_\text{b}&lt;/math&gt; (or slope of the &lt;math&gt;I_\text{c}&lt;/math&gt;-versus-&lt;math&gt;I_\text{b}&lt;/math&gt; graph, for &lt;math&gt;h_\text{fe}&lt;/math&gt;).
+
+In the cases above, gain will be a dimensionless quantity, as it is the ratio of like units (decibels are not used as units, but rather as a method of indicating a logarithmic relationship).  In the bipolar transistor example, it is the ratio of the output current to the input current, both measured in [[ampere]]s. In the case of other devices, the gain will have a value in [[SI]] units. Such is the case with the [[operational transconductance amplifier]], which has an open-loop gain ([[transconductance]]) in [[siemens (unit)|siemens]] ([[mho]]s), because the gain is a ratio of the output current to the input voltage.
+
+===Example===
+Q. An amplifier has an input impedance of 50 ohms and drives a load of 50 ohms. When its input (&lt;math&gt;V_\text{in}&lt;/math&gt;) is 1 volt, its output (&lt;math&gt;V_\text{out}&lt;/math&gt;) is 10 volts. What is its voltage and power gain?
+
+A. Voltage gain is simply:
+
+:&lt;math&gt;\text{gain} = \frac{V_\text{out}}{V_\text{in}} = \frac{10}{1} = 10~\text{V/V}.&lt;/math&gt;
+
+The units V/V are optional but make it clear that this figure is a voltage gain and not a power gain.
+Using the expression for power, ''P'' = ''V''&lt;sup&gt;2&lt;/sup&gt;/''R'', the power gain is:
+
+:&lt;math&gt;\text{gain} = \frac{V_\text{out}^2/50}{V_\text{in}^2/50} = \frac{V_\text{out}^2}{V_\text{in}^2} = \frac{10^2}{1^2} = 100~\text{W/W}.&lt;/math&gt;
+
+Again, the units W/W are optional. Power gain is more usually expressed in decibels, thus:
+
+:&lt;math&gt;\text{gain-db} = G_\text{dB} = 10 \log G_\text{W/W} = 10 \log 100 = 10 \times 2 = 20~\text{dB}.&lt;/math&gt;
+
+A gain of factor 1 (equivalent to 0&amp;nbsp;dB) where both input and output are at the same voltage level and impedance is also known as ''[[1 (number)|unity]] gain''.
+
+==See also==
+{{div col|colwidth=20em}}
+* [[Active laser medium]]
+* [[Antenna gain]]
+* [[Aperture-to-medium coupling loss]]
+* [[Automatic gain control]]
+* [[Attenuation]]
+* [[Complex gain]]
+* [[DC offset]]
+* [[Effective radiated power]]
+* [[Gain before feedback]]
+* [[Insertion gain]]
+* [[Loop gain]]
+* [[Open-loop gain]]
+* [[Net gain (telecommunications)|Net gain]]
+* [[Power gain]]
+* [[Process gain]]
+* [[Transmitter power output]]
+{{div col end}}
+
+==References==
+{{Reflist}}
+* {{FS1037C}}
+
+[[Category:Antennas (radio)]]
+[[Category:Transfer functions]]
+[[Category:Electrical parameters]]</text>
+      <sha1>bbuqjmsgaauubw3nld26ko7etsxjxo4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Loss</title>
+    <ns>0</ns>
+    <id>41969</id>
+    <revision>
+      <id>985644950</id>
+      <parentid>984187616</parentid>
+      <timestamp>2020-10-27T02:55:53Z</timestamp>
+      <contributor>
+        <username>EditAvenger</username>
+        <id>26943296</id>
+      </contributor>
+      <comment>/* Music */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2219" xml:space="preserve">{{Wiktionary|loss|lose}}
+
+'''Loss''' may refer to:
+
+{{toc right}}
+
+==People with the surname==
+*[[Joe Loss]] (1909–1990), founder of The Joe Loss Orchestra
+
+==Arts, entertainment, and media==
+===Music===
+*[[Loss (Bass Communion album)|''Loss'' (Bass Communion album)]] (2006)
+*[[Loss (Mull Historical Society album)|''Loss'' (Mull Historical Society album)]] (2001)
+*&quot;Losses&quot;, a song by Drake from ''[[Dark Lane Demo Tapes]]'' (2020)
+
+===Other uses in arts, entertainment, and media===
+*[[Loss (comic)|''Loss'' (comic)]], a webcomic strip and internet meme
+*[[Loss (film)|''Loss'' (film)]], a 2008 film by Maris Martinsons
+*[[Lord Loss (character)]], a character from Darren Shan's ''The Demonata''
+*&quot;[[The Loss]]&quot;, a 1990 episode of ''Star Trek: The Next Generation''
+
+==Grief==
+*[[Grief]], an emotional response to loss
+**[[Animal loss]], grief over the loss of an animal
+
+==Mathematics, science, and technology==
+*[[Angular misalignment loss]], power loss caused by the deviation from optimum angular alignment
+*[[Bridging loss]], the loss that results when an impedance is connected across a transmission line
+*[[Coupling loss]], the loss that occurs when energy is transferred from one circuit, optical device, or medium to another
+*[[Insertion loss]], the decrease in transmitted signal power resulting from the insertion of a device in a transmission line or optical fiber
+*[[Loss function]], in statistics, a function representing the cost associated with an event
+*[[Path loss]], the attenuation undergone by an electromagnetic wave in transit from a transmitter to a receiver
+**[[Free-space path loss]], the loss in signal strength that would result if all influences were sufficiently removed having no effect on its propagation
+*[[Return loss]], the ratio of the amplitude of the reflected wave to the amplitude of the incident wave
+*[[Round-trip loss]] in laser physics refers to energy lost due to scattering or absorption

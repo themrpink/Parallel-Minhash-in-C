@@ -1,0 +1,172 @@
+Classes in &lt;code&gt;java.lang&lt;/code&gt; are automatically imported into every [[source file]].
+
+==== java.lang.ref ====
+The {{Javadoc:SE|package=java.lang.ref|java/lang/ref}} package provides more flexible types of [[Reference (computer science)|references]] than are otherwise available, permitting limited interaction between the application and the [[Java Virtual Machine]] (JVM) [[garbage collection (computer science)|garbage collector]].  It is an important package, central enough to the language for the language designers to give it a name that starts with &quot;java.lang&quot;, but it is somewhat special-purpose and not used by a lot of developers.  This package was added in J2SE 1.2.
+
+Java has an expressive system of references and allows for special behavior for garbage collection. A normal reference in Java is known as a &quot;strong reference.&quot;  The &lt;code&gt;java.lang.ref&lt;/code&gt; package defines three other types of references—soft, [[weak reference|weak]], and phantom references.  Each type of reference is designed for a specific use.
+
+* A {{Javadoc:SE|java/lang/ref|SoftReference}} can be used to implement a [[cache (computing)|cache]].  An object that is not reachable by a strong reference (that is, not strongly reachable), but is referenced by a soft reference is called &quot;softly reachable.&quot;  A softly reachable object may be garbage collected at the discretion of the garbage collector.  This generally means that softly reachable objects are only garbage collected when free memory is low—but again, this is at the garbage collector's discretion. Semantically, a soft reference means, &quot;Keep this object when nothing else references it, unless the memory is needed.&quot;
+* A {{Javadoc:SE|java/lang/ref|WeakReference}} is used to implement weak maps.  An object that is not strongly or softly reachable, but is referenced by a weak reference is called &quot;[[weakly reachable]]&quot;.  A weakly reachable object is garbage collected in the next collection cycle. This behavior is used in the class {{Javadoc:SE|package=java.util|java/util|WeakHashMap}}.  A weak map allows the programmer to put key/value pairs in the map and not worry about the objects taking up memory when the key is no longer reachable anywhere else.  Another possible application of weak references is the [[string intern pool]].  Semantically, a weak reference means &quot;get rid of this object when nothing else references it at the next garbage collection.&quot;
+* A {{Javadoc:SE|java/lang/ref|PhantomReference}} is used to reference objects that have been marked for garbage collection and have been [[finalizer|finalized]], but have not yet been reclaimed. An object that is not strongly, softly or weakly reachable, but is referenced by a phantom reference is called &quot;phantom reachable.&quot; This allows for more flexible cleanup than is possible with the finalization mechanism alone.  Semantically, a phantom reference means &quot;this object is no longer needed and has been finalized in preparation for being collected.&quot;
+
+Each of these reference types extends the {{Javadoc:SE|java/lang/ref|Reference}} class, which provides the {{Javadoc:SE|name=get()|java/lang/ref|Reference|get()}} [[method (computer science)|method]] to return a strong reference to the referent object (or &lt;code&gt;null&lt;/code&gt; if the reference has been cleared or if the reference type is phantom), and the {{Javadoc:SE|name=clear()|java/lang/ref|Reference|clear()}} method to clear the reference.
+
+The &lt;code&gt;java.lang.ref&lt;/code&gt; also defines the class {{Javadoc:SE|java/lang/ref|ReferenceQueue}}, which can be used in each of the applications discussed above to keep track of objects that have changed reference type.  When a &lt;code&gt;Reference&lt;/code&gt; is created it is optionally registered with a reference queue.  The application polls the reference queue to get references that have changed reachability state.
+
+==== java.lang.reflect ====
+[[Reflection (computer science)|Reflection]] is a constituent of the [[Java (programming language)|Java]] API that lets Java code examine and &quot;reflect&quot; on Java components at runtime and use the reflected members. Classes in the {{Javadoc:SE|package=java.lang.reflect|java/lang/reflect}} package, along with &lt;code&gt;java.lang.Class&lt;/code&gt; and {{Javadoc:SE|package=java.lang|java/lang|Package}} accommodate applications such as [[debugger]]s, [[interpreter (computing)|interpreters]], object inspectors, [[class browser]]s, and services such as object [[serialization]] and [[JavaBeans]] that need access to either the public members of a target object (based on its runtime class) or the members declared by a given class. This package was added in JDK 1.1.
+
+Reflection is used to instantiate classes and invoke methods using their names, a concept that allows for dynamic programming.  Classes, interfaces, methods, [[field (computer science)|fields]], and [[constructor (computer science)|constructor]]s can all be discovered and used at runtime.  Reflection is supported by [[metadata]] that the JVM has about the program.
+
+===== Techniques =====
+There are basic techniques involved in reflection:
+
+* Discovery – this involves taking an object or class and discovering the members, superclasses, implemented interfaces, and then possibly using the discovered elements.
+* Use by name – involves starting with the symbolic name of an element and using the named element.
+
+====== Discovery ======
+Discovery typically starts with an object and calling the {{Javadoc:SE|java/lang|Object|getClass()}} method to get the object's &lt;code&gt;Class&lt;/code&gt;.  The &lt;code&gt;Class&lt;/code&gt; object has several methods for discovering the contents of the class, for example:
+
+* {{Javadoc:SE|name=getMethods()|java/lang|Class|getMethods()}} – returns an array of {{Javadoc:SE|java/lang/reflect|Method}} objects representing all the public methods of the class or interface
+* {{Javadoc:SE|name=getConstructors()|java/lang|Class|getConstructors()}} – returns an array of {{Javadoc:SE|java/lang/reflect|Constructor}} objects representing all the public constructors of the class
+* {{Javadoc:SE|name=getFields()|java/lang|Class|getFields()}} – returns an array of {{Javadoc:SE|java/lang/reflect|Field}} objects representing all the public fields of the class or interface
+* {{Javadoc:SE|name=getClasses()|java/lang|Class|getClasses()}} – returns an array of &lt;code&gt;Class&lt;/code&gt; objects representing all the public classes and interfaces that are members (e.g. [[inner class]]es) of the class or interface
+* {{Javadoc:SE|name=getSuperclass()|java/lang|Class|getSuperclass()}} – returns the &lt;code&gt;Class&lt;/code&gt; object representing the superclass of the class or interface (&lt;code&gt;null&lt;/code&gt; is returned for interfaces)
+* {{Javadoc:SE|name=getInterfaces()|java/lang|Class|getInterfaces()}} – returns an array of &lt;code&gt;Class&lt;/code&gt; objects representing all the interfaces that are implemented by the class or interface
+
+====== Use by name ======
+The &lt;code&gt;Class&lt;/code&gt; object can be obtained either through discovery, by using the ''class literal'' (e.g. &lt;code&gt;MyClass.class&lt;/code&gt;) or by using the name of the class (e.g. {{Javadoc:SE|name=Class.forName(&quot;mypackage.MyClass&quot;)|java/lang|Class|forName(java.lang.String)}}).  With a &lt;code&gt;Class&lt;/code&gt; object, member &lt;code&gt;Method&lt;/code&gt;, &lt;code&gt;Constructor&lt;/code&gt;, or &lt;code&gt;Field&lt;/code&gt; objects can be obtained using the symbolic name of the member.  For example:
+* {{Javadoc:SE|name=getMethod(&quot;methodName&quot;, Class...)|java/lang|Class|getMethod(java.lang.String,java.lang.Class...)}} – returns the &lt;code&gt;Method&lt;/code&gt; object representing the public method with the name &quot;methodName&quot; of the class or interface that accepts the parameters specified by the &lt;code&gt;Class...&lt;/code&gt; parameters.
+* {{Javadoc:SE|name=getConstructor(Class...)|java/lang|Class|getConstructor(java.lang.Class...)}} – returns the &lt;code&gt;Constructor&lt;/code&gt; object representing the public constructor of the class that accepts the parameters specified by the &lt;code&gt;Class...&lt;/code&gt; parameters.
+* {{Javadoc:SE|name=getField(&quot;fieldName&quot;)|java/lang|Class|getField(java.lang.String)}} – returns the &lt;code&gt;Field&lt;/code&gt; object representing the public field with the name &quot;fieldName&quot; of the class or interface.
+
+&lt;code&gt;Method&lt;/code&gt;, &lt;code&gt;Constructor&lt;/code&gt;, and &lt;code&gt;Field&lt;/code&gt; objects can be used to dynamically access the represented member of the class.  For example:
+* {{Javadoc:SE|name=Field.get(Object)|java/lang/reflect|Field|get(java.lang.Object)}} – returns an &lt;code&gt;Object&lt;/code&gt; containing the value of the field from the instance of the object passed to &lt;code&gt;get()&lt;/code&gt;.  (If the &lt;code&gt;Field&lt;/code&gt; object represents a static field then the &lt;code&gt;Object&lt;/code&gt; parameter is ignored and may be &lt;code&gt;null&lt;/code&gt;.)
+* {{Javadoc:SE|name=Method.invoke(Object, Object...)|java/lang/reflect|Method|invoke(java.lang.Object,java.lang.Object...)}} – returns an &lt;code&gt;Object&lt;/code&gt; containing the result of invoking the method for the instance of the first &lt;code&gt;Object&lt;/code&gt; parameter passed to &lt;code&gt;invoke()&lt;/code&gt;.  The remaining &lt;code&gt;Object...&lt;/code&gt; parameters are passed to the method.  (If the &lt;code&gt;Method&lt;/code&gt; object represents a [[static method]] then the first &lt;code&gt;Object&lt;/code&gt; parameter is ignored and may be &lt;code&gt;null&lt;/code&gt;.)
+* {{Javadoc:SE|name=Constructor.newInstance(Object...)|java/lang/reflect|Constructor|newInstance(java.lang.Object...)}} – returns the new &lt;code&gt;Object&lt;/code&gt; instance from invoking the constructor.  The &lt;code&gt;Object...&lt;/code&gt; parameters are passed to the constructor. (Note that the parameterless constructor for a class can also be invoked by calling {{Javadoc:SE|name=newInstance()|java/lang|Class|newInstance()}}.)
+
+===== Arrays and proxies =====
+The &lt;code&gt;java.lang.reflect&lt;/code&gt; package also provides an {{Javadoc:SE|java/lang/reflect|Array}} class that contains static methods for creating and manipulating array objects, and since J2SE 1.3, a {{Javadoc:SE|java/lang/reflect|Proxy}} class that supports dynamic creation of proxy classes that implement specified interfaces.
+
+The implementation of a &lt;code&gt;Proxy&lt;/code&gt; class is provided by a supplied object that implements the {{Javadoc:SE|java/lang/reflect|InvocationHandler}} interface.  The &lt;code&gt;InvocationHandler&lt;/code&gt;'s {{Javadoc:SE|name=invoke(Object, Method, Object&amp;#91;&amp;#93;)|java/lang/reflect|InvocationHandler|invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object&amp;#91;&amp;#93;)}} method is called for each method invoked on the proxy object—the first parameter is the proxy object, the second parameter is the &lt;code&gt;Method&lt;/code&gt; object representing the method from the interface implemented by the proxy, and the third parameter is the array of parameters passed to the interface method.  The &lt;code&gt;invoke()&lt;/code&gt; method returns an &lt;code&gt;Object&lt;/code&gt; result that contains the result returned to the code that called the proxy interface method.
+
+=== java.io ===
+The {{Javadoc:SE|package=java.io|java/io}} package contains classes that support [[input/output|input and output]].  The classes in the package are primarily [[stream (computing)|stream-oriented]]; however, a class for [[random access]] [[Computer file|files]] is also provided. The central classes in the package are {{Javadoc:SE|java/io|InputStream}} and {{Javadoc:SE|java/io|OutputStream}}, which are [[Class (computer science)#Concrete classes|abstract]] base classes for reading from and writing to [[byte stream]]s, respectively.  The related classes {{Javadoc:SE|java/io|Reader}} and {{Javadoc:SE|java/io|Writer}} are abstract base classes for reading from and writing to [[character (computing)|character]] streams, respectively.  The package also has a few miscellaneous classes to support interactions with the host [[file system]].
+
+==== Streams ====
+The stream classes follow the [[decorator pattern]] by extending the base subclass to add features to the stream classes. Subclasses of the base stream classes are typically named for one of the following attributes:
+
+* the source/destination of the stream data
+* the type of data written to/read from the stream
+* additional processing or filtering performed on the stream data
+
+The stream subclasses are named using the naming [[pattern]] &lt;code&gt;''XxxStreamType''&lt;/code&gt; where &lt;code&gt;''Xxx''&lt;/code&gt; is the name describing the feature and &lt;code&gt;''StreamType''&lt;/code&gt; is one of &lt;code&gt;InputStream&lt;/code&gt;, &lt;code&gt;OutputStream&lt;/code&gt;, &lt;code&gt;Reader&lt;/code&gt;, or &lt;code&gt;Writer&lt;/code&gt;.
+
+The following table shows the sources/destinations supported directly by the &lt;code&gt;java.io&lt;/code&gt; package:
+
+{| class=&quot;wikitable&quot;
+|-
+! Source/Destination !! Name !! Stream types !! In/Out !! Classes
+|-
+| &lt;code&gt;[[byte]]&lt;/code&gt; [[Array data type|array]] (&lt;code&gt;byte[]&lt;/code&gt;) || &lt;code&gt;ByteArray&lt;/code&gt; || &lt;code&gt;byte&lt;/code&gt; || in, out
+| {{Javadoc:SE|java/io|ByteArrayInputStream}}, {{Javadoc:SE|java/io|ByteArrayOutputStream}}
+|-
+| &lt;code&gt;char&lt;/code&gt; array (&lt;code&gt;char[]&lt;/code&gt;) || &lt;code&gt;CharArray&lt;/code&gt; || &lt;code&gt;char&lt;/code&gt; || in, out
+| {{Javadoc:SE|java/io|CharArrayReader}}, {{Javadoc:SE|java/io|CharArrayWriter}}
+|-
+| [[Computer file|file]] || &lt;code&gt;File&lt;/code&gt; || &lt;code&gt;byte&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt; || in, out
+| {{Javadoc:SE|java/io|FileInputStream}}, {{Javadoc:SE|java/io|FileOutputStream}}, {{Javadoc:SE|java/io|FileReader}}, {{Javadoc:SE|java/io|FileWriter}}
+|-
+| [[string (computer science)|string]] (&lt;code&gt;[[StringBuffer and StringBuilder|StringBuffer]]&lt;/code&gt;) || &lt;code&gt;String&lt;/code&gt; || &lt;code&gt;char&lt;/code&gt; || in, out
+| {{Javadoc:SE|java/io|StringReader}}, {{Javadoc:SE|java/io|StringWriter}}
+|-
+| [[thread (computer science)|thread]] (&lt;code&gt;Thread&lt;/code&gt;) || &lt;code&gt;Piped&lt;/code&gt; || &lt;code&gt;byte&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt; || in, out
+| {{Javadoc:SE|java/io|PipedInputStream}}, {{Javadoc:SE|java/io|PipedOutputStream}}, {{Javadoc:SE|java/io|PipedReader}}, {{Javadoc:SE|java/io|PipedWriter}}
+|}
+
+Other standard library packages provide stream implementations for other destinations, such as the &lt;code&gt;InputStream&lt;/code&gt; returned by the {{Javadoc:SE|package=java.net|java/net|Socket|getInputStream()}} method or the Java EE {{Javadoc:EE|package=javax.servlet|javax/servlet|ServletOutputStream}} class.
+
+Data type handling and processing or filtering of stream data is accomplished through stream [[filter (software)|filters]].  The filter classes all accept another compatible stream object as a parameter to the constructor and ''decorate'' the enclosed stream with additional features.  Filters are created by extending one of the base filter classes {{Javadoc:SE|java/io|FilterInputStream}}, {{Javadoc:SE|java/io|FilterOutputStream}}, {{Javadoc:SE|java/io|FilterReader}}, or {{Javadoc:SE|java/io|FilterWriter}}.
+
+The &lt;code&gt;Reader&lt;/code&gt; and &lt;code&gt;Writer&lt;/code&gt; classes are really just byte streams with additional processing performed on the data stream to convert the bytes to characters.  They use the default [[character encoding]] for the platform, which as of J2SE 5.0 is represented by the {{Javadoc:SE|java/nio/charset|Charset}} returned by the {{Javadoc:SE|package=java.nio.charset|java/nio/charset|Charset|defaultCharset()}} static method.  The {{Javadoc:SE|java/io|InputStreamReader}} class converts an &lt;code&gt;InputStream&lt;/code&gt; to a &lt;code&gt;Reader&lt;/code&gt; and the {{Javadoc:SE|java/io|OutputStreamWriter}} class converts an &lt;code&gt;OutputStream&lt;/code&gt; to a &lt;code&gt;Writer&lt;/code&gt;.  Both these classes have constructors that support specifying the character encoding to use. If no encoding is specified, the program uses the default encoding for the platform.
+
+The following table shows the other processes and filters that the &lt;code&gt;java.io&lt;/code&gt; package directly supports.  All these classes extend the corresponding &lt;code&gt;Filter&lt;/code&gt; class.
+
+{| class=&quot;wikitable&quot;
+|-
+! Operation !! Name !! Stream types !! In/Out !! Classes
+|-
+| [[buffer (computer science)|buffering]] || &lt;code&gt;Buffered&lt;/code&gt; || &lt;code&gt;byte&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt; || in, out
+| {{Javadoc:SE|java/io|BufferedInputStream}}, {{Javadoc:SE|java/io|BufferedOutputStream}}, {{Javadoc:SE|java/io|BufferedReader}}, {{Javadoc:SE|java/io|BufferedWriter}}
+|-
+| &quot;push back&quot; last value read || &lt;code&gt;Pushback&lt;/code&gt; || &lt;code&gt;byte&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt; || in
+| {{Javadoc:SE|java/io|PushbackInputStream}}, {{Javadoc:SE|java/io|PushbackReader}}
+|-
+| read/write [[primitive type]]s || &lt;code&gt;Data&lt;/code&gt; || &lt;code&gt;byte&lt;/code&gt; || in, out
+| {{Javadoc:SE|java/io|DataInputStream}}, {{Javadoc:SE|java/io|DataOutputStream}}
+|-
+| [[object serialization]] (read/write objects) || &lt;code&gt;Object&lt;/code&gt; || byte || in, out
+| {{Javadoc:SE|java/io|ObjectInputStream}}, {{Javadoc:SE|java/io|ObjectOutputStream}}
+|}
+
+==== Random access ====
+The {{Javadoc:SE|java/io|RandomAccessFile}} class supports ''[[random access]]'' reading and writing of files.  The class uses a ''[[Data file#File pointers and random access|file pointer]]'' that represents a byte-offset within the file for the next read or write operation.  The file pointer is moved implicitly by reading or writing and explicitly by calling the {{Javadoc:SE|name=seek(long)|java/io|RandomAccessFile|seek(long)}} or {{Javadoc:SE|name=skipBytes(int)|java/io|RandomAccessFile|skipBytes(int)}} methods.  The current position of the file pointer is returned by the {{Javadoc:SE|name=getFilePointer()|java/io|RandomAccessFile|getFilePointer()}} method.
+
+==== File system ====
+The {{Javadoc:SE|java/io|File}} class represents a [[Computer file|file]] or [[directory (file systems)|directory]] [[path (computing)|path]] in a [[file system]].  &lt;code&gt;File&lt;/code&gt; objects support the creation, deletion and renaming of files and directories and the manipulation of [[file attribute]]s such as ''read-only'' and ''last modified timestamp''.  &lt;code&gt;File&lt;/code&gt; objects that represent directories can be used to get a list of all the contained files and directories.
+
+The {{Javadoc:SE|java/io|FileDescriptor}} class is a [[file descriptor]] that represents a source or sink (destination) of bytes.  Typically this is a file, but can also be a [[System console|console]] or [[network socket]].  &lt;code&gt;FileDescriptor&lt;/code&gt; objects are used to create &lt;code&gt;File&lt;/code&gt; streams.  They are obtained from &lt;code&gt;File&lt;/code&gt; streams and &lt;code&gt;java.net&lt;/code&gt; sockets and datagram sockets.
+
+=== java.nio ===
+{{Main|Non-blocking I/O (Java)}}
+
+In J2SE 1.4, the package {{Javadoc:SE|package=java.nio|java/nio}} (NIO or Non-blocking I/O) was added to support [[memory-mapped I/O]], facilitating [[Input/output|I/O]] operations closer to the underlying hardware with sometimes dramatically better performance.  The &lt;code&gt;java.nio&lt;/code&gt; package provides support for a number of buffer types.  The subpackage {{Javadoc:SE|package=java.nio.charset|java/nio/charset}} provides support for different [[character encoding]]s for character data.  The subpackage {{Javadoc:SE|package=java.nio.channels|java/nio/channels}} provides support for ''channels,'' which represent connections to entities that are capable of performing I/O operations, such as files and sockets.  The &lt;code&gt;java.nio.channels&lt;/code&gt; package also provides support for fine-grained locking of files.
+
+=== java.math ===
+The {{Javadoc:SE|package=java.math|java/math}} package supports [[Arbitrary-precision arithmetic|multiprecision arithmetic]] (including modular arithmetic operations) and provides multiprecision prime number generators used for cryptographic key generation. The main classes of the package are:
+
+* {{Javadoc:SE|java/math|BigDecimal}} – provides arbitrary-precision signed decimal numbers. &lt;code&gt;BigDecimal&lt;/code&gt; gives the user control over rounding behavior through &lt;code&gt;RoundingMode&lt;/code&gt;.
+* {{Javadoc:SE|java/math|BigInteger}} – provides arbitrary-precision integers. Operations on &lt;code&gt;BigInteger&lt;/code&gt; do not [[Arithmetic overflow|overflow]] or lose precision. In addition to standard arithmetic operations, it provides [[modular arithmetic]], [[Greatest common divisor|GCD]] calculation, [[primality testing]], [[prime number]] generation, [[bit]] manipulation, and other miscellaneous operations.
+* {{Javadoc:SE|java/math|MathContext}}  – encapsulate the context settings that describe certain rules for numerical operators.
+* {{Javadoc:SE|java/math|RoundingMode}} – an enumeration that provides eight rounding behaviors.
+
+=== java.net ===
+The {{Javadoc:SE|package=java.net|java/net}} package provides special IO routines for networks, allowing [[HTTP]] requests, as well as other common transactions.
+
+=== java.text ===
+The {{Javadoc:SE|package=java.text|java/text}} package implements parsing routines for strings and supports various human-readable languages and locale-specific parsing.
+
+=== java.util ===
+[[Data structure]]s that aggregate objects are the focus of the {{Javadoc:SE|package=java.util|java/util}} package. Included in the package is the [[Collections API]], an organized data structure hierarchy influenced heavily by the [[design pattern (computer science)|design patterns]] considerations.
+
+== Special purpose packages ==
+
+=== java.applet ===
+{{Main|Java applet}}
+
+Created to support [[Java applet]] creation, the {{Javadoc:SE|package=java.applet|java/applet}} package lets applications be downloaded over a network and run within a guarded sandbox. Security restrictions are easily imposed on the sandbox. A developer, for example, may apply a [[digital signature]] to an applet, thereby labeling it as safe. Doing so allows the user to grant the applet permission to perform restricted operations (such as accessing the local hard drive), and removes some or all the sandbox restrictions. Digital certificates are issued by [[certificate authority|certificate authorities]].
+
+=== java.beans ===
+{{Main|JavaBeans}}
+
+Included in the {{Javadoc:SE|package=java.beans|java/beans}} package are various classes for developing and manipulating beans, reusable components defined by the [[JavaBeans|JavaBeans architecture]]. The architecture provides mechanisms for manipulating properties of components and firing events when those properties change.
+
+The APIs in &lt;code&gt;java.beans&lt;/code&gt; are intended for use by a bean editing tool, in which beans can be combined, customized, and manipulated. One type of bean editor is a [[Graphical user interface|GUI]] designer in an [[integrated development environment]].
+
+=== java.awt ===
+{{Main|Abstract Window Toolkit}}
+
+The {{Javadoc:SE|package=java.awt|java/awt}}, or Abstract Window Toolkit, provides access to a basic set of [[GUI]] widgets based on the underlying native platform's widget set, the core of the GUI event subsystem, and the interface between the native windowing system and the Java application. It also provides several basic [[layout manager]]s, a datatransfer package for use with the [[Clipboard (software)|Clipboard]] and [[Drag and drop|Drag and Drop]], the interface to [[input device]]s such as [[Mouse (computing)|mice]] and [[Keyboard (computing)|keyboards]], as well as access to the [[system tray]] on supporting systems. This package, along with &lt;code&gt;javax.swing&lt;/code&gt; contains the largest number of enums (7 in all) in JDK 6.
+
+=== java.rmi ===
+{{Main|Java Remote Method Invocation}}
+
+The {{Javadoc:SE|package=java.rmi|java/rmi}} package provides [[Java remote method invocation]] to support [[remote procedure call]]s between two java applications running in different [[JVM]]s.
+
+=== java.security ===
+Support for security, including the message digest algorithm, is included in the {{Javadoc:SE|package=java.security|java/security}} package.
+
+=== java.sql ===
+{{Main|Java Database Connectivity}}
+
+An implementation of the [[JDBC]] API (used to access [[SQL]] [[database]]s) is grouped into the {{Javadoc:SE|package=java.sql|java/sql}} package.

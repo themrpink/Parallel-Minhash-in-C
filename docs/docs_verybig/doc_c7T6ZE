@@ -1,0 +1,268 @@
+If the surface is not closed, it has an oriented curve as boundary. [[Stokes' theorem]] states that the flux of the [[Curl (mathematics)|curl]] of a vector field is the [[line integral]] of the vector field over this boundary. This path integral is also called [[Circulation (fluid dynamics)|circulation]], especially in fluid dynamics. Thus the curl is the circulation density.
+
+We can apply the flux and these theorems to many disciplines in which we see currents, forces, etc., applied through areas.
+
+=== Electromagnetism ===
+One way to better understand the concept of flux in electromagnetism is by comparing it to a butterfly net. The amount of air moving through the net at any given instant in time is the flux. If the wind speed is high, then the flux through the net is large. If the net is made bigger, then the flux is larger even though the wind speed is the same. For the most air to move through the net, the opening of the net must be facing the direction the wind is blowing. If the net is parallel to the wind, then no wind will be moving through the net. The simplest way to think of flux is &quot;how much air goes through the net&quot;, where the air is a velocity field and the net is the boundary of an imaginary surface.
+
+==== Electric flux ====
+
+An electric &quot;charge,&quot; such as a single electron in space, has a magnitude defined in coulombs. Such a charge has an electric field surrounding it. In pictorial form, an electric field is shown as a dot radiating &quot;lines of flux&quot; called Gauss lines.&lt;ref&gt;Purcell, p5-6&lt;/ref&gt; Electric Flux Density is the amount of electric flux, the number of &quot;lines,&quot; passing through a given area. Units are [[Gauss (unit)|Gauss]]/square meter.&lt;ref&gt;Browne, p223-225&lt;/ref&gt;
+
+Two forms of [[electric flux]] are used, one for the '''E'''-field:&lt;ref name=&quot;Electromagnetism 2008&quot;&gt;{{cite book|title=Electromagnetism |edition=2nd|author1=I.S. Grant |author2=W.R. Phillips |series=Manchester Physics|publisher=[[John Wiley &amp; Sons]]|year=2008|isbn=978-0-471-92712-9}}&lt;/ref&gt;&lt;ref name=&quot;Electrodynamics 2007&quot;&gt;{{cite book|title=Introduction to Electrodynamics|edition=3rd|author=D.J. Griffiths|publisher=Pearson Education, [[Dorling Kindersley]]|year=2007|isbn=81-7758-293-3}}&lt;/ref&gt;
+
+:{{oiint
+| preintegral = &lt;math&gt;\Phi_E=&lt;/math&gt;
+| intsubscpt = &lt;math&gt;{\scriptstyle A}&lt;/math&gt;
+| integrand = &lt;math&gt;\mathbf{E} \cdot {\rm d}\mathbf{A}&lt;/math&gt;
+}}
+
+and one for the '''D'''-field (called the [[electric displacement]]):
+
+:{{oiint
+| preintegral = &lt;math&gt;\Phi_D=&lt;/math&gt;
+| intsubscpt = &lt;math&gt;{\scriptstyle A}&lt;/math&gt;
+| integrand = &lt;math&gt;\mathbf{D} \cdot {\rm d}\mathbf{A}&lt;/math&gt;
+}}
+
+This quantity arises in [[Gauss's law]] – which states that the flux of the [[electric field]] '''E''' out of a [[closed surface]] is proportional to the [[electric charge]] ''Q&lt;sub&gt;A&lt;/sub&gt;'' enclosed in the surface (independent of how that charge is distributed), the integral form is:
+
+:{{oiint
+| preintegral =
+| intsubscpt = &lt;math&gt;{\scriptstyle A}&lt;/math&gt;
+| integrand = &lt;math&gt;\mathbf{E} \cdot {\rm d}\mathbf{A} = \frac{Q_A}{\varepsilon_0}&lt;/math&gt;
+}}
+
+where ε&lt;sub&gt;0&lt;/sub&gt; is the [[permittivity of free space]].
+
+If one considers the flux of the electric field vector, '''E''', for a tube near a point charge in the field of the charge but not containing it with sides formed by lines tangent to the field, the flux for the sides is zero and there is an equal and opposite flux at both ends of the tube. This is a consequence of Gauss's Law applied to an inverse square field. The flux for any cross-sectional surface of the tube will be the same. The total flux for any surface surrounding a charge ''q'' is ''q''/ε&lt;sub&gt;0&lt;/sub&gt;.&lt;ref&gt;{{cite book|last=Feynman|first=Richard P|title=The Feynman Lectures on Physics|publisher=Addison-Wesley|year=1964|volume=II|pages=4–8, 9|isbn=0-7382-0008-5}}&lt;/ref&gt;
+
+In free space the [[electric displacement]] is given by the [[constitutive relation]] '''D''' = ε&lt;sub&gt;0&lt;/sub&gt; '''E''', so for any bounding surface the '''D'''-field flux equals the charge ''Q&lt;sub&gt;A&lt;/sub&gt;'' within it. Here the expression &quot;flux of&quot; indicates a mathematical operation and, as can be seen, the result is not necessarily a &quot;flow&quot;, since nothing actually flows along electric field lines.
+
+==== Magnetic flux ====
+The magnetic flux density ([[magnetic field]]) having the unit Wb/m&lt;sup&gt;2&lt;/sup&gt; ([[Tesla (unit)|Tesla]]) is denoted by '''B''', and [[magnetic flux]] is defined analogously:&lt;ref name=&quot;Electromagnetism 2008&quot;/&gt;&lt;ref name=&quot;Electrodynamics 2007&quot;/&gt;
+
+:{{oiint
+| preintegral = &lt;math&gt;\Phi_B=&lt;/math&gt;
+| intsubscpt = &lt;math&gt;{\scriptstyle A}&lt;/math&gt;
+| integrand = &lt;math&gt;\mathbf{B} \cdot {\rm d}\mathbf{A}&lt;/math&gt;
+}}
+
+with the same notation above.  The quantity arises in [[Faraday's law of induction]], where the magnetic flux is time-dependent either because the boundary is time-dependent or magnetic field is time-dependent. In integral form:
+
+:&lt;math&gt;- \frac{{\rm d} \Phi_B}{ {\rm d} t} = 
+\oint_{\partial A} \mathbf{E} \cdot d \boldsymbol{\ell}&lt;/math&gt;
+
+where ''d'''''{{ell}}''' is an infinitesimal vector [[line element]] of the [[closed curve]] &lt;math&gt;\partial A&lt;/math&gt;, with [[Magnitude (vector)|magnitude]] equal to the length of the [[infinitesimal]] line element, and [[Direction (geometry)|direction]] given by the tangent to the curve &lt;math&gt;\partial A&lt;/math&gt;, with the sign determined by the integration direction.
+
+The time-rate of change of the magnetic flux through a loop of wire is minus the [[electromotive force]] created in that wire. The direction is such that if current is allowed to pass through the wire, the electromotive force will cause a current which &quot;opposes&quot; the change in magnetic field by itself producing a magnetic field opposite to the change.  This is the basis for [[inductor]]s and many [[electric generator]]s.
+
+==== Poynting flux ====
+Using this definition, the flux of the [[Poynting vector]] '''S''' over a specified surface is the rate at which electromagnetic energy flows through that surface, defined like before:&lt;ref name=&quot;Electrodynamics 2007&quot;/&gt;
+
+:{{oiint
+| preintegral = &lt;math&gt;\Phi_S=&lt;/math&gt;
+| intsubscpt = &lt;math&gt;{\scriptstyle A}&lt;/math&gt;
+| integrand = &lt;math&gt;\mathbf{S} \cdot {\rm d}\mathbf{A}&lt;/math&gt;
+}}
+
+The flux of the [[Poynting vector]] through a surface is the electromagnetic [[power (physics)|power]], or [[energy]] per unit [[time]], passing through that surface. This is commonly used in analysis of [[electromagnetic radiation]], but has application to other electromagnetic systems as well.
+
+Confusingly, the Poynting vector is sometimes called the ''power flux'',  which is an example of the first usage of flux, above.&lt;ref&gt;{{cite book | first=Roald K. | last=Wangsness | year=1986 | title=Electromagnetic Fields | edition=2nd | publisher=Wiley | isbn=0-471-81186-6 }} p.357&lt;/ref&gt; It has units of [[watt]]s per [[square metre]] (W/m&lt;sup&gt;2&lt;/sup&gt;).
+
+==SI radiometry units==
+{{SI radiometry units}}
+
+== See also ==
+{{Col-begin}}
+{{Col-break}}
+* [[AB magnitude]]
+* [[Explosively pumped flux compression generator]]
+* [[Eddy covariance]] flux (aka, eddy correlation, eddy flux)
+* [[Fast Flux Test Facility]]
+* [[Fluence]] (flux of the first sort for particle beams)
+* [[Fluid dynamics]]
+* [[Flux footprint]]
+* [[Flux pinning]]
+* [[Flux quantization]]
+* [[Gauss's law]]
+* [[Inverse-square law]]
+{{Col-break}}
+{{Portal|Mathematics}}
+* [[Jansky]] (non SI unit of spectral flux density)
+* [[Latent heat flux]]
+* [[Luminous flux]]
+* [[Magnetic flux]]
+* [[Magnetic flux quantum]]
+* [[Neutron flux]]
+* [[Poynting flux]]
+* [[Poynting theorem]]
+* [[Radiant flux]]
+* [[Rapid single flux quantum]]
+* [[Sound energy flux]]
+* [[Volumetric flux]] (flux of the first sort for fluids)
+* [[Volumetric flow rate]] (flux of the second sort for fluids)
+{{col-end}}
+
+== Notes ==
+{{Reflist}}
+
+* {{cite book |last= Browne | first= Michael, PhD | title=Physics for Engineering and Science, 2nd Edition. | publisher=[[McGraw-Hill Education|McGraw-Hill Publishing]] | series=Schaum Outlines | location=New York, Toronto | year= 2010 | isbn= 978-0-0716-1399-6 }}
+* {{cite book | last= Purcell | first= Edward, PhD | title=Electricity and Magnetism, 3rd Edition | publisher=[[Cambridge University Press]] | location=Cambridge, UK | year=2013 | isbn=978110-7014022 }}
+
+== Further reading ==
+* {{cite journal | author=Stauffer, P.H. | title=Flux Flummoxed: A Proposal for Consistent Usage | journal=Ground Water | year=2006 | volume=44 | issue=2 | pages= 125–128 | doi = 10.1111/j.1745-6584.2006.00197.x | pmid=16556188}}
+
+==External links==
+* {{Wiktionary-inline}}
+
+[[Category:Physical quantities]]
+[[Category:Vector calculus]]
+[[Category:Rates]]</text>
+      <sha1>q9sy1l7031a2g8z6w2z8mfmiqt9jqs9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Édouard Roche</title>
+    <ns>0</ns>
+    <id>43591</id>
+    <revision>
+      <id>941315634</id>
+      <parentid>940898470</parentid>
+      <timestamp>2020-02-17T21:30:27Z</timestamp>
+      <contributor>
+        <ip>12.174.253.28</ip>
+      </contributor>
+      <comment>/* Biography */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4023" xml:space="preserve">{{refimprove|date=June 2008}}
+{{Infobox scientist
+| name              = Édouard Roche
+| image             = Édouard Roche.jpg
+| image_size        = 
+| caption           = Édouard Roche
+| birth_date        = {{Birth date|1820|10|17|df=y}}
+| birth_place       = [[Montpellier]]
+| death_date        = {{Death date and age|1883|04|27|1820|10|17|df=y}}
+| death_place       = 
+| nationality       = [[France|French]]
+| fields            = [[Mathematics]], [[astronomy]]
+| workplaces        = 
+| alma_mater        = [[University of Montpellier]]
+| doctoral_advisor  = 
+| doctoral_students = 
+| known_for         = [[Roche sphere]], [[Roche limit]], [[Roche lobe]]
+| awards            = 
+}}
+'''Édouard Albert Roche''' ({{IPA-fr|edwaʁ albɛʁ ʁɔʃ|lang}}; 17 October 1820 – 27 April [[1883 in science|1883]]) was a [[France|French]] [[astronomer]] and [[mathematician]], who is best known for his work in the field of [[celestial mechanics]]. His name was given to the concepts of the [[Roche sphere]], [[Roche limit]], and [[Roche lobe]]. He also was the author of works in [[meteorology]].
+
+== Biography ==
+He was born in [[Montpellier]], and studied at the [[University of Montpellier]], receiving his D.Sc. in 1844 and later becoming a professor at the same institution, where he served in the Faculté des Sciences starting in 1849.&lt;ref name=brush1996/&gt; Roche made a mathematical study of [[Pierre-Simon Laplace|Laplace's]] [[nebular hypothesis]] and presented his results in a series of papers to the Academy of Montpellier from his appointment until 1877. The most important were on [[comets]] (1860) and the nebular hypothesis itself (1873). Roche's studies examined the effects of strong gravitational fields upon swarms of tiny particles.
+
+He is perhaps most famous for his theory that the [[planetary ring]]s of [[Saturn]] were formed when a large icy [[Natural satellite|moon]] came too close to Saturn and was pulled apart by [[gravitation]]al forces. He described a method of calculating the distance at which an object held together only by gravity would break up due to [[tidal force]]s; this distance became known as the Roche limit.
+
+His other best known works also involved orbital mechanics. The Roche sphere describes the limits at which an object which is in orbit around two other objects will be captured by one or the other, and the Roche lobe approximates the gravitational sphere of influence of one [[astronomical body]] in the face of perturbations from another heavier body around which it [[orbit]]s.
+
+== Works ==
+Roche's works are in French, his vernacular language.
+
+=== Lists of works ===
+* [http://www.academie-sciences.fr/activite/archive/dossiers/Roche/Roche_pdf/Roche_travaux.pdf List of works]{{dead link|date=January 2018 |bot=InternetArchiveBot |fix-attempted=yes }}, on the site of the [[Académie des sciences]] (31 items) (Includes—unnumbered—works commenting that of Roche. Also includes works in meteorology)
+* {{google books|fMvMAAAAMAAJ|{{noitalics|Liste des œuvres de M. Édouard Roche}}|page=33}}, in ''Mémoires de la Société des sciences, de l'agriculture et des arts de Lille'', 1885 (34 items)
+
+== See also ==
+* [[Roche lobe]]
+* [[Roche limit]]
+* [[Roche sphere]]
+
+==References==
+* [[Zdeněk Kopal|Z. Kopal]], ''The Roche problem'', [[Springer Science+Business Media|Kluwer Academic Publishers]], Dordrecht, 1989 {{ISBN|0-7923-0129-3}}.
+
+{{reflist|refs=
+&lt;ref name=brush1996&gt;{{citation | first1=Stephen G. | last1=Brush | title=A History of Modern Planetary Physics: Nebulous Earth | volume=1 | publisher=[[Cambridge University Press]] | year=1996 | isbn=0521441714 | page=96 | url=https://books.google.com/books?id=0nKebVI9kAgC&amp;pg=PA96 }}&lt;/ref&gt;
+}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Roche, Edouard}}
+[[Category:1820 births]]
+[[Category:1883 deaths]]
+[[Category:People from Montpellier]]
+[[Category:French astronomers]]
+[[Category:19th-century French mathematicians]]
+[[Category:Tidal forces]]
+[[Category:19th-century astronomers]]
+
+
+{{france-astronomer-stub}}</text>
+      <sha1>kabpacae09daaq8pi8m6t2k51lkpt8h</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>John Herschel</title>
+    <ns>0</ns>
+    <id>43592</id>
+    <revision>
+      <id>991394545</id>
+      <parentid>989123043</parentid>
+      <timestamp>2020-11-29T20:50:31Z</timestamp>
+      <contributor>
+        <username>PaulBetteridge</username>
+        <id>12900232</id>
+      </contributor>
+      <minor />
+      <comment>/* Death */ c/e - format</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="36832" xml:space="preserve">{{short description|19th-century English polymath, mathematician, astronomer, chemist, inventor and photographer}}
+{{Use dmy dates|date=September 2019}}
+{{Use British English|date=July 2012}}
+{{Infobox scientist
+| name              = Sir John Herschel
+| honorific_suffix = {{postnominals|country=GBR|size=100%|Bt|KH|FRS}}
+| image             = John Herschel 1846 (cropped).png
+| caption           = Drawing of John Herschel, published in 1846
+| birth_date        = {{birth date|df=y|1792|03|07}}&lt;ref name=&quot;ODNB&quot; /&gt;
+| birth_place       = [[Slough]], Buckinghamshire, England
+| death_date        = {{death date and age|df=y|1871|05|11|1792|03|07}}&lt;ref name=&quot;ODNB&quot; /&gt;
+| death_place       = Collingwood, near [[Hawkhurst]], Kent, England
+| resting_place     = [[Westminster Abbey]]
+| citizenship       =
+| nationality       = British
+| field             =
+| work_institutions =
+| education         = [[Eton College]]
+| alma_mater        = [[St John's College, Cambridge]]
+| doctoral_advisor  =
+| doctoral_students =
+| known_for         = The invention of photography
+| influences        =[[William Herschel]] (father), [[Caroline Herschel]] (aunt)
+| influenced        =
+| prizes            = {{plainlist|
+*[[Smith's Prize]] (1813)
+*[[Copley Medal]] (1821)
+*[[Lalande Medal]] (1825)
+*[[Gold Medal of the Royal Astronomical Society]] (1826, 1836)
+*[[Royal Medal]] (1836, 1840)
+*Knight of the [[Royal Guelphic Order]]}}
+| signature         =
+| footnotes         =
+| spouse            =}}
+
+'''Sir John Frederick William Herschel, 1st Baronet''' {{postnominals|country=GBR|KH|FRS}} ({{IPAc-en|ˈ|h|ɜr|ʃ|əl|,_|ˈ|h|ɛər|-}};&lt;ref&gt;{{cite web|url=http://www.dictionary.com/browse/herschel|title=Herschel|work=[[Random House Webster's Unabridged Dictionary]]}}&lt;/ref&gt; 7 March 1792&amp;nbsp;– 11 May 1871)&lt;ref name=&quot;ODNB&quot; /&gt; was an English [[polymath]], mathematician, [[astronomer]], [[chemist]], inventor, experimental photographer who invented the [[blueprint]],&lt;ref name=&quot;EncycBrit&quot;/&gt;&lt;ref name=&quot;columbia&quot;/&gt;&lt;ref name=&quot;vernacu&quot; /&gt; and did [[botanical]] work.&lt;ref name=HersNAH/&gt;
+
+Herschel originated the use of the [[Julian day]] system in [[astronomy]]. He named seven [[moons of Saturn]] and four [[moons of Uranus]] – the seventh planet, discovered by his father [[Sir William Herschel]]. He made many contributions to the science of photography, and investigated [[colour blindness]] and the chemical power of [[ultraviolet]] rays. His ''Preliminary Discourse'' (1831), which advocated an [[Inductive reasoning|inductive approach]] to scientific experiment and theory-building, was an important contribution to the philosophy of science.{{sfn|Cobb|2012|pp=409–439}}
+
+== Early life and work on astronomy ==
+[[File:Lunar Copernicus crater - Herschel 1842.jpg|thumb|left|A [[Calotype]] of a model of the lunar crater Copernicus, 1842]]
+
+Herschel was born in [[Slough]], Buckinghamshire, the son of Mary Baldwin and astronomer  William Herschel. He was the nephew of astronomer [[Caroline Herschel]]. He studied shortly at [[Eton College]] and [[St John's College, Cambridge]], graduating as [[Senior Wrangler]] in 1813.&lt;ref name=&quot;Venn&quot; /&gt; It was during his time as an undergraduate that he became friends with the mathematicians [[Charles Babbage]] and [[George Peacock]].&lt;ref name=HersNAH/&gt; He left Cambridge in 1816 and started working with his father. He took up astronomy in 1816, building a [[reflecting telescope]] with a mirror {{convert|18|in|mm}} in diameter, and with a {{convert|20|ft|m|adj=on}} [[focal length]]. Between 1821 and 1823 he re-examined, with [[James South]], the double stars catalogued by his father.&lt;ref name=&quot;EB1911&quot; /&gt; He was one of the founders of the Royal Astronomical Society in 1820. For his work with his father, he was presented with the [[Gold Medal of the Royal Astronomical Society]] in 1826 (which he won again in 1836), and with the [[Lalande Medal]] of the [[French Academy of Sciences]] in 1825, while in 1821 the [[Royal Society]] bestowed upon him the [[Copley Medal]] for his mathematical contributions to their Transactions. Herschel was made a Knight of the [[Royal Guelphic Order]] in 1831.&lt;ref name=HersNAH/&gt;
+
+Herschel served as [[president of the Royal Astronomical Society]] three times: 1827–29, 1839–41 and 1847–49.&lt;ref name=&quot;RoyAstrSoc&quot; /&gt;{{sfn |Dreyer |Turner |2014|p=250}}
+
+Herschel's ''A preliminary discourse on the study of natural philosophy'', published early in 1831 as part of ''[[Dionysius Lardner's Cabinet cyclopædia]]'', set out methods of scientific investigation with an orderly relationship between observation and theorising. He described nature as being governed by laws which were difficult to discern or to state mathematically, and the highest aim of [[natural philosophy]] was understanding these laws through [[inductive reasoning]], finding a single unifying explanation for a phenomenon. This became an authoritative statement with wide influence on science, particularly at the [[University of Cambridge]] where it inspired the student [[Charles Darwin]] with &quot;a burning zeal&quot; to contribute to this work.{{sfn|Darwin|1958|pp=[http://darwin-online.org.uk/content/frameset?viewtype=text&amp;itemID=F1497&amp;pageseq=69 67–68]}}{{sfn|Browne|1995|pp=128, 133}}{{sfn|Darwin|1985a|loc=[http://www.darwinproject.ac.uk/letter/DCP-LETT-94.xml#mark-94.f2 Letter No. 94]}}
+
+Herschel published a catalogue of his astronomical observations in 1864, as the ''[[General Catalogue of Nebulae and Clusters]]'', a compilation of his own work and that of his father's, expanding on the senior Herschel's ''[[Catalogue of Nebulae]]''. A further complementary volume was published posthumously, as the ''General Catalogue of 10,300 Multiple and Double Stars''.
+
+Herschel correctly considered astigmatism to be due to irregularity of the cornea and theorised that vision could be improved by the application of some animal jelly contained in a capsule of glass against the cornea. His views were published in an article entitled Light in 1828 and the ''Encyclopædia Metropolitana'' in 1845.&lt;ref name=&quot;anti_Cont&quot; /&gt;

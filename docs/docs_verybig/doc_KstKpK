@@ -1,0 +1,282 @@
+In 1853, [[Carl Friedrich Gauss|Gauss]] asked Riemann, his student, to prepare a ''[[Habilitationsschrift]]'' on the foundations of geometry. Over many months, Riemann developed his theory of [[higher dimensions]] and delivered his lecture at Göttingen in 1854 entitled &quot;[http://www.deutschestextarchiv.de/book/view/riemann_hypothesen_1867?p=7 Ueber&lt;!--[sic]--&gt; die Hypothesen welche der Geometrie zu Grunde liegen]&quot; (&quot;[http://www.emis.de/classics/Riemann/WKCGeom.pdf On the hypotheses which underlie geometry]&quot;). It was only published twelve years later in 1868 by Dedekind, two years after his death. Its early reception appears to have been slow but it is now recognized as one of the most important works in geometry.
+
+The subject founded by this work is [[Riemannian geometry]]. Riemann found the correct way to extend into ''n'' dimensions the [[differential geometry]] of surfaces, which Gauss himself proved in his ''[[theorema egregium]]''. The fundamental object is called the [[Riemann curvature tensor]]. For the surface case, this can be reduced to a number (scalar), positive, negative, or zero; the non-zero and constant cases being models of the known [[non-Euclidean geometry|non-Euclidean geometries]].
+
+Riemann's idea was to introduce a collection of numbers at every point in space (i.e., a [[tensor]]) which would describe how much it was bent or curved. Riemann found that in four spatial dimensions, one needs a collection of ten numbers at each point to describe the properties of a [[manifold]], no matter how distorted it is. This is the famous construction central to his geometry, known now as a [[Riemannian metric]].
+
+==Complex analysis==
+In his dissertation, he established a geometric foundation for [[complex analysis]] through [[Riemann surface]]s, through which multi-valued functions like the [[logarithm]] (with infinitely many sheets) or the [[square root]] (with two sheets) could become [[one-to-one function]]s. Complex functions are [[harmonic functions]] (that is, they satisfy [[Laplace's equation]] and thus the [[Cauchy–Riemann equations]]) on these surfaces and are described by the location of their singularities and the topology of the surfaces. The topological &quot;genus&quot; of the Riemann surfaces is given by &lt;math&gt;g=w/2-n+1&lt;/math&gt;, where the surface has &lt;math&gt;n&lt;/math&gt; leaves coming together at &lt;math&gt;w&lt;/math&gt; branch points. For &lt;math&gt;g&gt;1&lt;/math&gt; the Riemann surface has &lt;math&gt;(3g-3)&lt;/math&gt; parameters (the &quot;[[Moduli of algebraic curves|moduli]]&quot;).
+
+His contributions to this area are numerous. The famous [[Riemann mapping theorem]] says that a simply connected domain in the complex plane is &quot;biholomorphically equivalent&quot; (i.e. there is a bijection between them that is holomorphic with a holomorphic inverse) to either &lt;math&gt;\mathbb{C}&lt;/math&gt; or to the interior of the unit circle. The generalization of the theorem to Riemann surfaces is the famous [[uniformization theorem]], which was proved in the 19th century by [[Henri Poincaré]] and [[Felix Klein]]. Here, too, rigorous proofs were first given after the development of richer mathematical tools (in this case, topology). For the proof of the existence of functions on Riemann surfaces he used a minimality condition, which he called the [[Dirichlet principle]]. [[Karl Weierstrass]] found a gap in the proof: Riemann had not noticed that his working assumption (that the minimum existed) might not work; the function space might not be complete, and therefore the existence of a minimum was not guaranteed. Through the work of [[David Hilbert]]  in the Calculus of Variations, the Dirichlet principle was finally established. Otherwise, Weierstrass was very impressed with Riemann, especially with his theory of [[abelian function]]s. When Riemann's work appeared, Weierstrass withdrew his paper from ''[[Crelle's Journal]]'' and did not publish it. They had a good understanding when Riemann visited him in Berlin in 1859. Weierstrass encouraged his student [[Hermann Amandus Schwarz]] to find alternatives to the Dirichlet principle in complex analysis, in which he was successful. An anecdote from [[Arnold Sommerfeld]]&lt;ref&gt;[[Arnold Sommerfeld]], „Vorlesungen über theoretische Physik“, Bd.2 (Mechanik deformierbarer Medien), Harri Deutsch, S.124. Sommerfeld heard the story from Aachener Professor of Experimental Physics [[Adolf Wüllner]].&lt;/ref&gt; shows the difficulties which contemporary mathematicians had with Riemann's new ideas. In 1870, Weierstrass had taken Riemann's dissertation with him on a holiday to Rigi and complained that it was hard to understand. The physicist [[Hermann von Helmholtz]] assisted him in the work over night and returned with the comment that it was &quot;natural&quot; and &quot;very understandable&quot;.
+
+Other highlights include his work on abelian functions and [[theta functions]] on Riemann surfaces. Riemann had been in a competition with Weierstrass since 1857 to solve the Jacobian inverse problems for abelian integrals, a generalization of [[elliptic integrals]]. Riemann used theta functions in several variables and reduced the problem to the determination of the zeros of these theta functions. Riemann also investigated period matrices and characterized them through the &quot;Riemannian period relations&quot; (symmetric, real part negative). By [[Ferdinand Georg Frobenius]] and [[Solomon Lefschetz]] the validity of this relation is equivalent with the embedding of &lt;math&gt;\mathbb{C}^n/\Omega&lt;/math&gt; (where &lt;math&gt;\Omega&lt;/math&gt; is the lattice of the period matrix) in a projective space by means of theta functions. For certain values of &lt;math&gt;n&lt;/math&gt;, this is the [[Jacobian variety]] of the Riemann surface, an example of an abelian manifold.
+
+Many mathematicians such as [[Alfred Clebsch]] furthered Riemann's work on algebraic curves. These theories depended on the properties of a function defined on Riemann surfaces. For example, the [[Riemann–Roch theorem]] (Roch was a student of Riemann) says something about the number of linearly independent differentials (with known conditions on the zeros and poles) of a Riemann surface.
+
+According to [[Detlef Laugwitz]],&lt;ref&gt;[[Detlef Laugwitz]]: ''Bernhard Riemann 1826–1866''. Birkhäuser, Basel 1996, {{ISBN|978-3-7643-5189-2}}&lt;/ref&gt; [[automorphic function]]s appeared for the first time in an essay about the Laplace equation on electrically charged cylinders. Riemann however used such functions for conformal maps (such as mapping topological triangles to the circle) in his 1859 lecture on hypergeometric functions or in his treatise on [[minimal surface]]s.
+
+==Real analysis==
+In the field of [[real analysis]], he discovered the [[Riemann integral]] in his habilitation. Among other things, he showed that every piecewise continuous function is integrable. Similarly, the [[Stieltjes integral]] goes back to the Göttinger mathematician, and so they are named together the [[Riemann–Stieltjes integral]].
+
+In his habilitation work on [[Fourier series]], where he followed the work of his teacher Dirichlet, he showed that Riemann-integrable functions are &quot;representable&quot; by Fourier series. Dirichlet has shown this for continuous, piecewise-differentiable functions (thus with countably many non-differentiable points). Riemann gave an example of a Fourier series representing a continuous, almost nowhere-differentiable function, a case not covered by Dirichlet.  He also proved the [[Riemann–Lebesgue lemma]]: if a function is representable by a Fourier series, then the Fourier coefficients go to zero for large&amp;nbsp;''n''.
+
+Riemann's essay was also the starting point for [[Georg Cantor]]'s work with Fourier series, which was the impetus for [[set theory]].
+
+He also worked with [[hypergeometric differential equations]] in 1857 using complex analytical methods and presented the solutions through the behavior of closed paths about singularities (described by the [[monodromy matrix]]). The proof of the existence of such differential equations by previously known monodromy matrices is one of the Hilbert problems.
+
+== Number theory==
+He made some famous contributions to modern [[analytic number theory]]. In [[On the Number of Primes Less Than a Given Magnitude|a single short paper]], the only one he published on the subject of number theory, he investigated the [[Riemann zeta function|zeta function]] that now bears his name, establishing its importance for understanding the distribution of [[prime number]]s. The [[Riemann hypothesis]] was one of a series of conjectures he made about the function's properties.
+
+In Riemann's work, there are many more interesting developments. He proved the functional equation for the zeta function (already known to [[Leonhard Euler]]), behind which a theta function lies. Through the summation of this approximation function over the non-trivial zeros on the line with real portion 1/2, he gave an exact, &quot;explicit formula&quot; for &lt;math&gt;\pi(x)&lt;/math&gt;.
+
+Riemann knew of [[Pafnuty Chebyshev]]'s work on the [[Prime number theorem|Prime Number Theorem]]. He had visited Dirichlet in 1852.
+
+== Writings ==
+* 1868 ''On the hypotheses which lie at the foundation of geometry'', translated by [[William Kingdon Clifford|W.K.Clifford]], Nature 8 1873 183 – reprinted in Clifford's Collected Mathematical Papers, London 1882 (MacMillan); New York 1968 (Chelsea) http://www.emis.de/classics/Riemann/. Also in Ewald, William B., ed., 1996 “From Kant to Hilbert: A Source Book in the Foundations of Mathematics”, 2 vols. Oxford Uni. Press: 652&amp;ndash;61.
+* 1892 ''Collected Works of Bernhard Riemann'' (H. Weber ed). In German. Reprinted New York 1953 (Dover)
+* {{citation |last1=Riemann |first1=Bernhard |title=Collected papers |publisher=Kendrick Press, Heber City, UT |isbn=978-0-9740427-2-5 |mr=2121437 |year=2004}}
+
+== See also ==
+*[[List of things named after Bernhard Riemann]]
+*[[Non-Euclidean geometry]]
+*[[On the Number of Primes Less Than a Given Magnitude]], Riemann's 1859 paper introducing the complex zeta function
+
+== References==
+{{reflist}}
+
+== Further reading ==
+* {{citation |authorlink=John Derbyshire |first=John |last=Derbyshire |title=[[Prime Obsession|Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathematics]] |location=Washington, DC |publisher=John Henry Press |year=2003 |isbn=0-309-08549-7}}.
+* {{citation |first=Michael |last=Monastyrsky |title=Riemann, Topology and Physics |location=Boston, MA |publisher=Birkhäuser |year=1999 |isbn=0-8176-3789-3}}.
+* From Riemann to Differential Geometry and Relativity (Lizhen Ji, Athanase Papadopoulos,  and Sumio Yamada, Eds.) Springer,  2017, XXXIV, 647 p.  {{ISBN|978-3-319-60039-0}}
+
+== External links ==
+{{wikiquote}}
+{{Commons|Georg Friedrich Bernhard Riemann|Bernhard Riemann}}
+{{NIE Poster|Riemann, Georg Friedrich Bernhard|year=1905}}
+* {{MathGenealogy|id=18232}}
+* [http://www.maths.tcd.ie/pub/HistMath/People/Riemann/Papers.html The Mathematical Papers of Georg Friedrich Bernhard Riemann]
+* [http://www.emis.de/classics/Riemann/ Riemann's publications at emis.de]
+* {{MacTutor Biography|id=Riemann}}
+* [https://web.archive.org/web/20050903035028/http://www.fh-lueneburg.de/u1/gym03/englpage/chronik/riemann/riemann.htm Bernhard Riemann &amp;ndash; one of the most important mathematicians]
+* [https://web.archive.org/web/20160318034045/http://www.maths.tcd.ie/pub/HistMath/People/Riemann/Geom/ Bernhard Riemann's inaugural lecture]
+* {{ScienceWorldBiography | urlname=Riemann | title=Riemann, Bernhard (1826&amp;ndash;1866)}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Riemann, Georg Friedrich Bernhard}}
+[[Category:Bernhard Riemann| ]]
+[[Category:1826 births]]
+[[Category:1866 deaths]]
+[[Category:19th-century deaths from tuberculosis]]
+[[Category:19th-century German mathematicians]]
+[[Category:Differential geometers]]
+[[Category:Foreign Members of the Royal Society]]
+[[Category:German Lutherans]]
+[[Category:Tuberculosis deaths in Italy]]
+[[Category:People from the Kingdom of Hanover]]
+[[Category:University of Göttingen alumni]]
+[[Category:University of Göttingen faculty]]
+[[Category:Infectious disease deaths in Piedmont]]</text>
+      <sha1>hn2oam24jtdczlohhdo8244qy10b0fn</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Shortest path problem</title>
+    <ns>0</ns>
+    <id>41985</id>
+    <revision>
+      <id>991642681</id>
+      <parentid>989512496</parentid>
+      <timestamp>2020-12-01T02:53:51Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 42 templates: del empty params (5×); hyphenate params (13×); del |ref=harv (28×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="35862" xml:space="preserve">{{More footnotes|date=June 2009}}
+[[File:Shortest path with direct weights.svg|thumb|250px|Shortest path (A, C, E, D, F) between vertices A and F in the weighted directed graph]]
+In [[graph theory]], the '''shortest path problem''' is the problem of finding a [[path (graph theory)|path]] between two [[vertex (graph theory)|vertices]] (or nodes) in a [[Graph (discrete mathematics)|graph]] such that the sum of the [[Glossary of graph theory terms#weighted graph|weights]] of its constituent edges is minimized.
+
+The problem of finding the shortest path between two intersections on a road map may be modeled as a special case of the shortest path problem in graphs, where the vertices correspond to intersections and the edges correspond to road segments, each weighted by the length of the segment.
+
+==Definition==
+The shortest path problem can be defined for [[Graph (discrete mathematics)|graphs]] whether [[Graph (discrete mathematics)#Undirected graph|undirected]], [[Graph (discrete mathematics)#Directed graph|directed]], or [[Mixed graph|mixed]].
+It is defined here for undirected graphs; for directed graphs the definition of path
+requires that consecutive vertices be connected by an appropriate directed edge.
+
+Two vertices are adjacent when they are both incident to a common edge.
+A [[Path (graph theory)|path]] in an undirected graph is a [[sequence]] of vertices &lt;math&gt;P = ( v_1, v_2, \ldots, v_n ) \in V \times V \times \cdots \times V&lt;/math&gt;
+such that &lt;math&gt;v_i&lt;/math&gt; is adjacent to &lt;math&gt;v_{i+1}&lt;/math&gt; for &lt;math&gt;1 \leq i &lt; n&lt;/math&gt;.
+Such a path &lt;math&gt;P&lt;/math&gt; is called a path of length &lt;math&gt;n-1&lt;/math&gt;
+from &lt;math&gt;v_1&lt;/math&gt; to &lt;math&gt;v_n&lt;/math&gt;.
+(The &lt;math&gt;v_i&lt;/math&gt; are variables; their numbering here relates to their position in the sequence and needs not to relate to any canonical labeling of the vertices.)
+
+Let &lt;math&gt;e_{i, j}&lt;/math&gt; be the edge incident to both &lt;math&gt;v_i&lt;/math&gt; and &lt;math&gt;v_j&lt;/math&gt;. Given a [[Function (mathematics)#Real-valued functions|real-valued]] weight function &lt;math&gt;f: E \rightarrow \mathbb{R}&lt;/math&gt;, and an undirected (simple) graph &lt;math&gt;G&lt;/math&gt;, the shortest path from &lt;math&gt;v&lt;/math&gt; to &lt;math&gt;v'&lt;/math&gt; is the path &lt;math&gt;P = ( v_1, v_2, \ldots, v_n )&lt;/math&gt; (where &lt;math&gt;v_1 = v&lt;/math&gt; and &lt;math&gt;v_n = v'&lt;/math&gt;) that over all possible &lt;math&gt;n&lt;/math&gt; minimizes the sum &lt;math&gt;\sum_{i =1}^{n-1} f(e_{i, i+1}).&lt;/math&gt; When each edge in the graph has unit weight or &lt;math&gt;f: E \rightarrow \{1\}&lt;/math&gt;, this is equivalent to finding the path with fewest edges.
+
+The problem is also sometimes called the '''single-pair shortest path problem''', to distinguish it from the following variations:
+* The '''single-source shortest path problem''', in which we have to find shortest paths from a source vertex ''v'' to all other vertices in the graph.
+* The '''single-destination shortest path problem''', in which we have to find shortest paths from all vertices in the directed graph to a single destination vertex ''v''. This can be reduced to the single-source shortest path problem by reversing the arcs in the directed graph.
+* The '''all-pairs shortest path problem''', in which we have to find shortest paths between every pair of vertices ''v'', ''v' '' in the graph.
+
+These generalizations have significantly more efficient algorithms than the simplistic approach of running a single-pair shortest path algorithm on all relevant pairs of vertices.
+
+==Algorithms==
+The most important algorithms for solving this problem are:
+* [[Dijkstra's algorithm]] solves the single-source shortest path problem with non-negative edge weight.
+* [[Bellman–Ford algorithm]] solves the single-source problem if edge weights may be negative.
+* [[A* search algorithm]] solves for single-pair shortest path using heuristics to try to speed up the search.
+* [[Floyd–Warshall algorithm]] solves all pairs shortest paths.
+* [[Johnson's algorithm]] solves all pairs shortest paths, and may be faster than Floyd–Warshall on [[sparse graph]]s.
+* [[Viterbi algorithm]] solves the shortest stochastic path problem with an additional probabilistic weight on each node.
+
+Additional algorithms and associated evaluations may be found in {{harvtxt|Cherkassky|Goldberg|Radzik|1996}}.
+
+==Single-source shortest paths==
+
+===Undirected graphs===
+{| class=wikitable
+! Weights !! [[Time complexity]] !! Author
+|-
+| ℝ&lt;sub&gt;+&lt;/sub&gt; || ''O''(''V&lt;sup&gt;2&lt;/sup&gt;'') || {{harvnb|Dijkstra|1959}}
+|-
+| ℝ&lt;sub&gt;+&lt;/sub&gt;  || ''O''((''E''&amp;nbsp;+&amp;nbsp;''V'')&amp;nbsp;log&amp;nbsp;''V'') || {{harvnb|Johnson|1977}} ([[binary heap]])
+|-
+| ℝ&lt;sub&gt;+&lt;/sub&gt; || ''O''(''E''&amp;nbsp;+&amp;nbsp;''V''&amp;nbsp;log&amp;nbsp;''V'') || {{harvnb|Fredman|Tarjan|1984}} ([[Fibonacci heap]])
+|-
+| ℕ || ''O''(''E'') || {{harvnb|Thorup|1999}} (requires constant-time multiplication)
+|}
+
+===Unweighted graphs===
+{| class=wikitable
+! Algorithm !! Time complexity !! Author
+|-
+| [[Breadth-first search]] || ''O''(''E''&amp;nbsp;+&amp;nbsp;''V'') ||
+|}
+
+===Directed acyclic graphs (DAGs)===
+An algorithm using [[Topological sorting#Application to shortest path finding|topological sorting]] can solve the single-source shortest path problem in time {{math|Θ(''E'' + ''V'')}} in arbitrarily-weighted DAGs.&lt;ref&gt;{{harvnb|Cormen|Leiserson|Rivest|Stein|2001|p=655}}&lt;/ref&gt;
+
+===Directed graphs with nonnegative weights===
+The following table is taken from {{harvtxt|Schrijver|2004}}, with some corrections and additions.
+A green background indicates an asymptotically best bound in the table; ''L'' is the maximum length (or weight) among all edges, assuming integer edge weights.
+{| class=wikitable
+! Weights !! Algorithm !! Time complexity !! Author
+|-
+| ℝ || || ''O''(''V''&lt;sup&gt; 2&lt;/sup&gt;''EL'') || {{harvnb|Ford|1956}}
+|-
+| ℝ || [[Bellman–Ford algorithm]] || ''O''(''VE'') || {{harvnb|Shimbel|1955}}, {{harvnb|Bellman|1958}}, {{harvnb|Moore|1959}}
+|-
+| ℝ || || ''O''(''V''&lt;sup&gt; 2&lt;/sup&gt;&amp;nbsp;log&amp;nbsp;''V'') || {{harvnb|Dantzig|1960}}
+|-
+| ℝ || [[Dijkstra's algorithm]] with list || ''O''(''V''&lt;sup&gt; 2&lt;/sup&gt;) || {{harvnb|Leyzorek|Gray|Johnson|Ladew|1957}}, {{harvnb|Dijkstra|1959}}, Minty (see {{harvnb|Pollack|Wiebenson|1960}}), {{harvnb|Whiting|Hillier|1960}}
+|-
+| ℝ || [[Dijkstra's algorithm]] with [[binary heap]] || ''O''((''E''&amp;nbsp;+&amp;nbsp;''V'')&amp;nbsp;log&amp;nbsp;''V'') || {{harvnb|Johnson|1977}}
+|- style=&quot;background: #d0ffd0&quot;
+| ℝ || [[Dijkstra's algorithm]] with [[Fibonacci heap]]||''O''(''E''&amp;nbsp;+&amp;nbsp;''V''&amp;nbsp;log&amp;nbsp;''V'') || {{harvnb|Fredman|Tarjan|1984}}, {{harvnb|Fredman|Tarjan|1987}}
+|-
+| ℕ || Dial's algorithm&lt;ref name=&quot;dial69&quot;&gt;{{citation
+   | last = Dial | first = Robert B.
+   | title = Algorithm 360: Shortest-Path Forest with Topological Ordering [H]
+   | journal = Communications of the ACM
+   | volume = 12
+   | issue = 11
+   | pages = 632-633
+   | year = 1969
+   | doi = 10.1145/363269.363610
+   | url = https://dl.acm.org/doi/10.1145/363269.363610
+   | url-access = subscription
+  }}&lt;/ref&gt; ([[Dijkstra's algorithm]] using a [[bucket queue]] with ''L'' buckets) || ''O''(''E''&amp;nbsp;+&amp;nbsp;''LV'') || {{harvnb|Dial|1969}}
+|-
+|- style=&quot;background: #d0ffd0&quot;
+| || || ''O''(''E''&amp;nbsp;log&amp;nbsp;log&amp;nbsp;''L'') || {{harvnb|Johnson|1981}}, {{harvnb|Karlsson|Poblete|1983}}
+|-
+| || [[Gabow's algorithm (single-source shortest paths)|Gabow's algorithm]] || ''O''(''E''&amp;nbsp;log&lt;sub&gt;''E''/''V''&lt;/sub&gt;&amp;nbsp;''L'') || {{harvnb|Gabow|1983}}, {{harvnb|Gabow|1985}}
+|- style=&quot;background: #d0ffd0&quot;
+| || || ''O''(''E''&amp;nbsp;+&amp;nbsp;''V'' {{radic|log ''L''}}) || {{harvnb|Ahuja|Mehlhorn|Orlin|Tarjan|1990}}
+|-
+| || Thorup || ''O''(''E''&amp;nbsp;+&amp;nbsp;''V''&amp;nbsp;log&amp;nbsp;log&amp;nbsp;''V'') || {{harvnb|Thorup|2004}}
+|}
+{{expand list|date=February 2011}}
+
+===Directed graphs with arbitrary weights without negative cycles===
+{| class=wikitable
+! Weights !! Algorithm !! Time complexity !! Author
+|-
+| ℝ || || ''O''(''V''&lt;sup&gt; 2&lt;/sup&gt;''EL'') || {{harvnb|Ford|1956}}
+|-
+| ℝ || [[Bellman–Ford algorithm]] || ''O''(''VE'') || {{harvnb|Shimbel|1955}}, {{harvnb|Bellman|1958}}, {{harvnb|Moore|1959}}
+|-
+| ℝ || [[Johnson's algorithm|Johnson-Dijkstra]] with [[binary heap]] || ''O''(''V''&amp;nbsp;(''E''&amp;nbsp;+&amp;nbsp;log&amp;nbsp;''V'')) || {{harvnb|Johnson|1977}}
+|-
+| ℝ || [[Johnson's algorithm|Johnson-Dijkstra]] with [[Fibonacci heap]] || ''O''(''V''&amp;nbsp;(''E''&amp;nbsp;+&amp;nbsp;log&amp;nbsp;''V'')) || {{harvnb|Fredman|Tarjan|1984}}, {{harvnb|Fredman|Tarjan|1987}}, adapted after {{harvnb|Johnson|1977}}
+|-
+| ℕ || [[Johnson's algorithm|Johnson's technique]] applied to Dial's algorithm&lt;ref name=&quot;dial69&quot; /&gt; || ''O''(''V''&amp;nbsp;(''E''&amp;nbsp;+&amp;nbsp;''L'')) || {{harvnb|Dial|1969}}, adapted after {{harvnb|Johnson|1977}}
+|}
+{{expand list|date=December 2012}}
+
+===Planar directed graphs with arbitrary weights===
+
+==All-pairs shortest paths==
+The all-pairs shortest path problem finds the shortest paths between every pair of vertices {{mvar|v}}, {{mvar|v'}} in the graph.  The all-pairs shortest paths problem for unweighted directed graphs was introduced by {{harvtxt|Shimbel|1953}}, who observed that it could be solved by a linear number of matrix multiplications that takes a total time of {{math|''O''(''V''&lt;sup&gt;4&lt;/sup&gt;)}}.
+
+===Undirected graph===
+{| class=wikitable
+! Weights !! Time complexity !! Algorithm
+|-
+| ℝ&lt;sub&gt;+&lt;/sub&gt; || {{math|''O''(''V''&lt;sup&gt;3&lt;/sup&gt;)}} || [[Floyd–Warshall algorithm]]
+|-
+| &lt;math&gt;\{1, \infty\}&lt;/math&gt; || &lt;math&gt;O(V^\omega \log V)&lt;/math&gt; || [[Seidel's algorithm]] (expected running time)
+|-
+| ℕ || &lt;math&gt;O(V^3/2^{\Omega(\log n)^{1/2}})&lt;/math&gt; || {{harvnb|Williams|2014}}
+|-
+| ℝ&lt;sub&gt;+&lt;/sub&gt; || {{math|''O''(''EV''&amp;nbsp;log&amp;nbsp;α(''E'',''V''))}} || {{harvnb|Pettie|Ramachandran|2002}}
+|-
+| ℕ || {{math|''O''(''EV'')}} || {{harvnb|Thorup|1999}} applied to every vertex (requires constant-time multiplication).
+|}
+
+===Directed graph===
+{| class=wikitable
+! Weights !! Time complexity !! Algorithm
+|-
+| ℝ (no negative cycles) || {{math|''O''(''V''&lt;sup&gt;3&lt;/sup&gt;)}} || [[Floyd–Warshall algorithm]]
+|-
+| ℕ || &lt;math&gt;O(V^3/2^{\Omega(\log n)^{1/2}})&lt;/math&gt; || {{harvnb|Williams|2014}}
+|-
+| ℝ (no negative cycles) || {{math|''O''(''EV''&amp;nbsp;+&amp;nbsp;''V''&lt;sup&gt;2&lt;/sup&gt;&amp;nbsp;log&amp;nbsp;''V'')}} || [[Johnson's algorithm|Johnson–Dijkstra]]
+|-
+| ℝ (no negative cycles) || {{math|''O''(''EV''&amp;nbsp;+&amp;nbsp;''V''&lt;sup&gt;2&lt;/sup&gt;&amp;nbsp;log&amp;nbsp;log&amp;nbsp;''V'')}} || {{harvnb|Pettie|2004}}
+|-
+| ℕ || {{math|''O''(''EV''&amp;nbsp;+&amp;nbsp;''V''&lt;sup&gt;2&lt;/sup&gt;&amp;nbsp;log&amp;nbsp;log&amp;nbsp;''V'')}} || {{harvnb|Hagerup|2000}}
+|}
+
+==Applications==
+Shortest path algorithms are applied to automatically find directions between physical locations, such as driving directions on [[web mapping]] websites like [[MapQuest]] or [[Google Maps]]. For this application fast specialized algorithms are available.&lt;ref&gt;{{Cite journal|title=Fast route planning|first=Peter|last=Sanders|author-link=Peter Sanders (computer scientist)|publisher=Google Tech Talk|date=March 23, 2009|url=https://www.youtube.com/watch?v=-0ErpE8tQbw}}&lt;/ref&gt;
+
+If one represents a nondeterministic [[abstract machine]] as a graph where vertices describe states and edges describe possible transitions, shortest path algorithms can be used to find an optimal sequence of choices to reach a certain goal state, or to establish lower bounds on the time needed to reach a given state. For example, if vertices represent the states of a puzzle like a [[Rubik's Cube]] and each directed edge corresponds to a single move or turn, shortest path algorithms can be used to find a solution that uses the minimum possible number of moves.
+
+In a [[Computer network|networking]] or [[Telecommunications network|telecommunications]] mindset, this shortest path problem is sometimes called the min-delay path problem and usually tied with a [[widest path problem]]. For example, the algorithm may seek the shortest (min-delay) widest path, or widest shortest (min-delay) path.
+
+A more lighthearted application is the games of &quot;[[six degrees of separation]]&quot; that try to find the shortest path in graphs like movie stars appearing in the same film.
+
+Other applications, often studied in [[operations research]], include plant and facility layout, [[robotics]], [[transportation]], and [[Very-large-scale integration|VLSI]] design.&lt;ref&gt;{{cite journal |doi=10.1145/242224.242246 |title=Developing algorithms and software for geometric path planning problems |date=December 1996 |first=Danny Z. |last=Chen |journal=ACM Computing Surveys |volume=28 |issue=4es |s2cid=11761485 |at=Article 18 }}&lt;/ref&gt;
+
+===Road networks===
+A road network can be considered as a graph with positive weights. The nodes represent road junctions and each edge of the graph is associated with a road segment between two junctions. The weight of an edge may correspond to the length of the associated road segment, the time needed to traverse the segment, or the cost of traversing the segment. Using directed edges it is also possible to model one-way streets. Such graphs are special in the sense that some edges are more important than others for long-distance travel (e.g. highways). This property has been formalized using the notion of highway dimension.&lt;ref&gt;Abraham, Ittai; Fiat, Amos; [[Andrew V. Goldberg|Goldberg, Andrew V.]]; Werneck, Renato F. [http://research.microsoft.com/pubs/115272/soda10.pdf%20research.microsoft.com/pubs/115272/soda10.pdf &quot;Highway Dimension, Shortest Paths, and Provably Efficient Algorithms&quot;]. ACM-SIAM Symposium on Discrete Algorithms, pages 782–793, 2010.&lt;/ref&gt; There are a great number of algorithms that exploit this property and are therefore able to compute the shortest path a lot quicker than would be possible on general graphs.
+
+All of these algorithms work in two phases. In the first phase, the graph is preprocessed without knowing the source or target node. The second phase is the query phase. In this phase, source and target node are known. The idea is that the road network is static, so the preprocessing phase can be done once and used for a large number of queries on the same road network.
+
+The algorithm with the fastest known query time is called hub labeling and is able to compute shortest path on the road networks of Europe or the US in a fraction of a microsecond.&lt;ref&gt;Abraham, Ittai; Delling, Daniel; [[Andrew V. Goldberg|Goldberg, Andrew V.]]; Werneck, Renato F. [http://research.microsoft.com/pubs/142356/HL-TR.pdf research.microsoft.com/pubs/142356/HL-TR.pdf &quot;A Hub-Based Labeling Algorithm for Shortest Paths on Road Networks&quot;]. Symposium on Experimental Algorithms, pages 230–241, 2011.&lt;/ref&gt; Other techniques that have been used are:
+
+* ALT ([[A* search]], landmarks, and [[triangle inequality]])
+* Arc flags
+* [[Contraction hierarchies]]
+* Transit node routing
+* Reach-based pruning
+* Labeling
+* [[Hub labels]]
+
+==Related problems==
+For shortest path problems in [[computational geometry]], see [[Euclidean shortest path]].

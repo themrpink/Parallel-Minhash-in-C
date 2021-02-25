@@ -1,0 +1,179 @@
+Every topological group can be viewed as a [[uniform space]] in two ways; the ''left uniformity'' turns all left multiplications into uniformly continuous maps while the ''right uniformity'' turns all right multiplications into uniformly continuous maps.{{sfn|Bourbaki|1998|loc=section III.3}}
+If {{mvar|G}} is not abelian, then these two need not coincide. 
+The uniform structures allow one to talk about notions such as [[completeness (topology)|completeness]], [[uniformly continuous|uniform continuity]] and [[uniform convergence]] on topological groups.
+
+;Separation properties
+
+If {{mvar|U}} is an open subset of a commutative topological group {{mvar|G}} and {{mvar|U}} contains a compact set {{mvar|K}}, then there exists a neighborhood {{mvar|N}} of the identity element such that {{math|''KN'' ⊆ ''U''}}.{{sfn | Narici | Beckenstein | 2011 | pp=19-45}}
+
+As a uniform space, every commutative topological group is [[completely regular space|completely regular]]. 
+Consequently, for a multiplicative topological group {{mvar|G}} with identity element 1, the following are equivalent:{{sfn | Narici | Beckenstein | 2011 | pp=19-45}} 
+&lt;ol&gt;
+&lt;li&gt;{{mvar|G}} is a T&lt;sub&gt;0&lt;/sub&gt;-space ([[Kolmogorov space|Kolmogorov]]);&lt;/li&gt;
+&lt;li&gt;{{mvar|G}} is a T&lt;sub&gt;2&lt;/sub&gt;-space ([[Hausdorff space|Hausdorff]]);&lt;/li&gt;
+&lt;li&gt;{{mvar|G}} is a T&lt;sub&gt;3½&lt;/sub&gt; ([[Tychonoff space|Tychonoff]]);&lt;/li&gt;
+&lt;li&gt;{{math|{ 1 }}} is closed in {{mvar|G}};&lt;/li&gt;
+&lt;li&gt;{{math|{ 1 } :{{=}} {{underset|N ∈ 𝒩|{{big|∩}}}} ''N''}}, where {{math|𝒩}} is a neighborhood basis of the identity element in {{mvar|G}};&lt;/li&gt;
+&lt;lI&gt;for any {{mvar|''x'' ∈ ''G''}} such that {{math|''x'' ≠ 1}}, there exists a neighborhood {{mvar|U}} in {{mvar|G}} of the identity element such that {{mvar|''x'' ∉ ''U''}}.&lt;/li&gt;
+&lt;/ol&gt;
+
+A subgroup of a commutative topological group is discrete if and only if it has an [[isolated point]].{{sfn | Narici | Beckenstein | 2011 | pp=19-45}}
+
+If {{mvar|G}} is not Hausdorff, then one can obtain a Hausdorff group by passing to the quotient group {{math|''G''/''K''}}, where {{mvar|K}} is the [[closure (topology)|closure]] of the identity.{{sfn|Bourbaki|1998|loc=section III.2.7}} 
+This is equivalent to taking the [[Kolmogorov space#The Kolmogorov quotient|Kolmogorov quotient]] of {{mvar|G}}.
+
+;Metrizability
+
+The '''Birkhoff–Kakutani theorem''' (named after mathematicians [[Garrett Birkhoff]] and [[Shizuo Kakutani]]) states that the following three conditions on a topological group {{mvar|G}} are equivalent:{{sfn|Montgomery|Zippin|1955|loc=section 1.22}}
+* The identity element 1 is closed in {{mvar|G}}, and there is a countable [[neighborhood basis|basis of neighborhoods]] for 1 in {{mvar|G}}.
+* {{mvar|G}} is [[metrizable]] (as a topological space).
+* There is a left-invariant metric on {{mvar|G}} that induces the given topology on {{mvar|G}}.
+(A metric on {{mvar|G}} is called left-invariant if for each point {{math|''a'' ∈ ''G''}}, the map {{math|''x'' ↦ ''ax''}} is an [[isometry]] from {{mvar|G}} to itself.)
+
+;Subgroups
+
+Every [[subgroup]] of a topological group is itself a topological group when given the [[subspace topology]]. 
+Every open subgroup {{mvar|H}} is also closed in {{mvar|G}}, since the complement of {{mvar|H}} is the open set given by the union of open sets {{math|''gH''}} for {{math|''g'' ∈ ''G'' \ ''H''}}. 
+If {{mvar|H}} is a subgroup of {{mvar|G}} then the closure of {{mvar|H}} is also a subgroup. 
+Likewise, if {{mvar|H}} is a normal subgroup of {{mvar|G}}, the closure of {{mvar|H}} is normal in {{mvar|G}}.
+
+;Quotients and normal subgroups
+
+If {{mvar|H}} is a subgroup of {{mvar|G}}, the set of left [[coset]]s {{math|''G''/''H''}} with the [[quotient topology]] is called a [[homogeneous space]] for {{mvar|G}}. 
+The quotient map {{math|''q'' : ''G'' → ''G''/''H''}} is always [[open map|open]]. 
+For example, for a positive integer {{mvar|n}}, the [[n-sphere|sphere]] {{math|''S''&lt;sup&gt;''n''&lt;/sup&gt;}} is a homogeneous space for the [[rotation group]] {{math|SO(''n''+1)}} in {{math|ℝ&lt;sup&gt;''n''+1&lt;/sup&gt;}}, with {{math|''S''&lt;sup&gt;''n''&lt;/sup&gt; {{=}} SO(''n''+1)/SO(''n'')}}. 
+A homogeneous space {{math|''G''/''H''}} is Hausdorff if and only if {{mvar|H}} is closed in {{mvar|G}}.{{sfn|Bourbaki|1998|loc=section III.2.5}} 
+Partly for this reason, it is natural to concentrate on closed subgroups when studying topological groups.
+
+If {{mvar|H}} is a [[normal subgroup]] of {{mvar|G}}, then the [[quotient group]] {{math|''G''/''H''}} becomes a topological group when given the quotient topology. 
+It is Hausdorff if and only if {{mvar|H}} is closed in {{mvar|G}}. 
+For example, the quotient group {{math|ℝ/ℤ}} is isomorphic to the circle group {{math|''S''&lt;sup&gt;1&lt;/sup&gt;}}.
+
+In any topological group, the [[identity component]] (i.e., the [[connected component (topology)|connected component]] containing the identity element) is a closed normal subgroup. 
+If {{mvar|C}} is the identity component and ''a'' is any point of {{mvar|G}}, then the left coset {{math|''aC''}} is the component of {{mvar|G}} containing ''a''. 
+So the collection of all left cosets (or right cosets) of {{mvar|C}} in {{mvar|G}} is equal to the collection of all components of {{mvar|G}}. 
+It follows that the quotient group {{math|''G''/''C''}} is [[totally disconnected]].{{sfn|Bourbaki|1998|loc=section I.11.5}}
+
+;Closure and compactness
+
+In any commutative topological group, the product (assuming the group is multiplicative) {{math|''KC''}} of a compact set {{mvar|K}} and a closed set {{mvar|C}} is a closed set.{{sfn | Narici | Beckenstein | 2011 | pp=19-45}} 
+Furthermore, for any subsets {{mvar|R}} and {{mvar|S}} of {{mvar|G}}, {{math|(cl ''R'')(cl ''S'') ⊆ cl (''RS'')}}.{{sfn | Narici | Beckenstein | 2011 | pp=19-45}}
+
+If {{mvar|H}} is a subgroup of a commutative topological group {{mvar|G}} and if {{mvar|N}} is a neighborhood in {{mvar|G}} of the identity element such that {{mvar|''H'' ∩ cl ''N''}} is closed, then {{mvar|H}} is closed.{{sfn | Narici | Beckenstein | 2011 | pp=19-45}} 
+Every discrete subgroup of a Hausdorff commutative topological group is closed.{{sfn | Narici | Beckenstein | 2011 | pp=19-45}}
+
+;Isomorphism theorems
+
+The [[isomorphism theorem]]s from ordinary group theory are not always true in the topological setting. 
+This is because a bijective homomorphism need not be an isomorphism of topological groups. 
+The theorems are valid if one places certain restrictions on the maps involved. 
+For example, the first isomorphism theorem states that if {{math|''f'' : ''G'' → ''H''}} is a homomorphism, then the homomorphism from {{math|''G''/ker(''f'')}} to {{math|im(''f'')}} is an isomorphism if and only if the map {{mvar|f}} is open onto its image.{{sfn|Bourbaki|1998|loc=section III.2.8}}
+
+== Hilbert's fifth problem ==
+
+There are several strong results on the relation between topological groups and Lie groups. 
+First, every continuous homomorphism of Lie groups &lt;math&gt;G \to H&lt;/math&gt; is smooth. 
+It follows that a topological group has a unique structure of a Lie group if one exists. 
+Also, [[closed subgroup theorem|Cartan's theorem]] says that every closed subgroup of a Lie group is a Lie subgroup, in particular a smooth [[submanifold]].
+
+'''[[Hilbert's fifth problem]]''' asked whether a topological group {{mvar|G}} that is a [[topological manifold]] must be a Lie group. 
+In other words, does {{mvar|G}} have the structure of a smooth manifold, making the group operations smooth? 
+As shown by [[Andrew Gleason]], [[Deane Montgomery]], and [[Leo Zippin]], the answer to this problem is yes.{{sfn|Montgomery|Zippin|1955|loc=section 4.10}} 
+In fact, {{mvar|G}} has a [[real analytic]] structure. 
+Using the smooth structure, one can define the Lie algebra of {{mvar|G}}, an object of [[linear algebra]] that determines a [[connected space|connected]] group {{mvar|G}} up to [[covering space]]s. 
+As a result, the solution to Hilbert's fifth problem reduces the classification of topological groups that are topological manifolds to an algebraic problem, albeit a complicated problem in general.
+
+The theorem also has consequences for broader classes of topological groups. First, every [[compact group]] (understood to be Hausdorff) is an inverse limit of compact Lie groups. 
+(One important case is an inverse limit of finite groups, called a [[profinite group]]. For example, the group {{math|ℤ&lt;sub&gt;''p''&lt;/sub&gt;}} of ''p''-adic integers and the [[absolute Galois group]] of a field are profinite groups.) 
+Furthermore, every connected locally compact group is an inverse limit of connected Lie groups.{{sfn|Montgomery|Zippin|1955|loc=section 4.6}} 
+At the other extreme, a totally disconnected locally compact group always contains a compact open subgroup, which is necessarily a profinite group.{{sfn|Bourbaki|1998|loc=section III.4.6}} 
+(For example, the locally compact group {{math|GL(''n'',ℚ&lt;sub&gt;''p''&lt;/sub&gt;)}} contains the compact open subgroup {{math|GL(''n'',ℤ&lt;sub&gt;''p''&lt;/sub&gt;)}}, which is the inverse limit of the finite groups {{math|GL(''n'',ℤ/''p''&lt;sup&gt;''r''&lt;/sup&gt;)}} as {{mvar|r}}' goes to infinity.)
+
+== Representations of compact or locally compact groups ==
+
+An '''action''' of a topological group {{mvar|G}} on a topological space ''X'' is a [[Group action (mathematics)|group action]] of {{mvar|G}} on ''X'' such that the corresponding function {{math|''G'' × ''X'' → ''X''}} is continuous. 
+Likewise, a '''[[representation theory|representation]]''' of a topological group {{mvar|G}} on a real or complex topological vector space ''V'' is a continuous action of {{mvar|G}} on ''V'' such that for each {{math|''g'' ∈ ''G''}}, the map {{math|''v'' ↦ ''gv''}} from ''V'' to itself is linear.
+
+Group actions and representation theory are particularly well understood for compact groups, generalizing what happens for [[representation theory of finite groups|finite group]]s. 
+For example, every finite-dimensional (real or complex) representation of a compact group is a [[direct sum]] of [[irreducible representation]]s. 
+An infinite-dimensional [[unitary representation]] of a compact group can be decomposed as a Hilbert-space direct sum of irreducible representations, which are all finite-dimensional; this is part of the [[Peter–Weyl theorem]].{{sfn|Hewitt|Ross|1970|loc=Theorem 27.40}} 
+For example, the theory of [[Fourier series]] describes the decomposition of the unitary representation of the circle group {{math|''S''&lt;sup&gt;1&lt;/sup&gt;}} on the complex Hilbert space {{math|L&lt;sup&gt;2&lt;/sup&gt;(''S''&lt;sup&gt;1&lt;/sup&gt;)}}. 
+The irreducible representations of {{math|''S''&lt;sup&gt;1&lt;/sup&gt;}} are all 1-dimensional, of the form {{math|''z'' ↦ ''z''&lt;sup&gt;''n''&lt;/sup&gt;}} for integers {{mvar|n}} (where {{math|''S''&lt;sup&gt;1&lt;/sup&gt;}} is viewed as a subgroup of the multiplicative group {{mvar|ℂ}}*). 
+Each of these representations occurs with multiplicity 1 in {{math|L&lt;sup&gt;2&lt;/sup&gt;(''S''&lt;sup&gt;1&lt;/sup&gt;)}}.
+
+The irreducible representations of all compact connected Lie groups have been classified. 
+In particular, the [[character theory|character]] of each irreducible representation is given by the [[Weyl character formula]].
+
+More generally, locally compact groups have a rich theory of [[harmonic analysis]], because they admit a natural notion of [[measure (mathematics)|measure]] and [[integral]], given by the [[Haar measure]]. 
+Every unitary representation of a locally compact group can be described as a [[direct integral]] of irreducible unitary representations. 
+(The decomposition is essentially unique if {{mvar|G}} is of [[C*-algebra#Type for C*-algebras|Type I]], which includes the most important examples such as abelian groups and [[semisimple Lie group]]s.{{sfn|Mackey|1976|loc=section 2.4}}) 
+A basic example is the [[Fourier transform]], which decomposes the action of the additive group {{mvar|ℝ}} on the Hilbert space {{math|L&lt;sup&gt;2&lt;/sup&gt;(ℝ)}} as a direct integral of the irreducible unitary representations of {{mvar|ℝ}}. 
+The irreducible unitary representations of {{mvar|ℝ}} are all 1-dimensional, of the form {{math|''x'' ↦ ''e''&lt;sup&gt;2π''iax''&lt;/sup&gt;}} for {{math|''a'' ∈ ℝ}}.
+
+The irreducible unitary representations of a locally compact group may be infinite-dimensional. 
+A major goal of representation theory, related to the [[Langlands classification]] of [[admissible representation]]s, is to find the [[unitary dual]] (the space of all irreducible unitary representations) for the semisimple Lie groups. 
+The unitary dual is known in many cases such as [[representation theory of SL2(R)|{{math|SL(2,ℝ)}}]], but not all.
+
+For a locally compact abelian group {{mvar|G}}, every irreducible unitary representation has dimension 1. 
+In this case, the unitary dual &lt;math&gt;\hat{G}&lt;/math&gt; is a group, in fact another locally compact abelian group. 
+[[Pontryagin duality]] states that for a locally compact abelian group {{mvar|G}}, the dual of &lt;math&gt;\hat{G}&lt;/math&gt; is the original group {{mvar|G}}. 
+For example, the dual group of the integers {{math|ℤ}} is the circle group {{math|''S''&lt;sup&gt;1&lt;/sup&gt;}}, while the group {{mvar|ℝ}} of real numbers is isomorphic to its own dual.
+
+Every locally compact group {{mvar|G}} has a good supply of irreducible unitary representations; for example, enough representations to distinguish the points of {{mvar|G}} (the [[Gelfand–Raikov theorem]]). 
+By contrast, representation theory for topological groups that are not locally compact has so far been developed only in special situations, and it may not be reasonable to expect a general theory. 
+For example, there are many abelian [[Banach manifold|Banach–Lie groups]] for which every representation on Hilbert space is trivial.{{sfn|Banaszczyk|1983}}
+
+== Homotopy theory of topological groups ==
+
+Topological groups are special among all topological spaces, even in terms of their [[homotopy type]]. 
+One basic point is that a topological group {{mvar|G}} determines a path-connected topological space, the [[classifying space]] {{math|''BG''}} (which classifies [[principal bundle|principal {{mvar|G}}-bundles]] over topological spaces, under mild hypotheses). 
+The group {{mvar|G}} is isomorphic in the [[model category#Homotopy and the homotopy category|homotopy category]] to the [[loop space]] of {{math|''BG''}}; that implies various restrictions on the homotopy type of {{mvar|G}}.{{sfn|Hatcher|2001|loc=Theorem 4.66}} 
+Some of these restrictions hold in the broader context of [[H-space]]s.
+
+For example, the [[fundamental group]] of a topological group {{mvar|G}} is abelian. 
+(More generally, the [[Whitehead product]] on the homotopy groups of {{mvar|G}} is zero.) 
+Also, for any field ''k'', the [[cohomology]] ring {{math|''H''*(''G'',''k'')}} has the structure of a [[Hopf algebra]]. 
+In view of structure theorems on Hopf algebras by [[Heinz Hopf]] and [[Armand Borel]], this puts strong restrictions on the possible cohomology rings of topological groups. 
+In particular, if {{mvar|G}} is a path-connected topological group whose rational cohomology ring {{math|''H''*(''G'',ℚ)}} is finite-dimensional in each degree, then this ring must be a free [[graded-commutative]] algebra over {{math|ℚ}}, that is, the [[tensor product of algebras|tensor product]] of a [[polynomial ring]] on generators of even degree with an [[exterior algebra]] on generators of odd degree.{{sfn|Hatcher|2001|loc=Theorem 3C.4}}
+
+In particular, for a connected Lie group {{mvar|G}}, the rational cohomology ring of {{mvar|G}} is an exterior algebra on generators of odd degree. 
+Moreover, a connected Lie group {{mvar|G}} has a [[maximal compact subgroup]] ''K'', which is unique up to conjugation, and the inclusion of ''K'' into {{mvar|G}} is a [[homotopy equivalence]]. 
+So describing the homotopy types of Lie groups reduces to the case of compact Lie groups. 
+For example, the maximal compact subgroup of {{math|SL(2,ℝ)}} is the circle group {{math|SO(2)}}, and the homogeneous space {{math|SL(2,ℝ)/SO(2)}} can be identified with the [[hyperbolic plane]]. 
+Since the hyperbolic plane is [[contractible space|contractible]], the inclusion of the circle group into {{math|SL(2,ℝ)}} is a homotopy equivalence.
+
+Finally, compact connected Lie groups have been classified by [[Wilhelm Killing]], [[Élie Cartan]], and [[Hermann Weyl]]. 
+As a result, there is an essentially complete description of the possible homotopy types of Lie groups. 
+For example, a compact connected Lie group of dimension at most 3 is either a torus, the group [[SU(2)]] ([[diffeomorphic]] to the 3-sphere {{math|''S''&lt;sup&gt;3&lt;/sup&gt;}}), or its quotient group {{math|SU(2)/{±1} ≅ [[SO(3)]]}} (diffeomorphic to [[real projective space|{{math|'''RP'''&lt;sup&gt;3&lt;/sup&gt;}}]]).
+
+== Complete Abelian topological groups ==
+
+Information about convergence of nets and filters, such as definitions and properties, can be found in the article about [[filters in topology]]. 
+
+=== Canonical uniformity on a commutative topological group ===
+
+{{Main|Uniform space}}
+
+We will henceforth assume that any topological group that we consider is an additive commutative topological group with identity element {{math|0}}. 
+
+{{Quote frame|1='''Definition''' ('''Canonical entourage''' and '''diagonal'''): 
+The '''diagonal''' of {{mvar|X}} is the set
+
+::{{math|1=Δ&lt;sub&gt;''X''&lt;/sub&gt;  &amp;thinsp;:=&amp;thinsp;  { (''x'', ''x'') : ''x'' ∈ ''X'' &amp;thinsp;}}}
+
+and for any {{math|''N'' ⊆ ''X''}} containing {{math|0}}, the '''canonical entourage''' or '''canonical vicinities around {{mvar|N}}''' is the set 
+
+::{{math|1=Δ&lt;sub&gt;''X''&lt;/sub&gt;(''N'')  &amp;nbsp;:=&amp;nbsp;  { (''x'', ''y'') ∈ ''X'' × ''X'' : ''x'' - ''y'' ∈ ''N''&amp;thinsp;}  &amp;nbsp;=&amp;nbsp;  {{underset|''y'' ∈ ''X''|{{big|∪}}}} [(''y'' + ''N'') × { ''y'' }] &amp;nbsp;=&amp;nbsp;  Δ&lt;sub&gt;''X''&lt;/sub&gt; + (''N'' × { 0 }) }}
+
+
+'''Definition''' ('''Canonical uniformity'''):{{sfn | Edwards | 1995 | p=61}} For a topological group {{math|(''X'', τ)}}, the '''canonical uniformity''' on {{mvar|X}} is the [[Uniform space|uniform structure]] induced by the set of all canonical entourages {{math|1=Δ(''N'')}} as {{mvar|N}} ranges over all neighborhoods of {{math|0}} in {{mvar|X}}. 
+
+That is, it is the upward closure of the following prefilter on {{math|''X'' × ''X''}}, 
+
+::{{math|1={ Δ(''N'') : ''N'' is a neighborhood of 0 in ''X''&amp;thinsp;}}}
+
+where this prefilter forms what is known as a [[base of entourages]] of the canonical uniformity. 
+}}
+
+{{Quote frame|1='''Definition''' ('''Translation-invariant uniformity'''):{{sfn | Schaefer | Wolff | 1999 | pp=12-19}} For a commutative additive group {{mvar|X}}, a fundamental system of entourages {{math|ℬ}} is called '''translation-invariant''' if for every {{math|''B'' ∈ ℬ}}, {{math|(''x'', ''y'') ∈ ''B''}} if and only if {{math|(''x'' + ''z'', ''y'' + ''z'') ∈ ''B''}} for all {{math|''x'', ''y'', ''z'' ∈ ''X''}}. A uniformity {{math|ℬ}} is called '''translation-invariant''' if it has a base of entourages that is translation-invariant.
+}}

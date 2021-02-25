@@ -1,0 +1,124 @@
+where 1 is represented by &lt;math&gt;\sqrt{E_b} \phi(t)&lt;/math&gt; and 0 is represented by &lt;math&gt;-\sqrt{E_b} \phi(t)&lt;/math&gt;. This assignment is arbitrary.
+
+This use of this basis function is shown at the [[#timing|end of the next section]] in a signal timing diagram. The topmost signal is a BPSK-modulated cosine wave that the BPSK modulator would produce. The bit-stream that causes this output is shown above the signal (the other parts of this figure are relevant only to QPSK). After modulation, the base band signal will be moved to the high frequency band by multiplying &lt;math&gt; \cos(2 \pi f_c t)&lt;/math&gt;.
+
+===Bit error rate===
+The [[bit error rate]] (BER) of BPSK under [[additive white Gaussian noise]] (AWGN) can be calculated as:&lt;ref&gt;Communications Systems, H. Stern &amp; S. Mahmoud, Pearson Prentice Hall, 2004, p. 283.&lt;/ref&gt;
+
+:&lt;math&gt;P_b = Q\left(\sqrt{\frac{2 E_b}{N_0}}\right)&lt;/math&gt; or &lt;math&gt;P_e = \frac{1}{2} \operatorname{erfc} \left( \sqrt{\frac{E_b}{N_0}}\right)&lt;/math&gt;
+
+Since there is only one bit per symbol, this is also the symbol error rate.
+
+==Quadrature phase-shift keying (QPSK)==
+[[File:QPSK Gray Coded.svg|200px|right|thumb|Constellation diagram for QPSK with [[Gray coding]]. Each adjacent symbol only differs by one bit.]]
+
+Sometimes this is known as ''quadriphase PSK'', 4-PSK, or 4-[[QAM]]. (Although the root concepts of QPSK and 4-QAM are different, the resulting modulated radio waves are exactly the same.) QPSK uses four points on the constellation diagram, equispaced around a circle. With four phases, QPSK can encode two bits per symbol, shown in the diagram with [[Gray coding]] to minimize the [[bit error rate]] (BER){{snd}} sometimes misperceived as twice the BER of BPSK.
+
+The mathematical analysis shows that QPSK can be used either to double the data rate compared with a BPSK system while maintaining the ''same'' [[bandwidth (signal processing)|bandwidth]] of the signal, or to ''maintain the data-rate of BPSK'' but halving the bandwidth needed. In this latter case, the BER of QPSK is ''exactly the same'' as the BER of BPSK{{snd}} and believing differently is a common confusion when considering or describing QPSK. The transmitted carrier can undergo numbers of phase changes.
+
+Given that radio communication channels are allocated by agencies such as the [[Federal Communications Commission]] giving a prescribed (maximum) bandwidth, the advantage of QPSK over BPSK becomes evident: QPSK transmits twice the data rate in a given bandwidth compared to BPSK - at the same BER. The engineering penalty that is paid is that QPSK transmitters and receivers are more complicated than the ones for BPSK. However, with modern [[electronics]] technology, the penalty in cost is very moderate.
+
+As with BPSK, there are phase ambiguity problems at the receiving end, and [[#Differential encoding|differentially encoded]] QPSK is often used in practice.
+
+===Implementation===
+The implementation of QPSK is more general than that of BPSK and also indicates the implementation of higher-order PSK. Writing the symbols in the constellation diagram in terms of the sine and cosine waves used to transmit them:
+
+:&lt;math&gt;s_n(t) = \sqrt{\frac{2E_s}{T_s}} \cos \left(2 \pi f_c t + (2n - 1)\frac{\pi}{4}\right),\quad n = 1, 2, 3, 4.&lt;/math&gt;
+
+This yields the four phases π/4, 3π/4, 5π/4 and 7π/4 as needed.
+
+This results in a two-dimensional signal space with unit [[basis functions]]
+
+:&lt;math&gt;\begin{align}
+  \phi_1(t) &amp;= \sqrt{\frac{2}{T_s}} \cos\left(2\pi f_c t\right) \\
+  \phi_2(t) &amp;= \sqrt{\frac{2}{T_s}} \sin\left(2\pi f_c t\right)
+\end{align}&lt;/math&gt;
+
+The first basis function is used as the in-phase component of the signal and the second as the quadrature component of the signal.
+
+Hence, the signal constellation consists of the signal-space 4 points
+
+:&lt;math&gt;\begin{pmatrix} \pm\sqrt{\frac{E_s}{2}} &amp; \pm\sqrt{\frac{E_s}{2}} \end{pmatrix}.&lt;/math&gt;
+
+The factors of 1/2 indicate that the total power is split equally between the two carriers.
+
+Comparing these basis functions with that for BPSK shows clearly how QPSK can be viewed as two independent BPSK signals. Note that the signal-space points for BPSK do not need to split the symbol (bit) energy over the two carriers in the scheme shown in the BPSK constellation diagram.
+
+QPSK systems can be implemented in a number of ways. An illustration of the major components of the transmitter and receiver structure are shown below.
+
+[[File:Transmisor QPSK 2.png|thumb|600px|center|Conceptual transmitter structure for QPSK. The binary data stream is split into the in-phase and quadrature-phase components. These are then separately modulated onto two orthogonal basis functions. In this implementation, two sinusoids are used. Afterwards, the two signals are superimposed, and the resulting signal is the QPSK signal. Note the use of polar [[non-return-to-zero]] encoding. These encoders can be placed before for binary data source, but have been placed after to illustrate the conceptual difference between digital and analog signals involved with digital modulation.]]
+
+[[File:Receiver QPSK.PNG|thumb|600px|center|Receiver structure for QPSK. The matched filters can be replaced with correlators. Each detection device uses a reference threshold value to determine whether a 1 or 0 is detected.]]
+
+===Probability of error===
+Although QPSK can be viewed as a quaternary modulation, it is easier to see it as two independently modulated quadrature carriers. With this interpretation, the even (or odd) bits are used to modulate the in-phase component of the carrier, while the odd (or even) bits are used to modulate the quadrature-phase component of the carrier. BPSK is used on both carriers and they can be independently demodulated.
+
+As a result, the probability of bit-error for QPSK is the same as for BPSK:
+:&lt;math&gt;P_b = Q\left(\sqrt{\frac{2E_b}{N_0}}\right)&lt;/math&gt;
+
+However, in order to achieve the same bit-error probability as BPSK, QPSK uses twice the power (since two bits are transmitted simultaneously).
+
+The symbol error rate is given by:
+
+:&lt;math&gt;
+\begin{align}
+ P_s &amp;= 1 - \left( 1 - P_b \right)^2 \\
+     &amp;= 2Q\left( \sqrt{\frac{E_s}{N_0}} \right) - \left[ Q \left( \sqrt{\frac{E_s}{N_0}} \right) \right]^2.
+\end{align}
+&lt;/math&gt;
+
+If the [[signal-to-noise ratio]] is high (as is necessary for practical QPSK systems) the probability of symbol error may be approximated:
+
+:&lt;math&gt;P_s \approx 2 Q \left( \sqrt{\frac{E_s}{N_0}} \right ) = \operatorname{erfc} \left( \sqrt{\frac{E_s}{2N_0}} \right) = \operatorname{erfc} \left( \sqrt{\frac{E_b}{N_0}} \right)&lt;/math&gt;
+
+The modulated signal is shown below for a short segment of a random binary data-stream. The two carrier waves are a cosine wave and a sine wave, as indicated by the signal-space analysis above. Here, the odd-numbered bits have been assigned to the in-phase component and the even-numbered bits to the quadrature component (taking the first bit as number 1). The total signal{{snd}} the sum of the two components{{snd}} is shown at the bottom. Jumps in phase can be seen as the PSK changes the phase on each component at the start of each bit-period. The topmost waveform alone matches the description given for BPSK above.
+&lt;br /&gt;[[File:QPSK timing diagram.png|frame|center|Timing diagram for QPSK. The binary data stream is shown beneath the time axis. The two signal components with their bit assignments are shown at the top, and the total combined signal at the bottom. Note the abrupt changes in phase at some of the bit-period boundaries.]]
+
+The binary data that is conveyed by this waveform is: &lt;span style =&quot;letter-spacing:0.5em;&quot;&gt;11000110&lt;/span&gt;.
+* The odd bits, highlighted here, contribute to the in-phase component: &lt;span style =&quot;letter-spacing:0.5em;&quot;&gt;{{bg|lightblue|1}}1{{bg|lightblue|0}}0{{bg|lightblue|0}}1{{bg|lightblue|1}}0&lt;/span&gt;
+* The even bits, highlighted here, contribute to the quadrature-phase component: &lt;span style =&quot;letter-spacing:0.5em;&quot;&gt;1{{bg|lightblue|1}}0{{bg|lightblue|0}}0{{bg|lightblue|1}}1{{bg|lightblue|0}}&lt;/span&gt;
+
+===Variants===
+
+====Offset QPSK (OQPSK)====
+[[File:Pi-by-O-QPSK Gray Coded.svg|thumb|Signal doesn't pass through the origin, because only one bit of the symbol is changed at a time.]]
+
+''Offset quadrature phase-shift keying'' (''OQPSK'') is a variant of phase-shift keying modulation using four different values of the phase to transmit.  It is sometimes called ''staggered quadrature phase-shift keying'' (''SQPSK'').
+
+[[File:Oqpsk phase plot.svg|thumb|Difference of the phase between QPSK and OQPSK]]
+
+Taking four values of the phase (two [[bit]]s) at a time to construct a QPSK symbol can allow the phase of the signal to jump by as much as 180° at a time. When the signal is low-pass filtered (as is typical in a transmitter), these phase-shifts result in large amplitude fluctuations, an undesirable quality in communication systems. By offsetting the timing of the odd and even bits by one bit-period, or half a symbol-period, the in-phase and quadrature components will never change at the same time. In the constellation diagram shown on the right, it can be seen that this will limit the phase-shift to no more than 90° at a time. This yields much lower amplitude fluctuations than non-offset QPSK and is sometimes preferred in practice.
+
+The picture on the right shows the difference in the behavior of the phase between ordinary QPSK and OQPSK. It can be seen that in the first plot the phase can change by 180° at once, while in OQPSK the changes are never greater than 90°.
+
+The modulated signal is shown below for a short segment of a random binary data-stream. Note the half symbol-period offset between the two component waves. The sudden phase-shifts occur about twice as often as for QPSK (since the signals no longer change together), but they are less severe. In other words, the magnitude of jumps is smaller in OQPSK when compared to QPSK.
+
+[[File:OQPSK timing diagram.png|frame|center|Timing diagram for offset-QPSK. The binary data stream is shown beneath the time axis. The two signal components with their bit assignments are shown the top and the total, combined signal at the bottom. Note the half-period offset between the two signal components.]]
+
+====SOQPSK====
+The license-free '''[[Pulse shaping|shaped]]-offset QPSK''' (SOQPSK) is interoperable with Feher-patented QPSK ('''FQPSK'''), in the sense that an integrate-and-dump offset QPSK detector produces the same output no matter which kind of transmitter is used.&lt;ref&gt;
+Tom Nelson, Erik Perrins, and Michael Rice.
+[http://people.eecs.ku.edu/~esp/publications/c2005ItcCommon.pdf &quot;Common detectors for Tier 1 modulations&quot;] {{webarchive|url=https://web.archive.org/web/20120917001949/http://people.eecs.ku.edu/~esp/publications/c2005ItcCommon.pdf |date=2012-09-17 }}.
+
+T. Nelson, E. Perrins, M. Rice.
+[https://www.researchgate.net/publication/4213516_Common_detectors_for_shaped_offset_QPSK_(SOQPSK)_and_Feher-patented_QPSK_(FQPSK) &quot;Common detectors for shaped offset QPSK (SOQPSK) and Feher-patented QPSK (FQPSK)&quot;]
+{{Cite book | last1 = Nelson | first1 = T. | last2 = Perrins | first2 = E. | last3 = Rice | first3 = M. | doi = 10.1109/GLOCOM.2005.1578470 | chapter = Common detectors for shaped offset QPSK (SOQPSK) and Feher-patented QPSK (FQPSK) | title = GLOBECOM '05. IEEE Global Telecommunications Conference, 2005 | pages = 5 pp | year = 2005 | isbn = 0-7803-9414-3 }}
+{{ISBN|0-7803-9414-3}}
+&lt;/ref&gt; 
+
+These modulations carefully shape the I and Q waveforms such that they change very smoothly, and the signal stays constant-amplitude even during signal transitions. (Rather than traveling instantly from one symbol to another, or even linearly, it travels smoothly around the constant-amplitude circle from one symbol to the next.) SOQPSK modulation can be represented as the hybrid of QPSK and [[Minimum-shift keying|MSK]]: SOQPSK has the same signal constellation as QPSK, however the phase of SOQPSK is always stationary.&lt;ref&gt;Hill, Terrance J. &quot;A non-proprietary, constant envelope, variant of shaped offset QPSK (SOQPSK) for improved spectral containment and detection efficiency.&quot; MILCOM 2000. 21st Century Military Communications Conference Proceedings. Vol. 1. IEEE, 2000.&lt;/ref&gt;&lt;ref&gt;Li, Lifang, and M. K. Simon. [https://pdfs.semanticscholar.org/f025/2fa31444fad6a5090527d73f87352137c9b8.pdf &quot;Performance of coded offset quadrature phase-shift keying (OQPSK) and MIL-STD shaped OQPSK (SOQPSK) with iterative decoding.&quot;] Interplanetary Network Prog. Rep. 42 (2004).&lt;/ref&gt;
+
+The standard description of SOQPSK-TG involves [[ternary signal|ternary symbols]].&lt;ref&gt;Sahin, C. and Perrins, E., 2011, November. The capacity of SOQPSK-TG. In 2011-MILCOM 2011 Military Communications Conference (pp. 555-560). IEEE.&lt;/ref&gt; SOQPSK is one of the most spread modulation schemes in application to [[Low Earth orbit|LEO]] satellite communications.&lt;ref&gt;Saeed, N., Elzanaty, A., Almorad, H., Dahrouj, H., Al-Naffouri, T.Y. and Alouini, M.S., 2020. [https://arxiv.org/pdf/1908.09501.pdf Cubesat communications: Recent advances and future challenges.] IEEE Communications Surveys &amp; Tutorials.&lt;/ref&gt;
+
+====''&amp;pi;''/4-QPSK====
+[[File:Pi-by-4-QPSK Gray Coded.svg|thumb|right|Dual constellation diagram for π/4-QPSK. This shows the two separate constellations with identical Gray coding but rotated by 45° with respect to each other.]]
+
+This variant of QPSK uses two identical constellations which are rotated by 45° (&lt;math&gt;\pi/4&lt;/math&gt; radians, hence the name) with respect to one another. Usually, either the even or odd symbols are used to select points from one of the constellations and the other symbols select points from the other constellation. This also reduces the phase-shifts from a maximum of 180°, but only to a maximum of 135° and so the amplitude fluctuations of &lt;math&gt;\pi/4&lt;/math&gt;-QPSK are between OQPSK and non-offset QPSK.
+
+One property this modulation scheme possesses is that if the modulated signal is represented in the complex domain, transitions between symbols never pass through 0. In other words, the signal does not pass through the origin. This lowers the dynamical range of fluctuations in the signal which is desirable when engineering communications signals.
+
+On the other hand, &lt;math&gt;\pi/4&lt;/math&gt;-QPSK lends itself to easy demodulation and has been adopted for use in, for example, [[time-division multiple access|TDMA]] [[cellular telephone]] systems.
+
+The modulated signal is shown below for a short segment of a random binary data-stream. The construction is the same as above for ordinary QPSK. Successive symbols are taken from the two constellations shown in the diagram. Thus, the first symbol (1 1) is taken from the &quot;blue&quot; constellation and the second symbol (0 0) is taken from the &quot;green&quot; constellation. Note that magnitudes of the two component waves change as they switch between constellations, but the total signal's magnitude remains constant ([[constant envelope]]). The phase-shifts are between those of the two previous timing-diagrams.
+
+[[File:Pi-by-4-QPSK timing diagram.png|frame|center|Timing diagram for π/4-QPSK. The binary data stream is shown beneath the time axis. The two signal components with their bit assignments are shown the top and the total, combined signal at the bottom. Note that successive symbols are taken alternately from the two constellations, starting with the &quot;blue&quot; one.]]

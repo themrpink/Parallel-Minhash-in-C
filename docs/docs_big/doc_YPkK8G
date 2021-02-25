@@ -1,0 +1,175 @@
+===Mutual information===
+The [[mutual information]] of a distribution is a special case of the [[Kullback–Leibler divergence]] in which &lt;math&gt;P&lt;/math&gt; is the full multivariate distribution and &lt;math&gt;Q&lt;/math&gt; is the product of the 1-dimensional marginal distributions. In the notation of the [[#Kullback–Leibler divergence|Kullback–Leibler divergence section]] of this article, &lt;math&gt;\boldsymbol\Sigma_1&lt;/math&gt; is a [[diagonal matrix]] with the diagonal entries of &lt;math&gt;\boldsymbol\Sigma_0&lt;/math&gt;, and &lt;math&gt;\boldsymbol\mu_1 = \boldsymbol\mu_0&lt;/math&gt;. The resulting formula for mutual information is:
+
+:&lt;math&gt;
+I(\boldsymbol{X}) = - { 1 \over 2 } \ln  |  \boldsymbol \rho_0 |,
+&lt;/math&gt;
+
+where &lt;math&gt;\boldsymbol \rho_0&lt;/math&gt; is the [[Covariance matrix#Correlation matrix|correlation matrix]] constructed from &lt;math&gt;\boldsymbol \Sigma_0&lt;/math&gt;.{{citation needed|date=August 2019}}
+
+In the bivariate case the expression for the mutual information is:
+
+:&lt;math&gt;
+I(x;y) = - { 1 \over 2 } \ln (1 - \rho^2).
+&lt;/math&gt;
+
+===Joint normality===
+
+====Normally distributed and independent====
+
+If &lt;math&gt;X&lt;/math&gt; and &lt;math&gt;Y&lt;/math&gt; are normally distributed and [[statistical independence|independent]], this implies they are &quot;jointly normally distributed&quot;, i.e., the pair &lt;math&gt;(X,Y)&lt;/math&gt; must have multivariate normal distribution.  However, a pair of jointly normally distributed variables need not be independent (would only be so if uncorrelated, &lt;math&gt; \rho = 0&lt;/math&gt; ).
+
+====Two normally distributed random variables need not be jointly bivariate normal====
+{{See also|normally distributed and uncorrelated does not imply independent}}
+The fact that two random variables &lt;math&gt;X&lt;/math&gt; and &lt;math&gt;Y&lt;/math&gt; both have a normal distribution does not imply that the pair &lt;math&gt;(X,Y)&lt;/math&gt; has a joint normal distribution.  A simple example is one in which X has a normal distribution with expected value 0 and variance 1, and &lt;math&gt;Y=X&lt;/math&gt; if &lt;math&gt;|X| &gt; c&lt;/math&gt; and &lt;math&gt;Y=-X&lt;/math&gt; if &lt;math&gt;|X| &lt; c&lt;/math&gt;, where &lt;math&gt;c &gt; 0&lt;/math&gt;.  There are similar counterexamples for more than two random variables. In general, they sum to a [[mixture model]].{{citation needed|date=August 2020}}
+
+====Correlations and independence====
+
+In general, random variables may be uncorrelated but statistically dependent.  But if a random vector has a multivariate normal distribution then any two or more of its components that are uncorrelated are [[statistical independence|independent]].  This implies that any two or more of its components that are [[pairwise independence|pairwise independent]] are independent. But, as pointed out just above, it is ''not'' true that two random variables that are (''separately'', marginally) normally distributed and uncorrelated are independent.
+
+===Conditional distributions===
+
+If ''N''-dimensional '''x''' is partitioned as follows
+:&lt;math&gt;
+\mathbf{x}
+=
+\begin{bmatrix}
+ \mathbf{x}_1 \\
+ \mathbf{x}_2
+\end{bmatrix}
+\text{ with sizes }\begin{bmatrix} q \times 1 \\ (N-q) \times 1 \end{bmatrix}&lt;/math&gt;
+
+and accordingly '''μ''' and '''Σ''' are partitioned as follows
+
+:&lt;math&gt;
+\boldsymbol\mu
+=
+\begin{bmatrix}
+ \boldsymbol\mu_1 \\
+ \boldsymbol\mu_2
+\end{bmatrix}
+\text{ with sizes }\begin{bmatrix} q \times 1 \\ (N-q) \times 1 \end{bmatrix}&lt;/math&gt;
+
+:&lt;math&gt;
+\boldsymbol\Sigma
+=
+\begin{bmatrix}
+ \boldsymbol\Sigma_{11} &amp; \boldsymbol\Sigma_{12} \\
+ \boldsymbol\Sigma_{21} &amp; \boldsymbol\Sigma_{22}
+\end{bmatrix}
+\text{ with sizes }\begin{bmatrix} q \times q &amp; q \times (N-q) \\ (N-q) \times q &amp; (N-q) \times (N-q) \end{bmatrix}&lt;/math&gt;
+
+then the distribution of '''x'''&lt;sub&gt;1&lt;/sub&gt; conditional on '''x'''&lt;sub&gt;2&lt;/sub&gt; = '''a''' is multivariate normal {{nowrap|('''x'''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;{{!}}&amp;nbsp;'''x'''&lt;sub&gt;2&lt;/sub&gt; {{=}} '''a''') ~ ''N''(&lt;span style{{=}}&quot;text-decoration:overline;&quot;&gt;'''μ'''&lt;/span&gt;, &lt;span style{{=}}&quot;text-decoration:overline;&quot;&gt;'''Σ'''&lt;/span&gt;)}} where
+
+:&lt;math&gt;
+\bar{\boldsymbol\mu}
+=
+\boldsymbol\mu_1 + \boldsymbol\Sigma_{12} \boldsymbol\Sigma_{22}^{-1}
+\left(
+ \mathbf{a} - \boldsymbol\mu_2
+\right)
+&lt;/math&gt;
+
+and covariance matrix
+
+:&lt;math&gt;
+\overline{\boldsymbol\Sigma}
+=
+\boldsymbol\Sigma_{11} - \boldsymbol\Sigma_{12} \boldsymbol\Sigma_{22}^{-1} \boldsymbol\Sigma_{21}.
+&lt;/math&gt;&lt;ref name=eaton&gt;{{cite book|last=Eaton|first=Morris L.|title=Multivariate Statistics: a Vector Space Approach|year=1983|publisher=John Wiley and Sons|isbn=978-0-471-02776-8|pages=116–117}}&lt;/ref&gt;
+
+This matrix is the [[Schur complement]] of '''Σ'''&lt;sub&gt;22&lt;/sub&gt; in '''Σ'''. This means that to calculate the conditional covariance matrix, one inverts the overall covariance matrix, drops the rows and columns corresponding to the variables being conditioned upon, and then inverts back to get the conditional covariance matrix. Here &lt;math&gt;\boldsymbol\Sigma_{22}^{-1}&lt;/math&gt; is the [[generalized inverse]] of &lt;math&gt;\boldsymbol\Sigma_{22}&lt;/math&gt;.
+
+Note that knowing that {{nowrap|'''x'''&lt;sub&gt;2&lt;/sub&gt; {{=}} '''a'''}} alters the variance, though the new variance does not depend on the specific value of '''a'''; perhaps more surprisingly, the mean is shifted by &lt;math&gt;\boldsymbol\Sigma_{12} \boldsymbol\Sigma_{22}^{-1} \left(\mathbf{a} - \boldsymbol\mu_2 \right)&lt;/math&gt;; compare this with the situation of not knowing the value of '''a''', in which case '''x'''&lt;sub&gt;1&lt;/sub&gt; would have distribution
+&lt;math&gt;\mathcal{N}_q \left(\boldsymbol\mu_1, \boldsymbol\Sigma_{11} \right)&lt;/math&gt;.
+
+An interesting fact derived in order to prove this result, is that the random vectors &lt;math&gt;\mathbf{x}_2&lt;/math&gt; and &lt;math&gt;\mathbf{y}_1=\mathbf{x}_1-\boldsymbol\Sigma_{12}\boldsymbol\Sigma_{22}^{-1}\mathbf{x}_2&lt;/math&gt; are independent.
+
+The matrix '''Σ'''&lt;sub&gt;12&lt;/sub&gt;'''Σ'''&lt;sub&gt;22&lt;/sub&gt;&lt;sup&gt;−1&lt;/sup&gt; is known as the matrix of [[regression analysis|regression]] coefficients.
+
+==== Bivariate case ====
+In the bivariate case where '''x''' is partitioned into &lt;math&gt;X_1&lt;/math&gt; and &lt;math&gt;X_2&lt;/math&gt;, the conditional distribution of &lt;math&gt;X_1&lt;/math&gt; given &lt;math&gt;X_2&lt;/math&gt; is&lt;ref&gt;{{cite book|last=Jensen|first=J|title=Statistics for Petroleum Engineers and Geoscientists|year=2000|publisher=Elsevier|location=Amsterdam|pages=207}}&lt;/ref&gt;
+
+: &lt;math&gt;X_1\mid X_2=a \ \sim\ \mathcal{N}\left(\mu_1+\frac{\sigma_1}{\sigma_2}\rho( a - \mu_2),\, (1-\rho^2)\sigma_1^2\right). &lt;/math&gt;
+
+where &lt;math&gt;\rho&lt;/math&gt; is the [[Pearson product-moment correlation coefficient|correlation coefficient]] between &lt;math&gt;X_1&lt;/math&gt; and &lt;math&gt;X_2&lt;/math&gt;.
+
+==== Bivariate conditional expectation ====
+
+=====In the general case=====
+
+:&lt;math&gt;
+\begin{pmatrix}
+ X_1 \\
+ X_2
+\end{pmatrix}  \sim \mathcal{N} \left( \begin{pmatrix}
+ \mu_1 \\
+ \mu_2
+\end{pmatrix} , \begin{pmatrix}
+ \sigma^2_1 &amp;  \rho \sigma_1 \sigma_2 \\
+ \rho \sigma_1 \sigma_2 &amp;  \sigma^2_2
+\end{pmatrix} \right)
+&lt;/math&gt;
+
+The conditional expectation of X&lt;sub&gt;1&lt;/sub&gt; given X&lt;sub&gt;2&lt;/sub&gt; is:
+
+: &lt;math&gt;\operatorname{E}(X_1 \mid X_2=x_2) = \mu_1 + \rho \frac{\sigma_1}{\sigma_2}(x_2 - \mu_2)&lt;/math&gt;
+
+Proof: the result is obtained by taking the expectation of the conditional distribution &lt;math&gt;X_1\mid X_2&lt;/math&gt; above.
+
+=====In the centered case with unit variances=====
+
+:&lt;math&gt;
+\begin{pmatrix}
+ X_1 \\
+ X_2
+\end{pmatrix}  \sim \mathcal{N} \left( \begin{pmatrix}
+ 0 \\
+ 0
+\end{pmatrix} , \begin{pmatrix}
+ 1 &amp; \rho \\
+ \rho &amp; 1
+\end{pmatrix} \right)
+&lt;/math&gt;
+
+The conditional expectation of ''X''&lt;sub&gt;1&lt;/sub&gt; given ''X''&lt;sub&gt;2&lt;/sub&gt; is
+
+: &lt;math&gt;\operatorname{E}(X_1 \mid X_2=x_2)= \rho x_2 &lt;/math&gt;
+
+and the conditional variance is
+
+: &lt;math&gt; \operatorname{var}(X_1 \mid X_2 = x_2) = 1-\rho^2; &lt;/math&gt;
+
+thus the conditional variance does not depend on ''x''&lt;sub&gt;2&lt;/sub&gt;.
+
+The conditional expectation of ''X''&lt;sub&gt;1&lt;/sub&gt; given that ''X''&lt;sub&gt;2&lt;/sub&gt; is smaller/bigger than ''z'' is:&lt;ref name=Maddala83&gt;{{cite book|last=Maddala|first=G. S.|title=Limited Dependent and Qualitative Variables in Econometrics|year=1983|publisher=Cambridge University Press|isbn=0-521-33825-5}}&lt;/ref&gt;{{rp|367}}
+
+:&lt;math&gt;
+\operatorname{E}(X_1 \mid X_2 &lt; z) = -\rho { \phi(z) \over \Phi(z) } ,
+&lt;/math&gt;
+
+:&lt;math&gt;
+\operatorname{E}(X_1 \mid X_2 &gt; z) = \rho { \phi(z) \over (1- \Phi(z)) } ,
+&lt;/math&gt;
+
+where the final ratio here is called the [[inverse Mills ratio]].
+
+Proof: the last two results are obtained using the result &lt;math&gt;\operatorname{E}(X_1 \mid X_2=x_2)= \rho x_2 &lt;/math&gt;, so that
+
+:&lt;math&gt;
+\operatorname{E}(X_1 \mid X_2 &lt; z) = \rho E(X_2 \mid X_2 &lt; z)&lt;/math&gt; and then using the properties of the expectation of a [[truncated normal distribution]].
+
+===Marginal distributions===
+To obtain the [[marginal distribution]] over a subset of multivariate normal random variables, one only needs to drop the irrelevant variables (the variables that one wants to marginalize out) from the mean vector and the covariance matrix.  The proof for this follows from the definitions of multivariate normal distributions and linear algebra.&lt;ref&gt;The formal proof for marginal distribution is shown here http://fourier.eng.hmc.edu/e161/lectures/gaussianprocess/node7.html&lt;/ref&gt;
+
+''Example''
+
+Let {{nowrap|'''X''' {{=}} [''X''&lt;sub&gt;1&lt;/sub&gt;, ''X''&lt;sub&gt;2&lt;/sub&gt;, ''X''&lt;sub&gt;3&lt;/sub&gt;]}} be multivariate normal random variables with mean vector {{nowrap|'''μ''' {{=}} [''μ''&lt;sub&gt;1&lt;/sub&gt;, ''μ''&lt;sub&gt;2&lt;/sub&gt;, ''μ''&lt;sub&gt;3&lt;/sub&gt;]}} and covariance matrix '''Σ''' (standard parametrization for multivariate normal distributions). Then the joint distribution of {{nowrap|'''X′''' {{=}} [''X''&lt;sub&gt;1&lt;/sub&gt;, ''X''&lt;sub&gt;3&lt;/sub&gt;]}} is multivariate normal with mean vector {{nowrap|'''μ′''' {{=}} [''μ''&lt;sub&gt;1&lt;/sub&gt;, ''μ''&lt;sub&gt;3&lt;/sub&gt;]}} and covariance matrix
+&lt;math&gt; \boldsymbol\Sigma' =
+\begin{bmatrix}
+\boldsymbol\Sigma_{11} &amp; \boldsymbol\Sigma_{13} \\
+\boldsymbol\Sigma_{31} &amp; \boldsymbol\Sigma_{33}
+\end{bmatrix}
+&lt;/math&gt;.
+
+===Affine transformation===

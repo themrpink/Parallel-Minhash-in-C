@@ -1,0 +1,304 @@
+where {{mvar|i}} denotes the [[imaginary unit]] with {{math|''i''&lt;sup&gt;2&lt;/sup&gt; {{=}} −1}}.
+
+===As a sum over partitions===
+The Euler number {{math|''E''&lt;sub&gt;2''n''&lt;/sub&gt;}} can be expressed as a sum over the even [[Partition (number theory)|partitions]] of {{math|2''n''}},&lt;ref&gt;{{cite journal | first1=David C. | last1= Vella | title=Explicit Formulas for Bernoulli and Euler Numbers | journal=Integers | volume=8 | issue=1 | pages=A1 | year=2008 | url= http://www.integers-ejcnt.org/vol8.html}}&lt;/ref&gt;
+
+:&lt;math&gt;  E_{2n} = (2n)! \sum_{0 \leq k_1, \ldots, k_n \leq n} \binom K {k_1, \ldots , k_n}
+	\delta_{n,\sum mk_m}  \left( -\frac{1}{2!} \right)^{k_1} \left( -\frac{1}{4!} \right)^{k_2}
+	\cdots \left( -\frac{1}{(2n)!} \right)^{k_n} ,&lt;/math&gt;
+
+as well as a sum over the odd partitions of {{math|2''n'' − 1}},&lt;ref&gt;{{cite arxiv | eprint=1103.1585 | first1= J. | last1=Malenfant | title=Finite, Closed-form Expressions for the Partition Function and for Euler, Bernoulli, and Stirling Numbers| class= math.NT | year= 2011 }}&lt;/ref&gt;
+
+:&lt;math&gt; 	 E_{2n} =  (-1)^{n-1} (2n-1)! \sum_{0 \leq k_1, \ldots, k_n \leq 2n-1}
+    \binom K {k_1, \ldots , k_n}
+    \delta_{2n-1,\sum (2m-1)k_m }   \left( -\frac{1}{1!} \right)^{k_1}  \left( \frac{1}{3!} \right)^{k_2}
+    \cdots \left( \frac{(-1)^n}{(2n-1)!} \right)^{k_n}   , &lt;/math&gt;
+
+where in both cases {{math|''K'' {{=}} ''k''&lt;sub&gt;1&lt;/sub&gt; + ··· + ''k&lt;sub&gt;n&lt;/sub&gt;''}} and
+:&lt;math&gt; \binom K {k_1, \ldots , k_n}
+          \equiv \frac{ K!}{k_1! \cdots k_n!}&lt;/math&gt;
+is a [[multinomial coefficient]]. The [[Kronecker delta]]s in the above formulas restrict the sums over the {{mvar|k}}s to {{math|2''k''&lt;sub&gt;1&lt;/sub&gt; + 4''k''&lt;sub&gt;2&lt;/sub&gt; + ··· + 2''nk&lt;sub&gt;n&lt;/sub&gt;'' {{=}} 2''n''}} and to {{math|''k''&lt;sub&gt;1&lt;/sub&gt; + 3''k''&lt;sub&gt;2&lt;/sub&gt; + ··· + (2''n'' − 1)''k&lt;sub&gt;n&lt;/sub&gt;'' {{=}} 2''n'' − 1}}, respectively. 
+
+As an example,
+:&lt;math&gt;
+\begin{align}
+E_{10} &amp; = 10! \left( - \frac{1}{10!} + \frac{2}{2!\,8!} + \frac{2}{4!\,6!}
+	- \frac{3}{2!^2\, 6!}- \frac{3}{2!\,4!^2} +\frac{4}{2!^3\, 4!} - \frac{1}{2!^5}\right) \\[6pt]
+&amp; = 9! \left( - \frac{1}{9!} + \frac{3}{1!^2\,7!} + \frac{6}{1!\,3!\,5!}
+	+\frac{1}{3!^3}- \frac{5}{1!^4\,5!} -\frac{10}{1!^3\,3!^2} + \frac{7}{1!^6\, 3!} - \frac{1}{1!^9}\right) \\[6pt]
+&amp; = -50\,521.
+\end{align}
+&lt;/math&gt;
+
+===As a determinant===
+{{math|''E''&lt;sub&gt;2''n''&lt;/sub&gt;}} is given by the [[determinant]]
+
+:&lt;math&gt;
+\begin{align}
+E_{2n} &amp;=(-1)^n (2n)!~ \begin{vmatrix}   \frac{1}{2!}&amp; 1 &amp;~&amp; ~&amp;~\\
+                                                             \frac{1}{4!}&amp;  \frac{1}{2!} &amp; 1 &amp;~&amp;~\\
+                                                                 \vdots &amp; ~  &amp;  \ddots~~ &amp;\ddots~~ &amp; ~\\
+                                                               \frac{1}{(2n-2)!}&amp; \frac{1}{(2n-4)!}&amp; ~&amp;\frac{1}{2!} &amp;  1\\
+                                                               \frac{1}{(2n)!}&amp;\frac{1}{(2n-2)!}&amp; \cdots &amp;  \frac{1}{4!} &amp; \frac{1}{2!}\end{vmatrix}.
+
+\end{align}
+ &lt;/math&gt;
+
+===As an integral===
+{{math|''E''&lt;sub&gt;2''n''&lt;/sub&gt;}} is also given by the following integrals:
+:&lt;math&gt;
+\begin{align}
+(-1)^n E_{2n} &amp; = \int_0^\infty \frac{t^{2n}}{\cosh\frac{\pi t}2}\; dt =\left(\frac2\pi\right)^{2n+1} \int_0^\infty \frac{x^{2n}}{\cosh x}\; dx\\[8pt]
+&amp;=\left(\frac2\pi\right)^{2n} \int_0^1\log^{2n}\left(\tan \frac{\pi t}{4} \right)\,dt =\left(\frac2\pi\right)^{2n+1}\int_0^{\pi/2} \log^{2n}\left(\tan \frac{x}{2} \right)\,dx\\[8pt]
+&amp;= \frac{2^{2n+3}}{\pi^{2n+2}} \int_0^{\pi/2} x \log^{2n} (\tan x)\,dx = \left(\frac2\pi\right)^{2n+2} \int_0^\pi \frac{x}{2} \log^{2n} \left(\tan \frac{x}{2} \right)\,dx.\end{align}
+ &lt;/math&gt;
+
+==Congruences==
+W. Zhang&lt;ref&gt;{{cite journal | first1=W.P.| last1= Zhang | title=Some identities involving the Euler and the central factorial numbers | journal=Fibonacci Quarterly | volume=36 | issue=4 | pages=154–157 | year=1998 | url= https://www.mathstat.dal.ca/FQ/Scanned/36-2/zhang.pdf}}&lt;/ref&gt;  obtained the following combinational identities concerning the Euler numbers, for any prime &lt;math&gt; p &lt;/math&gt;, we have
+:&lt;math&gt;
+(-1)^{\frac{p-1}{2}} E_{p-1} \equiv \textstyle\begin{cases} 0 \mod p &amp;\text{if }p\equiv 1\bmod 4; \\ -2 \mod p &amp; \text{if }p\equiv 3\bmod 4. \end{cases}
+&lt;/math&gt;
+W. Zhang and Z. Xu&lt;ref&gt;{{cite journal | first1=W.P. | last1= Zhang | first2= Z.F. | last2=Xu | title=On a conjecture of the Euler numbers | journal=Journal of Number Theory | volume=127 | issue=2| pages= 283–291 | year=2007 | doi= 10.1016/j.jnt.2007.04.004 }}
+&lt;/ref&gt; proved that, for any prime &lt;math&gt; p \equiv 1 \pmod{4} &lt;/math&gt; and integer &lt;math&gt; \alpha\geq 1 &lt;/math&gt;, we have
+:&lt;math&gt;  E_{\phi(p^{\alpha})/2}\not \equiv 0 \pmod{p^{\alpha}} &lt;/math&gt;
+where &lt;math&gt;\phi(n)&lt;/math&gt; is the [[Euler's totient function]].
+
+==Asymptotic approximation==
+
+The Euler numbers grow quite rapidly for large indices as
+they have the following lower bound
+
+: &lt;math&gt; |E_{2 n}| &gt; 8 \sqrt { \frac{n}{\pi} } \left(\frac{4 n}{ \pi e}\right)^{2 n}. &lt;/math&gt;
+
+==Euler zigzag numbers==
+The [[Taylor series]] of &lt;math&gt;\sec x + \tan x = \tan\left(\frac\pi4 + \frac x2\right)&lt;/math&gt; is
+
+:&lt;math&gt;\sum_{n=0}^{\infty} \frac{A_n}{n!}x^n,&lt;/math&gt;
+
+where {{mvar|A&lt;sub&gt;n&lt;/sub&gt;}} is the [[Alternating permutation|Euler zigzag numbers]], beginning with
+:1, 1, 1, 2, 5, 16, 61, 272, 1385, 7936, 50521, 353792, 2702765, 22368256, 199360981, 1903757312, 19391512145, 209865342976, 2404879675441, 29088885112832, ... {{OEIS|id=A000111}}
+
+For all even {{mvar|n}},
+:&lt;math&gt;A_n = (-1)^\frac{n}{2} E_n,&lt;/math&gt;
+where {{mvar|''E&lt;sub&gt;n&lt;/sub&gt;''}} is the Euler number; and for all odd {{mvar|n}},
+:&lt;math&gt;A_n = (-1)^\frac{n-1}{2}\frac{2^{n+1}\left(2^{n+1}-1\right)B_{n+1}}{n+1},&lt;/math&gt;
+where {{mvar|''B&lt;sub&gt;n&lt;/sub&gt;''}} is the [[Bernoulli number]].
+
+For every ''n'',
+:&lt;math&gt;\frac{A_{n-1}}{(n-1)!}\sin{\left(\frac{n\pi}{2}\right)}+\sum_{m=0}^{n-1}\frac{A_m}{m!(n-m-1)!}\sin{\left(\frac{m\pi}{2}\right)}=\frac{1}{(n-1)!}.&lt;/math&gt;{{cn|date=September 2016}}
+
+==See also==
+* [[Bell number]]
+* [[Bernoulli number]]
+* [[Euler–Mascheroni constant]]
+
+==References==
+{{Reflist}}
+
+==External links==
+* {{springer|title=Euler numbers|id=p/e036540}}
+* {{MathWorld|urlname=EulerNumber|title=Euler number}}
+
+{{Classes of natural numbers}}
+
+{{DEFAULTSORT:Euler Number}}
+[[Category:Integer sequences]]
+[[Category:Leonhard Euler]]</text>
+      <sha1>95rv29vq7u0ir6q3yvm375dx5v9eqf4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Wikipedia:Magnus Manske Day</title>
+    <ns>4</ns>
+    <id>46897</id>
+    <revision>
+      <id>701568284</id>
+      <parentid>692154758</parentid>
+      <timestamp>2016-01-25T08:26:03Z</timestamp>
+      <contributor>
+        <username>Jane023</username>
+        <id>1213535</id>
+      </contributor>
+      <comment>blog post</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1018" xml:space="preserve">[[User:Magnus Manske|Magnus Manske]] Day is [[January 25]], which commemorates the day in [[2002]] when Wikipedia switched to the [[Wikipedia:Phase II software|Phase II software]], the precursor to [[MediaWiki]]. This was an important day for [[Wikipedia]]. [[User:Jimbo Wales|Jimbo Wales]] proclaimed:
+: &quot;I hereby decree, in my usual authoritarian and bossy manner, that today shall forever be known  as '''Magnus Manske Day'''.  Wikipedians of the distant future will marvel at the day when the new  software era dawned upon us. Tonight at dinner, every [[Wikipedia:Wikipedians|Wikipedian]] should say a toast to  [[User:Magnus Manske|Magnus]] and his many inventions.&quot;
+
+== See also ==
+* https://blog.wikimedia.org/2016/01/18/fifteen-years-wikipedia-magnus-manske/
+* [[mailarchive:wikipedia-l/2002-January/001164.html]]
+* [[Wikipedia:Wikipedia holidays]]
+* [[Wikipedia:Wikipedia Day]]
+* [[Wikipedia:Tim Starling Day]]
+* [[Wikipedia:Brion Vibber Day]]
+* [[Wikipedia:Justin Knapp Day]]
+
+[[Category:Wikipedia holidays]]</text>
+      <sha1>4egqfqvpxswi39kbkuylwzncc2m9i1f</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Wikipedia:Wikipedia Day</title>
+    <ns>4</ns>
+    <id>46899</id>
+    <revision>
+      <id>990613284</id>
+      <parentid>990613237</parentid>
+      <timestamp>2020-11-25T14:16:56Z</timestamp>
+      <contributor>
+        <username>Serols</username>
+        <id>9929111</id>
+      </contributor>
+      <minor />
+      <comment>Reverted edits by [[Special:Contributions/2409:4066:194:379E:1E6D:8593:3650:E53E|2409:4066:194:379E:1E6D:8593:3650:E53E]] ([[User talk:2409:4066:194:379E:1E6D:8593:3650:E53E|talk]]) ([[WP:HG|HG]]) (3.4.10)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2423" xml:space="preserve">{{Wikipedia Day}}
+
+
+==About==
+Wikipedia Day is an occasion to celebrate Wikipedia's birthday. Every year around [[January 15]] Wikipedia fans organize their own parties in their own communities to discuss Wikipedia and share cake. Typical activities at these events include Wikipedia editors sharing what they did in Wikipedia last year, anyone proposing to share information in Wikipedia in the coming year, Wikipedia training for newcomers, and socializing.
+
+On January 15, 2001, Wikipedia was established. Coincidentally, also on January 15, 2001 [[Creative Commons]] [http://whois.domaintools.com/creativecommons.org registered their website]. Creative Commons developed the free and open copyright system which Wikipedia uses, and Wikipedia is the most enthusiastic community of the free media which Creative Commons promotes. Yet another festive event around this time is [[Public Domain Day]], when on January 1 media will enter the public domain if the term of its copyright expired in the previous year.
+
+Feel free to celebrate Wikipedia Day! Celebrate Creative Commons' birthday too, if you like! Combine Wikipedia Day, Creative Commons Day, and Public Domain Day all in one January celebration of open knowledge and free media.
+
+==Wikipedia Day 2021==
+If you would host an event, create a [[WP:Meetup]] page for your city or organization and then list it here. 
+
+===United States===
+
+Northeast:
+*New York City (TBD)
+
+Southeast:
+*[[Wikipedia:WikiProject University of Virginia/Wikipedia Day 2021|University of Virginia]]
+
+Midwest:
+*
+
+Mountains:
+*
+
+West Coast:
+*
+
+===Australia===
+* TBD
+
+=== Hungary ===
+* TBD
+
+=== Serbia ===
+* TBD
+
+===India===
+
+=== Nepal ===
+* TBD
+
+===Online===
+*[[:meta:WALRUS/January 2021|WALRUS]]
+*[[:meta:Wikimedians in Residence Exchange Network/minutes 2021 01|Wikimedians in Residence Exchange Network]] 
+*[[:meta:Wikimedia_Café|Wikimedia Café]] 
+
+{{edit||''Your event here!''|section=2}}
+
+==Host an event==
+{{main|Wikipedia:Wikipedia Day/host}}
+Anyone can host a Wikipedia Day event! The tradition is to discuss Wikipedia with a group of other people and to have a [[Birthday cake]]. You do not need any special permission to host a party. Just do it and have fun.
+
+==See also==
+* [[m:Wikipedia 20|Wikipedia 20 planning on Meta-Wiki]]
+
+[[Category:Wikipedia Day| ]]
+[[Category:Wikipedia history]]
+[[Category:Wikipedia holidays|Wikipedia Day]]
+[[Category:Wikipedia public outreach events]]</text>
+      <sha1>2okrhvnymlgskd5q3ggdcaa9zvy9g01</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Maclaurin series</title>
+    <ns>0</ns>
+    <id>46905</id>
+    <redirect title="Taylor series" />
+    <revision>
+      <id>688130226</id>
+      <parentid>395958782</parentid>
+      <timestamp>2015-10-29T21:05:01Z</timestamp>
+      <contributor>
+        <username>Forbes72</username>
+        <id>6174461</id>
+      </contributor>
+      <comment>added [[Category:Series expansions]] using [[WP:HC|HotCat]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="59" xml:space="preserve">#REDIRECT [[Taylor series]]
+
+[[Category:Series expansions]]</text>
+      <sha1>9z0wtf8ac4vijao32w3o6eejlzqrq8s</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Otter</title>
+    <ns>0</ns>
+    <id>46916</id>
+    <revision>
+      <id>991141178</id>
+      <parentid>987840387</parentid>
+      <timestamp>2020-11-28T13:55:11Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 33 templates: del empty params (1×); hyphenate params (19×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="28271" xml:space="preserve">{{pp-semi-indef|small=yes}}
+{{short description|Subfamily of mammals (Lutrinae)}}
+{{About|the animal}}
+{{Use dmy dates|date=May 2012}}
+{{Automatic taxobox
+| name = Otter
+| fossil_range = [[Middle Miocene]] to present&lt;ref name=Koepfli2008 /&gt;
+| image = Fischotter, Lutra Lutra.JPG
+| image_caption = [[Eurasian otter]] (''Lutra lutra'')
+| taxon = Lutrinae
+| authority = [[Charles Lucien Bonaparte|Bonaparte]], 1838
+| subdivision_ranks = Genera
+| subdivision =
+''[[Aonyx]]''&lt;br /&gt;
+''[[Sea otter|Enhydra]]''&lt;br /&gt;
+''[[Hydrictis]]''&lt;br /&gt;
+''[[Lontra]]''&lt;br /&gt;
+''[[Lutra]]''&lt;br /&gt;
+''[[Lutrogale]]''&lt;br /&gt;
+''[[Pteronura]]'' &lt;br /&gt;
+†''[[Enhydriodon]]''&lt;ref&gt;{{cite journal|doi=10.1080/02724634.2011.550356 | volume=31 | issue=2 | title=Enhydriodon dikikae, sp. nov. (Carnivora: Mammalia), a gigantic otter from the Pliocene of Dikika, Lower Awash, Ethiopia | journal=Journal of Vertebrate Paleontology | pages=447–453| year=2011 | last1=Geraads | first1=Denis | last2=Alemseged | first2=Zeresenay | last3=Bobe | first3=René | last4=Reed | first4=Denné | s2cid=84797296 }}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=https://www.wired.com/2011/03/the-bear-otter/|title=The Bear Otter}}&lt;/ref&gt;&lt;br /&gt;
+†''[[Algarolutra]]'' &lt;br /&gt;
+†''[[Cyrnaonyx]]'' &lt;br /&gt;
+†''[[Megalenhydris]]'' &lt;br /&gt;
+†''[[Sardolutra]]'' &lt;br /&gt;
+†''[[Siamogale]]'' &lt;br /&gt;
+†''[[Teruelictis]]''&lt;br /&gt;
+†''[[Enhydritherium]]''&lt;br /&gt;
+†''[[Lartetictis ]]''&lt;br /&gt;
+†''[[Limnonyx]]''&lt;br /&gt;
+†''[[Lutravus]]''&lt;br /&gt;
+†''[[Sivaonyx]]''&lt;br /&gt;
+†''[[Torolutra]]''&lt;br /&gt;
+†''[[Tyrrhenolutra]]''&lt;br /&gt;
+†''[[Vishnuonyx]]''
+| type_genus = ''[[Lutra]]''
+| type_genus_authority = [[Morten Thrane Brünnich|Brünnich]], 1771
+| range_map = 
+| range_map_caption = 
+}}
+
+'''Otters''' are carnivorous [[mammal]]s in the [[Rank (zoology)|subfamily]] '''Lutrinae'''. The 13 extant otter [[species]] are all [[List of semiaquatic tetrapods|semiaquatic]], [[aquatic animal|aquatic]] or [[Marine ecology|marine]], with diets based on [[fish]] and [[invertebrates]]. Lutrinae is a branch of the [[Mustelidae]] [[Family (biology)|family]], which also includes [[weasel]]s, [[badger]]s, [[mink]], and [[wolverine]]s, among other animals.
+
+== Etymology ==
+The word ''otter'' derives from the [[Old English language|Old English]] word {{lang|ang|otor}} or {{lang|ang|oter}}. This, and cognate words in other [[Indo-European languages]], ultimately stem from the [[Proto-Indo-European language]] root {{PIE|*wódr̥}}, which also gave rise to the English word &quot;water&quot;.&lt;ref&gt;{{cite web|url=http://www.merriam-webster.com/dictionary/otter |title=Otter |work=Merriam Webster's online dictionary |access-date=16 September 2009}}&lt;/ref&gt;&lt;ref&gt;{{OEtymD|otter}}&lt;/ref&gt;

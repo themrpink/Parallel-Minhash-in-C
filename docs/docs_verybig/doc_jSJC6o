@@ -1,0 +1,348 @@
+===Array phasing===
+In order for the signals to add together, they need to arrive [[phase (waves)|in-phase]]. Consider two [[dipole antenna]]s placed in a line end-to-end, or ''collinear''. If the resulting array is pointed directly at the source signal, both dipoles will see the same instantaneous signal, and thus their reception will be in-phase. However, if one were to rotate the antenna so it was at an angle to the signal, the extra path from the signal to the more distant dipole means it receives the signal slightly out of phase. When the two signals are then added up, they no longer strictly reinforce each other, and the output drops. This makes the array more sensitive horizontally, while stacking the dipoles in parallel narrows the pattern vertically. This allows the designer to tailor the reception pattern, and thus the [[Antenna gain|gain]], by moving the elements about.
+
+If the antenna is properly aligned with the signal, at any given instant in time, all of the elements in an array will receive the same signal and be in-phase. However, the output from each element has to be gathered up at a single feed point, and as the signals travel across the antenna to that point, their phase is changing. In a two-element array this is not a problem because the feed point can be placed between them; any phase shift taking place in the transmission lines is equal for both elements. However, if one extends this to a four-element array, this approach no longer works, as the signal from the outer pair has to travel further and will thus be at a different phase than the inner pair when it reaches the center. To ensure that they all arrive with the same phase, it is common to see additional transmission wire inserted in the signal path, or for the transmission line to be crossed over to reverse the phase if the difference is greater than {{frac|2}} a wavelength.
+
+===Reflectors===
+The gain can be further improved through the addition of a ''reflector''. Generally any conductor in a flat sheet will act in a mirror-like fashion for radio signals, but this also holds true for non-continuous surfaces as long as the gaps between the conductors are less than about {{fract|10}} of the target wavelength.&lt;ref&gt;{{cite web |url=http://radiojove.gsfc.nasa.gov/class/educ/radio/tran-rec/exerc/iono.htm |title= The Effects of Earth's Upper Atmosphere on Radio Signals |website=NASA}}&lt;/ref&gt; This means that wire mesh or even parallel wires or metal bars can be used, which is especially useful both for reducing the total amount of material as well as reducing wind loads.
+
+Due to the change in signal propagation direction on reflection, the signal undergoes a reversal of phase. In order for the reflector to add to the output signal, it has to reach the elements in-phase. Generally this would require the reflector to be placed at {{frac|4}} of a wavelength behind the elements, and this can be seen in many common reflector arrays like [[television antenna]]s. However, there are a number of factors that can change this distance, and actual reflector positioning varies.
+
+Reflectors also have the advantage of reducing the signal received from the back of the antenna. Signals received from the rear and re-broadcast from the reflector have not undergone a change of phase, and do not add to the signal from the front. This greatly improves the [[front-to-back ratio]] of the antenna, making it more directional. This can be useful when a more directional signal is desired, or unwanted signals are present. There are cases when this is not desirable, and although reflectors are commonly seen in array antennas, they are not universal. For instance, while UHF television antennas often use an array of [[bowtie antenna]]s with a reflector, a bowtie array without a reflector is a relatively common design in the [[microwave]] region.&lt;ref&gt;{{cite book |chapter= Wideband printed bowtie array for spectrum monitoring |first=S. |last=Raut |date=July 2014 |pages=235–236 |work=Antennas and Propagation Society International Symposium|doi= 10.1109/APS.2014.6904449 |title= 2014 IEEE Antennas and Propagation Society International Symposium (APSURSI) |isbn= 978-1-4799-3540-6 |s2cid=42085218 }}&lt;/ref&gt;
+
+===Gain limits===
+As more elements are added to an array, the [[beamwidth]] of the antenna's main lobe decreases, leading to an increase in gain. In theory there is no limit to this process. However, as the number of elements increases, the complexity of the required feed network that keeps the signals in-phase increases. Ultimately, the rising inherent losses in the feed network become greater than the additional gain achieved with more elements, limiting the maximum gain that can be achieved.
+
+ [[File:Standard gain dipole array.png|thumb|Two element dipole array in front of a one wavelength square reflector used as gain standard]]The gain of practical array antennas is limited to about 25 - 30&amp;nbsp;dB. Two half wave elements spaced a half wave apart and a quarter wave from a reflecting screen have been used as a standard gain antenna with about 9.8 dBi at its design frequency.&lt;ref&gt;{{Cite web | url=http://www.schwarzbeck.de/en/antennas/standard-gain-antennas.html |title = Standard Gain Antennas}}&lt;/ref&gt; Common 4-bay television antennas have gains around 10 to 12&amp;nbsp;dB,&lt;ref&gt;{{cite web |url=http://www.channelmaster.com/Digital_HDTV_Outdoor_TV_Antenna_p/cm-4221hd.htm |title= ULTRAtenna 60 |website=Channel Master}}&lt;/ref&gt; and 8-bay designs might increase this to 12 to 16&amp;nbsp;dB.&lt;ref&gt;{{cite web |url=http://www.channelmaster.com/CM_4228HD_p/cm-4228hd.htm |title=  EXTREMEtenna 80 |website=Channel Master}}&lt;/ref&gt; The 32-element SCR-270 had a gain around 19.8&amp;nbsp;dB.&lt;ref&gt;{{cite book |url=https://books.google.com/books?id=k7g4BQAAQBAJ&amp;pg=PA460 |title=Radio Wave Propagation |page=460|isbn=9781483258546 |last1=Burrows |first1=Chas. R. |date=2013-10-22 }}&lt;/ref&gt; Some very large reflective arrays have been constructed, notably the Soviet [[Duga radar]]s which are hundreds of meters across and contain hundreds of elements. ''Active'' array antennas, in which groups of elements are driven by separate RF amplifiers, can have much higher gain, but are prohibitively expensive.
+
+Since the 1980s, versions for use at [[microwave]] frequencies have been made with [[patch antenna]] elements mounted in front of a metal surface.&lt;ref&gt;{{cite book|last=Huang|first=john|title=Reflectarray antennas}}&lt;/ref&gt;
+
+== Radiation pattern and beam steering ==
+When driven in phase, the [[radiation pattern]] of the reflective array is a single [[main lobe]] perpendicular to the plane of the antenna, plus several [[sidelobe]]s at equal angles to either side. The more elements used, the narrower the main lobe and the less power is radiated in the sidelobes.
+
+The main lobe of the antenna can be steered electronically within a limited angle by [[phase shift]]ing the drive signals applied to the individual elements. Each antenna element is fed through a [[phase shifter]] which can be controlled digitally, delaying each signal by a successive amount. This causes the wavefronts created by the superposition of the individual elements to be at an angle to the plane of the antenna. Antennas that use this technique are called [[phased array]]s and often used in modern radar systems. 
+
+Another option for steering the beam is mounting the entire antenna structure on a pivoting platform and rotating it mechanically.
+
+==See also==
+*[[Mars Cube One]] (2018 spacecraft design with Reflective array antenna)
+
+==References==
+&lt;references /&gt;
+{{FS1037C MS188}}
+
+{{multiple image
+| align = left
+| direction = horizontal
+| image1   = Reflective array, bow tie, grid, or panel UHF television antenna,.jpg
+| caption1 = A modern form of reflective array is the &quot;bow tie&quot; [[Ultrahigh frequency|UHF]] [[television antenna]].  This example has two dipole driven elements in front of a grill reflector.  The &quot;bow-tie&quot; dipoles, consisting of two V-shaped elements, have a larger bandwidth than ordinary dipoles, allowing the antenna to cover the wide UHF television band. This example is installed for reception of vertically polarized TV transmissions. 
+| width1   = 245
+| image2   = Woodpecker array.jpg
+| caption2 = Enormous reflective array antenna of the [[Duga radar|Duga]] or &quot;Steel Yard&quot;  [[Over the horizon radar|over-the-horizon]] (OTH) radar system, Chernobyl, Ukraine, part of the Soviet early-warning network.  It transmits at frequencies between 7 and 19 MHz.  The pairs of cylindrical cages at right are the [[half wave dipole]] driven elements.  Behind them is a reflector screen of horizontal wires, just visible in center.   
+| width2   = 230
+| image3   = 06issoudun alliss Gange.JPG
+| caption3 = An [[ALLISS]] antenna, a modular type of [[curtain array]] used by international [[shortwave]] stations for broadcasting to distant areas by [[skywave]].
+| width3   = 279
+}}
+{{multiple image
+| align = left
+| direction = horizontal
+| header   =
+| image1   =  Reflective array VHF television antenna 1954.jpg
+| caption1 =  VHF reflective array TV antenna from 1954. The driven elements are folded dipoles, the two long ones cover 54&amp;ndash;88&amp;nbsp;MHz the 4 short ones 174&amp;ndash;216&amp;nbsp;MHz.  
+| width1   = 185
+| image2   = Dipole array TV broadcast antenna.jpg
+| caption2 = &quot;Panel array&quot; VHF TV broadcasting antenna. This type is widely used for UHF today
+| width2   = 111
+| image3   = Bowtie UHF TV antenna 1954.png
+| caption3 = &quot;Bowtie&quot; UHF TV antenna from 1954
+| width3   = 112
+| image5   = SCR-270 Radar Antenna2.jpg
+| caption5 = Closeup of SCR-20 reflective array from the 1950s
+| width5   = 270
+| footer   =
+}}
+
+{{Antenna Types}}
+
+[[Category:Radio frequency antenna types]]
+[[Category:Antennas (radio)]]</text>
+      <sha1>gko7lz6yasxgpzto3a73go2wuji7i3e</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Reflectance</title>
+    <ns>0</ns>
+    <id>41644</id>
+    <revision>
+      <id>976758634</id>
+      <parentid>962344210</parentid>
+      <timestamp>2020-09-04T20:34:28Z</timestamp>
+      <contributor>
+        <username>Widefox</username>
+        <id>1588193</id>
+      </contributor>
+      <comment>Importing Wikidata [[Wikipedia:Short description|short description]]: &quot;Capacity of an object to reflect light&quot; ([[Wikipedia:Shortdesc helper|Shortdesc helper]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="8653" xml:space="preserve">{{short description|Capacity of an object to reflect light}}
+[[File:Image-Metal-reflectance.png|thumb|400px|Spectral reflectance curves for [[aluminium]] (Al), [[silver]] (Ag), and [[gold]] (Au) metal [[mirror]]s at normal incidence.]]
+
+The '''reflectance''' of the surface of a material is its effectiveness in reflecting [[radiant energy]]. It is the fraction of incident electromagnetic power that is reflected at the boundary. Reflectance is a component of the response of the [[electronic structure]] of the material to the electromagnetic field of light, and is in general a function of the frequency, or [[wavelength]], of the light, its polarization, and the [[angle of incidence (optics)|angle of incidence]]. The dependence of reflectance on the wavelength is called a ''reflectance spectrum'' or ''spectral reflectance curve''.
+
+==Mathematical definitions==
+===Hemispherical reflectance===
+The ''hemispherical reflectance'' of a surface, denoted ''R'', is defined as&lt;ref name=&quot;ISO_9288-1989&quot;&gt;{{cite web|url=http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=16943|title=Thermal insulation — Heat transfer by radiation — Physical quantities and definitions|work=ISO 9288:1989|publisher=[[International Organization for Standardization|ISO]] catalogue|year=1989|accessdate=2015-03-15}}&lt;/ref&gt;
+:&lt;math&gt;R = \frac{\Phi_\mathrm{e}^\mathrm{r}}{\Phi_\mathrm{e}^\mathrm{i}},&lt;/math&gt;
+where Φ&lt;sub&gt;e&lt;/sub&gt;&lt;sup&gt;r&lt;/sup&gt; is the [[radiant flux]] ''reflected'' by that surface and Φ&lt;sub&gt;e&lt;/sub&gt;&lt;sup&gt;i&lt;/sup&gt; is the radiant flux ''received'' by that surface.
+
+===Spectral hemispherical reflectance===
+The ''spectral hemispherical reflectance in frequency'' and ''spectral hemispherical reflectance in wavelength'' of a surface, denoted ''R''&lt;sub&gt;ν&lt;/sub&gt; and ''R''&lt;sub&gt;λ&lt;/sub&gt; respectively, are defined as&lt;ref name=&quot;ISO_9288-1989&quot; /&gt;
+:&lt;math&gt;R_\nu = \frac{\Phi_{\mathrm{e},\nu}^\mathrm{r}}{\Phi_{\mathrm{e},\nu}^\mathrm{i}},&lt;/math&gt;
+:&lt;math&gt;R_\lambda = \frac{\Phi_{\mathrm{e},\lambda}^\mathrm{r}}{\Phi_{\mathrm{e},\lambda}^\mathrm{i}},&lt;/math&gt;
+where
+:Φ&lt;sub&gt;e,ν&lt;/sub&gt;&lt;sup&gt;r&lt;/sup&gt; is the [[Radiant flux|spectral radiant flux in frequency]] ''reflected'' by that surface;
+:Φ&lt;sub&gt;e,ν&lt;/sub&gt;&lt;sup&gt;i&lt;/sup&gt; is the spectral radiant flux in frequency received by that surface;
+:Φ&lt;sub&gt;e,λ&lt;/sub&gt;&lt;sup&gt;r&lt;/sup&gt; is the [[Radiant flux|spectral radiant flux in wavelength]] ''reflected'' by that surface;
+:Φ&lt;sub&gt;e,λ&lt;/sub&gt;&lt;sup&gt;i&lt;/sup&gt; is the spectral radiant flux in wavelength received by that surface.
+
+===Directional reflectance===
+The ''directional reflectance'' of a surface, denoted ''R''&lt;sub&gt;Ω&lt;/sub&gt;, is defined as&lt;ref name=&quot;ISO_9288-1989&quot; /&gt;
+:&lt;math&gt;R_\Omega = \frac{L_{\mathrm{e},\Omega}^\mathrm{r}}{L_{\mathrm{e},\Omega}^\mathrm{i}},&lt;/math&gt;
+where
+:''L''&lt;sub&gt;e,Ω&lt;/sub&gt;&lt;sup&gt;r&lt;/sup&gt; is the [[radiance]] ''reflected'' by that surface;
+:''L''&lt;sub&gt;e,Ω&lt;/sub&gt;&lt;sup&gt;i&lt;/sup&gt; is the radiance received by that surface.
+
+===Spectral directional reflectance===
+The ''spectral directional reflectance in frequency'' and ''spectral directional reflectance in wavelength'' of a surface, denoted ''R''&lt;sub&gt;Ω,ν&lt;/sub&gt; and ''R''&lt;sub&gt;Ω,λ&lt;/sub&gt; respectively, are defined as&lt;ref name=&quot;ISO_9288-1989&quot; /&gt;
+:&lt;math&gt;R_{\Omega,\nu} = \frac{L_{\mathrm{e},\Omega,\nu}^\mathrm{r}}{L_{\mathrm{e},\Omega,\nu}^\mathrm{i}},&lt;/math&gt;
+:&lt;math&gt;R_{\Omega,\lambda} = \frac{L_{\mathrm{e},\Omega,\lambda}^\mathrm{r}}{L_{\mathrm{e},\Omega,\lambda}^\mathrm{i}},&lt;/math&gt;
+where
+:''L''&lt;sub&gt;e,Ω,ν&lt;/sub&gt;&lt;sup&gt;r&lt;/sup&gt; is the [[Radiance|spectral radiance in frequency]] ''reflected'' by that surface;
+:''L''&lt;sub&gt;e,Ω,ν&lt;/sub&gt;&lt;sup&gt;i&lt;/sup&gt; is the spectral radiance received by that surface;
+:''L''&lt;sub&gt;e,Ω,λ&lt;/sub&gt;&lt;sup&gt;r&lt;/sup&gt; is the [[Radiance|spectral radiance in wavelength]] ''reflected'' by that surface;
+:''L''&lt;sub&gt;e,Ω,λ&lt;/sub&gt;&lt;sup&gt;i&lt;/sup&gt; is the spectral radiance in wavelength received by that surface.
+
+==Reflectivity==
+[[File:Fresnel equations - reflectance.svg|thumb|400px|Fresnel reflection coefficients for a boundary surface between air and a variable material in dependence of the complex refractive index and the angle of incidence.]]
+{{redirect|Reflectivity|the EM formulation|Fresnel power reflection}}
+For homogeneous and semi-infinite (see [[Half-space (geometry)|halfspace]]) materials, reflectivity is the same as reflectance. 
+Reflectivity is the square of the magnitude of the [[Fresnel reflection coefficient]],&lt;ref&gt;E. Hecht (2001). Optics (4th ed.). Pearson Education. {{ISBN|0-8053-8566-5}}.&lt;/ref&gt;
+which is the ratio of the reflected to incident [[electric field]];&lt;ref name=GoldBook&gt;{{GoldBookRef|title=Reflectance|file=R05235|accessdate=2015-03-15}}&lt;/ref&gt; 
+as such the reflection coefficient can be expressed as a [[complex number]] as determined by the [[Fresnel equation]]s for a single layer, whereas the reflectance is always a positive [[real number]].
+
+For layered and finite media, according to the [[International Commission on Illumination|CIE]],{{citation needed|date=May 2015}} reflectivity is distinguished from ''reflectance'' by the fact that reflectivity is a value that applies to ''thick'' reflecting objects.&lt;ref name=&quot;ILV&quot;&gt;[http://www.cie.co.at/index.php/index.php?i_ca_id=306 CIE International Lighting Vocabulary]&lt;/ref&gt; When reflection occurs from thin layers of material, internal reflection effects can cause the reflectance to vary with surface thickness. Reflectivity is the limit value of reflectance as the sample becomes thick; it is the intrinsic reflectance of the surface, hence irrespective of other parameters such as the reflectance of the rear surface. Another way to interpret this is that the reflectance is the fraction of electromagnetic power reflected from a specific sample, while reflectivity is a property of the material itself, which would be measured on a perfect machine if the material filled half of all space.&lt;ref name=&quot;Grant&quot;&gt;[https://www.amazon.com/dp/081947245X Palmer and Grant, ''The Art of Radiometry'']&lt;/ref&gt;
+
+==Surface type==
+Given that reflectance is a directional property, most surfaces can be divided into those that give [[specular reflection]] and those that give [[diffuse reflection]].
+
+For specular surfaces, such as glass or polished metal, reflectance is nearly zero at all angles except at the appropriate reflected angle; that is the same angle with respect to the surface normal in the [[plane of incidence]], but on the opposing side. When the radiation is incident normal to the surface, it is reflected back into the same direction.
+
+For diffuse surfaces, such as matte white paint, reflectance is uniform; radiation is reflected in all angles equally or near-equally. Such surfaces are said to be [[Lambertian reflectance|Lambertian]].
+
+Most practical objects exhibit a combination of diffuse and specular reflective properties.
+
+==Water reflectance==
+[[File:Water reflectivity.jpg|thumb|400px|Reflectance of smooth water at {{nobreak|20°C}} (refractive index 1.333).]]
+
+Reflection occurs when light moves from a medium with one [[index of refraction]] into a second medium with a different index of refraction.
+
+Specular reflection from a body of water is calculated by the [[Fresnel equations]].&lt;ref name=&quot;Ottav&quot;&gt;Ottaviani, M. and Stamnes, K. and Koskulics, J. and Eide, H. and Long, S.R. and Su, W. and Wiscombe, W., 2008: '[https://journals.ametsoc.org/doi/pdf/10.1175/2007JTECHA1049.1 Light Reflection from Water Waves: Suitable Setup for a Polarimetric Investigation under Controlled Laboratory Conditions]''. Journal of Atmospheric and Oceanic Technology, '''25 (5)''', 715--728.&lt;/ref&gt; Fresnel reflection is directional and therefore does not contribute significantly to [[albedo]] which primarily diffuses reflection.
+
+A real water surface may be wavy. Reflectance, which assumes a flat surface as given by the [[Fresnel equations]], can be adjusted to account for [[waviness]].
+
+==Grating efficiency==
+The generalization of reflectance to a [[diffraction grating]], which disperses light by [[wavelength]], is called ''[[diffraction efficiency]]''.
+
+==Radiometry units in the International System of Units==
+{{SI radiometry units}}
+
+==See also==
+*[[Bidirectional reflectance distribution function]]
+*[[Colorimetry]]
+*[[Emissivity]]
+*[[Lambert's cosine law]]
+*[[Transmittance]]
+*[[Sun path]]
+*[[Light Reflectance Value]]
+*[[Albedo]]
+
+==References==
+{{reflist}}
+
+==External links==
+{{wiktionary|reflectance}}
+*[http://www.tvu.com/metalreflectivityLR.jpg Reflectivity of metals (chart)].
+*[http://www.graphics.cornell.edu/online/measurements/reflectance/index.html Reflectance Data].
+
+[[Category:Physical quantities]]
+[[Category:Radiometry]]
+[[Category:Dimensionless numbers]]</text>
+      <sha1>octwp4td7pl3iy438o8fe234ez4lu4r</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Refracted ray</title>
+    <ns>0</ns>
+    <id>41645</id>
+    <redirect title="Ray (optics)" />
+    <revision>
+      <id>766097236</id>
+      <parentid>765890325</parentid>
+      <timestamp>2017-02-18T06:00:40Z</timestamp>
+      <contributor>
+        <username>Srleffler</username>
+        <id>252195</id>
+      </contributor>
+      <comment>Rv. Redirect to anchor is fine.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="40" xml:space="preserve">#REDIRECT [[Ray (optics)#refracted ray]]</text>
+      <sha1>bimk1mpyybc4eg0hnyxa16kuycat09a</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Refractive index contrast</title>
+    <ns>0</ns>
+    <id>41646</id>
+    <revision>
+      <id>975834275</id>
+      <parentid>906845687</parentid>
+      <timestamp>2020-08-30T17:30:36Z</timestamp>
+      <contributor>
+        <username>Mike Peel</username>
+        <id>214232</id>
+      </contributor>
+      <comment>add inline ref</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1146" xml:space="preserve">'''Refractive index contrast''', in an [[optical fiber]], is a measure of the relative difference in [[refractive index]] of the [[Fiber optics#Principle of operation|core]] and [[Cladding (fiber optics)|cladding]]. The refractive index contrast of an optical fibre, Δ, is typically given by Δ = (''n''&lt;sub&gt;1&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt;- ''n''&lt;sub&gt;2&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt;)/(2''n''&lt;sub&gt;1&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt;), where ''n''&lt;sub&gt;1&lt;/sub&gt; is the maximum refractive index in the core and ''n''&lt;sub&gt;2&lt;/sub&gt; is the refractive index of the [[homogeneous cladding]].&lt;ref&gt;{{cite web |title=Definition: refractive index contrast |url=https://www.its.bldrdoc.gov/fs-1037/dir-031/_4507.htm |website=www.its.bldrdoc.gov}}&lt;/ref&gt; Normal optical fibers have very low refractive index contrast(Δ&lt;&lt;1)hence are weakly guided medium. The weak guiding will cause more of the Electrical field to &quot;leak&quot; and travel through the cladding(as evanescent waves) as compared to the strongly guided wave guides. The refractive index for core is greater than that of cladding.  
+
+==References==
+*{{FS1037C MS188}}
+{{Reflist}}
+
+[[Category:Fiber optics]]
+[[Category:Refraction]]
+
+{{optics-stub}}</text>
+      <sha1>20hip1fi8i7d4tc6jz89mmr3upcmtxt</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Reframing time</title>
+    <ns>0</ns>
+    <id>41647</id>
+    <redirect title="Frame synchronization" />
+    <revision>
+      <id>950649468</id>
+      <parentid>848046937</parentid>
+      <timestamp>2020-04-13T04:48:13Z</timestamp>
+      <contributor>
+        <username>Mccapra</username>
+        <id>12109628</id>
+      </contributor>
+      <comment>Redirected article</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="35" xml:space="preserve">#REDIRECT [[Frame synchronization]]</text>
+      <sha1>9flif8sv3jz2pyjq0nda3l7fxsjzrp9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Regeneration</title>
+    <ns>0</ns>
+    <id>41648</id>
+    <revision>
+      <id>987913277</id>
+      <parentid>944939937</parentid>
+      <timestamp>2020-11-09T23:57:45Z</timestamp>
+      <contributor>
+        <username>FloridaArmy</username>
+        <id>29750937</id>
+      </contributor>
+      <comment>/* Film and television */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4005" xml:space="preserve">{{wiktionary|regeneration|regenerate|regenerative}}
+'''Regeneration''' may refer to:
+
+{{tocright}}
+
+==Science and technology==
+* [[Regeneration (biology)]], the ability to recreate lost or damaged tissues, organs and limbs
+* [[Regeneration in humans]], the ability of humans to recreate, or induce the regeneration of, lost tissue
+* [[Regeneration (theology)]], the doctrine of being born again
+* [[Regenerative (design)]], a process for resilient and sustainable development
+* [[Regenerative agriculture]], a sub-category of organic agriculture
+
+==History and politics==
+*[[Regeneration (Colombia)]], La Regeneración, a 19th-century period and political movement in Colombia
+*[[Regeneration (Portugal)]], a 19th-century period in the history of Portugal
+* [[The ReGeneration]], a cultural generation concerned with environmentalism
+* [[Viðreisn]] (Regeneration), a political party in Iceland founded in 2016
+
+==Music==
+* [[Regeneration (Stanley Cowell album)|''Regeneration'' (Stanley Cowell album)]] (1976)
+* [[Regeneration (Roy Orbison album)|''Regeneration'' (Roy Orbison album)]] (1977)
+* [[Regeneration (The Divine Comedy album)|''Regeneration'' (The Divine Comedy album)]] (2001)
+* [[Regeneration (Superchick album)|''Regeneration'' (Superchick album)]] (2003)
+
+==Film and television==
+* [[Regeneration (1915 film)|''Regeneration'' (1915 film)]], a film starring John McCann
+*''[[Regeneration (1923 film)]]'', a [[Norman Studios]] production
+* [[Regeneration (1997 film)|''Regeneration'' (1997 film)]] or ''Behind the Lines'', a film adapted from the Pat Barker novel
+* [[ReGeneration (2010 film)|''ReGeneration'' (2010 film)]], a documentary film
+* [[Regeneration (K-9)|&quot;Regeneration&quot; (''K-9'')]], an episode of ''K-9''
+* [[Re-generation (The Outer Limits)|&quot;Re-generation&quot; (''The Outer Limits'')]], a 1997 episode of ''The Outer Limits''
+* [[Regeneration (Star Trek: Enterprise)|&quot;Regeneration&quot; (''Star Trek: Enterprise'')]], an episode of ''Star Trek: Enterprise''
+* [[Regeneration (Doctor Who)|Regeneration (''Doctor Who'')]], a biological ability exhibited by the Time Lords in the fictional context of ''Doctor Who''
+
+==Literature==
+* [[Regeneration (Haggard book)|''Regeneration'' (Haggard book)]], a 1910 non-fiction work by H. Rider Haggard
+* [[Regeneration (novel)|''Regeneration'' (novel)]], a novel by Pat Barker
+* ''Regeneration'', a book by [[Thomas Hunt Morgan]]
+
+==Other uses==
+* [[Regeneration (sculpture)|''Regeneration'' (sculpture)]], a 1975 sculpture by Alan Collins
+* ''[[Evil Dead: Regeneration]]'', a 2005 video game for the PlayStation 2 and Xbox
+
+==See also==
+* [[Bush regeneration]], an ecological technique practiced in Australia
+* [[Diesel particulate filter#Regeneration|DPF regeneration]], removing soot from a diesel particulate filter
+* [[Hydrochloric acid regeneration]], a chemical process for the reclamation of HCl from metal chloride solutions as hydrochloric acid
+* [[Presumptive regeneration]], the idea that the children of Christians will be born again because God cares for and chooses families as well as individuals
+* [[Regenerative amplification]], a process used to generate short but strong pulses of laser light
+* [[Regenerative brake]], an apparatus or system which allows a vehicle to recapture energy normally lost to heat when braking
+* [[Regeneration buffer]] (or regen buffer for short), a kind of video memory buffer in computer video hardware
+* Regenerative capacitor memory, a type of computer memory used in the [[Atanasoff&amp;ndash;Berry computer]]
+* [[Regenerative circuit]], a circuit in electronics that allows a signal to be amplified many times
+* [[Regenerative cooling (rocket)]], a process in rocket engines
+* [[Regenerative medicine]], Clinical therapy to replace or regenerate human cells, tissue or organs, to restore or establish normal function
+* [[Regenerative process]], a class of stochastic processes in applied probability
+* [[Urban regeneration]], or urban renewal
+* [[Regeneración]], Mexican newspaper
+
+{{disambiguation}}</text>
+      <sha1>6bl8gpe3cnfv3mx12h0dx84n1o30j0f</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Relative transmission level</title>
+    <ns>0</ns>
+    <id>41649</id>
+    <revision>
+      <id>674893338</id>
+      <parentid>626173678</parentid>
+      <timestamp>2015-08-06T20:49:01Z</timestamp>
+      <contributor>
+        <username>BD2412bot</username>
+        <id>25180159</id>
+      </contributor>
+      <minor />
+      <comment>Fixing [[Wikipedia:Disambiguation pages with links|links to disambiguation pages]], replaced: the [[gain]] → the [[Gain (electronics)|gain]] using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="740" xml:space="preserve">In [[telecommunication]], '''relative transmission level''' is the ratio of the [[Signalling (telecommunication)|signal]] [[Power (physics)|power]], at a given point in a [[transmission system]], to a reference signal power. 
+
+The [[ratio]] is usually determined by applying a [[standard test tone]] at [[zero transmission level point]] (or applying adjusted test tone power at any other point) and measuring the [[Gain (electronics)|gain]] or loss to the location of interest. A distinction should be made between the standard test tone power and the expected [[median]] power of the actual signal required as the basis for the design of transmission systems.

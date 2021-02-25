@@ -48,12 +48,12 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
 
    end = omp_get_wtime();
    elapsed = end - start;
-
+ 
    start=omp_get_wtime();
    mergesort_s_signatures(files_sketches, 0, N_SIGNATURES*numberOfFiles-1);
    end = omp_get_wtime();
    exectimes(elapsed, FIND_SIMILARITY, SET_TIME);
-
+ 
    //crea le triple {doc1, doc2, shared_signatures}
    int count = create_triplets(files_sketches, numberOfFiles, couples);
 

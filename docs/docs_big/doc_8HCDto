@@ -1,0 +1,386 @@
+{{DEFAULTSORT:Henry 06 Of England}}
+[[Category:Henry VI of England| ]]
+[[Category:1421 births]]
+[[Category:1471 deaths]]
+[[Category:15th-century murdered monarchs]]
+[[Category:15th-century English monarchs]]
+[[Category:15th-century kings of France]]
+[[Category:15th-century English nobility]]
+[[Category:English pretenders to the French throne]]
+[[Category:English people of French descent]]
+[[Category:House of Lancaster]]
+[[Category:House of Valois]]
+[[Category:People of the Hundred Years' War]]
+[[Category:People of the Wars of the Roses]]
+[[Category:Dukes of Cornwall]]
+[[Category:Founders of English schools and colleges]]
+[[Category:Medieval child rulers]]
+[[Category:Prisoners in the Tower of London]]
+[[Category:Burials at St George's Chapel, Windsor Castle]]
+[[Category:Monarchs imprisoned and detained during war]]
+[[Category:Sons of kings]]</text>
+      <sha1>1hcri0578n1n1ki4pbvfaso3n9bjvjo</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Catalan's constant</title>
+    <ns>0</ns>
+    <id>46860</id>
+    <revision>
+      <id>988525160</id>
+      <parentid>987887399</parentid>
+      <timestamp>2020-11-13T18:30:40Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Add: s2cid. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by Abductive | [[Category:Pages with missing ISBNs]] | via #UCB_Category 5/758</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="15015" xml:space="preserve">In [[mathematics]], '''Catalan's constant''' {{mvar|G}}, which appears in [[combinatorics]], is defined by
+
+:&lt;math&gt;G = \beta(2) = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)^2} = \frac{1}{1^2} - \frac{1}{3^2} + \frac{1}{5^2} - \frac{1}{7^2} + \frac{1}{9^2} - \cdots &lt;/math&gt;
+
+where {{mvar|β}} is the [[Dirichlet beta function]]. Its numerical value&lt;ref&gt;{{cite web|last1=Papanikolaou|first1=Thomas|title=Catalan's Constant to 1,500,000 Places|url=https://www.gutenberg.org/ebooks/812|website=Gutenberg.org|date=March 1997}}&lt;/ref&gt; is approximately {{OEIS|A006752}}
+
+:{{math|''G'' {{=}} {{val|0.915965594177219015054603514932384110774}}…}}
+
+{{unsolved|mathematics|Is Catalan's constant irrational? If so, is it transcendental?}}
+It is not known whether {{mvar|G}} is [[irrational number|irrational]], let alone [[transcendental number|transcendental]].&lt;ref&gt;{{citation
+ | last = Nesterenko | first = Yu. V.
+ | date = January 2016
+ | doi = 10.1134/s0081543816010107
+ | issue = 1
+ | journal = Proceedings of the Steklov Institute of Mathematics
+ | pages = 153–170
+ | title = On Catalan's constant
+ | volume = 292| s2cid = 124903059
+ }}.&lt;/ref&gt;
+
+Catalan's constant was named after [[Eugène Charles Catalan]].
+
+The similar but apparently more complicated series
+:&lt;math&gt; \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)^3} = \frac{1}{1^3} - \frac{1}{3^3} + \frac{1}{5^3} - \frac{1}{7^3} + \frac{1}{9^3} - \cdots &lt;/math&gt;
+
+can be evaluated exactly and is equal to π&lt;sup&gt;3&lt;/sup&gt;/32.
+
+==Integral identities==
+Some identities involving [[definite integral]]s include
+
+:&lt;math&gt;\begin{align}
+G &amp;= \iint_{[0,1]^2} \! \frac{1}{1+x^2 y^2} \,dx\, dy \\[3pt]
+G &amp;= \int_0^1\int_0^{1-x} \frac{1}{1 -x^2-y^2} \,dy\,dx \\[3pt]
+G &amp;= \int_1^\infty \frac{\ln t}{1 + t^2} \,dt \\[3pt]
+G &amp;= -\int_0^1 \frac{\ln t}{1 + t^2} \,dt \\[3pt]
+G &amp;= \int_0^\frac{\pi}{4} \frac{t}{\sin t \cos t} \,dt \\[3pt]
+G &amp;= \tfrac14 \int_{-\frac{\pi}{2}}^\frac{\pi}{2} \frac{t}{\sin t} \,dt \\[3pt]
+G &amp;= \int_0^\frac{\pi}{4} \ln \cot t \,dt \\[3pt]
+G &amp;= -\int_0^\frac{\pi}{4} \ln \tan t \,dt \\[3pt]
+G &amp;= \tfrac12 \int_0^\frac{\pi}{2} \ln ( \sec t +\tan t ) \,dt \\[3pt]
+G &amp;= \int_0^1 \frac{\arccos t}{\sqrt{1+t^2}} \,dt \\[3pt]
+G &amp;= \int_0^1 \frac{\operatorname{arsinh} t}{\sqrt{1-t^2}} \,dt \\[3pt]
+G &amp;= \int_0^\infty \arctan e^{-t} \,dt \\[3pt]
+G &amp;= \tfrac12 \int_0^\infty \frac{t}{\cosh t} \,dt  \\[3pt]
+G &amp;= \frac{\pi}{2} \int_1^\infty \frac{(t^4-6t^2+1)\ln\ln t}{(1+t^2)^3} \,dt \\[3pt]
+G &amp;= 1 + \lim_{\alpha\to{1^-}}\!\left\{\int_0^{\alpha}\!\frac{(1+6t^2+t^4)\arctan{t}}{t(1-t^2)^2}\, dt 
++  2\operatorname{arctanh}{\alpha} - \frac{\pi\alpha}{1-\alpha^2} \right\} \\[3pt]
+G &amp;= 1 - \frac18 \iint_{\mathbb{R}^2}\!\!\frac{x\sin(2xy/\pi)}{\,(x^2+\pi^2)\cosh x\sinh y\,} \,dxdy
+\end{align}&lt;/math&gt;
+
+where the last three formulas are related to Malmsten's integrals.&lt;ref&gt;{{Cite journal
+|first1=Iaroslav
+|last1=Blagouchine
+|title=Rediscovery of Malmsten's integrals, their evaluation by contour integration methods and some related results
+|year=2014
+|doi=10.1007/s11139-013-9528-5
+|url=https://iblagouchine.perso.centrale-marseille.fr/publications/Blagouchine-Malmsten-integrals-and-their-evaluation-by-contour-integration-methods-(Ramanujan-J-2014).pdf
+|volume=35
+|journal=The Ramanujan Journal
+|pages=21–110
+|s2cid=120943474
+|access-date=2018-10-01
+|archive-url=https://web.archive.org/web/20181002020243/https://iblagouchine.perso.centrale-marseille.fr/publications/Blagouchine-Malmsten-integrals-and-their-evaluation-by-contour-integration-methods-(Ramanujan-J-2014).pdf
+|archive-date=2018-10-02
+|url-status=dead
+}}&lt;/ref&gt;
+
+If {{math|K(''k'')}} is the [[Elliptic_integral#Complete_elliptic_integral_of_the_first_kind|complete elliptic integral of the first kind]], as a function of the elliptic modulus {{math|''k''}}, then
+:&lt;math&gt; G = \tfrac12 \int_0^1 \mathrm{K}(k)\,dk &lt;/math&gt;
+
+With the [[gamma function]] {{math|Γ(''x'' + 1) {{=}} ''x''!}}
+:&lt;math&gt;\begin{align}
+G &amp;= \frac{\pi}{4} \int_0^1 \Gamma\left(1+\frac{x}{2}\right)\Gamma\left(1-\frac{x}{2}\right)\,dx \\
+&amp;= \frac{\pi}{2} \int_0^\frac12\Gamma(1+y)\Gamma(1-y)\,dy \end{align}&lt;/math&gt;
+
+The integral
+:&lt;math&gt; G = \operatorname{Ti}_2(1)=\int_0^1 \frac{\arctan t}{t}\,dt &lt;/math&gt;
+
+is a known special function, called the [[inverse tangent integral]], and was extensively studied by [[Srinivasa Ramanujan]].
+
+==Uses==
+{{mvar|G}} appears in [[combinatorics]], as well as in values of the second [[polygamma function]], also called the [[trigamma function]], at fractional arguments:
+
+:&lt;math&gt;\begin{align} \psi_1 \left(\tfrac14\right) &amp;= \pi^2 + 8G \\
+\psi_1 \left(\tfrac34\right) &amp;= \pi^2 - 8G. \end{align}&lt;/math&gt;
+
+[[Simon Plouffe]] gives an infinite collection of identities between the trigamma function, {{pi}}&lt;sup&gt;2&lt;/sup&gt; and Catalan's constant; these are expressible as paths on a graph.
+
+In [[low-dimensional topology]], Catalan's constant is a rational multiple of the volume of an ideal hyperbolic [[octahedron]], and therefore of the [[hyperbolic volume]] of the complement of the [[Whitehead link]].&lt;ref&gt;{{citation
+ | last = Agol | first = Ian | authorlink = Ian Agol
+ | doi = 10.1090/S0002-9939-10-10364-5
+ | issue = 10
+ | journal = [[Proceedings of the American Mathematical Society]]
+ | mr = 2661571
+ | pages = 3723–3732
+ | title = The minimal volume orientable hyperbolic 2-cusped 3-manifolds
+ | volume = 138
+ | year = 2010| arxiv = 0804.0043| s2cid = 2016662 }}.&lt;/ref&gt;
+
+It also appears in connection with the [[hyperbolic secant distribution]].
+
+==Relation to other special functions==
+
+Catalan's constant occurs frequently in relation to the [[Clausen function]], the [[inverse tangent integral]], the [[inverse sine integral]], the [[Barnes G-function|Barnes {{mvar|G}}-function]], as well as integrals and series summable in terms of the aforementioned functions.
+
+As a particular example, by first expressing the [[inverse tangent integral]] in its closed form – in terms of Clausen functions – and then expressing those Clausen functions in terms of the Barnes {{mvar|G}}-function, the following expression is obtained (see [[Clausen function]] for more):
+
+:&lt;math&gt;G=4\pi \log\left( \frac{ G\left(\frac{3}{8}\right) G\left(\frac{7}{8}\right) }{ G\left(\frac{1}{8}\right) G\left(\frac{5}{8}\right) } \right) +4 \pi \log \left( \frac{ \Gamma\left(\frac{3}{8}\right) }{ \Gamma\left(\frac{1}{8}\right) } \right) +\frac{\pi}{2} \log \left( \frac{1+\sqrt{2} }{2 \left(2-\sqrt{2}\right)} \right)&lt;/math&gt;.
+
+If one defines the '''Lerch transcendent''' {{math|Φ(''z'',''s'',''α'')}} (related to the [[Lerch zeta function]]) by
+
+:&lt;math&gt;\Phi(z, s, \alpha) = \sum_{n=0}^\infty \frac { z^n} {(n+\alpha)^s},&lt;/math&gt;
+
+then
+
+:&lt;math&gt; G = \tfrac{1}{4}\Phi\left(-1, 2, \tfrac{1}{2}\right).&lt;/math&gt;
+
+==Quickly converging series==
+The following two formulas involve quickly converging series, and are thus appropriate for numerical computation:
+: &lt;math&gt;\begin{align}
+G &amp; = 3 \sum_{n=0}^\infty \frac{1}{2^{4n}}
+\left(-\frac{1}{2(8n+2)^2}+\frac{1}{2^2(8n+3)^2}-\frac{1}{2^3(8n+5)^2}+\frac{1}{2^3(8n+6)^2}-\frac{1}{2^4(8n+7)^2}+\frac{1}{2(8n+1)^2}\right)- \\
+&amp; \qquad -2 \sum_{n=0}^\infty \frac{1}{2^{12n}}
+\left(\frac{1}{2^4(8n+2)^2}+\frac{1}{2^6(8n+3)^2}-\frac{1}{2^9(8n+5)^2}-\frac{1}{2^{10} (8n+6)^2}-\frac{1}{2^{12} (8n+7)^2}+\frac{1}{2^3(8n+1)^2}\right)
+\end{align}&lt;/math&gt;
+
+and
+
+:&lt;math&gt;G = \frac{\pi}{8}\log\left(2 + \sqrt{3}\right) + \frac{3}{8}\sum_{n=0}^\infty \frac{1}{(2n+1)^2 \binom{2n}{n}}.&lt;/math&gt;
+
+The theoretical foundations for such series are given by Broadhurst, for the first formula,&lt;ref&gt;{{cite arXiv|first1=D. J. |last1=Broadhurst|eprint=math.CA/9803067 |title=Polylogarithmic ladders, hypergeometric series and the ten millionth digits of {{math|''ζ''(3)}} and {{math|''ζ''(5)}}| year=1998}}&lt;/ref&gt; and Ramanujan, for the second formula.&lt;ref&gt;{{cite book|first=B. C.|last=Berndt|title=Ramanujan's Notebook, Part I|publisher=Springer Verlag|date=1985|page=289}} {{ISBN missing}}&lt;/ref&gt; The algorithms for fast evaluation of the Catalan constant were constructed by E. Karatsuba.&lt;ref&gt;{{cite journal|first=E. A.|last=Karatsuba|title=Fast evaluation of transcendental functions|journal=Probl. Inf. Transm.|volume=27|issue=4|pages=339–360|date=1991|zbl=0754.65021|mr=1156939}}&lt;/ref&gt;&lt;ref&gt;{{cite book|first=E. A.|last=Karatsuba|contribution=Fast computation of some special integrals of mathematical physics|title=Scientific Computing, Validated Numerics, Interval Methods|url=https://archive.org/details/scientificcomput00wals_919|url-access=limited|editor1-first=W.|editor1-last=Krämer|editor2-first=J. W.|editor2-last=von Gudenberg|pages=[https://archive.org/details/scientificcomput00wals_919/page/n35 29]–41|date=2001}} {{ISBN missing}}&lt;/ref&gt;
+
+==Known digits==
+The number of known digits of Catalan's constant {{mvar|G}} has increased dramatically during the last decades. This is due both to the increase of performance of computers as well as to algorithmic improvements.&lt;ref&gt;{{cite web|last1=Gourdon|first1=X.|last2=Sebah|first2=P.|url=http://numbers.computation.free.fr/Constants/constants.html|title=Constants and Records of Computation}}&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot; style=&quot;margin: 1em auto 1em auto&quot;
+|+ Number of known decimal digits of Catalan's constant {{mvar|G}}
+! Date || Decimal digits || Computation performed by
+|-
+| 1832 ||align=&quot;right&quot;| 16 || [[Thomas Clausen (mathematician)|Thomas Clausen]]
+|-
+| 1858 ||align=&quot;right&quot;| 19 || Carl Johan Danielsson Hill
+|-
+| 1864 ||align=&quot;right&quot;| 14 || [[Eugène Charles Catalan]]
+|-
+| 1877 ||align=&quot;right&quot;| 20 || [[James Whitbread Lee Glaisher|James W. L. Glaisher]]
+|-
+| 1913 ||align=&quot;right&quot;| 32 || [[James Whitbread Lee Glaisher|James W. L. Glaisher]]
+|-
+| 1990 ||align=&quot;right&quot;| {{val|20000}} || Greg J. Fee
+|-
+| 1996 ||align=&quot;right&quot;| {{val|50000}} || Greg J. Fee
+|-
+| August 14, 1996 ||align=&quot;right&quot;| {{val|100000}} || Greg J. Fee &amp; [[Simon Plouffe]]
+|-
+| September 29, 1996 ||align=&quot;right&quot;| {{val|300000}} || Thomas Papanikolaou
+|-
+| 1996 ||align=&quot;right&quot;| {{val|1500000}} || Thomas Papanikolaou
+|-
+| 1997 ||align=&quot;right&quot;| {{val|3379957}} || Patrick Demichel
+|-
+| January 4, 1998 ||align=&quot;right&quot;| {{val|12500000}} || Xavier Gourdon
+|-
+| 2001 ||align=&quot;right&quot;| {{val|100000500}} || Xavier Gourdon &amp; Pascal Sebah
+|-
+| 2002 ||align=&quot;right&quot;| {{val|201000000}} || Xavier Gourdon &amp; Pascal Sebah
+|-
+| October 2006 ||align=&quot;right&quot;| {{val|5000000000}} || Shigeru Kondo &amp; Steve Pagliarulo&lt;ref&gt;{{Cite web |url=http://ja0hxv.calico.jp/pai/ecatalan.html |title=Shigeru Kondo's website |access-date=2008-01-31 |archive-url=https://web.archive.org/web/20080211185703/http://ja0hxv.calico.jp/pai/ecatalan.html |archive-date=2008-02-11 |url-status=dead }}&lt;/ref&gt;
+|-
+| August 2008 ||align=&quot;right&quot;| {{val|10000000000}} || Shigeru Kondo &amp; Steve Pagliarulo&lt;ref&gt;[http://numbers.computation.free.fr/Constants/constants.html Constants and Records of Computation]&lt;/ref&gt;
+|-
+| January 31, 2009 ||align=&quot;right&quot;| {{val|15510000000}} || Alexander J. Yee &amp; Raymond Chan&lt;ref name=yee_chan&gt;[http://www.numberworld.org/nagisa_runs/computations.html Large Computations]&lt;/ref&gt;
+|-
+| April 16, 2009 ||align=&quot;right&quot;| {{val|31026000000}} || Alexander J. Yee &amp; Raymond Chan&lt;ref name=yee_chan/&gt;
+|-
+| June 7, 2015 ||align=&quot;right&quot;| {{val|200000001100}} || Robert J. Setti&lt;ref name=setti&gt;[http://www.numberworld.org/digits/Catalan/ Catalan's constant records using YMP]&lt;/ref&gt;
+|-
+| April 12, 2016 ||align=&quot;right&quot;| {{val|250000000000}} || Ron Watkins&lt;ref name=setti&gt;[http://www.numberworld.org/digits/Catalan/ Catalan's constant records using YMP]&lt;/ref&gt;
+|-
+| February 16, 2019  ||align=&quot;right&quot;| {{val|300000000000}} || Tizian Hanselmann&lt;ref name=setti&gt;[http://www.numberworld.org/digits/Catalan/ Catalan's constant records using YMP]&lt;/ref&gt;
+|-
+| March 29, 2019  ||align=&quot;right&quot;| {{val|500000000000}} || Mike A &amp; Ian Cutress&lt;ref name=setti&gt;[http://www.numberworld.org/digits/Catalan/ Catalan's constant records using YMP]&lt;/ref&gt;
+|-
+| July 16, 2019  ||align=&quot;right&quot;| {{val|600000000100}} || Seungmin Kim&lt;ref name=yee&gt;[https://web.archive.org/web/20190722034426/http://www.numberworld.org/y-cruncher/ Catalan's constant records using YMP]&lt;/ref&gt;&lt;ref name=kim&gt;[https://ehfd.github.io/world-record/catalans-constant/ Catalan's constant world record by Seungmin Kim]&lt;/ref&gt;
+|-
+|}
+
+==See also ==
+* [[Particular values of Riemann zeta function]]
+* [[Mathematical constant]]
+
+==References==
+{{reflist}}
+
+==External links==
+* Victor Adamchik, ''[http://www-2.cs.cmu.edu/~adamchik/articles/catalan/catalan.htm 33 representations for Catalan's constant]'' (undated)
+* {{cite journal
+|first1=Victor
+|last1= Adamchik
+|year=2002
+|journal=Zeitschrift für Analysis und ihre Anwendungen
+|volume=21
+|issue=3
+|pages=1–10
+|url=http://www-2.cs.cmu.edu/~adamchik/articles/csum.html
+|title=A certain series associated with Catalan's constant
+|mr=1929434
+|doi=10.4171/ZAA/1110
+}}
+* {{cite web
+|first1=Simon
+|last1=Plouffe
+|url=http://www.lacim.uqam.ca/~plouffe/IntegerRelations/identities3a.html
+|title= A few identities (III) with Catalan
+|year=1993 }} (Provides over one hundred different identities)''.
+* Simon Plouffe, ''[http://www.lacim.uqam.ca/~plouffe/IntegerRelations/identities3.html A few identities with Catalan constant and Pi^2]'', (1999) ''(Provides a graphical interpretation of the relations)''
+* {{MathWorld|title=Catalan's Constant|urlname=CatalansConstant}}
+* [http://functions.wolfram.com/Constants/Catalan/06/01/ Catalan constant: Generalized power series] at the Wolfram Functions Site
+* Greg Fee, ''[https://www.gutenberg.org/ebooks/682 Catalan's Constant (Ramanujan's Formula)]'' (1996) ''(Provides the first 300,000 digits of Catalan's constant.)''.
+* {{citation
+|first1=Greg
+|title=Proceedings of the international symposium on Symbolic and algebraic computation - ISSAC '90
+|last1=Fee
+|year=1990
+|chapter=Computation of Catalan's constant using Ramanujan's Formula
+|pages=157–160
+|series=Proceedings of the ISSAC '90
+|doi=10.1145/96877.96917
+|isbn=0201548925
+|s2cid=1949187
+}}
+* {{Cite journal
+|first1=David M.
+|last1=Bradley
+|title=A class of series acceleration formulae for Catalan's constant
+|doi=10.1023/A:1006945407723
+|year=1999
+|journal=The Ramanujan Journal
+|volume=3
+|issue=2
+|pages=159–173
+|mr=1703281
+|arxiv=0706.0356
+|s2cid=5111792
+}}
+* {{Cite journal
+|first1=David M.
+|last1=Bradley
+|title=A class of series acceleration formulae for Catalan's constant
+|arxiv=0706.0356
+|year=2007
+|doi=10.1023/A:1006945407723
+|volume=3
+|issue=2
+|journal=The Ramanujan Journal
+|pages=159–173
+|bibcode=2007arXiv0706.0356B
+|s2cid=5111792
+}}
+* {{Citation
+|first1=David M.
+|last1=Bradley
+|title = Representations of Catalan's constant
+|citeseerx = 10.1.1.26.1879
+|year=2001
+}}
+
+*{{springer|title=Catalan constant|id=p/c130040}}
+*[http://mathworld.wolfram.com/CatalansConstant.html Catalan's Constant &amp;mdash; from Wolfram MathWorld]
+*[https://archive.org/details/ctcst10a Catalan's Constant (Ramanujan's Formula)]
+*[https://www.cs.cmu.edu/~adamchik/articles/catalan/catalan.htm catalan's constant] &amp;mdash; www.cs.cmu.edu
+
+[[Category:Combinatorics]]
+[[Category:Mathematical constants]]</text>
+      <sha1>0j62pk0xfiy9mw915sxtzpdninkaa9k</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Henry IV of England</title>
+    <ns>0</ns>
+    <id>46861</id>
+    <revision>
+      <id>990892093</id>
+      <parentid>990889663</parentid>
+      <timestamp>2020-11-27T03:10:05Z</timestamp>
+      <contributor>
+        <ip>216.87.229.4</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="40136" xml:space="preserve">{{other uses|Henry IV (disambiguation)}}
+{{short description|15th-century King of England}}
+{{EngvarB|date=July 2018}}
+{{Use dmy dates|date=December 2019}}
+{{Infobox royalty
+| name         = Henry IV
+| image        = &lt;!-- This is an accurate representation of Henry IV's appearance according to Mortimer --&gt;Illumination of Henry IV (cropped).jpg
+| alt          = Portrait of Henry IV
+| caption      = [[Miniature (illuminated manuscript)|Illuminated miniature]] of Henry IV, {{c.}} 1402{{sfn|Mortimer|2007|p=176}}
+| succession   = [[King of England]]
+| moretext     = [[Styles of English sovereigns|(more...)]]
+| reign        = 30 September 1399&amp;nbsp;– {{nowrap|20 March 1413}}
+| coronation   = 13 October 1399
+| predecessor  = [[Richard II of England|Richard II]]
+| successor    = [[Henry V of England|Henry V]]
+| birth_date   = {{circa|15 April}} 1367&lt;ref name=&quot;Mortimer2006&quot;&gt;{{cite journal |last=Mortimer |date=6 December 2006 |first=I. |authorlink=Ian Mortimer (historian) |title=Henry IV's date of birth and the royal Maundy |journal=[[Historical Research]] |volume=80 |issue=210 |pages=567–576 |doi=10.1111/j.1468-2281.2006.00403.x |issn=0950-3471 }}&lt;/ref&gt;
+| birth_place  = [[Bolingbroke Castle]], [[Lincolnshire]], England
+| death_date   = 20 March 1413 (aged 45)
+| death_place  = [[Westminster]], [[London]], England
+| burial_date  = 
+| burial_place = [[Canterbury Cathedral]], [[Kent]], England
+| spouse       = {{marriage|[[Mary de Bohun]]|1381|4 June 1394|end=d}}&lt;br&gt;{{marriage|[[Joan of Navarre, Queen of England|Joan of Navarre]]|7 February 1403}}
+| issue        = {{ubl|[[Henry V of England|Henry V, King of England]]|[[Thomas of Lancaster, 1st Duke of Clarence|Thomas, Duke of Clarence]]|[[John of Lancaster, 1st Duke of Bedford|John, Duke of Bedford]]|[[Humphrey, Duke of Gloucester]]|[[Blanche of England|Blanche, Electress Palatine]]|[[Philippa of England|Philippa, Queen of Denmark, Norway and Sweden]]}}
+| issue-link   = #Marriages and issue
+| issue-pipe   = more...
+| house        = [[House of Lancaster|Lancaster]] ([[House of Plantagenet|Plantagenet]])
+| father       = [[John of Gaunt]]
+| mother       = [[Blanche of Lancaster]]
+| signature    = Henry IV Signature.svg
+}}
+'''Henry IV''' (&lt;!--Please do not change birth year without discussing it on talk page. Thank you!--&gt;April 1367&amp;nbsp;– 20 March 1413) was [[King of England]] from 1399 to 1413. He asserted the claim of his grandfather [[King Edward III]], a maternal grandson of [[Philip IV of France]], to the [[Kingdom of France]]. Henry was the first English ruler since the [[Norman Conquest]] whose mother tongue was English rather than French.&lt;ref&gt;{{cite book |last1=Janvrin |date=6 June 2016 |last2=Rawlinson |first1=Isabelle |first2=Catherine |title=The French in London: From William the Conqueror to Charles de Gaulle |url={{google books|zKvKDAAAQBAJ|plainurl=yes}} |page=16 |translator=Emily Read |publisher=Wilmington Square Books |isbn=978-1-908524-65-2 }}&lt;/ref&gt; He was known as '''Henry Bolingbroke''' ({{IPAc-en|ˈ|b|ɒ|l|ɪ|ŋ|b|r|ʊ|k}}) before taking the throne. His father was Edward III's fourth son, [[John of Gaunt, Duke of Lancaster]]. His mother [[Blanche of Lancaster|Blanche]] was the daughter of royal nobleman, [[Henry, Duke of Lancaster]].
+
+John of Gaunt enjoyed a position of considerable influence during much of the reign of his own nephew, [[King Richard II]]. Henry was involved in the revolt of the [[Lords Appellant]] against Richard in 1388. He was later exiled by the king. After John of Gaunt died in 1399, the king did not allow Henry to inherit Gaunt's duchy. That year, Henry rallied a group of supporters, overthrew and imprisoned Richard II, and took the throne.
+
+As king, Henry faced a number of rebellions. [[Owain Glyndŵr]], the self-proclaimed [[List of rulers of Wales|ruler of Wales]], [[Glyndŵr Rising|revolted]] against the king. Henry IV defeated [[Henry Percy, 1st Earl of Northumberland]], at the [[Battle of Shrewsbury]] in 1403. The king had poor health in the latter part of his reign, and his eldest son, [[Henry of Monmouth]], assumed the reins of government in 1410. Henry IV died in 1413, and was succeeded by his son.
+
+==Siblings==
+Henry's elder sisters were [[Philippa, Queen of Portugal]], and [[Elizabeth of Lancaster, Duchess of Exeter]]. His younger half-sister, the daughter of his father's second wife, [[Constance of Castile, Duchess of Lancaster|Constance of Castile]], was [[Katherine, Queen of Castile]]. He also had four natural half-siblings born of [[Katherine Swynford]], originally his sisters' governess, then his father's longstanding mistress and later third wife. These illegitimate children were given the surname [[House of Beaufort|Beaufort]] from their birthplace at the [[Château de Beaufort]] in [[Champagne, France]].&lt;ref name=&quot;Armitage-Smith&quot;&gt;{{cite book| last=Armitage-Smith |first=Sydney |title=John of Gaunt |url=https://books.google.com/books?id=aUutJGyx5EEC&amp;pg=PA318 |year=1905 |publisher=Charles Scribner's Sons |page=318}}&lt;!-- |accessdate=17 July 2018--&gt;&lt;/ref&gt;
+
+Henry's relationship with his stepmother, Katherine Swynford, was a positive one, but his relationship with the Beauforts varied. In youth he seems to have been close to all of them, but rivalries with [[Henry Beaufort|Henry]] and [[Thomas Beaufort]] proved problematic after 1406. [[Ralph Neville, 4th Baron Neville]], married Henry's half-sister [[Joan Beaufort, Countess of Westmorland|Joan Beaufort]]. Neville remained one of his strongest supporters, and so did his eldest half-brother [[John Beaufort, 1st Earl of Somerset|John Beaufort]], even though Henry revoked [[Richard II]]'s grant to John of a [[marquess]]ate. Thomas Swynford, a son from Katherine's first marriage, was another loyal companion. Thomas was Constable of [[Pontefract Castle]], where Richard II is said to have died.
+
+Henry's half-sister Joan was the mother of [[Cecily Neville]]. Cecily married [[Richard, 3rd Duke of York]], and had several offspring, including [[Edward IV]] and [[Richard III]], making Joan the grandmother of two [[Yorkist]] kings of England.
+
+==Relationship with Richard II==
+[[File:HenryBolingbrokeClaimsThrone.jpg|thumb|300px|Henry of Bolingbroke, flanked by the lords spiritual and temporal, claims the throne in 1399. From a contemporary manuscript, British Library, [[Harleian Collection]]]]
+Henry experienced a more inconsistent relationship with King Richard II than his father had. First cousins and childhood playmates, they were admitted together to the [[Order of the Garter]] in 1377, but Henry participated in the [[Lords Appellant]]s' rebellion against the king in 1387.&lt;ref&gt;B. Bevan, ''Henry IV'', New York, 1994, pp. [https://books.google.be/books?id=wsjq_H5uCagC&amp;pg=PA6 6], [https://books.google.be/books?id=wsjq_H5uCagC&amp;pg=PA13 13].&lt;/ref&gt; After regaining power, Richard did not punish Henry, although he did execute or exile many of the other rebellious barons. In fact, Richard elevated Henry from [[Earl of Derby]] to [[Duke of Hereford]].
+
+Henry spent the full year of 1390 supporting the unsuccessful siege of [[Vilnius]] (capital of the [[Grand Duchy of Lithuania]]) by [[Teutonic Knights]] with 70 to 80 household knights.{{sfn|Given-Wilson|2016|pp=66–68}} During this campaign he bought captured [[Lithuania]]n women and children and took them back to [[Königsberg]] to be converted.{{sfn|Given-Wilson|2016|p=69}} Henry's second expedition to Lithuania in 1392 illustrates the financial benefits to the Order of these guest crusaders. His small army consisted of over 100 men, including [[longbow]] archers and six minstrels, at a total cost to the Lancastrian purse of £4,360. Despite the efforts of Henry and his English crusaders, two years of attacks on Vilnius proved fruitless. In 1392–93 Henry undertook a pilgrimage to [[Jerusalem]], where he made offerings at the [[Holy Sepulchre]] and at the [[Mount of Olives]].&lt;ref&gt;{{cite book|last=Bevan|first=Bryan|title=Henry IV|publisher=Macmillan|location=London|year=1994|page=[https://books.google.be/books?id=wsjq_H5uCagC&amp;pg=PA32 32]|isbn=0-948695-35-8}}&lt;/ref&gt; Later he vowed to lead a crusade to 'free Jerusalem from the infidel,' but he died before this could be accomplished.&lt;ref&gt;B. Bevan, ''Henry IV'', New York, 1994, p. [https://books.google.be/books?id=wsjq_H5uCagC&amp;pg=PA1 1].&lt;/ref&gt;
+
+The relationship between Henry and the king met with a second crisis. In 1398, a remark by [[Thomas de Mowbray, 1st Duke of Norfolk]], regarding Richard II's rule was interpreted as treason by Henry and Henry reported it to the king.&lt;ref&gt;A. Lyon, ''Constitutional History of the UK'', London – Sydney – Portland, 2003, p. [https://books.google.be/books?id=yiqrD_b_EGkC&amp;pg=PA122 122]&lt;/ref&gt; The two dukes agreed to undergo a duel of honour (called by Richard II) at Gosford Green near [[Caludon Castle]], Mowbray's home in [[Coventry]]. Yet before the duel could take place, Richard decided to banish Henry from the kingdom (with the approval of Henry's father, John of Gaunt) to avoid further bloodshed. Mowbray himself was exiled for life.&lt;ref name=&quot;Barr 1994 146&quot;&gt;H. Barr, ''Signes and Sothe: Language in the Piers Plowman Tradition'', Cambridge, 1994, p. [https://books.google.be/books?id=RPNVlYhWBqEC&amp;pg=PA146 146].&lt;/ref&gt;
+
+John of Gaunt died in February 1399.&lt;ref name=&quot;Barr 1994 146&quot;/&gt; Without explanation, Richard cancelled the legal documents that would have allowed Henry to inherit Gaunt's land automatically. Instead, Henry would be required to ask for the lands from Richard.&lt;ref name=&quot;Bevan 1994 51&quot;&gt;B. Bevan, ''Henry IV'', New York, 1994, p. 51.&lt;/ref&gt; After some hesitation, Henry met with the exiled [[Thomas Arundel]], former [[archbishop of Canterbury]], who had lost his position because of his involvement with the Lords Appellant.&lt;ref name=&quot;Bevan 1994 51&quot;/&gt; Henry and Arundel returned to England while Richard was on a military campaign in [[Ireland]]. With Arundel as his advisor, Henry began a military campaign, confiscating land from those who opposed him and ordering his soldiers to destroy much of [[Cheshire]]. Henry initially announced that his intention was  to reclaim his rights as [[Duke of Lancaster]], though he quickly gained enough power and support to have himself declared King Henry IV, imprison King Richard (who died in prison under mysterious circumstances) and bypass Richard's 7-year-old [[heir-presumptive]], [[Edmund de Mortimer, 5th Earl of March]].&lt;ref name=&quot;Bevan 1994 66&quot;&gt;B. Bevan, ''Henry IV'', New York, 1994, p. 66.&lt;/ref&gt; Henry's coronation, on 13 October 1399 at Westminster Abbey,&lt;ref&gt;B. Bevan, ''Henry IV'', New York, 1994, p. [https://books.google.be/books?id=IJMYDAAAQBAJ&amp;pg=PA67 67].&lt;/ref&gt; may have marked the first time since the [[Norman Conquest]] when the monarch made an address in English.
+
+Henry consulted with Parliament frequently, but was sometimes at odds with the members, especially over ecclesiastical matters. On Arundel's advice, Henry obtained from Parliament the enactment of ''[[De heretico comburendo]]'' in 1401, which prescribed the burning of [[heretics]], an act done mainly to suppress the [[Lollard]] movement.&lt;ref name=&quot;SomersetHavens2003&quot;&gt;{{cite book|author1=Fiona Somerset|author2=Jill C. Havens|author3=Derrick G. Pitard|title=Lollards and Their Influence in Late Medieval England|url=https://books.google.com/books?id=B9yepT96bvoC|year=2003|publisher=Boydell &amp; Brewer|isbn=978-0-85115-995-9}}&lt;/ref&gt;&lt;ref name=&quot;DoddBiggs2008&quot;&gt;{{cite book|author1=Gwilym Dodd|author2=Douglas Biggs|title=The Reign of Henry IV: Rebellion and Survival, 1403–1413|url=https://books.google.com/books?id=eoDd6UG7_0oC&amp;pg=PA137|year=2008|publisher=Boydell &amp; Brewer Ltd|isbn=978-1-903153-23-9|pages=137}}&lt;/ref&gt; In 1410, Parliament suggested confiscating church land. Henry refused to attack the Church that had helped him to power, and the House of Commons had to beg for the bill to be struck off the record.&lt;ref&gt;T. Jones – A. Ereira, ''[[Terry Jones' Medieval Lives]]'', London, 2004, p. [https://books.google.be/books?id=4T909PAV8GkC&amp;pg=PA112 112].&lt;/ref&gt;
+
+==Reign==
+[[File:Henry IV Coronation.jpg|thumb|left|upright|The Coronation of Henry IV of England. From a 15th-century manuscript of [[Jean Froissart]]'s ''[[Froissart's Chronicles|Chronicles]]''.]]

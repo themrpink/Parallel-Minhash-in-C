@@ -1,0 +1,166 @@
+:&lt;math&gt;x = [a_0; a_1, a_2, a_3] &lt;/math&gt;,
+
+or in the notation of [[Alfred Pringsheim|Pringsheim]] as
+
+:&lt;math&gt;x = a_0 + \frac{1 \mid}{\mid a_1} + \frac{1 \mid}{\mid a_2} + \frac{1 \mid}{\mid a_3},&lt;/math&gt;
+
+or in another related notation as
+
+:&lt;math&gt;x = a_0 + {1 \over a_1 + {}} {1 \over a_2 + {}} {1 \over a_3 {}}.&lt;/math&gt;
+
+Sometimes angle brackets are used, like this:
+
+:&lt;math&gt;x = \left \langle a_0; a_1, a_2, a_3 \right \rangle.&lt;/math&gt;
+
+The semicolon in the square and angle bracket notations is sometimes replaced by a comma.&lt;ref name=&quot;Long 1972 173&quot;/&gt;&lt;ref name=&quot;Pettofrezzo 1970 152&quot;/&gt;
+
+One may also define ''infinite simple continued fractions'' as [[limit of a sequence|limits]]:
+
+:&lt;math&gt;[a_0; a_1, a_2, a_3, \,\ldots ] = \lim_{n \to \infty} [a_0; a_1, a_2, \,\ldots, a_n]. &lt;/math&gt;
+
+This limit exists for any choice of &lt;math&gt;a_0&lt;/math&gt; and positive integers &lt;math&gt;a_1,a_2,\ldots &lt;/math&gt;&lt;ref name=&quot;Long 1972 183&quot;&gt;{{harvtxt|Long|1972|p=183}}&lt;/ref&gt;&lt;ref name=&quot;Pettofrezzo 1970 158&quot;&gt;{{harvtxt|Pettofrezzo|Byrkit|1970|p=158}}&lt;/ref&gt;
+
+==Finite continued fractions==&lt;!-- This section is linked from [[Continued fraction]] --&gt;
+Every finite continued fraction represents a [[rational number]], and every rational number can be represented in precisely two different ways as a finite continued fraction, with the conditions that the first coefficient is an integer and the other coefficients are positive integers. These two representations agree except in their final terms. In the longer representation the final term in the continued fraction is 1; the shorter representation drops the final 1, but increases the new final term by 1. The final element in the short representation is therefore always greater than 1, if present. In symbols:
+
+:{{math|[''a''{{sub|0}}; ''a''{{sub|1}}, ''a''{{sub|2}}, ..., ''a''{{sub|''n'' − 1}}, ''a''{{sub|''n''}}, 1] {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ''a''{{sub|2}}, ..., ''a''{{sub|''n'' − 1}}, ''a''{{sub|''n''}} + 1]}}.
+:{{math|[''a''{{sub|0}}; 1] {{=}} [''a''{{sub|0}} + 1]}}.
+
+==Of reciprocals==
+The continued fraction representations of a positive rational number and its [[multiplicative inverse|reciprocal]] are identical except for a shift one place left or right depending on whether the number is less than or greater than one respectively. In other words, the numbers represented by
+&lt;math&gt;[a_0;a_1,a_2,\ldots,a_n]&lt;/math&gt; and &lt;math&gt;[0;a_0,a_1,\ldots,a_n]&lt;/math&gt; are reciprocals. 
+
+For instance if &lt;math&gt;a&lt;/math&gt; is an integer and &lt;math&gt;x &lt; 1&lt;/math&gt; then
+
+:&lt;math&gt;x=0 + \frac{1}{a + \frac{1}{b}}&lt;/math&gt; and &lt;math&gt;\frac{1}{x} = a + \frac{1}{b}&lt;/math&gt;.
+If &lt;math&gt;x&gt;1&lt;/math&gt; then
+:&lt;math&gt;x = a + \frac{1}{b}&lt;/math&gt; and &lt;math&gt;\frac{1}{x} = 0 + \frac{1}{a + \frac{1}{b}}&lt;/math&gt;.
+
+The last number that generates the remainder of the continued fraction is the same for both &lt;math&gt;x&lt;/math&gt; and its reciprocal.
+
+For example,
+:&lt;math&gt;2.25 = \frac{9}{4} = [2;4]&lt;/math&gt; and &lt;math&gt;\frac{1}{2.25} = \frac{4}{9} = [0;2,4]&lt;/math&gt;.
+
+==Infinite continued fractions and convergents==&lt;!-- [[Convergent (continued fraction)]] links here.  Please do not change. --&gt;
+Every infinite continued fraction is [[irrational number|irrational]], and every irrational number can be represented in precisely one way as an infinite continued fraction.
+
+An infinite continued fraction representation for an irrational number is useful because its initial segments provide rational approximations to the number. These rational numbers are called the '''convergents''' of the continued fraction.&lt;ref&gt;{{harvtxt|Long|1972|p=177}}&lt;/ref&gt;&lt;ref&gt;{{harvtxt|Pettofrezzo|Byrkit|1970|pp=162–163}}&lt;/ref&gt; The larger a term is in the continued fraction, the closer the corresponding convergent is to the irrational number being approximated. Numbers like π have occasional large terms in their continued fraction, which makes them easy to approximate with rational numbers. Other numbers like ''e'' have only small terms early in their continued fraction, which makes them more difficult to approximate rationally. The [[golden ratio]] ϕ has terms equal to 1 everywhere—the smallest values possible—which makes ϕ the most difficult number to approximate rationally. In this sense, therefore, it is the &quot;most irrational&quot; of all irrational numbers. Even-numbered convergents are smaller than the original number, while odd-numbered ones are larger.
+
+For a continued fraction {{math|[''a''{{sub|0}}; ''a''{{sub|1}}, ''a''{{sub|2}}, ...]}}, the first four convergents (numbered 0 through 3) are
+
+:{{bigmath|{{sfrac|''a''{{sub|0}}|1}}, {{sfrac|''a''{{sub|1}}''a''{{sub|0}} + 1|''a''{{sub|1}}}}, {{sfrac|''a''{{sub|2}}(''a''{{sub|1}}''a''{{sub|0}} + 1) + ''a''{{sub|0}}|''a''{{sub|2}}''a''{{sub|1}} + 1}}, {{sfrac|''a''{{sub|3}}(''a''{{sub|2}}(''a''{{sub|1}}''a''{{sub|0}} + 1) + ''a''{{sub|0}}) + (''a''{{sub|1}}''a''{{sub|0}} + 1) | ''a''{{sub|3}}(''a''{{sub|2}}''a''{{sub|1}} + 1) + ''a''{{sub|1}}}}}}.
+
+The numerator of the third convergent is formed by multiplying the numerator of the second convergent by the third coefficient, and adding the numerator of the first convergent. The denominators are formed similarly. Therefore, each convergent can be expressed explicitly in terms of the continued fraction as the ratio of certain [[multivariate polynomial]]s called ''[[Continuant (mathematics)|continuants]]''.
+
+If successive convergents are found, with numerators {{mvar|h}}{{sub|1}}, {{mvar|h}}{{sub|2}}, ... and denominators {{mvar|k}}{{sub|1}}, {{mvar|k}}{{sub|2}}, ... then the relevant recursive relation is:
+
+:{{math|''h''{{sub|''n''}} {{=}} ''a''{{sub|''n''}}''h''{{sub|''n'' − 1}} + ''h''{{sub|''n'' − 2}}}},
+:{{math|''k''{{sub|''n''}} {{=}} ''a''{{sub|''n''}}''k''{{sub|''n'' − 1}} + ''k''{{sub|''n'' − 2}}}}.
+
+The successive convergents are given by the formula
+
+:{{bigmath|{{sfrac|''h''{{sub|''n''}}|''k''{{sub|''n''}}}} {{=}} {{sfrac|''a''{{sub|''n''}}''h''{{sub|''n'' − 1}} + ''h''{{sub|''n'' − 2}}|''a''{{sub|''n''}}''k''{{sub|''n'' − 1}} + ''k''{{sub|''n'' − 2}}}}}}.
+
+Thus to incorporate a new term into a rational approximation, only the two previous convergents are necessary. The initial &quot;convergents&quot; (required for the first two terms) are &lt;sup&gt;0&lt;/sup&gt;⁄&lt;sub&gt;1&lt;/sub&gt; and &lt;sup&gt;1&lt;/sup&gt;⁄&lt;sub&gt;0&lt;/sub&gt;. For example, here are the convergents for [0;1,5,2,2].
+
+:{| class=&quot;wikitable&quot;
+|- align=&quot;right&quot;
+! {{mvar|n}}
+| −2|| −1|| 0 || 1 || 2 || 3 || 4
+|- align=&quot;right&quot;
+! {{math|''a''{{sub|''n''}}}}
+| &amp;nbsp; || &amp;nbsp; || 0 || 1 || 5 || 2 || 2
+|- align=&quot;right&quot;
+! {{math|''h''{{sub|''n''}}}}
+| 0 || 1 || 0 || 1 || 5 || 11 || 27
+|- align=&quot;right&quot;
+! {{math|''k''{{sub|''n''}}}}
+| 1 || 0 || 1 || 1 || 6 || 13 || 32
+|}
+
+When using the [[Methods of computing square roots#Babylonian method|Babylonian method]] to generate successive approximations to the square root of an integer, if one starts with the lowest integer as first approximant, the rationals generated all appear in the list of convergents for the continued fraction. Specifically, the approximants will appear on the convergents list in positions 0, 1, 3, 7, 15, ... , {{math|2&lt;sup&gt;''k''&lt;/sup&gt;−1}}, ... For example, the continued fraction expansion for [[square root of 3|{{sqrt|3}}]] is [1;1,2,1,2,1,2,1,2,...]. Comparing the convergents with the approximants derived from the Babylonian method:
+
+:{| class=&quot;wikitable&quot;
+|- align=&quot;right&quot;
+! {{mvar|n}}
+| −2|| −1|| '''0''' || '''1''' || 2 || '''3''' || 4 || 5 || 6 || '''7'''
+|- align=&quot;right&quot;
+! {{math|''a''{{sub|''n''}}}}
+| &amp;nbsp; || &amp;nbsp; || 1 || 1 || 2 || 1 || 2 || 1 || 2 || 1
+|- align=&quot;right&quot;
+! {{math|''h''{{sub|''n''}}}}
+| 0 || 1 || '''1''' || '''2''' || 5 || '''7''' || 19 || 26 || 71 || '''97'''
+|- align=&quot;right&quot;
+! {{math|''k''{{sub|''n''}}}}
+| 1 || 0 || '''1''' || '''1''' || 3 || '''4''' || 11 || 15 || 41 || '''56'''
+|}
+
+:{{math|''x''{{sub|0}} {{=}} 1 {{=}} {{sfrac|1|1}}}}
+:{{math|''x''{{sub|1}} {{=}} {{sfrac|1|2}}(1 + {{sfrac|3|1}}) {{=}} {{sfrac|2|1}} {{=}} 2}}
+:{{math|''x''{{sub|2}} {{=}} {{sfrac|1|2}}(2 + {{sfrac|3|2}}) {{=}} {{sfrac|7|4}}}}
+:{{math|''x''{{sub|3}} {{=}} {{sfrac|1|2}}({{sfrac|7|4}} + {{sfrac|3|{{sfrac|7|4}}}}) {{=}} {{sfrac|97|56}}}}
+
+===Properties===
+A [[Baire space (set theory)|Baire space]] is a topological space on infinite sequences of natural numbers. The infinite continued fraction provides a [[homeomorphism]] from the Baire space to the space of irrational real numbers (with the subspace topology inherited from the [[Euclidean topology|usual topology]] on the reals). The infinite continued fraction also provides a map between the [[quadratic irrational]]s and the [[dyadic rational]]s, and from other irrationals to the set of infinite strings of binary numbers (i.e. the [[Cantor set]]); this map is called the [[Minkowski question mark]] function. The mapping has interesting self-similar [[fractal]] properties; these are given by the [[modular group]], which is the subgroup of [[Möbius transformation]]s having integer values in the transform. Roughly speaking, continued fraction convergents can be taken to be Möbius transformations acting on the (hyperbolic) [[upper half-plane]]; this is what leads to the fractal self-symmetry.
+
+===Some useful theorems===
+If &lt;math&gt;a_0&lt;/math&gt;, &lt;math&gt;a_1&lt;/math&gt;, &lt;math&gt;a_2&lt;/math&gt;, &lt;math&gt;\ldots&lt;/math&gt; is an infinite sequence of positive integers, define the sequences &lt;math&gt;h_n&lt;/math&gt; and &lt;math&gt;k_n&lt;/math&gt; recursively:
+{| border=&quot;0&quot; cellpadding=&quot;5&quot; cellspacing=&quot;10&quot; align=&quot;none&quot;
+|-
+|&lt;math&gt;h_{n}=a_nh_{n-1}+h_{n-2}&lt;/math&gt;
+|
+|
+|&lt;math&gt;h_{-1}=1&lt;/math&gt;
+|
+|&lt;math&gt;h_{-2}=0&lt;/math&gt;
+|-
+|&lt;math&gt;k_{n}=a_nk_{n-1}+k_{n-2}&lt;/math&gt;
+|
+|
+|&lt;math&gt;k_{-1}=0&lt;/math&gt;
+|
+|&lt;math&gt;k_{-2}=1&lt;/math&gt;
+|}
+
+&lt;blockquote&gt;'''Theorem 1.''' For any positive real number &lt;math&gt;z&lt;/math&gt;
+
+:&lt;math&gt; \left[a_0; a_1, \,\dots, a_{n-1}, z \right]=\frac{z h_{n-1}+h_{n-2}}{z k_{n-1}+k_{n-2}}.&lt;/math&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;'''Theorem 2.''' The convergents of [&lt;math&gt;a_0&lt;/math&gt;; &lt;math&gt;a_1&lt;/math&gt;, &lt;math&gt;a_2&lt;/math&gt;, &lt;math&gt;\ldots&lt;/math&gt;] are given by
+
+:&lt;math&gt;\left[a_0; a_1, \,\dots, a_n\right]=\frac{h_n}{k_n}.&lt;/math&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;'''Theorem 3.''' If the &lt;math&gt;n&lt;/math&gt;th convergent to a continued fraction is &lt;math&gt;h_n&lt;/math&gt;/&lt;math&gt;k_n&lt;/math&gt;, then
+
+:&lt;math&gt;k_nh_{n-1}-k_{n-1}h_n=(-1)^n.&lt;/math&gt;
+&lt;/blockquote&gt;
+
+'''Corollary 1:''' Each convergent is in its lowest terms (for if &lt;math&gt;h_n&lt;/math&gt; and &lt;math&gt;k_n&lt;/math&gt; had a nontrivial common divisor it would divide &lt;math&gt;k_n h_{n-1} - k_{n-1} h_n&lt;/math&gt;, which is impossible).
+
+'''Corollary 2:''' The difference between successive convergents is a fraction whose numerator is unity:
+
+:&lt;math&gt;\frac{h_n}{k_n}-\frac{h_{n-1}}{k_{n-1}} = \frac{h_nk_{n-1}-k_nh_{n-1}}{k_nk_{n-1}}= \frac{(-1)^{n+1}}{k_nk_{n-1}}.&lt;/math&gt;
+
+'''Corollary 3:''' The continued fraction is equivalent to a series of alternating terms:
+
+:&lt;math&gt;a_0 + \sum_{n=0}^\infty \frac{(-1)^{n}}{k_{n}k_{n+1}}.&lt;/math&gt;
+
+'''Corollary 4:''' The matrix
+:&lt;math&gt;\begin{bmatrix}
+h_n &amp; h_{n-1} \\
+k_n &amp; k_{n-1}
+\end{bmatrix}&lt;/math&gt;
+has [[determinant]] plus or minus one, and thus belongs to the group of
+&lt;math&gt;2\times 2 &lt;/math&gt; [[unimodular matrix|unimodular matrices]] &lt;math&gt;\mathrm{GL}(2,\mathbb{Z})&lt;/math&gt;.
+
+&lt;blockquote&gt;'''Theorem 4.''' Each (&lt;math&gt;s&lt;/math&gt;th) convergent is nearer to a subsequent (&lt;math&gt;n&lt;/math&gt;th) convergent than any preceding (&lt;math&gt;r&lt;/math&gt;th) convergent is. In symbols, if the &lt;math&gt;n&lt;/math&gt;th convergent is taken to be &lt;math&gt;[a_0;a_1,\ldots,a_n] = x_n&lt;/math&gt;, then
+:&lt;math&gt;\left| x_r - x_n \right| &gt; \left| x_s - x_n \right|&lt;/math&gt;
+for all &lt;math&gt;r &lt; s &lt; n&lt;/math&gt;.&lt;/blockquote&gt;
+
+'''Corollary 1:''' The even convergents (before the &lt;math&gt;n&lt;/math&gt;th) continually increase, but are always less than &lt;math&gt;x_n&lt;/math&gt;.
+
+'''Corollary 2:''' The odd convergents (before the &lt;math&gt;n&lt;/math&gt;th) continually decrease, but are always greater than &lt;math&gt;x_n&lt;/math&gt;.
+
+&lt;blockquote&gt;'''Theorem 5.'''

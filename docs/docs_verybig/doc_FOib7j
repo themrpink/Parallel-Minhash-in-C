@@ -1,0 +1,326 @@
+In recent decades, others have suggested refinements to the basic counting method.
+
+==The original LTC==
+The underlying premise of LTC is that if a suit is evenly distributed, i.e. three players hold three cards in the suit and one player holds four, a maximum of three losers can be assumed in any one suit held by the partnership and, in turn, the maximum number of losers held by the partnership in all four suits is 24 (three in each of the four suits in each of two hands, i.e. 3 x 4 x 2 = 24). The LTC method estimates the total number of losers held by the partnership and deducts that total from either 24 to estimate the number of tricks which the partnership may expect to win or 18 to estimate the bidding level the partnership may expect to make their contract. Using either of the LTC method options thus provides guidance as to how high to bid in the auction.
+
+===Methodology===
+The basic LTC methodology consists of three steps:
+{| style=&quot;border: none; background: none;&quot;
+|- style=&quot;vertical-align: top;&quot;
+|style=&quot;width:60px&quot;|'''Step 1:''' || '''Count losers in one's own hand'''&lt;br&gt;The estimated number of losing tricks (LTC) in one's hand is determined by examining each suit and assuming that an ace will never be a loser, nor will a king in a 2+ card suit, nor a queen in a 3+ card suit; accordingly
+* a void = 0 losing tricks.
+* a singleton other than an A = 1 losing trick.
+* a doubleton AK = 0; Ax or Kx = 1; Qx or xx = 2 losing tricks.
+* a three card suit AKQ = 0; AKx, AQx or KQx = 1 losing trick.
+* a three card suit Axx, Kxx or Qxx = 2; xxx = 3 losing tricks.
+
+It follows that hands without an A, K or Q have a maximum of 12 losers but may have fewer depending on shape, e.g. {{BridgeHandInline|Jxxx|Jxx|Jxx|Jxx}} has 12 losers (3 in each suit), whereas {{BridgeHandInline|xxxxx|&amp;mdash;|xxxx|xxxx}} has only 9 losers (3 in all suits except the void which counts no losers).
+|- style=&quot;vertical-align: top;&quot;
+| '''Step 2:''' || '''Estimate losers in partner's hand'''&lt;br&gt;Until further information is derived from the bidding, assume that a typical opening hand by partner contains 7 losers, e.g. {{BridgeHandInline|AKxxx|Axxx|Qx|xx}}, has 7 losers (1 + 2 + 2 + 2 = 7).
+|- style=&quot;vertical-align: top;&quot;
+| '''Step 3:'''|| '''Deduct the total from 24 or 18'''&lt;br&gt;The total number of losers in the partnership is determined by adding the numerical results of the previous two steps. Deducting this result from 24, gives an estimate of the total number of tricks that the partnership should win and therefore how high to bid. Deducting this result from 18, gives a  direct estimate of the bidding level the partnership can bid to and expect to make.
+|}
+
+===Example===
+You hold {{BridgeHandInline|AQxx|Qxx|Kxxx|Qx}} and partner opens 1{{hearts}}. If playing [[five-card majors]], you know you have at least an 8 card heart fit.
+{| style=&quot;border: none; background: none;&quot;
+|- style=&quot;vertical-align: top;&quot;
+|style=&quot;width:60px&quot;|'''Step 1:''' || '''Count losers in one's own hand'''
+{{spades}} AQxx counts as 1 loser&lt;br&gt;
+{{hearts}} Qxx counts as 2 losers&lt;br&gt;
+{{diamonds}} Kxxx counts as 2 losers&lt;br&gt;
+{{clubs}} Qx counts as 2 losers&lt;br&gt;
+A total of 7 losers.
+|- style=&quot;vertical-align: top;&quot;
+| '''Step 2:''' || '''Estimate losers in partner's hand'''&lt;br&gt;Opening partner is assumed to have 7 losers.
+|- style=&quot;vertical-align: top;&quot;
+| '''Step 3:'''|| '''Deduct the total from 24 or 18'''&lt;br&gt;The total number of losers held by the partnership is 7 + 7 = 14. Consequently the total number of tricks expected to be won are 24 - 14 = 10 and the expected bidding level may be subsequently worked out to be 10 - 6 = 4, or alternatively the expected bidding level can be calculated directly 18 - 14 = 4,
+|}
+At this stage in the bidding, one estimates that the partnership can take at least 10 tricks and bid to the 4 level.
+
+==Refinements==
+Thinking that the method tended to overvalue unsupported queens and undervalue supported jacks, [[Eric Crowhurst]] and [[Andrew Kambites]] refined the scale, as have others:
+* AQ [[doubleton]] = ½ loser according to [[Ron Klinger]].
+* KQ [[doubleton]] = 1 loser (obvious).
+* Kx [[doubleton]] = 1½ losers according to others.
+* AJ10 = 1 loser according to [[Harrison-Gray]].
+* KJ10 = 1½ losers according to [[Bernard Magee]].
+* Qxx = 3 losers (or possibly 2.5) unless trumps.
+* Subtract a loser if there is a known 9-card trump fit.
+
+In his book ''The Modern Losing Trick Count'', [[Ron Klinger]] advocates adjusting the number of loser based on the [[Hand evaluation#Control count|control count]] of the hand believing that the basic method undervalues an ace but overvalues a queen and undervalues short honor combinations such as Qx or a singleton king. Also it places no value on cards jack or lower.
+
+==New Losing-Trick Count (NLTC)==
+
+A &quot;New&quot; Losing-Trick Count (NLTC) was introduced in ''The Bridge World'', May 2003, by Johannes Koelman. Designed to be more precise than LTC, the NLTC method of hand evaluation utilizes the concept of &quot;half-losers&quot;, and it distinguishes between 'missing-Ace losers', 'missing-King losers' and 'missing-Queen losers.' NLTC intrinsically assigns greater value to Aces than it assigns to Kings, and it assigns greater value to Kings than it assigns to Queens. Some users of LTC make adjustments to the loser count to compensate for the imbalance of Aces and Queens held. Koelman argues that adjusting a hand's value for the imbalance between Aces and Queens ''held'' isn't the same as correcting for the imbalance between Aces and Queens ''missing''. Because of singletons and doubletons [and because losing-trick counts assign losers for the first three rounds of a suit], the number of losers from missing Aces tends to be greater than the number of losers from missing Queens.&lt;ref name=Koelman&gt;{{cite journal|last1=Koelman|first1=Johannes|title=A New Losing-Trick Count|journal=The Bridge World|date=May 2003|volume=74|issue=8|pages=26-28}}&lt;/ref&gt;
+
+NLTC differs from LTC in two significant ways. First, NLTC uses a different method to count losers (explanation and loser-count lists below). Consequently, with NLTC, the number of losers in a singleton or doubleton suit can exceed the number of cards in the suit. Second, with NLTC the number of combined losers between two hands is subtracted from 25, not from 24 (explanation below), to predict the number of tricks the two hands will produce when declarer plays the hand in the agreed trump suit. As with LTC, the NLTC formula assumes normal suit breaks, it assumes that required finesses work about half the time, and it must only be applied after an 8-card trump fit or better is discovered.  When counting NLTC losers in a hand, consider only the three highest ranking cards in each suit:
+
+* Count 1.5 losers for a missing Ace in a suit of at least 1 card in length
+* Count 1.0 losers for a missing King in a suit of at least 2 cards in length
+* Count 0.5 losers for a missing Queen in a suit of at least 3 cards in length
+* Count 0 losers for a void suit
+
+The following hands highlight the differences between the LTC and NLTC methods:
+
+{{BridgeHandInline|Axxx|Axx|Axx|Axx}} - 8 LTC losers, but only 6 NLTC losers&lt;br&gt; 
+{{BridgeHandInline|Kxxx|Kxx|Kxx|Kxx}} - 8 LTC losers, and also 8 NLTC losers&lt;br&gt;
+{{BridgeHandInline|Qxxx|Qxx|Qxx|Qxx}} - only 8 LTC losers, but 10 NLTC losers
+
+Here is the basic NLTC list. For simplicity, cards below the rank of Queen are represented by &quot;x&quot;:
+{| class=&quot;wikitable&quot;
+!colspan=7|Suit Length
+|-
+!colspan=2 |3 Cards&lt;br&gt;(or More)||colspan=2|Doubletons||colspan=2&quot;|Singletons||Void
+|-
+!width=14%|Holding||width=14.5%|NLTC||width=14%|Holding||width=14.5%|NLTC||width=14%|Holding||width=14.5%|NLTC||width=14.5%|NLTC
+|- align=&quot;center&quot;
+|AKQ(x)&lt;br&gt;AKx(x)&lt;br&gt;AQx(x)&lt;br&gt; Axx(x) || 0&lt;br&gt;0.5&lt;br&gt;1.0&lt;br&gt;1.5 || &amp;nbsp;&lt;br&gt;AK&lt;br&gt;AQ&lt;br&gt;Ax || &amp;nbsp;&lt;br&gt;0&lt;br&gt;1.0&lt;br&gt;1.0 || &amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;A || &amp;nbsp;&lt;br&gt; &amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt; 0 || &amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;0
+|-
+|- align=&quot;center&quot;
+|KQx(x)&lt;br&gt;Kxx(x) || 1.5&lt;br&gt;2.0 || KQ&lt;br&gt;Kx || 1.5&lt;br&gt;1.5 || &amp;nbsp;&lt;br&gt;K&lt;br&gt; || &amp;nbsp;&lt;br&gt;1.5 || &amp;nbsp;&lt;br&gt;0
+|-
+|- align=&quot;center&quot;
+|Qxx(x) || 2.5 || Qx || 2.5 || Q || 1.5 || 0
+|-
+|- align=&quot;center&quot;
+|xxx(x) || 3.0 || xx || 2.5 || x || 1.5 || 0
+|}
+
+All singletons, except singleton A, are initially counted as 1.5 losers, and all doubletons that are missing both the A and K are initially counted as 2.5 losers. Professional bridge player, Kevin Wilson, explains this concept of a suit that contains more losers than it contains cards: &quot;Think about how much of declarer play is about timing. When you're missing an Ace, you're losing more than just a trick; you're losing ''timing'' because the King, Queen and Jack that you might hold can't score immediate tricks. First you must force out the Ace [and when the opponents win their Ace, they might immediately score more tricks, or they might establish winning tricks for later in the play]. The idea of 1.5 losers for a singleton [and 2.5 losers for a doubleton] should be within your grasp.&quot;&lt;ref name=Wilson&gt;{{cite web|last1=Wilson|first1=Kevin|title=Upgrading and Improving Losing Trick Count|url=http://bridgewinners.com/article/view/upgrading-and-improving-losing-trick-count/|website=BridgeWinners.com|accessdate=16 February 2014|archive-url=https://web.archive.org/web/20150925101523/http://bridgewinners.com/article/view/upgrading-and-improving-losing-trick-count/|archive-date=25 September 2015|url-status=live}}&lt;/ref&gt; In Kevin's article, he coins the term &quot;modified&quot; losing-trick count, or MLTC.
+
+As with LTC, players seeking greater accuracy can also make adjustments to the NLTC. While the LTC normally uses only whole numbers and players who adjust with LTC commonly adjust in ½-loser increments, because NLTC uses fractions already, adjustments are usually made in ¼-loser increments or smaller. Players might prefer to adjust for the presence of Jacks and Tens, as these honor cards are assigned no value in the NLTC, but they're valuable holdings, particularly when they're together in the same suit, and especially when they're together and they support higher honors in the suit. Similarly, players might prefer to consider a singleton King as being more valuable than a singleton 2. As with other methods of evaluation, players can upgrade or downgrade the value of a given holding based on the ensuing auction.
+
+As previously stated, NLTC uses a value of 25 (instead of 24 with LTC) in the formula for determining the trick-taking potential for two hands. Here's a basic pair of hands that helps illustrate why:
+&lt;br /&gt;
+♠ xxxx
+♥ xxx
+♦ xxx
+♣ xxx
+&lt;br /&gt;
+♠ xxxx
+♥ xxx
+♦ xxx
+♣ xxx
+
+With both LTC and NLTC, the combined loser count with these two very weak and flat-shaped hands is 24 (12 losers in each hand). According to the LTC formula, there is no trick-taking potential with these hands (24-24 combined losers = 0 winning tricks).  We must remember, however, that both forms of the losing-trick count are used only after the partnership knows it has an 8-card fit or better. In addition, losing-trick count predictions assume that all suits will break normally.  In this example, given we possess an 8-card spade fit, and assuming the outstanding spades (trumps) split 3-2, the defenders can't prevent the (hypothetical) declarer from scoring one trump trick with these otherwise worthless hands. A losing-trick count formula that doesn't predict one winning trick with these two hands poses a theoretical concern.  With NLTC we deduct the total combined losers from 25, not from 24, so the NLTC formula accurately predicts the trick-taking potential of these two hands (25-24 losers = 1 winner).
+
+It's worth noting that these two example hands are flat shaped and are therefore poorly suited to considering losing trick counts, as losing-trick counts are not designed for notrump hand evaluation.&lt;ref name=Klinger/&gt; Instead, losing-trick counts are intended primarily for suit contract evaluations, particularly when one or both hands are unbalanced. Indeed, when one partner has 12 losers - which can only occur with 4333 shape - basic LTC can't predict 13 tricks.&lt;ref name=Koelman/&gt; NLTC however can predict a grand slam with balanced hands (examples below). For more information about NLTC, including new losing-trick counts in balanced hands, refer to Lawrence Diamond's ''Mastering Hand Evaluation''.&lt;ref&gt;{{cite book |last =  Diamond |first = Lawrence |authorlink =  |title = Mastering Hand Evaluation  |publisher = Master Point Press |location = Toronto |series =  |year = 2015 |doi = |isbn = 978-1-77140-153-1}}&lt;/ref&gt;
+
+Also similar to basic LTC, NLTC users may employ an alternate formula to determine the appropriate contract level for two fitting hands. The NLTC alternate formula is: 19 (instead of 18 with LTC) minus the sum of the losers in the two hands = the projected safe contract level when declarer plays the hand in the agreed trump suit. So, 7.5 losers opposite 7.5 losers leads to: 19-(7.5+7.5) = 19-15 = 4 (4-level contract). Players who use the basic LTC variation of this formula (i.e. 18 - total combined losers = suggested safe contract level) will recognize the difference between 25 and 19 as the number of tricks required by declarer to secure a &quot;book&quot;, which is 6.
+
+So, with 6.5 losers opposite 9.5 losers, we would calculate (19-16) = 3-level contract, or (25-16) = 9 tricks. With 4.5 losers opposite 7.5 losers: (19-12) = 7-level contract, or (25-12) = 13 tricks. This can help guide the bidding, as a standard opening hand typically has no more than 7.5 losers, and a typical hand with enough strength to respond typically has no more than 9.5 losers. So, when an 8-card or longer major-suit fit has been established, if the opening bidder holds a hand that has one less loser than a minimum opening hand, then opener can safely invite to game and bid to the three-level. If opener holds a hand that has two fewer losers than a minimum opening hand, then opener can force to game.
+
+If an uncontested auction has proceeded as 1D-1H, then opener with four-card heart support would act according to the following guidelines:
+* 7.5 losers: minimum values (simple raise)
+* 6.5 losers: game-invitational values (a jump to three, for example)
+* 5.5 losers: game-forcing values
+* 4.5 losers: consider investigating slam
+* 3.5 losers: investigate slam
+
+Next consider responder's hand. Opposite partner's 1H or 1S opening, with 3-card support, responder knows an 8+ fit exists and can bid according to the following table:
+* 9.5 losers: minimum values (simple raise)
+* 8.5 losers: game-invitational values
+* 7.5 losers: game-forcing values
+* 6.5 losers: consider investigating slam
+* 5.5 losers: investigate slam
+
+N.B. since this response system focuses on major-fits, it can be seen that to reach a minor-suit game at the 5-level, the hand must have one less loser for each of the above-listed actions.
+
+The NLTC solves the problem that the LTC method underestimates the trick taking potential by one on hands with a balance between 'ace-losers' and 'queen-losers'. For instance, the LTC can never predict a grand slam when both hands are 4333 distribution:
+
+{{BridgeHandWE
+|KQJ2|KQ2|KQ2|KQ2
+|A543|A43|A43|A43
+}}
+{{Clear}}will yield 13 tricks when played in spades on around 95% of occasions (failing only on a 5:0 trump break or on a ruff of the lead from a 7-card suit). However this combination is valued as only 12 tricks using the basic method (24 minus 4 and 8 losers = 12 tricks); whereas using the NLTC it is valued at 13 tricks (25 minus 12/2 and 12/2 losers = 13 tricks). Note, if the west hand happens to hold a small spade instead of the jack, both the LTC as well as the NLTC count would remain unchanged, whilst the chance of making 13 tricks falls to 67%.
+
+The NLTC also helps to prevent overstatement on hands which are missing aces. For example: {{BridgeHandWE
+|AQ432|KQ|KQ52|32
+|K8765|32|43|KQ54
+}}
+{{Clear}}
+will yield 10 tricks. The NLTC predicts this accurately (13/2 + 17/2 = 15 losers, subtracted from 25 = 10 tricks); whereas the basic LTC predicts 12 tricks (5 + 7 = 12 losers, subtracted from 24 = 12).
+
+==Further  bidding==
+
+Whichever method is being used, utilizing LTC evaluation need not stop after the opening bid and the response. Assuming opener bids 1{{hearts}} and partner responds 2{{hearts}};  opener will know from this bid that partner has 9 losers (using basic LTC), if opener has 5 losers rather than the systemically assumed 7, then the calculation changes to (5 + 9 = 14 deducted from 24 = 10) and game becomes apparent!
+
+A small number of modern bidding systems systemically utilize multiple responses and rebids after the opening bid to refine LTC evaluation and to allow further adjustments to be made based on combined suit length, shortages found, and high cards held. The Imperspicuity losing trick count bridge bidding system uses the Law of Total Losers, shape asking relay bidding, loser asking relay bidding, CROSS and CRO relay bidding, and  LTC techniques, to systemically determine the final bidding level, after opening bids and overcalls are initially made based on LTC evaluation methods.&lt;ref name=&quot;Lynch&quot; /&gt;
+
+==Limitations of the method==
+
+All LTC methods are only valid if trump fit (4-4, 5-3 or better) is evident and, even then, care is required to avoid counting double values in the same suit e.g. KQxx (1 loser in LTC) opposite a singleton x (also 1 loser in LTC).
+
+Regardless which hand evaluation is used (HCP, LTC, NLTC, etc.) without the partners exchanging information about specific suit strengths and suit lengths, a suboptimal evaluation of the trick taking potential of the combined hands will often result. Consider the examples:
+{{BridgeHandWE
+|QJ53|743|KJ2|632
+|AK874|A5|AQ54|54
+}}
+{{BridgeHandWE
+|QJ53|743|632|KJ2
+|AK874|A5|AQ54|54
+}}
+{{Clear}}
+Both layouts are the same, except for the swapping of West's minor suits. So in both cases East and West have exactly the same strength in terms of HCP, LTC, NLTC etc. Yet, the layout on the left may be expected to produce 10 tricks in spades, whilst on a bad day the layout to the right would even fail to produce 9 tricks.
+
+The difference between the two layouts is that on the left the high cards in the minor suits of both hands work in combination, whilst on the right hand side the minor suit honours fail to do so. Obviously on hands like these, it does not suffice to evaluate each hand individually. When inviting for game, both partners need to communicate in which suit they can provide assistance in the form of high cards, and adjust their hand evaluations accordingly. Conventional agreements like [[Game try|helpsuit trials and short suit trials]] are available for this purpose.
+
+==Notes==
+{{Reflist}}
+
+==Further reading==
+* {{cite book
+  |last1 = Courtenay
+  |first1 = Dudley
+  |authorlink1 =
+  |last2 = Walshe
+  |first2 = George
+  |authorlink2 =
+  |title = The Losing Trick Count, as used by the leading contract bridge tournament players, with examples of expert bidding and expert play
+  |edition =
+  |publisher = Methuen
+  |location = London
+  |pages = 176
+  |series =
+  |year = 1935
+  |doi =
+  |lccn =
+  |oclc =
+  |isbn = }} Nine editions published between 1935 and 1947. Republished in 2006 as ''Losing Trick Count - A Book of Bridge Technique'' by F. Dudley Courtenay, {{ISBN|978-1-4067-9716-9}}. Reference: {{cite book
+  |last1 = Tim
+  |first1 = Bourke
+  |authorlink1 = Tim Bourke
+  |last2 = Sugden
+  |first2 = John
+  |authorlink2 =
+  |title = Bridge Books in English from 1886-2010: an annotated bibliography
+  |publisher = Bridge Book Buffs (Cheltenham, England), 711 pages plus supplement
+  |series =
+  |year = 2010
+  |doi =
+  |isbn = 978-0-9566576-0-2}} Page 93.
+* [[Maurice Harrison-Gray|Harrison-Gray, Maurice]], articles in ''Country Life'' magazine in the 1950s and 1960s.
+* {{cite book
+  |last = Harrison-Gray
+  |first = Maurice
+  |authorlink =
+  |title = Losing Trick Count
+  |edition =
+  |publisher = 
+  |location = 
+  |pages = 
+  |series = 
+  |year = 1961
+  |doi =
+  |lccn =
+  |oclc =
+  |isbn = }}
+*{{cite book|last=Jones|first=Jennifer|title=Losing Trick Count|date=2011|publisher=Jennbridge}}
+*{{cite book|last=Jones|first=Jennifer|title=Losing Trick Count Vol. II|date=2012|publisher=Jennbridge}}
+* {{cite book
+  |last = Townsend
+  |first = Tom
+  |authorlink =
+  |title = Practice Your Losing Trick Count
+  |edition =
+  |publisher = Bridge Plus
+  |location = Reading
+  |pages = 
+  |series = Bridge Plus Practice Series
+  |year = 1997
+  |doi =
+  |lccn =
+  |oclc =
+  |isbn = 0-9525672-8-8}} 
+
+{{WPCBIndex}}
+
+[[Category:Contract bridge bidding]]</text>
+      <sha1>lzalxy9q24w1ojrbh5u5k1dp6ub7i0b</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Century of Progress</title>
+    <ns>0</ns>
+    <id>42219</id>
+    <revision>
+      <id>987866186</id>
+      <parentid>987866099</parentid>
+      <timestamp>2020-11-09T18:29:17Z</timestamp>
+      <contributor>
+        <username>Axeman89</username>
+        <id>148026</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="32397" xml:space="preserve">{{short description|1933 world exhibition in Chicago, Illinois, USA}}
+{{More citations needed|date=March 2009}}
+{{Use mdy dates|date=March 2012}}
+{{Infobox World's Fair
+| box_width       = 
+| class           = Universal
+| category        = 0
+| image           = Chicago world's fair, a century of progress, expo poster, 1933, 2.jpg
+| image_width     = 
+| caption         = A 1933 Century of Progress World's Fair poster.  It was later decided to continue the fair into 1934. This poster features the United States federal building and Hall of States.
+| year            = 1933–1934
+| name            = A Century of Progress International Exposition
+| motto           = Science Finds, Industry Applies, Man Adapts
+| building        = 
+| area            = {{convert|172|ha|acre|abbr=off}}
+| invent          = 
+| visitors        = 48,469,227 
+| organized       = 
+| cnt             = 
+| org             = 
+| biz             = 
+| country         = United States
+| city            = [[Chicago]]
+| venue           = Lakefront, Northerly Island
+| coord           = {{coord|41|51|38|N|87|36|41|W|format=dms|type:landmark_region:US-IL|display=inline,title}}
+| cand            = 1923
+| award           = 
+| open            = {{start date|1933|05|27}}
+| close           = {{start date|1934|10|31}}
+| prevexpo        = [[Ibero-American Exposition of 1929]] in [[Sevilla]] and [[1929 Barcelona International Exposition]]
+| prevcity        = [[Barcelona]]
+| nextexpo        = [[Brussels International Exposition (1935)]]
+| nextcity        = [[Brussels]]
+| suppl           = 
+| prevsuppl       = 
+| prevsupcity     = 
+| nextsuppl       = 
+| nextsupcity     = 
+| simuni          = 
+| simspe          = 
+| simhor          = 
+| simoth          = 
+| website         = 
+}}
+
+'''A Century of Progress International Exposition''', also known as the '''Chicago World's Fair''', was a [[World's Fair]] held in the city of [[Chicago]], Illinois, United States from 1933 to 1934. The fair, registered under the [[Bureau International des Expositions]] (BIE), celebrated the city's centennial. The theme of the fair was [[technological innovation]], and its motto was &quot;Science Finds, Industry Applies, Man Adapts&quot;, giving out a message that science and American life were wedded.&lt;ref&gt;{{Cite web|url=https://www.encyclopedia.com/education/news-and-education-magazines/worlds-fairs-1933-1939|title=World's Fairs 1933–1939 |last=|first=|date= March 6, 2019|website=Historic Events for Students: The Great Depression. encyclopedia|access-date=}}&lt;/ref&gt; Its architectural symbol was the [[Sky Ride]], a [[transporter bridge]] perpendicular to the shore on which one could ride from one side of the fair to the other.
+
+One description of the fair noted that the world, &quot;then still mired in the malaise of the [[Great Depression]], could glimpse a happier not-too-distant future, all driven by innovation in science and technology.&quot; Fair visitors saw the latest wonders in rail travel, automobiles, architecture and cigarette-smoking robots.&lt;ref&gt;{{cite news |title=Century of Progress Homes Tour at Indiana Dunes takes visitors back to the future |url=http://www.chicagotribune.com/lifestyles/travel/fall-guide/2017/ct-fall-travel-century-of-progress-indiana-0806-20170804-story.html| first=Chris |last=LaMorte |date=October 2, 2017 |newspaper=[[Chicago Tribune]]}}&lt;/ref&gt; The exposition &quot;emphasized technology and progress, a utopia, or perfect world, founded on democracy and manufacturing.&quot;&lt;ref&gt;{{Cite web|url=https://www.encyclopedia.com/education/news-and-education-magazines/worlds-fairs-1933-1939|title=World's Fairs 1933-1939|last=|first=|date= February 25, 2019|website=Historic Events for Students: The Great Depression. Encyclopedia|access-date=}}&lt;/ref&gt;
+
+==Context==
+[[File:1933 Century of Progress Opening Day Ticket.jpg|thumb|left|Ticket for the opening day ceremonies at Soldier Field]]
+
+A Century of  Progress was organized as an Illinois nonprofit corporation in January 1928 for the purpose of planning and hosting a World's Fair in Chicago in 1934. City officials designated three and a half miles of newly reclaimed land along the shore of Lake Michigan between 12th and 39th streets on the [[Near South Side, Chicago|Near South Side]] for the fairgrounds.&lt;ref&gt;Schrenk, Lisa D. (2007). ''Building a Century of Progress: The Architecture of the 1933-34 Chicago World's Fair''[[University of Minnesota Press]]. p. 4. {{ISBN|978-0816648368}}.&lt;/ref&gt; Held on a {{convert|427|acre|km2}} portion of [[Burnham Park (Chicago)|Burnham Park]], the $37,500,000 exposition was formally opened on May 27, 1933, by US Postmaster General [[James Farley]] at a four hour ceremony at [[Soldier Field]].&lt;ref&gt;''Chicago Fair Opened by Farley; Rays of Arcturus Start Lights. Postmaster General Conveys President's Hope That Exposition Will Help Friendship Among Nations—First Day's Attendance Estimated at About 250,000''.  ''The New York Times'', May 28, 1933, p. 1&lt;/ref&gt;&lt;ref&gt;{{cite book| title=Chicago and Suburbs 1939| publisher=[[Works Progress Administration]]| year=1939| pages=105}}&lt;/ref&gt; The fair's opening night began with a nod to the heavens. Lights were automatically activated when the rays of the star [[Arcturus]] were detected. The star was chosen as its light had started its journey at about the time of the previous Chicago world's fair—the [[World's Columbian Exposition]]—in 1893.&lt;ref&gt;{{cite web| title=Century of Progress World's Fair, 1933–1934| publisher=University of Illinois-Chicago| date=January 2008| url=http://collections.carli.illinois.edu/cdm4/item_viewer.php?CISOROOT=/uic_cop&amp;CISOPTR=45&amp;CISOBOX=1&amp;REC=1| accessdate=September 6, 2009}}&lt;/ref&gt; The rays were focused on [[photoelectric cell]]s in a series of astronomical observatories and then transformed into electrical energy which was transmitted to Chicago.&lt;ref name=&quot;II2005&quot;&gt;{{cite book| first=Jordan D.| last=Marche II| title=Theaters of Time and Space: American Planetaria, 1930-1970| url=https://books.google.com/books?id=olT1ipj-EboC&amp;pg=PP3| accessdate=3 September 2012| date=8 June 2005| publisher=Rutgers University Press| isbn=978-0-8135-3576-0| page=80}}&lt;/ref&gt; 
+
+==Exhibits==
+The fair buildings were multi-colored, to create a &quot;Rainbow City&quot; as compared to the &quot;White City&quot; of Chicago's earlier [[World's Columbian Exposition]]. The buildings generally followed [[Moderne architecture]] in contrast to the neoclassical themes used at the 1893 fair. One famous feature of the fair were the performances of fan dancer [[Sally Rand]]. Other popular exhibits were the various auto manufacturers, the Midway (filled with nightclubs such as the Old Morocco, where future stars [[Judy Garland]], [[The Cook Family Singers]], and [[The Andrews Sisters]] performed), and a recreation of important scenes from Chicago's history. The fair also contained exhibits that would seem shocking to modern audiences, including offensive portrayals of African-Americans, a &quot;Midget City&quot; complete with &quot;sixty [[Lilliput and Blefuscu|Lilliputians]]&quot;,&lt;ref&gt;{{cite book| last=Raabe| first=Meinhardt| authorlink=Meinhardt Raabe| author2=Daniel Kinske| title=Memories of a Munchkin| publisher=Back Stage Books| year=2005| location=New York| isbn=0-8230-9193-7| url-access=registration| url=https://archive.org/details/memoriesofmunchk00raab}}&lt;/ref&gt; and an exhibition of [[wikt:incubator|incubator]]s containing real babies.&lt;ref&gt;[http://www.omahapubliclibrary.org/transmiss/regions/northmid/baby.html ''Baby Incubators''], Omaha Public Library {{webarchive |url=https://web.archive.org/web/20090826160814/http://www.omahapubliclibrary.org/transmiss/regions/northmid/baby.html |date=August 26, 2009 }}.&lt;/ref&gt;
+
+The fair included an exhibit on the history of Chicago.  In the planning stages, several [[African-American]] groups from the city's newly growing population campaigned for [[Jean Baptiste Point du Sable]] to be honored at the fair.&lt;ref name=&quot;Reed&quot;&gt;{{cite journal|last=Reed|first=Christopher R. |title='In the Shadow of Fort Dearborn': Honoring De Saible at the Chicago World's Fair of 1933–1934|journal=Journal of Black Studies|date=June 1991|volume=21|issue=4|pages=398–413|jstor=2784685|ref=harv|doi=10.1177/002193479102100402}}&lt;/ref&gt; At the time, few Chicagoans had even heard of Point du Sable, and the fair's organizers presented the 1803 construction of [[Fort Dearborn]] as the city's historical beginning. The campaign was successful, and a replica of Point du Sable's cabin was presented as part of the &quot;background of the history of Chicago&quot;.&lt;ref name=&quot;Reed&quot;/&gt;
+
+[[Richard E. Byrd#Early Antarctic expeditions|Admiral Byrd's polar expedition ship]] the ''[[City of New York (1885 ship)|City of New York]]'' was visited by President [[Franklin D. Roosevelt]] when he came to the fair on October 2, 1933. The ''City'' was on show for the full length of the exhibition.&lt;ref&gt;{{cite web |title=Itinerary for FDR's trip to the Chicago World's Fair |url=http://www.fdrlibrary.marist.edu/daybyday/resource/october-1933-2/ |website=fdrlibrary.marist.edu |accessdate=3 June 2018}}&lt;/ref&gt;
+
+[[File:Century of Progress Graf Zeppelin Flight Cover.jpg|thumb|left|Cover carried on the ''[[LZ 127 Graf Zeppelin|Graf Zeppelin]]'' from 1933 ''Century of Progress Exposition'' franked with C-18 US Air Mail stamp issued for the airship's visit.]]
+
+One of the highlights of the 1933 World's Fair was the arrival of the German airship [[LZ 127 Graf Zeppelin|''Graf Zeppelin'']] on October 26, 1933. After circling Lake Michigan near the exposition for two hours, Commander [[Hugo Eckener]] landed the 776-foot airship at the nearby [[Naval Air Station Glenview#Pre-military history|Curtiss-Wright Airport]] in [[Glenview, Cook County, Illinois|Glenview]]. It remained on the ground for twenty-five minutes (from 1 to 1:25&amp;nbsp;pm)&lt;ref&gt;{{cite web |last=Senkus |first=William M. |title=Cinderella Stamps of the Century of Progress Expo in Chicago, Illinois |work=alphabetilately.org |year=2002 |url=http://alphabetilately.org/CoP.html |accessdate=9 November 2017}}&lt;/ref&gt; then took off ahead of an approaching weather front, bound for [[Akron, Ohio]].
+
+The &quot;dream cars&quot; which American automobile manufacturers exhibited at the fair included [[Cadillac (automobile)|Cadillac]]'s introduction of its V-16 limousine; [[Nash Motors|Nash]]'s exhibit had a variation on the vertical (i.e., [[paternoster lift]]) parking garage—all the cars were new Nashes; [[Lincoln (automobile)|Lincoln]] presented its rear-engined &quot;concept car&quot; precursor to the [[Lincoln-Zephyr]], which went on the market in 1936 with a front engine; [[Pierce-Arrow]] presented its modernistic [[Pierce Silver Arrow]] for which it used the byline &quot;Suddenly it's 1940!&quot; But it was [[Packard]] which won the best of show.{{citation needed|date=February 2018}}
+
+[[File:Pioneer Zephyr Dawn to Dusk Club.jpg|thumb|The passengers, including &quot;Zeph&quot; the burro, that rode the ''Zephyr'' on the &quot;Dawn-to-Dusk Dash&quot; gather for a group photo in front of the train after arriving in Chicago on May 26, 1934.]]One interesting and enduring exhibit was the [[1933 Homes of Tomorrow Exhibition]] that demonstrated modern home convenience and creative practical new building materials and techniques with twelve model homes sponsored by several corporations affiliated with home decor and construction. Marine artist [[Hilda Goldblatt Gorenstein (Hilgos)]] painted twelve murals for the Navy's exhibit in the Federal Building for the fair. The frieze was composed of twelve murals depicting the influence of sea power on America, beginning with the settlement of [[Jamestown, Virginia]] in 1607 when sea power first reached America and carrying through World War I.&lt;ref&gt;{{cite web| url=http://www.uic.edu/depts/lib/specialcoll/services/rjd/findingaids/HGorensteinf.html| publisher=University of Illinois at Chicago archive| title=U.S. Navy Exhibits Arrive for Fair; Models to Show Sea's Influence on Nation| newspaper=[[Chicago Daily News]]| first=Malcolm| last=McDowell| date=May 6, 1933| url-status=dead| archiveurl=https://web.archive.org/web/20090627104736/http://www.uic.edu/depts/lib/specialcoll/services/rjd/findingaids/HGorensteinf.html| archivedate=June 27, 2009| df=mdy-all}}&lt;/ref&gt;
+
+The [[1933 Major League Baseball All-Star Game|first]] [[Major League Baseball All-Star Game]] was held at [[Comiskey Park]] (home of the [[Chicago White Sox]]) in conjunction with the fair.

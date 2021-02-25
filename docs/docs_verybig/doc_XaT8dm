@@ -1,0 +1,216 @@
+Since
+
+:&lt;math&gt;\cos \pi = -1&lt;/math&gt;
+
+and
+
+:&lt;math&gt;\sin \pi = 0,&lt;/math&gt;
+
+it follows that
+
+: &lt;math&gt;e^{i \pi} = -1 + 0 i,&lt;/math&gt;
+
+which yields Euler's identity:
+
+: &lt;math&gt;e^{i \pi} +1 = 0.&lt;/math&gt;
+
+===Geometric interpretation===
+Any complex number &lt;math&gt;z = x + iy&lt;/math&gt; can be represented by the point &lt;math&gt;(x, y)&lt;/math&gt; on the [[complex plane]]. This point can also be represented in [[Complex_number#Polar_complex_plane|polar coordinates]] as &lt;math&gt;(r, \theta)&lt;/math&gt;, where ''r'' is the absolute value of ''z'' (distance from the origin), and &lt;math&gt;\theta&lt;/math&gt; is the argument of ''z'' (angle counterclockwise from the positive ''x''-axis). By the definitions of sine and cosine, this point has cartesian coordinates of &lt;math&gt;(r \cos \theta, r \sin \theta)&lt;/math&gt;, implying that &lt;math&gt;z = r(\cos \theta + i \sin \theta)&lt;/math&gt;. According to Euler's formula, this is equivalent to saying &lt;math&gt;z = r e^{i\theta}&lt;/math&gt;.
+
+Euler's identity says that &lt;math&gt;-1 = e^{i\pi}&lt;/math&gt;. Since &lt;math&gt;e^{i\pi}&lt;/math&gt; is &lt;math&gt;r e^{i\theta}&lt;/math&gt; for ''r'' = 1 and &lt;math&gt;\theta = \pi&lt;/math&gt;, this can be interpreted as a fact about the number −1 on the complex plane: its distance from the origin is 1, and its angle from the positive ''x''-axis is &lt;math&gt;\pi&lt;/math&gt; radians.
+
+Additionally, when any complex number ''z'' is [[Complex number#Multiplication and division in polar form|multiplied]] by &lt;math&gt;e^{i\theta}&lt;/math&gt;, it has the effect of rotating ''z'' counterclockwise by an angle of &lt;math&gt;\theta&lt;/math&gt; on the complex plane. Since multiplication by −1 reflects a point across the origin, Euler's identity can be interpreted as saying that rotating any point &lt;math&gt;\pi&lt;/math&gt; radians around the origin has the same effect as reflecting the point across the origin.
+
+==Generalizations==
+Euler's identity is also a special case of the more general identity that the {{mvar|n}}th [[roots of unity]], for {{math|''n'' &gt; 1}}, add up to 0:
+
+:&lt;math&gt;\sum_{k=0}^{n-1} e^{2 \pi i \frac{k}{n}} = 0 .&lt;/math&gt;
+
+Euler's identity is the case where {{math|''n'' {{=}} 2}}.
+
+In another field of mathematics, by using [[quaternion]] exponentiation, one can show that a similar identity also applies to quaternions. Let {{math|{{mset|''i'', ''j'', ''k''}}}} be the basis elements; then,
+
+:&lt;math&gt;e^{\frac{1}{\sqrt 3}(i \pm j \pm k)\pi} + 1 = 0. &lt;/math&gt;
+
+In general, given [[real numbers|real]] {{math|''a''&lt;sub&gt;1&lt;/sub&gt;}}, {{math|''a''&lt;sub&gt;2&lt;/sub&gt;}}, and {{math|''a''&lt;sub&gt;3&lt;/sub&gt;}} such that {{math|''a''&lt;sub&gt;1&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt; + ''a''&lt;sub&gt;2&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt; + ''a''&lt;sub&gt;3&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt; {{=}} 1}}, then,
+
+:&lt;math&gt;e^{\left(a_1i+a_2j+a_3k\right)\pi} + 1 = 0. &lt;/math&gt;
+
+For [[octonions]], with real {{math|''a''&lt;sub&gt;''n''&lt;/sub&gt;}} such that {{math|''a''&lt;sub&gt;1&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt; + ''a''&lt;sub&gt;2&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt; + ... + ''a''&lt;sub&gt;7&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt; {{=}} 1}}, and with the octonion basis elements {{math|{{mset|''i''&lt;sub&gt;1&lt;/sub&gt;, ''i''&lt;sub&gt;2&lt;/sub&gt;, ..., ''i''&lt;sub&gt;7&lt;/sub&gt;}}}},
+
+:&lt;math&gt;e^{\left(a_1i_1+a_2i_2+\dots+a_7i_7\right)\pi} + 1 = 0. &lt;/math&gt;
+
+==History==
+It has been claimed that Euler's identity appears in his monumental work of mathematical analysis published in 1748, ''[[Introductio in analysin infinitorum]]''.&lt;ref&gt;Conway &amp; Guy, p. 254–255.&lt;/ref&gt; However, it is questionable whether this particular concept can be attributed to Euler himself, as he may never have expressed it.&lt;ref name=Sandifer2007&gt;Sandifer, p. 4.&lt;/ref&gt; Moreover, while Euler did write in the ''Introductio'' about what we today call [[Euler's formula]],&lt;ref&gt;Euler, p. 147.&lt;/ref&gt; which relates {{mvar|e}} with cosine and sine terms in the field of complex numbers, the English mathematician [[Roger Cotes]] (who died in 1716, when Euler was only 9 years old) also knew of this formula and Euler may have acquired the knowledge through his Swiss compatriot [[Johann Bernoulli]].&lt;ref name=Sandifer2007/&gt;
+
+[[Robin Wilson (mathematician)|Robin Wilson]] states the following.&lt;ref&gt;Wilson, p. 151-152.&lt;/ref&gt;
+{{quote|text= 
+We've seen how it [Euler's identity] can easily be deduced from results of Johann Bernoulli and Roger Cotes, but that neither of them seem to have done so. Even Euler does not seem to have written it down explicitly – and certainly it doesn't appear in any of his publications – though he must surely have realized that it follows immediately from his identity [i.e. [[Euler's formula]]], {{nowrap|''e&lt;sup&gt;ix&lt;/sup&gt;'' {{=}} cos ''x'' + ''i'' sin ''x''}}. Moreover, it seems to be unknown who first stated the result explicitly&amp;hellip;.
+}}
+
+== See also ==
+*[[De Moivre's formula]] 
+*[[Exponential function]]
+*[[Gelfond's constant]]
+
+==Notes==
+{{reflist|group=n}}
+
+==References==
+{{Reflist|25em}}
+
+==Sources==
+* [[John Horton Conway|Conway, John H.]], and [[Richard K. Guy|Guy, Richard K.]] (1996), ''[https://books.google.com/books?id=0--3rcO7dMYC&amp;pg=PA254 The Book of Numbers]'', Springer {{ISBN|978-0-387-97993-9}}
+* [[Robert P. Crease|Crease, Robert P.]] (10&amp;nbsp;May 2004), &quot;[http://physicsworld.com/cws/article/print/2004/may/10/the-greatest-equations-ever The greatest equations ever]&quot;, ''[[Physics World]]'' [registration required]
+* [[William Dunham (mathematician)|Dunham, William]] (1999), ''Euler: The Master of Us All'', [[Mathematical Association of America]] {{ISBN|978-0-88385-328-3}}
+* Euler, Leonhard (1922), ''[http://gallica.bnf.fr/ark:/12148/bpt6k69587.image.r=%22has+celeberrimas+formulas%22.f169.langEN Leonhardi Euleri opera omnia. 1, Opera mathematica. Volumen VIII, Leonhardi Euleri introductio in analysin infinitorum. Tomus primus]'', Leipzig: B. G. Teubneri
+* [[Edward Kasner|Kasner, E.]], and [[James R. Newman|Newman, J.]] (1940), ''[[Mathematics and the Imagination]]'', [[Simon &amp; Schuster]]
+* [[Eli Maor|Maor, Eli]] (1998), ''{{mvar|e}}: The Story of a number'', [[Princeton University Press]] {{ISBN|0-691-05854-7}}
+* Nahin, Paul J. (2006), ''Dr. Euler's Fabulous Formula: Cures Many Mathematical Ills'', [[Princeton University Press]] {{ISBN|978-0-691-11822-2}}
+* [[John Allen Paulos|Paulos, John Allen]] (1992), ''Beyond Numeracy: An Uncommon Dictionary of Mathematics'', [[Penguin Books]] {{ISBN|0-14-014574-5}}
+* Reid, Constance (various editions), ''From Zero to Infinity'', [[Mathematical Association of America]]
+* Sandifer, C. Edward (2007), ''[https://books.google.com/books?id=sohHs7ExOsYC&amp;pg=PA4 Euler's Greatest Hits]'', [[Mathematical Association of America]] {{ISBN|978-0-88385-563-8}}
+*{{citation |title= A Most Elegant Equation: Euler's formula and the beauty of mathematics |first= David |last= Stipp |year=2017 |publisher= [[Basic Books]]}}
+*{{cite journal | last1 = Wells | first1 = David | year = 1990 | title = Are these the most beautiful? | url = | journal = [[The Mathematical Intelligencer]] | volume = 12 | issue = 3| pages = 37–41 | doi = 10.1007/BF03024015 }}
+*{{citation |first= Robin |last= Wilson |author-link= Robin Wilson (mathematician) |title= Euler's Pioneering Equation: The most beautiful theorem in mathematics |publisher= [[Oxford University Press]] |year= 2018}}
+*{{Citation |last1= Zeki |first1= S. |last2= Romaya |first2= J. P. |last3= Benincasa |first3= D. M. T. |last4= Atiyah |first4= M. F. |authorlink1= Semir Zeki |authorlink4= Michael Atiyah |title= The experience of mathematical beauty and its neural correlates |journal= Frontiers in Human Neuroscience |volume= 8 |pages= 68 | year= 2014 |doi= 10.3389/fnhum.2014.00068|pmc= 3923150 |pmid=24592230}}
+
+==External links==
+{{Wikiquote|Euler's identity}}
+* [https://www.youtube.com/watch?v=UcGDNUDQCc4 Complete derivation of Euler's identity]
+* [http://betterexplained.com/articles/intuitive-understanding-of-eulers-formula/ Intuitive understanding of Euler's formula]
+
+{{DEFAULTSORT:Euler's identity}}
+[[Category:Exponentials]]
+[[Category:Mathematical identities]]
+[[Category:E (mathematical constant)]]
+[[Category:Theorems in complex analysis]]
+[[Category:Leonhard Euler]]
+
+[[de:Eulersche Formel#Eulersche Identit.C3.A4t]]
+[[pl:Wzór Eulera#Tożsamość Eulera]]</text>
+      <sha1>ed7r5pq9lp8799kx5qqp2cvfvwft7vk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Euler's Identity</title>
+    <ns>0</ns>
+    <id>46741</id>
+    <redirect title="Euler&#039;s identity" />
+    <revision>
+      <id>783876235</id>
+      <parentid>175018936</parentid>
+      <timestamp>2017-06-05T06:03:55Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="95" xml:space="preserve">#REDIRECT [[Euler's identity]]
+
+{{Redirect category shell|1=
+{{R from other capitalisation}}
+}}</text>
+      <sha1>6xf6kxuwsqvga51roqrkuj5b97sgtip</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>AIML</title>
+    <ns>0</ns>
+    <id>46742</id>
+    <revision>
+      <id>964870031</id>
+      <parentid>962907104</parentid>
+      <timestamp>2020-06-28T02:14:12Z</timestamp>
+      <contributor>
+        <username>InternetArchiveBot</username>
+        <id>27015025</id>
+      </contributor>
+      <comment>Rescuing 1 sources and tagging 0 as dead.) #IABot (v2.0.1</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="9454" xml:space="preserve">{{for|the 20th century political party with this abbreviation|All-India Muslim League}}
+{{primary sources|date=March 2017}}
+{{Infobox file format
+| name                   = Artificial Intelligence Markup Language
+| icon                   =
+| logo                   =
+| screenshot             =
+| caption                =
+| extension              = &lt;tt&gt;.aiml&lt;/tt&gt;
+| mime                   =
+| type code              =
+| uniform type           =
+| magic                  =
+| owner                  = [[Richard Wallace (scientist)|Dr. Richard S. Wallace]]
+| released               = {{Start date and age|2001|07|16}} &lt;ref&gt;{{cite web |title=Press Release: AIML 1.0 Standard Passed (A.L.I.C.E. AI Foundation) |url=http://www.alicebot.org:80/press_releases/2001/aiml10.html |website=alicebot.org |accessdate=1 December 2013 |archiveurl=https://web.archive.org/web/20070715113602/http://www.alicebot.org/press_releases/2001/aiml10.html |archivedate=15 July 2007 |location=San Francisco CA |language=en |date=16 July 2001}}&lt;/ref&gt;
+| latest release version = 2.1 (rev 1.0.2.22)
+| latest release date    = {{Start date and age|2018|03|09}} &lt;ref&gt;{{cite web |title=AIML 2.1 (AIML Foundation) |url=http://www.aiml.foundation/doc.html |website=aiml.foundation/ |accessdate=19 April 2020 |archive-url=https://web.archive.org/web/20190514124117/http://www.aiml.foundation/doc.html |archive-date=14 May 2019 |url-status=dead }}&lt;/ref&gt;
+&lt;!-- Not supported in this infobox
+| latest preview version = 2.0
+| latest preview date    = {{Start date and age|2013|10|31}} &lt;ref&gt;{{cite web |last1=Wallace |first1=Richard S. |title=AIML 2.0 Working Draft |url=https://docs.google.com/document/d/1wNT25hJRyupcG51aO89UcQEiG-HkXRXusukADpFnDs4/pub |website=docs.google.com |publisher=ALICE A.I. Foundation |accessdate=1 December 2013 |language=en}}&lt;/ref&gt;
+--&gt;
+| genre                  = [[Artificial intelligence]]
+| container for          =
+| contained by           =
+| extended from          = [[XML]]
+| extended to            =
+| free                   = Yes
+| standard               =
+| url                    = http://www.aiml.foundation/doc.html
+}}
+
+'''AIML''', or '''[[Artificial intelligence|Artificial Intelligence]] Markup Language''', is an [[XML]] dialect for creating [[natural language]] software agents.
+
+== History ==
+The '''XML dialect''' called AIML was developed by [[Richard Wallace (scientist)|Richard Wallace]] and a worldwide [[free software community]] between 1995{{Citation needed|date=March 2019}} and 2002. AIML formed the basis for what was initially a highly extended [[ELIZA|Eliza]] called &quot;[[Artificial Linguistic Internet Computer Entity|A.L.I.C.E.]].&quot; (&quot;Artificial Linguistic Internet Computer Entity&quot;), which won the annual [[Loebner Prize|Loebner Prize Competition in Artificial Intelligence]]&lt;ref&gt;{{cite web |title=loebner.net - Informationen zum Thema loebner. |url=http://www.loebner.net/Prizef/loebner-prize.html |website=loebner.net |accessdate=10 November 2010 |archiveurl=https://web.archive.org/web/20101230195120/http://www.loebner.net/Prizef/loebner-prize.html |archivedate=30 December 2010 |date=26 October 2007}}&lt;/ref&gt; three times, and was also the Chatterbox Challenge&lt;ref&gt;{{cite web |title=Chatterbox Challenge |url=http://www.chatterboxchallenge.com/ |website=chatterboxchallenge.com |accessdate=10 November 2010 |archiveurl=https://web.archive.org/web/20060325195507/http://www.chatterboxchallenge.com/ |archivedate=25 March 2006 |url-status=dead}}&lt;/ref&gt; Champion in 2004.
+
+Because the A.L.I.C.E. AIML set was released under the [[GNU GPL]], and because most AIML interpreters are offered under a [[Free Software|free]] or [[open source license]], many &quot;Alicebot clones&quot; have been created based upon the original implementation of the program and its AIML knowledge base. Free AIML sets&lt;ref&gt;{{cite web |title=Free AIML sets - aitoold.org |url=http://aitools.org/Free_AIML_sets |website=aitools.org |archiveurl=https://web.archive.org/web/20061009222437/http://aitools.org/Free_AIML_sets |archivedate=9 October 2006 |date=17 May 2006}}&lt;/ref&gt; in several languages have been developed and made available by the user community. There are AIML interpreters available in [[Java (programming language)|Java]], [[Ruby programming language|Ruby]], [[Python (programming language)|Python]], [[C++]], [[C Sharp (programming language)|C#]], [[Pascal programming language|Pascal]], and other languages (see [[#Free .2F Open Source AIML Implementations|below]] {{dead link|date=June 2020}}).
+A semi-formal specification&lt;ref name=&quot;specs&quot;&gt;{{cite web |title=AIML 1.0.1 (A.L.I.C.E. AI Foundation) |url=http://www.alicebot.org:80/TR/2011/ |website=alicebot.org |accessdate=1 December 2013 |archiveurl=https://web.archive.org/web/20131118214101/http://www.alicebot.org/TR/2011/ |archivedate=18 November 2013 |language=en |date=13 October 2011 |url-status=dead }}&lt;/ref&gt; and a W3C XML Schema for AIML&lt;ref&gt;{{cite web |title=AIML.xsd |url=http://aitools.org/programd/resources/schema/AIML.xsd |website=aitools.org |accessdate=10 November 2010 |archiveurl=https://web.archive.org/web/20060317085750/http://aitools.org/programd/resources/schema/AIML.xsd |archivedate=17 March 2006}}&lt;/ref&gt; are available.
+
+Since early 2013, The A.L.I.C.E foundation has been working on a draft specification for AIML 2.0.&lt;ref&gt;{{cite web |title=AIML 2.0 draft specification released |url=http://alicebot.blogspot.com:80/2013/01/aiml-20-draft-specification-released.html |website=alicebot.blogspot.com |accessdate=19 June 2014 |archiveurl=https://web.archive.org/web/20130518171303/http://alicebot.blogspot.com/2013/01/aiml-20-draft-specification-released.html |archivedate=18 May 2013 |date=16 January 2013}}&lt;/ref&gt;
+
+== Elements of AIML ==
+AIML contains several elements. The most important of these are described in further detail below.
+
+=== Categories ===
+Categories in AIML form the fundamental unit of knowledge. A category consists of at least two further elements: the '''pattern''' and '''template''' elements. Here is a simple category:
+
+&lt;syntaxhighlight lang=&quot;xml&quot;&gt;
+&lt;category&gt;
+  &lt;pattern&gt;WHAT IS YOUR NAME&lt;/pattern&gt;
+  &lt;template&gt;My name is Michael N.S Evanious.&lt;/template&gt;
+&lt;/category&gt;
+&lt;/syntaxhighlight&gt;
+
+When this category is loaded, an AIML bot will respond to the input &quot;What is your name&quot; with the response &quot;My name is Michael N.S Evanious.&quot;
+
+=== Patterns ===
+A pattern is a string of characters intended to match one or more user inputs. A literal pattern like
+
+ WHAT IS YOUR NAME
+
+will match only one input, ignoring case: &quot;what is your name&quot;. But patterns may also contain wildcards, which match one or more words. A pattern like
+
+ WHAT IS YOUR *
+
+will match an infinite number of inputs, including &quot;what is your name&quot;, &quot;what is your shoe size&quot;, &quot;what is your purpose in life&quot;, etc.
+
+The AIML pattern syntax is a very simple pattern language, substantially less complex than [[regular expressions]] and as such less than level 3 in the [[Chomsky hierarchy]]. 
+To compensate for the simple [[pattern matching]] capabilities, AIML interpreters can provide preprocessing functions to expand abbreviations, remove misspellings, etc.
+
+The AIML syntax itself is at least as complex as [[finite state machines]] and as such at least of level 3 in the [[Chomsky hierarchy]]. This is because a state correlates to one [[topic (linguistics)|topic]]. To implement that behavior, the topic should have a &quot;*&quot; Pattern to make sure, that the state is not left accidentally. A state transit is implemented with the {{code|2=xml|1=&lt;think&gt;&lt;set name=&quot;topic&quot;&gt;state2&lt;/set&gt;&lt;/think&gt;}} Tag. This way, the bot will be able to &quot;remember&quot; the topic talked about or even user privileges, which are gained during the chat.
+
+=== Templates ===
+A template specifies the response to a matched pattern. A template may be as simple as some literal text, like
+
+ My name is John.
+
+A template may use variables, such as the example
+
+ My name is &lt;bot name=&quot;name&quot;/&gt;.
+
+which will substitute the bot's name into the sentence, or

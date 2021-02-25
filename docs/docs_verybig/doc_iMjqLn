@@ -1,0 +1,385 @@
+== Radiometric quantities ==
+{{SI radiometry units}}
+
+== Integral and spectral radiometric quantities ==
+[[Integral]] quantities (like [[radiant flux]]) describe the total effect of radiation of all [[wavelength]]s or [[frequency|frequencies]], while [[electromagnetic spectrum|spectral]] quantities (like [[spectral power]]) describe the effect of radiation of a single wavelength ''λ'' or frequency ''ν''. To each integral quantity there are corresponding spectral quantities, for example the radiant flux Φ&lt;sub&gt;e&lt;/sub&gt; corresponds to the spectral power Φ&lt;sub&gt;e,''λ''&lt;/sub&gt; and Φ&lt;sub&gt;e,''ν''&lt;/sub&gt;.
+
+Getting an integral quantity's spectral counterpart requires a [[Limit (mathematics)|limit transition]]. This comes from the idea that the precisely requested wavelength [[photon]] existence probability is zero. Let us show the relation between them using the radiant flux as an example:
+
+Integral flux, whose unit is [[watt|W]]:
+:&lt;math&gt;\Phi_\mathrm{e}.&lt;/math&gt;
+
+Spectral flux by wavelength, whose unit is {{nobreak|W/[[metre|m]]}}:
+:&lt;math&gt;\Phi_{\mathrm{e},\lambda} = {\mathrm{d}\Phi_\mathrm{e} \over \mathrm{d}\lambda},&lt;/math&gt;
+where &lt;math&gt;\mathrm{d}\Phi_\mathrm{e}&lt;/math&gt; is the radiant flux of the radiation in a small wavelength interval [''λ'', ''λ'' + d''λ''].
+The area under a plot with wavelength horizontal axis equals to the total radiant flux.
+
+Spectral flux by frequency, whose unit is {{nobreak|W/[[hertz|Hz]]}}:
+:&lt;math&gt;\Phi_{\mathrm{e},\nu} = {\mathrm{d}\Phi_\mathrm{e} \over \mathrm{d}\nu},&lt;/math&gt;
+where &lt;math&gt;\mathrm{d}\Phi_\mathrm{e}&lt;/math&gt; is the radiant flux of the radiation in a small frequency interval [''ν'', ''ν'' + d''ν''].
+The area under a plot with frequency horizontal axis equals to the total radiant flux.
+
+The spectral quantities by wavelength ''λ'' and frequency ''ν'' are related to each other, since the product of the two variables is the [[speed of light]] (&lt;math&gt;\lambda \cdot \nu = c&lt;/math&gt;):
+:&lt;math&gt;\Phi_{\mathrm{e},\lambda} = {c \over \lambda^2} \Phi_{\mathrm{e},\nu},&lt;/math&gt; or &lt;math&gt;\Phi_{\mathrm{e},\nu} = {c \over \nu^2} \Phi_{\mathrm{e},\lambda},&lt;/math&gt; or &lt;math&gt;\lambda \Phi_{\mathrm{e},\lambda} = \nu \Phi_{\mathrm{e},\nu}.&lt;/math&gt;
+
+The integral quantity can be obtained by the spectral quantity's integration:
+
+:&lt;math&gt;\Phi_\mathrm{e} = \int_0^\infty \Phi_{\mathrm{e},\lambda}\, \mathrm{d}\lambda = \int_0^\infty \Phi_{\mathrm{e},\nu}\, \mathrm{d}\nu = \int_0^\infty \lambda \Phi_{\mathrm{e},\lambda}\, \mathrm{d} \ln \lambda = \int_0^\infty \nu \Phi_{\mathrm{e},\nu}\, \mathrm{d} \ln \nu.&lt;/math&gt;
+
+== See also ==
+* [[Reflectivity]]
+* [[Microwave radiometer]]
+* [[Ionizing_radiation#Measurement|Measurement of Ionizing Radiation]]
+* [[Radiometric calibration]]
+* [[Radiometric resolution]]
+
+==References==
+{{Reflist}}
+
+==External links==
+*[https://web.archive.org/web/20130313095139/http://fp.optics.arizona.edu/Palmer/rpfaq/rpfaq.htm Radiometry and photometry FAQ] Professor Jim Palmer's Radiometry FAQ page (The University of Arizona College of Optical Sciences).
+
+[[Category:Radiometry| ]]
+[[Category:Measurement]]
+[[Category:Optical metrology]]
+[[Category:Telecommunications engineering]]
+[[Category:Observational astronomy]]
+[[Category:Electromagnetic radiation]]</text>
+      <sha1>1ynziwdnplmry5hw3hxhjp4744jga9g</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Randomizer</title>
+    <ns>0</ns>
+    <id>41626</id>
+    <redirect title="Scrambler" />
+    <revision>
+      <id>554702070</id>
+      <parentid>553215483</parentid>
+      <timestamp>2013-05-12T07:36:05Z</timestamp>
+      <contributor>
+        <username>AdventurousSquirrel</username>
+        <id>15167173</id>
+      </contributor>
+      <comment>merge/redirecting to [[Scrambler]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="22" xml:space="preserve">#REDIRECT[[Scrambler]]</text>
+      <sha1>5lh1i86qmtnb409phit80hw1t4fgvlx</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Random number</title>
+    <ns>0</ns>
+    <id>41627</id>
+    <revision>
+      <id>985130004</id>
+      <parentid>982092911</parentid>
+      <timestamp>2020-10-24T03:59:05Z</timestamp>
+      <contributor>
+        <ip>66.235.0.59</ip>
+      </contributor>
+      <comment>Removed &quot;Examples of Random Numbers&quot; section, apparently written by a troll.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3967" xml:space="preserve">{{use MDY dates|date=July 2020}}
+{{use American English|date=July 2020}}
+In mathematics and statistics, a '''random number''' is either [[Pseudorandom number generator|Pseudo-random]] or a number generated for, or part of, a set exhibiting [[statistical randomness]].
+
+In common understanding, it's that all have an equal chance; conversely, none have an advantage.&lt;ref name=RandomArticle_Lott.NYT2012/&gt;
+
+==Algorithms and implementations==
+A 1964-developed [[algorithm]]&lt;ref&gt;{{cite magazine |author=Richard Durstenfeld
+|title=Algorithm 235: Random permutation |doi=10.1145/364520.364540
+|magazine=[[Communications of the ACM]] ([[Association for Computing Machinery]])
+|volume=7 |issue=7 |page=420 |date=July 1964}}&lt;/ref&gt; is popularly known as ''the [[Donald Knuth|Knuth]] shuffle'' or ''the [[Fisher–Yates shuffle]]'' (based on work they did in 1938). A real-world use for this is sampling water quality in a [[Reservoir sampling|reservoir]].
+
+In 1999, a new feature was added to the Pentium III: a hardware-based random number generator.&lt;ref name=Random.NetwCom99&gt;
+   {{cite magazine  |magazine=[[Network Computing]]
+   |title=Privacy's Random Nature
+   |author=Robert Moscowitz  |date=July 12, 1999}}&lt;/ref&gt;&lt;ref name=RandomPenIII.Wired99&gt;{{cite magazine  |magazine=[[Wired (magazine)|Wired]]
+|url=https://www.wired.com/1999/01/hardwiring-security
+|title=Hardwiring Security  |date=January 1999}}&lt;/ref&gt; It has been described as &quot;several oscillators combine their outputs and that odd waveform is sampled asynchronously.&quot;&lt;ref&gt;{{cite web
+   |url=http://www.ciphersbyritter.com/NEWS4/PENTRAND.HTM
+   |author=Terry Ritter  |date=January 21, 1999
+   |title=The Pentium III RNG}}&lt;/ref&gt; These numbers, however, were only 32 bit, at a time when export controls were on 56 bits and higher, so they weren't state of the art&lt;ref&gt;{{cite web 
+|url=https://www.irisa.fr/caps/projects/hipsor/misc.php
+|title=Unpredictable Randomness Definition |website=IRISA}}&lt;/ref&gt;
+
+==Common understanding==
+In common understanding, &quot;1 2 3 4 5&quot; is not as random as &quot;3 5 2 1 4&quot; and certainly not as random as &quot;47 88 1 32 41&quot; but &quot;we can't say authoritavely that the first sequence is not random ... it could have been generated by chance.&quot;&lt;ref name=RandomArticle.SS1998&gt;
+{{cite magazine |magazine=Sun Server
+    |title=Javatalk: Horseshoes, hand grenades and random numbers
+    |author=Jonathan Knudson |date=January 1998 |pages=16–17}}&lt;/ref&gt;
+
+When a police officer claims to have done a &quot;random .. door-to-door&quot; search, there is a certain expectation that members of a jury will have.
+&lt;ref&gt;{{cite newspaper  
+   |newspaper=[[Los Angeles Times]]
+   |url=https://www.latimes.com/archives/la-xpm-1995-04-16-mn-55166-story.html
+   |title=NYPD Bad Cop’s Illegal Search Mars Career
+   |author=Tom Hays  |date=April 16, 1995}}&lt;/ref&gt;&lt;ref&gt;A pre-compiled list of apartment numbers would be a violation thereof.&lt;/ref&gt;
+
+==Real world consequences==
+Flaws in ''randomness'' have real-world consequences.&lt;ref name=RandomArticle_Encr.NYT2012&gt;{{cite newspaper
+   |newspaper=[[New York Times]]
+   |url=https://www.nytimes.com/2012/02/15/technology/researchers-find-flaw-in-an-online-encryption-method.html
+   |title=Flaw Found in an Online Encryption Method
+   |author=John Markoff  |date=February 14, 2012}}&lt;/ref&gt;&lt;ref name=RandomArticle_Lott.NYT2012&gt;{{cite newspaper
+|newspaper=[[New York Times]]
+|url=https://www.nytimes.com/interactive/2018/05/03/magazine/money-issue-iowa-lottery-fraud-mystery.html
+|title=The man who cracked the lottery
+|author=Reid Forgrave  |date=May 3, 2018}}&lt;/ref&gt;
+
+A 99.8% randomness was shown by researchers to negatively affect an estimated 27,000 customers of a large service&lt;ref name=RandomArticle_Encr.NYT2012/&gt; and that the problem was not limited to just that situation.
+
+==See also==
+* [[Algorithmically random sequence]]
+* [[Quasi-random sequence]]
+* [[Random number generation]]
+* [[Random sequence]]
+
+==References==
+{{reflist}}
+
+[[Category:Permutations]]
+
+
+{{Math-stub}}</text>
+      <sha1>nz8ljrostz5hbgbxb5kvxv2hz6r8d26</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Receive-after-transmit time delay</title>
+    <ns>0</ns>
+    <id>41628</id>
+    <revision>
+      <id>832461964</id>
+      <parentid>639498940</parentid>
+      <timestamp>2018-03-26T04:18:26Z</timestamp>
+      <contributor>
+        <ip>67.2.170.120</ip>
+      </contributor>
+      <comment>add RF definition</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="850" xml:space="preserve">{{no footnotes|date=January 2013}}
+In [[telecommunication]], '''receive-after-transmit time delay''' is the [[time]] interval between (a) the instant of [[keying (telecommunications)|keying]] off the local transmitter to stop transmitting and (b) the instant the local receiver output has increased to 90% of its steady-state value in response to an RF (radio-frequency) [[Signalling (telecommunication)|signal]] from another transmitter.  
+
+The RF signal from the distant transmitter must exist at the local receiver input prior to, or at the time of, keying off the local transmitter. 
+
+Receive-after-transmit time delay applies only to [[half-duplex operation]].
+
+==See also==
+*[[Transmit-after-receive time delay]]
+*[[Attack-time delay]]
+
+==References==
+{{FS1037C MS188}}
+
+[[Category:Telecommunications engineering]]
+[[Category:Radio technology]]</text>
+      <sha1>kg5gu9swy9x11d6ih21r5jpzf7t8t70</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Received noise power</title>
+    <ns>0</ns>
+    <id>41629</id>
+    <revision>
+      <id>834394088</id>
+      <parentid>757292134</parentid>
+      <timestamp>2018-04-05T14:05:44Z</timestamp>
+      <contributor>
+        <username>Kvng</username>
+        <id>910180</id>
+      </contributor>
+      <minor />
+      <comment>avoid unnec redirects</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1026" xml:space="preserve">{{no footnotes|date=January 2013}}
+In [[telecommunication]]s, '''received noise power''' is a measure of [[noise]] in a receiver. For example, the received noise power might be:
+#The calculated or measured [[noise power]], within the [[Bandwidth (signal processing)|bandwidth]] being used, at the receive end of a [[Telecommunication circuit|circuit]], [[Communication channel|channel]], [[Data link|link]], or [[Communications system|system]].
+#The absolute [[Power (physics)|power]] of the noise measured or calculated at a receive point. The related bandwidth and the [[noise weighting]] must also be specified.
+#The value of noise power, from all sources, measured at the [[telephone line|line]] terminals of a [[telephone]] set's receiver.' Either [[flat weighting]] or some other specific [[amplitude]]-[[frequency]] characteristic or [[noise weighting]] characteristic must be associated with the measurement.
+
+{{FS1037C MS188}}
+
+[[Category:Telecommunication theory]]
+[[Category:Noise (electronics)]]
+
+{{telecomm-stub}}</text>
+      <sha1>qtp4xcz8i88o93yruubrkj3n9ly79os</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attack-time delay</title>
+    <ns>0</ns>
+    <id>41630</id>
+    <revision>
+      <id>616447562</id>
+      <parentid>542998500</parentid>
+      <timestamp>2014-07-10T22:41:11Z</timestamp>
+      <contributor>
+        <username>Bhny</username>
+        <id>285109</id>
+      </contributor>
+      <comment>Unlinked: [[Output]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1353" xml:space="preserve">{{no footnotes|date=March 2013}}
+In [[telecommunications]], '''attack-time delay''' is the time needed for a [[Receiver (radio)|receiver]] or [[transmitter]] to respond to an incoming signal.
+
+For a receiver, the attack-time delay is defined as the [[time interval]] from the instant a [[step function|step]] [[radio-frequency]] (RF) [[Signalling (telecommunication)|signal]], at a level equal to the receiver's threshold of [[sensitivity (electronics)|sensitivity]], is applied to the receiver input, to the instant when the receiver's output [[amplitude]] reaches 90% of its [[steady state|steady-state value]]. If a [[squelch circuit]] is operating, the receiver attack-time delay includes the time for the receiver to break squelch. 
+
+For a transmitter, the attack-time delay is defined as the interval from the instant the transmitter is [[Keying (telecommunications)|keyed-on]] to the instant the transmitted RF signal amplitude has increased to a specified level, usually 90% of its key-on steady-state value.  The transmitter attack-time delay excludes the time required for automatic [[antenna (electronics)|antenna]] [[tuner (radio)|tuning]].
+
+==See also==
+*[[Transmit-after-receive time delay]]
+*[[Receive-after-transmit time delay]]
+
+==References==
+{{FS1037C MS188}}
+
+[[Category:Telecommunications engineering]]
+[[Category:Radio technology]]</text>
+      <sha1>1stkrsnoehv2t2usq5ewkqcfbihyb7g</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Recorder warning tone</title>
+    <ns>0</ns>
+    <id>41633</id>
+    <revision>
+      <id>713029689</id>
+      <parentid>635334587</parentid>
+      <timestamp>2016-04-01T14:11:31Z</timestamp>
+      <contributor>
+        <username>Xezbeth</username>
+        <id>86247</id>
+      </contributor>
+      <minor />
+      <comment>delink United States per [[WP:OVERLINK]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="804" xml:space="preserve">{{no footnotes|date=January 2013}}
+In [[telecommunication]], a '''recorder warning tone''' is a tone transmitted over a [[telephone line]] to indicate to the [[called party]] that the [[calling party]] is recording the conversation.
+
+In the United States, the recorder warning tone is a half-second burst of 1400 Hz applied every 15 seconds. The recorder warning tone is required by law to be generated as an integral part of any recording device used for the purpose and is required to be not under the control of the calling party. The tone is recorded together with the conversation.
+
+==References==
+*{{FS1037C}}
+
+==External links ==
+* [http://www.its.bldrdoc.gov/fs-1037/dir-030/_4468.htm Recorder warning tone] defined in [[Federal Standard 1037C]]
+
+[[Category:Telephony signals]]
+{{telephony-stub}}</text>
+      <sha1>aymw8g2ye04kx8q678vules0j8u7xt0</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Record medium</title>
+    <ns>0</ns>
+    <id>41634</id>
+    <redirect title="Data storage" />
+    <revision>
+      <id>812066588</id>
+      <parentid>785801486</parentid>
+      <timestamp>2017-11-25T20:15:15Z</timestamp>
+      <contributor>
+        <username>Tom94022</username>
+        <id>1256358</id>
+      </contributor>
+      <comment>Changed redirect to reflect change in section title</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="42" xml:space="preserve">#REDIRECT [[Data storage#Recording media]]</text>
+      <sha1>rg1510kdi21uu57h96pr0h0lc868nc8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Recovery procedure</title>
+    <ns>0</ns>
+    <id>41635</id>
+    <revision>
+      <id>628334407</id>
+      <parentid>558314575</parentid>
+      <timestamp>2014-10-05T14:06:37Z</timestamp>
+      <contributor>
+        <username>Xaosflux</username>
+        <id>502540</id>
+      </contributor>
+      <minor />
+      <comment>/* References */clean up using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="690" xml:space="preserve">In [[telecommunication]], a '''recovery procedure''' is a process that attempts to bring a [[communications system|system]] back to a normal operating state. Examples:
+#The actions necessary to restore an [[automated information system]]'s [[data file]]s and computational capability after a system failure. 
+#In [[data communications]], a process whereby a data station attempts to resolve conflicting or erroneous conditions arising during the [[data transfer]].
+
+==See also==
+*[[Error detection and correction]]
+*[[Fault-tolerant design]]
+*[[Fault-tolerant system]]
+
+==References==
+*{{FS1037C}}
+
+[[Category:Telecommunications techniques]]
+[[Category:Fault tolerance]]
+
+
+{{telecomm-stub}}</text>
+      <sha1>0z1wuawqs6jx20wrt47urpxwba5jf6a</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Reference circuit</title>
+    <ns>0</ns>
+    <id>41636</id>
+    <revision>
+      <id>969213640</id>
+      <parentid>453885482</parentid>
+      <timestamp>2020-07-24T02:07:44Z</timestamp>
+      <contributor>
+        <username>GVnayR</username>
+        <id>651076</id>
+      </contributor>
+      <comment>+short description</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1145" xml:space="preserve">{{short description|Hypothetical electric circuit}}
+
+A '''reference circuit''' is a hypothetical [[electric circuit]] of specified equivalent length and [[computer configuration|configuration]], and having a defined [[transmission characteristic]] or characteristics, used primarily as a reference for measuring the performance of other, ''i.e.,'' real, circuits or as a guide for planning and engineering of circuits and networks.  
+
+Normally, several types of reference circuits are defined, with different configurations, because [[Telecommunication|communications]] are required over a wide range of distances. Another type of reference circuit shows how to configure integrated circuits into function blocks, which Analog Devices provides for electrical design engineers.  Analog Devices' Circuits from the Lab reference circuits are fully tested and come with the schematics, evaluation boards, and device drivers necessary for system integration.  A group of related reference circuits is also called a ''[[reference system]]''.
+
+==References==
+*{{FS1037C MS188}}
+
+==See also==
+* [[netlist]] 
+* [[SPICE]]
+
+[[Category:Electronic circuits]]</text>
+      <sha1>457qe6oz142m742yvjam7qqxxfva8ek</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Reference clock</title>
+    <ns>0</ns>
+    <id>41637</id>
+    <revision>
+      <id>682949622</id>
+      <parentid>609761734</parentid>
+      <timestamp>2015-09-27T03:36:41Z</timestamp>
+      <contributor>
+        <username>Kethrus</username>
+        <id>22883165</id>
+      </contributor>
+      <minor />
+      <comment>clean up using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="287" xml:space="preserve">A '''reference clock''' may refer to the following:

@@ -1,0 +1,296 @@
+The use of [[robbed-bit signaling]] in America has decreased significantly as a result of [[Signaling System No 7]] (SS7) on inter-office dial trunks. With SS7, the full 64 kbit/s DS0 channel is available for use on a connection, and allows 64 kbit/s, and 128 kbit/s [[Integrated Services Digital Network|ISDN]] data calls to exist over a switched trunk network connection if the supporting T1 carrier entity is optioned [[B8ZS]] (Clear Channel Capable).&lt;ref name=&quot;ANSI T1.403&quot;/&gt;&lt;ref&gt;The Book On ESF, Verilink Corporation, 1986&lt;/ref&gt;&lt;ref&gt;D4 Digital Channel Bank Family, Bell System Technical Journal, November 1982&lt;/ref&gt;
+
+== Carrier pricing ==
+
+Carriers price DS1 lines in many different ways. However, most boil down to two simple components: [[local loop]] (the cost the local incumbent charges to transport the signal from the end user's [[telephone exchange|central office]], otherwise known as a CO, to the point of presence, otherwise known as a POP, of the carrier) and the port (the cost to access the telephone network or the Internet through the carrier's network). Typically, the port price is based upon access speed and yearly commitment level while the loop is based on geography. The farther the CO and POP, the more the loop costs.
+
+The loop price has several components built into it, including the mileage calculation (performed in V/H coordinates, not standard GPS coordinates) and the telco piece. Each local Bell operating company—namely [[Verizon]], [[AT&amp;T Inc.]], and [[Qwest]]—charge T-carriers different price per mile rates. Therefore, the price calculation has two distance steps: geomapping and the determination of local price arrangements.
+
+While most carriers utilize a geographic pricing model as described above, some Competitive Local Exchange Carriers ([[Competitive local exchange carrier|CLEC]]s), such as [[TelePacific Communications|TelePacific]], [[Integra Telecom]], [[tw telecom]], [[Windstream]], [[Level 3 Communications]], and [[XO Communications]] offer national pricing.
+
+Under this DS1 pricing model, a provider charges the same price in every geography it services. National pricing is an outgrowth of increased competition in the T-carrier market space and the commoditization of T-carrier products.&lt;ref&gt;{{cite web | last = Sweeney | first = Terry | author-link = | title = T1 Price Drop Means Good Deals For Smart Shoppers | work = | publisher = InformationWeek.com | date = December 25, 2000 | url = http://www.informationweek.com/817/teeone.htm | doi = | accessdate = 2008-01-03  }}&lt;/ref&gt; Providers that have adopted a national pricing strategy may experience widely varying margins as their suppliers, the Bell operating companies (e.g., [[Verizon]], [[AT&amp;T Inc.]], and [[Qwest]]), maintain geographic pricing models, albeit at wholesale prices.
+
+For voice DS1 lines, the calculation is mostly the same, except that the port (required for Internet access) is replaced by LDU (otherwise known as Long Distance Usage). Once the price of the loop is determined, only voice-related charges are added to the total. In short, the total price = loop + LDU x minutes used.
+
+== See also ==
+
+* [[Communications in Japan]]
+* [[Comparison of T-carrier and E-carrier systems]]
+* [[List of interface bit rates]]
+* [[Modified AMI code]]
+* [[Optical Carrier transmission rates]]
+* [[Plesiochronous digital hierarchy]]
+* [[STM-1]]
+* [[Supplemental Performance Report Message]]
+* [[Telecommunications in South Korea]]
+
+== References ==
+
+{{reflist}}
+{{refbegin}}
+* {{FS1037C}}
+* {{FOLDOC}}
+{{refend}}
+
+== External links ==
+
+* [[American National Standards Institute|ANSI]] T1.403-1999 - Network and Customer Installation Interface
+* [http://www.cisco.com/c/en/us/products/hw/tsd_products_support_end-of-sale_and_end-of-life_products_list.html Cisco T1 card documentation]; search for ''T1''
+* [http://www.dcbnet.com/notes/9611t1.html T1 architecture]
+
+[[Category:Telecommunications standards]]
+[[Category:Multiplexing]]</text>
+      <sha1>11lsbl5xsa56m9nmvrrsstuimrx2rhs</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>TCP/IP Suite</title>
+    <ns>0</ns>
+    <id>41780</id>
+    <redirect title="Internet protocol suite" />
+    <revision>
+      <id>458673179</id>
+      <parentid>230838414</parentid>
+      <timestamp>2011-11-02T18:12:28Z</timestamp>
+      <contributor>
+        <username>AvicBot</username>
+        <id>11952314</id>
+      </contributor>
+      <minor />
+      <comment>Robot: Fixing double redirect to [[Internet protocol suite]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="37" xml:space="preserve">#REDIRECT [[Internet protocol suite]]</text>
+      <sha1>0kybnbttntny7jbr4x2kumiy5glxpwl</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Technical control facility</title>
+    <ns>0</ns>
+    <id>41781</id>
+    <revision>
+      <id>635374328</id>
+      <parentid>635330011</parentid>
+      <timestamp>2014-11-25T12:54:05Z</timestamp>
+      <contributor>
+        <username>Dawynn</username>
+        <id>6655086</id>
+      </contributor>
+      <comment>Stub-sorting. [[Wikipedia:WikiProject Stub sorting|You can help!]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1116" xml:space="preserve">In [[telecommunication]], a '''technical control facility''' ('''TCF''') is a [[telecommunications facility]], or a designated and specially configured part thereof, that (a) contains the equipment necessary for ensuring fast, reliable, and secure exchange of [[information]], (b) typically includes distribution frames and associated panels, jacks, and switches and monitoring, test, conditioning, and orderwire equipment, and (c) allows telecommunications [[systems control]] personnel to exercise operational control of [[Telecommunication|communications]] paths and facilities, make quality analyses of communications and communications channels, [[wikt:monitor|monitor]] operations and [[repair and maintenance|maintenance]] functions, recognize and correct deteriorating conditions, restore disrupted communications, provide requested on-call circuits, and take or direct such actions as may be required and practical to provide effective telecommunications services. 
+
+==References==
+*{{FS1037C MS188}}
+
+[[Category:Telecommunications systems]]
+[[Category:Telecommunications infrastructure]]
+
+{{telecomm-stub}}</text>
+      <sha1>5k9nb0auboxt43jr34lulj5jrw53gu3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Telecommunications service</title>
+    <ns>0</ns>
+    <id>41782</id>
+    <revision>
+      <id>962014474</id>
+      <parentid>947721940</parentid>
+      <timestamp>2020-06-11T16:24:28Z</timestamp>
+      <contributor>
+        <username>Shhhnotsoloud</username>
+        <id>11521989</id>
+      </contributor>
+      <comment>Copyedit</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1776" xml:space="preserve">In [[telecommunication]], a '''telecommunications service''' is a service provided by a [[Telecommunications company|telecommunications provider]], or a specified set&lt;!--non-technical use, don't link--&gt; of [[User (telecommunications)|user]]-[[information transfer]] capabilities provided to a group of users by a telecommunications [[system]].
+
+The telecommunications service user is responsible for the information content of the [[message]]. The telecommunications service provider has the responsibility for the acceptance, [[transmission (telecommunications)|transmission]], and delivery of the message.&lt;ref&gt;{{FS1037C MS188}}&lt;/ref&gt;
+
+For purposes of regulation by the [[Federal Communications Commission]] under the U.S. [[Communications Act of 1934]] and [[Telecommunications Act of 1996]], the definition of telecommunications service is &quot;the offering of telecommunications for a fee directly to the public, or to such classes of users as to be effectively available directly to the public, regardless of the facilities used.&quot;&lt;ref&gt;{{USCSub|47|153|53}}.&lt;/ref&gt;  ''Telecommunications'', in turn, is defined as &quot;the transmission, between or among points specified by the user, of information of the user’s choosing, without change in the form or content of the information as sent and received.&quot;&lt;ref&gt;{{USCSub|47|153|50}}.&lt;/ref&gt;  
+
+==See also==
+* [[Communications service provider]]
+* [[Intelligent network service]] (IN service)
+* [[Internet service provider]] (ISP)
+* [[Service layer]] 
+* [[Value-added service]] or content provider
+
+==References==
+{{Reflist}}
+
+== See also ==
+* [[White pages]]
+* [[Yellow Pages]]
+* [[Tourism]]
+
+{{DEFAULTSORT:Telecommunications Service}}
+[[Category:Telecommunication services| ]]
+[[Category:Telecommunications|Service]]
+
+{{telecomm-stub}}</text>
+      <sha1>d696b1ri9a2dw7j2ffuc47j8gkwaqqd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Teleconference</title>
+    <ns>0</ns>
+    <id>41783</id>
+    <revision>
+      <id>953025649</id>
+      <parentid>952849178</parentid>
+      <timestamp>2020-04-25T09:11:27Z</timestamp>
+      <contributor>
+        <username>Lopifalko</username>
+        <id>11116033</id>
+      </contributor>
+      <comment>/* Internet teleconferencing */No indication this topic is worthy of an article</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1937" xml:space="preserve">{{short description|Live exchange of information among several persons remote from one another}}
+[[File:Medvedev and Vladimir Yakunin.jpg|thumb|300px|Teleconference using a video link. Simply due to costs, teleconferences are frequently limited to audio links (telephone or computer-based).]]A '''teleconference''' or '''[[teleseminar]]''' is the live exchange and mass articulation of [[information]] among several persons and machines remote from one another but linked by a [[telecommunications system]]. Terms such as audio conferencing, telephone conferencing and phone conferencing are also sometimes used to refer to teleconferencing.
+
+The telecommunications system may support the teleconference by providing one or more of the following: audio, [[video]], and/or [[data]] services by one or more means, such as [[telephone]], [[computer]], [[telegraph]], [[teleprinter|teletypewriter]], [[radio]], and [[television]].&lt;ref&gt;{{FS1037C MS188}}&lt;/ref&gt;
+
+== Internet teleconferencing ==
+Internet teleconferencing includes internet [[Conference call|telephone conferencing]], [[videotelephony]], [[web conferencing]], and [[augmented reality]] conferencing.
+
+Internet telephony involves conducting a teleconference over the [[Internet]] or a [[Wide Area Network]]. One key technology in this area is  [[Voice over Internet Protocol]] (VOIP).
+
+A working example of an augmented reality conferencing was demonstrated at the Salone di Mobile in Milano by AR+RFID Lab.&lt;ref&gt;[http://www.idealize.nl/2009/03/ar-maakt-cultureel-erfgoed-toegankelijk/ AR conferencing show in Milano]&lt;/ref&gt;
+
+== See also ==
+{{Wiktionary}}
+* {{annotated link|List of video telecommunication services and product brands}}
+* {{annotated link|Media space}}
+* {{annotated link|Telecollaboration}}
+* {{annotated link|Telepresence}}
+
+== References ==
+&lt;references/&gt;
+
+{{telecommunications}}
+
+[[Category:Teleconferencing| ]]
+[[Category:Telecommunications]]
+
+{{telecomm-stub}}</text>
+      <sha1>25y5djyscb6ofc7g5u07txqvh64nh4c</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Teletraining</title>
+    <ns>0</ns>
+    <id>41784</id>
+    <revision>
+      <id>546964000</id>
+      <parentid>546465982</parentid>
+      <timestamp>2013-03-25T20:32:02Z</timestamp>
+      <contributor>
+        <username>Jim.henderson</username>
+        <id>2255048</id>
+      </contributor>
+      <minor />
+      <comment>See also [[Audiovisual education]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="836" xml:space="preserve">'''Teletraining''' is [[training]] that 
+# usually conveys live instruction via [[Telecommunications facility|telecommunications facilities]], 
+# may be accomplished on a [[Point-to-point (telecommunications)|point-to-point]] basis or on a [[point-to-multipoint]] basis, and 
+# may assume forms including [[teleseminars]], a [[teleconference]], or an electronic classroom, usually including both audio and [[video]].
+
+''Synonyms''
+* [[distance education]]
+* distance learning
+* distance training
+* [[electronic classroom]]
+* virtual instruction
+
+== See also ==
+* [[Audiovisual education]]
+
+== References ==
+
+*{{FS1037C MS188}}
+
+{{Telecommunications}}
+{{Telecommunications-stub}}
+
+
+[[Category:Educational technology]]
+[[Category:Telecommunication services]]
+[[Category:Training]]
+[[Category:Teleconferencing]]
+[[Category:Videotelephony]]</text>
+      <sha1>q9sst5c28wuanlbbjzgyl72fflt2elo</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Terminal adapter</title>
+    <ns>0</ns>
+    <id>41785</id>
+    <revision>
+      <id>983448734</id>
+      <parentid>983448726</parentid>
+      <timestamp>2020-10-14T08:35:31Z</timestamp>
+      <contributor>
+        <username>ClueBot NG</username>
+        <id>13286072</id>
+      </contributor>
+      <minor />
+      <comment>Reverting possible vandalism by [[Special:Contribs/194.83.71.226|194.83.71.226]] to version by Hwqaksd. [[WP:CBFP|Report False Positive?]] Thanks, [[WP:CBNG|ClueBot NG]]. (3797133) (Bot)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2513" xml:space="preserve">{{Unreferenced|date=March 2018}}
+
+A '''terminal adapter''' or '''TA''' is a device that connects a terminal device – a computer, a mobile communications device, or other – to a communications network.
+
+== ISDN ==
+In [[ISDN]] terminology, the ''terminal adapter'' connects a ''terminal'' (computer) to the ISDN network. The TA therefore fulfills a similar function to the ones a [[modem]] has on the [[Plain old telephone service|POTS]] network, and is therefore sometimes called an '''ISDN modem'''.  The latter term, however, is partially misleading as there is no [[modulation]] or [[demodulation]] performed.
+
+There are devices on the market that combine the functions of an ISDN TA with those of a classical modem (with an ISDN line interface).  These combined TA/modems permit connections from both ISDN and analog-line/modem counterparts.  In addition, a TA may contain an interface and [[codec]] for one or more analog telephone lines (aka ''a/b line''), allowing an existing POTS installation to be upgraded to ISDN without changing phones.
+
+Terminal adapters typically connect to a [[basic rate interface]] ([[S interface|S0]], sometimes also  [[U interface|U0]]).  On the ''terminal'' side, the most popular interfaces are [[RS-232]] serial and [[USB]]; others like V.35 or [[RS-449]] are only of historical interest.
+
+Devices connecting ISDN to a network (e.g. [[Ethernet]]) commonly include [[router (computing)|routing]] functionality; while they technically include a TA function, they are referred to as (ISDN) [[router (computing)|router]]s.
+
+==Mobile networks==
+In [[mobile network]]s, the ''terminal adapter'' is used by the [[terminal equipment]] to access the [[mobile termination]], using AT commands (see [[Hayes command set]]).
+
+In [[2G]] (such as [[GSM]] or [[CDMA]]), the terminal adapter is a theoretically optional while in [[3G]] (such as [[W-CDMA]]), the terminal adapter is mandatory and is part of the mobile termination.
+
+==Automation industry==
+In the [[automation]] industry, a ''terminal adapter'' is a ''passive'' device that converts a connector like the [[8P8C]] (RJ-45) [[modular connector]] or [[DE-9 connector|9 pin D-Sub]] into a [[terminal block]] to facilitate wiring.  It is often used when [[daisy chain (electrical engineering)|daisy chain]] wiring is necessary on a multi-node serial communication network like [[RS-485]] or [[RS-422]].
+
+==See also==
+*[[Federal Standard 1037C]]
+
+{{DEFAULTSORT:Terminal Adapter}}
+[[Category:Integrated Services Digital Network]]</text>
+      <sha1>9y4oyf8okqzeldyjvfa23iri691xrj7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Terminal equipment</title>
+    <ns>0</ns>
+    <id>41786</id>
+    <revision>
+      <id>886894632</id>
+      <parentid>883035941</parentid>
+      <timestamp>2019-03-09T06:40:24Z</timestamp>
+      <contributor>
+        <username>Cnwilliams</username>
+        <id>10190671</id>
+      </contributor>
+      <minor />
+      <comment>Unlinked: [[Switchboard]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="932" xml:space="preserve">In [[telecommunication]], the term '''terminal equipment''' has the following meanings:
+
+* [[Telecommunication|Communications]] equipment at either end of a communications [[data link|link]], used to permit the stations involved to accomplish the mission for which the link was established.
+* In [[radio]]-[[relay]] systems, equipment used at points where [[data]] are inserted or derived, as distinct from equipment used only to relay a reconstituted [[Signalling (telecommunication)|signal]].
+* [[Telephone]] and [[telegraph]] switchboards and other centrally located equipment at which communications circuits are terminated.

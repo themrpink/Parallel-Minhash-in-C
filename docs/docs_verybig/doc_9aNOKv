@@ -1,0 +1,231 @@
+Basic steps:
+#compute the instantaneous frequency/amplitude relationship of the signal using the [[Short-time Fourier transform|STFT]], which is the [[discrete Fourier transform]] of a short, overlapping and smoothly windowed block of samples;
+#apply some processing to the Fourier transform magnitudes and phases (like resampling the FFT blocks); and
+#perform an inverse STFT by taking the inverse Fourier transform on each chunk and adding the resulting waveform chunks, also called overlap and add (OLA).&lt;ref&gt;{{cite journal
+ | author = Jont B. Allen
+ |date=June 1977
+ | title = Short Time Spectral Analysis, Synthesis, and Modification by Discrete Fourier Transform
+ | journal = IEEE Transactions on Acoustics, Speech, and Signal Processing
+ | volume = ASSP-25
+ | number = 3
+ 
+ | pages = 235–238
+}}&lt;/ref&gt;
+
+The phase vocoder handles [[Sine wave|sinusoid]] components well, but early implementations introduced considerable smearing on [[transient (acoustics)|transient]] (&quot;beat&quot;) waveforms at all non-integer compression/expansion rates, which renders the results phasey and diffuse. Recent improvements allow better quality results at all compression/expansion ratios but a residual smearing effect still remains.
+
+The phase vocoder technique can also be used to perform pitch shifting, chorusing, timbre manipulation, harmonizing, and other unusual modifications, all of which can be changed as a function of time.
+
+[[Image:Sinusoidal Analysis &amp; Synthesis (McAulay-Quatieri 1988).svg|thumb|300px|Sinusoidal analysis/synthesis system (based on {{harvnb|McAulay|Quatieri|1988|p=161}})&lt;ref&gt;{{citation
+ |last1        = McAulay
+ |first1       = R. J.
+ |last2        = Quatieri
+ |first2       = T. F.
+ |authorlink2  = Thomas F. Quatieri
+ |title        = Speech Processing Based on a Sinusoidal Model
+ |url          = http://www.ll.mit.edu/publications/journal/pdf/vol01_no2/1.2.3.speechprocessing.pdf
+ |journal      = The Lincoln Laboratory Journal
+ |volume       = 1
+ |issue        = 2
+ |date         = 1988
+ |pages        = 153&amp;ndash;167
+ |access-date  = 2014-09-07
+ |archive-url  = https://web.archive.org/web/20120521071601/http://www.ll.mit.edu/publications/journal/pdf/vol01_no2/1.2.3.speechprocessing.pdf
+ |archive-date = 2012-05-21
+ |url-status     = dead
+}}&lt;/ref&gt;]]
+
+=== Sinusoidal spectral modeling ===
+{{See also|Spectral modeling synthesis}}
+
+Another method for time stretching relies on a [[Spectral modelling synthesis|spectral model]] of the signal.  In this method, peaks are identified in frames using the [[Short-time Fourier transform|STFT]] of the signal, and sinusoidal &quot;tracks&quot; are created by connecting peaks in adjacent frames.  The tracks are then re-synthesized at a new time scale.  This method can yield good results on both polyphonic and percussive material, especially when the signal is separated into sub-bands.  However, this method is more computationally demanding than other methods.{{citation needed|date=December 2012}}
+
+[[File:MonophonicSoundCylinderModel.svg|thumb|200px|right|Modelling a monophonic sound as observation along a helix of a function with a cylinder domain]]
+
+== Time domain ==
+
+=== SOLA ===
+{{See also|PSOLA}}
+
+[[Rabiner]] and Schafer in 1978 put forth an alternate solution that works in the [[time domain]]: attempt to find the [[periodic signal|period]] (or equivalently the [[fundamental frequency]]) of a given section of the wave using some [[pitch detection algorithm]] (commonly the peak of the signal's [[autocorrelation]], or sometimes [[cepstrum|cepstral]] processing), and [[fade (audio engineering)|crossfade]] one period into another.
+
+This is called [[time-domain harmonic scaling]]&lt;ref&gt;{{cite journal
+ | author = David Malah
+ |date=April 1979
+ | title = Time-domain algorithms for harmonic bandwidth reduction and time scaling of speech signals
+ | journal = IEEE Transactions on Acoustics, Speech, and Signal Processing
+ | volume = ASSP-27
+ | issue = 2
+ | pages = 121–133
+}}&lt;/ref&gt; or the synchronized overlap-add method (SOLA) and performs somewhat faster than the phase vocoder on slower machines but fails when the autocorrelation mis-estimates the period of a signal with complicated harmonics (such as [[orchestra]]l pieces).
+
+[[Adobe Audition]] (formerly Cool Edit Pro) seems to solve this by looking for the period closest to a center period that the user specifies, which should be an integer multiple of the tempo, and between 30 [[hertz|Hz]] and the lowest bass frequency.
+
+This is much more limited in scope than the phase vocoder based processing, but can be made much less processor intensive, for real-time applications. It provides the most coherent results{{Citation needed|date=June 2017}} for single-pitched sounds like voice or musically monophonic instrument recordings.
+
+High-end commercial audio processing packages either combine the two techniques (for example by separating the signal into sinusoid and transient waveforms), or use other techniques based on the [[wavelet]] transform, or artificial neural network processing{{Citation needed|date=June 2016}}, producing the highest-quality time stretching.
+
+=== Frame-based approach ===
+[[File:GeneralizedPrinciple TSM.png|thumb|300x300px|Frame-based approach of many TSM procedures]]
+
+In order to preserve an audio signal's pitch when stretching or compressing its duration, many time-scale modification (TSM) procedures follow a frame-based approach.&lt;ref&gt;{{cite journal
+ | author = Jonathan Driedger and Meinard Müller
+ | title = A Review of Time-Scale Modification of Music Signals
+ | journal = Applied Sciences
+ | volume = 6
+ | issue = 2
+ | pages = 57
+ | year = 2016
+ | doi=10.3390/app6020057
+| doi-access = free
+ }}&lt;/ref&gt;
+Given an original discrete-time audio signal, this strategy's first step is to split the signal 
+into short ''analysis frames'' of fixed length.
+The analysis frames are spaced by a fixed number of samples, called the ''analysis hopsize'' &lt;math&gt;H_a\in\mathbb{N}&lt;/math&gt;.
+To achieve the actual time-scale modification, the analysis frames are then temporally relocated
+to have a ''synthesis hopsize'' &lt;math&gt;H_s\in\mathbb{N}&lt;/math&gt;.
+This frame relocation results in a modification of the signal's duration by a ''stretching factor'' of
+&lt;math&gt;\alpha=H_s/H_a&lt;/math&gt;.
+However, simply superimposing the unmodified analysis frames typically results in undesired artifacts
+such as phase discontinuities or amplitude fluctuations.
+To prevent these kinds of artifacts, the analysis frames are adapted to form ''synthesis frames'', prior to
+the reconstruction of the time-scale modified output signal.
+
+The strategy of how to derive the synthesis frames from the analysis frames is a key difference among
+different TSM procedures.
+
+== Speed hearing and speed talking==
+
+For the specific case of speech, time stretching can be performed using [[PSOLA]].
+
+While one might expect speeding up to reduce comprehension,
+Herb Friedman says that &quot;Experiments have shown that the brain works most efficiently if the information rate through the ears—via speech—is the 'average' reading rate, which is about 200–300 wpm (words per minute), yet the average rate of speech is in the neighborhood of 100–150 wpm.&quot;&lt;ref&gt;[http://www.atarimagazines.com/creative/v9n7/122_Variable_speech.php Variable Speech], Creative Computing Vol. 9, No. 7 / July 1983 / p. 122&lt;/ref&gt;
+
+Speeding up audio is seen as the equivalent of [[speed reading]].&lt;ref&gt;http://www.nevsblog.com/2006/06/23/listen-to-podcasts-in-half-the-time/&lt;/ref&gt;&lt;ref&gt;https://web.archive.org/web/20060902102443/http://cid.lib.byu.edu/?p=128&lt;/ref&gt;
+
+== Pitch scaling ==
+{{multiple image |align=right |direction=vertical |width=220
+ | image1   = H7600 Harmonizer Effects Processor by Eventide.tif
+ | caption1 = '''Pitch shifting''' ('''Frequency scaling''') is provided on [[Eventide, Inc|Eventide]] [[Harmonizer]]
+ | image2   = BodeFrequencyShifter.jpg
+ | caption2 = '''Frequency shifting''' provided by [[Harald Bode|Bode]] Frequency Shifter ''does not keep'' frequency ratio and harmony.
+}}
+
+These techniques can also be used to [[transposition (music)|transpose]] an audio sample while holding speed or duration constant.  This may be accomplished by time stretching and then resampling back to the original length.  Alternatively, the frequency of the sinusoids in a [[sinusoidal model]] may be altered directly, and the signal reconstructed at the appropriate time scale.
+
+Transposing can be called ''[[frequency]] scaling'' or ''[[pitch shift]]ing'', depending on perspective.
+
+For example, one could move the pitch of every note up by a perfect fifth, keeping the tempo the same.
+One can view this transposition as &quot;pitch shifting&quot;, &quot;shifting&quot; each note up 7 keys on a piano keyboard, or adding a fixed amount on the [[Mel scale]], or adding a fixed amount in linear [[pitch space]].
+One can view the same transposition as &quot;frequency scaling&quot;, &quot;scaling&quot; (multiplying) the frequency of every note by 3/2.
+
+Musical transposition preserves the ratios of the [[harmonic]] frequencies that determine the sound's [[timbre]], unlike the ''frequency shift'' performed by [[amplitude modulation]], which adds a fixed frequency offset to the frequency of every note. (In theory one could perform a literal ''pitch scaling'' in which the musical pitch space location is scaled [a higher note would be shifted at a greater interval in linear pitch space than a lower note], but that is highly unusual, and not musical.{{Citation needed|date=November 2012}})
+
+Time domain processing works much better here, as smearing is less noticeable, but scaling vocal samples distorts the [[formant]]s into a sort of [[Alvin and the Chipmunks]]-like effect, which may be desirable or undesirable.
+A process that preserves the formants and character of a voice involves analyzing the signal with a [[vocoder|channel vocoder]] or [[Linear predictive coding|LPC]] vocoder plus any of several [[pitch detection algorithm]]s and then resynthesizing it at a different fundamental frequency.
+
+A detailed description of older analog recording techniques for pitch shifting can be found within the [[Alvin and the Chipmunks]] entry.
+
+==See also==
+*[[Audio signal processing]]
+*[[Sound effect]]s
+*[[Time-compressed speech]]
+;others
+*[[Dynamic tonality]] — the real-time changes of [[Dynamic tuning|tuning]] and [[Dynamic timbres|timbre]] for new [[chord progression]]s, [[musical temperament]] modulations, etc.
+
+== References ==
+&lt;references /&gt;
+
+== External links ==
+*[http://blogs.zynaptiq.com/bernsee/time-pitch-overview/ Time Stretching and Pitch Shifting Overview] A comprehensive overview of current time and pitch modification techniques by Stephan Bernsee
+*[http://blogs.zynaptiq.com/bernsee/pitch-shifting-using-the-ft/ Stephan Bernsee's smbPitchShift C source code] C source code for doing frequency domain pitch manipulation
+*[https://github.com/janesconference/KievII/blob/master/dsp/pitchshift.js pitchshift.js from KievII] A Javascript pitchshifter based on smbPitchShift code, from the open source [https://github.com/janesconference/KievII KievII library]
+*[http://www.panix.com/~jens/pvoc-dolson.par The Phase Vocoder: A Tutorial] - A good description of the phase vocoder
+*[http://www.ee.columbia.edu/~dpwe/papers/LaroD99-pvoc.pdf New Phase-Vocoder Techniques for Pitch-Shifting, Harmonizing and Other Exotic Effects]
+*[https://web.archive.org/web/20040617224423/http://www.ircam.fr/equipes/analyse-synthese/roebel/paper/dafx2003.pdf A new Approach to Transient Processing in the Phase Vocoder]
+*[https://web.archive.org/web/20061223184759/http://keizai.yokkaichi-u.ac.jp/~ikeda/research/picola.html PICOLA and TDHS]
+*[http://www.guitarpitchshifter.com How to build a pitch shifter] Theory, equations, figures and performances of a real-time guitar pitch shifter running on a DSP chip
+*[http://www.zynaptiq.com/ztx/ ZTX Time Stretching Library] Free and commercial versions of a popular 3rd party time stretching library for iOS, Linux, Windows and Mac OS X
+*[http://www.zplane.de/index.php?page=description-elastique Elastique by zplane] commercial cross-platform library, mainly used by DJ and DAW manufacturers
+*[http://www.qneomusic.com Voice Synth] from Qneo - specialized synthesizer for creative voice sculpting
+*[https://www.audiolabs-erlangen.de/resources/MIR/TSMtoolbox/ TSM toolbox] Free MATLAB implementations of various Time-Scale Modification procedures
+*[https://vocalremover.org/pitch Pitch Shifter Audio Tool] Online pitch-shifting audio tool implemented by SoundTouch algorithm
+
+{{Music production}}
+
+{{DEFAULTSORT:Audio time-scale pitch modification}}
+[[Category:Audio engineering]]
+[[Category:Digital signal processing]]
+[[Category:Sound effects]]</text>
+      <sha1>lfv4e1l7ufsqst179i5c18nckcba3sq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Parallax scrolling</title>
+    <ns>0</ns>
+    <id>46944</id>
+    <revision>
+      <id>991133259</id>
+      <parentid>985242119</parentid>
+      <timestamp>2020-11-28T12:49:46Z</timestamp>
+      <contributor>
+        <username>Mortense</username>
+        <id>6596197</id>
+      </contributor>
+      <minor />
+      <comment>/* Parallax scrolling in Web design */ Copy edited (e.g. ref. &lt;https://en.wikipedia.org/wiki/JavaScript&gt; and &lt;https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_2&gt;). Expanded.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="15287" xml:space="preserve">{{refimprove|date=September 2007}}
+{{VG Graphics}}
+'''Parallax scrolling''' is a technique in [[computer graphics]] where background images move past the camera more slowly than foreground images, creating an illusion of depth in a [[2D computer graphics|2D]] scene of distance.&lt;ref&gt;{{cite news|title=Cap. O'Rourke to the rescue|url=https://news.google.com/newspapers?id=drgTAAAAIBAJ&amp;sjid=S5ADAAAAIBAJ&amp;pg=3478,303305&amp;dq=parallax+scrolling|date=1988-09-01|publisher=New Straits Times Malaysia |accessdate=2009-07-06}}&lt;/ref&gt; The technique grew out of the [[multiplane camera]] technique used in [[traditional animation]]&lt;ref name=art&gt;{{cite web|title=The Art of Parallax Scrolling|url=http://mos.futurenet.com/pdf/net/NET165_tut_flash.pdf|first=Wyatt|last=Paul|date=August 2007|accessdate=2009-07-06|url-status=dead|archiveurl=https://web.archive.org/web/20091007223458/http://mos.futurenet.com/pdf/net/NET165_tut_flash.pdf|archivedate=2009-10-07}}&lt;/ref&gt; since the 1930s. Parallax scrolling was popularized in [[2D computer graphics]] and [[video game]]s by the [[arcade games]] ''[[Moon Patrol]]''&lt;ref&gt;{{cite web|title=Chronology of the History of Video Games: Golden Age|url=https://www.thocp.net/software/games/golden_age.htm|first=Ted|last=Stahl|date=2006-07-26|accessdate=2009-07-06|archive-url=https://web.archive.org/web/20090716033610/http://www.thocp.net/software/games/golden_age.htm|archive-date=2009-07-16|url-status=live}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=https://www.gamesradar.com/f/gamings-most-important-evolutions/a-20101008102331322035/p-3|title=Gaming's Most Important Evolutions|page=3|publisher=[[GamesRadar]]|date=October 8, 2010|accessdate=2011-04-27}}&lt;/ref&gt; and ''[[Jungle Hunt]]'',&lt;ref&gt;{{cite web|title=Jungle Hunt Was a Terrible Waste of Quarters|url=http://retrovolve.com/jungle-hunt-was-a-terrible-waste-of-quarters/|access-date=2015-03-27|archive-url=https://web.archive.org/web/20150402132140/http://retrovolve.com/jungle-hunt-was-a-terrible-waste-of-quarters/|archive-date=2015-04-02|url-status=live}}&lt;/ref&gt; both released in 1982. Some parallax scrolling had earlier been used by the 1981 arcade game ''[[Jump Bug]]''.&lt;ref name=purcaru&gt;{{cite web|url=https://books.google.com/books?id=lB4PAwAAQBAJ&amp;pg=PA181|title=Games vs. Hardware. The History of PC video games: The 80's|first=Bogdan Ion|last=Purcaru|date=13 March 2014|publisher=Purcaru Ion Bogdan|via=Google Books}}&lt;/ref&gt;
+
+== Methods ==
+{{Original research|section|date=March 2015}}
+
+There are four main methods of [[parallax]] scrolling used in titles for [[arcade system board]], [[video game console]] and [[personal computer]] systems.{{citation needed|date=March 2015}}
+
+=== Layer method ===
+{{multiple image
+| align     = right
+| direction = vertical
+| header    = Demonstration of the layer method
+| width     = 500
+
+| image1    = The Whispered World parallax scrolling sample 1.jpg
+| alt1      = 
+| caption1  = A side view of the layers used for parallax scrolling in ''[[The Whispered World]]''
+
+| image2    = TWW parallax scrolling sample 2.jpg
+| alt2      = 
+| caption2  = The same image as above, viewed from the front
+}}
+
+Some display systems support multiple background layers that can be scrolled independently in horizontal and vertical directions and [[Compositing|composited]] on one another, simulating a [[multiplane camera]]. On such a display system, a game can produce parallax by simply changing each layer's position by a different amount in the same direction. Layers that move more quickly are perceived to be closer to the virtual camera. Layers can be placed in front of the ''playfield''—the layer containing the objects with which the player interacts—for various reasons such as to provide increased dimension, obscure some of the action of the game, or distract the player.
+
+=== Sprite method ===
+Programmers may also make pseudo-layers of [[sprite (computer graphics)|sprites]]—individually controllable moving objects drawn by hardware on top of or behind the layers—if they are available on the display system. For instance ''[[Star Force]]'', an overhead-view vertically scrolling shooter for [[Nintendo Entertainment System|NES]], used this for its starfield, and ''[[Final Fight (video game)|Final Fight]]'' for the Super NES used this technique for the layer immediately in front of the main playfield.
+
+The [[Amiga]] computer has sprites which can have any height and can be set horizontal with the copper co-processor, which makes them ideal for this purpose.
+
+[[Risky Woods]] on the [[Amiga]] uses sprites multiplexed with the copper to create an entire fullscreen parallax background layer&lt;ref&gt;{{cite web|url=http://www.codetapper.com/amiga/sprite-tricks/risky-woods/|title=Risky Woods|website=codetapper.com|access-date=2015-04-23|archive-url=https://web.archive.org/web/20150219002353/http://www.codetapper.com/amiga/sprite-tricks/risky-woods/|archive-date=2015-02-19|url-status=live}}&lt;/ref&gt; as an alternative to the system's dual playfield mode.
+
+=== Repeating pattern/animation method ===
+Scrolling displays built up of individual tiles can be made to 'float' over a repeating background layer by animating the individual tiles' bitmaps in order to portray the parallax effect. [[Color cycling]] can be used to animate tiles quickly on the whole screen. This software effect gives the illusion of another (hardware) layer. Many games used this technique for a scrolling star-field, but sometimes a more intricate or multi-directional effect is achieved, such as in the game ''Parallax'' by [[Sensible Software]].
+
+=== Raster method ===
+In [[raster graphics]], the lines of pixels in an image are typically composited and refreshed in top-to-bottom order with a slight delay (called the [[horizontal blanking interval]]) between drawing one line and drawing the next line.
+Games designed for older graphical chipsets—such as those of the [[History of video game consoles (third generation)|third]] and [[History of video game consoles (fourth generation)|fourth]] generations of video game consoles, those of dedicated [[Handheld TV game|TV game]]s, or those of similar handheld systems—take advantage of the raster characteristics to create the illusion of more layers.
+
+Some display systems have only one layer. These include most of the classic 8-bit systems (such as the [[Commodore 64]], [[Nintendo Entertainment System]], [[Master System|Sega Master System]], [[TurboGrafx-16|PC Engine/TurboGrafx-16]] and original [[Game Boy]]). The more sophisticated games on such systems generally divide the layer into horizontal strips, each with a different position and rate of scrolling. Typically, strips higher on the screen will represent things farther away from the virtual camera or one strip will be held stationary to display status information. The program will then wait for horizontal blank and change the layer's scroll position just before the display system begins to draw each scanline. This is called a &quot;[[raster scan|raster effect]]&quot; and is also useful for changing the system [[Palette (computing)|palette]] to provide a gradient background.
+
+Some platforms (such as the Commodore 64, [[Amiga]], Sega Master System,&lt;ref&gt;{{Cite web |url=https://www.smspower.org/uploads/Development/richard.txt |title=Archived copy |access-date=2018-09-04 |archive-url=https://web.archive.org/web/20171109095042/http://www.smspower.org/uploads/Development/richard.txt |archive-date=2017-11-09 |url-status=live }}&lt;/ref&gt; PC Engine/TurboGrafx-16,&lt;ref&gt;{{cite web |url=http://cgfm2.emuviews.com/txt/pcetech.txt |title=Archived copy |accessdate=2014-03-18 |url-status=dead |archiveurl=https://web.archive.org/web/20140318183739/http://cgfm2.emuviews.com/txt/pcetech.txt |archivedate=2014-03-18 }}&lt;/ref&gt; [[Mega Drive|Sega Mega Drive/Genesis]], [[Super Nintendo Entertainment System|Super NES]], [[Game Boy]], [[Game Boy Advance]] and [[Nintendo DS]]) provide a [[horizontal blank interrupt]] for automatically setting the registers independently of the rest of the program. Others, such as the NES, require the use of cycle-timed code, which is specially written to take exactly as long to execute as the video chip takes to draw one scanline, or [[Interrupt request|timers]] [[Memory management controller|inside game cartridges]] that generate [[Raster interrupt|interrupts]] after a given number of scanlines have been drawn. Many NES games use this technique to draw their status bars, and ''[[Teenage Mutant Ninja Turtles (arcade game)#Ports|Teenage Mutant Ninja Turtles II: The Arcade Game]]'' and ''[[Vice: Project Doom]]'' for NES use it to scroll background layers at different rates.
+
+More advanced raster techniques can produce interesting effects. A system can achieve a very effective depth of field if layers with rasters are combined; ''[[Sonic the Hedgehog (1991 video game)|Sonic the Hedgehog]]'', ''[[Sonic the Hedgehog 2 (16-bit)|Sonic The Hedgehog 2]]'', ''[[ActRaiser]]'', ''[[Lionheart (video game)|Lionheart]]'' and ''[[Street Fighter II]]'' used this effect well. If each scanline has its own layer, the ''[[Pole Position (video game)|Pole Position]]'' effect is produced, which creates a pseudo-3D road (or a pseudo-3D ball court as in ''[[NBA Jam (1993 video game)|NBA Jam]]'') on a 2D system.
+
+If the display system supports rotation and scaling in addition to scrolling—an effect popularly known as [[Mode 7]]—changing the rotation and scaling factors can draw a projection of a plane (as in ''[[F-Zero (video game)|F-Zero]]'' and ''[[Super Mario Kart]]'') or can warp the playfield to create an extra challenge factor.
+
+Another advanced technique is row/column scrolling, where rows/columns of [[Tile engine|tiles]] on a screen can be scrolled individually.&lt;ref&gt;{{cite web|url=https://web.archive.org/web/20140102211938/http://mamedev.org/devwiki/index.php?title=Using_MAME%27s_tilemap_system|title=Using MAME's tilemap system - DevWiki|author=|date=2 January 2014|website=archive.org}}&lt;/ref&gt; This technique is implemented in the [[Graphics processing unit|graphics chips]] of various [[List of Sega arcade system boards|Sega arcade system boards]] since the [[Sega Space Harrier]] and [[Sega System 16|System 16]],&lt;ref&gt;{{cite web |url=http://cgfm2.emuviews.com/txt/s16tech.txt |title=Archived copy |accessdate=2016-08-08 |url-status=dead |archiveurl=https://web.archive.org/web/20160304034742/http://cgfm2.emuviews.com/txt/s16tech.txt |archivedate=2016-03-04 }}&lt;/ref&gt; the Sega Mega Drive/Genesis console,&lt;ref&gt;{{cite web|url=http://www.gamepilgrimage.com/content/sega-genesis-vs-super-nintendo|title=Sega Genesis vs Super Nintendo|date=2009-08-11|website=gamepilgrimage.com|access-date=2014-09-26|archive-url=https://web.archive.org/web/20150924020645/http://www.gamepilgrimage.com/content/sega-genesis-vs-super-nintendo|archive-date=2015-09-24|url-status=live}}&lt;/ref&gt; and the [[CP System|Capcom CP System]],&lt;ref&gt;{{cite web|url=https://github.com/mamedev/mame/tree/master/src/mame/video/cps1.c|archive-url=https://hookagency.com/new-forgotten-world-clone-cp-system-code/|archive-date=25 May 2015|first=Paul|last=Leaman|title=New Forgotten World Clone – CP System Code}}&lt;/ref&gt; [[Irem M-92]]&lt;ref&gt;{{cite web|url=http://www.system16.com/hardware.php?id=747|title=System 16 - Irem M92 Hardware (Irem)|website=www.system16.com|access-date=2014-09-26|archive-url=https://web.archive.org/web/20141224152637/http://www.system16.com/hardware.php?id=747|archive-date=2014-12-24|url-status=live}}&lt;/ref&gt; and [[Taito F3 System]]&lt;ref&gt;{{cite web|url=http://www.system16.com/hardware.php?id=665|title=System 16 - Taito F3 System Hardware (Taito)|website=www.system16.com|access-date=2014-09-26|archive-url=https://web.archive.org/web/20140421134650/http://www.system16.com/hardware.php?id=665|archive-date=2014-04-21|url-status=live}}&lt;/ref&gt; [[arcade game]] boards.
+
+== Example ==
+In the following animation, three layers are moving leftward at different speeds. Their speeds decrease from front to back and correspond to increases in relative distance from the viewer. The ground layer is moving 8 times as fast as the vegetation layer. The vegetation layer is moving two times as fast as the cloud layer.

@@ -1,0 +1,250 @@
+=== Subjective speckles ===
+[[Image:Laser speckle.jpg|thumb|right|252x252px|Laser speckle on a digital camera image from a green laser pointer. This is a subjective speckle pattern. (Note that the color differences in the image are introduced by limitations of the camera system.)]]When a rough surface which is illuminated by a coherent light (e.g. a laser beam) is imaged, a speckle pattern is observed in the image plane; this is called a &quot;subjective speckle pattern&quot; – see image above. It is called &quot;subjective&quot; because the detailed structure of the speckle pattern depends on the viewing system parameters; for instance, if the size of the lens aperture changes, the size of the speckles change.  If the position of the imaging system is altered, the pattern will gradually change and will eventually be unrelated to the original speckle pattern.
+
+This can be explained as follows. Each point in the image can be considered to be illuminated by a finite area in the object.{{clarify |reason=This makes little sense. There are uncountably many points, forming a continuum. They can't each correspond to a positive area. Perhaps a picture would help? |date=October 2016}} The size of this area is determined by the diffraction-limited resolution of the lens which is given by the [[Airy disk]] whose diameter is 2.4λu/D, where λ is the wavelength of the light, ''u'' is the distance between the object and the lens, and ''D'' is the diameter of the lens aperture. (This is a simplified model of diffraction-limited imaging.)
+
+The light at neighboring points in the image has been scattered from areas which have many points in common and the intensity of two such points will not differ much.  However, two points in the image which are illuminated by areas in the object which are separated by the diameter of the Airy disk, have light intensities which are unrelated. This corresponds to a distance in the image of 2.4λv/D where ''v'' is the distance between the lens and the image. Thus, the &quot;size&quot; of the speckles in the image is of this order.
+
+The change in speckle size with lens aperture can be observed by looking at a laser spot on a wall directly, and then through a very small hole.  The speckles will be seen to increase significantly in size. Also, the speckle pattern itself will change when moving the position of the eye while keeping the laser pointer steady. A further proof that the speckle pattern is formed only in the image plane (in the specific case the eye's [[retina]]) is that the speckles will stay visible if the eye's focus is shifted away from the wall (this is different for an objective speckle pattern, where the speckle visibility is lost under defocussing).
+
+===Objective speckles===
+
+[[Image:Objective speckle.jpg|thumb|right|250px|A photograph of an objective speckle pattern. This is the light field formed when a laser beam was scattered from a plastic surface onto a wall.]] When laser light which has been scattered off a rough surface falls on another surface, it forms an &quot;objective speckle pattern&quot;. If a photographic plate or another 2-D optical sensor is located within the scattered light field without a lens, a speckle pattern is obtained whose characteristics depend on the geometry of the system and the wavelength of the laser. The speckle pattern in the figure was obtained by pointing a laser beam at the surface of a mobile phone so that the scattered light fell onto an adjacent wall. A photograph was then taken of the speckle pattern formed on the wall. Strictly speaking, this also has a second subjective speckle pattern but its dimensions are much smaller than the objective pattern so it is not seen in the image.
+ 
+The light at a given point in the speckle pattern is made up of contributions from the whole of the scattering surface.  The relative phases of these scattered waves vary across the scattering surface, so that the resulting phase on each point of the second surface varies randomly. The pattern is the same regardless of how it is imaged, just as if it were a painted pattern.
+
+The &quot;size&quot; of the speckles is a function of the wavelength of the light, the size of the laser beam which illuminates the first surface, and the distance between this surface and the surface where the speckle pattern is formed. This is the case because when the angle of scattering changes such that the relative path difference between light scattered from the centre of the illuminated area compared with light scattered from the edge of the illuminated changes by λ, the intensity becomes uncorrelated.  Dainty&lt;ref name = &quot;Dainty&quot;/&gt; derives an expression for the mean speckle size as λz/L where ''L'' is the width of the illuminated area and ''z'' is the distance between the object and the location of the speckle pattern.
+
+====Near-field speckles====
+
+Objective speckles are usually obtained in the far field (also called Fraunhofer region, that is the zone where [[Fraunhofer diffraction]] happens). This means that they are generated &quot;far&quot; from the object that emits or scatters light. Speckles can be observed also close to the scattering object, in the near field (also called Fresnel region, that is, the region where [[Fresnel diffraction]] happens). This kind of speckles are called '''near-field speckles'''. See [[near and far field]] for a more rigorous definition of &quot;near&quot; and &quot;far&quot;.
+
+The statistical properties of a far-field speckle pattern (i.e., the speckle form and dimension) depend on the form and dimension of the region hit by laser light. By contrast, a very interesting feature of near field speckles is that their statistical properties are closely related to the form and structure of the scattering object: objects that scatter at high angles generate small near field speckles, and vice versa. Under [[Rayleigh–Gans]] condition, in particular, speckle dimension mirrors the average dimension of the scattering objects, while, in general, the statistical properties of near field speckles generated by a sample depend on the light scattering distribution.&lt;ref&gt;{{Cite journal | last1 = Giglio | first1 = M. | last2 = Carpineti | first2 = M. | last3 = Vailati | first3 = A. | doi = 10.1103/PhysRevLett.85.1416 | title = Space Intensity Correlations in the Near Field of the Scattered Light: A Direct Measurement of the Density Correlation Function g(r) | journal = Physical Review Letters | volume = 85 | issue = 7 | pages = 1416–1419 | year = 2000 | pmid =  10970518| pmc = |bibcode = 2000PhRvL..85.1416G | url = https://semanticscholar.org/paper/51c3431bdb52f5bd2048d23dba02946f45d47301 }}&lt;/ref&gt;&lt;ref&gt;{{Cite journal | last1 = Giglio | first1 = M. | last2 = Carpineti | first2 = M. | last3 = Vailati | first3 = A. | last4 = Brogioli | first4 = D. | title = Near-Field Intensity Correlations of Scattered Light | doi = 10.1364/AO.40.004036 | journal = Applied Optics | volume = 40 | issue = 24 | pages = 4036–40 | year = 2001 | pmid =  18360438| pmc = |bibcode = 2001ApOpt..40.4036G }}&lt;/ref&gt;
+
+Actually, the condition under which the near field speckles appear has been described as more strict than the usual Fresnel condition.&lt;ref&gt;{{Cite journal | last1 = Cerbino | first1 = R. | doi = 10.1103/PhysRevA.75.053815 | title = Correlations of light in the deep Fresnel region: An extended Van Cittert and Zernike theorem | journal = Physical Review A | volume = 75 | issue = 5 | pages = 053815 | year = 2007 | pmid =  | pmc = |bibcode = 2007PhRvA..75e3815C | url = http://doc.rero.ch/record/8497/files/cerbino_cld.pdf }}&lt;/ref&gt;
+
+===Optical vortices in speckle patterns===
+
+Speckle interference pattern may be decomposed in the sum of plane waves. There exist a set of points where amplitude of electromagnetic field is exactly zero. These points had been recognized as '' dislocations of wave trains ''.&lt;ref name=&quot;Berry1974&quot;&gt;{{cite journal|doi=10.1098/rspa.1974.0012|title=Dislocations in Wave Trains|journal=Proceedings of the Royal Society A|volume=336|issue=1605|pages=165–190|year=1974|last1=Nye|first1=J. F.|last2=Berry|first2=M. V.|bibcode=1974RSPSA.336..165N}}&lt;/ref&gt;
+These phase dislocations of electromagnetic field are known as optical vortices.
+
+&lt;!-- Deleted image removed: [[Image:Vortex-antivortex pairs jpg.jpg|thumb|right|350px| Vortex pairs as phase singularities in speckle pattern.]] --&gt;
+There is a circular energy flow around each
+vortex core. Thus each vortex in the speckle pattern carries optical angular momentum. The angular momentum density is given by:&lt;ref name=&quot;OAM PC mirror&quot;&gt;[[Nonlinear optics#Angular and linear momenta in Optical Phase Conjugation|Optical Angular Momentum]]&lt;/ref&gt;
+
+: &lt;math&gt;\begin{align}
+  \vec \mathbf{L} \left(\vec \mathbf{r}, t\right) &amp;= \vec \mathbf{r} \times \vec  \mathbf{S} \left(\vec \mathbf{r}, t\right) \\
+  \vec \mathbf{S} \left(\vec \mathbf{r}, t\right) &amp;= \epsilon_0 c^2 \vec  \mathbf{E} \left(\vec \mathbf{r}, t\right) \times \vec  \mathbf{B} \left(\vec \mathbf{r}, t\right).
+\end{align}&lt;/math&gt;
+
+Typically vortices appear in speckle pattern in pairs. These vortex - antivortex pairs are placed randomly in space. One may show that electromagnetic angular momentum of each vortex pair is  close to zero.&lt;ref name=&quot;Okulov2008J&quot;&gt;{{cite journal|doi=10.1134/S0021364008200046|title=Optical and sound helical structures in a Mandelstam-Brillouin mirror|journal=JETP Letters|volume=88|issue=8|pages=487–491|year=2008|last1=Okulov|first1=A. Yu.|bibcode=2008JETPL..88..487O}}&lt;/ref&gt; In phase conjugating mirrors based on stimulated Brillouin scattering optical vortices excite acoustical vortices.&lt;ref name=&quot;Okulov2008&quot;&gt;{{cite journal|doi=10.1088/0953-4075/41/10/101001|title=Angular momentum of photons and phase conjugation|journal=Journal of Physics B|volume=41|issue=10|pages=101001|year=2008|last1=Okulov|first1=A Yu|arxiv=0801.2675|bibcode=2008JPhB...41j1001O}}&lt;/ref&gt;
+
+&lt;!-- Deleted image removed: [[Image:Speckle vortex pairs Ropes jpg.jpg|thumb|right|350px|Optical vortex-antivortex pairs form rope structures having similar geometry to magnetic ropes in plasmas&lt;ref name=&quot;Magnetic Ropes&quot;&gt;[[Birkeland current|Magnetic rope current]]&lt;/ref&gt;]] --&gt;
+Apart from formal decomposition in Fourier series the speckle pattern may be composed for plane waves emitted by tilted regions of the phase plate. This approach significantly simplifies numerical modelling. 3D numerical emulation demonstrates the intertwining of vortices which leads to formation of ''ropes'' in optical speckle.&lt;ref name=&quot;Okulov2009_PR&quot;&gt;{{cite journal|doi=10.1103/PhysRevA.80.013837|title=Twisted speckle entities inside wave-front reversal mirrors|journal=Physical Review A|volume=80|issue=1|pages=013837|year=2009|last1=Okulov|first1=A. Yu|bibcode=2009PhRvA..80a3837O|arxiv=0903.0057}}&lt;/ref&gt;
+
+==Applications==
+
+When lasers were first invented, the speckle effect was considered to be a severe drawback in using lasers to illuminate objects, particularly in [[Holography|holographic]] imaging because of the grainy image produced. It was later realized that speckle patterns could carry information about the object's surface deformations, and this effect is exploited in [[holographic interferometry]] and [[electronic speckle pattern interferometry]]. The speckle effect is also used in [[speckle imaging]] and in [[eye testing using speckle]].
+
+Speckle is the chief limitation of coherent [[lidar]] and coherent imaging in [[optical heterodyne detection]].
+
+In the case of near field speckles, the statistical properties depend on the light scattering
+distribution of a given sample. This allows the use of near field speckle analysis to detect the scattering distribution; this is the so-called [[near-field scattering]] technique.&lt;ref&gt;{{cite journal | last1 = Brogioli | first1 = D. | last2 = Vailati | first2 = A. | last3 = Giglio | first3 = M. | year = 2002 | title = Heterodyne near-field scattering | url = | journal = Applied Physics Letters| volume = 81 | issue = 22| pages = 4109–11 | doi=10.1063/1.1524702| arxiv = physics/0305102 | bibcode = 2002ApPhL..81.4109B }}&lt;/ref&gt;
+
+When the speckle pattern changes in time, due to changes in the illuminated surface, the phenomenon is known as [[dynamic speckle]], and it can be used to measure activity, by means of, for example, an optical flow sensor (optical computer mouse). In biological materials, the phenomenon is known as biospeckle.
+
+In a static environment, changes in speckle can also be used as a sensitive probe of the light source. This can be used in a wavemeter configuration, with a resolution around 1 [[attometre]]&lt;ref&gt;{{Cite journal|last=Bruce|first=Graham D.|last2=O’Donnell|first2=Laura|last3=Chen|first3=Mingzhou|last4=Dholakia|first4=Kishan|date=2019-03-15|title=Overcoming the speckle correlation limit to achieve a fiber wavemeter with attometer resolution|journal=Optics Letters|volume=44|issue=6|pages=1367|doi=10.1364/OL.44.001367|issn=0146-9592|arxiv=1909.00666}}&lt;/ref&gt;, (equivalent to 1 part in 10&lt;sup&gt;12&lt;/sup&gt; of the wavelength, equivalent to measuring the length of a [[Football field (area)|football field]] at the resolution of a single [[atom]]&lt;ref&gt;{{Cite web|last=Tudhope|first=Christine|date=7 March 2019 |url=https://phys.org/news/2019-03-revolutionise-fiber-optic.html|title=New research could revolutionise fiber-optic communications|website=Phys.org|access-date=2019-03-08}}&lt;/ref&gt;) and can also stabilise the wavelength of lasers&lt;ref&gt;{{Cite journal|last=Metzger|first=Nikolaus Klaus|last2=Spesyvtsev|first2=Roman|last3=Bruce|first3=Graham D.|last4=Miller|first4=Bill|last5=Maker|first5=Gareth T.|last6=Malcolm|first6=Graeme|last7=Mazilu|first7=Michael|last8=Dholakia|first8=Kishan|date=2017-06-05|title=Harnessing speckle for a sub-femtometre resolved broadband wavemeter and laser stabilization|journal=Nature Communications|language=en|volume=8|pages=15610|doi=10.1038/ncomms15610|pmid=28580938|pmc=5465361|arxiv=1706.02378|bibcode=2017NatCo...815610M}}&lt;/ref&gt; or measure polarization&lt;ref&gt;{{Cite journal|last=Facchin|first=Morgan|last2=Bruce|first2=Graham D.|last3=Dholakia|first3=Kishan|last4=Dholakia|first4=Kishan|last5=Dholakia|first5=Kishan|date=2020-05-15|title=Speckle-based determination of the polarisation state of single and multiple laser beams|url=https://www.osapublishing.org/osac/abstract.cfm?uri=osac-3-5-1302|journal=OSA Continuum|language=EN|volume=3|issue=5|pages=1302–1313|doi=10.1364/OSAC.394117|issn=2578-7519|doi-access=free}}&lt;/ref&gt;.
+
+The disordered pattern produced by speckle has been used in [[Quantum simulator|quantum simulations]] with [[Ultracold atom|cold atoms]].  The randomly-distributed regions of bright and dark light act as an analog of disorder in [[Solid-state physics|solid-state]] systems, and are used to investigate [[Anderson localization|localization]] phenomena.&lt;ref&gt;{{Cite journal|last=Billy|first=Juliette|last2=Josse|first2=Vincent|last3=Zuo|first3=Zhanchun|last4=Bernard|first4=Alain|last5=Hambrecht|first5=Ben|last6=Lugan|first6=Pierre|last7=Clément|first7=David|last8=Sanchez-Palencia|first8=Laurent|last9=Bouyer|first9=Philippe|date=2008-06-12|title=Direct observation of Anderson localization of matter waves in a controlled disorder|journal=Nature|language=en|volume=453|issue=7197|pages=891–894|doi=10.1038/nature07000|pmid=18548065|issn=0028-0836|arxiv=0804.1621|bibcode=2008Natur.453..891B}}&lt;/ref&gt;
+
+==Reduction==
+[[File:Green laser pointer TEM00 profile.JPG|thumb|A green laser pointer. Reduction of the speckle was necessary to photograph the laser's [[Gaussian profile]], accomplished by removing all lenses and projecting it onto an opaque liquid (milk) being the only surface flat and smooth enough.]]
+Speckle is considered to be a problem in laser based display systems like the [[Laser TV]]. Speckle is usually quantified by the speckle contrast. Speckle contrast reduction is essentially the creation of many independent speckle patterns, so that they average out on the retina/detector. This can be achieved by,&lt;ref&gt;{{cite book|doi=10.1117/12.463781|chapter=Speckle contrast reduction in laser projection displays|title=Projection Displays VIII|volume=4657|pages=131–137|year=2002|last1=Trisnadi|first1=Jahja I.}}&lt;/ref&gt;
+
+* Angle diversity: illumination from different angles
+* Polarization diversity: use of different polarization states
+* Wavelength diversity: use of laser sources which differ in wavelength by a small amount
+
+Rotating diffusers—which destroys the spatial coherence of the laser light—can also be used to reduce the speckle. Moving/vibrating screens or fibers may also be solutions&lt;ref&gt;{{cite web |title=Despeckler |url=https://www.fiberguide.com/product/despeckler/ |website=Fiberguide |accessdate=24 May 2019}}&lt;/ref&gt;. The Mitsubishi Laser TV appears to use such a screen which requires special care according to their product manual. A more detailed discussion on laser speckle reduction can be found here.&lt;ref&gt;{{cite journal|doi=10.1364/ao.49.000f79|pmid=20820205|title=Laser-based displays: A review|journal=Applied Optics|volume=49|issue=25|pages=F79–98|year=2010|last1=Chellappan|first1=Kishore V.|last2=Erden|first2=Erdem|last3=Urey|first3=Hakan|bibcode=2010ApOpt..49F..79C}}&lt;/ref&gt;
+
+[[Synthetic array heterodyne detection]] was developed to reduce [[speckle noise]] in coherent optical imaging and coherent [[differential absorption LIDAR]].
+
+In scientific applications, a [[spatial filter]] can be used to reduce speckle.
+
+==Analogies==
+Speckle-like patterns can also be observed in other systems where random interference occurs, including situations where, for example, the phenomenon is not observed over space but in time. This is the case of phase sensitive [[Optical time-domain reflectometer|optical time-domain reflectometry]], where multiple reflections of a coherent pulse generated at different instants interfere to produce a random time-domain signal.&lt;ref&gt;{{cite journal|last1=Garcia-Ruiz|first1=Andres|title=Speckle Analysis Method for Distributed Detection of Temperature Gradients With Φ OTDR|journal=IEEE Photonics Technology Letters|date=2016|volume=28|issue=18|page=2000|doi=10.1109/LPT.2016.2578043|ref=fiberOptics|bibcode=2016IPTL...28.2000G|url=https://zenodo.org/record/894688}}&lt;/ref&gt;
+
+==See also==
+* [[Diffusing-wave spectroscopy]]
+
+==References==
+&lt;references/&gt;
+
+==External links==
+* [https://web.archive.org/web/20090612070019/http://www.sciencenewsforkids.org/pages/puzzlezone/muse/muse0705.asp/ Seeing speckle in your fingernail]
+* [http://luxrerum.icmm.csic.es/?q=node/research/interference/ Research group on light scattering and photonic materials]
+* {{cite arxiv|eprint=0907.3376|last1=Brogioli|first1=Doriano|title=Near Field Speckles|last2=Vailati|first2=Alberto|last3=Giglio|first3=Marzio|class=physics.optics|year=2009}}
+
+{{DEFAULTSORT:Speckle Pattern}}
+[[Category:Interference]]
+[[Category:Patterns]]</text>
+      <sha1>8o7scd66ajr002fiv6mlsiubas7bbh8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Spectral width</title>
+    <ns>0</ns>
+    <id>41729</id>
+    <revision>
+      <id>626046603</id>
+      <parentid>582595298</parentid>
+      <timestamp>2014-09-18T06:11:17Z</timestamp>
+      <contributor>
+        <username>Gryllida</username>
+        <id>10244509</id>
+      </contributor>
+      <comment>added category [[Category:Optics|Optics]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1245" xml:space="preserve">In [[telecommunication]]s, '''spectral width''' is the [[wavelength]] interval over which the magnitude of all [[spectral component]]s is equal to or greater than a specified fraction of the magnitude of the component having the maximum value.
+
+In optical [[Telecommunication|communications]] applications, the usual method of specifying spectral width is the [[full width at half maximum]]. This is the same convention used in [[Bandwidth (signal processing)|bandwidth]], defined as the frequency range where power drops by less than half (at most &amp;minus;3 dB).
+
+The FWHM method may be difficult to apply when the spectrum has a complex shape. Another method of specifying spectral width is a special case of [[Root mean square|root-mean-square deviation]] where the independent variable is wavelength, λ, and ''f'' (λ) is a suitable radiometric quantity.
+
+The ''relative spectral width'', Δλ/λ, is frequently used where Δλ is obtained according to note 1, and λ is the center wavelength.
+
+==See also==
+*[[Spectral linewidth]] in [[optics]]
+
+==References==
+{{Refimprove|date=January 2009}}
+&lt;references/&gt;
+*{{FS1037C MS188}}
+
+[[Category:Telecommunication theory]]
+[[Category:Optical communications]]
+[[Category:Optics]]
+
+{{telecomm-stub}}</text>
+      <sha1>f1fwx0d6b5osogc9en9m3h1cldnu60q</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Speed of service</title>
+    <ns>0</ns>
+    <id>41730</id>
+    <revision>
+      <id>966231191</id>
+      <parentid>529557303</parentid>
+      <timestamp>2020-07-05T21:32:38Z</timestamp>
+      <contributor>
+        <username>Eagleash</username>
+        <id>17699731</id>
+      </contributor>
+      <minor />
+      <comment>stub cat pos per [[:WP:WSS#General rules]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="658" xml:space="preserve">In [[telecommunication]], '''speed of service''' is the [[time]] for a [[message]] to be received, for example:
+#The time between release of a message by the originator to receipt of the message by the addressee, as perceived by the [[end user]].  (''originator-to-recipient speed of service'')
+#The time between entry of a message into a [[communications system]] and receipt of the message at the terminating communications [[Facility (telecommunications)|facility]], ''i.e.,'' the communications facility serving the addressee, as measured by the system. 
+
+==References==
+*{{FS1037C MS188}}
+
+[[Category:Telecommunications engineering]]
+
+
+{{telecomm-stub}}</text>
+      <sha1>gw5g3z6eiev2jvdg3gjo3yeb2plmb6c</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Spill-forward feature</title>
+    <ns>0</ns>
+    <id>41732</id>
+    <revision>
+      <id>949098203</id>
+      <parentid>849657284</parentid>
+      <timestamp>2020-04-04T17:58:51Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: page. Formatted [[WP:ENDASH|dashes]]. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Activated by Zppix | [[Category:Telecommunications stubs‎]] | via #UCB_Category</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1039" xml:space="preserve">{{Use dmy dates|date=July 2018}}
+In [[telecommunication]], a '''spill-forward feature''' is a [[service feature]], in the operation of an intermediate office, that, acting on incoming [[trunking|trunk]] service treatment indications, assumes [[routing]] control of the [[telephone call|call]] from the originating office. This increases the chances of completion by offering the call to more trunk groups than are available in the originating office.{{r|&quot;Administration 1997 p. 19-PA24&quot;}}
+
+== References ==
+{{reflist|refs=
+&lt;ref name=&quot;Administration 1997 p. 19-PA24&quot;&gt;{{cite book
+| last        = Administration
+| first       = N.T.I.
+| title       = Telecommunications: Glossary of Telecommunications Terms
+| publisher   = Government Institutes
+| series      = Federal Standard
+| year        = 1997
+| isbn        = 978-1-4617-3232-7
+| url         = https://books.google.com/books?id=xSa_AAAAQBAJ&amp;pg=SL19-PA24
+| access-date = 10 July 2018
+| page        = 19–PA24
+}}&lt;/ref&gt;
+}}
+* {{FS1037C MS188}}
+
+[[Category:Teletraffic]]
+
+
+{{telecomm-stub}}</text>
+      <sha1>qbwjnzcjyq63hkli447amx32r7ztttx</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Sporadic E</title>
+    <ns>0</ns>
+    <id>41733</id>
+    <redirect title="Sporadic E propagation" />
+    <revision>
+      <id>15937218</id>
+      <parentid>10647272</parentid>
+      <timestamp>2005-02-28T16:33:56Z</timestamp>
+      <contributor>
+        <username>Bhamer</username>
+        <id>173504</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="36" xml:space="preserve">#REDIRECT [[Sporadic E propagation]]</text>
+      <sha1>ibi2b3i7ugtb2df7vj6ejgw9w6m52h6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Spread spectrum</title>
+    <ns>0</ns>
+    <id>41734</id>
+    <revision>
+      <id>991361538</id>
+      <parentid>968689456</parentid>
+      <timestamp>2020-11-29T17:33:38Z</timestamp>
+      <contributor>
+        <username>Edcolins</username>
+        <id>51336</id>
+      </contributor>
+      <comment>&quot;merging&quot; reference</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="13955" xml:space="preserve">{{Use American English|date = December 2019}}
+{{Short description|Spreading the frequency domain of a signal}}
+{{Modulation techniques}}
+{{Multiplex techniques}}
+{{Antennas|techniques}}
+
+In [[telecommunication]] and [[radio communication]], '''spread-spectrum''' techniques are methods by which a [[signal (electrical engineering)|signal]]  (e.g., an electrical, electromagnetic, or acoustic signal) generated with a particular [[Bandwidth (signal processing)|bandwidth]] is deliberately spread in the [[frequency domain]], resulting in a signal with a wider [[Bandwidth (signal processing)|bandwidth]]. These techniques are used for a variety of reasons, including the establishment of secure communications, increasing resistance to natural [[Interference (communication)|interference]], [[Noise (electronics)|noise]], and [[radio jamming|jamming]], to prevent detection, to limit [[Spectral flux density|power flux density]] (e.g., in [[satellite]] [[down link]]s), and to enable multiple-access communications.
+
+==Telecommunications==
+Spread spectrum generally makes use of a sequential [[noise]]-like signal structure to spread the normally [[narrowband]] information signal over a relatively [[wideband]] (radio) band of frequencies. The receiver correlates the received signals to retrieve the original information signal. Originally there were two motivations: either to resist enemy efforts to jam the communications (anti-jam, or AJ), or to hide the fact that communication was even taking place, sometimes called [[low probability of intercept]] (LPI).&lt;ref name=&quot;ref 1&quot;&gt;{{cite book| title=Principles of Spread-Spectrum Communication Systems, 4th ed.| year=2018|last1=Torrieri|first1=Don}}&lt;/ref&gt;
+
+[[Frequency-hopping spread spectrum]] (FHSS), [[direct-sequence spread spectrum]] (DSSS), [[time-hopping spread spectrum]] (THSS), [[chirp spread spectrum]] (CSS), and combinations of these techniques are forms of spread spectrum. The first two of these techniques employ pseudorandom number sequences&amp;mdash;created using [[pseudorandom number generator]]s&amp;mdash;to determine and control the spreading pattern of the signal across the allocated bandwidth. Wireless standard [[IEEE 802.11]] uses either FHSS or DSSS in its radio interface. 

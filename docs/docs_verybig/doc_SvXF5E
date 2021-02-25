@@ -1,0 +1,416 @@
+There has been research into [[executable compression]] as a mechanism for improving code density. The mathematics of [[Kolmogorov complexity]] describes the challenges and limits of this.
+
+===Representation===
+The instructions constituting a program are rarely specified using their internal, numeric form ([[machine code]]); they may be specified by programmers using an [[assembly language]] or, more commonly, may be generated from [[programming language]]s by [[compiler]]s.
+
+==Design==
+The design of instruction sets is a complex issue. There were two stages in history for the microprocessor. The first was the CISC (Complex Instruction Set Computer), which had many different instructions. In the 1970s, however, places like IBM did research and found that many instructions in the set could be eliminated. The result was the RISC (Reduced Instruction Set Computer), an architecture that uses a smaller set of instructions. A simpler instruction set may offer the potential for higher speeds, reduced processor size, and reduced power consumption. However, a more complex set may optimize common operations, improve memory and [[CPU cache|cache]] efficiency, or simplify programming.
+
+Some instruction set designers reserve one or more opcodes for some kind of [[system call]] or [[software interrupt]]. For example, [[MOS Technology 6502]] uses 00&lt;sub&gt;H&lt;/sub&gt;, [[Zilog Z80]] uses the eight codes C7,CF,D7,DF,E7,EF,F7,FF&lt;sub&gt;H&lt;/sub&gt;&lt;ref&gt;{{cite web|last=Ganssle|first=Jack|url=https://www.embedded.com/electronics-blogs/break-points/4023293/Proactive-Debugging|title=Proactive Debugging|date=February 26, 2001|website=embedded.com}}&lt;/ref&gt; while [[Motorola 68000]] use codes in the range A000..AFFF&lt;sub&gt;H&lt;/sub&gt;. &lt;!-- Trivial parts catalog notes, while recondite terms like CISC and RISC are completely unsupported by any textbook. --&gt;
+
+Fast virtual machines are much easier to implement if an instruction set meets the [[Popek and Goldberg virtualization requirements]].{{Clarify|date=October 2012}}
+
+The [[NOP slide]] used in [[immunity-aware programming]] is much easier to implement if the &quot;unprogrammed&quot; state of the memory is interpreted as a [[NOP (code)|NOP]].{{dubious|date=October 2012}}
+
+On systems with multiple processors, [[non-blocking synchronization]] algorithms are much easier to implement{{Citation needed |reason=Opinion unsupported by a textbook |date=October 2012}} if the instruction set includes support for something such as &quot;[[fetch-and-add]]&quot;, &quot;[[load-link/store-conditional]]&quot; (LL/SC), or &quot;atomic [[compare-and-swap]]&quot;.
+
+==Instruction set implementation==
+Any given instruction set can be implemented in a variety of ways. All ways of implementing a particular instruction set provide the same [[programming model]], and all implementations of that instruction set are able to run the same executables. The various ways of implementing an instruction set give different tradeoffs between cost, performance, power consumption, size, etc.
+
+When designing the [[microarchitecture]] of a processor, engineers use blocks of &quot;hard-wired&quot; electronic circuitry (often designed separately) such as adders, multiplexers, counters, registers, ALUs, etc. Some kind of [[register transfer language]] is then often used to describe the decoding and sequencing of each instruction of an ISA using this physical microarchitecture.
+There are two basic ways to build a [[control unit]] to implement this description (although many designs use middle ways or compromises):
+
+# Some computer designs &quot;hardwire&quot; the complete instruction set decoding and sequencing (just like the rest of the microarchitecture).
+# Other designs employ [[microcode]] routines or tables (or both) to do this&amp;mdash;typically as on-chip [[read-only memory|ROMs]] or [[programmable logic array|PLAs]] or both (although separate RAMs and [[read-only memory#Historical examples|ROM]]s have been used historically). The [[Western Digital]] [[MCP-1600]] is an older example, using a dedicated, separate ROM for microcode.
+Some designs use a combination of hardwired design and microcode for the control unit.
+
+Some CPU designs use a [[writable control store]]—they compile the instruction set to a writable [[RAM]] or [[flash memory|flash]] inside the CPU (such as the [[Rekursiv]] processor and the [[Imsys]] [[Cjip]]),&lt;ref&gt;{{cite web|url=http://cpushack.net/CPU/cpu7.html |title=Great Microprocessors of the Past and Present (V 13.4.0) |website=cpushack.net |access-date=2014-07-25}}&lt;/ref&gt; or an FPGA ([[reconfigurable computing]]).
+
+An ISA can also be [[emulator|emulated]] in software by an [[interpreter (computing)|interpreter]]. Naturally, due to the interpretation overhead, this is slower than directly running programs on the emulated hardware, unless the hardware running the emulator is an order of magnitude faster. Today, it is common practice for vendors of new ISAs or microarchitectures to make software emulators available to software developers before the hardware implementation is ready.
+
+Often the details of the implementation have a strong influence on the particular instructions selected for the instruction set. For example, many implementations of the [[instruction pipeline]] only allow a single memory load or memory store per instruction, leading to a [[load-store architecture]] (RISC). For another example, some early ways of implementing the [[instruction pipeline]] led to a [[delay slot]].
+
+The demands of high-speed digital signal processing have pushed in the opposite direction—forcing instructions to be implemented in a particular way. For example, to perform digital filters fast enough, the MAC instruction in a typical [[digital signal processor]] (DSP) must use a kind of [[Harvard architecture]] that can fetch an instruction and two data words simultaneously, and it requires a single-cycle [[multiply–accumulate]] [[binary multiplier|multiplier]].
+
+==See also==
+*[[Comparison of instruction set architectures]]
+*[[Computer architecture]]
+*[[CPU design]]
+*[[Emulator]]
+*[[Simulator]]
+*[[List of instruction sets]]
+*[[Instruction set simulator]]
+*[[OVPsim]] full systems simulator providing ability to create/model/emulate any instruction set using C and standard APIs
+*[[Register transfer language]] (RTL)
+*[[Micro-operation]]
+
+==References==
+{{Reflist|30em}}
+
+==Further reading==
+*{{cite journal |title=Standard Microprocessor Programming Cards |journal=Microprocessors and Microsystems |first=Jonathan P. |last=Bowen |author-link=Jonathan Bowen |volume=9 |number=6 |pages=274–290 |date=July–August 1985 |doi=10.1016/0141-9331(85)90116-4}}
+
+==External links==
+{{wikibooks
+|1= Microprocessor Design
+|2= Instruction Set Architectures
+}}
+*{{Commonscatinline|Instruction set architectures}}
+*[http://www.textfiles.com/programming/CARDS/ Programming Textfiles: Bowen's Instruction Summary Cards]
+*[http://www.cs.clemson.edu/~mark/hist.html Mark Smotherman's Historical Computer Designs Page]
+
+{{CPU technologies}}
+{{Authority control}}
+
+[[Category:Central processing unit]]
+[[Category:Instruction processing|Set architectures]]
+[[Category:Instruction set architectures| ]]
+[[Category:Microprocessors|*Instruction set]]</text>
+      <sha1>nr8dhn142g7jj15a7t4i65yfb7ivto6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Maclisp</title>
+    <ns>0</ns>
+    <id>47774</id>
+    <revision>
+      <id>981136954</id>
+      <parentid>914513698</parentid>
+      <timestamp>2020-09-30T14:18:59Z</timestamp>
+      <contributor>
+        <ip>85.238.91.38</ip>
+      </contributor>
+      <comment>Use &quot;Maclisp&quot; not &quot;MACLISP&quot; in running text, to match title, per [[MOS:ARTCON]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10904" xml:space="preserve">{{Infobox programming language
+| name = Maclisp
+| logo = &lt;!-- (filename) --&gt;
+| logo caption = 
+| screenshot = &lt;!-- (filename) --&gt;
+| screenshot caption = 
+| paradigms = [[Multi-paradigm programming language|Multi-paradigm]]: [[Functional programming|functional]], [[Procedural programming|procedural]], [[Reflection (computer programming)|reflective]], [[Metaprogramming|meta]]
+| family = [[Lisp (programming language)|Lisp]]
+| designer = [[Richard Greenblatt (programmer)|Richard Greenblatt]]&lt;br /&gt;Jon L. White
+| developer = [[Massachusetts Institute of Technology|MIT]]: [[Project MAC]]
+| released = {{Start date and age|1966|07}}
+| latest release version = 
+| latest release date = &lt;!-- {{Start date and age|1985?|MM|DD|df=yes}} --&gt;
+| typing = [[Dynamic typing|dynamic]], [[Strong and weak typing|strong]]
+| scope = 
+| programming language = [[Assembly language]], [[PL/I]]
+| discontinued = Yes
+| platform = [[PDP-6]], [[PDP-10]]
+| operating system = [[Incompatible Timesharing System]], [[TOPS-10]], [[TOPS-20]], [[Multics]]
+| license = 
+| file ext = {{Mono|.lisp}}, {{Mono|.fasl}}
+| file format = &lt;!-- or: | file formats = --&gt;
+| website = &lt;!-- {{URL|www.example.com}} --&gt;
+| implementations = 
+| dialects = 
+| influenced by = Lisp 1.5
+| influenced = [[Common Lisp]]
+}}
+'''Maclisp''' (or '''MACLISP''', sometimes styled '''MacLisp''' or '''MacLISP''') is a [[programming language]], a [[Dialect (computing)|dialect]] of the language [[Lisp (programming language)|Lisp]]. It originated at the [[Massachusetts Institute of Technology]]'s (MIT) [[Project MAC]]&lt;ref name=&quot;hackers&quot;&gt;{{cite book |last=Levy |first=Steven |author-link=Steven Levy |title=[[Hackers: Heroes of the Computer Revolution]] |publisher=Doubleday |year=1984 |isbn=0-385-19195-2}}&lt;/ref&gt; (from which it derived its prefix) in the late 1960s and was based on Lisp 1.5.&lt;ref&gt;{{cite report |title=Project MAC Progress Report IV: July 1966 to July 1967 |date=n.d. |page=19 |quote=The higher-level language used for most of the vision laboratory program is the PDP-6 LISP System. This system is based chiefly on the LISP 1.5 programming language, but has been extensively modified in a number of ways. These include many new functions and services, including facilities for linking with programs written in other languages. |url=http://www.dtic.mil/dtic/tr/fulltext/u2/681342.pdf}}&lt;/ref&gt; [[Richard Greenblatt (programmer)|Richard Greenblatt]] was the main developer of the original codebase for the [[PDP-6]];&lt;ref name=&quot;hackers&quot; /&gt; Jon L. White was responsible for its later maintenance and development.  The name ''Maclisp'' began being used in the early 1970s to distinguish it from other [[Fork (software development)|fork]]s of PDP-6 Lisp, notably [[BBN Lisp]].
+
+==History==
+Maclisp is a descendant of [[Lisp 1.5]].&lt;ref&gt;{{harvnb|Moon|1974|p=1}}&lt;/ref&gt;  Maclisp departs from Lisp 1.5 by using a ''value cell'' to access and store the dynamic values of [[Variable (computer science)|variables]];&lt;ref&gt;{{harvnb|Moon|1974|p=47}}&lt;/ref&gt; Lisp 1.5 used a linear search of an association list to determine a variable's value.&lt;ref&gt;Lisp 1.5 p. 13, evaluating an atom &lt;code&gt;e&lt;/code&gt; in the environment &lt;code&gt;a&lt;/code&gt; is done with &lt;code&gt;(cdr (assoc e a))&lt;/code&gt;.  That involves a linear search of the association list &lt;code&gt;a&lt;/code&gt;. A more involved description with global constants and errors is given on p. 71; it does a linear search of the property list before searching the association list.&lt;/ref&gt;  The Maclisp variable evaluation is faster but has different variable semantics.  Maclisp also employed reader macros to make more readable ''input'' and ''output'', termed [[input/output]] (I/O).  Instead of entering &lt;code&gt;(QUOTE A)&lt;/code&gt;, one could enter &lt;code&gt;'A&lt;/code&gt; to get the same [[s-expression]]. Although both implementations put functions on the property list, Maclisp uses different syntax to define functions.&lt;ref&gt;Maclisp uses &lt;code&gt;defun&lt;/code&gt;; Lisp 1.5 uses &lt;code&gt;define&lt;/code&gt;.&lt;/ref&gt;  Maclisp also has a load-on-demand feature.&lt;ref&gt;{{harvnb|Moon|1974|p=107}}; the &lt;code&gt;autoload&lt;/code&gt; property.&lt;/ref&gt;
+
+Maclisp began on [[Digital Equipment Corporation]] [[PDP-6]] and [[PDP-10]] computers running the [[Incompatible Timesharing System]] (ITS); later it was ported to all other PDP-10 operating systems, for example, ''Timesharing / Total Operating System'', [[TOPS-10]] and [[TOPS-20]].  The original implementation was in [[assembly language]], but a later implementation on [[Multics]] used [[PL/I]].  Maclisp developed considerably in its lifetime.  Major features{{which|date=March 2016}} were added which in other language systems would typically correspond to major release numbers.{{dubious|date=March 2016}}&lt;!-- distinguish the langage and the library; LET, SETF, and LOOP, for example, did not change the language. Compare with UNWIND-PROTECT. --&gt;
+
+Maclisp was used to implement the [[Macsyma]] [[computer algebra system]] (CAS) or symbolic algebra program. Macsyma's development also drove several features{{which|date=March 2016}}&lt;!-- BIGNUM and what else? --&gt; in Maclisp. The [[SHRDLU]] blocks-world program was written in Maclisp, and so the language was in widespread use in the [[artificial intelligence]] (AI) research community through the early 1980s.  It was also used to implement other programming languages, such as [[Planner (programming language)|Planner]] and [[Scheme (programming language)|Scheme]].  Multics Maclisp was used to implement the first Lisp-based [[Emacs]].
+
+Maclisp was an influential Lisp implementation, but is no longer maintained actively. It now runs on PDP-10 [[emulator]]s and can be used for experimenting with early AI programs.
+
+{{Lisp}}
+
+==Characteristics==
+Maclisp began with a small, fixed number of [[data type]]s: [[cons]] cell, atom (later termed ''symbol''), [[integer]], and [[Floating-point arithmetic|floating-point number]].  Later additions included: [[Array data type|arrays]], which were never first-class data types; [[Arbitrary-precision arithmetic|arbitrary-precision integers]] (bignums); [[String (computer science)|strings]]; and [[tuple]]s.  All objects (except inums) were implemented as [[Pointer (computer programming)|pointers]], and their data type was determined by the block of memory into which it pointed, with a special case for small numbers (inums).
+
+Programs could be ''[[Interpreted language|interpreted]]'' or ''[[Compiler|compiled]]''.  Compiled behavior was the same as interpreted except that local variables were lexical by default in compiled code, unless declared SPECIAL,&lt;ref&gt;{{cite web |url=http://maclisp.info/pitmanual/complr.html#23.1.2 |title=The Revised Maclisp Manual (The Pitmanual), Sunday Morning Edition |last=Pitman |first=Kent |date=December 16, 2007 |website=maclisp.info |publisher=HyperMeta, Inc. |access-date=October 20, 2018 |at=Declarations and the Compiler, Concept &quot;Variables&quot; |quote= If the variable to be bound has been declared to be special, the binding is compiled as code to imitate the way the interpreter binds variables.}}&lt;/ref&gt; and no error checking was done for inline operations such as CAR and CDR.  The Ncomplr compiler (mid-1970s) introduced fast numeric support to Lisp languages, generating [[machine code]] (instructions) for arithmetic rather than calling interpretive routines which dispatched on data type.  This made Lisp arithmetic comparable in speed to [[Fortran]] for scalar operations (though Fortran array and loop implementation remained much faster).
+
+The original version was limited by the 18-bit word [[memory address]] of the PDP-10, and considerable effort was expended in keeping the implementation lean and simple. Multics Maclisp had a far larger address space, but was costly to use.  When the memory and processing power of the [[PDP-10]] were exceeded, the [[Lisp Machine]] was invented: [[Lisp Machine Lisp]] is the direct descendant of Maclisp.  Several other [[Lisp (programming language)|Lisp]] dialects were also in use, and the need to unify the community resulted in the modern [[Common Lisp]] language.
+
+==Name==
+Maclisp was named for [[Project MAC]], and is unrelated to Apple's [[Macintosh]] (Mac) computer, which it predates by decades. The various Lisp systems for the Macintosh have no particular similarity to Maclisp.&lt;ref&gt;{{cite web |url=http://maclisp.info/pitmanual/ |title=The Revised Maclisp Manual (The Pitmanual), Sunday Morning Edition |last=Pitman |first=Kent |date=December 16, 2007 |website=maclisp.info |publisher=HyperMeta Inc. |access-date=October 20, 2018 |at=p. 1 FAQ q1 |quote=Project MAC had nothing to do with the Apple &quot;Mac&quot;. And neither did MACLISP.}}&lt;/ref&gt;
+
+==References==
+{{Reflist}}
+
+==External links==
+* http://www.softwarepreservation.org/projects/LISP/maclisp_family/ contains a bibliography of Maclisp.
+** John L. White. An Interim LISP User's Guide. Artificial Intelligence Memo No. 190, Project MAC, Massachusetts Institute of Technology, March 1970, 87 pages. ftp://publications.ai.mit.edu/ai-publications/pdf/AIM-190.pdf states &quot;'MACLISP' refers to the PDP/6 implementation of the programming language LISP in use at the Artificial Intelligence Group of Project MAC.&quot;
+** &quot;In 1973 and 1974, [[David A. Moon]] led an effort to implement MacLisp on the Honeywell 6180 under Multics. As a part of this project he wrote the first truly comprehensive reference manual for Maclisp, which became familiarly known as the 'Moonual'.&quot; [Steele and Gabriel 1993]
+** Jon L. White [JONL], Eric Rosen [ECR], [[Richard M. Stallman]] [RMS], [[Guy L. Steele Jr.]] [GLS], Howard I. Cannon [HIC], Bob Kerns [RWK]. LISP News. MacLisp release notes.
+** Jon L. White. LISP: Program is Data: A Historical Perspective on MacLISP. Proceedings of the 1977 MACSYMA Users' Conference. NASA Scientific and Technical Information Office (Washington, D.C., July 1977), pages 181-189. [http://www.softwarepreservation.org/projects/LISP/MIT/White-Program_Is_Data-1977-From_MACSYMA77.pdf PDF]
+* {{Cite book |first1=John |last1=McCarthy |author1-link=John McCarthy (computer scientist) |first2=Paul W. |last2=Abrahams |first3=Daniel J. |last3=Edwards |first4=Timothy P. |last4=Hart |first5=Michael I. |last5=Levin |title=LISP 1.5 Programmer's Manual |publisher=[[MIT Press]] |isbn=0-262-13011-4 |origyear=1962 |edition=2nd |year=1985 |url=https://archive.org/details/lisp15programmer00john |ref=harv |url-access=registration }}
+* {{cite book |last=Moon |first=David |author-link=David A. Moon |title=Maclisp Reference Manual |date=1974 |url=http://www.softwarepreservation.org/projects/LISP/MIT/Moon-MACLISP_Reference_Manual-Apr_08_1974.pdf |ref=harv}}
+* [http://maclisp.info/pitmanual/ ''The Revised Maclisp Manual''] (1983) by [[Kent Pitman]]
+* [http://www.multicians.org/lcp.html ''The Multics MACLISP compiler''] (1977) by [[Bernard Greenberg]]
+
+{{Lisp programming language}}
+
+[[Category:Lisp programming language family]]
+[[Category:Lisp (programming language)]]</text>
+      <sha1>mersb8jo7e86b2r9lnllt68dshdid2w</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Lisp Machine Lisp</title>
+    <ns>0</ns>
+    <id>47775</id>
+    <revision>
+      <id>982810473</id>
+      <parentid>952638547</parentid>
+      <timestamp>2020-10-10T13:58:28Z</timestamp>
+      <contributor>
+        <username>Jarble</username>
+        <id>7226930</id>
+      </contributor>
+      <comment>added [[Category:Programming languages created in 1976]] using [[WP:HC|HotCat]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4138" xml:space="preserve">{{Use mdy dates|date=April 2020}}
+{{primary sources|date=July 2009}}
+{{Infobox programming language
+| name = Lisp Machine Lisp
+| logo = &lt;!-- Filename only --&gt;
+| logo caption = 
+| screenshot = &lt;!-- Filename only --&gt;
+| screenshot caption = 
+| paradigms = 
+| family = [[Lisp (programming language)|Lisp]]
+| designers = [[David A. Moon]],&lt;br /&gt;[[Richard Stallman]],&lt;br /&gt;[[Daniel Weinreb]]
+| developers = [[Massachusetts Institute of Technology|MIT]],&lt;br /&gt;[[Symbolics]],&lt;br /&gt;[[Lisp Machines]],&lt;br /&gt;[[Texas Instruments]]
+| released = {{Start date and age|1976}}
+| latest release version = 
+| latest release date = {{Start date and age|1995}}
+| typing = 
+| scope = 
+| programming language = 
+| discontinued = Yes
+| platform = [[Lisp machine]]s
+| operating system = [[Genera (operating system)|Genera]], others
+| license = 
+| file ext = {{Mono|.lisp}}, {{Mono|.qfasl}}
+| file format = &lt;!-- or: | file formats = --&gt;
+| website = &lt;!-- {{URL|www.example.com}} --&gt;
+| implementations = 
+| dialects = Lisp Machine Lisp, ZetaLisp
+| influenced by = [[Lisp (programming language)|Lisp]], [[Maclisp]], [[Interlisp]]
+| influenced = [[Common Lisp]]
+}}
+
+'''Lisp Machine Lisp''' is a [[programming language]], a [[Dialect (computing)|dialect]] of the language [[Lisp (programming language)|Lisp]]. A direct descendant of [[Maclisp]], it was initially developed in the mid to late 1970s as the [[system programming]] language for the [[Massachusetts Institute of Technology]] (MIT) [[Lisp machine]]s. Lisp Machine Lisp was also the Lisp dialect with the most influence on the design of [[Common Lisp]].
+
+Lisp Machine Lisp branched into three dialects. [[Symbolics]] named their variant ZetaLisp. [[Lisp Machines]], Inc. and later [[Texas Instruments]] (with the [[TI Explorer]]) would share a common code base, but their dialect of Lisp Machine Lisp would differ from the version maintained at the [[MIT Computer Science and Artificial Intelligence Laboratory|MIT AI Lab]] by [[Richard Stallman]] and others.
+
+
+==Manual==
+The Lisp Machine Manual describes the Lisp Machine Lisp language in detail.&lt;ref&gt;{{cite web |url=https://hanshuebner.github.io/lmman/frontpage.html |title=Lisp Machine Manual, Hypertext (6th) edition |author=&lt;!--Unstated--&gt; |date=January 1984 |editor-last=Huebner |editor-first=Hans |website=GitHub |access-date=November 30, 2018}}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://www.bitsavers.org/pdf/mit/cadr/chinual_3rdEd_Mar81.pdf |title=Lisp Machine Manual, 3rd Edition |last1=Moon |first1=David |last2=Stallman |first2=Richard M. |last3=Weinreb |first3=Daniel |date=March 1981 |website=Bitsavers.org |access-date=November 30, 2018}}&lt;/ref&gt; The manual was popularly termed the ''Chine Nual'', because the full title was printed across the front and back covers such that only those letters appeared on the front.&lt;ref&gt;{{cite web |url=http://www.jargon.net/jargon/jargonfile/c/chinenual.html |title=chine nual |website=Cool Jargon |access-date=November 30, 2018}}&lt;/ref&gt; This name is sometimes further abbreviated by blending the two words into ''Chinual''.
+
+==Traits==
+Some Lisp Machine Lisp features:
+* Supports [[object-oriented programming]] via an object system named [[Flavors (programming language)|Flavors]]
+* Has dynamic binding, but supports [[Closure (computer programming)|closures]] with a special construct
+* Integer numbers were read and printed in [[octal]] (base 8) by default&lt;ref&gt;{{cite web |url=http://bitsavers.informatik.uni-stuttgart.de/pdf/mit/cadr/chinual_3rdEd_Mar81.pdf |title=Page 3 of Lisp Machine Manual 3rd Edition}}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=https://hanshuebner.github.io/lmman/intro.xml#Structure%20of%20the%20Manual-section |title=Currently the default radix for the Lisp Machine system is eight}}&lt;/ref&gt;
+* Dividing floating point numbers returned decimals, dividing integers returned [[rational number]]s ([[Fraction (mathematics)|fractions]])
+
+==References==
+{{Reflist}}
+&lt;!-- ==External links== --&gt;
+
+{{Lisp programming language}}
+
+[[Category:Lisp programming language family]]
+[[Category:Lisp (programming language)]]
+[[Category:1970s software]]
+[[Category:Programming languages created in 1976]]
+
+{{compu-lang-stub}}</text>
+      <sha1>1jtqcqsx75ssrbkemwlj265bexuw1m2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Maskun</title>
+    <ns>0</ns>
+    <id>47778</id>
+    <revision>
+      <id>932986090</id>
+      <parentid>791881713</parentid>
+      <timestamp>2019-12-29T09:40:58Z</timestamp>
+      <contributor>
+        <username>Bot1058</username>
+        <id>20585603</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Bot1058|Task 6]]: remove disambiguation page from [[Category:Monitored short pages]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="205" xml:space="preserve">'''Maskun''' may refer to:
+* [[Monochromacy]] (in parts of [[Micronesia]])
+* [[Maskun, Iran]], a village in Mazandaran Province, Iran
+* [[Maskun Rural District]], in Kerman Province, Iran
+
+{{disambig|geo}}</text>
+      <sha1>p6a6ttot1dx0l1th38uf232xj29wlvp</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Pohnpei</title>
+    <ns>0</ns>
+    <id>47779</id>
+    <revision>
+      <id>989694706</id>
+      <parentid>989694626</parentid>
+      <timestamp>2020-11-20T13:49:22Z</timestamp>
+      <contributor>
+        <username>Leo Breman</username>
+        <id>19215859</id>
+      </contributor>
+      <comment>/* Geography */ grammar.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30438" xml:space="preserve">{{About|the Pacific island|the Roman ruins|Pompeii|the modern Italian city|Pompei|the Classical Roman leader|Pompey}}
+{{Infobox islands
+| name             = Pohnpei
+| native_name      = &lt;!-- or local name to remove the &quot;native name:&quot; prefix --&gt;
+| sobriquet        = &lt;!-- or nickname --&gt;
+| etymology        = 
+| image_name       = Pohnpei Island.png
+| image_size       = 
+| image_caption    = Map of Pohnpei
+| image_alt        = 
+| locator_map      = 
+| locator_map_size = 
+| map_caption      = 
+| location         = 
+| coordinates      = {{coord|6|53|N|158|14|E|type:isle_region:FM-PNI_dim:50000|display=inline,title}}
+| archipelago      = [[Senyavin Islands]]
+| waterbody        = [[Pacific Ocean]]
+| total_islands    = 
+| major_islands    = 
+| area_km2 = 334&lt;!-- or area m2 or area ha --&gt;
+| area_footnotes   = 
+| rank             = 
+| length_km        = &lt;!-- or length m  --&gt;
+| length_footnotes = 
+| width_km         = &lt;!-- or width m  --&gt;
+| width_footnotes  =
+| coastline_km     = &lt;!-- or coastline m  --&gt;
+| coastline_footnotes = 
+| elevation_m      = 782
+| elevation_footnotes = 
+| highest_mount    = [[Mount Nanlaud]]
+| country          = [[Federated States of Micronesia]]
+| country_admin_divisions_title     = State
+| country_admin_divisions           = [[Pohnpei State|Pohnpei]]
+| country_admin_divisions_title_1   = 
+| country_admin_divisions_1         = 
+| country_admin_divisions_title_2   = 
+| country_admin_divisions_2         = 
+| country_capital                   = 
+| country_largest_city              = 
+| country_largest_city_population   = 
+| country_leader_title              = 
+| country_leader_name               = 
+| country1                         = 
+| country1_admin_divisions_title   = 
+| country1_admin_divisions         = 
+| country1_admin_divisions_title_1 = 
+| country1_admin_divisions_1       = 
+| country1_admin_divisions_title_2 = 
+| country1_admin_divisions_2       = 
+| country1_capital_city            = 
+| country1_largest_city            = [[Kolonia]]
+| country1_largest_city_population = 6,074
+| country1_leader_title            = 
+| country1_leader_name             = 
+| demonym          = 
+| population       = 36,196
+| population_as_of = 2010
+| population_footnotes = 
+| population_rank = 
+| population_rank_max = 
+| density_km2      = 
+| density_rank     =
+| density_footnotes = 
+| ethnic_groups    = 
+| website          = 
+| additional_info  = 
+}}
+
+'''Pohnpei''' &quot;upon (''pohn'') a stone altar (''pei'')&quot; (formerly known as '''Ponape''' or '''Ascension''', [[Chuukic–Pohnpeic languages|Proto-Chuukic-Pohnpeic]]: ''*Fawo ni pei''&lt;ref&gt;{{cite journal|last1=Bender|first1=Byron W.|s2cid=201778237|title=Proto-Micronesian Reconstructions: 2|journal=Oceanic Linguistics|date=2003|volume=42|issue=2|pages=271–281|doi=10.1353/ol.2003.0014}}&lt;/ref&gt;) is an island of the [[Senyavin Islands]] which are part of the larger [[Caroline Islands]] group. It belongs to [[Pohnpei State]], one of the four [[state (subnational)|state]]s in the [[Federated States of Micronesia]] (FSM). Major population centers on Pohnpei include [[Palikir]], the FSM's capital, and [[Kolonia]], the capital of Pohnpei State. Pohnpei Island is the largest (334&amp;nbsp;km²), with a highest point (782m), most populous (36,196 people), and most developed single island in the FSM.
+
+Pohnpei contains a wealth of [[biodiversity]]. It is one of the wettest places on Earth with annual recorded rainfall exceeding {{convert|300|in|mm|order=flip}} each year in certain mountainous locations. It is home to the ka tree (''[[Terminalia carolinensis]]'') found only in Pohnpei and [[Kosrae]].&lt;ref&gt;''[[Nature Conservancy]] Magazine'' February / March 2015 page 36&lt;/ref&gt;
+
+==Geography==
+[[File:Pohnpei Island municipalities.jpg|thumb|Detailed map of Pohnpei, showing the borders of the five 'independent tribes']]
+[[File:Senyavin island (FSM).jpg|thumb|Senyavin Islands (Pohnpei plus two neighboring atolls)]]
+
+The highest point of the island is [[Mount Nanlaud]] at 772 or 782 metres. Pohnpei is home to several dozen bird species including four [[endemism|endemic]] species, the [[Pohnpei lorikeet]], the [[Pohnpei fantail]], the [[Pohnpei flycatcher]] and the [[long-billed white-eye]]. A fifth endemic, the [[Pohnpei starling]], is thought to have recently gone [[extinct]].
+
+The only land reptiles are a few species of lizard. Originally the only mammals were bats. Pigs, rats and dogs were introduced; pigs have become feral. The lagoons are rich in fish, molluscs, turtles and other marine fauna.
+
+===Climate===
+[[File:Koloniasokehs.jpg|thumb|Kolonia Town looking down from Sokehs Ridge]]
+[[File:Ponape.jpg|thumb|District center of Pohnpei Circa 1960]]
+Pohnpei belongs to the [[Tropical rainforest climate]] zone ([[Köppen climate classification|Köppen]]: ''Af'').&lt;ref&gt;{{cite web |url=http://www.chinci.com/travel/pax/w/2081869/Mwahnd+Peidak/FM/Micronesia/1/ |title=Archived copy |accessdate=2015-01-16 |url-status=dead |archiveurl=https://web.archive.org/web/20141108091053/http://www.chinci.com/travel/pax/w/2081869/Mwahnd+Peidak/FM/Micronesia/1/ |archivedate=8 November 2014 |df=dmy-all }}&lt;/ref&gt; It is one of the wettest places on earth with an average annual recorded rainfall of {{convert|4775|mm|abbr=on}} in towns along the coast and about  {{convert|300|in|mm|order=flip|abbr=on}} each year in certain mountainous locations.&lt;ref&gt;{{cite web |url=http://www.weriguam.org/docs/reports/100.pdf |title=Archived copy |accessdate=2014-11-08 |url-status=dead |archiveurl=https://web.archive.org/web/20160304035749/http://www.weriguam.org/docs/reports/100.pdf |archivedate=4 March 2016 |df=dmy-all }}&lt;/ref&gt;
+{{Weather box|width=auto
+|location = Pohnpei
+|single line = Yes
+|metric first = Yes
+|Jan high F = 86
+|Feb high F = 86
+|Mar high F = 86
+|Apr high F = 86
+|May high F = 86
+|Jun high F = 86
+|Jul high F = 86
+|Aug high F =87
+|Sep high F = 87
+|Oct high F = 87
+|Nov high F =87
+|Dec high F = 86
+|year high F = 86
+|Jan low F = 73
+|Feb low F = 75
+|Mar low F = 75
+|Apr low F = 73
+|May low F = 73
+|Jun low F = 73
+|Jul low F = 71
+|Aug low F = 71
+|Sep low F = 71
+|Oct low F = 71
+|Nov low F = 73
+|Dec low F = 73
+|year low F = 71
+|Jan precipitation inch = 12.1
+|Feb precipitation inch =10.2
+|Mar precipitation inch = 14
+|Apr precipitation inch = 17.6
+|May precipitation inch = 19.4
+|Jun precipitation inch = 16.6
+|Jul precipitation inch = 17.2
+|Aug precipitation inch = 16.3
+|Sep precipitation inch = 15.9
+|Oct precipitation inch = 16.2
+|Nov precipitation inch = 15.9
+|Dec precipitation inch = 16.7
+|year precipitation inch = 187.8
+|source 1 = Weatherbase&lt;ref name=Weatherbase&gt;
+{{cite web
+|url =http://www.weatherbase.com/weather/weather.php3?s=913480&amp;refer=wikipedia |title =Weatherbase: Historical Weather for Pohnapei, Federated States of Micronesia
+|publisher=Weatherbase
+|year=2011
+|access-date=24 November 2011
+}}
+&lt;/ref&gt;
+|date=November 2011
+}}
+
+==History==
+{{See also|Nan Madol}}
+
+The natives of Pohnpei, especially the 'older' generations, often refer to events in their past as having occurred, e.g., in &quot;German times&quot; or &quot;before the Spaniards,&quot; which identifies the historical periods as follows:&lt;ref name=Native/&gt;

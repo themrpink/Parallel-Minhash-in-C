@@ -1,0 +1,261 @@
+: where &lt;math&gt;I&lt;/math&gt; is the identity matrix. For example, when n = 4
+
+: &lt;math&gt; H_4^{T}H_4 = \frac{1}{2}\begin{bmatrix} 1&amp;1&amp;\sqrt{2}&amp;0 \\ 1&amp;1&amp;-\sqrt{2}&amp;0 \\ 1&amp;-1&amp;0&amp;\sqrt{2} \\ 1&amp;-1&amp;0&amp;-\sqrt{2}\end{bmatrix}
+\cdot\; \frac{1}{2}\begin{bmatrix} 1&amp;1&amp;1&amp;1 \\ 1&amp;1&amp;-1&amp;-1 \\ \sqrt{2}&amp;-\sqrt{2}&amp;0&amp;0 \\ 0&amp;0&amp;\sqrt{2}&amp;-\sqrt{2}\end{bmatrix}
+= \begin{bmatrix} 1&amp;0&amp;0&amp;0 \\ 0&amp;1&amp;0&amp;0 \\ 0&amp;0&amp;1&amp;0 \\ 0&amp;0&amp;0&amp;1 \end{bmatrix}
+&lt;/math&gt;
+
+Thus, the inverse Haar transform is
+
+: &lt;math&gt; x_{n} = H^{T}y_{n}&lt;/math&gt;
+
+=== Example ===
+The Haar transform coefficients of a n=4-point signal &lt;math&gt;x_{4} = [1,2,3,4]^{T}&lt;/math&gt; can be found as
+
+: &lt;math&gt; y_{4} = H_4 x_4 = 
+\frac{1}{2}\begin{bmatrix} 1&amp;1&amp;1&amp;1 \\ 1&amp;1&amp;-1&amp;-1 \\ \sqrt{2}&amp;-\sqrt{2}&amp;0&amp;0 \\ 0&amp;0&amp;\sqrt{2}&amp;-\sqrt{2}\end{bmatrix} \begin{bmatrix} 1 \\ 2 \\ 3 \\ 4\end{bmatrix}
+= \begin{bmatrix} 5 \\ -2 \\ -1/\sqrt{2} \\ -1/\sqrt{2}\end{bmatrix}
+&lt;/math&gt;
+
+The input signal can then be perfectly reconstructed by the inverse Haar transform
+
+: &lt;math&gt; \hat{x_{4}} = H_{4}^{T}y_{4} = 
+\frac{1}{2}\begin{bmatrix} 1&amp;1&amp;\sqrt{2}&amp;0 \\ 1&amp;1&amp;-\sqrt{2}&amp;0 \\ 1&amp;-1&amp;0&amp;\sqrt{2} \\ 1&amp;-1&amp;0&amp;-\sqrt{2}\end{bmatrix} \begin{bmatrix} 5 \\ -2 \\ -1/\sqrt{2} \\ -1/\sqrt{2}\end{bmatrix}
+= \begin{bmatrix} 1 \\ 2 \\ 3 \\ 4 \end{bmatrix}
+&lt;/math&gt;
+
+=== Application ===
+Modern cameras are capable of producing images with resolutions in the range of tens of megapixels. These images need to be [[Image compression|compressed]] before storage and transfer. The Haar transform can be used for image compression. The basic idea is to transfer the image into a matrix in which each element of the matrix represents a pixel in the image. For example, a 256×256 matrix is saved for a 256×256 image. [[JPEG]] image compression involves cutting the original image into 8×8 sub-images. Each sub-image is an 8×8 matrix.
+
+The 2-D Haar transform is required. The equation of the Haar transform is &lt;math&gt;B_n = H_n A_n H_n^T&lt;/math&gt;, where &lt;math&gt;A_n&lt;/math&gt; is a ''n''&amp;nbsp;×&amp;nbsp;''n'' matrix and &lt;math&gt;H_n&lt;/math&gt; is n-point Haar transform. The inverse Haar transform is &lt;math&gt;A_n = H_n^T B_n H_n&lt;/math&gt;
+
+In oral surgery, image structure analysis based on the Haar wavelet is used to reveal potentially harmful lesions, i.e. leukoplakia [DOI: 10.1155/2020/8831161; DOI: 10.3390/ma13163614].
+
+==See also==
+* [[Dimension reduction]]
+* [[Walsh matrix]]
+* [[Walsh transform]]
+* [[Wavelet]]
+* [[Chirplet]]
+* [[Signal (electrical engineering)|Signal]]
+* [[Haar-like feature]] 
+* [[Strömberg wavelet]]
+* [[Dyadic transformation]]
+
+==Notes==
+{{Reflist}}
+
+==References==
+*{{citation
+ | last = Haar |first = Alfréd | author-link = Alfréd Haar
+ | title = Zur Theorie der orthogonalen Funktionensysteme
+ | journal = [[Mathematische Annalen]] 
+ | volume = 69 
+ | year = 1910 
+ | issue = 3 
+ | pages = 331–371 
+ | doi=10.1007/BF01456326 | hdl = 2027/uc1.b2619563| hdl-access = free}}
+* Charles K. Chui, ''An Introduction to Wavelets'', (1992), Academic Press, San Diego, {{ISBN|0-585-47090-1}}
+* English Translation of Haar's seminal article: https://www.uni-hohenheim.de/~gzim/Publications/haar.pdf{{Dead link|date=January 2020 |bot=InternetArchiveBot |fix-attempted=yes }}
+
+==External links==
+{{Commons category}}
+
+* {{springer|title=Haar system|id=p/h046070}}
+* [http://www.tomgibara.com/computer-vision/haar-wavelet Free Haar wavelet filtering implementation and interactive demo]
+* [http://packages.debian.org/wzip Free Haar wavelet denoising and lossy signal compression]
+
+===Haar transform===
+* [https://wayback.archive-it.org/all/20070728170955/http://cnx.org/content/m11087/latest/]
+* [http://math.hws.edu/eck/math371/applets/Haar.html]
+* [https://web.archive.org/web/20110125080404/http://online.redwoods.cc.ca.us/instruct/darnold/laproj/Fall2002/ames/paper.pdf]
+* [https://web.archive.org/web/20080318071618/http://scien.stanford.edu/class/ee368/projects2000/project12/2.html]
+* [http://fourier.eng.hmc.edu/e161/lectures/Haar/index.html]
+
+{{DEFAULTSORT:Haar Wavelet}}
+[[Category:Orthogonal wavelets]]</text>
+      <sha1>jip5hkr4fyra6efyjzd2cyk8l8w9dep</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>List of Fourier-related transforms</title>
+    <ns>0</ns>
+    <id>50907</id>
+    <revision>
+      <id>979921238</id>
+      <parentid>979921211</parentid>
+      <timestamp>2020-09-23T15:01:43Z</timestamp>
+      <contributor>
+        <username>Zppix</username>
+        <id>22665218</id>
+      </contributor>
+      <minor />
+      <comment>Reverted edits by [[Special:Contributions/75.110.62.12|75.110.62.12]] ([[User talk:75.110.62.12|talk]]) ([[WP:HG|HG]]) (3.4.10)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6954" xml:space="preserve">{{short description|Wikipedia list article}}
+This is a list of [[linear transformation]]s of [[function (mathematics)|function]]s related to [[Fourier analysis]].  Such transformations [[Map (mathematics)|map]] a function to a set of [[coefficient]]s of [[basis function]]s, where the basis functions are [[trigonometric function|sinusoidal]] and are therefore strongly localized in the [[frequency spectrum]].  (These transforms are generally designed to be invertible.)  In the case of the Fourier transform, each basis function corresponds to a single [[frequency]] component.
+
+==Continuous transforms==
+Applied to functions of continuous arguments, Fourier-related transforms include:
+* [[Two-sided Laplace transform]]
+* [[Mellin transform]], another closely related integral transform
+* [[Laplace transform]]
+* [[Fourier transform]], with special cases''':'''
+** [[Fourier series]] 
+*** When the input function/waveform is periodic, the Fourier transform output is a [[Dirac comb]] function, modulated by a discrete sequence of finite-valued coefficients that are complex-valued in general.  These are called '''Fourier series coefficients'''.  The term '''Fourier series''' actually refers to the inverse Fourier transform, which is a sum of sinusoids at discrete frequencies, weighted by the Fourier series coefficients.
+*** When the non-zero portion of the input function has finite duration, the Fourier transform is continuous and finite-valued.  But a discrete subset of its values is sufficient to reconstruct/represent the portion that was analyzed.  The same discrete set is obtained by treating the duration of the segment as one period of a periodic function and computing the Fourier series coefficients.
+** [[Sine and cosine transforms]]''':'''  When the input function has odd or even symmetry around the origin, the Fourier transform reduces to a sine or cosine transform.
+* [[Hartley transform]]
+* [[Short-time Fourier transform]] (or short-term Fourier transform) (STFT)
+** [[Rectangular mask short-time Fourier transform]]
+* [[Chirplet transform]]
+* [[Fractional Fourier transform]] (FRFT)
+* [[Hankel transform]]: related to the Fourier Transform of radial functions.
+* [[Fourier–Bros–Iagolnitzer transform]]
+* [[Linear canonical transform]]
+
+==Discrete transforms==
+For usage on [[computer]]s, number theory and algebra, discrete arguments (e.g. functions of a series of discrete samples) are often more appropriate, and are handled by the transforms (analogous to the continuous cases above):
+
+* [[Discrete-time Fourier transform]] (DTFT)''':''' Equivalent to the Fourier transform of a &quot;continuous&quot; function that is constructed from the discrete input function by using the sample values to modulate a [[Dirac comb]].  When the sample values are derived by sampling a function on the real line, ƒ(''x''), the DTFT is equivalent to a [[periodic summation]] of the Fourier transform of '''ƒ'''.  The DTFT output is always [[Period (physics)|periodic]] (cyclic).  An alternative viewpoint is that the DTFT is a transform to a frequency domain that is bounded (or ''finite''), the length of one cycle.
+** [[discrete Fourier transform]] (DFT)''':'''
+*** When the input sequence is periodic, the DTFT output is also a [[Dirac comb]] function, modulated by the coefficients of a Fourier series&lt;ref&gt;The Fourier series represents &lt;math&gt;\scriptstyle \sum_{n=-\infty}^{\infty}f(nT)\cdot \delta(t-nT),&lt;/math&gt; where T is the interval between samples.&lt;/ref&gt; which can be computed as a DFT of one cycle of the input sequence.  The number of discrete values in one cycle of the DFT is the same as in one cycle of the input sequence.
+*** When the non-zero portion of the input sequence has finite duration, the DTFT is continuous and finite-valued.  But a discrete subset of its values is sufficient to reconstruct/represent the portion that was analyzed.  The same discrete set is obtained by treating the duration of the segment as one cycle of a periodic function and computing the DFT'''.
+** Discrete [[sine and cosine transforms]]''':'''  When the input sequence has odd or even symmetry around the origin, the DTFT reduces to a [[discrete sine transform]] (DST) or [[discrete cosine transform]] (DCT).
+*** [[Regressive discrete Fourier series]], in which the period is determined by the data rather than fixed in advance.
+** [[Discrete Chebyshev transform]]s (on the 'roots' grid and the 'extrema' grid of the Chebyshev polynomials of the first kind). This transform is of much importance in the field of spectral methods for solving differential equations because it can be used to swiftly and efficient go from grid point values to Chebyshev series coefficients.
+* Generalized DFT (GDFT), a generalization of the DFT and constant modulus transforms where phase functions might be of linear with integer and real valued slopes, or even non-linear phase bringing flexibilities for optimal designs of various metrics, e.g. auto- and cross-correlations.
+* [[Discrete-space Fourier  transform]] (DSFT) is the generalization of the DTFT from 1D signals to 2D signals. It is called &quot;discrete-space&quot; rather than &quot;discrete-time&quot; because the most prevalent application is to imaging and image processing where the input function arguments are equally spaced samples of spatial coordinates &lt;math&gt;(x,y)&lt;/math&gt;. The DSFT output is  [[Period (physics)|periodic]] in both variables.
+* [[Z-transform]], a generalization of the DTFT to the entire [[complex plane]]
+* [[Modified discrete cosine transform]] (MDCT)
+* [[Discrete Hartley transform]] (DHT)
+* Also the discretized STFT (see above).
+* [[Hadamard transform]] ([[Walsh function]]).
+* [[Fourier transform on finite groups]].
+* [[Discrete Fourier transform (general)]].
+
+The use of all of these transforms is greatly facilitated by the existence of efficient algorithms based on a [[fast Fourier transform]] (FFT).  The [[Nyquist&amp;ndash;Shannon sampling theorem]] is critical for understanding the output of such discrete transforms.
+
+==Notes==
+{{reflist}}
+
+==See also==
+* [[Integral transform]]
+* [[Wavelet transform]]
+* [[Fourier transform spectroscopy]]
+* [[Harmonic analysis]]
+* [[List of transforms]]
+* [[List of operators]]
+* [[Bispectrum]]
+
+==References==
+* A. D. Polyanin and A. V. Manzhirov, ''Handbook of Integral Equations'', CRC Press, Boca Raton, 1998. {{isbn|0-8493-2876-4}}
+* [http://eqworld.ipmnet.ru/en/auxiliary/aux-inttrans.htm Tables of Integral Transforms] at EqWorld: The World of Mathematical Equations.
+* A. N. Akansu and H. Agirman-Tosun, [http://web.njit.edu/~akansu/PAPERS/AkansuIEEE-TSP2010.pdf &quot;''Generalized Discrete Fourier Transform With Nonlinear Phase''&quot;], IEEE ''Transactions on Signal Processing'', vol. 58, no. 9, pp. 4547-4556, Sept. 2010.
+
+[[Category:Fourier analysis| ]]
+[[Category:Image processing]]
+[[Category:Integral transforms|Fourier transforms]]
+[[Category:Mathematics-related lists|Fourier transforms]]
+
+[[de:Liste der Fourier-Transformationen]]</text>
+      <sha1>imd2bdqzb1oobxkwe35i8uuqs281b2j</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Roger Ebert</title>
+    <ns>0</ns>
+    <id>50908</id>
+    <revision>
+      <id>990431352</id>
+      <parentid>987811143</parentid>
+      <timestamp>2020-11-24T12:54:47Z</timestamp>
+      <contributor>
+        <ip>2601:647:5803:4090:5924:3CF8:F9C8:C55A</ip>
+      </contributor>
+      <comment>/* Critical style */ Previous link to Death Wish II review became 404. I found the redirect thru wayback machine: http://web.archive.org/web/20191209142750/https://www.rogerebert.com/apps/pbcs.dll/article?AID=/19820101/REVIEWS/201010315/1023</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="103439" xml:space="preserve">{{for|the website|RogerEbert.com}}
+{{short description|American film critic, author, journalist, and TV presenter}}
+{{good article}}
+{{Use mdy dates|date=March 2018}}
+{{Infobox writer
+| name             = Roger Ebert
+| image            = Roger Ebert (cropped).jpg
+| caption          = Ebert giving an interview for&lt;br&gt;''[[Sound Opinions]]'' in 2006
+| birth_name       = Roger Joseph Ebert
+| birth_date       = {{birth date|1942|6|18|mf=y}}
+| birth_place      = [[Urbana, Illinois]], U.S.
+| death_date       = {{death date and age|2013|4|4|1942|6|18|mf=y}}
+| death_place      = [[Chicago]], [[Illinois]], U.S.
+| occupation       = {{hlist|Film critic|journalist|screenwriter|film historian|author}}
+| education        = [[University of Illinois at Urbana–Champaign|University of Illinois, Urbana-Champaign]] ([[Bachelor of Arts|BA]])&lt;br&gt;[[University of Chicago]]
+| language         = English
+| years_active     = 1967–2013
+| subject          = Film
+| notableworks     = {{flat list|
+* ''[[The Great Movies]]''
+* ''[[Beyond the Valley of the Dolls]]''
+* ''Life Itself: A Memoir''
+}}
+| spouse           = {{marriage|[[Chaz Ebert|Chaz Hammelsmith]]|July 18, 1992&lt;!--Year omitted when marriage ends w/ death of article subject--&gt;}}
+| awards           = [[Pulitzer Prize for Criticism]]
+| signature        = Roger Ebert signature.png
+| website          = {{URL|https://rogerebert.com}}
+| portaldisp       =
+}}
+
+'''Roger Joseph Ebert''' ({{IPAc-en|ˈ|iː|b|ər|t}}; June 18, 1942 – April 4, 2013) was an American [[Film criticism|film critic]], film historian, journalist, screenwriter, and author. He was a film critic for the ''[[Chicago Sun-Times]]'' from 1967 until his death in 2013. In 1975, Ebert became the first film critic to win the [[Pulitzer Prize for Criticism]]. [[Neil Steinberg]] of the ''Chicago Sun-Times'' said Ebert &quot;was without question the nation's most prominent and influential film critic,&quot;&lt;ref name=SunTimesObit&gt;{{cite news|last=Steinberg |first=Neil |title=Roger Ebert dies at 70 after battle with cancer |url=http://www.suntimes.com/17320958-761/roger-ebert-dies-at-70-after-battle-with-cancer.html |newspaper=Chicago Sun-Times |date=April 4, 2013 |url-status=dead |archiveurl=https://web.archive.org/web/20141216070113/http://www.suntimes.com/17320958-761/roger-ebert-dies-at-70-after-battle-with-cancer.html |archivedate=December 16, 2014 }}&lt;/ref&gt; Tom Van Riper of ''[[Forbes]]'' described him as &quot;the most powerful pundit in America,&quot;&lt;ref&gt;{{cite news|url=https://www.forbes.com/2007/09/21/pundit-americas-top-oped-cx_tvr_0924pundits.html|title=The Top Pundits in America|work=Forbes|accessdate=December 9, 2008|author=Van Riper, Tom|date=September 24, 2007}}&lt;/ref&gt; and [[Kenneth Turan]] of the ''[[Los Angeles Times]]'' called him &quot;the best-known film critic in America.&quot;&lt;ref name=&quot;LA Times death Turan&quot;&gt;{{cite news|last=Turan|first=Kenneth|title=Remembrance: Roger Ebert, film's hero to the end|url=http://www.latimes.com/entertainment/movies/moviesnow/la-et-mn-roger-ebert-appreciation-20130405,0,669989.story|newspaper=Los Angeles Times|date=April 4, 2013}}&lt;/ref&gt;
+
+Ebert was known for his intimate, [[Midwestern United States|Midwestern]] writing voice and critical views informed by values of [[populism]] and [[humanism]].&lt;ref&gt;{{cite news|last=Zak|first=Dan|date=April 5, 2013|url=https://www.washingtonpost.com/lifestyle/style/roger-ebert-lover-of-life-taught-me-to-write/2013/04/05/131daa82-9d76-11e2-a2db-efc5298a95e1_story.html|title=Roger Ebert, lover of life, taught me to write|newspaper=[[The Washington Post]]|accessdate=April 29, 2020}}&lt;/ref&gt; Writing in a prose style intended to be entertaining and direct, he made sophisticated cinematic and analytical ideas more accessible to nonspecialist audiences.&lt;ref&gt;{{cite news|last=Zeitchik|first=Steven|date=April 5, 2013|url=https://www.latimes.com/entertainment/movies/la-xpm-2013-apr-05-la-et-mn-roger-ebert-reviews-film-newspapers-changed-20130405-story.html|title=Five unexpected ways Roger Ebert changed film journalism|newspaper=[[Los Angeles Times]]|accessdate=April 29, 2020}}&lt;/ref&gt; Despite being a populist, Ebert frequently endorsed foreign and independent films he believed would be appreciated by mainstream viewers, which often resulted in such films receiving greater exposure.&lt;ref&gt;{{cite magazine|last=Debruge|first=Peter|date=April 4, 2013|url=https://variety.com/2013/film/opinion/roger-ebert-dead-variety-critic-tribute-1200333350/|title=Variety's Peter Debruge Remembers Roger Ebert: A Champion Among Men|magazine=[[Variety (magazine)|variety]]|accessdate=April 29, 2020}}&lt;/ref&gt;
+
+Ebert and ''[[Chicago Tribune]]'' critic [[Gene Siskel]] helped popularize nationally televised film reviewing when they co-hosted the [[PBS]] show ''[[Sneak Previews]]'', followed by several variously named ''[[At the Movies (1986 TV program)|At the Movies]]'' programs. The two verbally sparred and traded humorous barbs while discussing films. They created and trademarked the phrase &quot;two thumbs up,&quot; used when both gave the same film a positive review. After Siskel died in 1999, Ebert continued hosting the show with various co-hosts and then, starting in 2000, with [[Richard Roeper]].
+
+Ebert was diagnosed with [[cancer]] of the [[Papillary thyroid cancer|thyroid]] and [[salivary gland cancer|salivary glands]] in 2002. In 2006, he required treatment that included removal of his lower jaw, leaving him severely disfigured and without the ability to speak or eat normally. However, his ability to write remained unimpaired and he continued to publish frequently online and in print until his death on April 4, 2013.
+
+==Early life==
+Roger Joseph Ebert&lt;ref name=YouTubeInterview&gt;{{YouTube|kTYVnuKnJNo|&quot;Roger Ebert – Archive Interview Part 1 of 3 &quot;}}. May 20, 2008. Retrieved June 7, 2012.&lt;/ref&gt; was born in [[Urbana, Illinois]], the only child of Annabel (née Stumm,&lt;ref name=parents /&gt;&lt;ref&gt;{{cite web |url=http://www.encyclopedia.com/doc/1G2-3069000035.html |title=Ebert, Roger (R. Hyde, Reinhold Timme) |website=encyclopedia.com |date=April 4, 2013}}&lt;/ref&gt; 1911–1987), a bookkeeper,&lt;ref name=SunTimesObit /&gt;&lt;ref name=parents&gt;{{cite web |url=http://www.filmreference.com/film/91/Roger-Ebert.html |title=Biography of Roger Ebert |publisher=Film Reference |accessdate=October 17, 2009}}&lt;/ref&gt;&lt;ref name=bookref1&gt;{{cite book |title=Life Itself: A Memoir |url=https://archive.org/details/lifeitselfmemoir00eber |url-access=registration |last=Ebert |first=Roger |publisher=Grand Central Publishing |location=New York}}&lt;/ref&gt; and Walter Harry Ebert (1901–1960), an electrician.&lt;ref&gt;{{cite news |url=http://rogerebert.suntimes.com/apps/pbcs.dll/article?AID=/20110119/REVIEWS/110119984/1001|author=Roger Ebert|title=The Company Men|publisher=[[RogerEbert.com]]|date=January 19, 2011 }}&lt;/ref&gt;&lt;ref name=ChicagoMag /&gt; He was raised [[Roman Catholic]], attending St. Mary's elementary school and serving as an [[altar boy]] in Urbana.&lt;ref name=ChicagoMag /&gt;
+
+His paternal grandparents were German immigrants&lt;ref&gt;{{cite web|url=http://rogerebert.suntimes.com/apps/pbcs.dll/article?AID=/20020412/REVIEWS/204120305/1023|title=Maryam Movie Review &amp; Film Summary|date=April 12, 2002|last=Ebert|first=Roger|website=[[RogerEbert.com]]|accessdate=January 2, 2017}}&lt;/ref&gt; and his maternal ancestry was Irish and Dutch.&lt;ref name=bookref1 /&gt;&lt;ref&gt;{{cite web| url=http://www.rogerebert.com/rogers-journal/oh-say-can-you-wear|date=May 13, 2010|website=[[RogerEbert.com]]|title=Oh, say, can you wear?}}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://blogs.suntimes.com/ebert/2013/02/what_was_my_aunt_martha_trying.html |archive-url=https://web.archive.org/web/20130226041411/http://blogs.suntimes.com/ebert/2013/02/what_was_my_aunt_martha_trying.html |url-status=dead |archive-date=February 26, 2013 |title=What was my Aunt Martha trying to ask me? |author=Ebert, Roger |date=February 22, 2013 |website=Roger Ebert's Journal |df=mdy-all }}&lt;/ref&gt; Ebert's interest in journalism began when he was a student at [[Urbana High School (Illinois)|Urbana High School]], where he was a sportswriter for ''[[The News-Gazette (Champaign–Urbana)|The News-Gazette]]'' in [[Champaign, Illinois]]; however, he began his writing career with letters of comment to the [[science-fiction fanzine]]s of the era.&lt;ref name=&quot;site&quot; /&gt;  In his senior year, he was class president and co-editor of his [[Student newspaper|high school newspaper]], ''The Echo''.&lt;ref name=ChicagoMag /&gt;&lt;ref name=&quot;Ebert My old man&quot;&gt;{{cite web |last1=Ebert |first1=Roger |title=My old man |url=https://www.rogerebert.com/rogers-journal/my-old-man |accessdate=July 11, 2019 |date=March 18, 2010 |quote=I always worked on newspapers. Harold Holmes, the father of my best friend Hal, was an editor at The News-Gazette, and took us down to the paper. A linotype operator set my byline in lead, and I used a stamp pad to imprint everything with &quot;By Roger Ebert.&quot; I was electrified. I wrote for the St. Mary's grade school paper. Nancy Smith and I were co-editors of the Urbana High School Echo. At Illinois, I published &quot;Spectator,&quot; a liberal weekly, my freshman year, and then sold it and went over to The Daily Illini. But that was after my father's death.}}&lt;/ref&gt; In 1958, he won the [[Illinois High School Association]] state [[Individual events (speech)|speech]] championship in &quot;radio speaking,&quot; an event that simulates radio newscasts.&lt;ref&gt;{{cite web|url=http://www.ihsa.org/SportsActivities/IndividualEvents/RecordsHistory.aspx?url=/data/ie/records/index.htm |title=Roger Ebert in the IHSA list of state speech champions, 1957–58 |publisher=Ihsa.org |accessdate=April 5, 2013}}&lt;/ref&gt;
+
+Regarding his early influences in film criticism, Ebert wrote in the 1998 parody collection ''Mad About the Movies'':{{cquote|I learned to be a movie critic by reading ''[[Mad (magazine)|Mad]]'' magazine&amp;nbsp;... ''Mad''{{'s}} parodies made me aware of the machine inside the skin&amp;nbsp;– of the way a movie might look original on the outside, while inside it was just recycling the same old dumb formulas. I did not read the magazine, I plundered it for clues to the universe. [[Pauline Kael]] [[I Lost It at the Movies|lost it at the movies]]; I lost it at ''Mad'' magazine.&lt;ref&gt;{{cite book|title=Mad About the Movies|year=1998|publisher=Mad Books|isbn=1-56389-459-9|url=https://archive.org/details/madaboutmovies00edit}}&lt;/ref&gt;
+}}
+
+Ebert began taking classes at the [[University of Illinois at Urbana–Champaign]] as an early-entrance student, completing his high school courses while also taking his first university class.&lt;ref&gt;{{cite book|title=Life Itself: A Memoir|last=Ebert|first=Roger|location=New York|publisher=Grand Central Publishing|page=91}}&lt;/ref&gt; After graduating from Urbana High School in 1960,&lt;ref&gt;{{cite news |author=&lt;!--Staff writer(s); no by-line.--&gt; |title=Milestones in the life of Roger Ebert|url=http://www.news-gazette.com/news/local/2013-04-05/milestones-life-roger-ebert.html|work=The News-Gazette|location=Champaign, IL|date=April 5, 2013|access-date=January 20, 2019}}&lt;/ref&gt; Ebert then attended and received his undergraduate degree in 1964. While at the University of Illinois, Ebert worked as a reporter for ''[[The Daily Illini]]'' and then served as its editor during his senior year while also continuing to work as a reporter for the ''News-Gazette'' of Champaign-Urbana, Illinois. (He had begun at the ''News-Gazette'' at age 15 covering Urbana High School sports.)&lt;ref&gt;{{cite book|title=Life Itself: A Memoir|last=Ebert|first=Roger|location=New York|publisher=Grand Central Publishing|page=30}}&lt;/ref&gt; As an undergraduate, he was a member of the [[Phi Delta Theta]] fraternity and president of the U.S. Student Press Association.&lt;ref&gt;{{cite book|title=Life Itself: A Memoir|last=Ebert |first=Roger|location=New York|publisher=Grand Central Publishing|pages=92, 96}}&lt;/ref&gt; One of the first movie reviews he ever wrote was a review of ''[[La Dolce Vita]]'', published in ''The Daily Illini'' in October 1961.&lt;ref&gt;{{cite web|url=http://www.rogerebert.com/reviews/la-dolce-vita|title=La Dolce Vita Movie Review &amp; Film Summary |last=Ebert|first=Roger |date=October 4, 1961|website=[[RogerEbert.com]]}}&lt;/ref&gt;
+
+Ebert spent a semester as a master's student in the department of English there before attending the [[University of Cape Town]] on a Rotary fellowship for a year.&lt;ref&gt;{{cite book |title=Life Itself: A Memoir|last=Ebert|first=Roger|location= New York|publisher=Grand Central Publishing|page=96}}&lt;/ref&gt; He returned from Cape Town to his graduate studies at Illinois for two more semesters and then, after being accepted as a PhD candidate at the [[University of Chicago]], he prepared to move to Chicago. He needed a job to support himself while he worked on his doctorate and so applied to the ''[[Chicago Daily News]]'', hoping that, as he had already sold freelance pieces to the ''Daily News'', including an article on the death of writer [[Brendan Behan]], he would be hired by editor [[Herman Kogan]]. Instead Kogan referred Ebert to the city editor at the ''Chicago Sun-Times,'' [[James F. Hoge Jr.|Jim Hoge]], who hired Ebert as a reporter and feature writer at the ''Sun-Times'' in 1966.&lt;ref&gt;{{cite book|title=Life Itself: A Memoir|last=Ebert|first=Roger|location=New York |publisher=Grand Central Publishing|page=139}}&lt;/ref&gt; He attended doctoral classes at the University of Chicago while working as a general reporter at the ''Sun-Times'' for a year. After movie critic Eleanor Keane left the ''Sun-Times'' in April 1967, editor Robert Zonka gave the job to Ebert.&lt;ref&gt;{{cite news|title=Ebert named film critic|newspaper=[[Chicago Sun-Times]]|date=April 5, 1967|page=57}}&lt;/ref&gt; The load of graduate school and being a film critic proved too much, so Ebert left the University of Chicago to focus his energies on film criticism.&lt;ref&gt;{{cite book|title=Life Itself: A Memoir|last=Ebert|first=Roger|location= New York|publisher=Grand Central Publishing|page=142}}&lt;/ref&gt;
+
+==Career==
+===Writing===
+Ebert began his career as a film critic in 1967, writing for the ''Chicago Sun-Times''.&lt;ref name=&quot;site&quot;&gt;{{cite web|url=http://www.rogerebert.com |title=RogerEbert.com |publisher=[[RogerEbert.com]] |date=October 13, 2004 |accessdate=July 24, 2011}}&lt;/ref&gt; That same year, he met film critic [[Pauline Kael]] for the first time at the New York Film Festival. After he sent her some of his columns, she told him they were &quot;the best film criticism being done in American newspapers today.&quot;&lt;ref name=ChicagoMag /&gt; That same year, Ebert's first book, a history of the [[University of Illinois]] titled ''Illini Century: One Hundred Years of Campus Life'', was published by the University's press. In 1969, his review of ''[[Night of the Living Dead]]''&lt;ref&gt;{{cite web|url=http://rogerebert.suntimes.com/apps/pbcs.dll/article?AID=/19670105/REVIEWS/701050301/1023|title = Night of the Living Dead|date = January 5, 1967|website = [[RogerEbert.com]]}}&lt;/ref&gt; was published in ''[[Reader's Digest]]''.&lt;ref&gt;{{cite web|url=http://www.rd.com/culture/looking-back-eberts-first-review-in-readers-digest/|title=Looking Back: Ebert's First Review in Reader's Digest|website = [[Reader's Digest]]|date = April 4, 2013|last = Beres|first = Damon|accessdate = December 26, 2016}}&lt;/ref&gt; In addition to film, Ebert would occasionally write about other topics for the ''Sun-Times'', such as music; In 1970, Ebert wrote the first published concert review of singer-songwriter [[John Prine]], who at the time was working as a mailman and performing at Chicago folk clubs.&lt;ref&gt;{{cite web |last1=Ebert |first1=Roger |title=John Prine: American Legend {{!}} Balder and Dash {{!}} Roger Ebert |url=https://www.rogerebert.com/balder-and-dash/john-prine-american-legend |website=www.rogerebert.com |accessdate=30 March 2020 |language=en}}&lt;/ref&gt;
+
+[[File:Russ Meyer and Roger Ebert by Roger Ebert.jpg|thumb|Ebert (right) with [[Russ Meyer]] in 1970]]
+Ebert co-wrote the screenplay for the [[Russ Meyer]] film ''[[Beyond the Valley of the Dolls]]'' (1970) and sometimes joked about being responsible for the film, which was poorly received on its release yet has become a [[cult film]].&lt;ref&gt;{{cite news|url=http://rogerebert.suntimes.com/apps/pbcs.dll/article?AID=/19700101/REVIEWS/708110301/1023 |title=Beyond the Valley of the Dolls|work=Chicago Sun-Times |author=Ebert, Roger|accessdate=September 3, 2012|year=1980}}&lt;/ref&gt; Ebert and Meyer also made  ''[[Up! (1976 film)|Up!]]'' (1976), ''[[Beneath the Valley of the Ultra-Vixens]]'' (1979), and other films, and were involved in the ill-fated [[Sex Pistols]] movie ''[[Who Killed Bambi? (unfinished film)|Who Killed Bambi?]]'' (In April 2010, Ebert posted his screenplay of ''Who Killed Bambi?'', aka ''Anarchy in the UK'', on his blog.)&lt;ref&gt;{{cite web|url=http://blogs.suntimes.com/ebert/2010/04/who_killed_bambi_-_a_screenpla.html|archive-url=https://web.archive.org/web/20100429015727/http://blogs.suntimes.com/ebert/2010/04/who_killed_bambi_-_a_screenpla.html|url-status=dead|archive-date=April 29, 2010|last=Ebert|first=Roger|title='Who Killed Bambi?'&amp;nbsp;– A screenplay|website=Chicago Sun-Times|date=April 25, 2010|df=mdy-all}}&lt;/ref&gt;
+
+Beginning in 1968, Ebert worked for the [[University of Chicago]] as an adjunct lecturer, teaching a night class on film at the [[Graham School of Continuing Liberal and Professional Studies]].&lt;ref&gt;{{cite web|url=https://news.uchicago.edu/article/2013/04/05/roger-ebert-x-70-film-critic-and-longtime-graham-school-lecturer-1942-2013|title = Roger Ebert, X'70, film critic and longtime Graham School lecturer, 1942–2013|date = April 5, 2013|accessdate = December 26, 2016|website = UChicagoNews|publisher = [[University of Chicago]]}}&lt;/ref&gt;
+
+In 1975, Ebert received the [[Pulitzer Prize for Criticism]].&lt;ref name=&quot;Salt Lake Tribune death&quot; /&gt;
+
+In October 1986, while continuing to work for the ''Sun-Times'' and still being based in Chicago, Ebert replaced [[Rex Reed]] as the ''[[New York Post]]'' chief film reviewer.&lt;ref&gt;{{cite magazine|magazine=[[Variety (magazine)|Variety]]|title=Ebert Supplants Reed As N.Y. Post Crit From Chi Base|page=4|date=October 29, 1986}}&lt;/ref&gt;
+
+As of 2007, his reviews were [[print syndication|syndicated]] to more than 200 newspapers in the United States and abroad.&lt;ref name=&quot;Corliss2007&quot;&gt;{{cite web|url=http://content.time.com/time/arts/article/0,8599,1636520,00.html|title=Thumbs Up for Roger Ebert|last=Corliss|first=Richard|date=June 23, 2007|website=[[Time (magazine)|Time]]|accessdate=January 2, 2017}}&lt;/ref&gt; Ebert also published more than 20 books and dozens of collected reviews.
+
+Even as he used TV (and later the internet) to share his reviews, Ebert continued to write for the ''Chicago Sun-Times'' until he died in 2013.&lt;ref&gt;{{Cite book|url=https://books.google.com/books?id=LQKhAwAAQBAJ&amp;q=write+for+the+Chicago+Sun-Times+until+he+died+in+2013&amp;pg=PA101|title=Obituaries in the Performing Arts, 2013|last=III|first=Harris M. Lentz|date=2014-05-16|publisher=McFarland|isbn=9780786476657|language=en}}&lt;/ref&gt;
+
+===TV career===
+Also in 1975, Ebert and [[Gene Siskel]] began co-hosting a weekly film-review television show, ''Sneak Previews'', which was locally produced by the Chicago [[public broadcasting]] station [[WTTW]]. The series was later picked up for national syndication on [[PBS]]. The duo became well known for their &quot;thumbs up/thumbs down&quot; review summaries.&lt;ref&gt;{{cite news|url=http://www.people.com/people/archive/article/0,,20129634,00.html|last=Gliatto|first=Tom|title=Despite the Loss of Film-Critic Buddy Gene Siskel, Roger Ebert Gives Life a Thumbs-Up|newspaper=[[People (magazine)|People]]|date= November 1, 1999}}&lt;/ref&gt; Siskel and Ebert trademarked the phrase &quot;Two Thumbs Up.&quot;&lt;ref name=Statement /&gt;
+
+In 1982, they moved from PBS to launch a similar [[Broadcast syndication|syndicated]] commercial television show named ''[[At the Movies (1982 TV program)|At the Movies With Gene Siskel &amp; Roger Ebert]]''. In 1986, they again moved the show to new ownership, creating ''[[At the Movies (1986 TV program)|Siskel &amp; Ebert &amp; the Movies]]'' through [[Disney-ABC Domestic Television|Buena Vista Television]], part of [[the Walt Disney Company]].
+
+After Siskel died in 1999, the producers retitled the show ''Roger Ebert &amp; the Movies'' and used rotating co-hosts including [[Martin Scorsese]], [[A.O. Scott]], and [[Janet Maslin]].
+
+In September 2000, ''Chicago Sun-Times'' columnist [[Richard Roeper]] became the permanent co-host and the show was renamed ''[[At the Movies (1986 TV program)|At the Movies with Ebert &amp; Roeper]]'' and later ''At the Movies''.
+
+In 2000, Ebert interviewed President [[Bill Clinton]] at [[The White House]]. Clinton spoke about his love for the movies, his favorite films of 1999, and of all time which include ''[[Casablanca (film)|Casablanca]]'' (1942), ''[[High Noon]]'' (1952) and ''[[The Ten Commandments (1956 film)|The Ten Commandments]]'' (1956). President Clinton also mentioned his favorite actors being [[Meryl Streep]], [[Robert De Niro]], and [[Tom Hanks]].&lt;ref&gt;{{cite web|url=https://siskelebert.org/?p=7506|title= The Bill Clinton Interview 2000|website= siskelebert.org|accessdate= July 17, 2020}}&lt;/ref&gt;
+
+In 2005, Ebert became the first film critic to receive a star on the [[Hollywood Walk of Fame]].&lt;ref name=&quot;Salt Lake Tribune death&quot;&gt;{{cite news|last=Rousseau|first=Caryn|title=Roger Ebert, first movie critic to win Pulitzer, dies at 70|url=http://www.sltrib.com/sltrib/entertainment2/56107300-223/ebert-movie-siskel-chicago.html.csp|newspaper=The Salt Lake Tribune|date=April 4, 2013|url-status=dead|archiveurl=https://web.archive.org/web/20160130005857/http://www.sltrib.com/sltrib/entertainment2/56107300-223/ebert-movie-siskel-chicago.html.csp|archivedate=January 30, 2016|df=mdy-all}}&lt;/ref&gt;
+
+===Later career===
+Ebert ended his association with the Disney-owned ''At The Movies'' in July 2008,&lt;ref name=Statement&gt;{{cite news|url=https://www.nytimes.com/2008/07/22/arts/22arts-EBERTANDROEP_BRF.html|title=Ebert and Roeper No Longer at the Movies |work=The New York Times|date=July 22, 2008|accessdate=Aug 30, 2013|first=Julie|last=Bloom}}&lt;/ref&gt; after the studio indicated it wished to take the program in a new direction. On February 18, 2009, Ebert reported that he and Roeper would soon announce a new movie-review program,&lt;ref name=NewShow&gt;{{cite news|url=http://rogerebert.suntimes.com/apps/pbcs.dll/section?category=ANSWERMAN|title=Roger Ebert. &quot;By the time we get to Phoenix, he'll be laughing&quot; February 18, 2009|work=Chicago Sun-Times|date=October 13, 2004|accessdate=July 24, 2011}}&lt;/ref&gt; and reiterated this plan after Disney announced that the program's last episode would air in August 2010.&lt;ref&gt;{{cite magazine|magazine= [[TV Guide]]|title = TV Guide|date = April 12, 2010| page =  64}}&lt;/ref&gt;

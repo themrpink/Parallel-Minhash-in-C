@@ -1,0 +1,215 @@
+At around the same time, the [[Mathematics in medieval Islam|Persian]] mathematician [[Al-Karaji]] (953–1029) wrote a now-lost book which contained the first description of Pascal's triangle.&lt;ref&gt;{{Cite book|url=https://books.google.com/books?id=kt9DIY1g9HYC&amp;q=al+karaji+pascal%27s+triangle&amp;pg=PA132|title=Encyclopaedia of the History of Science, Technology, and Medicine in Non-Western Cultures|last=Selin|first=Helaine|date=2008-03-12|publisher=Springer Science &amp; Business Media|isbn=9781402045592|language=en|page=132|bibcode=2008ehst.book.....S}}&lt;/ref&gt;&lt;ref&gt;[https://books.google.fr/books?id=vSkClSvU_9AC&amp;pg=PA62&amp;redir_esc=y#v=onepage&amp;q&amp;f=false/ The Development of Arabic Mathematics Between Arithmetic and Algebra - R. Rashed] &quot;Page 63&quot;&lt;/ref&gt;&lt;ref&gt;{{Cite book|url=https://books.google.com/books?id=kAjABAAAQBAJ&amp;q=al+karaji+binomial+theorem&amp;pg=PA54|title=From Alexandria, Through Baghdad: Surveys and Studies in the Ancient Greek and Medieval Islamic Mathematical Sciences in Honor of J.L. Berggren|last1=Sidoli|first1=Nathan|last2=Brummelen|first2=Glen Van|date=2013-10-30|publisher=Springer Science &amp; Business Media|isbn=9783642367366|language=en|page=54}}&lt;/ref&gt; It was later repeated by the Persian poet-astronomer-mathematician [[Omar Khayyám]] (1048–1131); thus the triangle is also referred to as the '''Khayyam triangle''' in [[Iran]].&lt;ref&gt;{{cite book |author=Kennedy, E. |title=Omar Khayyam. The Mathematics Teacher 1958 |jstor=i27957284|year=1966 |publisher=National Council of Teachers of Mathematics |pages=140–142}}&lt;/ref&gt; Several theorems related to the triangle were known, including the [[binomial theorem]]. Khayyam used a method of finding [[nth root|''n''th roots]] based on the binomial expansion, and therefore on the binomial coefficients.&lt;ref&gt;{{citation
+ | last = Coolidge | first = J. L. | author-link = Julian Coolidge
+ | journal = [[The American Mathematical Monthly]]
+ | jstor = 2305028
+ | mr = 0028222
+ | pages = 147–157
+ | title = The story of the binomial theorem
+ | volume = 56
+ | issue = 3 | year = 1949| doi = 10.2307/2305028 }}.&lt;/ref&gt;
+
+Pascal's triangle was known in China in the early 11th century through the work of the Chinese mathematician [[Jia Xian]] (1010–1070). In the 13th century, [[Yang Hui]] (1238–1298) presented the triangle and hence it is still called '''Yang Hui's triangle''' ({{lang-zh|s=杨辉三角|t=楊輝三角|labels=no}}) in [[China]].&lt;ref&gt;Weisstein, Eric W. (2003). ''CRC concise encyclopedia of mathematics'', p. 2169. {{isbn|978-1-58488-347-0}}.&lt;/ref&gt;
+
+In the west, the binomial coefficients were calculated by [[Gersonides]] in the early 14th century, using the multiplicative formula for them.&lt;ref name=&quot;ed-cam&quot;/&gt; [[Petrus Apianus]] (1495–1552) published the full triangle on the [[Book frontispiece|frontispiece]] of his book on business calculations in 1527. This is the first record of the triangle in Europe.&lt;ref&gt;{{citation|title=Nature of Mathematics|first=Karl J.|last=Smith|publisher=Cengage Learning|year=2010|isbn=9780538737586|page=10|url=https://books.google.com/books?id=Di0HyCgDYq8C&amp;pg=PA10}}.&lt;/ref&gt; [[Michael Stifel]] published a portion of the triangle (from the second to the middle column in each row) in 1544, describing it as a table of [[figurate number]]s.&lt;ref name=&quot;ed-cam&quot;/&gt; In [[Italy]], Pascal's triangle is referred to as '''Tartaglia's triangle''', named for the Italian [[algebra]]ist [[Niccolò Fontana Tartaglia]] (1500–1577), who published six rows of the triangle in 1556.&lt;ref name=&quot;ed-cam&quot;/&gt; [[Gerolamo Cardano]], also, published the triangle as well as the additive and multiplicative rules for constructing it in 1570.&lt;ref name=&quot;ed-cam&quot;/&gt;
+
+Pascal's ''Traité du triangle arithmétique'' (''Treatise on Arithmetical Triangle'') was published in 1655. In this, Pascal collected several results then known about the triangle, and employed them to solve problems in [[probability theory]]. The triangle was later named after Pascal by [[Pierre Raymond de Montmort]] (1708) who called it &quot;Table de M. Pascal pour les combinaisons&quot; (French: Table of Mr. Pascal for combinations) and [[Abraham de Moivre]] (1730) who called it &quot;Triangulum Arithmeticum PASCALIANUM&quot; (Latin: Pascal's Arithmetic Triangle), which became the modern Western name.&lt;ref&gt;{{Cite journal | doi = 10.2307/2975209 | title = The Binomial Coefficient Function | first =  David | last = Fowler | authorlink = David Fowler (mathematician) | journal = [[The American Mathematical Monthly]] | volume = 103 | issue = 1 |date=January 1996 | pages = 1–17 | jstor = 2975209 }} See in particular p. 11.&lt;/ref&gt;
+
+==Binomial expansions==
+[[Image:binomial_theorem_visualisation.svg|thumb|300px|Visualisation of binomial expansion up to the 4th power]]
+
+Pascal's triangle determines the coefficients which arise in [[binomial expansion]]s. For example, consider the expansion
+
+:(''x'' + ''y'')&lt;sup&gt;2&lt;/sup&gt; = ''x''&lt;sup&gt;2&lt;/sup&gt; + 2''xy'' + ''y''&lt;sup&gt;2&lt;/sup&gt; = '''1'''''x''&lt;sup&gt;2&lt;/sup&gt;''y''&lt;sup&gt;0&lt;/sup&gt; + '''2'''''x''&lt;sup&gt;1&lt;/sup&gt;''y''&lt;sup&gt;1&lt;/sup&gt; + '''1'''''x''&lt;sup&gt;0&lt;/sup&gt;''y''&lt;sup&gt;2&lt;/sup&gt;.
+
+The coefficients are the numbers in row two of Pascal's triangle: 1,&amp;nbsp;2,&amp;nbsp;1.
+In general, when a [[binomial (polynomial)|binomial]] like ''x'' + ''y'' is raised to a positive integer power we have:
+
+:(''x'' + ''y'')&lt;sup&gt;''n''&lt;/sup&gt; = ''a''&lt;sub&gt;0&lt;/sub&gt;''x''&lt;sup&gt;''n''&lt;/sup&gt; + ''a''&lt;sub&gt;1&lt;/sub&gt;''x''&lt;sup&gt;''n''−1&lt;/sup&gt;''y'' + ''a''&lt;sub&gt;2&lt;/sub&gt;''x''&lt;sup&gt;''n''−2&lt;/sup&gt;''y''&lt;sup&gt;2&lt;/sup&gt; + ... + ''a''&lt;sub&gt;''n''−1&lt;/sub&gt;''xy''&lt;sup&gt;''n''−1&lt;/sup&gt; + ''a''&lt;sub&gt;''n''&lt;/sub&gt;''y''&lt;sup&gt;''n''&lt;/sup&gt;,
+
+where the coefficients ''a''&lt;sub&gt;''i''&lt;/sub&gt; in this expansion are precisely the numbers on row ''n'' of Pascal's triangle. In other words,
+
+:&lt;math&gt;a_i = {n \choose i}.&lt;/math&gt;
+
+This is the [[binomial theorem]].
+
+The entire right diagonal of Pascal's triangle corresponds to the coefficient of ''y''&lt;sup&gt;''n''&lt;/sup&gt; in these binomial expansions, while the next diagonal corresponds to the coefficient of ''xy''&lt;sup&gt;''n''−1&lt;/sup&gt; and so on.
+
+To see how the binomial theorem relates to the simple construction of Pascal's triangle, consider the problem of calculating the coefficients of the expansion of {{math|(''x'' + 1)&lt;sup&gt;''n''+1&lt;/sup&gt;}}  in terms of the corresponding coefficients of {{math|(''x'' + 1)&lt;sup&gt;''n''&lt;/sup&gt;}} (setting ''y'' = 1 for simplicity). Suppose then that
+
+:&lt;math&gt;(x+1)^n=\sum_{i=0}^n a_i x^i.&lt;/math&gt;
+
+Now
+
+:&lt;math&gt; (x+1)^{n+1} = (x+1)(x+1)^n = x(x+1)^n + (x+1)^n = \sum_{i=0}^n a_i x^{i+1} + \sum_{i=0}^n a_i x^i.&lt;/math&gt;
+
+{{Image frame|width=230|caption=Six rows Pascal's triangle as binomial coefficients
+|content=
+&lt;math&gt;\begin{array}{c}
+\binom{0}{0} \\
+                                \binom{1}{0} \quad \binom{1}{1} \\
+                        \binom{2}{0} \quad \binom{2}{1} \quad \binom{2}{2} \\
+                \binom{3}{0} \quad \binom{3}{1} \quad \binom{3}{2} \quad \binom{3}{3} \\
+        \binom{4}{0} \quad \binom{4}{1} \quad \binom{4}{2} \quad \binom{4}{3} \quad \binom{4}{4} \\
+\binom{5}{0} \quad \binom{5}{1} \quad \binom{5}{2} \quad \binom{5}{3} \quad \binom{5}{4} \quad \binom{5}{5}
+\end{array}&lt;/math&gt;
+}}
+
+The two summations can be reorganized as follows:
+
+:&lt;math&gt;
+\begin{align}
+&amp; \sum_{i=0}^{n  } a_{i  } x^{i+1} + \sum_{i=0}^n a_i x^i \\
+&amp; {} = \sum_{i=1}^{n+1} a_{i-1} x^{i  } + \sum_{i=0}^n a_i x^i \\
+&amp; {} = \sum_{i=1}^{n  } a_{i-1} x^{i  } + \sum_{i=1}^n a_i x^i + a_0x^0 + a_{n}x^{n+1} \\
+&amp; {} = \sum_{i=1}^{n  } (a_{i-1} + a_i)x^{i  } + a_0x^0 + a_{n}x^{n+1} \\
+&amp; {} = \sum_{i=1}^{n  } (a_{i-1} + a_i)x^{i  } + x^0 + x^{n+1}
+\end{align}
+&lt;/math&gt;
+
+(because of how raising a polynomial to a power works, {{math|1 = ''a''&lt;sub&gt;0&lt;/sub&gt; = ''a''&lt;sub&gt;''n''&lt;/sub&gt; = 1)}}.
+
+We now have an expression for the polynomial {{math|(''x'' + 1)&lt;sup&gt;''n''+1&lt;/sup&gt;}} in terms of the coefficients of {{math|(''x'' + 1)&lt;sup&gt;''n''&lt;/sup&gt;}} (these are the ''a''&lt;sub&gt;''i''&lt;/sub&gt;s), which is what we need if we want to express a line in terms of the line above it.  Recall that all the terms in a diagonal going from the upper-left to the lower-right correspond to the same power of ''x'', and that the a-terms are the coefficients of the polynomial {{math|(''x'' + 1)&lt;sup&gt;''n''&lt;/sup&gt;}}, and we are determining the coefficients of {{math|(''x'' + 1)&lt;sup&gt;''n''+1&lt;/sup&gt;}}.  Now, for any given ''i'' not 0 or {{math|''n'' + 1}}, the coefficient of the ''x''&lt;sup&gt;''i''&lt;/sup&gt; term in the polynomial {{math|(''x'' + 1)&lt;sup&gt;''n''+1&lt;/sup&gt;}} is equal to {{math|{{define|''a''&lt;sub&gt;''i''−1&lt;/sub&gt;|the figure above and to the left of the figure to be determined, since it is on the same diagonal}} + {{define|''a''&lt;sub&gt;''i''&lt;/sub&gt;|the figure to the immediate right of the first figure}}}}.  This is indeed the simple rule for constructing Pascal's triangle row-by-row.
+
+It is not difficult to turn this argument into a [[proof (mathematics)|proof]] (by [[mathematical induction]]) of the binomial theorem. Since
+{{math|1=(''a'' + ''b'')&lt;sup&gt;''n''&lt;/sup&gt; = ''b''&lt;sup&gt;''n''&lt;/sup&gt;(''a''/''b'' +  1)&lt;sup&gt;''n''&lt;/sup&gt;}}, the coefficients are identical in the expansion of the general case.
+
+An interesting consequence of the binomial theorem is obtained by setting both variables ''x'' and ''y'' equal to one.  In this case, we know that {{math|1=(1 + 1)&lt;sup&gt;''n''&lt;/sup&gt; = 2&lt;sup&gt;''n''&lt;/sup&gt;}}, and so
+
+:&lt;math&gt; {n \choose 0} + {n \choose 1} + \cdots +{n \choose n-1} + {n \choose n} = 2^n. &lt;/math&gt;
+
+In other words, the sum of the entries in the ''n''th row of Pascal's triangle is the ''n''th power of&amp;nbsp;2. This is equivalent to the statement that the number of subsets (the cardinality of the [[power set]]) of an ''n''-element set is &lt;math&gt;2^n&lt;/math&gt;, as can be seen by observing that the number of subsets is the sum of the number of combinations of each of the possible lengths, which range from zero through to ''n''.
+
+==Combinations==
+
+A second useful application of Pascal's triangle is in the calculation of [[combination]]s. For example, the number of combinations of ''n'' things taken ''k'' at a time (called ''[[n choose k]]'') can be found by the equation
+
+:&lt;math&gt; \mathbf{C}(n,k) = \mathbf{C}_k^n= {_nC_k} = {n \choose k} = \frac{n!}{k!(n-k)!}.&lt;/math&gt;
+
+But this is also the formula for a cell of Pascal's triangle. Rather than performing the calculation, one can simply look up the appropriate entry in the triangle. Provided we have the first row and the first entry in a row numbered 0, the answer will be located at entry ''k'' in row ''n''. For example, suppose a basketball team has 10 players and wants to know how many ways there are of selecting 8. The answer is entry 8 in row 10, which is 45; that is, 10 choose 8 is 45.
+
+==Relation to binomial distribution and convolutions==
+When divided by 2&lt;sup&gt;''n''&lt;/sup&gt;, the ''n''th row of Pascal's triangle becomes the [[binomial distribution]] in the symmetric case where ''p'' =&amp;nbsp;1/2. By the [[central limit theorem]], this distribution approaches the [[normal distribution]] as ''n'' increases. This can also be seen by applying [[Stirling's formula]] to the factorials involved in the formula for combinations.
+
+This is related to the operation of discrete [[convolution]] in two ways. First, polynomial multiplication exactly corresponds to discrete convolution, so that repeatedly convolving the sequence {...,&amp;nbsp;0,&amp;nbsp;0,&amp;nbsp;1,&amp;nbsp;1,&amp;nbsp;0,&amp;nbsp;0,&amp;nbsp;...} with itself corresponds to taking powers of 1&amp;nbsp;+&amp;nbsp;''x'', and hence to generating the rows of the triangle. Second, repeatedly convolving the distribution function for a [[random variable]] with itself corresponds to calculating the distribution function for a sum of ''n'' independent copies of that variable; this is exactly the situation to which the central limit theorem applies, and hence leads to the normal distribution in the limit.
+
+==Patterns and properties==
+
+Pascal's triangle has many properties and contains many patterns of numbers.
+[[File:Pascal's Triangle animated binary rows.gif|200px|thumb|Each frame represents a row in Pascal's triangle. Each column of pixels is a number in binary with the least significant bit at the bottom. Light pixels represent ones and the dark pixels are zeroes.]]
+
+=== Rows ===
+
+*The sum of the elements of a single row is twice the sum of the row preceding it. For example, row&amp;nbsp;0 (the topmost row) has a value of 1, row&amp;nbsp;1 has a value of 2, row&amp;nbsp;2 has a value of 4, and so forth. This is because every item in a row produces two items in the next row: one left and one right. The sum of the elements of row&amp;nbsp;{{mvar|n}} is equal to {{math|2&lt;sup&gt;''n''&lt;/sup&gt;}}.
+*Taking the product of the elements in each row, the sequence of products {{OEIS|id=A001142}} is related to the base of the natural logarithm, ''[[E (mathematical constant)|e]]''.&lt;ref&gt;{{citation
+ | last = Brothers | first = H. J.
+ | doi = 10.4169/math.mag.85.1.51
+ | journal = [[Mathematics Magazine]]
+ | mr =
+ | pages = 51
+ | title = Finding e in Pascal's triangle
+ | volume = 85
+ | year = 2012| s2cid = 218541210
+ }}.&lt;/ref&gt;&lt;ref&gt;{{citation
+ | last = Brothers | first = H. J.
+ | doi =10.1017/S0025557200004204
+ | journal = [[The Mathematical Gazette]]
+ | mr = 
+ | pages = 145–148
+ | title = Pascal's triangle: The hidden stor-''e''
+ | volume = 96
+ | year = 2012}}.&lt;/ref&gt; Specifically, define the sequence ''s''&lt;sub&gt;''n''&lt;/sub&gt; as follows:
+::&lt;math&gt;s_n=\prod_{k=0}^{n}\binom{n}{k} = \prod_{k=0}^{n}\frac{n!}{k!(n-k)!}~, ~ n \geq 0.&lt;/math&gt;
+:Then, the ratio of successive row products is
+::&lt;math&gt;\frac{s_{n+1}}{s_{n}}=\frac{(n+1)!^{(n+2)}\prod_{k=0}^{n+1}{k!^{-2}}}{n!^{(n+1)}\prod_{k=0}^{n}{k!^{-2}}}
+=\frac{(n+1)^n}{n!}&lt;/math&gt;
+:and the ratio of these ratios is
+::&lt;math&gt;\frac{(s_{n+1})(s_{n-1})}{(s_n)^2}=\left(\frac{n+1}{n}\right)^n, ~ n\geq 1.&lt;/math&gt;
+:The right-hand side of the above equation takes the form of the limit definition of ''e''
+::&lt;math&gt;\textit{e} =\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}.&lt;/math&gt;
+* Pi can be found in Pascal's triangle through the [[Nilakantha Somayaji|Nilakantha]] infinite series.&lt;ref&gt;
+ {{citation
+ | last = Foster | first = T.
+ | doi = 10.5951/mathteacher.108.4.0246
+ | journal = [[Mathematics Teacher]]
+ | mr =
+ | pages = 247
+ | title = Nilakantha's Footprints in Pascal's Triangle
+ | volume = 108
+ | year = 2014}}&lt;/ref&gt;
+::&lt;math&gt;\pi=3+\sum_{n=1}^\infty(-1)^{n+1}\frac{\binom{2n+1}{1}}{\binom{2n+1}{2}\binom{2n+2}{2}}&lt;/math&gt;
+* ''The value of a row'', if each entry is considered a decimal place (and numbers larger than 9 carried over accordingly), is a power of 11 ( {{math|11&lt;sup&gt;''n''&lt;/sup&gt;}}, for row&amp;nbsp;{{mvar|n}}). Thus, in row&amp;nbsp;2, {{math|⟨1, 2, 1⟩}} becomes 11&lt;sup&gt;2&lt;/sup&gt;, while {{math|⟨1, 5, 10, 10, 5, 1⟩}} in row&amp;nbsp;five becomes (after carrying) 161,051, which is 11&lt;sup&gt;5&lt;/sup&gt;. This property is explained by setting {{math|1=''x'' = 10}} in the binomial expansion of {{math|(''x'' + 1)&lt;sup&gt;''n''&lt;/sup&gt;}}, and adjusting values to the decimal system. But {{mvar|x}} can be chosen to allow rows to represent values in [[radix|''any'' base]].
+** In [[base 3]]: {{math|1=1 2 1&lt;sub&gt;3&lt;/sub&gt; = 4&lt;sup&gt;2&lt;/sup&gt; (16)}}
+** {{math|1=⟨1, 3, 3, 1⟩ → 2 1 0 1&lt;sub&gt;3&lt;/sub&gt; = 4&lt;sup&gt;3&lt;/sup&gt; (64)}}
+** In [[base 9]]: {{math|1=1 2 1&lt;sub&gt;9&lt;/sub&gt; = 10&lt;sup&gt;2&lt;/sup&gt; (100)}}
+** &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {{math|1=1 3 3 1&lt;sub&gt;9&lt;/sub&gt; = 10&lt;sup&gt;3&lt;/sup&gt; (1000)}}
+** {{math|1=⟨1, 5, 10, 10, 5, 1⟩ → 1 6 2 1 5 1&lt;sub&gt;9&lt;/sub&gt; = 10&lt;sup&gt;5&lt;/sup&gt; (100000)}}
+*: In particular (see previous property), for {{math|1=''x'' = 1}} place value remains ''constant'' (1&lt;sup&gt;''place''&lt;/sup&gt;=1). Thus entries can simply be added in interpreting the value of a row.
+* Some of the numbers in Pascal's triangle correlate to numbers in [[Lozanić's triangle]].
+* The sum of the squares of the elements of row&amp;nbsp;{{mvar|n}} equals the middle element of row&amp;nbsp;{{math|2''n''}}.  For example, 1&lt;sup&gt;2&lt;/sup&gt;&amp;nbsp;+&amp;nbsp;4&lt;sup&gt;2&lt;/sup&gt;&amp;nbsp;+&amp;nbsp;6&lt;sup&gt;2&lt;/sup&gt;&amp;nbsp;+&amp;nbsp;4&lt;sup&gt;2&lt;/sup&gt;&amp;nbsp;+&amp;nbsp;1&lt;sup&gt;2&lt;/sup&gt; =&amp;nbsp;70.  In general form:
+::&lt;math&gt;\sum_{k=0}^n {n \choose k}^2 = {2n \choose n}.&lt;/math&gt;
+* On any row&amp;nbsp;{{mvar|n}}, where {{mvar|n}} is even, the middle term minus the term two spots to the left equals a [[Catalan number]], specifically the {{math|(''n''/2 + 1)}}th Catalan number. For example: on row&amp;nbsp;4,  {{math|1=6 − 1 = 5}}, which is the 3rd Catalan number, and {{math|1=4/2 + 1 = 3}}.
+* In a row&amp;nbsp;{{mvar|p}} where {{mvar|p}} is a [[prime number]], all the terms in that row except the 1s are [[multiple (mathematics)|multiples]] of&amp;nbsp;{{mvar|p}}. This can be proven easily, since if &lt;math&gt;p\in \mathbb{P}&lt;/math&gt;, then {{mvar|p}} has no factors save for 1 and itself. Every entry in the triangle is an integer, so therefore by definition &lt;math&gt;(p-k)!&lt;/math&gt; and &lt;math&gt;k!&lt;/math&gt; are factors of &lt;math&gt;p!\,&lt;/math&gt;. However, there is no possible way {{mvar|p}} itself can show up in the denominator, so therefore {{mvar|p}} (or some multiple of it) must be left in the numerator, making the entire entry a multiple of {{mvar|p}}.
+&lt;!--
+[[Image:Exp binomial grey.svg|thumb|300px|left|Binomial matrix as matrix exponential (illustration for 5×5 matrices). All the dots represent 0.]]  Comment: picture hidded since useless rescaling, also wrong paragraph for the pic --&gt;
+*''Parity'': To count [[odd number|odd]] terms in row&amp;nbsp;{{mvar|n}}, convert {{mvar|n}} to [[binary numeral system|binary]]. Let {{mvar|x}} be the number of 1s in the binary representation. Then the number of odd terms will be {{math|2&lt;sup&gt;''x''&lt;/sup&gt;}}. These numbers are the values in [[Gould's sequence]].&lt;ref&gt;{{citation
+ | last = Fine | first = N. J.
+ | doi = 10.2307/2304500
+ | journal = [[American Mathematical Monthly]]
+ | mr = 0023257
+ | pages = 589–592
+ | title = Binomial coefficients modulo a prime
+ | volume = 54
+ | issue = 10
+ | year = 1947| jstor = 2304500
+ }}. See in particular Theorem 2, which gives a generalization of this fact for all prime moduli.&lt;/ref&gt;
+*Every entry in row 2&lt;sup&gt;''n''&lt;/sup&gt;-1, ''n'' ≥ 0, is odd.&lt;ref&gt;{{citation
+ | last = Hinz | first = Andreas M.
+ | doi = 10.2307/2324061
+ | issue = 6
+ | journal = The American Mathematical Monthly
+ | mr = 1166003
+ | pages = 538–544
+ | title = Pascal's triangle and the Tower of Hanoi
+ | volume = 99
+ | year = 1992| jstor = 2324061
+ }}. Hinz attributes this observation to an 1891 book by [[Édouard Lucas]], ''Théorie des nombres'' (p.&amp;nbsp;420).&lt;/ref&gt;
+*''Polarity'': When the elements of a row of Pascal's triangle are added and subtracted together sequentially, every row with a middle number, meaning rows that have an odd number of integers, gives 0 as the result.  As examples, row 4 is 1 4   6 4  1, so the formula would be 6 – (4+4) + (1+1) = 0; and row 6 is 1 6  15 20 15 6  1, so the formula would be 20 – (15+15) + (6+6) – (1+1) = 0.  So every even row of the Pascal triangle equals 0 when you take the middle number, then subtract the integers directly next to the center, then add the next integers, then subtract, so on and so forth until you reach the end of the row.
+
+=== Diagonals ===
+{{Pascal_triangle_simplex_numbers.svg|250px|[[simplex]] numbers}}
+The diagonals of Pascal's triangle contain the [[figurate numbers]] of simplices:
+* The diagonals going along the left and right edges contain only 1's.
+* The diagonals next to the edge diagonals contain the [[natural number]]s in order.
+* Moving inwards, the next pair of diagonals contain the [[triangular number]]s in order.
+* The next pair of diagonals contain the [[tetrahedral number]]s in order, and the next pair give [[pentatope number]]s.
+
+::&lt;math&gt;\begin{align}
+P_0(n) &amp;= P_d(0) = 1, \\
+P_d(n) &amp;= P_d(n-1) + P_{d-1}(n) \\
+&amp;= \sum_{i=0}^n P_{d-1}(i) = \sum_{i=0}^d P_i(n-1).
+\end{align}&lt;/math&gt;
+
+The symmetry of the triangle implies that the ''n''&lt;sup&gt;th&lt;/sup&gt; d-dimensional number is equal to the ''d''&lt;sup&gt;th&lt;/sup&gt; ''n''-dimensional number.
+
+An alternative formula that does not involve recursion is as follows:
+
+::&lt;math&gt;P_d(n)=\frac{1}{d!}\prod_{k=0}^{d-1} (n+k) = {n^{(d)}\over d!} = \binom{n+d-1}{d}&lt;/math&gt;
+
+:where ''n''&lt;sup&gt;(''d'')&lt;/sup&gt; is the [[Pochhammer symbol|rising factorial]].
+
+The geometric meaning of a function P&lt;sub&gt;''d''&lt;/sub&gt; is:  P&lt;sub&gt;''d''&lt;/sub&gt;(1) = 1 for all ''d''.  Construct a ''d''-[[dimensional]] [[triangle]] (a 3-dimensional triangle is a [[tetrahedron]]) by placing additional dots below an initial dot, corresponding to P&lt;sub&gt;''d''&lt;/sub&gt;(1) = 1.  Place these dots in a manner analogous to the placement of numbers in Pascal's triangle.  To find P&lt;sub&gt;''d''&lt;/sub&gt;(''x''), have a total of ''x'' dots composing the target shape.  P&lt;sub&gt;''d''&lt;/sub&gt;(''x'') then equals the total number of dots in the shape.  A 0-dimensional triangle is a point and a 1-dimensional triangle is simply a line, and therefore P&lt;sub&gt;0&lt;/sub&gt;(''x'') = ''1'' and P&lt;sub&gt;1&lt;/sub&gt;(''x'') = ''x'', which is the sequence of natural numbers.  The number of dots in each layer corresponds to P&lt;sub&gt;''d''&amp;nbsp;−&amp;nbsp;1&lt;/sub&gt;(''x'').
+
+=== Calculating a row or diagonal by itself ===
+There are simple algorithms to compute all the elements in a row or diagonal without computing other elements or factorials.
+
+To compute row &lt;math&gt;n&lt;/math&gt; with the elements &lt;math&gt;\tbinom{n}{0}&lt;/math&gt;, &lt;math&gt;\tbinom{n}{1}&lt;/math&gt;, ..., &lt;math&gt;\tbinom{n}{n}&lt;/math&gt;, begin with &lt;math&gt;\tbinom{n}{0}=1&lt;/math&gt;. For each subsequent element, the value is determined by multiplying the previous value by a fraction with slowly changing numerator and denominator:
+
+:&lt;math&gt; {n\choose k}= {n\choose k-1}\times \frac{n+1-k}{k}.&lt;/math&gt;
+
+For example, to calculate row 5, the fractions are&amp;nbsp; &lt;math&gt;\tfrac{5}{1}&lt;/math&gt;,&amp;nbsp; &lt;math&gt;\tfrac{4}{2}&lt;/math&gt;,&amp;nbsp; &lt;math&gt;\tfrac{3}{3}&lt;/math&gt;,&amp;nbsp; &lt;math&gt;\tfrac{2}{4}&lt;/math&gt; and &lt;math&gt;\tfrac{1}{5}&lt;/math&gt;, and hence the elements are&amp;nbsp; &lt;math&gt;\tbinom{5}{0}=1&lt;/math&gt;, &amp;nbsp; &lt;math&gt;\tbinom{5}{1}=1\times\tfrac{5}{1}=5&lt;/math&gt;, &amp;nbsp; &lt;math&gt;\tbinom{5}{2}=5\times\tfrac{4}{2}=10&lt;/math&gt;, etc. (The remaining elements are most easily obtained by symmetry.)
+
+To compute the diagonal containing the elements &lt;math&gt;\tbinom{n}{0}&lt;/math&gt;, &lt;math&gt;\tbinom{n+1}{1}&lt;/math&gt;, &lt;math&gt;\tbinom{n+2}{2}&lt;/math&gt;, ..., we again begin with &lt;math&gt;\tbinom{n}{0}=1&lt;/math&gt; and obtain subsequent elements by multiplication by certain fractions:
+
+:&lt;math&gt; {n+k\choose k}= {n+k-1\choose k-1}\times \frac{n+k}{k}.&lt;/math&gt;
+
+For example, to calculate the diagonal beginning at &lt;math&gt;\tbinom{5}{0}&lt;/math&gt;, the fractions are&amp;nbsp; &lt;math&gt;\tfrac{6}{1}&lt;/math&gt;,&amp;nbsp; &lt;math&gt;\tfrac{7}{2}&lt;/math&gt;,&amp;nbsp; &lt;math&gt;\tfrac{8}{3}&lt;/math&gt;, ..., and the elements are &lt;math&gt;\tbinom{5}{0}=1&lt;/math&gt;, &amp;nbsp; &lt;math&gt;\tbinom{6}{1}=1\times\tfrac{6}{1}=6&lt;/math&gt;, &amp;nbsp; &lt;math&gt;\tbinom{7}{2}=6\times\tfrac{7}{2}=21&lt;/math&gt;, etc. By symmetry, these elements are equal to &lt;math&gt;\tbinom{5}{5}&lt;/math&gt;, &lt;math&gt;\tbinom{6}{5}&lt;/math&gt;, &lt;math&gt;\tbinom{7}{5}&lt;/math&gt;, etc.

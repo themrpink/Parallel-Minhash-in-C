@@ -1,0 +1,332 @@
+== Analog CMOS ==
+{{See|CMOS amplifier|Mixed-signal integrated circuit}}
+
+Besides digital applications, CMOS technology is also used in [[Analogue electronics|analog]] applications. For example, there are CMOS [[operational amplifier]] ICs available in the market. [[Transmission gate]]s may be used as analog [[multiplexers]] instead of signal [[relay]]s. CMOS technology is also widely used for [[radio frequency|RF]] circuits all the way to microwave frequencies, in [[mixed-signal integrated circuit|mixed-signal]] (analog+digital) applications.{{citation needed|date=January 2016}}
+
+=== RF CMOS ===
+{{Main|RF CMOS}}
+
+RF CMOS refers to [[RF circuit]]s ([[radio frequency]] circuits) which are based on [[mixed-signal integrated circuit|mixed-signal]] [[MOS integrated circuit|CMOS integrated circuit]] technology. They are widely used in [[wireless]] [[telecommunication]] technology. RF CMOS was developed by [[Asad Abidi]] while working at [[UCLA]] in the late 1980s. This changed the way in which RF circuits were designed, leading to the replacement of discrete [[bipolar transistors]] with CMOS integrated circuits in [[radio]] [[transceivers]].&lt;ref name=&quot;O'Neill&quot;&gt;{{cite journal |last1=O'Neill |first1=A. |title=Asad Abidi Recognized for Work in RF-CMOS |journal=IEEE Solid-State Circuits Society Newsletter |date=2008 |volume=13 |issue=1 |pages=57–58 |doi=10.1109/N-SSC.2008.4785694 |issn=1098-4232}}&lt;/ref&gt; It enabled sophisticated, low-cost and portable [[end-user]] terminals, and gave rise to small, low-cost, low-power and portable units for a wide range of wireless communication systems. This enabled &quot;anytime, anywhere&quot; communication and helped bring about the [[wireless revolution]], leading to the rapid growth of the wireless industry.&lt;ref&gt;{{cite journal |last1=Daneshrad |first1=Babal |last2=Eltawil |first2=Ahmed M. |title=Integrated Circuit Technologies for Wireless Communications |journal=Wireless Multimedia Network Technologies |volume=524 |date=2002 |pages=227–244 |doi=10.1007/0-306-47330-5_13 |isbn=0-7923-8633-7 |publisher=Springer US|series=The International Series in Engineering and Computer Science }}&lt;/ref&gt;
+
+The [[baseband processor]]s&lt;ref&gt;{{cite book |last1=Chen |first1=Wai-Kai |title=The VLSI Handbook |date=2018 |publisher=[[CRC Press]] |isbn=9781420005967 |pages=60–2 |url=https://books.google.com/books?id=rMsqBgAAQBAJ&amp;pg=SA60-PA2}}&lt;/ref&gt;&lt;ref&gt;{{cite book |last1=Morgado |first1=Alonso |last2=Río |first2=Rocío del |last3=Rosa |first3=José M. de la |title=Nanometer CMOS Sigma-Delta Modulators for Software Defined Radio |date=2011 |publisher=[[Springer Science &amp; Business Media]] |isbn=9781461400370 |page=1 |url=https://books.google.com/books?id=Alv6nWVCkDIC&amp;pg=PA1}}&lt;/ref&gt; and radio transceivers in all modern [[wireless networking]] devices and [[mobile phones]] are mass-produced using RF CMOS devices.&lt;ref name=&quot;O'Neill&quot;/&gt; RF CMOS circuits are widely used to transmit and receive wireless signals, in a variety of applications, such as [[satellite]] technology (such as [[GPS]]), [[bluetooth]], [[Wi-Fi]], [[near-field communication]] (NFC), [[mobile network]]s (such as [[3G]] and [[4G]]), [[Terrestrial television|terrestrial]] [[broadcast]], and [[automotive electronics|automotive]] [[radar]] applications, among other uses.&lt;ref&gt;{{cite book |last1=Veendrick |first1=Harry J. M. |title=Nanometer CMOS ICs: From Basics to ASICs |date=2017 |publisher=Springer |isbn=9783319475974 |page=243 |url=https://books.google.com/books?id=Lv_EDgAAQBAJ&amp;pg=PA243}}&lt;/ref&gt;
+
+Examples of commercial RF CMOS chips include Intel's [[Digital Enhanced Cordless Telecommunications|DECT]] cordless phone, and [[802.11]] ([[Wi-Fi]]) chips created by [[Atheros]] and other companies.&lt;ref name=&quot;IEEE-CMOS-dualband-n&quot;&gt;{{cite web|last1=Nathawad|first1=L.|last2=Zargari|first2=M.|last3=Samavati|first3=H.|last4=Mehta|first4=S.|last5=Kheirkhaki|first5=A.|last6=Chen|first6=P.|last7=Gong|first7=K.|last8=Vakili-Amini|first8=B.|last9=Hwang|first9=J.|last10=Chen|first10=M.|last11=Terrovitis|first11=M.|last12=Kaczynski|first12=B.|last13=Limotyrakis|first13=S.|last14=Mack|first14=M.|last15=Gan|first15=H.|last16=Lee|first16=M.|last17=Abdollahi-Alibeik|first17=B.|last18=Baytekin|first18=B.|last19=Onodera|first19=K.|last20=Mendis|first20=S.|last21=Chang|first21=A.|last22=Jen|first22=S.|last23=Su|first23=D.|last24=Wooley|first24=B.|title=20.2: A Dual-band CMOS MIMO Radio SoC for IEEE 802.11n Wireless LAN|url=http://www.ewh.ieee.org/r6/scv/ssc/May2008_WLAN.pdf|website=IEEE Entity Web Hosting|publisher=IEEE|accessdate=22 October 2016}}&lt;/ref&gt; Commercial RF CMOS products are also used for [[Bluetooth]] and [[Wireless LAN]] (WLAN) networks.&lt;ref&gt;{{cite journal |title=Abidi Receives IEEE Pederson Award at ISSCC 2008 |journal=[[IEEE Solid-State Circuits Society|SSCC: IEEE Solid-State Circuits Society News]] |date=Spring 2008 |volume=13 |issue=2 |page=12 |doi=10.1109/N-SSC.2008.4785734 |last1=Olstein |first1=Katherine |s2cid=30558989 }}&lt;/ref&gt; RF CMOS is also used in the radio transceivers for wireless standards such as [[GSM]], Wi-Fi, and Bluetooth, transceivers for mobile networks such as 3G, and remote units in [[wireless sensor network]]s (WSN).&lt;ref&gt;{{cite book |last1=Oliveira |first1=Joao |last2=Goes |first2=João |title=Parametric Analog Signal Amplification Applied to Nanoscale CMOS Technologies |date=2012 |publisher=[[Springer Science &amp; Business Media]] |isbn=9781461416708 |page=7 |url=https://books.google.com/books?id=Ahl_OuKxsToC&amp;pg=PR7}}&lt;/ref&gt;
+
+RF CMOS technology is crucial to modern wireless communications, including wireless networks and [[mobile communication]] devices. One of the companies that commercialized RF CMOS technology was [[Infineon]]. Its bulk CMOS [[RF switches]] sell over 1{{nbsp}}billion units annually, reaching a cumulative 5{{nbsp}}billion units, {{as of|2018|lc=y}}.&lt;ref&gt;{{cite news |title=Infineon Hits Bulk-CMOS RF Switch Milestone |url=https://www.eetasia.com/news/article/18112004-infineon-hits-bulk-cmos-rf-switch-milestone |accessdate=26 October 2019 |work=[[EE Times]] |date=20 November 2018 |language=en-PH}}&lt;/ref&gt;
+
+== Temperature range ==
+Conventional CMOS devices work over a range of –55&amp;nbsp;°C to +125&amp;nbsp;°C.
+
+There were theoretical indications as early as August 2008 that silicon CMOS will work down to –233&amp;nbsp;°C (40&amp;nbsp;[[kelvin|K]]).&lt;ref&gt;Edwards C, &quot;Temperature control&quot;, ''[[Engineering &amp; Technology]]'' 26 July{{snd}} 8 August 2008, [[Institution of Engineering and Technology|IET]]&lt;/ref&gt; Functioning temperatures near 40&amp;nbsp;K have since been achieved using overclocked AMD [[Phenom II]] processors with a combination of liquid nitrogen and liquid helium cooling.&lt;ref&gt;{{cite web |url=http://blogs.amd.com/home/2009/01/15/breaking-records-with-dragons-and-helium-in-the-las-vegas-desert/ |title=Breaking Records with Dragons and Helium in the Las Vegas Desert |first=Patrick |last=Moorhead |publisher=blogs.amd.com/patmoorhead |date=January 15, 2009 |accessdate=2009-09-18 |url-status=dead |archiveurl=https://web.archive.org/web/20100915140806/http://blogs.amd.com/home/2009/01/15/breaking-records-with-dragons-and-helium-in-the-las-vegas-desert/ |archivedate=September 15, 2010 }}&lt;/ref&gt;
+
+== Single-electron MOS transistors ==
+Ultra small (L = 20&amp;nbsp;nm, W = 20&amp;nbsp;nm) MOSFETs achieve the single-electron limit when operated at cryogenic temperature over a range of –269&amp;nbsp;°C (4&amp;nbsp;[[kelvin|K]]) to about –258&amp;nbsp;°C (15&amp;nbsp;[[kelvin|K]]). The transistor displays [[Coulomb blockade]] due to progressive charging of electrons one by one. The number of electrons confined in the channel is driven by the gate voltage, starting from an occupation of zero electrons, and it can be set to one or many.&lt;ref&gt;{{Cite journal |last1=Prati |first1=E. |last2=De Michielis |first2=M. |last3=Belli |first3=M. |last4=Cocco |first4=S. |last5=Fanciulli |first5=M. |last6=Kotekar-Patil |first6=D. |last7=Ruoff |first7=M. |last8=Kern |first8=D. P. |last9=Wharam |first9=D. A. |last10=Verduijn |doi=10.1088/0957-4484/23/21/215204 |first10=J. |last11=Tettamanzi |first11=G. C. |last12=Rogge |first12=S. |last13=Roche |first13=B. |last14=Wacquez |first14=R. |last15=Jehl |first15=X. |last16=Vinet |first16=M. |last17=Sanquer |first17=M. |title=Few electron limit of n-type metal oxide semiconductor single electron transistors |journal=Nanotechnology |volume=23 |issue=21 |pages=215204 |year=2012 |pmid=22552118 |arxiv=1203.4811 |bibcode=2012Nanot..23u5204P |s2cid=206063658 }}&lt;/ref&gt;
+
+== See also ==
+{{Div col}}
+* [[Active pixel sensor]] (CMOS sensor)
+* [[Beyond CMOS]]
+* [[CMOS amplifier]]
+* [[Electric (software)]] – used to lay out CMOS circuits
+* [[FEOL]] (front-end-of-line) – the first part of IC fabrication process
+* [[Gate equivalent]]  – a technology-independent measure of circuit complexity
+* [[HCMOS]] – high-speed CMOS 1982
+* [[LVCMOS]]
+* [[Magic (software)]] – used to lay out CMOS circuits
+* [[List of MOSFET applications]]
+* [[sCMOS]]
+* [[Thermal oxidation]]
+{{Div col end}}
+
+== References ==
+{{reflist|30em}}
+
+== Further reading ==
+{{See also|4000-series integrated circuits#Further reading|l1=List of books about 4000-series integrated circuits}}
+* {{cite book |author=Baker, R. Jacob |title=CMOS: Circuit Design, Layout, and Simulation, Third Edition |url=http://CMOSedu.com |publisher=Wiley-IEEE |location= |year=2010 |page=1174 |isbn=978-0-470-88132-3 |oclc= |doi= |accessdate=}} 
+* {{cite book |author1=Weste, Neil H. E. |author2=Harris, David M. |title=CMOS VLSI Design: A Circuits and Systems Perspective, Fourth Edition |url=http://CMOSVLSI.com/ |publisher=Pearson/Addison-Wesley |location=Boston |year=2010 |page=840 |isbn=978-0-321-54774-3 |oclc= |doi= |accessdate=}} 
+* {{cite book |last=Veendrick |first=H. J. M. |title=Nanometer CMOS ICs: From Basics to ASICs |year=2017 |publisher=Springer |page=770 |doi=10.1007/978-3-319-47597-4 |isbn=978-3-319-47595-0}} 
+* {{cite book |author=[[Carver Mead|Mead, Carver A.]] and [[Lynn Conway|Conway, Lynn]] |title=Introduction to VLSI systems |publisher=Addison-Wesley |location=Boston |year=1980 |pages= |isbn=0-201-04358-0 |oclc= |doi= |accessdate= |url-access=registration |url=https://archive.org/details/introductiontovl00mead }}
+
+== External links ==
+{{Commons category}}
+* [https://web.archive.org/web/20110719014039/http://tams-www.informatik.uni-hamburg.de/applets/cmos/ CMOS gate description and interactive illustrations]
+* [http://lasihomesite.com/ LASI] is a &quot;general purpose&quot; IC layout CAD tool.  It is a free download and can be used as a layout tool for CMOS circuits.
+
+{{Logic Families|state=expanded}}
+{{Electronic components}}
+
+[[Category:Electronic design]]
+[[Category:Digital electronics]]
+[[Category:Logic families]]
+[[Category:Integrated circuits]]
+[[Category:MOSFETs]]</text>
+      <sha1>23f1dwapywv83c163pt3mcfgj0gls0i</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Edward I the Elder of England</title>
+    <ns>0</ns>
+    <id>49421</id>
+    <redirect title="Edward the Elder" />
+    <revision>
+      <id>15944302</id>
+      <parentid>54695</parentid>
+      <timestamp>2002-04-17T20:56:35Z</timestamp>
+      <contributor>
+        <username>JHK</username>
+        <id>29</id>
+      </contributor>
+      <comment>redirect Ed the Elder</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30" xml:space="preserve">#REDIRECT [[Edward the Elder]]</text>
+      <sha1>5lqfzk2943ft7jdfgwkhmyv27reu5au</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Differentiable</title>
+    <ns>0</ns>
+    <id>49429</id>
+    <redirect title="Differentiable function" />
+    <revision>
+      <id>955348885</id>
+      <parentid>953927772</parentid>
+      <timestamp>2020-05-07T09:23:24Z</timestamp>
+      <contributor>
+        <username>D.Lazard</username>
+        <id>12336988</id>
+      </contributor>
+      <comment>not an ambiguous adjective</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="59" xml:space="preserve">#Redirect [[differentiable function]]
+
+{{R from adjective}}</text>
+      <sha1>rz0nev3zo5k6ee9zlkdfa25nk7h38el</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Robert Abercromby (Jesuit)</title>
+    <ns>0</ns>
+    <id>49430</id>
+    <revision>
+      <id>986304838</id>
+      <parentid>951715488</parentid>
+      <timestamp>2020-10-31T01:02:48Z</timestamp>
+      <contributor>
+        <username>Finnusertop</username>
+        <id>19089174</id>
+      </contributor>
+      <minor />
+      <comment>ref inline</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4259" xml:space="preserve">{{More citations needed|date=November 2013}}
+
+'''Father Robert Abercromby''' (1536 – 27 April 1613), whose surname was also spelled as '''Abrecromby''' and '''Abercrombie''', and was known by such pseudonyms as '''Robert Sandiesoun''' and '''Sanders Robertson''', was a [[Scotland|Scottish]] [[Society of Jesus|Jesuit]] [[missionary]].
+
+==Early life==
+He was born and educated in [[Scotland]], and studied in the [[Collegium Romanum]] in [[Rome]], where on 19 August 1563 he became a [[Society of Jesus|Jesuit]]. From 1564 he lived in Braunsberg (then in [[Royal Prussia]]; present-day [[Braniewo|Braniewo, Poland]]) where he was professor of grammar in the biggest Polish Jesuit ''[[collegium]]'' (where teaching was in [[Latin language|Latin]]) and a [[novice master]].
+
+In 1565 he was ordained a [[Catholic priest|priest]]. In Braniewo he was in constant contact with Cardinal [[Stanislaus Hosius]]. He was considered a good priest, but learning [[Polish language|Polish]] was difficult for him, and he had some problems with the finances of the school. Due to these problems he was permitted to leave Poland in 1580, when he met the Scottish king for the first time. In September 1580 he went back to Poland - from 1580–87 he performed similar tasks in [[Kraków]], [[Poznań]] and [[Wilno]].
+
+In 1587 he left Poland and returned to Scotland. During the journey to Scotland in 1580 and during his second stay there he was organizing transports of Scottish [[Catholicism|Catholic]] novices to be trained in Polish schools and [[Catholic seminary|seminaries]].&lt;ref&gt;Biegańska, Anna. ''The learned Scots in Poland from the mid-sixteenth to the close of the eighteenth century'', &quot;Canadian Slavonic Papers&quot;, March 2001, [http://findarticles.com/p/articles/mi_qa3763/is_200103/ai_n8948825/pg_3 online version]{{dead link|date=May 2017 |bot=InternetArchiveBot |fix-attempted=yes }}&lt;/ref&gt;&lt;ref&gt;Grzebień, Father Ludwik (SJ), ''Encyklopedia wiedzy o jezuitach na ziemiach Polski i Litwy, 1564-1995'', Kraków 1996, [http://jezuici.krakow.pl/cgi-bin/rjbo?b=enc&amp;q=ABERCROMBIE&amp;f=1 online version with additional bibliography]&lt;/ref&gt;
+
+==Contact with Anne of Denmark==
+Abercromby claimed that he had reconciled [[Anne of Denmark]], queen of [[James VI of Scotland]], to the [[Catholic Church]].&lt;ref&gt;{{Cite book|title=Dictionary of Christian Biography|editor=Michael Walsh|publisher=Continuum|isbn=0826452639|page=[https://archive.org/details/dictionaryofchri0000unse/page/3 3]|url=https://archive.org/details/dictionaryofchri0000unse/page/3}}&lt;/ref&gt; James apparently allowed Abercromby to meet her at [[Holyroodhouse]] circa 1599. She made no outward sign of a change of religion.&lt;ref name=ODNB/&gt;
+
+==Later life==
+Abercromby remained in Scotland for some time, but a price of 10,000 [[Crown (British coin)|crowns]] was put upon his head.&lt;ref&gt;{{Catholic|wstitle=Robert Abercromby|inline=1}}&lt;/ref&gt; He spent the period 1601–06 under the protection of [[George Gordon, 1st Marquess of Huntly]].&lt;ref name=ODNB&gt;{{ODNBweb|id=46|title=Abercromby, Robert|first=G. Martin|last=Murphy}}&lt;/ref&gt;
+
+Abercromby went back to Braunsberg in 1606. His name was connected to the [[allegiance oath controversy]] when a pamphlet &quot;[[pasquil]]&quot;, ''Exetasis epistolæ nomine regis'', written under the pseudonym Bartholus Pacenius against James I was traced to Braunsberg;&lt;ref name=ODNB/&gt; but the investigation by [[Patrick Gordon (diplomat)|Patrick Gordon]] was inconclusive.&lt;ref&gt;[https://lirias.kuleuven.be/bitstream/1979/796/1/DefDoctmetindex.pdf ''William Trumbull: A Jacobean diplomat at the court of the Archdukes in Brussels, 1605/9-1625'' (PDF), p. 193].&lt;/ref&gt; He died there on 27 April 1613.
+
+==Sources==
+*{{CathEncy|wstitle=Robert Abercromby}}
+
+==References==
+{{reflist}}
+
+{{authority control}}
+
+{{DEFAULTSORT:Abercromby, Robert}}
+[[Category:1536 births]]
+[[Category:1613 deaths]]
+[[Category:Scottish Jesuits]]
+[[Category:Scottish Roman Catholic missionaries]]
+[[Category:16th-century Scottish people]]
+[[Category:17th-century Scottish people]]
+[[Category:16th-century Roman Catholic priests]]
+[[Category:17th-century Roman Catholic priests]]
+[[Category:16th-century Jesuits]]
+[[Category:17th-century Jesuits]]
+[[Category:Date of birth unknown]]
+[[Category:Scottish Roman Catholics]]</text>
+      <sha1>5m2o9n7mesxtsdp47qh9v5sh5esvrq5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Francis Pharcellus Church</title>
+    <ns>0</ns>
+    <id>49431</id>
+    <revision>
+      <id>972790985</id>
+      <parentid>907122746</parentid>
+      <timestamp>2020-08-13T20:44:26Z</timestamp>
+      <contributor>
+        <username>CatchedY</username>
+        <id>39310652</id>
+      </contributor>
+      <minor />
+      <comment>added infobox information</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4068" xml:space="preserve">{{Infobox person
+| name               = Francis Pharcellus Church
+| image              = FrancisPharcellusChurch.jpg
+| caption            = Francis Pharcellus Church
+| birth_date         = February 22, 1839
+| birth_place        = [[Rochester, New York]]
+| death_date         = {{Death date and age|1906|4|11|1839|2|22}}
+| death_place        = [[New York City, New York]]
+| alma_mater         = [[Columbia College (New York)|Columbia College]]
+| occupation         = Publisher, editor
+}}
+'''Francis Pharcellus Church''' (February 22, 1839 &amp;ndash; April 11, 1906) was an American publisher and editor. He was a member of the [[Century Association]].&lt;ref&gt;{{Cite web|url=https://www.biography.com/people/francis-p-church-21186543|title=Francis P. Church|website=Biography.com|language=en-us|access-date=2017-09-21}}&lt;/ref&gt;
+
+==Biography==
+[[File:Francis Pharcellus Church Monument 2010.JPG|thumb|left|150px|The monument of Francis Pharcellus Church in Sleepy Hollow Cemetery]]
+He was born in [[Rochester, New York]] and graduated from [[Columbia College of Columbia University]] in New York City in 1859.
+
+With his brother [[William Conant Church]] he established ''[[Armed Forces Journal|The Army and Navy Journal]]'' in 1863, and [[The Galaxy (magazine)|''Galaxy'' magazine]] in 1866 (merged with [[The Atlantic|''Atlantic Monthly'']] after 10 years).&lt;ref&gt;[[The Galaxy (magazine)]]&lt;/ref&gt; He was a lead editorial writer on his brother's newspaper, the ''[[New York Sun (historical)|New York Sun]]'', and it was in that capacity that in 1897 he wrote his most famous editorial, &quot;[[Yes, Virginia, there is a Santa Claus]]&quot;.&lt;ref&gt;{{Cite web|url=http://www.newseum.org/exhibits/online/yes-virginia/|title=“Yes, Virginia, There is a Santa Claus” {{!}} Newseum|website=www.newseum.org|language=en-US|access-date=2017-09-21}}&lt;/ref&gt; In this editorial he responds to a young girl's question if there truly is a Santa Claus, writing that he definitely exists &quot;as certainly as love and generosity and devotion exist&quot;.&lt;ref&gt;{{Cite web |url=http://www.nydailynews.com/opinion/yes-virginia-article-1.1556978 |title=‘Yes, Virginia, there is a Santa Claus’: Read the iconic 1897 editorial that continues to bring Christmas joy |last=Editorial Board |website=New York Daily News |publication-date=24 December 2014}}&lt;/ref&gt; The editorial was uncharacteristic of Church's style; his other writings typically espoused hardened cynicism, skepticism toward religion and superstition, and a generally curmudgeonly approach, and Church initially refused to have his name attached to the piece.&lt;ref&gt;[[Paul Harvey|Harvey, Paul]]. [https://archive.org/download/PaulHarveyTROTS/TROTS_Yes_Virginia.mp3 The Rest of the Story: Yes, Virginia]. From the [[Internet Archive]] Old-Time Radio collection; date unknown.&lt;/ref&gt;
+
+Church died in [[New York City]], aged 67, and was buried in [[Sleepy Hollow Cemetery]] in [[Sleepy Hollow, New York]]. He had no children.
+
+==Portrayals==
+Church was portrayed by [[Charles Bronson]] in a 1991 film based on the Virginia story. His character was voiced by [[Sidney_Miller_(actor)|Sidney Miller]] and by [[Alfred Molina]] in animated short films in 1974 and 2009 respectively.
+
+== References ==
+{{Reflist}}
+
+==External links==
+* [http://www.sleepyhollowcemetery.org Sleepy Hollow Cemetery]
+*[http://www.bookrags.com/biography/francis-pharcellus-church-dlb/ Biography by BookRags.] 
+* {{Gutenberg author | id=Church,+Francis+Pharcellus | name=Francis Pharcellus Church}}
+* {{Internet Archive author |sname=Francis Pharcellus Church |sopt=t}}
+* {{Librivox author |id=2604}}
+
+{{wikiquote|Francis Pharcellus Church}}
+{{wikisource author}}
+{{commons category}}
+{{Christmas}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Church, Francis Pharcellus}}
+[[Category:1839 births]]
+[[Category:1906 deaths]]
+[[Category:American newspaper editors]]
+[[Category:American publishers (people)]]
+[[Category:Columbia College (New York) alumni]]
+[[Category:Businesspeople from Rochester, New York]]
+[[Category:Burials at Sleepy Hollow Cemetery]]
+[[Category:Journalists from New York (state)]]</text>
+      <sha1>oyrvykmej78ku1xtl37qbuwaahhxf15</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Conjunction (astronomy)</title>
+    <ns>0</ns>
+    <id>49434</id>
+    <revision>
+      <id>989691378</id>
+      <parentid>981140063</parentid>
+      <timestamp>2020-11-20T13:24:33Z</timestamp>
+      <contributor>
+        <username>JPxG</username>
+        <id>21894337</id>
+      </contributor>
+      <comment>/* 2020 */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="17522" xml:space="preserve">[[File:Mercury, Venus and the Moon Align.jpg|thumb|300px|A conjunction of [[Mercury (planet)|Mercury]] and [[Venus]] appears above the [[Moon]], as viewed from the [[Paranal Observatory]] in northern [[Chile]].]]
+In [[astronomy]], a '''conjunction''' occurs when two [[astronomical object]]s or [[spacecraft]] have either the same [[right ascension]] or the same [[ecliptic coordinate system|ecliptic longitude]], usually as observed from Earth.&lt;ref&gt;{{cite web
+ | url=http://asa.hmnao.com/AsA/SecM/Glossary.html#conjunction
+ | title=Conjunction
+ | work=Glossary, The Astronomical Almanac Online
+ | author=Her Majesty's Nautical Almanac Office and United States Naval Observatory
+ | year=2012
+ | accessdate=2012-07-08
+ | archive-url=https://web.archive.org/web/20130615043850/http://asa.hmnao.com/AsA/SecM/Glossary.html#conjunction
+ | archive-date=2013-06-15
+ | url-status=dead
+ }}&lt;/ref&gt;&lt;ref&gt;{{cite book 
+ | title=Astronomical Algorithms 
+ | author=Jean Meeus
+ | publisher=Willman-Bell Inc., Richmond, Virginia
+ | year=1991
+}}&lt;/ref&gt;
+The [[astronomical symbol]] for conjunction is ☌ (in [[Unicode]] U+260C) and handwritten [[File:Astronomical conjunction symbol.png|20px]]. 
+The conjunction symbol is not used in modern astronomy. It continues to be used in [[Astrological symbols#Aspects|astrology]].{{citation needed (lead)|date=March 2019}}
+
+When two objects always appear close to the [[ecliptic]]—such as two [[planet]]s, the [[Moon]] and a planet, or the [[Sun]] and a planet—this fact implies an apparent close approach between the objects as seen on the sky. A related word, ''[[appulse]]'', is the minimum apparent separation on the sky of two astronomical objects.&lt;ref&gt;{{cite web
+ | url=http://asa.hmnao.com/AsA/SecM/Glossary.html#appulse
+ | title=Appulse
+ | work=Glossary, The Astronomical Almanac Online
+ | author=Her Majesty's Nautical Almanac Office and United States Naval Observatory
+ | year=2012
+ | accessdate=2012-07-08
+ | archive-url=https://web.archive.org/web/20130615043850/http://asa.hmnao.com/AsA/SecM/Glossary.html#appulse
+ | archive-date=2013-06-15
+ | url-status=dead
+ }}&lt;/ref&gt;
+
+Conjunctions involve either two objects in the [[Solar System]] or one object in the Solar System and a more distant object, such as a [[star]]. A conjunction is an apparent phenomenon caused by the observer's [[perspective (visual)|perspective]]: the two objects involved are not actually close to one another in [[space]]. Conjunctions between two bright objects close to the ecliptic, such as two bright planets, can be seen with the [[naked eye]].
+
+==Passing close==
+[[File:Planetary Conjunction over Paranal.jpg|thumb|A conjunction of Mars and Jupiter in the morning of 1 May 2011, when, about an hour before sunrise, five of the Solar System's eight planets and the Moon could be seen from [[Cerro Paranal]], Chile.&lt;ref&gt;{{cite web|title=Planetary Conjunction over Paranal|url=http://www.eso.org/public/images/potw1118a/|work=ESO Picture of the Week|publisher=ESO|accessdate=2011-05-02}}&lt;/ref&gt;]]
+
+More generally, in the particular case of two [[planet]]s, it means that they merely have the same [[right ascension]] (and hence the same [[hour angle]]). This is called conjunction in right ascension. However, there is also the term conjunction in ecliptic longitude. At such conjunction both objects have the same ecliptic longitude. Conjunction in right ascension and conjunction in ecliptic longitude do not normally take place at the same time, but in most cases nearly at the same time. However, at [[triple conjunction]]s, it is possible that a conjunction only in right ascension (or ecliptic length) occurs. At the time of conjunction&amp;nbsp;– it does not matter if in right ascension or in ecliptic longitude&amp;nbsp;– the involved planets are close together upon the [[celestial sphere]]. In the vast majority of such cases, one of the planets will appear to pass north or south of the other.
+
+==Passing closer==
+[[File:ESO’s Very Large Telescope (VLT) observatory at Paranal.jpg|thumb|In the night sky over [[ESO]]'s [[Very Large Telescope]] (VLT) observatory at [[Paranal Observatory|Paranal]], the [[Moon]] shines along with two bright companions: [[Venus]] and [[Jupiter]].]]
+However, if two celestial bodies attain the same [[declination]] at the time of a conjunction in [[right ascension]] (or the same ecliptic latitude at a conjunction in ecliptic longitude), the one that is closer to the Earth will pass in front of the other. In such a case, a [[Syzygy (astronomy)|syzygy]] takes place. If one object moves into the shadow of another, the event is an [[eclipse]]. For example, if the Moon passes into the shadow of Earth and disappears from view, this event is called a [[lunar eclipse]]. If the visible disk of the nearer object is considerably smaller than that of the farther object, the event is called a [[Astronomical transit|transit]]. When Mercury passes in front of the Sun, it is a [[transit of Mercury]], and when Venus passes in front of the Sun, it is a [[transit of Venus]]. When the nearer object appears larger than the farther one, it will completely obscure its smaller companion; this is called an [[occultation]]. An example of an occultation is when the Moon passes between Earth and the Sun, causing the Sun to disappear either entirely or partially. This phenomenon is commonly known as a [[solar eclipse]]. Occultations in which the larger body is neither the Sun nor the Moon are very rare. More frequent, however, is an occultation of a planet by the [[Moon]]. Several such events are visible every year from various places on Earth.
+
+==Position of the observer==
+A conjunction, as a phenomenon of perspective, is an event that involves two astronomical bodies seen by an observer on the Earth. Times and details depend only very slightly on the observer's location on the Earth's surface, with the differences being greatest for conjunctions involving the Moon because of its relative closeness, but even for the Moon the time of a conjunction never differs by more than a few hours.
+
+==Superior and inferior==
+As seen from a planet that is [[inferior and superior planets|superior]], if an [[inferior and superior planets|inferior]] planet is on the opposite side of the Sun, it is in '''superior conjunction''' with the Sun. An '''inferior conjunction''' occurs when the two planets lie in a [[line (mathematics)|line]] on the same side of the [[Sun]]. In an inferior conjunction, the superior planet is &quot;in [[astronomical opposition|opposition]]&quot; to the Sun as seen from the inferior planet.
+&lt;div style=&quot;float:left; margin:1em&quot;&gt;[[File:Positional astronomy.svg]]&lt;/div&gt;
+The terms &quot;inferior conjunction&quot; and &quot;superior conjunction&quot; are used in particular for the planets [[Mercury (planet)|Mercury]] and [[Venus]], which are [[inferior and superior planets|inferior planets]] as seen from the Earth. However, this definition can be applied to any pair of planets, as seen from the one farther from the Sun.
+
+A planet (or [[asteroid]] or [[comet]]) is simply said to be in conjunction, when it is in conjunction with the [[Sun]], as seen from the Earth. The [[Moon]] is in conjunction with the Sun at [[New moon|New Moon]].
+
+==Quasiconjunction==
+In a quasiconjunction, a planet in [[apparent retrograde motion|retrograde motion]]&amp;nbsp;— always either [[Mercury (planet)|Mercury]] or [[Venus]], from the point of view of [[the Earth]]&amp;nbsp;— will &quot;drop back&quot; in right ascension until it almost allows another planet to overtake it, but then the former planet will resume its forward motion and thereafter appear to draw away from it again. This will occur in the morning sky, before dawn. The reverse may happen in the evening sky after dusk, with Mercury or Venus entering retrograde motion just as it is about to overtake another planet (often Mercury ''and'' Venus are ''both'' of the planets involved, and when this situation arises they may remain in very close visual proximity for several days or even longer). The quasiconjunction is reckoned as occurring at the time the distance in right ascension between the two planets is smallest, even though, when declination is taken into account, they may appear closer together shortly before or after this.
+
+==Notable conjunctions==
+[[File:Conjunção Lua-Vênus-Júpiter.jpg|thumb|right|250px|Conjunction of Venus (left) and Jupiter (bottom), with the nearby crescent Moon, seen from São Paulo, Brazil, on 1 December 2008]]
+[[File:Lune-Venus-Jupiter.JPG|thumb|right|250px|Moon, Venus and Jupiter]]
+[[File:Moon Jupiter Venus.JPG|thumb|right|250px|Moon, Jupiter (top), and Venus (right) at dusk seen from Madrid, Spain, on 20 June 2015]]
+
+===1899===
+In early December 1899 the Sun and the naked-eye planets appeared to lie within a band 35 degrees wide along the ecliptic as seen from the Earth. As a consequence, over the period 1–4 December 1899, the Moon reached conjunction with, in order, Jupiter, Uranus, the Sun, Mercury, Mars, Saturn and Venus. Most of these conjunctions were not visible because of the glare of the Sun.
+
+===1962===
+Over the period 4–6 February 1962, in a rare series of events, Mercury and Venus reached conjunction as observed from the Earth, followed by Venus and Jupiter, then by Mars and Saturn. Conjunctions took place between the Moon and, in turn, Mars, Saturn, the Sun, Mercury, Venus and Jupiter. Mercury also reached inferior conjunction with the Sun. The conjunction between the Moon and the Sun at [[new Moon]] produced a total solar eclipse visible in Indonesia and the Pacific Ocean,&lt;ref&gt;
+{{cite web
+ | last = Espenak
+ | first = Fred
+ | title = Total Solar Eclipse of 1962 Feb 05 
+ | work = NASA Eclipse Web Site
+ | publisher = NASA Goddard Space Flight Center
+ | year = 2004
+ | url = http://eclipse.gsfc.nasa.gov/SEplot/SEplot1951/SE1962Feb05T.GIF
+ | format = GIF image file
+ | accessdate = 12 June 2013 }}
+&lt;/ref&gt;
+when these five naked-eye planets were visible in the vicinity of the Sun in the sky.
+
+===1987===
+[[Mercury (planet)|Mercury]], [[Venus]] and [[Mars]] separately reached conjunction with each other, and each separately with the Sun, within a 7-day period in August 1987 as seen from the Earth. The Moon also reached conjunction with each of these bodies on 24 August. However, none of these conjunctions were observable due to the glare of the Sun.&lt;ref name=&quot;meeus_astrontables1983&quot; /&gt;

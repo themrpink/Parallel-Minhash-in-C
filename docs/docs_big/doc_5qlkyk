@@ -1,0 +1,114 @@
+=== Derivatives ===
+The trace corresponds to the derivative of the determinant: it is the [[Lie algebra]] analog of the ([[Lie group]]) map of the determinant. This is made precise in [[Jacobi's formula]] for the [[derivative]] of the [[determinant]].
+
+As a particular case, ''at the identity'', the derivative  of the determinant actually amounts to the trace: {{math|tr {{=}} det′&lt;sub&gt;'''I'''&lt;/sub&gt;}}.  From this (or from the connection between the trace and the eigenvalues), one can derive a connection between the trace function, the exponential map between a Lie algebra and its Lie group (or concretely, the [[matrix exponential]] function), and the [[determinant]]:
+
+:&lt;math&gt;\det(\exp(\mathbf{A})) = \exp(\operatorname{tr}(\mathbf{A})).&lt;/math&gt;
+
+For example, consider the one-parameter family of linear transformations given by rotation through angle {{mvar|θ}},
+
+:&lt;math&gt;\mathbf{R}_\theta = \begin{pmatrix}
+  \cos\theta &amp; -\sin\theta \\
+  \sin\theta &amp; \cos\theta
+\end{pmatrix}.&lt;/math&gt;
+
+These transformations all have determinant 1, so they preserve area. The derivative of this family at {{math|''θ'' {{=}} 0}}, the identity rotation, is the antisymmetric matrix
+
+:&lt;math&gt;A = \begin{pmatrix}
+  0 &amp; -1 \\
+  1 &amp; 0
+\end{pmatrix}&lt;/math&gt;
+
+which clearly has trace zero, indicating that this matrix represents an infinitesimal transformation which preserves area.
+
+A related characterization of the trace applies to linear [[vector field]]s. Given a matrix {{math|'''A'''}}, define a vector field {{math|'''F'''}} on {{math|'''R'''&lt;sup&gt;''n''&lt;/sup&gt;}} by {{math|'''F'''('''x''') {{=}} '''Ax'''}}. The components of this vector field are linear functions (given by the rows of {{math|'''A'''}}). Its [[divergence]] {{math|div '''F'''}} is a constant function, whose value is equal to {{math|tr('''A''')}}.
+
+By the [[divergence theorem]], one can interpret this in terms of flows: if {{math|'''F'''('''x''')}} represents the velocity of a fluid at location {{math|'''x'''}} and {{mvar|U}} is a region in {{math|'''R'''&lt;sup&gt;''n''&lt;/sup&gt;}}, the [[flow network|net flow]] of the fluid out of {{mvar|U}} is given by {{math|tr('''A''') · vol(''U'')}}, where {{math|vol(''U'')}} is the [[volume]] of {{mvar|U}}.
+
+The trace is a linear operator, hence it commutes with the derivative:
+
+:&lt;math&gt;\operatorname{d} \operatorname{tr} (\mathbf{X}) = \operatorname{tr}(\operatorname{d} \mathbf{X}) .&lt;/math&gt;
+
+== Applications ==
+The trace of a 2&amp;nbsp;×&amp;nbsp;2 [[complex matrix]] is used to classify [[Möbius transformation]]s. First, the matrix is normalized to make its [[determinant]] equal to one. Then, if the square of the trace is 4, the corresponding transformation is ''parabolic''. If the square is in the interval {{nowrap|[0,4)}}, it is ''elliptic''. Finally, if the square is greater than 4, the transformation is ''loxodromic''. See [[Möbius transformation#Classification|classification of Möbius transformations]].
+
+The trace is used to define [[character (mathematics)|characters]] of [[group representation]]s. Two representations {{math|'''A''', '''B''' : ''G'' → ''GL''(''V'')}} of a group {{mvar|G}} are equivalent (up to change of basis on {{mvar|V}}) if {{math|tr('''A'''(''g'')) {{=}} tr('''B'''(''g''))}} for all {{math|''g'' ∈ ''G''}}.
+
+The trace also plays a central role in the distribution of [[Quadratic form (statistics)|quadratic forms]].
+
+== Lie algebra ==
+The trace is a map of Lie algebras &lt;math&gt;\operatorname{tr}:\mathfrak{gl}_n\to K&lt;/math&gt; from the Lie algebra &lt;math&gt;\mathfrak{gl}_n&lt;/math&gt; of linear operators on an {{mvar|n}}-dimensional space ({{math|''n'' × ''n''}} matrices with entries in &lt;math&gt;K&lt;/math&gt;) to the Lie algebra {{mvar|K}} of scalars; as {{mvar|K}} is Abelian (the Lie bracket vanishes), the fact that this is a map of Lie algebras is exactly the statement that the trace of a bracket vanishes:
+
+:&lt;math&gt;\operatorname{tr}([\mathbf{A}, \mathbf{B}]) = 0 \text{ for each }\mathbf A,\mathbf B\in\mathfrak{gl}_n.&lt;/math&gt;
+
+The kernel of this map, a matrix whose trace is [[0 (number)|zero]], is often said to be '''{{visible anchor|traceless}}''' or '''{{visible anchor|trace free}}''', and these matrices form the [[simple Lie algebra]] &lt;math&gt;\mathfrak{sl}_n&lt;/math&gt;, which is the [[Lie algebra]] of the [[special linear group]] of matrices with determinant 1. The special linear group consists of the matrices which do not change volume, while the [[special linear Lie algebra]] is the matrices which do not alter volume of ''infinitesimal'' sets.
+
+In fact, there is an internal [[direct sum of Lie algebras|direct sum]] decomposition &lt;math&gt;\mathfrak{gl}_n=\mathfrak{sl}_n\oplus K&lt;/math&gt; of operators/matrices into traceless operators/matrices and scalars operators/matrices. The projection map onto scalar operators can be expressed in terms of the trace, concretely as:
+
+:&lt;math&gt;\mathbf{A} \mapsto \frac{1}{n}\operatorname{tr}(\mathbf{A})\mathbf{I}.&lt;/math&gt;
+
+Formally, one can compose the trace (the [[counit]] map) with the unit map &lt;math&gt;K\to\mathfrak{gl}_n&lt;/math&gt; of &quot;inclusion of [[scalar transformation|scalars]]&quot; to obtain a map &lt;math&gt;\mathfrak{gl}_n\to\mathfrak{gl}_n&lt;/math&gt; mapping onto scalars, and multiplying by {{mvar|n}}. Dividing by {{mvar|n}} makes this a projection, yielding the formula above.
+
+In terms of [[short exact sequence]]s, one has
+
+:&lt;math&gt;0 \to \mathfrak{sl}_n \to \mathfrak{gl}_n \overset{\operatorname{tr}}{\to} K \to 0&lt;/math&gt;
+
+which is analogous to
+
+:&lt;math&gt;1 \to \operatorname{SL}_n \to \operatorname{GL}_n \overset{\det}{\to} K^* \to 1&lt;/math&gt;
+
+(where &lt;math&gt;K^*=K\setminus\{0\}&lt;/math&gt;) for Lie groups. However, the trace splits naturally (via &lt;math&gt;1/n&lt;/math&gt; times scalars) so &lt;math&gt;\mathfrak{gl}_n=\mathfrak{sl}_n\oplus K&lt;/math&gt;, but the splitting of the determinant would be as the {{mvar|n}}th root times scalars, and this does not in general define a function, so the determinant does not split and the general linear group does not decompose:
+
+:&lt;math&gt;\operatorname{GL}_n \neq \operatorname{SL}_n \times K^*.&lt;/math&gt;
+
+=== Bilinear forms ===
+The [[bilinear form]] (where {{math|'''X'''}}, {{math|'''Y'''}} are square matrices)
+
+:&lt;math&gt;B(\mathbf{X}, \mathbf{Y}) = \operatorname{tr}(\operatorname{ad}(\mathbf{X})\operatorname{ad}(\mathbf{Y}))\quad\text{where }\operatorname{ad}(\mathbf{X})\mathbf{Y} = [\mathbf{X}, \mathbf{Y}] = \mathbf{X}\mathbf{Y} - \mathbf{Y}\mathbf{X}&lt;/math&gt;
+
+is called the [[Killing form]], which is used for the classification of Lie algebras.
+
+The trace defines a bilinear form:
+
+:&lt;math&gt;(\mathbf{X}, \mathbf{Y}) \mapsto \operatorname{tr}(\mathbf{X}\mathbf{Y}).&lt;/math&gt;
+
+The form is symmetric, non-degenerate&lt;ref group=note&gt;This follows from the fact that {{math|tr('''A'''*'''A''') {{=}} 0}} [[if and only if]] {{math|'''A''' {{=}} '''0'''}}.&lt;/ref&gt; and associative in the sense that:
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{X}[\mathbf{Y}, \mathbf{Z}]) = \operatorname{tr}([\mathbf{X}, \mathbf{Y}]\mathbf{Z}).&lt;/math&gt;
+
+For a complex simple Lie algebra (such as {{math|&lt;math&gt;\mathfrak{sl}&lt;/math&gt;&lt;sub&gt;''n''&lt;/sub&gt;}}), every such bilinear form is proportional to each other; in particular, to the Killing form.
+
+Two matrices {{math|'''X'''}} and {{math|'''Y'''}} are said to be ''trace orthogonal'' if
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{X}\mathbf{Y}) = 0&lt;/math&gt;.
+
+== Inner product ==
+For an {{math|''m'' × ''n''}} matrix {{math|'''A'''}} with complex (or real) entries and &lt;sup&gt;H&lt;/sup&gt; being the conjugate transpose, we have
+
+:&lt;math&gt;\operatorname{tr}\left(\mathbf{A}^{\mathsf H} \mathbf{A}\right) \ge 0 &lt;/math&gt;
+
+with equality [[if and only if]] {{math|'''A''' {{=}} '''0'''}}.&lt;ref name=&quot;HornJohnson&quot;&gt;{{cite book |title=Matrix Analysis |edition=2nd |first1=Roger A. |last1=Horn |first2=Charles R. |last2=Johnson |isbn=9780521839402 |publisher=Cambridge University Press|year=2013}}&lt;/ref&gt;{{rp|7}}
+
+The assignment
+
+:&lt;math&gt;\langle \mathbf{A}, \mathbf{B}\rangle = \operatorname{tr}\left(\mathbf{A}^{\mathsf H} \mathbf{B}\right)&lt;/math&gt;
+
+yields an [[inner product]] on the space of all complex (or real) {{math|''m'' × ''n''}} matrices.
+
+The [[norm (mathematics)|norm]] derived from the above inner product is called the [[Frobenius norm]], which satisfies submultiplicative property as matrix norm. Indeed, it is simply the [[Euclidean norm]] if the matrix is considered as a vector of length {{math|''m'' ⋅ ''n''}}.
+
+It follows that if {{math|'''A'''}} and {{math|'''B'''}} are real [[Positive definite matrix|positive semi-definite matrices]] of the same size then
+
+:&lt;math&gt;0 \leq
+  \left[\operatorname{tr}(\mathbf{A} \mathbf{B})\right]^2 \leq
+  \operatorname{tr}\left(\mathbf{A}^2\right) \operatorname{tr}\left(\mathbf{B}^2\right) \leq
+  \left[\operatorname{tr}(\mathbf{A})\right]^2 \left[\operatorname{tr}(\mathbf{B})\right]^2.&lt;/math&gt;&lt;ref group=note&gt;This can be proven with the [[Cauchy–Schwarz inequality]].&lt;/ref&gt;
+
+== Generalizations ==
+The concept of trace of a matrix is generalized to the [[trace class]] of [[compact operator]]s on [[Hilbert space]]s, and the analog of the [[Frobenius norm]] is called the [[Hilbert–Schmidt operator|Hilbert–Schmidt]] norm.
+
+If {{mvar|K}} is trace-class, then for any [[orthonormal basis]] &lt;math&gt;(\varphi_n)_n&lt;/math&gt;, the trace is given by
+
+:&lt;math&gt;\operatorname{tr}(K) = \sum_n \left\langle \varphi_n, K\varphi_n \right\rangle,&lt;/math&gt;
+
+and is finite and independent of the orthonormal basis.&lt;ref&gt;{{cite book | first=G. | last=Teschl | title=Mathematical Methods in Quantum Mechanics | series=Graduate Studies in Mathematics | volume=157 | date=30 October 2014 | publisher=American Mathematical Society | isbn=1470417049 | edition=2nd}}&lt;/ref&gt; 

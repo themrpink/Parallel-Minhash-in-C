@@ -1,0 +1,298 @@
+Version 5.9 of macOS Server only operates on macOS Catalina (10.15) and later.&lt;ref&gt;{{cite web|url=https://support.apple.com/en-us/HT209069|title=What's new in macOS Server|website=Apple Support}}&lt;/ref&gt;
+
+===macOS 10.15 (Server 5.10)===
+'''Released:''' April 1, 2020.
+
+Version 5.10 of macOS Server only operates on macOS Catalina (10.15) and later.&lt;ref&gt;{{cite web|url=https://support.apple.com/en-lamr/HT209069|title=What's new in macOS Server 5.10|website=Apple Inc|publisher=[[Apple Inc|Apple]]|accessdate=April 26, 2020}}&lt;/ref&gt;
+
+==Server administrator tools==
+* Beginning with the release of OS X 10.8 – Mountain Lion – there is only one Administrative tool – '''&quot;Server.app&quot;'''. This application is purchased and downloaded via the Mac App Store. This application is updated independently of macOS, also via the Mac App Store.
+
+: This Server tool is used to configure, maintain and monitor one or more macOS Server installations.
+: One purchase allows it to be installed on any licensed macOS installation.
+
+* The following information applies only to versions of Mac OS X Server prior to Mountain Lion (10.8)
+[[File:OSXServerBoxes.png|thumbnail|right|400px|Box artwork for Mac OS X Server versions 10.1–10.6]]
+:: Mac OS X Server comes with a variety of configuration tools that can be installed on non-server Macs as well:
+
+::* [[Server Admin (application)|Server Admin]]
+::* Server Preferences (application)
+::* [[Server Assistant]]
+::* [[Server Monitor]]
+::* [[System Image Utility]]
+::* [[Workgroup Manager]]
+::* [[Xgrid|Xgrid Admin]]
+
+==System requirements==
+&lt;div class=&quot;center&quot;&gt;
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Operating system version
+!Processor
+!Memory
+!Hard drive
+|-
+!Mac OS X Server 10.4
+|Mac computer with an Intel, PowerPC G5, PowerPC G4, or PowerPC G3 processor
+|512&amp;nbsp;MB of physical RAM
+|10&amp;nbsp;GB of available disk space
+|-
+!Mac OS X Server 10.5&lt;ref name=&quot;leopard-server-specs&quot;&gt;{{cite web |url=http://support.apple.com/kb/SP529 |title=Mac OS X 10.5 Server - Technical Specifications |author=[[Apple Inc.]] |date=June 26, 2009 |accessdate=October 27, 2012}}&lt;/ref&gt;
+|Mac computer with an Intel, PowerPC G5, or PowerPC G4 (867&amp;nbsp;MHz or faster) processor
+|1&amp;nbsp;GB of physical RAM
+|20&amp;nbsp;GB of available disk space
+|-
+! Mac OS X Server 10.6&lt;ref&gt;{{cite web |url=https://www.apple.com/server/macosx/specs.html |archive-url=https://web.archive.org/web/20110608204301/http://www.apple.com/server/macosx/specs.html |title=Mac OS X Server Snow Leopard - Technical Specifications |date=June 8, 2009 |archive-date=June 8, 2011|accessdate=November 25, 2012}}&lt;/ref&gt;
+|Mac desktop computer with an Intel processor (MacBook / MacBook Pro not recommended)
+| rowspan=&quot;2&quot; |2&amp;nbsp;GB of physical RAM
+|10&amp;nbsp;GB of available disk space
+|-
+!Mac OS X Server 10.7&lt;ref name=&quot;lion-server-specs&quot;/&gt;
+|[[x86-64]] based Macintosh computer
+|7&amp;nbsp;GB of available disk space
+|}
+&lt;/div&gt;
+
+==Technical specifications==
+{{col-begin|width=700px}}
+|- valign=&quot;top&quot;
+|
+'''File and print services'''
+* Mac ([[Apple Filing Protocol|AFP]], AppleTalk PAP, [[Internet Printing Protocol|IPP]])
+* [[Microsoft Windows|Windows]] ([[Server Message Block|SMB/CIFS]]: Apple SMBX in Lion Server — previously [[Samba software|Samba]] 2, IPP)
+* [[Unix-like]] systems ([[Network File System (protocol)|NFS]], [[Line Printer Daemon protocol|LPR/LPD]], IPP)
+* Internet ([[FTP]], [[WebDAV]])
+
+'''Directory services and authentication'''
+* [[Apple Open Directory|Open Directory]] ([[OpenLDAP]], [[Kerberos (protocol)|Kerberos]], [[Simple Authentication and Security Layer|SASL]])
+* Windows NT Domain Services (removed in Lion Server, previously [[Samba software|Samba]] 2)
+* [[Backup Domain Controller]] (BDC)
+* [[Lightweight Directory Access Protocol|LDAP]] directory connector
+* [[Active Directory]] connector
+* BSD configuration files (/etc)
+* [[RADIUS]]
+
+'''Mail services'''
+* [[SMTP]] ([[Postfix (software)|Postfix]])
+* [[Post Office Protocol|POP]] and [[IMAP]] ([[Dovecot (software)|Dovecot]])
+* [[Transport Layer Security|SSL/TLS]] encryption ([[OpenSSL]])
+* [[Mailing list]]s ([[Mailman (GNU)|Mailman]])
+* [[Webmail]] ([[RoundCube]])
+* [[E-mail spam|Junk mail]] filtering ([[SpamAssassin]])
+* [[Computer virus|Virus]] detection ([[ClamAV]])
+
+'''Calendaring'''
+* [[iCal Server]] ([[CalDAV]], iTIP, iMIP)
+
+'''Web hosting'''
+* [[Apache HTTP Server|Apache]] Web server (2.2 and 1.3)
+* SSL/TLS (OpenSSL)
+* [[WebDAV]]
+* [[Perl]] (5.8.8), [[PHP]] (5.2), [[Ruby (programming language)|Ruby]] (1.8.6), [[Ruby on Rails|Rails]] (1.2.3)
+* [[MySQL]] 5 (replaced by [[PostgreSQL]] in Lion Server)
+* [[Capistrano (software)|Capistrano]], [[Mongrel (web server)|Mongrel]]
+|
+'''Collaboration services'''
+* [[Wiki Server]] ([[RSS]])
+* [[iChat Server]] 3 ([[Extensible Messaging and Presence Protocol|XMPP]])
+
+'''Application servers'''
+* [[Apache Tomcat]] (6)
+* [[Java SE]] virtual machine
+* [[WebObjects]] deployment (5.4)
+* [[Apache Axis]] ([[SOAP]])
+
+'''Media streaming'''
+* [[QuickTime Streaming Server]] 6 (removed in Lion Server)
+* QuickTime Broadcaster 1.5
+
+'''Client management'''
+* Managed Preferences
+* [[NetBoot]]
+* [[NetInstall]]
+* [[Apple Software Update|Software Update]] Server
+* Portable home directories
+* Profile Manager (new in Lion Server)
+
+'''Networking and VPN'''
+* [[Domain Name System|DNS]] server ([[BIND]] 9)
+* [[DHCP]] server
+* [[Network address translation|NAT]] server
+* [[VPN]] server ([[L2TP]]/[[IPSec]], [[PPTP]])
+* [[Firewall (computing)|Firewall]] ([[IPFW2]])
+* [[Network Time Protocol|NTP]]
+|
+'''Distributed computing'''
+* [[Xgrid]] 2
+
+'''High-availability features'''
+* Automatic recovery
+* [[Journaling file system|File system journaling]]
+* IP [[failover]] (dropped in OS X 10.7 and later&lt;ref&gt;{{cite web|url=http://wiki.schellworth.de/os_x:ipfailover|title=osx:ipfailover|accessdate=September 11, 2014|last=Schellworth|first=Ph.}}&lt;/ref&gt;)
+* Software [[RAID]]
+* Disk space monitor
+
+'''File systems'''
+* [[HFS+]] (journaled, [[case sensitivity|case sensitive and case insensitive]])
+* [[File Allocation Table|FAT]]
+* [[NTFS]] (write support only available on Mac OS X Snow Leopard Server)
+* [[Unix File System|UFS]] (read-only)
+
+'''Management features'''
+* Server Assistant
+* Server Admin
+* Server Preferences
+* Server Status widget
+* Workgroup Manager
+* System Image Utility
+* [[Secure Shell]] (SSH2)
+* Server Monitor
+* RAID Utility
+* [[SNMP]]v3 ([[Net-SNMP]])
+|}
+
+==References==
+{{reflist}}
+
+==External links==
+{{Wikibooks}}
+*[https://www.apple.com/macos/server/ Apple – macOS Server]
+*[https://www.apple.com/feedback/server.html Official feedback page]
+*[https://www.apple.com/newsroom/2001/05/21Apple-Introduces-Mac-OS-X-Server/ Apple Introduces Mac OS X Server] – Apple press release
+*[https://www.apple.com/newsroom/2001/09/25Major-Mac-OS-X-Server-v10-1-Update-Now-Available/ Major Mac OS X Server v10.1 Update Now Available] – Apple press release
+*[https://www.apple.com/newsroom/2002/07/17Apple-Announces-Mac-OS-X-Jaguar-Server-Worlds-Easiest-to-Manage-UNIX-Based-Server-Software/ Apple Announces Mac OS X Server “Jaguar”, World’s Easiest-to-Manage UNIX-Based Server Software] – Apple press release
+*[https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Server-Panther/ Apple Announces Mac OS X Server “Panther”] – Apple press release
+*[https://www.apple.com/newsroom/2005/04/12Apple-Announces-Mac-OS-X-Server-Tiger/ Apple Announces Mac OS X Server “Tiger”] – Apple press release
+*[https://www.apple.com/newsroom/2007/06/11Apple-Announces-New-Mac-OS-X-Server-Leopard-Features/ Apple Announces New Mac OS X Server &quot;Leopard&quot; Features] – Apple press release
+*[https://www.apple.com/newsroom/2009/06/08Apple-Introduces-Mac-OS-X-Server-Snow-Leopard/ Apple Introduces Mac OS X Server Snow Leopard] – Apple press release
+
+{{macOS Server}}
+{{macOS}}
+{{Darwin derivations}}
+{{Apple Inc. operating systems}}
+{{Apple}}
+
+{{DEFAULTSORT:macOS Server}}
+[[Category:MacOS Server| ]]
+[[Category:MacOS| Server]]
+[[Category:Software version histories]]</text>
+      <sha1>47h6fhmmsd1jl3rs17xlfmbk41h5c83</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>AIBO</title>
+    <ns>0</ns>
+    <id>47087</id>
+    <revision>
+      <id>991616625</id>
+      <parentid>991319534</parentid>
+      <timestamp>2020-12-01T00:01:54Z</timestamp>
+      <contributor>
+        <username>King Zowie</username>
+        <id>35114620</id>
+      </contributor>
+      <comment>Fixed formatting errors and added QRIO information</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="48576" xml:space="preserve">{{about|the robotic pet|the Japanese television series|Aibō}}
+{{cleanup|reason=This article has bad grammar and is uncited.|date=February 2018}}
+{{Infobox robot
+| name             = Aibo
+| logo             = Aibo logo 2018.png
+| logosize         = 
+| image            =
+| imsize           = 300px
+| alt              = The ERS-210, a second-generation Aibo.
+| caption          = The ERS-210, a second-generation Aibo.
+| inventor         = SONY's Digital Creatures Lab and [[Toshitada Doi]]
+| manufacturer     = [[Sony|Sony Corporation]]
+| country          = Japan
+| year_of_creation = {{Start date and age|1999}}
+| price            =
+| type             = [[Dog]]
+| purpose          = Entertainment
+| derived_from     = 
+| replaced_by      = 
+| current_supplier = 
+| last_production  = {{End date and age|2006}}
+| website          =http://aibo.com
+}}
+'''AIBO''' (''stylized aibo, Artificial Intelligence Robot'', homonymous with {{Nihongo||[[wikt:相棒|相棒]]|aibō}}, &quot;pal&quot; or &quot;partner&quot; in Japanese) is a series of [[robotic dog]]s designed and manufactured by [[Sony]]. Sony announced a prototype Aibo in mid-1998.&lt;ref&gt;{{cite web|url=http://www.sony.net/SonyInfo/News/Press_Archive/199806/98-052/ |title=Archived copy |access-date=2013-01-14 |url-status=dead |archive-url=https://web.archive.org/web/20121202000405/http://www.sony.net/SonyInfo/News/Press_Archive/199806/98-052/ |archive-date=2012-12-02}}&lt;/ref&gt; The first consumer model was introduced on 11 May 1999.&lt;ref&gt;{{cite web|url=http://www.sony.net/SonyInfo/News/Press_Archive/199905/99-046/index.html |title=Archived copy |access-date=2013-03-10 |url-status=dead |archive-url=https://web.archive.org/web/20121028033310/http://www.sony.net/SonyInfo/News/Press_Archive/199905/99-046/index.html |archive-date=2012-10-28}}&lt;/ref&gt; New models were released every year until 2006. Although most models were dogs, other inspirations included lion-cubs or huskies/jack-russel terrier/bull terrier, and space explorer, and only the ERS-7 version, ERS-110/111 and ERS-1000 versions was explicitly a &quot;robotic dog&quot;, but the 210 can also be considered a dog due to its jack-russel terrier appearance and cute puppy face.&lt;ref name=&quot;pcmag.com&quot;&gt;{{cite web|last=Ulanoff |first=Lance |url=https://www.pcmag.com/article2/0,2817,1240970,00.asp |title=Surprise! Sony's AIBO Is a Dog |archive-url=https://web.archive.org/web/20130618031030/http://www.pcmag.com/article2/0,2817,1240970,00.asp |archive-date=2013-06-18 |url-status=live |publisher=Pcmag.com |date=2003-09-04 |access-date=2013-03-10}}&lt;/ref&gt;
+
+In 2006, AIBO was added into the [[Carnegie Mellon University]] [[Robot Hall of Fame]].&lt;ref&gt;{{cite web|url=http://www.robothalloffame.org/inductees/06inductees/aibo.html|title=2006 Inductees|publisher=The Robot Hall of Fame|access-date=2013-03-10}}&lt;/ref&gt;
+
+On 26 January 2006 Sony announced that it would discontinue AIBO and several other products in an effort to make the company more profitable.&lt;ref&gt;{{cite web|url=http://www.sony.net/SonyInfo/IR/info/presen/05q3/qfhh7c000008adfe.html |title=Sony Global - Q3 FY2005 Sony Group Earnings Announcement |publisher=Sony.net |date=2006-01-26 |access-date=2013-03-10 |url-status=dead |archive-url=https://web.archive.org/web/20130516161052/http://www.sony.net/SonyInfo/IR/info/presen/05q3/qfhh7c000008adfe.html |archive-date=2013-05-16}}&lt;/ref&gt; Sony's AIBO customer support was withdrawn gradually, with support for the final ERS-7M3 ending in March 2013.&lt;ref&gt;{{cite web|url=http://www.sonydigital-link.com/AIBO/4_0_support_breakdown.asp |title=Sony AIBO Europe - Official Website - Model-by-model breakdown |publisher=Sonydigital-link.com |access-date=2013-03-10}}&lt;/ref&gt;
+
+In July 2014, Sony stopped providing repairs for AIBO products and did not provide customer support or repair for the older AIBO robots.&lt;ref&gt;{{cite web|url=http://zasshi.news.yahoo.co.jp/article?a=20140728-00000008-sasahi-sci |title=ＡＩＢＯ、君を死なせない 修理サポート終了「飼い主」の悲しみ〈ＡＥＲＡ〉 （dot.） |publisher=Yahoo!ニュース |access-date=2014-07-29 |url-status=dead |archive-url=https://web.archive.org/web/20140729043600/http://zasshi.news.yahoo.co.jp/article?a=20140728-00000008-sasahi-sci |archive-date=2014-07-29}}&lt;/ref&gt;
+
+In November 2017, Sony announced a new generation of AIBO after 11 years.&lt;ref name=&quot;theverge.com2&quot;&gt;{{cite web|url=https://www.theverge.com/circuitbreaker/2017/10/31/16588878/sony-aibo-2017-announced-price-release-date|title=Sony just announced a new Aibo robot dog; The Verge|last=Byford|first=Sam|date=2017-10-31|publisher=Technologyreview.com}}&lt;/ref&gt;&lt;ref&gt;{{Citation|last=Rajamanickam Antonimuthu|title=Sony's Aibo Robot Dog returns with advanced AI|date=2017-11-02|url=https://www.youtube.com/watch?v=srod3Ashez0|access-date=2017-11-15}}&lt;/ref&gt; The fourth generation model, ERS-1000, was launched in Japan on 11 January 2018. The second lottery sale was set on 6 February 2018.&lt;ref&gt;{{cite web|url=http://www.answerslave.com/sony-aibo-robotic-dog|title=Sony AIBO - Robotic Dog|last=Alam|first=Imran|date=2018-02-02|publisher=Answerslave.com}}&lt;/ref&gt;
+
+==History==
+
+AIBO grew out of Sony's Computer Science Laboratory (CSL). Founded in 1990, CSL was set up to emulate the innovation center at [[PARC (company)|Xerox's Palo Alto Research Center (PARC)]]. CSL's first product was the Aperios operating system, later to form the base software some AIBO models used. When [[Nobuyuki Idei]] became president of Sony in 1995, he sought to adopt a digital agenda, reflected in the new motto he gave the company, “Digital Dream Kids,” and the prominence he gave to CSL.&lt;ref name=&quot;technologyreview.com&quot;&gt;{{cite web|last=Johnstone |first=Bob |url=http://www.technologyreview.com/featuredstory/400610/california-dreamin-sony-style/ |title=California Dreamin' Sony Style &amp;#124; MIT Technology Review |publisher=Technologyreview.com |date=2000-01-01 |access-date=2013-03-10}}&lt;/ref&gt;
+
+[[File:Two AIBO Prototypes and transparent ERS-7.jpg|thumb|Two AIBO Prototypes and transparent ERS-7]]
+Dr. [[Toshitada Doi]] is credited as AIBO's original progenitor: in 1994 he had started work on robots with artificial intelligence expert Masahiro Fujita within CSL. Fujita would write that the robot's behaviors will need to “be sufficiently complex or unexpected so that people keep an interest in watching or taking care of it”.&lt;ref&gt;[Fujita, M. &amp; Kitano, H. (1998). Development of an autonomous quadruped robot for robot entertainment. Autonomous Robots, 5, 7-20.]&lt;/ref&gt; Fujita argued that entertainment robots might be viable as &quot;A robot for entertainment can be effectively designed using various state-of-the-art technologies, such as speech recognition and vision, even though these technologies may not be mature enough for applications where they perform a critical function. While there exist special and difficult requirements in entertainment applications themselves, limited capabilities in the speech and vision systems may turn out to be an interesting and attractive feature for appropriately designed entertainment robots.&quot; His early monkey-like prototype &quot;MUTANT&quot; included behaviors that would become part of AIBOs including tracking a yellow ball, shaking hands, karate strikes and sleeping. Fujita would later receive the IEEE Inaba Technical Award for Innovation Leading to Production for &quot;AIBO, the world's first mass-market consumer robot for entertainment applications&quot;.&lt;ref&gt;{{cite web|url=http://www.ieee-ras.org/awards-recognition/society-awards/69-awards-recognition/society-awards/59-ieee-inaba-technical-award-for-innovation-leading-to-production |title=IEEE Inaba Technical Award for Innovation Leading to Production - IEEE Robotics and Automation Society |publisher=Ieee-ras.org |access-date=2013-03-10}}&lt;/ref&gt;
+
+A friend of Doi's, the artist [[Hajime Sorayama]], was enlisted to create the initial designs for the AIBO's body.&lt;ref name=&quot;This Cute Little Pet Is a Robot&quot; /&gt;  Those designs are now part of the permanent collections of [[Museum of Modern Art]]&lt;ref&gt;{{cite web|url=http://www.moma.org/collection/object.php?object_id=82163|title=The Collection &amp;#124; Hajime Sorayama and Sony Corporation, company design. Aibo entertainment robot (ERS-110). 1999|date=2012-11-05|publisher=MoMA|access-date=2013-03-10}}&lt;/ref&gt; and the [[Smithsonian Institution]]. The first generation AIBO design won Japan's prestigious &quot;Good Design Award, Grand Prize&quot;&lt;ref&gt;{{cite web|url=http://www.g-mark.org/award/describe/25081?token=IaLMoVwUvZ|title=エンタテインメントロボット [AIBO（アイボ）・ERS-110&amp;#93; &amp;#124; 受賞対象一覧 &amp;#124; Good Design Award|publisher=G-mark.org|language=ja|access-date=2013-03-10}}&lt;/ref&gt; and a special Intelligent Design award in the 2000 German Red Dot awards.&lt;ref&gt;{{cite web|url=http://deconstructingproductdesign.com/sony-aibo/|title=Deconstructing Product Design by William Lidwell and Gerry Manacsa » Sony AIBO|date=2009-08-22|publisher=Deconstructingproductdesign.com|access-date=2013-03-10|archive-url=https://web.archive.org/web/20130320234808/http://deconstructingproductdesign.com/sony-aibo/|archive-date=2013-03-20|url-status=dead}}&lt;/ref&gt;
+
+In 1997 Doi received backing from Idei to form Sony's Digital Creatures Lab.&lt;ref name=&quot;This Cute Little Pet Is a Robot&quot;&gt;{{cite news|url=http://www.businessweek.com/stories/1999-05-23/this-cute-little-pet-is-a-robot |title=This Cute Little Pet Is a Robot |newspaper=Business Week |date=24 May 1999 |url-status=live |archive-url=https://web.archive.org/web/20130719094129/http://www.businessweek.com/stories/1999-05-23/this-cute-little-pet-is-a-robot |archive-date=19 July 2013 |access-date=19 January 2013}}&lt;/ref&gt; Believing that robots would be commonplace in households by 2010, but aware of the shortcomings of available technology for functional uses, he decided to focus on robots for entertainment. The AIBO responded to over 100 voice commands and talked in a tonal language, or talked like a human and made other noises if programmed to. Two of the first generation AIBOs exported into the USA came to New York, NY and one remains in the archives and display at Artspace Company Y LLC.
+
+Later models of AIBOs were designed jointly with prestigious Japanese designers, and continued to gain design awards. The ERS-210 design was inspired by lion cubs. The bodies of the &quot;ERS-3x&quot; series (Latte and Macaron, the round-headed AIBOs released in 2001) were designed by visual artist Katsura Moshino winning the &quot;Good Design Award&quot;&lt;ref&gt;{{cite web|url=http://www.g-mark.org/award/describe/27471?token=IaLMoVwUvZ|title=エンタテインメントロボット AIBO [ERS-300シリーズ&quot;ラッテ＆マカロン&quot;&amp;#93; &amp;#124; 受賞対象一覧 &amp;#124; Good Design Award|publisher=G-mark.org|language=ja|access-date=2013-03-10}}&lt;/ref&gt; The sleek and futuristic, space-exploration inspired body of the &quot;ERS-220&quot; was designed by [[Shoji Kawamori]].&lt;ref&gt;{{cite web|url=http://www.plasticpals.com/?p=7957|title=• AIBO ERS-220|date=2013-01-24|publisher=Plasticpals.com|access-date=2013-03-10|archive-url=https://web.archive.org/web/20150924074057/http://www.plasticpals.com/?p=7957|archive-date=2015-09-24|url-status=dead}}&lt;/ref&gt; winning the &quot;Good Design Award&quot;&lt;ref&gt;{{cite web|url=http://www.g-mark.org/award/describe/27470?token=IaLMoVwUvZ|title=エンタテインメントロボット AIBO [ERS-220&amp;#93; &amp;#124; 受賞対象一覧 &amp;#124; Good Design Award|publisher=G-mark.org|language=ja|access-date=2013-03-10}}&lt;/ref&gt; and a &quot;Design for Asia&quot; award.&lt;ref&gt;{{cite web|url=http://www.dfaaward.com/2012/page/kr/winners/2003.php|title=Design for Asia Award 2012|publisher=Dfaaward.com|archive-url=https://archive.today/20130215195018/http://www.dfaaward.com/2012/page/kr/winners/2003.php|archive-date=2013-02-15|url-status=dead|access-date=2013-03-10}}&lt;/ref&gt; The ERS-7 Also won a &quot;Good Design Award&quot;.&lt;ref&gt;{{cite web|url=http://www.g-mark.org/award/describe/28437?token=IaLMoVwUvZ|title=エンターテインメントロボット [AIBO ERS-7&amp;#93; &amp;#124; 受賞対象一覧 &amp;#124; Good Design Award|publisher=G-mark.org|language=ja|access-date=2013-03-10}}&lt;/ref&gt;
+
+Almost ten years later, Idei's successor, [[Howard Stringer]] closed down AIBO and other robotic projects. Doi then staged a mock funeral, attended by more than 100 colleagues from Sony.&lt;ref&gt;{{cite magazine |author=Shea, Michael |url=http://www.theskinny.co.uk/tech/features/whokilledaibo |title=Who Killed AIBO the Robotic Dog? |date=27 July 2015 |magazine=[[The Skinny (magazine)|The Skinny]] |access-date=9 January 2016}}&lt;/ref&gt; At the funeral, Doi said that the Aibo was a symbol of a risk-taking spirit at Sony that was now dead.&lt;ref&gt;{{cite news |url=https://www.wsj.com/articles/SB117285593145024927 |title=Caught between two worlds, the Sony chief tightens his management grip. Will it work? |newspaper=Wall Street Journal |author=YUKARI IWATANI KANE |author2=PHRED DVORAK |archive-url=https://web.archive.org/web/20150702031421/http://www.wsj.com/articles/SB117285593145024927 |archive-date=July 2, 2015 |pages=A1 |date=March 3, 2007 }} [http://www.neogaf.com/forum/showthread.php?t=144875 Alt URL]&lt;/ref&gt;
+
+In November 2017, Sony Corporation announced that AIBO would return with a new model that would be capable of forming an emotional bond with users.&lt;ref&gt;{{Cite web|url=https://www.sony.net/SonyInfo/News/Press/201711/17-105E/index.html|title=Entertainment Robot &quot;Aibo&quot; Announced|website=Sony Global - Sony Global Headquarters|language=en|access-date=2017-12-05}}&lt;/ref&gt;
+
+==Models==
+
+===Prototypes===
+Several prototypes have been displayed by Sony. Early models were insect-like with six legs. The specifications and design of the 1998 prototype, described in a Sony press release, closely match those of the first generation AIBOs. Differences include the use of PC-Cards for memory (rather than MemoryStick media), the use of two batteries, and the option to use a 2-wheeled &quot;rolling module&quot; in place of legs.&lt;ref&gt;{{Cite web|url=http://www.sony.net/SonyInfo/News/Press_Archive/199806/98-052/|title=WebCite query result|website=www.webcitation.org|language=en|access-date=2017-11-15|url-status=live|archive-url=https://web.archive.org/web/20121202000405/http://www.sony.net/SonyInfo/News/Press_Archive/199806/98-052/|archive-date=2012-12-02}}&lt;/ref&gt;
+
+===First generation models (11x)===
+====ERS-110====
+The first commercially available AIBO. It has a beagle-like appearance. Sales began on 1 June 1999. There was a limited production of 3,000 for Japan and 2,000 for the USA. 
+They are often considered the rarest model. They were available to buy via the internet and sold out in 20 minutes after launch. It was silver with a golden-brown hue and grey claws.
+ERS-110 cost 250,000 yen, or US$2,500, which would convert to over $3,500 as of 2020.
+
+====ERS-111====
+The ERS-111 was an improved version of the original AIBO, initially released in November 1999. 40,000 units in total. Same price as ERS-110.
+It looks similar to ERS-110, but with different ear/tail shapes and different capabilities. It was available in a shiny silver with black claws or a metallic black color.
+
+===Second generation models (2x0)===
+====ERS-210====
+The ERS-210 was designed to look like a lion cub but is really a dog with a flat bull terrier face and jack-Russel appearance. It has speech recognition capabilities. The colors were black, silver, gold, red, blue, green, white.
+It is the most common and most popular AIBO model and sold over 65,000 units. It cost around $1,500 at launch and eventually went down to less than $1,000.
+
+====ERS-220====
+Silver. Headlights and LED near future-oriented design based on the concept of space exploration robot by Shoji Kawamori.
+It is nearly identical to the ERS-210 besides in outer shell. It sold around 5,000 to 7,000 units. 
+Remote operation is possible by using the optional Wireless LAN card as well as the ERS-210 &quot;AIBO Navigator 2&quot;. Height 29.6&amp;nbsp;cm, 1.5&amp;nbsp;kg weight, 1.5 hours (default) continuous operation time, 2.5 hours or more operation with a re-celled battery. 16 degrees of freedom (drive unit), price 180 000 yen (excluding tax)
+
+====ERS-210A/220A====
+Variants of ERS-210/220. Difficult to distinguish the appearance but with improved CPU and head clutch. Displays affixed logo sticker &quot;Super Core&quot; at the bottom of the body. US$1299 at launch.
+
+===Third Generation Models (31x)===
+
+====ERS-31x (Latte and Macaron)====
+The ERS-31x models had an &quot;AIBO's heart&quot; slogan. The original production design illustrator was Katsura Moschino. The price was 98,000 YEN, OR US$950.
+The &quot;Latte&quot; (ERS-311) is an off-white/cream color and is considered the &quot;friendly&quot; model. The &quot;Macaron&quot; (ERS-312) is mostly black with cream accents and is considered the &quot;naughty&quot; model. 
+The &quot;Pug&quot; (ERS-31L) is the least common of the three and was $200 cheaper. The 31x series dogs are considered to look like a Bichon puppy or a bear cub.
+
+===ERS 31xB===
+These models are aesthetically identical to their 31x predecessors but have an added Bluetooth capability chip installed to enable communication with the &quot;Handy viewer.&quot; The Handy Viewer was an exclusive Japanese device that would translate Aibos thoughts and feelings into text, and enable the handler to play games with them. While the ERS-311 and ERS-312 received these new releases, the ERS-31L never received the Bluetooth update to their hardware.
+
+===Fourth generation models (7Mx)===
+Estimated sales for all ERS-7 models: 40,000 to 50,000
+
+====ERS-7====
+November 2003&lt;br/&gt;
+This AIBO is regarded as the culmination of the series. The first generation of the ERS-7 Series, and also the very first Aibo to play polyphonic MIDI files with no limits. One of the first of actual &quot;dogs&quot; in the series, besides the 110/111, and 210.&lt;ref name=&quot;pcmag.com&quot;/&gt; Available in white. Packaged with MIND. US$1,599 at launch. This was the first model that talked in all of its versions, not just with special software. The ERS-7 and its variations sold around 25,000 units.
+
+====ERS-7M2====
+November 2004&lt;br/&gt;
+The second generation of the ERS-7, the first actual Aibo with lead-free solder. packaged with MIND2. Available in black or white.
+
+====ERS-7M3====
+October 2005&lt;br/&gt;
+The third generation of the ERS-7, but a variant of the ERS-7M2, packaged with MIND3. Another lead-free solder Aibo. Changed Wi-Fi. White, black, and champagne gold (called honey brown in Japan). The 7m3 version is different from the other ERS-7s because they can speak both English and Japanese. You can still raise them from birth like always, but its personality is slightly modified by every single interaction it has with you and its environment. This was the last model of Aibo until the line was discontinued in 2006.

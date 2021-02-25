@@ -1,0 +1,328 @@
+where the last inequality follows since &lt;math&gt;\sigma^*_i&lt;/math&gt; is a non-zero vector. But this is a clear contradiction, so all the gains must indeed be zero. Therefore, &lt;math&gt;\sigma^*&lt;/math&gt; is a Nash equilibrium for &lt;math&gt;G&lt;/math&gt; as needed.
+
+== Computing Nash equilibria ==
+If a player A has a [[dominant strategy]] &lt;math&gt;s_A&lt;/math&gt; then there exists a Nash equilibrium in which A plays &lt;math&gt;s_A&lt;/math&gt;. In the case of two players A and B, there exists a Nash equilibrium in which A plays &lt;math&gt;s_A&lt;/math&gt; and B plays a best response to &lt;math&gt;s_A&lt;/math&gt;. If &lt;math&gt;s_A&lt;/math&gt; is a strictly dominant strategy, A plays &lt;math&gt;s_A&lt;/math&gt; in all Nash equilibria. If both A and B have strictly dominant strategies, there exists a unique Nash equilibrium in which each plays their strictly dominant strategy.
+
+In games with mixed-strategy Nash equilibria, the probability of a player choosing any particular (so pure) strategy can be computed by assigning a variable to each strategy that represents a fixed probability for choosing that strategy. In order for a player to be willing to randomize, their expected payoff for each (pure) strategy should be the same. In addition, the sum of the probabilities for each strategy of a particular player should be 1. This creates a system of equations from which the probabilities of choosing each strategy can be derived.&lt;ref name=&quot;preliminaries&quot; /&gt;
+
+=== Examples ===
+{| border=&quot;1&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;margin: 1em 1em 1em 1em; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse; font-size: 95%;&quot; class=&quot;wikitable floatright&quot;
+|+ align=bottom |''Matching pennies''
+! {{diagonal split header|Player A|Player B}}
+!Player B plays H
+!Player B plays T
+|-
+!Player A plays H
+|align=center|−1, +1
+|align=center|+1, −1
+|-
+!Player A plays T
+|align=center|+1, −1
+|align=center|−1, +1
+|-
+|}
+
+In the matching pennies game, player A loses a point to B if A and B play the same strategy and wins a point from B if they play different strategies. To compute the mixed-strategy Nash equilibrium, assign A the probability ''p'' of playing H and (1−''p'') of playing T, and assign B the probability ''q'' of playing H and (1−''q'') of playing T.
+
+:E[payoff for A playing H] = (−1)''q'' + (+1)(1−''q'') = 1−2''q''
+:E[payoff for A playing T] = (+1)''q'' + (−1)(1−''q'') = 2''q''−1
+:E[payoff for A playing H] = E[payoff for A playing T] ⇒ 1−2''q'' = 2''q''−1 ⇒ ''q'' = 1/2
+
+:E[payoff for B playing H] = (+1)''p'' + (−1)(1−''p'') = 2''p''−1
+:E[payoff for B playing T] = (−1)''p'' + (+1)(1−''p'') = 1−2''p''
+:E[payoff for B playing H] = E[payoff for B playing T] ⇒ 2''p''−1 = 1−2''p'' ⇒ ''p'' = 1/2
+
+Thus a mixed-strategy Nash equilibrium, in this game, is for each player to randomly choose H or T with p = 1/2 and q = 1/2.
+
+== See also ==
+{{div col}}
+* {{annotated link|Adjusted winner procedure}}
+* {{annotated link|Complementarity theory}}
+* {{annotated link|Conflict resolution research}}
+* {{annotated link|Cooperation}}
+* {{annotated link|Equilibrium selection}}
+* {{annotated link|Evolutionarily stable strategy}} 
+* {{annotated link|Glossary of game theory}}
+* {{annotated link|Hotelling's law}}
+* {{annotated link|Manipulated Nash equilibrium}}
+* {{annotated link|Mexican standoff}}
+* {{annotated link|Minimax theorem}}
+* {{annotated link|Mutual assured destruction}}
+* {{annotated link|Extended Mathematical Programming#Equilibrium Problems|Extended Mathematical Programming for Equilibrium Problems}}
+* {{annotated link|Optimum contract and par contract}} 
+* {{annotated link|Self-confirming equilibrium}}
+* {{annotated link|Solution concept}}
+* {{annotated link|Stackelberg competition}}
+* {{annotated link|Wardrop's principle}}
+{{div col end}}
+
+== Notes ==
+{{Reflist|30em}}
+
+== References ==
+
+===Game theory textbooks===
+{{Refbegin}}
+* Dixit, Avinash, Susan Skeath and David Reiley. Games of Strategy. W.W. Norton &amp; Company. (Third edition in 2009)
+* {{Citation | last1=Dutta | first1=Prajit K. | title=Strategies and games: theory and practice | publisher=[[MIT Press]] | isbn=978-0-262-04169-0 | year=1999}}. Suitable for undergraduate and business students.
+* Fudenberg, Drew and [[Jean Tirole]] (1991) ''Game Theory'' MIT Press.
+* {{Citation | last2=Shoham | first2=Yoav | last1=Leyton-Brown | first1=Kevin | title=Essentials of Game Theory: A Concise, Multidisciplinary Introduction  | publisher=Morgan &amp; Claypool Publishers | isbn=978-1-59829-593-1 | url=http://www.gtessentials.org | year=2008 | location=San Rafael, CA}}. An 88-page mathematical introduction; see Chapter 2. [http://www.morganclaypool.com/doi/abs/10.2200/S00108ED1V01Y200802AIM003 Free online] at many universities.
+* [[Oskar Morgenstern|Morgenstern, Oskar]] and [[John von Neumann]] (1947) ''The Theory of Games and Economic Behavior'' Princeton University Press
+* {{Citation | last1=Myerson | first1=Roger B. | author1-link=Roger Myerson | title=Game theory: analysis of conflict | publisher=[[Harvard University Press]] | isbn=978-0-674-34116-6 | year=1997}}
+* {{Citation | last1=Papayoanou | first1=Paul | author1-link=Paul Papayoanou | title=Game Theory for Business: A Primer in Strategic Gaming | publisher=[[Probabilistic Publishing]] | isbn=978-0964793873 | year=2010}}
+* {{Citation | last1=Rubinstein | first1=Ariel | author1-link=Ariel Rubinstein | last2=Osborne | first2=Martin J. | title=A course in game theory | publisher=[[MIT Press]] | isbn=978-0-262-65040-3 | year=1994}}. A modern introduction at the graduate level.
+* {{Citation | last1=Shoham | first1=Yoav | last2=Leyton-Brown | first2=Kevin | title=Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations | publisher=[[Cambridge University Press]] | isbn=978-0-521-89943-7 | url=http://www.masfoundations.org | year=2009 | location=New York}}. A comprehensive reference from a computational perspective; see Chapter 3. [http://www.masfoundations.org/download.html Downloadable free online].
+* {{Citation | last1=Gibbons| first1=Robert | title=Game Theory for Applied Economists | publisher=[[Princeton University Press]] (July 13, 1992) | isbn=978-0-691-00395-5 | year=1992}}. Lucid and detailed introduction to game theory in an explicitly economic context.
+* {{Citation | last1=Osborne| first1=Martin| title=An introduction to game theory | publisher=[[Oxford University Press]] | isbn=978-0-19-512895-6 | year=2004}}. Introduction to Nash equilibrium.
+* {{Citation | last1=Binmore| first1=Ken| title=Playing for Real: A Text on Game Theory | publisher=[[Oxford University Press]] | isbn=978-0195300574 | year=2007}}.
+{{Refend}}
+
+===Original Nash papers===
+{{Refbegin}}
+* [[John Forbes Nash|Nash, John]] (1950)  &quot;Equilibrium points in n-person games&quot; ''[[Proceedings of the National Academy of Sciences]]'' 36(1):48-49.
+* [[John Forbes Nash|Nash, John]] (1951) &quot;Non-Cooperative Games&quot; ''[[The Annals of Mathematics]]'' 54(2):286-295.
+{{Refend}}
+
+===Other references===
+{{Refbegin}}
+* Mehlmann, A. (2000) ''The Game's Afoot! Game Theory in Myth and Paradox'', [[American Mathematical Society]].
+* [[Sylvia Nasar|Nasar, Sylvia]] (1998), ''[[A Beautiful Mind (book)|A Beautiful Mind]]'', [[Simon &amp; Schuster]].
+{{Refend}}
+
+== External links ==
+* {{springer|title=Nash theorem (in game theory)|id=p/n066040}}
+* [https://web.archive.org/web/20090909155608/http://wiki.cc.gatech.edu/theory/index.php/Nash_equilibrium Complete Proof of Existence of Nash Equilibria]
+* [https://unomaha.academia.edu/NAljaddou Simplified Form and Related Results]
+
+{{Game theory}}
+
+{{DEFAULTSORT:Nash Equilibrium}}
+[[Category:Game theory equilibrium concepts]]
+[[Category:Fixed points (mathematics)]]
+[[Category:1951 in economics]]</text>
+      <sha1>itnvf4xtz51gzxfsqsn9s7owvw4chng</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Molfetta</title>
+    <ns>0</ns>
+    <id>45338</id>
+    <revision>
+      <id>989840301</id>
+      <parentid>972405640</parentid>
+      <timestamp>2020-11-21T10:01:35Z</timestamp>
+      <contributor>
+        <username>DrVogel</username>
+        <id>32849731</id>
+      </contributor>
+      <comment>dab</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10169" xml:space="preserve">{{distinguish|Mofletta}}
+{{Use mdy dates|date=October 2011}}
+{{Infobox Italian comune
+| name                = Molfetta
+| official_name       = Città di Molfetta
+| native_name         = 
+| image_skyline       = Porto di Molfetta.jpg
+| imagesize           = 
+| image_alt           = 
+| image_caption       = Molfetta Harbour
+| image_shield        = Molfetta-Stemma.png
+| shield_alt          = Coat of arms of Molfetta
+| image_map           = Map of comune of Molfetta (metropolitan city of Bari, region Apulia, Italy).svg
+| map_alt             = 
+| map_caption         = Molfetta within the Province of Bari
+| pushpin_label_position = bottom
+| pushpin_map_alt     = 
+| coordinates         = {{coord|41|12|N|16|36|E|display=inline}}
+| coordinates_footnotes = 
+| region              = [[Apulia]]
+| metropolitan_city   = [[Metropolitan City of Bari|Bari]] (BA)
+| frazioni            = 
+| mayor_party         = 
+| mayor               = Tommaso Minervini
+| area_footnotes      = 
+| area_total_km2      = 58.26
+| population_footnotes = 
+| population_total    = 60433
+| population_as_of    = 31 December 2011
+| pop_density_footnotes = 
+| population_demonym  = Molfettesi
+| elevation_footnotes = 
+| elevation_m         = 18
+| twin1               = 
+| twin1_country       = 
+| saint               = San Corrado di Baviera, Madonna dei Martiri
+| day                 = 9 February, 8 September
+| postal_code         = 70056
+| area_code           = 080
+| website             = {{official website|http://www.comune.molfetta.ba.it}}
+| footnotes           = 
+}}
+[[File:Molfetta - Cattedrale di Santa Maria Assunta.JPG|thumb|[[Molfetta Cathedral]], or Church of ''Santa Maria Assunta'']]
+'''Molfetta'''  ({{IPA-it|molˈfetta|lang}}; [[Bari dialect|Molfettese]]: {{lang|nap|Melfétte}}) is a town located in the northern side of the [[Metropolitan City of Bari]], [[Apulia]], [[southern Italy]].
+
+It has a well restored old city, and its own [[dialect]].
+
+==History==
+The earliest local signs of permanent habitation are at the [[Neolithic]] site of Pulo, one of the most important such sites in southern Italy. The origins of the city can be traced to a small fishing port; antique graves testify to a fisherman's village in the fourth century BC. The position of the future city offered a valid landing to the commerce of [[Ruvo di Puglia|Roman Rubo]]. The first indication of a [[toponym]] on the coast between ''Turenum'' ([[Trani, Apulia|Trani]]) and ''Natiolum'' ([[Giovinazzo]]) is in the ''[[Antonine Itinerary|Itinerarium Provinciarum Antonini Augusti]]'', edited from a third-century core. The place denominated ''Respa'' was probably a wrong transcript of the toponym ''Melpha'', referring to a small village of fishermen.
+
+The first official document that mentions the city dates to November 925; it documents a ''civitas'' denominated Melfi, situated on a peninsula named Sant'Andrea. The city developed under [[Byzantine Empire|Byzantine]] dominion, and was later conquered by the [[Lombards]], who included it in the [[Duchy of Benevento]]. The city repelled repeated assaults by the [[Saracen]]s. As an independent seaport, Molfetta traded with other Mediterranean markets, including [[Venice]], [[Alexandria]], [[Constantinople]], Syria, [[Amalfi]] and [[Dubrovnik|Ragusa]].
+
+At the beginning of the 11th century the [[Italo-Normans|Normans]] arrived, and the autonomy that the city preserved helped foster its development as both a commercial port with the east, and as port of embarcation for pilgrims heading to the [[Holy Land]]. The [[Crusades]]  permitted the city to assume a wider importance. Among the many pilgrims was [[Conrad of Bavaria]], who was so enamoured of the city that he became venerated as San Corrado, the protecting saint of Molfetta. During the [[Capetian House of Anjou|Angevin]] dominion the city succeeded in remaining autonomous. However, the arrival of the Aragonese kingdom to Southern Italy, spurred turbulent struggles between French, Spanish and Italians. These wars provoked death and destruction in the whole south of Italy: the [[Sack of Molfetta]] at the hands of the French, 18&amp;ndash;19 July 1529, was an episode that stalled the economic rebirth of the city.
+
+In February 2006, Molfetta hosted International Youth Parliament, an event which took place the previous year in Canterbury.
+
+==Geography==
+Located in the north-western corner of its province, near the borders with the [[Province of Barletta-Andria-Trani|one of Barletta-Andria-Trani]], and by the [[Adriatic Sea|Adriatic Coast]], Molfetta borders with the municipalities of [[Bisceglie]] (BT), [[Giovinazzo]], [[Terlizzi]] and [[Ruvo di Puglia]].&lt;ref&gt;{{OSM|r|41130|Molfetta}}&lt;/ref&gt; The town is 27&amp;nbsp;km from [[Andria]], 31 from [[Barletta]] and 34 from [[Bari]].
+
+==Main sights==
+*''Il Pulo'' is one of the most important [[Neolithic]] sites of southern Italy. It is a circular cave {{convert|23|m|ft}} deep with grottoes and remains of old constructions.
+*The Old Cathedral (''[[:it:Duomo di San Corrado]]'') was built in the twelfth–thirteenth centuries in Apulian-Romanesque style, using local stone on a [[basilica]] plan, a nave with two aisles divided by four central cross-shaped pilasters.  The floor has two domes.  From the apse area rise two {{convert|20|m|ft|adj=on}} towers, one of which acted as watchtower, the other has the usual [[campanile]]. The interior has some notable religious furnishings from the sixteenth century
+*Several watchtowers, such as the ''Torre Calderina'' (fifteenth century) on the seaside, and the ''Torrione Passari'', inglobated in the town's walls.
+*The [[Molfetta Cathedral|New Cathedral]], or church of ''S. Maria Assunta in Cielo'', was built by the [[Jesuits]] from 1610. It houses the remains of the city's patron, ''San Corrado of Bavaria'', in a silver reliquary bust of the saint (seventeenth century) by [[G. Todaro]].
+*The church of ''San Bernardino da Siena'' (1451, rebuilt in 1585) includes a triptych by [[Duccio d'Andrea]] (fifteenth century) and other later paintings. Notable is the Renaissance choir. The annexed convent is now the Palazzo Civico (town hall).
+*The church of ''Santo Stefano'', built from 1286, but with a Renaissance stone façade added in 1586.
+*''Palazzo Giovene'' is a 16th-century palace, now used as Town Hall. It has a notable Renaissance style portal
+*The church of ''Santa Maria Consolatrice degli Afflitti'', simply known as Chiesa del Purgatorio, dating from 1643 and consecrated in 1667. The façade has statues representing Sts. Stephen, Peter, Paul and  Lawrence and, on the two side summits, those of St. Joaquim and St. Anne. The interior houses paintings by [[Bernardo Cavallino]] and native-son [[Corrado Giaquinto]].
+*The church of ''San Pietro Apostolo'', simply called &quot;San Pietro's Church&quot;, just existing in the twelfth century, but with the actual [[Baroque]] façade and bell tower, situated in the old town, at the begin of the street of the some name, near the Municipio Square.
+*The ''Temple of Calvary'', a small Neo-Gothic construction built in 1856 and designed by the local architect [[Corrado De Judicibus]].
+*Two km outside the city in the direction of [[Bisceglie]], is the basilica-sanctuary of the ''Madonna dei Martiri''. The current nave of the church is partially built over the old eleventh-century church, of which only a dome and the underlying structure remain, in today's altar area. Annexed is the Crusaders Hospital, also from the eleventh century.  The basilica conserves an image that was a votive gift of some Crusaders in 1188.
+* The [[Molfetta Lighthouse|lighthouse]]
+
+== People ==
+Personalities from Molfetta include the Rococo painter [[Corrado Giaquinto]], the 19th-century composer [[Luigi Capotorti]], the anti-fascist politician and writer [[Gaetano Salvemini]], the assassinated magistrate [[Girolamo Minervini]], the conductor [[Riccardo Muti]], Cardinal [[Angelo Amato]], goalkeeper [[Vitangelo Spadavecchia]], artist [[Rossella Biscotti]], the rapper [[Caparezza]], and [[Domenico Leccisi]], who is best known for stealing the corpse of the fascist dictator [[Benito Mussolini]] from an unmarked grave.&lt;!--the following are redlinks: the sculptor [[Giulio Cozzoli]], who was a big professor in [[Naples]]' Academy of A rts and the famous painter [[Ignazio Gadaleta]], teacher in [[Milan]]+ Academy of Brera.--&gt;
+
+==Migration==
+During the times of the mass migration of Italians, mainly following [[World War II]], many Molfettese residents migrated to a town in [[South Australia]] called [[Port Pirie]]. The culture of Molfetta is celebrated in Port Pirie and officials of both Port Pirie and Molfetta have close links today. In the United States, many Molfettese immigrants settled in the city of [[Hoboken, New Jersey]], where a substantial enclave still exists today.&lt;ref&gt;{{cite web |url=http://www.historelli.com |title=Historelli |quote=The American Story of Molfettese Immigration}}&lt;/ref&gt;
+
+==Twin towns — sister cities==
+Molfetta is [[Twin towns and sister cities|twinned]] with:
+
+* {{flagicon|GER}} [[Görlitz]], Germany (1971)
+* {{flagicon|AUS}} [[Fremantle]], Australia (1984)&lt;ref&gt;{{cite web| url=http://www.fremantle.wa.gov.au/City_of_Fremantle/Sister_cities_and_international_relations |title=Sister cities and international relations |work=City of Fremantle website |accessdate=22 May 2011 |archiveurl=https://web.archive.org/web/20100809085535/http://www.fremantle.wa.gov.au/City_of_Fremantle/Sister_cities_and_international_relations | url-status=dead |archivedate=2010-08-09}}&lt;/ref&gt;
+
+[[File:Puglia Molfetta1 tango7174.jpg|thumb|left|upright=3.5|The harbour.]]
+{{Clear}}
+
+==See also==
+*[[Molfetta railway station]]
+*[[Molfetta Lighthouse]]
+
+==References==
+{{reflist}}
+
+==External links==
+{{commons category|Molfetta}}
+* [https://web.archive.org/web/20110804044614/http://www.comune.molfetta.ba.it/ Official website] {{in lang|it}}
+* [http://www.newadvent.org/cathen/10434a.htm ''Catholic Encyclopedia'':] &quot;Molfetta, Terlizzi and Giovinazzo&quot;
+
+{{Metropolitan City of Bari}}
+
+{{authority control}}
+
+[[Category:Molfetta| ]]
+[[Category:Coastal towns in Apulia]]
+[[Category:Port cities and towns of the Adriatic Sea]]</text>
+      <sha1>472uqojis8i3e8tt7an8fp0g7myugpw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Feline</title>
+    <ns>0</ns>
+    <id>45339</id>
+    <revision>
+      <id>976775662</id>
+      <parentid>976775423</parentid>
+      <timestamp>2020-09-04T22:59:38Z</timestamp>
+      <contributor>
+        <username>IdreamofJeanie</username>
+        <id>4555919</id>
+      </contributor>
+      <comment>Reverting edit(s) by [[Special:Contributions/BLABLABLASHUTUP|BLABLABLASHUTUP]] ([[User_talk:BLABLABLASHUTUP|talk]]) to rev. 939802562 by ClueBot NG: [[WP:VANDAL|Vandalism]] [[w:en:WP:RW|(RW 15)]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="910" xml:space="preserve">{{wiktionary|feline}}
+'''Feline''' may refer to:
+
+==Zoology==
+* Loosely, [[Felidae]], a member of the cat family, which includes the subfamilies Pantherinae and Felinae (conventionally designated a [[felid]])
+** Following the taxonomic convention, [[Felinae]], the subfamily of Felidae that includes domestic cats and smaller wild cats
+*** [[Cat]], the domesticated cat
+
+==Music==
+* [[Feline (band)]], a late-1990s London-based English rock group
+* [[Feline (The Stranglers album)|''Feline'' (The Stranglers album)]], 1983
+* ''Feline'' (1998 album), the self-titled album by Feline, expanded release of ''[[Save Your Face]]''
+* [[Feline (Ella Eyre album)|''Feline'' (Ella Eyre album)]] (2015), the debut studio album by Ella Eyre
+* [[Feline (song)]], a song on Delta Goodrem's 2016 album ''Wings of the Wild''
+
+==Comics==
+* Feline (comics), a fictional character from the Malibu comics line
+
+{{disambiguation}}</text>
+      <sha1>e15r6tervqqq4j2xq6m17l7oa2pqi2p</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Pope Paschal II</title>
+    <ns>0</ns>
+    <id>45340</id>
+    <revision>
+      <id>980499905</id>
+      <parentid>980145519</parentid>
+      <timestamp>2020-09-26T21:25:43Z</timestamp>
+      <contributor>
+        <username>Raymie</username>
+        <id>575347</id>
+      </contributor>
+      <comment>Adding local [[Wikipedia:Short description|short description]]: &quot;Pope (r. 1099–1118)&quot;, overriding Wikidata description &quot;pope&quot; ([[Wikipedia:Shortdesc helper|Shortdesc helper]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="9588" xml:space="preserve">{{short description|Pope (r. 1099–1118)}}
+{{for|the Pisan saint Rainerius (Raniero)|Rainerius}}
+{{Infobox Christian leader
+| type = Pope
+| honorific-prefix = Pope
+| name = Paschal II
+| image = 
+| birth_name = Ranierius
+| term_start = 13 August 1099
+| term_end = 21 January 1118
+| predecessor = [[Urban II]]
+| successor = [[Gelasius II]]
+| cardinal = 1073
+| created_cardinal_by = [[Pope Gregory VII|Gregory VII]]
+| birth_date = 1050–55
+| birth_place = [[Bleda (Santa Sofia)|Bleda]], [[March of Tuscany]], [[Holy Roman Empire]]
+| death_date = {{death date|1118|1|21|df=y}}
+| death_place = [[Rome]], [[Papal States]]
+| previous_post = {{unbulleted list|[[San Clemente|Cardinal-Priest of San Clemente]] (1073–78)|Legate to [[France]] and [[Spain]] (1089–90)}}
+| other = Paschal
+}}
+
+'''Pope Paschal II''' ({{lang-la|Paschalis II}}; 1050&amp;nbsp;{{abbr|x|sometime between}}&amp;nbsp;1055&amp;nbsp;– 21 January 1118), born '''Ranierius''', was head of the [[Catholic Church]] and ruler of the [[Papal States]] from 13 August 1099 to his death in 1118. A monk of the [[Abbey of Cluny]], he was created the cardinal-priest of [[Basilica di San Clemente|San Clemente]] by [[Pope Gregory VII]] (1073–85) in 1073. He was consecrated as pope in [[Papal election, 1099|succession]] to [[Pope Urban II]] (1088–99) on 19 August 1099. His reign of almost twenty years was exceptionally long for a medieval pope.
+
+==Early career==
+Ranierius was born in [[Bleda (Santa Sofia)|Bleda]], near [[Forlì]], [[Romagna]]. He became a monk at Cluny at an early age.
+
+== Papacy ==
+During the long struggle of the papacy with the [[Holy Roman emperor]]s over [[Investiture Controversy|investiture]], Paschal II zealously carried on the [[Pope Gregory VII|Hildebrandine]] policy in favor of papal privilege, but with only partial success. [[Henry V, Holy Roman Emperor|Henry V]], son of [[Emperor Henry IV]], took advantage of his father's [[excommunication]] to rebel, even to the point of seeking out Paschal II for absolution for associating with his father, .&lt;ref&gt;Megan McLaughlin, ''Sex, Gender, and Episcopal Authority in an Age of Reform, 1000-1122'', (Cambridge University Press, 2010), 175.&lt;/ref&gt; But, Henry V was even more persistent in maintaining the right of investiture than Emperor Henry IV had been before his death in 1106. The imperial [[diet (assembly)|Diet]] at [[Mainz]] invited Paschal II to visit Germany and settle the trouble in January 1106, but the pope in the Council of [[Guastalla]] (October 1106) simply renewed the prohibition of investiture.&lt;ref&gt;Uta-Renate Blumenthal, ''The Investiture Controversy: Church and Monarchy from the Ninth to the Twelfth Century'', (University of Pennsylvania Press, 1988), 167.&lt;/ref&gt;&lt;ref name=EB1911/&gt;
+
+In the same year he brought to an end the investiture struggle in [[England]], in which [[Anselm of Canterbury|Anselm]], [[archbishop of Canterbury]], had been engaged with [[Henry I of England]], by retaining to himself exclusive right to invest with the ring and crozier, but recognizing the royal nomination to vacate [[benefice]]s and the oath of fealty for temporal domains. Paschal went to [[France]] at the close of 1106 to seek the mediation of [[Philip I of France]] and his son [[Louis VI of France|Louis]] in the imperial struggle, but he returned to Italy in September 1107, his negotiations remaining without result. When Henry V advanced with an army into Italy in order to be crowned, the pope agreed to a compact in February 1111 which stipulated that before receiving the imperial crown, Henry was to abjure all claims to investitures, whilst the pope undertook to compel the prelates and abbots of the empire to restore all the temporal rights and privileges which they held from the crown.&lt;ref&gt;{{CE1913|title = Pope Paschal II|url=http://www.newadvent.org/cathen/11514b.htm|last=Loughlin|first=James|volume=11|access-date=25 December 2017|inline=1}}&lt;/ref&gt; Preparations were made for the coronation on 12 February 1111, but the Romans rose in revolt against Henry, and the German king retired, taking the pope and Curia with him.&lt;ref name=EB1911/&gt;
+
+After 61 days of harsh imprisonment, during which Prince [[Robert I of Capua]]'s [[Italo-Normans|Norman]] army was repulsed on its rescue mission, Paschal II yielded and guaranteed investiture to the emperor. Henry V was then crowned in [[St. Peter's Basilica|St. Peter's]] on 13 April 1111, and, after exacting a promise that no revenge would be taken for what had happened, withdrew beyond the [[Alps]]. The Hildebrandine party was aroused to action, however; a [[Lateran]] council of March 1112 declared null and void the concessions extorted by violence; a council held at [[Vienne]] in October 1111 excommunicated the emperor; and Paschal II sanctioned the proceeding.&lt;ref&gt;[https://catholicsaints.info/new-catholic-dictionary-pope-paschal-ii/ “Pope Paschal II”. ''New Catholic Dictionary''. CatholicSaints.Info. 23 August 2013]&lt;/ref&gt;&lt;ref name=EB1911/&gt;
+
+[[File:Piae Postulatio Voluntatis bull of Pope Paschal II, 1113.jpg|thumb|right|''Pie Postulatio Voluntatis'', bull issued by Paschal II in 1113]]
+Pope Paschal II ordered the building of the basilica of [[Santi Quattro Coronati]] on the ashes of the one burned during the Norman [[Sack of Rome (1084)|sack of Rome in 1084]].&lt;ref&gt;Matilda Webb, ''The Churches and Catacombs of Early Christian Rome: A Comprehensive Guide'', (T.J.International, 2001), 93.&lt;/ref&gt;
+
+During Paschal's trip to France in 1106–1107, he consecrated the Cluniac church of Notre Dame at La Charité-sur-Loire,&lt;ref&gt;{{cite web|last1=Suger (Abbot)|title=De La Venue En France Du Pape Pascal II (1107) / Of Pope Paschal II's Travel to France (1107)|url=http://hypo.ge-dip.etat-ge.ch/www/cliotexte/sites/Arisitum/textes/histo/pape1.html|accessdate=1 May 2016|archiveurl=https://web.archive.org/web/20070926233512/http://hypo.ge-dip.etat-ge.ch/www/cliotexte/sites/Arisitum/textes/histo/pape1.html|archivedate=26 September 2007|language=French|quote=puis de Cluny à La Charité, où, au milieu d'un très grand concours d'archevêques, d'évêques et de moines, il dédia et consacra ce fameux monastère [...] 6) Le 9 mars 1107. Le monastère de la Charité-sur-Loire (Nièvre, arrondissement de Cosne) était un prieuré clunisien.|url-status=dead}}&lt;/ref&gt; the second largest church in Europe at the time.
+
+Towards the end of his pontificate trouble began anew in England; Paschal II complained in 1115 that councils were held and bishops translated without his authorization, and he threatened Henry I with [[excommunication]]. [[Matilda of Tuscany]] was said to have bequeathed all her allodial lands to the Church upon her death in 1115, but the donation was neither publicly acknowledged in Rome nor is any documentary record of the donation preserved. Emperor Henry V at once laid claim to Matilda's lands as imperial fiefs and forced the pope to flee from Rome. Paschal II returned after the emperor's withdrawal at the beginning of 1118, but died within a few days, on 21 January 1118.&lt;ref name=EB1911&gt;{{EB1911|wstitle=Paschal (popes) |volume=20|inline=1}}&lt;/ref&gt;
+
+In 1116, Paschal II, at the behest of Count [[Ramon Berenguer III of Barcelona]], issued a crusade for the capture of [[Tarragona]].&lt;ref&gt;Bernard F. Reilly, ''The Contest of Christian and Muslim Spain:1031-1157'', (Blackwell Publishing, 1995), 177.&lt;/ref&gt;
+
+During Paschal's papacy some efforts were made by the [[Byzantine]] Emperor [[Alexios I]] to bridge the [[East–West Schism|schism]] between the Orthodox and the Catholic Church, but these failed, as he pressed the demand that the [[patriarch of Constantinople]] recognise the pope's primacy over &quot;all the churches of God throughout the world&quot; in late 1112. This was something the patriarch could not do in face of opposition from the majority of clergy, the monastic world, and the laity.&lt;ref&gt;J.M. Hussey, ''The Orthodox Church in the Byzantine Empire'' (OXford: University Press, 1986), pp. 170–171.&lt;/ref&gt;
+
+Pope Paschal II issued the bull ''[[Pie postulatio voluntatis]]'' on 15 February 1113.&lt;ref&gt;Piae postulatio voluntatis | http://blessed-gerard.org/bgt_1_3.htm&lt;/ref&gt; It brought under Papal protection and confirmed as a religious order the Hospital of Saint John of Jerusalem, later known as the Knights Hospitaller and today known as the [[Sovereign Military Order of Malta]]. It also confirmed the order's acquisitions and donations in Europe and Asia and exempted it from all authority save that of the pope.&lt;ref&gt;Sire, H.J.A.: The Knights of Malta, Yale University Press, New Haven &amp; London, 1996&lt;/ref&gt;

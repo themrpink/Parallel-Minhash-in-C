@@ -1,0 +1,404 @@
+A CORBA product may optionally support the &quot;{{mono|http:}}&quot;, &quot;{{mono|ftp:}}&quot; and &quot;{{mono|file:}}&quot; formats. The semantics of these is that they provide details of how to download a stringified IOR (or, recursively, download another URL that will eventually provide a stringified IOR). Some ORBs do deliver additional formats which are proprietary for that ORB.
+
+== Benefits ==
+CORBA's benefits include language- and OS-independence, freedom from technology-linked implementations, strong data-typing, high level of tunability, and freedom from the details of distributed data transfers.
+
+; Language independence:CORBA was designed to free engineers from limitations of coupling their designs to a particular software language. Currently there are many languages supported by various CORBA providers, the most popular being Java and C++. There are also C++11, C-only, Smalltalk, Perl, Ada, Ruby, and Python implementations, just to mention a few.
+
+; OS-independence: CORBA's design is meant to be OS-independent. CORBA is available in Java (OS-independent), as well as natively for Linux/Unix, Windows, Solaris, OS X, OpenVMS, HPUX, Android, LynxOS, VxWorks, ThreadX, INTEGRITY, and others.
+
+; Freedom from technologies: One of the main implicit benefits is that CORBA provides a neutral playing field for engineers to be able to normalize the interfaces between various new and legacy systems. When integrating C, C++, Object Pascal, Java, Fortran, Python, and any other language or OS into a single cohesive system design model, CORBA provides the means to level the field and allow disparate teams to develop systems and unit tests that can later be joined together into a whole system. This does not rule out the need for basic system engineering decisions, such as threading, timing, object lifetime, etc. These issues are part of any system regardless of technology. CORBA allows system elements to be normalized into a single cohesive system model.&lt;br&gt; For example, the design of a [[multitier architecture]] is made simple using [[Java Servlet]]s in the web server and various CORBA servers containing the business logic and wrapping the database accesses. This allows the implementations of the business logic to change, while the interface changes would need to be handled as in any other technology. For example, a database wrapped by a server can have its database schema change for the sake of improved disk usage or performance (or even whole-scale database vendor change), without affecting the external interfaces. At the same time, C++ legacy code can talk to C/Fortran legacy code and Java database code, and can provide data to a web interface.
+
+; Data-typing: CORBA provides flexible data typing, for example an &quot;ANY&quot; datatype. CORBA also enforces tightly coupled datatyping, reducing human errors. In a situation where Name-Value pairs are passed around, it is conceivable that a server provides a number where a string was expected. CORBA Interface Definition Language provides the mechanism to ensure that user-code conforms to method-names, return-, parameter-types, and exceptions.
+
+; High tunability: Many implementations (e.g.  ORBexpress (Ada, C++, and Java implementation)&lt;ref&gt;{{cite web|title=ORBexpress : Real-time CORBA ORB|url=http://www.ois.com/Products/communications-middleware.html}}&lt;/ref&gt; and OmniORB (open source C++ and Python implementation))&lt;ref&gt;{{cite web|title=omniORB : Free CORBA ORB|url=http://omniorb.sourceforge.net|work=sourceforge.net|accessdate=9 January 2014}}&lt;/ref&gt; have options for tuning the threading and connection management features. Not all ORB implementations provide the same features.
+
+; Freedom from data-transfer details: When handling low-level connection and threading, CORBA provides a high level of detail in error conditions. This is defined in the CORBA-defined standard exception set and the implementation-specific extended exception set. Through the exceptions, the application can determine if a call failed for reasons such as &quot;Small problem, so try again&quot;, &quot;The server is dead&quot; or &quot;The reference does not make sense.&quot; The general rule is: Not receiving an exception means that the method call completed successfully. This is a very powerful design feature.
+
+; Compression: CORBA marshals its data in a binary form and supports compression. IONA, Remedy IT, and [[Telefonica|Telefónica]] have worked on an extension to the CORBA standard that delivers compression. This extension is called ZIOP and this is now a formal OMG standard.
+
+== Problems and criticism ==
+While CORBA delivered much in the way code was written and software constructed, it has been the subject of criticism.&lt;ref name=&quot;CORBA_trouble&quot;&gt;{{cite web |url=http://www.davidchappell.com/articles/article_Trouble_CORBA.html |archiveurl=https://web.archive.org/web/20121203074323/http://www.davidchappell.com/articles/article_Trouble_CORBA.html |archivedate=3 December 2012 |title=Trouble with CORBA |last=Chappel |first=David |date=May 1998 |accessdate=15 March 2010 |publisher=davidchappel.com}}&lt;/ref&gt;
+
+Much of the criticism of CORBA stems from poor implementations of the standard and not deficiencies of the standard itself. Some of the failures of the standard itself were due to the process by which the CORBA specification was created and the compromises inherent in the politics and business of writing a common standard sourced by many competing implementors.
+
+;Initial implementation incompatibilities
+:The initial specifications of CORBA defined only the IDL, not the on-the-wire format. This meant that source-code compatibility was the best that was available for several years. With CORBA 2 and later this issue was resolved.
+
+;Location transparency
+:CORBA's notion of location transparency has been criticized; that is, that objects residing in the same [[address space]] and accessible with a simple [[function call]] are treated the same as objects residing elsewhere (different processes on the same machine, or different machines). This is a fundamental design flaw,&lt;ref&gt;{{cite journal|last=Waldo|first=Jim|author2=Geoff Wyant |author3=Ann Wollrath |author4=Sam Kendall |title=A Note on Distributed Computing|journal=Sun Microsystem Laboratories|date=November 1994|url=http://www.cc.gatech.edu/classes/AY2010/cs4210_fall/papers/smli_tr-94-29.pdf|accessdate=4 November 2013}}&lt;/ref&gt;{{Failed verification|date=November 2017}} as it makes all object access as complex as the most complex case (i.e., remote network call with a wide class of failures that are not possible in local calls). It also hides the inescapable differences between the two classes, making it impossible for applications to select an appropriate use strategy (that is, a call with 1[[µs]] latency and guaranteed return will be used very differently from a call with 1s latency with possible transport failure, in which the delivery status is potentially unknown and might take 30s to time out).
+;Design and process deficiencies
+:The creation of the CORBA standard is also often cited for its process of [[design by committee]]. There was no process to arbitrate between conflicting proposals or to decide on the hierarchy of problems to tackle. Thus the standard was created by taking a union of the features in all proposals with no regard to their coherence.&lt;ref name=&quot;ACM_fall&quot;/&gt; This made the specification complex, expensive to implement entirely, and often ambiguous.
+
+:A design committee composed of a mixture of implementation vendors and customers created a diverse set of interests. This diversity made difficult a cohesive standard. Standards and interoperability increased competition and eased customers' movement between alternative implementations. This led to much political fighting within the committee and frequent releases of revisions of the CORBA standard that some ORB implementors ensured were difficult to use without proprietary extensions.&lt;ref name=&quot;CORBA_trouble&quot;/&gt; Less ethical CORBA vendors encouraged customer lock-in and achieved strong short-term results. Over time the ORB vendors that encourage portability took over market share. {{Citation needed|date=November 2017}}
+
+;Problems with implementations
+:Through its history, CORBA has been plagued by shortcomings in poor ORB implementations. Unfortunately many of the papers criticizing CORBA as a standard are simply criticisms of a particularly bad CORBA ORB implementation.
+
+:CORBA is a comprehensive standard with many features. Few implementations attempt to implement all of the specifications,&lt;ref name=&quot;ACM_fall&quot;&gt;{{cite journal |first=Michi |last=Henning |url=http://queue.acm.org/detail.cfm?id=1142044 |title=The Rise and Fall of CORBA |publisher=[[Association for Computing Machinery]] |journal=[[ACM Queue]] |volume=4 |issue=5 |date=30 June 2006 |accessdate=15 March 2010}}&lt;/ref&gt; and initial implementations were incomplete or inadequate.  As there were no requirements to provide a reference implementation, members were free to propose features which were never tested for usefulness or implementability. Implementations were further hindered by the general tendency of the standard to be verbose, and the common practice of compromising by adopting the sum of all submitted proposals, which often created APIs that were incoherent and difficult to use, even if the individual proposals were perfectly reasonable.{{Citation needed|date=February 2007}}
+
+:Robust implementations of CORBA have been very difficult to acquire in the past, but are now much easier to find. The SUN Java SDK comes with CORBA built-in. Some poorly designed implementations have been found to be complex, slow, incompatible and incomplete. Robust commercial versions began to appear but for significant cost. As good quality free implementations became available the bad commercial implementations died quickly.
+
+;Firewalls
+:CORBA (more precisely, [[General Inter-ORB Protocol|GIOP]]) is not tied to any particular communications transport. A specialization of GIOP is the Internet Inter-ORB Protocol or IIOP. IIOP uses raw [[TCP/IP]] connections in order to transmit data.
+
+:If the client is behind a very restrictive firewall or [[transparent proxy]] server environment that only allows [[HTTP]] connections to the outside through port 80, communication may be impossible, unless the proxy server in question allows the [[Tunneling protocol|HTTP CONNECT]] method or [[SOCKS]] connections as well. At one time, it was difficult even to force implementations to use a single standard port – they tended to pick multiple random ports instead. As of today, current ORBs do have these deficiencies. Due to such difficulties, some users have made increasing use of [[web services]] instead of CORBA. These communicate using [[XML]]/[[SOAP]] via port 80, which is normally left open or filtered through a HTTP proxy inside the organization, for web browsing via HTTP. Recent CORBA implementations, though, support [[Secure Sockets Layer|SSL]] and can be easily configured to work on a single port. Some ORBS, such as [[TAO (software)|TAO]], omniORB and [[JacORB]] also support bidirectional GIOP, which gives CORBA the advantage of being able to use callback communication rather than the polling approach characteristic of web service implementations. Also, most modern firewalls support GIOP &amp; IIOP and are thus CORBA-friendly firewalls.
+
+== See also ==
+;Software engineering
+* [[Component-based software engineering]]
+* [[Distributed computing]]
+* [[Portable object (computing)|Portable object]]
+* [[Service-oriented architecture]] (SOA)
+
+;Component-based software technologies
+* [[Freedesktop.org]] [[D-Bus]] – current open cross-language cross-platform object model
+* [[GNOME]] [[Bonobo (GNOME)|Bonobo]] – deprecated GNOME cross-language object model
+* [[KDE]] [[DCOP]] – deprecated KDE interprocess and software componentry communication system
+* [[KDE]] [[KDE Platform#KParts|KParts]] – KDE component framework
+* [[Component Object Model]] (COM) – Microsoft Windows-only cross-language object model
+* [[Distributed Component Object Model|DCOM]] (Distributed COM) – extension making COM able to work in networks
+* [[Common Language Infrastructure]] – Current [[.NET Framework|.NET]] cross-language cross-platform object model
+* [[XPCOM]] (Cross Platform Component Object Model) – developed by Mozilla for applications based on it (e.g. [[Mozilla Application Suite]], [[SeaMonkey]] 1.x)
+* [[IBM System Object Model]] SOM and DSOM – component systems from IBM used in [[OS/2]] and [[AIX]]
+* [[Internet Communications Engine]] (ICE)
+* [[Java remote method invocation]] (Java RMI)
+* [[Java Platform, Enterprise Edition]] (Java EE)
+* [[JavaBean]]
+* [[OpenAIR]]
+* [[Remote procedure call]] (RPC)
+* [[Windows Communication Foundation]] (WCF)
+* [[Software Communications Architecture]] (SCA) – components for embedded systems, cross-language, cross-transport, cross-platform
+
+;Language bindings
+* [[Language binding]]
+* [[Foreign function interface]]
+* [[Calling convention]]
+* [[Dynamic Invocation Interface]]
+* [[Name mangling]]
+* [[Application programming interface]] - API
+* [[Application binary interface]] - ABI
+* [[Comparison of application virtual machines]]
+* [[SWIG]] opensource automatic interfaces bindings generator from many languages to many languages
+
+== References ==
+{{Reflist}}
+
+== Further reading ==
+* {{cite web |url= https://www.omg.org/spec/CORBA/ |title= CORBA |work= Current |series= Specification |publisher= [[Object Management Group|OMG]]}}
+*{{cite book |first=Robert |last=Orfali |title=The Essential Client/Server Survival Guide |publisher=John Wiley &amp; Sons |isbn=0-471-15325-7 |url=https://archive.org/details/essentialclients00orfa }}
+*{{cite book |first=Robert |last=Orfali |first2=Dan |last2=Harkey  |first3=Jeri |last3=Edwards |title=The Essential Distributed Objects Survival Guide |url=https://archive.org/details/essentialdistrib00orfa |url-access=registration |publisher=John Wiley &amp; Sons |ISBN=0-471-12993-3}}
+*{{cite book |first=Robert |last=Orfali |first2=Dan |last2=Harkey |title=Client/Server Programming with JAVA and CORBA |publisher=John Wiley &amp; Sons |ISBN=0-471-24578-X |url-access=registration |url=https://archive.org/details/clientserverprog00orfa }}
+*{{cite book |first=Dirk |last=Slama |first2=Jason |last2=Garbis |first3=Perry |last3=Russell |title=Enterprise CORBA |url=https://archive.org/details/isbn_9780130839633 |url-access=registration |publisher=Prentice Hall |ISBN=0-13-083963-9}}
+*{{cite book |first=Michi |last=Henning |first2=Steve |last2=Vinoski |title=Advanced CORBA Programming with C++ |url=https://archive.org/details/advancedcorbapro00henn |url-access=registration |publisher=Addison-Wesley |ISBN=0-201-37927-9}}
+*{{cite book |first=Axel |last=Korthaus |first2=Martin |last2=Schader |first3=Markus |last3=Aleksy |url=http://www.wifo.uni-mannheim.de/CORBA/ |title=Implementing Distributed Systems with Java and CORBA |publisher=Springer |ISBN=3-540-24173-6 |access-date=23 June 2005 |archive-url=https://web.archive.org/web/20051031102447/http://www.wifo.uni-mannheim.de/CORBA/ |archive-date=31 October 2005 |url-status=dead }}
+*{{cite book |first=Fintan |last=Bolton |title=Pure Corba |publisher=Sams Publishing |ISBN=0-672-31812-1 |url-access=registration |url=https://archive.org/details/purecorba00fint }}
+*{{cite book |first=Jon |last=Siegel |title=CORBA 3 - Fundamentals and Programming |publisher=John Wiley &amp; Sons |ISBN=0-471-29518-3}}
+*{{cite book |first=Ron |last=Zahavi |title=Enterprise Application Integration with CORBA: Component and Web-Based Solutions |publisher=John Wiley &amp; Sons |ISBN=0-471-32720-4}}
+*{{cite book |first=Bret |last=Hartman |first2=hartman |last2=Beznosov |first3=Steve |last3=Vinoski |first4=Donald |last4=Flinn |title=Enterprise Security with EJB and CORBA |publisher=John Wiley &amp; Sons |ISBN=0-471-40131-5}}
+*{{cite book |first=Thomas J. |last=Mowbray |first2=Ron |last2=Zahavi |title=The Essential Corba: System Integration Using Distributed Objects |url=https://archive.org/details/essentialcorbasy00mowb |url-access=registration |publisher=John Wiley &amp; Sons |ISBN=0-471-10611-9}}
+*{{cite book |first=Michael |last=Rosen |author-link = Michael Rosen (enterprise architect)|first2=David |last2=Curtis |title=Integrating CORBA and COM Applications |publisher=John Wiley &amp; Sons |ISBN=0-471-19827-7}}
+*{{cite book |first=Gerald |last=Brose |first2=Andreas |last2=Vogel |first3=Keith |last3=Duddy |title=Java Programming with CORBA |publisher=John Wiley &amp; Sons |ISBN=0-471-37681-7}}
+*{{cite book |first=John |last=Schettino |first2=Robin S. |last2=Hohman |first3=Liz |last3=O'Hara |title=CORBA For Dummies |publisher=Hungry Minds |ISBN=0-7645-0308-1 |url-access=registration |url=https://archive.org/details/corbafordummies00sche }}
+*{{cite book |first=Jeremy L. |last=Rosenberger |title=Teach Yourself CORBA in 14 Days |url=https://archive.org/details/teachyourselfcor00rose |url-access=registration |publisher=Sams Publishing |ISBN=0-672-31208-5}}
+*{{cite book |first=Jon |last=Siegel  |title=Quick CORBA 3 |publisher=John Wiley &amp; Sons |ISBN=0-471-38935-8}}
+*{{cite book |first=Thomas J. |last=Mowbray |first2=Raphael C. |last2=Malveau |title=CORBA Design Patterns |publisher=John Wiley &amp; Sons |ISBN=0-471-15882-8 |url-access=registration |url=https://archive.org/details/corbadesignpatte00mowb }}
+*{{cite book |first=Robert |last=Orfali |first2=Dan |last2=Harkey |first3=Jeri |last3=Edwards |title=Instant CORBA |url=https://archive.org/details/instantcorba00orfa |url-access=registration |publisher=John Wiley &amp; Sons |ISBN=0-471-18333-4}}
+* {{cite book |last=Harmon |first=Paul |first2=William |last2=Morrissey |year=1996 |title=The Object Technology Casebook |publisher=John Wiley &amp; Sons |ISBN=0-471-14717-6 |authorlink=Paul Harmon (management author) |url-access=registration |url=https://archive.org/details/objecttechnology00harm }}
+
+== External links ==
+{{wikibooks|CORBA Programming}}
+* [http://www.omg.org/spec/CCM/ Official OMG CORBA Components page]
+* [http://ditec.um.es/~dsevilla/ccm Unofficial CORBA Component Model page]
+* [https://www.taox11.org/documents/presentations.html Comparing IDL to C++ with IDL to C++11]
+* [http://queue.acm.org/detail.cfm?id=1388786 Corba: Gone But (Hopefully) Not Forgotten]
+* [http://www.omg.org/spec/CORBA/ OMG XMI Specification]
+
+{{ISO standards}}
+{{Authority control}}
+
+[[Category:Common Object Request Broker Architecture| ]]
+[[Category:Component-based software engineering]]
+[[Category:GNOME]]
+[[Category:Inter-process communication]]
+[[Category:ISO standards]]
+[[Category:Object-oriented programming]]</text>
+      <sha1>t57bb4gpw7ka3dqop8j21f9unrt90bv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Java RMI</title>
+    <ns>0</ns>
+    <id>43286</id>
+    <redirect title="Java remote method invocation" />
+    <revision>
+      <id>783875376</id>
+      <parentid>627517239</parentid>
+      <timestamp>2017-06-05T05:56:04Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="98" xml:space="preserve">#REDIRECT [[Java remote method invocation]]
+
+{{Redirect category shell|1=
+{{R from initialism}}
+}}</text>
+      <sha1>n442mhxmr8h68ukccoxhc47gwmhngas</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>RMI</title>
+    <ns>0</ns>
+    <id>43287</id>
+    <revision>
+      <id>989127314</id>
+      <parentid>962541524</parentid>
+      <timestamp>2020-11-17T05:26:05Z</timestamp>
+      <contributor>
+        <username>DividedFrame</username>
+        <id>10531370</id>
+      </contributor>
+      <comment>/* Organizations */ RMI Expeditions</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2105" xml:space="preserve">{{wiktionary|RMI}}
+'''RMI''' may refer to:
+{{TOC right}}
+==Science and technology==
+* [[Radio-magnetic indicator]], an instrument used in aircraft navigation
+* [[Repetitive motion injury]], an injury to the musculoskeletal and nervous systems
+* [[Richtmyer–Meshkov instability]], an instability occurring when two fluids with different densities are impulsively accelerated
+* [[Risk of malignancy index]], for ovarian cancer
+
+===Computing===
+* [[Java remote method invocation|Remote Method Invocation]], an application-programming interface used in Java environments
+* &lt;code&gt;[[.rmi]]&lt;/code&gt;, a file extension for a RIFF MIDI file
+
+==Organizations==
+* [[RMI Corporation]], a semiconductor company manufacturing CPUs
+* [[RMI Titanium Company]], U.S. titanium fabricator now called RTI International Metals 
+* [[Railcar Management LLC]], a rail information services software company and subsidiary of GE Transportation
+* [[RMI Expeditions]], a mountain guide company based in Ashford, Washington, United States
+* [[Remote Medical International]], provides medical support in remote areas
+* [[Rocky Mountain Institute]], a non-profit energy-conservation organization in the United States of America
+* [[Rocky Mount Instruments]], manufacturer of the RMI 368 Electra-Piano and Harpsichord
+* [[Royal Manchester Institution]] (1823–1882), a learned society promoting the arts in Manchester, England
+* [[WRMI]] (branded Radio Miami International) an American shortwave radio station, often referred to on air as RMI
+* [[Reaction Motors Inc.]], an early American maker of liquid-fueled rocket engines
+
+==Places==
+* [[Federico Fellini International Airport]] (IATA code), near Rimini, Italy 
+* [[Republic of the Marshall Islands]], a nation-state in Micronesia
+
+==Other uses==
+* [[Radio Massacre International]], a British electronic-music group
+* [[Ramapough Mountain Indians]], a Native American group
+* [[Rank mobility index]], a measure of change in population-rank
+* [[Revenu minimum d'insertion]], a form of welfare introduced in France in 1988
+
+==See also==
+* [[RM1 (disambiguation)]]
+
+{{disambiguation}}</text>
+      <sha1>5m5b6vdra73n9519r3q90vb6h9kyxp5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Westside Story</title>
+    <ns>0</ns>
+    <id>43288</id>
+    <redirect title="West Side Story" />
+    <revision>
+      <id>345744061</id>
+      <parentid>345347460</parentid>
+      <timestamp>2010-02-22T21:52:21Z</timestamp>
+      <contributor>
+        <username>Xqbot</username>
+        <id>8066546</id>
+      </contributor>
+      <minor />
+      <comment>Robot: Fixing double redirect to [[West Side Story]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="29" xml:space="preserve">#REDIRECT [[West Side Story]]</text>
+      <sha1>13fn2xeo4ycrobiat328gxt7b7e9flu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Angiosperms</title>
+    <ns>0</ns>
+    <id>43289</id>
+    <redirect title="Flowering plant" />
+    <revision>
+      <id>844950238</id>
+      <parentid>844936699</parentid>
+      <timestamp>2018-06-08T08:59:39Z</timestamp>
+      <contributor>
+        <username>Christian75</username>
+        <id>1306352</id>
+      </contributor>
+      <minor />
+      <comment>Reverted 1 edit by [[Special:Contributions/Aaditya Kumar201|Aaditya Kumar201]] ([[User talk:Aaditya Kumar201|talk]]) to last revision by Caftaric. ([[WP:TW|TW]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="125" xml:space="preserve">#REDIRECT [[Flowering plant]]
+
+{{Redirect category shell|1=
+{{R from alternative name}}
+}}
+[[Category:Plant unranked clades]]</text>
+      <sha1>qmtl8px2n8v54hi5mrzp2bgm7b17uq1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Angiosperm</title>
+    <ns>0</ns>
+    <id>43290</id>
+    <redirect title="Flowering plant" />
+    <revision>
+      <id>783875361</id>
+      <parentid>770969468</parentid>
+      <timestamp>2017-06-05T05:55:54Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="202" xml:space="preserve">#REDIRECT [[Flowering plant]]
+
+{{Redirect category shell|1=
+{{R from alternative name}}
+}}
+
+[[Category:Angiosperms| ]]
+[[Category:Plant divisions]]
+[[Category:Extant Early Cretaceous first appearances]]</text>
+      <sha1>jrq1lapgf25jm97k7lzq6xxcy4cg1zo</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Charles darwin</title>
+    <ns>0</ns>
+    <id>43291</id>
+    <redirect title="Charles Darwin" />
+    <revision>
+      <id>844426599</id>
+      <parentid>771065655</parentid>
+      <timestamp>2018-06-04T21:03:34Z</timestamp>
+      <contributor>
+        <username>QYYZ</username>
+        <id>33343951</id>
+      </contributor>
+      <minor />
+      <comment>{{R from miscap}} rather than {{R from alt cap}} – also added {{R unprintworthy}}</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="108" xml:space="preserve">#REDIRECT [[Charles Darwin]]
+
+{{Redirect category shell|
+{{R from miscapitalisation}}
+{{R unprintworthy}}
+}}</text>
+      <sha1>oy71mivzxnpetu6rjxjmttosq2lzivl</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Paul Kelly (Australian musician)</title>
+    <ns>0</ns>
+    <id>43292</id>
+    <revision>
+      <id>989461103</id>
+      <parentid>989460949</parentid>
+      <timestamp>2020-11-19T03:06:32Z</timestamp>
+      <contributor>
+        <username>Tayi Arajakate</username>
+        <id>38321710</id>
+      </contributor>
+      <minor />
+      <comment>Reverted 1 edit by [[Special:Contributions/Irishslags|Irishslags]] ([[User talk:Irishslags|talk]]) to last revision by Dan arndt</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="187106" xml:space="preserve">{{About|the Australian musician|the Irish musician|Paul Kelly (Irish musician)|the American musician|Paul Kelly (American musician)}}
+{{Use dmy dates|date=November 2020}}
+{{Use Australian English|date=June 2014}}
+{{Infobox musical artist
+| name                = Paul Kelly
+| honorific_suffix    = {{post-nominals|country=AUS|AO}}
+| image               = Paul Kelly (April 6, 2015).jpg
+| alt                 = Head and shoulders of a sixty-year-old male standing at a microphone. He is strumming a guitar, singing and staring into the distance. He wears a purple suit, tie, blue shirt and vest.
+| caption             = [[Byron Bay Bluesfest]], April 2015
+| image_size          =
+| background          = solo_singer
+| birth_name          = Paul Maurice Kelly
+| alias               =
+| birth_date          = {{birth date and age|df=y|1955|1|13}}
+| birth_place         = [[Adelaide]], [[South Australia]], Australia
+| origin              =
+| genre               = {{flatlist|
+* [[Australian rock]]
+* [[folk music|folk]]
+}}
+| occupation          = {{flatlist|
+* Musician
+* singer-songwriter
+* producer
+* poet
+}}
+| instrument          = {{flatlist|
+* Vocals
+* guitar
+* harmonica
+}}
+| years_active        = 1974–present
+| label               = {{flatlist|
+* [[Mushroom Records|Mushroom]]
+* [[A&amp;M Records|A&amp;M]]
+* Gawdaggie / [[EMI Music Australia|EMI]]
+* [[Capitol Records|Capitol]]
+}}
+| associated_acts     = {{flatlist|
+* Paul Kelly and the Dots
+* Paul Kelly and the Coloured Girls
+* Paul Kelly and the Messengers
+* Paul Kelly and the Stormwater Boys
+* Uncle Bill
+* [[Professor Ratbaggy]]
+* Paul Kelly and the Boon Companions
+* [[Stardust Five]]
+* [[Dan Kelly (musician)|Dan Kelly]]
+}}
+| website             = {{URL|www.paulkelly.com.au}}
+}}
+
+'''Paul Maurice Kelly''' {{post-nominals|country=AUS|AO}} (born 13 January 1955) is an Australian rock music singer-songwriter and guitarist. He has performed solo, and has led numerous groups, including the Dots, the Coloured Girls, and the Messengers. He has worked with other artists and groups, including associated projects [[Professor Ratbaggy]] and [[Stardust Five]]. Kelly's music style has ranged from [[Bluegrass music|bluegrass]] to studio-oriented [[dub music|dub]] [[reggae]], but his core output straddles [[folk music|folk]], rock, and [[country music|country]]. His lyrics capture the vastness of the culture and landscape of Australia by chronicling life about him for over 30 years. [[David Fricke]] from ''[[Rolling Stone Australia|Rolling Stone]]'' calls Kelly &quot;one of the finest songwriters I have ever heard, Australian or otherwise.&quot;&lt;ref name=&quot;Fricke&quot;/&gt; Kelly has said, &quot;Song writing is mysterious to me. I still feel like a total beginner. I don't feel like I have got it nailed yet&quot;.&lt;ref name=&quot;Biog1997&quot;/&gt;
+
+After growing up in [[Adelaide]], Kelly travelled around Australia before settling in [[Melbourne]] in 1976. He became involved in the [[Pub rock (Australia)|pub rock]] scene and drug culture, and recorded two albums with Paul Kelly and the Dots. Kelly moved to Sydney by 1985, where he formed Paul Kelly and the Coloured Girls. The band was renamed Paul Kelly and the Messengers, initially only for international releases, to avoid possible racial interpretations of the word &quot;coloured&quot;. At the end of the 1980s, Kelly returned to Melbourne, and in 1991 he disbanded the Messengers. Kelly was married and divorced twice; he has three children and resides in [[St Kilda, Victoria|St Kilda]], a suburb of Melbourne. [[Dan Kelly (musician)|Dan Kelly]], his nephew, is a singer and guitarist in his own right. Dan performed with Kelly on ''Ways and Means'' and ''Stolen Apples''. Both were members of Stardust Five, which released a [[Stardust Five (album)|self-titled album]] in 2006. On 22 September 2010 Kelly released his memoir, ''How to Make Gravy'', which he described as &quot;it's not traditional; it's writing around the A–Z theme – I tell stories around the song lyrics in alphabetical order&quot;. His biographical film, ''[[Paul Kelly: Stories of Me]]'', directed by [[Ian Darling]], was released to cinemas in October 2012.
+
+Kelly's Top 40 singles include &quot;[[Billy Baxter (song)|Billy Baxter]]&quot;, &quot;[[Before Too Long]]&quot;, &quot;[[Darling It Hurts]]&quot;, &quot;[[To Her Door]]&quot; (his highest-charting local hit in 1987), &quot;[[Dumb Things]]&quot; (appeared on United States charts in 1988), and &quot;[[Roll on Summer]]&quot;. Top-20 albums include ''[[Gossip (Paul Kelly and the Coloured Girls album)|Gossip]]'', ''[[Under the Sun (Paul Kelly album)|Under the Sun]]'', ''[[Comedy (Paul Kelly &amp; The Messengers album)|Comedy]]'', ''[[Songs from the South]]'' (1997 [[compilation album|compilation]]), ''[[...Nothing but a Dream]]'', ''[[Stolen Apples (album)|Stolen Apples]]'', ''[[Spring and Fall (album)|Spring and Fall]]'', ''[[The Merri Soul Sessions]]'', ''Seven Sonnets and a Song'', ''Death's Dateless Night'' (with [[Charlie Owen (musician)|Charlie Owen]]), ''[[Life Is Fine]]'' – his first number-one album – and ''[[Nature (Paul Kelly album)|Nature]]''. Kelly has won 14 [[Australian Recording Industry Association]] (ARIA) Music Awards, including his induction into their [[ARIA Music Awards of 1997#Hall of Fame Inductees|Hall of Fame in 1997]]. In 2001 the [[Australasian Performing Right Association]] (APRA) listed the [[APRA Top 30 Australian songs|Top 30 Australian songs]] of all time, which included Kelly's &quot;To Her Door&quot;, and &quot;[[Treaty (song)|Treaty]]&quot;, written by Kelly and members of [[Yothu Yindi]]. Aside from &quot;Treaty&quot;, Kelly wrote or co-wrote several songs on [[Indigenous Australian]] social issues and historical events. He provided songs for many other artists, tailoring them to their particular vocal range. The album ''Women at the Well'' from 2002 had 14 female artists record his songs in tribute. Kelly was appointed as an [[Order of Australia|Officer of the Order of Australia]] in 2017 for distinguished service to the performing arts and to the promotion of the national identity through contributions as a singer, songwriter and musician.&lt;ref name=AO/&gt;
+
+==Early life==
+
+Paul Maurice Kelly was born on 13 January 1955 in [[Adelaide]], to John Erwin Kelly, a lawyer, and Josephine (née Filippini), the sixth of eight surviving children.&lt;ref name=&quot;Spirited Men115&quot;/&gt;&lt;ref name=&quot;KellyBio&quot;/&gt; According to ''[[Rip It Up (magazine)|Rip It Up]]'' magazine, &quot;legend has it&quot; that Kelly's mother gave birth to him &quot;in a taxi outside North Adelaide's Calvary Hospital&quot;.&lt;ref name=&quot;Rip&quot;/&gt;
+
+Although Kelly was raised as a [[Roman Catholic]], he later described himself as a non-believer in any religion.&lt;ref name=&quot;KellyGravy190&quot;/&gt;&lt;ref name=&quot;Courier&quot;/&gt; He is the great great grandson of Jeremiah Kelly, who emigrated from Ireland in 1852 and settled in [[Clare, South Australia]].&lt;ref name=&quot;Spirited Men116&quot;/&gt; His paternal grandfather, Francis Kelly, established a law firm in 1917, which his father, John, joined in 1937.&lt;ref name=&quot;Lawyers&quot;/&gt; John Kelly died in 1968 at the age of 52, after being diagnosed with [[Parkinson's disease]] three years earlier.&lt;ref name=&quot;KellyGravy223&quot;/&gt; Paul Kelly was thirteen years old when his father died.&lt;ref name=&quot;Rope&quot;/&gt; Kelly described his father: &quot;I have good memories, he was the kind of father that, well, I missed him when he died very much. The older children were growing into him at the time he died. He was not well enough to play sport with me.&quot;&lt;ref name=&quot;Lure&quot;/&gt;&lt;ref name=&quot;KellyGravy10&quot;/&gt;
+
+Kelly's maternal grandfather was an [[Argentine]]-born, Italian-speaking [[opera singer]], Count Ercole Filippini, a leading [[baritone]] for the [[La Scala]] Opera Company in [[Milan]].&lt;ref name=&quot;Leser204&quot;/&gt; Filippini was touring Australia in 1914 with a Spanish opera company when [[World War I]] broke out; Filippini stayed and later married Anne McPharland, one of his students.&lt;ref name=&quot;Spirited Men116&quot;/&gt; As Countessa Anne Filippini, she was Australia's first female symphony orchestra conductor.&lt;ref name=&quot;Lure&quot;/&gt; She sang the role of Marguerite in [[Australian Broadcasting Corporation]] (ABC) Radio [[Perth]]'s performance of ''[[Faust (opera)|Faust]]'' in 1928.&lt;ref name=&quot;Leser204&quot; /&gt; Kelly's grandparents started the Italo-Australian Opera Company, which toured the country in the 1920s.&lt;ref name=&quot;Italian&quot;/&gt;
+
+Josephine raised the younger children alone after John's death, but found time to assist others in need.&lt;ref name=&quot;Rope&quot;/&gt; Paul's oldest sister, Anne, became a nun and went on to write hymns, while a younger sister, Mary-Jo, plays piano in Latin bands and teaches music.&lt;ref name=&quot;Songline&quot;/&gt;&lt;ref name=&quot;VCASS&quot;/&gt; An older brother, Martin, works for [[Congregation of Christian Brothers|Edmund Rice International]],&lt;ref name=&quot;ABCQ&quot;/&gt;&lt;ref name=&quot;Edmund&quot;/&gt; with another brother, Tony, a drug and alcohol counsellor, who ran as an [[Australian Greens]] candidate in the [[2001 Australian federal election|2001]] and [[2004 Australian federal election|2004 federal elections]].&lt;ref name=&quot;Bunworth&quot;/&gt;&lt;ref name=&quot;Greens&quot;/&gt; Josephine Kelly moved to [[Brisbane]], where she died in 2000, at the age of 76.&lt;ref name=&quot;KellyGravy308&quot;/&gt;
+
+Kelly attended [[Rostrevor College]], a Christian Brothers school, where he played trumpet and studied piano, became the first XI cricket captain, played in the first XVIII football (Australian rules), and was named [[Dux (education)|dux]] of his senior year.&lt;ref name=&quot;apra02&quot;/&gt;&lt;ref name=&quot;WRecords&quot;/&gt; He studied arts at [[Flinders University]] in 1973, but left after a term, disillusioned with academic life. He began writing prose and started a magazine with some friends.&lt;ref name=&quot;Insight&quot;/&gt; Kelly spent several years working odd jobs, travelling around the country and learning guitar before he moved to Melbourne in 1976.&lt;ref name=&quot;Spirited Men118&quot;/&gt;&lt;ref name=&quot;McF&quot;/&gt;
+
+==1974–1984: Early career and with the Dots==
+
+[[File:Salamanca Market Hobart Tasmania.jpg|thumb|[[Salamanca Place]], [[Hobart]] (2007), where, in mid-1974, Kelly made his first public performance—a two-song set comprising [[Bob Dylan]]'s &quot;[[Girl from the North Country]]&quot; and &quot;[[Streets of Forbes]]&quot;, a traditional Australian folk song about [[bushranger]] [[Ben Hall (bushranger)|Ben Hall]].&lt;ref name=&quot;KellyGravy16&quot;/&gt;|alt=An exterior night street scene which shows a row of galleries, shops and cafés beyond pedestrians and parked cars. A stretch of bricked roadway is in the foreground.]]  
+While travelling around Australia, Paul Kelly made his first public performance in 1974 in [[Hobart]].&lt;ref name=&quot;Songline&quot; /&gt;&lt;ref name=&quot;Howl&quot;/&gt; He later recalled:
+
+{{quote|I was living there at the time and there was a folk club at Salamanca Place. They had a night, I think a Monday night, where anyone could get up. I sang [[Bob Dylan|Dylan]]'s &quot;[[Girl from the North Country|Girl from North Country]]&quot; and &quot;[[Streets of Forbes]]&quot;, a traditional Australian song about [[Ben Hall (bushranger)|Ben Hall]]. I can't really remember how it went – I remember I had a lot to drink afterwards from relief. I was incredibly nervous.&lt;ref name=&quot;jj&quot;/&gt;}}

@@ -1,0 +1,293 @@
+For exchanging the extracted models—in particular for use in [[predictive analytics]]—the key standard is the [[Predictive Model Markup Language]] (PMML), which is an [[XML]]-based language developed by the Data Mining Group (DMG) and supported as exchange format by many data mining applications. As the name suggests, it only covers prediction models, a particular data mining task of high importance to business applications. However, extensions to cover (for example) [[subspace clustering]] have been proposed independently of the DMG.&lt;ref&gt;{{Cite book | last1 = Günnemann | first1 = Stephan | last2 = Kremer | first2 = Hardy | last3 = Seidl | first3 = Thomas | doi = 10.1145/2023598.2023605 | chapter = An extension of the PMML standard to subspace clustering models | title = Proceedings of the 2011 workshop on Predictive markup language modeling | page = 48 | year = 2011 | isbn = 978-1-4503-0837-3 | s2cid = 14967969 }}&lt;/ref&gt;
+
+==Notable uses==
+{{Main|Examples of data mining}}
+{{Category see also|Applied data mining}}
+
+Data mining is used wherever there is digital data available today. Notable [[examples of data mining]] can be found throughout business, medicine, science, and surveillance.
+
+==Privacy concerns and ethics==
+While the term &quot;data mining&quot; itself may have no ethical implications, it is often associated with the mining of information in relation to peoples' behavior (ethical and otherwise).&lt;ref&gt;{{cite journal |author=Seltzer, William |title=The Promise and Pitfalls of Data Mining: Ethical Issues |url=https://ww2.amstat.org/committees/ethics/linksdir/Jsm2005Seltzer.pdf|publisher = American Statistical Association|journal = ASA Section on Government Statistics|date = 2005 }}&lt;/ref&gt;
+
+The ways in which data mining can be used can in some cases and contexts raise questions regarding [[privacy]], legality, and ethics.&lt;ref&gt;{{cite journal |author=Pitts, Chip |title=The End of Illegal Domestic Spying? Don't Count on It |url=http://www.washingtonspectator.com/articles/20070315surveillance_1.cfm |journal=Washington Spectator |date=15 March 2007 |url-status=dead |archive-url=https://web.archive.org/web/20071128015201/http://www.washingtonspectator.com/articles/20070315surveillance_1.cfm |archive-date=2007-11-28 }}&lt;/ref&gt; In particular, data mining government or commercial data sets for national security or law enforcement purposes, such as in the [[Total Information Awareness]] Program or in [[ADVISE]], has raised privacy concerns.&lt;ref&gt;{{cite journal |author=Taipale, Kim A. |title=Data Mining and Domestic Security: Connecting the Dots to Make Sense of Data |url=http://www.stlr.org/cite.cgi?volume=5&amp;article=2 |journal=Columbia Science and Technology Law Review |volume=5 |issue=2 |date=15 December 2003 |ssrn=546782 |oclc=45263753 }}&lt;/ref&gt;&lt;ref&gt;{{cite web|last1=Resig|first1=John|title=A Framework for Mining Instant Messaging Services|url=https://johnresig.com/files/research/SIAMPaper.pdf|access-date=16 March 2018}}&lt;/ref&gt;
+
+Data mining requires data preparation which uncovers information or patterns which compromise confidentiality and privacy obligations. A common way for this to occur is through [[aggregate function|data aggregation]]. Data aggregation involves combining data together (possibly from various sources) in a way that facilitates analysis (but that also might make identification of private, individual-level data deducible or otherwise apparent).&lt;ref name=&quot;NASCIO&quot;&gt;[http://www.nascio.org/publications/documents/NASCIO-dataMining.pdf ''Think Before You Dig: Privacy Implications of Data Mining &amp; Aggregation''] {{webarchive|url=https://web.archive.org/web/20081217063043/http://www.nascio.org/publications/documents/NASCIO-dataMining.pdf |date=2008-12-17 }}, NASCIO Research Brief, September 2004&lt;/ref&gt; This is not data mining ''per se'', but a result of the preparation of data before—and for the purposes of—the analysis. The threat to an individual's privacy comes into play when the data, once compiled, cause the data miner, or anyone who has access to the newly compiled data set, to be able to identify specific individuals, especially when the data were originally anonymous.&lt;ref&gt;{{cite magazine |first=Paul |last=Ohm |title=Don't Build a Database of Ruin |magazine=Harvard Business Review |url=http://blogs.hbr.org/cs/2012/08/dont_build_a_database_of_ruin.html}}&lt;/ref&gt;&lt;ref&gt;Darwin Bond-Graham, [http://www.counterpunch.org/2013/12/03/iron-cagebook/ Iron Cagebook – The Logical End of Facebook's Patents], [[Counterpunch.org]], 2013.12.03&lt;/ref&gt;&lt;ref&gt;Darwin Bond-Graham, [http://www.counterpunch.org/2013/09/11/inside-the-tech-industrys-startup-conference/ Inside the Tech industry's Startup Conference], [[Counterpunch.org]], 2013.09.11&lt;/ref&gt;
+
+It is recommended{{whom|date=August 2019}} to be aware of the following '''before''' data are collected:&lt;ref name=&quot;NASCIO&quot; /&gt;
+* The purpose of the data collection and any (known) data mining projects;
+* How the data will be used;
+* Who will be able to mine the data and use the data and their derivatives;
+* The status of security surrounding access to the data;
+* How collected data can be updated.
+
+Data may also be modified so as to ''become'' anonymous, so that individuals may not readily be identified.&lt;ref name=&quot;NASCIO&quot; /&gt; However, even &quot;anonymized&quot; data sets can potentially contain enough information to allow identification of individuals, as occurred when journalists were able to find several individuals based on a set of search histories that were inadvertently released by AOL.&lt;ref&gt;[http://www.securityfocus.com/brief/277 ''AOL search data identified individuals''], SecurityFocus, August 2006&lt;/ref&gt;
+
+The inadvertent revelation of [[personally identifiable information]] leading to the provider violates Fair Information Practices.   This indiscretion can cause financial,
+emotional, or bodily harm to the indicated individual.  In one instance of [[privacy violation]], the patrons of Walgreens filed a lawsuit against the company in 2011 for selling
+prescription information to data mining companies who in turn provided the data
+to pharmaceutical companies.&lt;ref&gt;{{Cite journal|title = Big data׳s impact on privacy, security and consumer welfare|journal = Telecommunications Policy|pages = 1134–1145|volume = 38|issue = 11|doi = 10.1016/j.telpol.2014.10.002|first = Nir|last = Kshetri|year = 2014|url = http://libres.uncg.edu/ir/uncg/f/N_Kshetri_Big_2014.pdf}}&lt;/ref&gt;
+
+===Situation in Europe===
+
+[[European Union|Europe]] has rather strong privacy laws, and efforts are underway to further strengthen the rights of the consumers. However, the [[International Safe Harbor Privacy Principles|U.S.–E.U. Safe Harbor Principles]], developed between 1998 and 2000, currently effectively expose European users to privacy exploitation by U.S. companies. As a consequence of [[Edward Snowden]]'s [[global surveillance disclosure]], there has been increased discussion to revoke this agreement, as in particular the data will be fully exposed to the [[National Security Agency]], and attempts to reach an agreement with the United States have failed.&lt;ref&gt;{{cite web |url=https://crsreports.congress.gov/product/pdf/R/R44257/7 |title=U.S.–E.U. Data Privacy: From Safe Harbor to Privacy Shield |last1=Weiss |first1=Martin A. |last2=Archick |first2=Kristin |date=19 May 2016 |agency=Congressional Research Service |location=Washington, D.C. |page=6 |format=PDF |id=R44257 |access-date=9 April 2020 |quote=On October 6, 2015, the [[Court of Justice of the European Union|CJEU]]&amp;nbsp;... issued a decision that invalidated Safe Harbor (effective immediately), as currently implemented. }}&lt;/ref&gt;
+
+In the United Kingdom in particular there have been cases of corporations using data mining as a way to target certain groups of customers forcing them to pay unfairly high prices. These groups tend to be people of lower socio-economic status who are not savvy to the ways they can be exploited in digital market places.&lt;ref&gt;Parker, George. “UK Companies Targeted for Using Big Data to Exploit Customers.” Subscribe to Read | Financial Times, Financial Times, 30 Sept. 2018, www.ft.com/content/5dbd98ca-c491-11e8-bc21-54264d1c4647. &lt;/ref&gt;
+
+===Situation in the United States===
+
+In the United States, privacy concerns have been addressed by the [[US Congress]] via the passage of regulatory controls such as the [[Health Insurance Portability and Accountability Act]] (HIPAA). The HIPAA requires individuals to give their &quot;informed consent&quot; regarding information they provide and its intended present and future uses. According to an article in ''Biotech Business Week'', &quot;'[i]n practice, HIPAA may not offer any greater protection than the longstanding regulations in the research arena,' says the AAHC. More importantly, the rule's goal of protection through informed consent is approach a level of incomprehensibility to average individuals.&quot;&lt;ref&gt;Biotech Business Week Editors (June 30, 2008); ''BIOMEDICINE; HIPAA Privacy Rule Impedes Biomedical Research'', Biotech Business Week, retrieved 17 November 2009 from LexisNexis Academic&lt;/ref&gt; This underscores the necessity for data anonymity in data aggregation and mining practices.
+
+U.S. information privacy legislation such as HIPAA and the [[Family Educational Rights and Privacy Act]] (FERPA) applies only to the specific areas that each such law addresses. The use of data mining by the majority of businesses in the U.S. is not controlled by any legislation.
+
+==Copyright law==
+
+===Situation in Europe===
+
+Under [[Copyright law of the European Union|European copyright]] and [[Database Directive|database law]]s, the mining of in-copyright works (such as by [[web mining]]) without the permission of the copyright owner is not legal. Where a database is pure data in Europe, it may be that there is no copyright—but database rights may exist so data mining becomes subject to [[intellectual property]] owners' rights that are protected by the [[Database Directive]]. On the recommendation of the [[Hargreaves review]], this led to the UK government to amend its copyright law in 2014 to allow content mining as a [[Limitations and exceptions to copyright|limitation and exception]].&lt;ref&gt;[http://www.out-law.com/en/articles/2014/june/researchers-given-data-mining-right-under-new-uk-copyright-laws/ UK Researchers Given Data Mining Right Under New UK Copyright Laws.] {{webarchive |url=https://web.archive.org/web/20140609020315/http://www.out-law.com/en/articles/2014/june/researchers-given-data-mining-right-under-new-uk-copyright-laws/ |date=June 9, 2014 }} ''Out-Law.com.''   Retrieved 14 November 2014&lt;/ref&gt; The UK was the second country in the world to do so after Japan, which introduced an exception in 2009 for data mining. However, due to the restriction of the [[Information Society Directive]] (2001), the UK exception only allows content mining for non-commercial purposes. UK copyright law also does not allow this provision to be overridden by contractual terms and conditions. 
+
+The [[European Commission]] facilitated stakeholder discussion on text and data mining in 2013, under the title of Licences for Europe.&lt;ref&gt;{{cite web|title=Licences for Europe – Structured Stakeholder Dialogue 2013|url=http://ec.europa.eu/licences-for-europe-dialogue/en/content/about-site|website=European Commission|access-date=14 November 2014}}&lt;/ref&gt; The focus on the solution to this legal issue, such as licensing rather than limitations and exceptions, led to representatives of universities, researchers, libraries, civil society groups and [[open access]] publishers to leave the stakeholder dialogue in May 2013.&lt;ref&gt;{{cite web|title=Text and Data Mining:Its importance and the need for change in Europe|url=http://libereurope.eu/news/text-and-data-mining-its-importance-and-the-need-for-change-in-europe/|website=Association of European Research Libraries|access-date=14 November 2014}}&lt;/ref&gt;
+
+===Situation in the United States===
+
+[[Copyright law of the United States|US copyright law]], and in particular its provision for [[fair use]], upholds the legality of content mining in America, and other fair use countries such as Israel, Taiwan and South Korea. As content mining is transformative, that is it does not supplant the original work, it is viewed as being lawful under fair use. For example, as part of the [[Google Book Search Settlement Agreement|Google Book settlement]] the presiding judge on the case ruled that Google's digitization project of in-copyright books was lawful, in part because of the transformative uses that the digitization project displayed—one being text and data mining.&lt;ref&gt;{{cite web|title=Judge grants summary judgment in favor of Google Books – a fair use victory|url=http://www.lexology.com/library/detail.aspx?g=a18c5b92-5a20-4d1d-a098-a3095046a88e|website=Lexology.com|publisher=Antonelli Law Ltd|access-date=14 November 2014}}&lt;/ref&gt;
+
+==Software==
+{{Category see also|Data mining and machine learning software}}
+
+===Free open-source data mining software and applications===
+The following applications are available under free/open-source licenses. Public access to application source code is also available.
+
+* [[Carrot2]]: Text and search results clustering framework.
+* [[Chemicalize.org]]: A chemical structure miner and web search engine.
+* [[ELKI]]: A university research project with advanced [[cluster analysis]] and [[anomaly detection|outlier detection]] methods written in the [[Java (programming language)|Java]] language.
+* [[General Architecture for Text Engineering|GATE]]: a [[natural language processing]] and language engineering tool.
+* [[KNIME]]: The Konstanz Information Miner, a user-friendly and comprehensive data analytics framework.
+* [[MOA (Massive Online Analysis)|Massive Online Analysis (MOA)]]: a real-time big data stream mining with concept drift tool in the [[Java (programming language)|Java]] programming language.
+* [[Multi expression programming|MEPX]] - cross-platform tool for regression and classification problems based on a Genetic Programming variant.
+* ML-Flex: A software package that enables users to integrate with third-party machine-learning packages written in any programming language, execute classification analyses in parallel across multiple computing nodes, and produce HTML reports of classification results.
+* [[mlpack]]: a collection of ready-to-use machine learning algorithms written in the [[C++]] language.
+* [[NLTK]] ([[Natural Language Toolkit]]): A suite of libraries and programs for symbolic and statistical natural language processing (NLP) for the [[Python (programming language)|Python]] language.
+* [[OpenNN]]: Open [[neural networks]] library.
+* [[Orange (software)|Orange]]: A component-based data mining and [[machine learning]] software suite written in the [[Python (programming language)|Python]] language.
+* [[R (programming language)|R]]: A [[programming language]] and software environment for [[statistics|statistical]] computing, data mining, and graphics. It is part of the [[GNU Project]].
+* [[scikit-learn]] is an open-source machine learning library for the Python programming language
+* [[Torch (machine learning)|Torch]]: An [[open source model|open-source]] [[deep learning]] library for the [[Lua (programming language)|Lua]] programming language and [[scientific computing]] framework with wide support for [[machine learning]] algorithms.
+* [[UIMA]]: The UIMA (Unstructured Information Management Architecture) is a component framework for analyzing unstructured content such as text, audio and video – originally developed by IBM.
+* [[Weka (machine learning)|Weka]]: A suite of machine learning software applications written in the [[Java (programming language)|Java]] programming language.
+
+===Proprietary data-mining software and applications===
+The following applications are available under proprietary licenses.
+
+* [[Angoss]] KnowledgeSTUDIO: data mining tool
+* [[LIONsolver]]: an integrated software application for data mining, business intelligence, and modeling that implements the Learning and Intelligent OptimizatioN (LION) approach.
+* Megaputer Intelligence: data and text mining software is called PolyAnalyst.
+* [[Microsoft Analysis Services]]: data mining software provided by [[Microsoft]].
+* [[NetOwl]]: suite of multilingual text and entity analytics products that enable data mining.
+* [[Oracle Data Mining]]: data mining software by [[Oracle Corporation]].
+* [[PSeven]]: platform for automation of engineering simulation and analysis, multidisciplinary optimization and data mining provided by [[DATADVANCE]].
+* [[Qlucore]] Omics Explorer: data mining software.
+* [[RapidMiner]]: An environment for [[machine learning]] and data mining experiments. &lt;!-- Latest version is NOT opensource --&gt;
+* [[SAS (software)#Components|SAS Enterprise Miner]]: data mining software provided by the [[SAS Institute]].
+* [[SPSS Modeler]]: data mining software provided by [[IBM]].
+* [[STATISTICA]] Data Miner: data mining software provided by [[StatSoft]].
+* [[Tanagra (machine learning)|Tanagra]]: Visualisation-oriented data mining software, also for teaching.
+* [[Vertica]]: data mining software provided by [[Hewlett-Packard]].
+* [[Google Cloud Platform]]: automated custom ML models managed by [[Google]].
+* [[Amazon SageMaker]]: managed service provided by [[Amazon.com|Amazon]] for creating &amp; productionising custom ML models.
+
+==See also==
+; Methods
+{{columns-list|colwidth=22em|
+* [[Agent mining]]
+* [[Anomaly detection|Anomaly/outlier/change detection]]
+* [[Association rule learning]]
+* [[Bayesian network]]s
+* [[Statistical classification|Classification]]
+* [[Cluster analysis]]
+* [[Decision tree]]s
+* [[Ensemble learning]]
+* [[Factor analysis]]
+* [[Genetic algorithms]]
+* [[Intention mining]]
+* [[Learning classifier system]]
+* [[Multilinear subspace learning]]
+* [[Artificial neural network|Neural network]]s
+* [[Regression analysis]]
+* [[Sequence mining]]
+* [[Structured data analysis (statistics)|Structured data analysis]]
+* [[Support vector machines]]
+* [[Text mining]]
+* [[Time series|Time series analysis]]
+
+}}
+
+; Application domains
+{{columns-list|colwidth=22em|
+* [[Analytics]]
+* [[Behavior informatics]]
+* [[Big Data|Big data]]
+* [[Bioinformatics]]
+* [[Business intelligence]]
+* [[Data analysis]]
+* [[Data warehouse]]
+* [[Decision support system]]
+* [[Domain driven data mining]]
+* [[Drug discovery]]
+* [[Exploratory data analysis]]
+* [[Predictive analytics]]
+* [[Web mining]]
+}}
+
+; Application examples
+{{Main|Examples of data mining}}
+{{Category see also|Applied data mining}}
+{{columns-list|colwidth=22em|
+*[[Automatic number plate recognition in the United Kingdom#Data mining|Automatic number plate recognition in the United Kingdom]]
+*[[Customer analytics#Data mining|Customer analytics]]
+*[[Educational data mining]]
+*[[National Security Agency#Transaction data mining|National Security Agency]]
+*[[Quantitative structure–activity relationship#Data mining approach|Quantitative structure–activity relationship]]
+*[[Surveillance#Data mining and profiling|Surveillance]] / [[Mass surveillance#Data mining|Mass surveillance]] (e.g., [[Stellar Wind (code name)|Stellar Wind]])
+}}
+
+; Related topics
+
+For more information about extracting information out of data (as opposed to ''analyzing'' data) , see:
+{{columns-list|colwidth=22em|
+* [[Data integration]]
+* [[Data transformation]]
+* [[Electronic discovery]]
+* [[Information extraction]]
+* [[Information integration]]
+* [[Named-entity recognition]]
+* [[Profiling (information science)]]
+* [[Psychometrics]]
+* [[Social media mining]]
+* [[Surveillance capitalism]]
+* [[Web scraping]]
+}}
+
+;Other resources
+*[[International Journal of Data Warehousing and Mining]]
+
+==References==
+{{Reflist|30em}}
+
+==Further reading==
+{{div col|colwidth=30em}}
+* Cabena, Peter; Hadjnian, Pablo; Stadler, Rolf; Verhees, Jaap; Zanasi, Alessandro (1997); ''Discovering Data Mining: From Concept to Implementation'', [[Prentice Hall]], {{ISBN|0-13-743980-6}}
+* M.S. Chen, J. Han, [[Philip S. Yu|P.S. Yu]] (1996) &quot;[http://cs.nju.edu.cn/zhouzh/zhouzh.files/course/dm/reading/reading01/chen_tkde96.pdf Data mining: an overview from a database perspective]&quot;. ''Knowledge and data Engineering, IEEE Transactions'' on 8 (6), 866–883
+* Feldman, Ronen; Sanger, James (2007); ''The Text Mining Handbook'', [[Cambridge University Press]], {{ISBN|978-0-521-83657-9}}
+* Guo, Yike; and Grossman, Robert (editors) (1999); ''High Performance Data Mining: Scaling Algorithms, Applications and Systems'', [[Kluwer Academic Publishers]]
+* [[Jiawei Han|Han, Jiawei]], Micheline Kamber, and Jian Pei. ''Data mining: concepts and techniques''. Morgan kaufmann, 2006.
+* [[Trevor Hastie|Hastie, Trevor]], [[Robert Tibshirani|Tibshirani, Robert]] and [[Jerome H. Friedman|Friedman, Jerome]] (2001); ''The Elements of Statistical Learning: Data Mining, Inference, and Prediction'', Springer, {{ISBN|0-387-95284-5}}
+* [[Bing Liu (computer scientist)|Liu, Bing]] (2007, 2011); ''Web Data Mining: Exploring Hyperlinks, Contents and Usage Data'', [[Springer Verlag|Springer]], {{ISBN|3-540-37881-2}}
+* {{cite journal |last=Murphy |first=Chris |date=16 May 2011 |title=Is Data Mining Free Speech? |journal=[[InformationWeek]] |page=12 }}
+* Nisbet, Robert; Elder, John; Miner, Gary (2009); ''Handbook of Statistical Analysis &amp; Data Mining Applications'', [[Academic Press]]/Elsevier, {{ISBN|978-0-12-374765-5}}
+* Poncelet, Pascal; Masseglia, Florent; and Teisseire, Maguelonne (editors) (October 2007); &quot;Data Mining Patterns: New Methods and Applications&quot;, ''Information Science Reference'', {{ISBN|978-1-59904-162-9}}
+* Tan, Pang-Ning; Steinbach, Michael; and Kumar, Vipin (2005); ''Introduction to Data Mining'', {{ISBN|0-321-32136-7}}
+* Theodoridis, Sergios; and Koutroumbas, Konstantinos (2009); ''Pattern Recognition'', 4th Edition, Academic Press, {{ISBN|978-1-59749-272-0}}
+* Weiss, Sholom M.; and Indurkhya, Nitin (1998); ''Predictive Data Mining'', [[Morgan Kaufmann]]
+* {{cite book |author1=Witten, Ian H.|author-link1=Ian H. Witten |author2=Frank, Eibe |author3=Hall, Mark A. |title=Data Mining: Practical Machine Learning Tools and Techniques |edition=3 |date=30 January 2011 |publisher=Elsevier |isbn=978-0-12-374856-0 }} (See also [[Weka (machine learning)|Free Weka software]])
+* Ye, Nong (2003); ''The Handbook of Data Mining'', Mahwah, NJ: Lawrence Erlbaum
+{{div col end}}
+
+==External links==
+{{Commons category|Data mining}}
+* {{DMOZ|Reference/Knowledge_Management/Knowledge_Discovery/Software|Knowledge Discovery Software}}
+* {{DMOZ|Computers/Software/Databases/Data_Mining/Tool_Vendors|Data Mining Tool Vendors}}
+
+{{data}}
+{{Data warehouse}}
+{{Computer science}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Data Mining}}
+[[Category:Data mining| ]]
+[[Category:Formal sciences]]</text>
+      <sha1>bh4x50oq1ggimm89k45kbzwfn9kug8a</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Buick</title>
+    <ns>0</ns>
+    <id>42254</id>
+    <revision>
+      <id>991599209</id>
+      <parentid>990595343</parentid>
+      <timestamp>2020-11-30T22:11:01Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 43 templates: del empty params (8×); hyphenate params (14×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="76131" xml:space="preserve">{{short description|Mid-level luxury division of General Motors}}
+{{other uses}}
+{{Infobox company
+| name = Buick Motor Division
+| logo = Buick_Logo.png
+| logo_size = 250
+| type = [[Division (business)|Division]]
+| industry = [[Automotive]]
+| founded = {{start date|1899}} (as Buick Auto-Vim and Power Company)&lt;br/&gt;{{start date and age|1903|5|19}}&lt;ref&gt;[http://www.buickheritagealliance.org/buick_history/motor_division BUICK MOTOR DIVISION HISTORY] by Lawrence R. Gustin, 1993 - Buick Motor Division&lt;/ref&gt; (as Buick Motor Company)
+| founder = [[David Dunbar Buick]]
+| hq_location_city = [[Detroit]], [[Michigan]]
+| hq_location_country = United States
+| area_served = China, United States, Canada, Mexico
+| products = [[Automobile]]s
+| services = {{unbulleted list | Vehicle financing | Vehicle service and parts }}
+| parent = [[General Motors]] (since 1908)
+| website = {{URL|https://www.buick.com/|buick.com}}
+}}
+'''Buick''' ({{IPAc-en|'|b|juː|ɪ|k}}) is a division of the [[United States|American]] automobile manufacturer [[General Motors]] (GM). Started by automotive pioneer [[David Dunbar Buick]], it was among the first American [[Brand|marques]] of automobiles, and was the company that established General Motors in 1908.&lt;ref name=&quot;The Buick 1987&quot;&gt;&quot;The Buick, A Complete History,&quot; third ed., 1987, Terry P. Dunham and Lawrence Gustin.&lt;/ref&gt; Before the establishment of General Motors, GM founder [[William C. Durant]] had served as Buick's general manager and major investor.
+
+For much of its existence in the [[North America]]n market, Buick has been marketed as a premium automobile brand, selling [[luxury vehicles]] positioned above GM's mainstream brands, while below the flagship luxury [[Cadillac]] division.  In addition to wealthier buyers, Buick has also had a reputation of appealing to older buyers.
+
+In 2017, Buick sold more than 1.4 million vehicles worldwide, a record for the brand.&lt;ref&gt;{{cite web|url=https://media.buick.com/media/us/en/buick/home.detail.html/content/Pages/news/us/en/2018/jan/0112-buick-sales.html|title=Two Straight Years of 1.4 Million Sales for Buick|publisher=General Motors|date=2018-01-12|accessdate=2018-01-12}}&lt;/ref&gt; The main market is now [[China]], where 80% of Buick-branded automobiles are sold.&lt;ref name=&quot;wsj2016&quot;&gt;{{cite news|last1=Frankel|first1=Todd C.|title=&quot;That's a Buick?&quot; In China, unlike the U.S., there's no doubt|url=https://www.washingtonpost.com/news/business/wp/2016/01/20/thats-a-buick-in-china-unlike-the-u-s-theres-no-doubt/|work=Washington Post|date=January 20, 2016}}&lt;/ref&gt; Buicks are also sold in the United States, [[Canada]], and [[Mexico]].
+
+==History==
+{{See also|David Dunbar Buick|Harley Earl}}
+
+===Early years===
+[[File:Valve-In-Head 1904 patent.jpg|thumb|150px|Valve-In-Head ([[OHV]]) engine, illustration from 1904 patent, Buick Manufacturing Company]]
+Buick is one of the oldest automobile brands in the world and the oldest in the United States. ([[Autocar Company|Autocar]], founded in 1897, is the oldest motor vehicle manufacturer in the [[western hemisphere]]; while originally an automobile maker, Autocar now builds heavy trucks. [[Oldsmobile]], also an early auto maker founded in 1897, is now defunct; [[Studebaker]] was founded in 1852, but did not begin producing automobiles until 1902; Ford produced his first car in 1896 but did not start the Ford Motor Co. until 1903, and during the period in between was involved with other automobile manufacturers such as [[Cadillac]], founded in 1902).
+
+[[File:Buick motor company logo 1904.png|thumb|left|130px|The first logo of Buick (1904), with an image of the [[Uncle Sam]] and the legend &quot;known all over the world&quot;]]
+The first two Buick automobiles were made in 1899 and 1900 at the &quot;Buick Auto-Vim and Power Company&quot; by chief-engineer [[Walter Lorenzo Marr|Walter Marr]],&lt;ref name=&quot;The Buick 1987&quot;/&gt; but company owner [[David Dunbar Buick]] was reluctant to begin making automobiles, being satisfied with stationary and marine engine production, so Marr left Buick in 1901 to found [[Marr (automobile)|his own automobile company]] under his own name. His replacement was Eugene Richard, who applied for a patent in 1902 for Marr's valve-in-head ([[Overhead valve engine|overhead valve]]) engine, which patent, number 771,095, was awarded to Richard in the name of Buick in 1904.&lt;ref name=&quot;The Buick 1987&quot;/&gt; In 1903, the third Buick automobile was made, this time by Richard, but in 1904 Buick, whose company was now called &quot;Buick Motor Company&quot;, moved from Detroit to Flint, Michigan, and Richard stayed behind. Marr was rehired in Flint as chief engineer, to begin making automobiles in production. That year, 37 Buick automobiles were made, production increasing to 750 in 1905, 1,400 in 1906, 4,641 in 1907, and 8,800 in 1908, taking the number one spot away from close competitors Oldsmobile, [[Ford Motor Company|Ford]], and [[Maxwell automobile|Maxwell]].&lt;ref name=&quot;The Buick 1987&quot;/&gt;
+
+David Buick incorporated his company as the Buick Motor Company on May 19, 1903, in [[Detroit]], Michigan. Buick had been financed by friend and fellow automobile enthusiast, [[Benjamin Briscoe]], who in September, 1903 sold control of the business to James H. Whiting (1842–1919),&lt;ref&gt;[http://www.flint.lib.mi.us/timeline/autohistory_0798/whitingJ.html Flint Timeline Project-James H. Whiting] {{webarchive |url=https://web.archive.org/web/20090707034109/http://www.flint.lib.mi.us/timeline/autohistory_0798/whitingJ.html |date=July 7, 2009 }}&lt;/ref&gt; of [[Flint Wagon Works]], in [[Flint, Michigan]]. Whiting moved Buick to Flint, to a location across the street from his factory, with the idea of adding Buick's engines to his wagons.&lt;ref name=&quot;The Buick 1987&quot;/&gt; David Buick stayed on as a manager, and re-hired Walter Marr as chief engineer. The engine Buick and Marr developed for this automobile was a two-cylinder valve-in-head engine of 159 cubic inches, with each cylinder [[boxer engine|horizontal and opposed to the other by 180 degrees]].
+
+[[File:LouisChevrolet 1910VanderbiltCup.jpg|thumb|200px|[[Louis Chevrolet]] driving a Buick Bug in the 1910 [[Vanderbilt Cup]]]]
+Whiting built only a few automobiles in 1904, the model B, before running out of capital, causing him to bring in [[William C. Durant]] that year as controlling investor. Durant built a few more model B's in 1904, and greatly stepped up production for the model C in 1905, and spent the next four years turning Buick into the biggest-selling automobile brand in the US. During the 19th century, Durant had made his fortune as co-owner, also in Flint, with [[Josiah Dallas Dort]], of the [[Durant-Dort Carriage Company]], which by 1904 was the largest carriage-making company in the country and one of the largest in the world.&lt;ref name=&quot;The Buick 1987&quot;/&gt; Durant moved most Buick production to the former Durant-Dort Imperial Wheel plant in [[Jackson, Michigan]] in 1905. Buick continued car production in Jackson through 1907, when Factory #1 was completed in Flint. The Jackson plant continued production with Buick trucks through 1912.&lt;ref&gt;{{Cite web|url=http://buickcity.blogspot.com|title=All Things Buick|website=buickcity.blogspot.com|language=en|access-date=2018-07-09}}&lt;/ref&gt; David Buick sold his stock upon departure in 1906, making him a wealthy man, but he died in modest circumstances 25 years later. In 1907, Durant agreed to supply motors to [[Samuel McLaughlin|R. S. McLaughlin]] in Canada, an auto maker, and in 1908 he founded [[General Motors]].&lt;ref&gt;VMC virtualmuseum.ca McLaughlin-Buick:&quot;Canada's Standard Car&quot;&lt;/ref&gt;
+{{-}}
+
+{|class=&quot;wikitable unsortable&quot;
+! style=&quot;background:light gray; color:black&quot;|Buick in the early years
+&lt;gallery&gt;
+File:1904Buick.jpg|1904 [[Buick Model B]]
+File:1905 Buick Model C.jpg|alt=Buick Model C, Jackson, Michigan|1905 Buick Model C
+File:Woman on Buick.jpg|1910 Buick Model 10 Runabout
+File:1914 BUICK B-35 PHAETEN, AM-91-91 pic1.JPG|1914 Buick B-35 phaeton
+File:Buick Roadster 1917.jpg|1917 Buick D-35 roadster
+File:Buick E-Six 45 (1918) 1Y7A6067.jpg|1918 Buick E-45
+File:Buick Roadster 1922.jpg|1922 Buick Model 22-54 Sport roadster
+File:Buick Standard Model 25 Touring 1925 2.jpg|1925 [[Buick Master Six|Buick Standard 25]] touring
+File:16 21 2362 museum.jpg|1925 [[Buick Master Six]]
+File:Buick Coupe Series 26 (1930) (20634081715).jpg|1930 Buick Series 26 business coupe
+File:Buick 4-Dorrars Sedan 1932.jpg|1932 Buick Model 67 sedan
+File:Buick 46C Convertible Coupe 1935.jpg|1935 [[Buick Special#Series 40 (1930–1935)|Buick Series 40]] Model 46C convertible coupe
+File:1938 Buick Roadmaster 4d sdn - fvr.jpg|1938 [[Buick Roadmaster]] Series 80 touring sedan
+File:1939 Buick 4d sdn - brown - 13.jpg|1939 [[Buick Special]] Series 40 Model 41 touring sedan
+&lt;/gallery&gt;
+|}
+
+Between 1899 and 1902, two prototype vehicles were built&lt;ref&gt;{{cite web |url=http://www.welovebuicks.com/history.html |title=Buick History |publisher=Welovebuicks.com |accessdate=2010-10-16 |archive-url=https://web.archive.org/web/20090307002136/http://www.welovebuicks.com/history.html |archive-date=2009-03-07 |url-status=dead }}&lt;/ref&gt; in Detroit, Michigan by [[Walter Lorenzo Marr]]. Some documentation exists of the 1901 or 1902 prototype with [[tiller]] steering&lt;ref&gt;{{cite web|url=http://www.prewarbuick.com/cars/19/1901-Buick-perhaps-1902 |title=1901 Buick perhaps 1902 |publisher=Prewarbuick.com |date=2002-01-01 |accessdate=2010-10-16}}&lt;/ref&gt; similar to the [[Oldsmobile Curved Dash]].
+In mid-1904, another prototype was constructed for an endurance run, which convinced Whiting to authorize production of the first models offered to the public.&lt;ref&gt;{{cite web |url=http://thewhiting.com/aboutus/history.html |title=James H. Whiting |publisher=Thewhiting.com |accessdate=2010-10-16 |archive-url=https://web.archive.org/web/20100522235557/http://thewhiting.com/aboutus/history.html |archive-date=2010-05-22 |url-status=dead }}&lt;/ref&gt; The architecture of this prototype was the basis for the Model B.
+
+The first Buick made for sale, the 1904 [[Buick Model B|Model B]], was built in Flint, Michigan at a re-purposed factory that was known as the Flint Wagon Works.&lt;ref&gt;{{cite web|url=https://runbidsell.com/resources/1904-buick-model-b/ |title=1904 Buick Model B |publisher=RunBidSell.com.com |accessdate=2019-09-02}}&lt;/ref&gt; There were 37 Buicks made that year, none of which survive. There are, however, two replicas in existence: the 1904 endurance car, at the Buick Gallery &amp; Research Center in Flint, and a Model B assembled by an enthusiast in California for the division's 100th anniversary.&lt;ref&gt;{{cite web |url=http://1929buick.com/gallery/sloan |title=1904 Buick Prototype - Sloan Museum |publisher=1929buick.com |accessdate=2010-10-16 |archive-url=https://web.archive.org/web/20110707060319/http://1929buick.com/gallery/sloan |archive-date=2011-07-07 |url-status=dead }}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://1929buick.com/gallery/1904buick |title=1904 Buick Model B - Restoration Project |publisher=1929buick.com |accessdate=2010-10-16 |archive-url=https://web.archive.org/web/20110707060327/http://1929buick.com/gallery/1904buick |archive-date=2011-07-07 |url-status=dead }}&lt;/ref&gt; Both of these vehicles use various parts from Buicks of that early era, as well as fabricated parts. These vehicles were each constructed with the two known surviving 1904 engines.
+
+The early success of Buick is attributed mainly to what it called the valve-in-head engine, now known as the [[Overhead valve engine|overhead valve]] (OHV), engine&lt;ref&gt;{{cite web |url=http://www.buick.com/heritage/index.jsp |title=A Heritage of Precision |publisher=Buick |accessdate=2010-10-16 |archive-url=https://web.archive.org/web/20080923214212/http://www.buick.com/heritage/index.jsp |archive-date=2008-09-23 |url-status=dead }}&lt;/ref&gt; patented by Eugene Richard and developed by Richard, Buick, and Marr. The Model F had a two-cylinder engine, an 87-inch wheelbase and weighed 1,800&amp;nbsp;lbs.&lt;ref&gt;{{cite web|url=http://www.oldcarbrochures.com/static/NA/Buick/1906_Buick/1906_Buick_Brochure/1906%20Buick%20Automobiles-14.html |title=1906 Buick Brochure |publisher=Oldcarbrochures.com |accessdate=2011-11-20}}&lt;/ref&gt; The creation of [[General Motors]] is attributed in part to the success of Buick,&lt;ref&gt;{{cite web |url=http://info.detnews.com/redesign/history/story/historytemplate.cfm?id=100&amp;CFID=11771161&amp;CFTOKEN=80488863 |title=The free-wheeling gambler who created conservative General Motors |publisher=Info.detnews.com |date=1996-07-30 |accessdate=2010-10-16 |url-status=dead |archive-url=https://archive.today/20120710003921/http://info.detnews.com/redesign/history/story/historytemplate.cfm?id=100&amp;CFID=11771161&amp;CFTOKEN=80488863 |archive-date=2012-07-10 }}&lt;/ref&gt; so it can be said [[Walter Lorenzo Marr|Marr]] and Richard's designs directly led to GM.&lt;ref&gt;{{cite news|last=Stoll |first=John D. |url=https://www.wsj.com/articles/SB121539865693931653?mod=hpp_us_whats_news |title=GM Weighs More Layoffs, Sale of Brands |publisher=Online.wsj.com |date=2008-07-07 |accessdate=2010-10-16}}&lt;/ref&gt; The power train and chassis architecture introduced on the Model B was continued through the 1909 Model F.&lt;ref&gt;{{cite web |last=Katz |first=John F. |url=http://www.autoweek.com/apps/pbcs.dll/article?AID=/20060703/FREE/60623009/1027/FREE |title=1909 Buick Model F |publisher=Autoweek.com |date=1998-03-02 |accessdate=2010-10-16 |archive-url=https://web.archive.org/web/20110628183832/http://www.autoweek.com/apps/pbcs.dll/article?AID=%2F20060703%2FFREE%2F60623009%2F1027%2FFREE |archive-date=2011-06-28 |url-status=dead }}&lt;/ref&gt;

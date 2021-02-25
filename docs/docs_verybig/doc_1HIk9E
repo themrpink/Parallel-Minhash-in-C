@@ -1,0 +1,186 @@
+==Vector interpretation==
+[[File:Simpson_paradox_vectors.svg|thumb|Vector interpretation of Simpson's paradox]]
+Simpson's paradox can also be illustrated using the 2-dimensional [[vector space]].&lt;ref&gt;{{cite journal|author=Kocik Jerzy|year=2001|title=Proofs without Words: Simpson's Paradox|url=http://www.math.siu.edu/kocik/papers/simpson2.pdf|journal=[[Mathematics Magazine]]|volume=74|issue=5|pages=399|doi=10.2307/2691038|jstor=2691038}}&lt;/ref&gt; A success rate of &lt;math&gt;\textstyle \frac{p}{q}&lt;/math&gt; (i.e., ''successes/attempts'') can be represented by a [[vector (geometry)|vector]] &lt;math&gt;\overrightarrow{A} = (q, p)&lt;/math&gt;, with a [[slope]] of &lt;math&gt;\textstyle \frac{p}{q}&lt;/math&gt;. A steeper vector then represents a greater success rate. If two rates &lt;math&gt;\textstyle \frac{p_1}{q_1}&lt;/math&gt; and &lt;math&gt;\textstyle \frac{p_2}{q_2}&lt;/math&gt; are combined, as in the examples given above, the result can be represented by the sum of the vectors &lt;math&gt;(q_1, p_1)&lt;/math&gt; and &lt;math&gt;(q_2, p_2)&lt;/math&gt;, which according to the [[parallelogram rule]] is the vector &lt;math&gt;(q_1 + q_2, p_1 + p_2)&lt;/math&gt;, with slope &lt;math&gt;\textstyle \frac{p_1 + p_2}{q_1 + q_2}&lt;/math&gt;.
+
+Simpson's paradox says that even if a vector &lt;math&gt;\overrightarrow{L_1}&lt;/math&gt; (in orange in figure) has a smaller slope than another vector &lt;math&gt;\overrightarrow{B_1}&lt;/math&gt; (in blue), and &lt;math&gt;\overrightarrow{L_2}&lt;/math&gt; has a smaller slope than &lt;math&gt;\overrightarrow{B_2}&lt;/math&gt;, the sum of the two vectors &lt;math&gt;\overrightarrow{L_1} + \overrightarrow{L_2}&lt;/math&gt; can potentially still have a larger slope than the sum of the two vectors &lt;math&gt;\overrightarrow{B_1} + \overrightarrow{B_2}&lt;/math&gt;, as shown in the example.  For this to occur one of the orange vectors must have a greater slope than one of the blue vectors (here &lt;math&gt;\overrightarrow{L_2}&lt;/math&gt; &amp; &lt;math&gt;\overrightarrow{B_1}&lt;/math&gt;), and these will generally be longer than the alternatively subscripted vectors — thereby dominating the overall comparison.
+
+==Correlation between variables==
+Simpson's paradox can also arise in [[correlation]]s,  in which two variables appear to have (say) a positive correlation towards one another, when in fact they have a negative correlation, the reversal having been brought about by a &quot;lurking&quot; confounder.  Berman et al.&lt;ref&gt;Berman, S. DalleMule, L.  Greene, M., Lucker, J. (2012), &quot;[http://www.statslife.org.uk/the-statistics-dictionary/2012-simpson-s-paradox-a-cautionary-tale-in-advanced-analytics Simpson's Paradox: A Cautionary Tale in Advanced Analytics]&quot;, ''[[Significance (magazine)|Significance]]''.&lt;/ref&gt; give an example from economics, where a dataset suggests overall demand is positively correlated with price (that is, higher prices lead to ''more'' demand), in contradiction of expectation.   Analysis reveals time to be the confounding variable: plotting both price and demand against time reveals the expected negative correlation over various periods, which then reverses to become positive if the influence of time is ignored by simply plotting demand against price.
+
+==Implications for decision making==
+The practical significance of Simpson's paradox surfaces in decision making situations where it poses the following dilemma: Which data should we consult in choosing an action, the aggregated or the partitioned? In the Kidney Stone example above, it is clear that if one is diagnosed with &quot;Small Stones&quot; or &quot;Large Stones&quot; the data for the respective subpopulation should be consulted and Treatment A would be preferred to Treatment B. But what if a patient is not diagnosed, and the size of the stone is not known; would it be appropriate to consult the aggregated data and administer Treatment B? This would stand contrary to common sense; a treatment that is preferred both under one condition and under its negation should also be preferred when the condition is unknown.
+
+On the other hand, if the partitioned data is to be preferred ''a priori'', what prevents one from partitioning the data into arbitrary sub-categories (say based on eye color or post-treatment pain) artificially constructed to yield wrong choices of treatments? Pearl&lt;ref name=&quot;pearl&quot;/&gt; shows that, indeed, in many cases it is the aggregated, not the partitioned data that gives the correct choice of action. Worse yet, given the same table, one should sometimes follow the partitioned and sometimes the aggregated data, depending on the story behind the data, with each story dictating its own choice. Pearl&lt;ref name=&quot;pearl&quot;/&gt; considers this to be the real paradox behind Simpson's reversal.
+
+As to why and how a story, not data, should dictate choices, the answer is that it is the story which encodes the causal relationships among the variables. Once we explicate these relationships and represent them formally, we can test which partition gives the correct treatment preference. For example, if we represent causal relationships in a graph called &quot;causal diagram&quot; (see [[Bayesian networks]]), we can test whether nodes that represent the proposed partition intercept spurious paths in the diagram. This test, called the &quot;back-door criterion&quot;, reduces Simpson's paradox to an exercise in graph theory.&lt;ref name=pearl-2013-r414&gt;{{cite web|last1=Pearl|first1=Judea|title=Understanding Simpson's paradox|url=http://ftp.cs.ucla.edu/pub/stat_ser/r414.pdf|website=UCLA Cognitive Systems Laboratory, Technical Report R-414|date=December 2013}}&lt;/ref&gt;
+
+==Psychology==
+Psychological interest in Simpson's paradox seeks to explain why people deem sign reversal to be impossible at first, offended by the idea that an action preferred both under one condition and under its negation should be rejected when the condition is unknown. The question is where people get this strong [[intuition]] from, and how it is encoded in the [[mind]].
+
+Simpson's paradox demonstrates that this intuition cannot be derived from either [[classical logic]] or [[probability calculus]] alone, and thus led [[philosopher]]s to speculate that it is supported by an innate causal logic that guides people in reasoning about actions and their consequences {{citation needed|date=August 2017}}. Savage's [[sure-thing principle]]&lt;ref name=&quot;blyth-72&quot;/&gt; is an example of what such logic may entail. A qualified version of Savage's sure thing principle can indeed be derived from Pearl's ''do''-calculus&lt;ref name=&quot;pearl&quot;/&gt; and reads: &quot;An action ''A'' that increases the probability of an event ''B'' in each subpopulation ''C&lt;sub&gt;i&lt;/sub&gt;'' of ''C'' must also increase the probability of ''B'' in the population as a whole, provided that the action does not change the distribution of the subpopulations.&quot; This suggests that knowledge about actions and consequences is stored in a form resembling Causal [[Bayesian Networks]].
+
+==Probability==
+A paper by Pavlides and Perlman presents a proof, due to Hadjicostas, that in a random 2 × 2 × 2 table with uniform distribution, Simpson's paradox will occur with a [[probability]] of exactly &lt;sup&gt;1&lt;/sup&gt;/&lt;sub&gt;60&lt;/sub&gt;.&lt;ref&gt;
+{{cite journal
+ | title = How Likely is Simpson's Paradox?
+ | author1=Marios G. Pavlides
+ | author2=Michael D. Perlman
+ | name-list-style=amp |date=August 2009
+ | journal = [[The American Statistician]]
+ | volume = 63
+ | issue = 3
+ | pages = 226–233
+ | doi = 10.1198/tast.2009.09007
+| url=https://semanticscholar.org/paper/0dc06fe2b58a3b4758c57198609f5c66550adae4
+ }}&lt;/ref&gt; A study by Kock suggests that the probability that Simpson's paradox would occur at random in path models (i.e., models generated by [[path analysis (statistics)|path analysis]]) with two predictors and one criterion variable is approximately 12.8 percent; slightly higher than 1 occurrence per 8 path models.&lt;ref&gt;Kock, N. (2015). [http://cits.tamiu.edu/kock/pubs/journals/2015JournalIJeC/Kock_2015_IJeC_SimpPdox.pdf How likely is Simpson's paradox in path models?] International Journal of e-Collaboration, 11(1), 1–7.&lt;/ref&gt;
+
+== Simpson's second paradox ==
+A &quot;second&quot; less well-known Simpson's paradox was discussed in his 1951 paper.  It can occur when the rational interpretation need not be found in the separate table but may instead reside in the combined table. Which form of the data should be used hinges on the background and the process giving rise to the data.
+
+Norton and Divine give a hypothetical example of the second paradox.&lt;ref&gt;{{Cite journal|last=Norton|first=H. James|last2=Divine|first2=George|date=August 2015|title=Simpson's paradox ... and how to avoid it|journal=Significance|volume=12|issue=4|pages=40–43|doi=10.1111/j.1740-9713.2015.00844.x|doi-access=free}}&lt;/ref&gt;
+
+==See also==
+* {{annotated link|Anscombe's quartet}}
+* {{annotated link|Condorcet paradox}}
+* {{annotated link|Ecological fallacy}}
+* {{annotated link|Ecological correlation}}
+* {{annotated link|Low birth-weight paradox}}
+* {{annotated link|Modifiable areal unit problem}}
+* {{annotated link|Prosecutor's fallacy}}
+* {{annotated link|Berkson's paradox}}
+* {{annotated link|Wyoming Rule}}
+
+==References==
+{{Reflist}}
+
+== Bibliography ==
+* [[Leila Schneps]] and [[Coralie Colmez]], ''Math on trial. How numbers get used and abused in the courtroom'', Basic Books, 2013. {{isbn|978-0-465-03292-1}}. (Sixth chapter: &quot;Math error number 6: Simpson's paradox. The Berkeley sex bias case: discrimination detection&quot;).
+
+==External links==
+{{Commons category|Simpson's paradox}}
+
+*[https://www.youtube.com/watch?v=s7x5P1yiYks&amp;list=PL0FfKwFuQb2Trlr06KCyfdGZyE5Et-Pgj&amp;index=1 Were Richer Voters More Likely to Vote Trump? (Simpson's Paradox)] — YouTube video explaining Simpson's Paradox. 
+*[http://ed.ted.com/lessons/how-statistics-can-be-misleading-mark-liddell How statistics can be misleading - Mark Liddell]—TED-Ed video and lesson.
+*[[Stanford Encyclopedia of Philosophy]]: &quot;[http://plato.stanford.edu/entries/paradox-simpson/  Simpson's Paradox]&quot; – by Gary Malinas.
+*[http://jeff560.tripod.com/s.html Earliest known uses of some of the words of mathematics: S]
+**For a brief history of the origins of the paradox see the entries &quot;Simpson's Paradox&quot; and &quot;Spurious Correlation&quot;
+* [[Judea Pearl|Pearl, Judea]], &quot;[http://bayes.cs.ucla.edu/LECTURE/lecture_sec1.htm &quot;The Art and Science of Cause and Effect.]&quot; A slide show and tutorial lecture.
+* [[Judea Pearl|Pearl, Judea]], [http://bayes.cs.ucla.edu/R264.pdf &quot;Simpson's Paradox: An Anatomy&quot;] ([[PDF]])
+* [[Judea Pearl|Pearl, Judea]], [http://ftp.cs.ucla.edu/pub/stat_ser/r466.pdf &quot;The Sure-Thing Principle&quot;] ([[PDF]])
+* Short articles by [[Alexander Bogomolny]] at Cut-the-knot:
+** &quot;[http://www.cut-the-knot.org/blue/Mediant.shtml Mediant Fractions.]&quot;
+** &quot;[http://www.cut-the-knot.org/Curriculum/Algebra/SimpsonParadox.shtml Simpson's Paradox.]&quot;
+*[https://www.wsj.com/articles/SB125970744553071829 The Wall Street Journal column &quot;The Numbers Guy&quot;] for December 2, 2009 dealt with recent instances of Simpson's paradox in the news. Notably a Simpson's paradox in the comparison of unemployment rates of the 2009 recession with the 1983 recession.
+* [https://stats.stackexchange.com/q/78255 How to resolve Simpson's paradox?] question on statistics Q&amp;A site CrossValidated
+* [http://www.stateoftheusa.org/content/at-the-plate-a-statistical-puz.php At the Plate, a Statistical Puzzler: Understanding Simpson's Paradox] by Arthur Smith, August 20, 2010
+*{{cite web|last1=Reich|first1=Henry|authorlink1=MinutePhysics|title=Simpson's Paradox|url=https://www.youtube.com/watch?v=ebEkn-BiW5k|website=YouTube|publisher=MinutePhysics|accessdate=24 October 2017|format=video}}
+
+{{Portal bar|Mathematics}}
+
+{{DEFAULTSORT:Simpson's Paradox}}
+[[Category:Probability theory paradoxes]]
+[[Category:Statistical paradoxes]]
+[[Category:Causal inference]]
+[[Category:1951 introductions]]</text>
+      <sha1>ngfcleiq3u6iym9fos0fu4212yv29f2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Green party</title>
+    <ns>0</ns>
+    <id>46097</id>
+    <revision>
+      <id>991324241</id>
+      <parentid>991196143</parentid>
+      <timestamp>2020-11-29T13:30:10Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 19 templates: del empty params (4×); hyphenate params (17×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="42081" xml:space="preserve">{{about|Green parties in general|specific political parties|List of green political parties|and|Green Party (disambiguation)}}
+{{Green politics sidebar|expanded=Core}}
+[[File:Daniel Brélaz (1982) by Erling Mandelmann.jpg|thumb|In 1979, [[Daniel Brélaz]] became the world's first green member of a national parliament (in [[Switzerland]]).]]
+
+A '''Green party''' is a formally organized [[political party]] based on the principles of [[green politics]], such as [[social justice]], [[environmentalism]] and [[nonviolence]].
+
+Greens believe that these issues are inherently related to one another as a foundation for world peace. Green party platforms typically embrace [[Social democracy|social-democratic economic policies]] and forming coalitions with other [[left-wing parties]].
+
+Green parties exist in nearly 90 countries around the world; many are members of [[Global Greens]].
+
+==Definitions==
+There are distinctions between &quot;green&quot; parties and &quot;Green&quot; parties. Any party, faction, or politician may be labeled &quot;green&quot; if it emphasizes environmental causes. In contrast, formally organized Green parties may follow a coherent [[ideology]] that includes not only [[environmentalism]], but often also other concerns such as [[social justice]], [[consensus decision-making]] and [[nonviolence]]. Greens believe that these issues are inherently related to one another as a foundation for world peace. The best-known statement of the above Green values is the [[Four Pillars of the Green Party]], adopted by the [[Alliance '90/The Greens|German Greens]] in 1979–1980 (but forsaken since). The [[Global Greens Charter]] lists six guiding principles which are ecological wisdom, social justice, participatory democracy, nonviolence, sustainability and respect for diversity.&lt;ref&gt;{{cite web
+ |url=https://www.globalgreens.org/globalcharter-english
+ |title=Global Greens Charter
+ |date=2012
+ |website=Global Greens
+ |access-date=2018-01-15
+}}&lt;/ref&gt;
+
+==History==
+Political parties campaigning on a predominantly environmental platform arose in the early 1970s in various parts of the world.
+
+The world's first political parties to campaign on a predominantly environmental platform were the [[United Tasmania Group]] contested the [[1972 Tasmanian state election|April 1972 state election]] in [[Tasmania]], Australia, and the [[Values Party]] of [[New Zealand]], which contested the [[1972 New Zealand general election|November 1972 New Zealand general election]].&lt;ref name=&quot;Dann, Christine&quot;&gt;{{cite web|last=Dann |first=Christine |title=The development of the first two Green parties New Zealand and Tasmania |url=http://www.globalgreens.info/literature/dann/chapterfive.html |work=From Earth's last islands. The global origins of Green politics |publisher=Global Greens |archive-url=https://web.archive.org/web/20110610062415/http://www.globalgreens.info/literature/dann/chapterfive.html |archive-date=June 10, 2011 |url-status=dead }}&lt;/ref&gt;  Their use of the name 'Green' derived from the [[Green ban|'Green Bans']]: an Australian movement of building workers who refused to build on sites of cultural and environmental significance.&lt;ref name=&quot;Bevan, RA&quot;&gt;Bevan, RA (2001), Petra Kelly: The Other Green, New Political Science, vol. 23, no. 2, November, pp. 181-202&lt;/ref&gt;
+
+The first green party in Europe was the Popular Movement for the Environment, founded in 1972 in the [[Switzerland|Swiss]] canton of [[Neuchâtel]]. The first national green party in Europe was [[PEOPLE Party|PEOPLE]], founded in Britain in February 1973, which eventually turned into the [[Ecology Party]], and then the [[Green Party (UK)|Green Party]]. Several other local political groups were founded in beginning of the 1970s and Fons Sprangers was probably the first Green mayor in the world, elected in 1970 in Meer, and active until 2006 for the Flemish Greens. The first political party to use the name &quot;Green&quot; seems to have been the Lower Saxon &quot;[[:de:Grüne Liste Umweltschutz|Green List for Environmental Protection]]&quot;, founded Sept. 1, 1977.
+
+The first Green Party to achieve national prominence was the [[German Green Party]], famous for their opposition to [[nuclear power]], as well as an expression of anti-centralist and pacifist values traditional to greens. They were founded in 1980 and have been in coalition governments at [[States of Germany|state]] level for some years. They were in federal government with the [[Social Democratic Party of Germany]] in a so-called [[Red-Green alliance]] from 1998 to 2005. In 2001, they reached an agreement to end reliance on nuclear power in Germany, and agreed to remain in coalition and support the government of Chancellor [[Gerhard Schröder]] in the [[2001 Afghan War]]. This put them at odds with many Greens worldwide.
+
+In [[Finland]], in 1995, the [[Vihreä Liitto|Finnish Green Party]] was the first European Green party to be part of a national Cabinet.  Other Green parties that have participated in government at national level include the [[Groen!]] (formerly Agalev) and [[Ecolo]] in [[Belgium]], [[The Greens (France)|The Greens]] in France and the [[Green Party (Ireland)|Green Party]] in Ireland. In the Netherlands [[GroenLinks]] (&quot;GreenLeft&quot;) was founded in 1990 from four small [[left-wing]] parties and is now a stable faction in the Dutch parliament. The [[Australian Greens]] supported a [[Australian Labor Party|Labor]] minority government from 2010 to 2013, and have participated in several state governments.
+
+Around the world, individuals have formed many Green parties over the last thirty years. Green parties now exist in most countries with democratic systems: from [[Canada]] to [[Peru]]; from [[Norway]] to [[South Africa]]; from [[Ireland]] to [[Mongolia]]. There is Green representation at national, regional and local levels in many countries around the world.
+
+Most of the Green parties are formed to win elections, and so organize themselves by the presented electoral or political districts. But that does not apply universally: The [[Green Party of Alaska]] is organized along bioregional lines to practice [[bioregional democracy]].
+
+=== Support ===
+Academic research has uncovered striking international consistency in the typical demographic and attitudinal profile of Green party supporters. In particular, Green voters tend to be young, highly educated, disproportionately female, and employed in the social and cultural services (healthcare, teaching, the arts etc.), whilst also displaying above-average levels of environmentalism and social liberalism.&lt;ref&gt;{{cite book|title=Class Politics and the Radical Right|last=Oesch|first=Daniel|date=January 1, 2013|publisher=Routledge|isbn=978-0415690522|editor-last=Rydgren|editor-first=Jens|location=London|pages=31–51|chapter=Chapter 3: The class basis of the cleavage between the New Left and the radical right: An analysis for Austria, Denmark, Norway and Switzerland}}&lt;/ref&gt;&lt;ref&gt;{{Cite journal|last=Dolezal|first=Martin|date=Summer 2010|title=Exploring the Stabilisation of a Political Force: The Social and Attitudinal Basis of Green Parties in the Age of Globalisation|journal=West European Politics|volume=33|issue=3|pages=534–552|doi=10.1080/01402381003654569}}&lt;/ref&gt; Additionally, Green parties also tend to attract greater levels of support in countries defined by high levels of economic development and low levels of unemployment, as well as the presence of tangible environmental disputes (such as nuclear power production) and active major party competition on the environmental issue.&lt;ref&gt;{{Cite journal|last=Grant|first=Zack P.|last2=Tilley|first2=James|date=Autumn 2018|title=Fertile Soil: Explaining variation in the success of Green parties|journal=West European Politics|volume=42|issue=3|pages=495–516|doi=10.1080/01402382.2018.1521673|doi-access=free}}&lt;/ref&gt; The former two factors are believed to generate cohorts of voters with enough material security to devote their attention to 'higher' goals such as environmentalism; the latter two help raise the profile of the Green's own policy positions and statements (providing that the major parties do not act so quickly to the rising salience of environmentalism as to usurp the issue entirely and completely preempt the development of a separate ecological party).
+
+===Alliances===
+Depending on local conditions or issues, platforms and alliances may vary. In line with the goal of  democracy, neighboring [[ecoregions]] may require different policies or protections.
+
+Green parties are often formed in a given jurisdiction by a coalition of scientific [[ecologists]], community [[environmentalists]], and local (or national) [[leftist]] groups or groups concerned with peace or citizens rights.
+
+A [[Red-Green alliance]] is an alliance between Green parties and [[Social democracy|social democratic]] parties.  Such alliances are typically formed for the purpose of elections (mostly in [[first-past-the-post]] election systems), or, after elections, for the purpose of forming a government.
+
+Some Greens, such as those in [[Hawaii]], find more effective alliances with more conservative groups (Blue-Green alliance) or [[indigenous peoples]] - who seek to prevent disruption of traditional ways of life or to save ecological resources they depend on. Although Greens find much to support in fostering these types of alliances with groups of historically different backgrounds, they also feel strongly about forming diverse communities through encouragement of [[Multiculturalism|diversity]] in social and economic [[demographics]] in communities, especially in the United States.
+
+Alliances often highlight strategic differences between participating in parties and advancing the values of the Green movement. For example, Greens became allied with centre-right parties to oust the centre-left ruling [[Institutional Revolutionary Party]] of [[Mexico]]. [[Ralph Nader]], the 2000 presidential nominee of the [[U.S. Greens]], campaigned with ultra-conservative [[Pat Buchanan]] on joint issues such as farm policy and bans on corporate funding of election campaigns, although this &quot;alliance&quot; between Nader and Buchanan was very specifically limited to the purpose of showing that there was broad support for certain specific issues, across the political spectrum.
+
+U.S. Greens grew dramatically throughout 2001. However, stable coalitions (such as that in Germany) tend to be formed between elections with left-wing parties on social issues, and 'the grassroots right' on such issues as irresponsible corporate subsidies and public ethics.
+
+On 13 June 2007, the [[Green Party (Ireland)|Irish Green Party]], represented by six members of parliament or [[Teachta Dála|TDs]], agreed to go into a coalition government for the first time in their history, with [[Fianna Fáil]] and the [[Progressive Democrats]] (the Progressive Democrats later dissolved as a party, though their members remained in parliament). The Green Party held two Cabinet seats, as well as two [[Minister of State (Ireland)|junior ministries]], until their withdrawal from government in January 2011. They lost all of their six seats in [[2011 Irish general election|the following month's general election]], but won two in the [[2016 Irish general election|2016 general election]], and twelve seats in the [[2020 Irish general election|2020 general election]], and entered government again in June 2020.
+
+In the [[Czech Republic]], the [[Green Party (Czech Republic)|Green Party]] was part of the governing coalition, together with the conservative [[Civic Democratic Party (Czech Republic)|Civic Democratic Party]] (ODS) and the [[Christian and Democratic Union – Czechoslovak People's Party|Christian Democrats]] (KDU–ČSL) from January 2007 until the government collapsed in March 2009.
+
+==Green parties==
+===Africa===
+{{Update|section|date=April 2009}}
+As of 2002 the foundation of Green parties has been the most notable in Africa.&lt;ref&gt;{{Cite web|url=https://europeangreens.eu/news/update/updapril2002.html|title=News|website=European Greens}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://global.greens.org.au/charter/africanamericaprotocol.html|title=Agreement between the African and American Federations}}{{dead link|date=December 2017 |bot=InternetArchiveBot |fix-attempted=yes }}&lt;/ref&gt;
+
+The leader of the Kenyan Green Party, [[Wangari Maathai]], won the [[Nobel Peace Prize]] in 2004, enhancing the image of Green parties across Africa and throughout the world.
+
+===Asia and Oceania===
+
+====Australia, Fiji, New Zealand, Papua New Guinea, Vanuatu====
+{{see also|Asia Pacific Greens Federation}}
+Green parties have achieved national or state parliamentary representation in [[New Zealand]], [[Australia]] and [[Vanuatu]]. In New Zealand the [[Green Party of Aotearoa New Zealand]] currently holds 8 seats in the [[New Zealand House of Representatives]] after the [[2017 New Zealand general election|2017 general election]].&lt;ref&gt;{{cite web|url=https://www.elections.org.nz/news-media/new-zealand-2017-general-election-official-results|title=NEW ZEALAND 2017 GENERAL ELECTION - OFFICIAL RESULTS|last=New Zealand Electoral Commission}}&lt;/ref&gt; The [[Australian Greens]] hold 10 seats in the [[Australian Senate]] and one seat in the [[Australian House of Representatives]]. Since [[2004 Australian federal election|2004]], they have received more votes than any other third party in every federal election. They also have representation in the upper and lower houses of [[Parliaments of the Australian states and territories|state parliaments]] of five states and in the unicameral chamber of one territory. Greens also hold representative positions in local government across New Zealand and Australia (where a number of local government authorities are controlled by Green councilors). The Greens took the seat of Melbourne from the Australian Labor Party in 2010 with candidate [[Adam Bandt]]. This is the first time the Greens have won a Lower House seat at a general election (although they have previously won two seats at by-elections).
+
+[[Proportional representation]] in the Australian Senate and in New Zealand has strengthened the position of the Australian Greens and the Green Party of New Zealand and enabled them to participate directly in legislatures and policy-making committees. In countries following British-style '[[majoritarian|first past the post]]' electoral rules, Green parties face barriers to gaining federal or provincial/regional/state seats. The [[Australian Labor Party]]'s practice of allocating a portion of ALP [[Group voting ticket|ticket votes]] to Australian Greens has helped bring AG candidates into parliament.
+
+In the [[2008 Australian Capital Territory general election|2008 ACT election]] in Australia, the Greens won 15.6% of the vote, winning 4 out of 17 seats. Shane Rattenbury was elected the speaker of the assembly, the first time a Green party member had held such a position in any parliament or assembly in Australia. However, they retained only one seat at the [[2012 Australian Capital Territory general election|2012 election]] in the same territory.
+
+The [[Green Confederation]] (''Confédération Verte'') in [[Vanuatu]] won 3 out of 52 seats in [[2012 Vanuatuan general election|the last general election]] in October 2012. Its most prominent member is [[Moana Carcasses Kalosil]], who became [[Prime Minister of Vanuatu|prime minister]] in March 2013.&lt;ref&gt;[http://www.radioaustralia.net.au/international/radio/program/pacific-beat/moana-carcasses-named-new-vanuatu-pm/1106450 &quot;Moana Carcasses named new Vanuatu PM&quot;], [[Radio Australia]], 25 March 2013&lt;/ref&gt; Carcasses, a [[Green liberal]],&lt;ref&gt;[http://www.imf.org/external/np/seminars/eng/2012/pic/pdf/MckCV.pdf &quot;Moana Carcassés Kalosil&quot;], [[IMF]]&lt;/ref&gt; does not lead a Green government, but a broad coalition government in which he is the only Green minister.&lt;ref&gt;[http://www.dailypost.vu/content/nations-interest-first-carcasses &quot;Nation's interest first: Carcasses&quot;] {{webarchive|url=https://web.archive.org/web/20130329020142/http://www.dailypost.vu/content/nations-interest-first-carcasses |date=2013-03-29 }}, ''Vanuatu Daily Post'', 26 March 2013&lt;/ref&gt;
+
+There is a [[Papua New Guinea Greens Party]], but it does not have any members in Parliament.&lt;ref&gt;[http://www.ippcc.gov.pg/parties.htm#PNGGreensPrty &quot;Papua New Guinea Greens Party&quot;] {{Webarchive|url=https://web.archive.org/web/20120819175032/http://www.ippcc.gov.pg/parties.htm#PNGGreensPrty |date=2012-08-19 }}, Integrity of Political Parties and Candidates Commission&lt;/ref&gt; There was briefly a [[Green Party of Fiji|Green Party in Fiji]] from 2008 to 2013; as Parliament was suspended by the military regime during this time, the party was not able to take part in any election before all parties were deregistered in 2013.&lt;ref&gt;[http://www.fijisun.com.fj/2013/06/02/going-green/ &quot;Going Green&quot;], ''Fiji Sun'', 2 June 2013&lt;/ref&gt;
+
+====Pakistan, Saudi Arabia====
+
+The [[Green Party of Pakistan]] was created in 2002, and the [[Green Party of Saudi Arabia]] emerged 2010. However, due to political repression, some South and Southwest Asian Green parties are [[subculture|underground]] organizations.
+
+====Lebanon====
+The [[Green Party of Lebanon]] was founded in 2008 as a secular party.&lt;ref&gt;{{cite news|url=http://www.dailystar.com.lb/News/Local-News/Feb/12/Green-Party-holds-annual-congress-in-Beirut.ashx#axzz20FeZq82M |title=Green Party holds annual congress in Beirut &amp;#124; News, Lebanon News |newspaper=The Daily Star |date=2010-02-12 |access-date=2013-08-29}}&lt;/ref&gt;  Its first president was Philippe Skaff, CEO of Grey Advertising.&lt;ref&gt;{{cite web|url=http://theinnercircle.wordpress.com/2008/08/22/lebanons-green-party/ |title=Lebanon's Green Party &amp;#124; The Lebanese Inner Circle : Blog |publisher=Theinnercircle.wordpress.com |date= 2008-08-22|access-date=2013-08-29}}&lt;/ref&gt;  The party debuted with the May 2010 municipal elections.&lt;ref&gt;{{cite web|url=http://www.greenprophet.com/2009/12/green-party-lebanon/ |title=A Green Party Grows in Lebanon |publisher=Green Prophet |date=2009-12-07 |access-date=2013-08-29}}&lt;/ref&gt;  In 2011, the party became the first political party in [[Lebanon]] to elect a female leader when Nada Zaarour was elected its president.&lt;ref&gt;{{cite news|url=http://www.dailystar.com.lb/News/Politics/2011/Sep-06/148043-green-party-becomes-first-in-lebanon-to-elect-female-leader.ashx#axzz20FeZq82M |title=Green Party becomes first in Lebanon to elect female leader &amp;#124; News, Lebanon News |newspaper=The Daily Star |date=2011-09-06 |access-date=2013-08-29}}&lt;/ref&gt;
+
+===Europe===

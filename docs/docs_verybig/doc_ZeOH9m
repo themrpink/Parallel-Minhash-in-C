@@ -1,0 +1,270 @@
+* {{cite web |url=http://cecas.clemson.edu/cvel/emc/calculators/TL_Calculator/index.html |title=Transmission Line Parameter Calculator |website=cecas.clemson.edu/cvel |publisher=[[Clemson University]] |place=	Clemson, SC}}
+
+{{Telecommunications}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Transmission Line}}
+[[Category:Signal cables]]
+[[Category:Telecommunications engineering]]
+[[Category:Transmission lines]]
+[[Category:Distributed element circuits]]</text>
+      <sha1>1vqmh81mml2y3klslah6slp4floebkk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Transmission medium</title>
+    <ns>0</ns>
+    <id>41812</id>
+    <revision>
+      <id>990012452</id>
+      <parentid>958759471</parentid>
+      <timestamp>2020-11-22T08:20:22Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: isbn, url. URLs might have been internationalized/anonymized. Correct ISBN10 to ISBN13. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by AManWithNoPlan | All pages linked from cached copy of User:AManWithNoPlan/sandbox2 | via #UCB_webform_linked 1920/3680</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="19579" xml:space="preserve">{{about|transmission of signals|biological transmission|Vector (molecular biology)}}
+A '''transmission medium''' is something that can mediate the [[wave propagation|propagation]] of [[signal]]s for the purposes of [[telecommunication]].
+
+Signals are typically imposed on a wave of some kind suitable for the chosen medium. For example, data can modulate sound and a transmission medium for [[sound]]s may be [[air]], but solids and liquids may also act as the transmission medium. [[Vacuum]] or air constitutes a good transmission medium for [[electromagnetic wave]]s such as [[light]] and [[radio wave]]s. While material substance is not required for electromagnetic waves to propagate, such waves are usually affected by the transmission media they pass through, for instance by [[absorption (electromagnetic radiation)|absorption]] or by [[Reflection (physics)|reflection]] or [[refraction]] at the [[interface (chemistry)|interface]]s between media. Technical devices can therefore be employed to transmit or guide waves. Thus, an optical fiber or a copper cable are used as transmission media.
+
+[[Image:RG-59.jpg|thumb|right|[[Coaxial cable]], one example of a '''transmission medium''']]
+[[Electromagnetic radiation]] can be transmitted through an [[optical medium]], such as [[optical fiber]], or through [[twisted pair]] wires, [[coaxial cable]], or [[dielectric]]-slab [[waveguide]]s.  It may also pass through any physical material that is transparent to the specific [[wavelength]], such as [[water]], [[air]], [[glass]], or [[concrete]]. [[Sound]] is, by definition, the vibration of matter, so it requires a physical medium for transmission, as do other kinds of mechanical waves and [[heat]] energy. Historically, science incorporated various [[aether theories]] to explain the transmission medium. However, it is now known that electromagnetic waves do not require a physical transmission medium, and so can travel through the &quot;[[vacuum]]&quot; of [[free space]]. Regions of the [[Electrical insulation|insulative]] vacuum can become [[conductive]] for [[electrical conduction]] through the presence of free [[electron]]s, [[Electron hole|holes]], or [[ion]]s.
+
+==Telecommunications==
+A physical medium in data communications is the transmission path over which a signal propagates. Many different types of transmission media are used as [[communications channel]].
+
+In many forms of communications, communication is in the form of electromagnetic waves. With guided transmission media, the waves are guided along a physical path; examples of guided media include phone lines, [[twisted pair]] cables, [[coaxial cable]]s, and optical fibers. Unguided transmission media are methods that allow the transmission of [[data]] without the use of physical means to define the path it takes. Examples of this include [[microwave]], [[radio]] or [[infrared]]. Unguided media provide a means for transmitting electromagnetic waves but do not guide them; examples are propagation through air, vacuum and seawater.
+
+The term direct link is used to refer to the transmission path between two devices in which signals propagate directly from transmitters to receivers with no intermediate devices, other than amplifiers or repeaters used to increase signal strength. This term can apply to both guided and unguided media.
+
+== Simplex versus duplex ==
+A transmission may be [[Simplex communication|simplex]], half-[[Duplex (telecommunications)|duplex]], or full-duplex.
+
+In simplex transmission, signals are transmitted in only one direction; one station is a transmitter and the other is the receiver. In the half-duplex operation, both stations may transmit, but only one at a time. In full duplex operation, both stations may transmit simultaneously. In the latter case, the medium is carrying signals in both directions at same time.
+
+== Types ==
+In general, a transmission medium can be classified as a:
+*''Linear medium'', if different waves at any particular point in the medium can be [[superposition principle|superposed]];
+*''Bounded medium'', if it is finite in extent, otherwise ''unbounded medium'';
+*''Uniform medium'' or ''homogeneous medium'', if its physical properties are unchanged at different points;
+*''Isotropic medium'', if its physical properties are the same in different directions.
+
+There are two main types of transmission media: guided and unguided.
+
+For telecommunications purposes in the United States, [[Federal Standard 1037C]], transmission media are classified as one of the following:
+* Guided (or bounded)—waves are guided along a solid medium such as a [[transmission line]].
+* Wireless (or unguided)—[[transmitter|transmission]] and [[Receiver (radio)|reception]] are achieved by means of an [[antenna (radio)|antenna]].
+One of the most common physical medias used in networking is [[Copper wire and cable|copper wire]]. Copper wire to carry signals to long distances using relatively low amounts of power. The [[unshielded twisted pair]] (UTP) is eight strands of copper wire, organized into four pairs.&lt;ref&gt;{{cite book | last = Agrawal | first = Manish | title = Business Data Communications | publisher = John Wiley &amp; Sons, Inc. | year = 2010 | page = 37 | isbn = 978-0470483367}}&lt;/ref&gt;
+
+=== Guided ===
+It is also known as wired transmission media which requires wire to transfer data over the network
+
+====Twisted pair====
+{{main|Twisted pair}}
+''Twisted pair'' cabling is a type of wiring in which two conductors of a single [[Electronic circuit|circuit]] are twisted together for the purposes of improving [[electromagnetic compatibility]]. Compared to a [[Single-ended signaling|single conductor]] or an untwisted [[balanced pair]], a twisted pair reduces [[electromagnetic radiation]] from the pair and [[crosstalk]] between neighboring pairs and improves rejection of external [[electromagnetic interference]]. It was invented by [[Alexander Graham Bell]].&lt;ref&gt;{{cite book |last1=McBee |first1=David Barnett, David Groth, Jim |title=Cabling : the complete guide to network wiring |date=2004 |publisher=SYBEX |location=San Francisco |isbn=9780782143317 |page=11 |edition=3rd |url=https://books.google.com/books?id=AKDSTYu3nl4C&amp;pg=PA11}}&lt;/ref&gt;
+
+====Coaxial cable====
+{{main|Coaxial cable}}
+[[File:RG-59.jpg|thumb|right|400px|&lt;center&gt;[[RG-59]] '''flexible coaxial cable''' composed of:&lt;/center&gt;&lt;ol type=&quot;A&quot; style=&quot;list-style-type: upper-latin;&quot;&gt;&lt;li&gt;Outer plastic sheath&lt;/li&gt;&lt;li&gt;Woven copper shield&lt;/li&gt;&lt;li&gt;Inner dielectric insulator&lt;/li&gt;&lt;li&gt;Copper core&lt;/li&gt;&lt;/ol&gt;]]
+[[File:Coaxial cable.JPG|thumb|270px|Cross-sectional view of a coaxial cable]]
+''Coaxial cable'', or ''coax'' (pronounced {{IPAc-en|'|k|oʊ|.|æ|k|s|}}) is a type of [[electrical cable]] that has an inner conductor surrounded by a tubular insulating layer, surrounded by a tubular conducting shield. Many coaxial cables also have an insulating outer sheath or jacket.  The term [[coaxial]] comes from the inner conductor and the outer shield sharing a geometric axis. Coaxial cable was invented by English physicist, engineer, and mathematician [[Oliver Heaviside]], who patented the design in 1880.&lt;ref&gt;{{cite book|last=Nahin|first=Paul J.|title=Oliver Heaviside: The Life, Work, and Times of an Electrical Genius of the Victorian Age|year=2002|isbn=0-8018-6909-9}}&lt;/ref&gt;
+
+Coaxial cable is a type of [[transmission line]], used to carry high [[frequency]] [[electrical signal]]s with low losses.  It is used in such applications as telephone trunklines, [[broadband internet]] networking cables,  high speed computer [[bus (computer)|data busses]], carrying [[cable television]] signals, and connecting [[radio transmitter]]s and [[radio receiver|receivers]] to their [[antenna (radio)|antenna]]s. It differs from other [[shielded cable]]s because the dimensions of the cable and connectors are controlled to give a precise, constant conductor spacing, which is needed for it to function efficiently as a transmission line.
+[[Image:Oheaviside.jpg|thumb|270px|Oliver Heaviside invented coaxial cable in 1880]]
+
+====Optical fiber====
+{{main|Optical fiber}}
+[[File:fibreoptic.jpg|thumb|right|A bundle of optical fiber]]
+[[File:Stealth Fiber Crew installing fiber cable underneath the streets of Manhattan.jpg|thumb|Fiber crew installing a 432-count fiber cable underneath the streets of Midtown Manhattan, New York City]]
+[[File:Fiber optic illuminated.jpg|thumb|A [[TOSLINK]] fiber optic audio cable with red light being shone in one end transmits the light to the other end]]
+[[File:Optical-fibre-junction-box.jpg|thumb|right|A [[19-inch rack|wall-mount cabinet]] containing optical fiber interconnects. The yellow cables are [[single-mode optical fiber|single mode fibers]]; the orange and aqua cables are [[multi-mode optical fiber|multi-mode fibers]]: 50/125 µm OM2 and 50/125 µm OM3 fibers respectively.]]
+
+Another example of a physical medium is [[optical fiber]], which has emerged as the most commonly used transmission medium for long-distance communications. Optical fiber is a thin strand of glass that guides light along its length. Four major factors favor optical fiber over copper- data rates, distance, installation, and costs. Optical fiber can carry huge amounts of data compared to copper. It can be run for hundreds of miles without the need for signal repeaters, in turn, reducing maintenance costs and improving the reliability of the communication system because repeaters are a common source of network failures. Glass is lighter than copper allowing for less need for specialized heavy-lifting equipment when installing long-distance optical fiber. Optical fiber for indoor applications cost approximately a dollar a foot, the same as copper.&lt;ref&gt;{{cite book | last = Agrawal | first = Manish | title = Business Data Communications | publisher = John Wiley &amp; Sons, Inc. | year = 2010 | pages = 41–43 | isbn = 978-0470483367}}&lt;/ref&gt;
+
+Multimode and single mode are two types of commonly used optical fiber. Multimode fiber uses LEDs as the light source and can carry signals over shorter distances, about 2 kilometers. Single mode can carry signals over distances of tens of miles.
+
+An ''optical fiber'' is a flexible, [[transparency and translucency|transparent]] fiber made by [[Drawing (manufacturing)|drawing]] [[glass]] ([[silica]]) or plastic to a diameter slightly thicker than that of a [[Hair's breadth|human hair]].&lt;ref&gt;{{cite web|title=Optical Fiber|url=http://www.thefoa.org/tech/ref/basic/fiber.html|website=www.thefoa.org |publisher=[[The Fiber Optic Association]] |accessdate=17 April 2015}}&lt;/ref&gt; Optical fibers are used most often as a means to transmit light between the two ends of the fiber and find wide usage in [[fiber-optic communication]]s, where they permit transmission over longer distances and at higher [[Bandwidth (computing)|bandwidths]] (data rates) than electrical cables. Fibers are used instead of [[metal]] wires because signals travel along them with less [[Attenuation|loss]]; in addition, fibers are immune to [[electromagnetic interference]], a problem from which metal wires suffer excessively.&lt;ref&gt;{{cite book|ref=Senior|last1=Senior|first1=John M.|last2=Jamro|first2=M. Yousif|title=Optical fiber communications: principles and practice|date=2009|publisher=Pearson Education|isbn=978-0130326812|pages=7–9}}&lt;/ref&gt; Fibers are also used for [[Illumination (lighting)|illumination]] and imaging, and are often wrapped in bundles so they may be used to carry light into, or images out of confined spaces, as in the case of a [[fiberscope]].&lt;ref&gt;{{cite web|title=Birth of Fiberscopes|url=http://www.olympus-global.com/en/corc/history/story/endo/fiber/|website=www.olympus-global.com |publisher=Olympus Corporation|accessdate=17 April 2015}}&lt;/ref&gt; Specially designed fibers are also used for a variety of other applications, some of them being [[fiber optic sensor]]s and [[fiber laser]]s.&lt;ref&gt;{{cite journal|last1=Lee|first1=Byoungho|title=Review of the present status of optical fiber sensors.|journal=Optical Fiber Technology|date=2003|volume=9|issue=2|pages=57–79 |doi=10.1016/s1068-5200(02)00527-8|bibcode=2003OptFT...9...57L}}&lt;/ref&gt;
+
+Optical fibers typically include a [[Core (optical fiber)|core]] surrounded by a transparent [[Cladding (fiber optics)|cladding]] material with a lower [[index of refraction]]. Light is kept in the core by the phenomenon of [[total internal reflection]] which causes the fiber to act as a [[waveguide]].&lt;ref&gt;[[#Senior|Senior]], pp. 12–14&lt;/ref&gt; Fibers that support many propagation paths or [[transverse mode]]s are called [[multi-mode fiber]]s, while those that support a single mode are called [[single-mode fiber]]s (SMF). Multi-mode fibers generally have a wider core diameter&lt;ref&gt;{{Cite book|url=https://books.google.com/books?id=HFMiAQAAMAAJ&amp;q=Multi-mode+fibers+generally+have+a+wider+core+diameter+and+are+used+for+short-distance+communication+links|title=The Optical Industry &amp; Systems Purchasing Directory|date=1984|publisher=Optical Publishing Company|language=en}}&lt;/ref&gt; and are used for short-distance communication links and for applications where high power must be transmitted.{{citation needed|date=April 2015}} Single-mode fibers are used for most communication links longer than {{convert|1000|sp=us|m|ft}}.{{citation needed|date=April 2015}}
+
+Being able to join optical fibers with low loss is important in fiber optic communication.&lt;ref&gt;[[#Senior|Senior]], p. 218&lt;/ref&gt; This is more complex than joining electrical wire or cable and involves careful [[Cleave (fiber)|cleaving]] of the fibers, precise alignment of the fiber cores, and the coupling of these aligned cores. For applications that demand a permanent connection a [[Fusion splicing|fusion splice]] is common. In this technique, an electric arc is used to  melt the ends of the fibers together. Another common technique is a [[mechanical splice]], where the ends of the fibers are held in contact by mechanical force. Temporary or semi-permanent connections are made by means of specialized [[optical fiber connector]]s.&lt;ref&gt;[[#Senior|Senior]], pp. 234–235&lt;/ref&gt;
+
+The field of applied science and engineering concerned with the design and application of optical fibers is known as '''fiber optics'''. The term was coined by Indian physicist [[Narinder Singh Kapany]], who is widely acknowledged as the father of fiber optics.&lt;ref name=&quot;southasia.ucsc.edu&quot;&gt;{{cite web|url=http://southasia.ucsc.edu/endowed-chairs/narinder-singh-kapany.html|title=Narinder Singh Kapany Chair in Opto-electronics|publisher=ucsc.edu}}&lt;/ref&gt;
+
+===Unguided Media===
+Transmission media then looking at analysis of using them unguided transmission media is data signals that flow through the air. They are not guided or bound to a channel to follow. Following are unguided media used for data communication:
+====Radio====
+{{main|Radio propagation}}
+{{Antennas|characteristics}}
+
+''Radio propagation'' is the behavior of [[radio wave]]s as they travel, or are [[wave propagation|propagated]], from one point to another, or into various parts of the [[atmosphere]].&lt;ref&gt;H. P. Westman et al., (ed), ''Reference Data for Radio Engineers, Fifth Edition'', 1968, Howard W. Sams and Co., {{ISBN|0-672-20678-1}}, Library of Congress Card No. 43-14665 page 26-1&lt;/ref&gt; As a form of [[electromagnetic radiation]], like light waves, radio waves are affected by the phenomena of [[reflection (physics)|reflection]], [[refraction]], [[diffraction]], [[absorption (electromagnetic radiation)|absorption]], [[polarization (waves)|polarization]], and [[scattering]].&lt;ref&gt;Demetrius T Paris and F. Kenneth Hurd, ''Basic Electromagnetic Theory'', McGraw Hill, New York 1969 {{ISBN|0-07-048470-8}}, Chapter 8&lt;/ref&gt;   Understanding the effects of varying conditions on radio propagation has many practical applications, from choosing frequencies for international [[shortwave]] [[Broadcasting|broadcasters]], to designing reliable [[Mobile phone|mobile telephone]] systems, to [[radio navigation]], to operation of [[radar]] systems.
+
+Several all different types of propagation are used in practical radio transmission systems. [[Line-of-sight propagation]] means radio waves which travel in a straight line from the transmitting antenna to the receiving antenna. Line of sight transmission is used to medium range radio transmission such as [[cell phone]]s, [[cordless phone]]s, [[walkie-talkie]]s, [[wireless network]]s, [[FM radio]] and [[television broadcasting]] and [[radar]], and [[satellite communication]], such as [[satellite television]]. Line-of-sight transmission on the surface of the Earth is limited to the distance to the visual horizon, which depends on the height of transmitting and receiving antennas. It is the only propagation method possible at [[microwave]] frequencies and above. At microwave frequencies, moisture in the atmosphere ([[rain fade]]) can degrade transmission.
+
+At lower frequencies in the [[medium frequency|MF]], [[low frequency|LF]], and [[very low frequency|VLF]] bands, due to [[diffraction]] radio waves can bend over obstacles like hills, and travel beyond the horizon as [[surface wave]]s which follow the contour of the Earth. These are called [[ground wave]]s.  [[AM broadcasting]] stations use ground waves to cover their listening areas. As the frequency gets lower, the attenuation with distance decreases, so [[very low frequency]] (VLF) and [[extremely low frequency]] (ELF) ground waves can be used to communicate worldwide. VLF and ELF waves can penetrate significant distances through water and earth, and these frequencies are used for mine communication and military communication with submerged submarines.
+
+At [[medium wave]] and [[shortwave]] frequencies ([[medium frequency|MF]] and [[high frequency|HF]] bands) radio waves can refract from a layer of [[charged particle]]s ([[ion]]s) high in the atmosphere, called the [[ionosphere]]. This means that radio waves transmitted at an angle into the sky can be reflected back to Earth beyond the horizon, at great distances, even transcontinental distances. This is called [[skywave]]  propagation. It is used by [[amateur radio]] operators to talk to other countries, and shortwave broadcasting stations that broadcast internationally. Skywave communication is variable, dependent on conditions in the upper atmosphere; it is most reliable at night and in the winter. Due to its unreliability, since the advent of [[communication satellite]]s in the 1960s, many long range communication needs that previously used skywaves now use satellites.
+
+In addition, there are several less common radio propagation mechanisms, such as [[tropospheric scattering]] (troposcatter) and [[near vertical incidence skywave]] (NVIS) which are used in specialized communication systems.
+
+
+==Digital encoding==
+Transmission and reception of data typically is performed in four steps.
+
+# The data is coded as binary numbers at the sender end
+# A carrier signal is modulated as specified by the binary representation of the data
+# At the receiving end, the incoming signal is demodulated into the respective binary numbers
+# Decoding of the binary numbers is performed&lt;ref&gt;{{cite book | last = Agrawal | first = Manish | title = Business Data Communications | publisher = John Wiley &amp; Sons, Inc. | year = 2010 | page = 54 | isbn = 978-0470483367}}&lt;/ref&gt;
+
+==See also==
+*[[Permittivity#Vacuum permittivity|Vacuum permittivity]]
+*[[Transmission (telecommunications)]]
+*[[Excitable medium]]
+*[[Duplex (telecommunications)]]
+*[[Luminiferous aether]]
+
+==References==
+{{Reflist}}
+{{Telecommunications}}
+[[Category:Electromagnetic radiation]]</text>
+      <sha1>qno97zh4e4wdvdrbdcfrtylp82vwd68</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Transmit-after-receive time delay</title>
+    <ns>0</ns>
+    <id>41813</id>
+    <revision>
+      <id>979087475</id>
+      <parentid>505032057</parentid>
+      <timestamp>2020-09-18T18:25:05Z</timestamp>
+      <contributor>
+        <username>I'm Aya Syameimaru!</username>
+        <id>38173635</id>
+      </contributor>
+      <comment>{{short description|</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="852" xml:space="preserve">{{short description|time interval}}
+In [[telecommunication]], '''transmit-after-receive time delay''' is the time interval from removal of RF energy at the local receiver input until the local transmitter is automatically keyed on and the transmitted rf [[Signalling (telecommunication)|signal]] amplitude has increased to 90% of its steady-state value.  ''An Exception:'' [[High-frequency]] (HF) [[transceiver]] equipment is normally not designed with an interlock between receiver [[squelch]] and transmitter on-off key. The transmitter can be keyed on at any time, independent of whether or not a signal is being received at the receiver input.
+
+==See also==
+*[[Attack-time delay]]
+*[[Receive-after-transmit time delay]]
+
+==References==
+*{{FS1037C MS188}}
+
+[[Category:Telecommunications engineering]]
+[[Category:Radio technology]]
+
+{{telecomm-stub}}</text>
+      <sha1>osx5y3nwl3kcmvx5ovx6lg57dop4dii</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Transmit flow control</title>
+    <ns>0</ns>
+    <id>41814</id>
+    <redirect title="Flow control" />
+    <revision>
+      <id>783874915</id>
+      <parentid>78198354</parentid>
+      <timestamp>2017-06-05T05:51:53Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="98" xml:space="preserve">#REDIRECT [[Flow_control#Transmit_flow_control]]
+
+{{Redirect category shell|1=
+{{R from merge}}
+}}</text>
+      <sha1>af6ewa2bgs78hgtsii8vxnpqvxe4s0e</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Transmitter attack-time delay</title>
+    <ns>0</ns>
+    <id>41815</id>
+    <redirect title="Attack-time delay" />
+    <revision>
+      <id>503061425</id>
+      <parentid>456774271</parentid>
+      <timestamp>2012-07-19T03:28:44Z</timestamp>
+      <contributor>
+        <username>Srleffler</username>
+        <id>252195</id>
+      </contributor>
+      <comment>Merge to [[Attack-time delay]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="31" xml:space="preserve">#REDIRECT [[Attack-time delay]]</text>
+      <sha1>82ujheomzt26xq1fxti6odogqtm1m6c</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Transponder</title>
+    <ns>0</ns>
+    <id>41817</id>
+    <revision>
+      <id>981509835</id>
+      <parentid>981507695</parentid>
+      <timestamp>2020-10-02T19:09:10Z</timestamp>
+      <contributor>
+        <username>Materialscientist</username>
+        <id>7852030</id>
+      </contributor>
+      <minor />
+      <comment>Reverted edits by [[Special:Contribs/212.9.10.166|212.9.10.166]] ([[User talk:212.9.10.166|talk]]) to last version by DannyS712</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12213" xml:space="preserve">{{short description|device that emits an identifying signal in response to a received signal}}
+[[Image:407 Transponder.jpg|thumb|right|120px|A [[Ontario Highway 407|Highway 407]] toll transponder]]
+In [[telecommunication]], a '''transponder''' is a device that, upon receiving a signal, emits a different signal in response.&lt;ref&gt;https://www.merriam-webster.com/dictionary/transponder&lt;/ref&gt; The term is a [[portmanteau]] of ''transmitter'' and ''responder''.&lt;ref&gt;[http://dictionary.reference.com/browse/transponder transponder]&lt;/ref&gt; It is variously abbreviated as XPDR, XPNDR, TPDR or TP.
+
+In [[air navigation]] or [[radio frequency]] identification, a [[Transponder (aeronautics)|flight transponder]] is an automated [[transceiver]] in an aircraft that emits a coded identifying signal in response to an interrogating received signal. In a [[communications satellite]], a [[Transponder (satellite communications)| satellite transponder]] receives signals over a range of uplink frequencies, usually from a [[satellite ground station]]. The transponder amplifies them, and re-transmits them on a different set of downlink frequencies to receivers on Earth, often without changing the content of the received signal or signals.
+
+==Satellite/broadcast communications==
+{{Details|Transponder (satellite communications)}}
+A [[communications satellite]]’s [[Communication channel|channels]] are called transponders because each is a separate [[transceiver]] or [[repeater]]. With [[digital video]] [[data compression]] and [[multiplexing]], several [[video]] and [[sound reproduction|audio]] channels may travel through a single transponder on a single [[wideband]] [[carrier signal|carrier]]. Original [[analog (signal)|analog]] video only has one channel per transponder, with [[subcarrier]]s for audio and automatic transmission identification service ([[Automatic Transmitter Identification System (television)|ATIS]]). Non-multiplexed [[radio station]]s can also travel in [[single channel per carrier]] (SCPC) mode, with multiple carriers (analog or digital) per transponder. This allows each station to transmit directly to the satellite, rather than paying for a whole transponder, or using [[landline]]s to send it to an [[Earth station (communications)|earth station]] for multiplexing with other stations.
+
+== Optical communications ==
+In [[optical fiber communications]], a transponder is the element that sends and receives the optical signal from a [[fiber]]. A transponder is typically characterized by its data rate and the maximum distance the signal can travel.
+
+The term &quot;transponder&quot; can apply to different items with important functional differences, mentioned across academic and commercial literature:
+* according to one description,&lt;ref&gt;[https://books.google.com/books?id=xTIonQZI7TMC&amp;lpg=PA349&amp;dq=%22optical%20fiber%20telecommunications%20V%22%20transceiver&amp;pg=PA353#v=onepage&amp;q=%22MSA%20transceivers%20and%20MSA%20transponders%22&amp;f=false Optical Fiber Telecommunications V: Systems and networks, Academic Press, 2008, page 353-354]&lt;/ref&gt; a transponder and [[transceiver]] are both functionally similar devices that convert a [[full-duplex]] ''electrical'' signal into a full-duplex optical signal. The difference between the two is that transceivers interface electrically with the host system using a ''serial'' interface, whereas transponders use a ''parallel'' interface to do so. In this view, transponders provide easier-to-handle lower-rate parallel signals, but are bulkier and consume more power than transceivers.
+* according to another description,&lt;ref&gt;[http://www.compeng.dit.ie/staff/tfreir/optical_2/Unit_4.ppt WDM and DWDM Multiplexing Powerpoint presentation, School of Electronic and Communications Engineering, Dublin (Ireland), slide 61]&lt;/ref&gt; transceivers are limited to providing an ''electrical-optical'' function only (not differentiating between serial or parallel electrical interfaces), whereas transponders convert an optical signal at one [[wavelength]] to an optical signal at another wavelength (typically [[Frequency grid|ITU standardized]] for [[DWDM]] communication). As such, transponders can be considered as two transceivers placed back-to-back. This view also seems to be held by e.g. [[Fujitsu]].&lt;ref&gt;[http://www.fujitsu.com/downloads/TEL/fnc/pdfservices/DWDM_Tutorial.pdf Fujitsu DWDM Primer, 2004]&lt;/ref&gt;
+
+As a result, difference in transponder functionality also might influence the functional description of related optical modules like [[transceivers]] and [[muxponder]]s.
+
+==Aviation==
+&lt;!-- This section is linked from [[SR-71 Blackbird]]. --&gt;
+{{Details|Transponder (aeronautics)}}
+[[File:Transponder in Private Aircraft.jpg|thumb|A transponder in a private plane squawking 2000]]
+
+Another type of transponder occurs in [[identification friend or foe]] (IFF) systems in [[military aviation]] and in [[air traffic control]] [[secondary surveillance radar]] (beacon radar) systems for [[general aviation]] and [[commercial aviation]].&lt;ref&gt;{{cite journal |last1=Dobkin |first1=Daniel M. |title=A Radio-Oriented Introduction to Radio Frequency Identification |journal=High Frequency Electronics |date=2005}}&lt;/ref&gt; [[Radar|Primary radar]] works best with large all-metal aircraft, but not so well on small, composite aircraft. Its range is also limited by terrain and rain or snow and also detects unwanted objects such as automobiles, hills and trees. Furthermore, it cannot always estimate the altitude of an aircraft. [[Secondary radar]] overcomes these limitations but it depends on a transponder in the aircraft to respond to interrogations from the ground station to make the plane more visible.
+
+Depending on the type of interrogation, the transponder sends back a [[transponder code]] (or &quot;squawk code&quot;, Mode A) or altitude information (Mode C) to help air traffic controllers to identify the aircraft and to maintain separation between planes. Another mode called Mode S (Mode Select) is designed to help avoiding over-interrogation of the transponder (having many radars in busy areas) and to allow automatic collision avoidance. Mode S transponders are [[backward compatible]] with Modes A and C. Mode S is mandatory in [[controlled airspace]] in many countries. Some countries have also required, or are moving toward requiring, that all aircraft be equipped with Mode S, even in [[uncontrolled airspace]]. However, in the field of general aviation there have been objections to these moves, because of the cost, size, limited benefit to the users in uncontrolled airspace, and, in the case of [[balloon (aeronautics)|balloons]] and [[Glider (sailplane)|gliders]], the power requirements during long flights.
+
+Transponders are used on some military aircraft to ensure ground personnel can verify the functionality of a missile’s [[flight termination system]] prior to launch. Such radar enhancing transponders are needed as the enclosed weapon bays on [[Fifth-generation jet fighter|modern aircraft]] interfere with prelaunch, flight termination system verification performed by [[range safety]] personnel during training test launches. The transponders re-radiates the signals allowing for much longer communication distances.&lt;ref&gt;{{Cite web|url=https://www.curtisswrightds.com/infocenter/white-papers/telemetry-re-radiation-system.html|title=TELEMETRY RE-RADIATION SYSTEM|last=Cook|first=Paul|date=2008|website=Curtiss-Wright Desfense Solutions}}&lt;/ref&gt;
+
+==Marine==
+The [[International Maritime Organization]]'s [[International Convention for the Safety of Life at Sea]] (SOLAS) requires the [[Automatic Identification System]] (AIS) to be fitted aboard international voyaging ships with {{GT|300 or more|disp=long}}, and all passenger ships regardless of size.&lt;ref&gt;{{cite web
+ |work        = [[International Convention for the Safety of Life at Sea|SOLAS]]'1974
+ |url         = http://www.imo.org/KnowledgeCentre/ReferencesAndArchives/HistoryofSOLAS/Documents/SOLAS%201974%20-%20Brief%20History%20-%20List%20of%20amendments%20to%20date%20and%20how%20to%20find%20them.html#43
+ |title       = December 2000 amendments
+ |author      = International Maritime Organization
+ |url-status     = dead
+ |archiveurl  = http://arquivo.pt/wayback/20140725015425/http://www.imo.org/KnowledgeCentre/ReferencesAndArchives/HistoryofSOLAS/Documents/SOLAS%201974%20-%20Brief%20History%20-%20List%20of%20amendments%20to%20date%20and%20how%20to%20find%20them.html#43
+ |archivedate = 2014-07-25
+}}&lt;/ref&gt; Although AIS transmitters/receivers are generally called transponders they generally transmit autonomously, although coast stations can interrogate class B transponders on smaller vessels for additional information. In addition, navigational aids often have transponders called [[Racon|RACON]] (radar beacons) designed to make them stand out on a ship's radar screen.

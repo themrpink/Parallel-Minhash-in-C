@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     if (numberOfFiles==0){
         exit(EXITNOFILEFOUND);
     }
-
+    printf("numero di file: %d\n", numberOfFiles);
     long long unsigned **minhashDocumenti = (long long unsigned **)malloc(numberOfFiles*sizeof (long long unsigned *));
 
     double start;
@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
 
     //test
     exectimes(1, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
-    check_coherence(minhashDocumenti, numberOfFiles);
+    //check_coherence(minhashDocumenti, numberOfFiles);
 
     for (int i = 0; i < numberOfFiles; i++) {
         free(files[i]);

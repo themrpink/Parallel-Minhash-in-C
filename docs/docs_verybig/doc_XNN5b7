@@ -1,0 +1,313 @@
+'''Simonyi''': Absolutely... we went over to the typed languages too later ... But ... we would look at one name and I would tell you exactly a lot about that...&lt;ref&gt;{{cite web|url=http://archive.computerhistory.org/resources/access/text/2015/06/102702232-05-01-acc.pdf|format=PDF|title=Oral History of Charles Simonyi |website=Archive.computerhistory.org\accessdate=5 August 2018}}&lt;/ref&gt;
+ |width  = 30%
+ |align  = right
+}}
+
+Hungarian notation was designed to be language-independent, and found its first major use with the [[BCPL]] programming language. Because BCPL has no data types other than the machine [[Word (computer architecture)|word]], nothing in the language itself helps a programmer remember variables' types. Hungarian notation aims to remedy this by providing the programmer with explicit knowledge of each variable's data type.
+
+In Hungarian notation, a variable name starts with a group of lower-case letters which are [[mnemonic]]s for the type or purpose of that variable, followed by whatever name the programmer has chosen; this last part is sometimes distinguished as the ''given name''. The first character of the given name can be capitalized to separate it from the type indicators (see also [[CamelCase]]). Otherwise the case of this character denotes scope.
+
+==History==
+{{Uncited-section|date=December 2016}}
+The original Hungarian notation, which would now be called Apps Hungarian, was invented by [[Charles Simonyi]], a programmer who worked at [[Xerox PARC]] circa 1972–1981, and who later became Chief Architect at [[Microsoft]].
+
+The name of the notation is a reference to Simonyi's nation of origin; [[Hungarian name|Hungarian people's names]] are &quot;reversed&quot; compared to most other European names; [[Name order|the family name precedes the given name]]. For example, the anglicized name &quot;Charles Simonyi&quot; in [[Hungarian language|Hungarian]] was originally &quot;Simonyi Károly&quot;. In the same way, the type name precedes the &quot;given name&quot; in Hungarian notation, rather than the more natural—to most Europeans—[[Smalltalk]] &quot;type last&quot; naming style (e.g. aPoint and lastPoint). This latter naming style was most common at Xerox PARC during Simonyi's tenure there.
+
+The name Apps Hungarian was coined since the convention was used in the [[application software|applications]] division of Microsoft. Systems Hungarian developed later in the [[Microsoft Windows]] development team. Simonyi's paper referred to prefixes used to indicate the &quot;type&quot; of information being stored. His proposal was largely concerned with decorating identifier names based upon the semantic information of what they store (in other words, the variable's ''purpose''), consistent with Apps Hungarian. However, his suggestions were not entirely distinct from what became known as Systems Hungarian, as some of his suggested prefixes contain little or no semantic information (see below for examples).
+
+=={{anchor|Systems|Apps}}Systems Hungarian vs. Apps Hungarian==
+Where Systems notation and Apps notation differ is in the purpose of the prefixes.
+
+In Systems Hungarian notation, the prefix encodes the actual data type of the variable. For example:
+
+*&lt;code&gt;lAccountNum&lt;/code&gt; : variable is a ''long integer'' (&lt;code&gt;&quot;l&quot;&lt;/code&gt;);
+*&lt;code&gt;arru8NumberList&lt;/code&gt; : variable is ''an '''arr'''ay of '''u'''nsigned '''8'''-bit integers'' (&lt;code&gt;&quot;arru8&quot;&lt;/code&gt;);
+*&lt;code&gt;bReadLine(bPort,&amp;arru8NumberList)&lt;/code&gt; : function with a byte-value return code.
+*&lt;code&gt;strName&lt;/code&gt; : Variable represents a string (&lt;code&gt;&quot;str&quot;&lt;/code&gt;) containing the name, but does not specify how that string is implemented.
+
+Apps Hungarian notation strives to encode the logical data type rather than the physical data type; in this way, it gives a hint as to what the variable's purpose is, or what it represents.
+*&lt;code&gt;rwPosition&lt;/code&gt; : variable represents a ''row'' (&lt;code&gt;&quot;rw&quot;&lt;/code&gt;);
+*&lt;code&gt;usName&lt;/code&gt; : variable represents an ''unsafe string'' (&lt;code&gt;&quot;us&quot;&lt;/code&gt;), which needs to be &quot;sanitized&quot; before it is used (e.g. see [[code injection]] and [[cross-site scripting]] for examples of attacks that can be caused by using raw user input)
+*&lt;code&gt;szName&lt;/code&gt; : variable is a '''''z'''ero-terminated '''s'''tring'' (&lt;code&gt;&quot;sz&quot;&lt;/code&gt;); this was one of Simonyi's original suggested prefixes.
+
+Most, but not all, of the prefixes Simonyi suggested are semantic in nature. To modern eyes, some prefixes seem to represent physical data types, such as &lt;code&gt;sz&lt;/code&gt; for strings. However, such prefixes were still semantic, as Simonyi intended Hungarian notation for languages whose type systems could not distinguish some data types that modern languages take for granted.
+
+The following are examples from the original paper:&lt;ref name=&quot;simonyi&quot;&gt;{{cite web
+ |     author = Charles Simonyi
+ |      title = Hungarian Notation
+ |date=November 1999
+ |  publisher = [[Microsoft Corp.]]
+ |       work = MSDN Library
+ |        url = http://msdn2.microsoft.com/en-us/library/aa260976(VS.60).aspx
+ | accessdate =
+ |      authorlink = Charles Simonyi
+}}
+&lt;/ref&gt;
+* &lt;code&gt;p''X''&lt;/code&gt; is a pointer to another type ''X''; this contains very little semantic information.
+* &lt;code&gt;''d''&lt;/code&gt; is a prefix meaning difference between two values; for instance, ''dY'' might represent a distance along the Y-axis of a graph, while a variable just called ''y'' might be an absolute position. This is entirely semantic in nature.
+* &lt;code&gt;''sz''&lt;/code&gt; is a null- or zero-terminated string. In C, this contains some semantic information because it is not clear whether a variable of type ''char*'' is a pointer to a single character, an array of characters or a zero-terminated string.
+* &lt;code&gt;''w''&lt;/code&gt; marks a variable that is a word. This contains essentially no semantic information at all, and would probably be considered Systems Hungarian.
+* &lt;code&gt;''b''&lt;/code&gt; marks a byte, which in contrast to w might have semantic information, because in C the only byte-sized data type is the ''char'', so these are sometimes used to hold numeric values. This prefix might clear ambiguity between whether the variable is holding a value that should be treated as a character or a number.
+
+While the notation always uses initial lower-case letters as mnemonics, it does not prescribe the mnemonics themselves. There are several widely used conventions (see examples below), but any set of letters can be used, as long as they are consistent within a given body of code.
+
+It is possible for code using Apps Hungarian notation to sometimes contain Systems Hungarian when describing variables that are defined solely in terms of their type.
+
+==Relation to sigils==
+In some programming languages, a similar notation now called [[sigil (computer programming)|sigil]]s is built into the language and enforced by the compiler. For example, in some forms of [[BASIC programming language|BASIC]], &lt;code&gt;name$&lt;/code&gt; names a [[string (computer science)|string]] and &lt;code&gt;count%&lt;/code&gt; names an [[integer]]. The major difference between Hungarian notation and sigils is that sigils declare the type of the variable in the language, whereas Hungarian notation is purely a naming scheme with no effect on the machine interpretation of the program text.
+
+==Examples==
+*&lt;code&gt;bBusy&lt;/code&gt; : [[Boolean datatype|boolean]]
+*&lt;code&gt;chInitial&lt;/code&gt; : [[character (computing)|char]]
+*&lt;code&gt;cApples&lt;/code&gt; : count of items
+*&lt;code&gt;dwLightYears&lt;/code&gt; : double [[Word (data type)|word]] (Systems)
+*&lt;code&gt;fBusy&lt;/code&gt; : [[Boolean data type|flag]] (or [[Floating-point|float]])
+*&lt;code&gt;nSize&lt;/code&gt; : [[Integer (computer science)|integer]] (Systems) or count (Apps)
+*&lt;code&gt;iSize&lt;/code&gt; : [[Integer (computer science)|integer]] (Systems) or index (Apps)
+*&lt;code&gt;fpPrice&lt;/code&gt; : [[floating-point]]
+*&lt;code&gt;db[[Pi]]&lt;/code&gt; : [[double precision|double]] (Systems)
+*&lt;code&gt;p[[Foo]]&lt;/code&gt; : [[pointer (computer programming)|pointer]]
+*&lt;code&gt;rgStudents&lt;/code&gt; : array, or range
+*&lt;code&gt;szLastName&lt;/code&gt; : zero-terminated string
+*&lt;code&gt;u16Identifier&lt;/code&gt; : unsigned 16-bit [[Integer (computer science)|integer]] (Systems)
+*&lt;code&gt;u32Identifier&lt;/code&gt; : unsigned 32-bit [[Integer (computer science)|integer]] (Systems)
+*&lt;code&gt;stTime&lt;/code&gt; : clock time structure
+*&lt;code&gt;fnFunction&lt;/code&gt; : function name
+
+The mnemonics for pointers and [[Array data structure|arrays]], which are not actual data types, are usually followed by the type of the data element itself:
+
+*&lt;code&gt;pszOwner&lt;/code&gt; : pointer to zero-terminated string
+*&lt;code&gt;rgfpBalances&lt;/code&gt; : array of [[floating-point]] values
+*&lt;code&gt;aulColors&lt;/code&gt; : array of unsigned long (Systems)
+
+While Hungarian notation can be applied to any programming language and environment, it was widely adopted by [[Microsoft]] for use with the C language, in particular for [[Microsoft Windows]], and its use remains largely confined to that area. In particular, use of Hungarian notation was widely [[Technology evangelist|evangelized]] by [[Charles Petzold]]'s ''&quot;Programming Windows&quot;'', the original (and for many readers, the definitive) book on [[Windows API]] programming.  Thus, many commonly seen constructs of Hungarian notation are specific to Windows:
+
+* For programmers who learned Windows programming in C, probably the most memorable examples are the &lt;code&gt;wParam&lt;/code&gt; (word-size parameter) and &lt;code&gt;lParam&lt;/code&gt; (long-integer parameter) for the [[WindowProc]]() function.
+* &lt;code&gt;hwndFoo&lt;/code&gt; : handle to a window
+* &lt;code&gt;lpszBar&lt;/code&gt; : long pointer to a zero-terminated string
+
+The notation is sometimes extended in [[C++]] to include the [[scope (programming)|scope]] of a variable, optionally separated by an underscore.&lt;ref&gt;{{cite web|title=Mozilla Coding Style|url=https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Coding_Style#Prefixes|website=Developer.mozilla.org|accessdate=17 March 2015}}&lt;/ref&gt;&lt;ref&gt;{{cite web|title=Webkit Coding Style Guidelines|url=http://www.webkit.org/coding/coding-style.html#names-data-members|website=Webkit.org|accessdate=17 March 2015}}&lt;/ref&gt; This extension is often also used without the Hungarian type-specification:
+
+* &lt;code&gt;g_nWheels&lt;/code&gt; : member of a global namespace, integer
+* &lt;code&gt;m_nWheels&lt;/code&gt; : member of a structure/class, integer
+* &lt;code&gt;m_wheels&lt;/code&gt;, &lt;code&gt;_wheels&lt;/code&gt; : member of a structure/class
+* &lt;code&gt;s_wheels&lt;/code&gt; : static member of a class
+* &lt;code&gt;c_wheels&lt;/code&gt; : static member of a function
+
+In [[JavaScript]] code using [[jQuery]], a &lt;code&gt;$&lt;/code&gt; prefix is often used to indicate that a variable holds a jQuery object (versus a plain DOM object or some other value).&lt;ref&gt;{{cite web|title=Why would a JavaScript variable start with a dollar sign?|url=https://stackoverflow.com/questions/205853/why-would-a-javascript-variable-start-with-a-dollar-sign|website=Stack Overflow|accessdate=12 February 2016}}&lt;/ref&gt;
+
+==Advantages==
+(Some of these apply to Systems Hungarian only.)
+
+Supporters argue that the benefits of Hungarian Notation include:&lt;ref name=&quot;simonyi&quot; /&gt;
+* The symbol type can be seen from its name.  This is useful when looking at the code outside an integrated development environment &amp;mdash; like on a code review or printout &amp;mdash; or when the symbol declaration is in another file from the point of use, such as a function.
+* In a language that uses [[dynamic typing]] or that is untyped, the decorations that refer to types cease to be redundant. In such languages variables are typically not declared as holding a particular type of data, so the only clue as to what operations can be done on it are hints given by the programmer, such as a variable naming scheme, documentation and comments. As mentioned above, Hungarian Notation expanded in such a language ([[BCPL]]).
+* The formatting of variable names may simplify some aspects of [[code refactoring]] (while making other aspects more error-prone).
+* Multiple variables with similar semantics can be used in a block of code: dwWidth, iWidth, fWidth, dWidth.
+* Variable names can be easy to remember from knowing just their types.
+* It leads to more consistent variable names.
+* Inappropriate type casting and operations using incompatible types can be detected easily while reading code.
+* In complex programs with many global objects (VB/Delphi Forms), having a basic prefix notation can ease the work of finding the component inside of the editor. For example, searching for the string &lt;code&gt;btn&lt;/code&gt; might find all the Button objects.
+* Applying Hungarian notation in a narrower way, such as applying only for member variables, helps avoid naming collision.
+* Printed code is more clear to the reader in case of datatypes, type conversions, assignments, truncations, etc.
+
+==Disadvantages==
+Most arguments against Hungarian notation are against ''Systems'' Hungarian notation, not ''Apps'' Hungarian notation. Some potential issues are:
+* The Hungarian notation is redundant when type-checking is done by the compiler. Compilers for languages providing strict type-checking, such as [[Pascal (programming language)|Pascal]], ensure the usage of a variable is consistent with its type automatically; checks by eye are redundant and subject to human error.
+* Most modern [[integrated development environment]]s display variable types on demand, and automatically flag operations which use incompatible types, making the notation largely obsolete.
+* Hungarian Notation becomes confusing when it is used to represent several properties, as in &lt;!--[http://mindprod.com/jgloss/unmainnaming.html]/--&gt; &lt;tt&gt;a_crszkvc30LastNameCol&lt;/tt&gt;: a [[constant (computer science)|constant]] [[reference (computer science)|reference]] [[parameter (computer science)|argument]], holding the contents of a [[database]] column &lt;tt&gt;LastName&lt;/tt&gt; of type [[varchar]](30) which is part of the table's [[primary key]].
+* It may lead to inconsistency when code is modified or ported. If a variable's type is changed, either the decoration on the name of the variable will be inconsistent with the new type, or the variable's name must be changed. A particularly well known example is the standard WPARAM type, and the accompanying wParam [[formal parameter]] in many Windows system function declarations. The 'w' stands for 'word', where 'word' is the native word size of the platform's hardware architecture. It was originally a 16 bit type on 16-bit word architectures, but was changed to a 32-bit on 32-bit word architectures, or 64-bit type on 64-bit word architectures in later versions of the operating system while retaining its original name (its true underlying type is UINT_PTR, that is, an unsigned integer large enough to hold a pointer). The semantic impedance, and hence programmer confusion and inconsistency from platform-to-platform, is on the assumption that 'w' stands for a two byte, 16-bit word in those different environments.
+* Most of the time, knowing the use of a variable implies knowing its type. Furthermore, if the usage of a variable is not known, it cannot be deduced from its type.
+* Hungarian notation reduces the benefits of using code editors that support completion on variable names, for the programmer has to input the type specifier first, which is more likely to collide with other variables than when using other naming schemes.
+* It makes code less readable, by obfuscating the purpose of the variable with type and scoping prefixes.&lt;ref&gt;{{cite book
+| last=Jones
+| first=Derek M.
+| title=The New C Standard: A Cultural and Economic Commentary
+| url=http://www.coding-guidelines.com/cbook/cbook1_2.pdf
+| page=727
+| year=2009
+| publisher=Addison-Wesley
+| isbn=0-201-70917-1}}&lt;/ref&gt;
+* The additional type information can insufficiently replace more descriptive names. E.g. sDatabase does not tell the reader what it is. databaseName might be a more descriptive name.
+* When names are sufficiently descriptive, the additional type information can be redundant. E.g. firstName is most likely a string. So naming it sFirstName only adds clutter to the code.
+* It's harder to remember the names.
+* Multiple variables with '''different''' semantics can be used in a block of code with similar names: ''dwTmp, iTmp, fTmp, dTmp''.
+* Placing data type or intent character identifiers as a prefix to the field or variable's Given name subverts the ability, in some programming environments, to jump to a field or variable name, alphabetically, when the user begins typing the name. FileMaker, &lt;ref&gt;{{cite web|url=http://www.filemaker.com|title=Make an app for any task - FileMaker — An Apple Subsidiary|website=Filemaker.com|accessdate=5 August 2018}}&lt;/ref&gt; for example, is one such programming environment. It may be preferable when using one of these programming environments to instead suffix Given names with such identifying characters.
+
+==Notable opinions==
+* [[Robert Cecil Martin]] (against Hungarian notation and all other forms of encoding): &lt;blockquote&gt;... nowadays HN and other forms of type encoding are simply impediments.  They make it harder to change the name or type of a variable, function, member or class.  They make it harder to read the code. And they create the possibility that the encoding system will mislead the reader.&lt;ref&gt;{{cite book
+ |       last = Martin |first=Robert Cecil 
+ |       date = 2008
+ |      title = Clean Code: A Handbook of Agile Software Craftsmanship
+ |   location = Redmond, WA
+ |  publisher = Prentice Hall PTR
+ |       isbn = 0-13-235088-2
+}}&lt;/ref&gt;&lt;/blockquote&gt;
+* [[Linus Torvalds]] (against Systems Hungarian): &lt;blockquote&gt;Encoding the type of a function into the name (so-called Hungarian notation) is brain damaged—the compiler knows the types anyway and can check those, and it only confuses the programmer.&lt;ref&gt;{{cite web
+ |      title = Linux kernel coding style
+ |       work = [[Linux kernel]] documentation
+ |        url = https://www.kernel.org/doc/Documentation/process/coding-style.rst
+ | accessdate = 9 March 2018
+}}&lt;/ref&gt;&lt;/blockquote&gt;
+* [[Steve McConnell]] (for Apps Hungarian): &lt;blockquote&gt;Although the Hungarian naming convention is no longer in widespread use, the basic idea of standardizing on terse, precise abbreviations continues to have value. Standardized prefixes allow you to check types accurately when you're using abstract data types that your compiler can't necessarily check.&lt;ref&gt;{{cite book
+ |       last = McConnell |first=Steve |authorlink=Steve McConnell
+ |       date = 2004
+ |      title = [[Code Complete]]
+ |    edition = 2nd
+ |   location = Redmond, WA
+ |  publisher = [[Microsoft Press]]
+ |       isbn = 0-7356-1967-0
+
+}}&lt;/ref&gt;&lt;/blockquote&gt;
+* [[Bjarne Stroustrup]] (against Systems Hungarian for C++):&lt;blockquote&gt;No I don't recommend 'Hungarian'. I regard 'Hungarian' (embedding an abbreviated version of a type in a variable name) as a technique that can be useful in untyped languages, but is completely unsuitable for a language that supports generic programming and object-oriented programming — both of which emphasize selection of operations based on the type and arguments (known to the language or to the run-time support). In this case, 'building the type of an object into names' simply complicates and minimizes abstraction.&lt;ref&gt;{{cite web
+ |       last = Stroustrup |first=Bjarne |authorlink = Bjarne Stroustrup
+ |       date = 2007
+ |      title = Bjarne Stroustrup's C++ Style and Technique FAQ
+ |        url = http://www.stroustrup.com/bs_faq2.html#Hungarian
+ | accessdate = 15 February 2015
+}}&lt;/ref&gt;&lt;/blockquote&gt;
+* [[Joel Spolsky]] (for Apps Hungarian): &lt;blockquote&gt;If you read Simonyi's paper closely, what he was getting at was the same kind of naming convention as I used in my example above where we decided that &lt;code&gt;'''us'''&lt;/code&gt; meant unsafe string and &lt;code&gt;'''s'''&lt;/code&gt; meant safe string. They're both of type &lt;code&gt;'''string'''&lt;/code&gt;. The compiler won't help you if you assign one to the other and Intellisense [an [[Intelligent code completion]] system] won't tell you [[:wikt:bupkis#English|bupkis]]. But they are semantically different. They need to be interpreted differently and treated differently and some kind of conversion function will need to be called if you assign one to the other or you will have a runtime bug. If you're lucky. There's still a tremendous amount of value to Apps Hungarian, in that it increases collocation in code, which makes the code easier to read, write, debug and maintain, and, most importantly, it makes wrong code look wrong.... (Systems Hungarian) was a subtle but complete misunderstanding of Simonyi’s intention and practice.&lt;ref&gt;{{cite web
+ |       last = Spolsky |first=Joel |authorlink = Joel Spolsky
+ |       date = 2005-05-11
+ |      title = Making Wrong Code Look Wrong
+ |       work = Joel on Software
+ |        url = http://www.joelonsoftware.com/articles/Wrong.html
+ | accessdate = 2005-12-13
+ }}&lt;/ref&gt;&lt;/blockquote&gt;
+* [[Microsoft]]'s Design Guidelines&lt;ref name=MSDotNetDeveloperGuide&gt;{{cite web
+ |      title = Design Guidelines for Developing Class Libraries: General Naming Conventions
+ |        url = http://msdn2.microsoft.com/en-us/library/ms229045.aspx
+ | accessdate = 2008-01-03
+}}&lt;/ref&gt; discourage developers from using Systems Hungarian notation when they choose names for the elements in .NET class libraries, although it was common on prior Microsoft development platforms like Visual Basic 6 and earlier.  These Design Guidelines are silent on the naming conventions for local variables inside functions.
+
+==See also==
+* [[Leszynski naming convention]], Hungarian notation for database development
+* [[Polish notation]]
+* [[PascalCase]]
+
+==References==
+{{reflist}}
+
+==External links==
+*[https://web.archive.org/web/20180519042122/http://www.parc.com/publication/1940/meta-programming.html Meta-Programming: A Software Production Method] Charles Simonyi, December 1976 (PhD Thesis)
+*[https://blogs.msdn.microsoft.com/larryosterman/2004/06/22/hugarian-notation-its-my-turn-now/ Hugarian{{sic|hide=y}} notation - it's my turn now :)]  – Larry Osterman's WebLog
+*[http://msdn.microsoft.com/en-us/library/aa260976%28VS.60%29.aspx Hungarian Notation] (MSDN)
+*[http://www.byteshift.de/msg/hungarian-notation-doug-klunder HTML version of Doug Klunder's paper]
+*[http://www.xoc.net/standards/rvbanc.asp RVBA Naming Conventions]
+*[http://msdn.microsoft.com/en-us/library/aa378932%28VS.85%29.aspx Coding Style Conventions] (MSDN)
+
+{{DEFAULTSORT:Hungarian Notation}}
+[[Category:Source code]]
+[[Category:Naming conventions]]</text>
+      <sha1>1pzzn022gw8glz9ow79tbqb4qn9jzds</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Gelimer</title>
+    <ns>0</ns>
+    <id>44230</id>
+    <revision>
+      <id>955447922</id>
+      <parentid>931247592</parentid>
+      <timestamp>2020-05-07T21:29:34Z</timestamp>
+      <contributor>
+        <username>FeanorStar7</username>
+        <id>160806</id>
+      </contributor>
+      <comment>/* Sources */ +sort tag</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6572" xml:space="preserve">[[File:Münze 50 Denari - Gelimer - König der Vandalen (cropped).jpg|thumb|50 [[denarii]] coin with a profile of Gelimer]]
+[[File:Luxe &amp; Antiquité10 plat Geilamir.jpg|thumb|The missorium (silver dish) of Gelimer ([[Bibliothèque nationale de France]])&lt;ref&gt;[http://medaillesetantiques.bnf.fr/ws/catalogue/app/collection/record/ark:/12148/c33gbfs80 &quot;Missorium de Geilamir, roi des Vandales&quot;]. Médailles et Antiques de la [[Bibliothèque nationale de France]]. ''Medaillesetantiques.bnf.fr''. Retrieved 2019-04-06.&lt;/ref&gt;]]
+
+'''Gelimer''' (original form possibly '''Geilamir''',&lt;ref&gt;The name is attested in this form on coins and in an inscription; see J.B. Bury, ''[http://penelope.uchicago.edu/Thayer/E/Roman/Texts/secondary/BURLAT/17*.html History of the Later Roman Empire]'' (London 1923), p. 126, n. 9.&lt;/ref&gt; 480–553), King of the [[Vandals]] and [[Alans]] (530–534), was the last [[Germanic peoples|Germanic]] ruler of the [[North Africa during Antiquity|North African]] [[Vandal Kingdom|Kingdom of the Vandals]]. He became ruler on 15 June 530 after deposing his [[Cousin|first cousin twice removed]], [[Hilderic]], who had angered the Vandal nobility by converting to [[Chalcedonian]] Christianity, as most of the Vandals at this time were fiercely devoted to [[Arianism|Arian Christianity]].&lt;ref&gt;The introduction of Arian Christianity to the Vandal nobility is discussed in H.E. Gieseche 1939. ''Die Ostgermanen und Arianismus'', esp. pp 167-99; the notorious Vandal persecutions of Catholic Christians in North Africa, recounted by the Catholic bishop [[Victor of Vita]], is translated by John R. C. Martyn, , 2008. ''Arians and Vandals of the 4th–6th centuries: annotated translations of the historical works by bishops [[Victor of Vita]] (''Historia persecutionis Africanae provinciae'') and [[Victor of Tonnena]]...'' (Cambridge), reviewed in ''The Journal of Ecclesiastical History'' '''61''', p 579f.&lt;/ref&gt;
+
+The [[Eastern Roman Emperor]] [[Justinian I]], who had supported Hilderic, soon declared [[Vandalic War|war on the Vandals]], ostensibly to restore Hilderic. In June 533, Justinian sent an expeditionary force commanded by [[Belisarius]] which finally reached Africa in the beginning of September. Meanwhile, in [[Sardinia]], which formed part of the Vandal domain, the governor [[Godas]], a [[Goths|Goth]], revolted against Gelimer and began to treat with Justinian as an independent sovereign. Gelimer, ignorant or contemptuous of Justinian's plans, sent a large army consisting of most of the available army in Africa under his brother [[Tzazo]] to crush the rebellion, meaning that the landing of Belisarius was entirely unopposed.&lt;ref&gt;Hodgkin, III, 669.&lt;/ref&gt; 
+
+On landing, Belisarius immediately marched for Carthage, finally meeting resistance on 13 September when he was confronted by Gelimer at [[battle of Ad Decimum|Ad Decimum]], 10 miles from [[Carthage]]. Although outnumbered 11,000 to 17,000 the battle was evenly fought by the Vandals until Gelimer's brother Ammatas was killed, at which time Gelimer lost heart and fled. On 14 September 533, Belisarius entered Carthage and ate the feast prepared for Gelimer in his palace. However, Belisarius was too late to save the life of Hilderic, who had been slain at Gelimer's orders as soon as the news of the landing of the imperial army came.&lt;ref&gt;Procopius, ''De Bellus'' III.17.11. Translated by H. B. Dewing, (Cambridge: Loeb Classical Library, 1979), vol. 2 p. 153&lt;/ref&gt;
+
+However, Gelimer had escaped the Roman pursuit, and on the return of Tzazo from Sardinia the combined Vandal army met Belisarius in battle, this time at a place called [[Battle of Tricamarum|Tricamarum]] about 20 miles from Carthage (December 533). This battle was far more stubbornly contested than that of Ad Decimum, but it ended in the utter rout of the Vandals and, once more, the flight of Gelimer. He retreated to ''Mons Pappua''&lt;ref&gt;For possible location of ''Mons Pappua'' see J. Desanges, 1959.&quot;La dernière retraite de Gélimer&quot;, ''Cahiers de Tunisie'' '''7''', pp 429-435.&lt;/ref&gt; (maybe in the [[Mount Edough]], near [[Annaba]])&lt;ref&gt;John Reynell Morell, ''Algeria: The Topography and History, Political, Social, and Natural, of French Africa'', London: Nathaniel Cooke, 1854, [https://books.google.fr/books?id=REVCAAAAIAAJ&amp;pg=PA197&amp;dq=gelimer+mount+edough+pappua+mons&amp;hl=fr&amp;sa=X&amp;ved=0ahUKEwis_PqjlLfhAhVJ8OAKHZc0A4MQ6AEIQTAE#v=onepage&amp;q=gelimer%20mount%20edough%20pappua%20mons&amp;f=false p. 197].&lt;/ref&gt; on the border of [[Numidia]], where he soon found himself besieged by Byzantine forces under [[Pharas the Herulian|Pharas]].&lt;ref&gt;{{Cite book|url=https://archive.org/details/belisariuslastro00ianh|title=Belisarius : the last Roman general|last=Hughes, Ian (Historian)|date=2009|publisher=Westholme|isbn=9781594160851|location=Yardley, Pa.|oclc=294885267|url-access=registration}}&lt;/ref&gt; According to [[Procopius]], when summoned to surrender Gelimer instead asked Pharas to send him a loaf of bread, a sponge, and a lyre, to make the winter months on Pappua more bearable.&lt;ref&gt;Procopius, ''De Bellus'' IV.6.20; translated by Dewing, vol. 2 pp. 259f&lt;/ref&gt;  
+
+Finally, in March 534, with his followers and their children starving and realizing he had no chance of regaining his kingdom, Gelimer surrendered to Belisarius and accepted the Romans' offer of vast estates in [[Galatia]] where he lived to be an old man. According to Byzantine chronicles, on his abdication he achieved some degree of anecdotal fame by crying out the verse from [[Ecclesiastes]], 'Vanity of vanities, all is vanity' during Justinian's triumph in Constantinople.&lt;ref&gt;Edward Gibbon, [http://www.sacred-texts.com/cla/gibbon/04/daf04010.htm ''Decline and Fall of the Roman Empire'', Vol. 4: Chapter 41: Conquests Of Justinian, Character Of Balisarius. Part II&lt;!-- Bot generated title --&gt;]&lt;/ref&gt;
+
+==Notes==
+{{reflist}}
+
+==Sources==
+*[[Thomas Hodgkin (historian)|Hodgkin, Thomas]]. ''Italy and her Invaders''. Clarendon Press: 1895.
+
+{{s-start}}
+{{s-reg}}
+{{s-bef | before = [[Hilderic]]}}
+{{s-ttl| title = [[Vandal|King of the Vandals]]|years=15 June 530 &amp;ndash; March 534}}
+{{s-non| reason = [[Vandalic War|Conquest]] by the Byzantine Empire}}
+{{s-end}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Gelimer}}
+[[Category:480 births]]
+[[Category:553 deaths]]
+[[Category:Kings of the Vandals]]
+[[Category:Vandal warriors]]
+[[Category:6th-century monarchs in Africa]]
+[[Category:5th-century Arian Christians]]
+[[Category:6th-century Arian Christians]]
+[[Category:Prisoners of war held by the Byzantine Empire]]
+[[Category:Vandalic War]]</text>
+      <sha1>guq6b4hynnp2nuslweyuj6uxhk38iaq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Andrzej Żuławski</title>
+    <ns>0</ns>
+    <id>44232</id>
+    <revision>
+      <id>978026089</id>
+      <parentid>976286703</parentid>
+      <timestamp>2020-09-12T12:48:17Z</timestamp>
+      <contributor>
+        <username>Rathfelder</username>
+        <id>398607</id>
+      </contributor>
+      <comment>-[[Category:People from Warsaw]]; -[[Category:French people of Polish descent]]; ±[[Category:People from Lviv]]→[[Category:Film people from Lviv]] using [[WP:HC|HotCat]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="9083" xml:space="preserve">{{short description|Polish film director}}
+{{Use dmy dates|date=September 2015}}
+{{Infobox person
+| name               = Andrzej Żuławski
+| image              = Andrzej Żuławski 03.jpg
+| caption            = Żuławski, {{circa|1985–1990}}
+| birth_name         = 
+| birth_date         = {{birth date|1940|11|22|df=y}}
+| birth_place        = [[Lviv]], [[Ukrainian Soviet Socialist Republic|USSR]]
+| death_date         = {{death date and age|2016|2|17|1940|11|22|df=y}}
+| death_place        = [[Warsaw]], Poland
+| occupation         = Film director&lt;br&gt;Novelist
+| years_active       = 1971–2016
+| spouse             = [[Małgorzata Braunek]] (divorced)
+| partner            = [[Sophie Marceau]] (1985–2001)
+| children           = 3
+| relatives          = [[Jerzy Żuławski]] (granduncle)
+| awards             = 
+| website            = 
+}}
+'''Andrzej Żuławski''' ({{IPA-pl|ˈandʐɛj ʐuˈwafskʲi|lang}}; 22 November 1940 – 17 February 2016) was a [[Poles|Polish]] [[film director]] and writer. He was born in [[Lviv]], [[Ukrainian SSR]] (now [[Ukraine]]).&lt;ref name=&quot;cult&quot;&gt;[http://www.culture.pl/web/english/resources-film-full-page/-/eo_event_asset_publisher/eAN5/content/andrzej-zulawski Culture.pl]&lt;/ref&gt; Żuławski often went against mainstream commercialism in his films, and enjoyed success mostly with European art-house audiences.
+
+In the late 1950s, he studied cinema in France. His second feature, ''[[The Devil (1972 film)|The Devil]]'' (1972), was banned in Poland, and Żuławski went to France. After the success of ''[[That Most Important Thing: Love]]'' in 1975, he returned to Poland where he spent two years making ''[[On the Silver Globe (film)|On the Silver Globe]]'' (1988). The work on this film was interrupted by the Polish authorities. After that, Żuławski moved to France where he became known for controversial and violent art-house films. Żuławski is also known for his work with actresses including [[Romy Schneider]], [[Isabelle Adjani]] and [[Sophie Marceau]].
+
+His films have received awards at various international film festivals. Żuławski had also written several novels, for example: ''Il était Un Verger'', ''Lity Bór'' (a.k.a. ''La Forêt Forteresse''), ''W Oczach Tygrysa'', and ''Ogród Miłości''.
+
+== Biography ==
+Andrzej Żuławski was born in [[Lviv]], [[UkrSSR]] (formerly known as Lwów). He was an assistant of the filmmaker [[Andrzej Wajda]].&lt;ref name = &quot;mira&quot;&gt;{{cite book| author = Mira Liehm|author2=Antonín J. Liehm| title = The Most Important Art Soviet and Eastern European Film After 1945| url = https://books.google.com/?id=eGi6ykWT6OkC&amp;pg=PA378| year = 1980| publisher = University of California Press| isbn = 978-0-520-04128-8| page = 378 }}&lt;/ref&gt;
+
+When his second film ''[[The Devil (1972 film)|The Devil]]'' was banned in Poland,&lt;ref name = &quot;atk&quot;&gt;{{cite book| last = Atkinson| first = Michael| title = Exile Cinema Filmmakers at Work beyond Hollywood| url = https://books.google.com/?id=WfJSv3fsLqcC&amp;pg=PA79| year = 2008| publisher = SUNY Press| isbn = 978-0-7914-7861-5| page = 79 }}&lt;/ref&gt; he decided to move to France, where he made ''[[That Most Important Thing: Love]]'' (1975) with [[Romy Schneider]].&lt;ref name = &quot;cart&quot;&gt;{{cite book| author = María Luisa Amador|author2=Jorge Ayala Blanco| title = Cartelera cinematográfica, 1980–1989| url = https://books.google.com/?id=XLxBcHacjkAC&amp;pg=PA425| year = 2006| publisher = UNAM| isbn = 978-970-32-3605-3| page = 425 }}&lt;/ref&gt;
+
+After returning to Poland he worked for two years on a film which the authorities did not allow him to finish (''On the Silver Globe''), based on a book by his great-uncle [[Jerzy Żuławski]].&lt;ref name=cult /&gt; Since then he lived and worked mostly in France, making art films.
+
+Being a maverick who always defied mainstream commercialism, Żuławski enjoyed success mostly with the European art-house audiences. His wild, imaginative, and controversial pictures have received awards at various international film festivals. He also wrote the novels ''Il était Un Verger'', ''Lity Bór'' (a.k.a. ''La Forêt Forteresse''), W Oczach Tygrysa, and Ogród Miłości.&lt;ref name=cult /&gt;
+
+In 2006 he was the Head of the Jury at the [[28th Moscow International Film Festival]].&lt;ref name=&quot;Moscow2006&quot;&gt;{{cite web|url=http://www.moscowfilmfestival.ru/miff34/eng/archives/?year=2006 |title=28th Moscow International Film Festival (2006) |accessdate=2013-04-14 |work=MIFF |url-status=dead |archiveurl=https://web.archive.org/web/20130421051006/http://www.moscowfilmfestival.ru/miff34/eng/archives/?year=2006 |archivedate=21 April 2013 |df=dmy }}&lt;/ref&gt;
+
+Żuławski worked many times with composer [[Andrzej Korzyński]], beginning in ''[[The Third Part of the Night]]'' (1971). Their last collaboration was for ''[[Cosmos (2015 film)|Cosmos]]'' (2015), which was also Żuławski's last film.

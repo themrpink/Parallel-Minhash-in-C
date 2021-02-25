@@ -1,0 +1,198 @@
+==See also==
+* [[Customer-premises equipment]]
+* [[Data terminal equipment]], an end instrument that converts user information into signals for transmission or reconverts the received signals into user information
+
+==References==
+{{FS1037C}}
+
+{{Telecomm-stub}}
+[[Category:Telecommunications equipment]]</text>
+      <sha1>6j5qsdmdy7l5cqkkufdafw4i2xi50x9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Ternary signal</title>
+    <ns>0</ns>
+    <id>41787</id>
+    <revision>
+      <id>914066398</id>
+      <parentid>912774896</parentid>
+      <timestamp>2019-09-04T23:33:06Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <minor />
+      <comment>Alter: template type. Add: pages, issue, volume, journal. Removed URL that duplicated unique identifier. Formatted [[WP:ENDASH|dashes]]. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]].| Activated by [[User:Ost316]] | [[Category:CS1 errors: missing periodical]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2187" xml:space="preserve">In [[telecommunication]], a '''ternary signal''' is a [[Signalling (telecommunication)|signal]] that can assume, at any given instant, one of three states or [[significant condition]]s, such as [[Power (physics)|power]] level, [[phase (waves)|phase]] position, [[pulse duration]], or [[frequency]].
+
+Examples of ternary signals are (a) a pulse that can have a positive, zero, or negative voltage value at any given instant ([[pulse-amplitude modulation|PAM]]-3), (b) a sine wave that can assume phases of 0°, 120°, or 240° relative to a [[clock]] pulse (3-[[phase-shift keying|PSK]]), and (c) a [[carrier signal]] that can assume any one of three different frequencies depending on three different [[modulation]] signal significant conditions (3-[[frequency modulation|FM]]).
+
+{{Modulation techniques}}
+
+Some examples of PAM-3 [[line code]]s that use ternary signals are:
+* [[hybrid ternary code]]
+* [[bipolar encoding]]
+* [[MLT-3 encoding]] used in [[Fast Ethernet#100BASE-TX|100BASE-TX Ethernet]]
+* [[B3ZS]]
+* [[4B3T]] used in some ISDN [[basic rate interface]]
+* [[8B6T]] used in [[Fast Ethernet#100BASE-T4|100BASE-T4 Ethernet]]
+* [[return-to-zero]]
+* [[DQPSK#SOQPSK|SOQPSK-TG]] uses ternary continuous phase modulation&lt;ref&gt;{{cite journal |doi=10.1109/TCOMM.2008.041108 |title=PAM representation of ternary CPM |journal=IEEE Transactions on Communications |volume=56 |issue=12 |pages=2020–2024 |author1=Erik Perrins |author2=Michael Rice |publisher=[[IEEE]] |date=12 December 2008}}&lt;/ref&gt;
+
+3-PSK can be seen as falling between &quot;binary phase-shift keying&quot; ([[BPSK]]), which uses two phases, and &quot;quadrature phase-shift keying&quot; ([[QPSK]]), which uses four phases.
+
+==References==
+{{reflist}}
+*{{FS1037C}}
+
+==See also==
+* [[Balanced ternary]]
+* [[Digital signal (electronics)]]
+* [[Fast Ethernet#100BASE-T2]] uses PAM-5, which, like ternary, is one of the few modulation schemes that does not use a power-of-two number of symbols.
+* [[Ternary computer]]
+* [[Three-phase electric power]], like 3-PSK, uses 3 phases at a single frequency and amplitude.
+* [[Three-valued logic]]
+
+{{DEFAULTSORT:Ternary Signal}}
+[[Category:Line codes]]
+[[Category:Ternary computers]]
+
+
+{{Telecomm-stub}}</text>
+      <sha1>lskcwfc04j1a3yq0m8bu3kmf9vh2lhc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Thermal noise</title>
+    <ns>0</ns>
+    <id>41788</id>
+    <redirect title="Johnson–Nyquist noise" />
+    <revision>
+      <id>62811405</id>
+      <parentid>15937273</parentid>
+      <timestamp>2006-07-09T01:46:06Z</timestamp>
+      <contributor>
+        <username>Marudubshinki</username>
+        <id>190816</id>
+      </contributor>
+      <minor />
+      <comment>Robot: Fixing double redirect</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="37" xml:space="preserve">#REDIRECT [[Johnson–Nyquist noise]]</text>
+      <sha1>t1wr1c6kdoe1nfy5gho3x9xw2690xjg</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Thermodynamic temperature</title>
+    <ns>0</ns>
+    <id>41789</id>
+    <revision>
+      <id>986576631</id>
+      <parentid>982680586</parentid>
+      <timestamp>2020-11-01T18:37:50Z</timestamp>
+      <contributor>
+        <username>Maniok</username>
+        <id>40483362</id>
+      </contributor>
+      <minor />
+      <comment>/* The nature of kinetic energy, translational motion, and temperature */ updated value of Boltzmann constant to 2019 SI definition, cf. https://www.bipm.org/en/measurement-units/</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="91545" xml:space="preserve">{{short description|Absolute measure of temperature}}
+{{Thermodynamics|cTopic=[[List of thermodynamic properties|System properties]]}}
+{{2019 SI redefinition|date=January 2020}}
+'''Thermodynamic temperature''' is the absolute measure of [[temperature]] and is one of the principal parameters of [[thermodynamics]].
+
+Thermodynamic temperature is defined by the [[third law of thermodynamics]] in which the theoretically lowest temperature is the null or zero point. At this point, [[absolute zero]], the particle constituents of [[matter]] have minimal motion and can become no colder.&lt;ref&gt;Rankine, W. J. M., &quot;A manual of the steam engine and other prime movers&quot;, Richard Griffin and Co., London (1859), p. 306–307.&lt;/ref&gt;&lt;ref&gt;[[William Thomson, 1st Baron Kelvin]], &quot;Heat&quot;, Adam and Charles Black, Edinburgh (1880), p. 39.&lt;/ref&gt; In the [[quantum mechanics|quantum-mechanical]] description, matter at absolute zero is in its [[ground state]], which is its state of lowest [[energy]]. Thermodynamic temperature is often also called '''absolute temperature''', for two reasons: the first, proposed by [[William Thomson, 1st Baron Kelvin|Kelvin]], that it does not depend on the properties of a particular material; the second, that it refers to an absolute zero according to the properties of the ideal gas.
+
+The [[International System of Units]] specifies a particular scale for thermodynamic temperature. It uses the [[kelvin]] scale for measurement and selects the [[triple point]] of water at 273.16&amp;nbsp;K as the fundamental fixing point. Other scales have been in use historically. The [[Rankine scale]], using the degree [[Fahrenheit]] as its unit interval, is still in use as part of the [[English Engineering Units]] in the United States in some engineering fields. [[ITS-90]] gives a practical means of estimating the thermodynamic temperature to a very high degree of accuracy.
+
+Roughly, the temperature of a body at rest is a measure of the mean of the energy of the translational, vibrational and rotational motions of matter's particle constituents, such as [[molecule]]s, [[atom]]s, and [[subatomic particle]]s. The full variety of these kinetic motions, along with potential energies of particles, and also occasionally certain other types of particle energy in equilibrium with these, make up the total [[internal energy]] of a substance. Internal energy is loosely called the [[heat]] energy or [[thermal energy]] in conditions when no [[work (thermodynamics)|work]] is done upon the substance by its surroundings, or by the substance upon the surroundings. Internal energy may be stored in a number of ways within a substance, each way constituting a &quot;degree of freedom&quot;. At equilibrium, each degree of freedom will have on average the same energy: &lt;math&gt;k_\text{B} T/2&lt;/math&gt; where &lt;math&gt;k_\text{B}&lt;/math&gt; is the [[Boltzmann constant]], unless that degree of freedom is in the quantum regime. The internal degrees of freedom (rotation, vibration, etc.) may be in the quantum regime at room temperature, but the translational degrees of freedom will be in the classical regime except at extremely low temperatures (fractions of kelvins) and it may be said that, for most situations, the thermodynamic temperature is specified by the average translational kinetic energy of the particles.
+
+== Overview ==
+&lt;!-- NOTE TO EDITORS: This section is internally linked from elsewhere within the article. Do not rename without correcting referencing links. --&gt;
+Temperature is a measure of the random submicroscopic motions and vibrations of the particle constituents of [[matter]]. These motions comprise the [[internal energy]] of a substance. More specifically, the thermodynamic temperature of any bulk quantity of matter is the measure of the average kinetic energy per classical (i.e., non-quantum) degree of freedom of its constituent particles. &quot;Translational motions&quot; are almost always in the classical regime. Translational motions are ordinary, whole-body movements in [[three-dimensional space]] in which particles move about and exchange energy in collisions. ''[[#The relationship of temperature.2C motions.2C conduction.2C and thermal energy|Figure&amp;nbsp;1]]'' below shows translational motion in gases; ''[[#The diffusion of thermal energy: Entropy, phonons, and mobile conduction electrons|Figure&amp;nbsp;4]]'' below shows translational motion in solids. Thermodynamic temperature's [[null (mathematics)|null]] point, absolute zero, is the temperature at which the particle constituents of matter are as close as possible to complete rest; that is, they have [[wikt:minimal#Adjective|minimal]] motion, retaining only [[quantum mechanics|quantum mechanical]] motion.&lt;ref name=&quot;T0&quot;&gt;[[Image:Zero-point energy v.s. motion.jpg|thumb|300px|Absolute zero's relationship to zero-point energy]] While scientists are achieving temperatures ever closer to [[absolute zero]], they can not fully achieve a state of ''zero'' temperature. However, even if scientists could remove ''all'' kinetic thermal energy from matter, [[quantum mechanics|quantum mechanical]] ''[[zero-point energy]]'' (ZPE) causes particle motion that can never be eliminated. Encyclopædia Britannica Online [http://britannica.com/eb/article-9078341 defines zero-point] energy as the &quot;vibrational energy that molecules retain even at the absolute zero of temperature&quot;. ZPE is the result of all-pervasive energy fields in the vacuum between the fundamental particles of nature; it is responsible for the [[Casimir effect]] and other phenomena. See ''[http://calphysics.org/zpe.html Zero Point Energy and Zero Point Field]''. See also ''[http://www.phys.ualberta.ca/~therman/lowtemp/projects1.htm Solid Helium] {{Webarchive|url=https://web.archive.org/web/20080212140020/http://www.phys.ualberta.ca/~therman/lowtemp/projects1.htm |date=2008-02-12 }}'' by the University of Alberta's Department of Physics to learn more about ZPE's effect on [[Bose–Einstein condensate]]s of helium.
+
+Although absolute zero (''T''=0) is not a state of zero molecular motion, it ''is&amp;nbsp;''the point of zero temperature and, in accordance with the Boltzmann constant, is also the point of zero particle kinetic energy and zero kinetic velocity. {{Anchor|thought experiment}}To understand how atoms can have zero kinetic velocity and simultaneously be vibrating due to ZPE, consider the following thought experiment: two ''T''=0 helium atoms in zero gravity are carefully positioned and observed to have an average separation of 620&amp;nbsp;[[picometer|pm]] between them (a gap of ten atomic diameters). It's an &quot;average&quot; separation because ZPE causes them to jostle about their fixed positions. Then one atom is given a kinetic kick of precisely 83&amp;nbsp;yoctokelvins (1&amp;nbsp;yK = {{val|1|e=-24|u=K}}). This is done in a way that directs this atom's velocity vector at the other atom. With 83&amp;nbsp;yK of kinetic energy between them, the 620 pm gap through their common [[Barycentric coordinates (astronomy)|barycenter]] would close at a rate of 719&amp;nbsp;pm/s and they would collide after 0.862 second. This is the same speed as shown in the ''[[#Overview|Fig.&amp;nbsp;1]] ''animation above. Before being given the kinetic kick, both ''T''=0 atoms had zero kinetic energy and zero kinetic velocity because they could persist indefinitely in that state and relative orientation even though both were being jostled by ZPE. At ''T''=0, no kinetic energy is available for transfer to other systems. The Boltzmann constant and its related formulas describe the realm of particle kinetics and velocity vectors whereas ZPE is an energy field that jostles particles in ways described by the mathematics of quantum mechanics. In atomic and molecular collisions in gases, ZPE introduces a degree of ''[[Chaos theory|chaos]]'', i.e., unpredictability, to rebound kinetics; it is as likely that there will be ''less'' ZPE-induced particle motion after a given collision as ''more.'' This random nature of ZPE is why it has no net effect upon either the pressure or volume of any ''bulk quantity'' (a statistically significant quantity of particles) of ''T''&gt;0&amp;nbsp;K gases. However, in ''T''=0 [[condensed matter physics|condensed matter]]; e.g., solids and liquids, ZPE causes inter-atomic jostling where atoms would otherwise be perfectly stationary. Inasmuch as the real-world effects that ZPE has on substances can vary as one alters a thermodynamic system (for example, due to ZPE, helium won't freeze unless under a pressure of at least 25&amp;nbsp;[[bar (unit)|bar]] or 2.5 [[megapascal|MPa]]), ZPE is very much a form of thermal energy and may properly be included when tallying a substance's internal energy.
+
+Note too that absolute zero serves as the baseline atop which [[thermodynamics]] and its [[thermodynamic equations|equations]] are founded because they deal with the exchange of thermal energy between ''&quot;systems&quot;'' (a plurality of particles and fields modeled as an average). Accordingly, one may examine ZPE-induced particle motion ''within'' a system that is at absolute zero but there can never be a net outflow of thermal energy from such a system. Also, the peak emittance wavelength of black-body radiation shifts to infinity at absolute zero; indeed, a peak no longer exists and black-body photons can no longer escape. Because of ZPE, however, ''virtual'' photons are still emitted at ''T''=0. Such photons are called &quot;virtual&quot; because they can't be intercepted and observed. Furthermore, this ''zero-point radiation'' has a unique ''zero-point spectrum.'' However, even though a ''T''=0 system emits zero-point radiation, no net heat flow ''Q'' out of such a system can occur because if the surrounding environment is at a temperature greater than ''T''=0, heat will flow inward, and if the surrounding environment is at ''T''=0, there will be an equal flux of ZP radiation both inward and outward. A similar ''Q ''equilibrium exists at ''T''=0 with the ZPE-induced [[spontaneous emission]] of photons (which is more properly called a ''stimulated'' emission in this context). The graph at upper right illustrates the relationship of absolute zero to zero-point energy. The graph also helps in the understanding of how zero-point energy got its name: it is the vibrational energy matter retains at the ''zero-kelvin point''. [http://pra.aps.org/abstract/PRA/v42/i4/p1847_1 ''Derivation of the classical electromagnetic zero-point radiation spectrum via a classical [[thermodynamic operation]] involving van der Waals forces''], Daniel C. Cole, Physical Review A, '''42''' (1990) 1847.&lt;/ref&gt; Zero kinetic energy remains in a substance at absolute zero (see ''[[Thermodynamic temperature#Thermal energy at absolute zero|Thermal energy at absolute zero]]'', below).
+
+Throughout the scientific world where measurements are made in [[International System of Units|SI]] units, thermodynamic temperature is measured in [[kelvin]]s (symbol:&amp;nbsp;K). Many engineering fields in the U.S. however, measure thermodynamic temperature using the [[Rankine scale]].
+
+By [https://web.archive.org/web/20070926215600/http://www1.bipm.org/en/si/si_brochure/chapter2/2-1/2-1-1/kelvin.html international agreement], the unit ''kelvin'' and its scale are defined by two points: absolute zero, and the [[triple point]] of [[Vienna Standard Mean Ocean Water]] (water with a specified blend of hydrogen and oxygen isotopes). Absolute zero, the lowest possible temperature, is defined as being precisely 0&amp;nbsp;K ''and'' −273.15&amp;nbsp;[[Celsius|°C]]. The [[triple point]] of water is defined as being precisely 273.16&amp;nbsp;K ''and'' 0.01&amp;nbsp;°C. This definition does three things:
+# It fixes the magnitude of the kelvin unit as being precisely 1 part in 273.16 parts the difference between absolute zero and the triple point of water;
+# It establishes that one kelvin has precisely the same magnitude as a one-degree increment on the [[Celsius]] scale; and
+# It establishes the difference between the two scales' null points as being precisely 273.15 kelvins (0&amp;nbsp;K = −273.15&amp;nbsp;°C and 273.16&amp;nbsp;K = 0.01&amp;nbsp;°C).
+
+Temperatures expressed in kelvins are converted to degrees Rankine by multiplying by 1.8 (''T''/°R&amp;nbsp;=&amp;nbsp;1.8&amp;nbsp;K/°R&amp;nbsp;×&amp;nbsp;''T''/K). Temperatures expressed in degrees Rankine are converted to kelvins by dividing by 1.8 (''T''/K&amp;nbsp;=&amp;nbsp;''T''/°R&amp;nbsp;÷&amp;nbsp;1.8&amp;nbsp;K/°R).
+
+=== Practical realization ===
+{{main|ITS-90}}
+
+Although the kelvin and Celsius scales are defined using absolute zero (0 K) and the triple point of water (273.16&amp;nbsp;K and 0.01&amp;nbsp;°C), it is impractical to use this definition at temperatures that are very different from the triple point of water. [[ITS-90]] is then designed to represent the thermodynamic temperature as closely as possible throughout its range. Many different thermometer designs are required to cover the entire range. These include helium vapor pressure thermometers, helium gas thermometers, [[resistance thermometer|standard platinum resistance thermometers]] (known as SPRTs, PRTs or Platinum RTDs) and [[infrared thermometer|monochromatic radiation thermometers]].
+
+For some types of thermometer the relationship between the property observed (e.g., length of a mercury column) and temperature, is close to linear, so for most purposes a linear scale is sufficient, without point-by-point calibration. For others a calibration curve or equation is required. The mercury thermometer, invented before the thermodynamic temperature was understood, originally ''defined'' the temperature scale; its linearity made readings correlate well with true temperature, i.e. the &quot;mercury&quot; temperature scale was a close fit to the true scale.
+
+== The relationship of temperature, motions, conduction, and thermal energy ==
+
+[[Image:Translational motion.gif|thumb|300px|'''Fig. 1''' The ''translational motion'' of fundamental particles of nature such as atoms and molecules are directly related to temperature. Here, the size of [[helium]] atoms relative to their spacing is shown to scale under 1950 [[atmosphere (unit)|atmospheres]] of pressure. These room-temperature atoms have a certain average speed (slowed down here two trillion-fold). At any given instant however, a particular helium atom may be moving much faster than average while another may be nearly motionless. Five atoms are colored red to facilitate following their motions.]]
+
+=== The nature of kinetic energy, translational motion, and temperature ===
+
+&lt;!-- NOTE TO EDITORS: This section is internally linked from elsewhere within the article. --&gt;
+
+The thermodynamic temperature is a measure of the average energy of the translational, vibrational and rotational motions of [[matter]]'s particle constituents ([[molecule]]s, [[atom]]s, and [[subatomic particle]]s). The full variety of these kinetic motions, along with potential energies of particles, and also occasionally certain other types of particle energy in equilibrium with these, contribute the total [[internal energy]] (loosely, the [[thermal energy]]) of a substance. Thus, internal energy may be stored in a number of ways (degrees of freedom) within a substance. When the degrees of freedom are in the classical regime (&quot;unfrozen&quot;) the temperature is very simply related to the average energy of those degrees of freedom at equilibrium. The three translational degrees of freedom are unfrozen except at the very lowest temperatures, and their kinetic energy is simply related to the thermodynamic temperature over the widest range. The [[heat capacity]], which relates heat input and temperature change, is discussed below.
+
+The relationship of kinetic energy, mass, and velocity is given by the formula ''E''&lt;sub&gt;k&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;{{sfrac|2}}''mv''&lt;sup&gt;2&lt;/sup&gt;.&lt;ref&gt;At non-[[Special relativity|relativistic]] temperatures of less than about 30&amp;nbsp;GK, [[classical mechanics]] are sufficient to calculate the velocity of particles. At 30&amp;nbsp;GK, individual neutrons (the constituent of neutron stars and one of the few materials in the universe with temperatures in this range) have a 1.0042&amp;nbsp;γ (gamma or [[Lorentz factor]]). Thus, the classic Newtonian formula for kinetic energy is in error less than half a percent for temperatures less than 30&amp;nbsp;GK.&lt;/ref&gt; Accordingly, particles with one unit of mass moving at one unit of velocity have precisely the same kinetic energy, and precisely the same temperature, as those with four times the mass but half the velocity.
+
+Except in the quantum regime at extremely low temperatures, the thermodynamic temperature of any ''bulk quantity'' of a substance (a statistically significant quantity of particles) is directly proportional to the mean average kinetic energy of a specific kind of particle motion known as ''translational motion.'' These simple movements in the three ''x''-, ''y''-, and ''z''-axis dimensions of space means the particles move in the three spatial ''[[degrees of freedom (physics and chemistry)|degrees of freedom]].'' The temperature derived from this translational kinetic energy is sometimes referred to as ''kinetic temperature'' and is equal to the thermodynamic temperature over a very wide range of temperatures. Since there are three [[translational motion|translational]] degrees of freedom (e.g., motion along the ''x''-, ''y''-, and ''z''-axes), the translational kinetic energy is related to the kinetic temperature by:
+
+: &lt;math&gt;\bar{E}\,=\,\frac{3}{2}k_\text{B} T_\text{k}&lt;/math&gt;
+
+where:
+
+* &lt;math&gt;\scriptstyle \bar{E}&lt;/math&gt; is the mean kinetic energy in [[joule]]s (J)
+* ''k''&lt;sub&gt;B&lt;/sub&gt; = {{val|1.380649|e=-23|u=J/K}} is the [[Boltzmann constant]]
+* &lt;math&gt;T_\text{k}&lt;/math&gt; is the kinetic temperature in kelvins (K)
+[[Image:Maxwell Dist-Inverse Speed.png|thumb|300px|'''Fig. 2''' The translational motions of helium atoms occur across a range of speeds. Compare the shape of this curve to that of a Planck curve in ''[[#The diffusion of thermal energy: Black-body radiation|Fig.&amp;nbsp;5&amp;nbsp;]]''below.]]
+
+While the Boltzmann constant is useful for finding the mean kinetic energy of a particle, it's important to note that even when a substance is isolated and in [[thermodynamic equilibrium]] (all parts are at a uniform temperature and no heat is going into or out of it), the translational motions of individual atoms and molecules occur across a wide range of speeds (see animation in ''[[#The relationship of temperature.2C motions.2C conduction.2C and thermal energy|Figure&amp;nbsp;1]]'' above). At any one instant, the proportion of particles moving at a given speed within this range is determined by probability as described by the [[Maxwell–Boltzmann distribution]]. The graph shown here in ''Fig.&amp;nbsp;2&amp;nbsp;'' shows the speed distribution of 5500&amp;nbsp;K helium atoms. They have a ''most probable'' speed of 4.780&amp;nbsp;km/s. However, a certain proportion of atoms at any given instant are moving faster while others are moving relatively slowly; some are momentarily at a virtual standstill (off the ''x''-axis to the right). This graph uses ''inverse speed'' for its ''x''-axis so the shape of the curve can easily be compared to the curves in ''[[#The diffusion of thermal energy: Black-body radiation|Figure&amp;nbsp;5]]'' below. In both graphs, zero on the ''x''-axis represents infinite temperature. Additionally, the ''x''- and ''y''-axis on both graphs are scaled proportionally.
+
+=== The high speeds of translational motion ===
+
+Although very specialized laboratory equipment is required to directly detect translational motions, the resultant collisions by atoms or molecules with small particles suspended in a [[fluid]] produces [[Brownian motion]] that can be seen with an ordinary microscope. The translational motions of elementary particles are ''very'' fast&lt;ref&gt;Even room–temperature air has an average molecular translational ''speed'' (not vector-isolated velocity) of 1822&amp;nbsp;km/hour. This is relatively fast for something the size of a molecule considering there are roughly {{val|2.42|e=16}} of them crowded into a single cubic millimeter. Assumptions: Average molecular weight of wet air = 28.838 g/mol and {{nowrap|1=''T'' = 296.15&amp;nbsp;K}}. Assumption's primary variables: An altitude of 194 meters above mean sea level (the world–wide median altitude of human habitation), an indoor temperature of 23&amp;nbsp;°C, a dewpoint of 9&amp;nbsp;°C (40.85% relative humidity), and 760&amp;nbsp;[[mmHg]] (101.325&amp;nbsp;kPa) sea level–corrected barometric pressure.&lt;/ref&gt; and temperatures close to absolute zero are required to directly observe them. For instance, when scientists at the [[National Institute of Standards and Technology|NIST]] achieved a record-setting cold temperature of 700&amp;nbsp;nK (billionths of a kelvin) in 1994, they used [[optical lattice]] laser equipment to [[Adiabatic process|adiabatically]] cool [[caesium]] atoms. They then turned off the entrapment lasers and directly measured atom velocities of 7&amp;nbsp;mm per second in order to calculate their temperature.&lt;ref&gt;[http://www.science.uva.nl/research/aplp/eprints/KasPhiRol95.pdf ''Adiabatic Cooling of Cesium to 700&amp;nbsp;nK in an Optical Lattice''], A. Kastberg ''et al.'', Physical Review Letters '''74''' (1995) 1542 {{doi|10.1103/PhysRevLett.74.1542}}. It's noteworthy that a record cold temperature of 450&amp;nbsp;[[Orders of magnitude (temperature)#SI multiples|pK]] in a Bose–Einstein condensate of sodium atoms (achieved by A. E. Leanhardt ''et al.''. of [[Massachusetts Institute of Technology|MIT]]) equates to an average vector-isolated atom velocity of 0.4&amp;nbsp;mm/s and an average atom speed of 0.7&amp;nbsp;mm/s.&lt;/ref&gt;&amp;nbsp; Formulas for calculating the velocity and speed of translational motion are given in the following footnote.&lt;ref name=&quot;Boltzmann&quot;&gt;The rate of translational motion of atoms and molecules is calculated based on thermodynamic temperature as follows:
+
+:&lt;math&gt;\bar{v} = \sqrt{\frac {k_\text{B} T}{m}}&lt;/math&gt;
+
+where:
+
+*&lt;math&gt;\bar{v}&lt;/math&gt; is the vector-isolated mean velocity of translational particle motion in m/s
+*''k''&lt;sub&gt;B&lt;/sub&gt; is the [[Boltzmann constant]] = {{val|1.3806504|(24)|e=-23|u=J/K}}
+*''T'' is the thermodynamic temperature in kelvins
+*''m'' is the molecular mass of substance in kilograms
+
+In the above formula, molecular mass, ''m'', in kilograms per particle is the quotient of a substance's [[molar mass]] (also known as ''atomic weight'', ''[[atomic mass]]'', ''relative atomic mass'', and ''[[Atomic mass unit|unified atomic mass units]]'') in [[gram|g]]/[[mole (unit)|mol]] or [[atomic mass unit|daltons]] divided by {{val|6.02214076|e=26|u=mol-1}} (which is the [[Avogadro constant]] times one thousand). For [[diatomic]] molecules such as [[hydrogen|H&lt;sub&gt;2&lt;/sub&gt;]], [[nitrogen|N&lt;sub&gt;2&lt;/sub&gt;]], and [[oxygen|O&lt;sub&gt;2&lt;/sub&gt;]], multiply atomic weight by two before plugging it into the above formula.
+
+The mean ''speed'' (not vector-isolated velocity) of an atom or molecule along any arbitrary path is calculated as follows:
+
+:&lt;math&gt;\bar{s} = \bar{v}\sqrt{3}&lt;/math&gt;
+
+where:
+
+*&lt;math&gt;\bar{s}&lt;/math&gt; is the mean speed of translational particle motion in m/s
+
+Note that the mean energy of the translational motions of a substance's constituent particles correlates to their mean ''speed'', not velocity. Thus, substituting &lt;math&gt;\bar{s}&lt;/math&gt; for ''v'' in the classic formula for kinetic energy, ''E&lt;sub&gt;k&lt;/sub&gt;''&amp;nbsp;=&amp;nbsp;{{frac|2}}''m''&amp;nbsp;•&amp;nbsp;''v''&lt;sup&gt;&amp;nbsp;2&lt;/sup&gt; produces precisely the same value as does ''E&lt;sub&gt;mean&lt;/sub&gt;''&amp;nbsp;=&amp;nbsp;3/2''k&lt;sub&gt;B&lt;/sub&gt;T'' (as shown in the section titled ''[[#The nature of kinetic energy, translational motion, and temperature|The nature of kinetic energy, translational motion, and temperature]])''.&lt;sub&gt;&amp;nbsp;&lt;/sub&gt;
+
+Note too that the Boltzmann constant and its related formulas establish that absolute zero is the point of both zero kinetic energy of particle motion and zero kinetic velocity (see also ''[[#Notes|Note 1]]'' above).&lt;/ref&gt;
+
+Because of their internal structure and flexibility, molecules can store kinetic energy in ''internal degrees of freedom'' which contribute to the [[heat capacity]].
+
+There are other forms of internal energy besides the kinetic energy of translational motion. As can be seen in the animation at right, [[molecule]]s are complex objects; they are a population of atoms and thermal agitation can strain their internal [[chemical bond]]s in three different ways: via rotation, bond length, and bond angle movements. These are all types of ''internal degrees of freedom''. This makes molecules distinct from ''[[monatomic]]'' substances (consisting of individual atoms) like the [[noble gas]]es [[helium]] and [[argon]], which have only the three translational degrees of freedom. Kinetic energy is stored in molecules' internal degrees of freedom, which gives them an ''internal temperature''. Even though these motions are called ''internal'', the external portions of molecules still move—rather like the jiggling of a stationary [[water balloon]]. This permits the two-way exchange of kinetic energy between internal motions and translational motions with each molecular collision. Accordingly, as energy is removed from molecules, both their kinetic temperature (the temperature derived from the kinetic energy of translational motion) and their internal temperature simultaneously diminish in equal proportions. This phenomenon is described by the [[equipartition theorem]], which states that for any bulk quantity of a substance in equilibrium, the kinetic energy of particle motion is evenly distributed among all the active (i.e. unfrozen) degrees of freedom available to the particles. Since the internal temperature of molecules is usually equal to their kinetic temperature, the distinction is usually of interest only in the detailed study of non-[[local thermodynamic equilibrium]] (LTE) phenomena such as [[combustion]], the [[sublimation (chemistry)|sublimation]] of solids, and the [[diffusion]] of hot gases in a partial vacuum.
+
+The kinetic energy stored internally in molecules causes substances to contain more internal energy at any given temperature and to absorb additional internal energy for a given temperature increase. This is because any kinetic energy that is, at a given instant, bound in internal motions is not at that same instant contributing to the molecules' translational motions.&lt;ref&gt;The internal degrees of freedom of molecules cause their external surfaces to vibrate and can also produce overall spinning motions (what can be likened to the jiggling and spinning of an otherwise stationary water balloon). If one examines a ''single'' molecule as it impacts a containers' wall, some of the kinetic energy borne in the molecule's internal degrees of freedom can constructively add to its translational motion during the instant of the collision and extra kinetic energy will be transferred into the container's wall. This would induce an extra, localized, impulse-like contribution to the average pressure on the container. However, since the internal motions of molecules are random, they have an equal probability of ''destructively'' interfering with translational motion during a collision with a container's walls or another molecule. Averaged across any bulk quantity of a gas, the internal thermal motions of molecules have zero net effect upon the temperature, pressure, or volume of a gas. Molecules' internal degrees of freedom simply provide additional locations where internal energy is stored. This is precisely why molecular-based gases have greater specific heat capacity than monatomic gases (where additional thermal energy must be added to achieve a given temperature rise).&lt;/ref&gt; This extra thermal energy simply increases the amount of energy a substance absorbs for a given temperature rise. This property is known as a substance's [[specific heat capacity]].
+
+Different molecules absorb different amounts of thermal energy for each incremental increase in temperature; that is, they have different specific heat capacities. High specific heat capacity arises, in part, because certain substances' molecules possess more internal degrees of freedom than others do. For instance, [[nitrogen]], which is a [[diatomic]] molecular gas at standard temperature and pressure, has ''five'' active degrees of freedom at room temperature: the three comprising translational motion plus two rotational degrees of freedom internally. Since the two internal degrees of freedom are essentially unfrozen, in accordance with the equipartition theorem, nitrogen has five-thirds the specific heat capacity per [[mole (unit)|mole]] (a specific number of molecules) as do the monatomic gases.&lt;ref&gt;When measured at constant-volume since different amounts of work must be performed if measured at constant-pressure. Nitrogen's ''C&lt;sub&gt;v&lt;/sub&gt;H'' (100&amp;nbsp;kPa, 20&amp;nbsp;°C) equals 20.8&amp;nbsp;J&amp;nbsp;mol&lt;sup&gt;−1&lt;/sup&gt;&amp;nbsp;K&lt;sup&gt;−1&lt;/sup&gt; vs. the monatomic gases, which equal 12.4717&amp;nbsp;J&amp;nbsp;mol&lt;sup&gt;−1&lt;/sup&gt;&amp;nbsp;K&lt;sup&gt;−1&lt;/sup&gt;. Citations: [http://www.whfreeman.com/ W.H. Freeman's] ''Physical Chemistry'', Part 3: Change ([http://www.whfreeman.com/college/pdfs/pchem8e/PC8eC21.pdf 422&amp;nbsp;kB PDF, here] {{Webarchive|url=https://wayback.archive-it.org/all/20070927061428/http://www.whfreeman.com/college/pdfs/pchem8e/PC8eC21.pdf |date=2007-09-27 }}), Exercise 21.20b, p.&amp;nbsp;787. Also [http://www.gsu.edu/ Georgia State University's] ''[http://hyperphysics.phy-astr.gsu.edu/hbase/kinetic/shegas.html Molar Specific Heats of Gases]''.&lt;/ref&gt; Another example is [[gasoline]] (see [[Heat capacity#Table of specific heat capacities|table]] showing its specific heat capacity). Gasoline can absorb a large amount of thermal energy per mole with only a modest temperature change because each molecule comprises an average of 21 atoms and therefore has many internal degrees of freedom. Even larger, more complex molecules can have dozens of internal degrees of freedom.

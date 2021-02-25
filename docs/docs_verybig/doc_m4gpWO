@@ -1,0 +1,152 @@
+I just clicked on the &quot;my Watchlist&quot; link, and went to the right place (a good thing), but all of the watchlist changes are now listed under 2/25/02, 15:51 (not a good thing, since yesterday they were sorted by day and time!).  Thought you might want to know! [[User:JHK|JHK]]
+
+:This isn't a bug in &quot;my watchlist&quot;. The problem is that the timestamp on every article got changed (which also added a few thousand pages to Recent Changes). --[[user:Zundark|Zundark]], 2002 Feb 26
+
+::This was my fault. With the introduction of the new database schema we introduced a new column that had to be filled with a new value. I forgot that setting this value automatically updates the timestamp of the article.  So this is not a bug in the software but in the procedure for moving to the new database schema. -- [[user:Jan Hidders|Jan Hidders]] 2002 Feb 26
+
+'''Namespaces and watchlists don't mix very well now'''
+
+My watchlist now classifies pages with namespaces together with the normal form of the pages under the date and time list. This isn't very useful.
+
+The watchlist also lists the namespaced page under its own proper time, which is useful. This does lead to the humorous result that [[Talk:Main Page]] is listed twice in a row in my watchlist right now, since among the pages in my watchlist, changes to [[Main Page]] and to [[Talk:Main Page]] occur right next to each other, as things are now.
+
+When I add a page to my watchlist, the software brings me back to the page that I just added -- great. But now when I add a page with a namespace, I come back to the unnamespaced version, which is not very nice -- and quite disconcerting when that unnamespaced version doesn't even exist!
+
+Now, what do you suppose the result to my watchlist is when I add a page with a namespace that doesn't have an unnamespaced version? (such as this very page). It shows up in my talklist under the unnamespaced name, in the list of &quot;non-existing [sic] articles&quot; that I'm watching. This is completely useless.
+
+This all seems to be a result of implementing the feature that putting a page on the watchlist also puts all of that page's namespaced compatriots on the watchlist. This is a great idea, for the reasons listed in [[Wikipedia:Feature requests]], but I don't think that it was implemented very well -- so much so that I prefer it the way that it was before.
+
+:The watchlist is currently somewhat broken thanks to workarounds for slow database issues. It'll be rewritten shortly so that all namespaces, not just (some) Talk pages, will work happily again, and everything will appear in a reasonable order and not duplicated. [[user:Brion VIBBER|Brion VIBBER]], Wednesday, May 15, 2002
+
+-- [[user:Toby Bartels|Toby Bartels]] 2002/05/15
+
+:(Problems mentioned above now fixed in CVS. [[user:Brion VIBBER|Brion VIBBER]], Wednesday, May 15, 2002)
+
+After raising a point at [[Talk:Nobel Prize]] I activated the &quot;Watch This Page&quot; function so that I could be ready to find answers when they came.  Instead I ended up the underlying [[Nobel Prize]] page contrary to my intention. [[user:Eclecticology|Eclecticology]], Thursday, May 16, 2002
+
+:See above; [[Nobel Prize]] and [[Talk:Nobel Prize]] will '''both''' appear on your watchlist. This is a feature: you don't have to separately add them both. [[user:Brion VIBBER|Brion VIBBER]], Thursday, May 16, 2002
+
+Thanks for the comment; it makes sense with the explanation.  Now a related problem.  I was culling my watch list of pages that I no longer wanted to follow.  One of these was [[Talk:Simon and Garfunkel]], which I put in on March 30 without the underlying article.  I tried stop watching this page with no effect.  I tried to watch the main article; this put the article on the watch list with a '''second''' talk page entry.  At this point the stop watching command got rid of the article and the new talk page, but left the old talk page still there.  Resultant question: How does one get old talk page reference off one's watch list? --[[user:Eclecticology|Eclecticology]], Tuesday, May 21, 2002
+
+:No problem, Eclec; just do what I did: By this point, all articles on your watchlist that don't belong to the blank namespace are listed at the bottom of your list as &quot;non-existing [''sic''] articles&quot;. Next to each is the link &quot;Stop watching this article for me&quot; -- this does not work properly due to a cookie bug (I assume), so don't click on it. Instead, follow the link to the article itself. (If the article is ''really'' nonexistent, then you will now have to manually edit the URL to remove the &lt;code&gt;&amp;amp;action=edit&lt;/code&gt; at the end of the URL before the next step.) Now click on &quot;Stop watching this article for me&quot;. This will remove the page from your watchlist and at the same time remove from your watchlist every other page with the same name but in different namespaces. If you don't want to watch any of these, then you're done; else, click on &quot;Watch this article for me&quot;. You are now watching all of the articles with that name, in whatever namespace, but there will be no spurious entries on your watchlist. You say that you want to watch the main article but not the talk page? Tough beans, that is no longer an option (unless there's something that I don't know about, which is always possible). FWIW, I did all this on [[March 21]], just in case this trick has been ruined by an update since then. -- [[user:Toby Bartels|Toby Bartels]], Thursday, May 23, 2002
+::Thanks Toby - it seems to work; now I can do some real housecleaning! [[user:Eclecticology|Eclecticology]]
+
+----
+
+'''Can't watch &lt;nowiki&gt;[[User Talk:]]&lt;/nowiki&gt; pages'''
+
+I've been watching [[User Talk:AxelBoldt]] since [[June 11]] now, waiting for him to reply to something that I wrote there.
+Even though my watchlist reports every petty change to [[User:AxelBoldt]], it doesn't notice any of the 4 changes that occurred to the talk page since then, so that I failed to realise until now that he answered me the very same day.
+&amp;mdash; [[user:Toby Bartels|Toby Bartels]], Monday, June 24, 2002
+
+----
+
+'''Can't get my own  &lt;nowiki&gt;[[User Talk:]]&lt;/nowiki&gt; page on my own watchlist'''
+
+I can't seem to get my user page to stick on the watchlist.  I put it on, it's there for a day or two sometimes, then goes off.  This week I just can't get it on the watchlist at all.  The interaction seems normal, but when the page refreshes, it is still unwatched.  Since this is a major means of communication, I'd like for this to work more reliably.  I can watch any other page.  I've tried this with three different browsers and it's always no go.  Note that I live in the &quot;Macwater&quot;.  [[user:Ortolan88|Ortolan88]], Saturday, July 13, 2002
+:I'll email you when it changes.  ;-)  I was watching your page awhile back and forgot to stop.  [[user:Koyaanis Qatsi|Koyaanis Qatsi]]
+
+Wait, is the problem your &lt;nowiki&gt;&lt;code&gt;[[User:]]&lt;/code&gt;&lt;/nowiki&gt; page or your &lt;nowiki&gt;&lt;code&gt;[[User_talk:]]&lt;/code&gt;&lt;/nowiki&gt; page?
+Is this the same bug as the one just above?
+&amp;mdash; [[user:Toby Bartels|Toby Bartels]], Sunday, July 14, 2002
+:I can't watch my own user page or my own user_talk: page.  I '''can''' watch [[User Talk:AxelBoldt]] however, so it isn't the same bug.
+
+:When I click on &quot;Watch this page&quot; I get a message that the page has been added to my watchlist, then I get a new page whose title is the URL of the page I just asked to watch.  I just ignore this page.  This happens whether the request to watch the page works or not.  [[user:Ortolan88|Ortolan88]], Friday, July 19, 2002
+
+== &quot;Votes for&quot; pages ==
+
+Voting for a page to be deleted logs that vote under [[Wikipedia:]] rather than [[Wikipedia:Votes for deletion]].  [[user:Koyaanis Qatsi|Koyaanis Qatsi]]
+
+----
+
+'''History of vote pages misses many edits'''
+
+See comment in [[Wikipedia:Bug reports/History]].
+&amp;mdash; [[user:Toby Bartels|Toby Bartels]], Tuesday, June 25, 2002</text>
+      <sha1>d72wa6c4ek4siq0yu8hhsa1sjjw1g7s</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>World's fair</title>
+    <ns>0</ns>
+    <id>50268</id>
+    <revision>
+      <id>988099632</id>
+      <parentid>985293403</parentid>
+      <timestamp>2020-11-11T02:05:52Z</timestamp>
+      <contributor>
+        <username>Alanscottwalker</username>
+        <id>7131173</id>
+      </contributor>
+      <comment>/* List of expositions */ ce</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="74684" xml:space="preserve">{{short description|Large international exhibition}}
+{{for|the Hip-Hop group|World's Fair (group)}}
+{{more citations needed|date=November 2019}}
+{{Use dmy dates|date=October 2018}}
+[[File:International Exhibition Brussels par Privat-Livemont.jpg|thumb|upright=0.6|Poster advertising the [[Brussels International (1897)|Brussels International Exposition]] in 1897]]
+[[File:Viking, replica of the Gokstad Viking ship, at the Chicago World Fair 1893.jpg|thumb|Replica of the Gokstad Viking ship at the [[World's Columbian Exposition|1893 Chicago World's Fair]]]]
+[[File:Expo4-Grenoble.jpg|thumb|Palace of the railways and great connections at the [[International Exhibition of Hydropower and Tourism]] in 1925]]
+
+A '''world's fair''' or '''world fair''' is a large international exhibition designed to showcase achievements of nations. These exhibitions vary in character and are held in different parts of the world at a specific site for a period of time, ranging usually from three to six months.
+
+The term &quot;world's fair&quot; is typically used in the United States.&lt;ref&gt;[https://www.britannica.com/topic/worlds-fair]  ''Britannica''. Retrieved 17 July 2019.&lt;/ref&gt; In French the term {{lang|fr|Exposition universelle}} ('universal exhibition'&lt;ref&gt;{{cite web |url=https://dictionary.cambridge.org/dictionary/french-english/exposition |title=exposition |website=Cambridge French-English Dictionary|date=  |author=}}&lt;/ref&gt;) is used; in other Romance languages such as Spanish, Italian, and Romanian, the translation of the French term is used. In the non-Romance languages of Europe, and in Asia and the Middle East, '''World Expo''' or '''Specialised Expo''' are commonly used. The short term '''Expo''' has been applied to both types of Expos in various locations since 1967.&lt;ref&gt;[http://expo67.ncf.ca/phraseology_why_it_was_called_expo_67_p1.html]  ''Phraseology of Expo''. Retrieved 25 July 2019.&lt;/ref&gt;
+
+Since the 1928 Convention Relating to International Exhibitions came into force, the [[Bureau of International Expositions]] (BIE) has served as an international sanctioning body for international exhibitions. Four types of international exhibition are organised under the auspices of the BIE: World Expos, Specialised Expos, Horticultural Expos (regulated by the [[AIPH|International Association of Horticultural Producers]]) and the [[Milan Triennial]]. Depending on their category, international exhibitions may last from three weeks to six months.
+
+[[Milan]], Italy, held the most recent World Expo [[Expo 2015|in 2015]], while [[Astana]], Kazakhstan, held the most recent Specialised Expo [[Expo 2017|in 2017]]. Dubai, [[United Arab Emirates]], was selected to host [[Expo 2020]], but due to the [[COVID-19 pandemic]] it was postponed to 2021. [[Buenos Aires]], Argentina, who had been selected to host the next Specialised Expo [[Expo 2023|in 2023]], announced its withdrawal with no reschedule date.&lt;ref&gt;{{cite web|url=https://www.lanacion.com.ar/politica/la-argentina-se-bajo-no-sera-sede-nid2479377|language=Spanish}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=https://www.elsol.com.ar/argentina-renuncio-a-ser-sede-de-la-expo-mundial-2023|language=Spanish}}&lt;/ref&gt;
+
+==History==
+{{Further|List of world expositions|List of world's fairs}}
+[[File:Exposition Universelle 1867.jpg|thumb|left|''Exposition universelle'' in Paris, 1867]]
+International Exhibitions originated in the French tradition of national exhibitions, a tradition that culminated with the [[French Industrial Exposition of 1844]] held in [[Paris]]. This fair was followed by other national exhibitions in [[continental Europe]] and the United Kingdom.
+
+The best-known 'first World Expo' was held in [[The Crystal Palace]] in [[Hyde Park, London]], United Kingdom, in 1851, under the title &quot;Great Exhibition of the Works of Industry of All Nations&quot;. [[The Great Exhibition]], as it is often called, was an idea of [[Albert, Prince Consort|Prince Albert]], [[Queen Victoria]]'s husband, and is usually considered to be the first international exhibition of manufactured products. It influenced the development of several aspects of society, including art-and-design education, international trade and relations, and tourism.&lt;ref&gt;John R. Davies in Findling and Pelle (2008), &quot;Encyclopedia of World's Fairs and Expositions&quot;, pp. 13–14&lt;/ref&gt; This expo was the precedent for the many international exhibitions, later called ''World Expos'', that have continued to be held to the present time.
+
+The character of world fairs, or expositions, has evolved since the first one in 1851. Three eras can be distinguished: the era of industrialization, the era of cultural exchange, and the era of nation branding.&lt;ref&gt;{{cite journal |date=April 2004|title= Three eras of World Expositions: 1851–present. |journal= Cosmopolite: Stardust World Expo &amp; National Branding Newsletter |issue= 5|page= 1&lt;!--2--&gt;|location= Amsterdam|publisher= Stardust New Ventures|editor1-first= Tjaco |editor1-last= Walvis}}&lt;/ref&gt;
+
+===Industrialization (1851–1938)===
+[[File:Chicago's Great Telescope (3573567148).jpg|thumb|The Yerkes Great refractor mounted at the 1893 World's Fair in Chicago]]
+The first era, the era of &quot;industrialization&quot;, roughly covered the years from 1800 to 1938. In these days, world expositions were largely focused on trade and displayed technological advances and inventions. World expositions were platforms for state-of-the-art science and technology from around the world. The world expositions of [[The Great Exhibition|1851 London]], [[Exhibition of the Industry of All Nations|1853 New York]], [[1862 International Exhibition|1862 London]], [[Centennial Exposition|1876 Philadelphia]], [[Exposition Universelle (1889)|1889 Paris]], [[World's Columbian Exposition|1893 Chicago]], [[Brussels International Exposition (1897)|1897 Brussels]], [[Exposition Universelle (1900)|1900 Paris]], [[Louisiana Purchase Exposition|1904 St. Louis]], [[Panama–Pacific International Exposition|1915 San Francisco]], and [[Century of Progress|1933–34 Chicago]] were notable in this respect.&lt;ref&gt;{{Cite web|title=world’s fair {{!}} History, Instances, &amp; Facts|url=https://www.britannica.com/topic/worlds-fair|website=Encyclopedia Britannica|language=en|access-date=2020-05-29}}&lt;/ref&gt;  Inventions such as the [[telephone]] were first presented during this era. This era set the basic character of the world fair.&lt;ref&gt;{{Cite journal|last=Abbattista|first=Guido|last2=Iannuzzi|first2=Giulia|date=2016|title=World Expositions as Time Machines: Two Views of the Visual Construction of Time between Anthropology and Futurama|url=http://worldhistoryconnected.press.uillinois.edu/13.3/forum_01_abbattista.html|journal=World History Connected|volume=13|issue=3|pages=|via=}}&lt;/ref&gt;
+
+===Cultural exchange (1939–1987)===
+[[File:Ice Follies at 1962 Worlds Fair 02.jpg|thumb|left|[[Ice Follies]] at the [[Century 21 Exposition|Seattle 1962 World's Fair]]]]
+{{Further|Technological utopianism}}
+
+The [[1939 New York World's Fair|1939–40 New York World's Fair]], and those that followed, took a different approach, one less focused on technology and aimed more at cultural themes and social progress. For instance, the theme of the 1939 fair was &quot;Building the World of Tomorrow&quot;; at the [[1964 New York World's Fair|1964–65 New York World's Fair]], it was &quot;Peace Through Understanding&quot;; at the [[Expo 67|1967 International and Universal Exposition]] in Montreal, it was &quot;Man and His World&quot;. These fairs encouraged effective [[intercultural communication]] along with sharing of technological innovation.
+
+The 1967 International and Universal Exposition in Montreal was promoted under the name ''Expo 67''. Event organizers retired the term ''world's fair'' in favor of ''Expo'' (the [[Montreal Expos]], a former [[Major League Baseball]] team, was named for the 1967 fair).&lt;ref&gt;{{cite video
+ | people    = Ted Dykstra (Director)
+ | date      = 2004
+ | title     = Expo'67: Back to the future
+ | medium    = DVD
+ | publisher = CBC Home Video
+ | location  = Canada}}&lt;/ref&gt;
+
+===Nation branding (1988–present)===
+[[File:Expo Sevilla3.jpg|thumb|1992 Expo in Seville, Spain]]
+From [[World Expo 88]] in [[Brisbane]] onwards, countries started to use expositions as a platform to improve their national image through their pavilions. Finland, Japan, Canada, France, and Spain are cases in point. A major study by Tjaco Walvis called &quot;Expo 2000 Hanover in Numbers&quot; showed that improving [[Nation branding|national image]] was the main goal for 73% of the countries participating in [[Expo 2000]].{{Citation needed|date=January 2012}} Pavilions became a kind of advertising campaign, and the Expo served as a vehicle for &quot;nation branding&quot;. According to branding expert [[Wally Olins]], Spain used [[Seville Expo '92|Expo '92]] and the [[1992 Summer Olympics]] in [[Barcelona]] in the same year to underscore its new position as a modern and democratic country and to show itself as a prominent member of the [[European Union]] and the global community.{{Citation needed|date=January 2014}}
+
+At [[Expo 2000]] Hanover, countries created their own architectural pavilions, investing, on average, €12&amp;nbsp;million each.&lt;ref&gt;{{cite web |url=http://www.bayareaeconomy.org/media/files/pdf/Expo_Report_sml.pdf |title=Archived copy |accessdate=6 July 2013 |url-status=dead |archiveurl=https://web.archive.org/web/20120813060823/http://www.bayareaeconomy.org/media/files/pdf/Expo_Report_sml.pdf |archivedate=13 August 2012 }}&lt;/ref&gt; Given these costs, governments are sometimes hesitant to participate, because the benefits may not justify the costs. However, while the effects are difficult to measure, an independent study for the Dutch pavilion at Expo 2000 estimated that the pavilion (which cost around €35&amp;nbsp;million) generated around €350&amp;nbsp;million of potential revenues for the Dutch economy. It also identified several key success factors for world-exposition pavilions in general.&lt;ref&gt;Tjaco Walvis (2003), &quot;Building Brand Locations&quot;, Corporate Reputation Review, Vol.5, No.4, pp. 358–366&lt;/ref&gt;
+
+==Types==
+[[File:EXPO TOWER.JPG|thumb|Expo tower for the Osaka 1970 World Expo in Japan]]
+&lt;!--[[File:1904 worlds fair boer war program.jpg|thumb|[[Louisiana Purchase Exposition|St. Louis 1904 World's Fair]] Boer War program. Battle recreations took 2–3 hours and included several Generals and 600 veteran soldiers from both sides of the war.  At the conclusion of the show, the [[Boer]] General [[Christiaan de Wet]] would escape on horseback by leaping from a height of {{convert|35|ft|m}} into a pool of water.]]--&gt;
+
+At present there are two types of international exhibition: World Expos (formally known as International Registered Exhibitions) and Specialised Expos (formally known as International Recognised Exhibitions).&lt;ref&gt;{{Cite web |url=http://www.bie-paris.org/site/en/expos/about-expos/expo-categories |title=Archived copy |access-date=26 May 2017 |archive-url=https://web.archive.org/web/20180311131852/http://www.bie-paris.org/site/en/expos/about-expos/expo-categories |archive-date=11 March 2018 |url-status=dead |df=dmy-all }}&lt;/ref&gt; World Expos, previously known as universal expositions, are the biggest category events. At World Expos, participants generally build their own pavilions. They are therefore the most extravagant and most expensive expos. Their duration may be between six weeks and six months. Since 1995, the interval between two World Expos has been at least five years. World [[Expo 2015]] was held in Milan, Italy, from 1 May to 31 October 2015.
+
+Specialized Expos are smaller in scope and investments and generally shorter in duration; between three weeks and three months. Previously, these Expos were called Special Exhibitions or International Specialized Exhibitions but these terms are no longer used officially. Their total surface area must not exceed 25 ha and organizers must build pavilions for the participating states, free of rent, charges, taxes and expenses. The largest country pavilions may not exceed 1,000&amp;nbsp;m&lt;sup&gt;2&lt;/sup&gt;. Only one Specialised Expo can be held between two World Expos.&lt;ref&gt;Based on: [[Bureau International des Expositions|BIE]] Convention&lt;/ref&gt;
+
+An additional two types of international exhibition may be recognized by the BIE: horticultural exhibitions, which are joint [[Bureau International des Expositions|BIE]] and AIPH-sanctioned 'garden' fairs in which participants present gardens and garden pavilions; and the semi-regular [[Milan Triennial]] (not always held every third year) art and design exhibition, held in [[Milan, Italy]], with the BIE granting official international exhibition status to 14 editions of the Triennale between 1996 and 2016.&lt;ref&gt;[http://www.bie-paris.org/site/en/expo-timeline/expo-timeline-triennale &quot;Triennal di Milano.&quot;]  ''Bureau International des Expositions'' (BIE-Paris.org).  Retrieved 10 June 2019.&lt;/ref&gt;
+
+===World Expos===
+[[File:Expo 2000 Hannover, Platz der Weltausstellung, gesehen vom Balkon vom Mäntelhaus Kaiser an der Kreuzung der Karmarschstraße mit der Osterstraße.jpg|thumb|Expo 2000 brickwork, for the World Expo in Hannover, Germany in the year 2000.]]
+World Expos (formally known as International Registered Exhibitions) encompass universal themes that affect the full gamut of human experience, and international and corporate participants are required to adhere to the theme in their representations.  Registered expositions are held every 5 years because they are more expensive as they require total design of pavilion buildings from the ground up. As a result, nations compete for the most outstanding or memorable structure—for example Japan, France, Morocco, and Spain at [[Seville Expo '92|Expo '92]]. Registered Expositions include [[Brussels]] [[Expo '58]], [[Montreal]] [[Expo 67]], [[Vancouver]] [[Expo 86]], [[Osaka]] [[Expo '70]], and [[Seville Expo '92]]. Sometimes prefabricated structures are used to minimize costs for developing countries, or for countries from a geographical block to share space (i.e. Plaza of the Americas at Seville '92).
+
+The only Registered (Universal) exposition to be held without BIE approval was the 1964–1965 New York World's Fair;&lt;ref&gt;{{cite web |url=http://www.businessinsider.com/futuristic-photos-from-1964-worlds-fair-2014-4 |title=15 Gorgeous Retro-Future Photos From The 1964 World's Fair |website=[[Business Insider]] |author=Harrison Jacobs |date=22 April 2014 |accessdate=1 August 2014}}&lt;/ref&gt; the sanctioning organization at Paris denied it &quot;official&quot; status because its president, [[Robert Moses]], would not comply with the BIE rule limiting the duration of universal expositions to six months. The Fair proceeded without BIE approval, and turned to tourism and trade organizations to host national pavilions in lieu of official government sponsorship. Many countries participated in that fair, including several newly independent African and Asian states.&lt;ref&gt;Findling and Pelle, ''Encyclopedia of World's Fairs and Expositions'', 9780786434169 p330&lt;/ref&gt;  The two World's Fairs in New York (1939–40 and 1964–65) and the Century of Progress in Chicago (1934-1935) are the only two-year world expositions that have been held.{{Citation needed|date=August 2009}}
+
+Frederick Pittera, a producer of international exhibitions and author of the history of world's fairs in the ''Encyclopædia Britannica'' and ''Compton Encyclopedia'', was commissioned by Mayor [[Robert F. Wagner Jr.]] of New York City in 1959 to prepare the first feasibility studies for the 1964 New York World's Fair. Pittera was joined in his study by Austrian architect [[Victor Gruen]] (Inventor of the '[[Shopping Mall]]'). The Eisenhower Commission ultimately awarded the world's fair bid to New York City against several major U.S. cities.&lt;ref&gt;{{cite web |url=http://www.nywf64.com/building04.html |title=Building the Fair – Five Men |publisher=nywf64.com |accessdate=1 August 2014}}&lt;/ref&gt;
+
+[[File:HONDA ASIMO.jpg|thumb|upright|right|[[ASIMO]] at Expo 2005 in Japan.]]
+In the 21st century the BIE has moved to sanction expos only every five years; following the numerous expos of the 1980s and 1990s, some see this as a means to cut down potential expenditure by participating nations. The move was also seen by some as an attempt to avoid conflicting with the [[Summer Olympics]]. The rule may apply to all expos, or it may end up that universal expositions will be restricted to every five years or so, with international or specialized expositions in the in-between years for countries wishing to celebrate a special event.

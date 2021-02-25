@@ -1,0 +1,415 @@
+int main(void)
+{
+    // create a Lua state
+    lua_State *L = luaL_newstate();
+
+    // load and execute a string
+    if (luaL_dostring(L, &quot;function foo (x,y) return x+y end&quot;)) {
+        lua_close(L);
+        return -1;
+    }
+
+    // push value of global &quot;foo&quot; (the function defined above)
+    // to the stack, followed by integers 5 and 3
+    lua_getglobal(L, &quot;foo&quot;);
+    lua_pushinteger(L, 5);
+    lua_pushinteger(L, 3);
+    lua_call(L, 2, 1); // call a function with two arguments and one return value
+    printf(&quot;Result: %d\n&quot;, lua_tointeger(L, -1)); // print integer value of item at stack top
+    lua_pop(L, 1); // return stack to original state
+    lua_close(L); // close Lua state
+    return 0;
+}
+&lt;/syntaxhighlight&gt;
+
+Running this example gives:
+&lt;pre&gt;$ cc -o example example.c -llua
+$ ./example
+Result: 8
+&lt;/pre&gt;
+
+The C API also provides some special tables, located at various &quot;pseudo-indices&quot; in the Lua stack. At &lt;code&gt;LUA_GLOBALSINDEX&lt;/code&gt; prior to Lua 5.2&lt;ref name=&quot;Changes in the API, Lua 5.2 manual&quot;&gt;{{cite web| url = https://www.lua.org/manual/5.2/manual.html#8.3| title = Changes in the API | work = Lua 5.2 Reference Manual| publisher = Lua.org| accessdate = 2014-05-09}}&lt;/ref&gt; is the globals table, &lt;code&gt;_G&lt;/code&gt; from within Lua, which is the main [[namespace]]. There is also a registry located at &lt;code&gt;LUA_REGISTRYINDEX&lt;/code&gt; where C programs can store Lua values for later retrieval.
+
+It is possible to write extension modules using the Lua API. Extension modules are [[Library (computing)#Dynamic linking|shared objects]] which can be used to extend the functionality of the interpreter by providing native facilities to Lua scripts. From the Lua side, such a module appears as a namespace table holding its functions and variables. Lua scripts may load extension modules using &lt;code&gt;require&lt;/code&gt;,&lt;ref name=luarefman /&gt; just like modules written in Lua itself. A growing collection of modules known as ''rocks'' are available through a [[package management system]] called [[LuaRocks]],&lt;ref&gt;{{cite web| url = https://luarocks.org/| title = LuaRocks| publisher = LuaRocks wiki| accessdate=2009-05-24}}&lt;/ref&gt; in the spirit of [[CPAN]], [[RubyGems]] and [[Python eggs]]. Prewritten Lua [[Language binding|bindings]] exist for most popular programming languages, including other scripting languages.&lt;ref&gt;{{cite web| url = http://lua-users.org/wiki/BindingCodeToLua| title = Binding Code To Lua| publisher = Lua-users wiki| accessdate = 2009-05-24}}&lt;/ref&gt; For C++, there are a number of template-based approaches and some automatic binding generators.
+
+== Applications ==
+{{main|List of applications using Lua}}
+
+In [[video game development]], Lua is widely used as a [[scripting language]] by [[Video game programmer#Scripter|programmers]], mainly due to its perceived easiness to embed, fast execution, and short [[learning curve]].&lt;ref&gt;{{cite web|url=https://stackoverflow.com/questions/38338/why-is-lua-considered-a-game-language |title=Why is Lua considered a game language? |accessdate=2017-04-22 |url-status=bot: unknown |archiveurl=https://web.archive.org/web/20130820131611/http://stackoverflow.com/questions/38338/why-is-lua-considered-a-game-language |archivedate=20 August 2013 }}&lt;/ref&gt; It is often used for manipulating the objects and elements players see in the game.&lt;ref&gt;{{Cite web|date=2020-10-16|title=5 Game Development Languages You Must Learn Right Now|url=https://narrasoft.com/5-game-development-languages-you-must-learn-right-now/|access-date=2020-11-21|website=NarraSoft|language=en-US}}&lt;/ref&gt;
+
+In 2003, a poll conducted by GameDev.net showed Lua was the most popular scripting language for game programming.&lt;ref&gt;{{cite web|url=https://gamedev.net/gdpolls/viewpoll.asp?ID=163 |title=Poll Results |accessdate=2017-04-22 |url-status=bot: unknown |archiveurl=https://web.archive.org/web/20031207171619/http://gamedev.net/gdpolls/viewpoll.asp?ID=163 |archivedate=7 December 2003 }}&lt;/ref&gt; On 12 January 2012, Lua was announced as a winner of the Front Line Award 2011 from the magazine ''[[Game Developer (magazine)|Game Developer]]'' in the category Programming Tools.&lt;ref&gt;{{cite web|url=http://www.gdmag.com/blog/2012/01/front-line-award-winners.php |title=Front Line Award Winners Announced |accessdate=2017-04-22 |url-status=bot: unknown |archiveurl=https://web.archive.org/web/20130615013638/http://www.gdmag.com/blog/2012/01/front-line-award-winners.php |archivedate=15 June 2013 }}&lt;/ref&gt;
+
+A large number of non-game applications also use Lua for extensibility, such as [[LuaTeX]], an implementation of the [[TeX]] type-setting language, [[Redis]], a [[key-value database]], [[Neovim]], a text editor, and [[Nginx]], a [[web server]].
+
+Through the Scribunto extension, Lua is available as a server side scripting language in the [[MediaWiki]] software that powers [[Wikipedia]] and other wikis.&lt;ref&gt;{{cite web |title=Extension:Scribunto - MediaWiki |url=https://www.mediawiki.org/wiki/Extension:Scribunto |website=MediaWiki.org |accessdate=21 February 2019}}&lt;/ref&gt;&lt;ref&gt;{{cite web |title = Wikipedia:Lua |url = https://en.wikipedia.org/wiki/Wikipedia:Lua |accessdate = 2018-12-19}}&lt;/ref&gt;{{Circular reference|date=October 2020}} Among its uses are allowing the integration of data from [[Wikidata]] into articles,&lt;ref&gt;{{Cite web|url=https://www.wikidata.org/wiki/Wikidata:Infobox_Tutorial|title=Wikidata:Infobox Tutorial - Wikidata|website=www.wikidata.org|access-date=2018-12-21}}&lt;/ref&gt; and powering the [[WP:Automated taxobox system|automated taxobox system]].
+
+==Languages that compile to Lua==
+* Moonscript is a [[Dynamic programming language|dynamic]], [[Whitespace character|whitespace]]-sensitive [[scripting language]] inspired by [[CoffeeScript]], which [[Compiler|compiles]] into Lua. This means that instead of using &lt;code&gt;do&lt;/code&gt; and &lt;code&gt;end&lt;/code&gt; (or &lt;code&gt;{&lt;/code&gt; and &lt;code&gt;}&lt;/code&gt;) to delimit sections of code it uses [[Line break (computing)|line breaks]] and [[indentation style]].&lt;ref&gt;{{Cite web|title=Language Guide - MoonScript 0.5.0|url=https://moonscript.org/reference/|access-date=2020-09-25|website=moonscript.org}}&lt;/ref&gt;&lt;ref&gt;{{Citation|last=leaf|title=leafo/moonscript|date=2020-09-23|url=https://github.com/leafo/moonscript|access-date=2020-09-25}}&lt;/ref&gt;&lt;ref name=&quot;:1&quot;&gt;{{cite web |url=https://andregarzia.com/2020/06/languages-that-compile-to-lua.html |title=Languages that compile to Lua |website=AndreGarzia.com |date=  |author=Andre Alves Garzia |accessdate= September 25, 2020}}&lt;/ref&gt; A notable usage of MoonScript is a video game distribution website [[Itch.io]].
+* Fennel.&lt;ref name=&quot;:1&quot; /&gt;
+* Urn.&lt;ref name=&quot;:1&quot; /&gt;
+* Amulet ML.&lt;ref name=&quot;:1&quot; /&gt;
+
+== See also ==
+* [[Comparison of programming languages]]
+
+== Notes ==
+
+{{notelist}}
+
+== References ==
+
+{{reflist|30em}}
+
+== Further reading ==
+
+* {{cite book | last1 = Ierusalimschy | first1 = R. | title = Programming in Lua | edition = 3rd | year = 2013 | publisher = Lua.org | isbn = 978-85-903798-5-0 | url = https://www.lua.org/pil/ }} (The 1st ed. is available [https://www.lua.org/pil/contents.html online].)
+&lt;!--UPDATEME to 5.2: * {{cite book | last1 = Ierusalimschy | first1= R. | last2 = Figueiredo | first2 = L. H. | last3 = Celes  | first3 = W. | title = Lua 5.1 Reference Manual | year= 2006 | publisher = Lua.org | isbn= 85-903798-3-3 | url = https://www.lua.org/manual/5.1/ }}--&gt;
+* {{cite book | last1 = Gutschmidt | first1 = T. | title = Game Programming with Python, Lua, and Ruby | year = 2003 | publisher = Course Technology PTR | isbn = 978-1-59200-077-7 }}
+* {{cite book | last1 = Schuytema | first1 = P. | last2 = Manyen | first2 = M. | title = Game Development with Lua | year = 2005 | publisher = Charles River Media | isbn = 978-1-58450-404-7 }}
+* {{cite book | last1 = Jung | first1 = K. | last2 = Brown | first2 = A. | title = Beginning Lua Programming | year = 2007 | publisher = [[Wrox Press]] | isbn = 978-0-470-06917-2 | url = https://www.wrox.com/WileyCDA/WroxTitle/productCd-0470069171.html | access-date = 7 July 2018 | archive-url = https://web.archive.org/web/20180708015602/https://www.wrox.com/WileyCDA/WroxTitle/productCd-0470069171.html | archive-date = 8 July 2018 | url-status = dead | df = dmy-all }}
+* {{cite book| editor-last = Figueiredo | editor-first = L. H. | editor2-last = Celes | editor2-first = W. | editor3-last = Ierusalimschy | editor3-first = R. | title = Lua Programming Gems | publisher = Lua.org | year = 2008 | isbn = 978-85-903798-4-3 | url = https://www.lua.org/gems/ }}
+* {{cite book | last = Takhteyev  | first = Yuri | title = Coding Places: Software Practice in a South American City | year = 2012 | publisher = [[The MIT Press]] | isbn = 978-0-262-01807-4 | url = https://codingplaces.net/ | archive-url = https://web.archive.org/web/20121102000628/http://codingplaces.net/ | url-status = dead | archive-date = 2012-11-02 }} Chapters 6 and 7 are dedicated to Lua, while others look at software in Brazil more broadly.
+* {{cite book | last=Varma | first=Jayant | title=Learn Lua for iOS Game Development | publisher=[[Apress]] | year=2012 | isbn=978-1-4302-4662-6 | url=https://www.amazon.com/exec/obidos/ASIN/1430246626/lua-docs-20 }}
+* {{cite web | url=https://www.gamedev.net/page/resources/_/technical/game-programming/an-introduction-to-lua-r1932 | title=An Introduction to Lua | website=GameDev.net | date=29 April 2003 | accessdate=3 January 2013 | author=Matheson, Ash | archive-url=https://web.archive.org/web/20121218104442/http://www.gamedev.net/page/resources/_/technical/game-programming/an-introduction-to-lua-r1932 | archive-date=18 December 2012 | url-status=dead }}
+* {{cite web|url=http://www.onlamp.com/pub/a/onlamp/2006/02/16/introducing-lua.html|title=Introducing Lua|last=Fieldhouse|first=Keith|date=16 February 2006|work=ONLamp.com|publisher=[[O'Reilly Media]]|access-date=28 February 2006|archive-url=https://web.archive.org/web/20060312124121/http://www.onlamp.com/pub/a/onlamp/2006/02/16/introducing-lua.html|archive-date=12 March 2006|url-status=dead|df=dmy-all}}
+* {{cite web|url=https://www.ibm.com/developerworks/linux/library/l-lua.html|title=Embeddable scripting with Lua|last=Streicher|first=Martin|date=28 April 2006|work=developerWorks|publisher=[[IBM]]}}
+* {{cite journal |last=Quigley|first=Joseph|date=1 June 2007|title=A Look at Lua|journal=[[Linux Journal]]|url=https://www.linuxjournal.com/article/9605}}
+* {{cite news|url=https://www.computerworld.com.au/article/260022/a-z_programming_languages_lua/|title=The A-Z of Programming Languages: Lua|last=Hamilton|first=Naomi|date=11 September 2008|work=[[Computerworld]]|publisher=[[International Data Group|IDG]]|access-date=7 July 2018|archive-url=https://web.archive.org/web/20180708020030/https://www.computerworld.com.au/article/260022/a-z_programming_languages_lua/|archive-date=8 July 2018|url-status=dead}} Interview with Roberto Ierusalimschy.
+* {{cite journal|url=https://queue.acm.org/detail.cfm?id=1983083|title=Passing a Language through the Eye of a Needle|last1=Ierusalimschy|first1=Roberto|last2=de Figueiredo|first2=Luiz Henrique|last3=Celes|first3=Waldemar|date=12 May 2011|journal=[[ACM Queue]]|volume=9|issue=5|pages=20–29|doi=10.1145/1978862.1983083|s2cid=19484689|access-date=7 July 2018|archive-url=https://web.archive.org/web/20180708074350/https://queue.acm.org/detail.cfm?id=1983083|archive-date=8 July 2018|url-status=dead}} How the embeddability of Lua impacted its design.
+* {{cite journal|url=https://cacm.acm.org/magazines/2018/11/232214-a-look-at-the-design-of-lua|title=A Look at the Design of Lua|last1=Ierusalimschy|first1=Roberto|last2=de Figueiredo|first2=Luiz Henrique|last3=Celes|first3=Waldemar|journal=[[Communications of the ACM]]|volume=61|issue=11|pages=114–123|date=November 2018|doi=10.1145/3186277|s2cid=53114923}}{{Dead link|date=June 2020 |bot=InternetArchiveBot |fix-attempted=yes }}
+* [https://www.lua.org/papers.html Lua papers and theses]
+
+== External links ==
+{{Sister project links|display=Lua|b = Lua Programming|v = Lua|wikt = no|q = no|s = no|commons = no}}
+
+* {{Official website|//www.lua.org/}}
+* [http://lua-users.org/ Lua Users], Community
+* [https://web.archive.org/web/20070202005230/http://luaforge.net/ Projects in Lua]
+* [https://luaforum.com Lua Forum]
+
+{{Lua programming language}}
+{{FOSS}}
+{{Programming languages}}
+{{Authority control}}
+{{Portal bar|Free and open-source software|Computer programming}}
+{{Use dmy dates|date=September 2017}}
+
+[[Category:Lua (programming language)| ]]
+[[Category:Articles with example C code]]
+[[Category:Brazilian inventions]]
+[[Category:Cross-platform free software]]
+[[Category:Cross-platform software]]
+[[Category:Dynamic programming languages]]
+[[Category:Dynamically typed programming languages]]
+[[Category:Embedded systems]]
+[[Category:Free compilers and interpreters]]
+[[Category:Free computer libraries]]
+[[Category:Free software programmed in C]]
+[[Category:Object-oriented programming languages]]
+[[Category:Pontifical Catholic University of Rio de Janeiro]]
+[[Category:Programming languages]]
+[[Category:Programming languages created in 1993]]
+[[Category:Prototype-based programming languages]]
+[[Category:Register-based virtual machines]]
+[[Category:Scripting languages]]
+[[Category:Software using the MIT license]]</text>
+      <sha1>cdbvu6eukbekbrb2kabzpwj2c567ly5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>1480s BC</title>
+    <ns>0</ns>
+    <id>46151</id>
+    <revision>
+      <id>976729355</id>
+      <parentid>905436603</parentid>
+      <timestamp>2020-09-04T17:06:28Z</timestamp>
+      <contributor>
+        <username>GoodDay</username>
+        <id>589223</id>
+      </contributor>
+      <comment>per [[WP:BOLDTITLE]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="669" xml:space="preserve">{{Decadebox BC|148}}
+The '''1480s BC''' was a decade lasting from January 1, 1489 BC to December 31, 1480 BC.
+
+==Events and trends==
+
+* [[1487 BC]]—[[Amphictyon]], son of [[Deucalion]] and [[Pyrrha]] and legendary [[King of Athens]], dies after a reign of 10 years and is succeeded by [[Erichthonius I of Athens]], a grandson of [[Cranaus]].
+* [[1481 BC]]—[[August 27]]—[[Lunar eclipse|Lunar]] [[Saros cycle|Saros]] 43 begins.&lt;ref&gt;[https://web.archive.org/web/20070711070946/http://sunearth.gsfc.nasa.gov/eclipse/LEsaros/LEsaros1-175.html Lunar Eclipses of Saros Series 1 to 175]&lt;/ref&gt;
+
+==References==
+{{reflist}}
+
+[[Category:15th century BC| ]]
+
+{{BC-year-stub}}</text>
+      <sha1>n6cfz5jsarj0lr01w43w08hdlu5tx8o</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Glue language</title>
+    <ns>0</ns>
+    <id>46154</id>
+    <redirect title="Scripting language" />
+    <revision>
+      <id>839939698</id>
+      <parentid>838789186</parentid>
+      <timestamp>2018-05-06T18:18:33Z</timestamp>
+      <contributor>
+        <username>Christian75</username>
+        <id>1306352</id>
+      </contributor>
+      <comment>{{R from merge}}  [[Category:Programming language classification]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="132" xml:space="preserve">#REDIRECT [[Scripting language#Glue languages]]
+
+{{R to section}}
+{{R from merge}}
+
+[[Category:Programming language classification]]</text>
+      <sha1>n8q0zrpfb4zs397no88amqe3j5ajmwb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>DGPS</title>
+    <ns>0</ns>
+    <id>46155</id>
+    <redirect title="Differential GPS" />
+    <revision>
+      <id>15941375</id>
+      <parentid>13891423</parentid>
+      <timestamp>2005-05-18T17:29:26Z</timestamp>
+      <contributor>
+        <username>TheoClarke</username>
+        <id>169558</id>
+      </contributor>
+      <comment>Redirect to [[Differential GPS]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30" xml:space="preserve">#REDIRECT [[Differential GPS]]</text>
+      <sha1>229y0gpc5c068qwr705xfvk1gfiw024</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Garrett County, Maryland</title>
+    <ns>0</ns>
+    <id>46157</id>
+    <revision>
+      <id>991683578</id>
+      <parentid>990186054</parentid>
+      <timestamp>2020-12-01T08:48:30Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 38 templates: del empty params (1×); hyphenate params (13×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="65484" xml:space="preserve">{{short description|County in Maryland, US}}
+{{Infobox U.S. county
+| county = Garrett County
+| state = Maryland
+| type = [[County (United States)|County]]
+| official_name =
+| flag = Flag of Garrett County, Maryland.svg
+| seal = Seal of Garrett County, Maryland.svg
+| founded date = November 4
+| founded year = 1872
+| seat wl = Oakland
+| largest city wl = Mountain Lake Park
+| city type = town
+| area_total_sq_mi = 656
+| area_land_sq_mi = 647
+| area_water_sq_mi = 8.6
+| area percentage = 1.3%
+| population_as_of = 2010
+| population_total = 30097
+| pop_est_as_of = 2019
+| population_est = 29014
+| population_density_sq_mi = auto
+| time zone = Eastern
+| district = 6th
+| web = http://www.garrettcounty.org/
+| named for = [[John W. Garrett|John Work Garrett]]| ex image = Garrett County Courthouse, Maryland.JPG
+| ex image cap = Garrett County Courthouse in December 2013
+}}
+[[File:Deep Creek Lake Maryland Panoramic View.jpg|thumb|right|300px|Panoramic view of [[History of Deep Creek Lake, Maryland|Deep Creek Lake]], Garrett County, MD.|alt=Panoramic View of a lake in Maryland.]]
+
+'''Garrett County''' {{IPAc-en|g|ər|ɛ|t}} is the westernmost [[County (United States)|county]] of the [[U.S. state]] of [[Maryland]]. As of the [[2010 United States Census|2010 census]], the population was 30,097,&lt;ref name=&quot;QF&quot;&gt;{{cite web|title=State &amp; County QuickFacts|url=http://quickfacts.census.gov/qfd/states/24/24023.html|publisher=United States Census Bureau|accessdate=August 24, 2013|url-status=dead|archive-url=https://web.archive.org/web/20110606163819/http://quickfacts.census.gov/qfd/states/24/24023.html|archive-date=June 6, 2011}}&lt;/ref&gt; making it the third-least populous county in Maryland. Its [[county seat]] is [[Oakland, Maryland|Oakland]].&lt;ref name=&quot;GR6&quot;&gt;{{cite web|url=http://www.naco.org/Counties/Pages/FindACounty.aspx |accessdate=June 7, 2011 |title=Find a County |publisher=National Association of Counties |url-status=dead |archive-url=https://web.archive.org/web/20110531210815/http://www.naco.org/Counties/Pages/FindACounty.aspx |archive-date=May 31, 2011 }}&lt;/ref&gt; The county was named for [[John W. Garrett|John Work Garrett]] (1820–1884), president of the [[Baltimore and Ohio Railroad]].&lt;ref name=mmo-garrett&gt;{{cite web| url   = http://www.msa.md.gov/msa/mdmanual/36loc/ga/html/ga.html| title = Maryland Counties, Garrett County, Maryland | work  = Maryland Manual On-Line| publisher  = Maryland State Archives| accessdate = 2009-11-11}}&lt;/ref&gt;  Created from [[Allegany County, Maryland]] in 1872, it was the last Maryland county to be formed.
+
+Garrett County has long been part of the [[Pittsburgh Media Market|media market]] of [[Pittsburgh, Pennsylvania]].&lt;ref&gt;{{Cite web|url=http://www.pgclips.com/|archive-url=https://archive.today/20130625132020/http://www.pgclips.com/?option=com_content&amp;view=article&amp;id=1055&amp;Itemid=119|url-status=dead|title=PG Clips|archive-date=2013-06-25|access-date=2013-05-27}}&lt;/ref&gt; It is considered to be a part of [[Western Maryland]].
+
+The [[Commonwealth of Pennsylvania]] is to the north.  The Maryland–Pennsylvania boundary is commonly known as the [[Mason–Dixon line]].&lt;ref&gt;{{citation | last   = Cope| first  = Thomas D| title  = Degrees along the west line, the parallel between Maryland and Pennsylvania| publisher = American Philosophical Society| series    = Proceedings of the American Philosophical Society 93(2):127-133|date=May 1949}}&lt;/ref&gt;  The eastern border with Allegany County was defined by the Bauer Report, submitted to Governor [[Lloyd Lowndes, Jr.]] on November 9, 1898.&lt;ref name=Code2009&gt;{{cite web| url = http://www.amlegal.com/library/md/garrettco.shtml| title = Title 1: General Provisions| work = Garrett County, MD Code of Ordinances| publisher = American Legal Publishing Corporation| accessdate = 2009-11-11| url-status = dead| archive-url = https://web.archive.org/web/20091031190313/http://www.amlegal.com/LIBRARY/MD/GARRETTCO.SHTML| archive-date = 2009-10-31}}&lt;/ref&gt; The [[Potomac River]] and [[State of West Virginia]] lie to the south and west.
+
+Garrett County lies in the [[Allegheny Mountains]], which here form the western flank of the [[Appalachian Mountain|Appalachian Mountain Range]]. [[Hoye-Crest]], a summit along [[Backbone Mountain]], is the highest point in Maryland.
+
+The [[Eastern Continental Divide]] runs along portions of [[Backbone Mountain]]. The western part of the county, drained by the [[Youghiogheny River]], is the only part of Maryland within the [[Mississippi River]] [[drainage basin]]. All other parts of the county are in the [[Chesapeake Bay]] basin.
+
+The [[National Register of Historic Places listings in Garrett County, Maryland]] has 20 [[National Register of Historic Places]]&lt;ref name=&quot;nris&quot;&gt;{{NRISref|2008a}}&lt;/ref&gt; properties and districts, including [[Casselman Bridge, National Road]] a [[National Historic Landmark]]. Garrett County is part of [[Maryland's 6th congressional district]]. The extreme south of the county lies within the [[United States National Radio Quiet Zone]].
+
+==History==
+[[File:Cumberland md braddock road.jpg|right|450px|thumb|Map of Braddock's Military Road from Cumberland, MD to Braddock, PA 1755]]
+In the early 20th century, the railroad and tourism started to decline. Coal mining and timber production continued at a much slower pace. Today, [[tourism]] has made a dramatic rebound in the county with logging and farming making up the greatest part of the economic base. Due to a cool climate and lack of any large city, Garrett County has remained a sparsely populated rural area.
+
+==Geography==
+According to the [[U.S. Census Bureau]], the county has a total area of {{convert|656|sqmi}}, of which {{convert|647|sqmi}} is land and {{convert|8.6|sqmi}} (1.3%) is water.&lt;ref name=&quot;GR1&quot;&gt;{{cite web|url=https://www.census.gov/geo/maps-data/data/docs/gazetteer/counties_list_24.txt |archive-url=https://web.archive.org/web/20140913171515/http://www.census.gov/geo/maps-data/data/docs/gazetteer/counties_list_24.txt |url-status=dead |archive-date=September 13, 2014 |publisher=United States Census Bureau |accessdate=September 12, 2014 |date=August 22, 2012 |title=2010 Census Gazetteer Files }}&lt;/ref&gt; It is the second-largest county in Maryland by land area.
+
+Garrett County is Maryland's westernmost, bordered to the north by the [[Mason–Dixon line]] with [[Pennsylvania]], to the south and west by [[West Virginia]] (with the [[Potomac River]] forming its southern boundary), and to the east by a land border with [[Allegany County, Maryland]].  The county's northwesternmost point is approximately {{convert|60|mi|km}} southeast of [[Pittsburgh, Pennsylvania]], and its southeasternmost point is approximately {{convert|160|mi|km}} northwest of [[Baltimore, Maryland]].
+
+Garrett County is located entirely within the highland zone of the [[Appalachian Mountains]] known variously as the [[Allegheny Mountains]], the [[Allegheny Plateau]], and the [[Appalachian Plateau]].  The county's highest elevations are located along four flat-topped ridges and range to a height of {{convert|3360|ft|m}} at [[Hoye-Crest]] along [[Backbone Mountain]], the highest point in the state of Maryland.  As is typical in the Allegheny region, broad flats generally lie below the ridge crests at elevations of approximately {{convert|500|ft|m}}.  River valleys are generally narrow and deep, with ravines typically 1,000 to {{convert|1800|ft|m}} below surrounding peaks.
+
+The county contains over {{convert|76000|acre|km2}} of parks, lakes, and publicly accessible forestland.  It is drained by two river systems, the [[Potomac River|Potomac]] and the [[Youghiogheny River|Youghiogheny]]. The [[Savage River (Maryland)|Savage River]], a tributary of the Potomac, drains about a third of the county.  The [[Casselman River]], a tributary of the Youghiogheny, flows north from the county's central section into Pennsylvania. The Youghiogheny itself drains the westernmost area of the county and flows north into Pennsylvania, where it empties into the [[Monongahela River]] at [[McKeesport, Pennsylvania|McKeesport]], just south of [[Pittsburgh]].&lt;ref name=dnr-blank&gt;{{cite journal
+ |author      = Gary B. Blank, Ph.D. Associate professor, Department of Forestry
+ |editor      = Maryland Department of Natural Resources
+ |title       = Forest Management History in the Central Appalachians 1900 to 2000
+ |publisher   = Department of Forestry, North Carolina State University
+ |location    = Raleigh, NC
+ |url         = http://www.dnr.state.md.us/forests/download/Garrett_County_Forest_History.pdf
+ |accessdate  = 2009-11-27
+ |url-status     = dead
+ |archive-url  = https://web.archive.org/web/20110419210009/http://www.dnr.state.md.us/forests/download/Garrett_County_Forest_History.pdf
+ |archive-date = 2011-04-19
+}}&lt;/ref&gt;
+
+===Geologic points of interest===
+
+====The Glades====
+The Glades' {{convert|601|acre|km2}} is of great scientific interest because it is an ombrotrophic system (fed solely by rainwater) with peat layers up to {{convert|9|ft|m}} thick, and is one of the oldest examples of mountain peatland in the [[Appalachians]].&lt;ref name=nc-m&gt;{{cite web
+ | url  = http://www.nature.org/wherewework/northamerica/states/maryland/preserves/art4783.html
+ | title  = The Glades
+ | work  = Maryland
+ | publisher  = The Nature Conservancy
+ | accessdate  = 2009-11-27
+ | archive-url  = https://web.archive.org/web/20110105100457/http://www.nature.org/wherewework/northamerica/states/maryland/preserves/art4783.html
+ | archive-date  = 2011-01-05
+ | url-status  = dead
+ }}&lt;/ref&gt;
+
+On the western edge of the [[Savage River State Forest]] along [[Maryland Route 495]] lies [[Bittinger, Maryland]], which is named after [[Henry Bittinger]], who first settled in the area and who was joined by other German settlers moving in and taking up the fertile farmland. On the eastern edge of Bittinger is one of the largest [[Glade (geography)|glades]] area of Garrett County. Geographically, this is an area that seems to have been affected by the last great ice sheet of North America. Two miles southeast of Bittinger, there is a large deposit of [[peat moss]].
+
+====Loess Dunes====
+In the [[Casselman River]] valley, {{convert|1|mi|km|adj=on}} south of [[Grantsville, Maryland]] and beside [[Maryland Route 495]], one can see remains of geological evidence about the last great ice sheet over North America. A series of low mounds can be seen in the fields on the west side of [[Maryland Route 495]] that are &quot;loess&quot; (wind-blown) material. Apparently, these are the only ones still visible in the northern part of Garrett County.
+
+The mounds were formed when a glacier lake existed in the Casselman valley, and the ice around the edges of the frozen lake melted. Wind blew fine grains of earth into the water around the edges where it sank to the bottom, and the mounds were the result of the deposit of this wind-blown material.
+
+{|  style=&quot;width:80%; margin:0 50px 0 0; background:none;&quot;
+&lt;!-- Table used to format names of Mountains, Creeks and Lake in county --&gt;
+|-  style=&quot;vertical-align:top; text-align:left;&quot;
+| style=&quot;width:45%;&quot;|
+&lt;!-- Nested-table (sortable) containing names of mountains and corresponding elevation --&gt;
+{| class=&quot;sortable&quot; cellspacing=&quot;0&quot; style=&quot;background:none;&quot;
+
+===Mountains===
+----
+! style=&quot;border-bottom:1px solid gray&quot; | Mountain&lt;ref name=mmo-mountains&gt;{{cite web
+ | url = http://www.msa.md.gov/msa/mdmanual/01glance/html/mountain.html
+ | title = Maryland at a Glance, Land, Mountains
+ | work = Maryland Manual On-Line
+ | publisher = Maryland State Archives
+ | accessdate = 2009-11-11
+}}&lt;/ref&gt;
+!  style=&quot;border-bottom:1px solid gray; text-align:center;&quot;| Elevation (ft.)
+|-
+| [[Backbone Mountain]]  || style=&quot;text-align:center;&quot;| 3,360   
+|-
+| [[Big Savage Mountain]] || align=center | 2,991
+|-
+| [[Blossom Hill (Maryland)|Blossom Hill]] || align=center | 2,620
+|-
+| [[Contrary Knob]] || align=center | 2,680
+|-
+| [[Conway Hill]] || align=center | 2,760
+|-
+| [[Dung Hill]] || align=center | 2,732
+|-
+| [[Elbow Mountain]] || align=center | 2,694
+|-
+| [[Elder Hill]] || align=center | 2,826
+|-
+| [[Fort Hill (Maryland)|Fort Hill]] || align=center | 2,600
+|-
+| [[George Mountain]] || align=center | 3,004
+|-
+| [[Lewis Knob]] || align=center | 2,960
+|-
+| [[Little Mountain (Maryland)|Little Mountain]] || align=center | 2,920
+|-
+| [[Little Savage Mountain]] || align=center | 2,817
+|-
+| [[Marsh Hill]] || align=center | 3,073
+|-
+| [[Meadow Mountain]] || align=center | 2,959
+|-
+| [[Mount Nebo (Maryland)|Mount Nebo]] || align=center | 2,604
+|-
+| [[Negro Mountain]] || align=center | 3,075
+|-
+| [[Pine Hill (Maryland)|Pine Hill]] || align=center | 2,500
+|-
+| [[Rich Hill (Maryland)|Rich Hill]] || align=center | 2,842
+|-
+| [[Ridgley Hill]] || align=center | 2,617
+|-
+| [[River Hill (Maryland)|River Hill]] || align=center | 2,700
+|-
+| [[Roman Nose Mountain]] || align=center | 3,140
+|-
+| [[Roth Rock Mountain]] || align=center | 2,860
+|-
+| [[Salt Block Mountain]] || align=center | 2,707
+|-
+| [[Snaggy Hill]] || align=center | 3,040
+|-
+| [[Walnut Hill (Maryland)|Walnut Hill]] || align=center | 2,629
+|-
+| [[Winding Ridge]] || align=center | 2,775
+|-
+| [[Whites Knob]] || align=center | 2,940
+|-
+| [[Zehner Hill]] || align=center | 3,000
+|}
+| style=&quot;width:10%;&quot;| 
+| style=&quot;width:45%;&quot;|
+&lt;!-- Nested-table containing names of creeks and lakes in county --&gt;
+{| width=&quot;100%&quot;  | style=&quot;background:transparent;&quot;
+
+===Creeks===
+----
+&lt;ref name=mmo-creeks&gt;{{cite web
+ | url = http://www.msa.md.gov/msa/mdmanual/01glance/html/creeks.html
+ | title = Maryland at a Glance, Waterways, Creeks
+ | work = Maryland Manual On-Line
+ | publisher = Maryland State Archives
+ | accessdate = 2009-11-11
+}}&lt;/ref&gt;
+*[[Bear Creek (Maryland)|Bear Creek]]
+*[[Beaver Creek (Garrett County, Maryland)|Beaver Creek]]
+*[[Cherry Creek (Maryland)|Cherry Creek]]
+*[[Church Creek]]
+*[[Crabtree Creek (Maryland)|Crabtree Creek]]
+*[[Deep Creek (Maryland)|Deep Creek]] (formerly [[Green Glades Creek]])
+*[[Fork Creek]]
+*[[Georges Creek (Potomac River)|Georges Creek]]
+*[[Herrington Creek]]
+*[[Middle Fork Creek]]
+*[[Muddy Creek (Maryland)|Muddy Creek]]
+*[[North Fork Creek]]
+*[[Rhine Creek (West Virginia)|Rhine Creek]]
+*[[Snowy Creek]]
+*[[South Fork Crabtree Creek]]
+*[[South Fork Creek]]
+
+===Lakes===
+----
+&lt;ref name=mmo-lakes&gt;{{cite web
+ | url = http://www.msa.md.gov/msa/mdmanual/01glance/html/lakes.html
+ | title = Maryland at a Glance, Waterways, Lakes
+ | work = Maryland Manual On-Line
+ | publisher = Maryland State Archives
+ | accessdate = 2009-11-11
+}}&lt;/ref&gt;
+*[[Deep Creek Lake]] (largest freshwater body of water in Maryland, {{convert|11.6|mi|km}} in length)

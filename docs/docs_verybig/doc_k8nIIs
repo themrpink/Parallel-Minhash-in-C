@@ -1,0 +1,415 @@
+==== CDMA ====
+Since 2008, new [[Code-division multiple access|CDMA]] signals are being researched for use with GLONASS.&lt;ref name=CDMA&gt;{{cite magazine|url=http://www.insidegnss.com/node/648|title=Russia Approves CDMA Signals for GLONASS, Discussing Common Signal Design|magazine=Inside GNSS|access-date=2010-12-30|archive-url=https://web.archive.org/web/20180313062644/http://www.insidegnss.com/node/648|archive-date=13 March 2018 |url-status=dead}}&lt;/ref&gt;&lt;ref name=CDMA_report_2007&gt;[http://www.navcen.uscg.gov/pdf/cgsicMeetings/47/%5B21%5D%20GLONASS%20CGSIC%20September%2024%20Fort%20Worth.pdf GLONASS Status and Progress] {{webarchive |url=https://web.archive.org/web/20110614023018/http://www.navcen.uscg.gov/pdf/cgsicMeetings/47/%5B21%5D%20GLONASS%20CGSIC%20September%2024%20Fort%20Worth.pdf|date=14 June 2011}}, S.G.Revnivykh, 47th CGSIC Meeting, 2007. &quot;L1CR and L5R CDMA interoperable with GPS and Galileo&quot;&lt;/ref&gt;&lt;ref name=CDMA_report_2011&gt;[http://www.unoosa.org/pdf/icg/2010/ICG5/18october/03.pdf GLONASS Status and Development], G.Stupak, 5th ICG Meeting&lt;/ref&gt;&lt;ref name=&quot;GNSS2&quot;&gt;[http://www.insidegnss.com/node/2487 Russia's First GLONASS-K In Orbit, CDMA Signals Coming] {{Webarchive |url=https://web.archive.org/web/20110307214035/http://www.insidegnss.com/node/2487|date=7 March 2011}} ''[[Inside GNSS]]'' (2011-02-26) Retrieved on 6 October 2011&lt;/ref&gt;&lt;ref name=CDMA_2011_CGSIG&gt;[https://www.gps.gov/cgsic/meetings/2011/revnivykh.pdf GLONASS Status and Modernization] Ekaterina Oleynik, Sergey Revnivykh, 51st CGSIG Meeting, September 2011&lt;/ref&gt;&lt;ref name=CDMA_2011_ICG&gt;[http://www.oosa.unvienna.org/pdf/icg/2011/icg-6/3.pdf GLONASS Status and Modernization] Sergey Revnivykh, 6th ICG Meeting, September 2011&lt;/ref&gt;&lt;ref name=CDMA_2012_ICG&gt;[http://www.unoosa.org/pdf/icg/2012/icg-7/3-1.pdf GLONASS Status and Modernization], Sergey Revnivykh, 7th ICG Meeting, November 2012&lt;/ref&gt;&lt;ref name=IGNSS_2013&gt;[http://glonass-iac.ru/aboutIAC/GLONASS_IGNSS-2013_Mirgorodskaya.pdf GLONASS Government Policy, Status and Modernization Plans], Tatiana Mirgorodskaya, IGNSS-2013, 16 July 2013&lt;/ref&gt;&lt;ref name=&quot;ICG_2016&quot;/&gt;
+
+The interface control documents for GLONASS CDMA signals was published in August 2016.&lt;ref name=glonass_icd&gt;[http://russianspacesystems.ru/bussines/navigation/glonass/interfeysnyy-kontrolnyy-dokument/ Russian Space Systems JSC - GLONASS Interface Control Documents] (in Russian)&lt;/ref&gt;
+
+According to GLONASS developers, there will be three open and two restricted CDMA signals. The open signal L3OC is centered at 1202.025 MHz and uses BPSK(10) modulation for both data and pilot channels; the ranging code transmits at 10.23 million [[Chip (CDMA)|chips]] per second, modulated onto the carrier frequency using QPSK with in-phase data and quadrature pilot. The data is error-coded with 5-bit [[Barker code]] and the pilot with 10-bit [[Neuman-Hoffman code]].&lt;ref&gt;{{cite web|url=http://gpsworld.com/glonass-modernization-12232/|title=GLONASS Modernization|publisher=GPS World|access-date=2 September 2015|date=2 November 2011|archive-url=https://web.archive.org/web/20151117032222/http://gpsworld.com/glonass-modernization-12232/|archive-date=17 November 2015|url-status=dead}}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://www.insidegnss.com/auto/julyaug11-Dumas.pdf|title=Data|date=2011|website=insidegnss.com}}&lt;/ref&gt;
+
+Open L1OC and restricted L1SC signals are centered at 1600.995 MHz, and open L2OC and restricted L2SC signals are centered at 1248.06 MHz, overlapping with GLONASS FDMA signals. Open signals L1OC and L2OC use [[time-division multiplexing]] to transmit pilot and data signals, with BPSK(1) modulation for data and BOC(1,1) modulation for pilot; wide-band restricted signals L1SC and L2SC use BOC (5, 2.5) modulation for both data and pilot, transmitted in quadrature phase to the open signals; this places peak signal strength away from the center frequency of narrow-band open signals.&lt;ref name=CDMA_2012_ICG/&gt;&lt;ref name=GPSWorld_Nov_2011&gt;[http://www.gpsworld.com/glonass-modernization-12232/ GLONASS Modernization], Yuri Urlichich, Valery Subbotin, Grigory Stupak, Vyacheslav Dvorkin, Alexander Povalyaev, Sergey Karutin, and Rudolf Bakitko, Russian Space Systems, GPS World, November 2011&lt;/ref&gt;
+
+[[Phase-shift keying|Binary phase-shift keying]] (BPSK) is used by standard GPS and GLONASS signals. [[Binary offset carrier modulation|Binary offset carrier]] (BOC) is the modulation used by [[Galileo (satellite navigation)|Galileo]], [[modernized GPS]], and [[BeiDou|BeiDou-2]].
+
+The navigational message of CDMA signals is transmitted as a sequence of text strings. The message has variable size - each pseudo-frame usually includes six strings and contains [[ephemerides]] for the current satellite (string types 10, 11, and 12 in a sequence) and part of the almanac for three satellites (three strings of type 20). To transmit the full almanac for all current 24 satellites, a superframe of 8 pseudo-frames is required. In the future, the superframe will be expanded to 10 pseudo-frames of data to cover full 30 satellites. The message can also contain [[Earth's rotation]] parameters, [[ionosphere]] models, long-term orbit parameters for GLONASS satellites, and [[International Cospas-Sarsat Programme|COSPAS-SARSAT]] messages. The system time marker is transmitted with each string; [[Leap second|UTC leap second]] correction is achieved by shortening or lengthening (zero-padding) the final string of the day by one second, with abnormal strings being discarded by the receiver.&lt;ref name=GPSWorld_Apr_2011&gt;[http://www.gpsworld.com/innovation-glonass-11405/ GLONASS: Developing Strategies for the Future], Yuri Urlichich, Valeriy Subbotin, Grigory Stupak, Vyacheslav Dvorkin, Alexander Povalyaev, and Sergey Karutin. GPS World, November 2011&lt;/ref&gt; The strings have a version tag to facilitate [[forward compatibility]]: future upgrades to the message format will not break older equipment, which will continue to work by ignoring new data (as long as the constellation still transmits old string types), but up-to-date equipment will be able to use additional information from newer satellites.&lt;ref name=GPSWorld_Nov_2013&gt;[http://gpsworld.com/new-structure-for-glonass-nav-message/ New Structure for GLONASS Nav Message] {{Webarchive|url=https://web.archive.org/web/20131212115824/http://gpsworld.com/new-structure-for-glonass-nav-message/|date=12 December 2013}}, Alexander Povalyaev, GPS World, 2 November 2013&lt;/ref&gt;
+
+The navigational message of the L3OC signal is transmitted at 100 bit/s, with each string of symbols taking 3 seconds (300 bits). A pseudo-frame of 6 strings takes 18 seconds (1800 bits) to transmit. A superframe of 8 pseudo-frames is 14,400 bits long and takes 144 seconds (2 minutes 24 seconds) to transmit the full almanac.
+
+The navigational message of the L1OC signal is transmitted at 100 bit/s. The string is 250 bits long and takes 2.5 seconds to transmit. A pseudo-frame is 1500 bits (15 seconds) long, and a superframe is 12,000 bits or 120 seconds (2 minutes).
+
+L2OC signal does not transmit any navigational message, only the pseudo-range codes:
+&lt;div style=&quot;overflow:auto;&quot;&gt;
+{| style=&quot;font-size: 90%;&quot; class=&quot;wikitable&quot;
+|+ &lt;span style=&quot;font-size: 110%&quot;&gt;Roadmap of GLONASS modernization&lt;/span&gt;
+! rowspan=&quot;2&quot; | Satellite series
+! rowspan=&quot;2&quot; | Launch
+! rowspan=&quot;2&quot; | Current status
+! rowspan=&quot;2&quot; | Clock error
+! colspan=&quot;2&quot; style=&quot;background:#bfbaed;&quot;| FDMA signals
+! colspan=&quot;3&quot; style=&quot;background:#99df99;&quot;| CDMA signals
+! colspan=&quot;3&quot; style=&quot;background:#fefe80;&quot;| Interoperability CDMA signals
+|-
+! style=&quot;background:#bfbaed;&quot;| 1602 + n×0.5625 MHz
+! style=&quot;background:#bfbaed;&quot;| 1246 + n×0.4375 MHz
+! style=&quot;background:#99df99;&quot;| 1600.995 MHz
+! style=&quot;background:#99df99;&quot;| 1248.06 MHz
+! style=&quot;background:#99df99;&quot;| 1202.025 MHz
+! style=&quot;background:#fefe80;&quot;| 1575.42 MHz
+! style=&quot;background:#fefe80;&quot;| 1207.14 MHz
+! style=&quot;background:#fefe80;&quot;| 1176.45 MHz
+
+|- style=&quot;text-align:center;&quot;
+| [[GLONASS (satellite)|GLONASS]]
+| 1982–2005
+| Out of service
+| 5{{e|−13}}
+| L1OF, L1SF
+| L2SF
+|
+|
+|
+|
+|
+|
+|- style=&quot;text-align:center;&quot;
+| [[GLONASS-M]]
+| 2003–
+| In service
+| 1{{e|−13}}
+| L1OF, L1SF
+| L2OF, L2SF
+| -
+| -
+| L3OC &lt;sup&gt;‡&lt;/sup&gt;
+|
+|
+|
+|- style=&quot;text-align:center;&quot;
+| [[GLONASS-K]]1
+| 2011–
+| In service
+| 5{{e|−14}}...1{{e|-13}}
+| L1OF, L1SF
+| L2OF, L2SF
+| -
+| -
+| L3OC
+|
+|
+|
+|- style=&quot;text-align:center;&quot;
+| [[GLONASS-K2]]
+| 2022–
+| Test satellite manufacturing
+| 5{{e|-15}}...5{{e|−14}}
+| L1OF, L1SF
+| L2OF, L2SF
+| L1OC, L1SC
+| L2OC, L2SC
+| L3OC
+|
+|
+|
+|- style=&quot;text-align:center;&quot;
+| GLONASS-V
+| 2023–2025
+| Design phase
+| 
+| -
+| -
+| L1OC, L1SC
+| L2OC, L2SC
+| L3OC
+|
+|
+|
+|- style=&quot;text-align:center;&quot;
+| [[GLONASS-KМ]]
+| 2030–
+| Research phase
+|
+| L1OF, L1SF
+| L2OF, L2SF
+| L1OC, L1SC
+| L2OC, L2SC
+| L3OC, L3SC
+| L1OCM
+| L3OCM
+| L5OCM
+|-
+| colspan=&quot;12&quot; | &quot;O&quot;: open signal (standard precision), &quot;S&quot;: obfuscated signal (high precision); &quot;F&quot;:[[FDMA]], &quot;С&quot;:[[CDMA]]; n=−7,−6,−5,...,6&lt;br/&gt;
+&lt;sup&gt;‡&lt;/sup&gt;Glonass-M spacecraft produced since 2014 include L3OC signal 
+|}&lt;/div&gt;
+
+[[Kosmos 2471|Glonass-K1]] test satellite launched in 2011 introduced L3OC signal. Glonass-M satellites produced since 2014 (s/n 755+) will also transmit L3OC signal for testing purposes.
+
+Enhanced Glonass-K1 and [[GLONASS-K2|Glonass-K2]] satellites, to be launched from 2022, will feature a full suite of modernized CDMA signals in the existing L1 and L2 bands, which includes L1SC, L1OC, L2SC, and L2OC, as well as the L3OC signal. Glonass-K2 series should gradually replace existing satellites starting from 2022, when Glonass-M launches will cease.&lt;ref name=&quot;ICG_2016&quot;&gt;[http://www.unoosa.org/pdf/icg/2016/icg11/01.pdf GLONASS Program Update], Ivan Revnivykh, Roscosmos, 11th ICG Meeting, November 2016&lt;/ref&gt;&lt;ref name=&quot;testoyedov-2015&quot;/&gt;
+
+[[Glonass-KM]] satellites will be launched by 2025. Additional open signals are being studied for these satellites, based on frequencies and formats used by existing GPS, Galileo, and [[BeiDou|Beidou/COMPASS]] signals:
+
+* open signal L1OCM using BOC(1,1) modulation centered at 1575.42 MHz, similar to [[L1C|modernized GPS signal L1C]], Galileo signal E1, and Beidou/COMPASS signal B1C;
+* open signal L5OCM using BPSK(10) modulation centered at 1176.45 MHz, similar to the GPS [[GPS signals#L5, Safety of Life|&quot;Safety of Life&quot; (L5)]], Galileo signal E5a, and Beidou/COMPASS signal B2a;&lt;ref name=CDMA_2010_insideGNSS&gt;{{cite magazine|url=http://www.insidegnss.com/node/1997|title=Russia to Put 8 CDMA Signals on 4 GLONASS Frequencies|magazine=Inside GNSS|date=2010-03-17|access-date=2010-12-30|archive-url=https://web.archive.org/web/20101205054554/http://insidegnss.com/node/1997|archive-date=5 December 2010|url-status=dead}}&lt;/ref&gt;
+* open signal L3OCM using BPSK(10) modulation centered at 1207.14 MHz, similar to Galileo signal E5b and Beidou/COMPASS signal B2b.&lt;ref name=CDMA_report_2011/&gt;
+Such an arrangement will allow easier and cheaper implementation of multi-standard [[Satellite navigation|GNSS]] receivers.
+
+With the introduction of CDMA signals, the constellation will be expanded to 30 active satellites by 2025; this may require eventual deprecation of FDMA signals.&lt;ref&gt;{{cite web |url=http://www.gpsworld.com/gnss-system/glonass/news/glonass-update-delves-constellation-details-10499|title=GLONASS Update Delves into Constellation Details|publisher=GPS World|access-date=2010-12-30|url-status=dead|archiveurl=https://web.archive.org/web/20110101144902/http://www.gpsworld.com/gnss-system/glonass/news/glonass-update-delves-constellation-details-10499|archivedate=1 January 2011}}&lt;/ref&gt; The new satellites will be deployed into three additional planes, bringing the total to six planes from the current three—aided by [[System for Differential Correction and Monitoring]] ([[MacAdam ellipse|SDCM]]), which is a [[GNSS augmentation|GNSS augmentation system]] based on a network of ground-based control stations and communication satellites [[Luch 5A]] and [[Luch 5B]].&lt;ref&gt;{{cite web |url=https://www.gpsworld.com/gnss-systemnewsglonass-modernization-maybe-six-planes-probably-more-satellites-12490/|title=GLONASS Modernization: Maybe Six Planes, Probably More Satellites|publisher=GPS World |date=10 January 2012|access-date=24 December 2018|archive-url=https://web.archive.org/web/20181102235300/http://gpsworld.com/gnss-systemnewsglonass-modernization-maybe-six-planes-probably-more-satellites-12490/|archive-date=2 November 2018|url-status=dead}}&lt;/ref&gt;&lt;ref name=SDCM_2012&gt;[http://www.unoosa.org/pdf/icg/2012/icg-7/3-2.pdf SDCM status and plans], Grigory Stupak, 7th ICG Meeting, November 2012&lt;/ref&gt;
+
+Six additional [[GLONASS-K#GLONASS-V|Glonass-V]] satellites, using [[Tundra orbit]] in three orbital planes, will be launched in 2023–2025; this regional high-orbit segment will offer increased regional availability and 25% improvement in precision over [[Eastern Hemisphere]], similar to Japanese [[Quasi-Zenith Satellite System|QZSS]] system and [[BeiDou|Beidou-1]].&lt;ref name=GPSWorld_GlonassV&gt;{{cite web |url=https://www.gpsworld.com/directions-2019-high-orbit-glonass-and-cdma-signal/|title=Directions 2019: High-orbit GLONASS and CDMA signal|date=12 December 2018|access-date=22 December 2018|archive-url=https://web.archive.org/web/20181222173732/https://www.gpsworld.com/directions-2019-high-orbit-glonass-and-cdma-signal/|archive-date=22 December 2018|url-status=dead}}&lt;/ref&gt; The new satellites will form two ground traces with inclination of 64.8°, eccentricity of 0.072, period of 23.9 hours, and ascending node longitude of 60° and 120°. Glonass-V vehicles are based on Glonass-K platform and will broadcast new CDMA signals only.&lt;ref name=GPSWorld_GlonassV/&gt; Previously [[Molniya orbit]], [[geosynchronous orbit]], or [[inclined orbit]] were also under consideration for the regional segment.&lt;ref name=CDMA_report_2011/&gt;&lt;ref name=GPSWorld_Apr_2011/&gt;
+
+=== Navigational message ===
+==== L1OC ====
+{| class=&quot;wikitable&quot;
+|+ Full-length string for L1OC navigational message
+|-
+!colspan=&quot;2&quot;| Field !! Size, bits !! Description
+|-
+|Timecode || СМВ || 12 || Constant bit sequence 0101 1111 0001 (5F1h)
+|-
+|String type || Тип || 6 || Type of the navigational message
+|-
+|Satellite ID || j || 6 ||  System ID number of the satellite (1 to 63; 0 is reserved until FDMA signal switch-off)
+|-
+|Satellite state || Г&lt;sup&gt;j&lt;/sup&gt;|| 1 ||  This satellite is:&lt;br/&gt;0 — healthy,&lt;br/&gt;1 — in error state
+|-
+|Data reliability|| l&lt;sup&gt;j&lt;/sup&gt;|| 1 || Transmitted navigational messages are:&lt;br/&gt;0 — valid,&lt;br/&gt;1 — unreliable
+|-
+|Ground control callback || П1 || 4 ||colspan=2| (Reserved for system use)
+|-
+|Orientation mode|| П2 || 1 || Satellite orientiation mode is:&lt;br/&gt;0 — Sun sensor control,&lt;br/&gt;1 — executing predictive thrust or mode transition
+|-
+|UTC correction || КР || 2 || On the last day of the current quarter, at 00:00 (24:00), a UTC leap second is:&lt;br/&gt;0 — not expected,&lt;br/&gt;1 — expected with positive value,&lt;br/&gt;2 — unknown,&lt;br/&gt;3 — expected with negative value
+|-
+|Execute correction || А || 1 || After the end of the current string, UTC correction is:&lt;br/&gt;0 — not expected,&lt;br/&gt;1 — expected
+|-
+|Satellite time || ОМВ || 16 || Onboard time of the day in 2 seconds intervals (0 to 43199)
+|-
+|Information || || 184 || Content of the information field is defined by string type
+|-
+|CRC || ЦК || 16 || Cyclic redundancy code
+|-
+|colspan=&quot;2&quot;| Total || 250
+|}
+
+==== L3OC ====
+{| class=&quot;wikitable&quot;
+|+ Full-length string for L3OC navigation message
+|-
+!colspan=&quot;2&quot;| Field !! Size, bits !! Description
+|-
+|Timecode || СМВ || 20 || Constant bit sequence 0000 0100 1001 0100 1110 (0494Eh)
+|-
+|String type || Тип || 6 || Type of the navigational message
+|-
+|Satellite time || ОМВ || 15 ||  Onboard time of the day in 3 seconds intervals (0 to 28799)
+|-
+|Satellite ID || j || 6 ||rowspan=&quot;7&quot;| The same as in L1OC signal
+|-
+|Satellite state|| Г&lt;sup&gt;j&lt;/sup&gt; || 1
+|-
+|Data reliability|| l&lt;sup&gt;j&lt;/sup&gt; || 1
+|-
+|Ground control callback || П1 ||4
+|-
+|Orientation mode|| П2 | 222
+|-
+|UTC correction  || КР || 2
+|-
+|Execute correction || А || 1
+|-
+|Information || || 219 || Content of the information field is defined by string type
+|-
+|CRC ||ЦК || 24 || Cyclic redundancy code
+|-
+|colspan=&quot;2&quot;| Total || 300
+|}
+
+==== Common properties of open CDMA signals====
+{| class=&quot;wikitable&quot;
+|+ String types for navigational signals
+|-
+!Type!! Content of the information field
+|-
+|0 || (Reserved for system use)
+|-
+|1 || Short string for the negative leap second
+|-
+|2 || Long string for the positive leap second
+|-
+|10, 11, 12 || Real-time information (ephemerides and time-frequency offsets).&lt;br/&gt;Transmitted as a packet of three strings in sequence
+|-
+|16 || Satellite orientation parameters for the predictive thrust maneuver
+|-
+|20 || Almanac
+|-
+|25 || Earth rotation parameters, ionosphere models, and time scale model for the difference between UTC(SU) and [[International Atomic Time|TAI]]
+|-
+|31, 32 || Parameters of long-term movement model
+|-
+|50 || Cospas-Sarsat service message — L1OC signal only
+|-
+|60 || Text message
+|}
+
+{| class=&quot;wikitable&quot;
+|+ Information field of a string type 20 (almanac) for the orbit type 0.&lt;ref group=&quot;nb&quot;&gt;Navigational message field j (satellite ID) references the satellite for the transmitted almanac (j&lt;sub&gt;A&lt;/sub&gt;)&lt;/ref&gt;
+|-
+!colspan=&quot;2&quot;| Field !! Size, bits !! Weight of the low bit || Description
+|-
+|Orbit type || ТО || 2 || 1 || 0 — circular orbit with 19100 km altitude &lt;ref group=&quot;nb&quot;&gt;The set of almanac parameters depends on the orbit type. Satellites with geosynchronous, medium-Earth, and high-elliptical orbits could be employed in the future.&lt;/ref&gt;
+|-
+|Satellite number || N&lt;sub&gt;S&lt;/sub&gt; || 6 || 1 || Total number of satellites transmitting CDMA signals (1 to 63) which are referenced to in the almanac.
+|-
+|Almanac age || E&lt;sub&gt;A&lt;/sub&gt; || 6 || 1 || Number of full days passed since the last almanac update.
+|-
+|Current day || N&lt;sub&gt;A&lt;/sub&gt; || 11 || 1 ||  Day number (1 to 1461) within a four-year interval starting on 1 January of the last leap year &lt;ref group=&quot;nb&quot;&gt;In a departure from the Gregorian calendar, all years exactly divisible by 100 (i.e. 2100 and so on) are treated as leap years&lt;/ref&gt; according to [[Moscow decree time]].
+|-
+|Signal status || PC&lt;sub&gt;A&lt;/sub&gt; || 5 || 1 || [[Bit field]] encoding types of CDMA signals transmitted by the satellite.&lt;br/&gt;Three highest bits correspond to signals L1, L2 и L3:&lt;br/&gt;0 — transmitted,&lt;br/&gt;1 — not transmitted
+|-
+|Satellite type|| PC&lt;sub&gt;A&lt;/sub&gt; || 3 || 1 || Satellite model and the set of transmitted CDMA signals:&lt;br/&gt;0 — Glonass-M (L3 signal),&lt;br/&gt;1 — Glonass-K1 (L3 signal),&lt;br/&gt;2 — Glonass-K1 (L2 and L3 signals),&lt;br/&gt;3 — Glonass-K2 (L1, L2, and L3 signals)
+|-
+|Time correction|| τ&lt;sub&gt;A&lt;/sub&gt; || 14 || 2&lt;sup&gt;−20&lt;/sup&gt; || Rough correction from onboard time scale to the GLONASS time scale ({{val|±7.8e-3}} с).
+|-
+|Ascension|| λ&lt;sub&gt;A&lt;/sub&gt; || 21 || 2&lt;sup&gt;−20&lt;/sup&gt; || Longitude of the satellite's first orbital node (±1 half-cycles).
+|-
+|Ascension time|| t&lt;sub&gt;λ&lt;sub&gt;A&lt;/sub&gt;&lt;/sub&gt; || 21 || 2&lt;sup&gt;−5&lt;/sup&gt; || Time of the day when the satellite is crossing its first orbital node (0 to 44100 s).
+|-
+|Inclination|| Δi&lt;sub&gt;A&lt;/sub&gt; || 15 || 2&lt;sup&gt;−20&lt;/sup&gt; || Adjustments to nominal inclination (64,8°) of the satellite orbit at the moment of ascension (±0.0156 half-cycles).
+|-
+|Eccentricity|| ε&lt;sub&gt;A&lt;/sub&gt; || 15 || 2&lt;sup&gt;−20&lt;/sup&gt; || Eccentricity of the satellite orbit at the ascension time (0 to 0.03).
+|-
+|Perigee|| ω&lt;sub&gt;A&lt;/sub&gt; || 16 || 2&lt;sup&gt;−15&lt;/sup&gt; || Argument to satellite's perigee at the ascension time (±1 half-cycles).
+|-
+|Period|| ΔT&lt;sub&gt;A&lt;/sub&gt; || 19 || 2&lt;sup&gt;−9&lt;/sup&gt; || Adjustments to the satellite's nominal draconic orbital period (40544 s) at the moment of ascension (±512 s).
+|-
+|Period change|| ΔṪ&lt;sub&gt;A&lt;/sub&gt; || 7 || 2&lt;sup&gt;−14&lt;/sup&gt; || Speed of change of the draconic orbital period at the moment of ascension ({{val|±3.9e-3}} s/orbit).
+|-
+|colspan=&quot;2&quot; rowspan=&quot;2&quot; | (Reserved) || L1OC: 23 || colspan=&quot;3&quot; rowspan=&quot;2&quot; | -
+|-
+|L3OC: 58
+|}
+{{reflist|group=nb}}
+
+== Satellites ==
+{{See also|List of GLONASS satellites}}
+
+The main contractor of the GLONASS program is Joint Stock Company [[Information Satellite Systems Reshetnev]] (ISS Reshetnev, formerly called NPO-PM). The company, located in [[Zheleznogorsk, Krasnoyarsk Krai|Zheleznogorsk]], is the designer of all GLONASS satellites, in cooperation with the [[Institute for Space Device Engineering]] ([[:ru:РНИИ КП]]) and the [[Russian Institute of Radio Navigation and Time]]. Serial production of the satellites is accomplished by the company [[Production Corporation Polyot]] in [[Omsk]].
+
+Over the three decades of development, the satellite designs have gone through numerous improvements, and can be divided into three generations: the original GLONASS (since 1982), GLONASS-M (since 2003) and GLONASS-K (since 2011). Each GLONASS satellite has a [[GRAU]] designation 11F654, and each of them also has the military &quot;Cosmos-NNNN&quot; designation.&lt;ref&gt;''Uragan'', Russian Space Web&lt;/ref&gt;
+
+=== First generation ===
+{{main|GLONASS (satellite)}}
+
+The true first generation of GLONASS (also called Uragan) satellites were all three-axis stabilized vehicles, generally weighing {{cvt|1250|kg}} and were equipped with a modest propulsion system to permit relocation within the constellation. Over time they were upgraded to Block IIa, IIb, and IIv vehicles, with each block containing evolutionary improvements.
+
+Six Block IIa satellites were launched in 1985–1986 with improved time and frequency standards over the prototypes, and increased frequency stability. These spacecraft also demonstrated a 16-month average operational lifetime. Block IIb spacecraft, with a two-year design lifetimes, appeared in 1987, of which a total of 12 were launched, but half were lost in launch vehicle accidents. The six spacecraft that made it to orbit worked well, operating for an average of nearly 22 months.
+
+Block IIv was the most prolific of the first generation. Used exclusively from 1988 to 2000, and continued to be included in launches through 2005, a total of 56 satellites were launched. The design life was three years, however numerous spacecraft exceeded this, with one late model lasting 68 months, nearly double.&lt;ref&gt;GLONASS #787, 68.7 operational months; as reported by RSA &quot;GLONASS constellation status&quot; on 6 April 2007&lt;/ref&gt;
+
+Block II satellites were typically launched three at a time from the [[Baikonur Cosmodrome]] using [[Proton-K]] [[Blok D|Blok-DM2]] or Proton-K [[Briz (rocket stage)|Briz-M]] boosters. The only exception was when, on two launches, an [[Etalon (satellite)|Etalon]] [[Satellite geodesy|geodetic reflector satellite]] was substituted for a GLONASS satellite.
+
+=== Second generation ===
+{{main|GLONASS-M}}
+
+The second generation of satellites, known as [[GLONASS-M|Glonass-M]], were developed beginning in 1990 and first launched in 2003. These satellites possess a substantially increased lifetime of seven years and weigh slightly more at {{cvt|1480|kg}}. They are approximately {{cvt|2.4|m}} in diameter and {{cvt|3.7|m}} high, with a solar array span of {{cvt|7.2|m}} for an electrical power generation capability of 1600 watts at launch. The aft payload structure houses 12 primary antennas for L-band transmissions. Laser corner-cube reflectors are also carried to aid in precise orbit determination and geodetic research. On-board [[Caesium standard|cesium clocks]] provide the local clock source. Glonass-M includes 31 satellites ranging from satellite index 21 - 92 and with 4 spare active satellites.
+
+A total of 41 second generation satellites were launched through the end of 2013. As with the previous generation, the second generation spacecraft were launched three at a time using [[Proton rocket|Proton-K]] Blok-DM2 or Proton-K Briz-M boosters. Some were launched alone with [[Soyuz-2|Soyuz-2-1b]]/[[Fregat]]
+
+On 30 July 2015, [[Information Satellite Systems Reshetnev|ISS Reshetnev]] announced that it had completed the last GLONASS-M (No. 61) spacecraft and it was putting it in storage waiting for launch, along with eight previously built satellites.&lt;ref name=&quot;issr-20150730&quot;/&gt;&lt;ref name=&quot;itartass-811771&quot;/&gt;
+
+As on 22 September 2017, GLONASS-M No.52 satellite went into operation and the orbital grouping has again increased to 24 space vehicles.&lt;ref&gt;{{cite news|url=https://www.geospatialworld.net/news/russia-increases-glonass-orbital-grouping-24-satellites/|title=Russia increases GLONASS orbital grouping to 24 satellites|date=2017-10-23|publisher=Geospatial World|access-date=2017-10-23}}&lt;/ref&gt;
+
+=== Third generation ===
+{{main|GLONASS-K}}
+
+GLONASS-K is a substantial improvement of the previous generation: it is the first unpressurised GLONASS satellite with a much reduced mass ({{cvt|750|kg}} versus {{cvt|1450|kg}} of GLONASS-M). It has an operational lifetime of 10 years, compared to the 7-year lifetime of the second generation GLONASS-M. It will transmit more navigation signals to improve the system's accuracy — including new CDMA signals in the L3 and L5 bands, which will use modulation similar to modernized GPS, Galileo, and BeiDou. Glonass-K consist of 26 satellites having satellite index 65-98 and widely used in Russian Military space.&lt;ref name=&quot;reshetnev_glonass_history&quot;/&gt;&lt;ref name=&quot;rian_scheduled&quot;&gt;{{cite news|url=http://en.rian.ru/russia/20110209/162520205.html|title=Russia to launch Glonass satellite on Feb. 24|publisher=RIA Novosti|date=2011-02-09}}&lt;/ref&gt;&lt;ref&gt;{{cite news|url=http://findarticles.com/p/articles/mi_m0BPW/is_10_21/ai_n56309362/?tag=content;col1|archive-url=https://archive.today/20120711083220/http://findarticles.com/p/articles/mi_m0BPW/is_10_21/ai_n56309362/?tag=content;col1|url-status=dead|archive-date=2012-07-11|publisher=GPS World|first=Richard |last=Langley|title=GLONASS forecast bright and plentiful|year=2010}}&lt;/ref&gt; The new satellite's advanced equipment—made solely from Russian components — will allow the doubling of GLONASS' accuracy.&lt;ref name=&quot;ato_glonass&quot;&gt;{{cite journal|url=http://www.ato.ru/content/glonass-nearing-completion|title=Glonass nearing completion|journal=Russia &amp; CIS Observer|last=Afanasyev|first=Igor|author2=Dmitri Vorontsov |date=2010-11-26|url-status=dead|archiveurl=https://web.archive.org/web/20101130065842/http://www.ato.ru/content/glonass-nearing-completion|archive-date=30 November 2010}}&lt;/ref&gt; As with the previous satellites, these are 3-axis stabilized, [[nadir]] pointing with dual solar arrays.{{citation needed|date=December 2010}} The first GLONASS-K satellite was successfully launched on 26 February 2011.&lt;ref name=&quot;reshetnev_glonass_history&quot;&gt;{{cite web|url=http://www.iss-reshetnev.com/images/File/magazin/2007/m2-screen_en.pdf|title=Glonass-K: a prospective satellite of the GLONASS system|publisher=Reshetnev Information Satellite Systems|year=2007|url-status=dead|archiveurl=https://web.archive.org/web/20110713063606/http://www.iss-reshetnev.com/images/File/magazin/2007/m2-screen_en.pdf|archive-date=13 July 2011}}&lt;/ref&gt;&lt;ref name=&quot;bbc_russia_launches_satellite&quot;&gt;{{cite news|url=https://www.bbc.co.uk/news/world-europe-12587238|title=Russia launches satellite for global navigation system|publisher=BBC News|date=2011-02-26}}&lt;/ref&gt;
+
+Due to their weight reduction, GLONASS-K spacecraft can be launched in pairs from the [[Plesetsk Cosmodrome]] launch site using the substantially lower cost [[Soyuz-2|Soyuz-2.1b]] boosters or in six-at-once from the [[Baikonur Cosmodrome]] using Proton-K Briz-M launch vehicles.&lt;ref name=&quot;ato_glonass&quot;/&gt;&lt;ref name=&quot;federal_targeted_program_2002&quot;/&gt;
+
+=== Ground control ===
+[[File:GLONASS GroundSegment.jpg|thumb|290px|right|Map depicting ground control stations]]
+
+The ground control segment of GLONASS is almost entirely located within former Soviet Union territory, except for several in Brazil.{{Citation needed|date=November 2020}}
+
+The GLONASS ground segment consists of:&lt;ref&gt;{{cite web|url=http://www.navipedia.net/index.php/GLONASS_Ground_Segment|title=GLONASS Ground Segment|website=navipedia.net}}&lt;/ref&gt;
+ 
+* a system control centre; 
+* five Telemetry, Tracking and Command centers; 
+* two Laser Ranging Stations;&lt;ref&gt;{{cite web|url=http://cddis.gsfc.nasa.gov/lw15/docs/papers/Russian%20Laser%20Tracking%20Network.pdf|title=Russian Laser Tracking Network}}&lt;/ref&gt; and
+* ten Monitoring and Measuring Stations.&lt;ref&gt;[http://www.oosa.unvienna.org/pdf/publications/icg_ebook.pdf Current and planned global and regional navigation satellite systems and satellite-based augmentation systems]&lt;/ref&gt;
+
+{| class=&quot;wikitable plainrowheaders&quot;
+|-
+! scope=&quot;col&quot; | Location !! scope=&quot;col&quot; | System control !! scope=&quot;col&quot; | Telemetry, Tracking and Command !! scope=&quot;col&quot; | Central clock !! scope=&quot;col&quot; | Upload stations !! scope=&quot;col&quot; | Laser Ranging !! scope=&quot;col&quot; | Monitoring and Measuring
+|-
+! scope=&quot;row&quot; | [[Krasnoznamensk, Moscow Oblast|Krasnoznamensk]] || x || - || - || - || - || x
+|-
+! scope=&quot;row&quot; | [[Schelkovo]] || - || x || x || x || x || x
+|-
+! scope=&quot;row&quot; | Komsomolsk || - || x || - || x || x || x
+|-
+! scope=&quot;row&quot; | [[Saint Petersburg]] || - || x || - || - || - || -
+|-
+! scope=&quot;row&quot; | [[Ussuriysk]] || - || x || - || - || - || -
+|-
+! scope=&quot;row&quot; | Yenisseisk || - || x || - || x || - || x
+|-
+! scope=&quot;row&quot; | [[Yakutsk]] || - || - || - || - || - || x
+|-
+! scope=&quot;row&quot; | [[Ulan-Ude]] || - || - || - || - || - || x
+|-
+! scope=&quot;row&quot; | [[Nurak|Nurek]] || - || - || - || - || - || x
+|-
+! scope=&quot;row&quot; | [[Vorkuta]] || - || - || - || - || - || x
+|-
+! scope=&quot;row&quot; | [[Murmansk]] || - || - || - || - || - || x
+|-
+! scope=&quot;row&quot; | Zelenchuk || - || - || - || - || - || x
+|}
+
+=== Receivers ===
+Companies producing GNSS receivers making use of GLONASS:
+* [https://www.furuno.com/en/gnss/ Furuno]
+* [https://www.javad.com/ JAVAD GNSS, Inc]
+* [[Septentrio]]
+* [[Topcon]]
+* C-Nav
+* [[Magellan Navigation]]
+* Novatel
+* [[Leica Geosystems]]
+* Hemisphere GNSS 
+* [[Trimble Inc]]
+* [[u-blox]]
+NPO Progress describes a receiver called ''GALS-A1'', which combines GPS and GLONASS reception.
+
+[[SkyWave Mobile Communications]] manufactures an [[Inmarsat]]-based satellite communications terminal that uses both GLONASS and GPS.&lt;ref&gt;&quot;GLONASS added to SkyWave terminals&quot;, Digital Ship, 4 December 2009, [http://www.thedigitalship.com/conferences/2006/displaynews.asp?NewsID=902 Thedigitalship.com] {{webarchive |url=https://web.archive.org/web/20110716231551/http://www.thedigitalship.com/conferences/2006/displaynews.asp?NewsID=902|date=16 July 2011}}&lt;/ref&gt;
+
+{{As of|2011}}, some of the latest receivers in the [[Garmin]] eTrex line also support GLONASS (along with GPS).&lt;ref&gt;[Garmin eTrex 20 https://buy.garmin.com/shop/shop.do?cID=145&amp;pID=87771#overviewTab]&lt;/ref&gt; Garmin also produce a standalone [[Bluetooth]] receiver, the GLO for Aviation, which combines GPS, [[Wide Area Augmentation System|WAAS]] and GLONASS.&lt;ref&gt;[https://buy.garmin.com/en-US/US/in-the-air/portable-gps/glo-for-aviation/prod109826.html GLO for Aviation|Garmin], buy.garmin.com, Retrieved on 2 August 2013&lt;/ref&gt;
+
+Various [[smartphone]]s from 2011 onwards have integrated GLONASS capability in addition to their pre-existing [[GPS]] receivers, with the intention of reducing signal acquisition periods by allowing the device to pick up more satellites than with a single-network receiver, including devices from: 
+* [[Xiaomi]]
+* [[Sony Ericsson]] &lt;ref&gt;{{cite web|url=http://dl-www.sonyericsson.com/cws/download/1/922/663/1315211190/pro_WP_13.pdf|title=Sony Xperia™ support (English)|website=sonyericsson.com|access-date=2 September 2015}}{{Dead link|date=March 2020|bot=InternetArchiveBot|fix-attempted=yes}}&lt;/ref&gt; 
+* [[ZTE]]
+* [[Huawei]] &lt;ref&gt;{{cite web|url=http://www.cnews.ru/news/top/index.shtml?2011/02/15/427617|title=Sony Ericsson и Huawei готовят смартфоны с ГЛОНАСС|work=CNews.ru|accessdate=2 September 2015|url-status=dead |archiveurl=https://web.archive.org/web/20150723064735/http://www.cnews.ru/news/top/index.shtml?2011%2F02%2F15%2F427617|archive-date=23 July 2015}}&lt;/ref&gt; 
+* [[Samsung]] ([[Samsung Galaxy Note (original)|Galaxy Note]], [[Galaxy Note II]], [[Galaxy S3]], [[Galaxy S4]]).&lt;ref&gt;{{cite web|url=http://www.samsung.com/global/microsite/galaxynote/note/spec.html |title=Samsung GALAXY Note|website=samsung.com|access-date=2 September 2015}}&lt;/ref&gt; Samsung Z3, Samsung Z4, Samsung Z5. 
+* [[Apple Inc.|Apple]] (since [[iPhone 4S]])
+* [[HTC]] &lt;ref&gt;[http://www.htc.com/www/smartphones/htc-wp-8x/#specs Windows Phone 8X by HTC Overview - HTC Smartphones], htc.com, Retrieved on 2 August 2013&lt;/ref&gt;
+* [[LG Corporation|LG]] &lt;ref&gt;[https://docs.google.com/viewer?url=http%3A%2F%2Fwww.qualcomm.com%2Fsites%2Fdefault%2Ffiles%2Fcommon%2Fproducts-services%2Fsnapdragon_specs_9-12.pdf Google Drive Viewer], docs.google.com, Retrieved on 2 August 2013&lt;/ref&gt;
+* [[Motorola]] &lt;ref&gt;{{cite web|url=http://mediacenter.motorola.com/Fact-Sheets/DROID-RAZR-by-Motorola-Fact-Sheet-386c.aspx|title=The Official Motorola Blog|website=motorola.com|access-date=2 September 2015}}&lt;/ref&gt;
+* [[Nokia]] &lt;ref&gt;{{cite news|url=https://www.reuters.com/article/2011/08/09/us-russia-glonass-idUSTRE7783VU20110809|title=GLONASS gets Nokia backing, aims to rival COMPASS|newspaper=Reuters|access-date=2 September 2015|date=9 August 2011}}&lt;/ref&gt;
+
+== Status ==
+=== Availability ===
+{{as of|2020|May|31}},&lt;ref name=&quot;auto&quot;&gt;{{cite web|url=https://glonass-iac.ru/en/GLONASS/index.php|title=Constellation status|website=glonass-iac.ru|access-date=2018-02-16}}&lt;/ref&gt; the GLONASS [https://glonass-iac.ru/en/GLONASS/ constellation status] is:&lt;ref name=&quot;auto&quot;/&gt;
+
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+! style=&quot;text-align:left;&quot;| Total
+| 27 SC
+|-
+! style=&quot;text-align:left;&quot;| Operational
+| 24 SC (Glonass-M/K)
+|-
+! style=&quot;text-align:left;&quot;| In commissioning
+| 0 SC
+|-
+! style=&quot;text-align:left;&quot;| In maintenance
+| 0 SC
+|-
+! style=&quot;text-align:left;&quot;| Under check by the Satellite Prime Contractor
+| 0 SC
+|-
+! style=&quot;text-align:left;&quot;| Spares
+| 2 SC
+|-
+! style=&quot;text-align:left;&quot;| In flight tests phase
+| 1 SC (Glonass-K)
+|-
+! style=&quot;text-align:left;&quot;| 
+| –
+|}
+
+The system requires 18 satellites for continuous navigation services covering the entire territory of the Russian Federation, and 24 satellites to provide services worldwide.&lt;ref name=&quot;rianovosti_worldrecord&quot;&gt;[http://en.rian.ru/russia/20081229/119210306.html Russia to set world record with 39 space launches in 2009], RIA Novosti, Retrieved on 29 December 2008&lt;/ref&gt; The GLONASS system covers 100% of worldwide territory.
+
+On 2 April 2014, the system experienced a technical failure that resulted in practical unavailability of the navigation signal for around 12 hours.&lt;ref name=&quot;izvestia&quot;&gt;{{cite news |url=http://izvestia.ru/news/568647|title=Роскосмос ищет причины сбоя ГЛОНАСС|newspaper=Izvestia|year=2014}}&lt;/ref&gt;
+
+On 14–15 April 2014, nine GLONASS satellites experienced a technical failure due to software problems.&lt;ref name=&quot;novaya gazeta&quot;&gt;{{cite web|url=https://www.novayagazeta.ru/news/2014/04/15/99404-sistema-glonass-vyshla-iz-stroya-vtoroy-raz-za-mesyats|title=Система ГЛОНАСС вышла из строя второй раз за месяц|year=2014}}&lt;/ref&gt;
+
+On 19 February 2016, three GLONASS satellites experienced a technical failure: the batteries of GLONASS-738 exploded, the batteries of GLONASS-737 were depleted, and GLONASS-736 experienced a stationkeeping failure due to human error during maneuvering. GLONASS-737 and GLONASS-736 are expected to be operational again after maintenance, and one new satellite (GLONASS-751) to replace GLONASS-738 is expected to complete commissioning in early March 2016. The full capacity of the satellite group is expected to be restored in the middle of March 2016.&lt;ref&gt;{{cite web|url=http://izvestia.ru/news/604492|title=Роскосмос обещает восстановить ГЛОНАСС к середине марта|date=18 February 2016}}&lt;/ref&gt;

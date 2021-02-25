@@ -1,0 +1,137 @@
+===Redshift velocity and recessional velocity===
+Redshift can be measured by determining the wavelength of a known transition, such as hydrogen α-lines for distant quasars, and finding the fractional shift compared to a stationary reference. Thus redshift is a quantity unambiguous for experimental observation. The relation of redshift to recessional velocity is another matter. For an extensive discussion, see Harrison.&lt;ref name=&quot;Harrison&quot;&gt;{{cite journal |last=Harrison |first=E. |date=1992 |title=The redshift-distance and velocity-distance laws |journal=[[The Astrophysical Journal]] |volume=403 |pages=28–31 | bibcode=1993ApJ...403...28H |doi=10.1086/172179}}&lt;/ref&gt;
+
+====Redshift velocity====
+The redshift ''z'' is often described as a ''redshift velocity'', which is the recessional velocity that would produce the same redshift ''if'' it were caused by a linear [[Doppler effect]] (which, however, is not the case, as the shift is caused in part by a [[Metric expansion of space|cosmological expansion of space]], and because the velocities involved are too large to use a non-relativistic formula for Doppler shift). This redshift velocity can easily exceed the speed of light.&lt;ref name=&quot;Madsen&quot;&gt;{{cite book
+ |last=Madsen |first=M. S.
+ |date=1995
+ |title=The Dynamic Cosmos
+ |url=https://books.google.com/books?id=_2GeJxVvyFMC&amp;pg=PA35
+ |page=35
+ |publisher=[[CRC Press]]
+ |isbn=978-0-412-62300-4
+}}&lt;/ref&gt; In other words, to determine the redshift velocity ''v&lt;sub&gt;rs&lt;/sub&gt;'', the relation:
+
+:&lt;math&gt; v_{rs} \equiv cz,&lt;/math&gt;
+
+is used.&lt;ref name=&quot;Dekel&quot;&gt;{{cite book |last1=Dekel |first1=A.  |last2=Ostriker |first2=J. P. |date=1999  |title=Formation of Structure in the Universe
+ |url=https://books.google.com/books?id=yAroX6tx-l0C&amp;pg=PA164 |page=164  |publisher=[[Cambridge University Press]] |isbn=978-0-521-58632-0 }}&lt;/ref&gt;&lt;ref name=&quot;Padmanabhan&quot;&gt;{{cite book |last=Padmanabhan |first=T. |date=1993 |title=Structure formation in the universe | url=https://books.google.com/books?id=AJlOVBRZJtIC&amp;pg=PA58 |page=58 |publisher=[[Cambridge University Press]] |isbn=978-0-521-42486-8 }}&lt;/ref&gt; That is, there is ''no fundamental difference'' between redshift velocity and redshift: they are rigidly proportional, and not related by any theoretical reasoning. The motivation behind the &quot;redshift velocity&quot; terminology is that the redshift velocity agrees with the velocity from a low-velocity simplification of the so-called [[Relativistic Doppler effect|Fizeau-Doppler formula]].&lt;ref name=&quot;Sartori&quot;&gt;
+{{cite book
+ |last=Sartori |first=L.
+ |date=1996
+ |title=Understanding Relativity
+ |page=163, Appendix 5B
+ |publisher=[[University of California Press]]
+ |isbn=978-0-520-20029-6
+}}&lt;/ref&gt;
+
+:&lt;math&gt;z = \frac{\lambda_o}{\lambda_e}-1 = \sqrt{\frac{1+\frac{v}{c}}{1-\frac{v}{c}}}-1 \approx \frac{v}{c}.&lt;/math&gt;
+
+Here, ''λ&lt;sub&gt;o&lt;/sub&gt;'', ''λ&lt;sub&gt;e&lt;/sub&gt;'' are the observed and emitted wavelengths respectively. The &quot;redshift velocity&quot; ''v&lt;sub&gt;rs&lt;/sub&gt;'' is not so simply related to real velocity at larger velocities, however, and this terminology leads to confusion if interpreted as a real velocity. Next, the connection between redshift or redshift velocity and recessional velocity is discussed. This discussion is based on Sartori.&lt;ref name=&quot;L_Sartori&quot;&gt;{{cite book|last=Sartori |first=L. |date=1996 |title=Understanding Relativity |pages=304–305 |publisher=[[University of California Press]] |isbn=978-0-520-20029-6
+}}&lt;/ref&gt;
+
+====Recessional velocity====
+
+Suppose ''R(t)'' is called the ''scale factor'' of the universe, and increases as the universe expands in a manner that depends upon the [[Physical cosmology|cosmological model]] selected. Its meaning is that all measured proper distances ''D(t)'' between co-moving points increase proportionally to ''R''. (The co-moving points are not moving relative to each other except as a result of the expansion of space.) In other words:
+
+:&lt;math&gt;\frac {D(t)}{D(t_0)} = \frac{R(t)}{R(t_0)},&lt;/math&gt; &lt;ref&gt;&quot;Introduction to Cosmology&quot;, Matts Roos&lt;/ref&gt;
+
+where ''t''&lt;sub&gt;0&lt;/sub&gt; is some reference time. If light is emitted from a galaxy at time ''t&lt;sub&gt;e&lt;/sub&gt;'' and received by us at ''t''&lt;sub&gt;0&lt;/sub&gt;, it is redshifted due to the expansion of space, and this redshift ''z'' is simply:
+
+:&lt;math&gt;z = \frac {R(t_0)}{R(t_e)} - 1. &lt;/math&gt;
+
+Suppose a galaxy is at distance ''D'', and this distance changes with time at a rate ''d&lt;sub&gt;t&lt;/sub&gt;D''. We call this rate of recession the &quot;recession velocity&quot; ''v&lt;sub&gt;r&lt;/sub&gt;'':
+
+:&lt;math&gt;v_r = d_tD = \frac {d_tR}{R} D. &lt;/math&gt;
+
+We now define the Hubble constant as
+
+:&lt;math&gt;H \equiv \frac{d_tR}{R}, &lt;/math&gt;
+
+and discover the Hubble law:
+
+:&lt;math&gt; v_r = H D. &lt;/math&gt;
+
+From this perspective, Hubble's law is a fundamental relation between (i) the recessional velocity contributed by the expansion of space and (ii) the distance to an object; the connection between redshift and distance is a crutch used to connect Hubble's law with observations. This law can be related to redshift ''z'' approximately by making a [[Taylor series]] expansion:
+
+:&lt;math&gt; z = \frac {R(t_0)}{R(t_e)} - 1 \approx \frac {R(t_0)} {R(t_0)\left(1+(t_e-t_0)H(t_0)\right)}-1 \approx (t_0-t_e)H(t_0), &lt;/math&gt;
+
+If the distance is not too large, all other complications of the model become small corrections, and the time interval is simply the distance divided by the speed of light:
+
+:&lt;math&gt; z \approx (t_0-t_e)H(t_0) \approx \frac {D}{c} H(t_0), &lt;/math&gt;
+
+or
+
+:&lt;math&gt; cz \approx D H(t_0) = v_r. &lt;/math&gt;
+
+According to this approach, the relation ''cz'' = ''v&lt;sub&gt;r&lt;/sub&gt;'' is an approximation valid at low redshifts, to be replaced by a relation at large redshifts that is model-dependent. See [[#redshift|velocity-redshift figure]].
+
+===Observability of parameters===
+Strictly speaking, neither ''v'' nor ''D'' in the formula are directly observable, because they are properties ''now'' of a galaxy, whereas our observations refer to the galaxy in the past, at the time that the light we currently see left it.
+
+For relatively nearby galaxies (redshift ''z'' much less than unity), ''v'' and ''D'' will not have changed much, and ''v'' can be estimated using the formula &lt;math&gt;v = zc&lt;/math&gt; where ''c'' is the speed of light. This gives the empirical relation found by Hubble.
+
+For distant galaxies, ''v'' (or ''D'') cannot be calculated from ''z'' without specifying a detailed model for how ''H'' changes with time. The redshift is not even directly related to the recession velocity at the time the light set out, but it does have a simple interpretation: ''(1+z)'' is the factor by which the universe has expanded while the photon was travelling towards the observer.
+
+===Expansion velocity vs. relative velocity===
+In using Hubble's law to determine distances, only the velocity due to the expansion of the universe can be used. Since gravitationally interacting galaxies move relative to each other independent of the expansion of the universe,&lt;ref name=&quot;AM-20170818&quot;&gt;{{cite web |last=Scharping |first=Nathaniel |title=Gravitational Waves Show How Fast The Universe is Expanding |url=http://www.astronomy.com/news/2017/10/gravitational-waves-show-how-fast-the-universe-is-expanding |date=18 October 2017 |website=[[Astronomy (magazine)|Astronomy]] |access-date=18 October 2017 }}&lt;/ref&gt; these relative velocities, called peculiar velocities, need to be accounted for in the application of Hubble's law.
+
+The [[Redshift-space distortions|Finger of God]] effect is one result of this phenomenon. In [[Virial theorem|systems that are gravitationally bound]], such as galaxies or our planetary system, the expansion of space is a much weaker effect than the attractive force of gravity.
+
+=== Time-dependence of Hubble parameter ===
+
+The parameter &lt;math&gt;H&lt;/math&gt; is commonly called the “''Hubble constant''”, but that is a misnomer since it is constant in space only at a fixed time; it varies with time in nearly all cosmological models, and all observations of far distant objects are also observations into the distant past, when the “constant” had a different value. The “''Hubble parameter''” is a more correct term, with &lt;math&gt;H_0 &lt;/math&gt; denoting the present-day value.
+
+Another common source of confusion is that the accelerating universe does ''not'' imply that the Hubble parameter is actually increasing with time; since &lt;math&gt; H(t) \equiv \dot{a}(t)/a(t) &lt;/math&gt;, in most accelerating models &lt;math&gt;a&lt;/math&gt; increases relatively faster than &lt;math&gt;\dot{a}&lt;/math&gt;, so H decreases with time. (The recession velocity of one chosen galaxy does increase, but different galaxies passing a sphere of fixed radius cross the sphere more slowly at later times.)
+
+On defining the dimensionless [[deceleration parameter]]
+:&lt;math&gt;  q \equiv - \frac {\ddot{a}\, a} {\dot{a}^2} &lt;/math&gt;, it follows that
+:&lt;math&gt; \frac{dH}{dt} = -H^2 (1+q) &lt;/math&gt;
+
+From this it is seen that the Hubble parameter is decreasing with time, unless &lt;math&gt; q &lt; -1 &lt;/math&gt;; the latter can only occur if the universe contains [[phantom energy]], regarded as theoretically somewhat improbable.
+
+However, in the standard [[ΛCDM model]], &lt;math&gt; q &lt;/math&gt; will tend to −1 from above in the distant future as the cosmological constant becomes increasingly dominant over matter; this implies that &lt;math&gt; H &lt;/math&gt; will approach from above to a constant value of &lt;math&gt; \approx 57 &lt;/math&gt; km/s/Mpc, and the scale factor of the universe will then grow exponentially in time.
+
+===Idealized Hubble's law===
+The mathematical derivation of an idealized Hubble's law for a uniformly expanding universe is a fairly elementary theorem of geometry in 3-dimensional [[Cartesian coordinate system|Cartesian]]/Newtonian coordinate space, which, considered as a [[metric space]], is entirely [[Cosmological principle|homogeneous and isotropic]] (properties do not vary with location or direction). Simply stated the theorem is this:
+{{bquote|Any two points which are moving away from the origin, each along straight lines and with speed proportional to distance from the origin, will be moving away from each other with a speed proportional to their distance apart.}}
+
+In fact this applies to non-Cartesian spaces as long as they are locally homogeneous and isotropic, specifically to the negatively and positively curved spaces frequently considered as cosmological models (see [[shape of the universe]]).
+
+An observation stemming from this theorem is that seeing objects recede from us on Earth is not an indication that Earth is near to a center from which the expansion is occurring, but rather that ''every'' observer in an expanding universe will see objects receding from them.
+
+===Ultimate fate and age of the universe===
+[[Image:Friedmann universes.svg|thumb|400px|The [[age of the universe|age]] and [[ultimate fate of the universe]] can be determined by measuring the Hubble constant today and extrapolating with the observed value of the deceleration parameter, uniquely characterized by values of density parameters (Ω&lt;sub&gt;M&lt;/sub&gt; for [[matter]] and Ω&lt;sub&gt;Λ&lt;/sub&gt; for dark energy). A &quot;closed universe&quot; with Ω&lt;sub&gt;M&lt;/sub&gt; &gt; 1 and Ω&lt;sub&gt;Λ&lt;/sub&gt; = 0 comes to an end in a [[Big Crunch]] and is considerably younger than its Hubble age. An &quot;open universe&quot; with Ω&lt;sub&gt;M&lt;/sub&gt; ≤ 1 and Ω&lt;sub&gt;Λ&lt;/sub&gt; = 0 expands forever and has an age that is closer to its Hubble age. For the accelerating universe with nonzero Ω&lt;sub&gt;Λ&lt;/sub&gt; that we inhabit, the age of the universe is coincidentally very close to the Hubble age.]]
+
+The value of the Hubble parameter changes over time, either increasing or decreasing depending on the value of the so-called [[deceleration parameter]] &lt;math&gt;q&lt;/math&gt;, which is defined by
+
+:&lt;math&gt;q = -\left(1+\frac{\dot H}{H^2}\right).&lt;/math&gt;
+
+In a universe with a deceleration parameter equal to zero, it follows that ''H'' = 1/''t'', where ''t'' is the time since the Big Bang. A non-zero, time-dependent value of &lt;math&gt;q&lt;/math&gt; simply requires [[integral|integration]] of the Friedmann equations backwards from the present time to the time when the [[particle horizon|comoving horizon]] size was zero.
+
+It was long thought that ''q'' was positive, indicating that the expansion is slowing down due to gravitational attraction. This would imply an age of the universe less than 1/''H'' (which is about 14 billion years). For instance, a value for ''q'' of 1/2 (once favoured by most theorists) would give the age of the universe as 2/(3''H''). The discovery in 1998 that ''q'' is apparently negative means that the universe could actually be older than 1/''H''. However, estimates of the [[age of the universe]] are very close to 1/''H''.
+
+===Olbers' paradox===
+{{Main|Olbers' paradox}}
+The expansion of space summarized by the Big Bang interpretation of Hubble's law is relevant to the old conundrum known as [[Olbers' paradox]]: If the universe were [[Infinity|infinite]] in size, [[static universe|static]], and filled with a uniform distribution of [[star]]s, then every line of sight in the sky would end on a star, and the sky would be as [[brightness|bright]] as the surface of a star. However, the night sky is largely dark.&lt;ref name=&quot;Chase_etal_2004&quot;&gt;{{cite web |last1=Chase |first1=S. I. |last2=Baez |first2=J. C. |date=2004 |title=Olbers' Paradox |url=http://math.ucr.edu/home/baez/physics/Relativity/GR/olbers.html |website=The Original Usenet Physics FAQ |access-date=2013-10-17}}&lt;/ref&gt;&lt;ref name=&quot;Asimov1974&quot;&gt;{{cite book |last=Asimov |first=I. |date=1974 |chapter=The Black of Night |title=Asimov on Astronomy |publisher=[[Doubleday (publisher)|Doubleday]] |isbn=978-0-385-04111-9 |chapter-url-access=registration |chapter-url=https://archive.org/details/asimovonastronom00isaa |url-access=registration |url=https://archive.org/details/asimovonastronom00isaa }}&lt;/ref&gt;
+
+Since the 17th&amp;nbsp;century, astronomers and other thinkers have proposed many possible ways to resolve this paradox, but the currently accepted resolution depends in part on the Big Bang theory, and in part on the Hubble expansion: In a universe that exists for a finite amount of time, only the light of a finite number of stars has had enough time to reach us, and the paradox is resolved. Additionally, in an expanding universe, distant objects recede from us, which causes the light emanated from them to be redshifted and diminished in brightness by the time we see it.&lt;ref name=Chase_etal_2004/&gt;&lt;ref name=Asimov1974/&gt;
+
+===Dimensionless Hubble parameter===
+Instead of working with Hubble's constant, a common practice is to introduce the '''dimensionless Hubble parameter''', usually denoted by ''h'', and to write the Hubble's parameter ''H''&lt;sub&gt;0&lt;/sub&gt; as ''h''&amp;nbsp;×&amp;nbsp;100&amp;nbsp;km&amp;nbsp;[[second|s]]&lt;sup&gt;−1&lt;/sup&gt;&amp;nbsp;[[Parsec|Mpc]]&lt;sup&gt;−1&lt;/sup&gt;, all the relative uncertainty of the true value of ''H''&lt;sub&gt;0&lt;/sub&gt; being then relegated to ''h''.&lt;ref&gt;
+{{cite book
+ |last=Peebles |first=P. J. E.
+ |date=1993
+ |title=Principles of Physical Cosmology
+ |publisher=[[Princeton University Press]]
+}}&lt;/ref&gt; Occasionally a reference value other than 100 may be chosen, in which case a subscript is presented after ''h'' to avoid confusion; e.g. h&lt;sub&gt;70&lt;/sub&gt; denotes &lt;math&gt; H_0 = 70 \, h_{70} &lt;/math&gt; km&amp;nbsp;s&lt;sup&gt;−1&lt;/sup&gt;&amp;nbsp;Mpc&lt;sup&gt;−1&lt;/sup&gt;, which implies &lt;math&gt; h_{70} = h / 0.7 &lt;/math&gt;.
+
+This should not be confused with the [[Dimensionless physical constant|dimensionless value]] of Hubble's constant, usually expressed in terms of [[Planck units]], obtained by multiplying ''H''&lt;sub&gt;0&lt;/sub&gt; by 1.75&amp;nbsp;×&amp;nbsp;10&lt;sup&gt;−63&lt;/sup&gt; (from definitions of parsec and [[Planck time|''t''&lt;sub&gt;P&lt;/sub&gt;]]), for example for ''H''&lt;sub&gt;0&lt;/sub&gt;=70, a Planck unit version of 1.2&amp;nbsp;×&amp;nbsp;10&lt;sup&gt;−61&lt;/sup&gt; is obtained.
+
+==Determining the Hubble constant==
+[[File:Recent Hubble's Constant Values.png|thumb|right|Value of the Hubble Constant including measurement uncertainty for recent surveys&lt;ref name=&quot;planck_overview&quot;/&gt;]]
+The value of the Hubble constant is estimated by measuring the redshift of distant galaxies and then determining the distances to them by some other method than Hubble's law. This approach forms part of the [[cosmic distance ladder]] for measuring distances to extragalactic objects. Uncertainties in the physical assumptions used to determine these distances have caused varying estimates of the Hubble constant.&lt;ref name=&quot;NYT-20170220&quot; /&gt;
+
+The observations of astronomer [[Walter Baade]] led him to define distinct &quot;[[stellar population|populations]]&quot; for stars (Population I and Population II). The same observations led him to discover that there are two types of Cepheid variable stars. Using this discovery he recalculated the size of the known universe, doubling the previous calculation made by [[Edwin Hubble|Hubble]] in 1929.&lt;ref&gt;Baade W (1944) The resolution of Messier 32, NGC 205, and the central region of the Andromeda nebula. ApJ 100 137-146&lt;/ref&gt;&lt;ref&gt;Baade W (1956) The period-luminosity relation of the Cepheids. PASP 68 5-16&lt;/ref&gt;&lt;ref&gt;{{cite web|last=Allen|first=Nick|title=Section 2: The Great Debate and the Great Mistake: Shapley, Hubble, Baade|url=http://www.institute-of-brilliant-failures.com/section2.htm|website=The Cepheid Distance Scale: A History|access-date=19 November 2011|archive-url=https://web.archive.org/web/20071210105344/http://www.institute-of-brilliant-failures.com/section2.htm|archive-date=10 December 2007|url-status=dead}}&lt;/ref&gt; He announced this finding to considerable astonishment at the 1952 meeting of the [[International Astronomical Union]] in Rome.
+
+In October 2018, scientists presented a new third way (two earlier methods, one based on redshifts and another on the cosmic distance ladder, gave results that do not agree), using information from [[gravitational wave]] events (especially those involving the [[Neutron star merger|merger of neutron stars]], like [[GW170817]]), of determining the Hubble constant.&lt;ref name=&quot;PHYS-20181022&quot;&gt;{{cite web |last=Lerner |first=Louise |title=Gravitational waves could soon provide measure of universe's expansion |url=https://phys.org/news/2018-10-gravitational-universe-expansion.html |date=22 October 2018 |work=[[Phys.org]] |access-date=22 October 2018 }}&lt;/ref&gt;&lt;ref name=&quot;NAT-20181017&quot;&gt;{{cite journal |last1=Chen |first1=Hsin-Yu |last2=Fishbach |first2=Maya |last3=Holz |first3=Daniel E. |title=A two per cent Hubble constant measurement from standard sirens within five years |date=17 October 2018 |journal=[[Nature (journal)|Nature]] |volume=562 |issue=7728 |pages=545–547 |doi=10.1038/s41586-018-0606-0 |pmid=30333628 |bibcode=2018Natur.562..545C |arxiv=1712.06531 |s2cid=52987203 }}&lt;/ref&gt;

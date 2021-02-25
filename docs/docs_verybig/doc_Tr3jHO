@@ -1,0 +1,193 @@
+=== Aquifers versus aquitards ===
+Aquifers are typically saturated regions of the subsurface that produce an economically feasible quantity of water to a well or [[spring (hydrosphere)|spring]] (e.g., sand and [[gravel]] or fractured [[bedrock]] often make good aquifer materials).
+
+An aquitard is a zone within the Earth that restricts the flow of groundwater from one aquifer to another. A completely impermeable aquitard is called an ''aquiclude'' or ''aquifuge''. Aquitards comprise layers of either clay or non-porous rock with low [[hydraulic conductivity]].
+
+In mountainous areas (or near rivers in mountainous areas), the main aquifers are typically unconsolidated [[alluvium]], composed of mostly horizontal layers of materials deposited by water processes (rivers and streams), which in cross-section (looking at a two-dimensional slice of the aquifer) appear to be layers of alternating coarse and fine materials. Coarse materials, because of the high energy needed to move them, tend to be found nearer the source (mountain fronts or rivers), whereas the fine-grained material will make it farther from the source (to the flatter parts of the basin or overbank areas—sometimes called the pressure area). Since there are less fine-grained deposits near the source, this is a place where aquifers are often unconfined (sometimes called the forebay area), or in hydraulic communication with the land surface.
+
+{{see also|Hydraulic conductivity|Storativity}}
+
+=== Confined versus unconfined ===
+There are two end members in the spectrum of types of aquifers; ''confined'' and ''unconfined'' (with semi-confined being in between). ''Unconfined'' aquifers are sometimes also called ''water table'' or ''phreatic'' aquifers, because their upper boundary is the [[water table]] or phreatic surface. (See [[Biscayne Aquifer]].) Typically (but not always) the shallowest aquifer at a given location is unconfined, meaning it does not have a confining layer (an aquitard or aquiclude) between it and the surface. The term &quot;perched&quot; refers to ground water accumulating above a low-permeability unit or strata, such as a clay layer. This term is generally used to refer to a small local area of ground water that occurs at an elevation higher than a regionally extensive aquifer. The difference between perched and unconfined aquifers is their size (perched is smaller). Confined aquifers are aquifers that are overlain by a confining layer, often made up of clay. The confining layer might offer some protection from surface contamination.
+
+If the distinction between confined and unconfined is not clear geologically (i.e., if it is not known if a clear confining layer exists, or if the geology is more complex, e.g., a fractured bedrock aquifer), the value of storativity returned from an [[aquifer test]] can be used to determine it (although aquifer tests in unconfined aquifers should be interpreted differently than confined ones). Confined aquifers have very low [[Specific storage|storativity]] values (much less than 0.01, and as little as {{10^|-5}}), which means that the aquifer is storing water using the mechanisms of aquifer matrix expansion and the compressibility of water, which typically are both quite small quantities. Unconfined aquifers have storativities (typically then called [[Specific storage|specific yield]]) greater than 0.01 (1% of bulk volume); they release water from storage by the mechanism of actually draining the pores of the aquifer, releasing relatively large amounts of water (up to the drainable [[Hydrogeology#Porosity|porosity]] of the aquifer material, or the minimum volumetric [[water content]]).
+{{see also|Porosity|Storativity}}
+
+=== Isotropic versus anisotropic ===
+In [[Isotropy|isotropic]] aquifers or aquifer layers the hydraulic conductivity (K) is equal for flow in all directions, while in [[Anisotropy|anisotropic]] conditions it differs, notably in horizontal (Kh) and vertical (Kv) sense.
+
+Semi-confined aquifers with one or more aquitards work as an anisotropic system, even when the separate layers are isotropic, because the compound Kh and Kv values are different (see [[Transmissibility (fluid)|hydraulic transmissivity]] and [[hydraulic conductivity#Resistance|hydraulic resistance]]).
+
+When calculating [[drainage equation|flow to drains]] &lt;ref&gt;''The energy balance of groundwater flow applied to subsurface drainage in anisotropic soils by pipes or ditches with entrance resistance''. International Institute for Land Reclamation and Improvement (ILRI), Wageningen, The Netherlands. On line : [http://www.waterlog.info/pdf/enerart.pdf] {{Webarchive|url=https://web.archive.org/web/20090219221547/http://waterlog.info/pdf/enerart.pdf|date=2009-02-19}} . Paper based on: R.J. Oosterbaan, J. Boonstra and K.V.G.K. Rao, 1996, &quot;The energy balance of groundwater flow&quot;. Published in V.P.Singh and B.Kumar (eds.), Subsurface-Water Hydrology, pp. 153–60, Vol. 2 of Proceedings of the International Conference on Hydrology and Water Resources, New Delhi, India, 1993. Kluwer Academic Publishers, Dordrecht, The Netherlands. {{ISBN|978-0-7923-3651-8}} . On line : [http://www.waterlog.info/pdf/enerbal.pdf] . The corresponding &quot;EnDrain&quot; software can be downloaded from : [http://www.waterlog.info/software.htm], or from : [http://www.waterlog.info/endrain.htm]&lt;/ref&gt; or [[drainage by wells|flow to wells]] &lt;ref&gt;ILRI (2000), ''Subsurface drainage by (tube)wells: Well spacing equations for fully and partially penetrating wells in uniform or layered aquifers with or without anisotropy and entrance resistance'', 9 pp. Principles used in the &quot;WellDrain&quot; model. International Institute for Land Reclamation and Improvement (ILRI), Wageningen, The Netherlands. On line : [http://www.waterlog.info/pdf/wellspac.pdf] . Download &quot;WellDrain&quot; software from : [http://www.waterlog.info/software.htm], or from : [http://www.waterlog.info/weldrain.htm]&lt;/ref&gt; in an aquifer, the anisotropy is to be taken into account lest the resulting design of the drainage system may be faulty.
+
+===Porous versus karst===
+
+To properly manage an aquifer its properties must be understood. Many properties must be known to predict how an aquifer will respond to rainfall, drought, pumping, and [[Pollution#Forms of pollution|contamination]]. Where and how much water enters the groundwater from rainfall and snowmelt? How fast and what direction does the groundwater travel? How much water leaves the ground as springs. How much water can be sustainably pumped out? How quickly will a contamination incident reach a well or spring? [[Groundwater model|Computer models]] can be used to test how accurately the understanding of the aquifer properties matches the actual aquifer performance.&lt;ref name=&quot;FieldMethodsGeoHydrogeo&quot;&gt;{{cite book|last1= Assaad |first1= Fakhry |last2=LaMoreaux |first2=Philip |last3=Hughes |first3=Travis |date=2004 |title=Field methods for geologists and hydrogeologists |location=Berlin, Germany |publisher= Springer-Verlag Berlin Heidelberg |isbn= 978-3-540-40882-6 |doi=10.1007/978-3-662-05438-3}}&lt;/ref&gt;{{rp|192–193, 233–237}} Environmental regulations require sites with potential sources of contamination to demonstrate that the [[Hydrology#Groundwater|hydrology]] has been [[Environmental monitoring|characterized]].&lt;ref name=&quot;FieldMethodsGeoHydrogeo&quot; /&gt;{{rp|3}}
+
+====Porous====
+[[File:Water seep from sandstone in Hanging Garden SE Utah.jpg|thumb|left|alt=Water slowly seeping from tan porous sandstone at contact with impermeable gray shale creates a refreshing growth of green vegetation in the desert. |Water in porous aquifers slowly seeps through pore spaces between sand grains]]
+
+Porous aquifers typically occur in sand and [[sandstone]]. Porous aquifer properties depend on the [[depositional environment|depositional sedimentary environment]] and later natural cementation of the sand grains. The environment where a sand body was deposited controls the orientation of the sand grains, the horizontal and vertical variations, and the distribution of shale layers. Even thin shale layers are important barriers to groundwater flow. All these factors affect the [[porosity]] and [[Permeability (earth sciences)|permeability]] of sandy aquifers.&lt;ref name=&quot;SandSandstone&quot;&gt;{{cite book|last1= Pettijohn |first1= Francis |last2=Potter |first2=Paul |last3=Siever |first3=Raymond |date=1987 |title=Sand and Sandstone |location=New York |publisher= Springer Science+Business Media |isbn= 978-0-387-96350-1 |doi=10.1007/978-1-4612-1066-5 }}&lt;/ref&gt;{{rp|413}} Sandy deposits formed in [[Shallow water marine environment|shallow marine environments]] and in [[aeolian processes|windblown sand dune environments]] have moderate to high permeability while sandy deposits formed in [[Fluvial processes|river environments]] have low to moderate permeability.&lt;ref name=&quot;SandSandstone&quot; /&gt;{{rp|418}} Rainfall and snowmelt enter the groundwater where the aquifer is near the surface. Groundwater flow directions can be determined from [[potentiometric surface]] maps of water levels in wells and springs. [[Aquifer test]]s and [[well test]]s can be used with [[Darcy's law]] flow equations to determine the ability of a porous aquifer to convey water.&lt;ref name=&quot;FieldMethodsGeoHydrogeo&quot; /&gt;{{rp|177–184}} Analyzing this type of information over an area gives an indication how much water can be pumped without [[overdrafting]] and how contamination will travel.&lt;ref name=&quot;FieldMethodsGeoHydrogeo&quot; /&gt;{{rp|233}} In porous aquifers groundwater flows as slow seepage in pores between sand grains. A groundwater flow rate of 1 foot per day (0.3 m/d) is considered to be a high rate for porous aquifers,&lt;ref&gt;{{cite book |title=Sustainability of ground-water resources. |publisher=U.S. Geological Survey |location=Denver, Colorado |series=Circular 1186 |url=https://archive.org/details/sustainabilityof00alle/page/8 |last1=Alley |first1=William |last2=Reilly |first2=Thomas |last3=Franke |first3=O. |page=[https://archive.org/details/sustainabilityof00alle/page/8 8] |date=1999 |isbn=978-0-607-93040-5 |doi=10.3133/cir1186 |url-access=registration }}&lt;/ref&gt; as illustrated by the water slowly seeping from sandstone in the accompanying image to the left.
+
+====Karst====
+[[File:MammothCaveNPS.jpg|thumb|left |alt=Several people in a jon boat on a river inside a cave. |Water in karst aquifers flows through open conduits where water flows as underground streams]]
+
+[[Karst]] aquifers typically develop in [[limestone]]. Surface water containing natural [[carbonic acid]] moves down into small fissures in limestone. This carbonic acid gradually dissolves limestone thereby enlarging the fissures. The enlarged fissures allow a larger quantity of water to enter which leads to a progressive enlargement of openings. Abundant small openings store a large quantity of water. The larger openings create a conduit system that drains the aquifer to springs.&lt;ref&gt;{{cite book |last=Dreybrodt |first=Wolfgang |date=1988 |title=Processes in karst systems: physics, chemistry, and geology |volume=4 |location=Berlin |publisher=Springer |pages=2–3 |isbn=978-3-642-83354-0 |doi=10.1007/978-3-642-83352-6 |series=Springer Series in Physical Environment }}&lt;/ref&gt; Characterization of karst aquifers requires field exploration to locate [[sinkhole|sinkholes, swallets]], [[Losing stream|sinking streams]], and [[Spring (hydrology)|springs]] in addition to studying [[geologic map]]s.&lt;ref name=&quot;DelineationGrdwtrBasinsTaylor&quot;&gt;{{cite book |last=Taylor |first=Charles |date=1997 |title=Delineation of ground-water basins and recharge areas for municipal water-supply springs in a karst aquifer system in the Elizabethtown area, Northern Kentucky |url=https://pubs.usgs.gov/wri/1996/4254/report.pdf |location=Denver, Colorado |publisher=U.S. Geological Survey |series=Water-Resources Investigations Report 96-4254 |doi=10.3133/wri964254 }}&lt;/ref&gt;{{rp|4}} Conventional hydrogeologic methods such as aquifer tests and potentiometric mapping are insufficient to characterize the complexity of karst aquifers. These conventional investigation methods need to be supplemented with [[Dye tracing|dye traces]], measurement of spring discharges, and analysis of water chemistry.&lt;ref&gt;{{cite book |last1=Taylor |first1=Charles |last2=Greene |first2=Earl |date=2008 |title=Field Techniques for Estimating Water Fluxes Between Surface Water and Ground Water |chapter=Hydrogeologic characterization and methods used in the investigation of karst hydrology. |chapter-url=https://pubs.usgs.gov/tm/04d02/pdf/TM4-D2-chap3.pdf |series=Techniques and Methods 4–D2 |publisher=U.S. Geological Survey |page=107 }}&lt;/ref&gt; U.S. Geological Survey dye tracing has determined that conventional groundwater models that assume a uniform distribution of porosity are not applicable for karst aquifers.&lt;ref&gt;{{cite journal |last1=Renken |first1=R. |last2=Cunningham |first2=K. |last3=Zygnerski |first3=M. |last4=Wacker |first4=M. |last5=Shapiro |first5=A. |last6=Harvey |first6=R. |last7=Metge |first7=D. |last8=Osborn |first8=C. |last9=Ryan |first9=J. |date=November 2005 |title=Assessing the Vulnerability of a Municipal Well Field to Contamination in a Karst Aquifer |journal= Environmental and Engineering Geoscience |publisher=GeoScienceWorld|volume=11 |number=4 |page=320 |doi=10.2113/11.4.319 |citeseerx=10.1.1.372.1559 }}&lt;/ref&gt; Linear alignment of surface features such as straight stream segments and sinkholes develop along [[Fracture (geology)|fracture traces]]. Locating a well in a fracture trace or intersection of fracture traces increases the likelihood to encounter good water production.&lt;ref&gt;{{cite book |last=Fetter |first=Charles |date=1988 |title=Applied Hydrology |location=Columbus, Ohio |publisher=Merrill |pages=294–295 |isbn=978-0-675-20887-1 }}&lt;/ref&gt; Voids in karst aquifers can be large enough to cause destructive collapse or [[subsidence]] of the ground surface that can create a catastrophic release of contaminants.&lt;ref name=&quot;FieldMethodsGeoHydrogeo&quot; /&gt;{{rp|3–4}} Groundwater flow rate in karst aquifers is much more rapid than in porous aquifers as shown in the accompanying image to the left. For example, in the Barton Springs Edwards aquifer, dye traces measured the karst groundwater flow rates from 0.5 to 7 miles per day (0.8 to 11.3&amp;nbsp;km/d).&lt;ref&gt;{{cite journal |last1=Scanlon |first1=Bridget |last2=Mace |first2=Robert |last3=Barrett |first3=Michael |last4=Smith |first4=Brian |date=2003  |title= Can we simulate regional groundwater flow in a karst system using equivalent porous media models? Case study, Barton Springs Edwards aquifer, USA |journal= Journal of Hydrology |publisher=Elsevier Science |volume=276 |issue= 1–4|page=142 |doi= 10.1016/S0022-1694(03)00064-7 }}&lt;/ref&gt; The rapid groundwater flow rates make [[Karst#Hydrology|karst aquifers much more sensitive]] to groundwater contamination than porous aquifers.&lt;ref name=&quot;DelineationGrdwtrBasinsTaylor&quot; /&gt;{{rp|1}}
+
+
+====Transboundary aquifer====
+
+When an aquifer transcends international boundaries, the term ''transboundary aquifer'' applies.&lt;ref&gt;{{cite web |title=International Waters |website=United Nations Development Programme |url=http://www.undp.org/gef/05/portfolio/iw.html |url-status=dead |archive-date=27 January 2009 |archive-url=https://web.archive.org/web/20090127055412/http://www.undp.org/gef/05/portfolio/iw.html }}&lt;/ref&gt; 
+
+Transboundariness is a concept, a measure and an approach first introduced in 2017.&lt;ref&gt;{{cite journal |last1=Sanchez |first1=Rosario |last2=Eckstein |first2=Gabriel |author-link2=Gabriel Eckstein|date=2017 |title=Aquifers Shared Between Mexico and the United States: Management Perspectives and Their Transboundary Nature |journal=Groundwater |volume=55 |number=4 |pages=495–505 |doi=10.1111/gwat.12533 |pmid=28493280 |url=https://transboundary.tamu.edu/media/1368/sanchez_et_al-2017-groundwater.pdf }}&lt;/ref&gt; The relevance of this approach is that the physical features of the aquifers become just additional variables among the broad spectrum of considerations of the transboundary nature of an aquifer: 
+
+* social (population);
+* economic (groundwater productivity);
+* political (as transboundary);
+* available research or data;
+* water quality and quantity;
+* other issues governing the agenda (security, trade, immigration and so on).
+
+The discussion changes from the traditional question of “is the aquifer transboundary?” to “how transboundary is the aquifer?”.
+
+The socio-economic and political contexts effectively overwhelm the aquifer's physical features adding its corresponding geostrategic value (its transboundariness)&lt;ref&gt;{{cite journal|url = https://transboundary.tamu.edu/media/1385/2018_awras_impact.pdf|title = Transboundary Groundwater|journal = Water Resources Impact|date = May 2018|volume = 20|number = 3}}&lt;/ref&gt;
+
+The criteria proposed by this approach attempt to encapsulate and measure all potential variables that play a role in defining the transboundary nature of an aquifer and its multidimensional boundaries.
+
+== Groundwater in rock formations ==
+[[File:Major US Aquifers by Rock Type.jpg|thumb|right|Map of major US aquifers by rock type]]
+Groundwater may exist in ''underground rivers'' (e.g., [[cave]]s where water flows freely underground). This may occur in [[erosion|eroded]] [[limestone]] areas known as [[karst topography]], which make up only a small percentage of Earth's area. More usual is that the pore spaces of rocks in the subsurface are simply saturated with water—like a kitchen sponge—which can be [[pump]]ed out for agricultural, industrial, or municipal uses.
+
+If a rock unit of low [[porosity]] is highly fractured, it can also make a good aquifer (via [[Fracture (geology)|fissure]] flow), provided the rock has a hydraulic conductivity sufficient to facilitate movement of water. Porosity is important, but, ''alone'', it does not determine a rock's ability to act as an aquifer. Areas of the [[Deccan Traps]] (a [[basalt]]ic lava) in west central India are good examples of rock formations with high porosity but low permeability, which makes them poor aquifers. Similarly, the micro-porous (Upper [[Cretaceous]]) [[Chalk Group]] of south east England, although having a reasonably high porosity, has a low grain-to-grain permeability, with its good water-yielding characteristics mostly due to micro-fracturing and fissuring.
+
+== Human dependence on groundwater ==
+
+[[File:Crops Kansas AST 20010624.jpg|thumb|right|[[center pivot irrigation|Center-pivot irrigated]] fields in [[Kansas]] covering hundreds of square miles watered by the [[Ogallala Aquifer]]]]
+Most land areas on [[Earth]] have some form of aquifer underlying them, sometimes at significant depths. In some cases, these aquifers are rapidly being depleted by the human population.
+
+Fresh-water aquifers, especially those with limited recharge by snow or rain, also known as [[meteoric water]], can be over-exploited and depending on the local [[hydrogeology]], may draw in non-potable water or saltwater intrusion from hydraulically connected aquifers or surface water bodies. This can be a serious problem, especially in coastal areas and other areas where aquifer pumping is excessive. In some areas, the ground water can become [[Arsenic contamination of groundwater|contaminated by arsenic]] and other mineral poisons.
+
+Aquifers are critically important in human habitation and agriculture. Deep aquifers in arid areas have long been water sources for irrigation (see Ogallala below). Many villages and even large cities draw their water supply from wells in aquifers.
+
+Municipal, irrigation, and industrial water supplies are provided through large wells. Multiple wells for one water supply source are termed &quot;wellfields&quot;, which may withdraw water from confined or unconfined aquifers. Using ground water from deep, confined aquifers provides more protection from surface water contamination. Some wells, termed &quot;collector wells&quot;, are specifically designed to induce infiltration of surface (usually river) water.
+
+Aquifers that provide sustainable fresh groundwater to urban areas and for agricultural irrigation are typically close to the ground surface (within a couple of hundred metres) and have some recharge by fresh water. This recharge is typically from rivers or meteoric water (precipitation) that percolates into the aquifer through overlying unsaturated materials.
+
+Occasionally, sedimentary or [[Fossil water|&quot;fossil&quot;]] aquifers are used to provide irrigation and drinking water to urban areas. In Libya, for example, [[Muammar Gaddafi|Muammar Gaddafi's]] [[Great Manmade River]] project has pumped large amounts of groundwater from aquifers beneath the Sahara to populous areas near the coast.&lt;ref name=&quot;Scholl&quot;&gt;{{cite web |last=Scholl |first=Adam |title=Map Room: Hidden Waters |url=http://www.worldpolicy.org/journal/winter2012/map-room |publisher=World Policy journal |access-date=19 December 2012}}&lt;/ref&gt; Though this has saved Libya money over the alternative, desalination, the aquifers are likely to run dry in 60 to 100 years.&lt;ref name=&quot;Scholl&quot;/&gt; Aquifer depletion has been cited as one of the causes of the food price rises of 2011.&lt;ref&gt;Brown, Lester. [https://foreignpolicy.com/articles/2011/01/10/the_great_food_crisis_of_2011 &quot;The Great Food Crisis of 2011.&quot;] ''[[Foreign Policy Magazine]]'', 10 January 2011.&lt;/ref&gt;
+
+== Subsidence ==
+In unconsolidated aquifers, groundwater is produced from pore spaces between particles of gravel, sand, and silt. If the aquifer is confined by low-permeability layers, the reduced water pressure in the sand and gravel causes slow drainage of water from the adjoining confining layers. If these confining layers are composed of compressible silt or clay, the loss of water to the aquifer reduces the water pressure in the confining layer, causing it to compress from the weight of overlying geologic materials. In severe cases, this compression can be observed on the ground surface as [[subsidence]]. Unfortunately, much of the subsidence from groundwater extraction is permanent (elastic rebound is small). Thus, the subsidence is not only permanent, but the compressed aquifer has a permanently reduced capacity to hold water.
+
+== Saltwater intrusion ==
+{{main|Saltwater intrusion}}
+Aquifers near the coast have a lens of freshwater near the surface and denser seawater under freshwater. Seawater penetrates the aquifer diffusing in from the ocean and is denser than freshwater. For porous (i.e., sandy) aquifers near the coast, the thickness of freshwater atop saltwater is about {{convert|40|ft|m|0|order=flip}} for every {{convert|1|ft|m|1|abbr=on|order=flip}} of freshwater head above [[sea level]]. This relationship is called the [[Ghyben-Herzberg equation]]. If too much ground water is pumped near the coast, salt-water may intrude into freshwater aquifers causing contamination of potable freshwater supplies. Many coastal aquifers, such as the [[Biscayne Aquifer]] near Miami and the New Jersey Coastal Plain aquifer, have problems with saltwater intrusion as a result of overpumping and sea level rise.
+
+== Salination ==
+[[File:aquifersalt.jpg|thumb|right|Diagram of a [[Hydrology (agriculture)|water balance]] of the aquifer]]
+Aquifers in surface [[irrigation|irrigated]] areas in semi-arid zones with reuse of the unavoidable irrigation water losses [[Groundwater recharge|percolating]] down into the underground by supplemental irrigation from wells run the risk of [[soil salination|salination]].&lt;ref&gt;{{Citation |author=ILRI |title=Effectiveness and Social/Environmental Impacts of Irrigation Projects: a Review |series=In: Annual Report 1988 of the International Institute for Land Reclamation and Improvement (ILRI) |year=1989 |pages=18–34 |location=Wageningen, The Netherlands |url=http://www.waterlog.info/pdf/irreff.pdf}}&lt;/ref&gt;
+
+Surface irrigation water normally contains salts in the order of {{val|0.5|u=g/l}} or more and the annual irrigation requirement is in the order of {{val|10000|u=m3/ha|fmt=commas}} or more so the annual import of salt is in the order of {{val|5000|u=kg/ha|fmt=commas}} or more.&lt;ref&gt;ILRI (2003), ''Drainage for Agriculture: Drainage and hydrology/salinity - water and salt balances''. Lecture notes International Course on Land Drainage, International Institute for Land Reclamation and Improvement (ILRI), Wageningen, The Netherlands. Download from : [http://www.waterlog.info/faqs.htm], or directly as PDF : [http://www.waterlog.info/pdf/balances.pdf]&lt;/ref&gt;
+
+Under the influence of continuous evaporation, the salt concentration of the aquifer water may increase continually and eventually cause an [[Environmental impact of irrigation|environmental]] problem.
+
+For [[Soil salinity control|salinity control]] in such a case, annually an amount of drainage water is to be discharged from the aquifer by means of a subsurface [[Drainage system (agriculture)|drainage system]] and disposed of through a safe outlet. The drainage system may be ''horizontal'' (i.e. using pipes, [[tile drainage|tile drains]] or ditches) or ''vertical'' ([[drainage by wells]]). To estimate the drainage requirement, the use of a [[groundwater model]] with an agro-hydro-salinity component may be instrumental, e.g. [[SahysMod]].
+
+== Examples ==
+{{Main|List of aquifers|Aquifers in the United States}}
+The [[Great Artesian Basin]] situated in [[Australia]] is arguably the largest groundwater aquifer in the world&lt;ref name=&quot;qldgovt&quot;&gt;{{cite web |url=http://www.nrw.qld.gov.au/factsheets/pdf/water/w68.pdf |archive-url=https://web.archive.org/web/20061113031749/http://www.nrw.qld.gov.au/factsheets/pdf/water/w68.pdf |url-status=dead |archive-date=13 November 2006 |title=The Great Artesian Basin |access-date=3 January 2007 |work=Facts: Water Series |publisher=Queensland Department of Natural Resources and Water}}&lt;/ref&gt; (over {{convert|1.7|e6km2|e6sqmi|abbr=unit|disp=or}}). It plays a large part in water supplies for Queensland, and some 
+remote parts of South Australia.
+
+The [[Guarani Aquifer]], located beneath the surface of [[Argentina]], [[Brazil]], [[Paraguay]], and [[Uruguay]], is one of the world's largest aquifer systems and is an important source of [[fresh water]].&lt;ref name=&quot;Science and Diplomacy.&quot;&gt;{{cite journal |url=http://www.sciencediplomacy.org/perspective/2015/international-atomic-energy-agency |journal=Science and Diplomacy |date=22 June 2015 |title=The International Atomic Energy Agency: Linking Nuclear Science and Diplomacy |first=John |last=Brittain}}&lt;/ref&gt; Named after the [[Guaraní people|Guarani people]], it covers {{convert|1200000|km2|sqmi|abbr=on}}, with a volume of about {{convert|40000|km3|cumi|abbr=on}}, a thickness of between {{convert|50|and|800|m|abbr=on}} and a maximum depth of about {{convert|1800|m|abbr=on}}.
+
+Aquifer depletion is a problem in some areas, and is especially critical in northern [[Africa]], for example the [[Great Manmade River]] project of [[Libya]]. However, new methods of groundwater management such as artificial recharge and injection of surface waters during seasonal wet periods has extended the life of many freshwater aquifers, especially in the United States.
+
+The [[Ogallala Aquifer]] of the central United States is one of the world's great aquifers, but in places it is being rapidly [[overdrafting|depleted]] by growing municipal use, and continuing agricultural use. This huge aquifer, which underlies portions of eight states, contains primarily [[fossil water]] from the time of the last [[Quaternary glaciation|glaciation]]. Annual recharge, in the more arid parts of the aquifer, is estimated to total only about 10 percent of annual withdrawals. According to a 2013 report by research hydrologist Leonard F. Konikow&lt;ref name=KonikowUSGSjan2013&gt;{{cite report |url=http://pubs.usgs.gov/sir/2013/5079/SIR2013-5079.pdf |title=Groundwater Depletion in the United States (1900–2008) |series=Scientific Investigations Report |number=2013–5079 |pages=63 |publisher=U.S. Department of the Interior, U.S. Geological Survey |location=Reston, [[Virginia|VA]] |first=Leonard F. |last=Konikow}}&lt;/ref&gt; at the [[United States Geological Survey]] (USGS), the depletion between 2001 and 2008, inclusive, is about 32 percent of the cumulative depletion during the entire 20th century (Konikow 2013:22).&quot;&lt;ref name=KonikowUSGSjan2013 /&gt; In the United States, the biggest users of water from aquifers include agricultural irrigation and oil and coal extraction.&lt;ref name=depletion&gt;{{cite news |title=Drop in U.S. underground water levels has accelerated: USGS |url=https://www.reuters.com/article/2013/05/20/us-usa-water-idUSBRE94J0Y920130520 |location=Washington, DC |first=Deborah |last=Zabarenko |date=20 May 2013 |work=Reuters}}&lt;/ref&gt; &quot;Cumulative total groundwater depletion in the United States accelerated in the late 1940s and continued at an almost steady linear rate through the end of the century. In addition to widely recognized environmental consequences, groundwater depletion also adversely impacts the long-term sustainability of groundwater supplies to help meet the Nation’s water needs.&quot;&lt;ref name=KonikowUSGSjan2013 /&gt;
+
+An example of a significant and sustainable carbonate aquifer is the [[Edwards Aquifer]]&lt;ref&gt;{{cite web |url=http://www.edwardsaquifer.org/ |title=Edwards Aquifer Authority |publisher=Edwardsaquifer.org |access-date=15 December 2013}}&lt;/ref&gt; in central [[Texas]]. This carbonate aquifer has historically been providing high quality water for nearly 2 million people, and even today, is full because of tremendous recharge from a number of area streams, rivers and [[lake]]s. The primary risk to this resource is human development over the recharge areas.
+
+Discontinuous sand bodies at the base of the [[McMurray Formation]] in the [[Athabasca Oil Sands]] region of northeastern [[Alberta]], Canada, are commonly referred to as the [[McMurray Formation#Hydrogeology|Basal Water Sand (BWS) aquifers]].&lt;ref name=&quot;Total2005&quot;&gt;{{cite report |url=http://www.total-ep-canada.com/upstream/documents/application/CR_4_Groundwater_Report.pdf |archive-url=https://web.archive.org/web/20131202222021/http://www.total-ep-canada.com/upstream/documents/application/CR_4_Groundwater_Report.pdf |url-status=dead |archive-date=2 December 2013 |title=Joslyn North Mine Project: Environmental Impact Assessment Hydrologeology |location=[[Edmonton]], Alberta |date=December 2005 |publisher=Deer Creek Energy |page=4}}&lt;/ref&gt; Saturated with water, they are confined beneath impermeable [[bitumen]]-saturated sands that are exploited to recover bitumen for [[synthetic crude]] oil production. Where they are deep-lying and recharge occurs from underlying [[Devonian]] [[formation (geology)|formations]] they are saline, and where they are shallow and recharged by [[meteoric water|surface water]] they are non-saline. The BWS typically pose problems for the recovery of bitumen, whether by [[open-pit mining]] or by ''in situ'' methods such as [[steam-assisted gravity drainage]] (SAGD), and in some areas they are targets for waste-water injection.&lt;ref name=Barson&gt;Barson, D., Bachu, S. and Esslinger, P. 2001. Flow systems in the Mannville Group in the east-central Athabasca area and implications for steam-assisted gravity drainage (SAGD) operations for in situ bitumen production. Bulletin of Canadian Petroleum Geology, vol. 49, no. 3, pp. 376–92.&lt;/ref&gt;&lt;ref name=&quot;Pembina&quot;&gt;{{cite report |url=https://www.ualberta.ca/~ersc/water/links/pembina.pdf |title=Oil and Troubled Waters: Reducing the impact of the oil and gas industry on Alberta's water resources |first1=Mary |last1=Griffiths |first2=Dan |last2=Woynillowicz |date=April 2003 |publisher=Pembina Institute |location=Edmonton, Alberta }}&lt;/ref&gt;&lt;ref name=&quot;FMFNtoCEAAJun2012&quot;&gt;{{cite report|title=Fort McKay's Review of Teck Resources Ltd. {{ndash}} Frontier Oil Sands Mine Project Integrated Application|url=http://www.ceaa-acee.gc.ca/050/documents/p65505/81570E.pdf|date=June 2012|publisher=Fort McKay First Nation|author=FMFN}}&lt;/ref&gt;
+
+== See also ==
+{{Wikipedia books|Aquifers}}
+* {{annotated link|Aquifer storage and recovery}}
+* {{annotated link|Aquifer properties}}
+* {{annotated link|Artesian aquifer}}
+* {{annotated link|Cistern}}
+* {{annotated link|Groundwater}}
+* {{annotated link|Groundwater model}}
+* {{annotated link|Groundwater pollution}}
+* {{annotated link|Hydraulic tomography}}
+* {{annotated link|Overexploitation}}
+* {{annotated link|Rock (geology)}}
+* {{annotated link|Seasonal thermal energy storage}} - aquifers may be used for storing heat between opposing seasons and for ecologically heating/cooling greenhouses, buildings, and district systems
+* {{annotated link|Spring (hydrology)}}
+* {{annotated link|Surficial aquifer}}
+
+== References ==
+{{reflist}}
+
+== External links ==
+* [http://www.earth-policy.org/images/uploads/book_files/outch06.pdf Falling Water Tables]
+* [http://www.un-igrac.org/ IGRAC International Groundwater Resources Assessment Centre]
+* [http://www.waterlog.info/sahysmod.htm SahysMod aquifer model]
+
+{{Aquiferproperties}}
+{{Aquifers}}
+{{Natural resources}}
+{{Subterranea}}
+
+[[Category:Aquifers| ]]
+[[Category:Hydraulic engineering]]
+[[Category:Hydrology]]
+[[Category:Hydrogeology]]
+[[Category:Water and the environment]]
+[[Category:Bodies of water]]
+[[Category:Water supply]]</text>
+      <sha1>sjnqn66day4036i5wduvyvmfxj5fsme</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Volcanoe</title>
+    <ns>0</ns>
+    <id>47483</id>
+    <redirect title="Volcano" />
+    <revision>
+      <id>783876434</id>
+      <parentid>63422864</parentid>
+      <timestamp>2017-06-05T06:05:55Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="77" xml:space="preserve">#REDIRECT [[Volcano]]
+
+{{Redirect category shell|1=
+{{R from misspelling}}
+}}</text>
+      <sha1>1f3itxknk906qeotpgpkhh6bajtlr3e</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Atmospheric pressure</title>
+    <ns>0</ns>
+    <id>47484</id>
+    <revision>
+      <id>990684666</id>
+      <parentid>989428225</parentid>
+      <timestamp>2020-11-25T22:55:13Z</timestamp>
+      <contributor>
+        <username>Hayald</username>
+        <id>40642882</id>
+      </contributor>
+      <minor />
+      <comment>/* Altitude variation */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="21208" xml:space="preserve">{{short description|Static pressure exerted by the weight of the atmosphere }}
+{{Redirect|Air pressure|the pressure of air in other systems|Pressure}}
+
+'''Atmospheric pressure''', also known as '''barometric pressure''' (after the [[barometer]]), is the [[pressure]] within the [[atmosphere of Earth]]. The [[Atmosphere (unit)|standard atmosphere]] (symbol: atm) is a unit of pressure defined as {{convert|101325|Pa|hPa mbar|abbr=on|lk=on}}, which is equivalent to 760{{nbsp}}[[millimeter of mercury|mm Hg]], 29.9212{{nbsp}}[[inch of mercury|inches{{nbsp}}Hg]], or 14.696{{nbsp}}[[pounds per square inch|psi]].&lt;ref name=&quot;icao&quot;&gt;International Civil Aviation Organization. ''Manual of the [[International Standard Atmosphere|ICAO Standard Atmosphere]]'', Doc 7488-CD, Third Edition, 1993. {{ISBN|92-9194-004-6}}.&lt;/ref&gt; The atm unit is roughly equivalent to the mean sea-level atmospheric pressure on Earth, that is, the Earth's atmospheric pressure at sea level is approximately 1 atm.

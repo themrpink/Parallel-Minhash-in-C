@@ -1,0 +1,198 @@
+===Joint moments of i.i.d. exponential order statistics===
+
+Let &lt;math&gt; X_1, \dotsc, X_n &lt;/math&gt; be &lt;math&gt; n &lt;/math&gt; [[Independent and identically distributed random variables|independent and identically distributed]] exponential random variables with rate parameter ''λ''. 
+Let &lt;math&gt; X_{(1)}, \dotsc, X_{(n)} &lt;/math&gt; denote the corresponding [[order statistic]]s. 
+For &lt;math&gt; i &lt; j &lt;/math&gt; , the joint moment &lt;math&gt; \operatorname E\left[X_{(i)} X_{(j)}\right] &lt;/math&gt; of the order statistics &lt;math&gt; X_{(i)} &lt;/math&gt; and &lt;math&gt; X_{(j)} &lt;/math&gt; is given by
+
+:&lt;math&gt;\begin{align}
+  \operatorname E\left[X_{(i)} X_{(j)}\right]
+    &amp;= \sum_{k=0}^{j-1}\frac{1}{(n - k)\lambda} \operatorname E\left[X_{(i)}\right] + \operatorname E\left[X_{(i)}^2\right] \\
+    &amp;= \sum_{k=0}^{j-1}\frac{1}{(n - k)\lambda}\sum_{k=0}^{i-1}\frac{1}{(n - k)\lambda} + \sum_{k=0}^{i-1}\frac{1}{((n - k)\lambda)^2} + \left(\sum_{k=0}^{i-1}\frac{1}{(n - k)\lambda}\right)^2.
+\end{align}&lt;/math&gt;
+
+This can be seen by invoking the [[law of total expectation]] and the memoryless property:
+:&lt;math&gt;\begin{align}
+  \operatorname E\left[X_{(i)} X_{(j)}\right]
+    &amp;= \int_0^\infty \operatorname E\left[X_{(i)} X_{(j)} \mid X_{(i)}=x\right] f_{X_{(i)}}(x) \, dx \\
+    &amp;= \int_{x=0}^\infty x \operatorname E\left[X_{(j)} \mid X_{(j)} \geq x\right] f_{X_{(i)}}(x) \, dx
+      &amp;&amp;\left(\textrm{since}~X_{(i)} = x \implies X_{(j)} \geq x\right) \\
+    &amp;= \int_{x=0}^\infty x \left[ \operatorname E\left[X_{(j)}\right] + x \right] f_{X_{(i)}}(x) \, dx
+      &amp;&amp;\left(\text{by the memoryless property}\right) \\
+    &amp;= \sum_{k=0}^{j-1}\frac{1}{(n - k)\lambda} \operatorname E\left[X_{(i)}\right] + \operatorname E\left[X_{(i)}^2\right].
+\end{align}&lt;/math&gt;
+
+The first equation follows from the [[law of total expectation]].
+The second equation exploits the fact that once we condition on &lt;math&gt; X_{(i)} = x &lt;/math&gt;, it must follow that &lt;math&gt; X_{(j)} \geq x &lt;/math&gt;.
+The third equation relies on the memoryless property to replace &lt;math&gt;\operatorname E\left[ X_{(j)} \mid X_{(j)} \geq x\right]&lt;/math&gt; with &lt;math&gt;\operatorname E\left[X_{(j)}\right] + x&lt;/math&gt;.
+
+===Sum of two independent exponential random variables===
+The probability distribution function (PDF) of a sum of two independent random variables is the [[convolution of probability distributions|convolution of their individual PDFs]].  If &lt;math&gt;X_1&lt;/math&gt; and &lt;math&gt;X_2&lt;/math&gt; are independent exponential random variables with respective rate parameters &lt;math&gt;\lambda_1&lt;/math&gt; and &lt;math&gt;\lambda_2,&lt;/math&gt; then the probability density of &lt;math&gt;Z=X_1+X_2&lt;/math&gt; is given by
+:&lt;math&gt; \begin{align}
+ f_Z(z) &amp;= \int_{-\infty}^\infty f_{X_1}(x_1) f_{X_2}(z - x_1)\,dx_1\\
+   &amp;= \int_0^z \lambda_1 e^{-\lambda_1 x_1} \lambda_2 e^{-\lambda_2(z - x_1)} \, dx_1 \\
+   &amp;= \lambda_1 \lambda_2 e^{-\lambda_2 z} \int_0^z e^{(\lambda_2 - \lambda_1)x_1}\,dx_1 \\
+   &amp;= \begin{cases}
+        \dfrac{\lambda_1 \lambda_2}{\lambda_2-\lambda_1} \left(e^{-\lambda_1 z} - e^{-\lambda_2 z}\right) &amp; \text{ if } \lambda_1 \neq \lambda_2 \\[4 pt]
+        \lambda^2 z e^{-\lambda z} &amp; \text{ if } \lambda_1 = \lambda_2 = \lambda.
+      \end{cases}
+ \end{align} &lt;/math&gt;
+The entropy of this distribution is available in closed form: assuming &lt;math&gt;\lambda_1 &gt; \lambda_2&lt;/math&gt; (without loss of generality), then
+:&lt;math&gt;
+\begin{align}
+ H(Z) &amp;= 1 + \gamma + \ln \left( \frac{\lambda_1 - \lambda_2}{\lambda_1 \lambda_2} \right) + \psi \left( \frac{\lambda_1}{\lambda_1 - \lambda_2} \right) ,
+\end{align}
+&lt;/math&gt;
+where &lt;math&gt;\gamma&lt;/math&gt; is the [[Euler-Mascheroni constant]], and &lt;math&gt;\psi(\cdot)&lt;/math&gt; is the [[digamma function]].&lt;ref&gt;{{cite arXiv|last1=Eckford |first1=Andrew W. |last2=Thomas |first2=Peter J. |date=2016 |title=Entropy of the sum of two independent, non-identically-distributed exponential random variables |eprint=1609.02911}}&lt;/ref&gt;
+
+In the case of equal rate parameters, the result is an [[Erlang distribution]] with shape 2 and parameter &lt;math&gt;\lambda,&lt;/math&gt; which in turn is a special case of [[gamma distribution]].
+
+==Related distributions==
+{{More footnotes|section|date=March 2011}}
+
+* If &lt;math&gt;X \sim \operatorname{Laplace}\left(\mu, \beta^{-1}\right)&lt;/math&gt; then |''X'' − μ| ~ Exp(β).
+* If ''X'' ~ Pareto(1, λ) then log(''X'') ~ Exp(λ).
+* If ''X'' ~ [[skew-logistic distribution|SkewLogistic]](θ), then &lt;math&gt;\log\left(1 + e^{-X}\right) \sim \operatorname{Exp}(\theta)&lt;/math&gt;.
+* If ''X&lt;sub&gt;i&lt;/sub&gt;'' ~ [[Uniform distribution (continuous)|''U''(0, 1)]] then 
+*: &lt;math&gt;\lim_{n \to \infty}n \min \left(X_1, \ldots, X_n\right) \sim \operatorname{Exp}(1)&lt;/math&gt;
+* The exponential distribution is a limit of a scaled [[beta distribution]]: 
+*: &lt;math&gt;\lim_{n \to \infty} n \operatorname{Beta}(1, n) = \operatorname{Exp}(1).&lt;/math&gt;
+* Exponential distribution is a special case of type 3 [[Pearson distribution]].
+* If ''X'' ~ Exp(λ) and ''X''{{sub|''i''}} ~ Exp(λ{{sub|''i''}}) then:
+** &lt;math&gt;kX \sim \operatorname{Exp}\left(\frac{\lambda}{k}\right)&lt;/math&gt;, closure under scaling by a positive factor.
+** 1&amp;nbsp;+&amp;nbsp;''X'' ~ [[Benktander Weibull distribution|BenktanderWeibull]](λ, 1), which reduces to a truncated exponential distribution.
+** ''ke&lt;sup&gt;X&lt;/sup&gt;'' ~ [[Pareto distribution|Pareto]](''k'', λ).
+** ''e&lt;sup&gt;−X&lt;/sup&gt;'' ~ [[Beta distribution|Beta]](λ, 1).
+** {{sfrac|1|k}}''e''{{sup|''X''}} ~ [[power law|PowerLaw]](''k'', λ)
+** &lt;math&gt;\sqrt{X} \sim \operatorname{Rayleigh} \left(\frac{1}{\sqrt{2\lambda}}\right)&lt;/math&gt;, the [[Rayleigh distribution]]
+** &lt;math&gt;X \sim \operatorname{Weibull}\left(\frac{1}{\lambda}, 1\right)&lt;/math&gt;, the [[Weibull distribution]]
+** &lt;math&gt;X^2 \sim \operatorname{Weibull}\left(\frac{1}{\lambda^2}, \frac{1}{2}\right)&lt;/math&gt;
+** {{nowrap|μ − β log(λ''X'') ∼ [[Gumbel distribution|Gumbel]](μ, β)}}.
+** If also ''Y'' ~ Erlang(''n'', λ) or&lt;math&gt;Y \sim \Gamma\left(n, \frac{1}{\lambda}\right)&lt;/math&gt; then &lt;math&gt;\frac{X}{Y} + 1 \sim \operatorname{Pareto}(1, n)&lt;/math&gt;
+** If also λ ~ [[gamma distribution|Gamma]](''k'', θ) (shape, scale parametrisation) then the marginal distribution of ''X'' is [[Lomax distribution|Lomax]](''k'', 1/θ), the gamma [[compound distribution|mixture]]
+** λ{{sub|1}}''X''{{sub|1}} − λ{{sub|2}}''Y''{{sub|2}} ~ [[Laplace distribution|Laplace(0, 1)]].
+** min{''X''&lt;sub&gt;1&lt;/sub&gt;, ..., ''X&lt;sub&gt;n&lt;/sub&gt;''} ~ Exp(λ&lt;sub&gt;1&lt;/sub&gt; + ... + λ&lt;sub&gt;''n''&lt;/sub&gt;).
+** If also λ{{sub|''i''}} = λ then:
+*** &lt;math&gt;X_1 + \cdots + X_k = \sum_i X_i \sim&lt;/math&gt; [[Erlang distribution|Erlang]](''k'', λ) = [[gamma distribution|Gamma]](''k'', λ&lt;sup&gt;−1&lt;/sup&gt;) = Gamma(''k'', λ) (in (''k'', θ) and (α, β) parametrization, respectively) with an integer shape parameter k.
+*** ''X''{{sub|''i''}} − ''X''{{sub|''j''}} ~ Laplace(0, λ&lt;sup&gt;−1&lt;/sup&gt;).
+** If also ''X''{{sub|''i''}} are independent, then:
+*** &lt;math&gt;\frac{X_i}{X_i + X_j}&lt;/math&gt; ~ [[uniform distribution (continuous)|U]](0, 1)
+*** &lt;math&gt;Z = \frac{\lambda_i X_i}{\lambda_j X_j}&lt;/math&gt; has probability density function &lt;math&gt;f_Z(z) = \frac{1}{(z + 1)^2}&lt;/math&gt;. This can be used to obtain a [[confidence interval]] for &lt;math&gt;\frac{\lambda_i}{\lambda_j}&lt;/math&gt;.
+** If also λ = 1:
+*** &lt;math&gt;\mu - \beta\log\left(\frac{e^{-X}}{1 - e^{-X}}\right) \sim \operatorname{Logistic}(\mu, \beta)&lt;/math&gt;, the [[logistic distribution]]
+*** &lt;math&gt;\mu - \beta\log\left(\frac{X_i}{X_j}\right) \sim \operatorname{Logistic}(\mu, \beta)&lt;/math&gt;
+*** ''μ'' − σ log(''X'') ~ [[generalized extreme value distribution|GEV(μ, σ, 0)]].
+*** Further if &lt;math&gt;Y \sim \Gamma\left(\alpha, \frac{\beta}{\alpha}\right)&lt;/math&gt; then &lt;math&gt;\sqrt{XY} \sim \operatorname{K}(\alpha, \beta)&lt;/math&gt; ([[K-distribution]])
+** If also λ = 1/2 then {{nowrap|''X'' ∼ χ{{su|b=2|p=2}}}}; i.e., ''X'' has a [[chi-squared distribution]] with 2 [[degrees of freedom (statistics)|degrees of freedom]]. Hence:
+**: &lt;math&gt;\operatorname{Exp}(\lambda) = \frac{1}{2\lambda} \operatorname{Exp}\left(\frac{1}{2} \right) \sim \frac{1}{2\lambda} \chi_2^2\Rightarrow \sum_{i=1}^n \operatorname{Exp}(\lambda) \sim \frac{1}{2\lambda }\chi_{2n}^2&lt;/math&gt;
+* If &lt;math&gt;X \sim \operatorname{Exp}\left(\frac{1}{\lambda}\right)&lt;/math&gt; and &lt;math&gt;Y \mid X&lt;/math&gt; ~ [[Poisson distribution|Poisson(''X'')]] then &lt;math&gt;Y \sim \operatorname{Geometric}\left(\frac{1}{1 + \lambda}\right)&lt;/math&gt; ([[geometric distribution]])
+* The [[Hoyt distribution]] can be obtained from exponential distribution and [[arcsine distribution]]
+
+Other related distributions:
+*[[Hyper-exponential distribution]] – the distribution whose density is a weighted sum of exponential densities.
+*[[Hypoexponential distribution]] – the distribution of a general sum of exponential random variables.
+*[[exGaussian distribution]] – the sum of an exponential distribution and a [[normal distribution]].
+
+==Statistical inference==
+Below, suppose random variable ''X'' is exponentially distributed with rate parameter λ, and &lt;math&gt;x_1, \dotsc, x_n&lt;/math&gt; are ''n'' independent samples from ''X'', with sample mean &lt;math&gt;\bar{x}&lt;/math&gt;.
+
+===Parameter estimation===
+
+The [[maximum likelihood]] estimator for λ is constructed as follows:
+
+The [[likelihood function]] for λ, given an [[independent identically-distributed random variables|independent and identically distributed]] sample ''x'' = (''x''&lt;sub&gt;1&lt;/sub&gt;, ..., ''x''&lt;sub&gt;''n''&lt;/sub&gt;) drawn from the variable, is:
+
+:&lt;math&gt; L(\lambda) = \prod_{i=1}^n\lambda\exp(-\lambda x_i) = \lambda^n\exp\left(-\lambda \sum_{i=1}^n x_i\right) = \lambda^n\exp\left(-\lambda n\overline{x}\right), &lt;/math&gt;
+
+where:
+
+:&lt;math&gt;\overline{x} = \frac{1}{n}\sum_{i=1}^n x_i&lt;/math&gt;
+
+is the sample mean.
+
+The derivative of the likelihood function's logarithm is:
+
+:&lt;math&gt;
+  \frac{d}{d\lambda} \ln L(\lambda) =
+  \frac{d}{d\lambda} \left( n \ln\lambda - \lambda n\overline{x} \right) =
+  \frac{n}{\lambda} - n\overline{x}\ \begin{cases}
+    &gt; 0, &amp; 0 &lt; \lambda &lt; \frac{1}{\overline{x}}, \\[8pt]
+    = 0, &amp; \lambda = \frac{1}{\overline{x}}, \\[8pt]
+    &lt; 0, &amp; \lambda &gt; \frac{1}{\overline{x}}.
+  \end{cases}
+&lt;/math&gt;
+
+Consequently, the [[maximum likelihood]] estimate for the rate parameter is:
+
+:&lt;math&gt;\widehat{\lambda} = \frac{1}{\overline{x}} = \frac{n}{\sum_i x_i}&lt;/math&gt;
+
+This is {{em|not}} an [[unbiased estimator]] of &lt;math&gt;\lambda,&lt;/math&gt; although &lt;math&gt;\overline{x}&lt;/math&gt; {{em|is}} an unbiased&lt;ref name=&quot;JohnsonWichern2007&quot;&gt;{{cite book|author1=Richard Arnold Johnson|author2=Dean W. Wichern|title=Applied Multivariate Statistical Analysis|url=https://books.google.com/books?id=gFWcQgAACAAJ|accessdate=10 August 2012|year=2007|publisher=Pearson Prentice Hall|isbn=978-0-13-187715-3}}&lt;/ref&gt; MLE&lt;ref&gt;''[http://www.itl.nist.gov/div898/handbook/eda/section3/eda3667.htm NIST/SEMATECH e-Handbook of Statistical Methods]''&lt;/ref&gt; estimator of &lt;math&gt;1/\lambda&lt;/math&gt; and the distribution mean.
+
+The bias of &lt;math&gt; \widehat{\lambda}_\text{mle} &lt;/math&gt; is equal to 
+:&lt;math&gt;b \equiv \operatorname{E}\left[\left(\widehat{\lambda}_\text{mle} - \lambda\right)\right] = \frac{\lambda}{n - 1} &lt;/math&gt;
+
+which yields the [[Maximum likelihood estimation#Second-order efficiency after correction for bias|bias-corrected maximum likelihood estimator]]
+
+: &lt;math&gt;\widehat{\lambda}^*_\text{mle} = \widehat{\lambda}_\text{mle} - \widehat{b} .&lt;/math&gt;
+
+===Approximate minimizer of expected squared error===
+Assume you have at least three samples. If we seek a minimizer of expected [[mean squared error]] (see also: [[Bias–variance tradeoff]]) that is similar to the maximum likelihood estimate (i.e. a multiplicative correction to the likelihood estimate) we have:
+
+:&lt;math&gt;\widehat{\lambda} = \left(\frac{n - 2}{n}\right) \left(\frac{1}{\bar{x}}\right) = \frac{n - 2}{\sum_i x_i}&lt;/math&gt;
+
+This is derived from the mean and variance of the [[inverse-gamma distribution]]: &lt;math display=&quot;inline&quot;&gt;\mbox{Inv-Gamma}(n, \lambda)&lt;/math&gt;.&lt;ref&gt;{{cite journal |first=Abdulaziz |last=Elfessi |first2=David M. |last2=Reineke |url=http://www.amstat.org/publications/jse/v9n1/elfessi.html |title=A Bayesian Look at Classical Estimation: The Exponential Distribution |journal=Journal of Statistics Education |volume=9 |issue=1 |year=2001 |pages= |doi=10.1080/10691898.2001.11910648|doi-access=free }}&lt;/ref&gt;
+
+===Fisher information===
+The [[Fisher information]], denoted &lt;math&gt;\mathcal{I}(\lambda)&lt;/math&gt;, for an estimator of the rate parameter &lt;math&gt;\lambda&lt;/math&gt; is given as:
+:&lt;math&gt;\mathcal{I}(\lambda) = \operatorname{E} \left[\left. \left(\frac{\partial}{\partial\lambda} \log f(x;\lambda)\right)^2\right|\lambda\right] = \int \left(\frac{\partial}{\partial\lambda} \log f(x;\lambda)\right)^2 f(x; \lambda)\,dx&lt;/math&gt;
+
+Plugging in the distribution and solving gives:
+:&lt;math&gt; \mathcal{I}(\lambda) = \int_{0}^{\infty} \left(\frac{\partial}{\partial\lambda} \log \lambda e^{-\lambda x}\right)^2 \lambda e^{-\lambda x}\,dx = \int_{0}^{\infty} \left(\frac{1}{\lambda} - x\right)^2 \lambda e^{-\lambda x}\,dx = \lambda^{-2}.&lt;/math&gt;
+
+This determines the amount of information each independent sample of an exponential distribution carries about the unknown rate parameter &lt;math&gt;\lambda&lt;/math&gt;.
+
+===Confidence intervals===
+The 100(1 − α)% confidence interval for the rate parameter of an exponential distribution is given by:&lt;ref&gt;{{cite book|title=Introduction to probability and statistics for engineers and scientists|first=Sheldon M.|last=Ross|page=267|url=https://books.google.com/books?id=mXP_UEiUo9wC&amp;pg=PA267| edition=4th|year=2009| publisher=Associated Press|isbn=978-0-12-370483-2}}&lt;/ref&gt;
+
+:&lt;math&gt;\frac{2n}{\widehat{\lambda} \chi^2_{1-\frac{\alpha}{2},2n} }&lt; \frac{1}{\lambda} &lt; \frac{2n}{\widehat{\lambda}  \chi^2_{\frac{\alpha}{2},2n}}&lt;/math&gt;
+
+which is also equal to:
+
+: &lt;math&gt;\frac{2n\overline{x}}{\chi^2_{1-\frac{\alpha}{2},2n}} &lt; \frac{1}{\lambda} &lt; \frac{2n\overline{x}}{\chi^2_{\frac{\alpha}{2},2n}}&lt;/math&gt;
+
+where {{math|χ{{su|p=2|b=''p'',''v''}}}} is the {{math|100(''p'')}} [[percentile]] of the  [[chi squared distribution]] with ''v'' [[degrees of freedom (statistics)|degrees of freedom]], n is the number of observations of inter-arrival times in the sample, and x-bar is the sample average. A simple approximation to the exact interval endpoints can be derived using a normal approximation to the {{math|''χ''{{su|p=2|b=''p'',''v''}}}} distribution. This approximation gives the following values for a 95% confidence interval:
+
+:&lt;math&gt;\begin{align}
+  \lambda_\text{lower} &amp;= \widehat{\lambda}\left(1 - \frac{1.96}{\sqrt{n}}\right) \\
+  \lambda_\text{upper} &amp;= \widehat{\lambda}\left(1 + \frac{1.96}{\sqrt{n}}\right)
+\end{align}&lt;/math&gt;
+
+This approximation may be acceptable for samples containing at least 15 to 20 elements.&lt;ref name=&quot;Guerriero&quot;&gt;{{Cite journal | first1 = V. | last1= Guerriero | year = 2012  | title = Power Law Distribution: Method of Multi-scale Inferential Statistics| journal = Journal of Modern Mathematics Frontier (JMMF)| url =https://www.academia.edu/27459041/Power_Law_Distribution_Method_of_Multi_scale_Inferential_Statistics | volume = 1  | pages = 21–28}}&lt;/ref&gt;
+
+===Bayesian inference===
+The [[conjugate prior]] for the exponential distribution is the [[gamma distribution]] (of which the exponential distribution is a special case).  The following parameterization of the gamma probability density function is useful:
+
+:&lt;math&gt;\operatorname{Gamma}(\lambda; \alpha, \beta) = \frac{\beta^{\alpha}}{\Gamma(\alpha)} \lambda^{\alpha-1} \exp(-\lambda\beta).&lt;/math&gt;
+
+The [[posterior distribution]] ''p'' can then be expressed in terms of the likelihood function defined above and a gamma prior:
+
+:&lt;math&gt;\begin{align}
+  p(\lambda) &amp;\propto L(\lambda) \Gamma(\lambda; \alpha, \beta) \\
+    &amp;= \lambda^n \exp\left(-\lambda n\overline{x}\right) \frac{\beta^{\alpha}}{\Gamma(\alpha)} \lambda^{\alpha-1} \exp(-\lambda \beta) \\
+    &amp;\propto \lambda^{(\alpha+n)-1} \exp(-\lambda \left(\beta + n\overline{x}\right)).
+\end{align}&lt;/math&gt;
+
+Now the posterior density ''p'' has been specified up to a missing normalizing constant.  Since it has the form of a gamma pdf, this can easily be filled in, and one obtains:
+
+:&lt;math&gt;p(\lambda) = \Gamma(\lambda; \alpha + n, \beta + n\overline{x}).&lt;/math&gt;
+
+Here the [[hyperparameter]] α can be interpreted as the number of prior observations, and β as the sum of the prior observations.
+The posterior mean here is:
+
+:&lt;math&gt;\frac{\alpha + n}{\beta + n\overline{x}}.&lt;/math&gt;
+
+==Occurrence and applications==
+
+===Occurrence of events===
+The exponential distribution occurs naturally when describing the lengths of the inter-arrival times in a homogeneous [[Poisson process]].
+
+The exponential distribution may be viewed as a continuous counterpart of the [[geometric distribution]], which describes the number of [[Bernoulli trial]]s necessary for a ''discrete'' process to change state. In contrast, the exponential distribution describes the time for a continuous process to change state.

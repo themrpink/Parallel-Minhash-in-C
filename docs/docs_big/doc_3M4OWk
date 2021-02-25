@@ -1,0 +1,352 @@
+Middle-endian machines like the Honeywell 316 above complicate this even further: the 32-bit value is stored as two 16-bit words {{mono|'hn'}} {{mono|'Jo'}} in little-endian, themselves with a big-endian notation (thus {{mono|'h' 'n' 'J' 'o'}}).
+
+This conflict between the memory arrangements of binary data and text is intrinsic to the nature of the little-endian convention.
+
+==Byte swapping==
+Byte-swapping consists of masking each byte and shifting them to the correct location. Many compilers provide [[Intrinsic function|built-ins]] that are likely to be compiled into native processor instructions ({{code|bswap}}/{{code|movbe}}), such as {{code|__builtin_bswap32}}. Software interfaces for swapping include:
+* Standard [[#Networking|network endianness]] functions (from/to BE, up to 32-bit).&lt;ref&gt;{{man|3|byteorder|Linux}}&lt;/ref&gt; Windows has a 64-bit extension in {{code|winsock2.h}}.
+* BSD and Glibc {{code|endian.h}} functions (from/to BE and LE, up to 64-bit).&lt;ref&gt;{{man|3|endian|Linux}}&lt;/ref&gt;
+* [[macOS]] {{code|OSByteOrder.h}} macros (from/to BE and LE, up to 64-bit).
+
+==Files and filesystems==
+The recognition of endianness is important when reading a file or filesystem that was created on a computer with different endianness.
+
+Some [[CPU]] instruction sets provide native support for endian byte swapping, such as {{code|bswap}}&lt;ref&gt;{{cite web|url=http://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf|title=Intel 64 and IA-32 Architectures Software Developer's Manual Volume 2 (2A, 2B &amp; 2C): Instruction Set Reference, A-Z|at=p. 3–112|publisher=Intel|date=September 2016|accessdate=2017-02-05}}&lt;/ref&gt; ([[x86]] - [[Intel 80486|486]] and later), and {{code|rev}}&lt;ref&gt;{{cite web|url=http://infocenter.arm.com/help/topic/com.arm.doc.ddi0487a.k_10775/index.html|title=ARMv8-A Reference Manual|publisher=[[ARM Holdings]]}}&lt;/ref&gt; ([[ARM architecture|ARMv6]] and later).
+
+Some [[compiler]]s have built-in facilities for byte swapping. For example, the [[Intel]] [[Fortran]] compiler supports the non-standard {{code|CONVERT}} specifier when opening a file, e.g.: {{code|1=OPEN(unit, CONVERT='BIG_ENDIAN',...)|2=fortran|class=nowrap}}.
+
+Some compilers have options for generating code that globally enable the conversion for all file IO operations. This permits the reuse of code on a system with the opposite endianness without code modification.
+
+Fortran sequential unformatted files created with one endianness usually cannot be read on a system using the other endianness because Fortran usually implements a [[storage record|record]] (defined as the data written by a single Fortran statement) as data preceded and succeeded by count fields, which are integers equal to the number of bytes in the data. An attempt to read such a file using Fortran on a system of the other endianness then results in a run-time error, because the count fields are incorrect. This problem can be avoided by writing out sequential binary files as opposed to sequential unformatted. Note however that it is relatively simple to write a program in another language (such as [[C (programming language)|C]] or [[Python (programming language)|Python]]) that parses Fortran sequential unformatted files of &quot;foreign&quot; endianness and converts them to &quot;native&quot; endianness, by converting from the &quot;foreign&quot; endianness when reading the Fortran records and data.
+
+[[Unicode]] text can optionally start with a [[byte order mark]] (BOM) to signal the endianness of the file or stream. Its code point is U+FEFF. In [[UTF-32]] for example, a big-endian file should start with {{code|00 00 FE FF|class=nowrap}}; a little-endian should start with {{code|FF FE 00 00|class=nowrap}}.
+
+Application binary data formats, such as for example [[MATLAB]] ''.mat'' files, or the ''.bil'' data format, used in topography, are usually endianness-independent. This is achieved by storing the data always in one fixed endianness, or carrying with the data a switch to indicate the endianness.
+
+An example of the first case is the binary [[XLS file]] format that is portable between Windows and Mac systems and always little-endian, leaving the Mac application to swap the bytes on load and save when running on a big-endian Motorola 68K or PowerPC processor.&lt;ref&gt;{{cite web |url=http://download.microsoft.com/download/0/B/E/0BE8BDD7-E5E8-422A-ABFD-4342ED7AD886/Excel97-2007BinaryFileFormat(xls)Specification.xps |title=Microsoft Office Excel 97 - 2007 Binary File Format Specification (*.xls 97-2007 format) |year=2007 |publisher=Microsoft Corporation }}&lt;/ref&gt;
+
+[[TIFF]] image files are an example of the second strategy, whose header instructs the application about endianness of their internal binary integers. If a file starts with the signature {{code|MM}} it means that integers are represented as big-endian, while {{code|II}} means little-endian. Those signatures need a single 16-bit word each, and they are [[palindrome]]s (that is, they read the same forwards and backwards), so they are endianness independent. {{code|I}} stands for [[Intel]] and {{code|M}} stands for [[Motorola]], the respective [[CPU]] providers of the [[IBM PC]] compatibles (Intel) and [[Apple Macintosh]] platforms (Motorola) in the 1980s. Intel CPUs are little-endian, while Motorola 680x0 CPUs are big-endian. This explicit signature allows a TIFF reader program to swap bytes if necessary when a given file was generated by a TIFF writer program running on a computer with a different endianness.
+
+As a consequence of its original implementation on the Intel 8080 platform, the operating system-independent [[File Allocation Table]] (FAT) file system is defined with little-endian byte ordering, even on platforms using another endiannes natively, necessitating byte-swap operations for maintaining the FAT.
+
+[[ZFS]]/[[OpenZFS]] combined [[file system]] and [[Logical volume management|logical volume manager]] is known to provide adaptive endianness and to work with both big-endian and little-endian systems.&lt;ref&gt;{{cite av media |url=http://open-zfs.org/wiki/Documentation/Read_Write_Lecture |title=FreeBSD Kernel Internals: An Intensive Code Walkthrough |author=Matt Ahrens |year=2016 |publisher=OpenZFS Documentation/Read Write Lecture }}&lt;/ref&gt;
+
+==Networking==
+Many [[IETF RFC]]s use the term ''network order'', meaning the order of transmission for bits and bytes ''over the wire'' in [[network protocols]]. Among others, the historic RFC&amp;nbsp;1700 (also known as [[Internet standard]] STD&amp;nbsp;2) has defined the network order for protocols in the [[Internet protocol suite]] to be [[#Big-endian|big-endian]], hence the use of the term &quot;network byte order&quot; for big-endian byte order.&lt;ref&gt;
+{{cite IETF
+ | title = Assigned Numbers
+ | rfc = 1700
+ | std = 2
+ | sectionname = Data Notations
+ | page = 3
+ | last1 = Reynolds
+ | first1 = J.
+ | authorlink1 = Joyce K. Reynolds
+ | last2 = Postel
+ | first2 = J.
+ | authorlink2 = Jon Postel
+ |date=October 1994
+ | publisher = [[Internet Engineering Task Force|IETF]]
+ | accessdate = 2012-03-02
+ }}
+&lt;/ref&gt;
+
+However, not all protocols use big-endian byte order as the network order. The [[Server Message Block]] (SMB) protocol uses little-endian byte order. In [[CANopen]], multi-byte parameters are always sent [[least significant byte]] first (little-endian). The same is true for [[Ethernet Powerlink]].&lt;ref&gt;Ethernet POWERLINK Standardisation Group (2012), ''EPSG Working Draft Proposal 301: Ethernet POWERLINK Communication Profile Specification Version 1.1.4'', chapter 6.1.1.&lt;/ref&gt;
+
+The [[Berkeley sockets]] [[application programming interface|API]] defines a set of functions to convert 16-bit and 32-bit integers to and from network byte order: the {{code|htons}} (host-to-network-short) and {{code|htonl}} (host-to-network-long) functions convert 16-bit and 32-bit values respectively from machine (''host'') to network order; the {{code|ntohs}} and {{code|ntohl}} functions convert from network to host order. These functions may be a [[no-op]] on a big-endian system.
+
+While the high-level network protocols usually consider the byte (mostly meant as ''[[octet (computing)|octet]]'') as their atomic unit, the lowest network protocols may deal with ordering of bits within a byte.
+
+==Bit endianness==
+[[Bit numbering]] is a concept similar to endianness, but on a level of bits, not bytes. ''Bit endianness'' or ''bit-level endianness'' refers to the transmission order of bits over a serial medium. The bit-level analogue of little-endian (least significant bit goes first) is used in [[RS-232]], [[HDLC]], [[Ethernet]], and [[USB]]. Some protocols use the opposite ordering (e.g. [[Teletext]], [[I²C|I&lt;sup&gt;2&lt;/sup&gt;C]], [[SMBus]], [[PMBus]], and [[synchronous optical networking|SONET and SDH]]&lt;ref&gt;Cf. Sec. 2.1 Bit Transmission of [http://tools.ietf.org/html/draft-ietf-pppext-sonet-as-00 draft-ietf-pppext-sonet-as-00 &quot;Applicability Statement for PPP over SONET/SDH&quot;]&lt;/ref&gt;). Usually, there exists a consistent view to the bits irrespective of their order in the byte, such that the latter becomes relevant only on a very low level. One exception is caused by the feature of some [[cyclic redundancy check]]s to detect ''all'' [[burst error]]s up to a known length, which would be spoiled if the bit order is different from the byte order on serial transmission.
+
+Apart from serialization, the terms ''bit endianness'' and ''bit-level endianness'' are seldom used, as computer architectures where each individual bit has a unique address are rare. Individual bits or [[bit field]]s are accessed via their numerical value or, in high-level programming languages, assigned names, the effects of which, however, may be machine dependent or lack [[software portability]].
+
+== Notes ==
+{{NoteFoot}}
+
+== References ==
+=== Citations ===
+{{Reflist}}
+
+== Further reading ==
+* {{cite IETF
+ |last = Cohen |first = Danny
+ |author-link = Danny Cohen (computer scientist)
+ |title = On Holy Wars and a Plea for Peace
+ |date = 1980-04-01
+ |url = https://www.ietf.org/rfc/ien/ien137.txt
+ |ien = 137
+ |publisher = [[Internet Engineering Task Force|IETF]]
+ }} &lt;small&gt;Also published at ''[[IEEE Computer]]'', [https://ieeexplore.ieee.org/document/1667115 October 1981 issue].&lt;/small&gt;
+* {{cite journal
+ |last = James |first = David V.
+ |title = Multiplexed buses: the endian wars continue
+ |journal = [[IEEE Micro]]
+ |date = June 1990
+ |volume = 10
+ |issue = 3
+ |pages = 9–21
+ |doi = 10.1109/40.56322
+ |s2cid = 24291134
+ |issn = 0272-1732
+ }}
+* {{cite journal
+ |last1 = Blanc |first1 = Bertrand 
+ |last2 = Maaraoui |first2 = Bob
+ |title = Endianness or Where is Byte 0?
+ |date = December 2005
+ |url = http://3bc.bertrand-blanc.com/endianness05.pdf
+ |access-date = 2008-12-21
+ }}
+
+== External links ==
+* [https://betterexplained.com/articles/understanding-big-and-little-endian-byte-order/ Understanding big and little endian byte order]
+* [https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/ByteOrdering.html#//apple_ref/doc/uid/20001150-CJBEJBHH Byte Ordering PPC]
+* [https://developer.ibm.com/articles/au-endianc/ Writing endian-independent code in C]
+
+[[Category:Computer memory]]
+[[Category:Data transmission]]
+[[Category:Metaphors]]
+[[Category:Software wars]]</text>
+      <sha1>etv3hogpyp35chznhataw8sl5plsjmd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Big endian</title>
+    <ns>0</ns>
+    <id>43027</id>
+    <redirect title="Endianness" />
+    <revision>
+      <id>912735474</id>
+      <parentid>783875204</parentid>
+      <timestamp>2019-08-27T15:06:41Z</timestamp>
+      <contributor>
+        <username>Ariadacapo</username>
+        <id>5047756</id>
+      </contributor>
+      <comment>Remove section part of link which points only to example; big-endian is explained and defined in lead of target</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="80" xml:space="preserve">#REDIRECT [[Endianness]]
+
+{{Redirect category shell|1=
+{{R to related topic}}
+}}</text>
+      <sha1>a1p166iipi934h65gbwpdxpp56n7grw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Little endian</title>
+    <ns>0</ns>
+    <id>43029</id>
+    <redirect title="Endianness" />
+    <revision>
+      <id>912718878</id>
+      <parentid>783875215</parentid>
+      <timestamp>2019-08-27T12:49:07Z</timestamp>
+      <contributor>
+        <username>Ariadacapo</username>
+        <id>5047756</id>
+      </contributor>
+      <comment>Remove section part of link which points only to example; little-endian is explained and defined in lead</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="80" xml:space="preserve">#REDIRECT [[Endianness]]
+
+{{Redirect category shell|1=
+{{R to related topic}}
+}}</text>
+      <sha1>a1p166iipi934h65gbwpdxpp56n7grw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Middle endian</title>
+    <ns>0</ns>
+    <id>43031</id>
+    <redirect title="Endianness" />
+    <revision>
+      <id>783875222</id>
+      <parentid>723302881</parentid>
+      <timestamp>2017-06-05T05:54:44Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="104" xml:space="preserve">#REDIRECT [[Endianness#Middle]]
+
+{{Redirect category shell|1=
+{{R to section}}
+{{R to related topic}}
+}}</text>
+      <sha1>n7ba98cftm5ahx55qwi4mqkea03q3um</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Middle-endian</title>
+    <ns>0</ns>
+    <id>43032</id>
+    <redirect title="Endianness" />
+    <revision>
+      <id>783875228</id>
+      <parentid>723302922</parentid>
+      <timestamp>2017-06-05T05:54:49Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="104" xml:space="preserve">#REDIRECT [[Endianness#Middle]]
+
+{{Redirect category shell|1=
+{{R to section}}
+{{R to related topic}}
+}}</text>
+      <sha1>n7ba98cftm5ahx55qwi4mqkea03q3um</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Network byte order</title>
+    <ns>0</ns>
+    <id>43033</id>
+    <redirect title="Endianness" />
+    <revision>
+      <id>760662417</id>
+      <parentid>138429210</parentid>
+      <timestamp>2017-01-18T09:31:42Z</timestamp>
+      <contributor>
+        <username>Rahulghose</username>
+        <id>13791669</id>
+      </contributor>
+      <comment>sub section no longer exists, updating to current existing correct subsection.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="35" xml:space="preserve">#REDIRECT [[Endianness#Networking]]</text>
+      <sha1>6powrq8kr9tvfyno8p8avub35shz4fv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Bahai Faith</title>
+    <ns>0</ns>
+    <id>43034</id>
+    <redirect title="Baháʼí Faith" />
+    <revision>
+      <id>929167151</id>
+      <parentid>777910710</parentid>
+      <timestamp>2019-12-04T02:23:10Z</timestamp>
+      <contributor>
+        <username>Xqbot</username>
+        <id>8066546</id>
+      </contributor>
+      <minor />
+      <comment>Bot: Fixing double redirect to [[Baháʼí Faith]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="121" xml:space="preserve">#REDIRECT [[Baháʼí Faith]]
+
+{{redirect category shell|{{R from name without diacritics}}{{R mod}}{{R unprintworthy}}}}</text>
+      <sha1>ljrwa8x9gpv8brxmmnxyw5z8okjzvy9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Scoville scale</title>
+    <ns>0</ns>
+    <id>43036</id>
+    <revision>
+      <id>991226272</id>
+      <parentid>987874090</parentid>
+      <timestamp>2020-11-28T23:38:55Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 43 templates: del empty params (3×); hyphenate params (23×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="27492" xml:space="preserve">{{short description|Scale for measuring spiciness of peppers}}
+{{redirect|Scoville}}
+[[File:PepperswithscovilleCentralMarketHoustonTX.JPG|thumb|Pepper stand at [[Central Market (Texas)|Central Market]] in [[Houston]], [[Texas]], with Scoville scale]]
+[[File:BhutJolokia09 Asit.jpg|thumb|The [[Ghost pepper]] of [[Northeast India]] is considered to be a &quot;very hot&quot; pepper, at about 1 million SHU.&lt;ref name=&quot;five38&quot;&gt;{{cite news|url=http://fivethirtyeight.com/features/rating-chili-peppers-on-a-scale-of-1-to-oh-dear-god-im-on-fire/|title=Rating Chili Peppers On A Scale Of 1 To Oh Dear God I'm On Fire|last=Barry-Jester|first=Anna Maria|date=October 15, 2014|work=[[FiveThirtyEight]]|access-date=2014-11-02}}&lt;/ref&gt;]]
+[[File:Naga_jolokia_chili.jpg|thumb|The [[Naga Morich]] with around 1 million SHU&lt;ref name=&quot;SomeLikeItHot&quot;&gt;{{cite web |url=http://www.thetraveleditor.com/article/3646/Feature_Article_Foodie_Some_Like_It_Hot_Dorset_s_Ultra_Hot_Chillies.html |archive-url=https://web.archive.org/web/20121119151035/http://www.thetraveleditor.com/article/3646/Feature_Article_Foodie_Some_Like_It_Hot_Dorset_s_Ultra_Hot_Chillies.html |title=Some Like It Hot: Dorset's Ultra-Hot Chillies |access-date=25 August 2010 |archive-date=19 November 2012}}&lt;/ref&gt; is primarily found in [[Bangladesh]]]]
+
+The '''Scoville scale''' is a [[measurement]] of the [[pungency]] (spiciness or &quot;heat&quot;) of [[chili pepper]]s, as recorded in Scoville Heat Units (SHU), based on the concentration of [[capsaicinoid]]s, among which [[capsaicin]] is the predominant component.&lt;ref name=&quot;twi&quot;&gt;{{cite web|author1=Twilight Greenaway|title=How Hot is That Pepper? How Scientists Measure Spiciness|url=https://www.smithsonianmag.com/arts-culture/how-hot-is-that-pepper-how-scientists-measure-spiciness-884380/|publisher=Smithsonian.com, US Smithsonian Institution|access-date=17 December 2017|date=10 January 2013}}&lt;/ref&gt;&lt;ref name=&quot;guzman&quot;&gt;{{cite journal|pmid=28662907|year=2017|last1=Guzmán|first1=I|title=Sensory properties of chili pepper heat - and its importance to food quality and cultural preference|journal=Appetite|volume=117|pages=186–190|last2=Bosland|first2=P. W|doi=10.1016/j.appet.2017.06.026|doi-access=free}}&lt;/ref&gt;&lt;ref name=&quot;collins&quot;&gt;{{cite journal | vauthors = Collins MD, Wasmund LM, Bosland PW | year = 1995 | title = Improved method for quantifying capsaicinoids in ''Capsicum'' using high-performance liquid chromatography | url = http://hortsci.ashspublications.org/content/30/1/137.full.pdf+html | journal = HortScience | volume = 30 | issue = 1 | pages = 137–139 | doi = 10.21273/HORTSCI.30.1.137 | doi-access = free }}&lt;/ref&gt;&lt;ref&gt;{{Citation | editor-first = KV | editor-last = Peter | title = Handbook of Herbs and Spices | volume = 1 | publisher = CRC Press | year = 2001 | isbn = 978-0-8493-1217-5 | page = 120}}&lt;/ref&gt;&lt;ref name=&quot;ppb&quot;&gt;{{cite journal|vauthors=Mazourek M, Pujar A, Borovsky Y, Paran I, Mueller L, Jahn MM|title=A Dynamic Interface for Capsaicinoid Systems Biology|journal=Plant Physiology |year=2009|volume=150|issue=4|pages=1806–1821|url=http://www.plantphysiol.org/content/plantphysiol/150/4/1806.full.pdf|doi=10.1104/pp.109.136549|pmid=19553373|pmc=2719146}}&lt;/ref&gt; The scale is named after its creator, American pharmacist [[Wilbur Scoville]], whose 1912 method is known as the Scoville [[organoleptic]] test.&lt;ref name=twi/&gt;&lt;ref name=Scoville1912&gt;{{cite journal|last1=Scoville|first1=Wilbur|title=Note on Capsicums|journal=Journal of the American Pharmaceutical Association|date=May 1912|volume=1|issue=5|pages=453–454 |doi=10.1002/jps.3080010520|url=https://zenodo.org/record/1427675}}&lt;/ref&gt; The Scoville organoleptic test is the most practical method for estimating SHU and is a subjective assessment derived from the capsaicinoid sensitivity by people experienced with eating hot chilis.&lt;ref name=&quot;twi&quot; /&gt;&lt;ref name=&quot;guzman&quot; /&gt;
+
+An alternative method, using [[high-performance liquid chromatography]] (HPLC), can be used to analytically quantify the capsaicinoid content as an indicator of pungency.&lt;ref name=&quot;twi&quot; /&gt;&lt;ref name=&quot;collins&quot; /&gt;&lt;ref name=&quot;ppb&quot; /&gt; As of 2011, the subjective organoleptic test has been largely superseded by analytical methods such as HPLC.&lt;ref name=&quot;:2&quot; /&gt;
+
+== Scoville organoleptic test ==
+In the Scoville [[organoleptic]] test, an exact weight of dried pepper is dissolved in alcohol to extract the heat components (capsaicinoids), then diluted in a solution of sugar water.&lt;ref name=twi/&gt;&lt;ref name=&quot;Peter2012&quot;&gt;{{cite book|last=Peter|first=K. V.|title=Handbook of Herbs and Spices|url=https://books.google.com/books?id=P4FwAgAAQBAJ&amp;pg=PA127|year=2012|publisher=Elsevier Science |isbn= 978-0-85709-5671|page=127}}&lt;/ref&gt;&lt;ref name=&quot;tainter&quot;/&gt; Decreasing concentrations of the extracted capsaicinoids are given to a panel of five trained tasters, until a majority (at least three) can no longer detect the heat in a dilution.&lt;ref name=&quot;five38&quot; /&gt;&lt;ref name=twi/&gt;&lt;ref name=&quot;Peter2012&quot;/&gt;&lt;ref name=&quot;tainter&quot;/&gt; The heat level is based on this dilution, rated in multiples of 100 SHU.&lt;ref name=&quot;Peter2012&quot;/&gt;
+
+Another source using [[Qualia|subjective assessment]] stated: &quot;Conventional methods used in determining the level of pungency or capsaicin concentration are using a panel of tasters (Scoville Organoleptic test method).&amp;nbsp;... Pepper pungency is measured in Scoville Heat Units (SHU) . This measurement is the highest dilution of a chili pepper extract at which heat can be detected by a taste panel.&quot;&lt;ref name=&quot;guzman&quot; /&gt;&lt;ref&gt;{{cite journal
+|vauthors=Stoica R, Moscovici M, Tomulescu C, Băbeanu N
+|title=Extraction and analytical methods of capsaicinoids - a review
+|journal=Scientific Bulletin. Series F. Biotechnologies
+|year=2016
+|volume=XX
+|pages=93–96
+|s2cid=38430045
+|url=https://pdfs.semanticscholar.org/0b7b/b726c67c316530bc445cdea106c0ad167f6b.pdf
+|issn=2285-1364
+}}&lt;/ref&gt;
+
+A weakness of the Scoville organoleptic test is its imprecision due to human subjectivity, depending on the taster's palate and number of mouth heat [[receptor (biochemistry)|receptors]], which vary widely among people.&lt;ref name=&quot;five38&quot;/&gt;&lt;ref name=&quot;guzman&quot; /&gt; Another weakness is [[neural adaptation|sensory fatigue]];&lt;ref name=&quot;five38&quot;/&gt; the palate is quickly desensitized to capsaicinoids after tasting a few samples within a short time period.&lt;ref name=&quot;Peter2012&quot;/&gt; Results vary widely (up to ± 50%) between laboratories.&lt;ref name=&quot;tainter&quot;&gt;{{cite book |last=Tainter |first=Donna R. |author2=Anthony T. Grenis |year=2001 |title=Spices and Seasonings |publisher=Wiley-IEEE |isbn=978-0-471-35575-5 |url=https://books.google.com/books?id=dfp4b3F0598C&amp;pg=PA30 |page=30|quote= Interlab variation [for the original Scoville scale] could be as high as +/−50%. However, labs that run these procedures could generate reasonably repeatable results.}}&lt;/ref&gt;
+
+== Pungency units==
+[[Image:Red savina cropped.jpg|thumb|The [[Red Savina pepper]], a hot chili.&lt;ref name=&quot;:3&quot;&gt;{{Cite book |last1=DeWitt |first1=Dave |last2=Bosland |first2=Paul W. |title=The Complete Chile Pepper Book |year=2009 |isbn=978-0-88192-920-1}}&lt;/ref&gt;]]
+
+Since the 1980s, spice heat has been assessed quantitatively by [[high-performance liquid chromatography]] (HPLC), which measures the concentration of heat-producing capsaicinoids, typically with capsaicin content as the main measure.&lt;ref name=&quot;guzman&quot; /&gt;&lt;ref name=collins/&gt; As stated in one review: &quot;the most reliable, rapid, and efficient method to identify and quantify capsaicinoids is HPLC; the results of which can be converted to Scoville Heat Units by multiplying the parts-per-million by 16.&quot;&lt;ref name=&quot;guzman&quot; /&gt; HPLC results permit the measurement of a substance’s capsaicin capacity to produce perceived heat (&quot;pungency&quot;). This method gives results in [[American Spice Trade Association]] &quot;pungency units&quot;, which are defined as one part capsaicin per million parts [[dry matter|dried pepper mass]].&lt;ref name=collins/&gt;
+
+For [[Parts-per notation|parts per million]] (ppm) measurements, SHU units are calculated from &quot;parts per million of heat&quot; (ppmH), which is found with the following calculation:
+
+&lt;math&gt;\text{ppmH}  = \frac{\text{peak area}({\text{capsaicin})}+0.82\cdot \text{peak area}(\text{dihydrocapsaicin)}}{\text{peak area}(\text{standard)}}&lt;/math&gt;&lt;ref name=&quot;collins&quot; /&gt; 
+
+Peak areas are calculated from HPLC traces of dry samples of the substance to be tested in 1 ml of [[acetonitrile]]. The standard used to calibrate the calculation is 1 gram of capsaicin. Scoville heat units are found by multiplying the ppmH value by a factor of 15 or 16.&lt;ref name=&quot;guzman&quot; /&gt;&lt;ref name=&quot;collins&quot; /&gt;
+
+An orally administered capsule of capsaicinoids claiming 100,000 Scoville units will correspond to around 6.6 mg of capsaicinoids.&lt;ref name=&quot;:1&quot; /&gt;
+
+The levels of pungency, in terms of Scoville units are:&lt;ref name=&quot;:2&quot;&gt;{{Cite journal|last=Al Othman|first=Zeid Abdullah|year=2011|title=Determination of Capsaicin and Dihydrocapsaicin in Capsicum Fruit Samples using High Performance Liquid Chromatography|url=https://www.mdpi.com/1420-3049/16/10/8919|journal=Molecules|pages=8920}}&lt;/ref&gt;{{cn|date=April 2020}}
+{| class=&quot;wikitable&quot;
+|+
+!Pungency
+!SHU
+|-
+|Very highly pungent
+|Above 80,000
+|-
+|Highly pungent
+|25,000 to 70,000
+|-
+|Moderately pungent
+|3,000 to 25,000
+|-
+|Mildly pungent
+|700 to 3,000
+|-
+|Non pungent
+|0 to 700
+|}
+
+==Scoville ratings==
+
+===Considerations===
+Since Scoville ratings are defined per unit of dry mass, comparison of ratings between products having different water content can be misleading.  For example, typical fresh chili peppers have a water content around 90%, whereas [[Tabasco sauce]] has a water content of 95%.&lt;ref&gt;USDA nutrient database for [http://ndb.nal.usda.gov/ndb/foods/show/3569?fg=&amp;man=&amp;lfacet=&amp;format=&amp;count=&amp;max=25&amp;offset=&amp;sort=&amp;qlookup=pepper Peppers, jalapeño, raw] (92% water content); [http://ndb.nal.usda.gov/ndb/foods/show/3419?fg=&amp;man=&amp;lfacet=&amp;format=&amp;count=&amp;max=25&amp;offset=&amp;sort=&amp;qlookup=pepper Peppers, hot chile, red, raw] (88% water content); [http://ndb.nal.usda.gov/ndb/foods/show/1214?qlookup=tabasco&amp;fg=&amp;format=&amp;man=&amp;lfacet=&amp;max=25&amp;new=1 Red Tabasco sauce] (95%)&lt;/ref&gt; For law-enforcement-grade [[pepper spray]], values from 500,000 up to 5 million SHU have been reported,&lt;ref name=&quot;five38&quot;/&gt;&lt;ref&gt;{{cite web | url = http://www.theppsc.org/Staff_Views/Czarnecki/chemical_hazards_in_law_enforcement.htm | title= Chemical hazards in law enforcement | publisher= The Police Policy Studies Council | access-date = 2009-02-09 | quote = Most law enforcement sprays have a pungency of 500,000 to 2 million SHU. One brand has sprays with 5.3 million SHU.}}&lt;/ref&gt; but the actual strength of the spray depends on the dilution.&lt;ref name=twi/&gt;
+
+Numerical results for any specimen vary depending on its cultivation conditions and the uncertainty of the laboratory methods used to assess the capsaicinoid content.&lt;ref name=&quot;guzman&quot; /&gt; Pungency values for any pepper are variable, owing to expected variation within a species, possibly by a factor of 10 or more, depending on [[Lineage_(evolution)#Phylogenetic_representation_of_lineages|seed lineage]], climate and [[humidity]], and soil composition supplying nutrients. The inaccuracies described in the measurement methods also contribute to the imprecision of these values.&lt;ref name=&quot;guzman&quot; /&gt;&lt;ref name=&quot;tainter&quot;/&gt;
+
+===''Capsicum'' peppers===
+&lt;!-- PLEASE NOTE: THE LIST BELOW IS NOT DEFINITIVE. Please refrain from adding peppers, particularly lesser-known ones. Uncited material may be removed. --&gt;
+
+''[[Capsicum]]'' [[chili pepper]]s are commonly used to add pungency in [[cuisine]]s worldwide.&lt;ref name=twi/&gt;&lt;ref name=guzman/&gt; The range of pepper heat reflected by a Scoville score is from 100 or less (sweet peppers) to over 3 million (Pepper X) (table below; Scoville scales for individual chili peppers are in the respective linked article).
+
+The chilis with the highest rating on the Scoville scale exceed one million Scoville units, and include specimens of [[naga jolokia]] or [[bhut jolokia]] and its [[cultivar]]s, the &quot;Dorset naga&quot; and the &quot;[[bhut jolokia]]&quot;, neither of which has official cultivar status.&lt;ref name=&quot;infinity&quot;&gt;{{cite news |url=http://www.telegraph.co.uk/news/newstopics/howaboutthat/7543281/Worlds-hottest-chilli-grown-in-Grantham-Lincs.html |title=World's hottest chilli grown in Grantham, Lincs |access-date=2010-04-24 |work=[[The Daily Telegraph]] |location=London |date=2010-04-01}}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://www.thisislincolnshire.co.uk/Grantham-firm-grows-world-s-hottest-chilli/story-11192125-detail/story.html |title=Grantham firm grows world's hottest chilli |publisher=www.thisislincolnshire.co.uk |access-date=2010-04-24 }}&lt;/ref&gt;
+
+Numerical results for any specimen vary depending on its cultivation conditions and the uncertainty of the laboratory methods used to assess the capsaicinoid content. Pungency values for any pepper are variable, owing to expected variation within a species—easily by a factor of 10 or more—depending on seed lineage, climate (humidity is a big factor for the Bhut Jolokia; the Dorset Naga and the original Naga have quite different ratings), and even soil (this is especially true of [[habanero]]s). The inaccuracies described in the measurement methods above also contribute to the imprecision of these values. When interpreting Scoville ratings, this should be kept in mind.&lt;ref name=&quot;tainter&quot; /&gt;
+
+The Scoville scale may be extrapolated to express the pungency of substances that are even hotter than pure capsaicin. One such substance is [[resiniferatoxin]], an alkaloid present in the sap of some species of [[euphorbia]] plants (spurges). Since it is 1000 times as hot as capsaicin, it would have a Scoville scale rating of 16 billion.&lt;ref&gt;Atala, Anthony, and Debra Slade (2003), ''Bladder Disease'', (Washington DC: National Bladder Foundation), p. 361.&lt;/ref&gt;

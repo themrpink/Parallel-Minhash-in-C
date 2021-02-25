@@ -1,0 +1,229 @@
+====Stereographic coordinate system====
+{{Further|Stereographic projection}}
+
+During medieval times, the stereographic coordinate system was used for navigation purposes.{{Citation needed|date=December 2007}} The stereographic coordinate system was superseded by the latitude-longitude system. Although no longer used in navigation, the stereographic coordinate system is still used in modern times to describe crystallographic orientations in the fields of [[crystallography]], [[mineralogy]] and materials science.{{Citation needed|date=December 2007}}
+
+==Vertical coordinates==
+{{Main|Vertical position}}
+
+{{expand section|date=December 2018}}
+
+Vertical coordinates include height and depth.
+
+==3D Cartesian coordinates==
+{{Further|Axes conventions}}
+
+Every point that is expressed in ellipsoidal coordinates can be expressed as an rectilinear {{nowrap|x y z}} ([[Cartesian coordinate|Cartesian]]) coordinate. Cartesian coordinates simplify many mathematical calculations. The Cartesian systems of different datums are not equivalent.&lt;ref name=Taylor2002/&gt;
+
+===Earth-centered, Earth-fixed===
+[[File:ECEF.svg|alt=Earth Centered, Earth Fixed coordinates|thumb|upright=1.3|Earth centered, Earth fixed coordinates in relation to latitude and longitude.]]
+{{Main|ECEF}}
+
+The [[ECEF|Earth-centered Earth-fixed]] (also known as the ECEF, ECF, or conventional terrestrial coordinate system) rotates with the Earth and has its origin at the center of the Earth.
+
+The conventional right-handed coordinate system puts:
+* The origin at the center of mass of the Earth, a point close to the Earth's [[figure of the Earth|center of figure]]
+* The Z axis on the line between the North and South Poles, with positive values increasing northward (but does not exactly coincide with the Earth's rotational axis)&lt;ref&gt;[http://www.weblab.dlr.de/rbrt/pdf/TN_0001.pdf Note on the BIRD ACS Reference Frames] {{webarchive|url=https://web.archive.org/web/20110718231431/http://www.weblab.dlr.de/rbrt/pdf/TN_0001.pdf |date=18 July 2011 }}&lt;/ref&gt;
+* The X and Y axes in the plane of the Equator
+* The X axis passing through extending from 180 degrees longitude at the Equator (negative) to 0 degrees longitude ([[prime meridian#IERS Reference Meridian|prime meridian]]) at the Equator (positive)
+* The Y axis passing through extending from 90 degrees west longitude at the Equator (negative) to 90 degrees east longitude at the Equator (positive)
+
+An example is the [http://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=aa3449 NGS data] for a brass disk near Donner Summit, in California. Given the dimensions of the ellipsoid, the conversion from lat/lon/height-above-ellipsoid coordinates to X-Y-Z is straightforward—calculate the X-Y-Z for the given lat-lon on the surface of the ellipsoid and add the X-Y-Z vector that is perpendicular to the ellipsoid there and has length equal to the point's height above the ellipsoid. The reverse conversion is harder: given X-Y-Z we can immediately get longitude, but no closed formula for latitude and height exists. &lt;!--, However, --&gt; See &quot;[[Geodetic system#Geodetic to/from ECEF coordinates|Geodetic system]].&quot; Using Bowring's formula in 1976 ''Survey Review'' the first iteration gives latitude correct within 10{{sup|-11}} degree as long as the point is within 10000 meters above or 5000 meters below the ellipsoid.
+
+=== Local tangent plane ===
+[[File:ECEF ENU Longitude Latitude relationships.svg|thumb|Earth centered Earth fixed and East, North, up coordinates.]]
+{{Main|Local tangent plane}}
+{{Further|Geographic coordinate conversion#From ECEF to ENU}}
+
+A local tangent plane can be defined based on the [[vertical and horizontal]] dimensions. The [[vertical coordinate]] can point either up or down. There are two kinds of conventions for the frames:
+* East, North, up (ENU), used in geography
+* North, East, down (NED), used specially in aerospace
+
+In many targeting and tracking applications the local ENU Cartesian coordinate system is far more intuitive and practical than ECEF or geodetic coordinates. The local ENU coordinates are formed from a plane tangent to the Earth's surface fixed to a specific location and hence it is sometimes known as a ''local tangent'' or ''local geodetic'' plane. By convention the east axis is labeled &lt;math&gt;x&lt;/math&gt;, the north &lt;math&gt;y&lt;/math&gt; and the up &lt;math&gt;z&lt;/math&gt;.
+
+In an airplane, most objects of interest are below the aircraft, so it is sensible to define down as a positive number. The NED coordinates allow this as an alternative to the ENU. By convention, the north axis is labeled &lt;math&gt;x'&lt;/math&gt;, the east &lt;math&gt;y'&lt;/math&gt; and the down &lt;math&gt;z'&lt;/math&gt;. To avoid confusion between &lt;math&gt;x&lt;/math&gt; and &lt;math&gt;x'&lt;/math&gt;, etc. in this article we will restrict the local coordinate frame to ENU.
+
+== On other celestial bodies ==
+Similar coordinate systems are defined for other celestial bodies such as:
+
+* The cartographic coordinate systems for almost all of the solid bodies in the [[Solar System]] were established by [[Merton E. Davies]] of the [[Rand Corporation]], including [[Mercury (planet)|Mercury]],&lt;ref&gt;Davies, M. E., &quot;Surface Coordinates and Cartography of Mercury,&quot; Journal of Geophysical Research, Vol. 80, No. 17, June 10, 1975.&lt;/ref&gt;&lt;ref&gt;Davies, M. E., S. E. Dwornik, D. E. Gault, and R. G. Strom, NASA Atlas of Mercury, NASA Scientific and Technical Information Office, 1978.&lt;/ref&gt; [[Venus]],&lt;ref&gt;Davies, M. E., T. R. Colvin, P. G. Rogers, P. G. Chodas, W. L. Sjogren, W. L. Akim, E. L. Stepanyantz, Z. P. Vlasova, and A. I. Zakharov, &quot;The Rotation Period, Direction of the North Pole, and Geodetic Control Network of Venus,&quot; Journal of Geophysical Research, Vol. 97, £8, pp. 13,14 1-13,151, 1992.&lt;/ref&gt; [[Mars]],&lt;ref&gt;Davies, M. E., and R. A. Berg, &quot;Preliminary Control Net of Mars,&quot;Journal of Geophysical Research, Vol. 76, No. 2, pps. 373-393, January 10, 1971.&lt;/ref&gt; the four [[Galilean moons]] of [[Jupiter]],&lt;ref&gt;[[Merton E. Davies]], Thomas A. Hauge, et. al.: Control Networks for the Galilean Satellites: November 1979 R-2532-JPL/NASA&lt;/ref&gt; and [[Triton (moon)|Triton]], the largest [[Natural satellite|moon]] of [[Neptune]].&lt;ref&gt;Davies, M. E., P. G. Rogers, and T. R. Colvin, &quot;A Control Network of Triton,&quot; Journal of Geophysical Research, Vol. 96, E l, pp. 15, 675-15, 681, 1991.&lt;/ref&gt;
+* [[Selenographic coordinates]] for the [[Moon]]
+
+== See also ==
+* {{annotated link|Decimal degrees}}
+* {{annotated link|Geographical distance}}
+* {{annotated link|Geographic information system}}
+* {{annotated link|Geo URI scheme}}
+* [[ISO 6709]], standard representation of geographic point location by coordinates
+* {{annotated link|Linear referencing}}
+* {{annotated link|Primary direction}}
+* {{annotated link|Spatial reference system}}
+
+== Notes ==
+{{NoteFoot}}
+
+== References ==
+=== Citations ===
+{{Reflist}}
+
+=== Sources ===
+{{refbegin}}
+* ''Portions of this article are from Jason Harris' &quot;Astroinfo&quot; which is distributed with [[KStars]], a desktop planetarium for [[Linux]]/[[KDE]]. See [http://edu.kde.org/kstars/index.phtml The KDE Education Project - KStars]''
+{{refend}}
+
+== External links ==
+{{Wikidata property|P625}}
+* {{Commons category-inline}}
+
+{{-}}
+{{Geographical coordinates |state = autocollapse }}
+{{Authority control}}
+[[Category:Geographic coordinate systems| ]]
+[[Category:Cartography]]
+[[Category:Geographic position|*]]
+[[Category:Geodesy]]
+[[Category:Navigation]]</text>
+      <sha1>9rae5k7bwag9goq4zu1em9tp2h87fr3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>ROT13</title>
+    <ns>0</ns>
+    <id>48362</id>
+    <revision>
+      <id>989037871</id>
+      <parentid>985870835</parentid>
+      <timestamp>2020-11-16T18:23:51Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>[[Category:CS1 errors: empty unknown parameters]]; [[WP:GenFixes]] on</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="19950" xml:space="preserve">{{short description|Type of Caesar cipher}}
+{{Use dmy dates|date=January 2020}}
+[[Image:ROT13 table with example.svg|right|thumbnail|320px|ROT13 replaces each letter by its partner 13 characters further along the alphabet. For example, &lt;kbd&gt;HELLO&lt;/kbd&gt; becomes &lt;kbd&gt;URYYB&lt;/kbd&gt; (or, conversely, &lt;kbd&gt;URYYB&lt;/kbd&gt; becomes &lt;kbd&gt;HELLO&lt;/kbd&gt; again).]]
+'''ROT13''' (&quot;'''rotate by 13 places'''&quot;, sometimes hyphenated '''ROT-13''') is a simple letter [[substitution cipher]] that replaces a letter with the 13th letter after it in the alphabet. ROT13 is a special case of the [[Caesar cipher]] which was developed in ancient Rome.
+
+Because there are 26 letters (2×13) in the [[ISO basic Latin alphabet|basic Latin alphabet]], ROT13 is its own [[inverse function|inverse]]; that is, to undo ROT13, the same [[algorithm]] is applied, so the same action can be used for encoding and decoding. The algorithm provides virtually no [[cryptography|cryptographic]] security, and is often cited as a canonical example of weak encryption.&lt;ref name=modern-cryptanalysis&gt;{{cite book |title=Modern Cryptanalysis: Techniques for Advanced Code Breaking |author=Christopher Swenson |page=5 |publisher=John Wiley &amp; Sons |date=17 March 2008 |isbn=9780470135938 |url=https://books.google.com/books?id=oLoaWgdmFJ8C&amp;pg=PA5 }}&lt;/ref&gt;
+
+ROT13 is used in [[online forum]]s as a means of hiding [[spoiler (media)|spoiler]]s, [[punch line|punchlines]], puzzle solutions, and [[profanity|offensive material]]s from the casual glance. ROT13 has inspired a variety of letter and word games online, and is frequently mentioned in [[newsgroup]] conversations.
+
+==Description==
+Applying ROT13 to a piece of text merely requires examining its alphabetic characters and replacing each one by the letter 13 places further along in the [[alphabet]], wrapping back to the beginning if necessary.&lt;ref name=&quot;schneier&quot;&gt;{{Cite book|last=Schneier |first=Bruce |author-link= Bruce Schneier |title=Applied Cryptography |url=https://archive.org/details/appliedcryptogra00schn_605 |url-access=limited |edition=Second|year=1996|publisher=John Wiley &amp; Sons |isbn= 0-471-11709-9|pages=[https://archive.org/details/appliedcryptogra00schn_605/page/n198 11] }}&lt;/ref&gt;
+&lt;kbd&gt;A&lt;/kbd&gt; becomes &lt;kbd&gt;N&lt;/kbd&gt;, &lt;kbd&gt;B&lt;/kbd&gt; becomes O, and so on up to &lt;kbd&gt;M&lt;/kbd&gt;, which becomes &lt;kbd&gt;Z&lt;/kbd&gt;, then the sequence continues at the beginning of the alphabet: &lt;kbd&gt;N&lt;/kbd&gt; becomes &lt;kbd&gt;A&lt;/kbd&gt;, O becomes &lt;kbd&gt;B&lt;/kbd&gt;, and so on to &lt;kbd&gt;Z&lt;/kbd&gt;, which becomes &lt;kbd&gt;M&lt;/kbd&gt;. Only those letters which occur in the [[English alphabet]] are affected; numbers, symbols, whitespace, and all other characters are left unchanged. Because there are 26 letters in the English alphabet and 26 = 2 &amp;times; 13, the ROT13 function is its own [[inverse function|inverse]]:&lt;ref name=&quot;schneier&quot;/&gt;
+
+:&lt;math&gt;\mbox{ROT}_{13}(\mbox{ROT}_{13}(x))=x&lt;/math&gt; for any basic Latin-alphabet text ''x''.
+
+In other words, two successive applications of ROT13 restore the original text (in [[mathematics]], this is sometimes called an ''[[involution (mathematics)|involution]]''; in cryptography, a ''[[reciprocal cipher]]'').
+
+The transformation can be done using a [[lookup table]], such as the following:
+{| style=&quot;margin-left:auto; margin-right:auto&quot; class=&quot;wikitable&quot;
+| Input
+| &lt;kbd&gt;&lt;span style=&quot;color: darkred&quot;&gt;ABCDEFGHIJKLM&lt;/span&gt;&lt;span style=&quot;color: darkblue&quot;&gt;NOPQRSTUVWXYZ&lt;/span&gt;&lt;span style=&quot;color: darkred&quot;&gt;abcdefghijklm&lt;/span&gt;&lt;span style=&quot;color: darkblue&quot;&gt;nopqrstuvwxyz&lt;/span&gt;&lt;/kbd&gt;
+|-
+| Output
+| &lt;kbd&gt;&lt;span style=&quot;color: darkblue&quot;&gt;NOPQRSTUVWXYZ&lt;/span&gt;&lt;span style=&quot;color: darkred&quot;&gt;ABCDEFGHIJKLM&lt;/span&gt;&lt;span style=&quot;color: darkblue&quot;&gt;nopqrstuvwxyz&lt;/span&gt;&lt;span style=&quot;color: darkred&quot;&gt;abcdefghijklm&lt;/span&gt;&lt;/kbd&gt;
+|}
+
+For example, in the following joke, the punchline has been obscured by ROT13:
+: Why did the chicken cross the road?
+: Gb trg gb gur bgure fvqr!
+
+Transforming the entire text via ROT13 form, the answer to the joke is revealed:
+: Jul qvq gur puvpxra pebff gur ebnq?
+: To get to the other side!
+
+A second application of ROT13 would restore the original.
+
+==Usage==
+
+ROT13 is a special case of the [[encryption algorithm]] known as a [[Caesar cipher]], used by [[Julius Caesar]] in the 1st century BC.&lt;ref&gt;{{Cite book|last=Kahn |first=David |author-link=David Kahn (writer) |title=The Codebreakers: The Story of Secret Writing |publisher=Macmillan |location=New York |isbn=0-684-83130-9 }}&lt;/ref&gt;
+
+[[Johann Ernst Elias Bessler]], a 18th century clockmaker and constructor of [[perpetual motion]] machines, pointed out that ROT13 encodes his surname as ''Orffyre''. He used its [[latinisation of names|latinised]] form, ''Orffyreus'', as his pseudonym.&lt;ref&gt;{{cite web|url=https://lockhaven.edu/~dsimanek/museum/people/people.htm|title=Perpetual Futility: A short history of the search for perpetual motion|last=Simanek|first=Donald E.|date=2012|website=The Museum of Unworkable Devices}}&lt;/ref&gt;
+
+ROT13 was in use in the net.jokes [[newsgroup]] by the early 1980s.{{efn|Early uses of ROT13 found in the Google USENET archive date back to 8 October 1982, posted to the &lt;kbd&gt;net.jokes&lt;/kbd&gt; newsgroup.&lt;ref&gt;{{cite newsgroup |url=http://groups.google.com/groups?selm=bnews.desoto.299 |newsgroup=net.jokes |author=desoto!gog |date=8 October 1982 |title=very mildly obscence joke, shift=13 }}&lt;/ref&gt;&lt;ref&gt;{{cite newsgroup |url=http://groups.google.com/groups?selm=bnews.utcsrgv.596 |newsgroup=net.jokes |author=utcsrgv!dave |date=8 October 1982 |title=encrypted jokes}}&lt;/ref&gt;}} It is used to hide potentially offensive jokes, or to obscure an answer to a puzzle or other [[spoiler (media)|spoiler]].&lt;ref name=&quot;schneier&quot;/&gt;&lt;ref name=&quot;jargon&quot;&gt;{{Cite web|date= 29 December 2003|first=Eric S. (ed.)|last=Raymond|author-link=Eric S. Raymond|url=http://www.catb.org/~esr/jargon/html/R/rot13.html |title=ROT13 |accessdate=19 September 2007 |work=The Jargon File, 4.4.7 }}{{Unreliable source?|date=August 2018}}&lt;/ref&gt; A shift of thirteen was chosen over other values, such as three as in the original [[Caesar cipher]], because thirteen is the value for which encoding and decoding are equivalent, thereby allowing the convenience of a single command for both.&lt;ref name=&quot;jargon&quot;/&gt; ROT13 is typically supported as a built-in feature to newsreading software.&lt;ref name=&quot;jargon&quot;/&gt; Email addresses are also sometimes encoded with ROT13 to hide them from less sophisticated [[spam bots]].&lt;ref&gt;{{cite web|last1=Ferner|first1=Matt|title=How to Hide Email Addresses From Spam Bots|url=http://www.practicalecommerce.com/articles/2434-How-to-Hide-Email-Addresses-From-Spam-Bots|publisher=PracticalEcommerce|accessdate=12 June 2014}}&lt;/ref&gt; It is also used to circumvent email screening and spam filtering. By obscuring an email's content, the screening algorithm is unable to identify the email as, for instance, a security risk, and allows it into the recipient's in-box.
+
+In encrypted, normal, English-language text of any significant size, ROT13 is recognizable from some letter/word patterns. The words &quot;n&quot;, &quot;V&quot; (capitalized only), and &quot;gur&quot; (ROT13 for &quot;a&quot;, &quot;I&quot;, and &quot;the&quot;), and words ending in &quot;yl&quot; (&quot;ly&quot;) are examples.
+
+ROT13 is not intended to be used where [[confidentiality|secrecy]] is of any concern—the use of a constant shift means that the encryption effectively has no [[key (cryptography)|key]], and decryption requires no more knowledge than the fact that ROT13 is in use. Even without this knowledge, the algorithm is easily broken through [[Frequency analysis (cryptanalysis)|frequency analysis]].&lt;ref name=&quot;schneier&quot;/&gt; Because of its utter unsuitability for real secrecy, ROT13 has become a catchphrase to refer to any conspicuously weak [[encryption]] scheme; a critic might claim that &quot;56-bit [[Data Encryption Standard|DES]] is little better than ROT13 these days&quot;. Also, in a play on real terms like &quot;double DES&quot;, the terms &quot;double ROT13&quot;, &quot;ROT26&quot;, or &quot;2ROT13&quot; crop up with humorous intent (due to the fact that, since applying ROT13 to an already ROT13-encrypted text restores the original [[plaintext]], ROT26 is equivalent to no encryption at all), including a spoof academic paper entitled &quot;On the 2ROT13 Encryption Algorithm&quot;.&lt;ref&gt;{{Cite web|title=On the 2ROT13 Encryption Algorithm|date=25 September 2004 |url=http://www.pruefziffernberechnung.de/Originaldokumente/2rot13.pdf|publisher=Prüfziffernberechnung in der Praxis|accessdate=20 September 2007}}&lt;/ref&gt; By extension, triple-ROT13 (used in joking analogy with 3DES) is equivalent to regular ROT13.
+
+In December 1999, it was found that [[Netscape Communicator]] used ROT13 as part of an insecure scheme to store email passwords.&lt;ref&gt;{{Cite document|author=Hollebeek, Tim|author2=Viega, John |authorlink2=John Viega |publisher=Reliable Software Technologies|title=Bad Cryptography in the Netscape Browser: A Case Study|citeseerx=10.1.1.15.9271 }}&lt;/ref&gt; In 2001, Russian programmer [[Dimitry Sklyarov]] demonstrated that an eBook vendor, New Paradigm Research Group (NPRG), used ROT13 to encrypt their documents; it has been speculated that NPRG may have mistaken the ROT13 toy example—provided with the [[Adobe Systems|Adobe]] eBook [[software development kit]]—for a serious encryption scheme.&lt;ref&gt;{{Cite web|first=Bruce|last=Perens|author-link=Bruce Perens|url=http://www.zdnet.com/news/dimitry-sklyarov-enemy-or-friend/116424 |title=Dimitry Sklyarov: Enemy or friend?|date=1 September 2001|accessdate=3 February 2011|publisher=[[ZDNet News]]}}&lt;/ref&gt; Windows XP uses ROT13 on some of its registry keys.&lt;ref&gt;{{Cite web|title=ROT13 is used in Windows|url=https://blog.didierstevens.com/2006/07/24/rot13-is-used-in-windows-you%E2%80%99re-joking/|date=24 July 2006|accessdate=15 December 2016}}&lt;/ref&gt; ROT13 is also used in the [[fortune (Unix)|Unix fortune program]] to conceal potentially offensive dicta.
+
+==Letter games and net culture==
+{| class=&quot;wikitable&quot; align=&quot;right&quot; style=&quot;margin: 0 0 1em 1em; text-align: center&quot;
+|-
+| colspan=&quot;2&quot; | &lt;kbd&gt;abcdefghijklmnopqrstuvwxyz&lt;/kbd&gt;&lt;br /&gt;&lt;kbd&gt;NOPQRSTUVWXYZABCDEFGHIJKLM&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;aha&lt;/kbd&gt; ↔ &lt;kbd&gt;nun&lt;/kbd&gt; || &lt;kbd&gt;ant&lt;/kbd&gt; ↔ &lt;kbd&gt;nag&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;balk&lt;/kbd&gt; ↔ &lt;kbd&gt;onyx&lt;/kbd&gt; || &lt;kbd&gt;bar&lt;/kbd&gt; ↔ &lt;kbd&gt;one&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;barf&lt;/kbd&gt; ↔ &lt;kbd&gt;ones&lt;/kbd&gt; || &lt;kbd&gt;be&lt;/kbd&gt; ↔ &lt;kbd&gt;or&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;bin&lt;/kbd&gt; ↔ &lt;kbd&gt;ova&lt;/kbd&gt; || &lt;kbd&gt;ebbs&lt;/kbd&gt; ↔ &lt;kbd&gt;roof&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;envy&lt;/kbd&gt; ↔ &lt;kbd&gt;rail&lt;/kbd&gt; || &lt;kbd&gt;er&lt;/kbd&gt; ↔ &lt;kbd&gt;re&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;errs&lt;/kbd&gt; ↔ &lt;kbd&gt;reef&lt;/kbd&gt; || &lt;kbd&gt;flap&lt;/kbd&gt; ↔ &lt;kbd&gt;sync&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;fur&lt;/kbd&gt; ↔ &lt;kbd&gt;she&lt;/kbd&gt; || &lt;kbd&gt;gel&lt;/kbd&gt; ↔ &lt;kbd&gt;try&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;gnat&lt;/kbd&gt; ↔ &lt;kbd&gt;tang&lt;/kbd&gt; || &lt;kbd&gt;irk&lt;/kbd&gt; ↔ &lt;kbd&gt;vex&lt;/kbd&gt;
+&lt;!-- Nice ones: --&gt;
+|-
+| &lt;kbd&gt;clerk&lt;/kbd&gt; ↔ &lt;kbd&gt;pyrex&lt;/kbd&gt; || &lt;kbd&gt;purely&lt;/kbd&gt; ↔ &lt;kbd&gt;cheryl&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;PNG&lt;/kbd&gt; ↔ &lt;kbd&gt;cat&lt;/kbd&gt; || &lt;kbd&gt;SHA&lt;/kbd&gt; ↔ &lt;kbd&gt;fun&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;furby&lt;/kbd&gt; ↔ &lt;kbd&gt;sheol&lt;/kbd&gt; || &lt;kbd&gt;terra&lt;/kbd&gt; ↔ &lt;kbd&gt;green&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;what&lt;/kbd&gt; ↔ &lt;kbd&gt;Jung&lt;/kbd&gt; || &lt;kbd&gt;URL&lt;/kbd&gt; ↔ &lt;kbd&gt;hey&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;purpura&lt;/kbd&gt; ↔ &lt;kbd&gt;Chechen&lt;/kbd&gt; || &lt;kbd&gt;shone&lt;/kbd&gt; ↔ &lt;kbd&gt;FUBAR&lt;/kbd&gt;
+|-
+| &lt;kbd&gt;Ares&lt;/kbd&gt; ↔ &lt;kbd&gt;Nerf&lt;/kbd&gt; || &lt;kbd&gt; abjurer&lt;/kbd&gt; ↔ &lt;kbd&gt;nowhere&lt;/kbd&gt;
+|}
+
+ROT13 provides an opportunity for [[letter games]]. Some words will, when transformed with ROT13, produce another word. Examples of 7-letter pairs in the [[English language]] are ''[[wiktionary:abjurer|abjurer]]'' and ''nowhere'', and ''[[Chechen people|Chechen]]'' and ''[[wiktionary:purpura|purpura]]''. Other examples of words like these are shown in the table.&lt;ref&gt;{{Cite web|url= http://www.furrfu.org/rot13words.html |last=De Mulder|first=Tom|title= ROT13 Words|accessdate=19 September 2007 |work=Furrfu!}}&lt;/ref&gt; The pair ''[[gnat]]'' and ''tang'' is an example of words that are both ROT13 reciprocals and [[palindrome|palindromic]].
+
+The 1989 [[International Obfuscated C Code Contest]] (IOCCC) included an entry by Brian Westley. Westley's [[computer program]] can be encoded in ROT13 or reversed and still [[compiler|compiles]] correctly. Its operation, when executed, is either to perform ROT13 encoding on, or to reverse its input.&lt;ref&gt;{{Cite web| url = http://www.ioccc.org/1989/westley.c | title = westley.c | work = [[IOCCC]] | year = 1989 | first = Brian | last = Westley |accessdate=13 August 2007}}&lt;/ref&gt;
+
+The newsgroup alt.folklore.urban coined a word—''furrfu''—that was the ROT13 encoding of the frequently encoded utterance &quot;[[:wikt:sheesh|sheesh]]&quot;. &quot;&lt;kbd&gt;Furrfu&lt;/kbd&gt;&quot; evolved in mid-1992 as a response to postings repeating [[urban myth]]s on alt.folklore.urban, after some posters complained that &quot;Sheesh!&quot; as a response to [[newbie|newcomer]]s was being overused.&lt;ref&gt;{{Cite web|url=http://foldoc.org/furrfu |title=Furrfu |publisher=[[Foldoc]] |date=25 October 1995 |accessdate=3 October 2016}}&lt;/ref&gt;
+
+==Variants==
+ROT5 is a practice similar to ROT13 that applies to numeric digits (0 to 9). ROT13 and ROT5 can be used together in the same message, sometimes called ROT18 (18 = 13 + 5) or ROT13.5.
+
+ROT47 is a derivative of ROT13 which, in addition to scrambling the basic letters, treats numbers and common symbols. Instead of using the sequence &lt;kbd&gt;A–Z&lt;/kbd&gt; as the alphabet, ROT47 uses a larger set of characters from the common [[character encoding]] known as [[ASCII]]. Specifically, the 7-bit printable characters, excluding space, from decimal 33 '&lt;kbd&gt;!&lt;/kbd&gt;' through 126 '&lt;kbd&gt;~&lt;/kbd&gt;', 94 in total, taken in the order of the numerical values of their ASCII codes, are rotated by 47 positions, without special consideration of case. For example, the character &lt;kbd&gt;A&lt;/kbd&gt; is mapped to &lt;kbd&gt;p&lt;/kbd&gt;, while &lt;kbd&gt;a&lt;/kbd&gt; is mapped to &lt;kbd&gt;2&lt;/kbd&gt;. The use of a larger alphabet produces a more thorough obfuscation than that of ROT13; for example, a telephone number such as &lt;kbd&gt;+1-415-839-6885&lt;/kbd&gt; is not obvious at first sight from the scrambled result &lt;kbd&gt;Z`\c`d\gbh\eggd&lt;/kbd&gt;. On the other hand, because ROT47 introduces numbers and symbols into the mix without discrimination, it is more immediately obvious that the text has been enciphered.
+
+Example:
+:&lt;kbd&gt;The Quick Brown Fox Jumps Over The Lazy Dog.&lt;/kbd&gt;
+enciphers to
+:&lt;kbd&gt;%96 &quot;F:4&lt; qC@H? u@I yF&gt;AD ~G6C %96 {2KJ s@8]&lt;/kbd&gt;
+
+The [[GNU C library]], a set of standard routines available for use in [[computer programming]], contains a [[function (programming)|function]]—'''&lt;kbd&gt;mem&lt;abbr title=frobnicate&gt;frob&lt;/abbr&gt;()&lt;/kbd&gt;'''&lt;ref&gt;{{Cite web|url=https://www.gnu.org/software/libc/manual/html_node/Obfuscating-Data.html|date=3 December 2006|title=5.13 Obfuscating Data|work=The GNU C Library Reference Manual |publisher=[[Free Software Foundation]]|access-date=2 August 2019}}&lt;/ref&gt;—which has a similar purpose to ROT13, although it is intended for use with arbitrary binary data. The function operates by combining each [[byte]] with the [[Binary number|binary]] pattern 00101010 ([[42 (number)|42]]) using the [[exclusive or]] (XOR) operation. This effects a [[simple XOR cipher]]. Like ROT13, XOR (and therefore &lt;kbd&gt;memfrob()&lt;/kbd&gt;) is self-reciprocal, and provides a similar, virtually absent, level of security.
+
+==Implementation==
+=== tr ===
+The ROT13 and ROT47 are fairly easy to implement using the Unix terminal application &lt;kbd&gt;[[Tr (Unix)|tr]]&lt;/kbd&gt;; to encrypt the string &quot;The Quick Brown Fox Jumps Over The Lazy Dog&quot; in ROT13:
+&lt;syntaxhighlight lang=&quot;console&quot;&gt;
+$ # Map upper case A-Z to N-ZA-M and lower case a-z to n-za-m
+$ tr 'A-Za-z' 'N-ZA-Mn-za-m' &lt;&lt;&lt; &quot;The Quick Brown Fox Jumps Over The Lazy Dog&quot;
+Gur Dhvpx Oebja Sbk Whzcf Bire Gur Ynml Qbt
+&lt;/syntaxhighlight&gt;
+
+and the same string for ROT47:
+&lt;syntaxhighlight lang=&quot;console&quot;&gt;
+$ echo &quot;The Quick Brown Fox Jumps Over The Lazy Dog&quot; | tr '\!-~' 'P-~\!-O'
+%96 &quot;F:4&lt; qC@H? u@I yF&gt;AD ~G6C %96 {2KJ s@8
+&lt;/syntaxhighlight&gt;
+
+=== Emacs and Vim ===
+In [[Emacs]], one can ROT13 the buffer or a selection with the following commands:&lt;ref&gt;[https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail-Rot13.html &quot;Rmail Rot13 – GNU Emacs Manual&quot;]. ''www.gnu.org''.&lt;/ref&gt;
+&lt;syntaxhighlight lang=&quot;text&quot;&gt;
+M-x toggle-rot13-mode
+M-x rot13-other-window
+M-x rot13-region
+&lt;/syntaxhighlight&gt;

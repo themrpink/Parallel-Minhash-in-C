@@ -1,0 +1,157 @@
+== History and practical application ==
+
+Reflected binary codes were applied to mathematical puzzles before they became known to engineers. [[Martin Gardner]] wrote a popular account of the Gray code in his August 1972 [[Mathematical Games column]] in Scientific American. The French engineer [[Émile Baudot]] used Gray codes in [[telegraphy]] in 1878.&lt;ref name=&quot;Pickover_2009&quot;/&gt;  He received the French [[Légion d'honneur|Legion of Honor]] medal for his work. The Gray code is sometimes attributed, incorrectly,&lt;ref name=&quot;Knuth&quot;/&gt; to [[Elisha Gray]].&lt;ref name=&quot;Heath_1961&quot;/&gt;&lt;ref name=&quot;Cattermole_1969&quot;/&gt;&lt;ref name=&quot;Edwards_2004&quot;/&gt;
+
+[[Frank Gray (researcher)|Frank Gray]], who became famous for inventing the signaling method that came to be used for compatible color television, invented a method to convert analog signals to reflected binary code groups using [[vacuum tube]]-based apparatus. The method and apparatus were patented in 1953 and the name of Gray stuck to the codes. The &quot;[[Pulse code modulation#History|PCM tube]]&quot; apparatus that Gray patented was made by Raymond W. Sears of Bell Labs, working with Gray and William M. Goodall, who credited Gray for the idea of the reflected binary code.&lt;ref name=&quot;Goodall_1951&quot;/&gt;
+[[File:US02632058 Gray.png|thumb|600px|center|Part of front page of Gray's patent, showing PCM tube (10) with reflected binary code in plate (15)]]
+
+Gray was most interested in using the codes to minimize errors in converting analog signals to digital; his codes are still used today for this purpose.
+
+=== Position encoders ===
+
+[[File:Encoder Disc (3-Bit).svg|thumb|[[Rotary encoder]] for angle-measuring devices marked in 3-bit binary-reflected Gray code (BRGC)]] 
+[[File:Gray code rotary encoder 13-track opened.jpg|thumb|A Gray code absolute rotary encoder with 13 tracks. Housing, interrupter disk, and light source are in the top; sensing element and support components are in the bottom.]]
+
+Gray codes are used in linear and rotary position encoders ([[absolute encoder]]s and [[quadrature encoder]]s) in preference to weighted binary encoding. This avoids the possibility that, when multiple bits change in the binary representation of a position, a misread will result from some of the bits changing before others.
+
+For example, some rotary encoders provide a disk which has an electrically conductive Gray code pattern on concentric rings (tracks). Each track has a stationary metal spring contact that provides electrical contact to the conductive code pattern. Together, these contacts produce output signals in the form of a Gray code. Other encoders employ non-contact mechanisms based on optical or magnetic sensors to produce the Gray code output signals.
+
+Regardless of the mechanism or precision of a moving encoder, position measurement error can occur at specific positions (at code boundaries) because the code may be changing at the exact moment it is read (sampled). A binary output code could cause significant position measurement errors because it is impossible to make all bits change at exactly the same time. If, at the moment the position is sampled, some bits have changed and others have not, the sampled position will be incorrect. In the case of absolute encoders, the indicated position may be far away from the actual position and, in the case of incremental encoders, this can corrupt position tracking.
+
+In contrast, the Gray code used by position encoders ensures that the codes for any two consecutive positions will differ by only one bit and, consequently, only one bit can change at a time. In this case, the maximum position error will be small, indicating a position adjacent to the actual position.
+
+=== Mathematical puzzles ===
+
+The binary-reflected Gray code can serve as a solution guide for the [[Tower of Hanoi|Towers of Hanoi problem]], as well as the classical [[Chinese rings puzzle]], a sequential mechanical puzzle mechanism.&lt;ref name=&quot;Knuth&quot;/&gt; It also forms a [[Hamiltonian cycle]] on a [[hypercube]], where each bit is seen as one dimension.
+
+=== Genetic algorithms ===
+
+Due to the [[Hamming distance]] properties of Gray codes, they are sometimes used in [[genetic algorithm]]s. They are very useful in this field, since mutations in the code allow for mostly incremental changes, but occasionally a single bit-change can cause a big leap and lead to new properties.
+
+=== Boolean circuit minimization ===
+
+Gray codes are also used in labelling the axes of [[Karnaugh map]]s&lt;ref name=&quot;Wakerly_1994&quot;/&gt;&lt;ref name=&quot;Brown_2012&quot;/&gt; as well as in [[Händler circle graph]]s,&lt;ref name=&quot;Händler_1958&quot;/&gt;&lt;ref name=&quot;Steinbuch-Wagner_1967&quot;/&gt;&lt;ref name=&quot;ISER_1&quot;/&gt;&lt;ref name=&quot;ISER_2&quot;/&gt; both graphical methods for [[logic circuit minimization]].
+
+=== Error correction ===
+
+In modern [[digital communications]], Gray codes play an important role in [[error correction]]. For example, in a [[digital modulation]] scheme such as [[quadrature amplitude modulation|QAM]] where data is typically transmitted in [[symbol rate|symbols]] of 4 bits or more, the signal's [[constellation diagram]] is arranged so that the bit patterns conveyed by adjacent constellation points differ by only one bit. By combining this with [[forward error correction]] capable of correcting single-bit errors, it is possible for a [[Receiver (radio)|receiver]] to correct any transmission errors that cause a constellation point to deviate into the area of an adjacent point. This makes the transmission system less susceptible to [[noise]].
+
+=== Communication between clock domains ===
+{{Main article|Clock domain crossing}}
+
+Digital logic designers use Gray codes extensively for passing multi-bit count information between synchronous logic that operates at different clock frequencies. The logic is considered operating in different &quot;clock domains&quot;. It is fundamental to the design of large chips that operate with many different clocking frequencies.
+
+=== Cycling through states with minimal effort ===
+
+If a system has to cycle through all possible combinations of on-off states of some set of controls, and the changes of the controls require non-trivial expense (e.g. time, wear, human work), a Gray code minimizes the number of setting changes to just one change for each combination of states. An example would be testing a piping system for all combinations of settings of its manually operated valves.
+
+A [[balanced Gray code]] can be constructed,&lt;ref name=&quot;Bhat-Savage_1996&quot;/&gt; that flips every bit equally often. Since bit-flips are evenly distributed, this is optimal in the following way: balanced Gray codes minimize the maximal count of bit-flips for each digit.
+
+====Gray code counters and arithmetic====
+
+A typical use of Gray code counters is building a [[FIFO (computing and electronics)|FIFO]] (first-in, first-out) data buffer that has read and write ports that exist in different clock domains. The input and output counters inside such a dual-port FIFO are often stored using Gray code to prevent invalid transient states from being captured when the count crosses clock domains.&lt;ref name=&quot;Donohue_2003&quot;/&gt;
+The updated read and write pointers need to be passed between clock domains when they change, to be able to track FIFO empty and full status in each domain. Each bit of the pointers is sampled non-deterministically for this clock domain transfer. So for each bit, either the old value or the new value is propagated. Therefore, if more than one bit in the multi-bit pointer is changing at the sampling point, a &quot;wrong&quot; binary value (neither new nor old) can be propagated. By guaranteeing only one bit can be changing, Gray codes guarantee that the only possible sampled values are the new or old multi-bit value. Typically Gray codes of power-of-two length are used.
+
+Sometimes digital buses in electronic systems are used to convey quantities that can only increase or decrease by one at a time, for example the output of an event counter which is being passed between clock domains or to a digital-to-analog converter. The advantage of Gray codes in these applications is that differences in the propagation delays of the many wires that represent the bits of the code cannot cause the received value to go through states that are out of the Gray code sequence. This is similar to the advantage of Gray codes in the construction of mechanical encoders, however the source of the Gray code is an electronic counter in this case. The counter itself must count in Gray code, or if the counter runs in binary then the output value from the counter must be reclocked after it has been converted to Gray code, because when a value is converted from binary to Gray code,&lt;ref group=&quot;nb&quot; name=&quot;NB_Arithmetic_conversion&quot;/&gt; it is possible that differences in the arrival times of the binary data bits into the binary-to-Gray conversion circuit will mean that the code could go briefly through states that are wildly out of sequence. Adding a clocked register after the circuit that converts the count value to Gray code may introduce a clock cycle of latency, so counting directly in Gray code may be advantageous.&lt;ref name=&quot;Hulst_1957&quot;/&gt;
+
+To produce the next count value in a Gray-code counter, it is necessary to have some combinational logic that will increment the current count value that is stored. One way to increment a Gray code number is to convert it into ordinary binary code, add one to it with a standard binary adder, and then convert the result back to Gray code.&lt;ref name=&quot;Mehta-Owens-Irwin_1996&quot;/&gt; Other methods of counting in Gray code are discussed in a report by [[Robert W. Doran]], including taking the output from the first latches of the master-slave flip flops in a binary ripple counter.&lt;ref name=&quot;Doran_2007&quot;/&gt;
+
+===={{anchor|Shifted Gray encoding}}Gray code addressing====
+
+As the execution of [[program code]] typically causes an instruction memory access pattern of locally consecutive addresses, [[bus encoding]]s using Gray code addressing instead of binary addressing can reduce the number of state changes of the address bits significantly, thereby reducing the [[CPU power consumption]] in some low-power designs.&lt;ref name=&quot;Su-Tsui-Despain_1994&quot;/&gt;&lt;ref name=&quot;Guo-Parameswaran_2010&quot;/&gt;
+
+==Constructing an ''n''-bit Gray code==
+
+[[File:Binary-reflected Gray code construction.svg|frame|right|The first few steps of the reflect-and-prefix method.]]
+[[File:Gray code permutation matrix 16.svg|thumb|right|250px|4-bit Gray code permutation]]
+
+The binary-reflected Gray code list for ''n'' bits can be generated [[recursion|recursively]] from the list for ''n''&amp;nbsp;&amp;minus;&amp;nbsp;1 bits by reflecting the list (i.e. listing the entries in reverse order), prefixing the entries in the original list with a binary 0, prefixing the entries in the reflected list with a binary&amp;nbsp;1, and then concatenating the original list with the reversed list.&lt;ref name=&quot;Knuth&quot;/&gt;  For example, generating the ''n''&amp;nbsp;=&amp;nbsp;3 list from the ''n''&amp;nbsp;=&amp;nbsp;2 list:
+
+{| cellpadding=&quot;5&quot; border=&quot;0&quot; style=&quot;margin: 1em;&quot;
+|-
+| 2-bit list:
+| 00, 01, 11, 10
+| &amp;nbsp;
+|-
+| Reflected:
+| &amp;nbsp;
+| 10, 11, 01, 00
+|-
+| Prefix old entries with ''0'':
+| 000, 001, 011, 010, 
+| &amp;nbsp;
+|-
+| Prefix new entries with ''1'':
+| &amp;nbsp; 
+| 110, 111, 101, 100
+|-
+| Concatenated:
+| 000, 001, 011, 010, 
+| 110, 111, 101, 100
+|}
+
+The one-bit Gray code is ''G''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;(0,&amp;nbsp;1). This can be thought of as built recursively as above from a zero-bit Gray code ''G''&lt;sub&gt;0&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;(&amp;nbsp;[[Empty string|Λ]]&amp;nbsp;) consisting of a single entry of zero length. This iterative process of generating ''G''&lt;sub&gt;''n''+1&lt;/sub&gt; from ''G''&lt;sub&gt;''n''&lt;/sub&gt; makes the following properties of the standard reflecting code clear:
+
+* ''G''&lt;sub&gt;''n''&lt;/sub&gt; is a [[permutation]] of the numbers 0, …, 2&lt;sup&gt;''n''&lt;/sup&gt;&amp;nbsp;&amp;minus;&amp;nbsp;1.  (Each number appears exactly once in the list.)
+* ''G''&lt;sub&gt;''n''&lt;/sub&gt; is embedded as the first half of ''G''&lt;sub&gt;''n''+1&lt;/sub&gt;.
+* Therefore, the coding is ''stable'', in the sense that once a binary number appears in ''G''&lt;sub&gt;''n''&lt;/sub&gt; it appears in the same position in all longer lists; so it makes sense to talk about ''the'' reflective Gray code value of a number: ''G''(''m'') = the ''m''-th reflecting Gray code, counting from 0.
+* Each entry in ''G''&lt;sub&gt;''n''&lt;/sub&gt; differs by only one bit from the previous entry. (The Hamming distance is 1.)
+* The last entry in ''G''&lt;sub&gt;''n''&lt;/sub&gt; differs by only one bit from the first entry. (The code is cyclic.)
+
+These characteristics suggest a simple and fast method of translating a binary value into the corresponding Gray code. Each bit is inverted if the next higher bit of the input value is set to one. This can be performed in parallel by a bit-shift and exclusive-or operation if they are available: the ''n''th Gray code is obtained by computing &lt;math&gt;n \oplus \lfloor n/2 \rfloor&lt;/math&gt;. Prepending a 0 leaves the order of the code words unchanged, prepending a 1 reverses the order of the code words. If the bits at position &lt;math&gt;i&lt;/math&gt; of codewords are inverted, the order of neighbouring blocks of &lt;math&gt;2^i&lt;/math&gt; codewords is reversed. E.g. if bit 0 is inverted in a 3 bit codeword sequence, the order of two neighbouring codewords is reversed
+
+{000,001,010,011,100,101,110,111} -&gt; {001,000,011,010,101,100,111,110}     (invert bit 0)
+
+If bit 1 is inverted, blocks of 2 codewords change order:
+
+{000,001,010,011,100,101,110,111} -&gt; {010,011,000,001,110,111,100,101}     (invert bit 1)
+
+If bit 2 is inverted, blocks of 4 codewords reverse order:
+
+{000,001,010,011,100,101,110,111} -&gt; {100,101,110,111,000,001,010,011}     (invert bit 2)
+
+Thus, ex-oring a bit &lt;math&gt;b_i&lt;/math&gt; at position &lt;math&gt;i&lt;/math&gt; with the bit &lt;math&gt;b_{i+1}&lt;/math&gt; at position &lt;math&gt;i+1&lt;/math&gt; leaves the order of codewords intact if &lt;math&gt;b_{i+1} = 0&lt;/math&gt;, and reverses the order of blocks of &lt;math&gt;2^{i+1}&lt;/math&gt; codewords if &lt;math&gt;b_{i+1} = 1&lt;/math&gt;. Now, this is exactly the same operation as the reflect-and-prefix method to generate the Gray code.
+
+A similar method can be used to perform the reverse translation, but the computation of each bit depends on the computed value of the next higher bit so it cannot be performed in parallel. Assuming &lt;math&gt;g_i&lt;/math&gt; is the &lt;math&gt;i&lt;/math&gt;th Gray-coded bit (&lt;math&gt;g_0&lt;/math&gt; being the most significant bit), and &lt;math&gt;b_i&lt;/math&gt; is the &lt;math&gt;i&lt;/math&gt;th binary-coded bit (&lt;math&gt;b_0&lt;/math&gt; being the most-significant bit), the reverse translation can be given recursively: &lt;math&gt;b_0 = g_0&lt;/math&gt;, and &lt;math&gt;b_i=g_i \oplus b_{i-1}&lt;/math&gt;. Alternatively, decoding a Gray code into a binary number can be described as a [[prefix sum]] of the bits in the Gray code, where each individual summation operation in the prefix sum is performed modulo two.
+
+To construct the binary-reflected Gray code iteratively, at step 0 start with the &lt;math&gt;\mathrm{code}_0 = 0&lt;/math&gt;, and at step &lt;math&gt;i &gt; 0&lt;/math&gt; find the bit position of the least significant 1 in the binary representation of &lt;math&gt;i&lt;/math&gt; and flip the bit at that position in the previous code &lt;math&gt;\mathrm{code}_{i-1}&lt;/math&gt; to get the next code &lt;math&gt;\mathrm{code}_i&lt;/math&gt;. The bit positions start 0, 1, 0, 2, 0, 1, 0, 3, ….&lt;ref group=&quot;nb&quot; name=&quot;NB_OEIS_A007814&quot;/&gt; See [[find first set]] for efficient algorithms to compute these values.
+
+== Converting to and from Gray code ==
+The following functions in [[C (programming language)|C]] convert between binary numbers and their associated Gray codes. While it may seem that Gray-to-binary conversion requires each bit to be handled one at a time, faster algorithms exist.&lt;ref name=&quot;Dietz&quot;/&gt;&lt;ref group=&quot;nb&quot; name=&quot;NB_Arithmetic_conversion&quot;/&gt;
+
+&lt;syntaxhighlight lang=&quot;C&quot;&gt;
+typedef unsigned int uint;
+
+// This function converts an unsigned binary number to reflected binary Gray code.
+uint BinaryToGray(uint num)
+{
+    return num ^ (num &gt;&gt; 1); // The operator &gt;&gt; is shift right. The operator ^ is exclusive or.
+}
+
+// This function converts a reflected binary Gray code number to a binary number.
+uint GrayToBinary(uint num)
+{
+    uint mask = num;
+    while (mask) {           // Each Gray code bit is exclusive-ored with all more significant bits.
+        mask &gt;&gt;= 1;
+        num   ^= mask;
+    }
+    return num;
+}
+
+// A more efficient version for Gray codes 32 bits or fewer through the use of SWAR (SIMD within a register) techniques. 
+// It implements a parallel prefix XOR function. The assignment statements can be in any order.
+// 
+// This function can be adapted for longer Gray codes by adding steps. 
+
+uint GrayToBinary32(uint num)
+{
+    num ^= num &gt;&gt; 16;
+    num ^= num &gt;&gt;  8;
+    num ^= num &gt;&gt;  4;
+    num ^= num &gt;&gt;  2;
+    num ^= num &gt;&gt;  1;
+    return num;
+}
+// A Four-bit-at-once variant changes a binary number (abcd)2 to (abcd)2 ^ (00ab)2, then to (abcd)2 ^ (00ab)2 ^ (0abc)2 ^ (000a)2.
+&lt;/syntaxhighlight&gt;

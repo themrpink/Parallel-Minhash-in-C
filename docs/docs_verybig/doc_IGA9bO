@@ -1,0 +1,227 @@
+&lt;gallery perrow=&quot;4&quot;&gt;
+File:Simple Time Domain Reflectometer Diagram.png|Simple TDR made from lab equipment
+File:Time Domain Reflectometer made from common lab equipment.JPG|Simple TDR made from lab equipment
+File:TDR trace of cable with open termination.JPG|TDR trace of a transmission line with an open termination
+File:TDR trace of cable with a short circuit termination.JPG|TDR trace of a transmission line with a short circuit termination
+File:TDR trace of cable with a capacitor termination.jpg|TDR trace of a transmission line with a 1nF capacitor termination
+File:TDR trace of cable terminationed with its characteristic impedance.jpg|TDR trace of a transmission line with an almost ideal termination
+File:TDR trace of cable with cable terminated on an oscilloscope.JPG|TDR trace of a transmission line terminated on an oscilloscope high impedance input. The blue trace is the pulse as seen at the far end. It is offset so that the baseline of each channel is visible
+File:TDR Step Same Baseline.JPG|TDR trace of a transmission line terminated on an oscilloscope high impedance input driven by a step input from a matched source. The blue trace is the signal as seen at the far end.
+&lt;/gallery&gt;
+
+These traces were produced by a commercial TDR using a step waveform with a 25&amp;nbsp;ps risetime, a sampling head with a 35&amp;nbsp;ps risetime, and an {{convert|18|inch|m|adj=on}} SMA cable.&lt;ref&gt;Hamilton Avnet part number P-3636-603-5215&lt;/ref&gt; The far end of the SMA cable was left open or connected to different adapters. It takes about 3&amp;nbsp;ns for the pulse to travel down the cable, reflect, and reach the sampling head.  A second reflection (at about 6&amp;nbsp;ns) can be seen in some traces; it is due to the reflection seeing a small mismatch at the sampling head and causing another &quot;incident&quot; wave to travel down the cable.
+&lt;gallery perrow=&quot;4&quot;&gt;
+File:TDR SMA open.svg|TDR of step into disconnected SMA male connector (non-precision open)&lt;br/&gt;horizontal: 1&amp;nbsp;ns/div&lt;br/&gt;vertical: 0.5&amp;nbsp;&amp;rho;/div
+File:TDR SMA APC7 open.svg|TDR of step into disconnected APC-7mm connector
+File:TDR SMA APC7 prec open.svg|TDR of step into APC-7mm precision open
+File:TDR SMA APC7 prec load.svg|TDR of step into APC-7mm precision load
+File:TDR SMA APC7 prec short.svg|TDR of step into APC-7mm precision short
+File:TDR SMA APC7 prec open 20ps.svg|TDR of step into APC-7mm precision open&lt;br/&gt;horizontal: 20&amp;nbsp;ps/div
+File:TDR SMA BNC BNC term.svg|TDR of step into mated BNC connector pair; the peak reflection is 0.04&lt;br/&gt;horizontal: 200&amp;nbsp;ps/div&lt;br/&gt;vertical: 20&amp;nbsp;m&amp;rho;/div
+&lt;/gallery&gt;
+
+== Explanation ==
+If the far end of the cable is shorted, that is, terminated with an impedance of zero ohms, and when the rising edge of the pulse is launched down the cable, the voltage at the launching point &quot;steps up&quot; to a given value instantly and the pulse begins propagating in the cable towards the short. When the pulse encounters the short, no energy is absorbed at the far end. Instead, an inverted pulse reflects back from the short towards the launching end. It is only when this reflection finally reaches the launch point that the voltage at this point abruptly drops back to zero, signaling the presence of a short at the end of the cable. That is, the TDR has no indication that there is a short at the end of the cable until its emitted pulse can travel in the cable and the echo can return. It is only after this round-trip delay that the short can be detected by the TDR. With knowledge of the [[velocity of propagation|signal propagation speed]] in the particular cable-under-test, the distance to the short can be measured.
+
+A similar effect occurs if the far end of the cable is an open circuit (terminated into an infinite impedance). In this case, though, the reflection from the far end is polarized identically with the original pulse and adds to it rather than cancelling it out. So after a round-trip delay, the voltage at the TDR abruptly jumps to twice the originally-applied voltage.
+
+Perfect termination at the far end of the cable would entirely absorb the applied pulse without causing any reflection, rendering the determination of the actual length of the cable impossible. in practice, some small reflection is nearly always observed.
+
+The magnitude of the reflection is referred to as the reflection coefficient or ρ. The coefficient ranges from 1 (open circuit) to -1 (short circuit). The value of zero means that there is no reflection. The reflection coefficient is calculated as follows:
+
+&lt;center&gt;&lt;math&gt;\rho = \frac{Z_t - Z_o}{Z_t + Z_o}&lt;/math&gt;&lt;/center&gt;
+
+Where Zo is defined as the characteristic impedance of the transmission medium and Zt is the impedance of the termination at the far end of the [[transmission line]].
+
+Any discontinuity can be viewed as a termination impedance and substituted as Zt. This includes abrupt changes in the characteristic impedance. As an example, a trace width on a printed circuit board doubled at its midsection would constitute a discontinuity. Some of the energy will be reflected back to the driving source; the remaining energy will be transmitted. This is also known as a scattering junction.
+
+==Usage==
+Time domain reflectometers are commonly used for in-place testing of very long cable runs, where it is impractical to dig up or remove what may be a kilometers-long cable. They are indispensable for [[preventive maintenance]] of [[telecommunication]] lines, as TDRs can detect resistance on joints and [[electrical connector|connectors]] as they [[corrosion|corrode]], and increasing [[Electrical insulation|insulation]] leakage as it degrades and absorbs moisture, long before either leads to catastrophic failures. Using a TDR, it is possible to pinpoint a fault to within centimetres.
+
+TDRs are also very useful tools for [[technical surveillance counter-measures]], where they help determine the existence and location of [[telephone tapping|wire tap]]s. The slight change in line impedance caused by the introduction of a tap or splice will show up on the screen of a TDR when connected to a phone line.
+
+TDR equipment is also an essential tool in the [[failure analysis]] of modern high-frequency printed circuit boards with signal traces crafted to emulate [[transmission line]]s. By observing reflections, any unsoldered pins of a [[ball grid array]] device can be detected. Short circuited pins can also be detected in a similar fashion.
+
+The TDR principle is used in industrial settings, in situations as diverse as the testing of [[integrated circuit]] packages to measuring liquid levels. In the former, the time domain reflectometer is used to isolate failing sites in the same. The latter is primarily limited to the process industry.
+
+===In level measurement===
+In a TDR-based [[level measurement]] device, the device generates an impulse that propagates down a thin waveguide (referred to as a probe) – typically a metal rod or a steel cable. When this impulse hits the surface of the medium to be measured, part of the impulse reflects back up the waveguide.  The device determines the fluid level by measuring the time difference between when the impulse was sent and when the reflection returned. The sensors can output the analyzed level as a continuous analog signal or switch output signals. In TDR technology, the impulse velocity is primarily affected by the permittivity of the medium through which the pulse propagates, which can vary greatly by the moisture content and temperature of the medium. In many cases, this effect can be corrected without undue difficulty. In some cases, such as in boiling and/or high temperature environments, the correction can be difficult. In particular, determining the froth (foam) height and the collapsed liquid level in a frothy / boiling medium can be very difficult.
+
+===Used in anchor cables in dams ===
+The Dam Safety Interest Group of CEA Technologies, Inc. (CEATI), a consortium of electrical power organizations, has applied [[Spread-spectrum time-domain reflectometry]] to identify potential faults in concrete dam anchor cables. The key benefit of Time Domain reflectometry over other testing methods is the non-destructive method of these tests.&lt;ref&gt;C. Furse, P. Smith, M. Diamond, &quot;[http://www.elen.utah.edu/~cfurse/Center%20of%20Excellence/wiring_papers/anchors%20R1.pdf Feasibility of Reflectometry for Nondestructive Evaluation of Prestressed Concrete Anchors],&quot; IEEE Journal of Sensors, Vol. 9. No. 11, Nov. 2009, pp. 1322 - 1329&lt;/ref&gt;
+
+===Used in the earth and agricultural sciences===
+{{Main|Measuring moisture content using time-domain reflectometry}}
+A TDR is used to determine [[moisture content]] in soil and porous media. Over the last two decades, substantial advances have been made measuring moisture in soil, grain, food stuff, and sediment. The key to TDR's success is its ability to accurately determine the permittivity (dielectric constant) of a material from wave propagation, due to the strong relationship between the permittivity of a material and its water content, as demonstrated in the pioneering works of Hoekstra and Delaney (1974) and Topp et al. (1980). Recent reviews and reference work on the subject include, Topp and Reynolds (1998), Noborio (2001), Pettinellia et al. (2002), Topp and Ferre (2002) and Robinson et al. (2003). The TDR method is a transmission line technique, and determines apparent permittivity (Ka) from the travel time of an electromagnetic wave that propagates along a transmission line, usually two or more parallel metal rods embedded in soil or sediment. The probes are typically between 10 and 30&amp;nbsp;cm long and connected to the TDR via coaxial cable.
+
+===In geotechnical engineering===
+Time domain reflectometry has also been utilized to monitor slope movement in a variety of [[geotechnical engineering|geotechnical]] settings including highway cuts, rail beds, and open pit mines (Dowding &amp; O'Connor, 1984, 2000a, 2000b; Kane &amp; Beck, 1999). In stability monitoring applications using TDR, a coaxial cable is installed in a vertical borehole passing through the region of concern. The electrical impedance at any point along a coaxial cable changes with deformation of the insulator between the conductors. A brittle grout surrounds the cable to translate earth movement into an abrupt cable deformation that shows up as a detectable peak in the reflectance trace. Until recently, the technique was relatively insensitive to small slope movements and could not be automated because it relied on human detection of changes in the reflectance trace over time. Farrington and Sargand (2004) developed a simple signal processing technique using numerical derivatives to extract reliable indications of slope movement from the TDR data much earlier than by conventional interpretation.
+
+Another application of TDRs in geotechnical engineering is to determine the soil moisture content. This can be done by placing the TDRs in different soil layers and measurement of the time of start of precipitation and the time that TDR indicate an increase in the soil moisture content. The depth of the TDR (d) is a known factor and the other is the time it takes the drop of water to reach that depth (t); therefore the speed of water [[infiltration (hydrology)|infiltration]] (v) can be determined. This is a good method to assess the effectiveness of Best Management Practices (BMPs) in reducing [[stormwater]] [[surface runoff]].
+
+===In semiconductor device analysis===
+Time domain reflectometry is used in semiconductor failure analysis as a non-destructive method for the location of defects in semiconductor device packages. The TDR provides an electrical signature of individual conductive traces in the device package, and is useful for determining the location of opens and shorts.
+
+===In aviation wiring maintenance===
+Time domain reflectometry, specifically [[spread-spectrum time-domain reflectometry]] is used on aviation wiring for both preventive maintenance and fault location.&lt;ref&gt;Smith, P., C. Furse, and J. Gunther, 2005. &quot;Analysis of spread spectrum time domain [http://livewiretest.com/analysis-of-spread-spectrum-time-domain-reflectometry-for-wire-fault-location/ reflectometry for wire fault location] {{webarchive|url=https://web.archive.org/web/20101231231446/http://livewiretest.com/analysis-of-spread-spectrum-time-domain-reflectometry-for-wire-fault-location/ |date=2010-12-31 }}&quot;. IEEE Sensors Journal 5:1469–1478.&lt;/ref&gt; Spread spectrum time domain reflectometry has the advantage of precisely locating the fault location within thousands of miles of aviation wiring. Additionally, this technology is worth considering for real time aviation monitoring, as  spread spectrum reflectometry can be employed on live wires.
+
+This method has been shown to be useful to locating intermittent electrical faults.&lt;ref&gt;Furse, Cynthia, Smith, P.,Safavi, Mehdi, and M. Lo, Chet. &quot;[http://livewiretest.com/feasibility-of-spread-spectrum-sensors-for-location-of-arcs-on-live-wires/ Feasibility of Spread Spectrum Sensors for Location of Arcs on Live Wires] {{webarchive|url=https://archive.today/20100501194849/http://livewiretest.com/feasibility-of-spread-spectrum-sensors-for-location-of-arcs-on-live-wires/ |date=2010-05-01 }}&quot;. IEEE Sensors Journal. December 2005.&lt;/ref&gt;
+
+Multi carrier time domain reflectometry (MCTDR) has also been identified as a promising method for embedded EWIS diagnosis or troubleshooting tools. Based on the injection of a multicarrier signal (respecting EMC and harmless for the wires), this smart technology provides information for the detection, localization and characterization of electrical defects (or mechanical defects having electrical consequences) in the wiring systems. 
+Hard fault (short, open circuit) or intermittent defects can be detected very quickly increasing the reliability of wiring systems and improving their maintenance.&lt;ref&gt;G.Millet, S.Bruillot, D.Dejardin, N.Imbert, F.Auzanneau, L.Incarbone, M.Olivas, L.Vincent, A.Cremzi, S.Poignant, 2014.[https://www.researchgate.net/publication/260075393_Aircraft_Electrical_Wiring_Monitoring_System &quot;Aircraft Electrical Wiring Monitoring System&quot; ]&lt;/ref&gt;
+
+==See also==
+* [[Frequency domain sensor]]
+* [[Murray loop bridge]]
+* [[Noise-domain reflectometry]]
+* [[Optical time-domain reflectometer]]
+* [[Return loss]]
+* [[Standing wave ratio]]
+
+== References ==
+{{Reflist|30em}}
+
+===Further reading===
+*Hoekstra, P. and A. Delaney, 1974. &quot;Dielectric properties of soils at UHF and microwave frequencies&quot;. ''Journal of Geophysical Research'' '''79''':1699–1708.
+*Smith, P., C. Furse, and J. Gunther, 2005. &quot;[http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1532290 Analysis of spread spectrum time domain reflectometry for wire fault location]&quot;. ''IEEE Sensors Journal'' '''5''':1469–1478.
+*Waddoups, B., C. Furse and M. Schmidt. &quot;Analysis of Reflectometry for Detection of Chafed Aircraft Wiring Insulation&quot;. Department of Electrical and Computer Engineering. Utah State University.
+*Noborio K. 2001. &quot;Measurement of soil water content and electrical conductivity by time domain reflectometry: A review&quot;. ''Computers and Electronics in Agriculture'' '''31''':213–237.
+*Pettinelli E., A. Cereti, A. Galli, and F. Bella, 2002. &quot;Time domain reflectometry: Calibration techniques for accurate measurement of the dielectric properties of various materials&quot;. ''Review of Scientific Instruments'' '''73''':3553–3562.
+*Robinson D.A., S.B. Jones, J.M. Wraith, D. Or and S.P. Friedman, 2003 &quot;A review of advances in dielectric and electrical conductivity measurements in soils using time domain reflectometry&quot;. ''Vadose Zone Journal'' '''2''': 444–475.
+* Robinson, D. A., C. S. Campbell, J. W. Hopmans, B. K. Hornbuckle, Scott B. Jones, R. Knight, F. Ogden, J. Selker, and O. Wendroth, 2008. &quot;Soil moisture measurement for ecological and hydrological watershed-scale observatories: A review.&quot; ''Vadose Zone Journal'' 7: 358-389.
+*Topp G.C., J.L. Davis and A.P. Annan, 1980. &quot;Electromagnetic determination of soil water content: measurements in coaxial transmission lines&quot;. ''Water Resources Research'' '''16''':574–582.
+*Topp G.C. and W.D. Reynolds, 1998. &quot;Time domain reflectometry: a seminal technique for measuring mass and energy in soil&quot;. ''Soil Tillage Research'' '''47''':125–132.
+*Topp, G.C. and T.P.A. Ferre, 2002. &quot;Water content&quot;, in ''Methods of Soil Analysis. Part 4''. (Ed. J.H. Dane and G.C. Topp), SSSA Book Series No. 5. Soil Science Society of America, Madison WI.
+*Dowding, C.H. &amp; O'Connor, K.M. 2000a. &quot;Comparison of TDR and Inclinometers for Slope Monitoring&quot;. ''Geotechnical Measurements—Proceedings of Geo-Denver2000'': 80–81. Denver, CO.
+*Dowding, C.H. &amp; O'Connor, K.M. 2000b. &quot;Real Time Monitoring of Infrastructure using TDR Technology&quot;. ''Structural Materials Technology NDT Conference 2000''
+*Kane, W.F. &amp; Beck, T.J. 1999. &quot;Advances in Slope Instrumentation: TDR and Remote Data Acquisition Systems&quot;. ''Field Measurements in Geomechanics, 5th International Symposium on Field Measurements in Geomechanics'': 101–105. Singapore.
+*Farrington, S.P. and Sargand, S.M., &quot;Advanced Processing of Time Domain Reflectometry for Improved Slope Stability Monitoring&quot;, ''Proceedings of the Eleventh Annual Conference on Tailings and Mine Waste'', October, 2004.
+*{{cite conference| last=Smolyansky| first=D.| title=Electronic Package Fault Isolation Using TDR | book-title=Microelectronics Failure Analysis | pages= 289–302 | year=2004 |publisher=ASM International | isbn= 0-87170-804-3 }}
+
+== External links ==
+{{Commons category|Time-domain reflectometry}}
+*[https://www.radiodetection.com/sites/default/files/TheABCsofTDRsApplicationNote.pdf Radiodetection Extended Training] - ABC's of TDR's
+*[http://news.bbc.co.uk/2/hi/technology/7228315.stm Work begins to repair severed net]
+*{{citation |url=http://literature.cdn.keysight.com/litweb/pdf/5966-4855E.pdf |series=Application Note |id=AN-1304-2 |title=Time Domain Reflectometry Theory |publisher=Keysight Technologies |date=31 May 2013 |access-date=13 February 2012 |df=dmy-all }}
+*{{citation |first1=Paul |last1=DeWinter |first2=Bill |last2=Ashley |url=http://www.aeatechnology.com/Application_Notes/AN201%20Step%20vs%20Pulse%20TDR%20Technology.pdf |id=AN201 |title=Step vs Pulse TDR Technology |year=2011 |publisher=AEA Technology, Inc. |series=Application Note |url-status=dead |archive-url=https://web.archive.org/web/20140826114235/http://www.aeatechnology.com/Application_Notes/AN201%20Step%20vs%20Pulse%20TDR%20Technology.pdf |archive-date=2014-08-26 }}
+*[http://www.mohr-engineering.com/TDR_for_Microwave_RF_and_Digital_Cables-A.php TDR for Digital Cables] - TDR for Microwave/RF and Digital Cables
+*[http://www.mohr-engineering.com/TDR_vs_FDR_Distance_to_Fault-A.php TDR vs FDR: Distance to Fault]
+
+{{Electrical and electronic measuring equipment}}
+
+{{DEFAULTSORT:Time-Domain Reflectometer}}
+[[Category:Electronic test equipment]]
+[[Category:Soil physics]]
+[[Category:Semiconductor analysis]]</text>
+      <sha1>ngd616yrrn7bjgfggqvggaq2draiiz1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Time-out</title>
+    <ns>0</ns>
+    <id>41798</id>
+    <redirect title="Time out" />
+    <revision>
+      <id>778038885</id>
+      <parentid>777967095</parentid>
+      <timestamp>2017-04-30T20:05:41Z</timestamp>
+      <contributor>
+        <username>BD2412</username>
+        <id>196446</id>
+      </contributor>
+      <minor />
+      <comment>/* top */spacing fix using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="100" xml:space="preserve">#REDIRECT [[Time out]]
+
+{{redirect category shell|{{R from ambiguous page}}{{R from modification}}}}</text>
+      <sha1>h46ir6xhlcqoq5af281ppmo0mv5m71y</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Time standard</title>
+    <ns>0</ns>
+    <id>41799</id>
+    <revision>
+      <id>991040399</id>
+      <parentid>991038269</parentid>
+      <timestamp>2020-11-27T23:09:45Z</timestamp>
+      <contributor>
+        <username>Jc3s5h</username>
+        <id>9182658</id>
+      </contributor>
+      <comment>Revert vandalism by various IP editors.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="16059" xml:space="preserve">A '''time standard''' is a specification for measuring time: either the rate at which time passes; or points in time; or both.  In modern times, several time specifications have been officially recognized as standards, where formerly they were matters of custom and practice.  An example of a kind of time standard can be a time scale, specifying a method for measuring divisions of time.  A standard for civil time can specify both time intervals and time-of-day.
+
+Standardized time measurements are made using a clock to count periods of some period changes, which may be either the changes of a natural phenomenon or of an artificial machine.
+
+Historically, time standards were often based on the Earth's rotational period.  From the late 18 century to the 19th century it was assumed that the Earth's daily rotational rate was constant.  Astronomical observations of several kinds, including eclipse records, studied in the 19th century, raised suspicions that the rate at which Earth rotates is gradually slowing and also shows small-scale irregularities, and this was confirmed in the early twentieth century. Time standards based on Earth rotation were replaced (or initially supplemented) for astronomical use from 1952 onwards by an ''ephemeris time'' standard based on the Earth's orbital period and in practice on the motion of the Moon.  The invention in 1955 of the caesium atomic clock has led to the replacement of older and purely astronomical time standards, for most practical purposes, by newer time standards based wholly or partly on atomic time.
+
+Various types of second and day are used as the basic time interval for most time scales. Other intervals of time (minutes, hours, and years) are usually defined in terms of these two.
+
+== Time standards based on Earth rotation ==
+'''[[Solar time|Apparent solar time]]''' ('apparent' is often used in English-language sources, but 'true' in French astronomical literature{{NoteTag|1= See for example a recent description of [http://www.bdl.fr/fr/ephemerides/astronomie/Promenade/pages3/325.html#tempsvrai &quot;temps vrai&quot;] {{webarchive|url=https://web.archive.org/web/20091123072000/http://www.bdl.fr/fr/ephemerides/astronomie/Promenade/pages3/325.html |date=2009-11-23 }} by the Bureau des Longitudes; and for an older example S Vince, [https://books.google.co.uk/books?id=Y5QAAAAAMAAJ&amp;pg=PA46 'A complete system of astronomy' (1814), esp. at page 46].}}) is based on the solar day, which is the period between one solar noon (passage of the real Sun across the [[meridian (geography)|meridian]]) and the next. A solar day is approximately 24 hours of mean time. Because the Earth's orbit around the sun is elliptical, and because of the obliquity of the Earth's axis relative to the [[ecliptic|plane of the orbit (the ecliptic)]], the apparent solar day varies a few dozen seconds above or below the mean value of 24 hours. As the variation accumulates over a few weeks, there are differences as large as 16 minutes between apparent solar time and mean solar time (see [[Equation of time]]). However, these variations cancel out over a year. There are also other perturbations such as Earth's wobble, but these are less than a second per year.
+
+'''[[Sidereal time]]''' is time by the stars. A sidereal rotation is the time it takes the Earth to make one revolution with rotation to the stars, approximately 23 hours 56 minutes 4 seconds. For accurate astronomical work on land, it was usual to observe sidereal time rather than solar time to measure mean solar time, because the observations of 'fixed' stars could be measured and reduced more accurately than observations of the Sun (in spite of the need to make various small compensations, for refraction, aberration, precession, nutation and proper motion).  It is well known that observations of the Sun pose substantial obstacles to the achievement of accuracy in measurement.&lt;ref&gt;See H A Harvey, [http://adsabs.harvard.edu/full/1936PA.....44..533H &quot;The Simpler Aspects of Celestial Mechanics&quot;], in Popular Astronomy 44 (1936), 533-541.&lt;/ref&gt; In former times, before the distribution of accurate time signals, it was part of the routine work at any observatory to observe the sidereal times of meridian transit of selected 'clock stars' (of well-known position and movement), and to use these to correct observatory clocks running local mean sidereal time; but nowadays local sidereal time is usually generated by computer, based on time signals.&lt;ref&gt;A E Roy, D Clarke, [https://books.google.co.uk/books?id=v2S6XV8dsIAC&amp;pg=PA89 'Astronomy: Principles and Practice' (4th edition, 2003) at p.89].&lt;/ref&gt;
+
+{{Anchor|Mean solar time}}'''[[Mean solar time]]''' was originally apparent solar time corrected by the [[equation of time]].  Mean solar time was sometimes derived, especially at sea for navigational purposes, by observing apparent solar time and then adding to it a calculated correction, the '''equation of time''', which compensated for two known irregularities, caused by the ellipticity of the Earth's orbit and the obliquity of the Earth's equator and polar axis to the [[ecliptic]] (which is the plane of the Earth's orbit around the sun).
+
+'''[[Greenwich Mean Time]]''' ('''GMT''') was originally mean time deduced from meridian observations made at the [[Royal Greenwich Observatory]] (RGO). The principal meridian of that observatory was chosen in 1884 by the [[International Meridian Conference]] to be the [[Prime Meridian]].  GMT either by that name or as 'mean time at Greenwich' used to be an international time standard, but is no longer so; it was initially renamed in 1928 as Universal Time (UT) (partly as a result of ambiguities arising from the changed practice of starting the astronomical day at midnight instead of at noon, adopted as from 1 January 1925).  The more current refined version of UT, [[UT1]], is still in reality mean time at Greenwich.  Greenwich Mean Time is still the legal time in the UK (in winter, and as adjusted by one hour for summer time).  But [[Coordinated Universal Time]] (UTC) (an atomic-based time scale which is always kept within 0.9 second of UT1) is in common actual use in the UK, and the name GMT is often inaccurately used to refer to it. (See articles [[Greenwich Mean Time]], [[Universal Time]], [[Coordinated Universal Time]] and the sources they cite.)
+
+'''[[Universal Time]]''' ('''UT''') is [[#Mean solar time|mean solar time]] at 0° longitude; some implementations are
+* '''UT0''' is the rotational time of a particular place of observation. It is observed as the diurnal motion of stars or extraterrestrial radio sources.
+* '''UT1''' is computed by correcting UT0 for the effect of polar motion on the longitude of the observing site. It varies from uniformity because of the irregularities in Earth's rotation.
+
+==Time standards for planetary motion calculations==
+[[Ephemeris time]] and its successor time scales described below have all been intended for astronomical use, e.g. in planetary motion calculations, with aims including uniformity, in particular, freedom from irregularities of Earth rotation. Some of these standards are examples of [[dynamical time scale]]s and/or of [[coordinate time]] scales.
+* '''[[Ephemeris time|Ephemeris Time]]''' ('''[[Ephemeris time|ET]]''') was from 1952 to 1976 an official time scale standard of the [[International Astronomical Union]]; it was a [[dynamical time scale]] based on the orbital motion of the Earth around the Sun, from which the ephemeris second was derived as a defined fraction of the tropical year. This ephemeris second was the standard for the [[SI]] second from 1956 to 1967, and it was also the source for calibration of the [[atomic clock|caesium atomic clock]];  its length has been closely duplicated, to within 1 part in 10&lt;sup&gt;10&lt;/sup&gt;, in the size of the current [[Second#International second|SI second]] referred to atomic time.&lt;ref&gt;[[William Markowitz|W Markowitz]], R G Hall, [[Louis Essen|L Essen]], J V L Parry (1958), 'Frequency of caesium in terms of ephemeris time', Phys Rev Letters v1 (1958), 105-107; and [[William Markowitz|Wm Markowitz]] (1988) 'Comparisons of ET(Solar), ET(Lunar), UT and TDT', in (eds.) A K Babcock &amp; G A Wilkins, 'The Earth's Rotation and Reference Frames for Geodesy and Geophysics', IAU Symposia #128 (1988), at pp 413-418.&lt;/ref&gt;  This Ephemeris Time standard was non-relativistic and did not fulfil growing needs for relativistic [[coordinate time]] scales.  It was in use for the official almanacs and planetary ephemerides from 1960 to 1983, and was replaced in official almanacs for 1984 and after, by numerically integrated [[Jet Propulsion Laboratory Development Ephemeris]] DE200 (based on the JPL relativistic coordinate time scale [[Ephemeris time#JPL ephemeris time argument Teph|T&lt;sub&gt;eph&lt;/sub&gt;]]).
+
+For applications at the Earth's surface, ET's official replacement was [[Terrestrial Dynamical Time]] (TDT), since redefined as [[Terrestrial Time]] (TT).  For the calculation of ephemerides, TDB was officially recommended to replace ET, but deficiencies were found in the definition of TDB (though not affecting T&lt;sub&gt;eph&lt;/sub&gt;), and these led to the [[IAU]] defining and recommending further time scales, [[Barycentric Coordinate Time]] (TCB) for use in the solar system as a whole, and [[Geocentric Coordinate Time]] (TCG) for use in the vicinity of the Earth.  As defined, TCB (as observed from the Earth's surface) is of divergent rate relative to all of ET, T&lt;sub&gt;eph&lt;/sub&gt; and TDT/TT;&lt;ref name=why1992&gt;P K Seidelmann &amp; T Fukushima (1992), [http://articles.adsabs.harvard.edu/full/1992A%26A...265..833S &quot;Why new time scales?&quot;], ''Astronomy &amp; Astrophysics'' vol.265 (1992), pages 833-838, including [http://www.ucolick.org/~sla/leapsecs/deltat.png Fig. 1 at p.835, a graph giving an overview of the rate differences and offsets between various standard time scales], present and past, defined by the IAU.&lt;/ref&gt; and the same is true, to a lesser extent, of TCG. The ephemerides of sun, moon and planets in current widespread and official use continue to be those calculated at the [[Jet Propulsion Laboratory]] (updated as from 2003 to [[DE405]]) using as argument T&lt;sub&gt;eph&lt;/sub&gt;. 
+* '''[[Terrestrial Time|Terrestrial Dynamic Time]]''' ('''TDT''')  replaced Ephemeris Time and maintained continuity with it. TDT is a uniform atomic time scale, whose unit is the SI second. TDT is tied in its rate to the SI second, as is International Atomic Time (TAI), but because TAI was somewhat arbitrarily defined at its inception in 1958 to be initially equal to a refined version of UT, TT is offset from TAI, by a constant 32.184 seconds. The offset provided a continuity from Ephemeris Time to TDT. TDT has since been redefined as Terrestrial Time (TT).
+* '''[[Barycentric Dynamical Time]]''' ('''TDB''') is similar to TDT but includes relativistic corrections that move the origin to the barycenter. TDB differs from TT only in periodic terms. The difference is at most 2 milliseconds.
+
+In 1991, in order to clarify the relationships between space-time coordinates, new time scales were introduced, each with a different frame of reference. Terrestrial Time is time at Earth's surface. Geocentric Coordinate Time is a coordinate time scale at Earth's center. Barycentric Coordinate Time is a coordinate time scale at the center of mass of the [[Solar System]], which is called the barycenter. Barycentric Dynamical Time is a dynamical time at the barycenter.&lt;ref&gt;[[Victor A. Brumberg|V Brumberg]], [[Sergei Kopeikin|S Kopeikin]] (1990), 'Relativistic time scales in the solar system', Celestial Mechanics and Dynamical Astronomy (1990), Vol. 48, 23-44&lt;/ref&gt;
+* '''[[Terrestrial Time]]''' ('''TT''')  is the time scale which had formerly been called Terrestrial Dynamical Time. It is now defined as a coordinate time scale at Earth's surface.
+* '''[[Geocentric Coordinate Time]]''' ('''TCG''') is a coordinate time having its spatial origin at the center of Earth's mass. TCG is linearly related to TT as: TCG - TT = &lt;var&gt;L&lt;sub&gt;G&lt;/sub&gt;&lt;/var&gt; * (JD -2443144.5) * 86400 seconds, with the scale difference &lt;var&gt;L&lt;sub&gt;G&lt;/sub&gt;&lt;/var&gt; defined as 6.969290134e-10 exactly.
+*'''[[Barycentric Coordinate Time]]''' ('''TCB''') is a coordinate time having its spatial origin at the Solar System barycenter. TCB differs from TT in rate and other mostly periodic terms. Neglecting the periodic terms, in the sense of an average over a long period of time the two are related by: TCB - TT = &lt;var&gt;L&lt;sub&gt;B&lt;/sub&gt;&lt;/var&gt; * (JD -2443144.5) * 86400 seconds. According to IAU the best estimate of the scale difference &lt;var&gt;L&lt;sub&gt;B&lt;/sub&gt;&lt;/var&gt; is 1.55051976772e-08.
+
+==Constructed time standards==
+'''[[International Atomic Time]]''' ('''[http://www.bipm.org/en/scientific/tai/tai.html TAI]''') is the primary international time standard from which other time standards, including UTC, are calculated. TAI is kept by the BIPM (International Bureau of Weights and Measures), and is based on the combined input of many [[atomic clock]]s [http://www.bipm.org/en/scientific/tai/clock_comparisons.html around the world], each corrected for environmental and relativistic effects.  It is the primary realisation of [[Terrestrial Time]].
+
+'''[[Coordinated Universal Time]]''' ('''UTC''') is an atomic time scale designed to approximate [[Universal Time]].  UTC differs from TAI by an integral number of seconds. UTC is kept within 0.9 second of UT1 by the introduction of one-second steps to UTC, the &quot;[[leap second]]&quot;. To date these steps (and difference &quot;TAI-UTC&quot;) have always been positive.
+
+'''[[Standard time]]''' or '''[[civil time]]''' in a region deviates a fixed, round amount, usually a whole number of hours, from some form of [[Universal Time]], now usually UTC.  The offset is chosen such that a new day starts approximately while the sun is crossing the [[nadir]] meridian. See [[Time zone]]. Alternatively the difference is not really fixed, but it changes twice a year a round amount, usually one hour, see [[Daylight saving time]].
+
+==Other time scales==
+[[Julian day|Julian day number]] is a count of days elapsed since Greenwich mean noon on 1 January 4713 B.C., Julian proleptic calendar. The Julian Date is the Julian day number followed by the fraction of the day elapsed since the preceding noon. Conveniently for astronomers, this avoids the date skip during an observation night.
+
+[[Julian day|Modified Julian day]] (MJD) is defined as MJD = JD - 2400000.5. An MJD day thus begins at midnight, civil date. Julian dates can be expressed in UT, TAI, TDT, etc. and so for precise applications the timescale should be specified, e.g. MJD 49135.3824 TAI.
+
+==See also==
+* [[Atomic clock]]
+* [[Radio clock]]
+* [[Time signal]]
+* [[Orbital period#Small body orbiting a central body|Orbital period as unit of time]]
+
+== Notes ==
+{{NoteFoot}}
+
+== References ==
+=== Citations ===
+{{Reflist}}
+
+=== Sources ===
+{{refbegin}}
+* ''IExplanatory Supplement to the Astronomical Almanac,'' P. K. Seidelmann, ed., University Science Books, 1992, {{ISBN|0-935702-68-7}}.
+{{refend}}
+
+==External links==
+* [http://tycho.usno.navy.mil/cgi-bin/timer.pl Current time] according to the [[United States Naval Observatory]]. (Refresh the site to get the current time.)
+* [http://tycho.usno.navy.mil/systime.html Systems of Time] by Dr. Demetrios Matsakis, Director, Time Service Dept., [[United States Naval Observatory]]
+* [http://tycho.usno.navy.mil/leapsec.html USNO article on the definition of seconds and leap seconds]
+* [http://www.ucolick.org/~sla/leapsecs/timescales.html A history of astronomical time scales] by Steve Allen
+* [http://www.cv.nrao.edu/~rfisher/Ephemerides/times.html Astronomical times]
+* [https://www.scientificamerican.com/article/experts-time-division-days-hours-minutes/ Why is a minute divided into 60 seconds, an hour into 60 minutes, yet there are only 24 hours in a day?] Ask the Experts -  March 5, 2007. SCIENTIFIC AMERICAN

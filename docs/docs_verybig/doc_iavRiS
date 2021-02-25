@@ -1,0 +1,208 @@
+The [[partial trace]] is another generalization of the trace that is operator-valued. The trace of a linear operator {{mvar|Z}} which lives on a product space {{math|''A'' ⊗ ''B''}} is equal to the partial traces over {{mvar|A}} and {{mvar|B}}:
+
+:&lt;math&gt;\operatorname{tr}(Z) = \operatorname{tr}_A \left(\operatorname{tr}_B(Z)\right) = \operatorname{tr}_B \left(\operatorname{tr}_A(Z)\right).&lt;/math&gt;
+
+For more properties and a generalization of the partial trace, see [[Traced monoidal category|traced monoidal categories]].
+
+If {{mvar|A}} is a general [[associative algebra]] over a field {{mvar|k}}, then a trace on {{mvar|A}} is often defined to be any map {{math|tr : ''A'' ↦ ''k''}} which vanishes on commutators: {{math|tr([''a'',''b''])}} for all {{math|''a'', ''b'' ∈ ''A''}}. Such a trace is not uniquely defined; it can always at least be modified by multiplication by a nonzero scalar.
+
+A [[supertrace]] is the generalization of a trace to the setting of [[superalgebra]]s.
+
+The operation of [[tensor contraction]] generalizes the trace to arbitrary tensors.
+
+== Coordinate-free definition ==
+
+The trace can also be approached in a coordinate-free manner, i.e., without referring to a choice of basis, as follows: the space of linear operators on a finite-dimensional vector space {{mvar|V}} (defined over the field {{mvar|F}}) is isomorphic to the space {{math|''V'' ⊗ ''V''&lt;sup&gt;∗&lt;/sup&gt;}} via the linear map
+:&lt;math&gt;V \otimes V^* \to \mathrm{Hom}(V, V), v \otimes h \mapsto (w \mapsto h(w)v).&lt;/math&gt;
+There is also a canonical bilinear function {{math|''t'' : ''V'' × ''V''&lt;sup&gt;∗&lt;/sup&gt; → ''F''}} that consists of applying an element {{math|''w''&lt;sup&gt;∗&lt;/sup&gt;}} of {{math|''V''&lt;sup&gt;∗&lt;/sup&gt;}} to an element {{mvar|v}} of {{mvar|V}} to get an element of {{mvar|F}}:
+
+:&lt;math&gt;t\left(v, w^*\right) := w^*(v) \in F.&lt;/math&gt;
+
+This induces a linear function on the [[tensor product]] (by [[tensor product#Universal property|its universal property]]) {{math|''t'' : ''V'' ⊗ ''V''&lt;sup&gt;∗&lt;/sup&gt; → F}}, which, as it turns out, when that tensor product is viewed as the space of operators, is equal to the trace.
+
+In particular, given a [[rank one operator]] {{mvar|A}} (equivalently, a [[simple tensor]] &lt;math&gt;v \otimes w^*&lt;/math&gt;), the square is &lt;math&gt;A^2 = \lambda A,&lt;/math&gt; because on its one-dimensional image, {{mvar|A}} is just scalar multiplication. In terms of the tensor expression, &lt;math&gt;\lambda = w^*(v),&lt;/math&gt; and it is the trace (and only non-zero eigenvalue) of {{mvar|A}}; this gives a coordinate-free interpretation of the diagonal entry. Every operator on an {{mvar|n}}-dimensional space can be expressed as a sum of {{mvar|n}} rank one operators; this gives a coordinate-free version of the sum of diagonal entries.
+
+This also clarifies why {{math|tr('''AB''') {{=}} tr('''BA''')}} and why {{math|tr('''AB''') ≠ tr('''A''')tr('''B''')}}, as composition of operators (multiplication of matrices) and trace can be interpreted as ''the same'' pairing. Viewing
+
+:&lt;math&gt;\operatorname{End}(V) \cong V \otimes V^*,&lt;/math&gt;
+
+one may interpret the composition map
+
+:&lt;math&gt;\operatorname{End}(V) \times \operatorname{End}(V) \to \operatorname{End}(V)&lt;/math&gt;
+
+as
+
+:&lt;math&gt;(V \otimes V^*) \times (V \otimes V^*) \to (V \otimes V^*)&lt;/math&gt;
+
+coming from the pairing {{math|''V''&lt;sup&gt;∗&lt;/sup&gt; × ''V'' → ''F''}} on the middle terms. Taking the trace of the product then comes from pairing on the outer terms, while taking the product in the opposite order and then taking the trace just switches which pairing is applied first. On the other hand, taking the trace of {{math|'''A'''}} and the trace of {{math|'''B'''}} corresponds to applying the pairing on the left terms and on the right terms (rather than on inner and outer), and is thus different.
+
+In coordinates, this corresponds to indexes: multiplication is given by
+
+:&lt;math&gt;(\mathbf{A}\mathbf{B})_{ik} = \sum_j a_{ij}b_{jk},&lt;/math&gt;
+
+so
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{A}\mathbf{B}) = \sum_{ij} a_{ij}b_{ji} \quad \text{and} \quad \operatorname{tr}(\mathbf{B}\mathbf{A}) = \sum_{ij} b_{ij}a_{ji}&lt;/math&gt;
+
+which is the same, while
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{A}) \cdot \operatorname{tr}(\mathbf{B}) = \sum_i a_{ii} \cdot \sum_j b_{jj},&lt;/math&gt;
+
+which is different.
+
+For finite-dimensional {{mvar|V}}, with basis {{math|{''e&lt;sub&gt;i&lt;/sub&gt;''&lt;nowiki&gt;}&lt;/nowiki&gt;}} and dual basis {{math|{''e&lt;sup&gt;i&lt;/sup&gt;''&lt;nowiki&gt;}&lt;/nowiki&gt;}}, then {{math|''e&lt;sub&gt;i&lt;/sub&gt;'' ⊗ ''e&lt;sup&gt;j&lt;/sup&gt;''}} is the {{mvar|ij}}-entry of the matrix of the operator with respect to that basis. Any operator {{math|'''A'''}} is therefore a sum of the form
+
+:&lt;math&gt;\mathbf{A} = a_{ij} e_i \otimes e^j.&lt;/math&gt;
+
+With {{mvar|t}} defined as above,
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{A}) = a_{ij}\operatorname{tr}\left(e_i \otimes e^j\right).&lt;/math&gt;
+
+The latter, however, is just the [[Kronecker delta]], being 1 if {{math|''i'' {{=}} ''j''}} and 0 otherwise. This shows that {{math|''tr''('''A''')}} is simply the sum of the coefficients along the diagonal. This method, however, makes coordinate invariance an immediate consequence of the definition.
+
+=== Dual ===
+Further, one may dualize this map, obtaining a map
+
+:&lt;math&gt;F^* = F \to V \otimes V^* \cong \operatorname{End}(V).&lt;/math&gt;
+
+This map is precisely the inclusion of [[scalar transformation|scalars]], sending {{math|1 ∈ ''F''}} to the identity matrix: &quot;trace is dual to scalars&quot;. In the language of [[bialgebra]]s, scalars are the ''unit'', while trace is the ''[[counit]]''.
+
+One can then compose these,
+
+:&lt;math&gt;F ~ \overset{I}{\to} ~ \operatorname{End}(V) ~ \overset{\operatorname{tr}}{\to} ~ F,&lt;/math&gt;
+
+which yields multiplication by {{mvar|n}}, as the trace of the identity is the dimension of the vector space.
+
+===Generalizations===
+Using the notion of [[dualizable object]]s and [[categorical trace]]s, this approach to traces can be fruitfully axiomatized and applied to other mathematical areas.
+
+== See also ==
+* [[Scalar curvature#Definition|Trace of a tensor with respect to a metric tensor]]
+* [[Characteristic function (probability theory)#Matrix-valued random variables|Characteristic function]]
+* [[Field trace]]
+* [[Golden–Thompson inequality]]
+* [[Singular trace]]
+* [[Specht's theorem]]
+* [[Trace class]]
+* [[Trace identity]]
+* [[Trace inequalities]]
+* [[von Neumann's trace inequality]]
+
+== Notes  ==
+{{reflist|group=note}}
+
+== References ==
+{{reflist}}
+
+== External links ==
+* {{springer|title=Trace of a square matrix|id=p/t093550}}
+
+{{DEFAULTSORT:Trace (Linear Algebra)}}
+[[Category:Linear algebra]]
+[[Category:Matrix theory]]</text>
+      <sha1>lem1nt141aibzsyeg0k0tvxxqm5z56n</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>William IV</title>
+    <ns>0</ns>
+    <id>43271</id>
+    <revision>
+      <id>991295540</id>
+      <parentid>991228790</parentid>
+      <timestamp>2020-11-29T09:18:46Z</timestamp>
+      <contributor>
+        <username>DrKay</username>
+        <id>2387872</id>
+      </contributor>
+      <comment>/* Relationships and marriage */ trim, per [[MOS:CAPTION]], captions should be succinct</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="66615" xml:space="preserve">{{Other people|named=titled}}
+{{short description|King of the United Kingdom of Great Britain and Ireland and of Hanover 1830–1837}}
+{{Infobox royalty
+| image = William IV crop.jpg
+| caption = Portrait by [[Martin Archer Shee]], 1833
+| alt = William in Garter Robes with his right hand on his sword and St Edward's Crown and sceptre beside him on a cushion resting on a covered table; in the distance to the right is a view of Windsor Castle.
+| succession = [[King of the United Kingdom]]
+| moretext = ([[Style of the British sovereign#Styles of British sovereigns|more...]])
+| reign = {{nowrap|26 June 1830 – 20 June 1837}}
+| coronation = 8 September 1831
+| cor-type = [[Coronation of William IV and Adelaide|Coronation]]
+| predecessor = [[George IV]]
+| successor = [[Queen Victoria|Victoria]]
+| succession1 = [[King of Hanover]]
+| moretext1 = 
+| reign1 = {{nowrap|26 June 1830 – 20 June 1837}}
+| coronation1 = 
+| cor-type1 = 
+| predecessor1 = [[George IV]]
+| successor1 = [[Ernest Augustus, King of Hanover|Ernest Augustus]]
+| spouse = {{marriage|[[Adelaide of Saxe-Meiningen]]|11 July 1818}}
+| issue =
+  {{indented plainlist |
+* ''Legitimate'':
+* [[Princess Charlotte of Clarence]]
+* [[Princess Elizabeth of Clarence]]
+* ''Illegitimate'':
+* [[George FitzClarence, 1st Earl of Munster|George FitzClarence, Earl of Munster]]
+* [[Henry FitzClarence]]
+* [[Sophia Sidney, Baroness De L'Isle and Dudley]]
+* [[Lady Mary Fox]]
+* [[Lord Frederick FitzClarence]]
+* [[Elizabeth Hay, Countess of Erroll]]
+* [[Lord Adolphus FitzClarence]]
+* [[Lady Augusta Gordon]]
+* [[Lord Augustus FitzClarence]]
+* [[Amelia Cary, Viscountess Falkland]]
+  }}
+| issue-link = #Issue
+| issue-pipe = more...
+| full name = William Henry
+| house = [[House of Hanover|Hanover]]
+| father = [[George III]]
+| mother = [[Charlotte of Mecklenburg-Strelitz]]
+| birth_date = {{birth date|1765|8|21|df=y}}
+| birth_place = [[Buckingham Palace|Buckingham House]], London, England
+| death_date = {{death date and age|1837|6|20|1765|8|21|df=yes}}
+| death_place = [[Windsor Castle]], Berkshire, England
+| burial_date = 8 July 1837
+| burial_place = [[St George's Chapel, Windsor]]
+| signature = William IV Signature.svg
+| religion = 
+| module          = {{Infobox military person | embed=yes
+  | allegiance    = {{flagcountry|United Kingdom of Great Britain and Ireland}}
+  | branch        = {{navy|United Kingdom}}&lt;br /&gt;&amp;nbsp;(active service)
+  | serviceyears  = 1779–1790&lt;br /&gt;&amp;nbsp;(active service)
+  | rank          = [[Rear admiral (Royal Navy)|Rear-Admiral]]&lt;br /&gt;&amp;nbsp;(active service)
+  | servicenumber = &lt;!-- Do not use data from primary sources such as service records --&gt;
+  | unit          =
+  | commands      = {{plainlist}}
+* {{HMS|Valiant|1759|6}}
+* {{HMS|Andromeda|1784|6}}
+* {{HMS|Pegasus|1779|6}}
+{{endplainlist}}
+  | battles_label =
+  | battles       = [[Battle of Cape St. Vincent (1780)|Battle of Cape St Vincent]]
+  | awards        = }}
+}}
+
+'''William IV''' (William Henry; 21 August 1765&amp;nbsp;– 20 June 1837) was [[King of the United Kingdom of Great Britain and Ireland]] and [[King of Hanover]] from 26 June 1830 until his death in 1837. The third son of [[George III]], William succeeded his elder brother [[George IV]], becoming the last king and penultimate monarch of Britain's [[House of Hanover]].
+
+William served in the [[Royal Navy]] in his youth, spending time in North America and the [[Caribbean]], and was later nicknamed the &quot;Sailor King&quot;.&lt;ref&gt;{{cite news | title = Scots Greys | last = Staff writer | date = 25 January 1831 |work=The Times | location = UK | page = 3 | quote = ...they will have the additional honour of attending our &quot;Sailor King&quot;... }}&lt;/ref&gt;&lt;ref&gt;{{cite news | title = Will of his late Majesty William IV | last = Staff writer | date = 29 June 1837 |work=The Times | location = UK | page = 5 | quote = ...ever since the accession of our sailor King... }}&lt;/ref&gt; In 1789, he was created [[Duke of Clarence and St Andrews]]. In 1827, he was appointed as Britain's first [[Lord High Admiral of the United Kingdom|Lord High Admiral]] since 1709. As his two older brothers died without leaving legitimate issue, he [[Hereditary monarchy|inherited the throne]] when he was 64 years old. His reign saw several reforms: the [[poor law]] was updated, [[child labour]] restricted, [[Slavery Abolition Act 1833|slavery abolished]] in nearly all of the [[British Empire]], and the British electoral system refashioned by the [[Reform Act 1832]]. Although William did not engage in politics as much as his brother or his father, he was the last monarch to appoint a British prime minister contrary to the will of Parliament. He granted his German kingdom a short-lived liberal constitution.
+
+At the time of his death, William had no surviving legitimate children, but he was survived by eight of the ten illegitimate children he had by the actress [[Dorothea Jordan]], with whom he cohabited for twenty years. Late in life, he married and apparently remained faithful to the young princess who would become [[Queen Adelaide]]. William was succeeded by his niece [[Queen Victoria]] in the United Kingdom, and his brother King [[Ernest Augustus, King of Hanover|Ernest Augustus]] in Hanover.
+
+== Early life ==
+William was born in the early hours of the morning on 21 August 1765 at [[Buckingham Palace|Buckingham House]], the third child and son of [[King George III]] and [[Queen Charlotte]].&lt;ref&gt;Ziegler, p. 12.&lt;/ref&gt; He had two elder brothers, [[George IV of the United Kingdom|George, Prince of Wales]], and [[Prince Frederick, Duke of York|Frederick]] (later [[Duke of York]]), and was not expected to inherit the Crown. He was baptised in the Great Council Chamber of [[St James's Palace]] on 20 September 1765. His godparents were the King's siblings: [[Prince William Henry, Duke of Gloucester and Edinburgh]]; [[Prince Henry, Duke of Cumberland and Strathearn|Prince Henry]] (later [[Duke of Cumberland]]); and [[Princess Augusta of Great Britain|Princess Augusta]], Hereditary Duchess of [[Brunswick-Wolfenbüttel]].&lt;ref&gt;{{cite web | url = http://users.uniserve.com/~canyon/christenings.htm#Christenings | website = Yvonne's Royalty Home Page | title = Royal Christenings | access-date = 23 May 2008 | archive-url = https://web.archive.org/web/20110806125845/http://users.uniserve.com/~canyon/christenings.htm#Christenings | archive-date = 6 August 2011}}&lt;/ref&gt;
+[[File:Prince William and Prince Edward 1778.jpg|thumb|upright|left|William aged thirteen (left) and his younger brother [[Prince Edward, Duke of Kent and Strathearn|Edward]], painted by [[Benjamin West]], 1778]]
+He spent most of his early life in [[Richmond, London|Richmond]] and at [[Kew Palace]], where he was educated by private tutors.&lt;ref&gt;Ziegler, pp. 13–19.&lt;/ref&gt; At the age of thirteen, he joined the [[Royal Navy]] as a [[midshipman]],&lt;ref&gt;Ziegler, pp. 23–31.&lt;/ref&gt; and was present at the [[Battle of Cape St. Vincent (1780)|Battle of Cape St Vincent]] in 1780.&lt;ref&gt;Allen, p. 29 and Ziegler, p. 32.&lt;/ref&gt; His experiences in the navy seem to have been little different from those of other midshipmen, though in contrast to other sailors he was accompanied on board ships by a tutor. He did his share of the cooking&lt;ref&gt;Ziegler, p. 29.&lt;/ref&gt; and got arrested with his shipmates after a drunken brawl in [[Gibraltar]]; he was hastily released from custody after his identity became known.&lt;ref&gt;Ziegler, p. 33.&lt;/ref&gt;
+
+He served in New York during the [[American War of Independence]], making him the only member of the [[British royal family]] to visit America up to and through the [[American Revolution]]. While William was in America, [[George Washington]] approved a plot to kidnap him, writing: &quot;The spirit of enterprise so conspicuous in your plan for surprising in their quarters and bringing off the Prince William Henry and [[Robert Digby (admiral)|Admiral Digby]] merits applause; and you have my authority to make the attempt in any manner, and at such a time, as your judgment may direct. I am fully persuaded, that it is unnecessary to caution you against offering insult or indignity to the persons of the Prince or Admiral...&quot;&lt;ref&gt;George Washington writing to Colonel Ogden, 28 March 1782, quoted in Allen, p. 31 and Ziegler, p. 39.&lt;/ref&gt; The plot did not come to fruition; the British heard of it and assigned guards to William, who had until then walked around New York unescorted.&lt;ref&gt;Allen, p. 32 and Ziegler, p. 39.&lt;/ref&gt; In September 1781, William held court at the [[Manhattan]] home of [[James Robertson (British Army officer)|Governor Robertson]]. In attendance were Mayor [[David Mathews]], Admiral Digby, and [[Oliver De Lancey (American loyalist)|General Delancey]].&lt;ref&gt;{{cite book|editor-last=Sabine|editor-first=William H. W.|title=Historical Memoirs of William Smith|location=New York|publisher=Arno Press|year=1956|volume=III|pages=446–447}}&lt;/ref&gt;
+
+He became a lieutenant in 1785 and [[Captain (naval)|captain]] of {{HMS|Pegasus|1779|6}} the following year.&lt;ref&gt;Ziegler, pp. 54–57.&lt;/ref&gt; In late 1786, he was stationed in the [[West Indies]] under [[Horatio Nelson]], who wrote of William: &quot;In his professional line, he is superior to two-thirds, I am sure, of the [Naval] list; and in attention to orders, and respect to his superior officer, I hardly know his equal.&quot;&lt;ref&gt;Ziegler, p. 59.&lt;/ref&gt; The two were great friends, and dined together almost nightly. At Nelson's wedding, William insisted on giving [[Frances Nelson|the bride]] away.&lt;ref&gt;Somerset, p. 42.&lt;/ref&gt; He was given command of the frigate {{HMS|Andromeda|1784|6}} in 1788, and was promoted to [[rear-admiral]] in command of {{HMS|Valiant|1759|6}} the following year.&lt;ref name=&quot;ma&quot;&gt;{{cite book | last = Ashley | first = Mike | title = The Mammoth Book of British Kings and Queens | publisher = Robinson | location = London | year = 1998 | pages = 686–687 | isbn = 978-1-84119-096-9 }}&lt;/ref&gt;
+
+William sought to be made a [[duke]] like his elder brothers, and to receive a similar parliamentary grant, but his father was reluctant. To put pressure on him, William threatened to stand for the [[British House of Commons]] for the constituency of [[Totnes (UK Parliament constituency)|Totnes]] in Devon. Appalled at the prospect of his son making his case to the voters, George III created him [[Duke of Clarence and St Andrews]] and [[Earl of Munster]] on 16 May 1789,&lt;ref&gt;Ziegler, p. 70.&lt;/ref&gt; supposedly saying: &quot;I well know it is another vote added to the Opposition.&quot;&lt;ref&gt;Memoirs of [[Sir Nathaniel Wraxall, 1st Baronet]], p. 154 quoted in Ziegler, p. 89.&lt;/ref&gt; William's political record was inconsistent and, like many politicians of the time, cannot be certainly ascribed to a single party. He allied himself publicly with the [[Whigs (British political party)|Whigs]], as did his elder brothers, who were known to be in conflict with the political positions of their father.&lt;ref&gt;Allen, p. 46 and Ziegler, pp. 89–92.&lt;/ref&gt;
+
+== Service and politics ==
+[[File:William IV by Sir Martin Archer Shee.jpg|thumb|left|upright|William in dress uniform painted by Sir [[Martin Archer Shee]], c.1800]]

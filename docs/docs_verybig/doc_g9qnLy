@@ -1,0 +1,326 @@
+* The Seliger system was tested during the 1960 launches of the [[Vostok (spacecraft)|Vostok]] capsule, including [[Sputnik 5]], containing the space dogs [[Belka (dog)|Belka]] and [[Strelka (dog)|Strelka]], whose images are often mistaken for the dog [[Laika]] and the 1961 flight of [[Yuri Gagarin]], the first man in space on [[Vostok 1]].
+* [[Vostok 2]] and thereafter used an improved 400-line television system referred to as [[Topaz (television)|Topaz]].
+* A second generation system ([[Krechet]], incorporating docking views, overlay of docking data, etc.) was introduced after 1975.
+
+A similar concept, also named ''SSTV'', was used on [[Mercury-Atlas 9|Faith 7]]&lt;ref&gt;http://www.svengrahn.pp.se/radioind/Mercury/MercuryRadio.html&lt;/ref&gt; as well as on the early years of the [[NASA]] [[Project Apollo|Apollo]] program.
+
+* The Faith 7 camera transmitted one frame every two seconds, with a resolution of 320 lines.&lt;ref&gt;http://www.svengrahn.pp.se/radioind/Mercury/MercuryRadio.html&lt;/ref&gt;
+	
+[[File:Apollo 11 first step.jpg|thumb|left|NASA slow scan image from the Moon]]
+The [[Apollo TV camera]]s used SSTV to transmit images from inside [[Apollo 7]], [[Apollo 8]], and [[Apollo 9]], as well as the [[Apollo 11]] [[Apollo Lunar Module|Lunar Module]] television from the [[Moon]]. NASA had taken all the original tapes and erased them for use on subsequent missions; however, the [[Apollo 11 missing tapes|Apollo 11 Tape Search and Restoration Team]] formed in 2003 tracked down the highest quality footage among the converted recordings of the first broadcast, pieced together the best footage, then contracted a specialist [[film restoration]] company to enhance the degraded black-and-white film and convert it into [[Digital data|digital]] format for [[Archive|archival records]].&lt;ref&gt;{{cite web
+|url= http://www.cosmosmagazine.com/news/3827/lost-apollo-tapes-restored-and-broadcast
+|title= 'Lost' Apollo 11 Moonwalk tapes restored
+|accessdate= 4 November 2010
+|author= Andrew Letten
+|date= 2010-10-26
+|publisher= [[Cosmos (magazine)|Cosmos Online]]
+|url-status=dead
+|archive-url=https://web.archive.org/web/20140720193330/http://cosmosmagazine.com/news/lost-apollo-tapes-restored-and-broadcast/
+|archive-date=July 20, 2014
+|quote= SYDNEY: After a three-year search for the lost Apollo 11 tapes and an exhaustive six-year restoration project, digitally remastered footage of the historic Moonwalk is almost ready to be broadcast.
+}}&lt;/ref&gt; 
+* The SSTV system used in [[NASA]]'s early Apollo missions transferred ten frames per second with a resolution of 320 frame lines in order to use less bandwidth than a normal TV transmission.{{citation needed|date=December 2019}}
+* The early SSTV systems used by NASA differ significantly from the SSTV systems currently in use by amateur radio enthusiasts today.
+
+===Progression===
+Commercial systems started appearing in the United States in 1970, after the [[Federal Communications Commission|FCC]] had legalized the use of SSTV for [[Amateur radio licensing in the United States|advanced level]] amateur radio operators in 1968.
+
+SSTV originally required quite a bit of specialized equipment. Usually there was a scanner or camera, a modem to create and receive the characteristic [[sound reproduction|audio]] howl, and a [[cathode ray tube]] from a surplus [[radar]] set. The special cathode ray tube would have &quot;long persistence&quot; [[phosphor]]s that would keep a picture visible for about ten seconds.
+
+The [[modem]] would generate audio tones between 1,200 and 2,300&amp;nbsp;Hz from picture signals, and picture signals from received audio tones. The audio would be attached to a radio [[receiver (radio)|receiver]] and [[transmitter]].
+
+==Current systems==
+A modern system, having gained ground since the early 1990s, uses a [[personal computer]] and special [[software]] in place of much of the custom equipment. The [[sound card]] of a PC, with special processing software, acts as a [[modem]]. The [[computer screen]] provides the output. A small [[digital camera]] or digital photos provide the input.
+{{overlay
+| image        = SSTV signal.jpg
+| width        = 300
+| height       = 197
+| float        = right
+| columns      = 
+| grid         = 
+| legend1title = {{small|A [[spectrogram]] of the beginning of an SSTV transmission}}
+| legend1start = 1
+| overlay1     = Calibration header
+| overlay1left = 30
+| overlay1top  = 70
+| overlay2     = VIS code
+| overlay2left = 50
+| overlay2top  = 160
+| overlay3     = RGB scanlines
+| overlay3left = 125
+| overlay3top  = 80
+| overlay4     = Sync pulses
+| overlay4left = 140
+| overlay4top  = 150
+}}
+
+===Modulation===
+Like the similar [[radiofax]] mode, SSTV is an [[analog signal]]. SSTV uses [[frequency modulation]], in which every different value of [[brightness]] in the image gets a different audio frequency. In other words, the signal frequency shifts up or down to designate brighter or darker pixels, respectively. Color is achieved by sending the brightness of each color component (usually red, green and blue) separately. This signal can be fed into an [[single-sideband modulation|SSB]] transmitter, which in part modulates the [[carrier signal]].
+
+There are a number of different modes of transmission, but the most common ones are ''Martin M1'' (popular in Europe) and ''Scottie S1'' (used mostly in the USA).&lt;ref name=&quot;Langner&quot;&gt;{{cite web | url = http://users.rcn.com/sstv/modes.html  | title = SSTV Transmission Modes. | author = Langner, John | accessdate = May 8, 2006 |archiveurl = https://web.archive.org/web/20030216064120/http://users.rcn.com/sstv/modes.html |archivedate = February 16, 2003}}&lt;/ref&gt; Using one of these, an image transfer takes 114 (M1) or 110 (S1) seconds. Some black and white modes take only 8 seconds to transfer an image.
+
+===Header===
+A calibration header is sent before the image. It consists of a 300-millisecond leader tone at 1,900&amp;nbsp;Hz, a 10&amp;nbsp;ms break at 1,200&amp;nbsp;Hz, another 300-millisecond leader tone at 1,900&amp;nbsp;Hz, followed by a digital VIS (vertical interval signaling) code, identifying the transmission mode used. The VIS consists of [[bit]]s of 30 milliseconds in length. The code starts with a start bit at 1,200&amp;nbsp;Hz, followed by 7 data bits ([[least significant bit|LSB]] first; 1,100&amp;nbsp;Hz for 1, 1,300&amp;nbsp;Hz for 0). An even [[parity bit]] follows, then a stop bit at 1,200&amp;nbsp;Hz. For example, the bits corresponding the decimal numbers 44 or 32 imply that the mode is Martin M1, whereas the number 60 represents Scottie S1.
+
+===Scanlines===
+[[File:Moderni SSTV.jpg|thumb|left|Slow scan Test card]]
+A transmission consists of horizontal [[line (video)|lines]], scanned from left to right. The color components are sent separately one line after another. The color encoding and order of transmission can vary between modes. Most modes use an [[RGB color model]]; some modes are black-and-white, with only one channel being sent; other modes use a YC color model, which consists of [[luminance]] (Y) and [[chrominance]] (R–Y and B–Y). The modulating frequency changes between 1,500 and 2,300&amp;nbsp;Hz, corresponding to the intensity ([[brightness]]) of the color component. The modulation is analog, so even though the horizontal resolution is often defined as 256 or 320 pixels, they can be sampled using any rate. The image [[aspect ratio (image)|aspect ratio]] is conventionally 4:3. Lines usually end in a 1,200&amp;nbsp;Hz horizontal synchronization pulse of 5 milliseconds (after all color components of the line have been sent); in some modes, the synchronization pulse lies in the middle of the line.
+
+===Modes===
+Below is a table of some of the most common SSTV modes and their differences.&lt;ref name=&quot;Langner&quot;/&gt; These modes share many properties, such as synchronization and/or frequencies and grey/color level correspondence. Their main difference is the image quality, which is proportional to the time taken to transfer the image and in the case of the AVT modes, related to synchronous data transmission methods and noise resistance conferred by the use of interlace.
+
+{| class=&quot;wikitable&quot;
+! Family !! Developer !! Name !! Color !! Time !! Lines
+|-
+| rowspan=8 | AVT
+| rowspan=8 | Ben Blish-Williams, AA7AS / AEA
+| 8 || BW or 1 of R, G, or B|| 8 s || 128×128
+|-
+| 16w || BW or 1 of R, G, or B || 16 s || 256×128
+|-
+| 16h || BW or 1 of R, G, or B || 16 s || 128×256
+|-
+| 32 || BW or 1 of R, G, or B || 32 s || 256×256
+|-
+| 24 || [[RGB]]  || 24 s || 128×128
+|-
+| 48w || [[RGB]]  || 48 s || 256×128
+|-
+| 48h || [[RGB]]  || 48 s || 128×256
+|-
+| 104 || [[RGB]] || 96 s || 256×256
+|-
+| rowspan=2 | Martin 
+| rowspan=2 | Martin Emmerson - G3OQD
+| M1 || [[RGB]]  || 114 s || 240¹
+|-
+| M2 || [[RGB]] || 58 s || 240¹
+|-
+| rowspan=6 | Robot
+| rowspan=6 | Robot SSTV
+| 8 || BW or 1 of R, G or B || 8 s || 120
+|-
+| 12 || [[YUV]] || 12 s || 128 luma, 32/32 chroma × 120
+|-
+| 24 || [[YUV]] || 24 s || 128 luma, 64/64 chroma × 120
+|-
+| 32 || BW or 1 of R, G or B || 32 s || 256 × 240
+|-
+| 36 || [[YUV]] || 36 s || 256 luma, 64/64 chroma × 240
+|-
+| 72 || [[YUV]] || 72 s || 256 luma, 128/128 chroma × 240
+|-
+| rowspan=2 | Scottie
+| rowspan=2 | Eddie Murphy - GM3SBC
+| S1 || [[RGB]] || 110 s || 240¹
+|-
+| S2 || [[RGB]] || 71 s || 240¹
+|}
+&lt;div style=&quot;font-size: 80%&quot;&gt;¹ Martin and Scottie modes actually send 256 scanlines, but the first 16 are usually grayscale.&lt;/div&gt;
+
+The mode family called AVT (for ''Amiga Video Transceiver'') was originally designed by Ben Blish-Williams (N4EJI, then AA7AS) for a custom modem attached to an Amiga computer, which was eventually marketed by AEA corporation.
+
+The Scottie and Martin modes were originally implemented as ROM enhancements for the Robot corporation SSTV unit. The exact line timings for the Martin M1 mode are given in this reference.&lt;ref name=&quot;QEX_Cordesses&quot;&gt;{{cite web | url = http://lionel.cordesses.free.fr/gpages/sstv.html | title = &quot;Some Thoughts on &quot;Real-Time&quot; SSTV Processing.&quot; | author = Cordesses, L. and R (F2DC) | work = QEX | year = 2003 | accessdate = September 2, 2008 }}&lt;/ref&gt;
+
+The Robot SSTV modes were designed by Robot corporation for their own SSTV unit.
+
+All four sets of SSTV modes are now available in various PC-resident SSTV systems and no longer depend upon the original hardware.
+
+====AVT====
+AVT is an abbreviation of &quot;Amiga Video Transceiver&quot;, software and hardware modem originally developed by &quot;Black Belt Systems&quot; (USA) around 1990 for the [[Amiga]] home computer popular all over the world before the [[IBM PC compatible|IBM PC]] family gained sufficient audio quality with the help of special [[sound card]]s.  These AVT modes differ radically from the other modes mentioned above, in that they are synchronous, that is, they have no per-line horizontal synchronization pulse but instead use the standard VIS vertical signal to identify the mode, followed by a frame-leading digital pulse train which pre-aligns the frame timing by counting first one way and then the other, allowing the pulse train to be locked in time at any single point out of 32 where it can be resolved or demodulated successfully, after which they send the actual image data, in a fully synchronous and typically interlaced mode.
+
+Interlace, no dependence upon sync, and interline reconstruction gives the AVT modes a better noise resistance than any of the other SSTV modes. Full frame images can be  reconstructed with reduced resolution even if as much as 1/2 of the received signal was lost in a solid block of interference or fade because of the interlace feature. For instance, first the odd lines are sent, then the even lines. If a block of odd lines are lost, the even lines remain, and a reasonable reconstruction of the odd lines can be created by a simple vertical interpolation, resulting in a full frame of lines where the even lines are unaffected, the good odd lines are present, and the bad odd lines have been replaced with an interpolation. This is a significant visual improvement over losing a non-recoverable contiguous block of lines in a non-interlaced transmission mode. Interlace is an optional mode variation, however without it, much of the noise resistance is sacrificed, although the synchronous character of the transmission ensures that intermittent signal loss does not cause loss of the entire image. 
+The AVT modes are mainly used in Japan and the United States. There is a full set of them in terms of black and white, color, and scan line counts of 128 and 256. Color bars and greyscale bars may be optionally overlaid top and/or bottom, but the full frame is available for image data unless the operator chooses otherwise. For receiving systems where timing was not aligned with the incoming image's timing, the AVT system provided for post-receive re-timing and alignment.
+
+===Frequencies===
+Using a receiver capable of demodulating [[single-sideband modulation]], SSTV transmissions can be heard on the following frequencies:
+
+{| class=&quot;wikitable&quot;
+! Band !! Frequency !! Sideband
+|-
+| [[80-meter band|80 meters]] || 3.845&amp;nbsp;MHz (3.73 in Europe) || LSB
+|-
+| [[Pirate radio in North America|43 meters]] || 6.925&amp;nbsp;MHz (Pirate Radio) || USB
+|-
+| [[40-meter band|40 meters]] || 7.170 MHz (7.165 in Europe) || LSB
+|-
+| [[40-meter band|40 meters]] || 7.180 MHz (New Suggested Frequency to include General Classes) || LSB
+|-
+| [[20-meter band|20 meters]] || 14.230MHz Frequency 1 Analog .  || USB
+|-
+| [[20-meter band|20 meters]] || 14.233MHz Frequency 2  Analog to alleviate crowding on 14.230. || USB
+|-
+| [[15-meter band|15 meters]] || 21.340 MHz || USB
+|-
+| [[10-meter band|10 meters]] || 28.680 MHz || USB
+|-
+| [[11-meter band|11 meters]] || 27.700 MHz (Pirate Radio) || USB
+
+|}
+
+==Media==
+{{external media
+|width=263px
+|video1={{youtube|id=u3k6Xt30Z7g|title=Video showing images and the sound generated when sending them as SSTV audio.}}
+}}
+[[File:SSTV AVT BW8 HOUSE - PICTURE.jpg|thumb|right|Encoded image in B/W 8 system]]
+
+{{Listen
+|pos=left
+|style=float:none; clear:none
+|filename=SSTV sunset audio.ogg
+|title=A sample SSTV transmission
+|description=An image of a sunset sent as Martin M1.
+|format=[[Ogg]]}}
+
+[[File:SSTV Sunset.png|thumb|none|The resulting picture following decoding of the sample SSTV transmission]]
+
+[[File:SSTV sunset audio -ogg-.jpg|thumb|none|A Spectral Analysis of the sample SSTV transmission]]
+
+==In popular culture==
+In Valve's 2007 video game ''[[Portal (video game)|Portal]]'', there was an internet update of the program files on March 3rd, 2010. This update gave a challenge; this challenge was to find hidden radios in each test chamber, and bring them to certain spots to receive hidden signals. The hidden signals became part of an [[alternate reality game|ARG]]-style analysis by fans of the game hinting at a sequel of the game{{snd}} some sounds were of [[Morse code]] strings that implied the restarting of a computer system, while others could be decoded as purposefully low-quality SSTV images. When some of these decoded images were put together in the correct order, it revealed a decodable MD5 hash for a [[bulletin-board system|Bulletin Board System]] phone number, (425) 822-5251. It provides multiple [[ASCII art]] images relating to the game and its potential sequel.&lt;ref&gt;{{cite web | url = http://www.shacknews.com/onearticle.x/62575  | title = Portal Patch Adds Morse Code, Achievement - Portal 2 Speculation Begins | first = Brian | last = Leahy | date = 2010-03-01 | accessdate =  2010-03-02 | publisher =  [[Shacknews]]  }}&lt;/ref&gt;&lt;ref&gt;{{cite web | url  =https://www.wired.com/gamelife/2010/03/portal-viral/  | title = Geeky Clues Suggest Portal Sequel Is Coming | work = [[Wired (magazine)|Wired]] | first = Gus | last = Mastrapa |  date = 2010-03-02 | accessdate  = 2010-03-02 }}&lt;/ref&gt;&lt;ref&gt;{{Cite web | url = http://g4tv.com/thefeed/blog/post/702963/Rumor-Valve-To-Make-Portal-2-Announcement-During-GDC-2010.html | title = Rumor: Valve To Make Portal 2 Announcement During GDC 2010 | work = [[X-Play]] | date = 2010-03-03 | accessdate = 2010-03-03 | first = Jake | last = Gaskill }}&lt;/ref&gt; The sequel, ''[[Portal 2]]'', was later confirmed. According to a hidden commentary node SSTV image from ''Portal 2'', the BBS is running from a Linux-based computer, and is linked to a 2400bps modem from 1987. It is hooked up in an unspecified Valve developer's kitchen. They kept spare modems in case one failed, and one did. The BBS only sends about 20 megabytes of data in total.
+
+In the aforementioned sequel, ''Portal 2'', there are four SSTV images. One is broadcast in a Rattman den. When decoded, this image is a very subtle hint towards the game's ending. The image is of a Weighted Companion Cube on the moon. The other three images are decoded from a commentary node in another Rattman den. These 3 images are slides with bullet points on how the ARG was done, and what the outcome was, such as how long it took the combined internet to solve the puzzle (The average completion time was 7 1/2 hours).&lt;ref&gt;Results of one user decoding images with SSTV software. http://forums.steampowered.com/forums/showthread.php?t=1854243 Retrieved 2012-08-14&lt;/ref&gt;
+
+In another video game, ''[[Kerbal Space Program]]'', there is a small hill in the southern hemisphere on the planet &quot;Duna,&quot; which transmits a color SSTV image in Robot 24 format. It depicts four astronauts standing next to what is either the Lunar Lander from the Apollo missions, or an unfinished pyramid. Above them is the game's logo and three circles.&lt;ref&gt;Decoding the KSP SSTV signal https://www.youtube.com/watch?v=EJbFg4sjINo&lt;/ref&gt; It only emits the sound if an object touches the peak of the hill.{{Citation needed|date=November 2015}}
+
+[[Caparezza]], an Italian songwriter, inserted an image on the [[ghost track]] of his album ''[[Prisoner 709]]''.
+
+==See also==
+* [[Amateur television]]
+* [[Hellschreiber]]
+* [[Narrow-bandwidth television]]
+* [[Radiofax]]
+* [[Radioteletype]]
+* [[Shortwave]]
+* [[SSTV repeater]]
+* [[Videotelephony]]
+
+==References==
+{{refbegin}}
+
+* Glidden, Ramon (September 1997). [http://www.arrl.org/files/file/Technology/tis/info/pdf/99753.pdf &quot;Getting Started With Slow Scan Television.&quot;] ''QST''. Accessed on April 28, 2005.
+* [http://cancerweb.ncl.ac.uk/cgi-bin/omd?slow+scan &quot;Slow scan definition.&quot;] ''On-line Medical Dictionary''. Accessed on April 28, 2005.
+* Turner, Jeremy (December 2003). [https://web.archive.org/web/20050412185521/http://www.openspace.ca/outerspace/TavFalcoInterview2003.html &quot;07: Interview With Tav Falco About Early Telematic Art at Televista in Memphis, New Center for Art Activities in New York and Open Space Gallery in Victoria, Canada.&quot;] ''Outer Space: The Past, Present and Future of Telematic Art''. Accessed on April 28, 2005.
+* Sarkissian, John. [http://www.parkes.atnf.csiro.au/apollo11/tv_from_moon.html Television from the Moon]. The Parkes Observatory's Support of the Apollo 11 Mission. Latest Update: 21 October 2005.
+
+{{refend}}
+
+===Notes===
+{{Reflist}}
+
+==External links==
+{{Commons category|Slow scan television}}
+* [http://www.g0hwc.com/ Live Slow Scan] for Live SSTV from round the world &amp; loads more
+* [http://www.issfanclub.com/image SSTV from the International Space Station] lists images received from the International Space station via SSTV
+* [http://www.sstv-handbook.com Image Communication on Short Waves] – an online free ham radio handbook for SSTV, [[WEFAX]] and digital SSTV
+
+'''Modem software:'''
+* [http://hamsoft.ca/pages/mmsstv.php MMSSTV] for [[Microsoft Windows]]
+* [https://www.hamradiodeluxe.com/ Ham Radio Deluxe] for [[Microsoft Windows]]
+* [http://users.belgacom.net/hamradio/rxsstv.htm RX-SSTV] for [[Microsoft Windows]]
+* [http://users.telenet.be/on4qz/ QSSTV] for [[Linux]]
+* [https://www.blackcatsystems.com/software/multimode.html MultiMode Cocoa] for [[Mac OS X]]
+* [https://s3.amazonaws.com/jf-files/MultiScan_2SL.zip MultiScan] for [[Mac OS X]]
+
+{{Video formats}}
+{{Amateur radio topics}}
+{{Telecommunications}}
+
+{{DEFAULTSORT:Slow-Scan Television}}
+[[Category:Amateur radio]]
+[[Category:Radio modulation modes]]
+[[Category:Television technology]]</text>
+      <sha1>jaxoqwf1buwrwcbjexpzr00e16qxgnd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Wikipedia:Publicity</title>
+    <ns>4</ns>
+    <id>51211</id>
+    <redirect title="Category:Wikipedia publicity" />
+    <revision>
+      <id>587443271</id>
+      <parentid>304407372</parentid>
+      <timestamp>2013-12-23T23:39:50Z</timestamp>
+      <contributor>
+        <username>Wbm1058</username>
+        <id>14383484</id>
+      </contributor>
+      <comment>category diffusion, replaced: R to other namespace → R to category namespace using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="70" xml:space="preserve">#REDIRECT [[:Category:Wikipedia publicity]]{{R to category namespace}}</text>
+      <sha1>okiblmug24k9a8l2n8dpais885l7z9o</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Offroad cycling</title>
+    <ns>0</ns>
+    <id>51214</id>
+    <redirect title="Mountain biking" />
+    <revision>
+      <id>461426630</id>
+      <parentid>461426562</parentid>
+      <timestamp>2011-11-19T13:38:02Z</timestamp>
+      <contributor>
+        <username>Graham87</username>
+        <id>194203</id>
+      </contributor>
+      <minor />
+      <comment>moved [[Bicycling/Offroad]] to [[Offroad cycling]] over redirect: revert</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="29" xml:space="preserve">#REDIRECT [[Mountain biking]]</text>
+      <sha1>m9edulel3wumjjo2yuiup6qo8swsng7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Airliner</title>
+    <ns>0</ns>
+    <id>51215</id>
+    <revision>
+      <id>991659077</id>
+      <parentid>991374491</parentid>
+      <timestamp>2020-12-01T05:02:44Z</timestamp>
+      <contributor>
+        <username>BilCat</username>
+        <id>2043601</id>
+      </contributor>
+      <minor />
+      <comment>Reverted edits by [[Special:Contribs/98.26.66.229|98.26.66.229]] ([[User talk:98.26.66.229|talk]]) to last version by Monkbot</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="58991" xml:space="preserve">{{short description|Aircraft designed for commercial transportation of passengers and cargo}}
+{{Redirect|Airliners|the website|Airliners.net}}
+[[File:UnitedandVA 32315 (16735062459).jpg|thumb|upright=1.4|The [[Boeing 737]] (United, foreground) and the [[Airbus A320]] (Virgin, background) are the most widespread airliners]]&lt;!--alternates: File:Air Berlin Boeing 737-700; D-AGEN@TXL;18.10.2010 588am (5095082414).jpg
+or File:United Airlines Airbus A320 and Boeing 737-800 on final approach at San Francisco.jpg--&gt;
+
+An '''airliner''' is a type of [[aircraft]] for transporting  [[passenger]]s and [[air cargo]].  Such aircraft are most often operated by [[airline]]s.  Although the definition of an airliner can vary from country to country, an airliner is typically defined as an [[airplane]] intended for carrying multiple passengers or cargo in commercial service. The largest of them are [[wide-body aircraft|wide-body]] jets which are also called twin-aisle because they generally have two separate aisles running from the front to the back of the passenger cabin. These are usually used for [[Flight length#long-haul|long-haul flights]] between [[airline hub]]s and major cities. A smaller, more common class of airliners is the [[narrow-body aircraft|narrow-body]] or single-aisle. These are generally used for short to medium-distance flights with fewer passengers than their wide-body counterparts.
+
+[[Regional airliner]]s typically seat fewer than 100 passengers and may be powered by [[turbofan]]s or [[turboprop]]s. These airliners are the non-[[mainline (flight)|mainline]] counterparts to the larger aircraft operated by the major carriers, legacy carriers, and [[flag carrier]]s, and are used to feed traffic into the large airline hubs. These regional routes then form the spokes of a hub-and-spoke air transport model.
+
+The lightest ([[light aircraft]], [[list of light transport aircraft]]) of short-haul regional feeder airliner type aircraft that carry a small number of passengers are called commuter aircraft, commuterliners, feederliners, and [[air taxi]]s, depending on their size, engines, how they are marketed, region of the world, and seating configurations. The [[Beechcraft 1900]], for example, has only 19 seats.
+
+==History==
+
+===Earliest specifications===
+When the [[Wright brothers]] made the world's first sustained [[heavier-than-air flight]], they laid the foundation for what would become a major transport industry. Their flight in 1903 was just 11 years before what is often defined as the world's first airliner.&lt;ref name=&quot;Tise&quot;&gt;Tise, Larry E. Conquering the Sky. New York: Palgrave MacMillan, 2009. Print.&lt;/ref&gt; These airliners have had a significant impact on global society, economics, and politics.&lt;ref name=&quot;Bernardo&quot;&gt;Bernardo, James V. Aviation and Space: In the Modern World. New York: E.P. Dutton. 1968.&lt;/ref&gt;
+
+[[File:Самолет &quot;Илья Муромец&quot;.jpg|thumb|[[Sikorsky Ilya Muromets]]]]
+
+In 1913, Igor Sikorsky developed the first large multi-engine airplane, the [[Sikorsky Russky Vityaz|Russky Vityaz]], refined into the more practical [[Sikorsky Ilya Muromets|Ilya Muromets]] with dual controls for a pilot plus copilot and a comfortable [[Aircraft cabin|cabin]] with a lavatory, cabin heating and lighting.&lt;!--ref name=ASM0807--&gt;
+The large four-engine biplane was derived in a [[bomber aircraft]], preceding subsequent transport and bomber aircraft.&lt;ref name=ASM0807&gt;{{cite news |url= http://www.airspacemag.com/history-of-flight/airplanes-that-transformed-aviation-46502830/?all |title= Airplanes that Transformed Aviation |date= July 2008 |author= Richard P. Hallion |work= Air &amp; space magazine |publisher= Smithsonian}}&lt;/ref&gt;
+Due to the onset of [[World War I]], it was never used as a commercial airliner.{{citation needed|date=March 2019}}
+It first flew on December 10, 1913 and took off for its first demonstration flight with 16 passengers aboard on February 25, 1914.
+
+In 1915, the first airliner (for commercial use) was used by Elliot Air Service. The aircraft was a [[Curtiss JN-4]], a small biplane which was used mainly in  World War I as a trainer. Later, it was also used as a tour and familiarization flight aircraft in the early 1920s.
+
+===Interwar period===
+In 1919, after World War I, the [[Farman F.60 Goliath]], originally designed as a long-range heavy bomber, was converted for commercial use into a passenger airliner. It could seat 14 passengers from 1919, and around 60 were built. Initially, several publicity flights were made, including one on 8 February 1919, when the Goliath flew 12 passengers from [[Toussus-le-Noble]] to [[RAF Kenley]], near [[Croydon]], despite having no permission from the British authorities to land.
+
+Another important airliner built in 1919 was the Airco DH.16; a redesigned [[Airco DH.9A]] with a wider [[fuselage]] to accommodate an enclosed cabin seating four passengers, plus pilot in an open cockpit. In March 1919, the prototype first flew at [[Hendon Aerodrome]]. Nine aircraft were built, all but one being delivered to the nascent airline, [[Aircraft Transport and Travel]], which used the first aircraft for pleasure flying, and on 25 August 1919, it inaugurated the first scheduled international airline service from London to Paris.&lt;ref name=&quot;Jackson Civil V2 p62&quot;&gt;Jackson 1973, p.62.&lt;/ref&gt; One aircraft was sold to the River Plate Aviation Company in [[Argentina]], to operate a cross-river service between [[Buenos Aires]] and [[Montevideo]].&lt;ref name=&quot;Jackson Civil V2 p62&quot;/&gt;
+Meanwhile, the competing [[Vickers]] converted its successful WWI bomber, the [[Vickers Vimy]], into a civilian version, the Vimy Commercial. It was redesigned with a larger-diameter fuselage (largely of [[spruce]] plywood), and first flew from the Joyce Green airfield in [[Kent]] on 13 April 1919.&lt;ref name=&quot;Andrews Vickersp95&quot;&gt;Andrews and Morgan 1988, p. 95.&lt;/ref&gt;&lt;ref name=&quot;Jackson v3 p202&quot;&gt;Jackson 1988, p. 202.&lt;/ref&gt;
+
+The world's first all-metal transport aircraft was the [[Junkers F.13]], also from 1919, with 322 built.
+The Dutch [[Fokker]] company produced the [[Fokker F.II]] and then the [[Fokker F.III|F.III]]. These aircraft were used by the Dutch airline [[KLM]] when it reopened{{explain|date=March 2019}} an Amsterdam-London service in 1921. The Fokkers were soon flying to destinations across Europe, including Bremen, Brussels, Hamburg, and Paris. They proved to be very reliable aircraft.

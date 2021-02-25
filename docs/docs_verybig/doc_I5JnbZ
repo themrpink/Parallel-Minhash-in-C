@@ -1,0 +1,299 @@
+
+{{Physics-stub}}</text>
+      <sha1>qw2ctu9yq2i1h66rg829ynfck4ojffa</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Truncated binary exponential backoff</title>
+    <ns>0</ns>
+    <id>41824</id>
+    <redirect title="Exponential backoff" />
+    <revision>
+      <id>838788301</id>
+      <parentid>386219857</parentid>
+      <timestamp>2018-04-29T09:09:22Z</timestamp>
+      <contributor>
+        <username>The Transhumanist</username>
+        <id>1754504</id>
+      </contributor>
+      <comment>Add template{{R to section}} to categorize redirect using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="110" xml:space="preserve">#REDIRECT [[Exponential backoff#Binary exponential backoff / truncated exponential backoff]]
+
+{{R to section}}</text>
+      <sha1>dot5xb64tawri8ytjs9c214daa4uej7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Trunk</title>
+    <ns>0</ns>
+    <id>41825</id>
+    <revision>
+      <id>974880308</id>
+      <parentid>974880279</parentid>
+      <timestamp>2020-08-25T15:23:23Z</timestamp>
+      <contributor>
+        <username>Swpb</username>
+        <id>1921264</id>
+      </contributor>
+      <comment>/* Biology */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1118" xml:space="preserve">{{wiktionary|Trunk|trunk}}
+
+'''Trunk''' may refer to:
+{{Tocright}}
+
+==Biology==
+* [[Trunk (anatomy)]], synonym for torso
+* [[Trunk (botany)]], a tree's central superstructure
+* [[Trunk of corpus callosum]], in neuroanatomy
+* [[Elephant#Trunk|Elephant trunk]], the proboscis of an elephant
+
+==Computing==
+* [[Trunk (software)]], in revision control
+* [[Trunk line]], a system of shared network access
+* [[Virtual LAN]], which uses a trunk port
+
+==Entertainment and media==
+* [[Trunk (album)|''Trunk'' (album)]], 2013 album by Ulf Lundell
+* ''[[The Trunk]]'', a 1961 British film
+* [[The Trunk (The Twilight Zone)|&quot;The Trunk&quot; (''The Twilight Zone'')]], a television episode
+* [[Trunk Records]], a record label
+
+==Other uses==
+* [[Trunk (car)]], a large storage compartment
+* [[Trunk (luggage)]]
+* [[Trunk (motorcycle)]], a storage compartment
+* [[Trunk road]], a major road
+* [[Trunk shot]], a cinematic shot from within a car trunk
+* [[Trunk show]], a merchandising event
+
+==See also==
+*[[Trunking (auto)]], riding in trunk or boot
+*[[Trunks (disambiguation)]]
+*[[Elephant's trunk (disambiguation)]]
+
+{{Disambiguation}}</text>
+      <sha1>3b3crbujtd8t66qd9pznas3zko93kvv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Trusted computing base</title>
+    <ns>0</ns>
+    <id>41826</id>
+    <revision>
+      <id>985424606</id>
+      <parentid>939971956</parentid>
+      <timestamp>2020-10-25T21:45:22Z</timestamp>
+      <contributor>
+        <username>Widefox</username>
+        <id>1588193</id>
+      </contributor>
+      <comment>Importing Wikidata [[Wikipedia:Short description|short description]]: &quot;Set of all computer components critical to its security&quot; ([[Wikipedia:Shortdesc helper|Shortdesc helper]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12741" xml:space="preserve">{{short description|Set of all computer components critical to its security}}
+{{textbook|date=February 2020}}
+{{distinguish|Trusted Computing}}
+
+The '''trusted computing base''' ('''TCB''') of a [[computer system]] is the set of all [[Computer hardware|hardware]], [[firmware]], and/or [[software]] components that are critical to its [[computer security|security]], in the sense that [[Software bug|bugs]] or [[Vulnerability (computing)|vulnerabilities]] occurring inside the TCB might jeopardize the security properties of the entire system. By contrast, parts of a computer system outside the TCB must not be able to misbehave in a way that would leak any more [[privilege (computer science)|privilege]]s than are granted to them in accordance to the [[security policy]].
+
+The careful design and implementation of a system's trusted computing base is paramount to its overall security. Modern [[operating system]]s strive to reduce the size of the TCB{{Citation needed lead|date=February 2019}} so that an exhaustive examination of its code base (by means of manual or computer-assisted [[software audit review|software audit]] or [[program verification]]) becomes feasible.
+
+==Definition and characterization==
+The term '''trusted computing base''' goes back to [[John Rushby]],&lt;ref&gt;
+{{cite conference
+ | first = John
+ | last = Rushby
+ | title = Design and Verification of Secure Systems
+ | booktitle = 8th ACM Symposium on Operating System Principles
+ | pages = 12–21
+ | year = 1981
+ | location = Pacific Grove, California, US
+}}&lt;/ref&gt; who defined it as the combination of [[Kernel (computing)|kernel]] and trusted [[Process (computing)|processes]]. The latter refers to processes which are allowed to violate the system's access-control rules.
+In the classic paper ''Authentication in Distributed Systems: Theory and Practice''&lt;ref&gt;B. Lampson, M. Abadi, M. Burrows and E. Wobber, [http://citeseer.ist.psu.edu/lampson92authentication.html Authentication in Distributed Systems: Theory and Practice], [[ACM Transactions on Computer Systems]] 1992, on page 6.&lt;/ref&gt; [[Butler Lampson|Lampson]] et al. define the TCB of a [[computer system]] as simply
+: ''a small amount of software and hardware that security depends on and that we distinguish from a much larger amount that can misbehave without affecting security.''
+
+Both definitions, while clear and convenient, are neither theoretically exact nor intended to be, as e.g. a [[network server]] process under a [[UNIX]]-like operating system might fall victim to a [[security breach]] and compromise an important part of the system's security, yet is not part of the operating system's TCB. The [[Trusted Computer System Evaluation Criteria|Orange Book]], another classic [[computer security]] literature reference, therefore provides&lt;ref&gt;[http://csrc.nist.gov/publications/history/dod85.pdf  Department of Defense trusted computer system evaluation criteria], DoD 5200.28-STD, 1985. In the glossary under entry '''Trusted Computing Base (TCB)'''.&lt;/ref&gt; a more formal definition of the TCB of a computer system, as
+
+: ''the totality of protection mechanisms within it, including hardware, firmware, and software, the combination of which is responsible for enforcing a computer security policy.''
+
+In other words, trusted computing base (TCB) is a combination of hardware, software, and controls that work together to form a trusted base to enforce your security policy.
+
+The Orange Book further explains that
+
+: ''&lt;nowiki&gt;[t]&lt;/nowiki&gt;he ability of a trusted computing base to enforce correctly a unified security policy depends on the correctness of the mechanisms within the trusted computing base, the protection of those mechanisms to ensure their correctness, and the correct input of parameters related to the security policy.''
+
+In other words, a given piece of hardware or software is a part of the TCB if and only if it has been designed to be a part of the mechanism that provides its security to the computer system. In [[operating system]]s, this typically consists of the [[kernel (computer science)|kernel]] (or [[microkernel]]) and a select set of system utilities (for example, [[setuid]] programs and [[Daemon (computer software)|daemons]] in UNIX systems). In [[programming language]]s that have security features designed in such as [[Java (programming language)|Java]] and [[E (programming language)|E]], the TCB is formed of the language runtime and standard library.&lt;ref&gt;M. Miller, C. Morningstar and B. Frantz, [http://www.erights.org/elib/capability/ode/ode-linear.html Capability-based Financial Instruments (An Ode to the Granovetter diagram)], in paragraph ''Subjective Aggregation''.&lt;/ref&gt;
+
+==Properties==
+
+===Predicated upon the security policy===
+As a consequence of the above Orange Book definition, the boundaries of the TCB depend closely upon the specifics of how the security policy is fleshed out. In the network server example above, even though, say, a [[Web server]] that serves a [[multi-user]] application is not part of the operating system's TCB, it has the responsibility of performing [[access control]] so that the users cannot usurp the identity and privileges of each other. In this sense, it definitely is part of the TCB of the larger computer system that comprises the UNIX server, the user's browsers and the Web application; in other words, breaching into the Web server through e.g. a [[buffer overflow]] may not be regarded as a compromise of the operating system proper, but it certainly constitutes a damaging [[exploit (computer security)|exploit]] on the Web application.
+
+This fundamental relativity of the boundary of the TCB is exemplified by the concept of the 'target of evaluation' ('TOE') in the [[Common Criteria]] security process: in the course of a Common Criteria security evaluation, one of the first decisions that must be made is the boundary of the audit in terms of the list of system components that will come under scrutiny.
+
+===A prerequisite to security===
+Systems that don't have a trusted computing base as part of their design do not provide security of their own: they are only secure insofar as security is provided to them by external means (e.g. a computer sitting in a locked room without a network connection may be considered secure depending on the policy, regardless of the software it runs). This is because, as [[David J. Farber]] et al. put it,&lt;ref&gt;W. Arbaugh, D. Farber and J. Smith, [http://citeseer.ist.psu.edu/article/arbaugh97secure.html A Secure and Reliable Bootstrap Architecture], 1997, also known as the “aegis papers”.&lt;/ref&gt; ''&lt;nowiki&gt;[i]n&lt;/nowiki&gt; a computer system, the integrity of lower layers is typically treated as axiomatic by higher layers''. As far as computer security is concerned, reasoning about the security properties of a computer system requires being able to make sound assumptions about what it can, and more importantly, cannot do; however, barring any reason to believe otherwise, a computer is able to do everything that a general [[Von Neumann architecture|Von Neumann machine]] can. This obviously includes operations that would be deemed contrary to all but the simplest security policies, such as divulging an [[email]] or [[password]] that should be kept secret; however, barring special provisions in the architecture of the system, there is no denying that the computer ''could be programmed'' to perform these undesirable tasks.
+
+These special provisions that aim at preventing certain kinds of actions from being executed, in essence, constitute the trusted computing base. For this reason, the [[Trusted Computer System Evaluation Criteria|Orange Book]] (still a reference on the design of secure operating systems {{As of|2007|lc=on}}) characterizes the various security assurance levels that it defines mainly in terms of the structure and security features of the TCB.
+
+===Software parts of the TCB need to protect themselves===
+As outlined by the aforementioned Orange Book, software portions of the trusted computing base need to protect themselves against tampering to be of any effect. This is due to the [[von Neumann architecture]] implemented by virtually all modern computers: since [[machine code]] can be processed as just another kind of data, it can be read and overwritten by any program barring special [[memory management]] provisions that subsequently have to be treated as part of the TCB. Specifically, the trusted computing base must at least prevent its own software from being written to.
+
+In many modern [[CPU]]s, the protection of the memory that hosts the TCB is achieved by adding in a specialized piece of hardware called the [[memory management unit]] (MMU), which is programmable by the operating system to allow and deny access to specific ranges of the system memory to the programs being run. Of course, the operating system is also able to disallow such programming to the other programs. This technique is called [[supervisor mode]]; compared to more crude approaches (such as storing the TCB in [[Read-only memory|ROM]], or equivalently, using the [[Harvard architecture]]), it has the advantage of allowing the security-critical software to be upgraded in the field, although allowing secure upgrades of the trusted computing base poses bootstrap problems of its own.&lt;ref&gt;[http://citeseer.ist.psu.edu/article/arbaugh97secure.html A Secure and Reliable Bootstrap Architecture], ''op. cit.''&lt;/ref&gt;
+
+===Trusted vs. trustworthy===
+As stated [[#A prerequisite to security|above]], trust in the trusted computing base is required to make any progress in ascertaining the security of the computer system. In other words, the trusted computing base is “trusted” first and foremost in the sense that it ''has'' to be trusted, and not necessarily that it is trustworthy. Real-world operating systems routinely have security-critical bugs discovered in them, which attests of the practical limits of such trust.&lt;ref&gt;[[Bruce Schneier]], [http://www.schneier.com/crypto-gram-0103.html#1 The security patch treadmill] (2001)&lt;/ref&gt;
+
+The alternative is formal [[software verification]], which uses mathematical proof techniques to show the absence of bugs. Researchers at [[NICTA]] and its spinout [[Open Kernel Labs]] have recently performed such a formal verification of [http://ssrg.nicta.com.au/projects/seL4/ seL4], a member of the [[L4 microkernel|L4 microkernel family]], proving functional correctness of the C implementation of the kernel.&lt;ref Name=&quot;Klein_EHACDEEKNSTW_09&quot;&gt;
+{{ cite conference
+ | first = Gerwin
+ | last = Klein
+ | first2 = Kevin
+ | last2 = Elphinstone
+ | first3 = Gernot
+ | last3 = Heiser
+ | author3-link = Gernot Heiser
+ | first4 = June
+ | last4 = Andronick
+ | first5 = David
+ | last5 = Cock
+ | first6 = Philip
+ | last6 = Derrin
+ | first7 = Dhammika
+ | last7 = Elkaduwe
+ | first8 = Kai
+ | last8 = Engelhardt
+ | first9 = Rafal
+ | last9 = Kolanski
+ | first10 = Michael
+ | last10 = Norrish
+ | first11 = Thomas
+ | last11 = Sewell
+ | first12 = Harvey
+ | last12 = Tuch
+ | first13 = Simon
+ | last13 = Winwood
+ | title = seL4: Formal verification of an OS kernel
+ | booktitle = 22nd ACM Symposium on Operating System Principles
+ | pages = 207–220
+ |date=October 2009
+ | location = Big Sky, Montana, US
+ | doi =
+ | url = http://www.sigops.org/sosp/sosp09/papers/klein-sosp09.pdf
+}}&lt;/ref&gt;
+This makes seL4 the first operating-system kernel which closes the gap between trust and trustworthiness, assuming the mathematical proof is free from error.
+
+===TCB size===
+Due to the aforementioned need to apply costly techniques such as formal verification or manual review, the size of the TCB has immediate consequences on the economics of the TCB assurance process, and the trustworthiness of the resulting product (in terms of the [[expected value|mathematical expectation]] of the number of bugs not found during the verification or review). In order to reduce costs and security risks, the TCB should therefore be kept as small as possible. This is a key argument in the debate preferring [[microkernel]]s to [[monolithic kernel]]s.&lt;ref&gt;[[Andrew S. Tanenbaum]], [http://www.cs.vu.nl/~ast/reliable-os/ Tanenbaum-Torvalds debate, part II] (12 May 2006)&lt;/ref&gt;
+
+==Examples==
+[[AIX operating system|AIX]] materializes the trusted computing base as an optional component in its install-time package management system.&lt;ref&gt;[http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg245962.pdf AIX 4.3 Elements of Security], August 2000, chapter 6.&lt;/ref&gt;
+
+==See also==
+
+* [[Black box]]
+* [[Trusted Computer System Evaluation Criteria|Orange Book]]
+* [[Trust anchor]]
+* [[Hardware security]]
+* [[Zero Trust]]
+
+==References==
+{{Reflist}}
+
+{{DEFAULTSORT:Trusted Computing Base}}
+[[Category:Computer security procedures]]</text>
+      <sha1>761u7sea0hdjqqrwnwle34mv982o48x</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Turnkey</title>
+    <ns>0</ns>
+    <id>41827</id>
+    <revision>
+      <id>991660474</id>
+      <parentid>955263118</parentid>
+      <timestamp>2020-12-01T05:15:02Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 3 templates: del empty params (1×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="5290" xml:space="preserve">{{short description|A project constructed so it can be sold to a buyer as complete}}
+{{other uses}}
+A '''turnkey''', a '''turnkey project''', or a '''turnkey operation''' (also spelled '''turn-key''') is a type of project that is constructed so that it can be sold to any buyer as a completed product. This is contrasted with [[build to order]], where the constructor builds an item to the buyer's exact specifications, or when an incomplete product is sold with the assumption that the buyer would complete it.
+
+A turnkey project or contract as described by Duncan Wallace (1984) is:&lt;ref name=wallace&gt;{{cite conference |title=Contracts for Industrial Project |last1=Wallace |first1=Duncan |year=1984 |pages=3 |location=Kuala Lumpur |conference=Building and Civil Engineering Claims}}&lt;/ref&gt;
+{{Quotation|…. a contract where the essential design emanates from, or is supplied by, the Contractor and not the owner, so that the legal responsibility for the design, suitability and performance of the work after completion will be made to rest … with the contractor …. 'Turnkey' is treated as merely signifying the design responsibility as the contractor's.}}
+
+A turnkey computer system is a complete computer including hardware, operating system and application(s) designed and sold to satisfy specific business requirements.
+
+==Common usage==
+''Turnkey'' refers to something that is ready for immediate use, generally used in the sale or supply of goods or services. The word is a reference to the fact that the customer, upon receiving the product, just needs to turn the ignition key to make it operational, or that the key just needs to be turned over to the customer.&lt;ref name=rics&gt;{{cite web |title=RICS draft guidance note - Comparative construction and engineering contracts&quot;: 1.3.5 The 'turnkey' approach |url=https://consultations.rics.org/consult.ti/comparative.construction/view?objectId=2425300 |website=RICS Consult |publisher=RICS Consult |accessdate=2 July 2015 |date=2013}}&lt;/ref&gt; ''Turnkey'' is commonly used in the construction industry, for instance, in which it refers to bundling of materials and labour by the home builder or general contractor to complete the home without owner involvement. The word is often used to describe a home built on the developer's land with the developer's financing ready for the customer to move in. If a contractor builds a &quot;turnkey home&quot; it frames the structure and finish the interior; everything is completed down to the cabinets and carpet. ''Turnkey'' is also commonly used in [[motorsports]] to describe a car being sold with [[powertrain]] (engine, transmission, etc.) to contrast with a vehicle sold without one so that other components may be re-used.
+
+Similarly, this term may be used to advertise the sale of an established business, including all the equipment necessary to run it, or by a business-to-business supplier providing complete packages for business start-up.&lt;ref name=rics/&gt; An example would be the creation of a &quot;turnkey hospital&quot; which would be building a complete medical centre with installed medical equipment.
+
+==Specific usage==
+The term ''turnkey'' is also often used in the technology industry, most commonly to describe pre-built computer &quot;packages&quot; in which everything needed to perform a certain type of task (e.g. audio editing) is put together by the supplier and sold as a bundle.{{citation needed|date=April 2015}} This often includes a computer with pre-installed software, various types of hardware, and accessories. Such packages are commonly called [[computer appliance|appliances]]. A website with a ready-made solutions and some configurations is called a turnkey website.
+
+In real estate, ''turnkey'' is defined as a home or property that is ready for occupation for its intended purpose, i.e., a home that is fully functional, needs no upgrading or repairs (move-in ready). In commercial use, a building set up to do auto repairs would be defined as turnkey if it came fully stocked with all needed machinery and tools for that particular trade.{{citation needed|date=April 2015}} The turnkey process includes all of the steps involved to open a location including the site selection, negotiations, space planning, construction coordination and complete installation. &quot;Turnkey real estate&quot; also refers to a type of [[investment]]. This process includes the purchase, construction or rehab (of an existing site), the leasing out to tenants, and then the sale of the property to a buyer. The buyer is purchasing an investment property which is producing a stream of income.
+
+In [[oil well|drilling]], the term indicates an arrangement where a contractor must fully complete a well up to some milestone to receive any payment (in exchange for greater compensation upon completion).&lt;ref&gt;{{cite web |title=turnkey |url=http://www.glossary.oilfield.slb.com/en/Terms/t/turnkey.aspx |website=Schlumberger Oilfield Glossary |publisher=Schlumberger Limited |accessdate=2 July 2015}}&lt;/ref&gt;
+
+==See also==
+*[[Commercial off-the-shelf]]
+*[[As a service|Construction as a Service (Caas)]]
+*[[Engineering, procurement and construction]]
+*[[Turnkey supplier]]
+*[[Value-added reseller]]
+
+==References==
+{{Reflist}}
+
+[[Category:Business law]]
+[[Category:Product management]]
+[[Category:Software features]]</text>
+      <sha1>9v4xj4v37ofd26ic1q2a34myri10qu3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Two-out-of-five code</title>
+    <ns>0</ns>
+    <id>41828</id>
+    <revision>
+      <id>982155957</id>
+      <parentid>982112524</parentid>
+      <timestamp>2020-10-06T13:43:21Z</timestamp>
+      <contributor>
+        <username>Kbrose</username>
+        <id>3938795</id>
+      </contributor>
+      <comment>copyedit, postal use appears to be illustrated more than use in telecom, misc. c/e</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="5516" xml:space="preserve">{{Use dmy dates|date=May 2019|cs1-dates=y}}
+[[Image:Barcode2of5example.svg|thumb| 2 of 5 barcode (non-interleaved)]]
+[[Image:Correios CEP 22011-080 - Codigo de Barras - PU1JFC.jpg|thumb| [[POSTNET]] barcode]]
+A '''two-out-of-five code''' is an [[constant-weight code]] that provides exactly ten possible combinations of two bits, and is thus used for representing the [[decimal digit]]s using five [[bit]]s.&lt;ref name=&quot;MIL_1991&quot;/&gt;  Each bit is assigned a weight, such that the set bits sum to the desired value, with an exception for zero.
+
+According to [[Federal Standard 1037C]]:
+* each decimal [[numerical digit|digit]] is represented by a binary numeral consisting of five bits of which two are of one kind, called ''ones'', and three are of the other kind, called ''zeros'', and
+* the usual weights assigned to the bit positions are 0-1-2-3-6.  However, in this scheme, [[0 (number)|zero]] is encoded as binary ''01100''; strictly speaking the 0-1-2-3-6 previously claimed is just a [[mnemonic]] device.&lt;ref&gt;{{FS1037C}}&lt;/ref&gt;
+
+The weights give a unique encoding for most digits, but allow two encodings for 3: 0+3 or 10010 and 1+2 or 01100.  The former is used to encode the digit 3, and the latter is used to represent the otherwise unrepresentable zero.
+
+The [[IBM 7070]], [[IBM 7072]], and [[IBM 7074]] computers used this code to represent each of the ten decimal digits in a machine word, although they numbered the bit positions 0-1-2-3-4, rather than with weights.  Each word also had a sign flag, encoded using a two-out-of-three code, that could be '''A''' Alphanumeric, '''−''' Minus, or '''+''' Plus.  When copied to a digit, the three bits were placed in bit positions 0-3-4.  (Thus producing the numeric values 3, 6 and 9, respectively.)
+
+A variant is the [[United States Postal Service]] [[POSTNET]] [[barcode]], used to represent the [[ZIP Code]] for automated mail sorting and routing equipment. This uses two tall bars as ones and three short bars as zeros.  Here, the weights assigned to the bit positions are 7-4-2-1-0. Again, zero is encoded specially, using the 7+4 combination (binary 11000) that would naturally encode 11. This method was also used in North American telephone [[multi-frequency]] and [[crossbar switch]]ing systems.&lt;ref&gt;{{cite web|url=http://simplethinking.com/photo/phone/vintage/xbr%20relays.shtml|archive-url=https://web.archive.org/web/20060316134506/http://simplethinking.com/photo/phone/vintage/xbr%20relays.shtml|archive-date=2006-03-16|title=Vintage Telephone Equipment Museum — XBR #5 MTF Relay Equip|website=SimpleThinking.com}}&lt;/ref&gt;
+
+The USPS [[Postal Alpha Numeric Encoding Technique]] (PLANET) uses the same weights, but with the opposite bar-height convention.
+
+The [[Code 39]] barcode uses weights 1-2-4-7-0 (i.e. [[Least significant bit|LSB]] first, [[Parity bit]] last) for the widths of its bars, but it also encodes two bits of extra information in the spacing between bars. The || ||| spacing is used for digits.
+
+The following table represents [[decimal]] digits from 0 to 9 in various two-out-of-five code systems:

@@ -1,0 +1,244 @@
+One method of producing a longer period is to sum the outputs of several LCGs of different periods having a large [[least common multiple]]; the [[Wichmann–Hill]] generator is an example of this form. (We would prefer them to be completely [[coprime]], but a prime modulus implies an even period, so there must be a common factor of 2, at least.) This can be shown to be equivalent to a single LCG with a modulus equal to the product of the component LCG moduli.
+
+[[George Marsaglia|Marsaglia]]'s add-with-carry and [[Subtract with carry|subtract-with-borrow]] PRNGs with a word size of ''b''=2&lt;sup&gt;''w''&lt;/sup&gt; and lags ''r'' and ''s'' (''r''&amp;nbsp;&gt;&amp;nbsp;''s'') are equivalent to LCGs with a modulus of ''b&lt;sup&gt;r&lt;/sup&gt;''&amp;nbsp;±&amp;nbsp;''b&lt;sup&gt;s&lt;/sup&gt;''&amp;nbsp;±&amp;nbsp;1.&lt;ref&gt;{{cite conference
+ |title=On the Lattice Structure of the Add-with-Carry and Subtract-with-Borrow Random Number Generators
+ |first1=Shu |last1=Tezuka |first2=Pierre |last2=L’Ecuyer
+ |url=https://core.ac.uk/download/pdf/39215926.pdf
+ |date=October 1993
+ |publisher=Kyoto University
+ |conference=Workshop on Stochastic Numerics
+}}&lt;/ref&gt;&lt;ref&gt;{{cite conference 
+ |url=http://www.informs-sim.org/wsc92papers/1992_0059.pdf
+ |first1=Shi |last1=Tezuka |first2=Pierre |last2=L'Ecuyer
+ |title=Analysis of Add-with-Carry and Subtract-with-Borrow Generators
+ |conference=Proceedings of the 1992 Winter Simulation Conference
+ |date=December 1992 |pages=443–447
+}}&lt;/ref&gt;
+
+[[Multiply-with-carry]] PRNGs with a multiplier of ''a'' are equivalent to LCGs with a large prime modulus of ''ab&lt;sup&gt;r&lt;/sup&gt;''−1 and a power-of-2 multiplier ''b''.
+
+A [[permuted congruential generator]] begins with a power-of-2-modulus LCG and applies an output transformation to eliminate the short period problem in the low-order bits.
+
+==Comparison with other PRNGs==
+
+The other widely used primitive for obtaining long-period pseudorandom sequences is the [[linear feedback shift register]] construction, which is based on arithmetic in GF(2)[''x''], the [[polynomial ring]] over [[GF(2)]].  Rather than integer addition and multiplication, the basic operations are [[exclusive-or]] and [[carry-less multiplication]], which is usually implemented as a sequence of [[logical shift]]s.  These have the advantage that all of their bits are full-period; they do not suffer from the weakness in the low-order bits that plagues arithmetic modulo 2&lt;sup&gt;''k''&lt;/sup&gt;.&lt;ref&gt;{{cite book |first=Neil |last=Gershenfeld |authorlink=Neil Gershenfeld |title=The Nature of Mathematical Modeling |url=https://archive.org/details/naturemathematic00gers_334 |url-access=limited |edition=First |publisher=Cambridge University Press |year=1999 |isbn=978-0-521-57095-4 |chapter=Section 5.3.2: Linear Feedback |page=[https://archive.org/details/naturemathematic00gers_334/page/n64 59]}}&lt;/ref&gt;
+
+Examples of this family include [[xorshift]] generators and the [[Mersenne twister]].  The latter provides a very long period (2&lt;sup&gt;19937&lt;/sup&gt;−1) and variate uniformity, but it fails some statistical tests.&lt;ref&gt;{{cite journal |last1=Matsumoto |first1=Makoto |first2=Takuji |last2=Nishimura |date=January 1998 |journal=ACM Transactions on Modeling and Computer Simulation |volume=8 |issue=1 |pages=3–30 |title=Mersenne twister: a 623-dimensionally equidistributed uniform pseudo-random number generator |doi=10.1145/272991.272995 |url=https://pdfs.semanticscholar.org/098d/5792ffa43e9885f9fc644ffdd7b6a59b0922.pdf |citeseerx=10.1.1.215.1141 }}&lt;/ref&gt;  [[Lagged Fibonacci generator]]s also fall into this category; although they use arithmetic addition, their period is ensured by an LFSR among the least-significant bits.
+
+It is easy to detect the structure of a linear feedback shift register with appropriate tests&lt;ref name=&quot;rfc4086&quot;&gt;{{cite IETF |rfc=4086 |bcp=106 |title=Randomness Requirements for Security |section=6.1.3 |sectionname=Traditional Pseudo-random Sequences |first1=Donald E. 3rd |last1=Eastlake |first2=Jeffrey I. |last2=Schiller |first3=Steve |last3=Crocker |date=June 2005 |publisher=[[Internet Engineering Task Force|IETF]]}}&lt;/ref&gt; such as the linear complexity test implemented in the [[TestU01]] suite; a boolean [[circulant matrix]] initialized from consecutive bits of an LFSR will never have [[Rank (linear algebra)|rank]] greater than the degree of the polynomial.  Adding a non-linear output mixing function (as in the [[Xorshift#xoshiro256**|xoshiro256**]] and [[permuted congruential generator]] constructions) can greatly improve the performance on statistical tests.
+
+Another structure for a PRNG is a very simple recurrence function combined with a powerful output mixing function.  This includes [[counter mode]] block ciphers and non-cryptographic generators such as [http://prng.di.unimi.it/splitmix64.c SplitMix64].
+
+A structure similar to LCGs, but ''not'' equivalent, is the multiple-recursive generator: ''X&lt;sub&gt;n&lt;/sub&gt;''&amp;nbsp;= (''a''&lt;sub&gt;1&lt;/sub&gt;''X''&lt;sub&gt;''n''−1&lt;/sub&gt;&amp;nbsp;+ ''a''&lt;sub&gt;2&lt;/sub&gt;''X''&lt;sub&gt;''n''−2&lt;/sub&gt;&amp;nbsp;+ ···&amp;nbsp;+ ''a&lt;sub&gt;k&lt;/sub&gt;X''&lt;sub&gt;''n''−''k''&lt;/sub&gt;) mod&amp;nbsp;''m'' for ''k''&amp;nbsp;≥&amp;nbsp;2.  With a prime modulus, this can generate periods up to ''m&lt;sup&gt;k&lt;/sup&gt;''−1, so is a useful extension of the LCG structure to larger periods.
+
+A powerful technique for generating high-quality pseudorandom numbers is to combine two or more PRNGs of different structure; the sum of an LFSR and an LCG (as in the [[KISS (algorithm)|KISS]] or [[Xorshift#xorwow|xorwow]] constructions) can do very well at some cost in speed.
+
+==See also==
+* [[List of random number generators]] – other PRNGs including some with better statistical qualitites
+* [[ACORN (PRNG)|ACORN generator]] – not to be confused with ACG which term appears to have been used for variants of LCG and LFSR generators
+* [[Permuted congruential generator]]
+* [[Full cycle]]
+* [[Inversive congruential generator]]
+* [[Multiply-with-carry]]
+* [[Lehmer RNG]] (sometimes called the Park–Miller RNG)
+* [[Combined linear congruential generator]]
+
+==Notes==
+{{Reflist|30em|refs=
+&lt;ref name=KnuthV2&gt;{{TAOCP|volume=2|edition=3|pages=10–26}}&lt;/ref&gt;
+&lt;ref name=Park88&gt;{{cite journal
+ |first1=Stephen K. |last1=Park |first2=Keith W. |last2=Miller
+ |title=Random Number Generators: Good Ones Are Hard To Find
+ |journal=[[Communications of the ACM]] |date=October 1988 |volume=31 |issue=10 |pages=1192–1201
+ |doi=10.1145/63039.63042 |url=http://www.firstpr.com.au/dsp/rand31/p1192-park.pdf
+}}&lt;/ref&gt;
+&lt;ref name=Hörmann92&gt;{{cite journal
+ |title=A Portable Uniform Random Number Generator Well Suited for the Rejection Method
+ |first1=Wolfgang |last1=Hörmann |first2=Gerhard |last2=Derflinger
+ |journal=ACM Transactions on Mathematical Software |volume=19 |issue=4 |pages=489–495 |date=1993
+ |doi=10.1145/168173.168414 |citeseerx=10.1.1.52.3811
+ |url=https://epub.wu.ac.at/1288/1/document.pdf
+ |quote=a multiplier about as small as {{sqrt|''m''}}, produces random numbers with a bad one-dimensional distribution.
+}}&lt;/ref&gt;
+&lt;ref name=LEcuyer99&gt;{{cite journal
+ |first=Pierre |last=L'Ecuyer
+ |title=Tables of Linear Congruential Generators of Different Sizes and Good Lattice Structure
+ |journal=[[Mathematics of Computation]] |volume=68 |issue=225 |pages=249–260 |year=1999
+ |url=http://citeseer.ist.psu.edu/132363.html
+ |doi=10.1090/S0025-5718-99-00996-5
+ |citeseerx=10.1.1.34.1024}}
+ Be sure to read the [https://www.iro.umontreal.ca/~lecuyer/myftp/papers/latrules99Errata.pdf Errata] as well.
+&lt;/ref&gt;
+}}
+
+==References==
+* {{Citation | last1=Press | first1=WH | last2=Teukolsky | first2=SA | last3=Vetterling | first3=WT | last4=Flannery | first4=BP | year=2007 | title=Numerical Recipes: The Art of Scientific Computing | edition=3rd | publisher=Cambridge University Press | location=New York | isbn=978-0-521-88068-8 | chapter=Section 7.1.1. Some History | chapter-url=http://apps.nrbook.com/empanel/index.html#pg=343}}
+*Gentle, James E., (2003). ''Random Number Generation and Monte Carlo Methods'', 2nd edition, Springer, {{ISBN|0-387-00178-6}}.
+* {{cite journal |author=Joan Boyar |title=Inferring sequences produced by pseudo-random number generators |journal=[[Journal of the ACM]] |year=1989 |volume=36 |issue=1 |pages=129–141 |doi=10.1145/58562.59305 |url=http://asterix.cs.gsu.edu/crypto/p129-boyar.pdf}} (in this paper, efficient algorithms are given for inferring sequences produced by certain pseudo-random number generators).
+
+==External links==
+* The simulation [http://www.vias.org/simulations/simusoft_lincong.html Linear Congruential Generator] visualizes the correlations between the pseudo-random numbers when manipulating the parameters.
+* [https://web.archive.org/web/20081211083300/http://www.cs.virginia.edu/~rjg7v/annotated.html Security of Random Number Generation: An Annotated Bibliography]
+* [https://web.archive.org/web/20090108194540/http://www.math.niu.edu/~rusin/known-math/99/LCG Linear Congruential Generators post to sci.math]
+* [http://www.goldsteintech.com/art.php The &quot;Death of Art&quot; computer art project at Goldstein Technologies LLC, uses an LCG to generate 33,554,432 images]
+* P. L'Ecuyer and R. Simard, [http://www.iro.umontreal.ca/~lecuyer/myftp/papers/testu01.pdf &quot;TestU01: A C Library for Empirical Testing of Random Number Generators&quot;], May 2006, revised November 2006, ''ACM Transactions on Mathematical Software'', 33, 4, Article 22, August 2007.
+* [https://web.archive.org/web/20150616223328/http://yurichev.com/blog/modulo/ Article about another way of cracking LCG]
+
+{{DEFAULTSORT:Linear Congruential Generator}}
+[[Category:Pseudorandom number generators]]
+[[Category:Modular arithmetic]]
+[[Category:Articles with example Python (programming language) code]]</text>
+      <sha1>19h0574ibt1f2usx8fe67sy8y0h8ku3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Opportunity cost</title>
+    <ns>0</ns>
+    <id>45528</id>
+    <revision>
+      <id>991215872</id>
+      <parentid>988365510</parentid>
+      <timestamp>2020-11-28T22:25:31Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 13 templates: del empty params (9×); del |url-status= (5×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="9180" xml:space="preserve">In [[Microeconomics|microeconomic theory]], '''opportunity cost''', or '''alternative cost''', is the loss of potential gain from other alternatives when one particular alternative is chosen over the others.&lt;ref&gt;{{Cite book|last=Stevenson|first=Angus|url=https://www.oxfordreference.com/view/10.1093/acref/9780195392883.001.0001/m_en_us1273667|title=&quot;opportunity cost&quot;|last2=Lindberg|first2=Christine A.|publisher=Oxford University Press|year=2011|isbn=978-0-19-539288-3}}&lt;/ref&gt; In simple terms, opportunity cost is the loss of the benefit that ''could'' have been enjoyed had a given choice not been made.
+
+As a representation of the relationship between scarcity and choice,&lt;ref name=&quot;:0&quot;&gt;{{Cite journal|last=Buchanan|first=James M.|date=1991|title=Opportunity Cost|url=https://link.springer.com/chapter/10.1007/978-1-349-21315-3_69#citeas|journal=The World of Economics|pages=520-525|doi=10.1007/978-1-349-21315-3_69|via=SpringerLink}}&lt;/ref&gt; the objective of opportunity cost is to ensure efficient use of scarce resources.&lt;ref name=&quot;:1&quot;&gt;{{Cite web|title=Economics A-Z terms beginning with O|url=https://www.economist.com/economics-a-to-z/o#node-21529616|access-date=November 1, 2020|website=The Economist}}&lt;/ref&gt; It incorporates all associated costs of a decision, both explicit and implicit.&lt;ref name=&quot;:2&quot;&gt;{{Cite book|last=Hutchison|first=Emma|title=Principles of Microeconomics|publisher=University of Victoria|year=2017}}&lt;/ref&gt; Opportunity cost also includes the utility or economic benefit an individual lost, it is indeed more than the monetary payment or actions taken. As an example, to go for a walk may not have any financial costs imbedded to it. Yet, the opportunity forgone is the time spent walking which could have been used instead for other purposes such as earning an income.&lt;ref name=&quot;:1&quot; /&gt;{{Economics sidebar}}
+Regardless of the time of occurrence of an activity, if scarcity was non-existent then all demands of a person are satiated. It’s only through scarcity that choice becomes essential which results in ultimately making a selection and/or decision.&lt;ref name=&quot;:0&quot; /&gt;
+
+Sacrifice is a given measurement in opportunity cost of which the decision maker forgoes the opportunity of the next best alternative.&lt;ref&gt;{{Cite journal|last=Parkin|first=Michael|date=2016|title=Opportunity Cost: A reexamination|url=https://www.tandfonline.com/doi/abs/10.1080/00220485.2015.1106361?journalCode=vece20|journal=The Journal of Economic Education|volume=47|issue=1|pages=12-22|via=Taylor &amp; Francis Online}}&lt;/ref&gt; In other words, to disregard the equivalent utility of the best alternative choice to gain the utility of the best perceived option.&lt;ref&gt;{{Cite web|title=(PDF) A HISTORICAL VIEW OVER THE OPPORTUNITY COST -ACCOUNTING DIMENSION|url=https://www.researchgate.net/publication/279528725_A_HISTORICAL_VIEW_OVER_THE_OPPORTUNITY_COST_-ACCOUNTING_DIMENSION|access-date=2020-11-01|website=ResearchGate|language=en}}&lt;/ref&gt; If there were decisions to be made that require no sacrifice then these would be cost free decisions with zero opportunity cost.&lt;ref&gt;{{Cite journal|last=Burch|first=Earl E.|last2=Henry|first2=William|date=1974|title=Opportunity and Incremental Cost: Attempt to Define in Systems Terms: A Comment. The Accounting Review|url=https://www.jstor.org/stable/244804?casa_token=0bdxPFA3N-wAAAAA%3AYNKWuoImURAjca_2SziSoF3sN0z4iqDuoNhBPHc--T2CU01qy7EmZ-RmB09a3QE565t3zuCOSgdYmhzpYTzbVCCu7dXj3RG7aS3ZdFlH92PtFZ0a3pV5sg&amp;seq=2#metadata_info_tab_contents|journal=The Accounting Review|volume=49|pages=118-123|via=JSTOR}}&lt;/ref&gt; 
+
+==Types of opportunity costs==
+
+===Explicit costs===
+[[Explicit cost|Explicit costs]] are the direct cost of an action, executed either through a cash transaction or a physical transfer of resources.&lt;ref name=&quot;:2&quot; /&gt; In other words, explicit opportunity costs are the out-of-pocket costs of a firm.&lt;ref name=&quot;:3&quot;&gt;{{Cite web|date=2016|title=Explicit and implicit costs and accounting and economic profit|url=https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit/economic-profit-tutorial/a/explicit-and-implicit-costs-and-accounting-and-economic-profit-cnx|access-date=November 1, 2020|website=Khan Academy}}&lt;/ref&gt; With this said, these particular costs can easily be identified under the expenses of a firm's income statement to represent all the cash outflows of a firm.&lt;ref name=&quot;:4&quot;&gt;{{Cite web|date=February 5, 2020|title=Explicit Costs: Definition and Examples|url=https://www.indeed.com/career-advice/career-development/explicit-cost|access-date=November 1, 2020|website=Indeed}}&lt;/ref&gt;
+
+Examples are as follows:&lt;ref name=&quot;:3&quot; /&gt;&lt;ref name=&quot;:5&quot;&gt;{{Cite journal|last=Crompton|first=John L.|last2=Howard|first2=Dennis R.|date=2013|title=Costs: The Rest of the Economic Impact Story|url=https://pdfs.semanticscholar.org/ca98/7798f556cac60a1fb81204c0a04f4b8ca697.pdf|journal=Journal of Sport Management|volume=27|issue=5|pages=379-392}}&lt;/ref&gt;
+
+* Land and infrastructure costs
+* Operation and maintenance costs - wages, rent, overhead, materials 
+
+Scenarios are as follows:&lt;ref name=&quot;:4&quot; /&gt; 
+
+* If a person leaves work for an hour and spends $200 on office supplies, then the explicit costs for the individual equates to the total expenses for the office supplies of $200. 
+* If a printer of a company malfunctions, then the explicit costs for the company equates to the total amount to be paid to the repair technician. 
+
+===Implicit costs===
+[[Implicit cost|Implicit costs]] (also referred to as Implied, Imputed or Notional costs) are the opportunity costs of utilising resources owned by the firm that could be used for other purposes. These costs are often hidden to the naked eye and aren’t made known.&lt;ref name=&quot;:5&quot; /&gt; Unlike explicit costs, implicit opportunity costs are normally corresponding to intangibles. Hence, they cannot be clearly identified, defined or reported.&lt;ref name=&quot;:4&quot; /&gt; In terms of factors of production, implicit opportunity costs allow for depreciation of goods, materials and equipment that ensure the operations of a company.&lt;ref name=&quot;:6&quot;&gt;{{Cite web|title=Reading: Explicit and Implicit Costs|url=https://courses.lumenlearning.com/suny-microeconomics/chapter/explicit-and-implicit-costs-and-accounting-and-economic-profit/|access-date=November 1, 2020|website=Lumen Learning}}&lt;/ref&gt; 
+
+Examples of implicit costs regarding production are mainly resources contributed by a business owner which includes:&lt;ref name=&quot;:3&quot; /&gt;&lt;ref name=&quot;:6&quot; /&gt; 
+
+* Human labour 
+* Infrastructure
+* Time
+
+Scenarios are as follows:&lt;ref name=&quot;:4&quot; /&gt; 
+
+* If a person leaves work for an hour to spend $200 on office supplies, and has an hourly rate of $25, then the implicit costs for the individual equates to the $25 that he/she could have earned instead. 
+* If a printer of a company malfunctions, the implicit cost equates to the total lost production time due to the machine breaking down. 
+
+== Excluded from opportunity cost ==
+
+=== Sunk costs ===
+Sunk costs (also referred to as historical costs) are costs that have been previously sustained and cannot be recovered. Since sunk costs are costs that have been incurred, they remain unchanged by both present and future action.&lt;ref&gt;{{Cite journal|last=Devine|first=Kevin|last2=O Clock|first2=Priscilla|date=March 1995|title=The effect on sunk costs and opportunity costs on a subjective capital allocation decision|url=https://www.econbiz.de/Record/the-effect-of-sunk-costs-and-opportunity-costs-on-a-subjective-capital-allocation-decision-devine-kevin/10001179457|journal=The Mid-Atlantic Journal of Business|volume=31|issue=1|pages=25-38}}&lt;/ref&gt; Decision makers who recognise the insignificance of sunk costs then understand that the &quot;consequences of choices cannot influence choice itself&quot;.&lt;ref name=&quot;:0&quot; /&gt;
+
+A scenario is given below:&lt;ref&gt;{{Cite web|date=October 6, 2020|title=Four Examples of Sunk Cost|url=https://www.indeed.com/career-advice/career-development/sunk-cost-definition-and-examples|access-date=November 1, 2020|website=Indeed}}&lt;/ref&gt;
+
+A company used $5,000 for marketing and advertising on its music streaming service to increase exposure to target market and potential consumers. In the end, the campaign proved unsuccessful. The sunk cost for the company equates to the $5,000 that was spent on the market and advertising means. This expense is to be ignored by the company in its future decisions, and highlights that no additional investment should be made.
+
+==See also==
+{{Portal|Economics}}
+{{div col|colwidth=20em}}
+*[[Best alternative to a negotiated agreement]]
+*[[Budget constraint]]
+*[[Economic value added]]
+*[[Fear of missing out]]
+*[[Opportunity cost of capital]]
+*[[Parable of the broken window]]
+*[[Production-possibility frontier]]
+*[[Reduced cost]] aka 'opportunity cost' in linear programming
+*[[There ain't no such thing as a free lunch]]
+*[[Time management]]
+*[[Trade-off]]
+*[[You can't have your cake and eat it]]
+{{div col end}}
+
+==References==
+{{Reflist}}
+
+==External links==
+{{Wikiquote}}
+* [https://www.nytimes.com/2005/09/01/business/01scene.html The Opportunity Cost of Economics Education] by [[Robert H. Frank]]
+
+{{microeconomics}}
+
+[[Category:Costs]]
+[[Category:Economics and time]]</text>
+      <sha1>ph4q52jemjcbnyq8j7etnrgmdwx4o1z</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Aldo Rossi</title>
+    <ns>0</ns>
+    <id>45534</id>
+    <revision>
+      <id>991168728</id>
+      <parentid>991167769</parentid>
+      <timestamp>2020-11-28T17:10:55Z</timestamp>
+      <contributor>
+        <username>Fylindfotberserk</username>
+        <id>9023670</id>
+      </contributor>
+      <comment>Reverted 1 edit by [[Special:Contributions/81.108.251.230|81.108.251.230]] ([[User talk:81.108.251.230|talk]]): Unsourced cahnge</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="22945" xml:space="preserve">{{short description|Italian architect}}
+{{for|the musician|Aldo Rossi (musician)}}
+{{Use dmy dates|date=September 2019}}
+{{Infobox architect
+|name                 = Aldo Rossi
+|image                = Aldo_Rossi_1986-87.jpg
+|image_size           = A4
+|caption              = Rossi in 1986 or 1987
+|nationality          = Italian
+|birth_date           = {{birth date|1931|5|3|df=y}}
+|birth_place          = [[Milan]], Italy
+|death_date           = {{death date and age|1997|9|4|1931|5|3|df=y}}
+|death_place          = Milan, Italy
+|alma_mater           = [[Polytechnic University of Milan]]
+|significant_buildings= [[Monte Amiata Housing|Monte Amiata complex]], [[Teatro Carlo Felice]], [[Teatro La Fenice]], [[Bonnefanten Museum]]
+|awards               = [[Pritzker Prize]] (1990)
+}}
+'''Aldo Rossi''' (3 May 1931 – 4 September 1997) was an Italian [[architect]] and [[designer]] who achieved international recognition in four distinct areas: architectural theory, drawing and design and also product design.&lt;ref&gt;{{Cite book |first=Germano |last=Celant |name-list-style=amp |first2=Diane |last2=Ghirardo |title=Aldo Rossi: Drawings |publisher=Skira |location=Milan |year=2008 |isbn=978-88-6130-143-6 }}&lt;/ref&gt; He was one of the leading exponents of the postmodern movement.&lt;ref&gt;{{Cite book|title=Encyclopedia of the City|url=https://archive.org/details/encyclopediacity00cave|url-access=limited|last=Caves|first=R. W.|publisher=Routledge|year=2004|isbn=9780415252256|location=|pages=[https://archive.org/details/encyclopediacity00cave/page/n614 574]}}&lt;/ref&gt;
+
+He was the first Italian to receive the [[Pritzker Architecture Prize|Pritzker Prize]] for architecture.&lt;ref&gt;Pritzker Prize for Architecture - [http://www.pritzkerprize.com/about/purpose chriteria]&lt;/ref&gt;
+
+==Early life==
+
+He was born in [[Milan]], [[Italy]].  After early education by the [[Somaschi Fathers|Somascan Religious Order]] and then at [[:it:Collegio arcivescovile Alessandro Volta|Alessandro Volta College]] in [[Lecco]], in 1949 he went to the school of architecture at the [[Polytechnic University of Milan]].  His thesis advisor was [[Piero Portaluppi]] and he  graduated in 1959.
+
+In 1955 he had started writing for, and from 1959 was one of the editors of, the architectural magazine [[Casabella|Casabella-Continuità]], with editor in chief [[Ernesto Nathan Rogers]]. Rossi left in 1964, when the chief editorship went to Gian Antonio Bernasconi. Rossi went on to work for [[:it:Società (rivista)|Società magazine]] and Il_contemporaneo, making him one of the most active participants in the fervent cultural debate of the time.
+
+His early articles cover architects such as [[Alessandro Antonelli]],  [[:it:Mario Ridolfi|Mario Ridolfi]], [[Auguste Perret]] and [[Emil Kaufmann]] and much of this material became part of his second book, ''Scritti scelti sull'architettura e la città 1956-1972'' (''Selected writings on architecture and the city from 1956 to 1972''). He married the Swiss actress Sonia Gessner, who introduced him to the world of film and theater. Culture and his family became central to his life. His son Fausto was active in movie-making both in front of and behind the camera and his daughter Vera was involved with theatre.
+
+==Career==
+
+He began his professional career at the studio of [[Ignazio Gardella]] in 1956, moving on to the studio of [[Marco Zanuso]]. In 1963 also he began teaching, firstly as an assistant to [[:it:Ludovico Quaroni|Ludovico Quaroni]] (1963) at the school of urban planning in [[Arezzo]], then to [[Carlo Aymonino]] at the [[Università Iuav di Venezia|Institute of Architecture in Venice]]. In 1965 he was appointed lecturer at the [[Polytechnic University of Milan]] and the following year he published ''The architecture of the city'' which soon became a classic of architectural literature.
+ 
+His professional career, initially dedicated to architectural theory and small building work took a huge leap forward when [[Carlo Aymonino|Aymonino]] allowed Rossi to design part of the [[Monte Amiata Housing|Monte Amiata complex]] in the [[Gallaratese|Gallaratese quarter]] of Milan. In 1971 he won the design competition for the extension of the San Cataldo Cemetery in [[Modena]], which made him internationally famous.
+
+After suspension from teaching in Italy in those politically troubled times, he moved to [[ETH Zurich]], occupying the chair in architectural design from 1971 to 1975.
+
+In 1973 he was director of the International Architecture Section at the [[:it:XV Triennale di Milano|XV Milan Triennial Exhibition of Decorative Arts and Modern Architecture]], where he presented, among others, his student [[Arduino Cantafora]].  Rossi's design ideas for the exhibition are explained in the International Architecture Catalogue and in a 16mm documentary ''Ornament and crime'' directed by Luigi Durissi and produced along with Gianni Braghieri and Franco Raggi.  In 1975, Rossi returned to the teaching profession in Italy, teaching architectural composition in Venice.
+
+In 1979 he was made a member of the prestigious [[Accademia di San Luca|Academy of Saint Luke]]. Meanwhile, there was international interest in his skills.  He taught at several universities in the United States, including [[Cooper Union]] in New York City and [[Cornell University]] in Ithaca (New York State).  At Cornell he participated in the ''Institute for Architecture and Urban Studies'' joint venture with New York's [[Museum of Modern Art]], travelling to China and Hong Kong and attending conferences in South America.
+
+In 1981 he published his autobiography, ''A scientific autobiography''. In this work the author, &quot;in discrete disorder&quot;, brings back memories, objects, places, forms, literature notes, quotes, and insights and tries to &quot;... go over things or impressions, describe, or look for ways to describe.&quot;  In the same year he won first prize at the international competition for the design of an apartment block on the corner of Kochstraße and Wilhelmstraße in central [[Berlin]].
+
+In 1984 together with [[Ignazio Gardella]] and [[Fabio Reinhart]], he won the competition for the renovation of the [[Teatro Carlo Felice]] in [[Genoa]], which was not fully completed until 1991. In 1985 and 1986 Rossi was director of the [[Venice Biennale of Architecture|3rd (respectively 4th) International Architecture Exhibition]] at the [[Venice Biennale]] including further away display spaces such as Villa Farsetti in [[Santa Maria di Sala]].

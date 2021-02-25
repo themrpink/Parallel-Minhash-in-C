@@ -1,0 +1,441 @@
+By a similar argument, if more than one edge is of minimum weight across a cut, then each such edge is contained in some minimum spanning tree.
+
+===Minimum-cost edge===
+''If the minimum cost edge ''e'' of a graph is unique, then this edge is included in any MST.''
+
+Proof: if ''e'' was not included in the MST, removing any of the (larger cost) edges in the cycle formed after adding ''e'' to the MST, would yield a spanning tree of smaller weight.
+
+===Contraction===
+''If T is a tree of MST edges, then we can ''contract'' T into a single vertex while maintaining the invariant that the MST of the contracted graph plus T gives the MST for the graph before contraction.&lt;ref name=PettieRamachandran2002/&gt;
+
+==Algorithms==
+
+In all of the algorithms below, ''m'' is the number of edges in the graph and ''n'' is the number of vertices.
+
+=== Classic algorithms ===
+The first algorithm for finding a minimum spanning tree was developed by Czech scientist [[Otakar Borůvka]] in 1926 (see [[Borůvka's algorithm]]). Its purpose was an efficient electrical coverage of [[Moravia]].  The algorithm proceeds in a sequence of stages. In each stage, called ''Boruvka step'', it identifies a forest ''F'' consisting of the minimum-weight edge incident to each vertex in the graph ''G'', then forms the graph {{tmath|1=G_1=G\setminus F}} as the input to the next step. Here {{tmath|G\setminus F}} denotes the graph derived from ''G'' by contracting edges in ''F'' (by the [[#Cut property|Cut property]], these edges belong to the MST). Each Boruvka step takes linear time. Since the number of vertices is reduced by at least half in each step, Boruvka's algorithm takes O(''m'' log ''n'') time.&lt;ref name=PettieRamachandran2002/&gt;
+
+A second algorithm is [[Prim's algorithm]], which was invented by [[Vojtěch Jarník]] in 1930 and rediscovered by [[Robert_C._Prim|Prim]] in 1957 and [[Edsger_W._Dijkstra|Dijkstra]] in 1959. Basically, it grows the MST (''T'') one edge at a time. Initially, ''T'' contains an arbitrary vertex. In each step, ''T'' is augmented with a least-weight edge (''x'',''y'') such that ''x'' is in ''T'' and ''y'' is not yet in ''T''. By the  [[#Cut property|Cut property]], all edges added to ''T'' are in the MST. Its run-time is either O(''m'' log ''n'') or O(''m'' + ''n'' log ''n''), depending on the data-structures used.
+
+A third algorithm commonly in use is [[Kruskal's algorithm]], which also takes O(''m'' log ''n'') time.
+
+A fourth algorithm, not as commonly used, is the [[reverse-delete algorithm]], which is the reverse of Kruskal's algorithm. Its runtime is O(''m'' log ''n'' (log log ''n'')&lt;sup&gt;3&lt;/sup&gt;).
+
+All four of these are [[greedy algorithm]]s. Since they run in polynomial time, the problem of finding such trees is in '''[[FP (complexity)|FP]]''', and related [[decision problem]]s such as determining whether a particular edge is in the MST or determining if the minimum total weight exceeds a certain value are in '''[[P (complexity)|P]]'''.
+
+=== Faster algorithms ===
+Several researchers have tried to find more computationally-efficient algorithms.
+
+In a comparison model, in which the only allowed operations on edge weights are pairwise comparisons, {{harvtxt|Karger|Klein|Tarjan|1995}} found a [[Expected linear time MST algorithm|linear time randomized algorithm]] based on a combination of Borůvka's algorithm and the reverse-delete algorithm.&lt;ref&gt;{{citation
+ | last1 = Karger | first1 = David R. | author1-link = David Karger
+ | last2 = Klein | first2 = Philip N.
+ | last3 = Tarjan | first3 = Robert E. | author3-link = Robert Tarjan
+ | doi = 10.1145/201019.201022
+ | mr = 1409738
+ | issue = 2
+ | journal = [[Journal of the Association for Computing Machinery]]
+ | pages = 321–328
+ | title = A randomized linear-time algorithm to find minimum spanning trees
+ | volume = 42
+ | year = 1995| s2cid = 832583 }}&lt;/ref&gt;&lt;ref&gt;{{citation
+ | last1 = Pettie | first1 = Seth
+ | last2 = Ramachandran | first2 = Vijaya
+ | contribution = Minimizing randomness in minimum spanning tree, parallel connectivity, and set maxima algorithms
+ | location = San Francisco, California
+ | pages = 713–722
+ | title = Proc. 13th ACM-SIAM Symposium on Discrete Algorithms (SODA '02)
+ | url = http://portal.acm.org/citation.cfm?id=545477
+ | year = 2002}}.&lt;/ref&gt;
+
+The fastest non-randomized comparison-based algorithm with known complexity, by [[Bernard Chazelle]], is based on the [[soft heap]], an approximate priority queue.&lt;ref name=Chazelle2000&gt;{{citation
+ | last = Chazelle | first = Bernard | author-link = Bernard Chazelle
+ | doi = 10.1145/355541.355562
+ | mr = 1866456
+ | issue = 6
+ | journal = [[Journal of the Association for Computing Machinery]]
+ | pages = 1028–1047
+ | title = A minimum spanning tree algorithm with inverse-Ackermann type complexity
+ | volume = 47
+ | year = 2000| s2cid = 6276962 }}.&lt;/ref&gt;&lt;ref&gt;{{citation
+ | last = Chazelle | first = Bernard | author-link = Bernard Chazelle
+ | doi = 10.1145/355541.355554
+ | mr = 1866455
+ | issue = 6
+ | journal = [[Journal of the Association for Computing Machinery]]
+ | pages = 1012–1027
+ | title = The soft heap: an approximate priority queue with optimal error rate
+ | volume = 47
+ | year = 2000| s2cid = 12556140 | url = http://www.link.cs.cmu.edu/15859-f07/papers/chazelle-soft-heap.pdf}}.&lt;/ref&gt; Its running time is ''[[Big O notation|O]]''(''m''&amp;nbsp;α(''m'',''n'')), where α is the classical functional [[Ackermann function#Inverse|inverse of the Ackermann function]]. The function α grows extremely slowly, so that for all practical purposes it may be considered a constant no greater than 4; thus Chazelle's algorithm takes very close to linear time.
+
+=== Linear-time algorithms in special cases ===
+
+==== Dense graphs ====
+
+If the graph is dense (i.e. ''m''/''n'' ≥ log log log ''n''), then a deterministic algorithm by Fredman and Tarjan finds the MST in time O(''m'').&lt;ref&gt;{{Cite journal | doi = 10.1145/28869.28874| title = Fibonacci heaps and their uses in improved network optimization algorithms| journal = Journal of the ACM| volume = 34| issue = 3| pages = 596| year = 1987| last1 = Fredman | first1 = M. L. | last2 = Tarjan | first2 = R. E. | s2cid = 7904683}}&lt;/ref&gt; The algorithm executes a number of phases. Each phase executes [[Prim's algorithm]] many times, each for a limited number of steps. The run-time of each phase is O(''m''+''n''). If the number of vertices before a phase is &lt;math&gt;n'&lt;/math&gt;, the number of vertices remaining after a phase is at most &lt;math&gt;n' / 2^{m/n'}&lt;/math&gt;. Hence, at most &lt;math&gt;\log^*{n}&lt;/math&gt; phases are needed, which gives a linear run-time for dense graphs.&lt;ref name=PettieRamachandran2002/&gt;
+
+There are other algorithms that work in linear time on dense graphs.&lt;ref name=Chazelle2000/&gt;&lt;ref&gt;{{Cite journal | doi = 10.1007/bf02579168| title = Efficient algorithms for finding minimum spanning trees in undirected and directed graphs| journal = Combinatorica| volume = 6| issue = 2| pages = 109| year = 1986| last1 = Gabow | first1 = H. N. | last2 = Galil | first2 = Z. | last3 = Spencer | first3 = T. | last4 = Tarjan | first4 = R. E. | s2cid = 35618095}}&lt;/ref&gt;
+
+==== Integer weights ====
+
+If the edge weights are integers represented in binary, then deterministic algorithms are known that solve the problem in ''O''(''m''&amp;nbsp;+&amp;nbsp;''n'') integer operations.&lt;ref&gt;{{citation
+ | last1 = Fredman | first1 = M. L. | author1-link = Michael Fredman
+ | last2 = Willard | first2 = D. E. | author2-link = Dan Willard
+ | doi = 10.1016/S0022-0000(05)80064-9
+ | mr = 1279413
+ | issue = 3
+ | journal = [[Journal of Computer and System Sciences]]
+ | pages = 533–551
+ | title = Trans-dichotomous algorithms for minimum spanning trees and shortest paths
+ | volume = 48
+ | year = 1994}}.&lt;/ref&gt;
+Whether the problem can be solved ''deterministically'' for a ''general graph'' in ''linear time'' by a comparison-based algorithm remains an open question.
+
+=== Decision trees ===
+Given graph ''G'' where the nodes and edges are fixed but the weights are unknown, it is possible to construct a binary [[decision tree]] (DT) for calculating the MST for any permutation of weights. Each internal node of the DT contains a comparison between two edges, e.g. &quot;Is the weight of the edge between ''x'' and ''y'' larger than the weight of the edge between ''w'' and ''z''?&quot;. The two children of the node correspond to the two possible answers &quot;yes&quot; or &quot;no&quot;. In each leaf of the DT, there is a list of edges from ''G'' that correspond to an MST. The runtime complexity of a DT is the largest number of queries required to find the MST, which is just the depth of the DT. A DT for a graph ''G'' is called ''optimal'' if it has the smallest depth of all correct DTs for ''G''.
+
+For every integer ''r'', it is possible to find optimal decision trees for all graphs on ''r'' vertices by [[brute-force search]]. This search proceeds in two steps.
+
+'''A. Generating all potential DTs'''
+* There are &lt;math&gt;2^{r \choose 2}&lt;/math&gt; different graphs on  ''r'' vertices.
+* For each graph, an MST can always be found using ''r''(''r''-1) comparisons, e.g. by [[Prim's algorithm]]. 
+* Hence, the depth of an optimal DT is less than &lt;math&gt;r^2&lt;/math&gt;.
+* Hence, the number of internal nodes in an optimal DT is less than &lt;math&gt;2^{r^2}&lt;/math&gt;.
+* Every internal node compares two edges. The number of edges is at most &lt;math&gt;r^2&lt;/math&gt; so the different number of comparisons is at most &lt;math&gt;r^4&lt;/math&gt;.
+* Hence, the number of potential DTs is less than:  &lt;math&gt;{(r^4)}^{(2^{r^2})} = r^{2^{(r^2+2)}}&lt;/math&gt;.
+
+'''B. Identifying the correct DTs'''
+To check if a DT is correct, it should be checked on all possible permutations of the edge weights.
+* The number of such permutations is at most &lt;math&gt;(r^2)!&lt;/math&gt;.
+* For each permutation, solve the MST problem on the given graph using any existing algorithm, and compare the result to the answer given by the DT.
+* The running time of any MST algorithm is at most &lt;math&gt;(r^2)&lt;/math&gt;, so the total time required to check all permutations is at most &lt;math&gt;(r^2+1)!&lt;/math&gt;.
+
+Hence, the total time required for finding an optimal DT for ''all'' graphs with ''r'' vertices is: &lt;math&gt;2^{r \choose 2} \cdot r^{2^{(r^2+2)}} \cdot (r^2+1)!&lt;/math&gt;, which is less than: &lt;math&gt;2^{2^{r^2+o(r)}}&lt;/math&gt;.&lt;ref name=PettieRamachandran2002/&gt;
+
+{{See also|Decision tree model}}
+
+=== Optimal algorithm ===
+
+Seth Pettie and Vijaya Ramachandran have found a provably optimal deterministic comparison-based minimum spanning tree algorithm.&lt;ref name=PettieRamachandran2002&gt;{{citation
+ | last1 = Pettie | first1 = Seth
+ | last2 = Ramachandran | first2 = Vijaya
+ | doi = 10.1145/505241.505243
+ | mr = 2148431
+ | issue = 1
+ | journal = [[Journal of the Association for Computing Machinery]]
+ | pages = 16–34
+ | title = An optimal minimum spanning tree algorithm
+ | url = https://web.eecs.umich.edu/~pettie/papers/jacm-optmsf.pdf
+ | volume = 49
+ | year = 2002| s2cid = 5362916
+ }}.&lt;/ref&gt; The following is a simplified description of the algorithm.
+
+# Let &lt;math&gt;r = \log \log \log n&lt;/math&gt;, where ''n'' is the number of vertices. Find all optimal decision trees on ''r'' vertices. This can be done in time O(''n'') (see [[#Decision trees|Decision trees]] above).
+# Partition the graph to components with at most ''r'' vertices in each component. This partition uses a [[soft heap]], which &quot;corrupts&quot; a small number of the edges of the graph.
+# Use the optimal decision trees to find an MST for the uncorrupted subgraph within each component.
+# Contract each connected component spanned by the MSTs to a single vertex, and apply any algorithm which works on [[#Dense graphs|dense graphs]] in time O(''m'') to the contraction of the uncorrupted subgraph
+# Add back the corrupted edges to the resulting forest to form a subgraph guaranteed to contain the minimum spanning tree, and smaller by a constant factor than the starting graph. Apply the optimal algorithm recursively to this graph.
+
+The runtime of all steps in the algorithm is O(''m''), ''except for the step of using the decision trees''. The runtime of this step is unknown, but it has been proved that it is optimal - no algorithm can do better than the optimal decision tree. Thus, this algorithm has the peculiar property that it is ''provably optimal'' although its runtime complexity is ''unknown''.
+
+=== Parallel and distributed algorithms ===
+{{further|Parallel algorithms for minimum spanning trees}}
+Research has also considered [[parallel algorithm]]s for the minimum spanning tree problem.
+With a linear number of processors it is possible to solve the problem in &lt;math&gt;O(\log n)&lt;/math&gt; time.&lt;ref&gt;{{citation
+ | last1 = Chong | first1 = Ka Wong
+ | last2 = Han | first2 = Yijie
+ | last3 = Lam | first3 = Tak Wah
+ | doi = 10.1145/375827.375847
+ | mr = 1868718
+ | issue = 2
+ | journal = [[Journal of the Association for Computing Machinery]]
+ | pages = 297–323
+ | title = Concurrent threads and optimal parallel minimum spanning trees algorithm
+ | volume = 48
+ | year = 2001| s2cid = 1778676
+ }}.&lt;/ref&gt;&lt;ref&gt;{{citation
+ | last1 = Pettie | first1 = Seth
+ | last2 = Ramachandran | first2 = Vijaya
+ | doi = 10.1137/S0097539700371065
+ | mr = 1954882
+ | issue = 6
+ | journal = [[SIAM Journal on Computing]]
+ | pages = 1879–1895
+ | title = A randomized time-work optimal parallel algorithm for finding a minimum spanning forest
+ | volume = 31
+ | year = 2002| url = http://www.eecs.umich.edu/~pettie/papers/sicomp-randmst.pdf
+ }}.&lt;/ref&gt;
+{{harvtxt|Bader|Cong|2006}} demonstrate an algorithm that can compute MSTs 5 times faster on 8 processors than an optimized sequential algorithm.&lt;ref&gt;{{citation
+ | last1 = Bader | first1 = David A. | author1-link = David A. Bader
+ | last2 = Cong | first2 = Guojing
+ | doi = 10.1016/j.jpdc.2006.06.001
+ | issue = 11
+ | journal = Journal of Parallel and Distributed Computing
+ | pages = 1366–1378
+ | title = Fast shared-memory algorithms for computing the minimum spanning forest of sparse graphs
+ | volume = 66
+ | year = 2006| s2cid = 2004627 }}.&lt;/ref&gt;
+
+Other specialized algorithms have been designed for computing minimum spanning trees of a graph so large that most of it must be stored on disk at all times. These ''external storage'' algorithms, for example as described in &quot;Engineering an External Memory Minimum Spanning Tree Algorithm&quot; by Roman, Dementiev et al.,&lt;ref&gt;{{citation
+ | last1 = Dementiev | first1 = Roman
+ | last2 = Sanders | first2 = Peter
+ | last3 = Schultes | first3 = Dominik
+ | last4 = Sibeyn | first4 = Jop F.
+ | contribution = Engineering an external memory minimum spanning tree algorithm
+ | pages = 195–208
+ | title = Proc. IFIP 18th World Computer Congress, TC1 3rd International Conference on Theoretical Computer Science (TCS2004)
+ | url = http://algo2.iti.kit.edu/dementiev/files/emst.pdf
+ | year = 2004}}.&lt;/ref&gt; can operate, by authors' claims,  as little as 2 to 5 times slower than a traditional in-memory algorithm. They rely on efficient [[external sorting|external storage sorting algorithm]]s and on [[graph contraction]] techniques for reducing the graph's size efficiently.
+
+The problem can also be approached in a [[distributed computing|distributed manner]].  If each node is considered a computer and no node knows anything except its own connected links, one can still calculate the [[distributed minimum spanning tree]].
+
+==MST on complete graphs==
+[[Alan M. Frieze]] showed that given a [[complete graph]] on ''n'' vertices, with edge weights that are independent identically distributed random variables with distribution function &lt;math&gt;F&lt;/math&gt; satisfying &lt;math&gt;F'(0) &gt; 0&lt;/math&gt;, then as ''n'' approaches [[Extended real number line|+∞]] the expected weight of the MST approaches &lt;math&gt;\zeta(3)/F'(0)&lt;/math&gt;, where &lt;math&gt;\zeta&lt;/math&gt; is the [[Riemann zeta function]] (more specifically is &lt;math&gt;\zeta(3)&lt;/math&gt; [[Apéry's constant]]). Frieze and [[J. Michael Steele|Steele]] also proved convergence in probability. [[Svante Janson]] proved a [[central limit theorem]] for weight of the MST.
+
+For uniform random weights in &lt;math&gt;[0,1]&lt;/math&gt;, the exact expected size of the minimum spanning tree has been computed for small complete graphs.&lt;ref&gt;{{citation
+ | last = Steele | first = J. Michael | author-link = J. Michael Steele
+ | contribution = Minimal spanning trees for graphs with random edge lengths
+ | mr = 1940139
+ | location = Basel
+ | pages = 223–245
+ | publisher = Birkhäuser
+ | series = Trends Math.
+ | title = Mathematics and computer science, II (Versailles, 2002)
+ | year = 2002}}&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot;
+|-
+!Vertices
+!Expected size
+!Approximate expected size
+|-
+|2
+|1 / 2
+|0.5
+|-
+|3
+|3 / 4
+|0.75
+|-
+|4
+|31 / 35
+|0.8857143
+|-
+|5
+|893 / 924
+|0.9664502
+|-
+|6
+|278 / 273
+|1.0183151
+|-
+|7
+|30739 / 29172
+|1.053716
+|-
+|8
+|199462271 / 184848378
+|1.0790588
+|-
+|9
+|126510063932 / 115228853025
+|1.0979027
+|}
+
+==Applications==
+Minimum spanning trees have direct applications in the design of networks, including [[computer network]]s, [[telecommunications network]]s, [[transport network|transportation network]]s, [[water supply network]]s, and [[electrical grid]]s (which they were first invented for, as mentioned above).&lt;ref&gt;{{citation
+ | last1 = Graham | first1 = R. L. | author1-link = Ronald Graham
+ | last2 = Hell | first2 = Pavol | author2-link = Pavol Hell
+ | doi = 10.1109/MAHC.1985.10011
+ | mr = 783327
+ | issue = 1
+ | journal = Annals of the History of Computing
+ | pages = 43–57
+ | title = On the history of the minimum spanning tree problem
+ | volume = 7
+ | year = 1985| s2cid = 10555375 }}&lt;/ref&gt; They are invoked as subroutines in algorithms for other problems, including the [[Christofides algorithm]] for approximating the [[traveling salesman problem]],&lt;ref&gt;[[Nicos Christofides]], [https://apps.dtic.mil/dtic/tr/fulltext/u2/a025602.pdf Worst-case analysis of a new heuristic for the travelling salesman problem], Report 388, Graduate School of Industrial Administration, CMU, 1976.&lt;/ref&gt; approximating the multi-terminal minimum cut problem (which is equivalent in the single-terminal case to the [[maximum flow problem]]),&lt;ref&gt;{{cite journal
+ |last1        = Dahlhaus
+ |first1       = E.
+ |last2        = Johnson
+ |first2       = D. S.
+ |author2-link = David S. Johnson
+ |last3        = Papadimitriou
+ |first3       = C. H.
+ |author3-link = Christos Papadimitriou
+ |last4        = Seymour
+ |first4       = P. D.
+ |author4-link = Paul Seymour (mathematician)
+ |last5        = Yannakakis
+ |first5       = M.
+ |author5-link = Mihalis Yannakakis
+ |title        = The complexity of multiterminal cuts
+ |journal      = [[SIAM Journal on Computing]]
+ |date         = August 1994
+ |volume       = 23
+ |issue        = 4
+ |pages        = 864–894
+ |doi          = 10.1137/S0097539792225297
+ |url          = http://akpublic.research.att.com/~dsj/papers/3way.pdf
+ |accessdate   = 17 December 2012
+ |url-status      = dead
+ |archive-url   = https://web.archive.org/web/20040824184059/http://akpublic.research.att.com/~dsj/papers/3way.pdf
+ |archive-date  = 24 August 2004
+}}&lt;/ref&gt;
+and approximating the minimum-cost weighted perfect [[matching (graph theory)|matching]].&lt;ref&gt;{{cite conference
+| url = http://dl.acm.org/citation.cfm?id=804689
+| title = Heuristics for weighted perfect matching
+| first1 =Kenneth J.
+| last1 =Supowit
+| first2=David A.
+| last2=Plaisted
+| first3=Edward M.
+| last3=Reingold
+| year =1980
+| conference = 12th Annual ACM Symposium on Theory of Computing (STOC '80)
+| publisher = ACM
+| location = New York, NY, USA
+| pages =398–419
+| doi =10.1145/800141.804689
+}}&lt;/ref&gt;
+
+Other practical applications based on minimal spanning trees include:
+* [[Taxonomy (general)|Taxonomy]].&lt;ref&gt;{{cite journal|last=Sneath|first=P. H. A.|title=The Application of Computers to Taxonomy|journal=Journal of General Microbiology|date=1 August 1957|volume=17|issue=1|pages=201–226|doi=10.1099/00221287-17-1-201|pmid=13475686|doi-access=free}}&lt;/ref&gt; 
+* [[Cluster analysis]]: clustering points in the plane,&lt;ref&gt;{{cite conference|last1=Asano|first1=T.|author1-link=Tetsuo Asano|last2=Bhattacharya|first2=B.|last3=Keil|first3=M.|last4=Yao|first4=F.|author4-link=Frances Yao|title=Clustering algorithms based on minimum and maximum spanning trees|conference=Fourth Annual Symposium on Computational Geometry (SCG '88)|year=1988|volume=1|pages=252–257|doi=10.1145/73393.73419}}&lt;/ref&gt; [[single-linkage clustering]] (a method of [[hierarchical clustering]]),&lt;ref&gt;{{cite journal|last1=Gower|first1=J. C.|last2=Ross|first2=G. J. S.|title=Minimum Spanning Trees and Single Linkage Cluster Analysis|journal=Journal of the Royal Statistical Society|year=1969|volume=18|series=C (Applied Statistics)|issue=1|pages=54–64|doi=10.2307/2346439|jstor=2346439}}&lt;/ref&gt; graph-theoretic clustering,&lt;ref&gt;{{cite journal|last=Päivinen|first=Niina|title=Clustering with a minimum spanning tree of scale-free-like structure|journal=Pattern Recognition Letters|date=1 May 2005|volume=26|issue=7|pages=921–930|doi=10.1016/j.patrec.2004.09.039}}&lt;/ref&gt; and clustering [[gene expression]] data.&lt;ref&gt;{{cite journal|last1=Xu|first1=Y.|last2=Olman|first2=V.|last3=Xu|first3=D.|title=Clustering gene expression data using a graph-theoretic approach: an application of minimum spanning trees|journal=Bioinformatics|date=1 April 2002|volume=18|issue=4|pages=536–545|doi=10.1093/bioinformatics/18.4.536|pmid=12016051|doi-access=free}}&lt;/ref&gt; 
+* Constructing trees for [[broadcasting (networking)|broadcasting]] in computer networks.&lt;ref&gt;{{cite journal|last1=Dalal|first1=Yogen K.|last2=Metcalfe|first2=Robert M.|title=Reverse path forwarding of broadcast packets|journal=Communications of the ACM|date=1 December 1978|volume=21|issue=12|pages=1040–1048|doi=10.1145/359657.359665|s2cid=5638057}}&lt;/ref&gt;
+* [[Image registration]]&lt;ref&gt;{{cite conference|last1=Ma|first1=B.|last2=Hero|first2=A.|last3=Gorman|first3=J.|last4=Michel|first4=O.|title=Image registration with minimum spanning tree algorithm|conference=International Conference on Image Processing|year=2000|volume=1|pages=481–484|doi=10.1109/ICIP.2000.901000|url=http://web.eecs.umich.edu/~hero/Preprints/MinimumSpanningTree.pdf}}&lt;/ref&gt; and [[Image segmentation|segmentation]]&lt;ref&gt;P. Felzenszwalb, D. Huttenlocher: Efficient Graph-Based Image Segmentation. IJCV 59(2) (September 2004)&lt;/ref&gt; &amp;ndash; see [[minimum spanning tree-based segmentation]].
+* Curvilinear [[feature extraction]] in [[computer vision]].&lt;ref&gt;{{cite journal|last1=Suk|first1=Minsoo|last2=Song|first2=Ohyoung|title=Curvilinear feature extraction using minimum spanning trees|journal=Computer Vision, Graphics, and Image Processing|date=1 June 1984|volume=26|issue=3|pages=400–411|doi=10.1016/0734-189X(84)90221-4}}&lt;/ref&gt;
+* [[Handwriting recognition]] of mathematical expressions.&lt;ref&gt;{{cite book|last1=Tapia|first1=Ernesto|last2=Rojas|first2=Raúl|title=Graphics Recognition. Recent Advances and Perspectives|series=Lecture Notes in Computer Science|volume=3088|year=2004|publisher=Springer-Verlag|chapter=Recognition of On-line Handwritten Mathematical Expressions Using a Minimum Spanning Tree Construction and Symbol Dominance|location=Berlin Heidelberg|isbn=978-3540224785|pages=329–340|chapter-url=http://page.mi.fu-berlin.de/rojas/2003/grec03.pdf}}&lt;/ref&gt; 
+* [[Circuit design]]: implementing efficient multiple constant multiplications, as used in [[finite impulse response]] filters.&lt;ref&gt;{{cite conference|last1=Ohlsson|first1=H.|title=Implementation of low complexity FIR filters using a minimum spanning tree|conference=12th IEEE Mediterranean Electrotechnical Conference (MELECON 2004)|year=2004|volume=1|pages=261–264|doi=10.1109/MELCON.2004.1346826}}&lt;/ref&gt;
+* [[Regionalisation]] of socio-geographic areas, the grouping of areas into homogeneous, contiguous regions.&lt;ref&gt;{{cite journal|last=AssunÇão|first=R. M.|author2=M. C. Neves |author3=G. Câmara |author4=C. Da Costa Freitas |title=Efficient regionalization techniques for socio‐economic geographical units using minimum spanning trees|journal=International Journal of Geographical Information Science|year=2006|volume=20|issue=7|pages=797–811|doi=10.1080/13658810600665111|s2cid=2530748|url=https://zenodo.org/record/3832352}}&lt;/ref&gt;
+* Comparing [[ecotoxicology]] data.&lt;ref&gt;{{cite journal|last1=Devillers|first1=J.|last2=Dore|first2=J.C.|title=Heuristic potency of the minimum spanning tree (MST) method in toxicology|journal=Ecotoxicology and Environmental Safety|date=1 April 1989|volume=17|issue=2|pages=227–235|doi=10.1016/0147-6513(89)90042-0|pmid=2737116}}&lt;/ref&gt;
+* Topological [[observability]] in power systems.&lt;ref&gt;{{cite journal|last1=Mori|first1=H.|last2=Tsuzuki|first2=S.|title=A fast method for topological observability analysis using a minimum spanning tree technique|journal=IEEE Transactions on Power Systems|date=1 May 1991|volume=6|issue=2|pages=491–500|doi=10.1109/59.76691}}&lt;/ref&gt; 
+* Measuring homogeneity of two-dimensional materials.&lt;ref&gt;{{cite journal|last1=Filliben|first1=James J.|last2=Kafadar|first2=Karen|author2-link=Karen Kafadar|last3=Shier|first3=Douglas R.|title=Testing for homogeneity of two-dimensional surfaces|journal=Mathematical Modelling|date=1 January 1983|volume=4|issue=2|pages=167–189|doi=10.1016/0270-0255(83)90026-X|doi-access=free}}&lt;/ref&gt; 
+* Minimax [[process control]].&lt;ref&gt;{{citation | last1 = Kalaba | first1 =Robert E. | title = Graph Theory and Automatic Control | url = http://www.dtic.mil/dtic/tr/fulltext/u2/297072.pdf | year = 1963}}&lt;/ref&gt;
+*Minimum spanning trees can also be used to describe financial markets.&lt;ref&gt;Mantegna, R. N. (1999). [https://arxiv.org/abs/cond-mat/9802256 Hierarchical structure in financial markets]. The European Physical Journal B-Condensed Matter and Complex Systems, 11(1), 193-197.&lt;/ref&gt;&lt;ref&gt;Djauhari, M., &amp; Gan, S. (2015). [https://www.researchgate.net/profile/Maman_Djauhari3/publication/277250327_Optimality_problem_of_network_topology_in_stocks_market_analysis/links/59ebdb7d4585151983cb7795/Optimality-problem-of-network-topology-in-stocks-market-analysis.pdf Optimality problem of network topology in stocks market analysis]. Physica A: Statistical Mechanics and Its Applications, 419, 108-114.&lt;/ref&gt; A correlation matrix can be created by calculating a coefficient of correlation between any two stocks. This matrix can be represented topologically as a complex network and a minimum spanning tree can be constructed to visualize relationships.
+
+==Related problems==
+{{regular_polygon_minimum_spanning_tree.svg}}
+The problem of finding the [[Steiner tree]] of a subset of the vertices, that is, minimum tree that spans the given subset, is known to be [[NP-Complete]].&lt;ref&gt;{{Garey-Johnson}}. ND12&lt;/ref&gt;
+
+A related problem is the [[k-minimum spanning tree|''k''-minimum spanning tree]] (''k''-MST), which is the tree that spans some subset of ''k'' vertices in the graph with minimum weight.
+
+A set of ''k-smallest spanning trees'' is a subset of ''k'' spanning trees (out of all possible spanning trees) such that no spanning tree outside the subset has smaller weight.&lt;ref&gt;{{citation
+ | last = Gabow | first = Harold N.
+ | mr = 0441784
+ | issue = 1
+ | journal = [[SIAM Journal on Computing]]
+ | pages = 139–150
+ | title = Two algorithms for generating weighted spanning trees in order
+ | volume = 6
+ | year = 1977
+ | doi=10.1137/0206011}}.&lt;/ref&gt;&lt;ref&gt;{{citation
+ | last = Eppstein | first = David | author-link = David Eppstein
+ | doi = 10.1007/BF01994879
+ | mr = 1172188
+ | issue = 2
+ | journal = BIT
+ | pages = 237–248
+ | title = Finding the ''k'' smallest spanning trees
+ | volume = 32
+ | year = 1992| s2cid = 121160520 }}.&lt;/ref&gt;&lt;ref&gt;{{citation
+ | last = Frederickson | first = Greg N.
+ | doi = 10.1137/S0097539792226825
+ | mr = 1438526
+ | issue = 2
+ | journal = [[SIAM Journal on Computing]]
+ | pages = 484–538
+ | title = Ambivalent data structures for dynamic 2-edge-connectivity and ''k'' smallest spanning trees
+ | volume = 26
+ | year = 1997| url = http://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=1888&amp;context=cstech
+ }}.&lt;/ref&gt;  (Note that this problem is unrelated to the ''k''-minimum spanning tree.)
+
+The [[Euclidean minimum spanning tree]] is a spanning tree of a graph with edge weights corresponding to the Euclidean distance between vertices which are points in the plane (or space).
+
+The [[rectilinear minimum spanning tree]] is a spanning tree of a graph with edge weights corresponding to the [[rectilinear distance]] between vertices which are points in the plane (or space).
+
+In the [[distributed computing|distributed model]], where each node is considered a computer and no node knows anything except its own connected links, one can consider [[distributed minimum spanning tree]]. The mathematical definition of the problem is the same but there are different approaches for a solution.
+
+The [[capacitated minimum spanning tree]] is a tree that has a marked node (origin, or root) and each of the subtrees attached to the node contains no more than a ''c'' nodes. ''c'' is called a tree capacity. Solving CMST optimally is [[NP-hard]],&lt;ref&gt;{{citation
+ | last1 = Jothi | first1 = Raja
+ | last2 = Raghavachari | first2 = Balaji
+ | title = Approximation Algorithms for the Capacitated Minimum Spanning Tree Problem and Its Variants in Network Design
+ | journal = ACM Trans. Algorithms
+ | volume = 1
+ | issue = 2
+ | pages = 265–282
+ | year = 2005
+ | doi=10.1145/1103963.1103967
+| s2cid = 8302085
+ }}&lt;/ref&gt; but good heuristics such as Esau-Williams and Sharma produce solutions close to optimal in polynomial time.
+
+The [[degree-constrained spanning tree|degree constrained minimum spanning tree]] is a minimum spanning tree in which each vertex is connected to no more than ''d'' other vertices, for some given number ''d''. The case ''d''&amp;nbsp;=&amp;nbsp;2 is a special case of the [[traveling salesman problem]], so the degree constrained minimum spanning tree is [[NP-hard]] in general.
+
+For [[directed graph]]s, the minimum spanning tree problem is called the [[Arborescence (graph theory)|Arborescence]] problem and can be solved in quadratic time using the [[Chu–Liu/Edmonds algorithm]].
+
+A '''maximum spanning tree''' is a spanning tree with weight greater than or equal to the weight of every other spanning tree.
+Such a tree can be found with algorithms such as Prim's or Kruskal's after multiplying the edge weights by -1 and solving
+the MST problem on the new graph. A path in the maximum spanning tree is the [[widest path problem|widest path]] in the graph between its two endpoints: among all possible paths, it maximizes the weight of the minimum-weight edge.&lt;ref&gt;{{citation
+ | last = Hu | first = T. C.
+ | issue = 6
+ | journal = Operations Research
+ | pages = 898–900
+ | title = The maximum capacity route problem
+ | volume = 9
+ | year = 1961
+ | jstor=167055
+ | doi=10.1287/opre.9.6.898| doi-access = free
+ }}.&lt;/ref&gt;
+Maximum spanning trees find applications in [[parsing]] algorithms for [[Natural language processing|natural languages]]&lt;ref&gt;{{cite conference
+ | last1 = McDonald | first1 = Ryan
+ | last2 = Pereira | first2 = Fernando
+ | last3 = Ribarov | first3 = Kiril
+ | last4 = Hajič | first4 = Jan
+ | title = Non-projective dependency parsing using spanning tree algorithms
+ | book-title = Proc. HLT/EMNLP
+ | year = 2005
+ | url = http://www.seas.upenn.edu/~strctlrn/bib/PDF/nonprojectiveHLT-EMNLP2005.pdf}}&lt;/ref&gt;
+and in training algorithms for [[conditional random field]]s.
+
+The '''dynamic MST''' problem concerns the update of a previously computed MST after an edge weight change in the original graph or the insertion/deletion of a vertex.&lt;ref&gt;{{citation
+ | last1 = Spira | first1 = P. M.
+ | last2 = Pan | first2 = A.
+ | mr = 0378466
+ | issue = 3
+ | journal = SIAM Journal on Computing
+ | pages = 375–380
+ | title = On finding and updating spanning trees and shortest paths
+ | volume = 4
+ | year = 1975
+ | doi=10.1137/0204032| url = http://www.ics.forth.gr/~lourakis/10.1137.0204032.pdf
+ }}.&lt;/ref&gt;&lt;ref&gt;{{citation
+ | last1 = Holm | first1 = Jacob
+ | last2 = de Lichtenberg | first2 = Kristian
+ | last3 = Thorup | first3 = Mikkel | author3-link = Mikkel Thorup
+ | doi = 10.1145/502090.502095
+ | mr = 2144928
+ | issue = 4
+ | journal = [[Journal of the Association for Computing Machinery]]
+ | pages = 723–760
+ | title = Poly-logarithmic deterministic fully dynamic algorithms for connectivity, minimum spanning tree, 2-edge, and biconnectivity
+ | volume = 48
+ | year = 2001| s2cid = 7273552
+ }}.&lt;/ref&gt;&lt;ref&gt;{{citation
+ | last1 = Chin | first1 = F.
+ | last2 = Houck | first2 = D.
+ | journal = [[Journal of Computer and System Sciences]]
+ | volume = 16
+ | issue = 3
+ | pages = 333–344
+ | title = Algorithms for updating minimal spanning trees
+ | year = 1978
+ | doi=10.1016/0022-0000(78)90022-3}}.&lt;/ref&gt;
+
+The minimum labeling spanning tree problem is to find a spanning tree with least types of labels if each edge in a graph is associated with a label from a finite label set instead of a weight.&lt;ref&gt;{{citation
+ | last1 = Chang | first1 = R.S. 
+ | last2 = Leu | first2 = S.J.
+ | journal = [[Information Processing Letters]]
+ | volume = 63
+ | issue = 5 
+ | pages = 277–282
+ | title = The minimum labeling spanning trees
+ | year = 1997
+ | doi=10.1016/s0020-0190(97)00127-0}}.&lt;/ref&gt;

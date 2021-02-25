@@ -1,0 +1,392 @@
+==See also==
+* [[Black Label (disambiguation)]]
+* [[Labeling (disambiguation)]]
+* [[White label]]
+
+{{disambiguation}}</text>
+      <sha1>96b86ab4nuq3nypdifhw6yr09t0qiry</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Lambert's cosine law</title>
+    <ns>0</ns>
+    <id>41306</id>
+    <revision>
+      <id>991487102</id>
+      <parentid>984659091</parentid>
+      <timestamp>2020-11-30T09:13:22Z</timestamp>
+      <contributor>
+        <username>AstroLynx</username>
+        <id>1609017</id>
+      </contributor>
+      <comment>better link to original edition</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="8709" xml:space="preserve">{{Redirect|Lambert's law|for the concept in logic|Lambert's law (logic)}}
+{{Refimprove|date=December 2009}}
+In [[optics]], '''Lambert's cosine law''' says that the [[radiant intensity]] or [[luminous intensity]] observed from an ideal [[diffuse reflection|diffusely reflecting]] surface or ideal diffuse radiator is [[directly proportional]] to the [[cosine]] of the angle ''θ'' between the direction of the incident light and the [[Normal (geometry)|surface normal]].&lt;ref name = &quot;RCAEOH&quot;&gt;RCA Electro-Optics Handbook, p.18 ff&lt;/ref&gt;&lt;ref name=&quot;SmithW&quot;&gt;Modern Optical Engineering, Warren J. Smith, McGraw-Hill, p.&amp;nbsp;228, 256&lt;/ref&gt; The law is also known as the '''cosine emission law'''&lt;ref&gt;{{cite book | title=Introduction to Optics | publisher=[[Prentice Hall]] | last=Pedrotti &amp; Pedrotti | date=1993 | isbn=0135015456 | url-access=registration | url=https://archive.org/details/introductiontoop00pedr }}&lt;/ref&gt;  or '''Lambert's emission law'''. It is named after [[Johann Heinrich Lambert]], from his ''[[Photometria]]'', published in 1760.&lt;ref&gt;{{cite book | last=Lambert | first=Johann Heinrich | title=Photometria, sive de mensura et gradibus luminis, colorum et umbrae | publisher=Eberhard Klett | date=1760 | url=https://www.e-rara.ch/zut/content/titleinfo/2814923}}&lt;/ref&gt;
+
+A surface which obeys Lambert's law is said to be ''Lambertian'', and exhibits [[Lambertian reflectance]]. Such a surface has the same [[radiance]] when viewed from any angle. This means, for example, that to the human eye it has the same apparent brightness (or [[luminance]]). It has the same radiance because, although the emitted power from a given area element is reduced by the cosine of the emission angle, the solid angle, subtended by surface visible to the viewer, is reduced by the same very amount. Because the ratio between power and solid angle is constant, radiance (power per unit solid angle per unit projected source area) stays the same.
+
+==Lambertian scatterers and radiators==
+
+When an area element is radiating as a result of being illuminated by an external source, the [[irradiance]] (energy or photons/time/area) landing on that area element will be proportional to the cosine of the angle between the illuminating source and the normal. A Lambertian scatterer will then scatter this light according to the same cosine law as a Lambertian emitter. This means that although the radiance of the surface depends on the angle from the normal to the illuminating source, it will not depend on the angle from the normal to the observer. For example, if the [[moon]] were a Lambertian scatterer, one would expect to see its scattered brightness appreciably diminish towards the [[terminator (solar)|terminator]] due to the increased angle at which sunlight hit the surface. The fact that it does not diminish illustrates that the moon is not a Lambertian scatterer, and in fact tends to scatter more light into the [[oblique angle]]s than a Lambertian scatterer.
+
+The emission of a Lambertian radiator does not depend on the amount of incident radiation, but rather from radiation originating in the emitting body itself. For example, if the [[sun]] were a Lambertian radiator, one would expect to see a constant brightness across the entire solar disc. The fact that the sun exhibits [[limb darkening]] in the visible region illustrates that it is not a Lambertian radiator. A [[black body]] is an example of a Lambertian radiator.
+
+==Details of equal brightness effect==
+
+&lt;div style=&quot;float: right&quot;&gt;
+{|
+|-
+| [[Image:Lambert Cosine Law 1.svg|frame|right|Figure 1: Emission rate (photons/s) in a normal and off-normal direction. The number of photons/sec directed into any wedge is proportional to the area of the wedge.]]
+|-
+| [[Image:Lambert Cosine Law 2.svg|frame|right|Figure 2: Observed intensity (photons/(s·m&lt;sup&gt;2&lt;/sup&gt;·sr)) for a normal and off-normal observer; ''dA''&lt;sub&gt;0&lt;/sub&gt; is the area of the observing aperture and ''d&amp;Omega;'' is the solid angle subtended by the aperture from the viewpoint of the emitting area element.]]
+|}
+&lt;/div&gt;
+The situation for a Lambertian surface (emitting or scattering) is illustrated in Figures 1 and 2.  For conceptual clarity we will think in terms of [[photon]]s rather than [[energy]] or [[luminous energy]]. The wedges in the [[circle]] each represent an equal angle ''dΩ'', of an arbitrarily chosen size, and for a Lambertian surface, the number of photons per second emitted into each wedge is proportional to the area of the wedge.
+
+The length of each wedge is the product of the [[diameter]] of the circle and cos(''θ''). The maximum rate of photon emission per unit [[solid angle]] is along the normal, and diminishes to zero for ''θ'' = 90°. In mathematical terms, the [[radiance]] along the normal is ''I''&amp;nbsp;photons/(s·m&lt;sup&gt;2&lt;/sup&gt;·sr) and the number of photons per second emitted into the vertical wedge is ''I'' ''dΩ'' ''dA''. The number of photons per second emitted into the wedge at angle ''θ'' is ''I''&amp;nbsp;cos(''θ'')&amp;nbsp;''dΩ''&amp;nbsp;''dA''.
+
+Figure 2 represents what an observer sees. The observer directly above the area element will be seeing the scene through an aperture of area ''dA''&lt;sub&gt;0&lt;/sub&gt; and the area element ''dA'' will subtend a (solid) angle of ''dΩ''&lt;sub&gt;0&lt;/sub&gt;, which is a portion of the observer's total angular field-of-view of the scene. Since the wedge size ''dΩ'' was chosen arbitrarily, for convenience we may assume without loss of generality that it coincides with the solid angle subtended by the aperture when &quot;viewed&quot; from the locus of the emitting area element dA. Thus the normal observer will then be recording the same ''I''&amp;nbsp;''dΩ''&amp;nbsp;''dA'' photons per second emission derived above and will measure a radiance of
+
+:&lt;math&gt;
+I_0=\frac{I\, d\Omega\, dA}{d\Omega_0\, dA_0}
+&lt;/math&gt;  photons/(s·m&lt;sup&gt;2&lt;/sup&gt;·sr).
+
+The observer at angle ''θ'' to the normal will be seeing the scene through the same aperture of area ''dA''&lt;sub&gt;0&lt;/sub&gt; (still corresponding to a ''dΩ'' wedge) and from this oblique vantage the area element ''dA'' is foreshortened and will subtend a (solid) angle of ''dΩ''&lt;sub&gt;0&lt;/sub&gt;&amp;nbsp;cos(''θ'').  This observer will be recording ''I''&amp;nbsp;cos(''θ'')&amp;nbsp;''dΩ''&amp;nbsp;''dA'' photons per second, and so will be measuring a radiance of
+
+:&lt;math&gt;
+I_0=\frac{I \cos(\theta)\, d\Omega\, dA}{d\Omega_0\, \cos(\theta)\, dA_0}
+=\frac{I\, d\Omega\, dA}{d\Omega_0\, dA_0}
+&lt;/math&gt;  photons/(s·m&lt;sup&gt;2&lt;/sup&gt;·sr),
+
+which is the same as the normal observer.
+
+== Relating peak luminous intensity and luminous flux ==
+
+In general, the [[luminous intensity]] of a point on a surface varies by direction; for a Lambertian surface, that distribution is defined by the cosine law, with peak luminous intensity in the normal direction. Thus when the Lambertian assumption holds, we can calculate the total [[luminous flux]], &lt;math&gt;F_{tot}&lt;/math&gt;, from the peak [[luminous intensity]], &lt;math&gt;I_{max}&lt;/math&gt;, by integrating the cosine law:
+:&lt;math&gt;F_{tot} = \int\limits_0^{2\pi}\,\int\limits_0^{\pi/2}\cos(\theta)I_{max}\,\sin(\theta)\,\operatorname{d}\theta\,\operatorname{d}\phi&lt;/math&gt;
+:::&lt;math&gt;= 2\pi\cdot I_{max}\int\limits_0^{\pi/2}\cos(\theta)\sin(\theta)\,\operatorname{d}\theta  &lt;/math&gt;
+:::&lt;math&gt;= 2\pi\cdot I_{max}\int\limits_0^{\pi/2}\frac{\sin(2\theta)}{2}\,\operatorname{d}\theta &lt;/math&gt;
+and so
+:&lt;math&gt;F_{tot}=\pi\,\mathrm{sr}\cdot I_{max}&lt;/math&gt;
+where &lt;math&gt;\sin(\theta)&lt;/math&gt; is the determinant of the [[Jacobian matrix]] for the [[unit sphere]], and realizing that &lt;math&gt;I_{max}&lt;/math&gt; is luminous flux per [[steradian]].&lt;ref&gt;Incropera and DeWitt, ''Fundamentals of Heat and Mass Transfer'', 5th ed., p.710.&lt;/ref&gt; Similarly, the peak intensity will be &lt;math&gt;1/(\pi\,\mathrm{sr})&lt;/math&gt; of the total radiated luminous flux. For Lambertian surfaces, the same factor of &lt;math&gt;\pi\,\mathrm{sr}&lt;/math&gt; relates [[luminance]] to [[luminous emittance]], [[radiant intensity]] to [[radiant flux]], and [[radiance]] to [[radiant emittance]].{{citation needed|date=June 2013}} Radians and steradians are, of course, dimensionless and so &quot;rad&quot; and &quot;sr&quot; are included only for clarity.
+
+Example: A surface with a luminance of say 100&amp;nbsp;cd/m&lt;sup&gt;2&lt;/sup&gt; (= 100 nits, typical PC monitor) will, if it is a perfect Lambert emitter, have a luminous emittance of 314 lm/m&lt;sup&gt;2&lt;/sup&gt;. If its area is 0.1 m&lt;sup&gt;2&lt;/sup&gt; (~19&quot; monitor) then the total light emitted, or luminous flux, would thus be 31.4 lm.
+
+==See also==
+* [[Transmittance]]
+* [[Reflectivity]]
+* [[Passive solar building design]]
+* [[Sun path]]
+
+== References ==
+&lt;references/&gt;
+
+{{DEFAULTSORT:Lambert's Cosine Law}}
+[[Category:Radiometry]]
+[[Category:Photometry]]
+[[Category:3D computer graphics]]
+[[Category:Scattering]]</text>
+      <sha1>cl4rdp4cff2plmaz4jtzjr5z21h2pcs</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Landscape mode</title>
+    <ns>0</ns>
+    <id>41307</id>
+    <redirect title="Page orientation" />
+    <revision>
+      <id>246039191</id>
+      <parentid>243216949</parentid>
+      <timestamp>2008-10-18T04:59:40Z</timestamp>
+      <contributor>
+        <username>KCinDC</username>
+        <id>2732624</id>
+      </contributor>
+      <comment>not enough content for an article; redirecting to [[Page orientation]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30" xml:space="preserve">#REDIRECT [[Page orientation]]</text>
+      <sha1>ltfp6ffanppddx6r4pfrehqtd9aqe7p</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Launch angle</title>
+    <ns>0</ns>
+    <id>41308</id>
+    <revision>
+      <id>697196870</id>
+      <parentid>514349854</parentid>
+      <timestamp>2015-12-28T22:46:00Z</timestamp>
+      <contributor>
+        <username>Natg 19</username>
+        <id>3492060</id>
+      </contributor>
+      <comment>Disambiguate [[Angle of incidence]] to [[angle of incidence (optics)]] using [[:en:Wikipedia:Tools/Navigation_popups|popups]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="736" xml:space="preserve">In [[fiber optics|fiber optic]] [[telecommunication]]s, the '''launch angle''' has the following meanings: 
+
+*The angle, with respect to the normal, at which a [[light]] [[line (mathematics)|ray]] emerges from a surface. 
+*The [[beam divergence]] at an emitting surface, such as that of a [[light-emitting diode]] (LED), [[laser]], [[lens (optics)|lens]], [[Prism (optics)|prism]], or [[optical fiber]] end face. 
+*At an end face of an optical fiber, the angle between an input ray and the [[fiber axis]]. If the end face of the fiber is perpendicular to the fiber axis, the launch angle is equal to the [[angle of incidence (optics)|angle of incidence]].
+
+==References==
+{{FS1037C MS188}}
+
+[[Category:Fiber optics]]
+
+
+{{telecomm-stub}}</text>
+      <sha1>8y9v5ezvi994ox5aqkrdqqbnvecojbg</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Launch numerical aperture</title>
+    <ns>0</ns>
+    <id>41309</id>
+    <revision>
+      <id>688726371</id>
+      <parentid>275342763</parentid>
+      <timestamp>2015-11-02T18:15:15Z</timestamp>
+      <contributor>
+        <username>GoodDay</username>
+        <id>589223</id>
+      </contributor>
+      <comment>Reduce whitespace</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="576" xml:space="preserve">In [[telecommunications]], '''launch numerical aperture''' ('''LNA''') is the [[numerical aperture]] of an [[optical]] system used to couple (launch) [[Power (physics)|power]] into an [[optical fiber]].  
+
+LNA may differ from the stated NA of a final focusing element if, for example, that element is underfilled or the focus is other than that for which the element is specified. 
+LNA is one of the parameters that determine the initial distribution of power among the modes of an optical fiber.
+
+==References==
+{{FS1037C MS188}}
+
+{{telecomm-stub}}
+
+[[Category:Fiber optics]]</text>
+      <sha1>m3aewkblel9bq2uzzork08t2e4nzygi</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Layer</title>
+    <ns>0</ns>
+    <id>41310</id>
+    <revision>
+      <id>960599328</id>
+      <parentid>960599247</parentid>
+      <timestamp>2020-06-03T21:00:05Z</timestamp>
+      <contributor>
+        <username>Dwkaminski</username>
+        <id>28117617</id>
+      </contributor>
+      <comment>/* Other uses */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2363" xml:space="preserve">{{wiktionary|layer|layers}}
+
+'''Layer''' or '''layered''' may refer to:
+{{TOC right}}
+==Arts, entertainment, and media==
+===Music===
+====Albums====
+*[[Layers (Kungs album)|''Layers'' (Kungs album)]]
+*[[Layers (Les McCann album)|''Layers'' (Les McCann album)]]
+*[[Layers (Royce da 5'9&quot; album)|''Layers'' (Royce da 5'9&quot; album)]]
+
+====Songs====
+*&quot;Layers&quot;, the title track of Royce da 5'9&quot;'s [[Layers (Royce da 5'9&quot; album)|sixth studio album]]
+
+===Other uses in arts, entertainment, and media===
+*[[Mega Man X8#Maverick Hunters|Layer]], a female Maverick Hunter in the ''Mega Man X'' series
+*Layer, an element in a [[digital painting]]
+
+===Science===
+* [[Stratum]], a layer of rock or soil with internally consistent characteristics
+* [[Thermocline]], a layer within a body of water where the temperature changes rapidly with depth
+
+===Technology===
+
+====Computing====
+* [[Layer (object-oriented design)]], a group of classes that have the same set of link-time module dependencies to other modules
+* [[Layers (digital image editing)]], used in digital image editing to separate different elements of an image
+* [[2D computer graphics#Layers|Layers]], in 2D computer graphics
+* [[Abstraction layer]], a way of hiding the implementation details of a particular set of functionality
+** [[Internet protocol suite]] layers
+** [[OSI model]] layers
+* [[Layer element]], a deprecated &amp;lt;iframe&amp;gt;-like tag, unique to Netscape 4 browsers
+* Layer of objects, a term in [[CAD standards|CAD]]
+* Map layer, a set of graphical information, especially in [[geographic information system]]s
+
+====Electronics====
+* [[Layer (electronics)]], a single thickness of some material covering a surface
+* [[Dual layer recording]], a DVD layer
+* [[F region]], or Appleton Layer in telecommunications
+
+==Other uses==
+* Layer, a tier of archaeological deposits in an [[Excavation (archaeology)|excavation]]
+* [[Layer hen]], a hen raised to produce eggs
+* [[Layering]], a technique for plant propagation
+* [[Layer cake]]
+* [[Layered clothing]], the wearing of multiple layers of clothing for practical or fashion purposes
+* [[Layered hair]], a popular hair-styling technique
+* [[Walter Francis Layer]] (1907-1965), American politician and U.S. Marine Corps colonel
+
+==See also==
+* [[Layering (disambiguation)]]
+* [[Multilevel (disambiguation)]]
+* {{lookfrom}}
+* {{intitle}}
+
+{{disambiguation}}</text>
+      <sha1>47r7vak1lkjk919vb9anslz7nb4r9eq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Layered system</title>
+    <ns>0</ns>
+    <id>41311</id>
+    <revision>
+      <id>823456296</id>
+      <parentid>823456237</parentid>
+      <timestamp>2018-02-01T10:45:32Z</timestamp>
+      <contributor>
+        <ip>122.15.156.180</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="532" xml:space="preserve">In [[telecommunication]], a '''layered system''' is a [[system]] in which components are grouped, ''i.e.'', layered, in a hierarchical arrangement, such that lower layers provide functions and services that support the functions and services of higher layers. 
+
+Systems of ever-increasing complexity and capability can be built by adding or changing the layers to improve overall system capability while using the components that are still in place.
+
+{{FS1037C}}
+
+[[Category:Network topology]]
+[[Category:Holism]]
+
+{{telecomm-stub}}</text>
+      <sha1>63yydqive44gxvxyk3l3zoftrf8yj38</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Leaky mode</title>
+    <ns>0</ns>
+    <id>41312</id>
+    <revision>
+      <id>968976320</id>
+      <parentid>968976286</parentid>
+      <timestamp>2020-07-22T17:11:09Z</timestamp>
+      <contributor>
+        <ip>112.104.10.138</ip>
+      </contributor>
+      <comment>/* References */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1926" xml:space="preserve">A '''leaky mode''' or '''tunneling mode''' in an [[optical fiber]] or other [[waveguide]] is a [[Normal mode|mode]] having an [[electric field]] that decays monotonically for a finite distance in the transverse direction but becomes oscillatory everywhere beyond that finite distance. Such a mode gradually &quot;leaks&quot; out of the waveguide as it travels down it, producing [[attenuation]] even if the waveguide is perfect in every respect.  In order for a leaky mode to be definable as a mode, the relative amplitude of the oscillatory part (the leakage rate) must be sufficiently small that the mode substantially maintains its shape as it decays.
+
+Leaky modes correspond to leaky rays in the terminology of [[geometric optics]].
+The propagation of light through optical fibre can take place via meridional rays or skew rays. These skew rays suffer only partial reflection while meridional rays are completely guided. Thus the modes allowing propagation of skew rays are called leaky modes. 
+Some optical power is lost into clad due to these modes.
+
+==References==
+*[https://www.osapublishing.org/aop/abstract.cfm?uri=aop-1-1-58 J. Hu and C. R. Menyuk, &quot;Understanding leaky modes: slab waveguide revisited&quot;]
+*{{cite journal| last1= Liu |first1= Hsuan-Hao |last2=Chang |first2=Hung-Chun |title=Leaky Surface Plasmon Polariton Modes at an Interface Between Metal and Uniaxially Anisotropic Materials. |journal=IEEE Photonics Journal |volume=5 |issue=6 |pages=4800806 |date=2013 | bibcode=2013IPhoJ...500806L |doi=10.1109/JPHOT.2013.2288298 | doi-access=free }}
+*{{cite journal| last1= Liu |first1= Hsuan-Hao |last2=Chang |first2=Hung-Chun |title=High-Resolution Analysis of Leaky Modes in Surface Plasmon Stripe Waveguides. |journal=J. Lightwave Technol. |volume=34 |issue=11 |pages=2752-2757 |date=2016 | bibcode=2016JLwT...34.2752L |doi= 10.1109/JLT.2016.2544843 }}
+
+{{FS1037C MS188}}
+
+[[Category:Fiber optics]]
+
+
+{{optics-stub}}</text>
+      <sha1>evbhbfy6wek31vxennr30v1jk8128ez</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Leaky ray</title>
+    <ns>0</ns>
+    <id>41313</id>
+    <redirect title="Ray (optics)" />
+    <revision>
+      <id>323256041</id>
+      <parentid>30684894</parentid>
+      <timestamp>2009-11-01T10:41:16Z</timestamp>
+      <contributor>
+        <username>Graham87</username>
+        <id>194203</id>
+      </contributor>
+      <comment>not a histmerge candidate</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="49" xml:space="preserve">#REDIRECT [[Ray (optics)]] {{nahmc|Ray (optics)}}</text>
+      <sha1>d18metzr219bo3hcota7k2gbykspsd9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Limiting</title>
+    <ns>0</ns>
+    <id>41314</id>
+    <redirect title="Limiter" />
+    <revision>
+      <id>783874828</id>
+      <parentid>733060971</parentid>
+      <timestamp>2017-06-05T05:51:03Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="71" xml:space="preserve">#REDIRECT [[Limiter]]
+
+{{Redirect category shell|1=
+{{r from merge}}
+}}</text>
+      <sha1>m4i35w0hbdm9aszygksq77lkj1gocqk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Linear polarization</title>
+    <ns>0</ns>
+    <id>41316</id>
+    <revision>
+      <id>988745085</id>
+      <parentid>987054538</parentid>
+      <timestamp>2020-11-15T00:35:24Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: url, isbn. URLs might have been internationalized/anonymized. Correct ISBN10 to ISBN13. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by AManWithNoPlan | All pages linked from cached copy of User:AManWithNoPlan/sandbox2 | via #UCB_webform_linked 1607/2507</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4316" xml:space="preserve">{{short description|Confinement of the electric field vector or magnetic field vector to a given plane along the direction of propagation}}
+{{More footnotes|date=May 2020}}
+[[File:Linear polarization schematic.png|162px|thumb|right|Diagram of the electric field of a light wave (blue), linear-polarized along a plane (purple line), and consisting of two orthogonal, in-phase components (red and green waves)]]
+In [[electrodynamics]], '''linear polarization''' or '''plane polarization''' of [[electromagnetic radiation]] is a confinement of the [[electric field]] vector or [[magnetic field]] vector to a given plane along the direction of propagation. See ''[[Polarization (waves)|polarization]]'' and ''[[plane of polarization]]'' for more information.
+
+The orientation of a linearly polarized electromagnetic wave is defined by the direction of the [[electric field]] vector.&lt;ref name=&quot;Shapira,&quot;&gt;{{cite book   
+  | last = Shapira
+  | first = Joseph 
+  | authorlink = 
+  |author2=Shmuel Y. Miller
+   | title = CDMA radio with repeaters
+  | publisher = Springer
+  | date = 2007
+  | location = 
+  | pages = 73
+  | url = https://books.google.com/books?id=Yd56YZY1RpAC&amp;q=%5Bpolarization+of+radio+waves%5D&amp;pg=PA73
+  | doi = 
+  | id = 
+  | isbn = 978-0-387-26329-8}}&lt;/ref&gt;  For example, if the electric field vector is vertical (alternately up and down as the wave travels) the radiation is said to be vertically polarized.
+
+==Mathematical description==
+The [[Classical physics|classical]] [[sinusoidal]] plane wave solution of the [[electromagnetic wave equation]] for the [[Electric field|electric]] and [[Magnetic field|magnetic]] fields is (cgs units)
+ 
+:&lt;math&gt; \mathbf{E} ( \mathbf{r} , t ) = \mid\mathbf{E}\mid  \mathrm{Re} \left \{  |\psi\rangle  \exp \left [ i \left  ( kz-\omega t  \right ) \right ] \right \}  &lt;/math&gt;

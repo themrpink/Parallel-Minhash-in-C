@@ -1,0 +1,198 @@
+where &lt;math&gt;\mathcal R&lt;/math&gt; is the resistance of the test wire per unit length.  Thus, Ohm's coefficients are,
+
+:&lt;math&gt; a = \frac {\mathcal E}{\mathcal R}, \quad b = \frac {\mathcal r}{\mathcal R} .&lt;/math&gt;
+[[File:Ohmsches Gesetz in Georg Simon Ohms Laborbuch.jpg|thumb|Ohm's law in Georg Ohm's lab book.]]
+Ohm's law was probably the most important of the early quantitative descriptions of the physics of electricity.  We consider it almost obvious today. When Ohm first published his work, this was not the case; critics reacted to his treatment of the subject with hostility.  They called his work a &quot;web of naked fancies&quot;&lt;ref&gt;
+Davies, B, &quot;A web of naked fancies?&quot;, ''Physics Education'' 15 57–61, Institute of Physics, Issue 1, Jan 1980 [http://www.iop.org/EJ/S/UNREG/an0VsEw7ynSY0UzIRNaNVQ/abstract/0031-9120/15/1/314]
+&lt;/ref&gt; and the German Minister of Education proclaimed that &quot;a professor who preached such heresies was unworthy to teach science.&quot;&lt;ref&gt;Hart, IB, ''Makers of Science'', London, Oxford University Press, 1923. p. 243. [http://www.foresight.org/news/negativeComments.html#loc037]&lt;/ref&gt; The prevailing scientific philosophy in Germany at the time asserted that experiments need not be performed to develop an understanding of nature because nature is so well ordered, and that scientific truths may be deduced through reasoning alone.&lt;ref&gt;Herbert Schnädelbach, ''Philosophy in Germany 1831–1933'', pp. 78–79, Cambridge University Press, 1984 {{ISBN|0521296463}}.&lt;/ref&gt;  Also, Ohm's brother Martin, a mathematician, was battling the German educational system. These factors hindered the acceptance of Ohm's work, and his work did not become widely accepted until the 1840s.  However, Ohm received recognition for his contributions to science well before he died.
+
+In the 1850s, Ohm's law was known as such and was widely considered proved, and alternatives, such as &quot;[[Barlow's law]]&quot;, were discredited, in terms of real applications to telegraph system design, as discussed by [[Samuel F. B. Morse]] in 1855.&lt;ref&gt;{{cite book | title = Shaffner's Telegraph Companion: Devoted to the Science and Art of the Morse Telegraph | author = Taliaferro Preston | author-link = Taliaferro Preston Shaffner | publisher = Pudney &amp; Russell | volume = Vol.2 | year = 1855 | url = https://books.google.com/books?id=TDEOAAAAYAAJ&amp;q=ohm%27s-law+date:0-1860&amp;pg=RA1-PA43 }}&lt;/ref&gt;
+
+The [[electron]] was discovered in 1897 by [[J. J. Thomson]], and it was quickly realized that it is the particle ([[charge carrier]]) that carries electric currents in electric circuits.  In 1900 the first ([[classical physics|classical]]) model of electrical conduction, the [[Drude model]], was proposed by [[Paul Drude]], which finally gave a scientific explanation for Ohm's law.  In this model, a solid conductor consists of a stationary lattice of [[atom]]s ([[ion]]s), with [[conduction electron]]s moving randomly in it.  A voltage across a conductor causes an [[electric field]], which accelerates the electrons in the direction of the electric field, causing a drift of electrons which is the electric current.  However the electrons collide with and scatter off of the atoms, which randomizes their motion, thus converting the kinetic energy added to the electron by the field to [[heat]] ([[thermal energy]]).  Using statistical distributions, it can be shown that the average drift velocity of the electrons, and thus the current, is proportional to the electric field, and thus the voltage, over a wide range of voltages.
+
+The development of [[quantum mechanics]] in the 1920s modified this picture somewhat, but in modern theories the average drift velocity of electrons can still be shown to be proportional to the electric field, thus deriving Ohm's law. In 1927 [[Arnold Sommerfeld]] applied the quantum [[Fermi-Dirac distribution]] of electron energies to the Drude model, resulting in the [[free electron model]]. A year later, [[Felix Bloch]] showed that electrons move in waves ([[Bloch electron]]s) through a solid crystal lattice, so scattering off the lattice atoms as postulated in the Drude model is not a major process; the electrons scatter off impurity atoms and defects in the material. The final successor, the modern quantum [[band theory]] of solids, showed that the electrons in a solid cannot take on any energy as assumed in the Drude model but are restricted to energy bands, with gaps between them of energies that electrons are forbidden to have.   The size of the band gap is a characteristic of a particular substance which has a great deal to do with its electrical resistivity, explaining why some substances are [[electrical conductor]]s, some [[semiconductor]]s, and some [[insulator (electricity)|insulators]].
+
+While the old term for electrical conductance, the [[Siemens (unit)|mho]] (the inverse of the resistance unit ohm), is still used, a new name, the [[Siemens (unit)|siemens]], was adopted in 1971, honoring [[Ernst Werner von Siemens]].  The siemens is preferred in formal papers.
+
+In the 1920s, it was discovered that the current through a practical resistor actually has statistical fluctuations, which depend on temperature, even when voltage and resistance are exactly constant; this fluctuation, now known as [[Johnson–Nyquist noise]], is due to the discrete nature of charge.  This thermal effect implies that measurements of current and voltage that are taken over sufficiently short periods of time will yield ratios of V/I that fluctuate from the value of R implied by the time average or [[ensemble average]] of the measured current; Ohm's law remains correct for the average current, in the case of ordinary resistive materials.
+
+Ohm's work long preceded [[Maxwell's equations]] and any understanding of frequency-dependent effects in AC circuits. Modern developments in electromagnetic theory and circuit theory do not contradict Ohm's law when they are evaluated within the appropriate limits.
+
+==Scope==
+Ohm's law is an [[empirical law]], a generalization from many experiments that have shown that current is approximately proportional to electric field for most materials. It is less fundamental than [[Maxwell's equations]] and is not always obeyed. Any given material will [[electrical breakdown|break down]] under a strong-enough electric field, and some materials of interest in electrical engineering are &quot;non-ohmic&quot; under weak fields.&lt;ref&gt;{{Citation |last=Purcell |first=Edward M. |author-link=Edward Mills Purcell |year=1985 |title=Electricity and magnetism |edition=2nd |series=Berkeley Physics Course |volume=2 |isbn=978-0-07-004908-6 |publisher=McGraw-Hill |page=129}}&lt;/ref&gt;&lt;ref&gt;{{Citation |last=Griffiths |first=David J. |author-link=David Griffiths (physicist) |year=1999 |title=Introduction to electrodynamics |edition=3rd |publisher=Prentice Hall |isbn=978-0-13-805326-0 |page=[https://archive.org/details/introductiontoel00grif_0/page/289 289] |url=https://archive.org/details/introductiontoel00grif_0/page/289 }}&lt;/ref&gt;
+
+Ohm's law has been observed on a wide range of length scales. In the early 20th century, it was thought that Ohm's law would fail at the [[Atomic spacing|atomic scale]], but experiments have not borne out this expectation. As of 2012, researchers have demonstrated that Ohm's law works for [[silicon]] wires as small as four atoms wide and one atom high.&lt;ref&gt;{{cite journal | last1 = Weber | first1 = B. | last2 = Mahapatra | first2 = S. | last3 = Ryu | first3 = H. | last4 = Lee | first4 = S. | last5 = Fuhrer | first5 = A. | last6 = Reusch | first6 = T. C. G. | last7 = Thompson | first7 = D. L. | last8 = Lee | first8 = W. C. T. | last9 = Klimeck | first9 = G. | last10 = Hollenberg | first10 = L. C. L. | last11 = Simmons | first11 = M. Y. | year = 2012 | title = Ohm's Law Survives to the Atomic Scale | journal = Science | volume = 335 | issue = 6064| pages = 64–67 | doi = 10.1126/science.1214319 |bibcode = 2012Sci...335...64W | pmid=22223802| s2cid = 10873901 | url = https://semanticscholar.org/paper/08a69a2747f537a91595cc4f004cf00f20214bab }}&lt;/ref&gt;
+
+==Microscopic origins==
+[[File:Electrona in crystallo fluentia.svg|thumb|200 px|right|Drude Model electrons (shown here in blue) constantly bounce among heavier, stationary crystal ions (shown in red).]]
+
+{{Main|Drude model}}
+
+The dependence of the current density on the applied electric field is essentially [[quantum mechanics|quantum mechanical]] in nature;  (see Classical and quantum conductivity.)  A qualitative description leading to Ohm's law can be based upon [[classical mechanics]] using the [[Drude model]] developed by [[Paul Drude]] in 1900.&lt;ref&gt;{{cite journal
+|last= Drude
+|first= Paul
+|title= Zur Elektronentheorie der Metalle
+|journal= Annalen der Physik
+|volume= 306
+|pages=566–613
+|issue=3
+|url= http://www3.interscience.wiley.com/cgi-bin/fulltext/112485959/PDFSTART
+|year= 1900
+|doi= 10.1002/andp.19003060312 |bibcode = 1900AnP...306..566D }}{{dead link|date=February 2019|bot=medic}}{{cbignore|bot=medic}}
+&lt;/ref&gt;&lt;ref&gt;{{cite journal
+|last= Drude
+|first= Paul
+|title= Zur Elektronentheorie der Metalle; II. Teil. Galvanomagnetische und thermomagnetische Effecte
+|journal= Annalen der Physik
+|volume= 308
+|issue=11
+|pages=369–402
+|url= http://www3.interscience.wiley.com/cgi-bin/fulltext/112485893/PDFSTART
+|year= 1900
+|doi= 10.1002/andp.19003081102 |bibcode = 1900AnP...308..369D }}{{dead link|date=February 2019|bot=medic}}{{cbignore|bot=medic}}
+&lt;/ref&gt;
+
+The Drude model treats [[electron]]s (or other charge carriers) like pinballs bouncing among the [[ion]]s that make up the structure of the material.  Electrons will be accelerated in the opposite direction to the electric field by the average electric field at their location. With each collision, though, the electron is deflected in a random direction with a velocity that is much larger than the velocity gained by the electric field.  The net result is that electrons take a zigzag path due to the collisions, but generally drift in a direction opposing the electric field.
+
+The [[drift velocity]] then determines the electric [[current density]] and its relationship to '''''E''''' and is independent of the collisions.  Drude calculated the average drift velocity from '''''p'''''&amp;nbsp;=&amp;nbsp;−''e'''E'''τ'' where '''''p''''' is the average [[momentum]], −''e'' is the charge of the electron and τ is the average time between the collisions.   Since both the momentum and the current density are proportional to the drift velocity, the current density becomes proportional to the applied electric field; this leads to Ohm's law.
+
+==Hydraulic analogy==
+
+A [[hydraulic analogy]] is sometimes used to describe Ohm's law.  Water pressure, measured by [[pascal (unit)|pascals]] (or [[pounds per square inch|PSI]]), is the analog of voltage because establishing a water pressure difference between two points along a (horizontal) pipe causes water to flow.  Water flow rate, as in [[liter]]s per second, is the analog of current, as in [[coulomb]]s per second. Finally, flow restrictors—such as apertures placed in pipes between points where the water pressure is measured—are the analog of resistors. We say that the rate of water flow through an aperture restrictor is proportional to the difference in water pressure across the restrictor. Similarly, the rate of flow of electrical charge, that is, the electric current, through an electrical resistor is proportional to the difference in voltage measured across the resistor.
+
+Flow and pressure variables can be calculated in fluid flow network with the use of the hydraulic ohm analogy.&lt;ref&gt;{{cite book |author1=A. Akers |author2=M. Gassman |author3=R. Smith  |name-list-style=amp | title = Hydraulic Power System Analysis | publisher = New York: Taylor &amp; Francis | year = 2006 | pages = Chapter 13 | isbn = 978-0-8247-9956-4 | url = https://books.google.com/books?id=Uo9gpXeUoKAC&amp;q=ohm+intitle:Hydraulic+intitle:Power+intitle:System+intitle:Analysis&amp;pg=PA299 | no-pp = true }}&lt;/ref&gt;&lt;ref&gt;A. Esposito, &quot;A Simplified Method for Analyzing Circuits by Analogy&quot;, ''Machine Design'', October 1969, pp. 173–177.&lt;/ref&gt;  The method can be applied to both steady and transient flow situations.  In the linear [[laminar flow]] region, [[Poiseuille's law]] describes the hydraulic resistance of a pipe, but in the [[turbulent flow]] region the pressure–flow relations become nonlinear.
+
+The hydraulic analogy to Ohm's law has been used, for example, to approximate blood flow through the circulatory system.&lt;ref&gt;{{cite book |last1=Guyton |first1=Arthur |last2=Hall |first2=John |editor1-first=Rebecca |editor1-last=Gruliow |title=Textbook of Medical Physiology |edition=11th |year=2006 |publisher=Elsevier Inc. |location=Philadelphia, Pennsylvania |isbn=978-0-7216-0240-0 |page=164  |chapter=Chapter 14: Overview of the Circulation; Medical Physics of Pressure, Flow, and Resistance}}&lt;/ref&gt;
+
+==Circuit analysis==
+[[File:Ohm_law_mnemonic_principle.svg|thumb|upright|Covering the [[Equation#Parameters_and_unknowns|unknown]] in the Ohm's law [[mnemonic#Types|image mnemonic]] gives the formula in terms of the remaining parameters]]
+[[File:Ohms law wheel WVOA.svg|thumb|right|Ohm's law wheel with international unit symbols]]
+
+In [[circuit analysis]], three equivalent expressions of Ohm's law are used interchangeably:
+
+:&lt;math&gt;I = \frac{V}{R} \quad \text{or}\quad V = IR \quad \text{or} \quad R = \frac{V}{I}. &lt;/math&gt;
+
+Each equation is quoted by some sources as the defining relationship of Ohm's law,&lt;ref name=Millikan/&gt;&lt;ref&gt;{{cite book
+ | title = Electric circuits
+ |author1=James William Nilsson  |author2=Susan A. Riedel
+  |name-list-style=amp | publisher = Prentice Hall
+ | year = 2008
+ | isbn = 978-0-13-198925-2
+ | page = 29
+ | url = https://books.google.com/books?id=sxmM8RFL99wC&amp;q=%22Ohm%27s+law+expresses+the+voltage%22++%22V+%3D+iR%22&amp;pg=PA29
+ }}&lt;/ref&gt;&lt;ref&gt;{{cite book
+ | title = Schaum's outline of theory and problems of beginning physics II
+ |author1=Alvin M. Halpern  |author2=Erich Erlbach
+  |name-list-style=amp | publisher = McGraw-Hill Professional
+ | year = 1998
+ | isbn = 978-0-07-025707-8
+ | page = 140
+ | url = https://books.google.com/books?id=vN2chIay624C&amp;q=%22Ohm%27s+law+that+R%3D+V/I+is+a+constant%22&amp;pg=PA140
+ }}&lt;/ref&gt;
+or all three are quoted,&lt;ref&gt;{{cite book
+ | title = Understanding DC circuits
+ |author1=Dale R. Patrick  |author2=Stephen W. Fardo
+  |name-list-style=amp | publisher = Newnes
+ | year = 1999
+ | isbn = 978-0-7506-7110-1
+ | page = 96
+ | url = https://books.google.com/books?id=wyC5SFtZskMC&amp;q=%22Ohm%27s+law%22+%22R+%3D%22+%22V+%3D%22+%22I+%3D%22&amp;pg=PA96
+ }}&lt;/ref&gt; or derived from a proportional form,&lt;ref&gt;{{cite book
+ | title = Elementary electrical calculations
+ | author = Thomas O'Conor Sloane
+ | publisher = D. Van Nostrand Co
+ | year = 1909
+ | page = [https://archive.org/details/elementaryelect01sloagoog/page/n57 41]
+ | url = https://archive.org/details/elementaryelect01sloagoog
+ | quote = R= Ohm's law proportional.
+ }}&lt;/ref&gt;
+or even just the two that do not correspond to Ohm's original statement may sometimes be given.&lt;ref&gt;{{cite book
+ | title = Electricity treated experimentally for the use of schools and students
+ | author = Linnaeus Cumming
+ | publisher = Longman's Green and Co
+ | year = 1902
+ | page = [https://archive.org/details/electricitytrea00cummgoog/page/n242 220]
+ | url = https://archive.org/details/electricitytrea00cummgoog
+ | quote = V=IR Ohm's law.
+ }}&lt;/ref&gt;&lt;ref&gt;{{cite book
+ | title = Building technology
+ | edition = 2nd
+ | author = Benjamin Stein
+ | publisher = John Wiley and Sons
+ | year = 1997
+ | isbn = 978-0-471-59319-5
+ | page = 169
+ | url = https://books.google.com/books?id=J_RSbj_KzAQC&amp;q=%22Ohm%27s+law+that+V%3D%22&amp;pg=PA169
+ }}&lt;/ref&gt;
+
+The interchangeability of the equation may be represented by a triangle, where ''V'' ([[voltage]]) is placed on the top section, the ''I'' ([[electric current|current]]) is placed to the left section, and the ''R'' ([[electrical resistance|resistance]]) is placed to the right. The divider between the top and bottom sections indicates division (hence the division bar).
+
+{{anchor|ohmic}}
+
+===Resistive circuits===
+[[Resistor]]s are circuit elements that impede the passage of [[electric charge]] in agreement with Ohm's law, and are designed to have a specific resistance value ''R''. In schematic diagrams, a resistor is shown as a long rectangle or zig-zag symbol. An element (resistor or conductor) that behaves according to Ohm's law over some operating range is referred to as an ''ohmic device'' (or an ''ohmic resistor'') because Ohm's law and a single value for the resistance suffice to describe the behavior of the device over that range.
+
+Ohm's law holds for circuits containing only resistive elements (no capacitances or inductances) for all forms of driving voltage or current, regardless of whether the driving voltage or current is constant ([[direct current|DC]]) or time-varying such as [[alternating current|AC]].  At any instant of time Ohm's law is valid for such circuits.
+
+Resistors which are in ''[[Series and parallel circuits#Series circuits|series]]'' or in ''[[Series and parallel circuits#Parallel circuits|parallel]]'' may be grouped together into a single &quot;equivalent resistance&quot; in order to apply Ohm's law in analyzing the circuit.
+
+===Reactive circuits with time-varying signals===
+
+When reactive elements such as capacitors, inductors, or transmission lines are involved in a circuit to which AC or time-varying voltage or current is applied, the relationship between voltage and current becomes the solution to a [[differential equation]], so Ohm's law (as defined above) does not directly apply since that form contains only resistances having value ''R'', not complex impedances which may contain capacitance (''C'') or inductance (''L'').
+
+Equations for [[time-invariant]] [[alternating current|AC]] circuits take the same form as Ohm's law. However, the variables are generalized to [[complex number]]s and the current and voltage waveforms are [[complex exponential]]s.&lt;ref&gt;{{cite book | title = Fundamentals of Electrical Engineering | author = Rajendra Prasad | publisher = Prentice-Hall of India | year = 2006 | url = https://books.google.com/books?id=nsmcbzOJU3kC&amp;q=ohm%27s-law+complex+exponentials&amp;pg=PA140 | isbn = 978-81-203-2729-0 }}&lt;/ref&gt;
+
+In this approach, a voltage or current waveform takes the form ''Ae''{{sup|''st''}}, where ''t'' is time, ''s'' is a complex parameter, and ''A'' is a complex scalar.  In any [[LTI system theory|linear time-invariant system]], all of the currents and voltages can be expressed with the same ''s'' parameter as the input to the system, allowing the time-varying complex exponential term to be canceled out and the system described algebraically in terms of the complex scalars in the current and voltage waveforms.
+
+The complex generalization of resistance is [[electrical impedance|impedance]], usually denoted ''Z''; it can be shown that for an inductor,
+
+:&lt;math&gt;Z = sL&lt;/math&gt;
+
+and for a capacitor,
+
+:&lt;math&gt;Z = \frac{1}{sC}.&lt;/math&gt;
+
+We can now write,
+
+:&lt;math&gt;\boldsymbol{V} = \boldsymbol{I} \cdot \boldsymbol{Z}&lt;/math&gt;
+
+where '''''V''''' and '''''I''''' are the complex scalars in the voltage and current respectively and '''''Z''''' is the complex impedance.
+
+This form of Ohm's law, with ''Z'' taking the place of ''R'', generalizes the simpler form.  When ''Z'' is complex, only the real part is responsible for dissipating heat.
+
+In the general AC circuit, ''Z'' varies strongly with the frequency parameter ''s'', and so also will the relationship between voltage and current.
+
+For the common case of a steady [[Sine wave|sinusoid]], the ''s'' parameter is taken to be &lt;math&gt;j\omega&lt;/math&gt;, corresponding to a complex sinusoid &lt;math&gt;Ae^{\mbox{ } j \omega t}&lt;/math&gt;.  The real parts of such complex current and voltage waveforms describe the actual sinusoidal currents and voltages in a circuit, which can be in different phases due to the different complex scalars.
+
+===Linear approximations===
+{{See also|Small-signal modeling|Network analysis (electrical circuits)#Small signal equivalent circuit}}
+
+Ohm's law is one of the basic equations used in the [[Network analysis (electrical circuits)|analysis of electrical circuits]].  It applies to both metal conductors and circuit components ([[resistor]]s) specifically made for this behaviour.  Both are ubiquitous in electrical engineering.  Materials and components that obey Ohm's law are described as &quot;ohmic&quot;&lt;ref&gt;Hughes, E, ''Electrical Technology'', pp10, Longmans, 1969.&lt;/ref&gt; which means they produce the same value for resistance (''R'' = ''V''/''I'') regardless of the value of ''V'' or ''I'' which is applied and whether the applied voltage or current is DC ([[direct current]]) of either positive or negative polarity or AC ([[alternating current]]).
+
+In a true ohmic device, the same value of resistance will be calculated from ''R'' = ''V''/''I'' regardless of the value of the applied voltage ''V''.  That is, the ratio of ''V''/''I'' is constant, and when current is plotted as a function of voltage the curve is ''linear'' (a straight line).  If voltage is forced to some value ''V'', then that voltage ''V'' divided by measured current ''I'' will equal ''R''.  Or if the current is forced to some value ''I'', then the measured voltage ''V'' divided by that current ''I'' is also ''R''.  Since the plot of ''I'' versus ''V'' is a straight line, then it is also true that for any set of two different voltages ''V''&lt;sub&gt;1&lt;/sub&gt; and ''V''&lt;sub&gt;2&lt;/sub&gt; applied across a given device of resistance ''R'', producing currents ''I''&lt;sub&gt;1&lt;/sub&gt; = ''V''&lt;sub&gt;1&lt;/sub&gt;/''R'' and ''I''&lt;sub&gt;2&lt;/sub&gt; = ''V''&lt;sub&gt;2&lt;/sub&gt;/''R'', that the ratio (''V''&lt;sub&gt;1&lt;/sub&gt; − ''V''&lt;sub&gt;2&lt;/sub&gt;)/(''I''&lt;sub&gt;1&lt;/sub&gt; − ''I''&lt;sub&gt;2&lt;/sub&gt;) is also a constant equal to ''R''.  The operator &quot;delta&quot; (Δ) is used to represent a difference in a quantity, so we can write Δ''V'' = ''V''&lt;sub&gt;1&lt;/sub&gt; − ''V''&lt;sub&gt;2&lt;/sub&gt; and Δ''I'' = ''I''&lt;sub&gt;1&lt;/sub&gt; − ''I''&lt;sub&gt;2&lt;/sub&gt;.  Summarizing, for any truly ohmic device having resistance ''R'', ''V''/''I'' = Δ''V''/Δ''I'' = ''R'' for any applied voltage or current or for the difference between any set of applied voltages or currents.
+
+[[File:FourIVcurves.svg|thumb|400px|The [[Current–voltage characteristic|''I''–''V'' curve]]s of four devices: Two [[resistor]]s, a [[diode]], and a [[Battery (electricity)|battery]]. The two resistors follow Ohm's law: The plot is a straight line through the origin. The other two devices do ''not'' follow Ohm's law.]]
+
+There are, however, components of electrical circuits which do not obey Ohm's law; that is, their relationship between current and voltage (their [[Current–voltage characteristic|''I''–''V'' curve]]) is ''nonlinear'' (or non-ohmic).  An example is the [[Diode#Shockley diode equation|p–n junction diode]] (curve at right).  As seen in the figure, the current does not increase linearly with applied voltage for a diode.  One can determine a value of current (''I'') for a given value of applied voltage (''V'') from the curve, but not from Ohm's law, since the value of &quot;resistance&quot; is not constant as a function of applied voltage.  Further, the current only increases significantly if the applied voltage is positive, not negative.  The ratio ''V''/''I'' for some point along the nonlinear curve is sometimes called the ''static'', or ''chordal'', or [[direct current|DC]], resistance,&lt;ref&gt;{{cite book | title = Engineering System Dynamics | author = Forbes T. Brown | publisher = CRC Press | year = 2006 | isbn = 978-0-8493-9648-9 | page = 43 | url = https://books.google.com/books?id=UzqX4j9VZWcC&amp;q=%22chordal+resistance%22&amp;pg=PA43 }}&lt;/ref&gt;&lt;ref&gt;{{cite book | title = Electromagnetic Compatibility Handbook | author = Kenneth L. Kaiser | publisher = CRC Press | year = 2004 | isbn = 978-0-8493-2087-3 | pages = 13–52 | url = https://books.google.com/books?id=nZzOAsroBIEC&amp;q=%22static+resistance%22+%22dynamic+resistance%22+nonlinear&amp;pg=PT1031 }}&lt;/ref&gt; but as seen in the figure the value of total ''V'' over total ''I'' varies depending on the particular point along the nonlinear curve which is chosen.  This means the &quot;DC resistance&quot; V/I at some point on the curve is not the same as what would be determined by applying an AC signal having peak amplitude Δ''V'' volts or Δ''I'' amps centered at that same point along the curve and measuring Δ''V''/Δ''I''. However, in some diode applications, the AC signal applied to the device is small and it is possible to analyze the circuit in terms of the ''dynamic'', ''small-signal'', or ''incremental'' resistance, defined as the one over the slope of the ''V''–''I'' curve at the average value (DC operating point) of the voltage (that is, one over the [[derivative]] of current with respect to voltage).  For sufficiently small signals, the dynamic resistance allows the Ohm's law small signal resistance to be calculated as approximately one over the slope of a line drawn tangentially to the ''V''–''I'' curve at the DC operating point.&lt;ref name=horowitz-hill&gt;{{cite book |last=Horowitz |first=Paul |author-link=Paul Horowitz |author2=Winfield Hill | title=The Art of Electronics |edition=2nd |year=1989 |publisher=Cambridge University Press |isbn=978-0-521-37095-0 |page = 13 | url = https://books.google.com/books?id=bkOMDgwFA28C&amp;q=small-signal+%22dynamic+resistance%22&amp;pg=PA13 |author2-link=Winfield Hill }}&lt;/ref&gt;
+
+==Temperature effects==
+Ohm's law has sometimes been stated as, &quot;for a conductor in a given state, the electromotive force is proportional to the current produced.&quot;  That is, that the resistance, the ratio of the applied [[electromotive force]] (or voltage) to the current, &quot;does not vary with the current strength .&quot;  The qualifier &quot;in a given state&quot; is usually interpreted as meaning &quot;at a constant temperature,&quot; since the resistivity of materials is usually temperature dependent. Because the conduction of current is related to [[Joule heating]] of the conducting body, according to [[Joule's first law]], the temperature of a conducting body may change when it carries a current.  The dependence of resistance on temperature therefore makes resistance depend upon the current in a typical experimental setup, making the law in this form difficult to directly verify.  [[James Clerk Maxwell|Maxwell]] and others worked out several methods to test the law experimentally in 1876, controlling for heating effects.&lt;ref&gt;
+{{cite journal
+ | journal = Nature
+ | volume = 14
+ | issue = 360
+ | title = Reports
+ | editor = Normal Lockyer
+ | publisher = Macmillan Journals Ltd
+ | date = September 21, 1876
+ | pages = 451–459 [452]
+ | doi = 10.1038/014451a0
+ | url = https://books.google.com/books?id=-8gKAAAAYAAJ&amp;q=ohm's-law%20temperature&amp;pg=PA452
+ |bibcode = 1876Natur..14..451. | doi-access = free
+ }}&lt;/ref&gt;
+
+==Relation to heat conductions==
+{{See also|Conduction (heat)}}
+Ohm's principle predicts the flow of electrical charge (i.e. current) in electrical conductors when subjected to the influence of voltage differences; [[Jean Baptiste Joseph Fourier|Jean-Baptiste-Joseph Fourier]]'s principle predicts the flow of [[heat]] in heat conductors when subjected to the influence of temperature differences.
+
+The same equation describes both phenomena, the equation's variables taking on different meanings in the two cases. Specifically, solving a heat conduction (Fourier) problem with ''[[temperature]]'' (the driving &quot;force&quot;) and ''[[flux|flux of heat]]'' (the rate of flow of the driven &quot;quantity&quot;, i.e. heat energy) variables also solves an analogous [[electrical conduction]] (Ohm) problem having ''[[electric potential]]'' (the driving &quot;force&quot;) and ''[[electric current]]'' (the rate of flow of the driven &quot;quantity&quot;, i.e. charge) variables.

@@ -1,0 +1,187 @@
+:*{{math|''&amp;mu;''}} must return results in the [[unit interval]] [0, 1], returning 0 for the empty set and 1 for the entire space.
+
+:*{{math|''&amp;mu;''}} must satisfy the ''countable additivity'' property that for all [[countable]] collections &lt;math&gt;\{E_i\}&lt;/math&gt; of pairwise [[disjoint sets]]: 
+::&lt;math&gt; \mu\Bigl(\bigcup_{i \in I} E_i\Bigr) = \sum_{i \in I} \mu(E_i).&lt;/math&gt;
+
+For example, given three elements 1, 2 and 3 with probabilities 1/4, 1/4 and 1/2, the value assigned to {1, 3} is 1/4 + 1/2 = 3/4, as in the diagram on the right.
+
+The [[conditional probability]] based on the intersection of events defined as:
+
+:&lt;math&gt;\mu (B \mid A) = \frac{\mu(A \cap B)}{\mu(A)}.&lt;/math&gt;
+
+satisfies the probability measure requirements so long as &lt;math&gt;\mu(A)&lt;/math&gt; is not zero.&lt;ref&gt;''Probability, Random Processes, and Ergodic Properties'' by Robert M. Gray 2009 {{isbn|1-4419-1089-1}} [https://books.google.com/books?id=x-VbL8mZWl8C&amp;pg=PA163 page 163]&lt;/ref&gt;
+
+Probability measures are distinct from the more general notion of [[Fuzzy measure theory|fuzzy measures]] in which there is no requirement that the fuzzy values sum up to 1, and the additive property is replaced by an order relation based on [[set inclusion]].
+
+==Example applications==
+''Market measures'' which assign probabilities to [[financial market]] spaces based on actual market movements are examples of probability measures which are of interest in [[mathematical finance]], e.g. in the pricing of [[financial derivative]]s.&lt;ref&gt;''Quantitative methods in derivatives pricing'' by Domingo Tavella 2002 {{isbn|0-471-39447-5}} [https://books.google.com/books?id=dHIMulKy8dYC&amp;pg=PA11 page 11]&lt;/ref&gt; For instance, a [[risk-neutral measure]] is a probability measure which assumes that the current value of assets is the [[expected value]] of the future payoff taken with respect to that same risk neutral measure (i.e. calculated using the corresponding risk neutral density function), and  [[discounted]] at the [[risk-free rate]]. If there is a unique probability measure that must be used to price assets in a market, then the market is called a [[complete market]].&lt;ref&gt;''Irreversible decisions under uncertainty'' by Svetlana I. Boyarchenko, Serge Levendorskiĭ 2007 {{isbn|3-540-73745-6}} [https://books.google.com/books?id=lpsrP5mQG_QC&amp;pg=PA11 page 11]&lt;/ref&gt;
+
+Not all measures that intuitively represent chance or likelihood are probability measures. For instance, although the fundamental concept of a system in [[statistical mechanics]] is a measure space, such measures are not always probability measures.&lt;ref name=stern/&gt; In general, in statistical physics, if we consider sentences of the form &quot;the probability of a system S assuming state A is p&quot; the geometry of the system does not always lead to the definition of a probability measure [[congruence relation|under congruence]], although it may do so in the case of systems with just one degree of freedom.&lt;ref name=gut/&gt;
+
+Probability measures are also used in [[mathematical biology]].&lt;ref&gt;''Mathematical Methods in Biology'' by J. David Logan, William R. Wolesensky 2009 {{isbn|0-470-52587-8}} [https://books.google.com/books?id=6GGyquH8kLcC&amp;pg=PA195 page 195]&lt;/ref&gt; For instance, in comparative [[sequence analysis]] a probability measure may be defined for the likelihood that a variant may be permissible for an [[amino acid]] in a sequence.&lt;ref&gt;''Discovering biomolecular mechanisms with computational biology'' by Frank Eisenhaber 2006 {{isbn|0-387-34527-2}} [https://books.google.com/books?id=Pygg7cIZTwIC&amp;pg=PA127 page 127]&lt;/ref&gt;
+
+[[Ultrafilter|Ultrafilters]] can be understood as &lt;math&gt;\{0,1\}&lt;/math&gt;-valued probability measures, allowing for many intuitive proofs based upon measures. For instance, [[Hindman’s theorem|Hindman's Theorem]] can be proven from the further investigation of these measures, and their [[convolution]] in particular.
+
+==See also==
+*[[Borel measure]]
+*[[Fuzzy measure]]
+*[[Haar measure]]
+*[[Martingale measure]]
+*[[Lebesgue measure]]
+
+==References==
+{{Reflist}}
+
+==Further reading==
+*{{cite book |title=Probability and Measure |first=Patrick |last=Billingsley |authorlink=Patrick Billingsley |year=1995 |publisher=John Wiley |isbn=0-471-00710-2 }}
+*{{cite book |title=Probability &amp; Measure Theory |first=Robert B. |last=Ash |first2=Catherine A. |last2=Doléans-Dade |year=1999 |publisher=Academic Press |isbn= 0-12-065202-1}}
+
+==External links==
+*{{Commonscat-inline}}
+
+[[Category:Measures (measure theory)]]
+[[Category:Experiment (probability theory)]]
+
+[[pl:Miara probabilistyczna]]</text>
+      <sha1>1k87quajem69k7oz194hzxp99mkjc75</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Painterliness</title>
+    <ns>0</ns>
+    <id>45438</id>
+    <revision>
+      <id>966031887</id>
+      <parentid>966029972</parentid>
+      <timestamp>2020-07-04T20:59:04Z</timestamp>
+      <contributor>
+        <username>Bus stop</username>
+        <id>2299668</id>
+      </contributor>
+      <comment>Please provide the source supporting that the term &quot;painterly&quot; can apply to &quot;music&quot;.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3930" xml:space="preserve">{{Refimprove|date=September 2010}}
+[[File:Matisse - Vase of Sunflowers (1898).jpg|thumb|upright|[[Henri Matisse]], ''Vase of Sunflowers'', 1898–99, [[State Hermitage Museum]] [[Saint Petersburg, Russia]].]]
+
+[[File:Eugenie Baizerman - Mother and Child c 1949.jpg|thumb|[[Eugenie Baizerman]], ''Mother and Child'', c. 1949]]
+
+'''Painterliness''' is a concept based on '''''{{lang-de|malerisch}}''''' ('painterly'), a word popularized by Swiss [[art historian]] [[Heinrich Wölfflin]] (1864–1945) to help focus, enrich and standardize the terms being used by art historians of his time to characterize [[Work of art|works of art]].
+
+A painting is said to be ''painterly'' when there are visible [[Brush#Paintbrushes|brushstroke]]s in the final work – the result of applying paint in a manner that is not entirely controlled, generally without closely following carefully drawn lines. Any painting media – oils, acrylics, watercolors, gouache, etc. – can produce either linear or painterly work. Some artists whose work could be characterized as painterly are [[Pierre Bonnard]], [[Francis Bacon (artist)|Francis Bacon]], [[Vincent van Gogh]], [[Rembrandt Harmenszoon van Rijn|Rembrandt]], [[Pierre-Auguste Renoir|Renoir]], [[John Singer Sargent]], and [[Andrew Wyeth]] (his early watercolors). The [[Impressionism|Impressionists]], [[Fauvism|Fauvists]] and the [[Abstract Expressionism|Abstract Expressionists]] tended strongly to be painterly.
+
+Painterly art often makes use of the many visual effects produced by paint on canvas, such as chromatic progression, warm and cool tones, [[Color wheel|complementary and contrasting colors]], broken tones, broad brushstrokes, [[Sketch (drawing)|sketchiness]], and [[impasto]].
+
+==Linear art==
+The opposite of painterly is ''linear'', ''plastic'' or ''formal linear'' design.&lt;ref&gt;For further clarification of the meaning of ''malerisch'' read ''Francis Bacon: Logic of Sensation'' by [[Gilles Deleuze]].&lt;/ref&gt;
+''Linear'' could describe the painting of artists such as [[Sandro Botticelli|Botticelli]], [[Michelangelo]], and [[Jean Auguste Dominique Ingres|Ingres]], whose works depend on creating the illusion of a degree of [[three-dimensional]]ity by means of &quot;modeling the form&quot; through skillful drawing, shading, and an academic (rather than impulsive) use of color. Contour and pattern are more the province of linear artists, while dynamism is the most common painterly trait.
+
+==Other usage==
+Although ''painterly'' generally refers to a certain use of paint in art, it happens that some forms of [[sculpture]] make use of apparently random surface effects which, if not exactly resembling brushstrokes, contain the traits of painterliness.&lt;ref&gt;{{cite book |last=Wölfflin |first=Heinrich |year=2012 |url=https://books.google.com/books?id=pjwhZxy7fYAC&amp;pg=PA54 |title=Principles of Art History |publisher=Courier Dover Publications |page=54 |isbn=9780486141763}}&lt;/ref&gt; The application of the term  outside the realm of painting may help the viewer, or listener, experience more deeply the significance of [[Auguste Rodin]]'s surfaces or [[Richard Strauss]]'s flow of chromatic harmonies.
+
+More recently, &quot;painterly&quot; is used to describe computer software, especially mobile apps, designed to create special effects on photographs, mimicking recognizable artistic media such as oils, watercolors, Japanese woodcuts, etc., or based on individual styles like [[van Gogh]], [[Monet]], and so on. The resulting photographs, once transformed, are also called &quot;painterly&quot;.&lt;ref&gt;http://iphonephotographyschool.com/painterly-apps/&lt;/ref&gt;
+
+==See also==
+*[[Expressionism]]
+*[[Abstract expressionism]]
+*[[Flatness (art)]]
+*[[Tachisme]]
+*[[Action painting]]
+*[[Lyrical abstraction]]
+*[[Neo-expressionism]]
+*[[Western painting]]
+*[[History of painting]]
+*[[Painting]]
+*[[Medium specificity]]
+
+==Notes and references==
+{{reflist}}
+
+[[Category:Painting]]
+[[Category:Concepts in aesthetics]]</text>
+      <sha1>mj82cgepzksw5z1mdurn5wj9p3hyko4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Physiocracy</title>
+    <ns>0</ns>
+    <id>45440</id>
+    <revision>
+      <id>988998046</id>
+      <parentid>987682873</parentid>
+      <timestamp>2020-11-16T13:35:19Z</timestamp>
+      <contributor>
+        <username>TheEpicGhosty</username>
+        <id>35773006</id>
+      </contributor>
+      <comment>added capitalism sidebar</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="19932" xml:space="preserve">{{short description|Economic theory of French origin that emphasizes value derived from the land}}
+{{wikt | physiocracy}}
+[[Image:Quesnay Portrait.jpg|thumb|right| [[François Quesnay]], a physician who is considered the founding father of physiocracy, published the &quot;Tableau économique&quot; (Economic Table) in 1758]]
+[[Image:Pierre Samuel du Pont de Nemours (1739-1817).png|thumb|right| [[Pierre Samuel du Pont de Nemours]], a prominent physiocrat. In his book ''La Physiocratie'', du Pont advocated low tariffs and free trade.]]
+{{Capitalism sidebar}}
+'''Physiocracy''' ({{Lang-fr| physiocratie}}; from the [[Greek language|Greek]] for &quot;government of nature&quot;) is an [[economic theory]] developed by a group of 18th-century [[Age of Enlightenment]] French [[economists]] who believed that the wealth of nations derived solely from the value of &quot;land [[agriculture]]&quot; or &quot;[[land development]]&quot; and that agricultural products should be highly priced.&lt;ref&gt;{{cite web|title= physiocrat|url= http://www.oxforddictionaries.com/definition/english/physiocrat?q=physiocracy#physiocrat__5|work= Oxford Dictionaries|publisher= Oxford University Press|accessdate= 27 October 2013}}&lt;/ref&gt; Their theories originated in [[France]] and were most popular during the second half of the 18th century. Physiocracy became one of the first well-developed theories of [[economics]].
+
+[[François Quesnay]] (1694–1774), [[Victor de Riqueti, marquis de Mirabeau|the marquis de Mirabeau]] (1715-1789) and [[Anne-Robert-Jacques Turgot]] (1727–1781) dominated the movement,&lt;ref name=&quot;Steiner 2003 p62&quot;&gt;Steiner (2003), pp. 61–62&lt;/ref&gt; which immediately preceded the first modern school, [[classical economics]], which began with the publication of [[Adam Smith]]'s ''[[The Wealth of Nations]]'' in 1776.
+
+The physiocrats made a significant contribution in their emphasis on productive work as the source of national wealth. This contrasted with earlier schools, in particular [[mercantilism]], which often focused on the ruler's wealth, accumulation of gold, or the [[balance of trade]]. Whereas the mercantilist school of economics held that value in the products of society was created at the point of sale,&lt;ref name=&quot;:0&quot; /&gt; by the seller exchanging his products for more money than the products had &quot;previously&quot; been worth, the physiocratic school of economics was the first to see [[manual labor|labor]] as the sole source of value.  However, for the physiocrats, only agricultural labor created this value in the products of society.&lt;ref name=&quot;:0&quot;&gt;Karl Marx and Frederick Engels (1988), pp. 348, 355, 358.&lt;/ref&gt;  All &quot;industrial&quot; and non-agricultural labors were &quot;unproductive appendages&quot; to agricultural labor.&lt;ref name=&quot;:0&quot; /&gt;
+
+Quesnay was likely influenced by his medical training. The earlier work of William Harvey had explained how blood flow and the circulatory system is vital to the human body; Quesay held that the circulation of wealth was vital to the economy. Societies at the time were also overwhelmingly agrarian. This may be why they viewed agriculture as the primary source of a nation's wealth. This is an idea which Quesay purported to demonstrate with data, comparing a workshop to a farm. He analyzed &quot;how money flowed between the three classes of farmers, proprietors, and artisans, in the same mechanical way that blood flows between different organs&quot; and claimed only the farm produced a surplus that added to the nation's wealth.
+Physiocrats viewed the production of [[goods and services]] as equivalent to the [[Consumption (economics)|consumption]] of the agricultural surplus, since human or animal muscle provided the main source of power and all energy derived from the surplus from agricultural production.  Profit in capitalist production was really only the [[Economic Rent|&quot;rent&quot;]] obtained by the owner of the land on which the agricultural production took place.&lt;ref name=&quot;:0&quot; /&gt;
+
+&quot;The physiocrats damned cities for their artificiality and praised more [[natural]] styles of living. They celebrated farmers.&quot;&lt;ref&gt;''Why Americans Value Rural Life'' by [[David B. Danbom]]&lt;/ref&gt; They called themselves [[Economist|''les Économistes'']], but are generally referred to as &quot;physiocrats&quot; to distinguish them from the many schools of economic thought that followed them.&lt;ref name=&quot;:1&quot;&gt;
+''The Penguin Dictionary of Economics'', George Bannock, R. E. Baxter and Evan Davis. 5th Edition. Penguin Books 1992 p. 329.
+&lt;/ref&gt;
+
+==Precursors==
+Physiocracy is an [[Agrarianism|agrarianist]] philosophy which developed in the context of the prevalent European rural society of the time. In the late [[Roman Republic]], the dominant [[Roman Senate|senatorial class]] was not allowed to engage in banking or commerce&lt;ref name=&quot;Byrd, 34&quot;&gt;Byrd (1995), 34&lt;/ref&gt; but relied on their ''[[latifundia]]'', large plantations, for income. They circumvented this rule through freedmen proxies who sold surplus agricultural goods.
+
+Other inspiration came from [[Economic history of China (pre-1911)|China's economic system]], then the largest in the world. Chinese society broadly distinguished [[four occupations]], with [[scholar-bureaucrats]] (who were also [[Gentry (China)|agrarian landlords]]) at the top and merchants at the bottom (because they did not produce but only distributed goods made by others). Leading physiocrats like [[François Quesnay]] were avid [[Confucianism|Confucianists]] who advocated China's agrarian policies.&lt;ref name=&quot;:2&quot;&gt;Derk Bodde (2005), [http://www.learn.columbia.edu/nanxuntu/html/state/ideas.pdf Chinese Ideas in the West] p.6, Reprinted with permission in China: A Teaching Workbook, Asia for Educators, Columbia University&lt;/ref&gt; Some scholars have advocated connections with the school of [[agriculturalism]], which promoted utopian communalism.&lt;ref&gt;Maverick, Lewis A. (1938). &quot;Chinese Influences Upon the Physiocrats&quot;. Economic History 3.&lt;/ref&gt; One of the integral parts of physiocracy, [[laissez-faire]], was adopted from Quesnay's writings on China,&lt;ref name=Baghdiantz&gt;{{cite book|last=Baghdiantz McCabe|first=Ina|title=Orientalism in Early Modern France: Eurasian Trade Exoticism and the Ancien Regime|year=2008|publisher=Berg Publishers|isbn=978-1-84520-374-0|pages=271–72}}&lt;/ref&gt; being a translation of the Chinese term [[wu wei]].&lt;ref&gt;{{cite book|last=Clarke|first=J.J.|title=Oriental Enlightenment: The Encounter Between Asian and Western Thought|year=1997|publisher=Routledge|isbn=978-0415133760|page=50}}&lt;/ref&gt; The concept natural order of physiocracy originated from &quot;Way of Nature&quot; of Chinese Taoism.&lt;ref name=&quot;:2&quot; /&gt;
+
+==History==
+The growing power of the centralized state control in the era of [[enlightened absolutism]] necessitated centralized systematic information on the nation. A major innovation was the collection, use and interpretation of numerical and statistical data, ranging from trade statistics, harvest reports, and death notices to population censuses. Starting in the 1760s, officials in France and Germany began increasingly to rely on quantitative data for systematic planning, especially regarding long-term economic growth. It combined the utilitarian agenda of &quot;enlightened absolutism&quot; with the new ideas being developed in  economics. In Germany the trend was especially strong in [[Cameralism]] while in France it was an important theme in physiocracy.&lt;ref&gt;Lars Behrisch, &quot;Statistics and Politics in the 18th Century.&quot; ''Historical Social Research/Historische Sozialforschung'' (2016) 41#2: 238-257. [https://dspace.library.uu.nl/bitstream/handle/1874/357697/Statistics.pdf?sequence=1 online]&lt;/ref&gt;
+
+[[Pierre Le Pesant, sieur de Boisguilbert]] served as a member of [[Louis XIV]]'s local administration of Paris, and wrote pamphlets and booklets on subjects related to his work: taxation, grain trade, and money. Le Pesant asserted that wealth came from [[homo economicus|self-interest]] and markets were connected by money flows (i.e. an expense for the buyer is revenue for the producer). Thus he realized that lowering prices in times of shortage – common at the time – was dangerous economically as it acted as a disincentive to production. Generally, Le Pesant advocated less government interference in the grain market, as any such interference would generate &quot;anticipations&quot; which would prevent the policy from working.&lt;ref name=&quot;Steiner 2003 p. 61&quot;&gt;Steiner (2003), p. 61&lt;/ref&gt;
+
+For instance, if the government bought corn abroad, some people would speculate that there was likely to be a shortage and would buy more corn, leading to higher prices and more of a shortage. This was an early example of advocacy of free trade. In anonymously published tracts, [[Vauban]] proposed a system known as ''La dîme royale'': this involved major simplification of the French tax code by switching to a relatively [[flat tax]] on property and trade. Vauban's use of statistics contrasted with earlier empirical methods in economics.&lt;ref name=&quot;Steiner 2003 p62&quot; /&gt;
+
+The event that led [[Victor de Riqueti, marquis de Mirabeau|Mirabeau]] to devote himself to political economy was undoubtedly his work on a manuscript of [[Richard Cantillon]]'s ''Essai sur la nature du commerce en général'', which he had in his possession as early as 1740&lt;ref&gt;{{Cite journal|last=Bertholet|first=Auguste|date=2020|title=The intellectual origins of Mirabeau|journal=History of European Ideas|volume=|pages=1–5|doi=10.1080/01916599.2020.1763745}}&lt;/ref&gt;. He elaborated a commentary of this text that gradually became what became his ''Ami des hommes''&lt;ref&gt;{{Cite web|last=|first=|date=|title=Correspondance Mirabeau - Sacconay (1731-1787)|url=http://lumieres.unil.ch/projets/mirabeau|url-status=dead|archive-url=https://web.archive.org/web/20200531231155/http://lumieres.unil.ch/projets/mirabeau/|archive-date=2020-05-31|access-date=|website=Lumières.Lausanne}}&lt;/ref&gt;.
+
+Around the time of the [[Seven Years' War]] between France and England (1756–63), the physiocracy movement grew. Several journals appeared, signaling an increasing audience in France for new economic ideas. Among the most important were the ''Journal Œconomique'' (1721–72), which promoted [[agronomy]] and rational [[husbandry]] and the ''Journal du commerce'' (1759–62), which was heavily influenced by the Irishman [[Richard Cantillon]] (1680–1734), both dominated by physiocrats; the ''Journal de l'agriculture, du commerce et des finances'' (1765–74) and the ''Ephémérides du citoyen'' (1767–72 and 1774–76).&lt;ref name=&quot;Steiner 2003 p62&quot;/&gt;
+
+Also, [[Jean Claude Marie Vincent de Gournay|Vincent de Gournay]] (1712–1759), the [[Intendant|Intendant du commerce]], brought together a group of young researchers including [[François Véron Duverger de Forbonnais]] (1722–1800) and one of the two most famous physiocrats, [[Anne-Robert-Jacques Turgot]] (1727–1781). The other, [[François Quesnay]] (1694–1774), was among those writing prolifically in contemporaneous journals.&lt;ref name=&quot;Steiner 2003 p62&quot;/&gt;
+
+In the 19th century [[Henry George]] in the United States advocated the collection of [[land rent]] as the primary if not the sole source of public revenue.
+
+== ''Tableau économique'' ==
+The ''[[Tableau économique]]'' or ''Economic Table'' is an economic model first described by [[François Quesnay]] in 1759, which laid the foundation of the physiocrats’ economic theories.&lt;ref name=&quot;Spiegel 1983 p.189&quot;&gt;Henry William Spiegel (1983) ''The Growth of Economic Thought'', Revised and Expanded Edition, Duke University Press. pp. 189, 195–96&lt;/ref&gt; It also contains the origins of modern ideas on the circulation of wealth and the nature of interrelationships in the economy.&lt;ref name=&quot;:1&quot; /&gt;
+
+The model Quesnay created consisted of three economic agents: the &quot;proprietary&quot; class consisted only of landowners; the &quot;productive&quot; class consisted of agricultural laborers; the &quot;sterile&quot; class was made up of artisans and merchants. The flow of production and cash between the three classes originated with the proprietary class because they owned the land and bought from both of the other classes.
+
+== Characteristics ==
+
+===Natural order===
+{{Disputed|date=November 2019}}
+
+The physiocrats thought there was a &quot;[[Natural order (philosophy)|natural order]]&quot; that allowed human beings to live together. Men did not come together via a somewhat arbitrary &quot;[[social contract]]&quot;.  Rather, they had to discover the laws of the natural order that would allow individuals to live in society without losing significant freedoms.&lt;ref&gt;{{Cite book|url=https://archive.org/details/historyofeconomi00gideiala|title=A history of economic doctrines from the time of the physiocrats to the present day|last1=Rist|first1=Charles|last2=Gide|first2=Charles|year=1915|publisher=D.C. Heath and Company}}&lt;/ref&gt; This concept of natural order had originated in China. The Chinese had believed that there can be good government only when a perfect harmony exists between the &quot;Way of Man&quot; (governmental institutions) and the &quot;Way of Nature&quot; (Quesnay's natural order).&lt;ref name=&quot;:2&quot; /&gt;
+
+===Individualism and laissez-faire===
+{{main|Individualism|Laissez-faire}}
+The physiocrats, especially Turgot, believed that self-interest was the motivation for each segment of the economy to play its role. Each individual is best suited to determine what goods they want and what work would provide them with what they want out of life. While a person might labor for the benefit of others, they will work harder for their own benefit; however, each person's needs are being supplied by many other people. The system works best when there is a complementary relationship between one person's needs and another person's desires, and so trade restrictions place an unnatural barrier to achieving one's goals. Laissez-faire was popularized by physiocrat [[Vincent de Gournay]] who is said to have adopted the term from [[François Quesnay]]'s writings on China.&lt;ref name=Baghdiantz/&gt;
+
+===Private property===
+None of the theories concerning the value of land could work without strong legal support for the ownership of private property. Combined with the strong sense of individualism, private property becomes a critical component of the Tableau's functioning.
+The physiocrats believed in the institution of private property. They saw property as a tree and its branches, as social institutions.
+They actually stated that landlords must enjoy 2/5 on the land surpluses. They also advocated that landlords should be given dues, otherwise they would take the land away from the cultivators.
+
+===Diminishing returns===
+{{main|Diminishing returns}}
+Turgot was one of the first to recognize that &quot;successive applications of the variable input will cause the product to grow, first at an increasing rate, later at a diminishing rate until it reaches a maximum.&quot;&lt;ref name=&quot;Spiegel 1983 p.189&quot; /&gt; This was a recognition that the productivity gains required to increase national wealth had an ultimate limit, and, therefore, wealth could not be infinite.
+
+===Investment capital===
+Both Quesnay and [[Anne Robert Jacques Turgot, Baron de Laune]] recognized that capital was needed by farmers to start the production process, and both were proponents of using some of each year's profits to increase productivity. Capital was also needed to sustain the laborers while they produced their product. Turgot recognizes that there is opportunity cost and risk involved in using capital for something other than land ownership, and he promotes interest as serving a &quot;strategic function in the economy&quot;.&lt;ref name=&quot;Spiegel 1983 p.189&quot; /&gt;
+
+==Subsequent developments==
+The ideas of the Physiocrats had an influence on [[Adam Smith]], [[David Ricardo]], [[John Stuart Mill]], and above all [[Henry George]], who appears at first to have come to similar beliefs independently. George was the driving force behind what became known as the [[Single Tax]] movement (not to be confused with [[Flat Tax]]). The Single Tax is a proposal for the use of the annual rental value of land ([[land value taxation]]) as the principal or sole source of public revenue.

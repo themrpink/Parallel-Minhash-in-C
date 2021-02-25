@@ -1,0 +1,424 @@
+In third-comma meantone, the fifths are tempered by 1/3 comma, and three descending fifths (such as A–D–G–C) produce a perfect minor third (A–C) one [[syntonic comma]] wider than the Pythagorean one that would result from three [[perfect fifth]]s. Third-comma meantone can be approximated by a division of the octave in [[19 equal temperament|19 equal steps]].
+
+==The tone as a mean==
+The name &quot;meantone temperament&quot; derives from the fact that all such temperaments have only one size of the tone, while [[just intonation]] produces a [[Major second#Major and minor tones|major tone]] and a minor one, differing by a [[syntonic comma]]. In any regular system (i.e. with all fifths but one of the same size)&lt;ref&gt;J. Murray Barbour, ''Tuning and Temperament. A Historical Survey''. East Lansing, 1951, p. xi.&lt;/ref&gt; the tone (as C–D) is reached after two fifths (as C–G–D), while the major third is reached after four fifths: the tone therefore is exactly half the major third. This is one sense in which the tone is a mean.
+
+In the case of quarter-comma meantone, in addition, where the major third is made narrower by a syntonic comma, the tone is also half a comma narrower than the major tone of just intonation, or half a comma wider than the minor tone: this is another sense in which the tone in quarter-tone temperament may be considered a mean tone, and it explains why quarter-comma meantone is often  considered the meantone temperament properly speaking.&lt;ref&gt;Barbour 1951, p. x and pp. 25-44.&lt;/ref&gt;
+
+==Meantone temperaments==
+&quot;Meantone&quot; can receive the following equivalent definitions:
+* The meantone is the geometric mean between the major whole tone (9:8 in just intonation) and the minor whole tone (10:9 in just intonation).
+* The meantone is the mean of its major third (for instance the square root of 5:4 in quarter-comma meantone).
+
+The family of meantone temperaments share the common characteristic that they form a stack of identical fifths, the tone being the result of two fifths minus one octave, the major third of four fifths minus two octaves. Meantone temperaments are often described by the fraction of the syntonic comma by which the fifths are tempered: quarter-comma meantone, the most common type, tempers the fifths by {{1/4}} of a syntonic comma, with the result that four fifths produce a just major third, a syntonic comma lower than a Pythagorean major third; third-comma meantone tempers by {{1/3}} of a syntonic comma, three fifths producing a just major sixth, a syntonic comma lower than a Pythagorean one.
+
+A meantone temperament is a [[linear temperament]],{{r|Fingering|p=15-32}} distinguished by the width of its [[generator (music)|generator]] (often measured in [[cent (music)|cents]]), as shown in the central column of Figure 1. Historically notable meantone temperaments, discussed below, occupy a narrow portion of this tuning continuum, with fifths ranging from approximately 695 to 699 cents.
+
+While the term ''meantone temperament'' refers primarily to the tempering of [[limit (music)|5-limit]] musical intervals, temperaments that approximate 5-limit intervals well, such as [[Quarter-comma meantone]], can also approximate [[7-limit]] intervals well, defining [[septimal meantone temperament]]. In Figure 1, the valid tuning ranges of 5-limit, 7-limit, and 11-limit tunings are shown, and can be seen to include many notable meantone tunings{{clarify |date=January 2018|reason=The meaning of &quot;valid tuning range&quot; is unclear.}}.
+
+Meantone temperaments can be specified in various ways: by what fraction (logarithmically) of a syntonic comma the fifth is being flattened (as above), what [[equal temperament]] has the meantone fifth in question, the width of the tempered perfect fifth in cents, or the ratio of the whole tone to the diatonic [[semitone]]. This last ratio was termed &quot;''R''&quot; by American composer, pianist and theoretician [[Easley Blackwood, Jr.|Easley Blackwood]], but in effect has been in use for much longer than that. It is useful because it gives us an idea of the melodic qualities of the tuning, and because if ''R'' is a [[rational number]] {{sfrac|''N''|''D''}}, so is {{sfrac|3''R'' + 1|5''R'' + 2}} or {{sfrac|3''N'' + ''D''|5''N'' + 2''D''}}, which is the size of fifth in terms of [[logarithm]]s base 2, and which immediately tells us what division of the octave we will have. If we multiply by 1200, we have the size of fifth in cents.
+
+In these terms, some historically notable meantone tunings are listed below. The second and fourth column are corresponding approximations to the first column. The third column shows how close the second column's approximation is to the actual size of the fifth interval in the given meantone tuning from the first column.
+
+{| class=&quot;wikitable&quot;
+|+ Meantone tunings
+|-
+! Fraction of a (syntonic) comma !! Pure interval
+!Approximate size of the fifth in octaves
+!Error (in cents)
+! Ratio ''R''
+|-
+|{{frac|1|315}} (nearly Pythagorean tuning) || {{frac|3&lt;sup&gt;311&lt;/sup&gt;×5|2&lt;sup&gt;495&lt;/sup&gt;}} (but {{frac|3|2}} can be considered pure for all practical purposes) || align=&quot;center&quot; |{{frac|31|[[53 equal temperament|53]]}}
+| +6.55227×10&lt;sup&gt;−5&lt;/sup&gt;
+| 9:4
+|-
+|{{frac|1|11}} ({{frac|1|12}} Pythagorean comma)|| {{frac|16384|10935}} ({{frac|2&lt;sup&gt;14&lt;/sup&gt;|3&lt;sup&gt;7&lt;/sup&gt;×5}}) (Kirnberger fifth (a just perfect fifth flattened by a [[schisma]])) || align=&quot;center&quot; |{{frac|7|[[12 equal temperament|12]]}}
+| +1.16371×10&lt;sup&gt;−4&lt;/sup&gt;
+| 2:1
+|-
+|{{frac|1|6}} || {{frac|45|32}} and {{frac|64|45}} || align=&quot;center&quot; |{{frac|32|55}}
+| -1.88801×10&lt;sup&gt;−1&lt;/sup&gt;
+| 9:5
+|-
+|{{frac|1|5}} || {{frac|15|8}} and {{frac|16|15}} || align=&quot;center&quot; |{{frac|25|43}}
+| +2.06757×10&lt;sup&gt;−2&lt;/sup&gt;
+| 7:4
+|-
+|{{frac|1|4}} || {{frac|5|4}} and {{frac|8|5}} || align=&quot;center&quot; |{{frac|18|[[31 equal temperament|31]]}}
+| +1.95765×10&lt;sup&gt;−1&lt;/sup&gt;
+| 5:3
+|-
+|{{frac|2|7}} || {{frac|25|24}} and {{frac|48|25}} || align=&quot;center&quot; |{{frac|29|50}}
+| +1.89653×10&lt;sup&gt;−1&lt;/sup&gt;
+| 8:5
+|-
+|{{frac|1|3}} || {{frac|5|3}} and {{frac|6|5}} || align=&quot;center&quot; |{{frac|11|[[19 equal temperament|19]]}}
+| -4.93956×10&lt;sup&gt;−2&lt;/sup&gt;
+| 3:2
+|-
+|{{frac|1|2}} || {{frac|9|5}} and {{frac|10|9}} || align=&quot;center&quot; |{{frac|15|26}}
+| +1.10584×10&lt;sup&gt;0&lt;/sup&gt;
+| 4:3
+|}
+
+===Equal temperaments===
+
+Neither the just fifth nor the quarter-comma meantone fifth is a [[rational number|rational]] fraction of the octave, but several tunings exist which approximate the fifth by such an interval; these are a subset of the [[equal temperament]]s (&quot;''N''-ET&quot;), in which the octave is divided into some number (''N'') of equally wide intervals.
+
+Equal temperaments useful as meantone tunings include (in order of increasing [[Generated collection|generator]] width) [[19 equal temperament|19-ET]], 50-ET, [[31 equal temperament|31-ET]], 43-ET, and 55-ET. The farther the tuning gets away from quarter-comma meantone, however, the less related{{r|Relating|}} the tuning is to harmonic timbres, which can be overcome by [[dynamic tonality|tempering the partials]] to match the tuning – which is possible, however, only on electronic synthetizers.&lt;ref&gt;
+{{cite journal
+ | doi = 10.1162/comj.2009.33.2.71
+ | first = William
+ | last = Sethares
+ | authorlink =
+ |author2=Milne, A. |author3=Tiedje, S. |author4=Prechtl, A. |author5=Plamondon, J. 
+ | year = 2009
+ | title =Spectral Tools for Dynamic Tonality and Audio Morphing
+ | journal = Computer Music Journal
+ | url = http://muse.jhu.edu/journals/computer_music_journal/summary/v033/33.2.sethares.html
+ | volume = 33
+ | issue = 2
+ | pages = 71–84 | id = 
+ | accessdate = 2009-09-20
+ | citeseerx = 10.1.1.159.838
+ | s2cid = 216636537
+ }}&lt;/ref&gt;
+{| class=&quot;wikitable&quot;
+|+ Comparison between 1/4-comma meantone and 31-ET (values in cents, rounded to 2 decimals)
+|-
+|| &amp;nbsp; 
+| align=&quot;center&quot; width=&quot;20em&quot; | C 
+| align=&quot;center&quot; width=&quot;20em&quot; | C{{sharp}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | D{{flat}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | D 
+| align=&quot;center&quot; width=&quot;20em&quot; | D{{sharp}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | E{{flat}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | E 
+| align=&quot;center&quot; width=&quot;20em&quot; | E{{sharp}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | F 
+| align=&quot;center&quot; width=&quot;20em&quot; | F{{sharp}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | G{{flat}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | G 
+| align=&quot;center&quot; width=&quot;20em&quot; | G{{sharp}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | A{{flat}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | A 
+| align=&quot;center&quot; width=&quot;20em&quot; | A{{sharp}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | B{{flat}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | B 
+| align=&quot;center&quot; width=&quot;20em&quot; | C{{flat}} 
+| align=&quot;center&quot; width=&quot;20em&quot; | C
+|-
+|| 1/4 comma: 
+| align=&quot;center&quot; width=&quot;20em&quot; | 0.00
+| align=&quot;center&quot; width=&quot;20em&quot; | 76.05 
+| align=&quot;center&quot; width=&quot;20em&quot; | 117.11 
+| align=&quot;center&quot; width=&quot;20em&quot; | 193.16 
+| align=&quot;center&quot; width=&quot;20em&quot; | 269.21 
+| align=&quot;center&quot; width=&quot;20em&quot; | 310.26 
+| align=&quot;center&quot; width=&quot;20em&quot; | 386.31 
+| align=&quot;center&quot; width=&quot;20em&quot; | 462.36 
+| align=&quot;center&quot; width=&quot;20em&quot; | 503.42 
+| align=&quot;center&quot; width=&quot;20em&quot; | 579.47 
+| align=&quot;center&quot; width=&quot;20em&quot; | 620.53 
+| align=&quot;center&quot; width=&quot;20em&quot; | 696.58 
+| align=&quot;center&quot; width=&quot;20em&quot; | 772.63 
+| align=&quot;center&quot; width=&quot;20em&quot; | 813.69 
+| align=&quot;center&quot; width=&quot;20em&quot; | 889.74 
+| align=&quot;center&quot; width=&quot;20em&quot; | 965.78 
+| align=&quot;center&quot; width=&quot;20em&quot; | 1006.84 
+| align=&quot;center&quot; width=&quot;20em&quot; | 1082.89 
+| align=&quot;center&quot; width=&quot;20em&quot; | 1123.95 
+| align=&quot;center&quot; width=&quot;20em&quot; | 1200.00
+|-
+|| 31-ET: 
+| align=&quot;center&quot; width=&quot;20em&quot; | 0.00
+| align=&quot;center&quot; width=&quot;20em&quot; | 77.42 
+| align=&quot;center&quot; width=&quot;20em&quot; | 116.13 
+| align=&quot;center&quot; width=&quot;20em&quot; | 193.55 
+| align=&quot;center&quot; width=&quot;20em&quot; | 270.97 
+| align=&quot;center&quot; width=&quot;20em&quot; | 309.68 
+| align=&quot;center&quot; width=&quot;20em&quot; | 387.10 
+| align=&quot;center&quot; width=&quot;20em&quot; | 464.52 
+| align=&quot;center&quot; width=&quot;20em&quot; | 503.23 
+| align=&quot;center&quot; width=&quot;20em&quot; | 580.65 
+| align=&quot;center&quot; width=&quot;20em&quot; | 619.35 
+| align=&quot;center&quot; width=&quot;20em&quot; | 696.77 
+| align=&quot;center&quot; width=&quot;20em&quot; | 774.19 
+| align=&quot;center&quot; width=&quot;20em&quot; | 812.90 
+| align=&quot;center&quot; width=&quot;20em&quot; | 890.32 
+| align=&quot;center&quot; width=&quot;20em&quot; | 967.74 
+| align=&quot;center&quot; width=&quot;20em&quot; | 1006.45 
+| align=&quot;center&quot; width=&quot;20em&quot; | 1083.87 
+| align=&quot;center&quot; width=&quot;20em&quot; | 1122.58 
+| align=&quot;center&quot; width=&quot;20em&quot; | 1200.00
+|}
+
+==Wolf intervals==
+
+A whole number of just perfect fifths will never add up to a whole number of octaves, because they are incommensurable (see [[Fundamental theorem of arithmetic]]). If a stacked-up whole number of perfect fifths is too close with the octave, then one of the intervals that is enharmonically equivalent to a fifth must have a different width than the other fifths. For example, to make a 12-note chromatic scale in [[Pythagorean tuning]] close at the octave, one of the fifth intervals must be lowered (&quot;out-of-tune&quot;) by the [[Pythagorean comma]]; this altered fifth is called a [[wolf fifth]] because it sounds similar to a fifth in its interval size and seems like an out-of-tune fifth. However, it really is a Pythagorean diminished sixth (or an augmented third instead of a fourth), say the interval between C and E{{sharp}}.
+
+Wolf intervals are an artifact of keyboard design.&lt;ref&gt;{{cite journal
+ | doi = 10.1080/17459730701828677
+ | first = Andrew
+ | last = Milne
+ | authorlink = 
+ |author2=Sethares, W.A. |author3=Plamondon, J. 
+ |date=March 2008
+ | title =Tuning Continua and Keyboard Layouts
+ | journal = Journal of Mathematics and Music
+ | volume = 2
+ | issue = 1
+ | pages = 1–19 
+ | citeseerx = 10.1.1.158.6927
+ | s2cid = 1549755
+ }}&lt;/ref&gt; This can be shown most easily using an isomorphic keyboard, such as that shown in Figure 2.
+[[Image:Isomorphic Note Layout.jpg|thumb|bottom|550px|Fig. 2: The Wicki [[isomorphic keyboard]], invented by [[Kaspar Wicki]] in 1896.]] On an [[isomorphic keyboard]], any given musical interval has the same shape wherever it appears, except at the edges. Here's an example. On the keyboard shown in Figure 2, from any given note, the note that's a perfect fifth higher is always up-and-rightwardly adjacent to the given note. There are no wolf intervals within the note-span of this keyboard. The problem is at the edge, on the note E{{music|sharp}}. The note that's a perfect fifth higher than E{{music|sharp}} is B{{music|sharp}}, which is not included on the keyboard shown (although it could be included in a larger keyboard, placed just to the right of A{{music|sharp}}, hence maintaining the keyboard's consistent note-pattern). Because there is no B{{music|sharp}} button, when playing an E{{music|sharp}} [[power chord]], one must choose some other note, such as C, to play instead of the missing B{{music|sharp}}.
+
+Even edge conditions produce wolf intervals only if the isomorphic keyboard has fewer buttons per octave than the tuning has [[enharmonic]]ally-distinct notes (Milne, 2007). For example, the isomorphic keyboard in Figure 2 has 19 buttons per octave, so the above-cited edge-condition, from E{{music|sharp}} to C, is ''not'' a wolf interval in 12-ET, 17-ET, or 19-ET; however, it ''is'' a wolf interval 26-ET, 31-ET, and 50-ET. In these latter tunings, using electronic transposition could keep the current key's notes on the isomorphic keyboard's white buttons, such that these wolf intervals would very rarely be encountered in tonal music, despite modulation to exotic keys.&lt;ref&gt;{{cite journal
+ | first = Jim
+ | last = Plamondon
+ | authorlink = 
+ |author2=Milne, A. |author3=Sethares, W.A.   
+ | year = 2009
+ | title =Dynamic Tonality: Extending the Framework of Tonality into the 21st Century
+ | journal = Proceedings of the Annual Conference of the South Central Chapter of the College Music Society
+ | url = http://sethares.engr.wisc.edu/paperspdf/CMS2009.pdf
+ }}&lt;/ref&gt;
+
+Isomorphic keyboards expose the invariant properties of the meantone tunings of the [[syntonic temperament]] isomorphically (that is, for example, by exposing a given interval with a single consistent inter-button shape in every octave, key, and tuning) because both the isomorphic keyboard and temperament are two-dimensional (''i.e.'', [[Rank of an abelian group|rank-2]]) entities (Milne, 2007). One-dimensional ''N''-key keyboards can expose accurately the invariant properties of only a single one-dimensional ''N''-ET tuning; hence, the one-dimensional piano-style keyboard, with 12 keys per octave, can expose the invariant properties of only one tuning: 12-ET.
+
+When the perfect fifth is exactly 700 [[cent (music)|cents]] wide (that is, tempered by approximately {{frac|11}} of a syntonic comma, or exactly {{frac|12}} of a Pythagorean comma) then the tuning is identical to the familiar 12-tone [[equal temperament]]. This appears in the table above when ''R'' = 2:1.
+
+Because of the compromises (and wolf intervals) forced on meantone tunings by the one-dimensional piano-style keyboard, [[well temperament]]s and eventually equal temperament became more popular.
+
+Using standard interval names, twelve fifths equal six octaves plus one [[augmented seventh]]; seven octaves are equal to eleven fifths plus one [[diminished sixth]]. Given this, three &quot;minor thirds&quot; are actually [[augmented second]]s (for example, B{{music|flat}} to C{{music|sharp}}), and four &quot;major thirds&quot; are actually [[diminished fourth]]s (for example, B to E{{music|flat}}). Several triads (like B&amp;ndash;E{{music|flat}}&amp;ndash;F{{music|sharp}} and B{{music|flat}}&amp;ndash;C{{music|sharp}}&amp;ndash;F) contain both these intervals and have normal fifths.
+
+==Extended meantones==
+&lt;!-- [[WP:NFCC]] violation: [[Image:Tonraum30.11-14 1.jpg|thumb|left|Figure 3: The archicembalo, a harpsichord-like instrument built to use an extended quarter-comma meantone tuning]] --&gt;
+All meantone tunings fall into the valid tuning range of the [[syntonic temperament]], so all meantone tunings are syntonic tunings. All syntonic tunings, including the meantones, have a conceptually infinite number of notes in each octave, that is, seven natural notes, seven sharp notes (F{{music|#}} to B{{music|#}}), seven flat notes (B{{music|b}} to F{{music|b}}), double sharp notes, double flat notes, triple sharps and flats, and so on. In fact, double sharps and flats are uncommon, but still needed; triple sharps and flats are almost never seen. In any syntonic tuning that happens to divide the octave into a small number of equally wide smallest intervals (such as [[12 equal temperament#Twelve-tone equal temperament|12]], [[19 equal temperament|19]], or [[31 equal temperament|31]]), this infinity of notes still exists, although some notes will be equivalent. For example, in 19-ET, E{{music|#}} and F{{music|b}} are the same pitch.
+
+Many musical instruments are capable of very fine distinctions of pitch, such as the human voice, the trombone, unfretted strings such as the violin, and lutes with tied frets. These instruments are well-suited to the use of meantone tunings.
+
+On the other hand, the piano keyboard has only twelve physical note-controlling devices per octave, making it poorly suited to any tunings other than 12-ET. Almost all of the historic problems with the meantone temperament are caused by the attempt to map meantone's infinite number of notes per octave to a finite number of piano keys. This is, for example, the source of the &quot;wolf fifth&quot; discussed above. When choosing which notes to map to the piano's black keys, it is convenient to choose those notes that are common to a small number of closely related keys, but this will only work up to the edge of the octave; when wrapping around to the next octave, one must use a &quot;wolf fifth&quot; that is not as wide as the others, as discussed above.
+
+The existence of the &quot;wolf fifth&quot; is one of the reasons why, before the introduction of [[well temperament]], instrumental music generally stayed in a number of &quot;safe&quot; tonalities that did not involve the &quot;wolf fifth&quot; (which was generally put between G{{music|#}} and E{{music|b}}).
+
+Throughout the Renaissance and Enlightenment, theorists as varied as [[Nicola Vicentino]], [[Francisco de Salinas]], [[Fabio Colonna]], [[Marin Mersenne]], [[Christiaan Huygens]], and [[Isaac Newton]] advocated the use of meantone tunings that were extended beyond the keyboard's twelve notes,&lt;ref&gt;Barbour, J.M., 2004, [https://books.google.com/books?id=G-pG77pmlp4C ''Tuning and Temperament: A Historical Survey''].&lt;/ref&gt;&lt;ref&gt;Duffin, R.W., 2006, [https://books.google.com/books?id=gQWyHQAACAAJ ''How Equal Temperament Ruined Harmony (and Why You Should Care)''].&lt;/ref&gt;&lt;ref&gt;Isacoff, Stuart, 2003, [https://books.google.com/books?id=P-sAAAAACAAJ ''Temperament: How Music Became a Battleground for the Great Minds of Western Civilization'']&lt;/ref&gt; and hence have come to be called &quot;extended&quot; meantone tunings. These efforts required a concomitant extension of keyboard instruments to offer means of controlling more than 12 notes per octave, including Vincento's Archicembalo (shown in Figure 3), Mersenne's 19-ET harpsichord, Colonna's 31-ET sambuca, and Huygens' 31-ET harpsichord.&lt;ref&gt;{{cite journal
+ | first = Christopher
+ | last = Stembridge
+ | authorlink = 
+ | year = 1993
+ | title =The Cimbalo Cromatico and Other Italian Keyboard Instruments with Nineteen or More Divisions to the Octave
+ | journal = Performance Practice Review
+ | volume = vi
+ | issue = 1
+ | pages = 33–59
+ | doi = 10.5642/perfpr.199306.01.02
+ | doi-access = free
+ }}&lt;/ref&gt; Other instruments extended the keyboard by only a few notes. Some period harpsichords and organs have split D{{music|#}}/E{{music|b}} keys, such that both [[E major]]/[[C-sharp minor|C{{music|#}} minor]] (4 sharps) and [[E-flat major|E{{music|b}} major]]/[[C minor]] (3 flats) can be played without wolf fifths. Many of those instruments also have split G{{music|#}}/A{{music|b}} keys, and a few have all the five accidental keys split.
+
+All of these alternative instruments were &quot;complicated&quot; and &quot;cumbersome&quot; (Isacoff, 2003), due to (a) not being isomorphic, and (b) not having the ability to transpose electronically, which can significantly reduce the number of note-controlling buttons needed on an [[isomorphic keyboard]] (Plamondon, 2009). Both of these criticisms could be addressed by electronic isomorphic keyboard instruments (such as the [[open-source hardware]] [[jammer keyboard]]), which could be simpler, less cumbersome, and more expressive than existing keyboard instruments.&lt;ref&gt;{{cite journal
+ | first = G.
+ | last = Paine
+ |author2=Stevenson, I. |author3=Pearce, A. 
+ | authorlink = 
+ | year = 2007
+ | title =The Thummer Mapping Project (ThuMP)
+ | journal = Proceedings of the 7th International Conference on New Interfaces for Musical Expression (NIME07)
+ | pages = 70–77
+ | url = http://www.activatedspace.com/Papers/PaineThuMP.pdf
+ }}&lt;/ref&gt;
+
+==Use of meantone temperament==
+
+References to tuning systems that could possibly refer to meantone were published as early as 1496 (Gafori), and Aron (1523) is unmistakably referring to meantone. However, the first mathematically precise Meantone tuning descriptions are found in late 16th century treatises by [[Francisco de Salinas]] and [[Gioseffo Zarlino]].  Salinas (in ''De musica libra septem'', 1577) describes three different mean tone temperaments: the third-comma system, the two-seventh-comma system, and the quarter-comma system.  He is the likely inventor of the third-comma system, while he and Zarlino both wrote on the two-seventh-comma system, apparently independently.  [[Lodovico Fogliano]] mentions the quarter-comma system, but offers no discussion of it.
+
+In the past, meantone temperaments were sometimes used or referred to under other names or descriptions.  For example, in 1691 [[Christiaan Huygens]] wrote his ''&quot;Lettre touchant le cycle harmonique&quot;'' (&quot;Letter concerning the harmonic cycle&quot;) with the purpose of introducing what he believed to be a new division of the octave.  In this letter Huygens referred several times, in a comparative way, to a conventional tuning arrangement, which he indicated variously as &quot;temperament ordinaire&quot;, or &quot;the one that everyone uses&quot;.  But Huygens' description of this conventional arrangement was quite precise, and is clearly identifiable with what is now classified as [[Quarter-comma meantone|(quarter-comma)]] meantone temperament.&lt;ref&gt;(See references cited in article '[[Temperament Ordinaire]]'.)&lt;/ref&gt;
+
+Although meantone is best known as a tuning environment associated with earlier music of the Renaissance and Baroque, there is evidence of continuous usage of meantone as a keyboard temperament well into the middle of the 19th century.&lt;ref&gt;George Grove wrote as late as 1890: &quot;The mode of tuning which prevailed before the introduction of equal temperament, is called the Meantone System. It has hardly yet died out in England, for it may still be heard on a few organs in country churches. According to Don B. Yñiguez, organist of Seville Cathedral, the meantone system is generally maintained on Spanish organs, even at the present day.&quot; ''A Dictionary of Music and Musicians'', Macmillan, London, vol. IV, 1890 [1st edition], p. 72.&lt;/ref&gt; Meantone temperament has had considerable revival for early music performance in the late 20th century and in newly composed works specifically demanding meantone by composers including [[John Adams (composer)|John Adams]], [[György Ligeti]] and [[Douglas Leedy]].
+
+==See also==
+
+* [[Dynamic tonality]]
+* [[Equal temperament]]
+* [[Just intonation]]
+* [[Interval (music)|Interval]]
+* [[Mathematics of musical scales]]
+* [[Pythagorean tuning]]
+* [[Semitone]]
+* [[Well temperament]]
+* [[Regular temperament]]
+* [[List of meantone intervals]]
+
+==References==
+
+&lt;references/&gt;
+
+==External links==
+* [https://web.archive.org/web/20120407071626/http://www.gesualdo.co.uk/2011/12/12/quater-comma-meantone-temperament/ An explanation of constructing Quarter Comma Meantone Tuning]
+* [http://www.lucytune.com LucyTuning - specific meantone derived from pi, and the writings of John Harrison]
+* [http://www.hpschd.nu/tech/tmp/mean.html How to tune quarter-comma meantone]
+* {{webarchive |url=https://web.archive.org/web/*/http://www.xs4all.nl/~huygensf/english/temperament.html |date=* }}  Music fragments played in different temperaments - mp3s not archived
+* [http://www.kylegann.com/histune.html Kyle Gann's Introduction to Historical Tunings] has an explanation of how the meantone temperament works.
+*Willem Kroesbergen, Andrew cruickshank: Meantone, unequal and equal temperament during J.S. Bach's life https://www.academia.edu/9189419/Blankenburg_Equal_or_unequal_temperament_during_J.S._Bach_s_life
+
+{{Musical tuning}}
+
+[[Category:Linear temperaments]]</text>
+      <sha1>m1rpf4brahov5vykx0kq6p3hxj88uuh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Suva</title>
+    <ns>0</ns>
+    <id>42904</id>
+    <revision>
+      <id>984812993</id>
+      <parentid>984536767</parentid>
+      <timestamp>2020-10-22T07:35:03Z</timestamp>
+      <contributor>
+        <username>Reenem</username>
+        <id>7471214</id>
+      </contributor>
+      <comment>/* Twin towns – sister cities */ Adding flags</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="38646" xml:space="preserve">{{short description|Capital of Fiji}}
+{{Use dmy dates|date=October 2019}}
+{{other uses}}
+{{Infobox settlement
+| official_name = Suva
+| native_name = सुवा
+| other_name = Capital City of Fiji
+| settlement_type = &lt;!--For Town or Village (Leave blank for the default City)--&gt;
+| image_skyline =File:SUVA CITY.JPG
+| imagesize = 255px
+| image_caption = Suva central business district
+| flag_size =
+| image_seal =
+| seal_size =
+| image_shield = SUVA City Council Logo.jpg
+| shield_size = 100px
+| nickname =
+| motto = ''Valataka na Dina'' (Fight for the Right)
+| image_map = Fiji_map.png
+| mapsize = 250px
+| map_caption = Suva within Fiji
+| image_map1 =
+| mapsize1 =
+| map_caption1 =
+| pushpin_map = &lt;!--the name of a location map as per http://en.wikipedia.org/wiki/Template:Location_map--&gt;
+| pushpin_label_position = &lt;!--the position of the pushpin label: left, right, top, bottom, none--&gt;
+| pushpin_mapsize =
+| pushpin_map_caption =
+| coordinates =
+| subdivision_type = Country
+| subdivision_name = [[Fiji]]
+| subdivision_type1 = Island
+| subdivision_type2 = Division
+| subdivision_type3 =
+| subdivision_type4 =
+| subdivision_name1 = [[Viti Levu]]
+| subdivision_name2 = [[Central Division, Fiji|Central Division]]
+| subdivision_name3 =
+| subdivision_name4 =
+| established_title =
+| established_date =
+| established_title2 = &lt;!--Incorporated (town)--&gt;
+| established_date2 =
+| established_title3 = &lt;!--Incorporated (city)--&gt;
+| established_date3 =
+| government_footnotes =
+| government_type = [[Suva City Council]]
+| leader_title =
+| leader_name =
+| leader_title1 = &lt;!--for places with, say, both a mayor and a city manager--&gt;
+| leader_name1 =
+| area_footnotes =
+| area_magnitude =
+| area_total_km2 = 2048
+| area_total_sq_mi = 790.5
+| area_land_km2 = &lt;!--See table @ Template:Infobox settlement for details on automatic unit conversion--&gt;
+| area_land_sq_mi =
+| area_water_km2 =
+| area_water_sq_mi =
+| area_water_percent =
+| area_urban_km2 =
+| area_urban_sq_mi =
+| area_metro_km2 =
+| area_metro_sq_mi =
+| elevation_footnotes = &lt;!--for references: use &lt;ref&gt; tags--&gt;
+| elevation_m =
+| elevation_ft =
+| population_total =93,970
+| population_as_of =2017
+| population_footnotes =
+| population_density_km2 =auto
+| population_density_sq_mi =
+| population_urban =185,913
+| population_density_urban_km2 =
+| population_density_urban_sq_mi =
+| population_metro =
+| population_density_metro_km2 =
+| population_density_metro_sq_mi =
+| population_blank1_title =
+| population_blank1 =
+| population_density_blank1_km2 =
+| population_density_blank1_sq_mi =
+| population_note =
+| postal_code_type = &lt;!--enter ZIP code, Postcode, Post code, Postal code...--&gt;
+| postal_code =
+| area_code =
+| website = {{URL|www.suvacity.org}}
+| footnotes =
+| governing body =
+| city_logo =
+| citylogo_size =
+| image_dot_map =
+| dot_mapsize =
+| dot_map_caption =
+| dot_x =
+| dot_y =
+| leader_title2 =
+| leader_name2 =
+| leader_title3 =
+| leader_name3 =
+| leader_title4 =
+| leader_name4 =
+| timezone = 1200 GMT
+| utc_offset = +12
+| timezone_DST =
+| utc_offset_DST =
+| blank_name =
+| blank_info =
+| blank1_name =
+| blank1_info =
+}}
+ &lt;!-- Infobox ends --&gt;
+
+'''Suva''' ({{IPA-fj|ˈsuβa}}) is the [[Capital city|capital]] and largest metropolitan city in [[Fiji]]. It is located on the southeast coast of the island of [[Viti Levu]], in the [[Rewa Province]], [[Central Division, Fiji|Central Division]].
+
+In 1877, it was decided to make Suva the capital of Fiji, as the geography of former main European settlement at [[Levuka]] on the island of [[Ovalau (Fiji)|Ovalau]], Lomaiviti province proved too restrictive. The administration of the colony was moved from Levuka to Suva in 1882.
+
+At the 2017 census, the city of Suva had a [[Demographics of Fiji|population]] of 93,970.&lt;ref&gt;{{cite web|url=http://www.statsfiji.gov.fj/Social/popn_townsarea.htm |title=Fiji Islands Bureau of Statistics – Population and Demography |publisher=Statsfiji.gov.fj |accessdate=10 October 2012}}&lt;/ref&gt; Including independent suburbs, the population of the Greater Suva urban area was 185,913 at the 2017 census.&lt;ref&gt;{{cite web|title=2007 Census of Population and Housing|url=http://www.statsfiji.gov.fj/statistics/2007-census-of-population-and-housing|accessdate=25 January 2017}}&lt;/ref&gt; Suva, along with the bordering towns of [[Lami, Fiji|Lami]], [[Nasinu]], and [[Nausori]], have a total urban population of around 330,000, over a third of the nation's population. This urban complex (not including Lami) is known also as the [[Suva-Nausori corridor]].
+
+Suva is the political, economic, and cultural centre of Fiji. It is also the economic and cultural capital of the South Pacific, hosting the majority of regional headquarters of major corporations, as well as international agencies and diplomatic missions in the region. The city also has a thriving arts and performance scene, with a growing reputation as the region's [[fashion capital]].
+
+==History==
+[[File:Suva postcard.jpg|thumb|Suva Central Business District in the 1950s]]
+[[File:The harbour, Suva, Fiji (NYPL Hades-2359163-4043519).jpg|thumb|Suva, Fiji, c. 1920]]
+In return for a promise to pay off debts owed to the United States by the [[Bau Island|Bauan]] [[Ratu|chieftain]], [[Seru Epenisa Cakobau]], the Australian-based [[Polynesia Company]] was granted {{convert|5000|km2|abbr=on}} of land, {{convert|575|km2|abbr=on}} of it near what was then the village of Suva, in 1868. The original intention was to develop a cotton farming industry, but the land and climate proved unsuitable.&lt;ref&gt;{{Cite web|url=http://www.climatefinder.com/places/NFNA|title=ClimateFinder.com - Nausori, Fiji|website=www.climatefinder.com|access-date=2020-02-04}}&lt;/ref&gt;
+
+Following the cession of the Fiji Islands to the United Kingdom in 1874, the [[British Empire|colonial authorities]] decided to move the capital to Suva from [[Levuka]], Ovalau, Lomaiviti in 1877, as Levuka's location, between a steep mountain and the sea, made any expansion of the town impractical. The transfer was made official in 1882. Colonel [[F.E. Pratt]] of the [[Royal Engineers]] was appointed Surveyor-General in 1875 and designed the new capital, assisted by W. Stephens and Colonel R.W. Stewart.&lt;ref&gt;{{Cite web|url=https://www.europcar.com.fj/pages/suva|title=Europcar Fiji - Suva|website=www.europcar.com.fj|access-date=2020-02-04}}&lt;/ref&gt;
+
+Following the promulgation of the Municipal Constitution Ordinance of 1909, Suva acquired municipal status in 1910. The town initially comprised one square mile; these boundaries remained intact until 1952 when the [[Muanikau]] and [[Samabula]] [[ward (politics)|wards]] were annexed, expanding its territory to {{convert|13|km2|abbr=on}}. In October that year, Suva was proclaimed a city – Fiji's first. [[Tamavua]] was subsequently annexed; the most recent extension of the city boundaries has been to incorporate the [[Cunningham (Fiji)|Cunningham]] area to the north of the city. [[Urban sprawl]] has resulted in a number of suburbs that remain outside of the city limits; together with the city itself, they form a metropolitan area known as the [[Greater Suva Area]].&lt;ref&gt;{{Cite book|url=https://books.google.com/books?id=9gKmPQeHBD0C&amp;pg=PA174|title=Saving Small Island Developing States: Environmental and Natural Resource Challenges|last1=Nath|first1=Shyam|last2=Roberts|first2=John L.|last3=Madhoo|first3=Yeti Nisha|publisher=Commonwealth Secretariat|year=2010|isbn=9781849290319|pages=164}}&lt;/ref&gt;
+
+The city hosted the [[2003 South Pacific Games]], being the third time in the event's 40-year history that they had been held in Suva. As part of the hosting of the event, a new gymnasium and indoor sports centre, swimming pool, and stadium; [[field hockey]] pitch; and stands were built in the area around Suva, funded by the [[Politics of Fiji|government]] and a $16&amp;nbsp;million People's Republic of China aid package.&lt;ref&gt;{{cite web |url=http://www.patarapacific.com/spg2003 |title=PATARA sponsors South Pacific Games 2003 and provides Information &amp; Communications Technology for a &quot;Smart Games&quot; |work=patarapacific.com |url-status=dead |archive-url=https://web.archive.org/web/20120804044326/http://www.patarapacific.com/spg2003 |archive-date=4 August 2012 |access-date=12 February 2020}}&lt;/ref&gt;
+
+==Geography and physical characteristics==
+
+Suva is the capital of Fiji and is a harbour city built on a peninsula reaching out into the sea. It has a mix of modern buildings and traditional colonial architecture.
+
+The city is perched on a hilly peninsula between Laucala Bay and Suva Harbour in the southeast corner of Viti Levu. The mountains north and west catch the southeast trade winds, producing moist conditions year round.
+
+Suva is the commercial and political centre of Fiji, though not necessarily the cultural centre. It is Fiji's main port city.

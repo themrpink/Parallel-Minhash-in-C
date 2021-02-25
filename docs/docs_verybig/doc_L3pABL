@@ -1,0 +1,493 @@
+:&lt;math&gt;q^N &lt; \frac{\varepsilon(1-q)}{d(x_1, x_0)}.&lt;/math&gt;
+
+Therefore, by choosing ''m'' and ''n'' greater than ''N'' we may write:
+
+:&lt;math&gt;d(x_m, x_n)  \leq q^n d(x_1, x_0) \left ( \frac{1}{1-q} \right ) &lt; \left (\frac{\varepsilon(1-q)}{d(x_1, x_0)} \right ) d(x_1, x_0) \left ( \frac{1}{1-q} \right ) = \varepsilon.&lt;/math&gt;
+
+This proves that the sequence {''x&lt;sub&gt;n&lt;/sub&gt;''} is Cauchy. By completeness of (''X'',''d''), the sequence has a limit ''x*'' ∈ ''X''. Furthermore, ''x*'' must be a [[Fixed point (mathematics)|fixed point]] of ''T'':
+
+:&lt;math&gt; x^*=\lim_{n\to\infty} x_n = \lim_{n\to\infty} T(x_{n-1}) = T\left(\lim_{n\to\infty} x_{n-1} \right) = T(x^*). &lt;/math&gt;
+
+As a contraction mapping, ''T'' is continuous, so bringing the limit inside ''T'' was justified. Lastly, ''T'' cannot have more than one fixed point in (''X'',''d''), since any pair of distinct fixed points ''p&lt;sub&gt;1&lt;/sub&gt;'' and ''p&lt;sub&gt;2&lt;/sub&gt;'' would contradict the contraction of ''T'':
+
+:&lt;math&gt; d(T(p_1),T(p_2)) = d(p_1,p_2) &gt; q d(p_1, p_2).&lt;/math&gt;
+
+==Applications==
+*A standard application is the proof of the [[Picard–Lindelöf theorem]] about the existence and uniqueness of solutions to certain [[ordinary differential equation]]s. The sought solution of the differential equation is expressed as a fixed point of a suitable integral operator which transforms continuous functions into continuous functions. The Banach fixed-point theorem is then used to show that this integral operator has a unique fixed point.
+*One consequence of the Banach fixed-point theorem is that small Lipschitz perturbations of the identity are [[Lipschitz continuity#Definitions|bi-lipschitz]] homeomorphisms. Let Ω be an open set of a Banach space ''E''; let ''I'' : Ω → ''E'' denote the identity (inclusion) map and let ''g'' : Ω → ''E'' be a Lipschitz map of constant ''k'' &lt; 1. Then 
+#Ω′ := (''I''+''g'')(Ω) is an open subset of ''E'': precisely, for any ''x'' in Ω such that ''B''(''x'', ''r'') ⊂ Ω one has ''B''((''I''+''g'')(''x''), ''r''(1−''k'')) ⊂ Ω′; 
+#''I''+''g'' : Ω → Ω′ is a bi-lipschitz homeomorphism; 
+:precisely, (''I''+''g'')&lt;sup&gt;−1&lt;/sup&gt; is still of the form ''I'' + ''h'' : Ω → Ω′ with ''h'' a Lipschitz map of constant ''k''/(1−''k''). A direct consequence  of this result yields the proof of the [[inverse function theorem]].
+*It can be used to give sufficient conditions under which Newton's method of successive approximations is guaranteed to work, and similarly for Chebyshev's third order method.
+*It can be used to prove existence and uniqueness of solutions to integral equations.
+*It can be used to give a proof to the [[Nash embedding theorem]].&lt;ref&gt;{{cite journal |first=Matthias|last=Günther|title=Zum Einbettungssatz von J. Nash | trans-title=On the embedding theorem of J. Nash | language=German | journal=[[Mathematische Nachrichten]]|volume= 144 |year=1989|pages= 165–187|doi=10.1002/mana.19891440113 | mr=1037168}}&lt;/ref&gt;
+*It can be used to prove existence and uniqueness of solutions to value iteration, policy iteration, and policy evaluation of [[reinforcement learning]].&lt;ref&gt;{{cite book |first=Frank L. |last=Lewis |first2=Draguna |last2=Vrabie |first3=Vassilis L. |last3=Syrmos |title=Optimal Control |chapter=Reinforcement Learning and Optimal Adaptive Control |location=New York |publisher=John Wiley &amp; Sons |year=2012 |isbn=978-1-118-12272-3 |pages=461–517 [p. 474] |chapterurl=https://www.google.com/books/edition/_/U3Gtlot_hYEC?hl=en&amp;gbpv=1&amp;pg=PA474 }}&lt;/ref&gt;
+*It can be used to prove existence and uniqueness of an equilibrium in [[Cournot competition]],&lt;ref&gt;{{cite journal |first=Ngo Van |last=Long |first2=Antoine |last2=Soubeyran |title=Existence and Uniqueness of Cournot Equilibrium: A Contraction Mapping Approach |journal=[[Economics Letters]] |volume=67 |issue=3 |year=2000 |pages=345–348 |doi=10.1016/S0165-1765(00)00211-1 |url=https://www.cirano.qc.ca/pdf/publication/99s-22.pdf }}&lt;/ref&gt; and other dynamic economic models.&lt;ref&gt;{{cite book |first=Nancy L. |last=Stokey |first2=Robert E. Jr. |last2=Lucas |authorlink2=Robert Lucas Jr. |title=Recursive Methods in Economic Dynamics |location=Cambridge |publisher=Harvard University Press |year=1989 |isbn=0-674-75096-9 |pages=508–516 |url=https://www.google.com/books/edition/_/BgQ3AwAAQBAJ?hl=en&amp;gbpv=1&amp;pg=PA508 }}&lt;/ref&gt;
+
+==Converses==
+Several converses of the Banach contraction principle exist. The following is due to [[Czesław Bessaga]], from 1959:
+
+Let ''f'' : ''X'' → ''X'' be a map of an abstract [[set (mathematics)|set]] such that each [[iterated function|iterate]] ''f&lt;sup&gt;n&lt;/sup&gt;'' has a unique fixed point. Let ''q'' ∈ (0, 1), then there exists a complete metric on ''X'' such that ''f'' is contractive, and ''q'' is the contraction constant.
+
+Indeed, very weak assumptions suffice to obtain such a kind of converse. For example if ''f'' : ''X'' → ''X'' is a map on a [[T1 space|''T''&lt;sub&gt;1&lt;/sub&gt; topological space]] with a unique [[fixed point (mathematics)|fixed point]] ''a'', such that for each ''x'' in ''X'' we have ''f&lt;sup&gt;n&lt;/sup&gt;''(''x'') → ''a'', then there already exists a metric on ''X'' with respect to which ''f'' satisfies the conditions of the Banach contraction principle with contraction constant 1/2.&lt;ref&gt;{{cite journal |first=Pascal |last=Hitzler | authorlink1=Pascal Hitzler|first2=Anthony K. |last2=Seda |title=A 'Converse' of the Banach Contraction Mapping Theorem |journal=Journal of Electrical Engineering |volume=52 |issue=10/s |year=2001 |pages=3–6 }}&lt;/ref&gt; In this case the metric is in fact an [[ultrametric]].
+
+==Generalizations==
+There are a number of generalizations (some of which are immediate [[Corollary|corollaries]]).&lt;ref name=Latif2014&gt;{{cite book |first=Abdul |last=Latif |title=Topics in Fixed Point Theory |pages=33–64 |chapter=Banach Contraction Principle and its Generalizations |publisher=Springer |year=2014 |doi=10.1007/978-3-319-01586-6_2 |isbn=978-3-319-01585-9 }}&lt;/ref&gt;
+
+Let ''T'' : ''X'' → ''X'' be a map on a complete non-empty metric space. Then, for example, some generalizations of the Banach fixed-point theorem are:
+*Assume that some iterate ''T&lt;sup&gt;n&lt;/sup&gt;'' of ''T'' is a contraction. Then ''T'' has a unique fixed point.
+*Assume that for each ''n'', there exist ''c&lt;sub&gt;n&lt;/sub&gt;'' such that ''d(T&lt;sup&gt;n&lt;/sup&gt;(x), T&lt;sup&gt;n&lt;/sup&gt;(y)) ≤ c&lt;sub&gt;n&lt;/sub&gt;d(x, y)'' for all ''x'' and ''y'', and that
+::&lt;math&gt;\sum\nolimits_n c_n &lt;\infty.&lt;/math&gt;
+:Then ''T'' has a unique fixed point.
+In applications, the existence and unicity of a fixed point often can be shown directly with the standard Banach fixed point theorem, by a suitable choice of the metric that makes the map ''T'' a contraction. Indeed, the above result by Bessaga strongly suggests to look for such a metric. See also the article on [[fixed point theorems in infinite-dimensional spaces]] for generalizations.
+
+A different class of generalizations arise from suitable generalizations of the notion of [[metric space]], e.g. by weakening the defining axioms for the notion of metric.&lt;ref&gt;{{cite book |first=Pascal |last=Hitzler  | authorlink1=Pascal Hitzler|first2=Anthony |last2=Seda |title=Mathematical Aspects of Logic Programming Semantics |location= |publisher=Chapman and Hall/CRC |year=2010 |isbn=978-1-4398-2961-5 }}&lt;/ref&gt; Some of these have applications, e.g., in the theory of programming semantics in theoretical computer science.&lt;ref&gt;{{cite journal |first=Anthony K. |last=Seda |first2=Pascal |last2=Hitzler | authorlink2=Pascal Hitzler|title=Generalized Distance Functions in the Theory of Computation |journal=The Computer Journal |volume=53 |issue=4 |pages=443–464 |year=2010 |doi=10.1093/comjnl/bxm108 }}&lt;/ref&gt;
+
+==See also==
+{{Div col|colwidth=30em}}
+* [[Brouwer fixed-point theorem]]
+* [[Caristi fixed-point theorem]]
+* [[Contraction mapping]]
+* [[Fichera's existence principle]]
+* [[Fixed-point iteration]]
+* [[Fixed-point theorem]]s
+* [[Infinite compositions of analytic functions]]
+* [[Kantorovich theorem]]
+{{Div col end}}
+
+==Notes==
+&lt;references/&gt;
+
+==References==
+*{{cite book |first=Praveen |last=Agarwal |first2=Mohamed |last2=Jleli |first3=Bessem |last3=Samet |chapter=Banach Contraction Principle and Applications |title=Fixed Point Theory in Metric Spaces |publisher=Springer |location=Singapore |year=2018 |isbn=978-981-13-2912-8 |pages=1–23 |doi=10.1007/978-981-13-2913-5_1 }}
+*{{cite book |first=Carmen |last=Chicone |title=Ordinary Differential Equations with Applications |location=New York |publisher=Springer |edition=2nd |year=2006 |isbn=0-387-30769-9 |chapter=Contraction |chapterurl=https://www.google.com/books/edition/_/yfY2uGROVrUC?hl=en&amp;gbpv=1&amp;pg=PA121 |pages=121–135 }}
+*{{cite book |first=Andrzej |last=Granas |first2=James |last2=Dugundji |authorlink2=James Dugundji |title=Fixed Point Theory |year=2003 |publisher=Springer-Verlag |location=New York |isbn=0-387-00173-5 }}
+*{{cite book |first=Vasile I. |last=Istrăţescu |title=Fixed Point Theory: An Introduction |publisher=D. Reidel |location=The Netherlands |year=1981 |isbn=90-277-1224-7 }} See chapter 7.
+*{{cite book |last1=Kirk |first1=William A. |last2=Khamsi |first2=Mohamed A. |title=An Introduction to Metric Spaces and Fixed Point Theory |year=2001 |publisher=John Wiley |location=New York |isbn=0-471-41825-0 }}
+
+{{PlanetMath attribution |urlname=banachfixedpointtheorem |title=Banach fixed point theorem }}
+
+{{DEFAULTSORT:Banach Fixed-Point Theorem}}
+[[Category:Topology]]
+[[Category:Fixed-point theorems]]
+[[Category:Articles containing proofs]]
+[[Category:Metric geometry]]</text>
+      <sha1>fspr0156wzkkf5yaamjxt0164az9yiz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Die Fledermaus</title>
+    <ns>0</ns>
+    <id>46677</id>
+    <revision>
+      <id>990878112</id>
+      <parentid>990810652</parentid>
+      <timestamp>2020-11-27T01:12:14Z</timestamp>
+      <contributor>
+        <username>Michael Bednarek</username>
+        <id>800198</id>
+      </contributor>
+      <comment>Undid revision 990810652 by [[Special:Contributions/Zeinanyc|Zeinanyc]] ([[User talk:Zeinanyc|talk]]): unnecessary blank line; remove non-functional [[Operabase]]; +IMSLP.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="19847" xml:space="preserve">{{for|the character in ''The Tick''|List of The Tick characters}}
+{{for|the BDSM author who sometimes used the pseudonym Fledermaus|Tony DeBlase}}
+{{Strauss II operas}}
+'''''{{Lang|de|Die Fledermaus}}''''' ({{IPA-de|diː ˈfleːdɐˌmaʊs|lang}}, ''The [[Bat|Flittermouse]]'' or ''The Bat'', sometimes called ''The Revenge of the Bat'') is an [[operetta]] composed by [[Johann Strauss II]] to a German [[libretto]] by [[Karl Haffner]] and [[Richard Genée]].
+
+==Background==
+The original literary source for ''{{Lang|de|Die Fledermaus}}'' was ''{{Lang|de|Das Gefängnis}}'' (''The Prison''), a [[farce]] by German playwright [[Roderich Benedix|Julius Roderich Benedix]]&lt;ref name=&quot;New Grove&quot;/&gt; that premiered in Berlin in 1851. On 10 September 1872, a three-act French [[Comédie en vaudeville|vaudeville]] play  by [[Henri Meilhac]] and [[Ludovic Halévy]], ''{{Lang|fr|Le Réveillon}}'', loosely based on the Benedix farce, opened at the [[Théâtre du Palais-Royal]].&lt;ref&gt;[http://gallica.bnf.fr/ark:/12148/bpt6k297412/f5.image Play text for ''Le Réveillon'', viewable at the Gallica website], accessed 1 September 2016.&lt;/ref&gt; Meilhac and Halévy had provided several successful libretti for [[Jacques Offenbach|Offenbach]] and ''Le Réveillon'' later formed the basis for the 1926 silent film ''[[So This Is Paris (1926 film)|So This Is Paris]]'', directed by [[Ernst Lubitsch]].
+
+Meilhac and Halévy's play was soon translated into German by Karl Haffner (1804–1876), at the instigation of [[Maximilian Steiner|Max Steiner]], as a non-musical play for production in Vienna. The French custom of a New Year's Eve ''[[réveillon]]'', or supper party, was not considered to provide a suitable setting for the Viennese theatre, so it was decided to substitute a ball for the ''réveillon''. Haffner's translation was then passed to the playwright and composer [[Richard Genée]],&lt;ref name=&quot;New Grove&quot;&gt;[[Andrew Lamb (writer)|Lamb, Andrew]]. Die Fledermaus. In: ''[[The New Grove Dictionary of Opera]]''. Macmillan, London and New York, 1997.&lt;/ref&gt; who had provided some of the lyrics for Strauss's ''[[Der Karneval in Rom]]'' the year before, and he completed the libretto.
+
+==Performance history==
+[[File:Bundesarchiv B 145 Bild-F001502-0008, Düsseldorf, Opernhaus.jpg|thumb|''Die Fledermaus'', Düsseldorf, 1954]]
+The operetta premiered on 5 April 1874 at the [[Theater an der Wien]] in Vienna and has been part of the regular repertoire ever since.
+
+It was performed in New York under [[Rudolf Bial]] at the [[Bowery Amphitheatre|Stadt Theatre]] on 21 November 1874. The German première took place at Munich's [[Gärtnerplatztheater]] in 1875. ''Die Fledermaus'' was sung in English at London's [[Alhambra Theatre]] on 18 December 1876, with its score modified by [[Hamilton Clarke]].&lt;ref name=obs&gt;''[[The Observer]]'', 4 May 1930, p. 14: interview with ROH archivist Richard Northcott in connection with revival of ''{{Lang|de|Die Fledermaus}}'' conducted by [[Bruno Walter]]&lt;/ref&gt;
+[[File:Strauss - La Tzigane poster.jpg|thumb|Poster for the original French translation, ''La Tzigane'']]
+When the operetta came to Paris in 1877 at the [[Théâtre de la Renaissance]], as ''La Tzigane'', with [[Jean-Vital Jammes|Ismaël]] and [[Zulma Bouffar]] in the cast, it was not a success;&lt;ref name=&quot;Stoullig3&quot;&gt;Noel E and Stoullig E. ''[[Les Annales du Théâtre et de la Musique]], 3eme édition, 1877.'' G Charpentier et Cie, Paris, 1878, 452-454.&lt;/ref&gt; only in 1904, with Meilhac and Halevy's original roles names and the words adapted by [[Paul Ferrier]] to the music (with [[Max Dearly]] and [[Ève Lavallière]] in the cast) did it find success in Paris and enter the repertoire there.&lt;ref&gt;Stoullig E. ''[[Les Annales du Théâtre et de la Musique]], 30eme edition'', 1904. Librairie Paul Ollendorff, Paris, 1905, 203-205.&lt;/ref&gt;
+
+The first London performance in German did not take place until 1895.&lt;ref name=obs /&gt; According to the archivist of the [[Royal Opera House|Royal Opera House, Covent Garden]], &quot;Twenty years after its production as a lyric opera in Vienna, [composer and conductor Gustav] [[Gustav Mahler|Mahler]] raised the artistic status of Strauss's work by producing it at the [[Hamburg State Opera|Hamburg Opera House]] [...] all the leading opera houses in Europe, notably [[Vienna State Opera|Vienna]] and [[Bavarian State Opera|Munich]], have brightened their regular repertoire by including it for occasional performance.&quot;&lt;ref name=obs /&gt;
+
+The role of Eisenstein was originally written for a [[tenor]] but is now frequently sung by a [[baritone]]. The role of Orlofsky is a [[trouser role]], usually performed by a [[mezzo-soprano]], sometimes by a [[countertenor]] and occasionally – an octave lower – by a [[tenor]].&lt;ref&gt;Recordings exist in which [[Wolfgang Windgassen]] and [[Gerhard Stolze]] play Orlofsky.&lt;/ref&gt;
+
+The party of Act II allows productions to insert a variety of additional entertainment acts, such as music, comedy, or dance. The lengthy drunken soliloquy by Frosch (a comedy speaking role) in Act III also permits variety in performance.
+
+==Roles==
+{| class=&quot;wikitable&quot;
+|+{{sronly|Roles, voice types, premiere cast}}
+!Role&lt;ref&gt;Because many English versions of the opera exist, character names can occasionally vary: Ida, for example, is called Sally in the Schirmer translation, see {{Cite book |title=''Die Fledermaus'': operetta in three acts  |language=de|publisher=G. Schirmer, Inc |year=1986}}&lt;/ref&gt;
+![[Voice type]]
+!Premiere cast, 5 April 1874&lt;br /&gt;[[Conducting|Conductor]]: Johann Strauss II&lt;ref&gt;{{Almanacco|dmy=05-04-1874|match=Die Fledermaus}}&lt;/ref&gt;
+|-
+|Gabriel von Eisenstein
+|[[tenor]]/[[baritone]]
+| Jani Szika
+|-
+|Rosalinde, ''Eisenstein's wife''
+|[[soprano]]
+|[[Marie Geistinger]]
+|-
+|Adele, ''Rosalinde's maid''
+|coloratura soprano
+|Caroline Charles-Hirsch
+|-
+|Ida, ''Adele's sister''
+|soprano
+|Jules
+|-
+|Alfred, ''a singer-teacher''
+|tenor
+| Hans Rüdiger
+|-
+|Dr Falke, ''a notary''
+|[[baritone]]
+| Ferdinand Lebrecht
+|-
+|Dr Blind, ''a lawyer''
+|tenor
+|Carl Matthias Rott
+|-
+|Frank, ''a prison governor''
+|baritone
+| Carl Adolf Friese
+|-
+|Prince Orlofsky, ''a Russian prince''
+|[[mezzo-soprano]] ([[en travesti]])
+|Irma Nittinger
+|-
+|Yvan, ''the prince's valet''
+|speaking role
+|
+|-
+|Frosch, ''a jailer''
+|speaking role
+| Alfred Schreiber
+|-
+|colspan=&quot;3&quot; |''Party-goers and servants at Prince Orlofsky's (chorus)''
+|}
+
+==Synopsis==
+
+===Act 1===
+
+Eisenstein's apartment
+
+Gabriel von Eisenstein, a Viennese man-about-town, has been sentenced to eight days in prison for insulting an official, partially due to the incompetence of his attorney, Dr. Blind. Adele, Eisenstein's maid, receives a forged letter, allegedly from her sister who is in the company of the ballet, but actually written by Falke, inviting her to Prince Orlofsky's ball. She pretends the letter says that her aunt is very sick, and asks her mistress Rosalinde (Eisenstein's wife) for an evening off (&quot;Da schreibt meine Schwester Ida&quot;/&quot;My sister Ida writes to me&quot;). Falke, Eisenstein's friend, arrives to invite him to the ball (Duet: &quot;Komm mit mir zum Souper&quot;/&quot;Come with me to the souper&quot;). Together, they recall a practical joke which Eisenstein played on Falke a few years ago, for which Falke is secretly planning a light-hearted revenge in kind. Eisenstein bids farewell to Adele and his wife Rosalinde, pretending he is going to prison (Trio: &quot;O Gott, wie rührt mich dies!&quot;/&quot;Oh dear, oh dear, how sorry I am&quot;) but really intending to postpone jail for one day and have fun at the ball.
+
+After Eisenstein leaves, Rosalinde is visited by her former lover, the singing teacher Alfred, who serenades her (&quot;Täubchen, das entflattert ist&quot;/&quot;Dove that has escaped&quot;). Frank, the governor of the prison, arrives to take Eisenstein to jail, and finds Alfred instead. In order not to compromise Rosalinde, Alfred agrees to pretend to be Eisenstein and to accompany Frank. (Finale, drinking song: &quot;Glücklich ist, wer vergisst&quot;/&quot;Happy is he who forgets&quot; followed by Rosalinde's defence when Frank arrives: &quot;Mit mir so spät im tête-à-tête&quot;/&quot;In tête-à-tête with me so late,&quot; and Frank's invitation: &quot;Mein schönes, großes Vogelhaus&quot;/&quot;My beautiful, large bird-cage.&quot;)
+
+===Act 2===
+
+A summer house in the Villa Orlofsky
+
+It transpires that Falke, with Prince Orlofsky's permission, is using the ball as a way of getting revenge on Eisenstein. Some time before, after a costume-party, Eisenstein had abandoned Falke, very drunk and dressed in a bat-costume, in the center of town, exposing him to ridicule the next day. As part of his scheme, Falke has invited Frank, Adele, and Rosalinde to come the ball, all concealing their identities as well. Rosalinde pretends to be a masked Hungarian countess, Eisenstein goes by the name &quot;Marquis Renard,&quot; Frank is &quot;Chevalier Chagrin,&quot; and Adele, who has borrowed one of Rosalinde's dresses without permission, pretends she is an actress.
+
+The ball is in progress (Chorus: &quot;Ein Souper heut' uns winkt&quot;/&quot;A souper is before us&quot;) and the Prince welcomes his guests (&quot;Ich lade gern mir Gäste ein&quot;/&quot;I love to invite my friends&quot;). Eisenstein is introduced to Adele, but is confused as to who she really is because of her striking resemblance to his maid. (&quot;Mein Herr Marquis&quot;/&quot;My lord marquis,&quot; sometimes referred to as &quot;[[Adele's Laughing Song]]&quot;). Frank arrives. He and Eisenstein, who are both posing as Frenchmen, attempt to conceal their identities by repeating common French phrases to each other, to Orlofsky's great amusement. Since neither actually knows French, both are fooled. As the party progresses, they both experience alcohol-induced good-feeling and manly camaraderie for each other.
+
+Then Falke introduces the masked Rosalinde to the company. She convinces everyone that she is Hungarian by singing the &quot;Czardas&quot;, a sentimental dancing-song (&quot;[[Klänge der Heimat]]&quot;/&quot;Sounds from home&quot;). During an amorous tête-à-tête, Eisenstein tries unsuccessfully to persuade the mystery-woman to unmask. She succeeds in extracting a valuable watch from her husband's pocket, something which she can use in the future as evidence of his impropriety. (Watch duet: &quot;Dieser Anstand, so manierlich&quot;/&quot;Her bearing, so well-mannered&quot;). In a rousing finale, Orlofsky makes a toast to champagne, and the company celebrates (The Champagne song: &quot;Im Feuerstrom der Reben&quot;/&quot;In the fire stream of the grape&quot;; followed by the canon: &quot;Brüderlein, Brüderlein und Schwesterlein&quot;/&quot;Brothers, brothers and sisters&quot; and the waltz finale, &quot;Ha, welch ein Fest, welche Nacht voll Freud'!&quot;/&quot;Ha, what joy, what a night of delight.&quot;) Eisenstein and Frank dash off as the clock strikes six in the morning.
+
+(Note: The &quot;Champagne song&quot;, which is sung by the entire ensemble, should not be confused with the baritone aria &quot;Fin ch' han dal vino&quot; from ''[[Don Giovanni]]'', which is often called the &quot;Champagne aria&quot;.)
+
+===Act 3===
+
+In the prison offices of Warden Frank
+
+The next morning they all find themselves at the prison where the confusion increases and is compounded by the jailer, Frosch, who has profited by Warden Frank's absence to become gloriously drunk. Alfred, still in jail in Eisenstein's place, irritates the other prisoners by singing operatic arias.
+
+Adele arrives to ask the Chevalier Chagrin (actually Frank) to sponsor her career as an actress, but Frank is not wealthy enough to do this (Melodrama; Couplet of Adele: &quot;Spiel' ich die Unschuld vom Lande&quot;/&quot;If I play the innocent peasant maid&quot;). Meanwhile, Alfred asks Frosch to summon Dr. Blind to help get him released; Frank agrees to allow this and Dr. Blind arrives. Eisenstein enters and says he has come to serve his sentence. He is surprised when Frank tells him that his cell is already occupied by a man who claims to be Eisenstein and whom Frank had arrested in Eisenstein's apartment. Frank further tells Eisenstein that the man he arrested was singing amorous songs to Rosalinde at the time of his arrest, and warmly kissed her goodbye. Enraged, Eisenstein takes Dr. Blind's wig and glasses in order to disguise himself and confront the impersonator Alfred, whom Eisenstein now believes has cuckolded him. Rosalinde enters. Eisenstein takes off his disguise and accuses her of being unfaithful to him with Alfred. Eisenstein, Rosalinde, and Alfred sing a trio in which Eisenstein angrily claims the right of vengeance (Trio: &quot;Ja, ich bin's, den ihr betrogen...Ra-ra-ra-ra-Rache will ich!&quot;/&quot;I'm the one who was mistreated....Ve-ve-ve-ve-vengeance is mine!&quot;). However, Rosalinde produces his watch, and he realizes that the Hungarian mystery-woman he tried to seduce at Orlofsky's party was actually Rosalinde in disguise and that he, not she, is at fault.
+
+Falke enters with all the guests from the party and explains that the whole thing was payback for Eisenstein's practical joke on him three years before. Eisenstein is delighted by the prank, and he begs Rosalinde to forgive him for his attempted infidelity. Rosalinde refuses at first, and threatens to divorce him, but Eisenstein tells her that his misbehavior was caused by the champagne. She accepts this explanation and immediately forgives him unconditionally. Orlofsky promises to finance Adele's acting career, and the company joyfully reprises the &quot;Champagne song&quot; from Act 2.
+
+==Recordings==
+{{Main|Die Fledermaus discography}}
+
+==Film adaptations==
+''{{Lang|de|Die Fledermaus}}'' has been adapted numerous times for the cinema and for TV:
+{| class=&quot;wikitable&quot;
+!Year
+!Country
+!align=&quot;center&quot;|Notes
+!align=&quot;center&quot;|Director
+!align=&quot;center&quot;|Eisenstein
+!align=&quot;center&quot;|Rosalinde
+!align=&quot;center&quot;|Adele
+!align=&quot;center&quot;|Orlofsky
+!align=&quot;center&quot;|Frosch
+|-
+|1917
+|Germany
+|as ''{{ill|Das fidele Gefängnis|de}}'' (''The Merry Jail'') (silent film)
+|[[Ernst Lubitsch]]
+|[[Harry Liedtke]] (Alex von Reizenstein)
+|{{ill|Kitty Dewall|de}} (Alice, his wife)
+|Agda Nielson (Mizi, the maid)
+|align=&quot;left&quot;|&amp;nbsp;
+|[[Emil Jannings]] (Quabbe, the jailer)
+|-
+|1923
+|Germany
+|''[[Die Fledermaus (1923 film)|Die Fledermaus]]'' (silent film)
+|[[Max Mack]]
+|[[Harry Liedtke]]
+|[[Eva May]]
+|[[Lya De Putti]]
+|[[Ernst Hofmann]]
+|[[Jakob Tiedtke]]
+|-
+|1931
+|France/Germany
+|''[[Die Fledermaus (1931 film)|Die Fledermaus]]'', &lt;br&gt; ''{{ill|La Chauve-Souris (film)|fr|3=La Chauve-Souris (film, 1932)|lt=La Chauve-Souris}}''
+|[[Karel Lamač]]
+|[[Georg Alexander]]
+|Betty Werner
+|[[Anny Ondra]]
+|[[Iván Petrovich]]
+|[[Karl Etlinger]]
+|-
+|1933
+|Great Britain
+|''[[Waltz Time (1933 film)|Waltz Time]]''
+|[[Wilhelm Thiele]]
+|[[Fritz Schulz (actor)|Fritz Schulz]]
+|[[Evelyn Laye]]
+|[[Gina Malo]]
+|[[George Baker (baritone)|George Baker]]
+|[[Jay Laurier]]
+|-
+|1937
+|Germany
+|''{{ill|Die Fledermaus (1937 film)|it|3=Die Fledermaus (film 1937)|lt=Die Fledermaus}}''
+|[[Paul Verhoeven (German director)|Paul Verhoeven]]
+|[[Hans Söhnker]]
+|[[Lída Baarová]]
+|[[Friedl Czepa]]
+|[[Karel Štěpánek]]
+|[[Hans Moser (actor)|Hans Moser]]
+|-
+|1945
+|Germany
+|''[[Die Fledermaus (1946 film)|Die Fledermaus]]'' &lt;br&gt; (Released 1946)
+|[[Géza von Bolváry]]
+|[[Johannes Heesters]]
+|[[Marte Harell]]
+|[[Dorit Kreysler]]
+|[[Siegfried Breuer]]
+|[[Josef Egger]]
+|-
+|1955
+|Great Britain
+|''[[Oh... Rosalinda!!]]'' – new title
+|[[Michael Powell]] and [[Emeric Pressburger]]
+|[[Michael Redgrave]]
+|[[Ludmilla Tchérina]]
+|[[Anneliese Rothenberger]]
+|[[Anthony Quayle]]
+|[[Oskar Sima]]
+|-
+|1955
+|East Germany
+|''[[Swelling Melodies]]'' – new title
+|[[E. W. Fiedler]]
+|Erich Arnold
+|Jarmila Kšírová
+|Sonja Schöner
+|[[Gerd Frickhöffer]]
+|[[Joseph Egger]]
+|-
+|1959
+|West Germany
+|TV adaptation
+|{{ill|Kurt Wilhelm|de|Kurt Wilhelm (Regisseur)}}
+|[[Friedrich Schoenfelder]]
+|[[Nadia Gray]]
+|[[Gerlinde Locker]]
+|Horst Uhse
+|[[Michl Lang]]
+|-
+|1962
+|Austria
+|''[[Die Fledermaus (1962 film)|Die Fledermaus]]''
+|[[Géza von Cziffra]]
+|[[Peter Alexander (Austrian performer)|Peter Alexander]]
+|[[Marianne Koch]]
+|[[Marika Rökk]]
+|[[Boy Gobert]]
+|[[Hans Moser (actor)|Hans Moser]]
+|-
+|1966
+|Denmark
+|''[[Flagermusen]]'' – Danish title
+|{{ill|Annelise Meineche|da}}
+|[[Poul Reichhardt]]
+|[[Lily Broberg]]
+|[[Ghita Nørby]]
+|{{ill|Grethe Mogensen|da}}
+|[[Paul Hagen]]
+|-
+|1968
+|Denmark
+|''Flagermusen'' – Danish title, TV adaptation
+|[[John Price (Danish actor)|John Price]]
+|[[Poul Reichhardt]]
+|[[Birgitte Bruun]]
+|[[Ellen Winther]]
+|[[Susse Wold]]
+|[[Buster Larsen]]
+|-
+|1972
+|Austria
+|''{{ill|Die Fledermaus (1972 film)|de|3=Die Fledermaus (1972)|lt=Die Fledermaus}}'' – TV adaptation
+|[[Otto Schenk]]
+|[[Eberhard Wächter (baritone)|Eberhard Wächter]]
+|[[Gundula Janowitz]]
+|Renate Holm
+|[[Wolfgang Windgassen]]
+|[[Otto Schenk]]
+|-
+|1979
+|Soviet Union
+|''[[Die Fledermaus (1979 film)|Die Fledermaus]]''
+|[[Yan Frid]]
+|[[Yury Solomin]]
+|[[Lyudmila Maksakova]]
+|[[Larisa Udovichenko]]
+|Yuri Vasilyev
+|Ivan Lyubeznov
+|-
+|1984
+|Great Britain
+|TV adaptation
+|[[Humphrey Burton]]
+|[[Hermann Prey]]
+|[[Kiri Te Kanawa]]
+|[[Hildegard Heichele]]
+|[[Doris Soffel]]
+|[[Josef Meinrad]]
+|-
+|1986
+|West Germany
+|
+|[[Otto Schenk]]
+|[[Eberhard Waechter (baritone)|Eberhard Wächter]]
+|[[Pamela Coburn]]
+|[[Janet Perry]]
+|[[Brigitte Fassbaender]]
+|[[Franz Muxeneder]]
+|-
+|1990
+|Great Britain
+|
+|[[Humphrey Burton]]
+|[[Louis Otey]]
+|[[Nancy Gustafson]]
+|Judith Howarth
+|[[Jochen Kowalski]]
+|[[John Sessions]]
+|-
+|1997
+|Australia
+|
+|[[Lindy Hume]]
+|[[Anthony Warlow]]
+|Gillian Sullivan
+|Amelia Farrugia
+|[[Suzanne Johnston]]
+|Geoff Kelso
+|-
+|2001
+|France
+|''La Chauve-Souris'' – French title
+|{{ill|Don Kent (director)|fr|Don Kent|lt=Don Kent}}
+|Christoph Homberger
+|[[Mireille Delunsch]]
+|[[Malin Hartelius]]
+|[[David Moss (musician)|David Moss]]
+|[[Elisabeth Trissenaar]]
+|-
+|2004
+|Ukraine
+|
+|Oksana Bayrak
+|[[Aleksei Kravchenko]]
+|[[Olga Kabo]]
+|Marina Mayko
+|[[Nikolai Karachentsov]]
+|
+|}
+
+==References==
+'''Notes'''
+{{Reflist}}
+'''Sources'''
+*[http://www.oxfordmusiconline.com/subscriber/article/grove/music/O005972 &quot;''{{Lang|de|Die Fledermaus}}''&quot;] by [[Andrew Lamb (writer)|Andrew Lamb]], in ''[[The New Grove Dictionary of Opera]]'', edited by [[Stanley Sadie]]. {{Subscription}}
+*[[John Warrack|Warrack, John]] and West, Ewan (1992), ''The Oxford Dictionary of Opera'', 782 pages, {{ISBN|0-19-869164-5}}
+
+==External links==
+{{Commons category|Die Fledermaus}}
+* {{IMSLP|work=Die Fledermaus (Strauss Jr., Johann)|cname=''Die Fledermaus''}}
+* [http://www.aria-database.com/translations/fledermaus.txt Libretto to ''{{Lang|de|Die Fledermaus}}'' in the original German with a literal English translation] from Aria-Database.com
+* [[Kurt Gänzl|Gänzl, Kurt]]. [http://operetta-research-center.org/die-fledermaus-comic-operette-3-acts-carl-haffner-richard-genee-based-le-reveillon-henri-meilhac-ludovic-halevy-lyrics-richard-genee-music-johann-strauss-theater-der/ ''Die Fledermaus''] entry in ''Encyclopedia of the Musical Theatre'' (includes complete original performance history)
+* [https://www.imdb.com/find?q=Die%20Fledermaus&amp;s=tt&amp;exact=true ''Die Fledermaus''], IMDb
+*[http://www.musicaltheatreguide.com/composers/straussjnr/fledermaus.htm The Guide to Operetta – ''{{Lang|de|Die Fledermaus}}'']
+*[http://www.guidetomusicaltheatre.com/shows_f/fledermaus.htm Die Fledermaus The Guide to Musical Theatre – ''{{Lang|de|Die Fledermaus}}'']
+* {{in lang|de}} [http://www.kultur-fibel.de/Kultur%20Fibel,%20Operette,%20Die%20Fledermaus%20-%201.htm ''{{Lang|de|Die Fledermaus}}'']
+* [http://pborisenko.ru/eng/theatre/Video/LM/lm.htm Operetta &quot;Die Fledermaus&quot; (&quot;The Bat&quot;) in Moscow Operetta]
+* {{YouTube|7HDmIFT0pHY|Overture}}, [[Carlos Kleiber]], [[Vienna New Year's Concert]] 1989
+
+{{Johann Strauss II|state=collapsed}}
+{{Die Fledermaus}}
+{{Portal bar|Opera}}
+
+{{Authority control}}
+{{DEFAULTSORT:Fledermaus, Die}}
+[[Category:Operas by Johann Strauss II]]
+[[Category:German-language operettas]]
+[[Category:Operas set in Austria]]
+[[Category:1874 operas]]
+[[Category:Operas based on plays]]
+[[Category:Operas]]</text>
+      <sha1>sc5cf7rypl44tao9prsiopuofacfo28</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Arithmetic encoding</title>
+    <ns>0</ns>
+    <id>46679</id>
+    <redirect title="Arithmetic coding" />
+    <revision>
+      <id>15941816</id>
+      <parentid>202058</parentid>
+      <timestamp>2002-09-07T19:18:06Z</timestamp>
+      <contributor>
+        <username>Damian Yerrick</username>
+        <id>1</id>
+      </contributor>
+      <minor />
+      <comment>there's already a node about this =&gt; Arithmetic coding</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="31" xml:space="preserve">#REDIRECT [[Arithmetic coding]]</text>
+      <sha1>gbqybgshkm6ynkwxil97dd0sj74pfyy</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Entropy encoding</title>
+    <ns>0</ns>
+    <id>46680</id>
+    <revision>
+      <id>983322758</id>
+      <parentid>983322528</parentid>
+      <timestamp>2020-10-13T15:46:40Z</timestamp>
+      <contributor>
+        <username>Ms. Monopoly</username>
+        <id>40076166</id>
+      </contributor>
+      <comment>contributed citation in intro</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3818" xml:space="preserve">{{no footnotes|date=December 2013}}
+In [[information theory]] an ''' entropy encoding''' is a [[Lossless compression |lossless data compression]] scheme that is independent of the specific characteristics of the medium.
+
+One of the main types of entropy coding creates and assigns a unique [[prefix-free code]] to each unique [[Symbol (data)|symbol]] that occurs in the input. &lt;ref&gt;{{Cite web|title=Education - Entropy Encoding|url=http://www.pcs-ip.eu/index.php/main/edu/8|access-date=2020-10-13|website=www.pcs-ip.eu}}&lt;/ref&gt; These [[entropy (information theory)|entropy]] encoders then compress data by replacing each fixed-length input symbol with the corresponding variable-length prefix-free output codeword. The length of each codeword is approximately [[Proportionality (mathematics)|proportional]] to the negative [[logarithm]] of the [[probability]] of occurrence of that codeword.  Therefore, the most common symbols use the shortest codes.&lt;ref&gt;{{Cite web|title=What is Entropy Coding {{!}} IGI Global|url=https://www.igi-global.com/dictionary/entropy-coding/10040|access-date=2020-10-13|website=www.igi-global.com}}&lt;/ref&gt;

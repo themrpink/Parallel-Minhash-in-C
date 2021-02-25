@@ -1,0 +1,202 @@
+A probability space &lt;math&gt;(\Omega,\; \mathcal{F},\; P)&lt;/math&gt; is said to be a complete probability space if for all &lt;math&gt;B\, \in \,\mathcal{F}&lt;/math&gt; with &lt;math&gt; P(B)\,=\;0 &lt;/math&gt; and all &lt;math&gt; A\; \subset \;B &lt;/math&gt; one has &lt;math&gt;A \;\in\; \mathcal{F}&lt;/math&gt;. Often, the study of probability spaces is restricted to complete probability spaces.
+
+==Examples==
+
+===Discrete examples===
+
+====Example 1====
+If the experiment consists of just one flip of a [[fair coin]], then the outcome is either heads or tails: &lt;math&gt;\Omega = \{\text{H}, \text{T}\}&lt;/math&gt;. The σ-algebra &lt;math&gt;\mathcal{F} = 2^{\Omega}&lt;/math&gt; contains &lt;math&gt;2^2 = 4&lt;/math&gt; events, namely: &lt;math&gt;\{\text{H}\}&lt;/math&gt; (“heads”), &lt;math&gt;\{\text{T}\}&lt;/math&gt; (“tails”), &lt;math&gt;\{\}&lt;/math&gt; (“neither heads nor tails”), and &lt;math&gt;\{\text{H}, \text{T}\}&lt;/math&gt; (“either heads or tails”); in other words, &lt;math&gt;\mathcal{F} = \{\{\}, \{\text{H}\}, \{\text{T}\}, \{\text{H}, \text{T}\}\}&lt;/math&gt;. There is a fifty percent chance of tossing heads and fifty percent for tails, so the probability measure in this example is &lt;math&gt;P(\{\}) = 0&lt;/math&gt;, &lt;math&gt;P(\{\text{H}\}) = 0.5&lt;/math&gt;, &lt;math&gt;P(\{\text{T}\}) = 0.5&lt;/math&gt;, &lt;math&gt;P(\{\text{H}, \text{T}\}) = 1&lt;/math&gt;.
+
+====Example 2====
+The fair coin is tossed three times. There are 8 possible outcomes: Ω = {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT} (here “HTH” for example means that first time the coin landed heads, the second time tails, and the last time heads again). The complete information is described by the σ-algebra &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt; = 2&lt;sup&gt;Ω&lt;/sup&gt; of 2&lt;sup&gt;8&lt;/sup&gt; = 256 events, where each of the events is a subset of Ω.
+
+Alice knows the outcome of the second toss only. Thus her incomplete information is described by the partition Ω = A&lt;sub&gt;1&lt;/sub&gt; ⊔ A&lt;sub&gt;2&lt;/sub&gt; = {HHH, HHT, THH, THT} ⊔ {HTH, HTT, TTH, TTT}, where ⊔ is the ''[[disjoint union]]'', and the corresponding σ-algebra &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Alice&lt;/sub&gt; = &lt;nowiki&gt;{{&lt;/nowiki&gt;}, A&lt;sub&gt;1&lt;/sub&gt;, A&lt;sub&gt;2&lt;/sub&gt;, Ω}. Bryan knows only the total number of tails. His partition contains four parts: Ω = B&lt;sub&gt;0&lt;/sub&gt; ⊔ B&lt;sub&gt;1&lt;/sub&gt; ⊔ B&lt;sub&gt;2&lt;/sub&gt; ⊔ B&lt;sub&gt;3&lt;/sub&gt; = {HHH} ⊔ {HHT, HTH, THH} ⊔ {TTH, THT, HTT} ⊔ {TTT}; accordingly, his σ-algebra &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Bryan&lt;/sub&gt; contains  2&lt;sup&gt;4&lt;/sup&gt; = 16 events.
+
+The two σ-algebras are [[comparability|incomparable]]: neither &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Alice&lt;/sub&gt; ⊆ &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Bryan&lt;/sub&gt; nor &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Bryan&lt;/sub&gt; ⊆ &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Alice&lt;/sub&gt;; both are sub-σ-algebras of 2&lt;sup&gt;Ω&lt;/sup&gt;.
+
+====Example 3====
+If 100 voters are to be drawn randomly from among all voters in California and asked whom they will vote for governor, then the set of all [[sequence]]s of 100 Californian voters would be the sample space Ω. We assume that [[simple random sample|sampling without replacement]] is used: only sequences of 100 ''different'' voters are allowed. For simplicity an ordered sample is considered, that is a sequence {Alice, Bryan} is different from {Bryan, Alice}. We also take for granted that each potential voter knows exactly his/her future choice, that is he/she doesn’t choose randomly.
+
+Alice knows only whether or not [[Arnold Schwarzenegger]] has received at least 60 votes. Her incomplete information is described by the σ-algebra &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Alice&lt;/sub&gt; that contains: (1) the set of all sequences in Ω where at least 60 people vote for Schwarzenegger; (2) the set of all sequences where fewer than 60 vote for Schwarzenegger; (3) the whole sample space Ω; and (4) the empty set ∅.
+
+Bryan knows the exact number of voters who are going to vote for Schwarzenegger. His incomplete information is described by the corresponding partition Ω = B&lt;sub&gt;0&lt;/sub&gt; ⊔ B&lt;sub&gt;1&lt;/sub&gt; ... ⊔ B&lt;sub&gt;100&lt;/sub&gt; and the σ-algebra &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Bryan&lt;/sub&gt; consists of 2&lt;sup&gt;101&lt;/sup&gt; events.
+
+In this case Alice’s σ-algebra is a subset of Bryan’s: &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Alice&lt;/sub&gt; ⊂ &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;&lt;sub&gt;Bryan&lt;/sub&gt;. Bryan’s σ-algebra is in turn a subset of the much larger “complete information” σ-algebra 2&lt;sup&gt;Ω&lt;/sup&gt; consisting of {{nobreak|2&lt;sup&gt;''n''(''n''−1)...(''n''−99)&lt;/sup&gt;}} events, where ''n'' is the number of all potential voters in California.
+
+===Non-atomic examples===
+
+====Example 4====
+A number between 0 and 1 is chosen at random, uniformly. Here Ω = [0,1], &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt; is the σ-algebra of [[Borel set]]s on Ω, and ''P'' is the [[Lebesgue measure]] on [0,1].
+
+In this case the open intervals of the form (''a'',''b''), where 0&amp;nbsp;&lt;&amp;nbsp;''a''&amp;nbsp;&lt;&amp;nbsp;''b''&amp;nbsp;&lt;&amp;nbsp;1, could be taken as the generator sets. Each such set can be ascribed the probability of ''P''((''a'',''b'')) = (''b''&amp;nbsp;−&amp;nbsp;''a''), which generates the [[Lebesgue measure]] on [0,1], and the [[Borel σ-algebra]] on Ω.
+
+====Example 5====
+A fair coin is tossed endlessly. Here one can take Ω = {0,1}&lt;sup&gt;∞&lt;/sup&gt;, the set of all infinite sequences of numbers 0 and 1. [[Cylinder set]]s {(''x''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;''x''&lt;sub&gt;2&lt;/sub&gt;,&amp;nbsp;...)&amp;nbsp;∈&amp;nbsp;Ω : ''x''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;''a''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;...,&amp;nbsp;''x''&lt;sub&gt;''n''&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;''a''&lt;sub&gt;''n''&lt;/sub&gt;} may be used as the generator sets. Each such set describes an event in which the first ''n'' tosses have resulted in a fixed sequence (''a''&lt;sub&gt;1&lt;/sub&gt;, ..., ''a''&lt;sub&gt;''n''&lt;/sub&gt;), and the rest of the sequence may be arbitrary. Each such event can be naturally given the probability of 2&lt;sup&gt;−''n''&lt;/sup&gt;.
+
+These two non-atomic examples are closely related: a sequence (''x''&lt;sub&gt;1&lt;/sub&gt;,''x''&lt;sub&gt;2&lt;/sub&gt;,...) ∈ {0,1}&lt;sup&gt;∞&lt;/sup&gt; leads to the number 2&lt;sup&gt;−1&lt;/sup&gt;''x''&lt;sub&gt;1&lt;/sub&gt; + 2&lt;sup&gt;−2&lt;/sup&gt;''x''&lt;sub&gt;2&lt;/sub&gt; + ... ∈ [0,1]. This is not a [[one-to-one correspondence]] between {0,1}&lt;sup&gt;∞&lt;/sup&gt; and [0,1] however: it is an [[standard probability space|isomorphism modulo zero]], which allows for treating the two probability spaces as two forms of the same probability space. In fact, all non-pathological non-atomic probability spaces are the same in this sense. They are so-called [[standard probability space]]s. Basic applications of probability spaces are insensitive to standardness. However, non-discrete conditioning is easy and natural on standard probability spaces, otherwise it becomes obscure.
+
+==Related concepts==
+
+===Probability distribution===
+Any [[probability distribution]] defines a probability measure.
+
+===Random variables===
+A [[random variable]] ''X'' is a [[measurable function]] ''X'': Ω → ''S'' from the sample space Ω to another measurable space ''S'' called the ''state space''.
+
+If ''A'' ⊂ ''S'', the notation Pr(''X'' ∈ ''A'') is a commonly used shorthand for ''P''({''ω'' ∈ Ω: ''X''(''ω'') ∈ ''A''}).
+
+===Defining the events in terms of the sample space===
+If Ω is [[countable]] we almost always define &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt; as the [[power set]] of Ω, i.e. &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt; = 2&lt;sup&gt;Ω&lt;/sup&gt; which is trivially a σ-algebra and the biggest one we can create using Ω. We can therefore omit &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt; and just write (Ω,P) to define the probability space.
+
+On the other hand, if Ω is [[uncountable]] and we use &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt; = 2&lt;sup&gt;Ω&lt;/sup&gt; we get into trouble defining our probability measure ''P'' because &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt; is too “large”, i.e. there will often be sets to which it will be impossible to assign a unique measure. In this case, we have to use a smaller σ-algebra &lt;math style=&quot;position:relative;top:-.2em&quot;&gt;\scriptstyle \mathcal{F}&lt;/math&gt;, for example the [[Borel algebra]] of  Ω, which is the smallest σ-algebra that makes all open sets measurable.
+
+===Conditional probability===
+Kolmogorov’s definition of probability spaces gives rise to the natural concept of [[conditional probability]].  Every set ''A'' with non-zero probability (that is, ''P''(''A'') &gt; 0) defines another probability measure
+: &lt;math&gt;
+    P(B | A) = {P(B \cap A) \over P(A)}
+  &lt;/math&gt;
+on the space. This is usually pronounced as the “probability of ''B'' given ''A''”.
+
+For any event ''B'' such that ''P''(''B'') &gt; 0 the function ''Q'' defined by ''Q''(''A'') = ''P''(''A''|''B'') for all events ''A'' is itself a probability measure.
+
+===Independence===
+Two events, ''A'' and ''B'' are said to be [[Statistical independence|independent]] if ''P''(''A''∩''B'')=''P''(''A'')''P''(''B'').
+
+Two random variables, ''X'' and ''Y'', are said to be independent if any event defined in terms of ''X'' is independent of any event defined in terms of ''Y''. Formally, they generate independent σ-algebras, where two σ-algebras ''G'' and ''H'', which are subsets of ''F'' are said to be independent if any element of ''G'' is independent of any element of ''H''.
+
+===Mutual exclusivity===
+Two events, ''A'' and ''B'' are said to be [[mutually exclusive]] or ''disjoint'' if the occurrence of one implies the non-occurrence of the other, i.e., their intersection is empty. This is a stronger condition than the probability of their intersection being zero.
+
+If ''A'' and ''B'' are disjoint events, then ''P''(''A''∪''B'') = ''P''(''A'') + ''P''(''B''). This extends to a (finite or countably infinite) sequence of events. However, the probability of the union of an uncountable set of events is not the sum of their probabilities. For example, if ''Z'' is a [[normal distribution|normally distributed]] random variable, then ''P''(''Z''=''x'') is 0 for any ''x'', but ''P''(''Z''∈'''R''') = 1.
+
+The event ''A''∩''B'' is referred to as “''A'' and ''B''”, and the event ''A''∪''B'' as “''A'' or ''B''”.
+
+==See also==
+* [[Space (mathematics)]]
+* [[Measure space]]
+* [[Fuzzy measure theory]]
+* [[Filtered probability space]]
+* [[Talagrand's concentration inequality]]
+
+==References==
+{{reflist}}
+
+==Bibliography==
+
+* [[Pierre Simon de Laplace]] (1812) ''Analytical Theory of Probability''
+:: The first major treatise blending calculus with probability theory, originally in French: ''Théorie Analytique des Probabilités''.
+*[[Andrei Nikolajevich Kolmogorov]] (1950) ''Foundations of the Theory of Probability''
+:: The modern measure-theoretic foundation of probability theory; the original German version (''Grundbegriffe der Wahrscheinlichkeitrechnung'') appeared in 1933.
+* [[Harold Jeffreys]] (1939) ''The Theory of Probability''
+:: An empiricist, Bayesian approach to the foundations of probability theory.
+* [[Edward Nelson]] (1987) ''Radically Elementary Probability Theory''
+:: Foundations of probability theory based on nonstandard analysis. Downloadable. http://www.math.princeton.edu/~nelson/books.html
+* [[Patrick Billingsley]]: ''Probability and Measure'', John Wiley and Sons,  New York, Toronto, London, 1979.
+* Henk Tijms (2004) ''Understanding Probability ''
+:: A lively introduction to probability theory for the beginner, Cambridge Univ. Press.
+* David Williams (1991) ''Probability with martingales''
+:: An undergraduate introduction to measure-theoretic probability, Cambridge Univ. Press.
+*{{cite book
+ | last       = Gut
+ | first      = Allan
+ | title      = Probability: A Graduate Course
+ | publisher  = Springer
+ | year       = 2005
+ | isbn         = 0-387-22833-0
+}}
+
+==External links==
+* {{Springer |title=Probability space |id=P/p074960 |first=V.V. |last=Sazonov}}
+* [https://www.youtube.com/watch?v=9eaOxgT5ys0 Animation] demonstrating probability space of dice
+* [http://www.math.uah.edu/stat/ Virtual Laboratories in Probability and Statistics] (principal author Kyle Siegrist), especially, [http://www.math.uah.edu/stat/prob Probability Spaces]
+* [http://en.citizendium.org/wiki/Probability_space Citizendium]
+* [http://www.encyclopediaofmath.org/index.php/Probability_space Complete probability space]
+* {{MathWorld |urlname=ProbabilitySpace}}
+
+[[Category:Experiment (probability theory)]]</text>
+      <sha1>fv9hgyc7jqu502em28p8cxzz895pksb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Metropolitan area network</title>
+    <ns>0</ns>
+    <id>43326</id>
+    <revision>
+      <id>987842091</id>
+      <parentid>983318121</parentid>
+      <timestamp>2020-11-09T15:44:18Z</timestamp>
+      <contributor>
+        <username>Kvng</username>
+        <id>910180</id>
+      </contributor>
+      <comment>Adding local [[Wikipedia:Short description|short description]]: &quot;Computer network serving a populated area&quot;, overriding Wikidata description &quot;computer network that interconnects users with computer resources in a geographic area or region&quot; ([[Wikipedia:Shortdesc helper|Shortdesc helper]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="16164" xml:space="preserve">{{short description|Computer network serving a populated area}}
+{{Use mdy dates|date=April 2019}}
+{{Area networks}}
+A '''metropolitan area network''' ('''MAN''') is a [[computer network]] that interconnects users with computer resources in a geographic region of the size of a [[metropolitan area]]. The term MAN is applied to the interconnection of [[local area networks]] (LANs) in a [[city]] into a single larger network which may then also offer efficient connection to a [[wide area network]]. The term is also used to describe the interconnection of several local area networks in a metropolitan area through the use of [[Point-to-point (telecommunications)|point-to-point connections]] between them .&lt;ref&gt;{{Cite web |url=http://www.apposite-tech.com/blog/wp-content/uploads/2017/09/IEEE-Std-802-Metropolitan-Area-Networks.pdf |title=IEEE Std 802-2002 |access-date=September 5, 2017 |archive-date=September 5, 2017 |archive-url=https://web.archive.org/web/20170905231438/http://www.apposite-tech.com/blog/wp-content/uploads/2017/09/IEEE-Std-802-Metropolitan-Area-Networks.pdf |url-status=bot: unknown }},
+    IEEE Standard for Local and Metropolitan Area Networks: Overview and Architecture,
+    page 1,
+    section 1.2: &quot;Key Concepts&quot;, &quot;basic technologies&quot;&lt;/ref&gt;&lt;ref&gt;{{cite book |author1=Kenneth C. Laudan |author2=Jane P. Laudon |title=Management Information Systems: Managing the Digital Firm |url=https://archive.org/details/isbn_9780130156822 |url-access=registration |edition=10th |date=2001}}&lt;/ref&gt;
+
+== History ==
+By 1999, [[local area network]]s (LANs) were well established to provide data communication in buildings and offices.{{citation needed|date=April 2019}} For the interconnection of LANs within a city, businesses relied primarily on the [[public switched telephone network]]. But while the telephone network was able to support the packet-based exchange of data that the various LAN protocols implemented, the bandwidth of the telephone network was already under heavy demand from [[circuit switching|circuit-switched]] voice, and the [[telephone exchanges]] were ill-designed to cope with the traffic spikes that LANs tended to produce.&lt;ref&gt;{{cite book |editor = IGIC, Inc. Staff |date= 1994 |title= Fiber Optic Metropolitan Area Networks (MANs)  |publisher= Information Gatekeepers Inc |isbn=  9781568510552 | page = 11}}&lt;/ref&gt;
+
+To interconnect local area networks more effectively, it was suggested that office buildings are connected using the [[single-mode optical fiber]] lines, which were by that time widely used in long-haul telephone trunks. Such [[dark fibre]] links were in some cases already installed on customer premises and telephone companies started to offer their dark fibre within their subscriber packages. Fibre optic metropolitan area networks were operated by telephone companies as private networks for their customers, and did not necessarily have full integation with the public [[wide area network]] (WAN) through gateways.&lt;ref&gt;{{cite book |editor = IGIC, Inc. Staff |date= 1994 |title= Fiber Optic Metropolitan Area Networks (MANs)  |publisher= Information Gatekeepers Inc |isbn=  9781568510552 | page = 12}}&lt;/ref&gt;
+
+Besides the larger companies that connected their offices across metropolitan areas, universities and research institutions also adopted dark fibre as their metropolitan area network backbone. In [[West Berlin]] the BERCOM project built up a multifunctional broadband communications system to connect the [[mainframe computers]] that publicly funded universities and research institutions in the city housed. The BERCOM MAN project could progress at speed because the [[Deutsche Bundespost]] had already installed hundreds of miles of fibre optic cable in West Berlin. Like other metropolitan dark fibre networks at the time, the dark fibre network in West Berlin had a star topology with a hub somewhere in the city centre.&lt;ref&gt;{{cite book |editor = IGIC, Inc. Staff |date= 1994 |title= Fiber Optic Metropolitan Area Networks (MANs)  |publisher= Information Gatekeepers Inc |isbn=  9781568510552 | page = 56}}&lt;/ref&gt; The backbone of the dedicated BERCOM MAN for universities and research institutions was an optical fibre double ring that used a high speed [[Ring network|slotted ring protocol]] developed by the GMD Research Centre for Innovative Computer Systems and Telephony. The BERCOM MAN backbone could thus support two times 280 Mbit/s data transfer.&lt;ref&gt;{{cite book |editor = IGIC, Inc. Staff |date= 1994 |title= Fiber Optic Metropolitan Area Networks (MANs)  |publisher= Information Gatekeepers Inc |isbn=  9781568510552 | page = 57}}&lt;/ref&gt;
+
+[[Image:WDM operating principle.svg|400px|thumb|Wavelength division multiplexing operating principle]]
+The productive use of [[dense wavelength division multiplexing]] (DWDM) provided another impetus for the development of metropolitan area networks in the 2000s. Long haul DWDM, with ranges from 0 to 3000+ km, had been developed so that companies that stored large amount of data on different sites, could exchange data or establish mirrors of their [[file server]]. With the use of DWDM on the existing fibre optic MANs of carriers, companies no longer needed to connect their LANs with a dedicated fibre optic link.&lt;ref&gt;{{cite book |author = Vivek Alwayn |date= 1994 |title= Optical Network Design and Implementation  |publisher= Cisco Press |isbn= 9781587051050 | page = 14}}&lt;/ref&gt; With DWDM companies could build dedicated MANs using the existing dark fibre network of a provider in a city. MANs thus became cheaper to build and maintain.&lt;ref&gt;{{cite book |author = Vivek Alwayn |date= 1994 |title= Optical Network Design and Implementation  |publisher= Cisco Press |isbn= 9781587051050 | page = 15}}&lt;/ref&gt; The DWDM platforms provided by dark fibre providers in cities could allow for a single fibre pair to be divided into 32 wavelengths. One multiplexed wavelength could support between 10 Mbit/s and 10 Gbit/s. Thus companies that paid for a MAN to connect different office sites within a city could increase the bandwidths of their MAN backbone as part of their subscription. DWDM platforms also alleviated the need for protocol conversion to connect LANs in a city, because any protocol and any traffic type could be transmitted using DWDM. Effectively it gave companies wishing to establish a MAN choice of protocol.&lt;ref&gt;{{cite book |author = Vivek Alwayn |date= 1994 |title= Optical Network Design and Implementation  |publisher= Cisco Press |isbn= 9781587051050 | page = 16}}&lt;/ref&gt;
+
+[[File:AlumRockViewSiliconValley w.jpg|thumb|upright=1.8|right|Looking west over northern [[San Jose, California|San Jose]] and other parts of [[Silicon Valley]] technology hub. Between 2002 and 2003 the [[Sprint Corporation]] built five [[Metro Ethernet]] rings to connect the metropolitan areas.]]
+[[Metro Ethernet]], where a fibre optic ring within a larger city was built as MAN backbone carrying [[Gigabit Ethernet]], became common. The ring topology was implemented using the [[Internet protocol]] (IP), so that data could be rerouted if a link was congested or one of the links that was part of the ring failed.&lt;ref&gt;{{cite book |author = Matthew Liotine |date= 2003 |title= Mission-critical Network Planning |url = https://archive.org/details/missioncriticaln00liot_321 |url-access = limited |publisher= Artech House |isbn= 9781580535595 | page = [https://archive.org/details/missioncriticaln00liot_321/page/n123 105]}}&lt;/ref&gt; In the USA the [[Sprint Corporation]] was at the forefront of building fibre optic rings that routed IP Packets on the MAN backbone. Between 2002 and 2003 Sprint built three MAN rings to cover [[San Francisco]], [[Oakland, California|Oakland]] and [[San Jose, California|San Jose]], and in turn connected these three metro rings with a further two rings. The Sprint metro rings routed voice and data, were connected to several local telecom exchange points, and totalled 189 miles of fibre optic cable. The metro rings also connected many cities to the [[Internet]] that went on to become part of the [[Silicon Valley]] tech-hub, such as [[Fremont, California|Fremont]], [[Milpitas]], [[Mountain View, California|Mountain View]], [[Palo Alto]], [[Redwood City]], [[San Bruno, California|San Bruno]], [[San Carlos, California|San Carlos]], [[Santa Clara, California|Santa Clara]] and [[Sunnyvale, California|Sunnyvale]]. By adopting IP routing for its metro Ethernet rings, Sprint could re-route traffic in its MANs within milliseconds in the event of fibre cuts or local [[power outage]]s.&lt;ref&gt;{{citation |date= November 2003 |title= Fiber in the Loop  |publisher= Information Gatekeepers Inc |issue= Vol.15 No. 11 | page = 2}}&lt;/ref&gt;
+
+The metro Ethernet rings that did not route IP traffic, instead used one of the various proprietary [[spanning tree protocol]] implementations, so that each MAN ring had a root bridge.&lt;ref&gt;{{cite book |author = Matthew Liotine |date= 2003 |title= Mission-critical Network Planning |url = https://archive.org/details/missioncriticaln00liot_321 |url-access = limited |publisher= Artech House |isbn= 9781580535595 | page = [https://archive.org/details/missioncriticaln00liot_321/page/n124 106]}}&lt;/ref&gt; Because [[layer 2]] switching can not operate if there is a loop in the network, the protocols to support L2 MAN rings all need to block redundant links and thus block part of the ring.&lt;ref&gt;{{cite book |author = Vivek Alwayn |date= 1994 |title= Optical Network Design and Implementation  |publisher= Cisco Press |isbn= 9781587051050 | page = 41}}&lt;/ref&gt; Capsuling protocols, such as [[Multiprotocol Label Switching]] (MPLS), were also deployed to address the drawbacks of operating L2 metro Ethernet rings.&lt;ref&gt;{{cite book |author = Vivek Alwayn |date= 1994 |title= Optical Network Design and Implementation  |publisher= Cisco Press |isbn= 9781587051050 | page = 43}}&lt;/ref&gt;
+
+Metro Ethernet was effectively the extension of [[Ethernet]] protocols beyond the [[local area network]] (LAN) and the ensuing investment in Ethernet led to the deployment of [[carrier Ethernet]], where Ethernet protocols are used in [[wide area networks]] (WAN). The efforts of the [[Metro Ethernet Forum]] (MEF) in defining best practice and standards for metropolitan area networks thus also defined carrier Ethernet.&lt;ref&gt;{{cite book |author = Jeffrey S. Beasley &amp; Piyasat Nilkaew |date= 2012 |title= Networking Essentials: Networking Essentials |publisher= Pearson Education |isbn=  9780133381702 | pages = 10–4}}&lt;/ref&gt; While the IEEE tried to standardise the emerging Ethernet based proprietary protocols, industry forums such as the MEF filled the gap and in January 2013 launched a certification for network equipment that can be configured to meet ''Carrier Ethernet 2.0'' specifications.&lt;ref&gt;{{cite book |author=Charles E. Spurgeon |author2=Joann Zimmerman |date= 1994 |title= Ethernet Switches: An Introduction to Network Design with Switches  |publisher= O'Reilly |isbn= 9781449367268 | page = 49}}&lt;/ref&gt;
+
+== Metropolitan internet exchange points ==
+[[File:Fiber-Optic Installation in New York City.jpg|thumb|[[Stealth Communications|Stealth Fiber Crew]] installing a 432-count dark fibre cable underneath the streets of [[New York City]].]]
+[[File:AMS-IX optical patch panel.jpg|thumb|An [[optical fiber]] [[photonic switch]] at the AMS-IX]]
+
+[[Internet exchange point]]s (IXs) have historically been important for the connection of MANs to the national or global [[Internet]]. The [[Boston Metropolitan Exchange Point]] (Boston MXP) enabled metro Ethernet providers, such as the HarvardNet to exchange data with national carriers, such as the [[Sprint Corporation]] and [[AT&amp;T]]. Exchange points also serve as low-latency link between [[campus area network]]s, thus the [[Massachusetts Institute of Technology]] and the [[Boston University]] could exchange data, voice and video using the Boston MXP. Further examples of metropolitan Internet Exchanges in the USA that were operational by 2002 include the Anchorage Metropolitan Access Point (AMAP), the [[Seattle Internet Exchange]] (SIX), the Dallas-Fort Worth Metropolitan Access Point (DFMAP) and the Denver Internet Exchange (IX-Denver).&lt;ref&gt;{{cite book |author=Marlyn Kemper Littman |date=2002 |title=Building Broadband Networks |url=https://archive.org/details/buildingbroadban0000litt |url-access=registration |publisher=CRC Press |isbn=978-1-4200-0001-6 |page=[https://archive.org/details/buildingbroadban0000litt/page/78 78]}}&lt;/ref&gt; [[Verizon]] put into operation three regional metropolitan exchanges to interconnect MANs and give them access to the Internet. The [[MAE-West]] serves the MANs of [[San Jose, California|San Jose]], [[Los Angeles]] and [[California]]. The [[MAE-East]] interconnects the MANs of [[New York City]], [[Washington, D.C.]], and [[Miami, Florida|Miami]]. While the MAE-Central interconnects the MANs of [[Dallas]], [[Texas]], and [[Illinois]].&lt;ref&gt;{{cite book |author=Gary B. Shelly |author2=Jennifer Campbell |date=2011 |title=Discovering the Internet: Complete  |publisher=Cengage Learning |isbn=978-1-111-82072-5 |page=345}}&lt;/ref&gt;
+
+In larger cities several local providers may have built a [[dark fibre]] MAN backbone. In London the [[metro Ethernet]] rings of several providers make up the London MAN infrastructure. Like other MANs, the London MAN primarily serves the needs of its urban customers, who typically need a high number of connections with low bandwidth, a fast transit to other MAN providers, as well as high bandwidth access to national and international long-haul providers. Within the MAN of larger cities, metropolitan exchange points now play a vital role. The [[London Internet Exchange]] (LINX) had by 2005 built up several exchange points across the [[Greater London]] region.&lt;ref&gt;{{cite book |editor=Sachar Paulus |editor2=Norbert Pohlmann |editor3=Helmut Reimer|date=2005 |title=ISSE 2005 — Securing Electronic Business Processes: Highlights of the Information Security Solutions Europe 2005 Conference |publisher=Springer |isbn=978-3-8348-0011-4 |page=324}}&lt;/ref&gt;
+
+Cities that host one of the international Internet Exchanges have become a preferred location for companies and [[data centre]]s. The [[Amsterdam Internet Exchange]] (AMS-IX) is the world second largest Internet Exchange and has attracted companies to Amsterdam that are dependent on high speed internet access. The Amsterdam metropolitan area network has benefited too from high speed Internet access.&lt;ref&gt;{{cite book |date=2015 |title=Comparative Study of Smart Cities in Europe and China 2014  |publisher=Springer |isbn=978-3-662-46867-8 |page=105}}&lt;/ref&gt; Similarly Frankfurt has become a magnet for data centres of international companies because it hosts the non-profit [[DE-CIX]], the largest Internet Exchange in the world.&lt;ref&gt;{{cite book |date=2015 |title=Comparative Study of Smart Cities in Europe and China 2014  |publisher=Springer |isbn=978-3-662-46867-8 |page=116}}&lt;/ref&gt; DE-CIX has gone on to establish carrier neutral metropolitan Internet Exchanges in [[DE-CIX New York|New York]], Madrid, [[UAE-IX|Dubai]], [[DE-CIX Marseille|Marseille]], Dallas, Hamburg, [[ALP-IX|Munich]], Duesseldorf, Berlin, Istanbul, [[DE-CIX Palermo|Palermo]], Lisbon, [[Mumbai IX|Mumbai]], Delhi, Kolkata, Chennai, and Moscow.&lt;ref&gt;{{cite web |url=https://www.de-cix.net/en/locations|title=Locations|date=|website=www.de-cix.net |publisher=[[DE-CIX]] |access-date=March 8, 2019}}&lt;/ref&gt; The business model of the metro DE-CIX is to reduce the transit cost for local carriers by keeping data in the metropolitan area or region, while at the same time allowing long-haul low-latency peering globally with other major MANs.&lt;ref&gt;{{cite web |url=https://www.ixreach.com/news/ix-reach-announced-official-reseller-de-cix-new-york/|title=IX Reach announced as official reseller of DE-CIX New York|date=March 28, 2014|website=www.ixreach.com |publisher=IX Reach |access-date=March 8, 2019}}&lt;/ref&gt;
+
+==See also==
+*[[Community network]]
+*[[E-government]]
+*[[Municipal wireless network]]
+*[[Smart city]]
+*[[Wireless community network]]
+
+==References==
+{{reflist}}
+
+{{Authority control}}
+
+[[Category:Metropolitan area networks| ]]</text>
+      <sha1>ocdoc2dxwmde33mejxsgvo6yqd3nyuw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Borel set</title>
+    <ns>0</ns>
+    <id>43327</id>
+    <revision>
+      <id>981265415</id>
+      <parentid>975088443</parentid>
+      <timestamp>2020-10-01T08:25:05Z</timestamp>
+      <contributor>
+        <username>WikiCleanerBot</username>
+        <id>18872885</id>
+      </contributor>
+      <minor />
+      <comment>v2.03b - [[User:WikiCleanerBot#T20|Bot T20 CW#61]] - [[WP:WCW]] project (Reference before punctuation)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12095" xml:space="preserve">In [[mathematics]], a '''Borel set''' is any set in a [[topological space]] that can be formed from [[open set]]s (or, equivalently, from [[closed set]]s) through the operations of [[countable]] [[union (set theory)|union]], countable [[intersection (set theory)|intersection]], and [[relative complement]].  Borel sets are named after [[Émile Borel]].

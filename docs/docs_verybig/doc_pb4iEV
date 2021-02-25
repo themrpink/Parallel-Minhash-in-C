@@ -1,0 +1,389 @@
+==Condorcet ranking methods==
+Some Condorcet methods produce not just a single winner, but a ranking of all candidates from first to last place. A '''Condorcet ranking''' is a list of candidates with the property that the Condorcet winner (if one exists) comes first and the Condorcet loser (if one exists) comes last, and this holds recursively for the candidates ranked between them.
+
+Methods that satisfy this property include:
+* [[Copeland's method]]
+* [[Kemeny–Young method]]
+* [[Ranked pairs]]
+* [[Schulze method]]
+* [[Copeland's method#Copeland_Star_Voting_method|Condorcet Star method]]
+
+Though there won't always be a Condorcet winner or Condorcet loser, there is always a Smith set and &quot;Smith loser set&quot; (smallest group of candidates who lose to all candidates not in the set in head-to-head elections). Some voting methods produce rankings that sort all candidates in the Smith set above all others, and all candidates in the Smith loser set below all others, with this holding recursively for all candidates ranked between them; in essence, this guarantees that when the candidates can be split into two groups, such that every candidate in the first group beats every candidate in the second group head-to-head, then all candidates in the first group are ranked higher than all candidates in the second group.&lt;ref&gt;https://core.ac.uk/download/pdf/7227054.pdf &quot;A first objective of this paper is to propose a formalization of this idea, called the Extended Condorcet Criterion (XCC). In essence, it says that if the set of alternatives can be partitioned in such a way that all members of a subset of this partition defeat all alternatives belonging to subsets with a higher index, then the former should obtain a better rank than the latter.&quot;&lt;/ref&gt; Because the Smith set and Smith loser set are equivalent to the Condorcet winner and Condorcet loser when they exist, methods that always produce Smith set rankings also always produce Condorcet rankings.
+
+==Comparison with instant runoff and first-past-the-post (plurality)==
+{{Essay|date=November 2020}}
+Many proponents of [[instant-runoff voting]] (IRV) are attracted by the belief that if their first choice does not win, their vote will be given to their second choice; if their second choice does not win, their vote will be given to their third choice, etc. This sounds perfect, but it is not true for every voter with IRV. If someone voted for a strong candidate, and their 2nd and 3rd choices are eliminated before their first choice is eliminated, IRV gives their vote to their 4th choice candidate, not their 2nd choice. [[Condorcet voting]] takes all rankings into account simultaneously, but at the expense of violating the [[later-no-harm criterion]] and the [[later-no-help criterion]]. With IRV, indicating a second choice will never affect your first choice. With Condorcet voting, it is possible that indicating a second choice will cause your first choice to lose.
+
+[[Plurality voting]] is simple, and theoretically provides incentives for voters to compromise for centrist candidates rather than throw away their votes on candidates who can't win. Opponents to plurality voting point out that voters often vote for the lesser of evils because they heard on the news that those two are the only two with a chance of winning, not necessarily because those two are the two natural compromises. This gives the media significant election powers. And if voters do compromise according to the media, the post election counts will prove the media right for next time. Condorcet runs each candidate against the other head to head, so that voters elect the candidate who would win the most sincere runoffs, instead of the one they thought they had to vote for.
+
+There are circumstances, as in the examples above, when both [[instant-runoff voting]] and the '[[plurality voting system|first-past-the-post]]' plurality system will fail to pick the Condorcet winner. (In fact, FPTP can elect the Condorcet loser and IRV can elect the second-worst candidate, who would lose to every candidate except the Condorcet loser.&lt;ref name=&quot;:02&quot;&gt;{{Cite journal|last=Nanson|first=E. J.|date=1882|title=Methods of election|url=https://archive.org/details/transactionsproc1719roya/page/207|journal=Transactions and Proceedings of the Royal Society of Victoria|volume=19|pages=207–208|quote=although Ware's method cannot return the worst, it may return the next worst.|via=}}&lt;/ref&gt;) In cases where there is a Condorcet Winner, and where IRV does not choose it, a majority would by definition prefer the Condorcet Winner to the IRV winner. Proponents of the Condorcet criterion see it as a principal issue in selecting an electoral system. They see the Condorcet criterion as a natural extension of [[majority rule]]. Condorcet methods tend to encourage the selection of centrist candidates who appeal to the [[median]] voter. Here is an example that is designed to support IRV at the expense of Condorcet:
+
+{| class=&quot;wikitable&quot;
+|-
+!499 voters
+!3 voters
+!498 voters
+|-
+|1. A
+|1. B
+|1. C
+|-
+|2. B
+|2. C
+|2. B
+|-
+|3. C
+|3. A
+|3. A
+|}
+
+B is preferred by a 501–499 majority to A, and by a 502–498 majority to C. So, according to the Condorcet criterion, B should win, despite the fact that very few voters rank B in first place. By contrast, IRV elects C and plurality elects A. The goal of a ranked voting system is for voters to be able to vote sincerely and trust the system to protect their intent. Plurality voting forces voters to do all their tactics before they vote, so that the system does not need to figure out their intent.
+
+The significance of this scenario, of two parties with strong support, and the one with weak support being the Condorcet winner, may be misleading, though, as it is a common mode in plurality voting systems (see [[Duverger's law]]), but much less likely to occur in Condorcet or IRV elections, which unlike Plurality voting, punish candidates who alienate a significant block of voters.
+
+Here is an example that is designed to support Condorcet at the expense of IRV:
+
+{| class=&quot;wikitable&quot;
+|-
+!33 voters
+!16 voters
+!16 voters
+!35 voters
+|-
+|1. A
+|1. B
+|1. B
+|1. C
+|-
+|2. B
+|2. A
+|2. C
+|2. B
+|-
+|3. C
+|3. C
+|3. A
+|3. A
+|}
+
+B would win against either A or C by more than a 65–35 margin in a one-on-one election, but IRV eliminates B first, leaving a contest between the more &quot;polar&quot; candidates, A and C. Proponents of plurality voting state that their system is simpler than any other and more easily understood.
+
+All three systems are susceptible to [[tactical voting]], but the types of tactics used and the frequency of strategic incentive differ in each method.
+
+==Potential for tactical voting==
+{{See also|Tactical voting#Condorcet}}
+Like all voting methods,&lt;ref&gt;Satterthwaite, Mark. &quot;Strategy-proofness and Arrow's conditions: Existence and correspondence theorems for voting procedures and social welfare functions&quot;.&lt;/ref&gt; Condorcet methods are vulnerable to [[Tactical voting|compromising]]. That is, voters can help avoid the election of a less-preferred candidate by insincerely raising the position of a more-preferred candidate on their ballot. However, Condorcet methods are only vulnerable to compromising when there is a [[Condorcet cycle|majority rule cycle]], or when one can be created.&lt;ref&gt;https://pdfs.semanticscholar.org/8ebe/dc95ea48189d2f074190359bc884cfeb4a13.pdf&lt;/ref&gt;
+
+All Condorcet methods are at least somewhat vulnerable to [[Tactical voting|burying]]. That is, voters can sometimes help a more-preferred candidate by insincerely lowering the position of a less-preferred candidate on their ballot.
+
+Example with the [[Schulze method]]:
+{| class=&quot;wikitable&quot;
+|-
+!46 voters
+!44 voters
+!10 voters
+|-
+|1. A
+|1. B
+|1. C
+|-
+|2. B
+|2. A
+|2. B
+|-
+|3. C
+|3. C
+|3. A
+|}
+* B is the sincere Condorcet winner. But since A has the most votes and almost has a majority, with A and B forming a [[mutual majority criterion|mutual majority]] of 90% of the voters, A can win by publicly instructing A voters to bury B with C (see * below), using B-top voters' 2nd choice support to win the election. If B, after hearing the public instructions, reciprocates by burying A with C, C will be elected, and this threat may be enough to keep A from pushing for his tactic. B's other possible recourse would be to attack A's ethics in proposing the tactic and call for all voters to vote sincerely. This is an example of the [[Chicken_(game)|chicken dilemma]].
+{| class=&quot;wikitable&quot;
+|-
+!46 voters
+!44 voters
+!10 voters
+|-
+|1. A
+|1. B
+|1. C
+|-
+|2. C*
+|2. A
+|2. B
+|-
+|3. B*
+|3. C
+|3. A
+|}
+* B beats A by 8 as before, and A beats C by 82 as before, but ''now'' C beats B by 12, forming a [[Smith set]] greater than one. Even the [[Schulze method]] elects A: The path strength of A beats B is the lesser of 82 and 12, so 12. The path strength of B beats A is only 8, which is less than 12, so A wins. B voters are powerless to do anything about the public announcement by A, and C voters just hope B reciprocates, or maybe consider compromise voting for B if they dislike A enough.
+
+Supporters of Condorcet methods which exhibit this potential problem could rebut this concern by pointing out that pre-election polls are most necessary with [[plurality voting]], and that voters, armed with ranked choice voting, could lie to pre-election pollsters, making it impossible for Candidate A to know whether or how to bury. It is also nearly impossible to predict ahead of time how many supporters of A would actually follow the instructions, and how many would be alienated by such an obvious attempt to manipulate the system.
+
+{| class=&quot;wikitable&quot;
+|-
+!33 voters
+!16 voters
+!16 voters
+!35 voters
+|-
+|1. A
+|1. B
+|1. B
+|1. C
+|-
+|2. B
+|2. A
+|2. C
+|2. B
+|-
+|3. C
+|3. C
+|3. A
+|3. A
+|}
+* In the above example, if C voters bury B with A, A will be elected instead of B. Since C voters prefer B to A, only they would be hurt by attempting the burying. Except for the first example where one candidate has the most votes and has a near majority, the Schulze method is very resistant to burying.
+
+==Evaluation by criteria==
+
+Scholars of electoral systems often compare them using mathematically defined [[Comparison of electoral systems|voting system criteria]]. The criteria which Condorcet methods satisfy vary from one Condorcet method to another. However, the Condorcet criterion implies the [[majority criterion]], and thus is incompatible with [[independence of irrelevant alternatives]] (though it implies a weaker analogous form of the criterion: when there is a Condorcet winner, losing candidates can drop out of the election without changing the result),&lt;ref&gt;{{cite arxiv |eprint=1804.02973 |page=351 |quote=The Condorcet criterion for single-winner elections (section 4.7) is important because, when there is a Condorcet winner b ∈ A, then it is still a Condorcet winner when alternatives a1,...,an ∈ A \ {b} are removed. So an alternative b ∈ A doesn’t owe his property of being a Condorcet winner to the presence of some other alternatives. Therefore, when we declare a Condorcet winner b ∈ A elected whenever a Condorcet winner exists, we know that no other alternatives a1,...,an ∈ A \ {b} have changed the result of the election without being elected.|last1=Schulze |first1=Markus |title=The Schulze Method of Voting |year=2018 |class=cs.GT }}&lt;/ref&gt; [[later-no-harm]], the [[participation criterion]], and the [[consistency criterion]]. 
+
+{| class=&quot;wikitable&quot; style=&quot;text-align:center&quot;
+|- style=&quot;font-size:90%;line-height:1;&quot;
+! {{diagonal split header|&lt;br /&gt;Condorcet&lt;br /&gt;method|Voting system&lt;br /&gt;criterion}} !! [[Monotonicity criterion|Monotonic]] !! [[Condorcet loser criterion|Condorcet&lt;br /&gt;loser]] !! [[Independence of clones criterion|Clone&lt;br /&gt;independence]] !! [[Reversal symmetry|Reversal&lt;br /&gt;symmetry]] !! [[Polynomial time|Polynomial&lt;br /&gt;time]] !! [[Resolvability criterion|Resolvable]] !! [[Independence of irrelevant alternatives#Local independence|Local&lt;br /&gt;independence&lt;br /&gt;of irrelevant&lt;br /&gt;alternatives]]
+|-
+! [[Schulze method|Schulze]]
+| {{yes}} || {{yes}} || {{yes}} || {{yes}} || {{yes}} || {{yes}} || {{no}}
+|-
+! [[Ranked Pairs]]
+| {{yes}} || {{yes}} || {{yes}} || {{yes}} || {{yes}} || {{yes}} || {{yes}}
+|-
+! [[Minimax Condorcet|Minimax]]
+| {{yes}} || {{no}} || {{no}} || {{no}} || {{yes}} || {{yes}} || {{no}}
+|-
+! [[Nanson's method|Nanson]]
+| {{no}} || {{yes}} || {{no}} || {{yes}} || {{yes}} || {{partial|Unknown}} || {{partial|Unknown}}
+|-
+! [[Kemeny–Young method|Kemeny–Young]]
+| {{yes}} || {{yes}} || {{no}} || {{yes}} || {{no}} || {{yes}} || {{yes}}
+|-
+! [[Dodgson's method|Dodgson]]
+| {{no}} || {{no}} || {{no}} || {{no}} || {{no}} || {{partial|Unknown}} || {{partial|Unknown}}
+|-
+! [[Copeland's method|Copeland]]
+| {{yes}} || {{yes}} || {{no}} || {{yes}} || {{yes}} || {{no}} || {{no}}
+|}
+
+==Use of Condorcet voting==
+[[Image:Voting2.png|thumb|right|sample ballot for Wikimedia's Board of Trustees elections]]
+Condorcet methods are not known to be currently in use in government elections anywhere in the world, but a Condorcet method known as [[Nanson's method]] was used in city elections in the [[United States|U.S.]] town of [[Marquette, Michigan]] in the 1920s,&lt;ref&gt;{{Citation | place = UK | url = http://www.nuff.ox.ac.uk/Politics/papers/2002/w23/mclean.pdf | title = Australian electoral reform and two concepts of representation | publisher = Ox | type = paper | last = McLean | year = 2002 | accessdate = 2015-06-27}}&lt;/ref&gt; and today Condorcet methods are used by a number of private organizations. Organizations which currently use some variant of the Condorcet method are:
+
+* The [[Wikimedia Foundation]] used the [[Schulze method]] to elect its Board of Trustees until 2013, when it switched to a [[ratings ballot]] with Support/Neutral/Oppose ballots.&lt;ref&gt;{{Cite web|url=https://meta.wikimedia.org/wiki/Wikimedia_Foundation_elections_2013/Results|title=Wikimedia Foundation elections 2013/Results – Meta|website=meta.wikimedia.org|language=en|access-date=2017-01-23}}&lt;/ref&gt;
+* The [[Pirate Party (Sweden)|Pirate Party of Sweden]] uses the [[Schulze method]] for its primaries
+* The [[Debian]] project uses the [[Schulze method]] for internal referenda and to elect its leader
+* The [[Software in the Public Interest]] corporation uses the [[Schulze method]] for internal referenda and to elect its Board of Directors
+* The [[Gentoo Linux|Gentoo Foundation]] uses the [[Schulze method]] for internal referenda and to elect its Board of Trustees and its Council
+* The [[Free State Project]] used [[Minimax Condorcet|Minimax]] for choosing its target state
+* The [[United Kingdom|uk]].* hierarchy of [[Usenet]]
+* The [[Alma Mater Society of the University of British Columbia|Student Society of the University of British Columbia]] uses [[ranked pairs]] for its executive elections.
+* [[Kingman Hall]] and [[Hillegass Parker House]], two loosely affiliated [[student housing cooperative]]s, each use the [[Schulze method]] to elect their management teams.
+{{See also|Schulze method#Users|l1=Use of the Schulze method}}
+
+==Other considerations==
+
+* Condorcet election results show the win margins for every head to head runoff. If the Condorcet winner (A) is part of an A beats B beats C beats A [[Smith set]], supporters of Candidate C will know that Candidate C would win a [[recall election]] if candidate B is somehow kept off the ballot. If Condorcet voting is used, the rules for ballot access in recall elections may need to be evaluated to take the potential motives into consideration.
+
+* If every seat in a legislature is elected (in separate elections, by the same pool of voters – use of districts will avoid this) by the Condorcet method, the legislators would all be centrists and might all agree with each on what laws to pass. Some voters prefer to have opposites in the legislature so they can't pass laws easily. These voters might prefer the Condorcet method for electing executive offices.
+
+* If 10 candidates run for governor in a Condorcet race, ballot counters may need to count 9+8+7+6+5+4+3+2+1 = 45 head to head runoffs to find the winner. While this is doable, it might be more practical to still use ballot access laws or primaries, defeating some of the original intent of the Condorcet method. Possible solutions:
+** Computers can be used to speed up the counts, though some voters fear computers can be hacked and used for ballot counting fraud. 
+** Another option would be to allow several independent scanner owners count the ballots and compare results. Volunteer hand counters could then spot check various candidates and ranks to make sure they match the subtotals reported by the scanners. 
+** It is also possible to limit the number of ranks voters can use; for example, if every voter is only allowed to rank each candidate either 1st, 2nd, or 3rd, with equal rankings allowed, then only the runoffs between candidates ranked 1st and 2nd, 1st and 3rd, 1st and last, 2nd and 3rd, 2nd and last, and 3rd and last need be counted, as the runoffs between two candidates at the same rank will result in ties.
+** The negative vote-counting approach to pairwise counting may reduce the amount of work the vote-counters have to do.&lt;ref&gt;{{Cite news|date=2020-08-14|title=Negative vote-counting approach for pairwise counting|language=en|work=Electowiki|url=https://electowiki.org/wiki/Negative_vote-counting_approach_for_pairwise_counting|access-date=2020-09-08}}&lt;/ref&gt; For example, with 10 candidates, a voter who ranks candidate A as their 1st choice and doesn't rank any other candidate prefers A over 9 other candidates. In the regular approach, this means recording those 9 preferences; but with negative counting, it can simply be recorded that A is marked on 1 voter's ballot and that no other candidate is preferred over A, with this itself indicating that A is preferred in every match-up. When a voter ranks a candidate 2nd, then a negative vote can be placed in the matchup between the 2nd choice and 1st choice to indicate that the 2nd choice is '''not''' preferred to the 1st choice, such that it will cancel out with the support the 2nd choice would receive against the 1st choice from being marked on the voter's ballot. Negative votes can likewise be applied to matchups where both candidates are ranked equally. 
+** If there are no more than 5 candidates ( or a larger number of candidates is short-listed to 5) then the amount of effort counting ballots could be reduced to normal acceptable levels by asking voters to select an order of preference from a predetermined list of the possibilities. This would mean that the ballots would just require to be counted once to determine the number of votes cast for each order of preference. The results would then be entered into a simple spreadsheet which would determine the Condorcet winner. For example where there are candidates A, B and C, there are six orders of preference, so voters could be asked to choose which of the six they wish to vote for. Counting would then be simply a matter of counting how votes were cast for each order of preference. The results could then be applied to a simple spreadsheet which revealed the Condorcet winner. If there were four candidates (options) then there would be 24 orders of preference; if there were five candidates then there would be 120 orders of preference and so on.
+
+* Voters make an economic trade-off in the amount of time invested in researching and ranking candidates.  If voters rank too few candidates or [[donkey voting|rank such as to inaccurately represent their preferences]], the Condorcet candidate cannot be correctly discovered. Nominating primaries reduce the number of candidates to avoid this, and the style of nominating primary can impact whether the Condorcet candidate—or at least a similar candidate—remains or if all such candidates are eliminated in favor of polarized options.
+
+==See also==
+{{Portal|Politics}}
+* [[Condorcet loser criterion]]
+* [[Ramon Llull]] (1232–1315) who, with the 2001 discovery of his lost manuscripts ''Ars notandi'', ''Ars eleccionis'', and ''Alia ars eleccionis'', was given credit for discovering the Borda count and Condorcet criterion (Llull winner) in the 13th century
+
+'''Proportional forms of Condorcet'''
+* [[CPO-STV]]
+* [[Schulze STV]]
+
+==Notes and references==
+{{Reflist}}
+
+==Further reading==
+* {{cite book | last =  Black | first =  Duncan | title = The Theory of Committees and Elections | url =  https://archive.org/details/theoryofcommitte0000blac | url-access =  registration | publisher =  Cambridge University Press | year = 1958}}
+* {{cite book | last = Farquarson | first = Robin | title = Theory of Voting | location = Oxford | year = 1969}}
+* {{cite book | last = Sen | first = Amartya Kumar| title = Collective Choice and Social Welfare | isbn = 978-0-8162-7765-0 | year = 1970 | publisher = Holden-Day}}
+
+==External links==
+&lt;!-- this section contains a lot of links; please try to keep it organized by the author's last name. --&gt;
+* {{Citation | url = http://pj.freefaculty.org/Ukraine/PJ3_VotingSystemsEssay.pdf | title = Voting Systems | first = Paul E | last = Johnson | publisher = Free faculty | accessdate = 2015-06-27}}.
+* {{Citation | url = http://robla.net/1996/politics/condorcet.html | title = Condorcet's Method | first = Robert ‘Rob’ | last = Lanphier}}.
+* {{Citation | url = http://accuratedemocracy.com/ | title = Accurate Democracy | first = Robert ‘Rob’ | last = Loring | access-date = 2004-11-02 | archive-url = https://web.archive.org/web/20041030073537/http://www.accuratedemocracy.com/ | archive-date = 2004-10-30 | url-status = dead }}.
+* {{Citation | url = http://condorcet.ca/ | title = Condorcet Canada Initiative | first = Ron | last = McKinnon | place = CA | accessdate = 2019-01-08}}. Multipage description of Condorcet method and Ranked Pairs from a Canadian perspective.
+* {{Citation | url = http://www1.fee.uva.nl/creed/pdffiles/MoulinCh4Elferink.pdf | title = Voting and Social Choice | first = Hervé | last = Moulin | publisher = UVA | place = NL | accessdate = 2015-06-27}}. Demonstration and commentary on Condorcet method.
+* {{Citation | url = http://www2.uah.es/docecon/documentos/DT1.pdf | title = A strong No Show Paradox is a common flaw in Condorcet voting correspondences | first = Joaquin | last = Perez | place = ES | publisher = UAH | accessdate = 2015-06-27 | archive-url = https://web.archive.org/web/20160303171153/http://www3.uah.es/docecon/documentos/DT1.pdf | archive-date = 2016-03-03 | url-status = dead }}.
+* {{Citation | url = http://radicalcentrism.org/resources/maximum-majority-voting/ | title = Maximum Majority Voting (a Condorcet method) | first = Ernest | last = Prabhakar | publisher = Radical centrism | accessdate = 2015-06-27| date = 2010-06-28 }}.
+* {{Citation | url = http://m-schulze.9mail.de/schulze1.pdf | title = A New Monotonic, Clone-Independent, Reversal Symmetric, and Condorcet-Consistent Single-Winner Election Method | first = Markus | last = Schulze}}.
+
+===Software===
+* {{Citation | url = http://www.cs.cornell.edu/andru/civs.html | title = CIVS, a free web poll service using the Condorcet method | publisher = Cornell}}.
+* {{Citation | url = https://github.com/julien-boudry/Condorcet | type = Open-source command line application and [[PHP]] [[Library (computing)|library]] for computing multiple Condorcet methods and others | title =Condorcet PHP }}.
+* {{Citation | url = http://www.condorcet.vote/ | title = Condorcet.Vote | type = A free web poll application using the original Condorcet method and many others like Schulze method.}}.
+* {{Citation | url = http://condorcet.ericgorr.net/ | title = Condorcet Voting Calculator | first = Eric | last = Gorr}}.
+* {{Citation | url = http://stv.sourceforge.net/ | type = software for computing Condorcet methods and STV | title = STV | publisher = Sourceforge}}.
+* {{Citation | url = http://www.votefair.org/surveys.html | title = VoteFair surveys | publisher = VoteFair | type = Free ranking service that calculates [[Condorcet Kemeny|Condorcet–Kemeny]] results }}
+* {{Citation | url = https://github.com/cpsolver/VoteFair-ranking-cpp | title = VoteFair Ranking | type = Open-source C++ election software that calculates [[Condorcet Kemeny|Condorcet–Kemeny]] results. | publisher = VoteFair}}
+* {{Citation | url = http://voteer.com/ | publisher = Arpinum | title = Voteer | type = free web pool service using a Condorcet algorythme}}
+* {{Citation | url = https://dev.entrouvert.org/projects/wcs | publisher = Entr'ouvert | title = w.c.s. | type = A free web poll application using OpenSTV for voting algorithms}}
+
+{{Voting systems}}
+
+{{DEFAULTSORT:Condorcet Method}}
+[[Category:Single-winner electoral systems]]
+[[Category:Condorcet methods|*]]
+[[Category:Preferential electoral systems]]
+
+[[he:מועמד קונדורסה]]</text>
+      <sha1>kunsvvbvof9609bm3o33c73gh2ws4n5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>The Forge of God</title>
+    <ns>0</ns>
+    <id>44447</id>
+    <revision>
+      <id>989386848</id>
+      <parentid>956820330</parentid>
+      <timestamp>2020-11-18T18:00:13Z</timestamp>
+      <contributor>
+        <username>BOZ</username>
+        <id>861759</id>
+      </contributor>
+      <comment>reception section added</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="5381" xml:space="preserve">{{Infobox book | 
+| name          = The Forge of God
+| title_orig    = 
+| translator    = 
+| image         = TheForgeOfGod(1stEd).jpg
+| image_size    = 
+| caption       = Cover of first edition (hardcover)
+| author        = [[Greg Bear]]
+| illustrator   = 
+| cover_artist  = 
+| country       = United States
+| language      = English
+| series        = The Forge of God series
+| genre         = [[Science fiction]] 
+| publisher     = [[Tor Books]]
+| release_date  = 1987
+| english_release_date =
+| media_type    = Print ([[Hardcover]] &amp; [[Paperback]])
+| pages         = 474 
+| isbn          = 0-312-93021-6
+| dewey= 813/.54 19
+| congress= PS3552.E157 F6 1987
+| oclc= 16089603
+| preceded_by   = 
+| followed_by   = [[Anvil of Stars]]
+}}
+'''''The Forge of God''''' is a [[1987 in literature|1987]] [[science fiction]] novel by American writer [[Greg Bear]]. Earth faces destruction when an inscrutable and overwhelming alien form of life attacks.
+
+''The Forge of God'' was nominated for the [[Nebula Award]] for [[Nebula Award for Best Novel|Best Novel]] in 1987,&lt;ref name=&quot;WWE-1987&quot;&gt;{{cite web
+| url = http://www.worldswithoutend.com/books_year_index.asp?year=1987 
+| title = 1987 Award Winners &amp; Nominees
+| work = Worlds Without End
+| accessdate=2009-07-11
+}}&lt;/ref&gt; and was also nominated for the [[Hugo Award|Hugo]] and [[Locus Award|Locus]] Awards in 1988.&lt;ref name=&quot;WWE-1988&quot;&gt;{{cite web
+| url = http://www.worldswithoutend.com/books_year_index.asp?year=1988 
+| title = 1988 Award Winners &amp; Nominees
+| work = Worlds Without End
+| accessdate=2009-07-11
+}}&lt;/ref&gt;
+
+== Plot ==
+
+The novel features scenes and events, including the discovery of a nearly-dead alien in the desert, who clearly says in [[English language|English]], &quot;I'm sorry, but there is bad news,&quot; and the alien's subsequent [[interrogation]] and [[autopsy]]; the discovery of an artificial geological formation and its subsequent nuclear destruction by a desperate military; and the Earth's eventual destruction by the mutual [[annihilation]] of a piece of [[neutronium]] and a piece of [[antimatter|antineutronium]] dropped into [[Earth's core]].
+
+There is another alien faction at work, however, represented on Earth by small spider-like robots that recruit human agents through some form of [[mind control]]. They frantically collect all the human data, biological records, tissue samples, seeds, and [[DNA]] from the [[biosphere]] that they can and evacuate a handful of people from Earth. In outer space, this faction's machines combat and eventually destroy the attackers but not before Earth's fate is sealed. The evacuees eventually settle a newly [[terraforming|terraformed]] Mars while some form the crew of a Ship of the Law to hunt down the home world of the killers, a quest described in the sequel, ''[[Anvil of Stars]]''.
+
+One of the point of view characters is Arthur Gordon, a scientist. He; his wife, Francine; and son Martin are among those rescued from the destruction of Earth. Some other characters are close to an American president, who fails to take action against the threat.
+
+The two books show at least one solution to the [[Fermi paradox]], with electromagnetically noisy civilizations being snuffed out by the arrival of [[Von Neumann probe|self-replicating machines]] designed to destroy any potential threat to their (possibly long-dead) creators. (A similar theme is explored in [[Fred Saberhagen]]'s ''[[Berserker (Saberhagen)|Berserker]]'' novels.)
+
+==Cultural reference==
+It features a character, Lawrence Van Cott, that is modelled on science fiction author [[Larry Niven]], whose full name is &quot;Laurence van Cott Niven&quot;.
+
+==Reception==
+[[David Langford|Dave Langford]] reviewed ''The Forge of God'' for ''[[White Dwarf (magazine)|White Dwarf]]'' #95, and stated that &quot;A good nasty read [...] with a flicker of optimism: in the jungle Out There, someone is on our side ...&quot;&lt;ref name=&quot;WD95&quot;&gt;{{cite journal  | last =Langford | first =Dave | authorlink =David Langford | title =Critical Mass  | journal =[[White Dwarf (magazine)|White Dwarf]]  | issue =Issue 95  | pages =12   | publisher =[[Games Workshop]]  | year = November 1987  | issn =}}&lt;/ref&gt;
+
+==Movie==
+In the early 2000s, ''The Forge of God'' and ''Anvil of Stars'', as well as an as-yet-unwritten third book, were optioned by [[Warner Bros.]] to be made into movies. It was reported that Stephen Susco worked on a script for ''The Forge Of God''. In July 2006, Greg Bear mentioned on his website that the movie is &quot;Still under option. Studio engaged in 'silent running.'&amp;nbsp;&quot;&lt;ref&gt;{{cite web |url=http://www.gregbear.com/blog/archive_2006_2.cfm |last=Bear |first=Greg |authorlink=Greg Bear |date=2006-07-28 |accessdate=2007-07-13 |title=Response: Anvil/Forge |work=Greg Bear: Blog Archives}}&lt;/ref&gt;
+
+However, in October 2010, Bear commented on his website that Ken Nolan (who wrote the screen adaptation for Ridley Scott's ''[[Black Hawk Down (film)|Black Hawk Down]]'' film), was actively working on a screenplay.
+
+==References==
+{{Reflist}}
+
+==External links==
+{{wikiquote}}
+*{{isfdb title|1910}}
+
+{{DEFAULTSORT:Forge Of God, The}}
+[[Category:1987 American novels]]
+[[Category:1987 science fiction novels]]
+[[Category:Alien invasions in novels]]
+[[Category:Apocalyptic novels]]
+[[Category:Novels by Greg Bear]]
+[[Category:Self-replicating machines in fiction]]
+[[Category:Tor Books books]]
+[[Category:Fiction set in 1996]]</text>
+      <sha1>l9hcaewywnp5l73lj2y3k4f74u6emm3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Blood Music (novel)</title>
+    <ns>0</ns>
+    <id>44449</id>
+    <revision>
+      <id>979600955</id>
+      <parentid>931234640</parentid>
+      <timestamp>2020-09-21T17:24:35Z</timestamp>
+      <contributor>
+        <username>BOZ</username>
+        <id>861759</id>
+      </contributor>
+      <comment>reception section added</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="5025" xml:space="preserve">{{Infobox book| &lt;!-- See Wikipedia:WikiProject_Novels or Wikipedia:WikiProject_Books --&gt;
+| name          = Blood Music
+| title_orig    =
+| translator    =
+| image         = BloodMusic(1stEd).jpg
+| caption = Cover of first edition (hardcover)
+| author        = [[Greg Bear]]
+| cover_artist  =
+| country       = United States
+| language      = English
+| series        =
+| genre         = [[Science fiction]] 
+| publisher     = [[Arbor House]]
+| release_date  = 1985
+| media_type    = Print (hardback &amp; paperback)
+| pages         = 262 
+| isbn          = 0-87795-720-7
+| dewey= 813/.54 19
+| congress= PS3552.E157 B58 1985
+| oclc= 11444143
+| preceded_by   =
+| followed_by   =
+}}
+'''''Blood Music''''' is a [[science fiction]] novel by American writer [[Greg Bear]].
+It was originally published as a short story in [[1983 in literature|1983]] in the American science fiction magazine ''[[Analog Science Fiction and Fact|Analog Science Fact &amp; Fiction]]'', winning the 1983 [[Nebula Award for Best Novelette]] and the 1984 [[Hugo Award for Best Novelette]].

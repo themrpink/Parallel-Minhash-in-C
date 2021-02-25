@@ -1,0 +1,239 @@
+===Example: fundamental group of torus===
+As an example of the distinction between the functorial statement and individual objects, consider [[homotopy group]]s of a product space, specifically the fundamental group of the torus.
+
+The [[homotopy group]]s of a product space are naturally the product of the homotopy groups of the components, &lt;math&gt;\pi_n((X,x_0) \times (Y,y_0)) \cong \pi_n((X,x_0)) \times \pi_n((Y,y_0)),&lt;/math&gt; with the isomorphism given by projection onto the two factors, fundamentally because maps into a product space are exactly products of maps into the components – this is a functorial statement.
+
+However, the torus (which is abstractly a product of two circles) has [[fundamental group]] isomorphic to &lt;math&gt;Z^2&lt;/math&gt;, but the splitting &lt;math&gt;\pi_1(T,t_0) \approx \mathbf{Z} \times \mathbf{Z}&lt;/math&gt; is not natural. Note the use of &lt;math&gt;\approx&lt;/math&gt;, &lt;math&gt;\cong&lt;/math&gt;, and &lt;math&gt;=&lt;/math&gt;:{{efn|1='''Z'''&lt;sup&gt;''n''&lt;/sup&gt; could be defined as the ''n''-fold product of '''Z''', or as the product of '''Z'''&lt;sup&gt;''n''&amp;nbsp;&amp;minus;&amp;nbsp;1&lt;/sup&gt; and '''Z''', which are subtly different sets (though they can be naturally identified, which would be notated as ≅). Here we've fixed a definition, and in any case they coincide for ''n''&amp;nbsp;=&amp;nbsp;2.}}
+:&lt;math&gt;\pi_1(T,t_0) \approx \pi_1(S^1,x_0) \times \pi_1(S^1,y_0) \cong \mathbf{Z} \times \mathbf{Z} = \mathbf{Z}^2.&lt;/math&gt;
+This abstract isomorphism with a product is not natural, as some isomorphisms of &lt;math&gt;T&lt;/math&gt; do not preserve the product: the self-homeomorphism of &lt;math&gt;T&lt;/math&gt; (thought of as the [[Quotient space (topology)|quotient space]] &lt;math&gt;R^2/\mathbb{Z}^2&lt;/math&gt;) given by &lt;math&gt;\left(\begin{smallmatrix}1 &amp; 1\\0 &amp; 1\end{smallmatrix}\right)&lt;/math&gt; (geometrically a [[Dehn twist]] about one of the generating curves) acts as this matrix on &lt;math&gt;\mathbb{Z}^2&lt;/math&gt; (it's in the [[general linear group]] &lt;math&gt;\text{GL}(\mathbb{Z}, 2)&lt;/math&gt; of invertible integer matrices), which does not preserve the decomposition as a product because it is not diagonal. However, if one is given the torus as a product &lt;math&gt;(T,t_0) = (S^1,x_0) \times (S^1,y_0)&lt;/math&gt; – equivalently, given a decomposition of the space – then the splitting of the group follows from the general statement earlier. In categorical terms, the relevant category (preserving the structure of a product space) is &quot;maps of product spaces, namely a pair of maps between the respective components&quot;.
+
+Naturality is a categorical notion, and requires being very precise about exactly what data is given – the torus as a space that happens to be a product (in the category of spaces and continuous maps) is different from the torus presented as a product (in the category of products of two spaces and continuous maps between the respective components).
+
+===Example: dual of a finite-dimensional vector space===
+Every finite-dimensional vector space is isomorphic to its dual space, but there may be many different isomorphisms between the two spaces. There is in general no natural isomorphism between a finite-dimensional vector space and its dual space.&lt;ref&gt;{{harv|MacLane|Birkhoff|1999|loc=§VI.4}}&lt;/ref&gt; However, related categories (with additional structure and restrictions on the maps) do have a natural isomorphism, as described below.
+
+The dual space of a finite-dimensional vector space is again a finite-dimensional vector space of the same dimension, and these are thus isomorphic, since dimension is the only invariant of finite-dimensional vector spaces over a given field. However, in the absence of additional constraints (such as a requirement that maps preserve the chosen basis), the map from a space to its dual is not unique, and thus such an isomorphism requires a choice, and is &quot;not natural&quot;. On the category of finite-dimensional vector spaces and linear maps, one can define an infranatural isomorphism from vector spaces to their dual by choosing an isomorphism for each space (say, by choosing a basis for every vector space and taking the corresponding isomorphism), but this will not define a natural transformation. Intuitively this is because it required a choice, rigorously because ''any'' such choice of isomorphisms will not commute with, say, the zero map; see {{harv|MacLane|Birkhoff|1999|loc=§VI.4}} for detailed discussion.
+
+Starting from finite-dimensional vector spaces (as objects) and the identity and dual functors, one can define a natural isomorphism, but this requires first adding additional structure, then restricting the maps from &quot;all linear maps&quot; to &quot;linear maps that respect this structure&quot;. Explicitly, for each vector space, require that it comes with the data of an isomorphism to its dual, &lt;math&gt;\eta_V\colon V \to V^*&lt;/math&gt;. In other words, take as objects vector spaces with a [[nondegenerate bilinear form]] &lt;math&gt;b_V\colon V \times V \to K&lt;/math&gt;. This defines an infranatural isomorphism (isomorphism for each object). One then restricts the maps to only those maps &lt;math&gt;T\colon V \to U&lt;/math&gt; that commute with the isomorphisms: &lt;math&gt;T^*(\eta_{U}(T(v))) = \eta_{V}(v)&lt;/math&gt; or in other words, preserve the bilinear form: &lt;math&gt;b_{U}(T(v),T(w))=b_V(v,w)&lt;/math&gt;. (These maps define the ''naturalizer'' of the isomorphisms.) The resulting category, with objects finite-dimensional vector spaces with a nondegenerate bilinear form, and maps linear transforms that respect the bilinear form, by construction has a natural isomorphism from the identity to the dual (each space has an isomorphism to its dual, and the maps in the category are required to commute). Viewed in this light, this construction (add transforms for each object, restrict maps to commute with these) is completely general, and does not depend on any particular properties of vector spaces.
+
+In this category (finite-dimensional vector spaces with a nondegenerate bilinear form, maps linear transforms that respect the bilinear form), the dual of a map between vector spaces can be identified as a [[transpose]]. Often for reasons of geometric interest this is specialized to a subcategory, by requiring that the nondegenerate bilinear forms have additional properties, such as being symmetric ([[orthogonal matrices]]), symmetric and positive definite ([[inner product space]]), symmetric sesquilinear ([[Hermitian space]]s), skew-symmetric and totally isotropic ([[symplectic vector space]]), etc. – in all these categories a vector space is naturally identified with its dual, by the nondegenerate bilinear form.
+
+== Operations with natural transformations ==
+[[File:Natural transformation composition.svg|thumb|Horizontal and vertical composition of natural transformations]]
+If &lt;math&gt;\eta : F \to G&lt;/math&gt; and &lt;math&gt;\epsilon: G \to H&lt;/math&gt;
+are natural transformations between functors &lt;math&gt;F, G, H: C \to D&lt;/math&gt;, then we can compose them to get a natural transformation &lt;math&gt;\epsilon\eta: F \to H&lt;/math&gt;. 
+This is done componentwise: &lt;math&gt;(\epsilon\eta)_X = \epsilon_X \eta_X&lt;/math&gt;. This &quot;vertical composition&quot; of natural transformation is [[associative]] and has an identity, and 
+allows one to consider the collection of all functors &lt;math&gt;C \to D&lt;/math&gt; itself as a category (see below under [[#Functor categories|Functor categories]]).
+
+Natural transformations also have a &quot;horizontal composition&quot;.  If &lt;math&gt;\eta: F \to G&lt;/math&gt; 
+is a natural transformation between functors &lt;math&gt;F, G: C \to D&lt;/math&gt; and &lt;math&gt;\epsilon: J \to K&lt;/math&gt;
+is a natural transformation between functors &lt;math&gt;J, K: D \to E&lt;/math&gt;, then the composition of functors allows a composition of natural transformations &lt;math&gt;\epsilon * \eta: JF \to KG&lt;/math&gt;.
+This operation is also associative with identity, and the identity coincides with that for vertical composition.  The two operations are related by an identity which exchanges vertical composition with horizontal composition.
+
+If &lt;math&gt;\eta: F \to G&lt;/math&gt;  is a natural transformation between functors &lt;math&gt;F, G: C \to D&lt;/math&gt;, and &lt;math&gt;H: D \to E&lt;/math&gt; is another functor, then we can form the natural transformation &lt;math&gt;H(\eta): HF \to HG&lt;/math&gt; by defining
+
+:&lt;math&gt; (H \eta)_X = H \eta_X. &lt;/math&gt;
+
+If on the other hand &lt;math&gt;K: B \to C&lt;/math&gt; is a functor, the natural transformation &lt;math&gt;\eta K: FK \to GK&lt;/math&gt; is defined by
+
+:&lt;math&gt; (\eta K)_X = \eta_{K(X)}. &lt;/math&gt;
+
+==Functor categories==
+
+{{Main|Functor category}}
+If &lt;math&gt;C&lt;/math&gt; is any category and &lt;math&gt;I&lt;/math&gt; is a [[small category]], we can form the [[functor category]] &lt;math&gt;C^I&lt;/math&gt; having as objects all functors from &lt;math&gt;I&lt;/math&gt; to &lt;math&gt;C&lt;/math&gt; and as morphisms the natural transformations between those functors. This forms a category since for any functor &lt;math&gt;F&lt;/math&gt; there is an identity natural transformation &lt;math&gt;1_F: F \to F&lt;/math&gt; (which assigns to every object &lt;math&gt;X&lt;/math&gt; the identity morphism on &lt;math&gt;F(X)&lt;/math&gt;) and the composition of two natural transformations (the &quot;vertical composition&quot; above) is again a natural transformation.
+
+The [[isomorphism]]s in &lt;math&gt;C^I&lt;/math&gt; are precisely the natural isomorphisms. That is, a natural transformation &lt;math&gt;\eta: F \to G&lt;/math&gt; is a natural isomorphism if and only if there exists a natural transformation &lt;math&gt;\epsilon: G \to F&lt;/math&gt; such that &lt;math&gt;\eta\epsilon = 1_G&lt;/math&gt; and &lt;math&gt;\epsilon\eta = 1_F&lt;/math&gt;.
+
+The functor category &lt;math&gt;C^I&lt;/math&gt; is especially useful if &lt;math&gt;I&lt;/math&gt; arises from a [[directed graph]]. For instance, if &lt;math&gt;I&lt;/math&gt; is the category of the directed graph {{nobreak|1=• → •}}, then &lt;math&gt;C^I&lt;/math&gt; has as objects the morphisms of &lt;math&gt;C&lt;/math&gt;, and a morphism between &lt;math&gt;\phi: U \to V&lt;/math&gt; and &lt;math&gt;\psi: X \to Y&lt;/math&gt; in &lt;math&gt;C^I&lt;/math&gt; is a pair of morphisms &lt;math&gt;f: U \to X&lt;/math&gt; and &lt;math&gt;g: V \to Y&lt;/math&gt; in &lt;math&gt;C&lt;/math&gt; such that the &quot;square commutes&quot;, i.e. &lt;math&gt;\psi \circ f = g \circ \phi&lt;/math&gt;.
+
+More generally, one can build the [[2-category]] &lt;math&gt;\textbf{Cat}&lt;/math&gt; whose
+* 0-cells (objects) are the small categories,
+* 1-cells (arrows) between two objects &lt;math&gt;C&lt;/math&gt; and &lt;math&gt;D&lt;/math&gt; are the functors from &lt;math&gt;C&lt;/math&gt; to &lt;math&gt;D&lt;/math&gt;,
+* 2-cells between two 1-cells (functors) &lt;math&gt;F:C\to D&lt;/math&gt; and &lt;math&gt;G:C\to D&lt;/math&gt; are the natural transformations from &lt;math&gt;F&lt;/math&gt; to &lt;math&gt;G&lt;/math&gt;.
+The horizontal and vertical compositions are the compositions between natural transformations described previously. A functor category &lt;math&gt;C^I&lt;/math&gt; is then simply a hom-category in this category (smallness issues aside).
+
+=== More examples ===
+Every [[Limit (category theory)|limit]] and colimit provides an example for a simple natural transformation, as a [[cone (category theory)|cone]] amounts to a natural transformation with the [[diagonal functor]] as domain.  Indeed, if limits and colimits are defined directly in terms of their [[universal property]], they are universal morphisms in a functor category.
+
+==Yoneda lemma==
+
+{{Main|Yoneda lemma}}
+If &lt;math&gt;X&lt;/math&gt; is an object of a [[locally small category]] &lt;math&gt;C&lt;/math&gt;, then the assignment &lt;math&gt;Y \mapsto \text{Hom}_{C}(X, Y)&lt;/math&gt; defines a covariant functor &lt;math&gt;F_X: C \to \textbf{Set}&lt;/math&gt;. This functor is called ''[[representable functor|representable]]'' (more generally, a representable functor is any functor naturally isomorphic to this functor for an appropriate choice of &lt;math&gt;X&lt;/math&gt;). The natural transformations from a representable functor to an arbitrary functor &lt;math&gt;F: C \to \textbf{Set}&lt;/math&gt; are completely known and easy to describe; this is the content of the [[Yoneda lemma]].
+
+== Historical notes ==
+
+[[Saunders Mac Lane]], one of the founders of category theory, is said to have remarked, &quot;I didn't invent categories to study functors; I invented them to study natural transformations.&quot;&lt;ref&gt;{{harv|Mac Lane|1998|loc=§I.4}}&lt;/ref&gt; Just as the study of [[group (mathematics)|groups]] is not complete without a study of [[group homomorphism|homomorphisms]], so the study of categories is not complete without the study of [[functor]]s. The reason for Mac Lane's comment is that the study of functors is itself not complete without the study of natural transformations.
+
+The context of Mac Lane's remark was the axiomatic theory of [[homology (mathematics)|homology]]. Different ways of constructing homology could be shown to coincide: for example in the case of a [[simplicial complex]] the groups defined directly would be isomorphic to those of the singular theory.  What cannot easily be expressed without the language of natural transformations is how homology groups are compatible with morphisms between objects, and how two equivalent homology theories not only have the same homology groups, but also the same morphisms between those groups.
+
+== See also ==
+{{Portal|Mathematics}}
+* [[Extranatural transformation]]
+*[[Universal property]]
+*[[Higher category theory]]
+
+==Notes==
+{{Reflist|group=lower-alpha}}
+
+== References ==
+{{reflist}}
+{{refbegin}}
+*{{citation| first = Saunders | last = Mac Lane | authorlink = Saunders Mac Lane | year = 1998 | title = [[Categories for the Working Mathematician]] | series = Graduate Texts in Mathematics '''5''' | edition = 2nd | publisher = Springer-Verlag | isbn = 0-387-98403-8 | page = 16}}
+* {{citation|first1=Saunders|last1=MacLane|authorlink1=Saunders MacLane|first2=Garrett|last2=Birkhoff|authorlink2=Garrett Birkhoff|title=Algebra|edition=3rd|publisher=AMS Chelsea Publishing|year=1999|isbn=0-8218-1646-2}}.
+* {{cite book | last = Awodey | first = Steve | title = Category theory | url = https://archive.org/details/categorytheoryse00awod | url-access = limited | publisher = Oxford University Press | location = Oxford New York | year = 2010 | isbn = 0199237182 | page = [https://archive.org/details/categorytheoryse00awod/page/n172 156] }}
+* {{cite book | last = Lane | first = Saunders | title = Sheaves in geometry and logic : a first introduction to topos theory | url = https://archive.org/details/sheavesgeometryl00macl_937 | url-access = limited | publisher = Springer-Verlag | location = New York | year = 1992 | isbn = 0387977104 | page = [https://archive.org/details/sheavesgeometryl00macl_937/page/n12 13] }}
+{{refend}}
+
+==External links==
+* [http://ncatlab.org/nlab nLab], a wiki project on mathematics, physics and philosophy with emphasis on the ''n''-categorical point of view
+* [[André Joyal]], [http://ncatlab.org/nlab CatLab], a wiki project dedicated to the exposition of categorical mathematics
+* {{cite web | first = Chris | last = Hillman | title = A Categorical Primer | citeseerx = 10.1.1.24.3264 | postscript = : }} formal introduction to category theory.
+* J. Adamek, H. Herrlich, G. Stecker, [http://katmat.math.uni-bremen.de/acc/acc.pdf Abstract and Concrete Categories-The Joy of Cats]
+* [[Stanford Encyclopedia of Philosophy]]: &quot;[http://plato.stanford.edu/entries/category-theory/ Category Theory]&quot;—by Jean-Pierre Marquis. Extensive bibliography.
+* [http://www.mta.ca/~cat-dist/ List of academic conferences on category theory]
+* Baez, John, 1996,&quot;[http://math.ucr.edu/home/baez/week73.html The Tale of ''n''-categories.]&quot; An informal introduction to higher categories.
+* [http://wildcatsformma.wordpress.com WildCats] is a category theory package for [[Mathematica]]. Manipulation and visualization of objects, [[morphism]]s, categories, [[functor]]s, natural transformations, [[universal properties]].
+* [https://www.youtube.com/user/TheCatsters The catsters], a YouTube channel about category theory.
+*{{planetmath reference|id=5622|title=Category Theory}}
+* [http://categorieslogicphysics.wikidot.com/events Video archive] of recorded talks relevant to categories, logic and the foundations of physics.
+*[https://web.archive.org/web/20080916162345/http://www.j-paine.org/cgi-bin/webcats/webcats.php Interactive Web page] which generates examples of categorical constructions in the category of finite sets.
+
+{{Category theory}}
+
+[[Category:Functors]]</text>
+      <sha1>0z4vxy3r743izcb9gr05bex7gpx4hmd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Un*x</title>
+    <ns>0</ns>
+    <id>45024</id>
+    <redirect title="Unix-like" />
+    <revision>
+      <id>15940328</id>
+      <parentid>13679235</parentid>
+      <timestamp>2005-05-14T02:19:52Z</timestamp>
+      <contributor>
+        <username>Tverbeek</username>
+        <id>93887</id>
+      </contributor>
+      <comment>merged into [[Unix-like]], with which it was largely redundant</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="23" xml:space="preserve">#REDIRECT [[Unix-like]]</text>
+      <sha1>tqtf8jhokoj1bnl98xutc7bphcpcqs5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Mongol invasion of Kievan Rus'</title>
+    <ns>0</ns>
+    <id>45028</id>
+    <revision>
+      <id>991267621</id>
+      <parentid>989259041</parentid>
+      <timestamp>2020-11-29T04:53:19Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 8 templates: del empty params (6×); hyphenate params (6×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="26464" xml:space="preserve">{{Infobox military conflict
+| conflict   = Mongol conquest of Eastern Europe
+| image      = File:1236-1242 Mongol invasions of Europe.jpg
+| image_size = 250px
+| caption    = Mongol invasion of Europe, 1236-1242
+| date       = 1237–1242
+| place      = Parts of modern [[Russia]], [[Ukraine]] and [[Belarus]]
+| result     = Decisive Mongol victory resulting in Rus principalities and republics becoming [[vassal]]s of the [[Mongol Empire|Mongol]] [[Golden Horde]].
+| combatant1 = [[Mongol Empire]]
+| combatant2 = {{plainlist|
+*[[Vladimir-Suzdal]]
+*[[File:Alex K Kyiv Michael 2.svg|20px]] [[Principality of Kiev|Kiev]]
+*[[File:Alex K Halych-Volhynia.svg|20px]] [[Galicia-Volhynia]]
+*[[File:Nowogród.svg|20px]] [[Novgorod Republic]]
+*[[File:Coat of Arms of Smolensk (1430s).jpg|20px]] [[Principality of Smolensk|Smolensk]]
+*[[File:Seal-of-Alexander-Nevsky 1236 Avers.svg|20px]] [[Principality of Rostov|Rostov]]
+*[[Principality of Turov and Pinsk|Turov and Pinsk]]
+*[[Principality of Chernigov|Chernigov]]
+*[[Principality of Ryazan|Ryazan]]
+*[[Principality of Pereyaslavl|Pereyaslavl]]
+*[[Cumans]]}}
+| commander1 = {{plainlist|
+*[[Batu Khan]]
+*[[Möngke Khan]]
+*[[Subutai]]
+*[[Jebe]]
+*[[Boroldai]]
+*[[Berke]]
+*[[Orda Khan|Orda]]
+*[[Kadan]]
+*[[Shiban]]
+*[[Güyük Khan]]}}
+| commander2 = {{plainlist|
+*[[File:Alex K Halych-Volhynia.svg|20px]] [[Mstislav the Bold]]
+*[[File:Alex K Halych-Volhynia.svg|20px]] [[Daniel of Galicia]]{{Surrendered}}
+*[[File:Alex K Kyiv Michael 2.svg|20px]] [[Mstislav III of Kiev]] {{POW}}{{executed}}
+*[[Mstislav II Svyatoslavich|Mstislav II of Chernigov]] {{KIA}}
+*[[Yuri II of Vladimir]] {{KIA}}}}
+| strength1 = '''1236:'''{{plainlist|
+*35,000 Mongol cavalry
+*40,000+ Turkic [[auxiliaries]]&lt;ref&gt;de Hartog, Genghis Khan: Conqueror of the World, pp. 165–66: notes that contemporary Mongol sources describe Batu as invading with 12–14 [[Tumen (unit)|tumen]]s, which would give him a nominal total of 120,000–140,000 men. However, the author also notes that tumens were often at less than full strength.&lt;/ref&gt;}}'''1223:'''{{plainlist|
+*c. 20,000 cavalry}}
+| strength2  = '''1236:'''{{plainlist|
+*c. 25,000–50,000 total including garrisons and tribesmen&lt;ref&gt;Fennell, John. &quot;The Crisis of Medieval Russia: 1200-1304&quot;. London, 1983. Page 85. Excerpt: &quot;If we assume that each of the larger cities could field, say, between 3,000 and 5,000 men, we can arrive at a total of about 60,000 fighting troops. If we add to this another 40,000 from smaller towns and from the various Turkic allies in the Principality of Kiev, then the total coincides with the 100,000 estimated by S. M. Solov'ev in his ''History of Russia''. But then this is only a rough estimate of the ''potential'' number. We have no idea how many, towns and districts actually mustered troops- for instance, it seems highly unlikely that Novgorod sent any at all. Certainly, none came to help their outpost at Torzhok. Perhaps then half or a quarter – or even a smaller fraction- of the total was the most the Russians could muster.&quot;&lt;/ref&gt;}}
+| casualties1 = Unknown
+| casualties2 = 500,000 (6–7% of the population of Rus)&lt;ref name=&quot;Mongol Conquests&quot;&gt;[http://users.erols.com/mwhite28/warstat0.htm#Mongol Colin McEvedy, Atlas of World Population History (1978)]&lt;/ref&gt;
+}}
+{{Campaignbox Mongol invasions}}
+{{Campaignbox Mongol invasion of Rus'}}
+{{Campaignbox Ögedei Khan's Campaigns}}
+
+The '''Mongol conquest of Kievan Rus'''' was part of the [[Mongol invasion of Europe]], in which the [[Mongol Empire]] invaded and conquered [[Kievan Rus']] and other Russian principalities in the 13th century AD, destroying numerous cities, including [[Ryazan]], [[Kolomna]], [[Moscow]], [[Vladimir-Suzdal|Vladimir]] and [[Kiev]].&lt;ref&gt;{{Cite news|url=http://study.com/academy/lesson/the-mongol-invasion-of-russia-in-the-13th-century.html|title=The Mongol Invasion of Russia in the 13th Century {{!}} Study.com|work=Study.com|access-date=2017-05-15|language=en}}&lt;/ref&gt;&lt;ref name=EB1911&gt;{{cite EB1911 |wstitle=Mongols |volume=18 |pages=712–721 |first1=Robert Kennaway |last1=Douglas  |first2=Bernhard |last2=Jülg}}&lt;/ref&gt;
+
+The campaign was heralded by the [[Battle of the Kalka River]] in May 1223, which resulted in a Mongol victory over the forces of several Rus' principalities. The Mongols retreated, having gathered their intelligence which was the purpose of the reconnaissance-in-force. A full-scale invasion of Rus' by [[Batu Khan]] followed, from 1237 to 1242. The invasion was ended by the Mongol succession process upon the death of [[Ögedei Khan]]. All Rus' principalities were forced to submit to Mongol rule and became vassals of the [[Golden Horde]] empire, some of which lasted until 1480.
+
+The invasion, facilitated by the beginning of the breakup of Kievan Rus' in the 13th century, had incalculable ramifications for the history of [[Eastern Europe]], including the division of the [[Early East Slavs|East Slavic people]] into three separate nations: modern-day [[Russia]], [[Ukraine]] and [[Belarus]],&lt;ref&gt;[[Boris Rybakov]], ''Киевская Русь и русские княжества XII-XIII вв.'' (''Kievan Rus' and Russian Princedoms in 12th and 13th Centuries''), Moscow: Nauka, 1993. {{ISBN|5-02-009795-0}}.&lt;/ref&gt; and the rise of the [[Grand Duchy of Moscow]].
+
+==Background==
+As it was undergoing fragmentation, Kievan Rus' faced the unexpected invasion of foreign foe coming from the mysterious regions of the [[Far East]]. &quot;For our sins&quot;, writes the [[Rus' (people)|Rus']] chronicler of the time, &quot;unknown nations arrived. No one knew their origin or whence they came, or what religion they practiced. That is known only to God, and perhaps to wise men learned in books&quot;.&lt;ref&gt;{{cite web | url=https://archive.org/details/chronicleofnovgo00michrich | title=The Chronicle of Novgorod 1016-1471 | publisher=London, Offices of the society | work=Michell | date=1914 | access-date=4 June 2014 |author1=Michell, Robert |author2=Forbes, Nevell | page=64}}&lt;/ref&gt;
+
+The princes of Rus' first heard of the coming [[Mongol]] warriors from the nomadic [[Cumans]]. The historical accounts after the initial invasion call them by the name Tartars. They were previously known for pillaging settlers on the frontier, the nomads now preferred peaceful relations, warning their neighbors: &quot;These terrible strangers have taken our country, and tomorrow they will take yours if you do not come and help us&quot;. In response to this call, [[Mstislav the Bold]] and [[Mstislav III of Kiev|Mstislav Romanovich the Old]] joined forces and set out eastward to meet the foe, only to be routed on April 1, 1223, at the [[Battle of the Kalka River]].
+
+Although this defeat left the Rus' principalities at the mercy of invaders, the Mongol or Tartar forces retreated and did not reappear for thirteen years, during which time the princes of Rus' went on quarreling and fighting as before, until they were startled by a new and much more formidable invading force. In the [[The Secret History of the Mongols|Secret History of the Mongols]], the only reference to this early battle is:
+
+&quot;Then he (Chinghis Khan) sent Dorbei the Fierce off against the city of Merv, and on to conquer the people between Iraq and the Indus. He sent Subetei the Brave off to war in the North where he defeated eleven kingdoms and tribes, crossing the Volga and Ural Rivers, finally going to war with Kiev.&quot;
+
+==Invasion of Batu Khan==
+{{see also|1240 Batu raid of Ruthenia}}
+The vast Mongol (Tartar) army of around 40,000 &lt;ref&gt;{{Cite web|last=May|first=Timothy|date=2018-11-01|title=Genghis Khan's Secrets of Success|url=https://www.historynet.com/genghis-khans-secrets-success.htm|access-date=2020-09-01|website=HistoryNet|language=en-US}}&lt;/ref&gt; [[horse archer|mounted archer]]s, commanded by [[Batu Khan]] and [[Subutai]], crossed the [[Volga River]] and [[Mongol invasion of Volga Bulgaria|invaded Volga Bulgaria]] in late 1236. It took them only a month to extinguish the resistance of the weak [[Volga Bulgaria|Volga Bulgars]], the [[Cumans]]-[[Kipchak people|Kipchaks]] and the [[Alans]].
+
+[[File:Sacking of Suzdal by Batu Khan.jpg|200px|left|thumb|Sacking of [[Suzdal]] by [[Batu Khan]] in February 1238; [[Miniature (illuminated manuscript)|miniature]] from the 16th-century chronicle.]]
+
+In November 1237, Batu Khan sent his envoys to the court of [[Yuri II]] of [[Vladimir-Suzdal|Vladimir]] and demanded his submission. A month later, the Tartar hordes besieged [[Ryazan]]. After six days of bloody battle, the city was totally annihilated and inhabitants slaughtered.&lt;ref name=EB1911/&gt; Alarmed by the news, Yuri&amp;nbsp; II sent his sons to detain the invaders, but they were defeated and ran for their lives. Having burnt down [[Kolomna]] and Moscow, the horde laid siege to Vladimir on February 4, 1238. Three days later, the capital of [[Vladimir-Suzdal]] was taken and burnt to the ground. The royal family perished in the fire, while the grand prince retreated northward. Crossing the Volga, Vladimir mustered a new army, which was encircled and totally annihilated by the Mongols in the [[Battle of the Sit River]] on March 4.
+
+Thereupon Batu Khan divided his army into smaller units, which ransacked fourteen cities of modern-day Russia: [[Rostov]], [[Uglich]], [[Yaroslavl]], [[Kostroma]], [[Kashin (town)|Kashin]], [[Sknyatino|Ksnyatin]], [[Gorodets, Nizhny Novgorod Oblast|Gorodets]], [[Galich, Russia|Galich]], [[Pereslavl-Zalessky]], [[Yuryev-Polsky (town)|Yuriev-Polsky]], [[Dmitrov]], [[Volokolamsk]], [[Tver]], and [[Torzhok]]. Chinese [[siege engine]]s were used by the Mongols under Tului to raze the walls of Rus' cities.&lt;ref&gt;(the University of Michigan){{cite book |url=https://books.google.com/books?id=6GMFAAAAMAAJ&amp;q=The+Mongols+invaded+the+Russian+steppes+at+this+time,+reaching+the+Crimea+before+turning+back+at+the+Khan's+orders.+The+youngest+son+of+Genghis,+Tului,+was+given+the+special+task+of+destroying+walled+cities+during+this+campaign,+employing+the+Chinese+engines|title=Artillery and warfare during the thirteenth and fourteenth centuries |author=John Merton Patrick|access-date=2011-11-28 |volume=Volume 8, Issue 3 of Monograph series |year=1961 |publisher=Utah State University Press |page=12 |quote=The Mongols invaded the Russian steppes at this time, reaching the Crimea before turning back at the Khan's orders. The youngest son of Genghis, Tului, was given the special task of destroying walled cities during this campaign, employing the Chinese engines }}&lt;/ref&gt; The most difficult to take was the small town of [[Kozelsk]], whose boy-prince Vasily, son of Titus, and inhabitants resisted the Mongols for seven weeks, killing 4,000. As the story goes, at the news of the Mongol approach, the whole town of [[Kitezh]] with all its inhabitants was submerged into a lake, where, as legend has it, it may be seen to this day. The only major cities to escape destruction were [[Novgorod]] and [[Pskov]]. The Mongols planned to advance on Novgorod, but the principality was spared the fate of its brethren by the wise decision to preemptively surrender.&lt;ref&gt;Frank McLynn, Kublia Khan (2015).&lt;/ref&gt;
+
+In mid-1238, Batu Khan devastated the [[Crimea]] and pacified [[Mordovia]]. In the winter of 1239, he sacked [[Chernihiv]] and [[Pereiaslav]]. After many days of [[Siege of Kiev (1240)|siege]], the horde stormed [[Kiev]] in December 1240. Despite the resistance of [[Danylo of Halych]], Batu Khan managed to take two of his principal cities, [[Halych]] and [[Volodymyr-Volynskyi]]. The Mongol Tartars then resolved to &quot;reach the ultimate sea&quot;, where they could proceed no further and invaded Hungary (under Batu Khan) and Poland (under Baidar and Kaidu).&lt;ref name=EB1911/&gt; Batu Khan captured [[Pest, Hungary|Pest]], and then on Christmas Day 1241, [[Esztergom]].&lt;ref name=EB1911/&gt;
+
+==Age of Tatar rule==
+{{POV check|section|date=November 2018}}
+{{See also|List of conflicts in Eastern Europe during Turco-Mongol rule}}
+[[File: SmirnovVS KnMihailChern.jpg|thumb|right|Prince [[Michael of Chernigov]] was passed between fires in accordance with ancient Turco-Mongol tradition. Batu Khan ordered him to prostrate himself before the tablets of [[Genghis Khan]]. The Mongols stabbed him to death for his refusal to do obeisance to Genghis Khan's [[shrine]].]]
+
+This time the invaders came to stay and Batu Khan built a capital, called [[Sarai (city)|Sarai]], or Sarai Batu ( Batu’s Palaces) on the lower Volga. Here the commander of the [[Golden Horde]], as the western section of the Tartar or [[Mongol empire]] was called, fixed his golden palace city and represented his sovereign the grand khan who lived with the Great Horde in the [[Orkhon Valley]]. Here they had their headquarters and held parts of Rus' in subjection for nearly three centuries. All of the Russian states, including [[Novgorod Republic|Novgorod]], [[Principality of Smolensk|Smolensk]], [[Galich, Russia|Galich]] and [[Pskov]], submitted to the Tatar-Mongol rule.&lt;ref&gt;Henry Smith Williams ''The Historians' History of the World'', p.654&lt;/ref&gt;
+
+The term by which this subjection is commonly designated, the Mongol or Tatar &quot;yoke&quot;, suggests terrible oppression, but in reality these nomadic invaders from [[Mongolia]] were not such cruel, oppressive taskmasters.&lt;ref&gt;It has been noted that it was during the period of Mongol domination that &quot;the curve of Russian Western trade climbed steadily&quot;, as did its trade with the Orient. See Donald Ostrowski, ''Muscovy and the Mongols: Cross-cultural Influences on the Steppe Frontier'', Cambridge University Press, 1996. Page 109.&lt;/ref&gt; In the first place, they never settled in the country, and they had little direct dealing with the inhabitants. In accordance with the admonitions of Genghis Khan to his children and grandchildren, they retained their pastoral mode of life, so that the subject peoples, agriculturists, and dwellers in towns were not disturbed in their ordinary avocations. The Golden Horde Tartars instituted census, taxes, and tributes on the conquered lands, which were usually collected by local princes and brought to Sarai. It was only in the 14th and 15th centuries, with the rise of the [[Tatar]] khanates, that [[Crimean-Nogai raids into East Slavic lands|slave raids]] on the Slavic population became significant, with the purpose of trading slaves with the [[Ottoman Empire]]. The raids were catastrophic for both Muscovy and the Grand Duchy of Lithuania, and they largely prevented the settlement of the &quot;[[Wild Fields]]&quot; – the Russian steppes extending from about {{convert|100|mi|km|-1|order=flip|abbr=off}} south of [[Moscow]] to the [[Black Sea]] – and they ultimately contributed to the development of the [[Cossacks]].
+
+In religious matters, the Mongols were extremely tolerant. When they first appeared in Europe, they were [[shamanism|shamanists]], and as such, they had no religious fanaticism. After adopting [[Islam]] they remained as tolerant as before,&lt;ref&gt;[[Paul Robert Magocsi]]. ''A History of Ukraine''. University of Toronto Press, 1996. Page 110.&lt;/ref&gt; and the khan of the Golden Horde, who first became a Muslim, allowed the Rus' to found a [[Krutitsy|Christian bishopric]] in his capital. [[Nogai Khan]], half a century later, married a daughter of the [[Byzantine empire|Byzantine]] emperor and gave his own daughter in marriage to a Rus' prince, [[Theodor the Black]]. Some modern revisionist Russian historians (most notably the Soviet-era historian and &quot;[[Neo-Eurasianism|Neo-Eurasianist]]&quot; ideologist [[Lev Gumilev]]) even postulate that there was no invasion at all. According to them, the Rus' princes concluded a defensive alliance with the Horde in order to repel attacks of the fanatical [[Teutonic Knights]], which posed a much greater threat to the Rus' religion and culture.
+
+These points represent the bright side of Tartar rule. So long as a powerful kingdom of nomads was established on the doorstep of Russia, the country was under threat and liable to be overrun at any time by them. Invasions were not frequent, but when they occurred they caused an incalculable amount of devastation and suffering. In the intervals, the people had to pay a fixed tribute. At first, it was collected by [[baskak|Tatar tax-gatherers]]; by about 1259 it was regulated by a census of the population; and finally, its collection was entrusted to the native princes, so the people were no longer brought into direct contact with the Tatar officials.
+
+==Impact on development==
+{{History of East Slavs}}
+[[Giovanni de Plano Carpini]], the pope's envoy to the Mongol great khan, traveled through [[Kiev]] in February 1246 and wrote:
+
+{{quote|They (the Mongols) attacked Rus', where they made great havoc, destroying cities and fortresses and slaughtering men; and they laid siege to Kiev, the capital of Rus'; after they had besieged the city for a long time, they took it and put the inhabitants to death. When we were journeying through that land we came across countless skulls and bones of dead men lying about on the ground. Kiev had been a very large and thickly populated town, but now it has been reduced almost to nothing, for there are at the present time scarce two hundred houses there and the inhabitants are kept in complete slavery.&lt;ref&gt;{{cite web|url=https://tspace.library.utoronto.ca/citd/RussianHeritage/4.PEAS/4.L/12.III.5.html |title=The Destruction of Kiev |publisher=Tspace.library.utoronto.ca |access-date=12 October 2013 |url-status=dead |archive-url=https://wayback.archive-it.org/6473/20160819150506/https://tspace.library.utoronto.ca/citd/RussianHeritage/4.PEAS/4.L/12.III.5.html |archive-date=19 August 2016 }}&lt;/ref&gt;}}

@@ -1,0 +1,309 @@
+In [[telecommunication]], a '''maritime broadcast communications net''' is a [[communications net]] that is used for international distress calling, including international lifeboat, lifecraft, and survival-craft [[high frequency]] (HF); aeronautical emergency [[very high frequency]] (VHF); survival [[ultra high frequency]] (UHF); international calling and safety very high frequency (VHF); combined scene-of-search-and-rescue; and other similar and related purposes. 
+
+''Note:''  Basic international distress calling is performed at either [[medium frequency]] (MF) or at [[high frequency]] (HF).
+
+==See also==
+
+* [[500 kHz]]
+* [[Distress frequency]]
+* [[Global Maritime Distress Safety System]]
+
+{{FS1037C}}
+{{telecommunications-stub}}
+[[Category:Broadcasting]]</text>
+      <sha1>hoejjtjg85dpqe0kxob3fz1ye2mthxf</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Master frequency generator</title>
+    <ns>0</ns>
+    <id>41354</id>
+    <revision>
+      <id>693283349</id>
+      <parentid>446850356</parentid>
+      <timestamp>2015-12-01T15:58:05Z</timestamp>
+      <contributor>
+        <username>Kvng</username>
+        <id>910180</id>
+      </contributor>
+      <comment>avoid redirect</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="791" xml:space="preserve">A '''master [[frequency]] generator''' or '''master electronic [[oscillator]]''', in [[frequency-division multiplexing]] (FDM), is a piece of equipment used to provide [[system]] end-to-end [[Carrier signal|carrier]] frequency [[synchronization]] and frequency accuracy of tones.  
+
+The following types of oscillators are used in the [[Defense Communications System]] FDM systems:
+*Type 1 - A '''master [[carrier signal|carrier]] oscillator''' as an integral part of the [[multiplexer]] set.
+*Type 2 - A '''submaster oscillator''' equipment or slave oscillator equipment as an integral part of the multiplexer set.
+*Type 3 - An '''external master oscillator''' equipment that has extremely accurate and stable characteristics.
+
+==References==
+*{{FS1037C MS188}}
+
+[[Category:Synchronization]]</text>
+      <sha1>c5ivq5diu841y2tldi1rx4o4q6oqg4x</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Master station</title>
+    <ns>0</ns>
+    <id>41355</id>
+    <revision>
+      <id>704325520</id>
+      <parentid>566562673</parentid>
+      <timestamp>2016-02-10T22:46:05Z</timestamp>
+      <contributor>
+        <username>BG19bot</username>
+        <id>14508071</id>
+      </contributor>
+      <minor />
+      <comment>/* top */Remove blank line(s) between list items per [[WP:LISTGAP]] to fix an accessibility issue for users of [[screen reader]]s. Do [[WP:GENFIXES]] and cleanup if needed.  Discuss this at [[Wikipedia talk:WikiProject Accessibility#LISTGAP]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1678" xml:space="preserve">In [[telecommunication]], a '''master station''' is a station that controls or coordinates the activities of other stations in the system.
+
+Examples:
+*In a [[data network]], the control station may designate a master station to ensure [[data transfer]] to one or more slave stations.&lt;ref name=FS1037C&gt;[[Federal Standard 1037C]]&lt;/ref&gt; Such a master station controls one or more [[data link]]s of the data [[communications network]] at any given instant. The assignment of master status to a given station is temporary and is controlled by the control station according to the procedures set forth in the operational [[Communications protocol|protocol]]. Master status is normally conferred upon a station so that it may transmit a [[message]], but a station need not have a [[message]] to send to be designated the master station.
+* In navigation systems using precise [[time dissemination]], the master station is a station that has the [[clock]] that is used to synchronize the clocks of subordinate stations.&lt;ref name=FS1037C/&gt;
+* In [[basic mode link control]], the master station is a data station that has accepted an invitation to ensure a [[data transfer]] to one or more slave stations.&lt;ref name=FS1037C/&gt;  At a given instant, there can be only one master station on a data link.
+
+==Operation modes==
+In data transmission, a master station can be set to not wait for a reply from a slave station after transmitting each message or [[transmission block]]. In this case the station is said to be in &quot;continuous operation&quot;.&lt;ref&gt;Federal Standard 1037C, entry for &quot;Continuous operation&quot;.&lt;/ref&gt;
+
+==References==
+&lt;references/&gt;
+{{FS1037C}}
+
+[[Category:Telecommunications systems]]</text>
+      <sha1>l5lz7mtxqcwhxvaamsz8owampptdv8z</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Maximal-ratio combining</title>
+    <ns>0</ns>
+    <id>41358</id>
+    <revision>
+      <id>985104980</id>
+      <parentid>943070057</parentid>
+      <timestamp>2020-10-24T00:11:16Z</timestamp>
+      <contributor>
+        <username>Peter Horn</username>
+        <id>897817</id>
+      </contributor>
+      <comment>[[noise level]] → [[Noise (electronics)|noise level]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3051" xml:space="preserve">In [[telecommunication]]s, '''maximum-ratio combining''' ('''MRC''') is a method of [[diversity combining]] in which:
+#the signals from each [[Communication channel|channel]] are added together,
+#the [[Gain (electronics)|gain]] of each channel is made [[Proportionality (mathematics)|proportional]] to the rms [[signal level]] and inversely proportional to the mean square [[Noise (electronics)|noise level]] in that channel.
+#different proportionality constants are used for each channel. 
+It is also known as '''ratio-squared combining''' and '''predetection combining'''.  Maximum-ratio combining is the optimum combiner for independent [[additive white Gaussian noise]] channels.
+
+MRC can restore a signal to its original shape. The technique was invented by American engineer [[Leonard R. Kahn]]&lt;ref name=&quot;MRC&quot;&gt;{{cite journal|last1=Kahn|first1=Leonard|title=Ratio Squarer|journal=Proc. IRE (Corresp.)|date=November 1954|volume=42|issue=11|page=1704|doi=10.1109/JRPROC.1954.274666}}&lt;/ref&gt; in 1954.
+
+MRC has also been found in the field of neuroscience, where it has been shown that neurons in the retina scale their dependence on two sources of input in proportion to the signal-to-noise ratio of the inputs.&lt;ref&gt;{{Cite journal|last=Homann|first=Jan|last2=Freed|first2=Michael A.|date=2016-12-30|title=A mammalian retinal ganglion cell implements a neuronal computation that maximizes the SNR of its postsynaptic currents|journal=Journal of Neuroscience|volume=37|issue=6|language=en|pages=2814–16|doi=10.1523/JNEUROSCI.2814-16.2016|issn=0270-6474|pmid=28039376|pmc=5299566}}&lt;/ref&gt;
+
+== Example: Least Squares estimate in the case of Rx diversity ==
+
+We consider an example of which the receiver is endowed with N antennas. In this case, the received vector &lt;math&gt;y&lt;/math&gt; is
+{{NumBlk|:|&lt;math&gt;y=hs+\rho n \,&lt;/math&gt;|{{EquationRef|1}}}}
+where &lt;math&gt;n&lt;/math&gt; is noise vector &lt;math&gt;n-CN(0,I_{N \times N})&lt;/math&gt;. Following the ML detection criterion the detection procedure may be written as
+{{NumBlk|:|&lt;math&gt;\tilde{s}=argmin_{s \in QPSK}|\hat{s}-s|^2,&lt;/math&gt;|{{EquationRef|2}}}}
+where &lt;math&gt;\hat{s}&lt;/math&gt; is the least square solution to the above model.
+{{NumBlk|:|&lt;math&gt;\hat{s}=(h^*h)^{-1}h^*y.&lt;/math&gt;|{{EquationRef|3}}}}
+The least square solution in this case is also known as maximum-ratio-combining (MRC). In the case of N antennas the LS can be written as
+{{NumBlk|:|&lt;math&gt;\hat{s}=\frac{h_0^*y_0+h_1^*y_1+...+h_{N-1}^*y_{N-1}}{|h_0|^2+|h_1|^2+...+|h_{N-1}|^2},&lt;/math&gt;|{{EquationRef|4}}}}
+which means that the signal from each antenna is rotated and weighted according to the phase and strength of the channel, such that the signals from all antennas are combined to yield the maximum ratio between signal and noise terms.
+
+==References==
+{{reflist}}
+{{refbegin}}
+*{{FS1037C MS188}}
+{{refend}}
+
+==External links==
+* [http://www.google.com.na/patents/EP2015468A1?cl=sv [[Siae Microelettronica]] patent]
+
+{{DEFAULTSORT:Maximum-Ratio Combining}}
+[[Category:Telecommunications techniques]]
+[[Category:Radio resource management]]
+
+
+{{telecomm-stub}}</text>
+      <sha1>5mbqhrsqksbfxy9ztiqyyrzs88ayo93</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Maximum usable frequency</title>
+    <ns>0</ns>
+    <id>41359</id>
+    <revision>
+      <id>961618934</id>
+      <parentid>960874551</parentid>
+      <timestamp>2020-06-09T14:07:51Z</timestamp>
+      <contributor>
+        <username>Kvng</username>
+        <id>910180</id>
+      </contributor>
+      <minor />
+      <comment>Reverted 1 edit by [[Special:Contributions/102.186.204.85|102.186.204.85]] ([[User talk:102.186.204.85|talk]]) to last revision by Kvng ([[WP:TW|TW]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3612" xml:space="preserve">{{short description|Highest radio frequency that can be used for skywave radio transmission}}
+In [[radio]] [[transmission (telecommunications)|transmission]]  '''maximum usable frequency''' ('''MUF''') is the highest radio [[frequency]] that can be used for transmission between two points via [[Reflection (physics)|reflection]] from the [[ionosphere]] ([[skywave]] or &quot;skip&quot; propagation) at a specified [[time]], independent of transmitter power. This index is especially useful in regard to [[shortwave]] transmissions. 
+
+In [[shortwave]] radio communication, a major mode of long distance propagation  is for the [[radio wave]]s to reflect off the [[ionization|ionized]] layers of the atmosphere and return diagonally back to Earth.  In this way radio waves can travel beyond the horizon, around the curve of the Earth.  However the [[refractive index]] of the ionosphere decreases with increasing frequency, so there is an upper limit to the frequency which can be used.   Above this frequency the radio waves are not reflected by the ionosphere but are transmitted through it into space. 
+
+The ionization of the atmosphere varies with time of day and season as well as with solar conditions, so the upper frequency limit for skywave communication varies on an hourly basis.   MUF is a median frequency, defined as the highest frequency at which skywave communication is possible 50% of the days in a month, as opposed to the [[lowest usable high frequency]] (LUF) which is the frequency at which communication is possible 90% of the days, and the [[Frequency of optimum transmission]] (FOT).
+
+Typically the MUF is a predicted number. Given the [[maximum observed frequency]] (MOF) for a mode on each day of the month at a given hour, the MUF is the highest frequency for which an ionospheric communications path is predicted on 50% of the days of the month. 
+
+On a given day, communications may or may not succeed at the MUF. Commonly, the optimal operating frequency for a given path is estimated at 80 to 90% of the MUF. As a [[rule of thumb]] the MUF is approximately 3 times the [[critical frequency]].&lt;ref&gt;Practical antenna handbook, 5th edition. {{ISBN|978-0-07-163958-3}}&lt;/ref&gt;
+
+&lt;math&gt;\text{MUF} = \frac{\text{critical frequency}}{\cos\theta}&lt;/math&gt;&lt;ref&gt;http://www.tutorvista.com/content/physics/physics-iv/communication-systems/sky-wave-propagation.php&lt;/ref&gt;
+
+where the critical frequency is the highest frequency reflected for a signal propagating directly upward and Θ is the angle of incidence.&lt;ref name=Poole&gt;{{cite web|last=Poole|first=Ian|title=Lowest &amp; Maximum Usable Frequency, Critical Frequency|url=https://www.electronics-notes.com/articles/antennas-propagation/ionospheric/maximum-lowest-critical-optimum-usable-working-frequency.php|publisher=Electronics Notes|accessdate=23 April 2014}}&lt;/ref&gt;
+
+== Optimum Working Frequency ==
+Another important parameter used in skywave propagation is the optimum working frequency (OWF), which estimates the maximum frequency that must be used for a given critical frequency and incident angle. It is the frequency chosen to avoid the irregularities of the atmosphere.
+
+&lt;math&gt;\mathrm{OWF} = 0.85 \mathrm{MUF} = 0.85 f_\mathrm{c} /(cos\theta)&lt;/math&gt;
+
+==See also==
+*[[DX communication]]
+*[[E-layer]]
+*[[E-skip]]
+*[[F region|F-layer]]
+*[[Lowest usable high frequency]]
+*[[MW DX]]
+*[[Near vertical incidence skywave]]
+*[[Radio propagation]]
+*[[Skip distance]]
+*[[TV-FM DX]]
+
+==Sources==
+
+{{FS1037C MS188}}
+{{Reflist}}
+
+== External links ==
+*[http://www.hfradio.org/muf_basics.html MUF Basics]
+
+[[Category:Radio frequency propagation]]
+
+{{telecomm-stub}}</text>
+      <sha1>47abkshpsrkz98t4u15nm3baypnprl6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Maximum user signaling rate</title>
+    <ns>0</ns>
+    <id>41360</id>
+    <redirect title="Data signaling rate" />
+    <revision>
+      <id>482470887</id>
+      <parentid>481939336</parentid>
+      <timestamp>2012-03-18T02:16:30Z</timestamp>
+      <contributor>
+        <username>Jim.henderson</username>
+        <id>2255048</id>
+      </contributor>
+      <comment>Executing the merger</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="33" xml:space="preserve">#REDIRECT [[data signaling rate]]</text>
+      <sha1>nt8zi78hjolw98sv93y5dc64itcvs9k</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Mean time between outages</title>
+    <ns>0</ns>
+    <id>41363</id>
+    <revision>
+      <id>936495300</id>
+      <parentid>856647444</parentid>
+      <timestamp>2020-01-19T06:41:43Z</timestamp>
+      <contributor>
+        <username>NeedsGlasses</username>
+        <id>33324950</id>
+      </contributor>
+      <minor />
+      <comment>changed engineering to more specific category</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="552" xml:space="preserve">In a [[system]] the '''mean time between outages''' ('''MTBO''') is the mean [[time]] between equipment failures that result in loss of system continuity or unacceptable [[Degradation (telecommunications)|degradation]]. 
+
+The MTBO is calculated by the equation,
+
+&lt;math&gt;MTBO = \frac{MTBF}{1-FFAS}&lt;/math&gt;
+
+where MTBF is the nonredundant [[mean time between failures]] and FFAS is the fraction of failures for which the failed equipment is automatically bypassed. 
+
+==References==
+{{FS1037C MS188}}
+
+
+
+
+
+{{tech-stub}}
+
+[[Category:Reliability engineering]]</text>
+      <sha1>99kg0bdlytkz8qt33hm5wrzrtcp9zrq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Mechanically induced modulation</title>
+    <ns>0</ns>
+    <id>41364</id>
+    <revision>
+      <id>926114332</id>
+      <parentid>848046936</parentid>
+      <timestamp>2019-11-14T09:20:09Z</timestamp>
+      <contributor>
+        <username>Mccapra</username>
+        <id>12109628</id>
+      </contributor>
+      <comment>Successfully de-orphaned! Wikiproject Orphanage: [[Wikipedia:ORPHAN|You can help!]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="645" xml:space="preserve">
+'''Mechanically induced modulation''' is an optical [[Signalling (telecommunication)|signal]] [[modulation]] induced by mechanical means. 
+
+An example of deleterious mechanically induced modulation is speckle [[noise]] created in a multimode fiber by an imperfect [[Fusion splicing|splice]] or imperfectly mated connectors. Mechanical disturbance of the fiber ahead of the joint will introduce changes in the modal structure, resulting in variations of [[joint]] loss. This is a subset of many mechanisms that can lead to modal noise in an optical system.
+
+==References==
+{{FS1037C}}
+
+[[Category:Fiber-optic communications]]
+
+
+{{telecomm-stub}}</text>
+      <sha1>2hqtkv64xdngsdauztvia5y6200ysw1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Mediation function</title>
+    <ns>0</ns>
+    <id>41365</id>
+    <revision>
+      <id>979081175</id>
+      <parentid>502493193</parentid>
+      <timestamp>2020-09-18T17:41:40Z</timestamp>
+      <contributor>
+        <username>I'm Aya Syameimaru!</username>
+        <id>38173635</id>
+      </contributor>
+      <comment>{{short description|</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="753" xml:space="preserve">{{short description|telecommunications network management function}}
+In [[telecommunications]] [[network management]], a '''mediation function''' is a function that routes or acts on [[information]] passing between network elements and network operations.  
+
+Examples of mediation functions are [[communications protocol|communications]] control, [[Communications protocol|protocol]] conversion, [[data]] handling, communications of primitives, processing that includes decision-making, and [[computer storage|data storage]]. 
+
+Mediation functions can be shared among network elements, mediation devices, and network [[Instruction (computer science)|operation]] centers.
+
+==Sources==
+{{FS1037C MS188}}
+
+[[Category:Network management]]

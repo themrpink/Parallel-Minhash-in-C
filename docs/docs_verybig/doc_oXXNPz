@@ -1,0 +1,425 @@
+In any event, [[Kurt Gödel]] in 1930–31 proved that while the logic of much of ''Principia Mathematica'', now known as [[first-order logic]], is [[Gödel's completeness theorem|complete]], [[Peano axioms|Peano arithmetic]] is necessarily incomplete if it is [[consistent]]. This is very widely—though not universally—regarded as having shown the [[logicist]] program of Frege to be impossible to complete.
+
+In 2001 A Centenary International Conference celebrating the first hundred years of Russell's paradox was held in Munich and its proceedings have been published.&lt;ref name=&quot;auto&quot;/&gt;
+
+==Applied versions==
+There are some versions of this paradox that are closer to real-life situations and may be easier to understand for non-logicians. For example, the [[barber paradox]] supposes a barber who shaves all men who do not shave themselves and only men who do not shave themselves. When one thinks about whether the barber should shave himself or not, the paradox begins to emerge.
+
+As another example, consider five lists of encyclopedia entries within the same encyclopedia:
+
+{| class=&quot;wikitable&quot;
+|- valign=&quot;top&quot;
+| style=&quot;width:20%;&quot;| List of articles about people:
+*[[Don Knotts]]
+*[[Don Nix]]
+*[[Emperor Kōnin]]
+*[[Hermann Hesse]]
+*[[Isaac Newton]]
+*[[Nikola Tesla]]
+*[[Ptolemy VII of Egypt]]
+*[[Rainie Yang]]
+*[[Sherlock Holmes]]
+*[[Socrates]]
+| style=&quot;width:20%;&quot;| List of articles starting with the letter L:
+*[[L]]
+*[[L!VE TV]]
+*[[L&amp;H (disambiguation)|L&amp;H]]
+*[[Leivonmäki]]
+*[[London]]
+...
+*List of articles starting with the letter K
+*List of articles starting with the letter L ''(itself; OK)''
+*List of articles starting with the letter M
+...
+| style=&quot;width:20%;&quot;| List of articles about places:
+*[[Asia]]
+*[[Enoshima]]
+*[[Germany]]
+*[[Leivonmäki]]
+*[[Katase River]]
+| style=&quot;width:20%;&quot;| List of articles about Japan:
+*[[Emperor Showa]]
+*[[Enoshima]]
+*[[Katase River]]
+*[[Mount Fuji]]
+*[[Tokyo]]
+| style=&quot;width:20%;&quot;| List of all lists that do not contain themselves:
+*List of articles about Japan
+*List of articles about people
+*List of articles about places
+...
+*List of articles starting with the letter K
+*List of articles starting with the letter M
+...
+*'''List of all lists that do not contain themselves?'''
+|}
+
+If the &quot;List of all lists that do not contain themselves&quot; contains itself, then it does not belong to itself and should be removed. However, if it does not list itself, then it should be added to itself.
+
+While appealing, these [[layman]]'s versions of the paradox share a drawback: an easy refutation of the barber paradox seems to be that such a barber does not exist, or that the barber has [[Alopecia universalis|alopecia]] and therefore doesn't shave. The whole point of Russell's paradox is that the answer &quot;such a set does not exist&quot; means the definition of the notion of set within a given theory is unsatisfactory. Note the difference between the statements &quot;such a set does not exist&quot; and &quot;it is an [[empty set]]&quot;. It is like the difference between saying &quot;There is no bucket&quot; and saying &quot;The bucket is empty&quot;.
+
+A notable exception to the above may be the [[Grelling–Nelson paradox]], in which words and meaning are the elements of the scenario rather than people and hair-cutting. Though it is easy to refute the barber's paradox by saying that such a barber does not (and ''cannot'') exist, it is impossible to say something similar about a meaningfully defined word.
+
+One way that the paradox has been dramatised is as follows:
+
+:Suppose that every public library has to compile a catalogue of all its books. Since the catalogue is itself one of the library's books, some librarians include it in the catalogue for completeness; while others leave it out as it being one of the library's books is self-evident.
+
+:Now imagine that all these catalogues are sent to the national library. Some of them include themselves in their listings, others do not. The national librarian compiles two master catalogues—one of all the catalogues that list themselves, and one of all those that don't.
+
+:The question is: should these master catalogues list themselves? The 'Catalogue of all catalogues that list themselves' is no problem. If the librarian doesn't include it in its own listing, it remains a true catalogue of those catalogues that do include themselves. If the librarian ''does'' include it, it remains a true catalogue of those that list themselves.
+
+:However, just as the librarian cannot go wrong with the first master catalogue, the librarian is doomed to fail with the second. When it comes to the 'Catalogue of all catalogues that don't list themselves', the librarian cannot include it in its own listing, because then it would include itself, and so belongs to the ''other'' catalogue, that of catalogues that do include themselves. However, if the librarian leaves it out, the catalogue is incomplete. Either way, it can never be a true master catalogue of catalogues that do not list themselves.
+
+==Applications and related topics==
+
+===Russell-like paradoxes===
+As illustrated above for the barber paradox, Russell's paradox is not hard to extend. Take:
+
+* A [[transitive verb]] &lt;V&gt;, that can be applied to its [[substantive]] form.
+
+Form the sentence:
+
+:The &lt;V&gt;er that &lt;V&gt;s all (and only those) who don't &lt;V&gt; themselves,
+
+Sometimes the &quot;all&quot; is replaced by &quot;all &lt;V&gt;ers&quot;.
+
+An example would be &quot;paint&quot;:
+
+:The ''paint''er that ''paint''s all (and only those) that don't ''paint'' themselves.
+or &quot;elect&quot;
+:The ''elect''or ([[Group representation|representative]]), that ''elect''s all that don't ''elect'' themselves.
+
+Paradoxes that fall in this scheme include:
+
+* [[Barber paradox|The barber with &quot;shave&quot;]].
+* The original Russell's paradox with &quot;contain&quot;: The container (Set) that contains all (containers) that don't contain themselves.
+* The [[Grelling–Nelson paradox]] with &quot;describer&quot;: The describer (word) that describes all words, that don't describe themselves.
+* [[Richard's paradox]] with &quot;denote&quot;: The denoter (number) that denotes all denoters (numbers) that don't denote themselves. (In this paradox, all descriptions of numbers get an assigned number. The term &quot;that denotes all denoters (numbers) that don't denote themselves&quot; is here called ''Richardian''.)
+* &quot;I am lying.&quot;, namely the [[liar paradox]] and [[Epimenides paradox]], whose origins are ancient
+* [[Russell–Myhill paradox]]
+
+==Related paradoxes==
+* The [[Burali-Forti paradox]], about the [[order type]] of all [[well-ordering]]s
+* The [[Kleene–Rosser paradox]], showing that the original [[lambda calculus]] is inconsistent, by means of a self-negating statement
+* [[Curry's paradox]] (named after [[Haskell Curry]]), which does not require [[negation]]
+* The [[Interesting number paradox|smallest uninteresting integer]] paradox
+* [[Girard's paradox]] in [[type theory]]
+
+==See also==
+* [[Basic Law V]]
+* [[Cantor's diagonal argument]]
+* [[Hilbert's first problem]]
+* &quot;[[On Denoting]]&quot;
+* [[Quine's paradox]]
+* [[Self-reference]]
+* [[Strange loop]]
+* [[Universal set]]
+
+==Notes==
+{{notelist}}
+
+==References==
+{{reflist|30em}}
+
+==Sources==
+{{refbegin}}
+*{{citation|last=Potter|first=Michael|date=15 January 2004|title=Set Theory and its Philosophy|publisher=[[Clarendon Press]] ([[Oxford University Press]])|isbn=978-0-19-926973-0}}
+*{{citation|last=van Heijenoort|first=Jean|authorlink=Jean van Heijenoort|date=1967|title=From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, (third printing 1976)|publisher=[[Harvard University Press]]|publication-place=Cambridge, Massachusetts|isbn=0-674-32449-8}}
+*{{citation|last=Livio|first=Mario|authorlink=Mario Livio|date=6 January 2009|title=Is God a Mathematician?|publisher=[[Simon &amp; Schuster]]|publication-place=New York|isbn=978-0-7432-9405-8
+}}
+{{refend}}
+
+==External links==
+{{Wikiversity|Russell's paradox}}
+*{{cite IEP |url-id=par-russ |title=Russell's Paradox}}
+*{{cite SEP |url-id=russell-paradox |title=Russell's Paradox |first=Andrew David |last=Irvine |date=2016}}
+*{{MathWorld |title=Russell's Antinomy |id=RussellsAntinomy }}
+*[http://www.cut-the-knot.org/selfreference/russell.shtml Russell's Paradox] at [[Cut-the-Knot]]
+
+{{Logical paradoxes}}
+{{Set theory}}
+
+{{DEFAULTSORT:Russell's Paradox}}
+[[Category:Bertrand Russell]]
+[[Category:Paradoxes of naive set theory]]
+[[Category:1901 in science]]
+[[Category:Self-referential paradoxes]]</text>
+      <sha1>0b0welrotvex9rz0yqfdm2baxjdaqv9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Simpson's paradox</title>
+    <ns>0</ns>
+    <id>46096</id>
+    <revision>
+      <id>990891096</id>
+      <parentid>990888648</parentid>
+      <timestamp>2020-11-27T03:01:19Z</timestamp>
+      <contributor>
+        <ip>2604:2000:1742:A11F:1DE4:67C8:60CD:1D1A</ip>
+      </contributor>
+      <comment>Fixed description of Radelet study—some of the claims were wrong, and the &quot;nonprimary&quot; aspect was not explained. While I understand this isn't the article topic, this section should perhaps be removed in light of the lack of statistical significance associated with the data reported.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="27643" xml:space="preserve">{{short description|A phenomenon in probability and statistics, in which a trend appears in groups of data but disappears when these groups are combined}}
+[[Image:Simpson's paradox continuous.svg|thumb|Simpson's paradox for quantitative data: a positive trend (&lt;span style=&quot;display:inline-block; vertical-align:middle; width:2em; height:0px; border-style:none; border-top:2px solid blue;&quot;&gt;&amp;nbsp;&lt;/span&gt;, &lt;span style=&quot;display:inline-block; vertical-align:middle; width:2em; height:0px; border-style:none; border-top:2px solid red;&quot;&gt;&amp;nbsp;&lt;/span&gt;) appears for two separate groups, whereas a negative trend (&lt;span style=&quot;display:inline-block; vertical-align:middle; width:2em; height:0px; border-style:none; border-top:2px dashed #000;&quot;&gt;&amp;nbsp;&lt;/span&gt;) appears when the groups are combined.]]
+[[File:Simpsons paradox - animation.gif|thumb|Visualization of Simpson's paradox on data resembling real-world variability indicates that risk of misjudgement of true relationship can be hard to spot]]
+
+'''Simpson's paradox''', which also goes by several other names, is a phenomenon in [[probability]] and [[statistics]], in which a trend appears in several different groups of data but disappears or reverses when these groups are combined. This result is often encountered in social-science and medical-science statistics&lt;ref&gt;
+{{cite journal
+ | title = Simpson's Paradox in Real Life
+ | author = Clifford H. Wagner
+ |date=February 1982
+ | journal = [[The American Statistician]]
+ | volume = 36
+ | issue = 1
+ | pages = 46–48
+ | doi = 10.2307/2684093
+ | jstor = 2684093
+}}&lt;/ref&gt;&lt;ref&gt;Holt, G. B. (2016).  [http://jco.ascopubs.org/content/34/9/1016.1.full Potential Simpson's paradox in multicenter study of intraperitoneal chemotherapy for ovarian cancer.] Journal of Clinical Oncology, 34(9), 1016-1016.&lt;/ref&gt;&lt;ref name=&quot;VogelFranks2017&quot;&gt;{{cite journal|last1=Franks|first1=Alexander|authorlink2=Edoardo Airoldi|last2=Airoldi|first2=Edoardo|last3=Slavov|first3=Nikolai|title=Post-transcriptional regulation across human tissues|journal=PLOS Computational Biology|volume=13|issue=5|year=2017|pages=e1005535|issn=1553-7358|doi=10.1371/journal.pcbi.1005535|pmid=28481885|pmc=5440056|arxiv=1506.00219}}&lt;/ref&gt; and is particularly problematic when frequency data is unduly given [[causal]] interpretations.&lt;ref name=&quot;pearl&quot;&gt;[[Judea Pearl]]. ''Causality: Models, Reasoning, and Inference'', Cambridge University Press (2000, 2nd edition 2009). {{isbn|0-521-77362-8}}.&lt;/ref&gt; The paradox can be resolved when causal relations are appropriately addressed in the statistical modeling.&lt;ref name=&quot;pearl&quot;/&gt;&lt;ref&gt;Kock, N., &amp; Gaskins, L. (2016).  [http://cits.tamiu.edu/kock/pubs/journals/2016JournalIJANS_ModJCveNetCorrp/Kock_Gaskins_2016_IJANS_SimpPdox.pdf Simpson's paradox, moderation and the emergence of quadratic relationships in path models: An information systems illustration.] International Journal of Applied Nonlinear Science, 2(3), 200-234.&lt;/ref&gt; It is also referred to as '''Simpson's reversal''', '''Yule–Simpson effect''', '''amalgamation paradox''', or '''reversal paradox'''.&lt;ref&gt;
+{{cite journal|author=[[I. J. Good]], Y. Mittal|date=June 1987|title=The Amalgamation and Geometry of Two-by-Two Contingency Tables|journal=[[The Annals of Statistics]]|volume=15|issue=2|pages=694–711|doi=10.1214/aos/1176350369|issn=0090-5364|jstor=2241334|doi-access=free}}&lt;/ref&gt;
+
+Simpson's paradox has been used as an exemplar to illustrate to the non-specialist or public audience the kind of misleading results mis-applied statistics can generate.&lt;ref&gt;Robert L. Wardrop (February 1995). &quot;Simpson's Paradox and the Hot Hand in Basketball&quot;. ''The American Statistician'', ''' 49 (1)''': pp. 24–28.&lt;/ref&gt;&lt;ref&gt;[[Alan Agresti]] (2002). &quot;Categorical Data Analysis&quot; (Second edition). [[John Wiley and Sons]] {{isbn|0-471-36093-7}}&lt;/ref&gt; [[Martin Gardner]] wrote a popular account of Simpson's paradox in his March 1976 [[Mathematical Games column]] in ''[[Scientific American]]''.&lt;ref&gt;{{cite journal|last1=Gardener|first1=Martin|title=MATHEMATICAL GAMES: On the fabric of inductive logic, and some probability paradoxes|journal=Scientific American|date=March 1979|volume=234|issue=3|page=119|url=http://flowcytometry.sysbio.med.harvard.edu/files/flowcytometryhms/files/herzenbergfacshistory.pdf#129|accessdate=28 February 2017|doi=10.1038/scientificamerican0376-119}}&lt;/ref&gt;
+
+[[Edward H. Simpson]] first described this phenomenon in a technical paper in 1951,&lt;ref&gt;
+{{cite journal
+ | title=The Interpretation of Interaction in Contingency Tables
+ | author = Simpson, Edward H.
+ | year = 1951
+ | journal = Journal of the Royal Statistical Society, Series B
+ | volume = 13
+ | pages = 238–241
+}}&lt;/ref&gt; but the statisticians [[Karl Pearson]] et al., in 1899,&lt;ref&gt;
+{{Cite journal
+ | last1 = Pearson  | first1 = Karl
+ | author1-link = Karl Pearson
+ | last2 = Lee | first2 = Alice
+ | last3 = Bramley-Moore | first3 = Lesley
+ | title = Genetic (reproductive) selection: Inheritance of fertility in man, and of fecundity in thoroughbred racehorses 
+ | journal = [[Philosophical Transactions of the Royal Society A]]
+ | volume = 192
+ | pages = 257–330
+ | year = 1899
+ | doi = 10.1098/rsta.1899.0006
+| doi-access = free
+ }}&lt;/ref&gt; and [[Udny Yule]], in 1903,&lt;ref name=yule&gt;
+{{Cite journal
+ | title = Notes on the Theory of Association of Attributes in Statistics
+ | author = G. U. Yule
+ | year = 1903
+ | journal = [[Biometrika]]
+ | volume = 2
+ | pages = 121–134
+ | doi = 10.1093/biomet/2.2.121
+ | issue = 2
+| url = https://zenodo.org/record/1431599
+ }}&lt;/ref&gt; had mentioned similar effects earlier. The name ''Simpson's paradox'' was introduced by Colin R. Blyth in 1972.&lt;ref name=&quot;blyth-72&quot;&gt;
+{{cite journal
+ | title = On Simpson's Paradox and the Sure-Thing Principle
+ | author = Colin R. Blyth
+ | date=June 1972
+ | journal = Journal of the American Statistical Association
+ | volume = 67
+ | issue = 338
+ | pages = 364–366
+ | doi = 10.2307/2284382
+ | jstor = 2284382
+}}&lt;/ref&gt;
+
+== Examples ==
+
+===UC Berkeley gender bias ===
+One of the best-known examples of Simpson's paradox is a study of gender bias among [[graduate school]] admissions to [[University of California, Berkeley]]. The admission figures for the fall of 1973 showed that men applying were more likely than women to be admitted, and the difference was so large that it was unlikely to be due to chance.&lt;ref name=&quot;freedman&quot;&gt;[[David A. Freedman|David Freedman]], Robert Pisani, and Roger Purves (2007), ''Statistics'' (4th edition), [[W. W. Norton &amp; Company|W. W. Norton]]. {{isbn|0-393-92972-8}}.&lt;/ref&gt;&lt;ref name=&quot;Bickel&quot;&gt;{{cite journal
+ | author = [[Peter J. Bickel|P.J. Bickel]], E.A. Hammel and J.W. O'Connell
+ | year = 1975
+ | title = Sex Bias in Graduate Admissions: Data From Berkeley
+ | journal = [[Science (journal)|Science]]
+ | volume = 187
+ | pages = 398–404
+ | doi = 10.1126/science.187.4175.398
+ | pmid = 17835295
+ | issue = 4175
+ | url=http://homepage.stat.uiowa.edu/~mbognar/1030/Bickel-Berkeley.pdf
+}}&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot; style=&quot;margin-left:auto; margin-right:auto; border:none; text-align:right;&quot;
+|-
+! rowspan=&quot;2&quot; |
+! colspan=&quot;2&quot; | Men
+! colspan=&quot;2&quot; | Women
+|-
+! Applicants
+! Admitted
+! Applicants
+! Admitted
+|-
+! Total
+| 8442
+| '''44%'''
+| 4321
+| 35%
+|}
+
+However, when examining the individual departments, it appeared that six out of 85 departments were significantly biased against men, whereas four were significantly biased against women. In fact, the pooled and corrected data showed a &quot;small but [[statistical significance|statistically significant]] bias in favor of women&quot;.&lt;ref name=&quot;Bickel&quot; /&gt; The data from the six largest departments are listed below, the top two departments by number of applicants for each gender italicised.
+
+{| class=&quot;wikitable&quot; style=&quot;margin-left:auto; margin-right:auto; border:none; text-align:right;&quot;
+|-
+! rowspan=&quot;2&quot; | Department
+! colspan=&quot;2&quot; | Men
+! colspan=&quot;2&quot; | Women
+|-
+! Applicants
+! Admitted
+! Applicants
+! Admitted
+|-
+! A
+| '''''825'''''
+| 62%
+| 108
+| '''82%'''
+|-
+! B
+| '''''560'''''
+| 63%
+|  25
+| '''68%'''
+|-
+! C
+| 325
+| '''37%'''
+| '''''593'''''
+| 34%
+|-
+! D
+| 417
+| 33%
+| 375
+| '''35%'''
+|-
+! E
+| 191
+| '''28%'''
+| '''''393'''''
+| 24%
+|-
+! F
+| 373
+|  6%
+| 341
+|  '''7%'''
+|}
+
+The research paper by Bickel et al.&lt;ref name=&quot;Bickel&quot; /&gt; concluded that women tended to apply to more competitive departments with low rates of admission even among qualified applicants (such as in the English Department), whereas men tended to apply to less competitive departments with high rates of admission among the qualified applicants (such as in [[engineering]] and [[chemistry]]).
+
+===Kidney stone treatment===
+This is a real-life example from a medical study&lt;ref&gt;{{Cite journal
+ | author1=C. R. Charig
+ | author2=D. R. Webb
+ | author3=S. R. Payne
+ | author4=J. E. Wickham
+ | title = Comparison of treatment of renal calculi by open surgery, percutaneous nephrolithotomy, and extracorporeal shockwave lithotripsy
+ | journal = [[Br Med J (Clin Res Ed)]]
+ | volume = 292
+ | issue = 6524
+ | pages = 879–882
+ | pmid = 3083922
+ | date = 29 March 1986
+ | doi = 10.1136/bmj.292.6524.879
+ | pmc = 1339981
+}}&lt;/ref&gt; comparing the success rates of two treatments for [[kidney stone]]s.&lt;ref&gt;{{Cite journal
+ | author1 = Steven A. Julious 
+ | author2 = Mark A. Mullee
+ | title = Confounding and Simpson's paradox
+ | journal = [[BMJ]]
+ | pages = 1480–1481
+ | url = http://bmj.bmjjournals.com/cgi/content/full/309/6967/1480
+ | pmid = 7804052
+ | date = 3 December 1994 | volume = 309
+ | issue = 6967
+ | pmc = 2541623
+ | doi=10.1136/bmj.309.6967.1480
+}}&lt;/ref&gt;
+
+The table below shows the success rates and numbers of treatments for treatments involving both small and large kidney stones, where Treatment A includes open surgical procedures and Treatment B includes closed surgical procedures. The numbers in parentheses indicate the number of success cases over the total size of the group.
+
+{| class=&quot;wikitable&quot; summary=&quot;results accounting for stone size&quot; style=&quot;margin-left:auto; margin-right:auto; border:none;&quot;
+! {{diagonal split header|Stone size &amp;nbsp; &amp;nbsp;|Treatment}}
+! Treatment A
+! Treatment B
+|- align=&quot;center&quot;
+! Small stones
+| ''Group 1''&lt;br /&gt;'''93% (81/87)'''   || ''Group 2''&lt;br /&gt;87% (234/270)
+|- align=&quot;center&quot;
+! Large stones
+| ''Group 3''&lt;br /&gt;'''73% (192/263)''' || ''Group 4''&lt;br /&gt;69% (55/80)
+|- align=&quot;center&quot;
+! Both
+| 78% (273/350) || '''83% (289/350)'''
+|}
+[[File:Simpson_paradox_kidney_stones.svg|thumb|Vector representation in which each vector's slope denotes its success rate]]
+The paradoxical conclusion is that treatment A is more effective when used on small stones, and also when used on large stones, yet treatment B is more effective when considering both sizes at the same time. In this example, the &quot;lurking&quot; variable (or [[confounding|confounding variable]]) is the size of the stones (represented by the doctors' treatment decision trend of favoring B for smaller stones), which was not previously known to be important until its effects were included.
+
+Which treatment is considered better is determined by an inequality between two ratios (successes/total). The reversal of the inequality between the ratios, which creates Simpson's paradox, happens because two effects occur together:
+# The sizes of the groups, which are combined when the lurking variable is ignored, are very different. Doctors tend to give cases with large stones the better treatment A, and the cases with small stones the inferior treatment B. Therefore, the totals are dominated by groups 3 and 2, and not by the two much smaller groups 1 and 4.
+# The lurking variable has a large effect on the ratios; i.e., the success rate is more strongly influenced by the severity of the case than by the choice of treatment. Therefore, the group of patients with large stones using treatment A (group 3) does worse than the group with small stones (groups 1 and 2), even if the latter used the inferior treatment B (group 2).
+Based on these effects, the paradoxical result is seen to arise by suppression of the causal effect of the size of the stones on successful treatment.  The paradoxical result can be rephrased more accurately as follows: When the less effective treatment B is applied more frequently to smaller stones cases, it can appear to be a more effective treatment.
+
+===Batting averages===
+A common example of Simpson's paradox involves the [[batting average (baseball)|batting average]]s of players in [[professional baseball]]. It is possible for one player to have a higher batting average than another player each year for a number of years, but to have a lower batting average across all of those years. This phenomenon can occur when there are large differences in the number of [[at bat]]s between the years. Mathematician [[Kenneth A. Ross|Ken Ross]]&lt;ref&gt;Ken Ross. &quot;''A Mathematician at the Ballpark: Odds and Probabilities for Baseball Fans (Paperback)''&quot; Pi Press, 2004. {{isbn|0-13-147990-3}}. 12–13&lt;/ref&gt; demonstrated this using the batting average of two baseball players, [[Derek Jeter]] and [[David Justice]], during the years 1995 and 1996:&lt;ref&gt;Statistics available from [[Baseball-Reference.com]]: [https://www.baseball-reference.com/j/jeterde01.shtml Data for Derek Jeter]; [https://www.baseball-reference.com/j/justida01.shtml Data for David Justice].&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot; style=&quot;margin-left:auto; margin-right:auto; border:none;&quot;
+|-
+! {{diagonal split header|Batter &amp;nbsp;|Year}}
+! colspan=&quot;2&quot; | 1995
+! colspan=&quot;2&quot; | 1996
+! colspan=&quot;2&quot; | Combined
+|-
+| Derek Jeter
+|  12/48
+| .250
+| 183/582
+| .314
+| 195/630
+| '''.310'''
+|-
+| David Justice
+| 104/411
+| '''.253'''
+|  45/140
+| '''.321'''
+| 149/551
+| .270
+|}
+
+In both 1995 and 1996, Justice had a higher batting average (in bold type) than Jeter did. However, when the two baseball seasons are combined, Jeter shows a higher batting average than Justice. According to Ross, this phenomenon would be observed about once per year among the possible pairs of players.
+
+===Racial disparity in the death penalty===
+This real-life example is taken from a 1981 study by Michael Radelet.&lt;ref name=&quot;Radelet&quot;&gt;{{cite journal
+ | author = Michael Radelet
+ | year = 1981
+ | title = Racial Characteristics and the Imposition of the Death Penalty
+ | journal = American Sociological Review
+ | volume = 46
+ | number = 6
+ | pages = 918-927
+ | url=https://eric.ed.gov/?id=EJ257331
+}}&lt;/ref&gt; The data are from twenty Florida counties during 1976-1977.
+
+{| class=&quot;wikitable&quot; summary=&quot;Sentence of Death Penalty in Nonprimary Homicide Cases&quot; style=&quot;margin-left:auto; margin-right:auto; border:none;&quot;
+! {{diagonal split header|Victim &amp;nbsp; &amp;nbsp;|Defendant}}
+! White
+! Black
+! Both
+|- align=&quot;center&quot;
+! White
+| 13% (19/151)   || '''17% (11/63)''' || '''14% (30/214)'''
+|- align=&quot;center&quot;
+! Black
+| 0% (0/9) || '''6% (6/103)''' || 5% (6/112)
+|- align=&quot;center&quot;
+! Both
+| '''12% (19/160)''' || 10% (17/166)
+|}
+
+When victims are aggregated, white defendants appear more likely to receive the death penalty, having been sentenced to death in 19 out of 160 &quot;non primary&quot; homicide cases (homicides cases in which the defendant and the victim are strangers), 13%, while African American defendants were sentenced to death in 17 out of 166 cases, 10%.&lt;ref name=&quot;Radelet&quot;/&gt; However, when the race of the victim is disaggregated, it appears that African American defendants are more likely to be sentenced to death when the victim is white and when the victim is African American, facially suggesting that the increased likelihood of being sentenced to death when the victim is white, coupled with the fact that defendants in such cases are more likely to be white, tends to mask the effect of the defendant's race.&lt;ref name=&quot;Radelet&quot;/&gt; (Notably, Radelet found that none of the aforementioned correlations were statistically significant, instead suggesting that the data was primarily driven by the increased likelihood of a first-degree murder indictment associated with white victims.&lt;ref name=&quot;Radelet&quot;/&gt;)

@@ -1,0 +1,151 @@
+'''Another linking error''' - My user page had some external links that were just the usual raw html://yaddayadda.com/etcetera and they used to work, but today they didn't. I wasn't because there was an asterisk or a parenthesis immediately before or after the URL. It doesn't seem to be because the URL ends in a / - I looked at other user pages to compare, and I '''cannot''' figure out why it wasn't working - gremlins? (Look back one or two levels in the history of my user page to see the formats - I've since forced it to work, by hiding the URL from the displayed page.) -- [[user:Marj Tiefert|Marj Tiefert]], Wednesday, May 15, 2002
+
+:I believe that the current software is actively unlinking URLs like that. I edited a page that had an external link in it of the form you describe above, just a bare URL, and even though I didn't touch the external URL in question it came up unlinked after the edit. Try it out; find a page with an existing external link, edit it, and the link will be gone in the new version. This doesn't apply to links using the syntax &lt;nowiki&gt;[http://yaddayadda.com/etcetera name of link here]&lt;/nowiki&gt;, however. Those remain intact through an edit. [[user:Bryan Derksen|Bryan Derksen]], Monday, May 20, 2002
+
+::This only seems to happen under some circumstances; I've seen it in some articles, but I can't for the life of me reproduce it in [[Wikipedia:Sandbox]]. I think it may be already fixed under the current development version (where I can't reproduce it even by exactly copying Marj's user page). [[user:Brion VIBBER|Brion VIBBER]], Monday, May 20, 2002
+
+:::If you only have a naked URL on a page, it won't turn into a link. If there are other URL's on the page, it sometimes turns into a link. This is fixed in CVS. [[user:AxelBoldt|AxelBoldt]]
+
+::::2002-6-10 Seems to still be a problem; see the links at the end of [[daylight saving time]] for an example. [[User:Rootbeer|Rootbeer]]
+
+::::2002-6-16 I fixed [[daylight saving time]] by opening it for editing and saving it again with no changes. I don't know enough about the internals (caching?) to say why it worked. But if this problem has been fixed in the software now, I suppose that any other pages with non-working links will eventually be edited, and thereby start working again. [[User:Rootbeer|Rootbeer]]
+
+ &lt;font color=red&gt;STATUS: FIXED IN CVS?&lt;/font&gt;
+
+----
+'''Parser generates extra whitespace'''
+
+The [[Bipolar disorder]] page is full of extra whitespace - looking at the article reveals lots of &amp;lt;p&amp;gt; &amp;lt;/p;gt; and &amp;lt;pre&amp;gt; &amp;lt;/pre&amp;gt; spans generated.
+
+Similarly, if an otherwise employ line contains some white space, the previous parser took that as a paragraph break, while the new parser treats it as a block of indented nothing, resulting in too much space between the paragraphs.
+
+If whitespace precedes a #, then it is taken to be a numbered list, while before it was taken as a literal # (which is the correct behavior, especially useful for programs). [[user:AxelBoldt|AxelBoldt]]
+ &lt;font color=red&gt;STATUS : Solved in CVS&lt;/font&gt;
+----
+'''Bad table code can screw up layout'''
+
+(2002/1/28) In the [[Quaternions]] article, the first part of the article appears at the bottom of the page, as do all the QuickBar links. --[[user:Zundark|Zundark]]
+
+:This was caused by Bad Table Code in the article. There was no closing TR tag for the last row in the table, and an extra open TR tag after the end of the table. I've fixed the article... The parser could probably be made to be able to normalize these things, though (ie, remove table-ish tags not inside &amp;amp;amp;amp;lt;TABLE&amp;amp;amp;amp;gt;...&amp;amp;amp;amp;lt;/TABLE&amp;amp;amp;amp;gt;) --[[user:Brion VIBBER|Brion Vibber]]
+
+----
+'''Parser issues with header lines'''
+
+The display of [[Eight queens puzzle]] is... less than optimal.
+The problem is that the leading space on a line used to disable the processing of '#':
+now the Python program example is damaged. 
+
+----
+'''Definition lists produce invalid HTML, could use some improvement as well'''
+
+(2002/4/16) [[user:Lee Daniel Crocker|Lee Daniel Crocker]] The line
+  &lt;pre&gt;; term : definition&lt;/pre&gt;
+is rendered as
+  &lt;pre&gt;&amp;lt;DL&amp;gt;&amp;lt;dt&amp;gt; term &amp;lt;/DL&amp;gt;&amp;lt;DL&amp;gt;&amp;lt;dt&amp;gt;&amp;lt;dd&amp;gt; definition&amp;lt;/DL&amp;gt;&lt;/pre&gt;
+
+Note that neither the &quot;dt&quot; nor &quot;dd&quot; elements are properly closed. Further,
+
+(2002/1/25) Definition lists like:
+;Term 1:Definition 1.
+;Term 2:Definition 2.
+each get put in separate &amp;amp;amp;amp;lt;dl&amp;amp;amp;amp;gt; tags, resulting in too much spacing between them. [[user:Carey Evans|Carey Evans]]
+
+While we're at it, it would be nice if the DD/DL elements were only closed off
+on a full blank line (or end of article), and not just a single newline.  That would
+make them more consistent with regular paragraph text, and make articles with
+long definitions easier to write and edit.
+
+Specifically,
+
+  &lt;pre&gt;; term
+  : long definition blah blah blah blah blah blah blah blah blah
+   blah blah blah blah blah blah blah blah blah blah blah blah blah
+   blah blah blah blah blah blah
+  &lt;/pre&gt;
+
+should be rendered identically to
+
+  &lt;pre&gt;; term
+  : long definition blah blah blah blah blah blah blah blah blah blah blah
+    blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+    blah blah blah
+  &lt;/pre&gt;
+
+This should also be the case for the ULs and OLs created by * and #.  Of course, if the first
+character of a new line within a DD is &quot;;&quot;, then close the DD and open a DT; if it is &quot;:&quot;,
+insert an empty DT and open a new DD.  When a full blank line is encountered, close both
+
+the open DD and the DL.  I'll take a look at the parser code to see if that's possible.
+ &lt;font color=red&gt;STATUS : Solved in CVS&lt;/font&gt;
+
+----
+'''Character entities in links'''
+
+Sat Feb  2 00:23:40 UTC 2002: On [[list of food additives]], I have additives like [[&amp;amp;amp;amp;beta;-cyclodextrine]].  When I click on the question mark to create an article about it, I get the [[Main Page]] displayed for edit instead. Note that since &amp;amp;amp;amp; is a safe character in URI path segments, escaping it as %26 has no effect.
+:This is due to a bug in the code putting too many HTML escapes into the title; if it were working correctly, the %26 escape would indeed have an effect. My recommendation until this is resolved: use [[beta-cyclodextrine|&amp;beta;-cyclodextrine]] (&lt;nowiki&gt;[[beta-cyclodextrine|&amp;amp;beta;-cyclodextrine]]&lt;/nowiki&gt;). --[[user:Brion VIBBER|Brion Vibber]]
+
+::There's probably good arguments for actually writing &quot;beta-cyclodextrine&quot; in the article. However, my point about the % escape is that according to RFC 2396, there is ''no difference'' between %26 and just &amp;amp; in the path of the URL. --Carey
+
+:::Well, there's the RFC and then there's the actual behavior of the software... PHP does not seem to consider %26 to be an ampersand for the purposes of extracting variables from the URL's *query* bit. At least my reading of the RFC agrees with it: &lt;i&gt;?3.4 Query Component ... Within a query component, the characters ...&quot;@&quot;, &quot;&amp;amp;&quot;, &quot;=&quot;... are reserved.?&lt;/i&gt; It's not a problem in the path, only in the query when you're e.g. editing the page. --BV
+
+::The URL rewriting to give nice URLs like http://www.wikipedia.com/wiki/MainPage rather than .../wiki.phtml?MainPage makes this a bit more complicated. There's no question mark in the URL for this edit page, so Apache is probably justified in converting %26 to &amp;amp; internally, before processing the Alias or RewriteRule directive, or http://www.wikipedia.com/%77%69%6B%69/ wouldn't work. --Carey
+
+(Ideally the URL would be encoded as %CE%B2-cyclodextrine, the UTF-8 encoding of GREEK SMALL LETTER BETA.)
+:Impossible until the database is converted from ISO-8859-1 to UTF-8. --BV
+
+::I would just write &amp;amp;lt;? echo urlencode(recode(&quot;h..utf8&quot;, $title)) ?&amp;amp;gt;. --Carey
+
+:::Yeah, that could probably work as long as titles are normalized internally. I'll try banging the code into place... --BV
+
+References:
+[http://www.ietf.org/rfc/rfc2396.txt RFC 2396],
+[http://www.w3.org/International/O-URL-and-ident.html W3C on i18n of URIs]
+
+
+--[[user:Carey Evans|Carey Evans]]
+
+----
+'''Problem in &quot;printable version&quot; page?'''
+
+Please go to [[Category theory]] and try the &quot;printable version&quot; link;
+you will probably see that the word [[functor|functors]] remains as a blue
+link instead of becoming simple italics text.  I was unable to spot any
+sort of difference from other links that would cause this strange behaviour,
+and I suppose it can be considered a bug, since the printable version should
+not contain any link in the text part. [[user:Daniel Mahu|Daniel M]]
+
+:Yup, it's a bug, caused by the fact that the link looks like &lt;nowiki&gt;[[functor|&amp;lt;b&amp;gt;functors&amp;lt;/b&amp;gt;]]&lt;/nowiki&gt;. It's fixed in the development version of the code. [[user:AxelBoldt|AxelBoldt]]
+ &lt;font color=red&gt;STATUS : Solved in CVS&lt;/font&gt;
+
+
+----
+It's always a positive sign that somebody is working hard to improve a system when brand goofy new bugs start to appear.  I just put together a new preliminary subject outline for [[philately]] with a certain amount of bulleted text.   Now, when I enter a new first level bullet after a line with a second level bullet, that first level bullet doesn't appear in the article. [[user:Eclecticology|Eclecticology]], Thursday, May 9, 2002
+
+: I've noted this problem in numbered lists too, or something like it. Also, it used to be possible to create a mixed list with a structure something like:
+*One header
+##A sub-item
+##Another sub-item
+##Yet another sub-item
+*A new header
+##A sub-item for the second header
+##And so forth
+
+(see [[Montgomery County, Maryland]] for an example!) All of a sudden, this has stopped giving reasonable results. -- BRG (Friday, May 10, 2002, but first noticed earlier)
+
+------
+
+Again with [[philately]]:  When I linked to this from the &quot;recent changes&quot; page, I was aghast that the work that I had done was gone without explanation.  I checked the history and the (diff)'s, but that showed that my input was all still there, and that apparently no human had touched it.  From this I made a couple of minor edits (just to have something different) and saved it again.  That was last night.  Now again if I try to link from &quot;recent changes&quot; I still get an older version of the page.  At this point I am beginning to wonder to what extent a link reliably gives the most recent version of a page. [[user:Eclecticology|Eclecticology]], Friday, May 10, 2002
+:This morning I'd noticed a similar problem with the article on [[Maryland]], which I've worked on a lot; only it had apparently gone back many versions. While trying to restore my edits, however, I found the correct version suddenly appeared! -- BRG
+
+----
+
+ #REDIRECT appears to be broken; 
+When I try to access a redirected article, it appears with the &quot;Redirect from '''foo_bar'''&quot; header, but the article itself appears as:
+
+# REDIRECT foo_bar
+
+Any idea what's happening?  Refreshing the page has no effect.  I'm using IE6.0 on WinXP.  (2002.05.15 [[user:pgdudda|pgdudda]])
+
+:Got an article you can give as an example? This is expected behavior in the case of redirect chains: if article A redirects to B, and B redirects to C, going to A gets you to B but no further (thus preventing endless loops of redirects where A redirects to B to C to A to B to C to A to B to C to...) I've you've got one of these, please edit the articles in question and fix it so that all the redirect pages redirect to the actual page, rather than to other redirects. [[user:Brion VIBBER|Brion VIBBER]], Wednesday, May 15, 2002
+
+::I was running into this problem with the article &quot;prefix__morpheme&quot;, attempting to redirect it to the article [[prefix]] by typing in &quot;#REDIRECT prefix&quot;.  That generated an error, but changing it so that there were double square brackets around the word &quot;prefix&quot; makes it work fine.  I had thought the square brackets were unnecessary, but apparently not.  (FYI, [[Prefix__morpheme|Prefix&amp;nbsp;&amp;nbsp;morpheme]] now points to [[Prefix morpheme]], though I may consolidate that with the [[Prefix]] article, since the former is a one-line stub.  Thanks for helping me get that sorted out!  (2002.05.15 [[user:pgdudda|pgdudda]])

@@ -30,11 +30,15 @@ int main(int argc, char *argv[]) {
 
     char *folderName = argv[1];
     int numberOfThreads  = atoi(argv[2]);
-    
+
     int numberOfFiles = countNumberOfFiles(folderName);
     if (numberOfFiles == 0) {
         exit(EXITNOFILEFOUND);
     }
+
+    if(numberOfFiles<numberOfThreads)
+        numberOfThreads = numberOfFiles;
+    printf("numero di file: %d\n", numberOfFiles);
     char **files = (char**)calloc(numberOfFiles, sizeof(char*));
     //per misurare il tempo effettivo di computazione
     struct timespec begin, end; 
@@ -102,7 +106,7 @@ int main(int argc, char *argv[]) {
 
     free(files);
     exectimes(numberOfThreads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
-    check_coherence(minhashDocumenti, numberOfFiles);
+    //check_coherence(minhashDocumenti, numberOfFiles);
 
     return 0;
 }

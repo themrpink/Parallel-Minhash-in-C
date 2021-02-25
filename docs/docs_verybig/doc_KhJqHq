@@ -1,0 +1,315 @@
+Handholes and other below-ground splice vaults are deployed in a variety of environments. The major distinctions in these environments focus on the strength and frequency of vehicular and foot traffic loading. There are four basic application environments:
+
+:*Light Duty: Pedestrian Only 
+:*Medium Duty: Pedestrian and Light Incidental Vehicular Traffic (Up to Class 5 Vehicles)
+:*Heavy Duty: Non-Deliberate (Incidental) Vehicular Traffic (Up to Class 7 Vehicles)
+:*Heavy Duty: Non-Deliberate (Incidental) Vehicular Traffic (Up to Class 8 Vehicles)
+
+Handhole-type products deployed in any environment are subjected to the following types of traffic loading: Vertical Cover Load, Vertical Sidewall Load, Lateral Sidewall Load, and Long-Term Lateral Sidewall Load.
+
+Telcordia [http://telecom-info.telcordia.com/site-cgi/ido/docs.cgi?ID=SEARCH&amp;DOCUMENT=GR-902&amp; GR-902, ''Generic Requirements for Handholes and Other Below-Ground Splice Vaults,''] contains detailed industry requirements for handholes, and includes specific loading requirements for the defined application environments. It provides explicit correlations to other standards such as ANSI/SCTE-77,&lt;ref name=&quot;ansi&quot;&gt;ANSI/SCTE-77, ''Specification for Underground Enclosure Integrity''&lt;/ref&gt; AASHTO&lt;ref name=&quot;asshto&quot;&gt;American Association of State Highway and Transportation Officials (AASHTO)&lt;/ref&gt; specifications, and ASTM C857.&lt;ref name=&quot;astm&quot;&gt;American Society for Testing and Materials (ASTM) C857, ''Standard Practice for Minimum Structural Design Loading for Underground Precast Concrete Utility Structures''&lt;/ref&gt;
+
+===Corrosion resistance===
+Corrosion in outside plant telecommunications network components is caused by exposure to the effects of temperature, humidity, electrical power, and contaminants. Corrosion resistance criteria for these network components are based on the environments to which they are exposed.
+
+Outside plant environments can be above-ground, underground, buried, or underwater. Industry requirements document [[Telcordia]] [http://telecom-info.telcordia.com/site-cgi/ido/docs.cgi?ID=SEARCH&amp;DOCUMENT=GR-2836&amp; GR-2836] defines these environments and provides corrosion resistance criteria for the telecommunications equipment in each.&lt;ref&gt;[http://telecom-info.telcordia.com/site-cgi/ido/docs.cgi?ID=SEARCH&amp;DOCUMENT=GR-2836&amp; GR-2836-CORE, ''Generic Requirements for Assuring Corrosion Resistance of Telecommunication Equipment in the Outside Plant,''] Telcordia.&lt;/ref&gt; It also includes references to various associated [[ASTM]] Standards.
+
+====Above-ground plant====
+Above-ground plant includes all the telecommunications equipment physically located on or above the ground. This includes enclosures such as huts, cabinets, and pedestals, and the equipment mounted therein. It also includes pole-mounted equipment and cases, and pole-line hardware.
+
+Above-ground plant can be exposed to extreme temperatures, and to humidity that varies with the seasons and with daily temperature changes. When humidity condenses on the surfaces of outdoor apparatus or equipment, the corrosivity of the moisture layer can be increased by industrial pollutants that render the condensate moisture corrosive. In sea coastal areas, wind-borne, salt-laden water droplets can deposit on exposed components.
+
+Near large cultivated areas, where fertilizers are applied by airplanes, the wind may carry nitrates, phosphates, and ammonium compounds to settle on metallic components of the above-ground telephone plant. Similarly, in residential areas, lawn fertilizers and herbicides can cause corrosion. In regions with snow, the salts used to melt snow and ice on roadways can accelerate corrosion. Under extreme conditions, pedestals and cabinets may be flooded with water that contains mud and corrosive salts. Corrosion of these flooded components may be accelerated by the presence of dc voltages used to power the networks. Secretions from insects can also accelerate corrosion. Finally, chewing by rodents may expose metallic components, normally protected by a polymer or paint coating, to a corrosive environment.
+
+====Underground plant====
+Underground plant includes all the telecommunications equipment installed in underground structures such as utility holes, Controlled Environment Vaults (CEVs), and ducts, along with associated hardware. Underground plant can be exposed to waters containing water-soluble salts of the native soil. Utility holes often show evidence of corrosion of support hardware and bonding ribbons that is caused by sulfate-reducing bacteria. The environment in utility holes and ducts can be made corrosive by man-made chemicals such as industrial effluent, fertilizers, and de-icing salts. Protective plastic coatings and cable jackets can rapidly deteriorate from leaking steam pipes present in many urban areas and from gasoline leaking from underground storage tanks.
+
+The most aggressive contributor to corrosion of underground plant is dc stray current from electrified rail transportation systems, cathodic protection rectifiers, or welding and mining operations. Although such dc currents are mostly dealt with “after the fact” using protective systems (e.g., low resistance bonds, reverse current switches, cathodic protection), some of the protection has to be included at the manufacturing stage. This protection may include insulating covers on cable shields, or nonmetallic components or coatings for apparatus.
+
+====Buried plant====
+Buried plant consists of telecommunications equipment such as cables, splice closures, lower parts of pedestals, and grounding systems directly buried in the soil. Buried plant can be exposed to the same corrosive environment as underground plant. In addition, attack by gophers can expose underlying components to corrosion attack.
+
+====Underwater plant====
+Underwater plant includes all telecommunications equipment located beneath the surface of a body of water. This includes cables and repeaters. The water can range from relatively pure, to brackish, to badly contaminated with industrial effluent.
+
+==See also==
+*[[Inside plant]]
+
+==References==
+{{Reflist}}
+
+*{{FS1037C MS188}}
+
+{{Telecommunications}}
+
+{{DEFAULTSORT:Outside Plant}}
+[[Category:Telecommunications infrastructure]]</text>
+      <sha1>2kvxboezv0rngerm49trhxvd4fnz0rw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Ovality</title>
+    <ns>0</ns>
+    <id>41473</id>
+    <revision>
+      <id>663582585</id>
+      <parentid>663582572</parentid>
+      <timestamp>2015-05-22T19:38:19Z</timestamp>
+      <contributor>
+        <username>Crystallizedcarbon</username>
+        <id>22150306</id>
+      </contributor>
+      <minor />
+      <comment>Reverted edits by [[Special:Contributions/192.88.94.1|192.88.94.1]] ([[User talk:192.88.94.1|talk]]) ([[WP:HG|HG]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2076" xml:space="preserve">In [[telecommunication]]s and [[fiber optics]], '''ovality''' or '''noncircularity''' is the degree of deviation from perfect circularity of the cross section of the core or cladding of the fiber.
+
+The cross-sections of the core and cladding are assumed to a first approximation to be elliptical. Quantitatively, the ovality of either the core or cladding is expressed as &lt;math&gt;\frac {2(a-b)} {a+b}&lt;/math&gt;, where ''a'' is the length of the major axis and ''b'' is the length of the minor axis. The dimensionless quantity so obtained may be multiplied by 100 to express ovality as a percentage. Alternatively, ovality of the core or cladding may be specified by a [[tolerance field]] consisting of two concentric circles, within which the cross section boundaries must lie.
+
+In measurements, ovality is the amount of out-of-roundness of a hole or cylindrical part in the typical form of an oval.
+
+==In chemistry==
+In [[computational chemistry]], especially in [[Quantitative structure–activity relationship|QSAR]]&lt;ref name=&quot;isbn0-582-38210-6&quot;&gt;{{cite book | author = Leach, Andrew R. | title = Molecular modelling: principles and applications | publisher = Prentice Hall | location = Englewood Cliffs, N.J | year = 2001 | isbn = 0-582-38210-6 }}&lt;/ref&gt; studies, ovality&lt;ref&gt;{{cite book |last= Hehre |first= Warren J. |author2=William Sean Ohlinger |title= Spartan'10 Tutorial and User's Guide |publisher= Wavefunction, Inc. | location = Irvine, CA|year= 2008 |isbn= 1-890661-41-4}}&lt;/ref&gt; refers to, a measure of how the shape of a molecule approaches a [[sphere]] (at one extreme) or a [[quantum electrodynamic threshold|cigar shape]] (at the other). 
+Ovality is described by a ratio of volume to area:
+
+&lt;math&gt;O = \frac {A}{4\pi(\frac{3V}{4\pi})^{\frac 2 3}}&lt;/math&gt;
+
+where:
+
+:O = Ovality
+:A = Area
+:V = Volume
+
+The ovality of the [[Helium atom|He atom]] is '''1.0''' and that of HC&lt;sub&gt;24&lt;/sub&gt;H (12 triple bonds) is '''~1.7'''.
+
+==See also==
+*[[Concentricity error]]
+*[[Roundness (object)]]
+
+==References==
+&lt;references/&gt;
+
+*[[Federal Standard 1037C]]
+
+[[Category:Fiber optics]]</text>
+      <sha1>jnxnkr4khban8rj6ikuq5d2lp7bzzhx</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Overfill</title>
+    <ns>0</ns>
+    <id>41474</id>
+    <revision>
+      <id>532049825</id>
+      <parentid>504805610</parentid>
+      <timestamp>2013-01-09T00:28:30Z</timestamp>
+      <contributor>
+        <username>Addbot</username>
+        <id>6569922</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Addbot|Bot:]] Removing Orphan Tag (Nolonger an Orphan) ([[User_talk:Addbot|Report Errors]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="701" xml:space="preserve">In [[telecommunications]], '''overfill''' is the condition that prevails when the [[numerical aperture]] or the  [[beam diameter]] of an [[optical]] source, such as a [[laser]], [[light-emitting diode]], or [[optical fiber]], exceeds that of the driven element, e.g. an [[optical fiber]] [[Core (optical fiber)|core]]. In optical [[telecommunication|communications]] testing, overfill in both numerical aperture and mean diameter (core diameter or spot size) is usually required.
+In polygonal mirror scanners, an overfilled type is one which uses each mirror facet at least in one dimension completely.
+
+==References==
+*[[Federal Standard 1037C]]
+
+[[Category:Optical communications]]
+
+{{telecom-stub}}</text>
+      <sha1>e9urocbwkusv5xui9o72afdc5hhvvho</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Overflow</title>
+    <ns>0</ns>
+    <id>41475</id>
+    <revision>
+      <id>978533103</id>
+      <parentid>978378633</parentid>
+      <timestamp>2020-09-15T13:42:37Z</timestamp>
+      <contributor>
+        <username>Leschnei</username>
+        <id>27335766</id>
+      </contributor>
+      <comment>moved [[River overflow]] to Other section</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1317" xml:space="preserve">{{wiktionary|overflow}}
+'''Overflow''' may refer to:
+
+==Computing and telecommunications==
+*[[Integer overflow]], a condition that occurs when an integer calculation produces a result that is greater than what a given register can store or represent
+*[[Buffer overflow]], a situation whereby the incoming data size exceeds that which can be accommodated by a buffer.
+**[[Heap overflow]], a type of buffer overflow that occurs in the heap data area
+*[[Overflow (software)]], a NASA-developed computational fluid dynamics program using overset (Chimera) grids
+*[[Overflow condition]], a situation that occurs when more information is being transmitted than the hardware can handle
+*[[Overspill]], a proof technique in non-standard analysis, is less commonly called overflow
+*[[Stack overflow]] in which a computer program makes too many subroutine calls and its call stack runs out of space
+
+==Other==
+*[[Overflow (magazine)|''Overflow'' (magazine)]], a free quarterly in Brooklyn, New York, US
+*[[0verflow]], a Japanese video game developer
+*[[River overflow]], a relatively long and significant increase in the water content of a river, causing a rise in its level
+*[[Sanitary sewer overflow]], a condition whereby untreated sewage is discharged into the environment, escaping wastewater treatment
+
+{{disambiguation}}</text>
+      <sha1>8pzg3699go2yol8cn1mn9dhcq5swswi</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Overhead information</title>
+    <ns>0</ns>
+    <id>41476</id>
+    <revision>
+      <id>811640971</id>
+      <parentid>563124630</parentid>
+      <timestamp>2017-11-22T23:15:22Z</timestamp>
+      <contributor>
+        <username>J947</username>
+        <id>29495429</id>
+      </contributor>
+      <comment>Added {{[[Template:one source|one source]]}} tag to article ([[WP:TW|TW]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="882" xml:space="preserve">{{one source|date=November 2017}}
+'''Overhead information''' is [[Digital data|digital]] [[information]] transferred across the functional [[user interface|interface]] between a [[user (telecommunications)|user]] and a telecommunications [[system]], or between functional units within a telecommunications system, for the purpose of directing or controlling the transfer of [[user information]] or the detection and correction of errors.  
+
+Overhead information originated by the user is not considered to be system overhead information. Overhead information generated within the [[communications system]] and not delivered to the user is system overhead information. Thus, the user [[throughput]] is reduced by both overheads while system throughput is reduced only by system overhead.
+
+==References==
+*{{FS1037C MS188}}
+
+[[Category:Data transmission]]
+
+{{telecommunications-stub}}</text>
+      <sha1>fzt83xk6xhhgrltr7wox9r6as5e4mfm</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Overmodulation</title>
+    <ns>0</ns>
+    <id>41477</id>
+    <revision>
+      <id>853567723</id>
+      <parentid>853567459</parentid>
+      <timestamp>2018-08-05T17:37:46Z</timestamp>
+      <contributor>
+        <username>Oshwah</username>
+        <id>3174456</id>
+      </contributor>
+      <minor />
+      <comment>Reverted good faith edits by [[Special:Contributions/Sagar_nilgar|Sagar_nilgar]] ([[User talk:Sagar_nilgar|talk]]): rv - it should match the article title ([[WP:HG|HG]]) (3.4.4)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1230" xml:space="preserve">{{Refimprove|date=February 2013}}
+'''Overmodulation''' is the condition that prevails in [[telecommunication]] when the instantaneous level of the modulating [[Signalling (telecommunication)|signal]] exceeds the value necessary to produce 100% [[modulation]] of the [[carrier signal|carrier]]. In the sense of this definition, it is almost always considered a [[Fault (technology)|fault]] condition. In layman's terms, the signal is going &quot;off the scale&quot;. Overmodulation results in spurious emissions by the modulated carrier, and [[distortion]] of the recovered modulating signal. This means that the envelope of the output waveform is distorted. 
+
+Although overmodulation is sometimes considered permissible, it should not occur in practice; a distorted waveform envelope will result in a distorted output signal of the receiving medium.&lt;ref name=&quot;Cliff Robbins&quot;&gt;{{cite web|title=Overmodulation|url=http://www.its.bldrdoc.gov/fs-1037/dir-026/_3806.htm|accessdate=10 January 2013}}&lt;/ref&gt;
+
+==References==
+
+&lt;references /&gt;
+
+==See also==
+* [[Clipping (audio)]]
+* [[Overshoot (signal)]]
+* [[Automatic gain control]]
+
+{{Audio broadcasting}}
+
+[[Category:Telecommunication theory]]
+[[Category:Radio modulation modes]]
+
+
+{{telecomm-stub}}</text>
+      <sha1>gzk61tc07x36qjod4mzw4flcgm59eev</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Override</title>
+    <ns>0</ns>
+    <id>41478</id>
+    <revision>
+      <id>742888221</id>
+      <parentid>610147964</parentid>
+      <timestamp>2016-10-06T12:37:12Z</timestamp>
+      <contributor>
+        <username>TheFarix</username>
+        <id>928626</id>
+      </contributor>
+      <minor />
+      <comment>/* top */Use more formal language using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="800" xml:space="preserve">{{Wiktionary|override}}
+'''Override''' may refer to:
+
+* [[Override (film)|''Override'' (film)]], a 1994 science fiction short film
+* [[OverRide (video game)|''OverRide'' (video game)]]
+* [[Overriders]], an insurance term
+* [[Overriding (mathematics)]]
+* [[Manual override]], a function where an automated system is placed under manual control
+* [[Veto override]], a procedure employed by legislatures
+* Dr. [[Gregory Herd]], a Marvel Comics character formerly named Override
+* [[Overrider]], a Marvel Comics mutant
+* Override, a character on the anime television series ''[[Transformers: Cybertron]]''
+* [[Overriding aorta]], a medical condition in which aorta emerge from abnormal position.
+* [[Method overriding]], a subclassing feature in Object Oriented programming languages.
+
+{{disambiguation}}</text>
+      <sha1>7k88fzvj5lwk046hhw0ilose4hi6ht3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Overshoot</title>
+    <ns>0</ns>
+    <id>41479</id>
+    <revision>
+      <id>959755989</id>
+      <parentid>903233194</parentid>
+      <timestamp>2020-05-30T12:56:14Z</timestamp>
+      <contributor>
+        <username>TompaDompa</username>
+        <id>23012287</id>
+      </contributor>
+      <comment>Epidemiology.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="984" xml:space="preserve">{{Wiktionary}}
+'''Overshoot'''  may refer to:
+
+* [[Overshoot (population)]], when a population exceeds the environment's carrying capacity
+** ''[[William R. Catton, Jr.#Overshoot: The Ecological Basis of Revolutionary Change|Overshoot: The Ecological Basis of Revolutionary Change]]'', 1980 book by [[William R. Catton, Jr.]]
+* [[Overshoot (signal)]], when a signal exceeds its steady state value
+* [[Overshoot (microwave communication)]], unintended reception of microwave signals
+* [[Overshoot (migration)]], when migratory birds end up further than intended
+* [[Overshoot (typography)]] the degree to which a letter dips below the baseline, or exceeds the cap height
+* [[Overshoot (aviation)|Overshoot (combat aviation)]], a key concept in basic fighter maneuvers (BFM)
+*[[Overshoot (epidemiology)]], when the proportion of a population infected exceeds the herd immunity threshold
+* In economics, the [[overshooting model]] for the volatility of exchange rates
+
+{{Disambiguation}}</text>
+      <sha1>db21g76emffkpymjgzkr3uofva27p00</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Overtone</title>
+    <ns>0</ns>
+    <id>41480</id>
+    <revision>
+      <id>988242665</id>
+      <parentid>985504538</parentid>
+      <timestamp>2020-11-11T23:38:32Z</timestamp>
+      <contributor>
+        <ip>66.183.49.215</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="16084" xml:space="preserve">{{Redirect|Overtones||Overtones (disambiguation)}}
+{{Redirect|Superharmonic|functions in mathematics|Superharmonic function}}
+{{ref improve|date=December 2013}}

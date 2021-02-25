@@ -1,0 +1,265 @@
+and in the [[Vim (text editor)|Vim text editor]], one can ROT13 a buffer with the command:&lt;ref&gt;[https://web.archive.org/web/20160303184604/http://rayninfo.co.uk/vimtips.html Best of VIM Tips, gVIM's Key Features zzapper (Internet Archive link)]&lt;/ref&gt;
+
+ ggg?G
+
+=== Python ===
+In [[Python (programming language)|Python]], the module {{mono|this}} is implemented using ROT13:&lt;ref&gt;{{cite web |title=cpython: this.py |url=https://github.com/python/cpython/blob/master/Lib/this.py}}&lt;/ref&gt;
+&lt;syntaxhighlight lang=&quot;pycon&quot;&gt;
+&gt;&gt;&gt; import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+
+&gt;&gt;&gt; with open(this.__file__) as f:
+...     print(f.read())
+s = &quot;&quot;&quot;Gur Mra bs Clguba, ol Gvz Crgref
+
+Ornhgvshy vf orggre guna htyl.
+Rkcyvpvg vf orggre guna vzcyvpvg.
+Fvzcyr vf orggre guna pbzcyrk.
+Pbzcyrk vf orggre guna pbzcyvpngrq.
+Syng vf orggre guna arfgrq.
+Fcnefr vf orggre guna qrafr.
+Ernqnovyvgl pbhagf.
+Fcrpvny pnfrf nera'g fcrpvny rabhtu gb oernx gur ehyrf.
+Nygubhtu cenpgvpnyvgl orngf chevgl.
+Reebef fubhyq arire cnff fvyragyl.
+Hayrff rkcyvpvgyl fvyraprq.
+Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.
+Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.
+Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh'er Qhgpu.
+Abj vf orggre guna arire.
+Nygubhtu arire vf bsgra orggre guna *evtug* abj.
+Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg'f n onq vqrn.
+Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.
+Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg'f qb zber bs gubfr!&quot;&quot;&quot;
+
+d = {}
+for c in (65, 97):
+    for i in range(26):
+        d[chr(i+c)] = chr((i+13) % 26 + c)
+
+print(&quot;&quot;.join([d.get(c, c) for c in s]))
+&lt;/syntaxhighlight&gt;
+The module {{mono|codecs}} provides {{mono|'rot13'}} text transform.&lt;ref&gt;{{cite web |title=codecs — Codec registry and base classes — Python 3.9.0 documentation |url=https://docs.python.org/3/library/codecs.html#text-transforms}}&lt;/ref&gt;
+&lt;syntaxhighlight lang=&quot;pycon&quot;&gt;
+&gt;&gt;&gt; import codecs
+&gt;&gt;&gt; print(codecs.encode(this.s, 'rot13'))
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+&lt;/syntaxhighlight&gt;
+
+==See also==
+* [[Cryptanalysis]]
+
+==References==
+{{notelist}}
+
+{{reflist}}
+
+{{Cryptography navbox | classical}}
+
+{{DEFAULTSORT:Rot13}}
+[[Category:Classical ciphers]]
+[[Category:Internet culture]]</text>
+      <sha1>gfn7t12450smxd963xk9jvh6lj4p1vh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Richmond County, New York</title>
+    <ns>0</ns>
+    <id>48363</id>
+    <redirect title="Staten Island" />
+    <revision>
+      <id>902184901</id>
+      <parentid>902184853</parentid>
+      <timestamp>2019-06-17T04:55:28Z</timestamp>
+      <contributor>
+        <username>Mr. Guye</username>
+        <id>16852310</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="142" xml:space="preserve">#REDIRECT [[Staten Island]]
+
+[[Category:New York (state) counties]]
+{{Redirect category shell|
+{{R from merge}}
+{{R from alternative name}}
+}}</text>
+      <sha1>dc95qnrp1scecbzncvmrmaanathnzp8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Software architecture</title>
+    <ns>0</ns>
+    <id>48364</id>
+    <revision>
+      <id>991271631</id>
+      <parentid>990432901</parentid>
+      <timestamp>2020-11-29T05:22:13Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 48 templates: del empty params (21×); hyphenate params (11×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="47737" xml:space="preserve">{{short description|High level structures of a software system}}
+{{Software development process}}
+'''Software architecture''' refers to the fundamental structures of a [[software system]] and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and properties of both elements and relations.&lt;ref name=&quot;DSA2&quot;&gt;{{cite book|last=Clements|first=Paul|author2=Felix Bachmann |author3-link=Len Bass|author3=Len Bass |author4=David Garlan |author5=James Ivers |author6=Reed Little |author7=Paulo Merson |author8=Robert Nord |author9=Judith Stafford  |title=Documenting Software Architectures: Views and Beyond, Second Edition|publisher = Addison-Wesley|year=2010|location=Boston|isbn=978-0-321-55268-6}}&lt;/ref&gt; The ''architecture'' of a software system is a metaphor, analogous to the [[architecture]] of a building.&lt;ref name=&quot;PERRY1992&quot;&gt;{{Cite journal | last1 = Perry | first1 = D. E. | last2 = Wolf | first2 = A. L. | author-link2 = Alexander L. Wolf| doi = 10.1145/141874.141884 | title = Foundations for the study of software architecture | journal = [[ACM SIGSOFT Software Engineering Notes]]| volume = 17 | issue = 4 | pages = 40 | year = 1992 | url = http://users.ece.utexas.edu/~perry/work/papers/swa-sen.pdf| citeseerx = 10.1.1.40.5174 | s2cid = 628695 }}&lt;/ref&gt; It functions as a blueprint for the system and the developing project, laying out the tasks necessary to be executed by the design teams.&lt;ref&gt;{{Cite web|url=https://www.sei.cmu.edu/research-capabilities/all-work/display.cfm?customel_datapageid_4050=21328|title=Software Architecture|website=www.sei.cmu.edu|language=en|access-date=2018-07-23}}&lt;/ref&gt;
+
+Software architecture is about making fundamental structural choices that are costly to change once implemented. Software architecture choices include specific structural options from possibilities in [[Software design|the design of the software]]. For example, the systems that controlled the [[Space Shuttle]] launch vehicle had the requirement of being very fast and very reliable. Therefore, an appropriate [[real-time computing]] language would need to be chosen. Additionally, to satisfy the need for reliability the choice could be made to have multiple redundant and independently produced copies of the program, and to run these copies on independent hardware while cross-checking results.
+
+[[Software documentation|Documenting software]] architecture facilitates communication between [[Stakeholder (corporate)#In management|stakeholders]], captures early decisions about the high-level design, and allows reuse of design components between projects.&lt;ref name=&quot;SAP2&quot;&gt;{{cite book|last=Bass|first=Len|author2=Paul Clements |author3=Rick Kazman |title=Software Architecture in Practice, Third Edition|publisher = Addison-Wesley|year=2012|location=Boston|isbn=978-0-321-81573-6}}&lt;/ref&gt;{{rp|29–35}}
+
+==Scope==
+Opinions vary as to the scope of software architectures:&lt;ref&gt;{{cite web|author=SEI|title= How do you define Software Architecture?|url= http://www.sei.cmu.edu/architecture/start/glossary/definition-form.cfm |year=2006|access-date=2012-09-12}}&lt;/ref&gt;
+* '''Macroscopic system structure''': this refers to architecture as a higher-level [[Abstraction (computer science)|abstraction]] of a software system that consists of a collection of computational ''components'' together with ''connectors'' that describe the interaction between these components.&lt;ref&gt;{{cite web|author=Garlan &amp; Shaw |title= An Introduction to Software Architecture |url= https://www.cs.cmu.edu/afs/cs/project/able/ftp/intro_softarch/intro_softarch.pdf |year=1994|access-date=2012-09-13}}&lt;/ref&gt;
+* '''The important stuff—whatever that is''': this refers to the fact that software architects should concern themselves with those decisions that have high impact on the system and its stakeholders.&lt;ref name=&quot;FOWL2003&quot;&gt;{{Cite journal | last1 = Fowler | first1 = Martin | title = Design – Who needs an architect? | doi = 10.1109/MS.2003.1231144 | journal = IEEE Software | volume = 20 | issue = 5 | pages = 11–44 | year = 2003 | s2cid = 356506 }}&lt;/ref&gt;
+* '''That which is fundamental to understanding a system in its environment'''&lt;ref&gt;[http://www.iso-architecture.org/42010/defining-architecture.html ISO/IEC/IEEE 42010: Defining &quot;architecture&quot;]. Iso-architecture.org. Retrieved on 2013-07-21.&lt;/ref&gt;
+* '''Things that people perceive as hard to change''': since designing the architecture takes place at the beginning of a software system's lifecycle, the architect should focus on decisions that &quot;have to&quot; be right the first time. Following this line of thought, architectural design issues may become non-architectural once their irreversibility can be overcome.&lt;ref name=&quot;FOWL2003&quot;/&gt;
+* '''A set of architectural design decisions''': software architecture should not be considered merely a set of models or structures, but should include the decisions that lead to these particular structures, and the rationale behind them.&lt;ref name=&quot;jansen05&quot; /&gt; This insight has led to substantial research into software architecture [[knowledge management]].&lt;ref name=&quot;AKM&quot;&gt;{{cite book |title=Software Architecture Knowledge Management |last1=Ali Babar |first1=Muhammad|last2=Dingsoyr|first2=Torgeir|last3=Lago|first3=Patricia|last4=van Vliet|first4=Hans|year=2009 |publisher=Springer|location=Dordrecht Heidelberg London New York |isbn=978-3-642-02373-6}}&lt;/ref&gt;
+
+There is no sharp distinction between software architecture versus design and requirements engineering (see [[#Related fields|Related fields]] below). They are all part of a &quot;chain of intentionality&quot; from high-level intentions to low-level details.&lt;ref name=&quot;FAIRBANKS2010&quot;&gt;{{cite book|author=George Fairbanks|title=Just Enough Software Architecture|year=2010|publisher=Marshall &amp; Brainerd}}&lt;/ref&gt;{{rp|18}}
+
+==Characteristics==
+Software architecture exhibits the following:
+
+'''Multitude of stakeholders:''' software systems have to cater to a variety of stakeholders such as business managers, owners, users, and operators. These stakeholders all have their own concerns with respect to the system. Balancing these concerns and demonstrating that they are addressed is part of designing the system.&lt;ref name=&quot;SAP2&quot; /&gt;{{rp|29–31}} This implies that architecture involves dealing with a broad variety of concerns and stakeholders, and has a multidisciplinary nature.
+
+'''[[Separation of concerns]]:''' the established way for architects to reduce complexity is to separate the concerns that drive the design. Architecture documentation shows that all stakeholder concerns are addressed by modeling and describing the architecture from separate points of view associated with the various stakeholder concerns.&lt;ref name=&quot;ISO42010&quot;/&gt; These separate descriptions are called architectural views (see for example the [[4+1 architectural view model]]).
+
+'''Quality-driven:''' classic [[software design]] approaches (e.g. [[Jackson Structured Programming]]) were driven by required functionality and the flow of data through the system, but the current insight&lt;ref name=&quot;SAP2&quot;/&gt;{{rp|26–28}} is that the architecture of a software system is more closely related to its [[quality attributes]] such as [[fault-tolerance]], [[backward compatibility]], [[extensibility]], [[reliability (engineering)|reliability]], [[maintainability]], [[availability]], security, usability, and other such –[[ilities]]. Stakeholder concerns often translate into [[requirements]] on these quality attributes, which are variously called [[non-functional requirements]], extra-functional requirements, behavioral requirements, or quality attribute requirements.
+
+'''Recurring styles:''' like building architecture, the software architecture discipline has developed standard ways to address recurring concerns. These &quot;standard ways&quot; are called by various names at various levels of abstraction. Common terms for recurring solutions are architectural style,&lt;ref name=&quot;FAIRBANKS2010&quot;/&gt;{{rp|273–277}} tactic,&lt;ref name=&quot;SAP2&quot;/&gt;{{rp|70–72}} [[reference architecture]]&lt;ref name=&quot;REFARCHPRIMER&quot;&gt;{{cite web |url=http://www.gaudisite.nl/ReferenceArchitecturePrimerPaper.pdf |title=A Reference Architecture Primer |last1=Muller |first1=Gerrit |date=August 20, 2007 |website=Gaudi site |access-date=November 13, 2015}}&lt;/ref&gt;&lt;ref name=&quot;REFARCHCLASS&quot;&gt;{{cite journal |last1=Angelov |first1=Samuil |last2=Grefen |first2=Paul |last3=Greefhorst |first3=Danny |title=A Classification of Software Reference Architectures: Analyzing Their Success and Effectiveness |journal=Proc. Of WICSA/ECSA 2009 |pages=141–150 |doi=10.1109/WICSA.2009.5290800 |year=2009 |isbn=978-1-4244-4984-2 |citeseerx=10.1.1.525.7208 |s2cid=10417628 }}&lt;/ref&gt; and [[architectural pattern]].&lt;ref name=&quot;SAP2&quot;/&gt;{{rp|203–205}}
+
+'''Conceptual integrity:''' a term introduced by [[Fred Brooks]] in ''[[The Mythical Man-Month]]'' to denote the idea that the architecture of a software system represents an overall vision of what it should do and how it should do it. This vision should be separated from its implementation. The architect assumes the role of &quot;keeper of the vision&quot;, making sure that additions to the system are in line with the architecture, hence preserving [[The Mythical Man-Month#Conceptual integrity|conceptual integrity]].&lt;ref name=&quot;BROOKS&quot;&gt;{{cite book |last= Brooks, Jr.|first=Frederick P. |date=1975|title=The Mythical Man-Month – Essays on Software Engineering |publisher=Addison-Wesley |isbn=978-0-201-00650-6|title-link=The Mythical Man-Month }}&lt;/ref&gt;{{rp|41–50}}
+
+'''Cognitive constraints:''' [[Conway's law|an observation]] first made in a 1967 paper by computer programmer [[Melvin Conway]] that organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations. As with conceptual integrity, it was Fred Brooks who introduced it to a wider audience when he cited the paper and the idea in his elegant classic ''The Mythical Man-Month'', calling it &quot;Conway's Law.&quot;
+
+== Motivation ==
+Software architecture is an &quot;intellectually graspable&quot; abstraction of a complex system.&lt;ref name=&quot;SAP2&quot;/&gt;{{rp|5–6}} This abstraction provides a number of benefits:
+* ''It gives a basis for analysis of software systems' behavior before the system has been built.''&lt;ref name=&quot;PERRY1992&quot;/&gt; The ability to verify that a future software system fulfills its stakeholders' needs without actually having to build it represents substantial cost-saving and risk-mitigation.&lt;ref name=&quot;SARA&quot;&gt;{{cite web| first1 = H. | last1 = Obbink
+ | last2 = Kruchten| first2 = P.
+ | last3 = Kozaczynski| first3 = W.
+ | last4 = Postema | first4 = H.
+ | last5 = Ran| first5 = A.
+ | last6 = Dominick| first6 = L.
+ | last7 = Kazman| first7 = R.
+| last8 = Hilliard| first8 = R.
+| last9 = Tracz| first9 = W.
+ | last10 = Kahane| first10 = E.
+| title = Software Architecture Review and Assessment (SARA) Report
+| date = Feb 6, 2002
+ | url = https://pkruchten.files.wordpress.com/2011/09/sarav1.pdf
+ | access-date = November 1, 2015}}&lt;/ref&gt; A number of techniques have been developed to perform such analyses, such as [[ATAM]] or by creating a visual representation of the software system.
+* ''It provides a basis for re-use of elements and decisions.''&lt;ref name=&quot;PERRY1992&quot;/&gt;&lt;ref name=&quot;SAP2&quot;/&gt;{{rp|35}} A complete software architecture or parts of it, like individual architectural strategies and decisions, can be re-used across multiple systems whose stakeholders require similar quality attributes or functionality, saving design costs and mitigating the risk of design mistakes.
+* ''It supports early design decisions that impact a system's development, deployment, and maintenance life.''&lt;ref name=&quot;SAP2&quot;/&gt;{{rp|31}} Getting the early, high-impact decisions right is important to prevent schedule and [[cost overrun|budget overruns]].
+* ''It facilitates communication with stakeholders, contributing to a system that better fulfills their needs.''&lt;ref name=&quot;SAP2&quot;/&gt;{{rp|29–31}} Communicating about complex systems from the point of view of stakeholders helps them understand the consequences of their stated requirements and the design decisions based on them. Architecture gives the ability to communicate about design decisions before the system is implemented, when they are still relatively easy to adapt.
+* ''It helps in risk management.'' Software architecture helps to reduce risks and chance of failure.&lt;ref name=&quot;FAIRBANKS2010&quot;/&gt;{{rp|18}}
+* ''It enables [[cost reduction]].'' Software architecture is a means to manage risk and costs in complex IT projects.&lt;ref name=&quot;RCDA&quot;&gt;{{cite journal |last1=Poort |first1=Eltjo |last2=van Vliet |first2=Hans |date=September 2012 |title=RCDA: Architecting as a risk- and cost management discipline |journal=Journal of Systems and Software |volume=85 |issue=9 |pages=1995–2013 |doi=10.1016/j.jss.2012.03.071 |url=https://zenodo.org/record/896159 }}&lt;/ref&gt;
+
+==History==
+The comparison between software design and (civil) architecture was first drawn in the late 1960s,&lt;ref&gt;{{cite web |editor1=P. Naur |editor2=B. Randell |title=Software Engineering: Report of a conference sponsored by the NATO Science Committee, Garmisch, Germany, 7–11 Oct. 1968 |publisher=NATO, Scientific Affairs Division |location=Brussels |year=1969 |url=http://homepages.cs.ncl.ac.uk/brian.randell/NATO/nato1968.PDF |access-date=2012-11-16}}&lt;/ref&gt; but the term &quot;software architecture&quot; did not see widespread usage until the 1990s.&lt;ref&gt;{{Cite journal|author1=P. Kruchten |author2=H. Obbink  |author3=J. Stafford |title=The past, present and future of software architecture|journal=IEEE Software |volume=23 |issue=2 |pages=22 |year=2006|doi=10.1109/MS.2006.59 |s2cid=2082927 }}&lt;/ref&gt; The field of [[computer science]] had encountered problems associated with complexity since its formation.&lt;ref&gt;{{cite web|author=University of Waterloo|title= A Very Brief History of Computer Science |url=http://www.cs.uwaterloo.ca/~shallit/Courses/134/history.html |year=2006|access-date=2006-09-23}}&lt;/ref&gt; Earlier problems of complexity were solved by developers by choosing the right [[data structure]]s, developing [[algorithm]]s, and by applying the concept of [[separation of concerns]]. Although the term &quot;software architecture&quot; is relatively new to the industry, the fundamental principles of the field have been applied sporadically by [[software engineering]] pioneers since the mid-1980s. Early attempts to capture and explain software architecture of a system were imprecise and disorganized, often characterized by a set of box-and-line [[diagram]]s.&lt;ref&gt;{{Cite journal|author=IEEE Transactions on Software Engineering|title= Introduction to the Special Issue on Software Architecture |year=2006|doi= 10.1109/TSE.1995.10003 }}&lt;/ref&gt;
+
+Software architecture as a concept has its origins in the research of [[Edsger Dijkstra]] in 1968 and [[David Parnas]] in the early 1970s. These scientists emphasized that the structure of a software system matters and getting the structure right is critical. During the 1990s there was a concerted effort to define and codify fundamental aspects of the discipline, with research work concentrating on architectural styles ([[patterns]]), [[architecture description language]]s, [[Software documentation#Architecture/Design documentation|architecture documentation]], and [[formal method]]s.&lt;ref&gt;{{cite web|author=Garlan &amp; Shaw |title= An Introduction to Software Architecture |url= https://www.cs.cmu.edu/afs/cs/project/able/ftp/intro_softarch/intro_softarch.pdf |year=1994|access-date=2006-09-25}}&lt;/ref&gt;
+
+Research institutions have played a prominent role in furthering software architecture as a discipline. [[Mary Shaw (computer scientist)|Mary Shaw]] and David Garlan of [[Carnegie Mellon]] wrote a book titled ''Software Architecture: Perspectives on an Emerging Discipline'' in 1996, which promoted software architecture concepts such as [[software component|components]], connectors, and styles. The [[University of California, Irvine]]'s Institute for Software Research's efforts in software architecture research is directed primarily in architectural styles, architecture description languages, and dynamic architectures.
+
+[[IEEE 1471]]-2000, &quot;Recommended Practice for Architecture Description of Software-Intensive Systems&quot;, was the first formal standard in the area of software architecture. It was adopted in 2007 by ISO as [[IEEE 1471|ISO/IEC 42010:2007]]. In November 2011, IEEE 1471–2000 was superseded by [[ISO/IEC 42010|ISO/IEC/IEEE 42010:2011]], &quot;Systems and software engineering – Architecture description&quot; (jointly published by IEEE and ISO).&lt;ref name=&quot;ISO42010&quot;&gt;{{cite web|author=ISO/IEC/IEEE|title=ISO/IEC/IEEE 42010:2011 Systems and software engineering – Architecture description|url=http://www.iso.org/iso/catalogue_detail.htm?csnumber=50508|year=2011|access-date=2012-09-12}}&lt;/ref&gt;
+
+While in [[IEEE 1471]], software architecture was about the architecture of &quot;software-intensive systems&quot;, defined as &quot;any system where software contributes essential influences to the design, construction, deployment, and evolution of the system as a whole&quot;, the 2011 edition goes a step further by including the [[ISO/IEC 15288]] and [[ISO/IEC 12207]] definitions of a system, which embrace not only hardware and software, but also &quot;humans, processes, procedures, facilities, materials and naturally occurring entities&quot;. This reflects the relationship between software architecture, [[enterprise architecture]] and [[solution architecture]].
+
+==Architecture activities==
+
+There are many activities that a software architect performs. A software architect typically works with project managers, discusses [[architecturally significant requirements]] with stakeholders, designs a software architecture, evaluates a design, communicates with designers and stakeholders, documents the architectural design and more.&lt;ref name=&quot;Kruchten 2008&quot;&gt;{{Cite journal | last1 = Kruchten | first1 = P. | title = What do software architects really do? | doi = 10.1016/j.jss.2008.08.025 | journal = Journal of Systems and Software | volume = 81 | issue = 12 | pages = 2413–2416 | year = 2008 }}&lt;/ref&gt; There are four core activities in software architecture design.&lt;ref name=&quot;hofmeister07&quot;/&gt; These core architecture activities are performed iteratively and at different stages of the initial software development life-cycle, as well as over the evolution of a system.
+
+'''Architectural analysis''' is the process of understanding the environment in which a proposed system will operate and determining the requirements for the system. The input or requirements to the analysis activity can come from any number of stakeholders and include items such as:
+
+* what the system will do when operational (the functional requirements)
+* how well the system will perform runtime non-functional requirements such as reliability, operability, performance efficiency, security, compatibility defined in [[ISO/IEC 25010]]:2011 standard&lt;ref name=&quot;ISO25010&quot;&gt;{{cite web|author=ISO/IEC|title=ISO/IEC 25010:2011 Systems and software engineering – Systems and software Quality Requirements and Evaluation (SQuaRE) – System and software quality models|url=http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=35733|year=2011|access-date=2012-10-08}}&lt;/ref&gt; 
+* development-time of non-functional requirements such as maintainability and transferability defined in ISO 25010:2011 standard&lt;ref name=&quot;ISO25010&quot;/&gt; 
+* business requirements and environmental contexts of a system that may change over time, such as legal, social, financial, competitive, and technology concerns&lt;ref&gt;{{cite book|author=Osterwalder and Pigneur| title = Value Creation from E-Business Models| chapter = An Ontology for e-Business Models|pages=65–97|year=2004| doi = 10.1016/B978-075066140-9/50006-0| isbn = 9780750661409|chapter-url=https://pdfs.semanticscholar.org/8513/9070e23b0b3278d73ea51b873acd99352e9c.pdf|citeseerx=10.1.1.9.6922| s2cid = 14177438}}&lt;/ref&gt;
+
+The outputs of the analysis activity are those requirements that have a measurable impact on a software system's architecture, called architecturally significant requirements.&lt;ref name=&quot;ASR_Chen&quot;&gt;{{Cite journal |doi = 10.1109/MS.2012.174|title = Characterizing Architecturally Significant Requirements|journal = IEEE Software|volume = 30|issue = 2|pages = 38–45|year = 2013|last1 = Chen|first1 = Lianping|last2 = Ali Babar|first2 = Muhammad|last3 = Nuseibeh|first3 = Bashar|hdl = 10344/3061|s2cid = 17399565}}&lt;/ref&gt;
+
+'''Architectural synthesis''' or design is the process of creating an architecture. Given the architecturally significant requirements determined by the analysis, the current state of the design and the results of any evaluation activities, the design is created and improved.&lt;ref name=&quot;hofmeister07&quot;/&gt;&lt;ref name=&quot;SAP2&quot;/&gt;{{rp|311–326}}
+
+'''Architecture evaluation''' is the process of determining how well the current design or a portion of it satisfies the requirements derived during analysis. An evaluation can occur whenever an architect is considering a design decision, it can occur after some portion of the design has been completed, it can occur after the final design has been completed or it can occur after the system has been constructed. Some of the available software architecture evaluation techniques include [[Architecture tradeoff analysis method|Architecture Tradeoff Analysis Method (ATAM)]] and TARA.&lt;ref name=&quot;woods2012&quot; &gt;{{Cite journal | last1 = Woods | first1 = E. | title = Industrial architectural assessment using TARA | doi = 10.1016/j.jss.2012.04.055 | journal = Journal of Systems and Software | volume = 85 | issue = 9 | pages = 2034–2047 | year = 2012 | s2cid = 179244 }}&lt;/ref&gt; Frameworks for comparing the techniques are discussed in frameworks such as ''SARA Report''&lt;ref name=&quot;SARA&quot; /&gt; and ''Architecture Reviews: Practice and Experience''.&lt;ref&gt;{{Cite journal | last1 = Maranzano | first1 = J. F. | last2 = Rozsypal | first2 = S. A. | last3 = Zimmerman | first3 = G. H. | last4 = Warnken | first4 = G. W. | last5 = Wirth | first5 = P. E. | last6 = Weiss | first6 = D. M. | doi = 10.1109/MS.2005.28 | title = Architecture Reviews: Practice and Experience | journal = IEEE Software | volume = 22 | issue = 2 | pages = 34 | year = 2005 | s2cid = 11697335 }}&lt;/ref&gt;
+
+'''Architecture evolution''' is the process of maintaining and adapting an existing software architecture to meet changes in requirements and environment. As software architecture provides a fundamental structure of a software system, its evolution and maintenance would necessarily impact its fundamental structure. As such, architecture evolution is concerned with adding new functionality as well as maintaining existing functionality and system behavior.
+
+Architecture requires critical supporting activities. These supporting activities take place throughout the core software architecture process. They include knowledge management and communication, design reasoning and decision making, and documentation.
+
+=== Architecture supporting activities ===
+Software architecture supporting activities are carried out during core software architecture activities. These supporting activities assist a software architect to carry out analysis, synthesis, evaluation, and evolution. For instance, an architect has to gather knowledge, make decisions and document during the analysis phase.
+
+* '''Knowledge management and communication''' is the act of exploring and managing knowledge that is essential to designing a software architecture. A software architect does not work in isolation. They get inputs, functional and non-functional requirements, and design contexts, from various stakeholders; and provides outputs to stakeholders. Software architecture knowledge is often tacit and is retained in the heads of stakeholders. Software architecture knowledge management activity is about finding, communicating, and retaining knowledge. As software architecture design issues are intricate and interdependent, a knowledge gap in design reasoning can lead to incorrect software architecture design.&lt;ref name=&quot;Kruchten 2008&quot; /&gt;&lt;ref name=&quot;SAKM&quot;&gt;{{cite book|last1=Babar|first1=M.A.|last2=Dingsøyr|first2=T.|last3=Lago|first3=P.|last4=Vliet|first4=H. van|title=Software Architecture Knowledge Management:Theory and Practice (eds.), First Edition|publisher = Springer|year=2009|isbn=978-3-642-02373-6}}&lt;/ref&gt; Examples of knowledge management and communication activities include searching for design patterns, prototyping, asking experienced developers and architects, evaluating the designs of similar systems, sharing knowledge with other designers and stakeholders, and documenting experience in a wiki page.
+* '''Design reasoning and decision making''' is the activity of evaluating design decisions. This activity is fundamental to all three core software architecture activities.&lt;ref name=&quot;jansen05&quot;&gt;{{Cite book | last1 = Jansen | first1 = A. | last2 = Bosch | first2 = J. | doi = 10.1109/WICSA.2005.61 | chapter = Software Architecture as a Set of Architectural Design Decisions | title = 5th Working IEEE/IFIP Conference on Software Architecture (WICSA'05) | pages = 109 | year = 2005 | isbn = 978-0-7695-2548-8 | citeseerx = 10.1.1.60.8680 | s2cid = 13492610 }}&lt;/ref&gt;&lt;ref name=&quot;tang09&quot;&gt;{{Cite journal | last1 = Tang | first1 = A. | last2 = Han | first2 = J. | last3 = Vasa | first3 = R. | doi = 10.1109/MS.2009.46 | title = Software Architecture Design Reasoning: A Case for Improved Methodology Support | journal = IEEE Software | volume = 26 | issue = 2 | pages = 43 | year = 2009 | hdl = 1959.3/51601 | s2cid = 12230032 }}&lt;/ref&gt; It entails gathering and associating decision contexts, formulating design decision problems, finding solution options and evaluating tradeoffs before making decisions. This process occurs at different levels of decision granularity while evaluating significant architectural requirements and software architecture decisions, and software architecture analysis, synthesis, and evaluation. Examples of reasoning activities include understanding the impacts of a requirement or a design on quality attributes, questioning the issues that a design might cause, assessing possible solution options, and evaluating the tradeoffs between solutions.
+* '''Documentation''' is the act of recording the design generated during the software architecture process. [[Software design|System design]] is described using several views that frequently include a static view showing the code structure of the system, a dynamic view showing the actions of the system during execution, and a deployment view showing how a system is placed on hardware for execution. Kruchten's 4+1 view suggests a description of commonly used views for documenting software architecture;&lt;ref name=&quot;Kru95&quot;&gt;{{cite journal |last=Kruchten |first=Philippe |year=1995 |url=http://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf |title=Architectural Blueprints – The '4+1' View Model of Software Architecture |journal=IEEE Software |volume=12 |issue=6 |pages=42–50 |doi=10.1109/52.469759|arxiv=2006.04975 }}&lt;/ref&gt; ''Documenting Software Architectures: Views and Beyond'' has descriptions of the kinds of notations that could be used within the view description.&lt;ref name=&quot;DSA2&quot; /&gt; Examples of documentation activities are writing a specification, recording a system design model, documenting a design rationale, developing a viewpoint, documenting views.
+
+== Software architecture topics ==
+
+=== Software architecture description ===
+{{main|Software architecture description}}
+Software architecture description involves the principles and practices of modeling and representing architectures, using mechanisms such as architecture description languages, architecture viewpoints, and architecture frameworks.
+
+=== Architecture description languages ===
+{{main|Architecture description language}}
+An architecture description language (ADL) is any means of expression used to describe a software architecture ([[ISO/IEC 42010|ISO/IEC/IEEE 42010]]).
+Many special-purpose ADLs have been developed since the 1990s, including [[Architecture analysis and design language|AADL]] (SAE standard), [[Wright (ADL)|Wright]] (developed by Carnegie Mellon), [[Acme (ADL)|Acme]] (developed by Carnegie Mellon), xADL (developed by UCI), [[Darwin (ADL)|Darwin]] (developed by [[Imperial College London]]), DAOP-ADL (developed by University of Málaga), SBC-ADL (developed by [[National Sun Yat-Sen University]]), and [[ByADL (ADL)|ByADL]] (University of L'Aquila, Italy).
+
+=== Architecture viewpoints ===
+{{main|View model}}
+[[File:4+1 Architectural View Model.svg|thumb|264px|[[4+1 architectural view model]].]]
+Software architecture descriptions are commonly organized into [[view model|views]], which are analogous to the different types of [[blueprint]]s made in building [[architecture]]. Each view addresses a set of system concerns, following the conventions of its ''viewpoint'', where a viewpoint is a specification that describes the notations, modeling, and analysis techniques to use in a view that expresses the architecture in question from the perspective of a given set of stakeholders and their concerns ([[ISO/IEC 42010|ISO/IEC/IEEE 42010]]). The viewpoint specifies not only the concerns framed (i.e., to be addressed) but the presentation, model kinds used, conventions used and any consistency (correspondence) rules to keep a view consistent with other views.
+
+=== Architecture frameworks ===
+{{main|Architecture framework}}
+An architecture framework captures the &quot;conventions, principles and practices for the description of architectures established within a specific domain of application and/or community of stakeholders&quot; ([[ISO/IEC 42010|ISO/IEC/IEEE 42010]]). A framework is usually implemented in terms of one or more viewpoints or ADLs.
+
+=== Architectural styles and patterns ===
+{{main|Architectural pattern}}
+&lt;!-- This section is linked from [[Abstraction (computer science)]] --&gt;
+
+An [[architectural pattern]] is a general, reusable solution to a commonly occurring problem in software architecture within a given context. 
+Architectural patterns are often documented as software [[Software design pattern|design patterns]].

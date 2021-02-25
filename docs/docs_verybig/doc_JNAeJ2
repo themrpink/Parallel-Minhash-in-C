@@ -1,0 +1,188 @@
+Each iso-density [[Locus (mathematics)|locus]] &amp;mdash; the locus of points in ''k''-dimensional space each of which gives the same particular value of the density &amp;mdash; is an [[ellipse]] or its higher-dimensional generalization; hence the multivariate normal is a special case of the [[elliptical distribution]]s.
+
+The quantity &lt;math&gt;\sqrt{({\mathbf x}-{\boldsymbol\mu})^\mathrm{T}{\boldsymbol\Sigma}^{-1}({\mathbf x}-{\boldsymbol\mu})}&lt;/math&gt; is known as the [[Mahalanobis distance]], which represents the distance of the test point &lt;math&gt;{\mathbf x}&lt;/math&gt; from the mean &lt;math&gt;{\boldsymbol\mu}&lt;/math&gt;. Note that in the case when &lt;math&gt;k = 1&lt;/math&gt;, the distribution reduces to a univariate normal distribution and the Mahalanobis distance reduces to the absolute value of the [[standard score]]. See also [[#Interval|Interval]] below.
+
+====Bivariate case====
+In the 2-dimensional nonsingular case (&lt;math&gt;k = \text{rank}\left(\Sigma\right) = 2&lt;/math&gt;), the [[probability density function]] of a vector &lt;math&gt;\text{[XY]′}&lt;/math&gt; is:
+
+: &lt;math&gt;
+f(x,y) =
+      \frac{1}{2 \pi  \sigma_X \sigma_Y \sqrt{1-\rho^2}}
+      \mathrm{e}^{
+        -\frac{1}{2(1-\rho^2)}\left[
+          (\frac{x-\mu_X}{\sigma_X})^2 -
+          2\rho(\frac{x-\mu_X}{\sigma_X})(\frac{y-\mu_Y}{\sigma_Y}) +
+          (\frac{y-\mu_Y}{\sigma_Y})^2 
+        \right]
+      }
+&lt;/math&gt;
+
+where &lt;math&gt;\rho&lt;/math&gt; is the [[Pearson product-moment correlation coefficient|correlation]] between &lt;math&gt;X&lt;/math&gt; and &lt;math&gt;Y&lt;/math&gt; and
+where &lt;math&gt; \sigma_X&gt;0 &lt;/math&gt; and &lt;math&gt; \sigma_Y&gt;0 &lt;/math&gt;. In this case,
+: &lt;math&gt;
+    \boldsymbol\mu = \begin{pmatrix} \mu_X \\ \mu_Y \end{pmatrix}, \quad
+    \boldsymbol\Sigma = \begin{pmatrix} \sigma_X^2 &amp; \rho \sigma_X \sigma_Y \\
+                             \rho \sigma_X \sigma_Y  &amp; \sigma_Y^2 \end{pmatrix}.
+  &lt;/math&gt;
+In the bivariate case, the first equivalent condition for multivariate reconstruction of normality can be made less restrictive as it is sufficient to verify that [[countably infinite|countably many]] distinct linear combinations of &lt;math&gt;X&lt;/math&gt; and &lt;math&gt;Y&lt;/math&gt; are normal in order to conclude that the vector of  &lt;math&gt;\text{[XY]′}&lt;/math&gt; is bivariate normal.&lt;ref name=HT/&gt;
+
+The bivariate iso-density loci plotted in the  &lt;math&gt;x,y&lt;/math&gt;-plane are [[ellipse]]s, whose [[Semi-major and semi-minor axes|principal axes]] are defined by the [[eigenvectors]] of the covariance matrix &lt;math&gt;\boldsymbol\Sigma&lt;/math&gt; (the major and minor [[semidiameter]]s of the ellipse equal the square-root of the ordered eigenvalues).
+[[File:GaussianScatterPCA.png|thumb|right|Bivariate normal distribution centered at &lt;math&gt;(1, 3)&lt;/math&gt; with a standard deviation of 3 in roughly the &lt;math&gt;(0.878, 0.478)&lt;/math&gt; direction and of&amp;nbsp;1 in the orthogonal direction.]]
+
+As the absolute value of the correlation parameter  &lt;math&gt;\rho&lt;/math&gt; increases, these loci are squeezed toward the following line :
+
+: &lt;math&gt;
+    y(x) = \sgn (\rho)\frac{\sigma_Y}{\sigma_X} (x - \mu _X) + \mu_Y.
+  &lt;/math&gt;
+
+This is because this expression, with &lt;math&gt;sgn(\rho)&lt;/math&gt; (where sgn is the [[Sign function]]) replaced by &lt;math&gt;\rho&lt;/math&gt;, is the [[best linear unbiased prediction]] of &lt;math&gt;Y&lt;/math&gt; given a value of &lt;math&gt;X&lt;/math&gt;.&lt;ref name=wyattlms/&gt;
+
+
+====Degenerate case====
+If the covariance matrix &lt;math&gt;\boldsymbol\Sigma&lt;/math&gt; is not full rank, then the multivariate normal distribution is degenerate and does not have a density. More precisely, it does not have a density with respect to ''k''-dimensional [[Lebesgue measure]] (which is the usual measure assumed in calculus-level probability courses). Only random vectors whose distributions are [[absolute continuity#Absolute continuity of measures|absolutely continuous]] with respect to a measure are said to have densities (with respect to that measure). To talk about densities but avoid dealing with measure-theoretic complications it can be simpler to restrict attention to a subset of &lt;math&gt;\operatorname{rank}(\boldsymbol\Sigma)&lt;/math&gt; of the coordinates of &lt;math&gt;\mathbf{x}&lt;/math&gt; such that the covariance matrix for this subset is positive definite; then the other coordinates may be thought of as an [[affine function]] of these selected coordinates.{{citation needed|date=July 2012}}
+
+To talk about densities meaningfully in singular cases, then, we must select a different base measure. Using the [[disintegration theorem]] we can define a restriction of Lebesgue measure to the &lt;math&gt;\operatorname{rank}(\boldsymbol\Sigma)&lt;/math&gt;-dimensional affine subspace of &lt;math&gt;\mathbb{R}^k&lt;/math&gt; where the Gaussian distribution is supported, i.e. &lt;math&gt;\{\boldsymbol\mu+\boldsymbol{\Sigma^{1/2}}\mathbf{v} : \mathbf{v} \in \mathbb{R}^k \}&lt;/math&gt;. With respect to this measure the distribution has the density of the following motif:
+
+:&lt;math&gt;f(\mathbf{x})= \left(\det\nolimits^*(2\pi\boldsymbol\Sigma)\right)^{-\frac{1}{2}}\, e^{ -\frac{1}{2}(\mathbf{x}-\boldsymbol\mu)^{{{\!\mathsf{T}}}} \boldsymbol\Sigma^+(\mathbf{x}-\boldsymbol\mu) }&lt;/math&gt;
+
+where &lt;math&gt;\boldsymbol\Sigma^+&lt;/math&gt; is the [[generalized inverse]] and det* is the [[pseudo-determinant]].&lt;ref name=rao/&gt;
+
+=== Cumulative distribution function ===
+The notion of [[cumulative distribution function]] (cdf) in dimension 1 can be extended in two ways to the multidimensional case, based on rectangular and ellipsoidal regions.
+
+The first way is to define the cdf &lt;math&gt;F(\mathbf{x})&lt;/math&gt; of a random vector &lt;math&gt;\mathbf{X}&lt;/math&gt; as the probability that all components of &lt;math&gt;\mathbf{X}&lt;/math&gt; are less than or equal to the corresponding values in the vector &lt;math&gt;\mathbf{x}&lt;/math&gt;:&lt;ref name=&quot;bo16&quot;&gt;{{cite journal|last1=Botev|first1=Z. I.|title=The normal law under linear restrictions: simulation and estimation via minimax tilting|journal=Journal of the Royal Statistical Society, Series B|volume=79|pages=125–148|date=2016|doi=10.1111/rssb.12162|arxiv=1603.04166|bibcode=2016arXiv160304166B}}&lt;/ref&gt;
+
+:&lt;math&gt; F(\mathbf{x}) = \mathbb{P}(\mathbf{X}\leq \mathbf{x}), \quad \text{where } \mathbf{X} \sim \mathcal{N}(\boldsymbol\mu,\, \boldsymbol\Sigma).&lt;/math&gt;
+
+Though there is no closed form for &lt;math&gt;F(\mathbf{x})&lt;/math&gt;, there are a number of algorithms that  [https://cran.r-project.org/web/packages/TruncatedNormal/ estimate it numerically].&lt;ref name=&quot;bo16&quot;/&gt;&lt;ref name=Genz&gt;{{cite book|last=Genz|first=Alan|title=Computation of Multivariate Normal and t Probabilities|date=2009|publisher=Springer|isbn=978-3-642-01689-9|url=https://www.springer.com/statistics/computational+statistics/book/978-3-642-01688-2}}&lt;/ref&gt;
+
+Another way is to define the cdf &lt;math&gt;F(r)&lt;/math&gt; as the probability that a sample lies inside the ellipsoid determined by its [[Mahalanobis distance]] &lt;math&gt;r&lt;/math&gt; from the Gaussian, a direct generalization of the standard deviation
+.&lt;ref name=Bensimhoun&gt;[https://upload.wikimedia.org/wikipedia/commons/a/a2/Cumulative_function_n_dimensional_Gaussians_12.2013.pdf Bensimhoun Michael, ''N-Dimensional Cumulative Function, And Other Useful Facts About Gaussians and Normal Densities'' (2006)]&lt;/ref&gt;
+In order to compute the values of this function, closed analytic formulae exist,&lt;ref name=&quot;Bensimhoun&quot;/&gt; as follows.
+
+====Interval====
+{{further|Confidence region}}
+
+The [[interval estimation|interval]] for the multivariate normal distribution yields a region consisting of those vectors '''x''' satisfying
+
+:&lt;math&gt;({\mathbf x}-{\boldsymbol\mu})^T{\boldsymbol\Sigma}^{-1}({\mathbf x}-{\boldsymbol\mu}) \leq \chi^2_k(p).&lt;/math&gt;
+
+Here &lt;math&gt;{\mathbf x}&lt;/math&gt; is a &lt;math&gt;k&lt;/math&gt;-dimensional vector, &lt;math&gt;{\boldsymbol\mu}&lt;/math&gt; is the known &lt;math&gt;k&lt;/math&gt;-dimensional mean vector, &lt;math&gt;\boldsymbol\Sigma&lt;/math&gt; is the known [[covariance matrix]] and &lt;math&gt;\chi^2_k(p)&lt;/math&gt; is the  [[quantile function]] for probability &lt;math&gt;p&lt;/math&gt; of the [[chi-squared distribution]] with &lt;math&gt;k&lt;/math&gt; degrees of freedom.&lt;ref name=Siotani/&gt;
+When &lt;math&gt;k = 2,&lt;/math&gt; the expression defines the interior of an ellipse and the chi-squared distribution simplifies to an [[exponential distribution]] with mean equal to two (rate equal to half).
+
+=== Complementary cumulative distribution function (tail distribution) ===
+The  [[cumulative distribution function#Derived functions|complementary cumulative distribution function]] (ccdf) or the '''tail distribution'''  
+is defined as &lt;math&gt;\overline F(\mathbf{x})=1-\mathbb P(\mathbf X\leq \mathbf x)&lt;/math&gt;. 
+When &lt;math&gt; \mathbf{X} \sim \mathcal{N}(\boldsymbol\mu,\, \boldsymbol\Sigma)&lt;/math&gt;, then
+the ccdf can be written as a probability the  maximum of dependent Gaussian variables:&lt;ref name=&quot;bmr15&quot;&gt;{{cite conference |title=Tail distribution of the maximum of correlated Gaussian random variables |last1=Botev |first1=Z. I. |last2=Mandjes |first2=M. |last3=Ridder |first3=A.  |publisher=IEEE|ISBN=978-1-4673-9743-8 |book-title= 2015 Winter Simulation Conference (WSC) |pages=633–642 |location=Huntington Beach, Calif., USA |date=6–9 December 2015 |doi= 10.1109/WSC.2015.7408202 }}
+&lt;/ref&gt;
+
+:&lt;math&gt; \overline F(\mathbf{x}) =\mathbb P(\cup_i\{X_i\geq x_i\})= \mathbb P(\max_i Y_i\geq 0), 
+\quad \text{where } \mathbf{Y} \sim \mathcal{N}(\boldsymbol\mu-\mathbf{x},\, \boldsymbol\Sigma).&lt;/math&gt;
+While no simple closed formula exists for computing the ccdf, the maximum of dependent Gaussian variables can 
+be estimated accurately via the [[Monte Carlo method]].&lt;ref name=&quot;bmr15&quot;/&gt;&lt;ref name=&quot;abl08&quot;&gt;{{cite conference |title=Efficient simulation for tail probabilities of Gaussian random fields |last1=Adler |first1=R. J.  
+|last2=Blanchet |first2=J. |last3=Liu |first3=J.  |year=2008 |publisher=IEEE|ISBN=978-1-4244-2707-9
+ |book-title= 2008 Winter Simulation Conference (WSC) |pages=328–336 |location=Miami, Fla., USA |date=7–10 Dec 2008 
+|doi= 10.1109/WSC.2008.473608 }}
+&lt;/ref&gt;
+
+== Properties ==
+===Higher moments===
+{{Main|Isserlis' theorem}}
+The ''k''th-order [[moment (mathematics)|moments]] of '''x''' are given by
+
+:&lt;math&gt;
+\mu_{1,\ldots,N}(\mathbf{x})\ \stackrel{\mathrm{def}}{=}\  \mu _{r_1,\ldots,r_N}(\mathbf{x})\ \stackrel{\mathrm{def}}{=} \operatorname E\left[ \prod_{j=1}^N X_j^{r_j} \right]
+&lt;/math&gt;
+
+where {{math|''r''&lt;sub&gt;1&lt;/sub&gt; + ''r''&lt;sub&gt;2&lt;/sub&gt; + ⋯ + ''r&lt;sub&gt;N&lt;/sub&gt;'' {{=}} ''k''.}}
+
+The ''k''th-order central moments are as follows
+
+{{ordered list|list_style_type=lower-alpha
+|If ''k'' is odd, {{math|''μ''&lt;sub&gt;1, …, ''N''&lt;/sub&gt;('''x''' − '''''μ''''') {{=}} 0}}.
+|If ''k'' is even with {{math|''k'' {{=}} 2''λ''}}, then
+}}
+:&lt;math&gt;
+\mu_{1,\dots,2\lambda}(\mathbf{x}-\boldsymbol\mu )=\sum \left( \sigma_{ij} \sigma_{k\ell} \cdots \sigma_{XZ}\right)
+&lt;/math&gt;
+
+where the sum is taken over all allocations of the set &lt;math&gt;\left\{ 1,\ldots,2\lambda \right\}&lt;/math&gt; into ''λ'' (unordered) pairs. That is, for a ''k''th {{math| ({{=}} 2''λ'' {{=}} 6)}} central moment, one sums the products of {{nowrap|''λ'' {{=}} 3}} covariances (the expected value '''''μ''''' is taken to be 0 in the interests of parsimony):
+
+: &lt;math&gt;\begin{align}
+&amp; \operatorname E[X_1 X_2 X_3 X_4 X_5 X_6] \\[8pt]
+= {} &amp; \operatorname E[X_1 X_2]\operatorname E[X_3 X_4]\operatorname E[X_5 X_6] + \operatorname E[X_1 X_2]\operatorname E[X_3 X_5]\operatorname E[X_4 X_6] + \operatorname E[X_1 X_2]\operatorname E[X_3 X_6] \operatorname E[X_4 X_5] \\[4pt]
+&amp; {} + \operatorname E[X_1 X_3]\operatorname [X_2 X_4]\operatorname E[X_5 X_6] + \operatorname E[X_1 X_3]\operatorname E[X_2 X_5]\operatorname E[X_4 X_6] + \operatorname E[X_1 X_3]\operatorname E[X_2 X_6] \operatorname E[X_4 X_5] \\[4pt]
+&amp; {} +  \operatorname E[X_1 X_4]\operatorname E[X_2 X_3]\operatorname E[X_5 X_6] + \operatorname E[X_1 X_4]\operatorname E[X_2 X_5]\operatorname E[X_3 X_6]+ \operatorname E[X_1 X_4]\operatorname E[X_2 X_6] \operatorname E[X_3 X_5] \\[4pt]
+&amp; {} + \operatorname E[X_1 X_5]\operatorname E[X_2 X_3]\operatorname E[X_4 X_6] + \operatorname E[X_1 X_5]\operatorname E[X_2 X_4]\operatorname E[X_3 X_6] + \operatorname E[X_1 X_5]\operatorname E[X_2 X_6] \operatorname E[X_3 X_4] \\[4pt]
+&amp; {} + \operatorname E[X_1 X_6]\operatorname E[X_2 X_3]\operatorname E[X_4 X_5] + \operatorname E[X_1 X_6]\operatorname E[X_2 X_4]\operatorname E[X_3 X_5] + \operatorname E[X_1 X_6] \operatorname E[X_2 X_5]\operatorname E[X_3 X_4].
+\end{align}
+&lt;/math&gt;
+
+This yields &lt;math&gt;\tfrac{(2\lambda -1)!}{2^{\lambda -1}(\lambda -1)!}&lt;/math&gt; terms in the sum (15 in the above case), each being the product of ''λ'' (in this case 3) covariances. For fourth order moments (four variables) there are three terms. For sixth-order moments there are {{math|3 × 5 {{=}} 15}} terms, and for eighth-order moments there are {{math|3 × 5 × 7 {{=}} 105}} terms.
+
+The covariances are then determined by replacing the terms of the list &lt;math&gt;[ 1, \ldots, 2\lambda]&lt;/math&gt; by the corresponding terms of  the list consisting of ''r''&lt;sub&gt;1&lt;/sub&gt; ones, then ''r''&lt;sub&gt;2&lt;/sub&gt; twos, etc.. To illustrate this, examine the following 4th-order central moment case:
+
+: &lt;math&gt;
+\begin{align}
+\operatorname E \left [ X_i^4 \right ] &amp; = 3\sigma_{ii}^2 \\[4pt]
+\operatorname E \left[ X_i^3 X_j \right  ] &amp; = 3\sigma_{ii} \sigma_{ij} \\[4pt]
+\operatorname E \left[ X_i^2 X_j^2 \right  ] &amp; = \sigma_{ii}\sigma_{jj}+2 \sigma _{ij}^2 \\[4pt]
+\operatorname E \left[ X_i^2 X_j X_k \right  ] &amp; = \sigma_{ii}\sigma _{jk}+2\sigma _{ij}\sigma_{ik} \\[4pt]
+\operatorname E \left [ X_i X_j X_k X_n \right  ] &amp; = \sigma_{ij}\sigma _{kn} + \sigma _{ik} \sigma_{jn} + \sigma_{in} \sigma _{jk}.
+\end{align}
+&lt;/math&gt;
+
+where &lt;math&gt;\sigma_{ij}&lt;/math&gt; is the covariance of ''X&lt;sub&gt;i&lt;/sub&gt;'' and ''X&lt;sub&gt;j&lt;/sub&gt;''. With the above method one first finds the general case for a ''k''th moment with ''k'' different ''X'' variables, &lt;math&gt;E\left[ X_i X_j X_k X_n\right]&lt;/math&gt;, and then one simplifies this accordingly. For example, for &lt;math&gt;\operatorname E[ X_i^2 X_k X_n ]&lt;/math&gt;, one lets {{math|''X&lt;sub&gt;i&lt;/sub&gt;'' {{=}} ''X''&lt;sub&gt;''j''&lt;/sub&gt;}} and one uses the fact that &lt;math&gt;\sigma_{ii} = \sigma_i^2&lt;/math&gt;.
+
+===Likelihood function===
+
+If the mean and variance matrix are known, a suitable log likelihood function for a single observation '''x'''  is
+
+:&lt;math&gt;\ln L = -\frac{1}{2} \left[ \ln (|\boldsymbol\Sigma|\,) + (\mathbf{x}-\boldsymbol\mu)^{\rm T}\boldsymbol\Sigma^{-1}(\mathbf{x}-\boldsymbol\mu) + k\ln(2\pi) \right]&lt;/math&gt;,
+
+where '''''x''''' is a vector of real numbers (to derive this, simply take the log of the PDF).   The circularly symmetric version of the noncentral complex case, where '''''z''''' is a vector of complex numbers, would be
+
+:&lt;math&gt;\ln L  = -\ln (|\boldsymbol\Sigma|\,) -(\mathbf{z}-\boldsymbol\mu)^\dagger\boldsymbol\Sigma^{-1}(\mathbf{z}-\boldsymbol\mu) -k\ln(\pi)&lt;/math&gt;
+
+i.e. with the [[conjugate transpose]] (indicated by &lt;math&gt;\dagger&lt;/math&gt;) replacing the normal [[transpose]] (indicated by &lt;math&gt;{}^{\rm T}&lt;/math&gt;).  This is slightly different than in the real case, because the circularly symmetric version of the [[complex normal distribution]] has a slightly different form for the [[normalization constant]].
+
+A similar notation is used for [[multiple linear regression]].&lt;ref&gt;Tong, T. (2010) [http://amath.colorado.edu/courses/7400/2010Spr/lecture9.pdf Multiple Linear Regression : MLE and Its Distributional Results] {{webarchive|url=https://www.webcitation.org/6HPbX5thy?url=http://amath.colorado.edu/courses/7400/2010Spr/lecture9.pdf|date=2013-06-16}}, Lecture Notes&lt;/ref&gt;
+
+===Differential entropy===
+
+The [[differential entropy]] of the multivariate normal distribution is&lt;ref&gt;{{cite journal
+ | last1 = Gokhale | first1 = DV 
+ | last2 = Ahmed | first2 = NA
+ | last3 = Res |first3=BC
+ | last4 = Piscataway |first4=NJ
+ | date = May 1989
+ | title = Entropy Expressions and Their Estimators for Multivariate Distributions
+ | journal = IEEE Transactions on Information Theory
+ | volume = 35  | issue = 3  | pages = 688–692
+ | doi =10.1109/18.30996
+}}&lt;/ref&gt;
+
+:&lt;math&gt;
+\begin{align}
+h\left(f\right) &amp; = -\int_{-\infty}^\infty \int_{-\infty}^\infty \cdots\int_{-\infty}^\infty f(\mathbf{x}) \ln f(\mathbf{x})\,d\mathbf{x},\\
+&amp; = \frac12 \ln\left(\left|\left(2\pi e\right)\boldsymbol\Sigma \right|\right) = \frac12 \ln\left(\left(2\pi e\right)^k \left|\boldsymbol\Sigma \right|\right) = \frac{k}{2} \ln\left(2\pi e\right) + \frac{1}{2} \ln\left(\left|\boldsymbol\Sigma \right|\right) = \frac{k}{2} + \frac{k}{2} \ln\left(2\pi \right) + \frac{1}{2} \ln\left(\left|\boldsymbol\Sigma \right|\right)\\
+\end{align}
+&lt;/math&gt;
+where the bars denote the [[determinant|matrix determinant]] and {{math|''k''}} is the dimensionality of the vector space.
+
+===Kullback–Leibler divergence===
+The [[Kullback–Leibler divergence]] from &lt;math&gt;\mathcal{N}_1(\boldsymbol\mu_1, \boldsymbol\Sigma_1)&lt;/math&gt; to &lt;math&gt;\mathcal{N}_0(\boldsymbol\mu_0, \boldsymbol\Sigma_0)&lt;/math&gt;, for non-singular matrices Σ&lt;sub&gt;1&lt;/sub&gt; and Σ&lt;sub&gt;0&lt;/sub&gt;, is:&lt;ref&gt;{{cite journal |first=J. |last=Duchi |title=Derivations for Linear Algebra and Optimization |url=https://stanford.edu/~jduchi/projects/general_notes.pdf#page=13 |page=13 }}&lt;/ref&gt;
+
+:&lt;math&gt;
+D_\text{KL}(\mathcal{N}_0 \| \mathcal{N}_1) = { 1 \over 2 } \left\{ \operatorname{tr} \left( \boldsymbol\Sigma_1^{-1} \boldsymbol\Sigma_0 \right) + \left( \boldsymbol\mu_1 - \boldsymbol\mu_0\right)^{\rm T} \boldsymbol\Sigma_1^{-1} ( \boldsymbol\mu_1 - \boldsymbol\mu_0 ) - k +\ln { |  \boldsymbol \Sigma_1 | \over | \boldsymbol\Sigma_0 | } \right\},
+&lt;/math&gt;
+where &lt;math&gt;k&lt;/math&gt; is the dimension of the vector space.
+
+The [[logarithm]] must be taken to base ''[[e (mathematical constant)|e]]'' since the two terms following the logarithm are themselves base-''e'' logarithms of expressions that are either factors of the density function or otherwise arise naturally.  The equation therefore gives a result measured in [[nat (unit)|nat]]s.  Dividing the entire expression above by log&lt;sub&gt;''e''&lt;/sub&gt;&amp;nbsp;2 yields the divergence in [[bit]]s.
+
+When &lt;math&gt;\boldsymbol\mu_1 = \boldsymbol\mu_0&lt;/math&gt;,
+
+:&lt;math&gt;
+D_\text{KL}(\mathcal{CN}_0 \| \mathcal{CN}_1) =  { 1 \over 2 } \left\{ \operatorname{tr} \left( \boldsymbol\Sigma_1^{-1} \boldsymbol\Sigma_0 \right) - k +\ln { |  \boldsymbol \Sigma_1 | \over | \boldsymbol\Sigma_0 | }\right\}.
+&lt;/math&gt;

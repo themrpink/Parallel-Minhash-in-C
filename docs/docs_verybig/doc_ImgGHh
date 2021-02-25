@@ -1,0 +1,208 @@
+''Block-level'' tags are elements like paragraph, lists, etc. Not all these elements can directly contain text. Sequential block-level elements render one &quot;after&quot; another. After, in this case, can differ depending on the language. In most Western languages, &quot;after&quot; means below: text paragraphs are printed down the page. Other languages' [[Writing system#Directionality|writing systems can have different directionality]]; for example, in Japanese, paragraphs are often printed in downward columns, with the columns running from right to left, so &quot;after&quot; in that case would be to the left. DocBook semantics are entirely neutral to these kinds of language-based concepts.
+
+''Inline-level'' tags are elements like emphasis, hyperlinks, etc. They wrap text within a block-level element. These elements do not cause the text to break when rendered in a paragraph format, but typically they cause the document processor to apply some kind of distinct typographical treatment to the enclosed text, by changing the font, size, or similar attributes. (The DocBook specification ''does'' say that it expects different typographical treatment, but it does not offer specific requirements as to what this treatment may be.) That is, a DocBook processor doesn't have to transform an &lt;code&gt;emphasis&lt;/code&gt; tag into ''italics''. A reader-based DocBook processor could increase the size of the words, or, a text-based processor could use bold instead of italics.
+
+=== Sample document ===
+
+&lt;syntaxhighlight lang=&quot;xml&quot;&gt;
+ &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;book xml:id=&quot;simple_book&quot; xmlns=&quot;http://docbook.org/ns/docbook&quot; version=&quot;5.0&quot;&gt;
+   &lt;title&gt;Very simple book&lt;/title&gt;
+   &lt;chapter xml:id=&quot;chapter_1&quot;&gt;
+     &lt;title&gt;Chapter 1&lt;/title&gt;
+     &lt;para&gt;Hello world!&lt;/para&gt;
+     &lt;para&gt;I hope that your day is proceeding &lt;emphasis&gt;splendidly&lt;/emphasis&gt;!&lt;/para&gt;
+   &lt;/chapter&gt;
+   &lt;chapter xml:id=&quot;chapter_2&quot;&gt;
+     &lt;title&gt;Chapter 2&lt;/title&gt;
+     &lt;para&gt;Hello again, world!&lt;/para&gt;
+   &lt;/chapter&gt;
+ &lt;/book&gt;
+&lt;/syntaxhighlight&gt;
+
+Semantically, this document is a &quot;book&quot;, with a &quot;title&quot;, that contains two &quot;chapters&quot; each with their own &quot;titles&quot;. Those &quot;chapters&quot; contain &quot;paragraphs&quot; that have text in them. The markup is fairly readable in English.
+
+In more detail, the root element of the document is &lt;code&gt;book&lt;/code&gt;. All DocBook elements are in an [[XML Namespace]], so the root element has an ''xmlns'' attribute to set the current namespace. Also, the root element of a DocBook document must have a ''version'' that specifies the version of the format that the document is built on.
+
+(XML documents can include elements from multiple namespaces at once. For simplicity, the example does not illustrate this.)
+
+A &lt;code&gt;book&lt;/code&gt; element must contain a &lt;code&gt;title&lt;/code&gt;, or an &lt;code&gt;info&lt;/code&gt; element containing a &lt;code&gt;title&lt;/code&gt;. This must be before any child structural elements. Following the title are the structural children, in this case, two &lt;code&gt;chapter&lt;/code&gt; elements. Each of these must have a &lt;code&gt;title&lt;/code&gt;. They contain &lt;code&gt;para&lt;/code&gt; block elements, which can contain free text and other inline elements like the &lt;code&gt;emphasis&lt;/code&gt; in the second paragraph of the first chapter.
+
+=== Schemas and validation ===
+
+Rules are formally defined in the DocBook [[XML schema]]. Appropriate programming tools can validate an XML document (DocBook or otherwise), against its corresponding schema, to determine if (and where) the document fails to conform to that schema. XML editing tools can also use schema information to avoid creating non-conforming documents in the first place.
+
+== Authoring and processing ==
+
+Because DocBook is XML, documents can be created and edited with any text editor. A dedicated [[XML editor]] is likewise a functional DocBook editor. DocBook provides [[XML schema|schema files]] for popular XML schema languages, so any XML editor that can provide content completion based on a schema can do so for DocBook. Many [[XML editor#Graphical editors|graphical]] or [[WYSIWYG]] [[XML editor#WYSIWYG editors|XML editors]] come with the ability to edit DocBook like a [[word processor]]. {{Citation needed|date=August 2013}}
+
+Because DocBook conforms to a well-defined XML schema, documents can be validated and processed using any tool or programming language that includes XML support.
+
+== History ==
+
+DocBook began in 1991 in discussion groups on [[Usenet]] and eventually became a joint project of [[HAL Computer Systems]] and [[O'Reilly Media|O'Reilly &amp; Associates]] and eventually spawned its own maintenance organization (the Davenport Group) before moving in 1998 to the ''SGML Open'' consortium, which subsequently became [[OASIS (organization)|OASIS]]. DocBook is currently maintained by the ''DocBook Technical Committee'' at OASIS.&lt;ref&gt;[http://www.docbook.org/tdg5/en/html/ch01.html Getting Started with DocBook]&lt;/ref&gt;
+
+DocBook is available in both [[SGML]] and [[XML]] forms, as a [[Document Type Definition|DTD]]. [[RELAX NG]] and [[W3C XML Schema]] forms of the XML version are available. Starting with DocBook 5, the RELAX NG version is the &quot;normative&quot; form from which the other formats are generated.
+
+DocBook originally started out as an SGML application, but an equivalent XML application was developed and has now replaced the [[SGML]] one for most uses. (Starting with version 4 of the SGML DTD, the XML DTD continued with this version numbering scheme.) Initially, a key group of software companies used DocBook since their representatives were involved in its initial design. Eventually, however, DocBook was adopted by the open source community where it has become a standard for creating documentation for many projects, including [[FreeBSD]], [[KDE]], [[GNOME]] desktop documentation, the [[GTK+]] [[Application programming interface|API]] references, the [[Linux kernel]] documentation, and the work of the [[Linux Documentation Project]].
+
+=== Pre DocBook v5.0 ===
+
+Until DocBook 5, DocBook was defined normatively by a Document Type Definition (DTD). Because DocBook was built originally as an application of [[SGML]], the DTD was the only available schema language. DocBook 4.x formats can be SGML or XML, but the XML version does not have its own namespace.
+
+DocBook 4.x formats had to live within the restrictions of being defined by a DTD. The most significant restriction was that an element name uniquely defines its possible contents. That is, an element named &lt;code&gt;info&lt;/code&gt; must contain the same information no matter where it is in the DocBook file. As such, there are many kinds of info elements in DocBook 4.x: &lt;code&gt;bookinfo&lt;/code&gt;, &lt;code&gt;chapterinfo&lt;/code&gt;, etc. Each has a slightly different content model, but they do share some of their content model. Additionally, they repeat context information. The book's &lt;code&gt;info&lt;/code&gt; element is that, because it is a direct child of the book; it does not need to be named specially for a human reader. However, because the format was defined by a DTD, it did have to be named as such. The root element does not have or need a ''version'', as the version is built into the DTD declaration at the top of a pre-DocBook 5 document.
+
+DocBook 4.x documents are not compatible with DocBook 5, but can be converted into DocBook 5 documents via an XSLT stylesheet. One (&lt;code&gt;db4-upgrade.xsl&lt;/code&gt;) is provided as part of the distribution of the DocBook 5 schema and specification package.&lt;ref&gt;Jirka Kosek, Norman Walsh, Dick Hamilton, and Michael Smith, ''DocBook V5.0: The Transition Guide'', 16 June 2009, [http://docbook.org/docs/howto/#convert4to5 Converting DocBook V4.x documents to DocBook V5.0]&lt;/ref&gt;
+
+== Output formats ==
+
+DocBook files are used to prepare output files in a wide variety of formats. Nearly always, this is accomplished using [[DocBook XSL]] stylesheets. These are [[XSLT]] stylesheets that transform DocBook documents into a number of formats ([[HTML]], [[XSL-FO]] for later conversion into [[PDF]], etc.). These stylesheets can be sophisticated enough to generate tables of contents, glossaries, and indexes. They can oversee the selection of particular designated portions of a master document to produce different versions of the same document (such as a &quot;tutorial&quot; or a &quot;quick-reference guide&quot;, where each of these consist of a subset of the material). Users can write their own customized stylesheets or even a full-fledged program to process the DocBook into an appropriate output format as their needs dictate.
+
+Norman Walsh and the DocBook Project development team maintain the key application for producing output from DocBook source documents: A set of [[Extensible Stylesheet Language|XSL]] stylesheets (as well as a legacy set of [[DSSSL]] stylesheets) that can generate high-quality [[HTML]] and print ([[XSL Formatting Objects|FO]]/[[Portable Document Format|PDF]]) output, as well as output in other formats, including [[Rich Text Format|RTF]], [[man page]]s and HTML Help.
+
+[[Web help]]&lt;ref name=webhelp-1.76.1 /&gt; is a chunked HTML output format in the [[DocBook XSL]] stylesheets that was introduced in version 1.76.1. The documentation for web help&lt;ref&gt;[http://docbook.sourceforge.net/release/xsl/current/webhelp/docs/index.html Web help documentation]&lt;/ref&gt; also provides an example of web help and is part of the DocBook XSL distribution.
+
+The major features are its fully CSS-based page layout, search of the help content, and a table of contents in collapsible-tree form. Search has [[stemming]], match highlighting, explicit page-scoring, and the standard multilingual [[Tokenization (lexical analysis)|tokenizer]]. The search and TOC are in a pane that appears as a [[Frameset (HTML)|frameset]], but is actually implemented with [[div and span|div tags]] and cookies (so that it is progressive).
+
+== Simplified DocBook ==
+
+DocBook offers a large number of features that may be overwhelming to a new user. For those who want the convenience of DocBook without a steep learning curve, ''Simplified DocBook'' was designed. It is a small subset of DocBook designed for single documents such as articles or white papers (i.e., &quot;books&quot; are not supported). The Simplified DocBook DTD is currently at version 1.1.&lt;ref&gt;[http://www.docbook.org/schemas/sdocbook/ Simplified DocBook]&lt;/ref&gt;
+
+== See also ==
+
+*[[List of document markup languages]]
+*[[Comparison of document markup languages]]
+*[[DocBook XSL]]
+*[[Darwin Information Typing Architecture]]
+*[[LinuxDoc]]
+*[[LaTeX]]
+*[[Mumasy]]
+*[[SilkPage]]
+
+== References ==
+
+{{reflist}}
+
+== Further reading ==
+Norman Walsh is the principal author of the book [http://www.docbook.org/tdg/ ''DocBook: The Definitive Guide''], the official documentation of DocBook. This book is available online under the [[GNU Free Documentation License|GFDL]], and also as a print publication.
+
+{{refbegin}}
+* {{ cite book | author = Norman Walsh | date = June 2010 | title = DocBook 5: The Definitive Guide | edition = 2nd | publisher = O'Reilly Associates | isbn = 978-0-596-80502-9 | url = http://www.docbook.org/ }}
+* {{ cite book | author = Bob Stayton | year = 2005 | title = DocBook XSL: The Complete Guide | edition = 3rd | publisher = Sagehill Enterprises | isbn = 0-9741521-2-9 | url = http://www.sagehill.net/docbookxsl/ }}
+* {{ cite book | author = Joe Brockmeier | year = 2001 | title = DocBook Publishing&amp;nbsp;— A Better Way to Create Professional Documents | publisher = Prima Tech's Linux Series | isbn = 0-7615-3331-1 }}
+{{refend}}
+
+== External links ==
+* [http://docbook.org DocBook.org] - Collection of DocBook information, including a 4.x and 5.0 version of ''DocBook: The Definitive Guide'' and all versions of the DocBook schemas/DTDs.
+* [http://www.oasis-open.org/docbook/ DocBook Repository at OASIS] - Normative home of DocBook schema/DTD.
+* [http://docbook.sourceforge.net DocBook XSL Project page] at [[SourceForge.net]], [https://github.com/docbook/xslt10-stylesheets XSLT 1.0 Stylesheets for DocBook] at [[GitHub]]
+* [http://tldp.org/HOWTO/DocBook-Demystification-HOWTO/ DocBook Demystification HOWTO]
+* [https://web.archive.org/web/20110629115314/http://www.karakas-online.de/forum/viewtopic.php?t=44156 DocBook: The Definitive Guide, 1st edition, v. 2.0.6] - Fully bookmarked PDF of the Guide for DocBook 3.x and 4.x.
+
+{{OASIS Standards}}
+{{Document markup languages}}
+
+{{Authority control}}
+
+[[Category:DocBook| ]]
+[[Category:Markup languages]]
+[[Category:Document-centric XML-based standards]]
+[[Category:Technical communication]]
+[[Category:Technical communication tools]]
+[[Category:Software documentation]]
+[[Category:Open formats]]</text>
+      <sha1>cb5dqvyll8biztw353csno7fa54z918</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Friends of the Earth</title>
+    <ns>0</ns>
+    <id>44195</id>
+    <revision>
+      <id>988277204</id>
+      <parentid>978777349</parentid>
+      <timestamp>2020-11-12T05:30:05Z</timestamp>
+      <contributor>
+        <username>Sandtalon</username>
+        <id>37478957</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="22369" xml:space="preserve">{{redirect|FoE|other uses|foe (disambiguation)}}
+
+{{primary sources|date=November 2010}}
+
+{{Infobox organization
+| name                             = Friends of Earth
+| abbreviation                     = FoEI
+| logo                             = FoE logo.svg
+| logo_size                        = 120px
+| formation                        = {{start date and age|df=yes|paren=yes|1969}}
+| founder                          = {{plainlist|
+* Donald Aitken
+* [[David Brower]]
+* [[Jerry Mander]]
+}}
+| area_served                      = Global
+| key_people                       = {{plainlist|
+* [[Karin Nansen]] (chair)&lt;ref name = &quot;nansennewchair&quot;&gt;
+{{cite web
+  | url = http://www.foei.org/news/karin-nansen-new-chair-friends-earth-international
+  | title = Karin Nansen new chair Friends of the Earth International
+  | publisher = Friends of the Earth International
+  | accessdate = 2017-02-15
+  | date = 2017-01-12
+}}&lt;/ref&gt;
+* Jagoda Munić
+* Hemantha Withanage
+* Choony Kim
+* Asad Rehman
+* Godwin Uyi Ojo
+* Kwami Dodzi Kpondzo
+* Silvia Quiroa&lt;ref&gt;{{cite web
+  | url = http://www.foei.org/no-category/excom
+  | title = Excom
+  | publisher = Friends of the Earth International
+  | accessdate = 2017-02-15
+}}&lt;/ref&gt;
+}}
+| focus                            = {{plainlist|
+* [[Environmentalism]]
+* [[Human rights]]
+}}
+| num_members                      = 75 national member groups
+| num_volunteers                   = some 5,000 local activist groups
+| homepage                         = {{url|http://www.foei.org}}
+}}
+
+'''Friends of the Earth International''' ('''FoEI''') is an international network of [[environmental organization]]s in 74 countries.&lt;ref&gt;{{cite web
+ |url         = http://www.foei.org/en/who-we-are/about
+ |title       = About Friends of the Earth International
+ |publisher   = Friends of the Earth International
+ |accessdate  = 2009-06-25
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20090504190008/http://www.foei.org/en/who-we-are/about
+ |archivedate = 2009-05-04
+}}&lt;/ref&gt;
+
+Friends of the Earth was founded in 1969 in [[San Francisco]] by [[David Brower]], Donald Aitken and Gary Soucie after Brower's split with the [[Sierra Club]]&lt;ref&gt;Thomson, Jennifer (2017). &quot;Surviving the 1970s: The Case of Friends of the Earth&quot;, ''Environmental History''. Vol.22(2), p.235&lt;/ref&gt; due to the latter's positive approach to [[Nuclear power|nuclear energy]]. The founding donation of $500,000 (in 2019 USD) was provided by [[Robert Orville Anderson]], the owner of [[Atlantic Richfield]] oil company.&lt;ref&gt;{{Cite web|url=https://www.forbes.com/sites/michaelshellenberger/2019/03/28/the-dirty-secret-of-renewables-advocates-is-that-they-protect-fossil-fuel-interests-not-the-climate/|title=Why Renewables Advocates Protect Fossil Fuel Interests, Not The Climate|last=Shellenberger|first=Michael|website=Forbes|language=en|access-date=2019-06-18}}&lt;/ref&gt;
+
+It became an international network of organisations in 1971 with a meeting of representatives from four countries, namely [[United States|U.S.]], [[Sweden]], the [[United Kingdom|UK]] and [[France]].&lt;ref&gt;{{cite web|url=http://www.foei.org/en/who-we-are/about/history|title=History|publisher=|accessdate=25 May 2016}}&lt;/ref&gt;
+
+FoEI currently has a secretariat (based in [[Amsterdam]], [[Netherlands]]) which provides support for the network and its agreed major campaigns.&lt;ref&gt;{{cite news |title=Friends of the Earth ticked off over claims in anti-fracking leaflet |url=https://www.theguardian.com/environment/2017/jan/04/friends-of-earth-ticked-off-claims-anti-fracking-leaflet |accessdate=16 October 2018 |newspaper=The Guardian |date=4 January 2017}}&lt;/ref&gt; The executive committee of elected representatives from national groups sets policy and oversees the work of the secretariat. In 2016, [[Uruguayans|Uruguayan]] activist [[Karin Nansen]] was elected to serve as chair of Friends of the Earth International.&lt;ref name=&quot;nansennewchair&quot; /&gt;
+
+== Campaign issues ==
+Friends of the Earth (International) is an international membership organisation, with members spread across the world. Its main parent body, [[Friends of the Earth (EWNI)]] is primarily an [[advocacy]] group, with most of its activities focused in [[United Kingdom|UK.]] Its advocacy programs focus on environmental issues, highlighting their social, political and human rights contexts. Their campaigns mostly take place in the United Kingdom, with a few activities in USA and Europe through their sister agency Friends of the earth (International). The international wing of Friends of the Earth is headquartered in Amsterdam, Netherlands for tax reasons.&lt;ref name=&quot;foe&quot;&gt;{{cite web |title=Our work |url=https://friendsoftheearth.uk/latest/successes |website=www.friendsoftheearth.uk |publisher=Friends of the earth UK |accessdate=16 October 2018}}&lt;/ref&gt;
+
+As per its website, the current campaign priorities of Friends of the Earth internationally are:&lt;ref name=&quot;FOEI Campaigns&quot;&gt;{{cite web|url=http://www.foei.org/en/what-we-do|title=Home - Friends of the earth international|accessdate=25 May 2016|url-status=dead|archiveurl=https://web.archive.org/web/20140325231024/http://www.foei.org/en/what-we-do|archivedate=25 March 2014}}&lt;/ref&gt; [[economic justice]] and resisting [[neoliberalism]], [[forest]]s and [[biodiversity]], [[food sovereignty]] and [[climate justice]] and energy (Including releasing the song [[Love Song to the Earth|&quot;Love Song To the Earth&quot;]]). The campaign priorities of FOEI are set at its bi-annual general meeting. Additionally, FOEI also plans campaigns in other fields like [[desertification]], [[Antarctica]], [[Oceans|maritime]], [[mining]] and [[Extractive industry|extractive industries]] and [[nuclear power]].&lt;ref name=&quot;FOEI Campaigns&quot; /&gt;&lt;ref&gt;{{cite web|url=http://nbn-resolving.de/urn:nbn:de:0168-ssoar-383932|title=&quot;Where do we go from Wyhl?&quot; Transnational anti-nuclear protest targeting European and international organizations in the 1970s|publisher=|accessdate=25 May 2016}}&lt;/ref&gt; In 2016, FOEI also led a campaign on the [[Environmental impact of meat production|consumption and intensive meat production]] (''[[Meat Atlas]]'')&lt;ref&gt;{{cite web|url=http://www.foei.org/en/what-we-do/land-grabbing/latest-news/friends-of-the-earth-europe-new-report-international-2018meat-atlas2019|title=Home - Friends of the earth international|accessdate=25 May 2016|url-status=dead|archiveurl=https://web.archive.org/web/20140307190807/http://www.foei.org/en/what-we-do/land-grabbing/latest-news/friends-of-the-earth-europe-new-report-international-2018meat-atlas2019/|archivedate=7 March 2014}}&lt;/ref&gt;
+
+FOEI claims that it has been successful as it has eliminated billions in taxpayer subsidies to corporate polluters, reformed the [[World Bank]] to address environmental and human rights concerns, pushed the debate on global warming to pressure the U.S. to attempt the best legislation possible, stopped more than 150 destructive dams and water projects worldwide, pressed and won landmark regulations of strip mines and oil tankers and banned [[International Whaling Commission|international whaling]].&lt;ref&gt;{{cite web|url=http://www.foei.org/member-groups/north-america/united-states-of-america|title=United States of America - Friends of the Earth International|work=foei.org|accessdate=18 January 2017}}&lt;/ref&gt; Its critics claim that the organization only tries to obtain media attention, but does not stay with locals to actually solve complicated problems, and that it prevents development in developing countries. They have also been critical of its policy to accept high levels of funding from companies and charities related to oil and gas.&lt;ref name=&quot;cr&quot;&gt;{{cite news |title=Greenpeace and Friends of the Earth hit back over 'out-of-touch' criticism |url=https://www.theguardian.com/environment/2011/jun/13/greenpeace-foe-charles-secrett-criticism |accessdate=16 October 2018 |newspaper=The Guardian |date=13 June 2011}}&lt;/ref&gt;
+
+=== Oil ===
+In October 2018, it was announced that [[Aliko Dangote]], Africa's richest man, was planning to build a $12 billion oil refinery on 6,180 acres of [[swampland]] in Nigeria. This would make it the world's largest refinery. By 2022, the refinery would process 650,000 barrels of [[crude oil]] daily. Nigeria is already Africa's largest oil producer, though the refineries present are of low quality, and so most of the oil used within the country is imported. Because the refinery would be built so far from the Niger Delta, where most Nigerian oil is extracted, two [[undersea pipeline]]s will be used to carry petroleum the 240 miles to the [[Lagos]]-based refinery. Pipelines that already exist in Nigeria are under security, and some have been blown up by angry citizens and members of a rebel group called the [[Delta Avengers]], who are angry about the pollution and poverty associated with and stemming from the oil industry. In addition, this refinery would likely give Dangote a monopoly on Nigerian oil.&lt;ref&gt;{{Cite news|url=https://www.nytimes.com/2018/10/09/business/energy-environment/in-nigeria-plans-for-the-worlds-largest-refinery.html|title=In Nigeria, Plans for the World’s Largest Refinery|last=Edozien|first=Frankie|date=2018-10-09|work=The New York Times|access-date=2018-12-11|language=en-US|issn=0362-4331}}&lt;/ref&gt;
+
+On December 11, 2018, FOE Africa began protesting outside of an event hosted by the [[Shell Nigeria|Shell corporation]]. Activists found that Shell helped draft a portion of the [[Paris climate agreement|Paris Climate Agreement]] in 2015. Shell, an oil drilling company, influenced the guidelines on [[greenhouse gas emission]] allowances and restrictions.&lt;ref&gt;{{Cite web|url=https://theintercept.com/2018/12/08/shell-oil-executive-boasts-that-his-company-influenced-the-paris-agreement/|title=Shell Oil Executive Boasts That His Company Influenced the Paris Agreement|last=Aronoff|first=Kate|date=2018-12-08|website=The Intercept|language=en-US|access-date=2018-12-11}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://popularresistance.org/shell-oil-executive-boasts-that-his-company-influenced-the-paris-agreement/|title=Shell Oil Executive Boasts That His Company Influenced The Paris Agreement|website=PopularResistance.Org|language=en-US|access-date=2018-12-11}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://theecologist.org/2018/jul/17/what-shell-knew-and-how-it-once-stalled-international-climate-negotiations|title=What Shell knew and how it once stalled international climate negotiations|website=The Ecologist|language=en|access-date=2018-12-11}}&lt;/ref&gt; At the protest, Rita Uwaka of [[Nigeria]]'s branch of FOE said: &quot;It's like hell on Earth. I represent communities in the [[Niger Delta]] who are impacted by these big polluters...Having these big polluters come in here as a saint is not only a slap on us as delegates of [[Conference of the parties|COP]]. It's also a slap on Mother Earth.&quot;&lt;ref&gt;{{Citation|last=Democracy Now!|title=Top U.S. &amp; World Headlines — December 11, 2018|url=https://www.youtube.com/watch?v=Sv8wvzTJV2I|access-date=2018-12-11}}&lt;/ref&gt;
+
+== Friends of the Earth groups ==
+[[File:Friends of the Earth workshop, Nambassa 1978.jpg|thumb|'Friends of the Earth' workshop, at [[Nambassa]] Festival 1978, [[New Zealand]].]]
+The Friends of the Earth in each country are themselves many-tiered networks reaching from individual [[activist]]s up to the national pressure group which campaigns for environmentally progressive and sustainable policies. The groups and activists carry out educational and research activities.

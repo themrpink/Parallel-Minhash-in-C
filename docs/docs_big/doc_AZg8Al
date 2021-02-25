@@ -1,0 +1,327 @@
+=== Using SNMP to attack a network ===
+Because SNMP is designed to allow administrators to monitor and configure network devices remotely it can also be used to penetrate a network. A significant number of software tools can scan the entire network using SNMP, therefore mistakes in the configuration of the read-write mode can make a network susceptible to attacks.&lt;ref name=&quot;Mason&quot;&gt;{{Cite book|title= Cisco Secure Internet Security Solutions|authors =Andrew G. Mason &amp; Mark J. Newcomb |publisher= Cisco Press|year=2001 |isbn= 9781587050169}}&lt;/ref&gt;{{rp|52}}
+
+In 2001 [[Cisco]] released information that indicated that, even in read-only mode, the SNMP implementation of [[Cisco IOS]] is vulnerable to certain [[denial of service]] attacks. These security issues can be fixed through an IOS upgrade.&lt;ref&gt;{{Cite book|title= Cisco Secure Internet Security Solutions|url= https://archive.org/details/ciscosecureinter00maso|url-access= limited|authors =Andrew G. Mason &amp; Mark J. Newcomb |publisher= Cisco Press|year=2001 |isbn= 9781587050169|pages=[https://archive.org/details/ciscosecureinter00maso/page/n51 52]}}&lt;/ref&gt; 
+
+If SNMP is not used in a network it should be disabled in network devices. When configuring SNMP read-only mode, close attention should be paid to the configuration of the [[access control]] and from which IP addresses SNMP messages are accepted. If the SNMP servers are identified by their IP, SNMP is only allowed to respond to these IPs and SNMP messages from other IP addresses would be denied. However, [[IP address spoofing]] remains a security concern.&lt;ref name=&quot;Mason&quot;/&gt;{{rp|54}}&lt;!--[[User:Kvng/RTH]]--&gt;
+
+=== SNMP authentication ===
+SNMP is available in different versions 1, 2 and 3, each has its own security issues. SNMP v1 sends passwords in clear-text over the network. Therefore, passwords can be read with [[packet sniffing]]. SNMP v2 allows [[password hashing]] with [[MD5]], but this has to be configured. Virtually all [[network management software]] support SNMP v1, but not necessarily SNMP v2 or v3. SNMP v2 was specifically developed to provide [[data security]], that is [[authentication]], [[privacy]] and [[authorization]], but only SNMP version 2c gained the endorsement of the [[Internet Engineering Task Force]] (IETF), while versions 2u and 2* failed to gain IETF approval due to security issues. SNMP v3 uses MD5, [[Secure Hash Algorithm]] (SHA) and keyed algorithms to offer protection against unauthorised data modification and masquerade attacks. If a higher level of security is needed the [[Data Encryption Standard]] (DES) can be optionally used in the [[cipher block chaining]] mode. SNMP v3 is implemented on Cisco IOS since release 12.0(3)T.&lt;ref name=&quot;Mason&quot;/&gt;{{rp|52}}
+
+SNMPv3 may be subject to [[Brute force attack|brute force]] and [[dictionary attack]]s for guessing the authentication keys, or encryption keys, if these keys are generated from short (weak) passwords or passwords that can be found in a dictionary. SNMPv3 allows both providing random uniformly distributed cryptographic keys and generating cryptographic keys from password supplied by the user. The risk of guessing authentication strings from hash values transmitted over the network depends on the [[Hash function]] used and the length of the hash value.{{Citation needed|date=April 2017}} SNMPv3 uses the [[HMAC]]-[[SHA-2]] [[Authentication protocol|Authentication Protocol]] for the User-based Security Model (USM).&lt;ref name=&quot;RFC7630&quot;&gt;{{IETF RFC|7630}}&amp;nbsp;— HMAC-SHA-2 Authentication Protocols in the User-based Security Model (USM) for SNMPv3&lt;/ref&gt; A [[Challenge-handshake authentication protocol|challenge-response handshake]] was not used to improve security. SNMPv3 (like other SNMP protocol versions) is a [[stateless protocol]], and it has been designed with minimal amount of interactions between the agent and the manager. Thus introducing a challenge-response handshake for each command would impose a burden on the agent (and possibly on the network itself) that the protocol designers deemed excessive and unacceptable.{{Citation needed|date=April 2017}}
+
+The security deficiencies of all SNMP versions can be mitigated by [[IPsec]] authentication and confidentiality mechanisms.{{Citation needed|date=June 2020}} The implementation of SNMP over [[Datagram Transport Layer Security]] (DTLS) is also available.&lt;ref name=&quot;Jacobs&quot;/&gt;
+
+=== SNMP autodiscovery ===
+SNMP based network management software send passwords repeatedly during normal operations across the network. Therefore, clear-text passwords are a significant security risk. If SNMP v2 is used, the network administrator should enable password encryption on network devices, that is the SNMP servers running on them.
+
+Many SNMP implementations include a type of automatic discovery where a new network component, such as a switch or router, is discovered and pooled automatically. In SNMPv1 and v2c this is done through a ''community string'' that is broadcast in clear-text to other devices.&lt;ref name=&quot;Jacobs&quot;/&gt; Because of its default configuration on community strings, they are public for read-only access and private for read-write&lt;ref name=&quot;Tipton&quot;/&gt;{{rp|1874}} SNMP topped the list of the [[SANS Institute]]'s Common Default Configuration Issues and was number ten on the SANS Top 10 Most Critical Internet Security Threats for the year 2000.&lt;ref&gt;{{Cite web | url=http://www.sans.org/top20/2000/ | title=SANS Institute - CIS Critical Security Controls}}&lt;/ref&gt; System and network administrators frequently do not change these configurations.&lt;ref name=&quot;Tipton&quot;/&gt;{{rp|1874}} The community string sent by SNMP over the network is not encrypted. Once the community string is known outside the organization it could become the target for an attack. To prevent the easy discovery of the community, SNMP should be configured to pass community-name authentication failure traps and the SNMP management device needs to be configured to react to the authentication failure trap.&lt;ref name=&quot;Mason&quot;/&gt;{{rp|54}}
+
+SNMPv1 and v2 are vulnerable to [[IP spoofing]] attacks, whether it runs over TCP or UDP, and is a subject to bypassing device access lists that might have been implemented to restrict SNMP access. SNMPv3 security mechanisms such as USM or TSM prevent a successful attack. It would be pointless to employ SNMPv3 VACM (View-based Access Control) without securing messages with USM or TSM.{{Citation needed|date=April 2017}}
+
+==RFC references==
+* {{IETF RFC|1155}} (STD 16)&amp;nbsp;— ''Structure and Identification of Management Information for the TCP/IP-based Internets''
+* {{IETF RFC|1156}} (Historic)&amp;nbsp;— ''Management Information Base for Network Management of TCP/IP-based internets''
+* {{IETF RFC|1157}} (Historic)&amp;nbsp;— ''A Simple Network Management Protocol (SNMP)''
+* {{IETF RFC|1213}} (STD 17)&amp;nbsp;— ''Management Information Base for Network Management of TCP/IP-based internets: MIB-II''
+* {{IETF RFC|1452}} (Informational)&amp;nbsp;— ''Coexistence between version 1 and version 2 of the Internet-standard Network Management Framework'' (Obsoleted by {{IETF RFC|1908}})
+* {{IETF RFC|1901}} (Experimental)&amp;nbsp;— ''Introduction to Community-based SNMPv2''
+* {{IETF RFC|1902}} (Draft Standard)&amp;nbsp;— ''Structure of Management Information for SNMPv2'' (Obsoleted by {{IETF RFC|2578}})
+* {{IETF RFC|1908}} (Standards Track)&amp;nbsp;— ''Coexistence between Version 1 and Version 2 of the Internet-standard Network Management Framework''
+* {{IETF RFC|2570}} (Informational)&amp;nbsp;— ''Introduction to Version 3 of the Internet-standard Network Management Framework '' (Obsoleted by {{IETF RFC|3410}})
+* {{IETF RFC|2578}} (STD 58)&amp;nbsp;— ''Structure of Management Information Version 2 (SMIv2)''
+* {{IETF RFC|3410}} (Informational)&amp;nbsp;— ''Introduction and Applicability Statements for Internet Standard Management Framework''
+* STD 62
+** {{IETF RFC|3411}}&amp;nbsp;— ''An Architecture for Describing Simple Network Management Protocol (SNMP) Management Frameworks''
+** {{IETF RFC|3412}}&amp;nbsp;— ''Message Processing and Dispatching for the Simple Network Management Protocol (SNMP)''
+** {{IETF RFC|3413}}&amp;nbsp;— ''Simple Network Management Protocol (SNMP) Applications''
+** {{IETF RFC|3414}}&amp;nbsp;— ''User-based Security Model (USM) for version 3 of the Simple Network Management Protocol (SNMPv3)''
+** {{IETF RFC|3415}}&amp;nbsp;— ''View-based Access Control Model (VACM) for the Simple Network Management Protocol (SNMP)''
+** {{IETF RFC|3416}}&amp;nbsp;— ''Version 2 of the Protocol Operations for the Simple Network Management Protocol (SNMP)''
+** {{IETF RFC|3417}}&amp;nbsp;— ''Transport Mappings for the Simple Network Management Protocol (SNMP)''
+** {{IETF RFC|3418}}&amp;nbsp;— ''Management Information Base (MIB) for the Simple Network Management Protocol (SNMP)''
+* {{IETF RFC|3430}} (Experimental)&amp;nbsp;— ''Simple Network Management Protocol (SNMP) over Transmission Control Protocol (TCP) Transport Mapping''
+* {{IETF RFC|3584}} (BCP 74)&amp;nbsp;— ''Coexistence between Version 1, Version 2, and Version 3 of the Internet-standard Network Management Framework''
+* {{IETF RFC|3826}} (Proposed)&amp;nbsp;— ''The Advanced Encryption Standard (AES) Cipher Algorithm in the SNMP User-based Security Model''
+* {{IETF RFC|4789}} (Proposed)&amp;nbsp;— ''Simple Network Management Protocol (SNMP) over IEEE 802 Networks''
+* {{IETF RFC|5343}} (STD 78)&amp;nbsp;— ''Simple Network Management Protocol (SNMP) Context EngineID Discovery''
+* {{IETF RFC|5590}} (STD 78)&amp;nbsp;— ''Transport Subsystem for the Simple Network Management Protocol (SNMP)''
+* {{IETF RFC|5591}} (STD 78)&amp;nbsp;— ''Transport Security Model for the Simple Network Management Protocol (SNMP)''
+* {{IETF RFC|5592}} (Proposed)&amp;nbsp;— ''Secure Shell Transport Model for the Simple Network Management Protocol (SNMP)''
+* {{IETF RFC|5608}} (Proposed)&amp;nbsp;— '' Remote Authentication Dial-In User Service (RADIUS) Usage for Simple Network Management Protocol (SNMP) Transport Models.''
+* {{IETF RFC|6353}} (STD 78)&amp;nbsp;— ''Transport Layer Security (TLS) Transport Model for the Simple Network Management Protocol (SNMP)''
+* {{IETF RFC|7630}} (Standards Track)&amp;nbsp;— ''HMAC-SHA-2 Authentication Protocols in the User-based Security Model (USM) for SNMPv3''
+
+==See also==
+* [[AgentX]], a subagent protocol for SNMP
+* [[Common management information protocol|CMIP over TCP/IP]] (CMOT)
+* [[Common management information protocol]] (CMIP), a management protocol by ISO/OSI used by telecommunications devices
+* [[Common management information service]] (CMIS)
+* [[IEC 62379]]
+* [[Net-SNMP]], an open source reference implementation of SNMP
+* [[Netconf]], a protocol which is an XML-based configuration protocol for network equipment
+* [[Network monitoring comparison]]
+* [[Object identifier]] (OID)
+* [[Remote monitoring]] (RMON)
+* [[Simple Gateway Monitoring Protocol]] (SGMP), an obsolete protocol replaced by SNMP
+* [[SNMP simulator]]
+
+== References ==
+
+{{reflist|30em}}
+
+==Further reading==
+* {{Cite book
+| publisher = O'Reilly Media
+| isbn = 978-0596008406 
+| page = 462
+| last = Douglas Mauro
+| first = Kevin Schmidt
+| title = Essential SNMP, Second Edition
+| year = 2005
+}}
+* {{Cite book
+| publisher = Addison Wesley Longman, Inc
+| isbn = 978-0201485349
+| page = [https://archive.org/details/snmpsnmpv2snmpv30000stal/page/619 619]
+| last = William Stallings
+| title = SNMP, SNMPv2, SNMPv3, and RMON 1 and 2
+| year = 1999
+| url = https://archive.org/details/snmpsnmpv2snmpv30000stal/page/619
+}}
+
+==External links==
+{{Wikiversity | Simple Network Management Protocol}}
+* {{Dmoz|Computers/Internet/Protocols/SNMP|Simple Network Management Protocol}}
+
+[[Category:Application layer protocols]]
+[[Category:Internet protocols]]
+[[Category:Internet Standards]]
+[[Category:Multi-agent systems]]
+[[Category:Network management]]
+[[Category:System administration]]</text>
+      <sha1>efhnoyiscwyco3jzscj7hck95u4aw7o</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Simplex circuit</title>
+    <ns>0</ns>
+    <id>41711</id>
+    <redirect title="Simplex communication" />
+    <revision>
+      <id>503068418</id>
+      <parentid>281212109</parentid>
+      <timestamp>2012-07-19T04:43:54Z</timestamp>
+      <contributor>
+        <username>Srleffler</username>
+        <id>252195</id>
+      </contributor>
+      <comment>#REDIRECT [[Simplex communication]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="35" xml:space="preserve">#REDIRECT [[Simplex communication]]</text>
+      <sha1>ro2md27awpb2pkqvxo4vlaqrzzyi6e7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Simplex signaling</title>
+    <ns>0</ns>
+    <id>41712</id>
+    <revision>
+      <id>951867087</id>
+      <parentid>834392936</parentid>
+      <timestamp>2020-04-19T08:57:50Z</timestamp>
+      <contributor>
+        <username>Spinningspark</username>
+        <id>3727527</id>
+      </contributor>
+      <comment>/* top */ retarget pipe to [[earth-return telegraph]]. The [[earth return]] page is now a dab and it used to point to the power distribution article which is not the right thing at all</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1190" xml:space="preserve">'''Simplex signaling''' (SX) is [[Signalling (telecommunication)|signaling]] in which two conductors are used for a single [[telecommunication circuit]], and a center-tapped coil, or its equivalent, is used to split the signaling current equally between the two conductors. The return path for the current is [[earth-return telegraph|through ground]]. 
+It is distinct from a [[phantom circuit]] in which the return current path for power or signaling is provided through different signal conductors.
+SX signaling may be one-way, for intra-central-office use, or the simplex legs may be connected to form full duplex signaling circuits that function like composite (CX) signaling circuits with [[E and M signaling|E&amp;M]] lead control.
+
+Simplex is also used to describe a powering method where one or more signal conductors carries direct current to power a remote device, which sends its output signal back on the same conductor.  [[Phantom powering]] as used in [[Sound recording and reproduction|audio]] is a form of simplex powering, as the return current flows through the ground or shield conductor.
+
+==References==
+*{{FS1037C MS188}}
+
+[[Category:Telephony signals]]
+
+
+{{telephony-stub}}</text>
+      <sha1>ak5zm2945mqgdo6bvcvlqpokbw5f4ua</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Simulate</title>
+    <ns>0</ns>
+    <id>41713</id>
+    <redirect title="Simulation" />
+    <revision>
+      <id>783874894</id>
+      <parentid>694406539</parentid>
+      <timestamp>2017-06-05T05:51:44Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="73" xml:space="preserve">#REDIRECT [[Simulation]]
+
+{{Redirect category shell|1=
+{{R from verb}}
+}}</text>
+      <sha1>8kc5wq0d682aee9hu27sx722xt5xd6i</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>SINAD</title>
+    <ns>0</ns>
+    <id>41714</id>
+    <revision>
+      <id>941952334</id>
+      <parentid>936055601</parentid>
+      <timestamp>2020-02-21T17:13:24Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <minor />
+      <comment>Removed URL that duplicated unique identifier. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Activated by [[User:AManWithNoPlan]] | via #UCB_toolbar</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4602" xml:space="preserve">{{Use dmy dates|date=February 2013}}
+'''Signal-to-noise and distortion ratio''' ('''SINAD''') is a measure of the quality of a signal from a communications device, often defined as
+:&lt;math&gt;
+\mathrm{SINAD} = \frac{P_\text{signal} + P_\text{noise} + P_\text{distortion}}{P_\text{noise} + P_\text{distortion}},
+&lt;/math&gt;
+where &lt;math&gt;P&lt;/math&gt; is the average power of the [[signal (electronics)|signal]], [[noise]] and [[distortion]] components. SINAD is usually expressed in [[decibel|dB]] and is quoted alongside the receiver RF [[sensitivity (electronics)|sensitivity]], to give a quantitative evaluation of the receiver sensitivity. Note that with this definition, unlike [[Signal-to-noise ratio|SNR]], a SINAD reading can never be less than 1 (i.e. it is always positive when quoted in dB).
+
+When calculating the distortion, it is common to exclude the [[DC bias|DC]] components.&lt;ref&gt;{{citation |url=http://www.maxim-ic.com/app-notes/index.mvp/id/740 |title=Glossary of Frequently Used High-Speed Data Converter Terms |publisher=[[Maxim Integrated Products]] |date=2001-12-17 |accessdate=2011-11-05}}&lt;/ref&gt;
+
+Due to widespread use, SINAD has collected several different definitions. SINAD is commonly defined as:
+#The ratio of (a) total received [[Power (physics)|power]], i.e., the signal to (b) the noise-plus-distortion power.  This is modeled by the equation above.&lt;ref&gt;{{Cite web|url=https://www.electronics-notes.com/articles/radio/radio-receiver-sensitivity/what-is-sinad-signal-to-noise-and-distortion.php|title=What is SINAD {{!}} SINAD Measurements {{!}} Electronics Notes|website=www.electronics-notes.com|access-date=2019-03-24}}&lt;/ref&gt;
+#The ratio of (a) the power of a test signal, i.e. a sine wave, to (b) the residual received power, i.e. noise-plus-distortion power. With this definition, it is possible to have a SINAD level less than one. This definition is used in the calculation of [[ENOB]] for [[Digital-to-analog converter|DACs]]&lt;ref&gt;{{Cite journal|date=2012-02-01|title=IEEE Standard for Terminology and Test Methods of Digital-to-Analog Converter Devices|journal=IEEE STD 1658-2011|pages=1–126|doi=10.1109/IEEESTD.2012.6152113|isbn=978-0-7381-7147-0}}&lt;/ref&gt; and [[Analog-to-digital converter|ADCs]].&lt;ref&gt;{{Cite journal|date=2011-01-01|title=IEEE Standard for Terminology and Test Methods for Analog-to-Digital Converters|journal=IEEE STD 1241-2010 (Revision of IEEE STD 1241-2000)|pages=1–139|doi=10.1109/IEEESTD.2011.5692956|isbn=978-0-7381-6239-3}}&lt;/ref&gt;
+Information on the relations between SINAD, [[Effective number of bits|ENOB]], [[Signal-to-noise ratio|SNR]], [[Total harmonic distortion|THD]] and [[Spurious-free dynamic range|SFDR]] can be found in.&lt;ref&gt;{{citation |url=http://www.analog.com/static/imported-files/tutorials/MT-003.pdf |title=Understand SINAD, ENOB, SNR, THD, THD + N, and SFDR so You Don't Get Lost in the Noise Floor |publisher=[[Analog Devices, Inc.]] |year=2009 |accessdate=2012-08-17}}&lt;/ref&gt;
+
+==Commercial radio specifications==
+A typical example, quoted from a commercial hand held [[VHF]] or [[UHF]] radio, might be:
+
+:Receiver sensitivity: 0.25 μV at 12 dB SINAD.
+
+This is stating that the receiver will produce intelligible speech with a signal at its input as low as 0.25 μV.  Radio receiver designers will test the product in a laboratory using a procedure, which is typically as follows:
+* With no signal present on the input, the noise and distortion of the receiver are measured at a convenient level.
+* A signal is applied to the input such that the output increases by 12&amp;nbsp;dB.
+* The level of the signal needed to produce this is noted. In this case, it was found to be 0.25 microvolts.
+
+According to the radio designer, intelligible speech can be detected 12&amp;nbsp;dB above the receiver's noise floor (noise and distortion).  Regardless of how accurate this output power is regarding intelligible speech, having a standard output SINAD allows easy comparison between radio receiver input sensitivities.  This 0.25 μV value is typical for VHF commercial radio, while 0.35 μV is probably more typical for UHF. In the real world, lower SINAD values (more noise) can still result in intelligible speech, but it is tiresome work to listen to a voice in that much noise.
+
+== See also ==
+* [[Signal-to-noise ratio]]
+* [[Total harmonic distortion]] (THD+N)
+
+==References==
+{{reflist}}
+
+==External links==
+*[http://www.radio-electronics.com/info/rf-technology-design/rf-noise-sensitivity/sinad.php SINAD and SINAD measurements for radio receivers]
+
+{{Noise}}
+
+{{FS1037C MS188}}
+
+[[Category:Noise (electronics)]]
+[[Category:Error measures]]</text>
+      <sha1>ocy18ey9sytw3wt7nfkcwv7ln11eyvq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Single-frequency signaling</title>
+    <ns>0</ns>
+    <id>41715</id>
+    <revision>
+      <id>906402956</id>
+      <parentid>902450564</parentid>
+      <timestamp>2019-07-15T16:32:32Z</timestamp>
+      <contributor>
+        <username>Kvng</username>
+        <id>910180</id>
+      </contributor>
+      <comment>rm dup links. std 1st sentence construct.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2574" xml:space="preserve">In [[telephony]], '''single-frequency signaling''' ('''SF''') is [[line signaling]] in which [[dial pulse]]s or supervisory signals are conveyed by a single [[voice-frequency]] tone in each direction.  SF and similar systems were used in 20th-century [[carrier system]]s.
+
+An SF signaling unit converts [[direct current|DC]] signaling (usually, at least in [[long distance calling|long distance]] circuits, [[E and M signaling|E&amp;M]] signaling) to a format (characterized by the presence or absence of a single voice-frequency tone), which is suitable for [[transmission (telecommunications)|transmission]] over an [[alternating current|AC]] path, ''e.g.'', a [[carrier system]]. The SF tone is present in the [[on-hook]] or idle state and absent during the seized state. In the seized state, dial pulses are conveyed by bursts of SF tone, corresponding to the interruptions in dc continuity created by a [[rotary dial]] or other DC [[Dialling (telephony)|dialing]] mechanism. 
+
+The SF tone may occupy a small portion of the [[User (telecommunications)|user]] [[data channel]] spectrum, ''e.g.,'' 1600&amp;nbsp;Hz or [[2600 Hz]] (SF &quot;[[in-band signaling]])&quot;. There may be a [[notch filter]] at the precise SF [[frequency]], either filtering the circuit at all times or only when the circuit is [[off-hook]], to prevent the user from inadvertently disconnecting a [[telephone call|call]] if the users voice has a sufficiently strong spectral content at the SF frequency, a [[falsing]] condition known as ''talk-off''. Notoriously, this property was exploited by [[blue box]]ers and other toll fraudsters. The SF tone may also be just outside the user voice band, ''e.g.,'' 3600&amp;nbsp;Hz.  
+
+The [[Defense Data Network]] (DDN) transmitted DC [[line signaling]] pulses or supervisory signals, or both, over [[carrier signal|carrier]] channels or [[Electrical cable|cable]] pairs on a [[four-wire circuit]] basis using a 2600&amp;nbsp;Hz [[Signalling (telecommunication)|signal]] tone. The conversion into tones, or vice versa, is done by SF signal units.
+
+SF was developed in the early 20th century and standardized in middle century. &lt;ref&gt;[http://www.alcatel-lucent.com/bstj/vol33-1954/articles/bstj33-6-1309.pdf In-Band Single-Frequency Signaling] by A. Weaver and N. A. Newell, Bell System Technical Journal, June 7, 1954&lt;/ref&gt; It declined in the 1970s due to the adoption of [[T-carrier]], and was largely abandoned late in the century in favor of [[common-channel signaling]].
+
+== References ==
+{{Reflist}}
+
+*{{FS1037C MS188}}
+
+{{telecommunications}}
+
+[[Category:Telephony signals]]</text>
+      <sha1>d3afyp8mi2mlpkjv2tifpr7c8ocpx4j</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Single-mode optical fiber</title>
+    <ns>0</ns>
+    <id>41716</id>
+    <revision>
+      <id>984543746</id>
+      <parentid>984543704</parentid>
+      <timestamp>2020-10-20T17:16:47Z</timestamp>
+      <contributor>
+        <username>CNMall41</username>
+        <id>20480869</id>
+      </contributor>
+      <comment>/* References not necessary</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12604" xml:space="preserve">[[Image:Singlemode fibre structure.svg|thumb|right|The structure of a typical [[single-mode fiber]].
+{{ordered list
+| Core 8–9&amp;nbsp;µm diameter
+| Cladding 125&amp;nbsp;µm diameter
+| Buffer 250&amp;nbsp;µm diameter
+| Jacket 900&amp;nbsp;µm diameter
+}}]]
+In [[fiber-optic communication]], a '''single-mode optical fiber''' ('''SMF''') is an [[optical fiber]] designed to carry only a single [[mode (electromagnetism)|mode]] of light - the [[transverse mode]]. Modes are the possible solutions of the [[Helmholtz equation]] for waves, which is obtained by combining [[Maxwell's equations]] and the boundary conditions. These modes define the way the wave travels through space, i.e. how the wave is distributed in space. Waves can have the same mode but have different frequencies. This is the case in single-mode fibers, where we can have waves with different frequencies, but of the same mode, which means that they are distributed in space in the same way, and that gives us a single ray of light. Although the ray travels parallel to the length of the fiber, it is often called [[transverse mode]] since its [[Electromagnetic radiation|electromagnetic]] oscillations occur perpendicular (transverse) to the length of the fiber. The 2009 [[Nobel Prize in Physics]] was awarded to [[Charles K. Kao]] for his theoretical work on the single-mode optical fiber.&lt;ref&gt;Nobel Prize Citation http://www.nobelprize.org/nobel_prizes/physics/laureates/2009/kao-facts.html&lt;/ref&gt; The standard [[G.652]] defines the most widely used form of single-mode optical fiber.&lt;ref&gt;{{Cite web|url=https://community.fs.com/blog/what-kind-of-single-mode-fiber-should-you-choose.html|title=What Is G.652 Fiber? G.652 vs G.652.D, G.652 vs G.655|last=FS.COM|first=|date=2015-12-29|website=Blog|language=en|url-status=live|archive-url=https://web.archive.org/web/20191113072458/https://community.fs.com/blog/what-kind-of-single-mode-fiber-should-you-choose.html|archive-date=2019-11-13|access-date=2019-11-13}}&lt;/ref&gt;
+
+==History==
+In 1961, [[Elias Snitzer]] while working at American Optical published a comprehensive theoretical description of single mode fibers in the [[Journal of the Optical Society of America]].&lt;ref&gt;{{Cite web|url=https://www.osa.org/en-us/about_osa/newsroom/obituaries/2012/elias_snitzer/|title=Elias Snitzer &amp;#124; In Memoriam &amp;#124; The Optical Society}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://www.m2optics.com/blog/history-of-optical-fiber|title=History of Optical Fiber|first=Tiffany San|last=Souci|website=www.m2optics.com}}&lt;/ref&gt;
+
+At the Corning Glass Works (now [[Corning Inc.]]), Robert Maurer, Donald Keck and Peter Schultz started with fused silica, a material that can be made extremely pure, but has a high melting point and a low refractive index. They made cylindrical preforms by depositing purified materials from the vapor phase, adding carefully controlled levels of dopants to make the refractive index of the core slightly higher than that of the cladding, without raising attenuation dramatically. In September 1970, they announced they had made single-mode fibers with attenuation at the 633-nanometer helium-neon line below 20&amp;nbsp;dB/km.&lt;ref&gt;{{Cite web|url=https://www.jeffhecht.com/history.html|title=Fiber Optic History &amp;#124; Jeff Hecht|website=www.jeffhecht.com}}&lt;/ref&gt;
+
+==Characteristics==
+Like [[multi-mode optical fiber]]s, single-mode fibers do exhibit [[modal dispersion]] resulting from multiple spatial modes but with narrower modal dispersion.{{Citation needed|date=June 2014}} Single-mode fibers are therefore better at retaining the fidelity of each light pulse over longer distances than multi-mode fibers.  For these reasons, single-mode fibers can have a higher [[Bandwidth (computing)|bandwidth]] than multi-mode fibers. Equipment for single-mode fiber is more expensive than equipment for multi-mode optical fiber, but the single-mode fiber itself is usually cheaper in bulk. {{Citation needed|date=June 2013}}
+[[File:Single mode fiber1.jpg|thumb|Cross section of a single-mode optical fiber patch cord end, taken with a Fiberscope. The circle is the cladding, 125 microns in diameter. Debris is visible as a streak on the cross-section, and glows due to the illumination.]]
+A typical single-mode optical fiber has a core diameter between 8 and 10.5 [[µm]]&lt;ref name=&quot;arcelect&quot;&gt;{{cite web | title = Fiber Optic Cable Tutorial | url = http://www.arcelect.com/fibercable.htm | author = ARC Electronics | date = 2007-10-01 | access-date = 2007-07-25 | archive-url = https://web.archive.org/web/20181023040952/https://arcelect.com/fibercable.htm | archive-date = 2018-10-23 | url-status = dead }}&lt;/ref&gt; and a cladding diameter of 125&amp;nbsp;µm. There are a number of special types of single-mode optical fiber which have been chemically or physically altered to give special properties, such as [[dispersion-shifted fiber]] and [[nonzero dispersion-shifted fiber]]. Data rates are limited by [[polarization mode dispersion]] and [[chromatic dispersion]].  {{asof|2005}}, data rates of up to 10 gigabits per second were possible at distances of over {{convert|80|km|0|abbr=on}} with commercially available transceivers ([[Xenpak]]). By using [[optical amplifier]]s and dispersion-compensating devices, state-of-the-art [[DWDM]] optical systems can span thousands of kilometers at 10 Gbit/s, and several hundred kilometers at 40 Gbit/s.{{citation needed|date=November 2013}}
+
+The lowest-order bounds mode is ascertained for the wavelength of interest by solving [[Maxwell's equations]] for the boundary conditions imposed by the fiber, which are determined by the [[Fiber optics#Principle of operation|core]] diameter and the refractive indices of the core and [[Cladding (fiber optics)|cladding]].  The solution of Maxwell's equations for the lowest order bound mode will permit a pair of orthogonally polarized fields in the fiber, and this is the usual case in a [[telecommunications|communication]] fiber.
+
+In step-index guides, single-mode operation occurs when the [[Normalized frequency (fiber optics)|normalized frequency]], ''V'', is less than or equal to 2.405. For [[Power law|power-law]] profiles, single-mode operation occurs for a normalized frequency, ''V'', less than approximately 
+:&lt;math&gt;2.405 \sqrt{\frac{g+2}{g}}&lt;/math&gt;, 
+where ''g'' is the profile parameter.
+
+In practice, the orthogonal polarizations may not be associated with degenerate modes.
+
+OS1 and OS2 are standard single-mode optical fiber used with wavelengths 1310&amp;nbsp;nm and 1550&amp;nbsp;nm (size 9/125&amp;nbsp;µm) with  a maximum attenuation of 1&amp;nbsp;dB/km (OS1) and 0.4&amp;nbsp;dB/km (OS2). OS1 is defined in [[ISO/IEC 11801]],&lt;ref&gt;{{Cite web|url=https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/03/64/36491.html|title=ISO/IEC 11801:2002|website=ISO}}&lt;/ref&gt; and OS2 is defined in ISO/IEC 24702.&lt;ref&gt;{{Cite web|url=https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/03/88/38812.html|title=ISO/IEC 24702:2006|website=ISO}}&lt;/ref&gt;
+
+==Connectors==
+
+Optical fiber connectors are used to join optical fibers where a connect/disconnect capability is required. The basic connector unit is a connector assembly. A connector assembly consists of an adapter and two connector plugs. 
+Due to the sophisticated polishing and tuning procedures that may be incorporated into optical connector manufacturing, connectors are generally assembled onto optical fiber in a supplier's manufacturing facility. However, the assembly and
+polishing operations involved can be performed in the field, for example to make cross-connect jumpers to size.

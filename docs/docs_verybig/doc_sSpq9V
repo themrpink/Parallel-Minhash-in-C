@@ -1,0 +1,239 @@
+{{Carnegie Mellon}}
+{{Navboxes
+|titlestyle =  {{CollegePrimaryStyle|Carnegie Mellon Tartans|color=white}}
+|list =
+{{Pittsburgh}}
+{{Pittsburgh Universities}}
+{{Colleges and Universities in Pennsylvania}}
+{{University Athletic Association navbox}}
+{{Global Alliance of Technological Universities}}
+{{Association of American Universities}}
+{{Universities Research Association}}
+}}
+{{Authority control}}
+
+[[Category:Carnegie Mellon University| ]]
+[[Category:1900 establishments in Pennsylvania]]
+[[Category:Educational institutions established in 1900]]
+[[Category:Pittsburgh History &amp; Landmarks Foundation Historic Landmarks]]
+[[Category:Universities and colleges in Pittsburgh]]
+[[Category:Technological universities in the United States]]
+[[Category:Universities and colleges formed by merger in the United States]]
+[[Category:Private universities and colleges in Pennsylvania]]</text>
+      <sha1>pb8ii3fjllmz9z5jnjwnhzbs860vss8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>InterMezzo (file system)</title>
+    <ns>0</ns>
+    <id>48095</id>
+    <revision>
+      <id>917190859</id>
+      <parentid>888544738</parentid>
+      <timestamp>2019-09-22T17:53:21Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>/* top */[[User:Monkbot/task 16: remove replace deprecated dead-url params|Task 16]]: replaced (3×) / removed (0×) deprecated |dead-url= and |deadurl= with |url-status=;</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="5509" xml:space="preserve">{{Infobox software
+| name                   = InterMezzo
+| title                  = 
+| logo                   = &lt;!-- Image name is enough --&gt;
+| logo caption           = 
+| logo_size              = 
+| logo_alt               = 
+| screenshot             = &lt;!-- Image name is enough --&gt;
+| caption                = 
+| screenshot_size        = 
+| screenshot_alt         = 
+| collapsible            = 
+| author                 = 
+| developer              = [[Peter Braam]]
+| released               = &lt;!-- {{Start date and age|YYYY|MM|DD|df=yes/no}} --&gt;
+| discontinued           = 
+| latest release version = 
+| latest release date    = &lt;!-- {{Start date and age|YYYY|MM|DD|df=yes/no}} --&gt;
+| latest preview version = 
+| latest preview date    = &lt;!-- {{Start date and age|YYYY|MM|DD|df=yes/no}} --&gt;
+| status                 = 
+| programming language   = 
+| operating system       = [[Linux kernel]]
+| platform               = 
+| size                   = 
+| language               = 
+| language count         = &lt;!-- DO NOT include this parameter unless you know what it does --&gt;
+| language footnote      = 
+| genre                  = [[distributed file system]]
+| license                = [[GNU General Public License]]
+}}
+
+'''InterMezzo''' was a [[distributed file system]] written for the [[Linux kernel]], distributed under the [[GNU General Public License]]. It was included in the standard Linux [[Kernel (computing)|kernel]] from version 2.4.15 but was dropped from version 2.6. InterMezzo is designed to work on top of an existing [[journaling file system]] such as [[ext3]], [[IBM Journaled File System 2 (JFS2)|JFS]], [[ReiserFS]] or [[XFS]]. It was developed around 1999.
+
+An InterMezzo system consists of a [[Server (computing)|server]], which holds the master copy of the file system, and one or more [[Client (computing)|clients]] with a [[Cache (computing)|cache]] of the file system. It works either in a replication mode, in which a client maintains a duplicate of the entire file system, or in an on-demand mode in which the client only requests files that it needs. It does this by capturing all writes to the server's file system [[Journal (computing)|journal]] and streaming them to the client systems to be replayed.
+
+InterMezzo is described as a &quot;high availability file system&quot; since a client can continue to operate even if the connection to the server is lost. During a period of disconnection, updates are logged and will be propagated when the connection is restored. Conflicts are detected and handled according to a &quot;conflict resolution policy&quot; (although the best policy is likely to be to avoid conflicts).
+
+Typical applications of replication mode are:
+* A cluster of servers operating on a shared file system.
+* Computers that are not always connected to the network, such as [[laptop]]s.
+
+Typical applications of on-demand mode were distributed file serving, such as [[File Transfer Protocol]] (FTP) or [[WWW]], or desktop workstations.
+
+InterMezzo was started as part of the [[Coda (file system)|Coda]] file system project at [[Carnegie Mellon University]] and took many design decisions from Coda (but did not share code). Coda in turn was a branch from the [[OpenAFS]] project.&lt;ref&gt;{{Cite news |title= Using the InterMezzo Distributed Filesystem |author=  Bill von Hagen |work= Linux Planet |date= August 12, 2002 |url= http://www.linuxplanet.com/linuxplanet/reports/4368/1/ |url-status=live |archiveurl= https://web.archive.org/web/20030402131112/http://www.linuxplanet.com/linuxplanet/reports/4368/1/ |archivedate= April 2, 2003 |accessdate= September 23, 2013  }}&lt;/ref&gt;
+It was designed for enhanced scalability, performance, modularity, and easy integration with existing file systems. 
+A paper was presented at an Open Source Convention in August 1999 by [[Peter Braam|Peter J. Braam]], Michael Callahan, and Phil Schwan.&lt;ref&gt;{{Cite news |title= A report from the Open Source Convention |author= Vicki Brown |date= September 1, 1999 |url= http://www.sunworld.com/sunworldonline/swol-09-1999/swol-09-osconf.html |url-status=dead |archiveurl= https://web.archive.org/web/20010204001000/http://www.sunworld.com/sunworldonline/swol-09-1999/swol-09-osconf.html |archivedate= February 4, 2001 |accessdate= September 23, 2013 }}&lt;/ref&gt;
+A company called Stelias Computing created a web site in late 1999, and announced a &quot;beta&quot; test version in January 2000.&lt;ref name=&quot;site&quot;&gt;{{Cite web |title= Archive of the Inter-Mezzo.org web site |url= http://inter-mezzo.org |url-status=dead |archiveurl= https://web.archive.org/web/20000520193359/http://inter-mezzo.org/index.html |archivedate= May 20, 2000 |accessdate= September 23, 2013  }}&lt;/ref&gt;
+
+Although it was supported in the standard Linux kernel in version 2.4, InterMezzo was removed in the 2.6 series. Its developers moved on to a new project named [[Lustre (file system)|Lustre]] at a company called Cluster File Systems, around 2001. Development continued through about 2003, and the web site was maintained through 2008.&lt;ref name=&quot;site&quot; /&gt;
+
+== See also ==
+{{Portal|Free and open-source software}}
+
+* [[rsync]]
+* [[Coda_(file_system)|Coda]]
+* [[Lustre (file system)|Lustre]]
+
+==References==
+{{Reflist}}
+
+==External links==
+* [http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=78855 Debian Bug report logs on InterMezzo, mentioning Lustre].
+
+{{DEFAULTSORT:Intermezzo (File System)}}
+[[Category:Network file systems]]
+[[Category:Virtualization-related software for Linux]]
+[[Category:Distributed file systems supported by the Linux kernel]]</text>
+      <sha1>1t2hxp1ok9hg7woamkjzt0grjzj5jyx</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Bitch (slang)</title>
+    <ns>0</ns>
+    <id>48097</id>
+    <revision>
+      <id>990506652</id>
+      <parentid>982614057</parentid>
+      <timestamp>2020-11-24T21:34:43Z</timestamp>
+      <contributor>
+        <username>Dugan Murphy</username>
+        <id>787448</id>
+      </contributor>
+      <minor />
+      <comment>/* Son of a bitch */ Added author-link parameter to citation</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="36178" xml:space="preserve">{{hatnote|&quot;Bitch, please&quot; redirects here. For the song by Snoop Dogg, see [[Bitch Please]]. For the song by Eminem, see [[Bitch Please II]].}}
+{{pp-semi-protected|small=yes}}
+{{pp-move-indef}}
+{{short description|Pejorative slang word for a person, usually a woman.}}
+[[File:Protests at Walker Art Center, June 2017.jpg|thumb|right|230px|A slang use of the word &quot;bitch&quot; can be seen in the center sign of this protest, which reads &quot;burn this bitch down&quot;]]
+'''''Bitch''''', literally meaning a female [[dog]], is a [[wikt:pejorative|pejorative]] slang word for a person — usually a woman — who is belligerent, unreasonable, malicious, controlling, aggressive, or dominant. When applied to a man, ''bitch'' reverses its meaning and is a derogatory term for a subordinate, weak, or cowardly man. Its original use as a vulgarism, documented from the fifteenth century, suggested high [[sexual desire]] in a woman, comparable to a [[canine reproduction|dog in heat]]. The range of meanings has expanded in modern usage. In a [[feminism|feminist]] context, it can indicate a strong or [[assertive]] woman.
+
+The word ''bitch'' is one of the most common curse words in the English language. According to Dr. Timothy Jay, there are &quot;over 70 different taboo words,&quot; but 80 percent of the time only ten words are used, and ''bitch'' is included in this set.&lt;ref&gt;{{Cite journal|title = The Utility and Ubiquity of Taboo Words|last = Jay|first = Timothy|date = Mar 2009|journal = Perspectives on Psychological Science|doi = 10.1111/j.1745-6924.2009.01115.x|volume=4|issue = 2|pages=153–161|url = https://zenodo.org/record/894512|pmid = 26158942}}&lt;/ref&gt;
+
+==History==
+[[File:Pregnant bitch mongrel Jan 2008 Shot in Jalandhar Punjab India by gopal1035 017.jpg|thumb|Literally, a bitch is a female dog. Its original use as an insult was based on a comparison of a woman to a dog in heat.]]
+According to the [[Oxford English Dictionary]], the term ''bitch'' comes from the Old English word ''bicce'' or ''bicge'', meaning &quot;female dog&quot;, which dates to around 1000 CE. It may have derived from the earlier Old Norse word ''bikkja'', also meaning &quot;female dog&quot;.&lt;ref name=OED&gt;{{citation |contribution= bitch, n. 1 |title = Oxford English Dictionary Online |publisher=Oxford University Press |contribution-url = http://www.oed.com/view/Entry/19524?isAdvanced=false&amp;result=1&amp;rskey=ucGD6t&amp; |accessdate=10 August 2017|title-link = Oxford English Dictionary }}&lt;/ref&gt;&lt;ref name=&quot;nytimes07&quot;&gt;{{cite news|url=https://www.nytimes.com/2007/08/07/nyregion/07bword.html|title=It’s a Female Dog, or Worse. Or Endearing. And Illegal? |last=Grynbaum |first=Michael M.|date=August 7, 2007|newspaper=The New York Times|accessdate=2009-10-01}}&lt;/ref&gt;
+
+&quot;Dog&quot; has long been used as an insult toward both women and men. In [[ancient Greece]], dog was often used in a derogatory sense to refer to someone whose behavior was improper or transgressive. This could include shamelessness or lack of restraint, lack of hospitality, lack of loyalty, and indiscriminate or excessive violence, among other qualities.&lt;ref name=&quot;Franco&quot;&gt;{{cite book |last=Franco |first=Cristiana |title= Shameless: The Canine and the Feminine in Ancient Greece |publisher= University of California Press |date=2014 |isbn= 9780520273405|oclc=886107785}}&lt;/ref&gt; Over time, classicist C. Franco argues, a &quot;persistent symbolic connection&quot; developed between dogs and women in Greek literature that expressed and reinforced women's subordinate position in society and their supposedly inferior nature.&lt;ref name=&quot;Franco&quot; /&gt;
+
+There may also be a connection between less literal senses of &quot;bitch&quot; and the Greek goddess [[Artemis]]. As she is the goddess of the hunt, she was often portrayed with a pack of hunting dogs and sometimes transformed into an animal herself.&lt;ref&gt;{{Cite web|url = http://clarebayley.com/2011/06/bitch-a-history/|title = The Evolution of Bitch in the English Language|date = |accessdate = October 20, 2015|website = Bitch a History|last = Bayley|first = Clare}}&lt;/ref&gt; She was seen as free, vigorous, cold, impetuous, unsympathetic, wild, and beautiful.&lt;ref&gt;{{Cite book|title = The Greek Goddesses|last = Higginson|first = Thomas|publisher = Middlebury College|year = |isbn = |location = |page=197}}&lt;/ref&gt;
+
+The earliest use of &quot;bitch&quot; specifically as a derogatory term for women dates to the fifteenth century.&lt;ref name=&quot;OED&quot; /&gt;&lt;ref name=&quot;nytimes07&quot; /&gt; Its earliest slang meaning mainly referred to [[human sexual behavior|sexual behavior]], according to the English language historian Geoffrey Hughes:&lt;ref name=&quot;hughes&quot;&gt;Hughes, Geoffrey. Encyclopedia of Swearing : The Social History of Oaths, Profanity, Foul Language, and Ethnic Slurs in the English-Speaking World. Armonk, N.Y.: M.E. Sharpe, 2006.&lt;/ref&gt;
+
+&lt;blockquote&gt;
+The early applications were to a promiscuous or sensual woman, a metaphorical
+extension of the behavior of a bitch in heat. Herein lies the original point of the powerful
+insult ''son of a bitch,'' found as ''biche sone'' ca. 1330 in ''[[Of Arthour and of Merlin|Arthur and Merlin]]'' ... while in a
+spirited exchange in the [[Chester Mystery Plays|''Chester Play'']] (ca. 1400) a character demands: &quot;Whom callest thou
+queine, skabde bitch?&quot; (&quot;Who are you calling a whore, you miserable bitch?&quot;).
+&lt;/blockquote&gt;
+
+''Bitch'' remained a strong insult through the nineteenth century. The entry in [[Francis Grose]]'s ''[[Dictionary of the Vulgar Tongue]]'' (1785) reads:
+
+&lt;blockquote&gt;
+A she dog, or doggess; the most offensive appellation
+that can be given to an English woman, even more
+provoking than that of whore, as may be gathered from the
+regular [[Billingsgate|Billinsgate]] or [[St Giles, London|St Giles]] answer--&quot;I may be a
+whore, but can't be a bitch.&quot;&lt;ref&gt;Grose, Francis. ''[http://www.gutenberg.org/catalog/world/readfile?pageno=20&amp;fk_files=9510 1811 Dictionary of the Vulgar Tongue]''. Hosted at [[Project Gutenberg]]. Retrieved on January 9, 2007.&lt;/ref&gt;
+&lt;/blockquote&gt;Throughout the word's evolution into the nineteenth century, it became gradually less offensive. The [[Oxford English Dictionary]] in the nineteenth century described the insult as “strictly a lewd or sensual woman”.&lt;ref&gt;{{Cite journal|url = |title = Bitch|last = Gross|first = Beverly|date = 1994|journal = Salmagundi|doi = |pmid = |access-date = }}&lt;/ref&gt;  The word went through many similar phases throughout history. It was not until the 20th century that feminism began to reevaluate the term and its appropriation.&lt;ref&gt;{{Cite journal|url = |title = The Social Harms of &quot;Bitch&quot;|last = Kleinman|first = Sherryl|date = Spring 2009|journal = Sociological Analysis|doi = |pmid = |access-date = |first2 = Matthew|last2 = Ezzel|last3 = Frost|first3 = A. Corey}}&lt;/ref&gt;
+
+In the 1920s, ''bitch'' became once again a common insult used against women. The term ''bitch'' became more popular in common language during this era. Between 1915 and 1930, the use of &quot;bitch&quot; in newspapers and literature more than doubled.&lt;ref&gt;{{Cite web|title = Google Ngram Viewer|url = https://books.google.com/ngrams/graph?content=bitch&amp;year_start=1915&amp;year_end=1930&amp;corpus=15&amp;smoothing=3&amp;share=&amp;direct_url=t1%253B%252Cbitch%253B%252Cc0|website = books.google.com|accessdate = 2015-10-23}}&lt;/ref&gt; The writing of [[Ernest Hemingway]] popularized the more modern meaning of &quot;bitch&quot; in this era. He used it to represent favorable qualities such as ferocity, edginess, and grit.&lt;ref&gt;{{Cite web|title = Meet the New Bitch|url = https://www.theatlantic.com/magazine/archive/2015/04/meet-the-new-bitch/386246/|website =[[The Atlantic]]|accessdate = 2015-10-23}}&lt;/ref&gt; It was during this time that women began gaining more freedom (such as the right to vote through the [[Nineteenth Amendment to the United States Constitution|Nineteenth Amendment]]).&lt;ref&gt;{{Cite web|title = 19th Amendment to the U.S. Constitution: Women%27s Right to Vote|url = https://www.archives.gov/historical-docs/document.html?doc=13&amp;title.raw=19th+Amendment+to+the+U.S.+Constitution:+Women%2527s+Right+to+Vote|website = www.archives.gov|accessdate = 2015-10-20}}&lt;/ref&gt;  These new civil rights that women gained upset the male-dominated society, threatening misogynist men of the time feel threatened. The word &quot;bitch&quot; during the twenties meant &quot;malicious or consciously attempting to harm&quot;, &quot;difficult, annoying, or interfering&quot;, and &quot;sexually brazen or overly vulgar&quot;.&lt;ref&gt;{{Cite web|url = http://www.huffingtonpost.com/zoe-triska/post_4332_b_2526243.html|title = You Say 'Bitch' Like It's A Bad Thing: Examining the Implications of the Notorious Word|date = January 23, 2013|accessdate = October 18, 2015|website = The Huffington Post|publisher = The Huffington Post|last = Triska|first = Zoë}}&lt;/ref&gt;
+
+==Modern use==
+{{Globalize|section|USA|2name=the United States|date=December 2010}}&lt;!-- The sources used are all from the US, It needs sources from all the major English speaking nations to represent a global view.--&gt;
+In modern usage, the slang term bitch has different meanings depending largely on social context and may vary from very offensive to endearing,&lt;ref name=&quot;nytimes07&quot; /&gt; and as with many slang terms, its meaning and nuances can vary depending on the region in which it is used.
+
+[[File:Bitch Barossa Grenache.jpg|thumb|Bitch wine|&quot;Bitch&quot; has been reappropriated to have positive meanings in some contexts.]]
+
+The term ''bitch'' can refer to a person or thing that is very difficult, as in &quot;Life's a bitch&quot; or &quot;He sure got the bitch end of that deal&quot;. It is common for insults to lose intensity as their meaning broadens (&quot;[[bastard (disambiguation)|bastard]]&quot; is another example).&lt;ref name=&quot;hughes&quot;/&gt; In the film ''[[The Women (1939 film)|The Women]]'' (1939), [[Joan Crawford]] could only allude to the word:  &quot;And by the way, there's a name for you ladies, but it isn't used in high society - outside of a kennel.&quot;  At the time, use of the actual word would have been censored by the [[Hays Office]]. By 1974, [[Elton John]] had a hit single (#4 in the U.S. and #14 in the U.K.) with &quot;[[The Bitch Is Back]]&quot;, in which he says &quot;bitch&quot; repeatedly. It was, however, censored by some radio stations.&lt;ref name=&quot;songfacts-ej&quot;&gt;{{cite web|url=http://www.songfacts.com/detail.php?id=850 |title=The Bitch Is Back by Elton John Songfacts |publisher=Songfacts.com |accessdate=2012-05-03}}&lt;/ref&gt; On late night U.S. television, the character [[Emily Litella]] (1976-1978) on ''[[Saturday Night Live]]'' (portrayed by [[Gilda Radner]]) would frequently refer to [[Jane Curtin]] under her breath at the end of their ''Weekend Update'' routine in this way: &quot;Oh! Never mind...! ''Bitch!''&quot;
+
+''Bitchin' '' arose in the 1950s to describe something found to be cool or rad.&lt;ref&gt;{{Cite web|title = bitchin' {{!}} very good or appealing|url = http://www.merriam-webster.com/dictionary/bitchin'|website = www.merriam-webster.com|accessdate = 2015-10-23}}&lt;/ref&gt;
+
+Modern use can include self-description, often as an unfairly difficult person. For example, in the [[The New York Times Best Seller list|''New York Times'' bestseller]] ''The Bitch in the House'', a woman describes her marriage: &quot;I'm fine all day at work, but as soon as I get home, I'm a horror....I'm the bitch in the house.&quot;&lt;ref&gt;The Bitch in the House, ed. Cathi Hanaeur&lt;/ref&gt; [[Boy George]] admitted &quot;I was being a bitch&quot; in a falling out with Elton John.&lt;ref&gt;[http://blog.pinknews.co.uk/2009/07/elton-john-and-boy-george-end-feud.html Elton John and Boy George End Feuf] {{webarchive |url=https://web.archive.org/web/20110616003151/http://blog.pinknews.co.uk/2009/07/elton-john-and-boy-george-end-feud.html |date=June 16, 2011 }}&lt;/ref&gt;
+
+Generally, the term ''bitch'' is still considered offensive, and not accepted in formal situations. According to [[linguist]] [[Deborah Tannen]], &quot;''Bitch'' is the most contemptible thing you can say about a woman. Save perhaps the four-letter [[cunt|C word]].&quot;&lt;ref&gt;{{cite magazine |url=http://www.time.com/time/magazine/article/0,9171,982345,00.html |last=Carlson|first=Margaret|date=1995-01-16|title=Muzzle the B word|magazine=Time|volume=145|issue=2|page=36|issn=0040-781X}} Academic Search Complete, EBSCOhost AN 9501107624 (accessed October 1, 2009).&lt;/ref&gt;
+It's common for the word to be censored on [[Prime time]] TV, often rendered as &quot;the b-word&quot;. During the 2008 U.S. presidential campaign, a [[John McCain]] supporter referred to [[Hillary Clinton]] by asking, &quot;How do we beat the bitch?&quot; The event was reported in censored format:&lt;ref name=&quot;nieman&quot;&gt;{{cite web|last=Hall |first=Kathleen |url=http://www.nieman.harvard.edu/reportsitem.aspx?id=100020 |title=Nieman Reports &amp;#124; The 'B' Word in Traditional News and on the Web |publisher=Nieman.harvard.edu |accessdate=2012-05-03}}&lt;/ref&gt;
+&lt;blockquote&gt;
+On CNN's &quot;The Situation Room,&quot; Washington Post media critic and CNN &quot;Reliable Sources&quot; host Howard Kurtz observed that &quot;Senator McCain did not embrace the 'b' word that this woman in the audience used.&quot; ABC reporter Kate Snow adopted the same locution. On CNN's &quot;Out in the Open,&quot; Rick Sanchez characterized the word without using it by saying, &quot;Last night, we showed you a clip of one of his supporters calling Hillary Clinton the b-word that rhymes with witch.&quot; A local Fox 25 news reporter made the same move when he rhymed the unspoken word with rich.
+&lt;/blockquote&gt;
+
+[[Rick Sanchez (journalist)|Rick Sanchez]] of [[CNN]] went on to comment: &quot;...a horrible word that is used to do nothing but demean women... Obviously, the word that's used here is very offensive.&quot;&lt;ref&gt;{{cite web|url=http://www.nieman.harvard.edu/reportsitem.aspx?id=100020|title=The 'B' Word in Traditional News and on the Web|last=Jamieson|first=Kathleen Hall |author2=Jacqueline Dunn|date=n.d.|publisher=Nieman Harvard|accessdate=2009-09-27}}&lt;/ref&gt;
+
+=== Reappropriation ===
+
+[[File:SlutWalk NYC October 2011 Shankbone 4.JPG|thumb|Two women protesting the pejorative 'bitch' and [[slut-shaming]] at New York City's [[SlutWalk]] in October 2011&lt;ref&gt;[http://blogs.villagevoice.com/runninscared/2011/10/slutwalk_rally.php SlutWalk Rally Against Sexual Violence Draws Huge Crowd of Feminists] {{webarchive|url=https://web.archive.org/web/20120504171729/http://blogs.villagevoice.com/runninscared/2011/10/slutwalk_rally.php |date=2012-05-04 }}, Rebecca Nathanson, ''[[Village Voice]]'', October 2, 2011&lt;/ref&gt;]]
+
+In the context of modern [[feminism]], ''bitch'' has varied [[reappropriation|reappropriated]] meanings that may connote a ''strong female'' ([[anti-stereotype]] of weak submissive woman), ''cunning'' (equal to males in mental guile), or else it may be used as a tongue-in cheek [[wikt:backhanded|backhanded]] compliment for someone who has excelled in an achievement.&lt;ref name=&quot;zeisler&quot;&gt;[https://www.nytimes.com/2006/08/06/magazine/06wwln_q4.html?ex=1312516800&amp;en=bd6388aef33693d1&amp;ei=5088&amp;partner=rssnyt&amp;emc=rss Pop Goes the Feminist], Deborah Solomon interviews Andi Zeisler, ''[[The New York Times]]'', August 6, 2006.&lt;/ref&gt;&lt;ref&gt;[http://www.metroactive.com/papers/cruz/11.29.00/feminism-0048.html Third Wave Feminism], by Tamara Straus, MetroActive, December 6, 2000.&lt;/ref&gt;&lt;ref&gt;[http://www.popgurls.com/article_show.php3?id=634 You've Really Got Some Minerva, Veronica Mars] {{webarchive|url=https://web.archive.org/web/20070423171534/http://www.popgurls.com/article_show.php3?id=634 |date=2007-04-23 }}, 2006-11-21.&lt;/ref&gt; For example, ''[[Bitch (magazine)|Bitch]]'' magazine describes itself as a &quot;feminist response to pop culture&quot;.&lt;ref&gt;{{cite web |url=http://bitchmagazine.org/ |title=Bitch Media |publisher=Bitchmagazine.org |date=2012-04-25 |accessdate=2012-05-03 |archive-url=https://web.archive.org/web/20110725080514/http://bitchmagazine.org/ |archive-date=2011-07-25 |url-status=dead }}&lt;/ref&gt;
+
+Feminist attorney [[Jo Freeman]] (Joreen) authored &quot;The BITCH Manifesto&quot; in 1968:&lt;ref&gt;{{cite web|url=http://scriptorium.lib.duke.edu/wlm/bitch/ |title=The Bitch Manifesto - Documents from the Women's Liberation Movement |publisher=Scriptorium.lib.duke.edu |accessdate=2012-05-03}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.jofreeman.com/joreen/bitch.htm |title=The BITCH Manifesto |publisher=Jofreeman.com |accessdate=2012-05-03}}&lt;/ref&gt;&lt;blockquote&gt;
+A Bitch takes shit from no one. You may not like her, but you cannot ignore her....[Bitches] have loud voices and often use them. Bitches are not pretty....Bitches seek their identity strictly thru themselves and what they do. They are subjects, not objects...Often they do dominate other people when roles are not available to them which more creatively sublimate their energies and utilize their capabilities. More often they are accused of domineering when doing what would be considered natural by a man.
+&lt;/blockquote&gt;Bitch has also been reappropriated by [[Hip hop|hip-hop]] culture, rappers use the adjective &quot;[[Bad Bitch|bad bitch]]&quot; to refer to an independent, confident, attractive woman. The term is used in a complimentary way, meaning the woman is desirable. One of the first instances of &quot;bitch&quot; being used in this way is in the song &quot;Da Baddest Bitch&quot; by [[Trina]], released in 1999.&lt;ref name=&quot;vice.com&quot;&gt;{{Cite web|title = The Evolution of the Bitch {{!}} VICE {{!}} United States|url = https://www.vice.com/read/the-evolution-of-the-bitch-905|website = VICE|accessdate = 2015-10-23|language = en-us}}&lt;/ref&gt; This can also be seen throughout multiple different songs from Rihanna's song entitled &quot;Bad Bitch&quot; featuring [[Beyoncé]] which reiterates the line &quot;I'm a bad bitch&quot;&lt;ref&gt;{{Cite web|title = Rihanna (Ft. Beyoncé) – Bad Bitch (Demo)|url = https://genius.com/Rihanna-bad-bitch-demo-lyrics|website = Genius|accessdate = 2015-10-23|archive-url = https://web.archive.org/web/20151012040602/http://genius.com/Rihanna-bad-bitch-demo-lyrics|archive-date = 2015-10-12|url-status = dead}}&lt;/ref&gt; multiple times. [[Nicki Minaj]] is another female rap icon who uses the term in her song &quot;Starships&quot; where she says  “bad bitches like me is hard to come by”.&lt;ref&gt;{{Cite web|title = Starships - Nicki Minaj|url = https://play.google.com/music/preview/Tiqjltan2c3qplewwvcwcu3ig2y?lyrics=1&amp;pcampaignid=kp-lyrics|accessdate = 2015-10-23}}&lt;/ref&gt; This use of the word bitch shows women reappropriating the meaning to be a more positive and empowering word for women.
+
+====Pop culture====
+
+In pop culture, the use of the term ''bitch'' has increased through media such as television, movies, magazines, social media, etc. The use of the word &quot;bitch&quot; on television shows tripled between 1998 and 2007, which had much to do with the word's feminist facelift in the previous decade.&lt;ref name=&quot;vice.com&quot;/&gt;
+
+In a 2006 interview titled &quot;Pop Goes the Feminist&quot;, ''Bitch'' magazine co-founder [[Andi Zeisler]] explained the naming of the magazine:&lt;ref name=&quot;zeisler&quot; /&gt;
+
+&lt;blockquote&gt;
+When we chose the name, we were thinking, well, it would be great to reclaim the word &quot;bitch&quot; for strong, outspoken women, much the same way that &quot;[[queer]]&quot; has been reclaimed by the [[gay community]]. That was very much on our minds, the positive power of language reclamation.&lt;/blockquote&gt;
+
+[[File:Seattle - Pain in the Grass - 1995 - 7 Year Bitch 01.jpg|thumb|The band [[7 Year Bitch]] in concert.]]
+
+Pop culture contains a number of slogans of [[Identity (social science)|self-identification]] based on ''bitch''. For example,
+* &quot;You call me 'Bitch' like it's a bad thing.&quot;
+* &quot;I go zero to bitch in 3.5 seconds.&quot;
+There are several [[backronym]]s. [[Heartless Bitches International]] is a club with the slogan &quot;Because we know BITCH means: Being In Total Control, Honey!&quot; Other imagined acronyms include
+* &quot;Beautiful Intelligent Talented Creative Honest&quot;
+* &quot;Beautiful Individual That Causes [[Erection|Hardons]]&quot;&lt;ref&gt;{{cite web|url=http://www.abbreviations.com/b1.aspx?KEY=385003 |title=BITCH - Beautiful Individual That Causes Hardons |publisher=Abbreviations.com |accessdate=2012-05-03}}&lt;/ref&gt;
+* &quot;Babe In Total Control of Herself&quot;.&lt;ref&gt;{{cite web|url=http://acronyms.thefreedictionary.com/Beautiful+Intelligent+Talented+Creative+Honest |title=Beautiful Intelligent Talented Creative Honest - What does BITCH stand for? Acronyms and abbreviations by the Free Online Dictionary |publisher=Acronyms.thefreedictionary.com |accessdate=2012-05-03}}&lt;/ref&gt;
+As stated in Scallen's ''[https://americanstudies.nd.edu/assets/61886/bitchthesisentirely3.pdf Bitch Thesis]'', &quot;As Asim demonstrates with his discussion of the appropriation of the N word by black communities, the term ''bitch'' is deployed in pop culture in multiple ways (with multiple meanings) at the same time.&quot;&lt;ref&gt;Scallen. &quot;Bitch Thesis.&quot; 2010. ''Department
+of American Studies.'' Paper. 17 October 2015.&lt;/ref&gt;  Derogatory terms are constantly appropriated. Many women, such as Nicki Minaj, refer to themselves as bitches.  By calling oneself a bitch in today's culture, these women are referencing their success, money, sexuality, and power.  Asha Layne's article [http://www.hamptoninstitution.org/women-in-hip-hop.html#.Vimtrn6rTIU ''Now That’s a Bad Bitch!: The State of Women in Hip-Hop''], &quot;The change in the meaning of the word thus subverts the tools of oppression used to dominate women to now empower them.&quot;&lt;ref&gt;Layne, Asha. ''Now That's a Bad Bitch!: The State of
+Women in Hip-Hop''. 24 April 2014. Article. 19 October 2015.&lt;/ref&gt;
+
+===Hip hop culture===
+{{Main|Misogyny in hip hop culture}}
+
+One early rapper to use the word ''bitch'' on record was [[Duke Bootee]] on his classic 1983 song with [[Grandmaster Flash]], ''[[New York, New York (Grandmaster Flash and the Furious Five song)|New York New York]]''. (''&quot;He says he ain't gonna pay no child support / because the bitch left him without a second thought.&quot;'') However, it is sometimes claimed that [[Slick Rick]]'s &quot;[[La Di Da Di]]&quot; (1985) was the first rap song to use the term.&lt;ref&gt;{{cite web|last=Aldave |first=Cherryl |url=http://www.hiphopdx.com/index/interviews/id.198/title.forgotten-elements-a-bitch-iz-a-bitch |title=Forgotten Elements: A Bitch Iz A Bitch &amp;#124; Rappers Talk Hip Hop Beef &amp; Old School Hip Hop |publisher=HipHop DX |date=2003-01-29 |accessdate=2013-02-24}}&lt;/ref&gt; Since the late 1980s, the word ''bitch'' has been frequently used among hip-hop artists and followers of the culture, which can be said as &quot;bee-otch&quot;, spelled like Biotch, Beyotch, Beotch, etc.&lt;ref name=&quot;adams &amp; fuller&quot;&gt;{{cite journal | last1 = Adams | first1 = Terri M. | last2 = Fuller | first2 = Douglas B. | year = 2006 | title = The Words Have Changed but the Ideology Remains the Same: Misogynistic Lyrics in Rap Music | url = http://www.electricprint.com/edu4/classes/readings/depository/gender/misogyny_music1.pdf | journal = Journal of Black Studies | volume = 36 | issue = 6 | pages = 938–957 | doi = 10.1177/0021934704274072 | url-status = dead | archiveurl = https://web.archive.org/web/20120328055249/http://www.electricprint.com/edu4/classes/readings/depository/gender/misogyny_music1.pdf | archivedate = 2012-03-28 }}&lt;/ref&gt; One of the first artists to popularize the pronunciation as ''beeatch'' or ''biatch'' as a refrain in the late 1980s was Oakland-based rapper [[Too $hort]].
+
+Reaching back to the dozens and dirty blues, early rappers like [[Slick Rick]] established the bitch as a character: a woman, often treacherous, but sometimes simply déclassé.&lt;ref&gt;{{Cite web|title = Who You Calling A B----?|url = https://www.npr.org/sections/therecord/2012/09/06/160672019/who-you-calling-a-b|website = NPR.org|accessdate = 2015-10-23}}&lt;/ref&gt; Adams and Fuller (2006) state that, in misogynistic rap, a ''bitch'' is a &quot;money-hungry, scandalous, manipulating, and demanding woman&quot;.&lt;ref name=&quot;adams &amp; fuller&quot;/&gt; However, the word ''bitch'' is also frequently used (by male rappers) towards other men in rap lyrics, usually to describe a man who is a subordinate or homosexual, or a man who is supposedly unmanly or inferior in some way.&lt;ref&gt;{{cite web|url=http://rapgenius.com/Dr-dre-bitches-aint-shit-lyrics |title=Dr. Dre – Bitches Ain't Shit Lyrics |publisher=Rap Genius |accessdate=2013-02-24}}&lt;/ref&gt;  An example of this is the song ''Bitches 2'' by [[Ice-T]], which gives an example of a male &quot;bitch&quot; in each verse.
+
+Some female hip hop artists have challenged male rappers' use of the word ''bitch'' to refer to women, with [[Queen Latifah]] asking in her 1993 song &quot;[[U.N.I.T.Y.]]&quot;: &quot;Who you callin' a bitch?&quot;&lt;ref&gt;[[Mark Anthony Neal|Neal, Mark Anthony]] and Murray Forman. [https://books.google.com/books?id=K4yDAOL07ugC&amp;pg=PA315 ''That’s the Joint! The Hip-Hop Studies Reader'']. New York: Routledge, 2004, p. 315, {{ISBN|978-0-415-96918-5}}.&lt;/ref&gt;&lt;ref&gt;Dyson, Miachel Eric. [https://books.google.com/books?id=bUautpC-HokC&amp;pg=PA124 ''Know What I Mean?: Reflections on Hip-Hop'']. New York: Basic Civitas Books, 2007, p. 124, {{ISBN|978-0-465-01716-4}}.&lt;/ref&gt;  Other female rappers from the same era frequently used the term to refer to themselves and/or others, notably [[Roxanne Shante]] (who even made a 1992 album entitled ''[[The Bitch Is Back (Roxanne Shanté album)|The Bitch Is Back]]'') and [[MC Lyte]]. Popular culture has inspired [[Woman|women]] to redefine the word bitch as a [[euphemism]] for &quot;[[Strong black woman]]&quot;.
+
+In 2016, [[Kanye West]] released his seventh studio album called [[The Life of Pablo]].  On the song called &quot;Famous&quot; West raps, &quot;I feel like me and Taylor might still have sex / Why? I made that bitch famous.&quot;  This sparked a controversy with [[Taylor Swift]] as she &quot;cautioned him about releasing a song with such a strong misogynistic message.&quot;&lt;ref&gt;{{Cite web|url=https://mic.com/articles/135147/7-times-women-in-hip-hop-proved-kanye-wrong-about-the-word-bitch|title=7 Women Who Put Kanye in His Place About Using the Word &quot;Bitch&quot;|website=mic.com|language=en|access-date=2019-04-30}}&lt;/ref&gt;  In response to Swift's remarks, West went on Twitter and posted a tweet which said how the word &quot;bitch&quot; is an endearing term in hip hop like the word &quot;nigga&quot;.
+
+==In reference to men==
+
+When used to describe a male, ''bitch'' may also confer the meaning of subordinate, especially to another male, as in [[prison]]. Generally, this term is used to indicate that the person is acting outside the confines of their gender roles, such as when women are assertive or aggressive, or when men are passive or servile. According to [[James C. Coyne|James Coyne]] from the Department of Psychology at the University of California, &quot;'Bitch' serves the social function of isolating and discrediting a class of people who do not conform to the socially accepted patterns of behavior.&quot;&lt;ref&gt;{{cite journal | last1 = Coyne | first1 = James C. | last2 = Sherman | first2 = Richard C. | last3 = O'Brien | first3 = Karen | year = 1978 | title = Expletives and Woman's Place | url = | journal = Sex Roles | volume = 4 | issue = 6| pages = 827–35 | doi=10.1007/bf00287702}}&lt;/ref&gt;
+
+Historically, the term may be used to refer to a man who is nasty, rude or otherwise offensive. In [[Shakespeare]]'s ''[[King Lear]]'' (1603), the [[Earl of Kent]] refers to Oswald as: &quot;...nothing but the composition of a knave, beggar, coward, pandar, and the son and heir of a mongrel bitch...&quot;&lt;ref&gt;{{cite web |url=http://www.it.usyd.edu.au/~matty/Shakespeare/texts/tragedies/kinglear.html |title=King Lear |publisher=It.usyd.edu.au |accessdate=2012-05-03 |archive-url=https://web.archive.org/web/20100518202949/http://www.it.usyd.edu.au/~matty/Shakespeare/texts/tragedies/kinglear.html |archive-date=2010-05-18 |url-status=dead }}&lt;/ref&gt; In Act II Scene I of [[Shakespeare]]'s ''[[Troilus and Cressida]]'', Ajax strikes Thersites, yelling &quot;Thou bitch-wolf's son, canst thou not hear?&quot;&lt;ref&gt;{{cite book |last=Shakespeare |first=William |year=1602 |title=Troilus and Cressida |publisher=Yale University Press |page=35 }}&lt;/ref&gt;
+
+In the context of [[prison sexuality]], a ''bitch'' is a lower-[[hierarchy]] prisoner, typically physically weak or vulnerable, who is dominated by more senior prisoners and forced to adopt a servile role. According to convention, these inmates are used as sexual slaves or traded as personal property.&lt;ref name=&quot;inmate-steve&quot;&gt;{{cite web |url=http://www.counterpunch.org/steve08012003.html |title=Prison Bitch » Counterpunch: Tells the Facts, Names the Names |publisher=Counterpunch |date=2003-08-02 |accessdate=2012-05-03 |url-status=dead |archiveurl=https://web.archive.org/web/20110805011117/http://www.counterpunch.org/steve08012003.html |archivedate=2011-08-05 }}&lt;/ref&gt;
+
+A &quot;prison bitch&quot; can also refer to any subservient entity, as in the [[Douglas Rushkoff]] description of a [[Microsoft]] - [[Yahoo]] partnership: &quot;Yahoo is merely hooking up with the most alpha male company it can still find in order to survive. Microsoft will soon turn Yahoo into its prison bitch, and this won’t be pretty.&quot;&lt;ref name=&quot;rushkoff&quot;&gt;{{cite web |url=http://www.thedailybeast.com/blogs-and-stories/2009-07-29/microsofts-prison-yard-conquest.html |title=Microsoft's Prison Yard Conquest |last1=Rushkoff |first1=Douglas |date=29 July 2009 |work=The Daily Beast |publisher=The Newsweek/Daily Beast Company LLC |accessdate=27 February 2012}}&lt;/ref&gt;

@@ -21,7 +21,7 @@ int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *sign
 
 int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti){
 
-
+    printf("ok\n");
     struct doc_couple* couples = (struct doc_couple*) malloc( ((numberOfFiles *(numberOfFiles+1))/2)* 200*sizeof(struct doc_couple));
     struct sign_doc* files_sketches = (struct sign_doc*) malloc(numberOfFiles * N_SIGNATURES * sizeof(struct sign_doc));
 
@@ -30,20 +30,20 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
     for(int i=0; i < numberOfFiles; i++)
         get_sketches(i, files_sketches+(i*N_SIGNATURES) , *(minhashDocumenti+i), files[i]);
     exectimes(getElapsedTime(&begin, &end), GET_SKETCHES, SET_TIME);
-
+    printf("ok1\n");
     clock_gettime(CLOCK_REALTIME, &begin);
     mergesort_s_signatures(files_sketches, 0, N_SIGNATURES*numberOfFiles-1);
     exectimes(getElapsedTime(&begin, &end), MERGE_SORT, SET_TIME);
-
+    printf("ok2\n");
     //crea le triple {doc1, doc2, shared_signatures}
     int count = create_triplets(files_sketches, numberOfFiles, couples);
-
+    printf("ok3\n");
     //ordina per doc_id
     mergesort_s_doc_id(couples,0, count-1);
-
+    printf("ok4\n");
     //raccogli le coppie di documenti che hanno almeno una signature in comune
     int index = do_clustering(couples, count);
-
+    printf("ok5\n");
     check_and_print_similarity(minhashDocumenti, couples, index, files);
     return 0;
 }

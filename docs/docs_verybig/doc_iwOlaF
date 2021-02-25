@@ -1,0 +1,242 @@
+==Places==
+*[[Lock, Ohio]], an unincorporated community in the United States
+*[[Lock, South Australia]], a small town in the center of the Eyre Peninsula
+*[[Lock Island]], an island in the River Thames in England
+*[[Lock Island (Nunavut)]], an island Peel Sound in Nunavut, Canada
+
+==Sports==
+*[[Lock (rugby league)]], a player position in rugby league, known as loose forward in the United Kingdom
+*[[Lock (rugby union)]], a player position in rugby union
+*Lock, any of several [[grappling hold]]s in wrestling, judo and other martial arts
+
+==Other uses==
+*[[Lock (firearm)]], the ignition mechanism of small arms
+*[[Lock (weapons guidance)]], missile navigation system's target acquisition fix
+*[[Lock of hair]], a piece of hair
+**[[Dreadlocks]], ropelike strands of hair
+**[[Lovelock (hair)]], hairstyle
+*[[Fermentation lock]], a device in beer and wine making that allows carbon dioxide to escape while not allowing air to enter
+*[[Rope lock]], a device used in theater fly systems
+
+==See also==
+*{{Look from}}
+*{{In title}}
+*[[-lock]], an Old English suffix
+*[[Loch]], a Gaelic term used in Scotland to describe lakes and other bodies of water
+*[[Lock and Key (disambiguation)]]
+*[[Locke (disambiguation)]], a common English surname and place name
+*[[Locker (disambiguation)]]
+*[[Locking (disambiguation)]]
+*[[Locks (disambiguation)]]
+*[[Lox]], cured salmon filet
+*[[Unlock (disambiguation)]]
+
+{{Disambiguation|geo}}</text>
+      <sha1>m9ogzyvd2ey7uj85bh3yahffsxnp49e</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Identity map pattern</title>
+    <ns>0</ns>
+    <id>46955</id>
+    <revision>
+      <id>949539972</id>
+      <parentid>934320983</parentid>
+      <timestamp>2020-04-07T02:14:16Z</timestamp>
+      <contributor>
+        <username>Dgpop</username>
+        <id>96647</id>
+      </contributor>
+      <comment>cleanup template; removed See Also to prominent link; numbers instead of bullets</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1239" xml:space="preserve">{{One source|date=April 2020}}
+
+In the design of [[database management systems]], the '''identity map pattern''' is a database access [[design pattern (computer science)|design pattern]] used to improve performance by providing a context-specific, in-memory [[database cache|cache]] to prevent duplicate retrieval of the same object data from the database.&lt;ref&gt;{{cite book
+  | last = Fowler
+  | first = Martin
+  | title = Patterns of Enterprise Application Architecture
+  | pages = 195–199
+  | publisher = Addison-Wesley
+  | isbn = 0-321-12742-0
+  | year = 2003
+}}&lt;/ref&gt;
+
+If the requested data has already been loaded from the database, the identity map returns the same instance of the already instantiated object, but if it has not been loaded yet, it loads it and stores the new object in the map. In this way, it follows a similar principle to [[lazy loading]].
+
+There are four types of Identity Map
+#Explicit
+#Generic
+#Session
+#Class
+
+== See also ==
+* [[Active record pattern|Active record]]
+* [[Lazy loading]]
+
+== References ==
+
+{{reflist}}
+
+{{Design Patterns Patterns}}
+
+[[Category:Architectural pattern (computer science)]]
+[[Category:Articles with example C Sharp code]]
+[[Category:Software design patterns]]
+
+
+{{comp-sci-stub}}</text>
+      <sha1>a743oqnpj5c6bjj5enbaequuhwcsrx1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Cepstrum</title>
+    <ns>0</ns>
+    <id>46956</id>
+    <revision>
+      <id>984860763</id>
+      <parentid>984857801</parentid>
+      <timestamp>2020-10-22T15:09:06Z</timestamp>
+      <contributor>
+        <username>AnomieBOT</username>
+        <id>7611264</id>
+      </contributor>
+      <minor />
+      <comment>Dating maintenance tags: {{Cn}}</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="17888" xml:space="preserve">{{Redirects|Cepstral|the text-to-speech company|Cepstral (company)}}
+{{Use mdy dates|date=November 2011}}
+
+In [[Fourier analysis]], the '''cepstrum''' ({{IPAc-en|ˈ|k|ɛ|p|s|t|r|ʌ|m|,_|ˈ|s|ɛ|p|-|,_|-|s|t|r|ə|m}}; plural ''cepstra'', adjective ''cepstral'') is the result of computing the [[inverse Fourier transform]] (IFT) of the [[logarithm]] of the estimated [[signal spectrum]]. The method is a tool for investigating periodic structures in [[frequency]] spectra. The ''power cepstrum'' has applications in the analysis of [[human speech]].
+
+The term ''cepstrum'' was derived by reversing the first four letters of ''spectrum''. Operations on cepstra are labelled ''quefrency analysis'' (or ''quefrency alanysis''), ''liftering'', or ''cepstral analysis''. It may be pronounced in the two ways given, the second having the advantage of avoiding confusion with ''kepstrum''.
+
+==Origin and definition==
+The concept of the cepstrum was introduced in 1963 by B. P. Bogert, M. J. Healy, and [[J. W. Tukey]].&lt;ref name=&quot;Bogert_1963&quot;&gt;B. P. Bogert, M. J. R. Healy, and J. W. Tukey, ''The Quefrency {{sic|Alanysis|nolink=y|expected=Quefrency Alanysis is the original and correct spelling}} of Time Series for Echoes: Cepstrum, Pseudo Autocovariance, Cross-Cepstrum and Saphe Cracking'', ''Proceedings of the Symposium on Time Series Analysis'' (M. Rosenblatt, Ed) Chapter 15, 209-243. New York: Wiley, 1963.&lt;/ref&gt; It serves as a tool to investigate periodic structures in frequency spectra.&lt;ref name=&quot;Norton_2003&quot;&gt;{{cite book| author = Norton, Michael Peter |author2=Karczub, Denis| title = Fundamentals of Noise and Vibration Analysis for Engineers| url = https://books.google.com/books?id=jDeRCSqtev4C| date = November 17, 2003| publisher = Cambridge University Press| isbn = 0-521-49913-5 }}&lt;/ref&gt; Such effects are related to noticeable echos or [[Reflection (physics)|reflections]] in the signal, or to the occurrence of harmonic frequencies ([[Harmonic series (music)#Partial|partials]], [[overtones]]). Mathematically it deals with the problem of [[deconvolution]] of signals in the frequency space.&lt;ref name=&quot;Childers_1977&quot;&gt;D. G. Childers, D. P. Skinner, R. C. Kemerait, &quot;[http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1455016 The Cepstrum: A Guide to Processing]&quot;, ''Proceedings of the IEEE'', Vol. 65, No. 10, October 1977, pp.&amp;nbsp;1428–1443.&lt;/ref&gt;
+
+References to the Bogert paper, in a bibliography, are often edited incorrectly.{{cn|date=October 2020}} The terms &quot;quefrency&quot;, &quot;alanysis&quot;, &quot;cepstrum&quot; and &quot;saphe&quot; were invented by the authors by rearranging the letters in frequency, analysis, spectrum, and phase. The invented terms are defined in analogy to the older terms.
+
+The name ''cepstrum'' was derived by reversing the first four letters of ''spectrum''. Operations on ''cepstra'' are labelled ''quefrency analysis'' (aka ''quefrency alanysis''&lt;ref name=&quot;Bogert_1963&quot;/&gt;), ''liftering'', or ''cepstral analysis''.&lt;!-- please don't change spellings without looking them up --&gt; 
+It may be pronounced in the two ways given, the second having the advantage of avoiding confusion with ''kepstrum''.
+
+The cepstrum is the result of following sequence of mathematical operations:
+*transformation of a [[signal]] from the [[time domain]] to the [[frequency domain]]
+*computation of the logarithm of the spectral amplitude
+*transformation to quefrency domain, where the final independent variable, the quefrency, has a time scale.&lt;ref name=&quot;Bogert_1963&quot; /&gt;&lt;ref name=&quot;Norton_2003&quot; /&gt;&lt;ref name=&quot;Childers_1977&quot; /&gt;
+
+The concept of the cepstrum has led to numerous applications:&lt;ref name=&quot;Norton_2003&quot; /&gt;&lt;ref name=&quot;Childers_1977&quot; /&gt;
+* dealing with reflection inference (radar, sonar applications, earth seismology)
+* estimation of speaker fundamental frequency (pitch)
+* speech analysis and recognition
+* medical applications in analysis of electroencephalogram (EEG) and brain waves
+* machine vibration analysis based on harmonic patterns (gearbox faults, turbine blade failures, ...)&lt;ref name=&quot;Norton_2003&quot; /&gt;&lt;ref name=&quot;Randall_2002&quot;&gt;[https://www.bksv.com/media/doc/233-80.pdf R.B. Randall: Cepstrum Analysis and Gearbox Fault Diagnosis, Brüel&amp;Kjaer Application Notes  233-80, Edition 2].&lt;/ref&gt;&lt;ref name=&quot;Beckhoff&quot;&gt;[https://infosys.beckhoff.com/english.php?content=../content/1033/tf3600_tc3_condition_monitoring/27021598926718347.html&amp;id= Beckhoff information system: TF3600 TC3 Condition Monitoring: Gearbox monitoring (online, 4.4.2020)].&lt;/ref&gt;
+
+The cepstrum is used in many variants. Most important are:
+* power cepstrum: The logarithm is taken from the &quot;power spectrum&quot;
+* complex cepstrum: The logarithm is taken from the spectrum, which is calculated via Fourier analysis
+* real cepstrum: The logarithm is taken from the amplitude values of the spectrum. The phase information is neglected.
+
+== Abbreviations ==
+Following abbreviations are used in the formulas to explain the cepstrum:
+{| class=&quot;wikitable&quot;
+|+
+!Abbreviation
+!Explanation
+|-
+|&lt;math&gt;f(t)&lt;/math&gt;
+|Signal, which is a function of time
+|-
+|&lt;math&gt;C&lt;/math&gt;
+|Cepstrum
+|-
+|&lt;math&gt;\mathcal{F}&lt;/math&gt;
+|[[Fourier transform]]: The abbreviation can stand i.e. for a [[continuous fourier transform]], a [[Discrete Fourier transform|discrete fourier transform]] (DFT) or even a [[z-transform]], as the z-transform is a generalization of the DFT.&lt;ref name=&quot;Childers_1977&quot; /&gt;
+|-
+|&lt;math&gt;\mathcal{F}^{-1}&lt;/math&gt;
+|Inverse of the fourier transform
+|-
+|&lt;math&gt;\left|\mathcal{F}\{f(t)\}\right|^2&lt;/math&gt;
+|Power spectrum
+|-
+|&lt;math&gt;\log(x)&lt;/math&gt;
+|[[Logarithm]] of x. The choice of the base b depends on the user. In some articles the base is not specified, others prefer base 10 or e. The choice of the base has no impact on the basic calculation rules, but sometimes base ''e'' leads to simplifications (see &quot;complex cepstrum&quot;).
+|-
+|&lt;math&gt;\left|x\right|&lt;/math&gt;
+|[[Absolute value]], or magnitude of a [[complex value]], which is calculated from real- and imaginary part using the [[Pythagorean theorem]].
+|-
+|&lt;math&gt;\phi&lt;/math&gt;
+|Phase angle of a [[complex value]]
+|}
+
+==Power cepstrum==
+The &quot;cepstrum&quot; was originally defined as &quot;power cepstrum&quot; by the following relationship:&lt;ref name=&quot;Bogert_1963&quot; /&gt;&lt;ref name=&quot;Childers_1977&quot; /&gt;
+
+:&lt;math&gt;C_{p}=\left|\mathcal{F}^{-1}\left\{\log\left(\left|\mathcal{F}\{f(t)\}\right|^2\right)\right\}\right|^2&lt;/math&gt;
+
+The power cepstrum has main applications in analysis of sound and vibration signals. It is a complementary tool to spectral analysis.&lt;ref name=&quot;Norton_2003&quot; /&gt;
+
+Sometimes it is also defined as:&lt;ref name=&quot;Norton_2003&quot; /&gt;
+
+:&lt;math&gt;C_{p}=\left|\mathcal{F}\left\{\log\left(\left|\mathcal{F}\{f(t)\}\right|^2\right)\right\}\right|^2&lt;/math&gt;
+Due to this formula, the cepstrum is also sometimes called the ''spectrum of a spectrum''. It can be shown that both formulas are consistent with each other as the frequency spectral distribution remains the same, the only difference being a scaling factor &lt;ref name=&quot;Norton_2003&quot; /&gt; which can be applied afterwards. Some articles prefer the second formula.&lt;ref name=&quot;Norton_2003&quot; /&gt;&lt;ref name=&quot;Randall_2002&quot; /&gt;
+
+Other notations are possible due to the fact, that the log of the power spectrum is equal to the log of the spectrum, if a scaling factor 2 is applied:&lt;ref name=&quot;Beckhoff&quot; /&gt;
+:&lt;math&gt;\log |\mathcal{F}|^2  = 2 \log |\mathcal{F}| &lt;/math&gt; 
+and therefore:
+:&lt;math&gt;C_{p}=\left|\mathcal{F}^{-1}\left\{2\log |\mathcal{F}|\right\}\right|^2&lt;/math&gt;, or
+:&lt;math&gt;C_{p}=4\cdot\left|\mathcal{F}^{-1}\left\{\log |\mathcal{F}| \right\}\right|^2&lt;/math&gt;, which provides a relationship to the ''real cepstrum'' (see below).
+
+Further, it shall be noted, that the final squaring operation in the formula for the power spectrum &lt;math&gt;C_{p}&lt;/math&gt; is sometimes called unnecessary&lt;ref name=&quot;Childers_1977&quot; /&gt; and therefore sometimes omitted.&lt;ref name=&quot;Randall_2002&quot; /&gt;&lt;ref name=&quot;Norton_2003&quot; /&gt;
+
+==Complex cepstrum==
+The ''complex cepstrum'' was defined by Oppenheim in his development of homomorphic system theory.&lt;ref name=&quot;AVOppenheim_1965&quot;&gt;A. V. Oppenheim, &quot;Superposition in a class of nonlinear systems&quot; Ph.D. diss., Res. Lab. Electronics, M.I.T. 1965.&lt;/ref&gt;&lt;ref name=&quot;AVOppenheim_1975&quot;&gt;A. V. Oppenheim, R. W. Schafer, &quot;Digital Signal Processing&quot;, 1975 (Prentice Hall).&lt;/ref&gt; The formula is provided also in other literature.&lt;ref name=&quot;Norton_2003&quot; /&gt;
+
+:&lt;math&gt;C_{c}=\mathcal{F}^{-1}\left\{\log( \mathcal{F}\{f(t) \})\right\}&lt;/math&gt;
+
+As &lt;math&gt;\mathcal{F}&lt;/math&gt; is complex the log-term can be also written with &lt;math&gt;\mathcal{F}&lt;/math&gt; as a product of magnitude and phase, and subsequently as a sum. Further simplification is obvious, if log is a natural logarithm with base e:
+
+:&lt;math&gt;\log(\mathcal{F}) = \log(\mathcal{|F| \cdot e^{i\phi}})&lt;/math&gt;
+:&lt;math&gt;\log_e(\mathcal{F}) = \log_e(\mathcal{|F|}) + \log_e(e^{i\phi}) = \log_e(\mathcal{|F|}) + i\phi&lt;/math&gt;
+
+Therefore: The complex cepstrum can be also written as:&lt;ref name=&quot;Randall_2017&quot;&gt;R.B. Randall:, [https://surveillance7.sciencesconf.org/conference/surveillance7/01_a_history_of_cepstrum_analysis_and_its_application_to_mechanical_problems.pdf &quot;A history of cepstrum analysis and its application to mechanical problems&quot;], in: Mechanical Systems and Signal Processing, Volume 97, December 2017 (Elsevier).&lt;/ref&gt;
+
+:&lt;math&gt;C_{c}=\mathcal{F}^{-1}\left\{\log_e(\mathcal{|F|}) + i\phi\right\}&lt;/math&gt;
+
+The complex cepstrum retains the information about the phase. Thus it is always possible to return from the quefrency domain to the time domain by the inverse operation:&lt;ref name=&quot;Norton_2003&quot; /&gt;&lt;ref name=&quot;Childers_1977&quot; /&gt;
+
+:&lt;math&gt;f(t)=\mathcal{F}^{-1}\left\{b^\left(\mathcal{F}\{C_{c}\}\right)\right\}&lt;/math&gt;, where b is the base of the used logarithm
+
+Main application is the modification of the signal in the quefrency domain (liftering) as an analog operation to filtering in the spectral frequency domain.&lt;ref name=&quot;Norton_2003&quot; /&gt;&lt;ref name=&quot;Childers_1977&quot; /&gt; An example is the suppression of echo effects by suppression of certain quefrencies.&lt;ref name=&quot;Norton_2003&quot; /&gt;
+
+==Real cepstrum==
+The ''real cepstrum'' is derived from the complex cepstrum by setting the phase of the spectrum to zero.&lt;ref name=&quot;Randall_2002&quot; /&gt;  It has a focus on periodic effects in the amplitudes of the spectrum:
+
+&lt;math&gt;C_{r}=\mathcal{F}^{-1}\left\{\log(\mathcal{|\mathcal{F}\{f(t) \}|})\right\}&lt;/math&gt;
+
+Thus, it is also directly related to the power spectrum:
+
+&lt;math&gt;C_{p}=4\cdot C_{r}^2&lt;/math&gt;
+
+=={{anchor|Real cepstrum|Phase cepstrum|Kepstrum}}Other definitions related to &quot;cepstrum&quot;==
+[[File:Cepstrum signal analysis.png|right|thumb|Steps in forming cepstrum from time history]]
+
+A short-time cepstrum analysis was proposed by [[Manfred R. Schroeder|Schroeder]] and Noll for application to pitch determination of human speech.&lt;ref name=&quot;schroeder64&quot;&gt;
+A. Michael Noll and [[Manfred R. Schroeder]], &quot;Short-Time 'Cepstrum' Pitch Detection,&quot; (abstract) Journal of the Acoustical Society of America, Vol. 36, No. 5, p. 1030&lt;/ref&gt;&lt;ref name=&quot;noll64&quot;&gt;A. Michael Noll (1964), “Short-Time Spectrum and Cepstrum Techniques for Vocal-Pitch Detection”, Journal of the Acoustical Society of America, Vol. 36, No. 2, pp. 296–302.&lt;/ref&gt;&lt;ref name=&quot;noll67&quot;&gt;A. Michael Noll (1967), “Cepstrum Pitch Determination”, Journal of the Acoustical Society of America, Vol. 41, No. 2, pp. 293–309.&lt;/ref&gt;
+
+The ''phase cepstrum'' is related to the complex cepstrum as
+: phase spectrum = (complex cepstrum − time reversal of complex cepstrum)&lt;sup&gt;2&lt;/sup&gt;.
+
+The ''kepstrum'', which stands for &quot;Kolmogorov-equation power-series time response&quot;, is similar to the cepstrum and has the same relation to it as expected value has to statistical average, i.e. cepstrum is the empirically measured quantity, while kepstrum is the theoretical quantity. It was in use before the cepstrum.&lt;ref&gt;
+&quot;Predictive decomposition of time series with applications to seismic exploration&quot;, E. A. Robinson MIT report 1954; Geophysics 1967 vol. 32, pp. 418–484;  
+&quot;Use of the kepstrum in signal analysis&quot;, M. T. Silvia and E. A. Robinson, Geoexploration, volume 16, issues 1–2, April 1978, pages 55–73.
+&lt;/ref&gt;&lt;ref&gt;
+&quot;A kepstrum approach to filtering, smoothing and prediction with application to speech enhancement&quot;, T. J. Moir and J. F. Barrett, Proc. Royal Society A, vol. 459, 2003, pp. 2957–2976.
+&lt;/ref&gt;
+
+==Applications==
+The cepstrum can be seen as information about the rate of change in the different spectrum bands. It was originally invented for characterizing the seismic [[Echo (phenomenon)|echoes]] resulting from [[earthquake]]s and [[bomb]] explosions. It has also been used to determine the fundamental frequency of human speech and to analyze [[radar]] signal returns. Cepstrum pitch determination is particularly effective because the effects of the vocal excitation (pitch) and [[vocal tract]] (formants) are additive in the logarithm of the power spectrum and thus clearly separate.&lt;ref name=noll67/&gt;
+
+The autocepstrum is defined as the cepstrum of the [[autocorrelation]]. The autocepstrum is more accurate than the cepstrum in the analysis of data with echoes.
+
+The cepstrum is a representation used in [[homomorphic filtering|homomorphic signal processing]], to convert signals combined by [[convolution]] (such as a source and filter) into sums of their cepstra, for linear separation. In particular, the power cepstrum is often used as a feature vector for representing the human voice and musical signals. For these applications, the spectrum is usually first transformed using the [[mel scale]]. The result is called the [[mel-frequency cepstrum]] or MFC (its coefficients are called mel-frequency cepstral coefficients, or MFCCs). It is used for voice identification, [[pitch detection algorithm|pitch detection]] and much more. The cepstrum is useful in these applications because the low-frequency periodic excitation from the [[vocal cord]]s and the [[formant]] filtering of the [[vocal tract]], which convolve in the [[time domain]] and multiply in the [[frequency domain]], are additive and in different regions in the quefrency domain.

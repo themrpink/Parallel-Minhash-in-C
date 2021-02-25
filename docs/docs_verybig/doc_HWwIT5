@@ -1,0 +1,220 @@
+For the transmitting antenna, by the definition of gain, &lt;math&gt;G&lt;/math&gt;, the radiation power density at a distance &lt;math&gt;r&lt;/math&gt; from the antenna (i.e. the power passing through unit area) is
+
+:&lt;math&gt;\mathrm{W}(\theta,\Phi) = \frac{\mathrm{G}(\theta,\Phi)}{4 \pi r^{2}} P_{t}&lt;/math&gt;.
+
+Here, the angles &lt;math&gt;\theta&lt;/math&gt; and &lt;math&gt;\Phi&lt;/math&gt; indicate a dependence on direction from the antenna, and &lt;math&gt;P_{t}&lt;/math&gt; stands for the power the transmitter would deliver into a matched load. The gain &lt;math&gt;G&lt;/math&gt; may be broken down into three factors; the [[antenna gain]] (the directional redistribution of the power), the [[radiation efficiency]] (accounting for ohmic losses in the antenna), and lastly the loss due to mismatch between the antenna and transmitter. Strictly, to include the mismatch, it should be called the '''realized gain''',&lt;ref name=&quot;IEEEdict1997&quot;/&gt; but this is not common usage.
+
+For the receiving antenna, the power delivered to the receiver is
+
+:&lt;math&gt;P_{r} = \mathrm{A}(\theta,\Phi) W\,&lt;/math&gt;.
+
+Here &lt;math&gt;W&lt;/math&gt; is the power density of the incident radiation, and &lt;math&gt;A&lt;/math&gt; is the [[antenna aperture]] or effective area of the antenna (the area the antenna would need to occupy in order to intercept the observed captured power). The directional arguments are now relative to the receiving antenna, and again &lt;math&gt;A&lt;/math&gt; is taken to include ohmic and mismatch losses.
+
+Putting these expressions together, the power transferred from transmitter to receiver is
+
+:&lt;math&gt;P_{r} = A \frac{G}{4 \pi r^{2}} P_{t}&lt;/math&gt;,
+
+where &lt;math&gt;G&lt;/math&gt; and &lt;math&gt;A&lt;/math&gt; are directionally dependent properties of the transmitting and receiving antennas respectively. For transmission from the reference
+antenna (2), to the test antenna (1), that is
+
+:&lt;math&gt;P_{1r} = \mathrm{A_{1}}(\theta,\Phi) \frac{G_{2}}{4 \pi r^{2}} P_{2t}&lt;/math&gt;,
+
+and for transmission in the opposite direction
+
+:&lt;math&gt;P_{2r} = A_{2} \frac{\mathrm{G_{1}}(\theta,\Phi)}{4 \pi r^{2}} P_{1t}&lt;/math&gt;.
+
+Here, the gain &lt;math&gt;G_{2}&lt;/math&gt; and effective area &lt;math&gt;A_{2}&lt;/math&gt; of antenna 2 are fixed, because the orientation of this antenna is fixed with respect to the first.
+
+Now for a given disposition of the antennas, the [[reciprocity (electromagnetism)|reciprocity theorem]] requires that the power transfer is equally effective in each direction, i.e.
+
+:&lt;math&gt;\frac{P_{1r}}{P_{2t}} = \frac{P_{2r}}{P_{1t}}&lt;/math&gt;,
+
+whence
+
+:&lt;math&gt;\frac{\mathrm{A_{1}}(\theta,\Phi)}{\mathrm{G_{1}}(\theta,\Phi)} = \frac{A_{2}}{G_{2}}&lt;/math&gt;.
+
+But the right hand side of this equation is fixed (because the orientation of antenna 2 is fixed), and so
+
+:&lt;math&gt;\frac{\mathrm{A_{1}}(\theta,\Phi)}{\mathrm{G_{1}}(\theta,\Phi)} = \mathrm{constant}&lt;/math&gt;,
+
+i.e. the directional dependence of the (receiving) effective aperture and the (transmitting) gain are identical (QED). Furthermore, the constant of proportionality is the same irrespective of the nature of the antenna, and so must be the same for all antennas. Analysis of a particular antenna (such as a [[Hertzian dipole]]), shows that this constant is &lt;math&gt;\frac{\lambda^{2}}{4\pi}&lt;/math&gt;, where &lt;math&gt;\lambda&lt;/math&gt; is the free-space wavelength. Hence, for any antenna the gain and the effective aperture are related by
+
+:&lt;math&gt;\mathrm{A}(\theta,\Phi) = \frac{\lambda^{2} \mathrm{G}(\theta,\Phi)}{4 \pi}&lt;/math&gt;.
+
+Even for a receiving antenna, it is more usual to state the gain than to specify the effective aperture. The power delivered to the receiver is therefore more usually written as
+
+:&lt;math&gt;P_{r} = \frac{\lambda^{2} G_{r} G_{t}}{(4 \pi r)^{2}} P_{t}&lt;/math&gt;
+
+(see [[link budget]]). The effective aperture is however of interest for comparison with the actual physical size of the antenna.
+
+===Practical consequences===
+
+* When determining the pattern of a receiving antenna by computer simulation, it is not necessary to perform a calculation for every possible angle of incidence. Instead, the radiation pattern of the antenna is determined by a single simulation, and the receiving pattern inferred by reciprocity.
+* When determining the pattern of an [[antenna measurement|antenna by measurement]], the antenna may be either receiving or transmitting, whichever is more convenient.
+* For a practical antenna, the side lobe level should be minimum, it is necessary to have the maximum directivity.&lt;ref&gt;{{cite journal|last1=Singh|first1=Urvinder|last2=Salgotra|first2=Rohit|title=Synthesis of linear antenna array using flower pollination algorithm|journal=Neural Computing and Applications|volume=29|issue=2|date=20 July 2016|pages=435–445|doi=10.1007/s00521-016-2457-7}}&lt;/ref&gt;
+
+==See also==
+*[[E-plane and H-plane]]
+
+==References==
+&lt;references/&gt;
+{{FS1037C MS188}}
+
+==External links==
+* [http://www.astronwireless.com/topic-archives-antenna-radiation-patterns.asp Understanding and Using Antenna Radiation Patterns By Joseph H. Reisert]
+* Explanation of the term “[https://www.radartutorial.eu/06.antennas/an12.en.html Two-Way beamwidth]”
+
+[[Category:Antennas (radio)]]
+[[Category:Fiber optics]]</text>
+      <sha1>q6pvny6ww22e2n1yqw3sv0iucu14coj</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Radiation scattering</title>
+    <ns>0</ns>
+    <id>41621</id>
+    <redirect title="Scattering" />
+    <revision>
+      <id>451672718</id>
+      <parentid>383202551</parentid>
+      <timestamp>2011-09-21T13:27:34Z</timestamp>
+      <contributor>
+        <username>TimothyRias</username>
+        <id>6112443</id>
+      </contributor>
+      <comment>redirect to [[scattering]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="24" xml:space="preserve">#REDIRECT [[scattering]]</text>
+      <sha1>2v8u877wyh1lmfez88m48y35x5302gd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Radio equipment</title>
+    <ns>0</ns>
+    <id>41622</id>
+    <redirect title="Radio-frequency engineering" />
+    <revision>
+      <id>797754074</id>
+      <parentid>796588001</parentid>
+      <timestamp>2017-08-29T00:07:58Z</timestamp>
+      <contributor>
+        <username>RoySmith</username>
+        <id>130326</id>
+      </contributor>
+      <comment>[[Wikipedia:Articles for deletion/Radio equipment (2nd nomination)]] closed as redirect to [[Radio-frequency engineering#Radio electronics]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="84" xml:space="preserve">#REDIRECT [[Radio-frequency engineering#Radio electronics]] {{R from related topic}}</text>
+      <sha1>cfwm0gcfz79pakl0jp2loxmayxvr1vk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Radio fix</title>
+    <ns>0</ns>
+    <id>41623</id>
+    <revision>
+      <id>976205840</id>
+      <parentid>704325588</parentid>
+      <timestamp>2020-09-01T19:05:03Z</timestamp>
+      <contributor>
+        <username>Fgnievinski</username>
+        <id>6727347</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2261" xml:space="preserve">In [[telecommunication]] and [[position fixing]], the term '''radio fix''' has the following meanings:
+
+*The locating of a [[radio]] transmitter by bearings taken from two or more [[direction finding]] stations, the site of the transmitter being at the point of intersection.
+*The location of a ship or aircraft by determining the direction of radio signals coming to the ship or aircraft from two or more sending stations, the locations of which are known.
+
+Compare [[triangulation]].
+
+==Obtaining a radio fix==
+
+[[Image:Radio Fix on 1 Station.svg|thumb|right|200px|Obtaining a Line of Position using the bearing to a single radio station.]]
+[[Image:Radio Fix on 2 Stations.svg|thumb|right|300px|Obtaining a position fix using the bearing to two radio stations.]]
+
+A single transmitter can be used to give a line of position (LOP) of the craft. The (true) bearing to the station from the craft, TB or QUJ, is composed of the true heading, TH, plus the relative bearing, RB, of the station. The bearing from the station (QTE) is found by adding 180° to the QUJ figure.
+
+The line of position is then the line of bearing QUJ (i.e. from the station to the receiver) passing through the station.
+
+:&lt;math&gt;\mbox{LOP}=\mbox{TH}+\mbox{RB}+180&lt;/math&gt;
+
+For the diagram on the right, we have:
+
+:&lt;math&gt;\mbox{LOP}=120+40+180&lt;/math&gt;
+:&lt;math&gt;\mbox{LOP}=340&lt;/math&gt;
+
+A radio fix on two stations can be found in exactly the same way. The intersection of the two [[position line]]s gives the position of the receiver. For the diagram on the right, the LOPs are found as before:
+
+:&lt;math&gt;\mbox{LOP1}=120+320+180&lt;/math&gt;
+:&lt;math&gt;\mbox{LOP1}=260&lt;/math&gt;
+
+:&lt;math&gt;\mbox{LOP2}=120+40+180&lt;/math&gt;
+:&lt;math&gt;\mbox{LOP2}=340&lt;/math&gt;
+
+Remembering that the LOPs pass through their respective stations, it is now simple to find the location of the craft.
+
+Remember too, that bearings and direction are given/recorded with respect to True North and to [[Magnetic North]].  Values used by mobile stations usually need to be converted from Magnetic to True. (Fixed stations are expected to use True).
+
+==See also==
+*[[Direction finding]]
+*[[Radio determination]]
+*[[Radio direction finder]]
+*[[Radio location]]
+*[[Radio navigation]]
+
+
+== Sources ==
+*{{FS1037C}}
+*{{DODDIC}}
+
+[[Category:Radio navigation]]</text>
+      <sha1>9oxgj0js5rs61f39ajzrsx469x6ivr2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Radio horizon</title>
+    <ns>0</ns>
+    <id>41624</id>
+    <redirect title="Line-of-sight propagation" />
+    <revision>
+      <id>417161327</id>
+      <parentid>414181152</parentid>
+      <timestamp>2011-03-04T22:46:27Z</timestamp>
+      <contributor>
+        <username>Wtshymanski</username>
+        <id>139104</id>
+      </contributor>
+      <comment>merged and redirected</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="39" xml:space="preserve">#REDIRECT [[Line-of-sight propagation]]</text>
+      <sha1>50ev2896eak8v884zekiirufxp7jgfc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Radiometry</title>
+    <ns>0</ns>
+    <id>41625</id>
+    <revision>
+      <id>982979377</id>
+      <parentid>976441190</parentid>
+      <timestamp>2020-10-11T14:47:45Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>[[:Category:CS1 errors: deprecated parameters|last-author-amp=y/yes]] → name-list-style=amp; etc.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4990" xml:space="preserve">{{one source|date=December 2015}}
+'''Radiometry''' is a set of techniques for [[measurement|measuring]] [[electromagnetic radiation]], including [[visible light]]. Radiometric techniques in [[optics]] characterize the distribution of the radiation's [[power (physics)|power]] in space, as opposed to [[photometry (optics)|photometric]] techniques, which characterize the light's interaction with the human eye. The fundamental difference between radiometry and photometry is that radiometry gives the entire optical radiation spectrum, while photometry is limited to the visible spectrum. Radiometry is distinct from [[quantum optics|quantum]] techniques such as [[photon]] counting.
+
+The use of [[radiometer]]s to determine the temperature of objects and gasses by measuring radiation flux is called [[pyrometry]].  Handheld pyrometer devices are often marketed as [[infrared thermometer]]s.
+
+Radiometry is important in [[astronomy]], especially [[radio astronomy]], and plays a significant role in [[Earth remote sensing]]. The measurement techniques categorized as ''radiometry'' in optics are called [[Photometry (astronomy)|''photometry'']] in some astronomical applications, contrary to the optics usage of the term.
+
+'''Spectroradiometry''' is the measurement of absolute radiometric quantities in narrow bands of wavelength.&lt;ref&gt;{{cite book|title=Focal Encyclopedia of Photography|publisher=[[Focal Press]] | author=Leslie D. Stroebel | author2=Richard D. Zakia | name-list-style=amp | date=1993 | edition=3rd|page=[https://archive.org/details/focalencyclopedi00lesl/page/115 115] |isbn=0-240-51417-3 | url = https://archive.org/details/focalencyclopedi00lesl |url-access=registration|quote=spectroradiometry Focal Encyclopedia of Photography.}}&lt;/ref&gt;

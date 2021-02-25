@@ -1,0 +1,202 @@
+Binary data transfer to or from these [[minicomputer]]s was often accomplished using a doubly encoded technique to compensate for the relatively high error rate of punches and readers. The low-level encoding was typically ASCII, further encoded and framed in various schemes such as [[Intel Hex]], in which a binary value of &quot;01011010&quot; would be represented by the ASCII characters &quot;5A&quot;. Framing, addressing and [[checksum]] (primarily in ASCII hex characters) information helped with error detection. Efficiencies of such an encoding scheme are on the order of 35–40% (e.g., 36% from 44 8-bit ASCII characters being needed to represent sixteen [[byte]]s of binary data per frame).
+
+=== Computer-aided manufacturing===
+[[file:Paper tape reader on a CNC control 001.jpg|thumb|upright|Paper tape reader on a [[Numerical control|computer numerical control]] (CNC) machine]]
+
+In the 1970s, [[computer-aided manufacturing]] equipment often used paper tape. Paper tape was an important storage medium for computer-controlled [[wire-wrap]] machines, for example. A paper tape reader was smaller and less expensive than [[hollerith card]] or [[magnetic tape]] readers. Premium black waxed and lubricated long-fiber papers, and [[PET film (biaxially oriented)|Mylar film]] tape were invented so that production tapes for these machines would last longer.
+
+=== Data transfer for ROM and EPROM programming ===
+
+In the 1970s through the early 1980s, paper tape was commonly used to transfer binary data for incorporation in either mask-programmable [[read-only memory]] (ROM) chips or their erasable counterparts [[EPROM]]s. A significant variety of encoding formats were developed for use in computer and ROM/EPROM data transfer.&lt;ref name=&quot;Data I/O Corporation&quot;/&gt; Encoding formats commonly used were primarily driven by those formats that EPROM programming devices supported and included various ASCII hex variants as well as a number of proprietary formats.
+
+A much more primitive as well as a much longer high-level encoding scheme was also used, [[BNPF]] (Begin-Negative-Positive-Finish). In BNPF encoding, a single [[byte]] (8 bits) would be represented by a highly redundant character framing sequence starting with a single ASCII &quot;B&quot;, eight ASCII characters where a &quot;0&quot; would be represented by a &quot;N&quot; and a &quot;1&quot; would be represented by a &quot;P&quot;, followed by an ending ASCII &quot;F&quot;. These ten-character ASCII sequences were separated by one or more [[whitespace character]]s, therefore using at least eleven ASCII characters for each byte stored (9% efficiency). The ASCII &quot;N&quot; and &quot;P&quot; characters differ in four bit positions, providing excellent protection from single punch errors. Alternative schemes were also available where &quot;L&quot; and &quot;H&quot; or &quot;0&quot; and &quot;1&quot; were also available to represent data bits, but in both of these encoding schemes, the two data-bearing ASCII characters differ in only one bit position, providing very poor single punch error detection.
+
+=== Cash registers ===
+
+[[NCR Corporation|NCR]] of [[Dayton, Ohio]], made cash registers around 1970 that would punch paper tape. [[Sweda]] made similar cash registers around the same time. The tape could then be read into a computer and not only could sales information be summarized, billings could be done on charge transactions. The tape was also used for inventory tracking, recording department and class numbers of items sold.
+
+=== Newspaper industry ===
+
+Punched paper tape was used by the newspaper industry until the mid-1970s or later. Newspapers were typically set in hot lead by devices like [[Linotype machine]]s. With the wire services coming into a device that would punch paper tape, rather than the Linotype operator having to retype all the incoming stories, the paper tape could be put into a paper tape reader on the Linotype and it would create the lead slugs without the operator re-typing the stories. This also allowed newspapers to use devices, such as the [[Friden Flexowriter]], to convert typing to lead type via tape. Even after the demise of the Linotype and hot lead, many early &quot;offset&quot; devices had paper tape readers on them to produce the news-story copy.
+
+If an error was found at one position on the six-level tape, that character could be turned into a null character to be skipped by punching out the remaining non-punched positions with what was known as a “chicken plucker&quot;. It looked like a strawberry stem remover that, pressed with thumb and forefinger, could punch out the remaining positions, one hole at a time.
+
+=== Cryptography ===
+
+[[Gilbert Vernam|Vernam ciphers]] were invented in 1917 to encrypt [[teleprinter]] communications using a key stored on paper tape. During the last third of the 20th century, the [[National Security Agency]] (NSA) used punched paper tape to distribute [[key (cryptography)|cryptographic keys]]. The eight-level paper tapes were distributed under strict accounting controls and read by a [[fill device]], such as the hand held [[KOI-18]], that was temporarily connected to each security device that needed new keys. NSA has been trying to replace this method with a more secure electronic key management system ([[EKMS]]), but as of 2016, paper tape is apparently still being employed.&lt;ref name=&quot;taleoftape&quot;/&gt; The paper tape canister is a [[tamper-resistant]] container that contains features to prevent undetected alteration of the contents.
+
+== Advantages and limitations ==
+{{procon|date=September 2020}}
+
+Punched tape has some useful properties:
+
+* Longevity. Although many [[magnetic tape]]s have deteriorated over time to the point that the data on them has been irretrievably lost, punched tape can be read many decades later, if [[acid-free paper]] or Mylar film is used. Some paper can degrade rapidly.
+* Human accessibility. The hole patterns can be decoded visually if necessary, and torn tape can be repaired (using special all-hole pattern tape splices). Editing text on a punched tape was achieved by literally cutting and pasting the tape with scissors, glue, or by taping over a section to cover all holes and making new holes using a manual hole punch.
+* Magnetic field immunity. In a [[machine shop]] full of powerful electric motors, the [[numerical control]] programs need to survive the magnetic fields generated by those motors.&lt;ref name=&quot;Sinha&quot;/&gt;
+* Ease of destruction. In the case of cryptographic keys, the inherent flammability (sometimes enhanced by using flash paper) of paper tape was an asset. Once the key had been loaded into the device, the paper tape could simply be burned, preventing the key from falling into enemy hands.
+
+The biggest problems with paper tape were:
+
+* Reliability. It was common practice to follow each mechanical copying of a tape with a manual hole-by-hole comparison.
+* Rewinding the tape was difficult and prone to problems. Great care was needed to avoid tearing the tape.{{citation needed|date=January 2016}} Some systems used ''fanfold'' paper tape rather than rolled paper tape. In these systems, no rewinding was necessary nor were any fancy supply reel, takeup reel, or tension arm mechanisms required; the tape merely fed from the supply tank through the reader to the takeup tank, refolding itself back into exactly the same form as when it was fed into the reader.
+* Low information density. Datasets much larger than a few dozen kilobytes are impractical to handle in paper tape format.
+
+== See also ==
+
+* [[Bit bucket]]
+* [[Book music]]
+* [[Friden Flexowriter]]
+* [[Key punch]]
+* [[Music roll]]
+* [[Tape library]]
+* [[Zygalski sheets]]
+
+== References ==
+
+{{reflist|refs=
+&lt;ref name=&quot;Maxfield&quot;&gt;{{ cite magazine | first = Clive | last = Maxfield | title = How it was: Paper tapes and punched cards | date = 13 October 2011 | magazine = EE Times | url = http://www.eetimes.com/author.asp?doc_id=1285484 }}&lt;/ref&gt;
+&lt;ref name=&quot;Smid&quot;&gt;{{ cite book | first = Peter | last = Smid | title = CNC Control Setup for Milling and Turning: Mastering CNC Control Systems | url = https://books.google.com/books?id=-2ev3yYwvq0C&amp;pg=PA20 | year = 2010 | publisher = Industrial Press | isbn = 978-0-8311-3350-4 | pages = 20 }}&lt;/ref&gt;
+&lt;ref name=&quot;Dalakov&quot;&gt;{{ Citation | last = Dalakov | first = Georgi | title = History of computers: The MARK computers of Howard Aiken | url = http://history-computer.com/ModernComputer/Relays/Aiken.html | accessdate = 2011-01-12 }}&lt;/ref&gt;
+&lt;ref name=&quot;Proesch&quot;&gt;{{ cite book | url = https://books.google.com/books?id=q_yq7zvehjoC&amp;pg=PA136 | title = Technical Handbook for Radio Monitoring HF: Edition 2009 | last = Proesch | first = Roland | year = 2009 | publisher = Books on Demand | isbn = 978-3837045734 }}&lt;/ref&gt;
+&lt;ref name=&quot;Hult&quot;&gt;{{ citation | last = Hult | first = Ture | title = Presentation of a new high speed paper tape reader | journal = BIT Numerical Mathematics | volume = 3 | issue = 2 | pages = 93–96 | year = 1963 | doi = 10.1007/BF01935575 | s2cid = 61020497 }}&lt;/ref&gt;
+&lt;ref name=&quot;Data I/O Corporation&quot;&gt;{{ cite web | url = ftp://ftp.dataio.com/main/Manuals/UniFam/Translation%20Formats.pdf | title = Translation File Formats | publisher = Data I/O Corporation | accessdate = 2010-08-30 }}&lt;/ref&gt;
+&lt;ref name=&quot;taleoftape&quot;&gt;{{ cite web | url = https://www.nsa.gov/about/cryptologic-heritage/historical-figures-publications/publications/misc/tale-of-the-tape/ | title = Tale of the Tape | publisher = National Security Agency Central Security Service | date = May 3, 2016 | accessdate = June 16, 2014 }}&lt;/ref&gt;
+&lt;ref name=&quot;Sinha&quot;&gt;{{ cite book | first = N.K. | last = Sinha | title = Microprocessor-Based Control Systems | url = https://books.google.com/books?id=JgalRre0L8wC&amp;pg=PA264 | date = 30 June 1986 | publisher = Springer | isbn = 978-90-277-2287-4 | pages = 264 }}&lt;/ref&gt;
+}}
+
+== External links ==
+{{commons category|Punched tapes}}
+
+* {{cite web | title = ECMA standard for Data Interchange on Punched Tape | date = November 1965 | id = ECMA-10 | publisher = European Computer Manufacturers Association | url = http://www.srcf.ucam.org/~jsm28/ECMA-10/ | access-date = 2003-07-10 | archive-url = https://web.archive.org/web/20110927013440/http://www.srcf.ucam.org/~jsm28/ECMA-10/ | archive-date = 2011-09-27 | url-status = dead }}
+* [https://web.archive.org/web/20161019020351/http://www.poppyfields.net/filks/00124.html A song mentioning paper tape]
+* [https://web.archive.org/web/20040408201444/http://homepages.cwi.nl/~dik/english/codes/punched.html Various punched media]
+* [https://archive.today/20130212105409/http://www.technikum29.de/de/geraete/olympia-schreibautomat.shtm Olympia Flexowriter]
+* [https://web.archive.org/web/20160528204327/http://www.deadmedia.org/notes/39/394.html Detailed description of two paper tape code systems], [[Baudot code]] and the system used by the [[ILLIAC]] computer
+* [https://www.youtube.com/watch?v=_U9-gFkPVwM Working paper tape punch/reader GNT 3601], [[Musée Bolo]], YouTube
+
+{{Paper data storage media}}
+
+[[Category:Computer storage tape media]]
+[[Category:History of computing]]
+[[Category:Telegraphy]]</text>
+      <sha1>goqgverrnwqqi12lsxhobhj0xtet4oy</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Paper tape</title>
+    <ns>0</ns>
+    <id>49762</id>
+    <redirect title="Punched tape" />
+    <revision>
+      <id>111558738</id>
+      <parentid>111466680</parentid>
+      <timestamp>2007-02-28T11:59:43Z</timestamp>
+      <contributor>
+        <username>Davidprior</username>
+        <id>2520675</id>
+      </contributor>
+      <comment>Revert to revision 15944589 dated 2002-04-20 05:14:42 by 213.86.144.209 using [[:en:Wikipedia:Tools/Navigation_popups|popups]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="26" xml:space="preserve">#redirect [[punched tape]]</text>
+      <sha1>gs0z3xglgs9h0uqqg3sblmhmmxlxdd4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Anne Neville</title>
+    <ns>0</ns>
+    <id>49763</id>
+    <revision>
+      <id>989971117</id>
+      <parentid>987508013</parentid>
+      <timestamp>2020-11-22T01:46:18Z</timestamp>
+      <contributor>
+        <username>Telephone Directory</username>
+        <id>39243194</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="27381" xml:space="preserve">{{Other people|Anne Neville}}
+{{short description|English queen}}
+{{Use dmy dates|date=March 2020}}
+{{Infobox royalty
+| consort = yes
+| image = Anne Neville.jpg
+| succession = [[Queen consort of England]]
+| reign = 26 June 1483 – 16 March 1485
+| coronation = 6 July 1483
+| spouse = {{marriage|[[Edward of Westminster, Prince of Wales]]|1470|1471|end=d}}&lt;br /&gt;{{marriage|[[Richard III, King of England]]|1472}}
+| issue = [[Edward of Middleham, Prince of Wales]]
+| father = [[Richard Neville, 16th Earl of Warwick]]
+| mother = [[Anne de Beauchamp, 16th Countess of Warwick]]
+| birth_date = 11 June 1456
+| birth_place = [[Warwick Castle]], [[Warwickshire]], England
+| death_date = {{Death date and age|1485|3|16|1456|6|11|df=yes}}
+| death_place = [[Westminster]], London, England
+| burial_date = 25 March 1485
+| burial_place = [[Westminster Abbey]], London
+| house = [[House of Neville|Neville]]
+}}
+'''Anne Neville''' (11 June 1456 – 16 March 1485) was an English queen, the younger of the two daughters and co-heiresses of [[Richard Neville, 16th Earl of Warwick]] (the &quot;Kingmaker&quot;). She became [[Princess of Wales]] as the wife of [[Edward of Westminster]] (only son and [[heir apparent]] of King Henry VI) and then [[List of English consorts|Queen of England]] as the wife of [[Richard III of England|King Richard III]].
+
+As a member of the powerful [[House of Neville]], she played a critical part in the [[Wars of the Roses]] fought between the [[House of York]] and [[House of Lancaster]] for the English crown. Her father Warwick betrothed her as a girl to Edward, Prince of Wales, the son of [[Henry VI of England|Henry VI]].&lt;ref name=&quot;wagner&quot;&gt;John A. Wagner. ''Encyclopedia of the Wars of the Roses,'' ABC-CLIO, 1 Jan 2001. pg 171.&lt;/ref&gt; The marriage was to seal an alliance to the [[House of Lancaster]] and halt the [[War of the Roses|civil war]] between the two houses of Lancaster and York.&lt;ref name=&quot;wagner&quot; /&gt;
+
+After the death of Prince Edward, she married [[Richard III of England|Richard, Duke of Gloucester]], younger brother of King [[Edward IV of England|Edward IV]] and of [[George, Duke of Clarence]], the husband of Anne's elder sister [[Isabel Neville, Duchess of Clarence|Isabel Neville]]. Anne became queen when Richard III ascended the throne in June 1483, following the declaration that Edward IV's children by [[Elizabeth Woodville]] were illegitimate. Anne Neville predeceased her husband by five months, dying in March 1485. Her only child was [[Edward of Middleham, Prince of Wales|Edward of Middleham]], who predeceased her.
+
+==Early life==
+Anne Neville was born at [[Warwick Castle]], the younger daughter of [[Richard Neville, 16th Earl of Warwick]], and [[Anne Neville, 16th Countess of Warwick|Anne de Beauchamp]]. Her father was one of the most powerful noblemen in England and the most important supporter of the House of York. Her grandfather's sister, [[Cecily Neville, Duchess of York|Cecily Neville]], was the wife of [[Richard Plantagenet, 3rd Duke of York|Richard, Duke of York]], who claimed the crown for the [[House of York]].
+
+Much of Anne Neville's childhood was spent at [[Middleham Castle]], one of her father's properties, where she and her elder sister, [[Isabel Neville|Isabel]], met two younger sons of the Duke of York: Richard, Duke of Gloucester (the future [[Richard III]]) and [[George Plantagenet, 1st Duke of Clarence|George, Duke of Clarence]]. Richard especially attended his knighthood training at Middleham since mid-1461 until at least the spring of 1465,&lt;ref name=kendall1955&gt;Kendall P.M., ''Richard III'', 1955. Reprinted: {{cite book|last=Kendall|first=Paul Murray|title=Richard the Third|url=https://books.google.com/books?id=K0Rml6pLuSMC|year=2002|publisher=W. W. Norton|isbn=978-0-393-00785-5|pages=608}}&lt;/ref&gt; or possibly since 1465 until late 1468.&lt;ref&gt;{{cite book|last1=Baldwin|first1=David|title=Richard III|date=2012|publisher=Amberley Publishing|isbn=978-1445601823|pages=288}}&lt;/ref&gt; It is possible that even at this early stage, a match between the Earl's daughters and the young dukes was being considered.&lt;ref&gt;Licence 2013, p. 63. Young aristocrats were often sent away to be raised in households of their intended future partners&lt;/ref&gt; The Duke of York was killed on 30 December 1460 but, with Warwick's help, his eldest son became King [[Edward IV]] in March 1461. In July 1469, Lady Isabel married Clarence, while in July 1470, after the Earl of Warwick's flight to France and change of allegiance, Anne Neville was betrothed to [[Edward of Westminster]], the Lancastrian heir to the throne of England, and married to him by the end of the same year.&lt;ref name=&quot;wagner&quot; /&gt;
+
+==Princess of Wales==
+[[File:MiddlehamCJW.jpg|thumb|left|[[Middleham Castle]] came into the possession of the Neville family in 1270.]]
+
+The Earl of Warwick had been at odds with Edward IV for some time, resenting the rise in the king's favour of the new queen's family, the Woodvilles. In 1469, the earl tried to put his son-in-law George on the throne, but met resistance from Parliament. After a second rebellion against King Edward failed in early 1470, he was forced to flee to France, where he allied himself with the ousted [[House of Lancaster]] in 1470. With [[Henry VI of England|King Henry VI]] imprisoned in the [[Tower of London]], the ''de facto'' Lancastrian leader was his consort, [[Margaret of Anjou]], who was suspicious of Warwick's motives. To quell these suspicions, Anne Neville was formally betrothed to the son of Henry VI and Margaret of Anjou, [[Edward of Westminster]], at the [[Château d'Amboise]] in France. They were married in [[Angers Cathedral]], probably on 13 December 1470, to make Anne Neville the Princess of Wales.
+
+Warwick restored Henry VI to the throne in October 1470, however Edward IV returned to the country in March 1471 and quickly captured London and the person of Henry VI. The mentally troubled Henry VI was taken by Edward IV as a prisoner to the [[Battle of Barnet]], where Warwick was killed on 14 April 1471. Edward IV then incarcerated Henry VI in the Tower of London. Following the decisive Yorkist victory at the [[Battle of Tewkesbury]] on 4 May, Henry was reported to have died of &quot;pure displeasure and melancholy,&quot; although &quot;The Great Chronicle of London&quot; reported that Richard, Duke of Gloucester, was responsible for his death. As Constable of England, he probably delivered King Edward's order to kill Henry to the Constable of the Tower.&lt;ref name=kendall1955 /&gt;
+
+Margaret of Anjou had returned to England with Anne Neville and Prince Edward in April, bringing additional troops. At the Battle of Tewkesbury, Edward IV crushed this last Lancastrian army. Prince Edward was killed in or shortly after the battle, and Anne Neville was taken prisoner. She was taken first to [[Coventry]] and then to the house of her brother-in-law the Duke of Clarence in London, while her mother [[Anne Beauchamp, 16th Countess of Warwick|Anne Beauchamp]], Warwick's wife, sought sanctuary in [[Beaulieu Abbey]]. When the crisis settled down and the Countess wished to be restored to her estates, Edward IV refused her safe conduct to plead her case; she wrote to [[Elizabeth Woodville|Queen Elizabeth]] and several others to no avail.&lt;ref&gt;{{cite book | title=Queens Consort, England's Medieval Queens | last=Hilton | first=Lisa | authorlink=Lisa Hilton (writer) | page=444 | year=2008 | publisher=Weidenfeld &amp; Nichelson | location=Great Britain | isbn=978-0-7538-2611-9 }}&lt;/ref&gt;
+
+Anne, now widowed, became the subject of some dispute between George of Clarence and his brother Richard of Gloucester, who still wanted to marry her. Anne Neville and her sister, the Duchess of Clarence, were heiresses to their parents' vast estates. Clarence, anxious to secure the entire inheritance, treated her as his ward and opposed her getting married, which would strengthen her position to claim a share.
+
+There are various accounts of what happened subsequently, including the story that Clarence hid her in a London cookshop, disguised as a servant, so that his brother would not know where she was. Gloucester is said to have tracked her down and escorted her to sanctuary at the Church of [[St Martin's le Grand]].&lt;ref&gt;Croyland Chronicle (pp. 469-70) Clarence &quot;caused the damsel (Anne) to be concealed in order that it might not be known by his Brother where she was; as he was afraid of a division of the Earl's property, which he wished to come to himself alone in right of his wife, and not be obliged to share it with any other person.&quot; Richard however, &quot;discovered the Young lady in the city of London disguised in the habit of a cookmaid; upon which he had her removed to the sanctuary of St. Martin's&quot;, as reported in Paul Murray Kendall, Richard III, 1955.&lt;/ref&gt; In order to win the final consent of his brother George to the marriage, Richard of Gloucester renounced most of Warwick's land and property, including the earldoms of Warwick (which the earl had held in his wife's right) and Salisbury and surrendered to Clarence the office of Great Chamberlain of England.&lt;ref name=kendall1955 /&gt;
+
+==Duchess of Gloucester==
+The exact date of the wedding of Anne Neville and Richard, Duke of Gloucester, is not known, although most sources agree that a ceremony took place sometime in the spring of 1472 in [[St Stephen's Chapel]] in the [[Palace of Westminster]],&lt;ref&gt;{{cite book|last1=Cannon|first1=John|last2=Hargreaves|first2=Anne|title=The Kings and Queens of Britain|url=https://books.google.com/books?id=FKhB1kiXq7YC&amp;pg=PA246|date=26 March 2009|publisher=OUP Oxford|isbn=978-0-19-158028-4|pages=246–}}&lt;/ref&gt;&lt;ref&gt;{{cite web  |last=Marek |first=Miroslav |url=http://genealogy.euweb.cz/anjou/anjou7.html#R3 |title=Anjou 7 |website=Genealogy.euweb.cz |accessdate=8 October 2016}}{{Self-published source|date=November 2016}}{{Better source|date=November 2016}}&lt;/ref&gt; after a dispensation to marry was issued from Rome on 22 April 1472. This dispensed the impediment of affinity created when Anne married Edward of Lancaster, who was Richard's blood cousin.&lt;ref&gt;{{cite journal |last1=Barnfield |first1=Marie |title=Diriment Impediments, Dispensations and Divorce: Richard III and Matrimony |journal=The Ricardian |date=2007 |volume=XVII |url=http://www.richardiii.net/6_3_1_the_ricardian_archive.php#2008}}&lt;/ref&gt; The couple made their marital home in the familiar surroundings of [[Middleham Castle]], Yorkshire, after Richard was appointed Governor of the North on the king's behalf. Upon her marriage, Anne was styled Duchess of Gloucester. They had only one child, [[Edward of Middleham, Prince of Wales|Edward]], born at Middleham allegedly sometime in 1473, but more probably in 1476.&lt;ref&gt;{{cite book|last1=Blunt|first1=John Henry|title=Tewkesbury Abbey and its associations|date=1875|publisher=Simpkin, Marshall, and Co.|location=London|url=https://archive.org/details/tewkesburyabbeyi00blunuoft}}&lt;/ref&gt; Anne's mother, the [[Anne Beauchamp, 16th Countess of Warwick|dowager Countess of Warwick]], joined her daughter's household in 1473 after Richard obtained the king's permission to release his mother-in-law from her guarded sanctuary.&lt;ref name=kendall1955 /&gt;
+
+In 1478, Anne Neville inherited the [[Lordship of Glamorgan]]. The title had been held by her father and on his death had passed to Anne's elder sister [[Isabel Neville]]. Females could not exercise the Lordship in their own right, so the title immediately transferred to Isabel's husband, the [[George Plantagenet, 1st Duke of Clarence]]. On his death in February 1478, the title passed to Anne and was henceforth exercised by her husband, [[Richard of Gloucester]] until his death, when it passed to the new king, [[Henry VII of England|Henry VII]].&lt;ref&gt;{{cite book|last=Chrimes|first=Stanley Bertram|title=Henry VII|url=https://books.google.com/books?id=MQlo014s8lkC|year=1999|publisher=Yale University Press|isbn=978-0-300-07883-1|page=248}}&lt;/ref&gt;
+
+==Queen of England==
+[[File:Rous Roll - Richard and family.jpg|thumb|left|Contemporary illumination (''Rous Roll'') of Richard III, his queen Anne Neville, and their son [[Edward of Middleham, Prince of Wales|Edward, the Prince of Wales]].]]
+
+On 9 April 1483, Edward IV died and Anne's husband Richard was named [[Lord Protector]] for his 12-year-old nephew [[Edward V]]. But on 25 June 1483, Edward V and his siblings were [[Titulus Regius|declared illegitimate]] and Richard ascended the throne as King Richard III. Anne Neville was crowned alongside her husband on 6 July 1483 by [[Thomas Bourchier (bishop)|Thomas Bourchier]], Archbishop of Canterbury, the first joint coronation in England in 175 years. The queen's train was borne by [[Margaret, Countess of Richmond]], whose son would become Henry VII after defeating Richard at the [[Battle of Bosworth]]. Almost the entire peerage of England was present at what was a magnificent spectacle.&lt;ref&gt;{{cite web |url=http://westminster-abbey.org/our-history/royals/richard-iii |title=Westminster Abbey » Richard III |website=Westminster-abbey.org |accessdate=8 October 2016}}&lt;/ref&gt;&lt;ref&gt;{{cite book|last1=Sutton|first1=Anne F.|last2=Hammond|first2=P. W.|title=The Coronation of Richard III: The Extant Documents|url=https://books.google.com/books?id=UgAXAQAAIAAJ|year=1983|publisher=Alan Sutton|isbn=978-0-904387-85-8|pages=500}}&lt;/ref&gt; Richard and Anne's son Edward of Middleham was created Prince of Wales in York Minster on 8 September 1483 following their Royal Progress across England.&lt;ref&gt;York City Records&lt;/ref&gt;
+
+Anne was on good terms with her mother-in-law [[Cecily Neville, Duchess of York]], with whom she discussed religious works, such as the writings of [[Mechtilde of Hackeborn]].&lt;ref&gt;{{cite book|last1=Hilton|first1=Lisa|title=Queens Consort: England's Medieval Queens|date=2008|publisher=Weidenfeld &amp; Nicolson|isbn=9780297852612|page=[https://archive.org/details/queensconsorteng00hilt/page/456 456]|url-access=registration|url=https://archive.org/details/queensconsorteng00hilt/page/456}}&lt;/ref&gt;
+
+Edward of Middleham died suddenly in April 1484 at [[Middleham Castle]], while his parents were in Nottingham on their way to visit him. Both Richard and Anne were overwhelmed with grief at this news.&lt;ref&gt;{{cite book|last=Lewis|first=Matthew|title=The Wars of the Roses: The Key Players in the Struggle for Supremacy|url=https://books.google.com/books?id=MOWGCgAAQBAJ&amp;pg=PR64|date=15 August 2015|publisher=Amberley Publishing Limited|isbn=978-1-4456-4636-7|pages=64–}} &quot;On hearing the news of this, at Nottingham, where they were then residing, you might have seen his father and mother in a state almost bordering on madness, by reason of their sudden grief&quot;&lt;/ref&gt; Anne was particularly heartbroken, and she fell gravely ill only a few months later.
+
+[[File:King Richard III and Queen Anne.jpg|thumb|[[Stained glass]] depiction of Richard III and Anne Neville in [[Cardiff Castle]]]]
+After the death of her son, Anne Neville effectively adopted her nephew [[Edward, Earl of Warwick]].&lt;ref&gt;{{Cite web|title=Edward PLANTAGENET (1º E. Warwick)|url=http://www.tudorplace.com.ar/Bios/EdwardPlantagenet(1EWarwick).htm|website=www.tudorplace.com.ar|access-date=2020-05-22}}&lt;/ref&gt; After Anne Neville died, Richard may have named another nephew, [[John de la Pole, Earl of Lincoln]], as his heir presumptive.&lt;ref name=&quot;Hicks2014&quot;&gt;{{cite book|author=Michael Hicks|title=The Wars of the Roses: 1455–1485|url=https://books.google.com/books?id=k2-ICwAAQBAJ&amp;pg=PT62|date=6 June 2014|publisher=Bloomsbury Publishing|isbn=978-1-4728-1018-2|pages=62–}}&lt;/ref&gt;
+
+== Death ==
+Anne Neville died on 16 March 1485, probably of [[tuberculosis]], at [[Westminster]].&lt;ref&gt;Licence 2013, p. 176.&lt;/ref&gt; The day she died, there was an [[eclipse]],&lt;ref&gt;{{cite web |url=http://eclipse.gsfc.nasa.gov/SEcat5/SE1401-1500.html |title=Catalog of Solar Eclipses: 1401 to 1500 |website=Eclipse.gsfc.nasa.gov |accessdate=8 October 2016}}&lt;/ref&gt; which some took to be an omen of her husband's fall from heavenly grace. She was buried in [[Westminster Abbey]] in an unmarked grave to the right of the High Altar, next to the door to the Confessor's Chapel.&lt;ref&gt;{{cite web |url=http://westminster-abbey.org/our-history/royals/anne-neville,-wife-of-richard-iii |title=Westminster Abbey » Anne Neville, wife of Richard III |website=Westminster-abbey.org |accessdate=8 October 2016 |archive-url=https://web.archive.org/web/20160918062055/http://westminster-abbey.org/our-history/royals/anne-neville,-wife-of-richard-iii |archive-date=18 September 2016 |url-status=dead }}&lt;/ref&gt; Richard III is said to have wept at her funeral. Nevertheless, rumours circulated that Richard III had poisoned her in order to marry his niece [[Elizabeth of York]].&lt;ref&gt;Hicks 2006, p.196.&lt;/ref&gt;
+
+Richard sent Elizabeth away from court to Sheriff Hutton and publicly rebutted these rumours on 30 March 1485 during an assembly of Lords he summoned at the Hospital of St. John. Addressing them &quot;in a loud and distinct voice&quot;, he &quot;showed his grief and displeasure aforesaid and said it never came into his thought or mind to marry in such manner wise, nor willing nor glad of the death of his queen but as sorry and in heart as heavy as man might be …&quot;.&lt;ref&gt;{{cite book|last1=Watney|first1=Frank D.|last2=Lyell|first2=Laetitia|title=Acts of Court of the Mercers' Company 1453–1527|url=https://books.google.com/books?id=lApNUxjgg1gC&amp;pg=PR7|date=2 February 2012|publisher=Cambridge University Press|isbn=978-1-107-68164-4}} Entry for 31 March 1485&lt;/ref&gt; There is no reason to doubt that Richard's grief over his wife's death was genuine.&lt;ref&gt;Hicks, 2011&lt;/ref&gt; Documents later found in the Portuguese royal archives show that after Anne's death, Richard's ambassadors were sent on a formal errand to negotiate a double marriage between Richard and the Portuguese king's sister [[Joan, Princess of Portugal|Joanna]], of Lancastrian descent, and Elizabeth of York and Joana's cousin Duke Manuel (the future [[Manuel I of Portugal|Manuel I]]).&lt;ref&gt;{{cite book|last=Ashdown-Hill|first=John|title=The Last Days of Richard III and the Fate of His DNA|url=https://archive.org/details/lastdaysofrichar0000ashd|url-access=registration|date=10 December 2012|publisher=History Press Limited|isbn=978-0-7524-9205-6}}&lt;/ref&gt;
+
+There was no memorial to Queen Anne until 1960, when a bronze tablet was erected on a wall near her grave by the [[Richard III Society]].
+
+{{Infobox COA wide
+|image = Arms of Anne Neville (Variant).svg
+|image size = 
+|notes = As Queen, Anne Neville bore the arms of her husband, King [[Richard III of England|Richard III]], impaled with the Neville arms without difference. Anne Neville sometimes bore her father, Lord Warwick's, full achievement, however at other times she also bore the arms of [[House of Neville|Neville]] ''without'' difference by a label for [[House of Lancaster|Lancaster]] (larger coat of arms).
+|year_adopted = 1483
+|escutcheon = [[quartering (heraldry)|Quarterly]], 1st and 4th, France moderne, 2nd and 3rd England; impaled with Gules, a saltire Argent.
+|symbolism =  The other version of Anne Neville's arms as queen bore that of her husband, King Richard, Quarterly, 1st and 4th, France moderne, 2nd and 3rd England, impaled with the full achievement of Anne Neville's father; of seven, 1st, Gules, a fess between six crosses crosslet Or (Beauchamp), 2nd, Chequy Or and Azure, a chevron ermine (Newburgh), 3rd, Argent, three lozenges conjoined in fess Gules (Montacute), 4th, Or, an eagle displayed Vert (Monthermer), 5th, Gules a saltire Argent, a label of three points gobony Argent and Azure (Neville), 6th, Or, three chevrons Gules (Clare), 7th, Quarterly, Argent and Gules, a fret Or, overall a bendlett Sable (Despencer).&lt;ref&gt;Pinches, John Harvey; Pinches, Rosemary (1974), The Royal Heraldry of England, Heraldry Today, Slough, Buckinghamshire: Hollen Street Press, {{ISBN|0-900455-25-X}}&lt;/ref&gt; [[File:Arms of Anne Neville.svg|right|100px]] The coat of arms of Richard Neville, 16th Earl of Warwick used almost all typical forms of heraldry in England: the first quarter consisted of his father-in-law, [[Richard Beauchamp, 13th Earl of Warwick|Richard de Beauchamp]], who bore with an escutcheon of De Clare quartering Despenser, which was shown in Neville's fourth quarter. The second quarter showed the arms of the Montacutes (Montagu). The third quarter showed the arms of Neville differenced by a label for [[House of Lancaster|Lancaster]].&lt;ref&gt;{{cite book|last=Turnbull|first=Stephen R.|title=The Book of the Medieval Knight|url=https://archive.org/details/bookofmedievalkn0000turn_l7u4|url-access=registration|year=1985|publisher=Arms and Armour Press|isbn=978-0-85368-715-3}}&lt;/ref&gt;
+}}
+
+==Cultural depictions==
+
+===Theatre and film===
+[[File:Edwin Austin Abbey richard duke of gloucester and the lady anne 1896.jpg|thumb|''Richard, Duke of Gloucester and the Lady Anne'' by [[Edwin Austin Abbey]].]]
+
+Anne Neville appears in three scenes in William Shakespeare's ''[[Richard III (play)|Richard III]]''. In Act I, Scene 2, Richard III persuades her to marry him. In Act IV, Scene 1, just before Richard III's coronation, Anne Neville meets Edward IV's widow and laments her own position. In Act V, Scene 3, Anne Neville is one of the ghosts that appear to Richard III.

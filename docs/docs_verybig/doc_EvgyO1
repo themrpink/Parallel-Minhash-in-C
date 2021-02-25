@@ -1,0 +1,216 @@
+:&lt;math&gt;
+U\, a_i^\dagger \,U^\dagger = \sum_{j=1}^N  a_j^\dagger\,U_{ji}\quad\text{for all}\quad
+U \in U(N),
+&lt;/math&gt;
+where &lt;math&gt;U_{ji}&lt;/math&gt; is an element in the defining matrix representation of ''U''(''N'').
+
+The energy levels of the system are
+
+:&lt;math&gt; E = \hbar \omega \left[(n_1 + \cdots + n_N) + {N\over 2}\right].&lt;/math&gt;
+:&lt;math&gt;n_i = 0, 1, 2, \dots \quad (\text{the energy level in dimension } i).
+&lt;/math&gt;
+
+As in the one-dimensional case, the energy is quantized. The ground state energy is ''N'' times the one-dimensional ground energy, as we would expect using the analogy to ''N'' independent one-dimensional oscillators. There is one further difference: in the one-dimensional case, each energy level corresponds to a unique quantum state. In ''N''-dimensions, except for the ground state, the energy levels are ''degenerate'', meaning there are several states with the same energy.
+
+The degeneracy can be calculated relatively easily.  As an example, consider the 3-dimensional case: Define ''n''&amp;nbsp;=&amp;nbsp;''n''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;+&amp;nbsp;''n''&lt;sub&gt;2&lt;/sub&gt;&amp;nbsp;+&amp;nbsp;''n''&lt;sub&gt;3&lt;/sub&gt;. All states with the same ''n'' will have the same energy.  For a given ''n'', we choose a particular ''n''&lt;sub&gt;1&lt;/sub&gt;. Then ''n''&lt;sub&gt;2&lt;/sub&gt;&amp;nbsp;+&amp;nbsp;''n''&lt;sub&gt;3&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;''n''&amp;nbsp;−&amp;nbsp;''n''&lt;sub&gt;1&lt;/sub&gt;. There are ''n''&amp;nbsp;−&amp;nbsp;''n''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;+&amp;nbsp;1 possible pairs {''n''&lt;sub&gt;2&lt;/sub&gt;,&amp;nbsp;''n''&lt;sub&gt;3&lt;/sub&gt;}.  ''n''&lt;sub&gt;2&lt;/sub&gt; can take on the values 0 to ''n''&amp;nbsp;−&amp;nbsp;''n''&lt;sub&gt;1&lt;/sub&gt;, and for each ''n''&lt;sub&gt;2&lt;/sub&gt; the value of ''n''&lt;sub&gt;3&lt;/sub&gt; is fixed. The degree of degeneracy therefore is:
+
+:&lt;math&gt;
+g_n = \sum_{n_1=0}^n n - n_1 + 1 = \frac{(n+1)(n+2)}{2}
+&lt;/math&gt;
+Formula for general ''N'' and ''n'' [''g''&lt;sub&gt;''n''&lt;/sub&gt; being the dimension of the symmetric irreducible ''n''&lt;sup&gt;th&lt;/sup&gt; power representation of the unitary group ''U''(''N'')]:
+:&lt;math&gt;
+g_n = \binom{N+n-1}{n}
+&lt;/math&gt;
+The special case ''N'' = 3, given above, follows directly from this general equation.  This is however, only true for distinguishable particles, or one particle in N dimensions (as dimensions are distinguishable). For the case of ''N'' bosons in a one-dimension harmonic trap, the degeneracy scales as the number of ways to partition an integer ''n'' using integers less than or equal to ''N''.
+
+:&lt;math&gt;
+g_n = p(N_{-},n)
+&lt;/math&gt;
+
+This arises due to the constraint of putting ''N'' quanta into a state ket where &lt;math&gt;\sum_{k=0}^\infty k n_k = n  &lt;/math&gt;   and &lt;math&gt; \sum_{k=0}^\infty  n_k = N &lt;/math&gt;, which are the same constraints as in integer partition.
+
+===Example: 3D isotropic harmonic oscillator===
+[[File:2D_Spherical_Harmonic_Orbitals.png|thumb|300px|right|Schrödinger 3D spherical harmonic orbital solutions in 2D density plots; the [[Mathematica]] source code that used for generating the plots is at the top]]
+The Schrödinger equation of a spherically-symmetric three-dimensional harmonic oscillator can be solved explicitly by separation of variables; see [[Particle in a spherically symmetric potential#3D isotropic harmonic oscillator|this article]] for the present case. This procedure is analogous to the separation performed in the [[Hydrogen-like atom#Schrödinger equation in a spherically symmetric potential|hydrogen-like atom]] problem, but with the [[Particle in a spherically symmetric potential|spherically symmetric potential]]
+:&lt;math&gt;V(r) = {1\over 2} \mu \omega^2 r^2,&lt;/math&gt;
+where {{mvar|μ}} is the mass of the problem. Because {{mvar|m}} will be used below for the magnetic quantum number, mass is indicated by  {{mvar|μ}}, instead of {{mvar|m}},   as earlier in this article.
+
+The solution reads&lt;ref&gt;[[Albert Messiah]], ''Quantum Mechanics'', 1967, North-Holland, Ch XII,  § 15, p 456.[https://archive.org/details/QuantumMechanicsVolumeI/page/n239 online]&lt;/ref&gt;
+:&lt;math&gt;\psi_{klm}(r,\theta,\phi) = N_{kl} r^{l}e^{-\nu r^2}L_k^{(l+{1\over 2})}(2\nu r^2) Y_{lm}(\theta,\phi)&lt;/math&gt;
+where
+:&lt;math&gt;N_{kl}=\sqrt{\sqrt{\frac{2\nu^3}{\pi }}\frac{2^{k+2l+3}\;k!\;\nu^l}{
+(2k+2l+1)!!}}~~&lt;/math&gt; is a normalization constant; &lt;math&gt;\nu \equiv {\mu \omega \over 2 \hbar}~&lt;/math&gt;;
+:&lt;math&gt;{L_k}^{(l+{1\over 2})}(2\nu r^2)&lt;/math&gt; 
+are [[Laguerre polynomials#Generalized Laguerre polynomials|generalized Laguerre polynomials]]; The order {{mvar|k}}  of the polynomial is a non-negative integer;
+:&lt;math&gt;Y_{lm}(\theta,\phi)\,&lt;/math&gt; is a [[spherical harmonics|spherical harmonic function]];
+: {{mvar| ħ}} is the reduced [[Planck constant]]: &amp;nbsp; &lt;math&gt;\hbar\equiv\frac{h}{2\pi}~.&lt;/math&gt;
+
+The energy eigenvalue is
+:&lt;math&gt;E=\hbar \omega \left(2k+l+\frac{3}{2}\right) ~.&lt;/math&gt;
+The energy is usually described by the single [[quantum number]]
+:&lt;math&gt;n\equiv 2k+l  ~.&lt;/math&gt;
+
+Because {{mvar|k}} is a non-negative integer, for every even {{mvar|n}} we have {{math|ℓ {{=}} 0, 2, ..., ''n'' − 2, ''n''}} and for every odd {{mvar|n}}  we have {{math|ℓ {{=}} 1, 3, ..., ''n''&amp;nbsp;−&amp;nbsp;2, ''n''}} . The magnetic quantum number {{mvar|m}} is an integer satisfying {{math|−ℓ ≤ ''m'' ≤ ℓ}},    so for every {{mvar|n}} and ℓ there are 2''ℓ''&amp;nbsp;+&amp;nbsp;1 different [[quantum state]]s, labeled by {{mvar|m}} . Thus, the degeneracy at level {{mvar|n}}   is
+:&lt;math&gt;\sum_{l=\ldots,n-2,n} (2l+1) = {(n+1)(n+2)\over 2} ~,&lt;/math&gt;
+where the sum starts from 0 or 1, according to whether {{mvar|n}} is even or odd.
+This result is in accordance with the dimension formula above, and amounts to the dimensionality of a symmetric representation of {{math|''SU''(3)}},&lt;ref&gt;Fradkin, D. M. &quot;Three-dimensional isotropic harmonic oscillator and SU3.&quot; ''American Journal of Physics'' '''33''' (3) (1965) 207–211.&lt;/ref&gt; the relevant degeneracy group.
+
+==Applications==
+===Harmonic oscillators lattice: phonons===
+{{see also|Canonical quantization}}
+
+We can extend the notion of a harmonic oscillator to a one-dimensional lattice of many particles. Consider a one-dimensional quantum mechanical ''harmonic chain'' of ''N'' identical atoms. This is the simplest quantum mechanical model of a lattice, and we will see how [[phonon]]s arise from it. The formalism that we will develop for this model is readily generalizable to two and three dimensions.
+
+As in the previous section, we denote the positions of the masses by  {{math|''x&lt;sub&gt;1&lt;/sub&gt;,x&lt;sub&gt;2&lt;/sub&gt;,...''}}, as measured from their equilibrium positions (i.e.  {{math|''x&lt;sub&gt;i&lt;/sub&gt;''}}  = 0 if the particle {{mvar| i}} is at its equilibrium position). In two or more dimensions, the {{math|''x&lt;sub&gt;i&lt;/sub&gt;''}} are vector quantities. The [[Hamiltonian (quantum mechanics)|Hamiltonian]] for this system is
+
+:&lt;math&gt;\mathbf{H} = \sum_{i=1}^N {p_i^2 \over 2m} + {1\over 2} m \omega^2 \sum_{\{ij\} (nn)} (x_i - x_j)^2 ~,&lt;/math&gt;
+where {{mvar|m}} is the (assumed uniform) mass of each atom, and  {{math|''x&lt;sub&gt;i&lt;/sub&gt;''}} and  {{math|''p&lt;sub&gt;i&lt;/sub&gt;''}} are the position and [[momentum]] operators for the ''i'' th atom and the sum is made over the nearest neighbors (nn).  However, it is customary to rewrite the Hamiltonian in terms of the [[normal modes]] of the [[wavevector]] rather than in terms of the particle coordinates so that one can work in the more convenient [[Fourier space]].
+
+We introduce, then, a set of {{mvar|N}} &quot;normal coordinates&quot; {{math|''Q&lt;sub&gt;k&lt;/sub&gt;''}}, defined as the [[discrete Fourier transform]]s of the {{mvar|x}}s, and {{mvar|N}} &quot;conjugate momenta&quot;  {{mvar|Π}} defined as the Fourier transforms of the {{mvar|p}}s,
+:&lt;math&gt;
+Q_k = {1\over\sqrt{N}} \sum_{l} e^{ikal} x_l&lt;/math&gt;
+:&lt;math&gt;
+\Pi_{k} = {1\over\sqrt{N}} \sum_{l}  e^{-ikal} p_l    ~.
+&lt;/math&gt;
+
+The quantity {{math|''k&lt;sub&gt;n&lt;/sub&gt;''}} will turn out to be the [[Wavenumber|wave number]] of the phonon, i.e. 2''π''  divided by the [[wavelength]]. It takes on quantized values, because the number of atoms is finite.
+
+This preserves the desired commutation relations in either real space or wave vector space
+: &lt;math&gt; \begin{align} 
+\left[x_l , p_m \right]&amp;=i\hbar\delta_{l,m} \\ 
+\left[ Q_k , \Pi_{k'} \right] &amp;={1\over N} \sum_{l,m} e^{ikal} e^{-ik'am}  [x_l , p_m ] \\
+ &amp;= {i \hbar\over N} \sum_{m} e^{iam(k-k')} = i\hbar\delta_{k,k'} \\
+\left[ Q_k , Q_{k'} \right] &amp;= \left[ \Pi_k , \Pi_{k'} \right] = 0 ~.
+\end{align}&lt;/math&gt;
+
+From the general result
+: &lt;math&gt; \begin{align} 
+\sum_{l}x_l x_{l+m}&amp;={1\over N}\sum_{kk'}Q_k Q_{k'}\sum_{l} e^{ial\left(k+k'\right)}e^{iamk'}= \sum_{k}Q_k Q_{-k}e^{iamk} \\ 
+\sum_{l}{p_l}^2 &amp;= \sum_{k}\Pi_k \Pi_{-k}   ~,
+\end{align}&lt;/math&gt;
+it is easy to show, through elementary trigonometry, that the potential energy term is
+: &lt;math&gt; 
+{1\over 2} m \omega^2 \sum_{j} (x_j - x_{j+1})^2= {1\over 2} m \omega^2\sum_{k}Q_k Q_{-k}(2-e^{ika}-e^{-ika})= {1\over 2} m \sum_{k}{\omega_k}^2Q_k Q_{-k} ~ ,&lt;/math&gt;
+where
+:&lt;math&gt;\omega_k = \sqrt{2 \omega^2 (1 - \cos(ka))} ~.&lt;/math&gt;
+
+The Hamiltonian may be written in wave vector space as
+:&lt;math&gt;\mathbf{H} = {1\over {2m}}\sum_k \left(
+{ \Pi_k\Pi_{-k} } + m^2 \omega_k^2 Q_k Q_{-k} 
+\right) ~.&lt;/math&gt;
+
+Note that the couplings between the position variables have been transformed away; if the {{mvar|Q}}s and {{mvar| Π}}s were [[Hermitian operator|hermitian]](which they are not), the transformed Hamiltonian would describe {{mvar|N}} ''uncoupled'' harmonic oscillators.
+
+The form of the quantization depends on the choice of boundary conditions; for simplicity, we impose ''periodic'' boundary conditions, defining the {{math|(''N'' + 1)}}th atom as equivalent to the first atom. Physically, this corresponds to joining the chain at its ends. The resulting quantization is
+
+:&lt;math&gt;k=k_n = {2n\pi \over Na}
+\quad \hbox{for}\ n = 0, \pm1, \pm2, \ldots , \pm {N \over 2}.\ &lt;/math&gt;
+
+The upper bound to {{mvar|n}} comes from the minimum wavelength, which is twice the lattice spacing {{mvar|a}}, as discussed above.
+
+The harmonic oscillator eigenvalues or energy levels for the mode {{math|''ω&lt;sub&gt;k&lt;/sub&gt;''}} are 
+::&lt;math&gt;E_n = \left({1\over2}+n\right)\hbar\omega_k   \quad\hbox{for}\quad n=0,1,2,3,\ldots&lt;/math&gt;
+
+If we ignore the [[zero-point energy]] then the levels are evenly spaced at 
+::&lt;math&gt;\hbar\omega,\, 2\hbar\omega,\, 3\hbar\omega,\, \ldots  &lt;/math&gt;
+
+So an '''exact''' amount of [[energy]] {{math|  ''ħω''}},  must be supplied to the harmonic oscillator lattice to push it to the next energy level. In comparison to the [[photon]] case when the [[electromagnetic field]] is quantised, the quantum of vibrational energy is called a [[phonon]].
+
+All quantum systems show wave-like and particle-like properties. The particle-like properties of the phonon are best understood using the methods of [[second quantization]] and operator techniques described later.&lt;ref name=&quot;Mahan&quot;&gt;{{cite book|last=Mahan|first=GD|authorlink=|title=many particle physics|publisher= springer|location=New York|isbn=978-0306463389|year=1981}}&lt;/ref&gt;
+
+In the continuum limit, ''a''→0, ''N''→∞, while ''Na'' is held fixed. The canonical coordinates ''Q&lt;sub&gt;k&lt;/sub&gt;'' devolve to the decoupled momentum modes of a scalar field, &lt;math&gt;\phi_k&lt;/math&gt;, whilst the location index {{mvar|i}} (''not the displacement dynamical variable'') becomes the ''parameter {{mvar|x}} argument of the scalar field, &lt;math&gt;\phi (x,t)&lt;/math&gt;.
+
+===Molecular vibrations===
+{{main|Molecular vibration}}
+* The vibrations of a [[diatomic molecule]] are an example of a two-body version of the quantum harmonic oscillator. In this case, the angular frequency is given by
+::&lt;math&gt;\omega = \sqrt{\frac{k}{\mu}} &lt;/math&gt;
+:where &lt;math&gt;\mu = \frac{m_1 m_2}{m_1 + m_2}&lt;/math&gt; is the [[reduced mass]] and &lt;math&gt;m_1&lt;/math&gt; and &lt;math&gt;m_2&lt;/math&gt; are the masses of the two atoms.&lt;ref&gt;{{Cite web|title=Quantum Harmonic Oscillator|website=Hyperphysics|accessdate=24 September 2009|url=http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/hosc.html}}&lt;/ref&gt;
+* The [[Hooke's atom]] is a simple model of the [[helium]] atom using the quantum harmonic oscillator.
+* Modelling phonons, as discussed above.
+* A charge &lt;math&gt;q&lt;/math&gt;, with mass &lt;math&gt;m&lt;/math&gt;,  in a uniform magnetic field &lt;math&gt;\mathbf{B}&lt;/math&gt;, is an example of a one-dimensional quantum harmonic oscillator: the [[Landau quantization]].
+
+==See also==
+{{Div col}}
+*[[Quantum pendulum]]
+*[[Quantum machine]]
+*[[Gas in a harmonic trap]]
+*[[Creation and annihilation operators]]
+*[[Coherent state]]
+*[[Morse potential]]
+*[[Bertrand's theorem]]
+*[[Mehler kernel]]
+*[[Molecular vibration#Quantum mechanics|Molecular vibration]]
+{{Div col end}}
+
+==References==
+{{Reflist}}
+
+==External links==
+*[http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/hosc.html Quantum Harmonic Oscillator]
+*[http://behindtheguesses.blogspot.com/2009/03/quantum-harmonic-oscillator-ladder.html Rationale for choosing the ladder operators]
+*[http://www.brummerblogs.com/curvature/3d-harmonic-oscillator-eigenfunctions/  Live 3D intensity plots of quantum harmonic oscillator]
+*[http://ltl.tkk.fi/~ethuneb/courses/monqo.pdf Driven and damped quantum harmonic oscillator (lecture notes of course &quot;quantum optics in electric circuits&quot;)]
+
+{{Use dmy dates|date=August 2019}}
+
+{{DEFAULTSORT:Quantum Harmonic Oscillator}}
+[[Category:Quantum models]]
+[[Category:Quantum mechanics]]
+[[Category:Oscillators]]</text>
+      <sha1>pz3i61av7saixsfzf6lgbz7nf2hkclb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Buccaneer</title>
+    <ns>0</ns>
+    <id>50720</id>
+    <revision>
+      <id>987138467</id>
+      <parentid>982955925</parentid>
+      <timestamp>2020-11-05T04:21:37Z</timestamp>
+      <contributor>
+        <username>Gsquaredxc</username>
+        <id>38316964</id>
+      </contributor>
+      <minor />
+      <comment>v2.03b - [[WP:WCW]] project (Link equal to linktext)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="21797" xml:space="preserve">{{self published | date=January 2017}}
+
+{{EngvarB|date=August 2020}}
+{{Use dmy dates|date=August 2020}}
+{{short description|Privateers or free sailors during the 17th and 18th centuries}}
+{{other uses}}
+{{wiktionary}}
+[[Image:Pyle pirate handsome.jpg|thumb|upright|&quot;Buccaneer of the Caribbean&quot; from [[Howard Pyle]]'s ''Book of Pirates''.&lt;ref&gt;{{cite book | author = Pyle, Howard | year = 1921 | title = Howard Pyle's Book of Pirates: Fiction, Fact and Fancy Concerning the Buccaneers and Marooners of the Spanish Main | location = New York | publisher = Harper &amp; Brothers | via = web.archive.org | url = http://etext.lib.virginia.edu/toc/modeng/public/PylPira.html | url-status = dead | archive-url = https://web.archive.org/web/20081002094639/http://etext.lib.virginia.edu/toc/modeng/public/PylPira.html | archive-date = 2 October 2008 | access-date = 9 January 2017 }}&lt;/ref&gt;]]
+'''Buccaneers''' were a kind of [[privateer]]s or free sailors peculiar to the [[Caribbean Sea]] during the 17th and 18th centuries. First established on northern [[Hispaniola]] as early as 1625, their heyday was from [[the Restoration]] in 1660 until about 1688, during a time when governments were not strong enough and did not consistently attempt to suppress them.&lt;ref name=&quot;Clark&quot;&gt;{{cite book |last=Clark |first=Sir George |date=1956 |title=The Later Stuarts, 1660–1714 |location=The Oxford History of England |publisher=Oxford University Press |page=326-329 |isbn=0-19-821702-1}}&lt;/ref&gt; 
+
+Originally the name applied to the landless hunters of wild boars and cattle in the largely uninhabited areas of [[Tortuga (Haiti)|Tortuga]] and [[Hispaniola]]. The meat they caught was smoked over a slow fire in little huts the French called ''boucanes'' to make ''viande boucanée'' – ''jerked meat'' or ''jerky'' – which they sold to the [[French corsairs|corsairs]] that preyed on the (largely Spanish) shipping and settlements of the Caribbean. Eventually the term was applied to the corsairs and (later) privateers themselves, also known as the [[Brethren of the Coast]]. Though corsairs, also known as ''filibusters'' or ''freebooters'', were largely lawless, privateers were nominally licensed by the authorities – first the French, later the English and Dutch – to prey on the Spanish, until their [[depredations]] became so severe they were suppressed.&lt;ref&gt;{{Citation |first1= P. K. |last1= Kemp |first2= Christopher |last2= Lloyd |year= 1965 |publisher= Tower Publications, Inc. |title= The Buccaneers |url= https://archive.org/details/brethrenofcoastb00kemp }}, pp. 5–7. First published in the United States by St. Martin's Press, New York [1960] as ''Brethren of the Coast: Buccaneers of the South Seas''. Includes a critical list of sources.&lt;/ref&gt;
+
+==Etymology==
+The term ''buccaneer'' was taken from the Spanish ''bucanero'' and derives from the Caribbean [[Arawakan languages|Arawak]] word ''[[buccan]]'', a wooden frame on which [[Tainos]] and [[Island Caribs|Caribs]] slowly roasted or smoked meat, commonly [[manatee]]. From it derived the [[French language|French]] word ''boucane'' and hence the name ''boucanier'' for French hunters who used such frames to smoke meat from [[feral]] [[cattle]] and [[Razorback|pigs]] on [[Hispaniola]]. [[Kingdom of England|English]] colonists [[anglicised]] the word ''boucanier'' to ''buccaneer''.&lt;ref name=little&gt;{{cite book | author = Little, Benerson | year = 2007 | title = The Buccaneer's Realm: Pirate Life on the Spanish Main, 1674–1688 | page = | location = | publisher = Potomac Books | url = https://books.google.com/books?isbn=1597971014 | access-date = 9 January 2017 }}&lt;/ref&gt;
+
+==History==
+{{unreferenced section|date=September 2016}}
+About 1630, French interlopers were driven away from the island of [[Hispaniola]] and fled to nearby [[Tortuga (Haiti)|Tortuga]]. French buccaneers were established on northern Hispaniola as early as 1625,&lt;ref&gt;{{cite web|url=http://www.thewayofthepirates.com/history-of-piracy/tortuga.php|title=Tortuga – Pirate History – The Way Of The Pirates|accessdate=23 October 2014}}&lt;/ref&gt; but lived at first mostly as hunters rather than robbers; their transition to full-time piracy was gradual and motivated in part by Spanish efforts to wipe out both the buccaneers and the prey animals on which they depended.  The buccaneers' migration from Hispaniola's mainland to the more defensible offshore island of [[Tortuga (Haiti)|Tortuga]] limited their resources and accelerated their piratical raids. According to [[Alexandre Exquemelin]], the Tortuga buccaneer [[Pierre le Grand (pirate)|Pierre Le Grand]] pioneered the settlers' attacks on galleons making the return voyage to Spain. The Spaniards also tried to drive them out of Tortuga, but the buccaneers were joined by many more French, [[Dutch Republic|Dutch]], and English adventurers who turned to piracy.&lt;ref&gt;{{Cite news|url=https://www.britannica.com/topic/buccaneer|title=buccaneer {{!}} Facts, History, &amp; Meaning|work=Encyclopedia Britannica|access-date=17 October 2018|language=en}}&lt;/ref&gt; They set their eyes on Spanish shipping, generally using small craft to attack [[galleon]]s in the vicinity of the [[Windward Passage]]. With the support and encouragement of rival European powers, they became strong enough to sail for the mainland of [[Spanish colonization of the Americas|Spanish America]], known as the [[Spanish Main]], and sacked cities.
+
+Perhaps what distinguished the buccaneers from earlier Caribbean sailors was their use of permanent bases in the West Indies. During the mid 17th century, the Bahama Islands attracted many lawless people who had taken over [[New Providence]]. Encouraged by its large harbour, they were joined by several pirates who made their living by raiding the Spanish on the coast of Cuba. They called this activity buccaneering.&lt;ref&gt;{{cite web|url=https://archive.org/details/memoirsofpeterhe00bruc|title=Memoirs of Peter Henry Bruce, esq., a military officer, in the services of Prussia, Russia, and Great Britain. Containing an account of his travels in Germany, Russia, Tartary, Turkey, the West Indies, &amp;c., as also several very interesting private anecdotes of the Czar, Peter I, of Russia|first=Peter Henry|last=Bruce|date=4 May 1782|location=London |publisher=T. Payne and Son|accessdate=4 May 2018|via=Internet Archive|url-status=live|archiveurl=https://web.archive.org/web/20160428171757/https://archive.org/details/memoirsofpeterhe00bruc|archivedate=28 April 2016}}&lt;/ref&gt; Their principal station was Tortuga, but from time to time they seized other strongholds, like Providence, and they were welcomed with their booty in ports like [[Port Royal]] in [[Jamaica]]. At first they were international. In 1663 it was estimated that there were fifteen of their ships with nearly a thousand men, English, French, and Dutch, belonging to Jamaica and Tortuga. As time went on and the European governments asserted their authority, the buccaneers first became separated by nationalities and then in time were suppressed altogether, leaving behind only dispersed bands of pirates.&lt;ref name=&quot;Clark&quot;&gt;&lt;/ref&gt;
+
+English settlers occupying [[Jamaica]] began to spread the name ''buccaneers'' with the meaning of pirates. The name became universally adopted later in 1684 when the first English translation of [[Alexandre Exquemelin]]'s book ''The Buccaneers of America'' was published.
+
+Viewed from [[London]], buccaneering was a budget way to wage war on England's rival, Spain. The English crown licensed buccaneers with [[Letter of marque|letters of marque]], legalising their operations in return for a share of their profits. The buccaneers were invited by Jamaica's Governor [[Thomas Modyford]] to base ships at Port Royal. The buccaneers robbed Spanish shipping and colonies, and returned to Port Royal with their plunder, making the city the most prosperous in the Caribbean. There even were [[Royal Navy]] officers sent to lead the buccaneers, such as [[Christopher Myngs]]. Their activities went on irrespective of whether England happened to be at war with Spain or France.
+
+Among the leaders of the buccaneers were two Frenchmen, Jean-David Nau, better known as [[L'Ollonais|François l'Ollonais]], and [[Daniel Montbars]], who destroyed so many Spanish ships and killed so many Spaniards that he was called &quot;the Exterminator&quot;.
+
+Another noted leader was [[Welsh people|Welshman]] [[Henry Morgan]], who sacked [[Maracaibo]], [[Portobelo, Colón|Portobello]], and [[Panama City]], stealing a huge amount from the Spanish. Morgan became rich and went back to England, where he was [[knight]]ed by [[Charles II of England|Charles II]].
+
+While the buccaneers were powerful it was not only hostility to Spain, but also lack of authority, that prevented the other states from ending the old state of affairs in which, even when they were at peace with Spain and Portugal in Europe, there was 'no peace beyond [[Treaty of Tordesillas|the Line]]'. The West Indies were beyond the range of the European international system. Sometimes this was for their advantage but on the whole, with the intermingled possessions, trade rivalries, and disputes about territorial rights, the local conditions led to conflicts. The West Indies continued to be one of the centres of international strife throughout the eighteenth century though by that time it was regulated in the same way as in Europe, and had become inseparable from the European wars.&lt;ref name=&quot;Clark&quot;&gt;&lt;/ref&gt;
+
+During the [[Second Anglo-Dutch War]] in 1665, [[Michiel de Ruyter|de Ruyter]] attacked [[Barbados]] with a strong squadron, and the English had no choice but to base their defence on the buccaneers whom the governor of Jamaica had previously been trying to suppress. They were unmanageable and destroyed where they conquered, but they mastered the Dutch colonies of [[St. Eustatius]] and [[Tobago]]. In 1666, however, when the French joined the Dutch in the war the weakness of this policy was proved. The English hoped to capture the French plantations of [[St. Kitts]], where there were new settlers of both nations, and so they declined to make a new agreement for neutrality. They made what was intended to be a surprise attack, but was an ignominious failure, and the English settlers in the island had to surrender unconditionally. More than 8,000 of them were shipped away, and their property was seized by the French. [[Francis Willoughby, 5th Baron Willoughby of Parham|Lord Willoughby]], the able governor of Barbados, got together an expedition for a counter-stroke, but his fleet was broken up by a hurricane in which he perished. The French captured one island after another. In 1667 naval ships from England regained the command of the sea and made various conquests, but the [[Peace of Breda]] re-established the status quo in March of that year.
+
+Henry Morgan was knighted in 1674 and became lieutenant-governor of Jamaica. In the late 1670s there was a succession of raids on Spanish ports. In 1680 a party made its way across the [[Isthmus of Panama]] and, sailing in captured Spanish ships, pillaged the coasts and commerce of the Pacific. They had not been long on their journey when the Anglo-Spanish treaty of 1680 was signed, which at last stipulated for a real peace beyond the Line and indirectly recognised the right of the English to trade in West Indian waters. When the buccaneers returned by way of Cape Horn in 1682, the survivors found themselves treated as pirates. The French, within a very few years, also controlled their buccaneers, and in the [[Nine Years' War]] (1688-1697) they were no longer an important factor. Until about 1688 the governments were not strong enough, and did not consistently attempt, to suppress the buccaneers.&lt;ref name=&quot;Clark&quot;&gt;&lt;/ref&gt;
+
+In January 1684, Havana responded to the attacks by the buccaneers of the Bahamas in the event known as the [[Raid on Charles Town]].{{Citation needed|date=October 2018}} 
+
+In the 1690s, the old buccaneering ways began to die out, as European governments began to discard the policy of &quot;no peace beyond [[Treaty of Tordesillas|the Line]]&quot;.{{citation needed|date=January 2017}} Buccaneers were hard to control; some even embroiled their colonies in unwanted wars. Notably, at the 1697 joint French-buccaneer [[Raid on Cartagena (1697)|siege of Cartagena]], led by [[Bernard Desjean, Baron de Pointis]], the buccaneers and the French regulars parted on extremely bitter terms.{{citation needed|date=January 2017}} Less tolerated by local Caribbean officials, buccaneers increasingly turned to legal work or else joined regular pirate crews who sought plunder in the Indian Ocean, the east coast of North America, or [[West Africa]] as well as in the Caribbean.

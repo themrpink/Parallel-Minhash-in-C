@@ -1,0 +1,171 @@
+:&lt;math&gt;
+\sigma_\omega^2 =\frac{1}{2\pi E} \int |\omega-\xi|^2|\hat{\psi}(\omega)|^2 \, d\omega
+&lt;/math&gt;
+
+Multiplication with a rectangular window in the time domain corresponds to convolution with a &lt;math&gt;\rm{sinc(\Delta_t\omega)}&lt;/math&gt; function in the frequency domain, resulting in spurious [[ringing artifacts]] for short/localized temporal windows. With the continuous-time Fourier Transform, &lt;math&gt;\Delta_t \rightarrow \infty&lt;/math&gt; and this convolution is with a delta function in Fourier space, resulting in the true Fourier transform of the signal &lt;math&gt;x(t)&lt;/math&gt;. The window function may be some other [[Apodizing|apodizing filter]], such as a [[Gaussian filter|Gaussian]]. The choice of windowing function will affect the approximation error relative to the true Fourier transform.
+
+A given resolution cell's time-bandwidth product may not be exceeded with the STFT. All STFT basis elements maintain a uniform spectral and temporal support for all temporal shifts or offsets, thereby attaining an equal resolution in time for lower and higher frequencies. The resolution is purely determined by the sampling width.
+
+In contrast, the wavelet transform's [[Multiresolution analysis|multiresolutional]] properties enables large temporal supports for lower frequencies while maintaining short temporal widths for higher frequencies by the scaling properties of the wavelet transform. This property extends conventional time-frequency analysis into time-scale analysis.&lt;ref&gt;Mallat, Stephane. &quot;A wavelet tour of signal processing. 1998.&quot; 250-252.&lt;/ref&gt; [[File:Time frequency atom resolution.png|thumb|STFT time-frequency atoms (left) and DWT time-scale atoms (right). The time-frequency atoms are four different basis functions used for the STFT (i.e. '''four separate Fourier transforms required'''). The time-scale atoms of the DWT achieve small temporal widths for high frequencies and good temporal widths for low frequencies with a '''single''' transform basis set.]]
+
+The discrete wavelet transform is less computationally [[complexity|complex]], taking [[Big O notation|O(''N'')]] time as compared to O(''N''&amp;nbsp;log&amp;nbsp;''N'') for the [[fast Fourier transform]]. This computational advantage is not inherent to the transform, but reflects the choice of a logarithmic division of frequency, in contrast to the equally spaced frequency divisions of the FFT (Fast Fourier Transform) which uses the same basis functions as DFT (Discrete Fourier Transform).&lt;ref&gt;The Scientist and Engineer's Guide to Digital Signal Processing By Steven W. Smith, Ph.D. chapter 8 equation 8-1: http://www.dspguide.com/ch8/4.htm&lt;/ref&gt; It is also important to note that this complexity only applies when the filter size has no relation to the signal size. A wavelet without [[compact support]] such as the [[Shannon wavelet]] would require O(''N''&lt;sup&gt;2&lt;/sup&gt;). (For instance, a logarithmic Fourier Transform also exists with O(''N'') complexity, but the original signal must be sampled logarithmically in time, which is only useful for certain types of signals.&lt;ref&gt;http://homepages.dias.ie/~ajones/publications/28.pdf&lt;/ref&gt;)
+
+== Definition of a wavelet ==
+There are a number of ways of defining a wavelet (or a wavelet family).
+
+=== Scaling filter ===
+An orthogonal wavelet is entirely defined by the scaling filter – a low-pass [[finite impulse response]] (FIR) filter of length 2''N'' and sum 1. In [[Biorthogonal system|biorthogonal]] wavelets, separate decomposition and reconstruction filters are defined.
+
+For analysis with orthogonal wavelets the high pass filter is calculated as the [[quadrature mirror filter]] of the low pass, and reconstruction filters are the time reverse of the decomposition filters.
+
+Daubechies and Symlet wavelets can be defined by the scaling filter.
+
+=== Scaling function ===
+Wavelets are defined by the wavelet function ψ(''t'') (i.e. the mother wavelet) and scaling function φ(''t'') (also called father wavelet) in the time domain.
+
+The wavelet function is in effect a band-pass filter and scaling that for each level halves its bandwidth. This creates the problem that in order to cover the entire spectrum, an infinite number of levels would be required. The scaling function filters the lowest level of the transform and ensures all the spectrum is covered. See&lt;ref&gt;{{cite web|url=http://www.polyvalens.com/blog/?page_id=15#7.+The+scaling+function+%5B7%5D|title=A Really Friendly Guide To Wavelets – PolyValens|website=www.polyvalens.com}}&lt;/ref&gt; for a detailed explanation.
+
+For a wavelet with compact support, φ(''t'') can be considered finite in length and is equivalent to the scaling filter ''g''.
+
+Meyer wavelets can be defined by scaling functions
+
+=== Wavelet function ===
+The wavelet only has a time domain representation as the wavelet function ψ(''t'').
+
+For instance, [[Mexican hat wavelet]]s can be defined by a wavelet function. See a list of a few [[Continuous wavelets]].
+
+== History ==
+The development of [[wavelets]] can be linked to several separate trains of thought, starting with [[Alfréd Haar|Haar]]'s work in the early 20th century. Later work by [[Dennis Gabor]] yielded [[Gabor atom]]s (1946), which are constructed similarly to wavelets, and applied to similar purposes.
+
+[[Wavelet compression]], a form of [[transform coding]] that uses [[wavelet transforms]] in [[data compression]], began after the development of the [[discrete cosine transform]] (DCT),&lt;ref name=&quot;Hoffman&quot;&gt;{{cite book |last1=Hoffman |first1=Roy |title=Data Compression in Digital Systems |date=2012 |publisher=[[Springer Science &amp; Business Media]] |isbn=9781461560319 |page=124 |url=https://books.google.com/books?id=FOfTBwAAQBAJ |quote=Basically, wavelet coding is a variant on DCT-based transform coding that reduces or eliminates some of its limitations. (...) Another advantage is that rather than working with 8 × 8 blocks of pixels, as do JPEG and other block-based DCT techniques, wavelet coding can simultaneously compress the entire image.}}&lt;/ref&gt; a block-based [[data compression]] algorithm first proposed by [[N. Ahmed|Nasir Ahmed]] in the early 1970s.&lt;ref name=&quot;Ahmed&quot;&gt;{{cite journal |last=Ahmed |first=Nasir |author-link=N. Ahmed |title=How I Came Up With the Discrete Cosine Transform |journal=[[Digital Signal Processing (journal)|Digital Signal Processing]] |date=January 1991 |volume=1 |issue=1 |pages=4–5 |doi=10.1016/1051-2004(91)90086-Z}}&lt;/ref&gt;&lt;ref name=&quot;Stankovic&quot;&gt;{{cite journal |last1=Stanković |first1=Radomir S. |last2=Astola |first2=Jaakko T. |title=Reminiscences of the Early Work in DCT: Interview with K.R. Rao |journal=Reprints from the Early Days of Information Sciences |date=2012 |volume=60 |url=http://ticsp.cs.tut.fi/reports/ticsp-report-60-reprint-rao-corrected.pdf |access-date=13 October 2019}}&lt;/ref&gt; The introduction of the DCT led to the development of wavelet coding, a variant of DCT coding that uses wavelets instead of DCT's block-based algorithm.&lt;ref name=&quot;Hoffman&quot;/&gt;
+
+Notable contributions to wavelet theory since then can be attributed to [[George Zweig|Zweig]]’s discovery of the [[continuous wavelet transform]] (CWT) in 1975 (originally called the cochlear transform and discovered while studying the reaction of the ear to sound),&lt;ref&gt;http://scienceworld.wolfram.com/biography/Zweig.html
+ Zweig, George Biography on Scienceworld.wolfram.com&lt;/ref&gt; Pierre Goupillaud, [[Alex Grossman|Grossmann]] and [[Jean Morlet|Morlet]]'s formulation of what is now known as the CWT (1982), Jan-Olov Strömberg's early work on [[Strömberg wavelet|discrete wavelets]] (1983), the LeGall-Tabatabai (LGT) 5/3 wavelet developed by Didier Le Gall and Ali J. Tabatabai (1988),&lt;ref&gt;{{cite web |last1=Sullivan |first1=Gary |title=General characteristics and design considerations for temporal subband video coding |publisher=[[Video Coding Experts Group]] |website=[[ITU-T]] |date=8–12 December 2003 |url=https://www.itu.int/wftp3/av-arch/video-site/0312_Wai/VCEG-U06.doc |access-date=13 September 2019}}&lt;/ref&gt;&lt;ref&gt;{{cite book |last1=Bovik |first1=Alan C. |title=The Essential Guide to Video Processing |date=2009 |publisher=[[Academic Press]] |isbn=9780080922508 |page=355 |url=https://books.google.com/books?id=wXmSPPB_c_0C&amp;pg=PA355}}&lt;/ref&gt;&lt;ref&gt;{{cite journal |last1=Gall |first1=Didier Le |last2=Tabatabai |first2=Ali J. |title=Sub-band coding of digital images using symmetric short kernel filters and arithmetic coding techniques |journal=ICASSP-88., International Conference on Acoustics, Speech, and Signal Processing |date=1988 |pages=761–764 vol.2 |doi=10.1109/ICASSP.1988.196696|s2cid=109186495 }}&lt;/ref&gt; [[Ingrid Daubechies]]' orthogonal wavelets with compact support (1988), [[Stephane Mallat|Mallat]]'s multiresolution framework (1989), [[Ali Akansu]]'s [[Binomial QMF]] (1990), Nathalie Delprat's time-frequency interpretation of the CWT (1991), Newland's [[harmonic wavelet transform]] (1993), and [[set partitioning in hierarchical trees]] (SPIHT) developed by Amir Said with William A. Pearlman in 1996.&lt;ref name=&quot;Said&quot;&gt;{{cite journal|last = Said|first = Amir|author2=Pearlman, William A.|title = A new fast and efficient image codec based on set partitioning in hierarchical trees|journal = IEEE Transactions on Circuits and Systems for Video Technology|volume = 6|pages = 243–250|date = June 1996|issn = 1051-8215|doi = 10.1109/76.499834|issue = 3}}&lt;/ref&gt;
+
+The [[JPEG 2000]] standard was developed from 1997 to 2000 by a [[Joint Photographic Experts Group]] (JPEG) committee chaired by Touradj Ebrahimi (later the JPEG president).&lt;ref&gt;{{cite book |last1=Taubman |first1=David |last2=Marcellin |first2=Michael |title=JPEG2000 Image Compression Fundamentals, Standards and Practice: Image Compression Fundamentals, Standards and Practice |date=2012 |publisher=[[Springer Science &amp; Business Media]] |isbn=9781461507994 |url=https://books.google.com/books?id=y7HeBwAAQBAJ&amp;pg=PA402}}&lt;/ref&gt; In contrast to the DCT algorithm used by the original [[JPEG]] format, JPEG 2000 instead uses [[discrete wavelet transform]] (DWT) algorithms. It uses the [[Cohen-Daubechies-Feauveau wavelet|CDF]] 9/7 wavelet transform (developed by Ingrid Daubechies in 1992) for its [[lossy compression]] algorithm, and the LeGall-Tabatabai (LGT) 5/3 wavelet transform (developed by Didier Le Gall and Ali J. Tabatabai in 1988) for its [[lossless compression]] algorithm.&lt;ref name=&quot;Unser&quot;&gt;{{cite journal |last1=Unser |first1=M. |last2=Blu |first2=T. |title=Mathematical properties of the JPEG2000 wavelet filters |journal=IEEE Transactions on Image Processing |date=2003 |volume=12 |issue=9 |pages=1080–1090 |doi=10.1109/TIP.2003.812329 |url=https://pdfs.semanticscholar.org/6ed4/dece8b364416d9c390ba53df913bca7fb9a6.pdf |pmid=18237979|s2cid=2765169 }}&lt;/ref&gt; [[JPEG 2000]] technology, which includes the [[Motion JPEG 2000]] extension, was selected as the [[video coding standard]] for [[digital cinema]] in 2004.&lt;ref&gt;{{cite book |last1=Swartz |first1=Charles S. |title=Understanding Digital Cinema: A Professional Handbook |date=2005 |publisher=[[Taylor &amp; Francis]] |isbn=9780240806174 |page=147 |url=https://books.google.com/books?id=tYw3ehoBnjkC&amp;pg=PA147}}&lt;/ref&gt;
+
+=== Timeline ===
+* First wavelet ([[Haar Wavelet]]) by [[Alfréd Haar]] (1909)
+* Since the 1970s: [[George Zweig]], [[Jean Morlet]], [[Alex Grossman]]n
+* Since the 1980s: [[Yves Meyer]], Didier Le Gall, Ali J. Tabatabai, [[Stéphane Mallat]], [[Ingrid Daubechies]], [[Ronald Coifman]], [[Ali Akansu]], [[Victor Wickerhauser]]
+* Since the 1990s: Nathalie Delprat, Newland, Amir Said, William A. Pearlman, Touradj Ebrahimi, [[JPEG 2000]]
+
+== Wavelet transforms ==
+{{main|Wavelet transform}}
+A wavelet is a mathematical function used to divide a given function or [[continuous signal|continuous-time signal]] into different scale components. Usually one can assign a frequency range to each scale component. Each scale component can then be studied with a resolution that matches its scale. A wavelet transform is the representation of a function by wavelets. The wavelets are [[Scaling (geometry)|scaled]] and [[Translation (geometry)|translated]] copies (known as &quot;daughter wavelets&quot;) of a finite-length or fast-decaying oscillating waveform (known as the &quot;mother wavelet&quot;). Wavelet transforms have advantages over traditional [[Fourier transform]]s for representing functions that have discontinuities and sharp peaks, and for accurately deconstructing and reconstructing finite, non-[[Periodic function|periodic]] and/or non-[[stationary process|stationary]] signals.
+
+Wavelet transforms are classified into [[discrete wavelet transform]]s (DWTs) and [[continuous wavelet transform]]s (CWTs). Note that both DWT and CWT are continuous-time (analog) transforms. They can be used to represent continuous-time (analog) signals. CWTs operate over every possible scale and translation whereas DWTs use a specific subset of scale and translation values or representation grid.
+
+There are a large number of wavelet transforms each suitable for different applications. For a full list see [[list of wavelet-related transforms]] but the common ones are listed below:
+
+* [[Continuous wavelet transform]] (CWT)
+* [[Discrete wavelet transform]] (DWT)
+* [[Fast wavelet transform]] (FWT)
+* [[Lifting scheme]] &amp; [[Generalized lifting|Generalized Lifting Scheme]]
+* [[Wavelet packet decomposition]] (WPD)
+* [[Stationary wavelet transform]] (SWT)
+* [[Fractional Fourier transform]] (FRFT)
+* [[Fractional wavelet transform]] (FRWT)
+
+=== Generalized transforms ===
+There are a number of generalized transforms of which the wavelet transform is a special case. For example, Yosef Joseph {{Proper name|Segman}} introduced scale into the [[Heisenberg group]], giving rise to a continuous transform space that is a function of time, scale, and frequency. The CWT is a two-dimensional slice through the resulting 3d time-scale-frequency volume.
+
+Another example of a generalized transform is the [[chirplet transform]] in which the CWT is also a two dimensional slice through the chirplet transform.
+
+An important application area for generalized transforms involves systems in which high frequency resolution is crucial. For example, [[darkfield microscope|darkfield]] electron optical transforms intermediate between direct and [[reciprocal space]] have been widely used in the [[harmonic analysis]] of atom clustering, i.e. in the study of [[crystal]]s and [[crystal defect]]s.&lt;ref&gt;P. Hirsch, A. Howie, R. Nicholson, D. W. Pashley and M. J. Whelan (1965/1977) ''Electron microscopy of thin crystals'' (Butterworths, London/Krieger, Malabar FLA) {{isbn|0-88275-376-2}}&lt;/ref&gt; Now that [[transmission electron microscope]]s are capable of providing digital images with picometer-scale information on atomic periodicity in [[nanostructure]] of all sorts, the range of [[pattern recognition]]&lt;ref&gt;P. Fraundorf, J. Wang, E. Mandell and M. Rose (2006) Digital darkfield tableaus, ''Microscopy and Microanalysis'' '''12''':S2, 1010–1011 (cf. [https://arxiv.org/abs/cond-mat/0403017 arXiv:cond-mat/0403017])&lt;/ref&gt; and [[strain (materials science)|strain]]&lt;ref&gt;{{cite journal | last1 = Hÿtch | first1 = M. J. | last2 = Snoeck | first2 = E. | last3 = Kilaas | first3 = R. | year = 1998 | title = Quantitative measurement of displacement and strain fields from HRTEM micrographs | journal = Ultramicroscopy | volume = 74 | issue = 3| pages = 131–146 | doi=10.1016/s0304-3991(98)00035-7}}&lt;/ref&gt;/[[metrology]]&lt;ref&gt;Martin Rose (2006) ''Spacing measurements of lattice fringes in HRTEM image using digital darkfield decomposition'' (M.S. Thesis in Physics, U. Missouri – St. Louis)&lt;/ref&gt; applications for intermediate transforms with high frequency resolution (like brushlets&lt;ref&gt;F. G. Meyer and R. R. Coifman (1997) ''Applied and Computational Harmonic Analysis'' '''4''':147.&lt;/ref&gt; and ridgelets&lt;ref&gt;A. G. Flesia, [[Hagit Hel-Or|H. Hel-Or]], A. Averbuch, [[Emmanuel Candès|E. J. Candes]], R. R. Coifman and [[David Donoho|D. L. Donoho]] (2001) ''Digital implementation of ridgelet packets'' (Academic Press, New York).&lt;/ref&gt;) is growing rapidly.
+
+Fractional wavelet transform (FRWT) is a generalization of the classical wavelet transform in the fractional Fourier transform domains. This transform is capable of providing the time- and fractional-domain information simultaneously and representing signals in the time-fractional-frequency plane.&lt;ref&gt;{{cite journal | last1 = Shi | first1 = J. | last2 = Zhang | first2 = N.-T. | last3 = Liu | first3 = X.-P. | year = 2011| title = A novel fractional wavelet transform and its applications | journal = Sci. China Inf. Sci. | volume = 55 | issue = 6| pages = 1270–1279 | doi=10.1007/s11432-011-4320-x| doi-access = free }}&lt;/ref&gt;
+
+== Applications of wavelet transform ==
+Generally, an approximation to DWT is used for [[data compression]] if a signal is already sampled, and the CWT for [[signal analysis]].&lt;ref&gt;A.N. Akansu, W.A. Serdijn and I.W. Selesnick, [http://web.njit.edu/~akansu/PAPERS/ANA-IWS-WAS-ELSEVIER%20PHYSCOM%202010.pdf Emerging applications of wavelets: A review], Physical Communication, Elsevier, vol. 3, issue 1, pp. 1-18, March 2010.&lt;/ref&gt; Thus, DWT approximation is commonly used in engineering and computer science, and the CWT in scientific research.
+
+Like some other transforms, wavelet transforms can be used to transform data, then encode the transformed data, resulting in effective compression. For example, [[JPEG 2000]] is an image compression standard that uses biorthogonal wavelets. This means that although the frame is overcomplete, it is a ''tight frame'' (see types of [[Frame of a vector space|frames of a vector space]]), and the same frame functions (except for conjugation in the case of complex wavelets) are used for both analysis and synthesis, i.e., in both the forward and inverse transform. For details see [[wavelet compression]].
+
+A related use is for smoothing/denoising data based on wavelet coefficient thresholding, also called wavelet shrinkage. By adaptively thresholding the wavelet coefficients that correspond to undesired frequency components smoothing and/or denoising operations can be performed.
+
+Wavelet transforms are also starting to be used for communication applications. Wavelet [[OFDM]] is the basic modulation scheme used in [[HD-PLC]] (a [[power line communication]]s technology developed by [[Panasonic]]), and in one of the optional modes included in the [[IEEE 1901]] standard. Wavelet OFDM can achieve deeper notches than traditional [[Fast Fourier transform|FFT]] OFDM, and wavelet OFDM does not require a guard interval (which usually represents significant overhead in FFT OFDM systems).&lt;ref name=&quot;galli&quot;&gt;{{cite journal |title= Recent Developments in the Standardization of Power Line Communications within the IEEE |author1= Stefano Galli |author2=O. Logvinov |journal= IEEE Communications Magazine |date= July 2008 |volume= 46 |number= 7 |pages= 64–71 |doi= 10.1109/MCOM.2008.4557044 |s2cid= 2650873 }} An overview of P1901 PHY/MAC proposal.&lt;/ref&gt;
+
+=== As a representation of a signal ===
+
+Often, signals can be represented well as a sum of sinusoids. However, consider a non-continuous signal with an abrupt discontinuity; this signal can still be represented as a sum of sinusoids, but requires an infinite number, which is an observation known as [[Gibbs phenomenon]]. This, then, requires an infinite number of Fourier coefficients, which is not practical for many applications, such as compression. Wavelets are more useful for describing these signals with discontinuities because of their time-localized behavior (both Fourier and wavelet transforms are frequency-localized, but wavelets have an additional time-localization property). Because of this, many types of signals in practice may be non-sparse in the Fourier domain, but very sparse in the wavelet domain. This is particularly useful in signal reconstruction, especially in the recently popular field of [[compressed sensing]]. (Note that the [[short-time Fourier transform]] (STFT) is also localized in time and frequency, but there are often problems with the frequency-time resolution trade-off. Wavelets are better signal representations because of [[multiresolution analysis]].)
+
+This motivates why wavelet transforms are now being adopted for a vast number of applications, often replacing the conventional [[Fourier Transform|Fourier transform]]. Many areas of physics have seen this paradigm shift, including [[molecular dynamics]], [[chaos theory]],&lt;ref&gt;{{cite journal|last1=Wotherspoon|first1=T.|last2=et.|first2=al.|title=Adaptation to the edge of chaos with random-wavelet feedback.|journal=J. Phys. Chem.|volume=113|issue=1|pages=19–22|date=2009|doi=10.1021/jp804420g|bibcode=2009JPCA..113...19W|pmid=19072712}}&lt;/ref&gt; [[ab initio]] calculations, [[astrophysics]], [[gravitational wave]] transient data analysis,&lt;ref&gt;{{cite journal |collaboration=LIGO Scientific Collaboration and Virgo Collaboration |last1=Abbott |first1=Benjamin P. |title=Observing gravitational-wave transient GW150914 with minimal assumptions |journal=[[Phys. Rev. D]] |volume=93 |issue=12 |page=122004 |year=2016 |doi=10.1103/PhysRevD.93.122004 |arxiv=1602.03843 |bibcode=2016PhRvD..93l2004A }}&lt;/ref&gt;&lt;ref&gt;{{cite journal |author=V Necula, S Klimenko and G Mitselmakher |title=Transient analysis with fast Wilson-Daubechies time-frequency transform |journal=Journal of Physics: Conference Series |volume=363 |page=012032 |year=2012 |doi=10.1088/1742-6596/363/1/012032 |doi-access=free }}&lt;/ref&gt; [[Density matrix|density-matrix]] localisation, [[seismology]], [[optics]], [[turbulence]] and [[quantum mechanics]]. This change has also occurred in [[image processing]], [[Electroencephalography|EEG]], [[Electromyography|EMG]],&lt;ref&gt;J. Rafiee et al. Feature extraction of forearm EMG signals for prosthetics, Expert Systems with Applications 38 (2011) 4058–67.&lt;/ref&gt; [[Electrocardiography|ECG]] analyses, [[neural oscillation|brain rhythms]], [[DNA]] analysis, [[protein]] analysis, [[climatology]], human sexual response analysis,&lt;ref&gt;J. Rafiee et al. Female sexual responses using signal processing techniques, The Journal of Sexual Medicine 6 (2009) 3086–96. [http://rafiee.us/files/JSM_2009.pdf (pdf)]&lt;/ref&gt; general [[signal processing]], [[speech recognition]], acoustics, vibration signals,&lt;ref&gt;{{cite journal | last1 = Rafiee | first1 = J. | last2 = Tse | first2 = Peter W. | year = 2009 | title = Use of autocorrelation in wavelet coefficients for fault diagnosis | journal = Mechanical Systems and Signal Processing | volume = 23 | issue = 5| pages = 1554–72 | doi=10.1016/j.ymssp.2009.02.008}}&lt;/ref&gt; [[computer graphics]], [[multifractal analysis]], and [[sparse coding]]. In [[computer vision]] and [[image processing]], the notion of [[scale space]] representation and Gaussian derivative operators is regarded as a canonical multi-scale representation.
+
+=== Wavelet denoising ===
+Suppose we measure a noisy signal &lt;math&gt;x = s + v &lt;/math&gt;. Assume s has a sparse representation in a certain wavelet bases, and &lt;math&gt;v \ \sim\ \mathcal{N}(0,\,\sigma^2I)&lt;/math&gt;
+
+So &lt;math&gt;y = W^Tx = W^Ts + W^Tv = p + z&lt;/math&gt;.
+
+Most elements in p are 0 or close to 0, and &lt;math&gt;z \ \sim\ \ \mathcal{N}(0,\,\sigma^2I)&lt;/math&gt;
+
+Since W is orthogonal, the estimation problem amounts to recovery of a signal in iid [[Gaussian noise]]. As p is sparse, one method is to apply a Gaussian mixture model for p.
+
+Assume a prior &lt;math&gt;p \ \sim\ a\mathcal{N}(0,\,\sigma_1^2) +(1- a)\mathcal{N}(0,\,\sigma_2^2)&lt;/math&gt;, &lt;math&gt;\sigma_1^2&lt;/math&gt; is the variance of &quot;significant&quot; coefficients, and &lt;math&gt;\sigma_2^2&lt;/math&gt; is the variance of &quot;insignificant&quot; coefficients.
+
+Then &lt;math&gt;\tilde p = E(p/y) = \tau(y) y&lt;/math&gt;, &lt;math&gt;\tau(y)&lt;/math&gt; is called the shrinkage factor, which depends on the prior variances &lt;math&gt;\sigma_1^2&lt;/math&gt; and &lt;math&gt;\sigma_2^2&lt;/math&gt;. The effect of the shrinkage factor is that small coefficients are set early to 0, and large coefficients are unaltered.
+
+Small coefficients are mostly noises, and large coefficients contain actual signal.
+
+At last, apply the inverse wavelet transform to obtain &lt;math&gt; \tilde s = W \tilde p&lt;/math&gt;
+
+== List of wavelets ==
+
+=== Discrete wavelets ===
+* [[Beylkin]] (18)
+* [[BNC wavelets]]
+* [[Coiflet]] (6, 12, 18, 24, 30)
+* [[Cohen-Daubechies-Feauveau wavelet]] (Sometimes referred to as CDF N/P or Daubechies biorthogonal wavelets)
+* [[Daubechies wavelet]] (2, 4, 6, 8, 10, 12, 14, 16, 18, 20, etc.)
+* [[Binomial-QMF]] (Also referred to as Daubechies wavelet)
+* [[Haar wavelet]]
+* [[Mathieu wavelet]]
+* [[Legendre wavelet]]
+* [[Villasenor wavelet]]
+* [[Symlet]]&lt;ref&gt;''Matlab Toolbox'' – URL: http://matlab.izmiran.ru/help/toolbox/wavelet/ch06_a32.html&lt;/ref&gt;
+
+=== Continuous wavelets ===
+
+==== Real-valued ====
+* [[Beta wavelet]]
+* [[Hermitian wavelet]]
+* [[Hermitian hat wavelet]]
+* [[Meyer wavelet]]
+* [[Mexican hat wavelet]]
+* [[Poisson wavelet]]
+* [[Shannon wavelet]]
+* [[Spline wavelet]]
+* [[Strömberg wavelet]]
+
+==== Complex-valued ====
+* [[Complex Mexican hat wavelet]]
+* [[fbsp wavelet]]
+* [[Morlet wavelet]]
+* [[Shannon wavelet]]
+* [[Modified Morlet wavelet]]
+
+== See also ==
+* [[Chirplet transform]]
+* [[Curvelet]]
+* [[Digital cinema]]
+* [[Filter bank]]s
+* [[Fractal compression]]
+* [[Fractional Fourier transform]]
+* [[JPEG 2000]]
+* [[Multiresolution analysis]]
+* [[Noiselet]]
+* [[Non-separable wavelet]]
+* [[Scale space]]
+* [[Scaled correlation]]
+* [[Shearlet]]
+* [[Short-time Fourier transform]]
+* [[Ultra wideband]] radio- transmits wavelets
+* [[Wave packet]]
+* [[Gabor wavelet#Wavelet space]]&lt;ref&gt;Erik Hjelmås  (1999-01-21) ''Gabor Wavelets'' URL: http://www.ansatt.hig.no/erikh/papers/scia99/node6.html&lt;/ref&gt;
+* [[Dimension reduction]]
+* [[Fourier-related transforms]]
+* [[Spectrogram]]
+* [[Huygens–Fresnel principle]] (physical wavelets)
+
+== References ==
+=== Citations ===
+{{Reflist|30em}}

@@ -1,0 +1,176 @@
+When actual measurements of an antenna's gain are made by a laboratory, the field strength of the test antenna is measured when supplied with, say, 1 watt of transmitter power, at a certain distance. That field strength is compared to the field strength found using a so-called ''reference antenna'' at the same distance receiving the same power in order to determine the gain of the antenna under test. That ratio would be equal to G if the reference antenna were an isotropic radiator(irad).
+
+However a true isotropic radiator cannot be built, so in practice a different antenna is used. This will often be a half-wave dipole, a very well understood and repeatable antenna that can be easily built for any frequency. The directive gain of a half-wave dipole is known to be 1.64 and it can be made nearly 100% efficient. Since the gain has been measured with respect to this reference antenna, the difference in the gain of the test antenna is often compared to that of the dipole. The gain relative to a dipole is thus often quoted and is denoted using dBd instead of dBi to avoid confusion. Therefore, in terms of the true gain (relative to an isotropic radiator) G, this figure for the gain is given by:
+:&lt;math&gt;G_{dBd} = 10 \cdot \log_{10}\left(\frac{G}{1.64}\right).&lt;/math&gt;
+
+For instance, the above antenna with a gain G=5 would have a gain with respect to a dipole of 5/1.64 = 3.05, or in decibels one would call this 10&amp;nbsp;log(3.05) = 4.84&amp;nbsp;dBd. In general:
+:&lt;math&gt;G_{dBd} = G_{dBi} - 2.15dB &lt;/math&gt;
+Both dBi and dBd are in common use. When an antenna's maximum gain is specified in decibels (for instance, by a manufacturer) one must be certain as to whether this means the gain relative to an isotropic radiator or with respect to a dipole. If it specifies dBi or dBd then there is no ambiguity, but if only dB is specified then the fine print must be consulted. Either figure can be easily converted into the other using the above relationship.
+
+Note that when considering an antenna's directional pattern, gain with respect to a dipole does ''not'' imply a comparison of that antenna's gain in each direction to a dipole's gain in that direction. Rather, it is a comparison between the antenna's gain in each direction to the ''peak'' gain of the dipole (1.64). In any direction, therefore, such numbers are 2.15&amp;nbsp;dB smaller than the gain expressed in dBi.
+
+==Partial gain==
+'''Partial gain''' is calculated as power gain, but for a particular [[Antenna (radio)#Polarization|polarization]].  It is defined as the part of the [[radiation intensity]] &lt;math&gt;U&lt;/math&gt; corresponding to a given polarization, divided by the total radiation intensity of an isotropic antenna.
+
+:&lt;math&gt;G_{\theta} = 4\pi\left(\frac{U_\theta}{P_{\mathrm{in}}}\right)&lt;/math&gt;
+
+:&lt;math&gt;G_{\phi} = 4\pi\left(\frac{U_\phi}{P_{\mathrm{in}}}\right)&lt;/math&gt;
+
+where &lt;math&gt;U_{\theta}&lt;/math&gt; and &lt;math&gt;U_{\phi}&lt;/math&gt; represent the radiation intensity in a given direction contained in their respective E field component.
+
+As a result of this definition, we can conclude that the total gain of an antenna is the sum of partial gains for any two orthogonal polarizations.
+
+:&lt;math&gt;G = G_{\theta} + G_{\phi}&lt;/math&gt;
+
+==Example calculation==
+Suppose a lossless antenna has a radiation pattern given by:
+
+:&lt;math&gt;U = B_0\,\sin^3(\theta).&lt;/math&gt;
+
+Let us find the gain of such an antenna.
+
+'''Solution''':
+
+First we find the peak radiation intensity of this antenna:
+
+:&lt;math&gt; U_{\mathrm{max}} = B_0&lt;/math&gt;
+
+The total radiated power can be found by integrating over all directions:
+
+:&lt;math&gt;P_{\mathrm{rad}} = \int_0^{2\pi}\int_0^{\pi}U(\theta,\phi)\sin(\theta) \, d\theta \,d\phi = 2 \pi B_0 \int_0^{\pi}\sin^4(\theta) \, d\theta = B_0\left(\frac{3\pi^2}{4} \right)&lt;/math&gt;
+
+:&lt;math&gt;D = 4\pi\left(\frac{U_{\mathrm{max}}}{P_{\mathrm{rad}}}\right) = 4\pi\left[\frac{B_0}{B_0\left(\frac{3\pi^2}{4}\right)}\right] = \frac{16}{3\pi} = 1.698&lt;/math&gt;
+
+Since the antenna is specified as being lossless the radiation efficiency is 1. The maximum gain is then equal to:
+
+:&lt;math&gt;G = \epsilon_{antenna} \, D = (1)(1.698) = 1.698&lt;/math&gt; .
+
+:&lt;math&gt;G_{dBi} = 10 \, \log_{10}(1.698) = 2.30 \, \mathrm{dBi}&lt;/math&gt;
+
+Expressed relative to the gain of a half-wave dipole we would find:
+
+:&lt;math&gt;G_{dBd} = 10 \, \log_{10}(1.698/1.64) = 0.15 \, \mathrm{dBd}&lt;/math&gt;.
+
+== Realized gain ==
+According to IEEE Standard 145–1993,&lt;ref name=&quot;:0&quot; /&gt; '''realized gain''' differs from the above definitions of gain in that it is &quot;reduced by the losses due to the mismatch of the antenna input impedance to a specified impedance.&quot;  This mismatch induces losses above the dissipative losses described above; therefore, realized gain will always be less than gain.
+
+Gain may be expressed as '''absolute gain''' if further clarification is required to differentiate it from realized gain.&lt;ref name=&quot;:0&quot; /&gt;
+
+==Total radiated power==
+'''Total radiated power''' (TRP) is the sum of all RF power radiated by the antenna when the source power is included in the measurement.  TRP is expressed in watts or the corresponding logarithmic expressions, often dBm or dBW.&lt;ref&gt;{{Cite web|url = http://www.ctia.org/docs/default-source/default-document-library/ctia_ota_test_plan_rev_3_4_2.pdf?sfvrsn=2|title = CTIA Test Plan for Wireless Device Over-the-Air Performance Rev. 3.4.2|date = May 2015|website = Certification Test Plans|publisher = CTIA|url-status = live|archiveurl = https://web.archive.org/web/20160216175131/http://www.ctia.org/docs/default-source/default-document-library/ctia_ota_test_plan_rev_3_4_2.pdf?sfvrsn=2|archivedate = 2016-02-16}}&lt;/ref&gt;
+
+When testing mobile devices, TRP can be measured while in close proximity of power-absorbing losses such as the body and hand of the user.&lt;ref name=&quot;Ref_a&quot;&gt;Mobile Broadband Multimedia Networks: Techniques, Models and Tools for 4G by Luís M. Correia&lt;/ref&gt;
+
+The TRP can be used to determine body loss (BoL). The body loss is considered as the ratio of TRP measured in the presence of losses and TRP measured while in free space.
+
+==See also==
+*[[Antenna (radio)#Gain|Antenna]]
+*[[Antenna measurement#Gain|Antenna measurement]]
+*[[Antenna effective area]]
+*[[Cardioid]]
+
+==References==
+{{Reflist}}
+
+==Bibliography==
+*''Antenna Theory'' (3rd edition), by C. Balanis, Wiley, 2005, {{ISBN|0-471-66782-X}}
+*''Antenna for all applications'' (3rd edition), by John D. Kraus, Ronald J. Marhefka, 2002, {{ISBN|0-07-232103-2}}
+
+{{FS1037C MS188}}
+
+{{DEFAULTSORT:Antenna Gain}}
+[[Category:Antennas (radio)|Directive Gain]]
+[[Category:Telecommunications engineering]]
+[[Category:Engineering ratios]]</text>
+      <sha1>few0po9cbgzbrbjxkawhqv0ew432vzw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Adrien-Marie Legendre</title>
+    <ns>0</ns>
+    <id>49695</id>
+    <revision>
+      <id>991606403</id>
+      <parentid>985854024</parentid>
+      <timestamp>2020-11-30T22:56:39Z</timestamp>
+      <contributor>
+        <username>Bri.public</username>
+        <id>26329020</id>
+      </contributor>
+      <minor />
+      <comment>/* Mathematical work */ ce punct.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="17255" xml:space="preserve">{{short description|French mathematician}}
+{{other uses|Legendre (disambiguation){{!}}Legendre}}
+{{Use dmy dates|date=July 2017}}
+{{Infobox scientist
+| name = Adrien-Marie Legendre
+| birth_date =  {{birth date|df=yes|1752|9|18}}
+| birth_place =  Paris, France
+| death_date = {{death date and age|df=yes|1833|1|9|1752|9|18}}
+| death_place =  Paris, France
+| nationality = French  
+| field = Mathematician
+| work_institution = [[École Militaire]]&lt;br&gt;[[École Normale Supérieure|École Normale]]&lt;br&gt;[[École Polytechnique]]
+| alma_mater = [[Collège Mazarin]]
+| doctoral_advisor = &lt;!--there were no PhDs in France before 1808--&gt;
+| doctoral_students = &lt;!--there were no PhDs in France before 1808--&gt;
+| influenced = [[Évariste Galois]]
+| known_for  = [[Legendre transformation]]&lt;br&gt;[[Legendre polynomial]]s&lt;br&gt;[[Legendre transform]]&lt;br&gt;[[Elliptic function]]s&lt;br&gt;Introducing the character [[∂]]&lt;ref&gt;{{cite web|url=http://jeff560.tripod.com/calculus.html|author=Aldrich, John|title=Earliest Uses of Symbols of Calculus|accessdate=20 April 2017}}&lt;/ref&gt;
+| image = Legendre.jpg
+| caption = 1820 watercolor [[caricature]] of Adrien-Marie Legendre by French artist [[Julien-Léopold Boilly]] (see [[Adrien-Marie Legendre#Mistaken portrait|portrait debacle]]), the only existing portrait known&lt;ref name=&quot;Duren2009&quot;&gt;{{cite journal | last=Duren | first=Peter | title=Changing Faces: The Mistaken Portrait of Legendre | journal=[[Notices of the American Mathematical Society|Notices of the AMS]] | volume=56 | issue=11 |date=December 2009 | pages=1440–1443, 1455 | url=http://www.ams.org/notices/200911/rtx091101440p.pdf}}&lt;/ref&gt;
+}}
+'''Adrien-Marie Legendre''' ({{IPAc-en|l|ə|ˈ|ʒ|ɑː|n|d|ər|,_|-|ˈ|ʒ|ɑː|n|d}};&lt;ref&gt;[http://dictionary.reference.com/browse/legendre &quot;Legendre&quot;]. ''[[Random House Webster's Unabridged Dictionary]]''.&lt;/ref&gt; {{IPA-fr|adʁiɛ̃ maʁi ləʒɑ̃dʁ|lang}}; 18 September 1752 – 9 January 1833) was a French mathematician who made numerous contributions to mathematics. Well-known and important concepts such as the [[Legendre polynomials]] and [[Legendre transformation]] are named after him.
+
+== Life ==
+Adrien-Marie Legendre was born in Paris on 18 September 1752 to a wealthy family. He received his education at the [[Collège Mazarin]] in Paris, and defended his thesis in physics and mathematics in 1770. He taught at the [[École Militaire]] in Paris from 1775 to 1780 and at the [[École Normale Supérieure|École Normale]] from 1795. At the same time, he was associated with the [[Bureau des Longitudes]]. In 1782, the [[Prussian Academy of Sciences|Berlin Academy]] awarded Legendre a prize for his treatise on projectiles in resistant media. This treatise also brought him to the attention of [[Lagrange]].&lt;ref name=&quot;:0&quot;&gt;{{MacTutor Biography|id=Legendre}}&lt;/ref&gt;
+
+The ''[[Académie des sciences]]'' made Legendre an adjoint member in 1783 and an associate in 1785. In 1789, he was elected a [[Fellow of the Royal Society]].&lt;ref&gt;{{cite web| url = http://royalsociety.org/dserve/dserve.exe?dsqIni=Dserve.ini&amp;dsqApp=Archive&amp;dsqCmd=Show.tcl&amp;dsqDb=Persons&amp;dsqPos=0&amp;dsqSearch=%28Surname%3D%27le%20gendre%27%29|title = Library and Archive|publisher= Royal Society|accessdate = 6 August 2012}}&lt;/ref&gt;
+
+He assisted with the [[Anglo-French Survey (1784–1790)]] to calculate the precise distance between the [[Paris Observatory]] and the [[Royal Greenwich Observatory]] by means of [[trigonometry]]. To this end in 1787 he visited Dover and London together with [[Dominique, comte de Cassini]] and [[Pierre Méchain]]. The three also visited [[William Herschel]], the discoverer of the planet [[Uranus]].
+
+Legendre lost his private fortune in 1793 during the French Revolution. That year, he also married Marguerite-Claudine Couhin, who helped him put his affairs in order. In 1795, Legendre became one of six members of the mathematics section of the reconstituted Académie des Sciences, renamed the Institut National des Sciences et des Arts. Later, in 1803, Napoleon reorganized the Institut National, and Legendre became a member of the Geometry section. From 1799 to 1812, Legendre served as mathematics examiner for graduating artillery students at the École Militaire and from 1799 to 1815 he served as permanent mathematics examiner for the [[École Polytechnique]].&lt;ref&gt;[[André Weil]], ''Number Theory: An approach through history From Hammurapi to Legendre'', Springer Science &amp; Business Media2006, p. 325.&lt;/ref&gt; In 1824, Legendre's pension from the École Militaire was stopped because he refused to vote for the government candidate at the Institut National.&lt;ref name=&quot;:0&quot; /&gt; His pension was partially reinstated with the change in government in 1828. In 1831, he was made an officer of the [[Légion d'Honneur]].{{Citation needed|date=October 2018}}
+
+Legendre died in Paris on 9 January 1833, after a long and painful illness, and Legendre's widow carefully preserved his belongings to memorialize him. Upon her death in 1856, she was buried next to her husband in the village of Auteuil, where the couple had lived, and left their last country house to the village. Legendre's name is one of the [[List of the 72 names on the Eiffel Tower|72 names inscribed on the Eiffel Tower]].
+[[File:Tombe Adrien-Marie Legendre, Cimetière d'Auteuil, Paris.jpg|thumb|His grave at the Auteuil cemetery.]]
+
+== Mathematical work==
+[[Niels Abel|Abel]]'s work on [[elliptic function]]s was built on Legendre's and some of [[Carl Friedrich Gauss|Gauss]]' work in statistics and [[number theory]] completed that of Legendre. He developed, and first communicated to his contemporaries before Gauss, the [[least squares]] method &lt;ref&gt;{{cite journal |author= Stephen M. Stigler|year=1981 |title=Gauss and the Invention of Least Squares |url=http://projecteuclid.org/euclid.aos/1176345451 |journal=Ann. Stat. |volume=9 |issue=3 |pages=465–474 |doi=10.1214/aos/1176345451 |doi-access=free }}&lt;/ref&gt; which has broad application in [[linear regression]], [[signal processing]], statistics, and [[curve fitting]]; this was published in 1806 as an appendix to his book on the paths of comets. Today, the term &quot;least squares method&quot; is used as a direct translation from the French &quot;méthode des moindres carrés&quot;.
+
+His major work is ''Exercices de Calcul Intégral'', published in three volumes in 1811, 1817 and 1819. In the first volume he introduced the basic properties of elliptic integrals, [[beta function]]s and [[gamma function]]s, introducing the symbol Γ normalizing it to Γ(n+1) = n!. Further results on the beta and gamma functions along with their applications to mechanics – such as the rotation of the earth, and the attraction of ellipsoids – appeared in the second volume.&lt;ref name=&quot;:1&quot;&gt;{{Cite book|url=https://books.google.com/books?id=bENTBQAAQBAJ&amp;pg=PA218|title=Creators of mathematical and computational sciences|last=Agarwal|first=Ravi P.|last2=Sen|first2=Syamal K.|publisher=Springer|year=2014|isbn=9783319108704|pages=218–19|oclc=895161901}}&lt;/ref&gt; In 1830, he gave a proof of [[Fermat's last theorem]] for exponent ''n''&amp;nbsp;=&amp;nbsp;5, which was also proven by [[Peter Gustav Lejeune Dirichlet|Lejeune Dirichlet]] in 1828.&lt;ref name=&quot;:1&quot; /&gt;
+
+In [[number theory]], he conjectured the [[quadratic reciprocity]] law, subsequently proved by Gauss; in connection to this, the [[Legendre symbol]] is named after him. He also did pioneering work on the distribution of [[prime number|primes]], and on the application of analysis to number theory. His 1798 conjecture of the [[prime number theorem]] was rigorously proved by [[Jacques Hadamard|Hadamard]] and [[Charles Jean de la Vallée-Poussin|de la Vallée-Poussin]] in 1896. In 1798 again, Legendre established the condition to express integers as the sum of three squares, following work on this topic by [[René Descartes]].&lt;ref&gt;{{cite book|last=Wolfram|first=Stephen|title=A New Kind of Science|publisher=Wolfram Media, Inc.|year=2002|page=[https://www.wolframscience.com/nks/notes-4-4--properties-of-number-theoretic-sequences/ 910]|isbn=1-57955-008-8|url=https://www.wolframscience.com/nks/}}&lt;/ref&gt;
+
+Legendre did an impressive amount of work on [[elliptic function]]s, including the classification of [[elliptic integral]]s, but it took [[Niels Henrik Abel|Abel]]'s stroke of genius to study the inverses of [[Carl Gustav Jakob Jacobi|Jacobi]]'s [[Jacobi's elliptic functions|functions]] and solve the problem completely.
+
+He is known for the [[Legendre transformation]], which is used to go from the [[Lagrangian mechanics|Lagrangian]] to the [[Hamiltonian mechanics|Hamiltonian]] formulation of [[classical mechanics]]. In [[thermodynamics]] it is also used to obtain the [[enthalpy]] and the [[Helmholtz free energy|Helmholtz]] and [[Gibbs free energy|Gibbs]] [[Thermodynamic free energy|(free) energies]] from the [[internal energy]]. He is also the namesake of the [[Legendre polynomials]], solutions to Legendre's differential equation, which occur frequently in physics and engineering applications, ''e.g.'' [[electrostatics]].
+
+Legendre is best known as the author of ''Éléments de géométrie'', which was published in 1794 and was the leading elementary text on the topic for around 100 years. This text greatly rearranged and simplified many of the propositions from [[Euclid's Elements|Euclid's ''Elements'']] to create a more effective textbook.
+
+==Honors==
+*Foreign Honorary Member of the [[American Academy of Arts and Sciences]] (1832)&lt;ref name=AAAS&gt;{{cite web|title=Book of Members, 1780–2010: Chapter L|url=http://www.amacad.org/publications/BookofMembers/ChapterL.pdf|publisher=American Academy of Arts and Sciences|accessdate=28 July 2014}}&lt;/ref&gt;
+*The [[Moon]] crater [[Legendre (crater)|Legendre]] is named after him.
+*Main-belt asteroid [[26950 Legendre]] is named after him.
+*Legendre is one of the [[List of the 72 names on the Eiffel Tower|72 prominent French scientists]] who were commemorated on plaques at the first stage of the [[Eiffel Tower]] when it first opened.
+
+==Publications==
+
+;Essays
+* 1782 ''Recherches sur la trajectoire des projectiles dans les milieux résistants'' (prize on projectiles offered by the Berlin Academy)
+
+;Books
+* ''Eléments de géométrie'', textbook 1794
+* ''Essai sur la Théorie des Nombres'' 1797-8 (&quot;An VI&quot;), 2nd ed. 1808, 3rd ed. in 2 vol. 1830
+* ''Nouvelles Méthodes pour la Détermination des Orbites des Comètes'', 1805
+* ''Exercices de Calcul Intégral'', book in three volumes 1811, 1817, and 1819
+* ''Traité des Fonctions Elliptiques'', book in three volumes 1825, 1826, and 1830
+
+;Memoires in ''Histoire de l'Académie Royale des Sciences''
+* 1783 ''Sur l'attraction des Sphéroïdes homogènes'' (work on Legendre polynomials)
+* 1784 ''Recherches sur la figure des Planètes'' p.&amp;nbsp;370
+* 1785 ''Recherches d'analyse indéterminée'' p.&amp;nbsp;465 (work on number theory)
+* 1786 ''Mémoire sur la manière de distinguer les Maxima des Minima dans le Calcul des Variations'' p.&amp;nbsp;7 (as Legendre)
+* 1786 ''Mémoire sur les Intégrations par arcs d'ellipse'' p.&amp;nbsp;616 (as le Gendre)
+* 1786 ''Second Mémoire sur les Intégrations par arcs d'ellipse'' p.&amp;nbsp;644
+* 1787 ''L'intégration de quelques équations aux différences Partielles'' (Legendre transform)

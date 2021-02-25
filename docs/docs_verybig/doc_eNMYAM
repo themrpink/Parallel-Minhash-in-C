@@ -1,0 +1,312 @@
+PD characteristics for this signals is equal&lt;ref&gt;A. J. Viterbi, ''Principles of Coherent Communication'', McGraw-Hill, New York, 1966&lt;/ref&gt; to
+
+:&lt;math&gt;
+ \varphi(\theta_1 - \theta_2) = \frac{A_1 A_2}{2}\sin(\theta_1 - \theta_2)
+&lt;/math&gt;
+
+Hence the phase domain model takes the form
+
+:&lt;math&gt;\begin{align}
+ \dot x &amp;= -\frac{1}{RC}x + \frac{1}{RC}\frac{A_1 A_2}{2}\sin(\theta_{\Delta}),\\[6pt]
+ \dot \theta_{\Delta} &amp;= \omega_{\Delta} - g_v (c^{*}x).
+\end{align}
+&lt;/math&gt;
+
+This system of equations is equivalent to the equation of mathematical pendulum
+
+:&lt;math&gt;
+\begin{align}
+x &amp; = \frac{\dot\theta_2 - \omega_2}{g_v c^*} = \frac{\omega_1 - \dot\theta_{\Delta} - \omega_2}{g_v c^*},\\[6pt]
+\dot x &amp; = \frac{\ddot\theta_2}{g_v c^*},\\[6pt]
+\theta_1 &amp; = \omega_1 t + \Psi,\\[6pt]
+\theta_{\Delta} &amp; = \theta_1 -\theta_2,\\[6pt]
+\dot\theta_{\Delta} &amp; = \dot\theta_1 - \dot\theta_2 = \omega_1 - \dot\theta_2,\\[6pt]
+&amp; \frac{1}{g_v c^*}\ddot\theta_{\Delta} - \frac{1}{g_v c^* RC}\dot\theta_{\Delta} - \frac{A_1A_2}{2RC}\sin\theta_{\Delta} = \frac{\omega_2 - \omega_1}{g_v c^* RC}.
+\end{align}
+&lt;/math&gt;
+
+===Linearized phase domain model===
+Phase locked loops can also be analyzed as control systems by applying the [[Laplace transform]]. The loop response can be written as
+
+:&lt;math&gt;\frac{\theta_o}{\theta_i} = \frac{K_p K_v F(s)} {s + K_p K_v F(s)}&lt;/math&gt;
+
+Where
+* &lt;math&gt;\theta_o&lt;/math&gt; is the output phase in [[radian]]s
+* &lt;math&gt;\theta_i&lt;/math&gt; is the input phase in radians
+* &lt;math&gt;K_p&lt;/math&gt; is the phase detector gain in [[volt]]s per radian
+* &lt;math&gt;K_v&lt;/math&gt; is the VCO gain in radians per volt-[[second]]
+* &lt;math&gt;F(s)&lt;/math&gt; is the loop filter transfer function (dimensionless)
+
+The loop characteristics can be controlled by inserting different types of loop filters. The simplest filter is a one-pole [[RC circuit]]. The loop transfer function in this case is
+
+:&lt;math&gt;F(s) = \frac{1}{1 + s R C}&lt;/math&gt;
+
+The loop response becomes:
+
+:&lt;math&gt;\frac{\theta_o}{\theta_i} = \frac{\frac{K_p K_v}{R C}}{s^2 + \frac{s}{R C} + \frac{K_p K_v}{R C}}&lt;/math&gt;
+
+This is the form of a classic [[harmonic oscillator]]. The denominator can be related to that of a second order system:
+
+:&lt;math&gt;s^2 + 2 s \zeta \omega_n + \omega_n^2&lt;/math&gt;
+
+where &lt;math&gt;\zeta&lt;/math&gt; is the damping factor and &lt;math&gt;\omega_n&lt;/math&gt; is the natural frequency of the loop.
+
+For the one-pole RC filter,
+
+:&lt;math&gt;\omega_n = \sqrt{\frac{K_p K_v}{R C}}&lt;/math&gt;
+:&lt;math&gt;\zeta = \frac{1}{2 \sqrt{K_p K_v R C}}&lt;/math&gt;
+
+The loop natural frequency is a measure of the response time of the loop, and the damping factor is a measure of the overshoot and ringing. Ideally, the natural frequency should be high and the damping factor should be near 0.707 (critical damping). With a single pole filter, it is not possible to control the loop frequency and damping factor independently. For the case of critical damping,
+
+:&lt;math&gt;R C = \frac{1}{2 K_p K_v}&lt;/math&gt;
+:&lt;math&gt;\omega_c = K_p K_v \sqrt{2}&lt;/math&gt;
+
+A slightly more effective filter, the lag-lead filter includes one pole and one zero. This can be realized with two resistors and one capacitor. The transfer function for this filter is
+
+:&lt;math&gt;F(s) = \frac{1+s C R_2}{1+s C (R_1+R_2)}&lt;/math&gt;
+
+This filter has two time constants
+
+:&lt;math&gt;\tau_1 = C (R_1 + R_2)&lt;/math&gt;
+:&lt;math&gt;\tau_2 = C R_2&lt;/math&gt;
+
+Substituting above yields the following natural frequency and damping factor
+
+:&lt;math&gt;\omega_n = \sqrt{\frac{K_p K_v}{\tau_1}}&lt;/math&gt;
+:&lt;math&gt;\zeta = \frac{1}{2 \omega_n \tau_1} + \frac{\omega_n \tau_2}{2}&lt;/math&gt;
+
+The loop filter components can be calculated independently for a given natural frequency and damping factor
+
+:&lt;math&gt;\tau_1 = \frac{K_p K_v}{\omega_n^2}&lt;/math&gt;
+:&lt;math&gt;\tau_2 = \frac{2 \zeta}{\omega_n} - \frac{1}{K_p K_v}&lt;/math&gt;
+
+Real world loop filter design can be much more complex e.g. using higher order filters to reduce various types or source of phase noise. (See the D Banerjee ref below)
+
+===Implementing a digital phase-locked loop in software===
+Digital phase locked loops can be implemented in hardware, using integrated circuits such as a CMOS 4046.   However, with microcontrollers becoming faster, it may make sense to implement a phase locked loop in software for applications that do not require locking onto signals in the MHz range or faster, such as precisely controlling motor speeds.  Software implementation has several advantages including easy customization of the feedback loop including changing the multiplication or division ratio between the signal being tracked and the output oscillator.  Furthermore, a software implementation is useful to understand and experiment with.  As an example of a phase-locked loop implemented using a [[phase frequency detector]] is presented in MATLAB, as this type of phase detector is robust and easy to implement.
+
+&lt;syntaxhighlight lang=&quot;matlab&quot;&gt;
+% This example is written in MATLAB
+
+% Initialize variables
+vcofreq = zeros(1, numiterations);
+ervec = zeros(1, numiterations);
+% Keep track of last states of reference, signal, and error signal
+qsig = 0; qref = 0; lref = 0; lsig = 0; lersig = 0;
+phs = 0;
+freq = 0;
+
+% Loop filter constants (proportional and derivative)
+% Currently powers of two to facilitate multiplication by shifts
+prop = 1 / 128;
+deriv = 64;
+
+for it = 1:numiterations
+    % Simulate a local oscillator using a 16-bit counter
+    phs = mod(phs + floor(freq / 2 ^ 16), 2 ^ 16);
+    ref = phs &lt; 32768;
+    % Get the next digital value (0 or 1) of the signal to track
+    sig = tracksig(it);
+    % Implement the phase-frequency detector
+    rst = ~ (qsig &amp; qref); % Reset the &quot;flip-flop&quot; of the phase-frequency
+    % detector when both signal and reference are high
+    qsig = (qsig | (sig &amp; ~ lsig)) &amp; rst; % Trigger signal flip-flop and leading edge of signal
+    qref = (qref | (ref &amp; ~ lref)) &amp; rst; % Trigger reference flip-flop on leading edge of reference
+    lref = ref; lsig = sig; % Store these values for next iteration (for edge detection)
+    ersig = qref - qsig; % Compute the error signal (whether frequency should increase or decrease)
+    % Error signal is given by one or the other flip flop signal
+    % Implement a pole-zero filter by proportional and derivative input to frequency
+    filtered_ersig = ersig + (ersig - lersig) * deriv;
+    % Keep error signal for proportional output
+    lersig = ersig;
+    % Integrate VCO frequency using the error signal
+    freq = freq - 2 ^ 16 * filtered_ersig * prop;
+    % Frequency is tracked as a fixed-point binary fraction
+    % Store the current VCO frequency
+    vcofreq(1, it) = freq / 2 ^ 16;
+    % Store the error signal to show whether signal or reference is higher frequency
+    ervec(1, it) = ersig;
+end
+&lt;/syntaxhighlight&gt;
+
+In this example, an array &lt;tt&gt;tracksig&lt;/tt&gt; is assumed to contain a reference signal to be tracked.  The oscillator is implemented by a counter, with the most significant bit of the counter indicating the on/off status of the oscillator.  This code simulates the two D-type [[Flip-flop (electronics)|flip-flops]] that comprise a phase-frequency comparator.  When either the reference or signal has a positive edge, the corresponding flip-flop switches high.  Once both reference and signal is high, both flip-flops are reset.  Which flip-flop is high determines at that instant whether the reference or signal leads the other.  The error signal is the difference between these two flip-flop values.  The pole-zero filter is implemented by adding the error signal and its derivative to the filtered error signal.  This in turn is integrated to find the oscillator frequency.
+
+In practice, one would likely insert other operations into the feedback of this phase-locked loop.  For example, if the phase locked loop were to implement a frequency multiplier, the oscillator signal could be divided in frequency before it is compared to the reference signal.
+
+==See also==
+* [[Frequency-locked loop]]
+* [[Charge-pump phase-locked loop]]
+* [[Carrier recovery]]
+* [[Circle map]] – A simple mathematical model of the phase-locked loop showing both mode-locking and chaotic behavior.
+* [[Costas loop]]
+* [[Delay-locked loop]] (DLL)
+* [[Direct conversion receiver]]
+* [[Direct digital synthesizer]]
+* [[Kalman filter]]
+* [[PLL multibit]]
+* [[Shortt–Synchronome clock]] – Slave pendulum phase-locked to master (ca 1921)
+
+==Notes==
+{{Notelist}}
+
+==References==
+{{Reflist|30em}}
+
+==Further reading==
+{{Commons category|Phase-locked loops}}
+*{{Citation
+ |first= Dean
+ |last= Banerjee
+ |url= http://www.ti.com/tool/pll_book
+ |title= PLL Performance, Simulation and Design Handbook
+ |edition= 4th
+ |year= 2006
+ |publisher= [[National Semiconductor]]
+ |ref= none
+ |access-date= 2012-12-04
+ |archive-url= https://web.archive.org/web/20120902032009/http://www.ti.com/tool/pll_book
+ |archive-date= 2012-09-02
+ |url-status= dead
+ }}.
+*{{Citation
+ |first= R. E.
+ |last= Best
+ |title= Phase-locked Loops: Design, Simulation and Applications
+ |publisher= McGraw-Hill
+ |year= 2003
+ |isbn= 0-07-141201-8
+ |ref=none}}
+*{{Citation
+ |first= Henri
+ |last= de Bellescize
+ |title= La réception Synchrone
+ |journal= L'Onde Electrique
+ |volume= 11
+ |pages=230–240
+ |date= June 1932
+ |ref=none}}
+*{{Citation
+ |first= Richard C.
+ |last= Dorf
+ |title= The Electrical Engineering Handbook
+ |publisher= CRC Press
+ |location= Boca Raton
+ |year= 1993
+ |bibcode= 1993eeh..book.....D
+ |isbn= 0-8493-0185-8
+ |ref=none}}
+*{{Citation
+ |first= William F.
+ |last=Egan
+ |author-link=William F. Egan (electrical_engineer)
+ |title= Phase-Lock Basics
+ |publisher= John Wiley &amp; Sons
+ |year= 1998
+ |ref=none}}. (provides useful Matlab scripts for simulation)
+*{{Citation
+ |first= William F.
+ |last= Egan
+ |author-link=William F. Egan (electrical_engineer)
+ |title= Frequency Synthesis by Phase Lock
+ |edition= 2nd
+ |publisher= John Wiley and Sons
+ |year= 2000
+ |ref=none}}. (provides useful Matlab scripts for simulation)
+*{{Citation
+ |first= Floyd M.
+ |last= Gardner
+ |author-link= Floyd M. Gardner
+ |title= Phaselock Techniques
+ |edition= 3rd
+ |publisher= Wiley-Interscience
+ |year= 2005
+ |isbn= 978-0-471-43063-6 |ref=none}}
+*{{Citation
+ |first1= J.
+ |last1= Klapper
+ |first2= J. T.
+ |last2= Frankle
+ |title= Phase-Locked and Frequency-Feedback Systems
+ |publisher= Academic Press
+ |year= 1972
+ |ref=none}}. (FM Demodulation)
+*{{Citation
+ |title= Predicting the Phase Noise and Jitter of PLL-Based Frequency Synthesizers
+ |edition= 4g
+ |first= Ken
+ |last= Kundert
+ |date= August 2006
+ |publisher= Designer's Guide Consulting, Inc.
+ |url= http://www.designers-guide.org/Analysis/PLLnoise+jitter.pdf
+ |ref=none}}
+*{{Citation
+ |first= Mingliang
+ |last= Liu
+ |title= Build a 1.5-V 2.4-GHz CMOS PLL
+ |date= February 21, 2006
+ |publisher= Wireless Net Design Line
+ |url= http://www.wirelessnetdesignline.com/howto/180205535
+ |ref= none
+ |archive-url= https://web.archive.org/web/20100701082915/http://www.wirelessnetdesignline.com/howto/180205535
+ |archive-date= July 1, 2010
+ |url-status= dead
+ }}. An article on designing a standard PLL IC for Bluetooth applications.
+*{{Citation
+ |first= Dan H.
+ |last= Wolaver
+ |title= Phase-Locked Loop Circuit Design
+ |publisher= Prentice Hall
+ |year= 1991
+ |isbn= 0-13-662743-9
+ |ref=none}}
+
+==External links==
+* [https://www.electronics-notes.com/articles/radio/pll-phase-locked-loop/tutorial-primer-basics.php Phase locked loop primer] – Includes embedded video
+
+{{Authority control}}
+
+[[Category:Articles with example MATLAB/Octave code]]
+[[Category:Communication circuits]]
+[[Category:Electronic design]]
+[[Category:Electronic oscillators]]
+[[Category:Radio electronics]]</text>
+      <sha1>7fx22ip7ksgnh3gag3oshp9v9l74g49</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Phase noise</title>
+    <ns>0</ns>
+    <id>41549</id>
+    <revision>
+      <id>990877909</id>
+      <parentid>987723691</parentid>
+      <timestamp>2020-11-27T01:10:41Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 13 templates: del empty params (16×); hyphenate params (1×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12187" xml:space="preserve">[[File:Phase Noise measured in ssa.png|thumb|250px|right|Phase noise measured by signal source analyzer (SSA). The SSA shows the positive part of the phase noise. In this picture there is a phase noise of the main carrier, 3 other signals and &quot;noise hill&quot;.]]
+[[File:Phasenrauschen(2).png|thumb|250px|right|A weak signal disappears in the phase noise of the stronger signal]]
+In [[signal processing]], '''phase noise''' is the [[frequency-domain]] representation of random fluctuations in the [[phase (waves)|phase]] of a [[waveform]], corresponding to [[time-domain]] deviations from perfect periodicity (&quot;[[jitter]]&quot;).  Generally speaking, [[radio-frequency]] engineers speak of the phase noise of an [[oscillator]], whereas [[digital-system]] engineers work with the jitter of a clock.
+
+==Definitions==
+Historically there have been two conflicting yet widely used definitions for phase noise. Some authors define phase noise to be the [[spectral density]] of a signal's phase only,&lt;ref&gt;{{Citation |first1=J. |last1=Rutman |first2=F. L. |last2=Walls |title=Characterization of frequency stability in precision frequency sources |journal=Proceedings of the IEEE |volume=79 |issue=6 |pages=952–960 |date=June 1991 |url=http://www.umbc.edu/photonics/Menyuk/Phase-Noise/rutman_ProcIEEE_910601.pdf |doi=10.1109/5.84972 |bibcode=1991IEEEP..79..952R }}&lt;/ref&gt; while the other definition refers to the phase spectrum (which pairs up with the amplitude spectrum, see [[spectral density#Related concepts]]) resulting from the [[spectral estimation]] of the signal itself.&lt;ref&gt;{{Citation |first1=A. |last1=Demir |first2=A. |last2=Mehrotra |first3=J. |last3=Roychowdhury |title=Phase noise in oscillators: a unifying theory and numerical methods for characterization |journal=IEEE Transactions on Circuits and Systems I: Fundamental Theory and Applications |volume=47 |issue=5 |pages=655–674 |date=May 2000 |issn=1057-7122 |doi=10.1109/81.847872 |url=http://potol.eecs.berkeley.edu/~jr/research/PDFs/2000-TCAS1-Demir-Mehrotra-Roychowdhury.pdf |citeseerx=10.1.1.335.5342 }}&lt;/ref&gt; Both definitions yield the same result at offset frequencies well removed from the carrier. At close-in offsets however, the two definitions differ.&lt;ref&gt;{{Citation |first1=R. |last1=Navid |first2=C. |last2=Jungemann |first3=T. H. |last3=Lee |first4=R. W. |last4=Dutton |author4-link=Robert W. Dutton |title=Close-in phase noise in electrical oscillators |journal=Proc. SPIE Symp. Fluctuations and Noise |location=Maspalomas, Spain |year=2004 }}&lt;/ref&gt;
+
+The [[IEEE]] defines phase noise as {{math|ℒ(''f'') {{=}} ''S''&lt;sub&gt;φ&lt;/sub&gt;(''f'')/2}} where the &quot;phase instability&quot; {{math|''S''&lt;sub&gt;φ&lt;/sub&gt;(''f'')}} is the one-sided spectral density of a signal's phase deviation.&lt;ref&gt;{{Citation |first2=Eva. S. |last2=Ferre-Pikal |first1=John R. |last1=Vig |first3=J. C. |last3=Camparo |first4=L. S. |last4=Cutler |first5=L. |last5=Maleki |first6=W. J. |last6=Riley |first7=S. R. |last7=Stein |first8=C. |last8=Thomas |first9=F. L. |last9=Walls |first10=J. D. |last10=White |id=IEEE Std 1139-1999 |title=IEEE Standard Definitions of Physical Quantities for Fundamental Frequency and Time Metrology &amp;ndash; Random Instabilities |publisher=IEEE |date=26 March 1999 |isbn=978-0-7381-1754-6 |ref=CITEREFIEEE1999 }}, see definition 2.7.&lt;/ref&gt;  Although {{math|''S''&lt;sub&gt;φ&lt;/sub&gt;(''f'')}} is a one-sided function, it represents &quot;the double-sideband spectral density of phase fluctuation&quot;.&lt;ref&gt;{{Harvnb|IEEE|1999|p=2}}, stating {{math|ℒ(''f'')}} &quot;is one half of the double-sideband spectral density of phase fluctuations.&quot;&lt;/ref&gt;  The symbol {{math|ℒ}} is called a [[L#Derived signs, symbols and abbreviations|''(capital or uppercase) script L'']].&lt;ref&gt;{{Harvnb|IEEE|1999|p=2}}&lt;/ref&gt;
+
+==Background==
+An ideal [[electronic oscillator|oscillator]] would generate a pure [[sine wave]].  In the frequency domain, this would be represented as a single pair of [[Dirac delta function]]s (positive and negative conjugates) at the oscillator's frequency; i.e., all the signal's [[power (physics)|power]] is at a single frequency.  All real oscillators have [[phase modulated]] [[Electronic noise|noise]] components.  The phase noise components spread the power of a signal to adjacent frequencies, resulting in noise [[sidebands]].  Oscillator phase noise often includes low frequency [[flicker noise]] and may include [[white noise]].
+
+Consider the following noise-free signal:
+: {{math|''v''(''t'') {{=}} ''A''cos(2π''f''&lt;sub&gt;0&lt;/sub&gt;''t'')}}.
+
+Phase noise is added to this signal by adding a [[Stochastic Process|stochastic process]] represented by φ to the signal as follows:
+: {{math|''v''(''t'') {{=}} ''A''cos(2π''f''&lt;sub&gt;0&lt;/sub&gt;''t'' + φ(''t''))}}.
+
+Phase noise is a type of [[cyclostationary noise]] and is closely related to [[jitter]]. A particularly important type of phase noise is that produced by [[oscillator phase noise|oscillators]].
+
+Phase noise ({{math|ℒ(''f'')}}) is typically expressed in units of [[dBc]]/Hz, and it represents the noise power relative to the carrier contained in a 1&amp;nbsp;Hz bandwidth centered at a certain offsets from the carrier. For example, a certain signal may have a phase noise of −80&amp;nbsp;dBc/Hz at an offset of 10&amp;nbsp;kHz and −95&amp;nbsp;dBc/Hz at an offset of 100&amp;nbsp;kHz. Phase noise can be measured and expressed as single-sideband or double-sideband values, but as noted earlier, the IEEE has adopted the definition as one-half of the double-sideband PSD.

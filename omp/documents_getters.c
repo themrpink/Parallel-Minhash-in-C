@@ -69,7 +69,7 @@ int list_dir(const char *nomeDirectory, char ***files) {
         end = omp_get_wtime();
         exectimes(end-start, LIST_DIR, SET_TIME);
     }
-   printf("numb file: %d\n", i);
+   
     return numberOfFiles;
 }
 

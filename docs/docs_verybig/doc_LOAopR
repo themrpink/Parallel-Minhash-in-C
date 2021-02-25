@@ -1,0 +1,125 @@
+The line voltage &lt;math&gt;V(x)&lt;/math&gt; and the current &lt;math&gt;I(x)&lt;/math&gt; can be expressed in the frequency domain as
+
+:&lt;math&gt;\frac{\partial V(x)}{\partial x} = -(R + j\,\omega\,L)\,I(x)&lt;/math&gt;
+
+:&lt;math&gt;\frac{\partial I(x)}{\partial x} = -(G + j\,\omega\,C)\,V(x) ~\,.&lt;/math&gt;
+
+===Special case of a lossless line===
+When the elements &lt;math&gt;R&lt;/math&gt; and &lt;math&gt;G&lt;/math&gt; are negligibly small the transmission line is considered as a lossless structure. In this hypothetical case, the model depends only on the &lt;math&gt;L&lt;/math&gt; and &lt;math&gt;C&lt;/math&gt; elements which greatly simplifies the analysis. For a lossless transmission line, the second order steady-state Telegrapher's equations are:
+
+:&lt;math&gt;\frac{\partial^2 V(x)}{\partial x^2}+ \omega^2 L\,C\,V(x) = 0&lt;/math&gt;
+
+:&lt;math&gt;\frac{\partial^2 I(x)}{\partial x^2} + \omega^2 L\,C\,I(x) = 0 ~\,.&lt;/math&gt;
+
+These are [[wave equation]]s which have [[plane wave]]s with equal propagation speed in the forward and reverse directions as solutions. The physical significance of this is that electromagnetic waves propagate down transmission lines and in general, there is a reflected component that interferes with the original signal. These equations are fundamental to transmission line theory.
+
+===General case of a line with losses===
+In the general case the loss terms, &lt;math&gt;R&lt;/math&gt; and &lt;math&gt;G&lt;/math&gt;, are both included, and the full form of the Telegrapher's equations become:
+
+:&lt;math&gt;\frac{\partial^2 V(x)}{\partial x^2} = \gamma^2 V(x)\,&lt;/math&gt;
+
+:&lt;math&gt;\frac{\partial^2 I(x)}{\partial x^2} = \gamma^2 I(x)\,&lt;/math&gt;
+
+where &lt;math&gt;\gamma&lt;/math&gt; is the ([[complex number|complex]]) [[propagation constant]]. These equations are fundamental to transmission line theory. They are also [[wave equation]]s, and have solutions similar to the special case, but which are a mixture of sines and cosines with exponential decay factors. Solving for the propagation constant &lt;math&gt;\gamma&lt;/math&gt; in terms of the primary parameters &lt;math&gt;R&lt;/math&gt;, &lt;math&gt;L&lt;/math&gt;, &lt;math&gt;G&lt;/math&gt;, and &lt;math&gt;C&lt;/math&gt; gives:
+
+:&lt;math&gt;\gamma = \sqrt{(R + j\,\omega\,L)(G + j\,\omega\,C)\,}&lt;/math&gt;
+
+and the characteristic impedance can be expressed as
+
+:&lt;math&gt;Z_0 = \sqrt{\frac{R + j\,\omega\,L}{G + j\,\omega\,C}\,} ~\,.&lt;/math&gt;
+
+The solutions for &lt;math&gt;V(x)&lt;/math&gt; and &lt;math&gt;I(x)&lt;/math&gt; are:
+
+:&lt;math&gt;V(x) = V_{(+)} e^{-\gamma\,x} + V_{(-)} e^{+\gamma\,x} \,&lt;/math&gt;
+
+:&lt;math&gt;I(x) = \frac{1}{Z_0}\,\left( V_{(+)} e^{-\gamma\,x} - V_{(-)} e^{+\gamma\,x} \right) ~\,. &lt;/math&gt;
+
+The constants &lt;math&gt;V_{(\pm)}&lt;/math&gt; must be determined from boundary conditions. For a voltage pulse &lt;math&gt;V_{\mathrm{in}}(t) \,&lt;/math&gt;, starting at &lt;math&gt;x = 0&lt;/math&gt; and moving in the positive &lt;math&gt;x&lt;/math&gt;&amp;nbsp;direction, then the transmitted pulse &lt;math&gt;V_{\mathrm{out}}(x,t) \,&lt;/math&gt; at position &lt;math&gt;x&lt;/math&gt; can be obtained by computing the Fourier Transform, &lt;math&gt;\tilde{V}(\omega)&lt;/math&gt;, of &lt;math&gt;V_{\mathrm{in}}(t) \,&lt;/math&gt;, attenuating each frequency component by &lt;math&gt;e^{-\operatorname{Re}(\gamma)\,x} \,&lt;/math&gt;, advancing its phase by &lt;math&gt;-\operatorname{Im}(\gamma)\,x\,&lt;/math&gt;, and taking the [[Fourier inversion theorem|inverse Fourier Transform]]. The real and imaginary parts of &lt;math&gt;\gamma&lt;/math&gt; can be computed as
+
+:&lt;math&gt;\operatorname{Re}(\gamma) = \alpha = (a^2 + b^2)^{1/4} \cos(\psi ) \,&lt;/math&gt;
+
+:&lt;math&gt;\operatorname{Im}(\gamma) = \beta = (a^2 + b^2)^{1/4} \sin(\psi) \,&lt;/math&gt;
+
+with
+
+:&lt;math&gt;a ~ \equiv ~ R\, G\, - \omega^2 L\,C\ ~ = ~ \omega^2 L\,C\,\left[ \left( \frac{R}{\omega L} \right) \left( \frac{G}{\omega C} \right) - 1 \right] &lt;/math&gt;
+
+:&lt;math&gt;b ~ \equiv ~ \omega\,C\,R + \omega\,L\,G ~ = ~ \omega^2 L\,C\,\left( \frac{R}{\omega\,L} + \frac{G}{\omega\,C} \right) &lt;/math&gt;
+
+the right-hand expressions holding when neither &lt;math&gt;L&lt;/math&gt;, nor  &lt;math&gt;C&lt;/math&gt;, nor &lt;math&gt;\omega&lt;/math&gt; is zero, and with
+
+:&lt;math&gt;\psi ~ \equiv ~ \tfrac{1}{2}\operatorname{atan2}(b,a)\,&lt;/math&gt;
+
+where [[atan2]] is the everywhere-defined form of two-parameter arctangent function, with arbitrary value zero when both arguments are zero.
+
+Alternatively, the complex square root can be evaluated algebraically, to yield:
+
+:&lt;math&gt; \alpha = \frac{\pm b}{\sqrt{2 \left( - a + \sqrt{a^2 + b^2} \right)~}},&lt;/math&gt;
+and
+:&lt;math&gt; \beta = \pm { \sqrt{\tfrac{1}{2}\left( - a + \sqrt{a^2 + b^2} \right)~} },&lt;/math&gt;
+
+with the plus or minus signs chosen opposite to the direction of the wave's motion through the conducting medium. (Note that  {{mvar|a}}  is usually negative, since &lt;math&gt;G&lt;/math&gt; and &lt;math&gt;R&lt;/math&gt; are typically much smaller than &lt;math&gt;\omega C&lt;/math&gt; and &lt;math&gt;\omega L&lt;/math&gt;, respectively, so  {{mvar|&amp;minus;a}}  is usually positive. {{mvar|b}} is always positive.)
+
+===Special, low loss case===
+For small losses and high frequencies, the general equations can be simplified: If &lt;math&gt;\tfrac{R}{\omega\,L} \ll 1 &lt;/math&gt; and &lt;math&gt;\tfrac{G}{\omega\,C} \ll 1&lt;/math&gt; then
+
+:&lt;math&gt;\operatorname{Re}(\gamma) = \alpha \approx \tfrac{1}{2}\sqrt{L\,C\,}\,\left( \frac{R}{L} + \frac{G}{C} \right) \,&lt;/math&gt;
+
+:&lt;math&gt;\operatorname{Im}(\gamma) = \beta \approx \omega\,\sqrt{L\,C\,} ~.\,&lt;/math&gt;
+
+Since an advance in phase by &lt;math&gt;- \omega\,\delta&lt;/math&gt; is equivalent to a time delay by &lt;math&gt;\delta&lt;/math&gt;, &lt;math&gt;V_{out}(t)&lt;/math&gt; can be simply computed as
+
+:&lt;math&gt;V_{\mathrm{out}}(x,t) \approx V_{\mathrm{in}}(t - \sqrt{L\,C\,}\,x)\,e^{- \tfrac{1}{2}\sqrt{L\,C\,}\,\left( \frac{R}{L} + \frac{G}{C} \right)\,x }. \,&lt;/math&gt;
+
+===Heaviside condition===
+{{Main|Heaviside condition}}
+The [[Heaviside condition]] is a special case where the wave travels down the line without any [[dispersion (optics)|dispersion]] distortion. The condition for this to take place is
+
+:&lt;math&gt; \frac {G}{C} = \frac {R}{L} &lt;/math&gt;
+
+==Input impedance of transmission line==
+[[File:SmithChartLineLength.svg|thumb|350px|Looking towards a load through a length &lt;math&gt;\ell&lt;/math&gt; of lossless transmission line, the impedance changes as &lt;math&gt;\ell&lt;/math&gt; increases, following the blue circle on this [[Smith chart|impedance Smith chart]]. (This impedance is characterized by its [[reflection coefficient]], which is the reflected voltage divided by the incident voltage.) The blue circle, centred within the chart, is sometimes called an ''SWR circle'' (short for ''constant [[standing wave ratio]]'').]]
+
+The [[characteristic impedance]] &lt;math&gt;Z_0&lt;/math&gt; of a transmission line is the ratio of the amplitude of a ''single'' voltage wave to its current wave. Since most transmission lines also have a reflected wave, the characteristic impedance is generally not the impedance that is measured on the line.
+
+The impedance measured at a given distance &lt;math&gt;\ell&lt;/math&gt; from the load impedance &lt;math&gt;Z_\mathrm{L}&lt;/math&gt; may be expressed as
+
+:&lt;math&gt;Z_\mathrm{in}\left(\ell\right)=\frac{V(\ell)}{I(\ell)} = Z_0 \frac{1 + \mathit{\Gamma}_\mathrm{L} e^{-2 \gamma \ell}}{1 - \mathit{\Gamma}_\mathrm{L} e^{-2 \gamma \ell}}&lt;/math&gt;,
+
+where &lt;math&gt;\gamma&lt;/math&gt; is the propagation constant and &lt;math&gt;\mathit{\Gamma}_\mathrm{L} = \frac{\,Z_\mathrm{L} - Z_0\,}{Z_\mathrm{L} + Z_0}&lt;/math&gt; is the voltage [[reflection coefficient]] measured at the load end of the transmission line. Alternatively, the above formula can be rearranged to express the input impedance in terms of the load impedance rather than the load voltage reflection coefficient:
+
+:&lt;math&gt;Z_\mathrm{in}(\ell) = Z_0\,\frac{Z_\mathrm{L} + Z_0 \tanh\left(\gamma \ell\right)}{Z_0 + Z_\mathrm{L}\,\tanh\left(\gamma \ell \right)}&lt;/math&gt;.
+
+===Input impedance of lossless transmission line===
+For a lossless transmission line, the propagation constant is purely imaginary, &lt;math&gt;\gamma = j\,\beta&lt;/math&gt;, so the above formulas can be rewritten as
+:&lt;math&gt;
+Z_\mathrm{in}(\ell) = Z_0 \frac{Z_\mathrm{L} + j\,Z_0\,\tan(\beta \ell)}{Z_0 + j\,Z_\mathrm{L}\tan(\beta \ell)}
+&lt;/math&gt;
+
+where &lt;math&gt;\beta = \frac{\,2 \pi\,}{\lambda}&lt;/math&gt; is the [[wavenumber]].
+
+In calculating &lt;math&gt;\beta,&lt;/math&gt; the wavelength is generally different ''inside'' the transmission line to what it would be in free-space. Consequently, the velocity factor of the material the transmission line is made of needs to be taken into account when doing such a calculation.
+
+===Special cases of lossless transmission lines===
+====Half wave length====
+For the special case where &lt;math&gt;\beta\,\ell= n\,\pi&lt;/math&gt; where n is an integer (meaning that the length of the line is a multiple of half a wavelength), the expression reduces to the load impedance so that
+:&lt;math&gt;Z_\mathrm{in} = Z_\mathrm{L} \,&lt;/math&gt;
+
+for all &lt;math&gt;n\,.&lt;/math&gt; This includes the case when &lt;math&gt;n=0&lt;/math&gt;, meaning that the length of the transmission line is negligibly small compared to the wavelength. The physical significance of this is that the transmission line can be ignored (i.e. treated as a wire) in either case.
+
+====Quarter wave length====
+{{Main|quarter-wave impedance transformer}}
+For the case where the length of the line is one quarter wavelength long, or an odd multiple of a quarter wavelength long, the input impedance becomes
+:&lt;math&gt;
+Z_\mathrm{in}=\frac{Z_0^2}{Z_\mathrm{L}} ~\,.
+&lt;/math&gt;
+
+====Matched load====
+Another special case is when the load impedance is equal to the characteristic impedance of the line (i.e. the line is ''matched''), in which case the impedance reduces to the characteristic impedance of the line so that
+:&lt;math&gt;Z_\mathrm{in}=Z_\mathrm{L}=Z_0 \,&lt;/math&gt;
+for all &lt;math&gt;\ell&lt;/math&gt; and all &lt;math&gt;\lambda&lt;/math&gt;.
+
+====Short====
+[[File:Transmission line animation open short2.gif|thumb|right|300px|[[Standing wave]]s on a transmission line with an open-circuit load (top), and a short-circuit load (bottom). Black dots represent electrons, and the arrows show the electric field.]]
+{{main|stub (electronics)#Short circuited stub|l1=stub}}
+For the case of a shorted load (i.e. &lt;math&gt;Z_\mathrm{L} = 0&lt;/math&gt;), the input impedance is purely imaginary and a periodic function of position and wavelength (frequency)

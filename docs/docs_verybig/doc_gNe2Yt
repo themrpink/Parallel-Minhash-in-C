@@ -1,0 +1,220 @@
+[[Category:Debugging]]
+[[Category:Computer errors]]</text>
+      <sha1>gz0vetqy5zwlbp677vg0c4usskd4ku4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Reserved word</title>
+    <ns>0</ns>
+    <id>49723</id>
+    <revision>
+      <id>946999270</id>
+      <parentid>946971690</parentid>
+      <timestamp>2020-03-23T17:48:20Z</timestamp>
+      <contributor>
+        <username>ToBeFree</username>
+        <id>16759563</id>
+      </contributor>
+      <minor />
+      <comment>(endorse removal of the spam honeypot)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="24696" xml:space="preserve">{{short description|Word in a programming language that cannot be used as an identifier}}
+In a [[computer language]], a '''reserved word''' (also known as a '''reserved identifier''') is a word that cannot be used as an [[Identifier#In computer science|identifier]], such as the name of a variable, function, or [[Label (programming language)|label]] – it is &quot;reserved from use&quot;. This is a [[Syntax (programming languages)|syntactic]] definition, and a reserved word may have no meaning.
+
+A closely related and often conflated notion is a '''keyword''', which is a word with special meaning in a particular context. This is a [[Semantics (computer science)|semantic]] definition. By contrast, names in a [[standard library]] but not built into the language are not considered reserved words or keywords. The terms &quot;reserved word&quot; and &quot;keyword&quot; are often used interchangeably – one may say that a reserved word is &quot;reserved for use as a keyword&quot; – and formal use varies from language to language; for this article we distinguish as above.
+
+In general reserved words and keywords need not coincide, but in most modern languages keywords are a subset of reserved words, as this makes parsing easier, since keywords cannot be confused with identifiers. In some languages, like C or Python, reserved words and keywords coincide, while in other languages, like Java, all keywords are reserved words, but some reserved words are not keywords – these are &quot;reserved for future use&quot;. In yet other languages, such as the older languages [[ALGOL]], [[FORTRAN]] and [[PL/I]], there are keywords but no reserved words, with keywords being distinguished from identifiers by other means. This makes parsing more difficult with look-ahead parsers necessary.
+
+==Distinction==
+The sets of reserved words and keywords in a language often coincide or are almost equal, and the distinction is subtle, so the terms are often used interchangeably. However, in careful usage they are distinguished.
+
+Making keywords be reserved words makes [[lexing]] easier, as a string of characters will unambiguously be either a keyword or an identifier, without depending on context; thus keywords are usually a subset of reserved words. However, reserved words need not be keywords – for example, in Java, &lt;code&gt;goto&lt;/code&gt; is a reserved word, but has no meaning and does not appear in any production rules in the grammar. This is usually done for [[forward compatibility]], so a reserved word may become a keyword in a future version without breaking existing programs.
+
+Conversely, keywords need not be reserved words, with their role understood from context, or they may be distinguished in another manner, such as by [[stropping (programming)|stropping]]. For example, the phrase &lt;code&gt;if = 1&lt;/code&gt; is unambiguous in most grammars, since a control statement of an if clause cannot start with an &lt;code&gt;=&lt;/code&gt;, and thus is allowed in some languages, such as [[FORTRAN]]. Alternatively, in [[ALGOL 68]], keywords must be stropped – marked in some way to distinguished – in the strict language by listing in bold, and thus are not reserved words. Thus in the strict language the following expression is legal, as the bold keyword '''if''' does not conflict with the ordinary identifier &lt;code&gt;if&lt;/code&gt;:
+:'''if''' if '''eq''' 0 '''then''' 1 '''fi'''
+However, in ALGOL 68 there is also a stropping regime in which keywords are reserved words, an example of how these distinct concepts often coincide; this is followed in many modern languages.
+
+==Syntax==
+{{main|Syntax (programming languages)}} 
+A reserved word is one that &quot;looks like&quot; a normal word, but is not allowed to be used as a normal word. Formally this means that it satisfies the usual [[lexical syntax]] (syntax of words) of identifiers – for example, being a sequence of letters – but cannot be used where identifiers are used. For example, the word &lt;code&gt;if&lt;/code&gt; is commonly a reserved word, while &lt;code&gt;x&lt;/code&gt; generally is not, so &lt;code&gt;x = 1&lt;/code&gt; is a valid assignment, but &lt;code&gt;if = 1&lt;/code&gt; is not.
+
+Keywords have varied uses, but primarily fall into a few classes: part of the phrase grammar (specifically a [[Production (computer science)|production rule]] with [[nonterminal symbol]]s), with various meanings, often being used for [[control flow]], such as the word &lt;code&gt;if&lt;/code&gt; in most procedural languages, which indicates a [[Conditional (computer programming)|conditional]] and takes clauses (the nonterminal symbols); names of primitive types in a language that support a [[type system]], such as &lt;code&gt;int&lt;/code&gt;; primitive [[Literal (computer programming)|literal]] values such as &lt;code&gt;true&lt;/code&gt; for Boolean true; or sometimes special commands like &lt;code&gt;exit&lt;/code&gt;. Other uses of keywords in phrases are for input/output, such as &lt;code&gt;print&lt;/code&gt;.
+
+The distinct definitions are clear when a language is analyzed by a combination of a lexer and a parser, and the syntax of the language is generated by a [[lexical grammar]] for the words, and a [[context-free grammar]] of [[Production (computer science)|production rule]]s for the phrases. This is common in analyzing modern languages, and in this case keywords are a subset of reserved words, as they must be distinguished from identifiers at the word level (hence reserved words) to be syntactically analyzed differently at the phrase level (as keywords).
+
+In this case reserved words are defined as part of the lexical grammar, and are each tokenized as a separate type, distinct from identifiers. In conventional notation, the reserved words &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;then&lt;/code&gt; for example are tokenized as types &lt;code&gt;IF&lt;/code&gt; and &lt;code&gt;THEN&lt;/code&gt;, respectively, while &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; are both tokenized as type &lt;code&gt;Identifier&lt;/code&gt;.
+
+Keywords, by contrast, syntactically appear in the phrase grammar, as [[terminal symbol]]s. For example, the production rule for a conditional expression may be &lt;code&gt;IF Expression THEN Expression&lt;/code&gt;. In this case &lt;code&gt;IF&lt;/code&gt; and &lt;code&gt;THEN&lt;/code&gt; are terminal symbols, meaning &quot;a token of type &lt;code&gt;IF&lt;/code&gt; or &lt;code&gt;THEN&lt;/code&gt;, respectively&quot; – and due to the lexical grammar, this means the string &lt;code&gt;if&lt;/code&gt; or &lt;code&gt;then&lt;/code&gt; in the original source. As an example of a primitive constant value, &lt;code&gt;true&lt;/code&gt; may be a keyword representing the boolean value &quot;true&quot;, in which case it should appear in the grammar as a possible expansion of the production &lt;code&gt;BinaryExpression&lt;/code&gt;, for instance.
+
+==Reserved ranges==
+Beyond reserving specific lists of words, some languages reserve entire ranges of words, for use as private spaces for future language version, different dialects, compiler vendor-specific extensions, or for internal use by a compiler, notably in [[name mangling]].
+
+This is most often done by using a prefix, often one or more [[underscore]]s. C and C++ are notable in this respect: C99 reserves identifiers that start with two underscores or an underscore followed by an uppercase letter, and further reserves identifiers that start with a single underscore (in the ordinary and tag spaces) for use in [[file scope]];&lt;ref&gt;C99 specification, 7.1.3 Reserved identifiers&lt;/ref&gt; with C++03 further reserves identifiers that contain a double underscore anywhere&lt;ref&gt;C++03 specification, 17.4.3.2.1 Global names [lib.global.names]&lt;/ref&gt; – this allows the use of a double underscore as a separator (to connect user identifiers), for instance.
+
+The frequent use of a double underscores in internal identifiers in Python gave rise to the abbreviation ''dunder;'' this was coined by [http://www.alumni.caltech.edu/~mjackson Mark Jackson]&lt;ref&gt;{{cite mailing list |title=How do you pronounce &quot;__&quot; (double underscore)? |first=Mark |last=Jackson |date=Sep 26, 2002 |mailinglist=python-list |url=https://mail.python.org/pipermail/python-list/2002-September/155836.html |accessdate=November 9, 2014}}&lt;/ref&gt; and independently by Tim Hochberg,&lt;ref&gt;{{cite mailing list |title=How do you pronounce &quot;__&quot; (double underscore)? |first=Tim |last=Hochberg |date=Sep 26, 2002 |mailinglist=python-list |url=https://mail.python.org/pipermail/python-list/2002-September/157561.html |accessdate=November 9, 2014}}&lt;/ref&gt; within minutes of each other, both in reply to the same question in 2002.&lt;ref&gt;[https://wiki.python.org/moin/DunderAlias Dunder (Double UNDERscore) Alias]&lt;/ref&gt;&lt;ref&gt;{{cite mailing list |title=How do you pronounce &quot;__&quot; (double underscore)? |first=Pat |last=Notz |date=Sep 26, 2002 |mailinglist=python-list |url=https://mail.python.org/pipermail/python-list/2002-September/137816.html |accessdate=November 9, 2014}}&lt;/ref&gt;
+
+==Specification==
+The list of reserved words and keywords in a language are defined when a language is developed, and both form part of a language's [[formal specification]]. Generally one wishes to minimize the number of reserved words, to avoid restricting valid identifier names. Further, introducing new reserved words breaks existing programs that use that word (it is not backwards compatible), so this is avoided. To prevent this and provide [[forward compatibility]], sometimes words are reserved without having a current use (a reserved word that is not a keyword), as this allows the word to be used in future without breaking existing programs. Alternatively, new language features can be implemented as predefineds, which can be overridden, thus not breaking existing programs.
+
+Reasons for flexibility include allowing compiler vendors to extend the specification by including non-standard features, different standard dialects of language to extend it, or future versions of the language to include additional features. For example, a procedural language may anticipate adding [[Object-oriented programming|object-oriented]] capabilities in a future version or some dialect, at which point one might add keywords like &lt;code&gt;class&lt;/code&gt; or &lt;code&gt;object&lt;/code&gt;. To accommodate this possibility, the current specification may make these reserved words, even if they are not currently used.
+
+A notable example is in [[Java (programming language)|Java]], where &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;goto&lt;/code&gt; are reserved words — they have no meaning in Java but they also cannot be used as identifiers. By reserving the terms, they can be implemented in future versions of Java, if desired, without breaking older Java source code. For example, there was a proposal in 1999 to add C++-like &lt;code&gt;const&lt;/code&gt; to the language, which was possible using the &lt;code&gt;const&lt;/code&gt; word, since it was reserved but currently unused; however, this proposal was rejected – notably because even though adding the feature would not break any existing programs, using it in the standard library (notably in collections) ''would'' break compatibility.&lt;ref&gt;{{cite web|url=http://bugs.java.com/view_bug.do?bug_id=4211070 |title=Bug ID: JDK-4211070 Java should support const parameters (like C++) for code {{sic|maint|ainence|nolink=y}} |publisher=Bugs.sun.com |date= |accessdate=2014-11-04}}&lt;!-- was previously at:
+http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4211070
+2013-08-18
+--&gt;&lt;/ref&gt; [[JavaScript]] also contains a number of reserved words without special functionality; the exact list varies by version and mode.&lt;ref&gt;[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords Lexical grammar: Keywords]&lt;/ref&gt;
+
+Languages differ significantly in how frequently they introduce new reserved words or keywords and how they name them, with some languages being very conservative and introducing new keywords rarely or never, to avoid breaking existing programs, while other languages introduce new keywords more freely, requiring existing programs to change existing identifiers that conflict. A case study is given by new keywords in [[C11 (C standard revision)|C11]] compared with [[C++11]], both from 2011 – recall that in C and C++, identifiers that begin with an underscore followed by an uppercase letter are reserved:&lt;ref&gt;C99 specification, 7.1.3 Reserved identifiers: &quot;All identifiers that begin with an underscore and either an uppercase letter or another underscore are always reserved for any use.&quot;&lt;/ref&gt;
+{{quote|The C committee prefers not to create new keywords in the user name space, as it is generally expected that each revision of C will avoid breaking older C programs. By comparison, the C++ committee (WG21) prefers to make new keywords as normal‐looking as the old keywords. For example, C++11 defines a new &lt;tt&gt;thread_local&lt;/tt&gt; keyword to designate static storage local to one thread. C11 defines the new keyword as &lt;tt&gt;_Thread_local.&lt;/tt&gt; In the new C11 header &amp;lt;threads.h&amp;gt;, there is a macro definition to provide the normal‐looking name:&lt;ref&gt;[http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3631.pdf C11:The New C Standard], Thomas Plum, &quot;A Note on Keywords&quot;&lt;/ref&gt;
+:&lt;tt&gt;#define thread_local _Thread_local&lt;/tt&gt;
+}}
+That is, C11 introduced the keyword &lt;code&gt;_Thread_local&lt;/code&gt; within an existing set of reserved words (those with a certain prefix), and then used a separate facility (macro processing) to allow its use as if it were a new keyword without any prefixing, while C++11 introduce the keyword &lt;code&gt;thread_local&lt;/code&gt; despite this not being an existing reserved word, breaking any programs that used this, but without requiring macro processing.
+
+==Predefined names==
+A related notion to reserved words are predefined functions, methods, subroutines, or variables, particularly [[library routine]]s from the standard library. These are similar in that they are part of the basic language, and may be used for similar purposes. However, these differ in that the name of a predefined function, method, or subroutine is typically categorized as an identifier instead of a reserved word, and is not treated specially in the syntactic analysis. Further, reserved words may not be redefined by the programmer, but predefineds can often be overridden in some capacity.
+
+Languages vary as to what is provided as a keyword and what is a predefined. Some languages, for instance, provide keywords for input/output operations whereas in others these are library routines. In [[Python (programming language)|Python]] (versions earlier than 3.0) and many [[BASIC]] dialects, &lt;code&gt;print&lt;/code&gt; is a keyword. In contrast, the C, Lisp, and Python 3.0 equivalents &lt;code&gt;printf&lt;/code&gt;, &lt;code&gt;format&lt;/code&gt;, and &lt;code&gt;print&lt;/code&gt; are functions in the standard library. Similarly, in Python prior to 3.0, &lt;code&gt;None&lt;/code&gt;, &lt;code&gt;True&lt;/code&gt;, and &lt;code&gt;False&lt;/code&gt; were predefined variables, but not reserved words, but in Python 3.0 they were made into reserved words.&lt;ref name=guido2013&gt;&quot;[http://python-history.blogspot.com/2013/11/story-of-none-true-false.html The story of None, True and False (and an explanation of literals, keywords and builtins thrown in)]&quot;, ''The History of Python,'' November 10, 2013, Guido van Rossum&lt;/ref&gt;
+
+==Definition==
+{{Multiple issues|section=yes|
+{{Refimprove section|date=December 2009}}
+{{cleanup section|reason=mix of definition, examples, and general discussion|date=March 2014}}
+}}
+Some use the terms &quot;keyword&quot; and &quot;reserved word&quot; interchangeably, while others distinguish usage, say by using &quot;keyword&quot; to mean a word that is special only in certain contexts but &quot;reserved word&quot; to mean a special word that cannot be used as a user-defined name. The meaning of keywords — and, indeed, the meaning of the notion of ''keyword'' — differs widely from language to language. Concretely, in ALGOL 68, keywords are stropped (in the strict language, written in bold) and are not reserved words – the unstropped word can be used as an ordinary identifier.
+
+The &quot;[[Java (programming language)|Java Language]] Specification&quot; uses the term &quot;keyword&quot;.&lt;ref&gt;
+{{cite web
+|quote= The following character sequences, formed from ASCII letters, are reserved for use as keywords and cannot be used as identifiers[...]
+|title= The Java Language Specification, 3rd Edition, Section 3.9: Keywords
+|url= http://java.sun.com/docs/books/jls/third_edition/html/lexical.html#3.9
+|publisher= [[Sun Microsystems]]
+|year= 2000
+|accessdate= 2009-06-17
+}}
+&lt;/ref&gt; The ISO 9899 standard for the [[C programming language]] uses the term &quot;keyword&quot;.&lt;ref&gt;
+{{cite web
+|quote=The above tokens (case sensitive) are reserved (in translation phases 7 and 8) for use as keywords, and shall not be used otherwise.
+|url=http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1256.pdf
+|title=ISO/IEC 9899:TC3, Section 6.4.1: Keywords
+|publisher=[[International Organization for Standardization]] JTC1/SC22/WG14
+|date=2007-09-07
+}}&lt;/ref&gt;
+
+In many languages, such as [[C (programming language)|C]] and similar environments like [[C++]], a ''keyword'' is a reserved word which identifies a syntactic form. Words used in [[control flow]] constructs, such as &lt;tt&gt;if&lt;/tt&gt;, &lt;code&gt;then&lt;/code&gt;, and &lt;code&gt;else&lt;/code&gt; are keywords. In these languages, keywords cannot also be used as the names of variables or functions.
+
+In some languages, such as [[ALGOL]] and [[ALGOL 68|Algol 68]], keywords cannot be written verbatim, but must be [[Stropping (syntax)|stropped]]. This means that keywords must be marked somehow. E.g. by quoting them or by prefixing them by a special character. As a consequence, keywords are not reserved words, and thus the same word can be used for as a normal identifier. However, one stropping regime was to not strop the keywords, and instead have them simply be reserved words.
+
+Some languages, such as [[PostScript]], are extremely liberal in this approach, allowing core keywords to be redefined for specific purposes.
+
+In [[Common Lisp]], the term &quot;keyword&quot; (or &quot;keyword symbol&quot;) is used for a special sort of [[symbol (Lisp)|symbol]], or identifier. Unlike other symbols, which usually stand for variables or functions, keywords are self-[[Lisp (programming language)#Self-evaluating forms and quoting|quoting]] and self-evaluating&lt;ref&gt;[[Peter Norvig]]: ''Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp'', Morgan Kaufmann, 1991, {{ISBN|1-55860-191-0}}, [http://norvig.com/paip.html Web]&lt;/ref&gt;&lt;sup&gt;:98&lt;/sup&gt; and are [[String interning|interned]] in the &lt;tt&gt;KEYWORD&lt;/tt&gt; package.&lt;ref&gt;[http://www.lispworks.com/documentation/HyperSpec/Body/t_kwd.htm#keyword ''Type'' '''KEYWORD'''] from the [[Common Lisp HyperSpec]]&lt;/ref&gt; Keywords are usually used to label named arguments to functions, and to represent symbolic values.  The symbols which name functions, variables, special forms and macros in the package named COMMON-LISP are basically reserved words. The effect of redefining them is undefined in ANSI Common Lisp.&lt;ref&gt;{{cite web|title=Constraints on the COMMON-LISP Package for Conforming Programs|url=http://www.lispworks.com/documentation/HyperSpec/Body/11_abab.htm}}&lt;/ref&gt; Binding them is possible. For instance the expression &lt;code&gt;(if if case or)&lt;/code&gt; is possible, when &lt;code&gt;if&lt;/code&gt; is a local variable. The leftmost &lt;code&gt;if&lt;/code&gt; refers to the &lt;code&gt;if&lt;/code&gt; operator; the remaining symbols are interpreted as variable names. Since there is a separate namespace for functions and variables, &lt;code&gt;if&lt;/code&gt; could be a local variable. In Common Lisp, however, there are two special symbols which are not in the keyword package: the symbols &lt;code&gt;t&lt;/code&gt; and &lt;code&gt;nil&lt;/code&gt;.  When evaluated as expressions, they evaluate to themselves. They cannot be used as the names of functions or variables, so are de facto reserved. &lt;code&gt;(let ((t 42)))&lt;/code&gt; is a well-formed expression, but the &lt;code&gt;let&lt;/code&gt; operator will not permit the usage.
+
+Typically, when a programmer attempts to use a keyword for a variable or function name, a compilation error will be triggered. In most modern editors, the keywords are automatically set to have a particular text colour to remind or inform the programmers that they are keywords.
+
+In languages with [[macro (computer science)|macros]] or [[lazy evaluation]], control flow constructs such as &lt;code&gt;if&lt;/code&gt; can be implemented as macros or functions. In languages without these expressive features, they are generally keywords.
+
+==Comparison by language==
+
+Not all languages have the same numbers of reserved words.  For example, Java (and other [[C (programming language)|C]] derivatives) has a rather sparse complement of reserved words—approximately 50 – whereas [[COBOL]] has approximately 400.   At the other end of the spectrum, pure [[Prolog (programming language)|Prolog]] and PL/I have none at all.
+
+The number of reserved words in a language has little to do with how “powerful” a language is.  COBOL was designed in the 1950s as a business language and was made to be self-documenting using English-like structural elements such as verbs, clauses, sentences, sections and divisions.  C, on the other hand, was written to be very terse (syntactically) and to get more text on the screen.  For example, compare the equivalent blocks of code from C and COBOL to calculate weekly earnings:
+
+&lt;syntaxhighlight lang=&quot;c&quot;&gt;
+      // Calculation in C:
+      
+      if (salaried)
+              amount = 40 * payrate;
+      else
+              amount = hours * payrate;
+&lt;/syntaxhighlight&gt;
+      
+&lt;syntaxhighlight lang=&quot;cobol&quot;&gt;
+      *&gt; Calculation in COBOL:
+      
+      IF Salaried THEN
+              MULTIPLY Payrate BY 40 GIVING Amount
+      ELSE
+              MULTIPLY Payrate BY Hours GIVING Amount
+      END-IF.
+&lt;/syntaxhighlight&gt;
+      
+&lt;syntaxhighlight lang=&quot;cobol&quot;&gt;
+      *&gt; Other example of calculation in COBOL:
+      
+      IF Salaried 
+              COMPUTE Amount = Payrate * 40
+      ELSE
+              COMPUTE Amount = hours * payrate
+      END-IF.
+&lt;/syntaxhighlight&gt;
+
+Pure Prolog logic is expressed in terms of relations, and execution is triggered by running queries over these relations.  Constructs such as loops are implemented using recursive relationships.
+
+All three of these languages can solve the same types of “problems” even though they have differing numbers of reserved words.  This “power” relates to their belonging to the set of [[Turing completeness|Turing-complete]] languages.
+
+==Disadvantages==
+Definition of reserved words in a language raises problems.  The language may be difficult for new users to learn because of a long list of reserved words to memorize which can't be used as identifiers.  It may be difficult to extend the language because addition of reserved words for new features might invalidate existing programs or, conversely, &quot;overloading&quot; of existing reserved words with new meanings can be confusing.  Porting programs can be problematic because a word not reserved by one system/compiler might be reserved by another.
+
+==Reserved words and language independence==
+
+Microsoft’s [[.NET Framework|.NET]]  [[Common Language Infrastructure| Common Language Infrastructure (CLI)]] specification allows code written in 40+ different programming languages to be combined together into a final product.  Because of this, identifier/reserved word collisions can occur when code implemented in one language tries to execute code written in another language.  For example, a [[Visual Basic .NET|Visual Basic.NET]] library may contain a [[Class (computer science)|class]] definition such as:
+
+&lt;syntaxhighlight lang=&quot;vbnet&quot;&gt;
+' Class Definition of This in Visual Basic.NET:
+
+Public Class this
+        ' This class does something...
+End Class
+&lt;/syntaxhighlight&gt;
+
+If this is compiled and distributed as part of a toolbox, a [[C Sharp (programming language)|C#]] programmer, wishing to define a variable of type “&lt;code&gt;this&lt;/code&gt;” would encounter a problem: &lt;code&gt;'this'&lt;/code&gt; is a reserved word in C#. Thus, the following will not compile in C#:
+
+&lt;syntaxhighlight lang=&quot;csharp&quot;&gt;
+// Using This Class in C#:
+
+this x = new this();  // Won't compile!
+&lt;/syntaxhighlight&gt;
+
+A similar issue arises when accessing members, overriding virtual methods, and identifying namespaces.
+
+This is resolved by [[Stropping (syntax)|stropping]]. In order to work around this issue, the specification allows the programmer to (in C#) place the [[at-sign]] before the identifier which forces it to be considered an identifier rather than a reserved word by the compiler:
+
+&lt;syntaxhighlight lang=&quot;csharp&quot;&gt;
+// Using This Class in C#:
+
+@this x = new @this();  // Will compile! 
+&lt;/syntaxhighlight&gt;
+
+For consistency, this usage is also permitted in non-public settings such as local variables, parameter names, and private members.
+
+==See also==
+* [[List of Java keywords]]
+* [[Symbol (programming)]]
+
+==References==
+{{Reflist|30em}}
+{{refbegin}}
+{{refend}}
+
+[[Category:Programming constructs]]
+[[Category:Programming language topics]]</text>
+      <sha1>nw7h320gdvtz5403q0y3gqnm3f2wk6m</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Cross assembler</title>
+    <ns>0</ns>
+    <id>49724</id>
+    <redirect title="Assembly language" />
+    <revision>
+      <id>783877069</id>
+      <parentid>453699819</parentid>
+      <timestamp>2017-06-05T06:12:26Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="179" xml:space="preserve">#REDIRECT [[Assembly_language#Cross assembler]]

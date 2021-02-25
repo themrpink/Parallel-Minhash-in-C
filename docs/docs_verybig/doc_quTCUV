@@ -1,0 +1,256 @@
+==Practical applications==
+
+===Music===
+White noise is commonly used in the production of [[electronic music]], usually either directly or as an input for a filter to create other types of noise signal. It is used extensively in [[audio synthesis]], typically to recreate percussive instruments such as [[cymbal]]s or [[snare drum]]s which have high noise content in their frequency domain. A simple example of white noise is a nonexistent radio station (static).
+
+===Electronics engineering===
+White noise is also used to obtain the [[impulse response]] of an electrical circuit, in particular of [[amplifier]]s and other audio equipment. It is not used for testing loudspeakers as its spectrum contains too great an amount of high frequency content. [[Pink noise]], which differs from white noise in that it has equal energy in each octave, is used for testing transducers such as loudspeakers and microphones.
+
+===Computing===
+White noise is used as the basis of some [[hardware random number generator|random number generators]]. For example, [[Random.org]] uses a system of atmospheric antennae to generate random digit patterns from white noise.
+
+===Tinnitus treatment===
+White noise is a common synthetic noise source used for sound masking by a [[tinnitus masker]].&lt;ref&gt;{{ cite book|last=Jastreboff |first= P. J.|chapter= Tinnitus Habituation Therapy (THT) and Tinnitus Retraining Therapy (TRT)|title= Tinnitus Handbook|location= San Diego|publisher=Singular|year= 2000|pages=357–376}}&lt;/ref&gt; [[White noise machine]]s and other white noise sources are sold as privacy enhancers and sleep aids (see [[music and sleep]]) and to mask [[tinnitus]].&lt;ref&gt;{{cite journal |title=Evidence based complementary intervention for insomnia |journal=Hawaii Med J |volume=61 |issue=9 |pages=192, 213 |date=September 2002 |pmid=12422383 |url=http://cogprints.org/5032/1/2002_H.M.J_White-noise_for_PTSD.pdf |last1=López |first1=HH |last2=Bracha |first2=AS |last3=Bracha |first3=HS}}&lt;/ref&gt; Alternatively, the use of an FM radio tuned to unused frequencies (&quot;static&quot;) is a simpler and more cost-effective source of white noise.&lt;ref&gt;{{Cite journal | issn = 0016-867X | volume = 58 | issue = 2 | pages = 28–34 | last = Noell | first = Courtney A |author2=William L Meyerhoff  | title = Tinnitus. Diagnosis and treatment of this elusive symptom | journal = Geriatrics | date = February 2003 | pmid=12596495}}&lt;/ref&gt; However, white noise generated from a common commercial radio receiver tuned to an unused frequency is extremely vulnerable to being contaminated with spurious signals, such as adjacent radio stations, harmonics from non-adjacent radio stations, electrical equipment in the vicinity of the receiving antenna causing interference, or even atmospheric events such as solar flares and especially lightning.
+
+There is evidence that white noise exposure therapies may induce maladaptive changes in the brain that degrade neurological health and compromise cognition.&lt;ref&gt;{{Cite journal|last1=Attarha|first1=Mouna|last2=Bigelow|first2=James|last3=Merzenich|first3=Michael M.|date=2018-10-01|title=Unintended Consequences of White Noise Therapy for Tinnitus-Otolaryngology's Cobra Effect: A Review|journal=JAMA Otolaryngology–Head &amp; Neck Surgery |volume=144|issue=10|pages=938–943|doi=10.1001/jamaoto.2018.1856|issn=2168-619X|pmid=30178067|s2cid=52147162}}&lt;/ref&gt;
+
+===Work environment===
+The effects of white noise upon cognitive function are mixed. Recently, a small study found that white noise background stimulation improves cognitive functioning among secondary students with [[attention deficit hyperactivity disorder]] (ADHD), while decreasing performance of non-ADHD students.&lt;ref&gt;{{Cite journal| volume = 6| issue = 1| pages = 55| last = Soderlund| first = Goran|author2=Sverker Sikstrom |author3=Jan Loftesnes |author4=Edmund Sonuga Barke | title = The effects of background white noise on memory performance in inattentive school children| journal = Behavioral and Brain Functions| year = 2010| doi=10.1186/1744-9081-6-55| pmid = 20920224| pmc = 2955636}}&lt;/ref&gt;&lt;ref&gt;{{Cite journal | doi = 10.1111/j.1469-7610.2007.01749.x | pmid = 17683456 | issn = 0021-9630 | volume = 48 | issue = 8 | pages = 840–847 | last = Söderlund | first = Göran |author2=Sverker Sikström |author3=Andrew Smart  | title = Listen to the noise: Noise is beneficial for cognitive performance in ADHD. | journal = Journal of Child Psychology and Psychiatry | year = 2007 | citeseerx = 10.1.1.452.530 }}&lt;/ref&gt; Other work indicates it is effective in improving the mood and performance of workers by masking background office noise,&lt;ref&gt;{{Cite journal | doi = 10.1177/0013916592243006 | volume = 24 | issue = 3 | pages = 381–395 | last = Loewen | first = Laura J. |author2=Peter Suedfeld  | title = Cognitive and Arousal Effects of Masking Office Noise | journal = Environment and Behavior | date = 1992-05-01 | s2cid = 144443528 }}&lt;/ref&gt; but decreases cognitive performance in complex card sorting tasks.&lt;ref&gt;{{Cite journal | issn = 0022-1309 | volume = 120 | issue = 3 | pages = 339–355 | last = Baker | first = Mary Anne |author2=Dennis H. Holding  | title = The effects of noise and speech on cognitive task performance. | journal = Journal of General Psychology | date = July 1993 | doi=10.1080/00221309.1993.9711152| pmid = 8138798 }}&lt;/ref&gt;
+
+Similarly, an experiment was carried out on sixty six healthy participants to observe the benefits of using white noise in a learning environment. The experiment involved the participants identifying different images whilst having different sounds in the background. Overall the experiment showed that white noise does in fact have benefits in relation to learning. The experiments showed that white noise improved the participant's learning abilities and their recognition memory slightly.&lt;ref&gt;Rausch, V. H. (2014). White noise improves learning by modulating activity in dopaminergic midbrain regions and right superior temporal sulcus . Journal of cognitive neuroscience , 1469-1480&lt;/ref&gt;
+
+==Mathematical definitions==
+
+===White noise vector===
+A [[random vector]] (that is, a partially indeterminate process that produces vectors of real numbers) is said to be a white noise vector or white random vector if its components each have a [[probability distribution]] with zero mean and finite [[variance]], and are [[statistically independent]]: that is, their [[joint probability distribution]] must be the product of the distributions of the individual components.&lt;ref name=&quot;fessler&quot;&gt;
+  Jeffrey A. Fessler (1998), ''[https://web.archive.org/web/20131218214647/http://andywilliamson.org/_/wp-content/uploads/2010/04/White-Noise.pdf On Transformations of Random Vectors.]'' Technical report 314, Dept. of Electrical Engineering and Computer Science, Univ. of Michigan. ([[PDF]])&lt;/ref&gt;
+
+A necessary (but, [[normally distributed and uncorrelated does not imply independent|in general, not sufficient]]) condition for statistical independence of two variables is that they be [[correlation|statistically uncorrelated]]; that is, their [[covariance]] is zero. Therefore, the  [[covariance matrix]] ''R'' of the components of a white noise vector ''w'' with ''n'' elements must be an ''n'' by ''n'' [[diagonal matrix]], where each diagonal element ''Rᵢᵢ'' is the [[variance]] of component ''wᵢ''; and the [[Correlation and dependence#Correlation matrices|correlation]] matrix must be the ''n'' by ''n'' identity matrix.
+
+If, in addition to being independent, every variable in ''w'' also has a [[normal distribution]] with zero mean and the same variance &lt;math&gt;\sigma^2&lt;/math&gt;, ''w'' is said to be a Gaussian white noise vector. In that case, the joint distribution of ''w'' is a [[multivariate normal distribution]]; the independence between the variables then implies that the distribution has [[elliptical distribution|spherical symmetry]] in ''n''-dimensional space. Therefore, any [[orthogonal transformation]] of the vector will result in a Gaussian white random vector. In particular, under most types of [[discrete Fourier transform]], such as [[fast Fourier transform|FFT]] and [[discrete Hartley transform|Hartley]], the transform ''W'' of ''w'' will be a Gaussian white noise vector, too; that is, the ''n'' Fourier coefficients of ''w'' will be independent Gaussian variables with zero mean and the same variance &lt;math&gt;\sigma^2&lt;/math&gt;.
+
+The [[power spectrum]] ''P'' of a random vector ''w'' can be defined as the expected value of the squared modulus of each coefficient of its Fourier transform ''W'', that is, ''Pᵢ'' = E(|''Wᵢ''|²). Under that definition, a Gaussian white noise vector will have a perfectly flat power spectrum, with ''Pᵢ''&amp;nbsp;=&amp;nbsp;''&amp;sigma;² for all&amp;nbsp;''i''.
+
+If ''w'' is a white random vector, but not a Gaussian one, its Fourier coefficients ''Wᵢ'' will not be completely independent of each other; although for large ''n'' and common probability distributions the dependencies are very subtle, and their pairwise correlations can be assumed to be zero.
+
+Often the weaker condition &quot;statistically uncorrelated&quot; is used in the definition of white noise, instead of &quot;statistically independent&quot;. However some of the commonly expected properties of white noise (such as flat power spectrum) may not hold for this weaker version. Under this assumption, the stricter version can be referred to explicitly as independent white noise vector.&lt;ref name=&quot;ezivot&quot;&gt;
+  Eric Zivot and Jiahui Wang (2006), [http://faculty.washington.edu/ezivot/econ584/notes/timeSeriesConcepts.pdf Modeling Financial Time Series with S-PLUS]. Second Edition. ([[PDF]])
+&lt;/ref&gt;{{rp|p.60}} Other authors use strongly white and weakly white instead.&lt;ref name=&quot;diebold&quot;&gt;
+  [[Francis X. Diebold]] (2007), ''[https://www.sas.upenn.edu/~fdiebold/Teaching221/FullBook.pdf Elements of Forecasting],'' 4th edition. ([[PDF]])
+&lt;/ref&gt;
+
+An example of a random vector that is &quot;Gaussian white noise&quot; in the weak but not in the strong sense is ''x''=[''x''₁,''x''₂] where ''x''₁ is a normal random variable with zero mean, and ''x''₂ is equal to +''x''₁ or to −''x''₁, with equal probability. These two variables are uncorrelated and individually normally distributed, but they are not jointly normally distributed and are not independent. If ''x'' is rotated by 45 degrees, its two components will still be uncorrelated, but their distribution will no longer be normal.
+
+In some situations one may relax the definition by allowing each component of a white random vector ''w'' to have non-zero expected value &lt;math&gt;\mu&lt;/math&gt;. In [[image processing]] especially, where samples are typically restricted to positive values, one often takes &lt;math&gt;\mu&lt;/math&gt; to be one half of the maximum sample value. In that case, the Fourier coefficient ''W''₀ corresponding to the zero-frequency component (essentially, the average of the ''w''_i) will also have a non-zero expected value &lt;math&gt;\mu\sqrt{n}&lt;/math&gt;; and the power spectrum ''P'' will be flat only over the non-zero frequencies.
+
+===Discrete-time white noise===
+A discrete-time [[stochastic process]] &lt;math&gt;W[n]&lt;/math&gt; is a generalization of random vectors with a finite number of components to infinitely many components. A discrete-time stochastic process &lt;math&gt;W[n]&lt;/math&gt; is called white noise if its mean does not depend on the time &lt;math&gt;n&lt;/math&gt; and is equal to zero, i.e. &lt;math&gt;\operatorname{E}[W[n]] = 0&lt;/math&gt; and if the autocorrelation function &lt;math&gt;R_{W}[n] = \operatorname{E}[W[k+n]W[k]]&lt;/math&gt; only depends on &lt;math&gt;n&lt;/math&gt; but not on &lt;math&gt;k&lt;/math&gt; and has a nonzero value only for &lt;math&gt;n = 0&lt;/math&gt;, i.e. &lt;math&gt;R_{W}[n] = \sigma^2 \delta [n]&lt;/math&gt;.
+
+===Continuous-time white noise===
+In order to define the notion of &quot;white noise&quot; in the theory of [[continuous-time]] signals, one must replace the concept of a &quot;random vector&quot; by a continuous-time random signal; that is, a random process that generates a function &lt;math&gt;w&lt;/math&gt; of a real-valued parameter &lt;math&gt;t&lt;/math&gt;.
+
+Such a process is said to be white noise in the strongest sense if the value &lt;math&gt;w(t)&lt;/math&gt; for any time &lt;math&gt;t&lt;/math&gt; is a random variable that is statistically independent of its entire history before &lt;math&gt;t&lt;/math&gt;. A weaker definition requires independence only between the values &lt;math&gt;w(t_1)&lt;/math&gt; and &lt;math&gt;w(t_2)&lt;/math&gt; at every pair of distinct times &lt;math&gt;t_1&lt;/math&gt; and &lt;math&gt;t_2&lt;/math&gt;. An even weaker definition requires only that such pairs &lt;math&gt;w(t_1)&lt;/math&gt; and &lt;math&gt;w(t_2)&lt;/math&gt; be uncorrelated.&lt;ref name=econterms&gt;
+  [http://economics.about.com/od/economicsglossary/g/whitenoise.htm ''White noise process'']. By Econterms via About.com. Accessed on 2013-02-12.
+&lt;/ref&gt;  As in the discrete case, some authors adopt the weaker definition for &quot;white noise&quot;, and use the qualifier independent to refer to either of the stronger definitions. Others use weakly white and strongly white to distinguish between them.
+
+However, a precise definition of these concepts is not trivial, because some quantities that are  finite sums in the finite discrete case must be replaced by integrals that may not converge. Indeed, the set of all possible instances of a signal &lt;math&gt;w&lt;/math&gt; is no longer a finite-dimensional space &lt;math&gt;\mathbb{R}^n&lt;/math&gt;, but an infinite-dimensional [[function space]]. Moreover, by any definition a white noise signal &lt;math&gt;w&lt;/math&gt; would have to be essentially discontinuous at every point; therefore even the simplest operations on &lt;math&gt;w&lt;/math&gt;, like integration over a finite interval, require advanced mathematical machinery.
+
+Some authors require each value &lt;math&gt;w(t)&lt;/math&gt; to be a real-valued random variable with expectation &lt;math&gt;\mu&lt;/math&gt; and some finite variance &lt;math&gt;\sigma^2&lt;/math&gt;. Then the covariance &lt;math&gt;\mathrm{E}(w(t_1)\cdot w(t_2))&lt;/math&gt; between the values at two times &lt;math&gt;t_1&lt;/math&gt; and &lt;math&gt;t_2&lt;/math&gt; is well-defined: it is zero if the times are distinct, and &lt;math&gt;\sigma^2&lt;/math&gt; if they are equal. However, by this definition, the integral
+: &lt;math&gt;W_{[a,a+r]} = \int_a^{a+r} w(t)\, dt&lt;/math&gt;
+over any interval with positive width &lt;math&gt;r&lt;/math&gt; would be simply the width times the expectation: &lt;math&gt;r\mu&lt;/math&gt;. This property would render the concept inadequate as a model of physical &quot;white noise&quot; signals.
+
+Therefore, most authors define the signal &lt;math&gt;w&lt;/math&gt; indirectly by specifying non-zero values for the integrals of &lt;math&gt;w(t)&lt;/math&gt; and &lt;math&gt;|w(t)|^2&lt;/math&gt; over any interval &lt;math&gt;[a,a+r]&lt;/math&gt;, as a function of its width &lt;math&gt;r&lt;/math&gt;. In this approach, however, the value of &lt;math&gt;w(t)&lt;/math&gt; at an isolated time cannot be defined as a real-valued random variable{{Citation needed|reason=an authoritative work on white noise given one such example should be given|date=January 2017}}. Also the covariance &lt;math&gt;\mathrm{E}(w(t_1)\cdot w(t_2))&lt;/math&gt; becomes infinite when &lt;math&gt;t_1=t_2&lt;/math&gt;; and the [[autocorrelation]] function &lt;math&gt;\mathrm{R}(t_1,t_2)&lt;/math&gt; must be defined as &lt;math&gt;N \delta(t_1-t_2)&lt;/math&gt;, where &lt;math&gt;N&lt;/math&gt; is some real constant and &lt;math&gt;\delta&lt;/math&gt; is [[Dirac delta function|Dirac's &quot;function&quot;]].
+
+In this approach, one usually specifies that the integral &lt;math&gt;W_I&lt;/math&gt; of &lt;math&gt;w(t)&lt;/math&gt; over an interval &lt;math&gt;I=[a,b]&lt;/math&gt; is a real random variable with normal distribution, zero mean, and variance &lt;math&gt;(b-a)\sigma^2&lt;/math&gt;; and also that the covariance &lt;math&gt;\mathrm{E}(W_I\cdot W_J)&lt;/math&gt; of the integrals &lt;math&gt;W_I&lt;/math&gt;, &lt;math&gt;W_J&lt;/math&gt; is &lt;math&gt;r\sigma^2&lt;/math&gt;, where &lt;math&gt;r&lt;/math&gt; is the width of the intersection &lt;math&gt;I\cap J&lt;/math&gt; of the two intervals &lt;math&gt;I,J&lt;/math&gt;. This model is called a Gaussian white noise signal (or process).
+
+==Mathematical applications==
+
+===Time series analysis and regression===
+In [[statistics]] and [[econometrics]] one often assumes that an observed series of data values is the sum of a series of values generated by a [[deterministic]] [[linear model|linear process]], depending on certain [[Dependent and independent variables|independent (explanatory) variables]], and on a series of random noise values. Then [[regression analysis]] is used to infer the parameters of the model process from the observed data, e.g. by [[ordinary least squares]], and to [[hypothesis testing|test the null hypothesis]] that each of the parameters is zero against the alternative hypothesis that it is non-zero. Hypothesis testing typically assumes that the noise values are mutually uncorrelated with zero mean and have the same Gaussian probability distribution{{snd}}in other words, that the noise is Gaussian white (not just white). If there is non-zero correlation between the noise values underlying different observations then the estimated model parameters are still [[bias of an estimator|unbiased]], but estimates of their uncertainties (such as [[confidence interval]]s) will be biased (not accurate on average). This is also true if the noise is [[heteroskedasticity|heteroskedastic]]{{snd}}that is, if it has different variances for different data points.
+
+Alternatively, in the subset of regression analysis known as [[time series analysis]] there are often no explanatory variables other than the past values of the variable being modeled (the [[dependent variable]]). In this case the noise process is often modeled as a [[Moving average model|moving average]] process, in which the current value of the dependent variable depends on current and past values of a sequential white noise process.
+
+===Random vector transformations===
+These two ideas are crucial in applications such as [[channel estimation]] and [[Mixing console#Channel equalization|channel equalization]] in [[telecommunication|communications]] and [[sound reproduction|audio]]. These concepts are also used in [[data compression]].
+
+&lt;!-- This does not seem to be incorrect but seems to be original research, sort of. Needs to be trimmed to the bare essentials. --&gt;
+In particular, by a suitable linear transformation (a [[coloring transformation]]), a white random vector can be used to produce a &quot;non-white&quot; random vector (that is, a list of random variables) whose elements have a prescribed [[covariance matrix]]. Conversely, a random vector with known covariance matrix can be transformed into a white random vector by a suitable [[whitening transformation]].
+
+==Generation==
+White noise may be generated digitally with a [[digital signal processor]], [[microprocessor]], or [[microcontroller]]. Generating white noise typically entails feeding an appropriate stream of random numbers to a [[digital-to-analog converter]]. The quality of the white noise will depend on the quality of the algorithm used.&lt;ref&gt;{{cite web |url=https://qualityassignmenthelp.com/wp-content/uploads/2017/03/Gaussian-noise_How-to-Generate-.pdf |title=How to Generate White Gaussian Noise |author=Matt Donadio |access-date=2012-09-19}}&lt;/ref&gt;
+
+==See also==
+{{colors of noise}}
+{{columns-list|colwidth=30em|
+*[[Bochner–Minlos theorem]]
+*[[Brownian noise]]
+*[[Dirac delta function]]
+*[[Electronic noise]]
+*[[Independent component analysis]]
+*[[Noise (physics)]]
+*[[Noise (video)]]
+*[[Principal components analysis]]
+*[[Sound masking]]
+}}
+
+==References==
+{{reflist|30em}}
+
+==External links==
+{{Commons category|White noise}}
+
+{{Noise}}
+{{Stochastic processes}}
+
+{{DEFAULTSORT:White Noise}}
+[[Category:Noise (electronics)]]
+[[Category:Statistical signal processing]]
+[[Category:Data compression]]
+[[Category:Sound]]
+[[Category:Acoustics]]</text>
+      <sha1>l57cu60o3667hts8wgxyi336vkvg3lu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Butter</title>
+    <ns>0</ns>
+    <id>46183</id>
+    <revision>
+      <id>982582473</id>
+      <parentid>982581676</parentid>
+      <timestamp>2020-10-09T01:34:47Z</timestamp>
+      <contributor>
+        <username>Somedifferentstuff</username>
+        <id>13434233</id>
+      </contributor>
+      <comment>Fat to one decimal place for readability</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="50346" xml:space="preserve">{{Other uses}}
+{{short description|dairy product}}
+{{Use dmy dates|date=August 2020}}
+{{pp-semi-vandalism|small=yes}}
+{{Infobox nutritional value
+| name            = Butter
+| image           = File:Švédský koláč naruby 904 (cropped).JPG
+| image_size      = &lt;!-- Defaults to 235px --&gt;
+| image_alt       = Melted and solid butter
+| caption         = Melted and solid butter
+| serving_size    = 1 US Tbsp (14.2g)
+| kcal            = 101.8
+| carbs           = 0.01&amp;nbsp;g
+| starch          = 
+| sugars          = 0.01&amp;nbsp;g
+| lactose         = 
+| fiber           = 
+| fat             = 11.5&amp;nbsp;g
+| satfat          = 7.3&amp;nbsp;g
+| transfat        = 0.5&amp;nbsp;g
+| monofat         = 3&amp;nbsp;g
+| polyfat         = 0.4&amp;nbsp;g
+| omega3fat       = 
+| omega6fat       = 
+| protein         = 0.1&amp;nbsp;g
+| tryptophan      = 
+| threonine       = 
+| isoleucine      = 
+| leucine         = 
+| lysine          = 
+| methionine      = 
+| cystine         = 
+| phenylalanine   = 
+| tyrosine        = 
+| valine          = 
+| arginine        = 
+| histidine       = 
+| alanine         = 
+| aspartic acid   = 
+| glutamic acid   = 
+| glycine         = 
+| proline         = 
+| serine          = 
+| hydroxyproline  = 
+| water           = 
+| cholesterol     = 30.5&amp;nbsp;mg
+| alcohol         = 
+| caffeine        = 
+| vitA_ug         = 97.1
+| vitA_iu         = 355
+| betacarotene_ug = 
+| lutein_ug       = 
+| thiamin_mg      = &lt;!-- 0.0007 --&gt;   &lt;!-- don't include nutrients that are &lt; 1% of RDA --&gt;
+| riboflavin_mg   = &lt;!-- 0.005 --&gt;
+| niacin_mg       = &lt;!-- 0.006 --&gt;
+| pantothenic_mg  = 
+| vitB6_mg        = &lt;!-- 0.0004 --&gt;
+| folate_ug       = &lt;!-- 0.426 --&gt;
+| vitB12_ug       = 0.024
+| choline_mg      = 
+| vitC_mg         = 
+| vitD_ug         = 
+| vitD_iu         = 
+| vitE_mg         = 0.33
+| vitK_ug         = 0.99
+| calcium_mg      = &lt;!-- 3.4 --&gt;
+| copper_mg       = 
+| iron_mg         = &lt;!-- 0.03 --&gt;
+| magnesium_mg    = &lt;!-- 0.28 --&gt;
+| manganese_mg    = 
+| phosphorus_mg   = &lt;!-- 3.4 --&gt;
+| potassium_mg    = &lt;!-- 3.4 --&gt;
+| selenium_ug     =
+| sodium_mg       = &lt;!-- 1.6 --&gt;
+| zinc_mg         = &lt;!-- 0.01 --&gt;
+| opt1n           = 
+| opt1v           = 
+| opt2n           = 
+| opt2v           = 
+| opt3n           = 
+| opt3v           = 
+| opt4n           = 
+| opt4v           = 
+| note            = USDA 01145, Butter, without salt.&lt;br /&gt;Fat percentage can vary.&lt;br /&gt;See also [[Butter#Types|Types of butter]]. 
+| source          = 
+| source_usda     = 1
+| noRDA           = 
+| float           =
+}}
+{{cookbook}}
+'''Butter''' is a [[dairy product]] made from the fat and protein components of [[milk]] or [[cream]]. It is a semi-solid [[emulsion]] at [[room temperature]], consisting of approximately 80% [[butterfat]]. It is used at room temperature as a [[spread (food)|spread]], melted as a [[condiment]], and used as an ingredient in [[baking]], [[sauce]] making, [[pan frying]], and other cooking procedures.
+
+Most frequently made from [[cattle|cow's]] milk, butter can also be manufactured from the milk of other [[mammal]]s, including [[Sheep milk|sheep]], [[Goat milk|goats]], [[Buffalo milk|buffalo]], and [[Yak milk|yaks]]. It is made by [[churning (butter)|churning]] milk or cream to separate the fat globules from the [[buttermilk]]. [[Dairy salt|Salt]] and [[food coloring]]s are sometimes added to butter. [[Kitchen rendering|Rendering]] butter, removing the water and [[milk solids]], produces [[clarified butter]] or ''[[ghee]]'', which is almost entirely butterfat.
+
+Butter is a water-in-oil [[emulsion]] resulting from an inversion of the cream, where the milk proteins are the emulsifiers. Butter remains a firm solid when [[refrigerated]], but softens to a spreadable consistency at [[room temperature]], and melts to a thin liquid consistency at {{Convert|32|to|35|C}}. The density of butter is 911&amp;nbsp;grams per litre (0.950 lb per US pint).&lt;ref&gt;{{cite web|url=https://physics.info/density/|work=The Physics Hypertextbook|title=Density|last=Elert|first=Glenn|access-date=26 March 2018|archive-url=https://web.archive.org/web/20180819083024/https://physics.info/density/#|archive-date=19 August 2018|url-status=live}}&lt;/ref&gt; It generally has a pale yellow color, but varies from deep yellow to nearly white. Its natural, unmodified color is dependent on the source animal's feed and genetics, but the commercial manufacturing process commonly manipulates the color with food colorings like [[annatto]]&lt;ref&gt;{{cite web |title=A Substitute for 'Annatto' in Butter |url=https://www.nature.com/articles/157232a0 |website=Nature |publisher=Nature |accessdate=2 November 2018}}&lt;/ref&gt; or [[carotene]].
+
+==Etymology==
+The word ''butter'' derives (via [[Germanic languages]]) from the [[Latin]] ''butyrum'',&lt;ref&gt;[http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059%3Aentry%3Dbutyrum butyrum] {{Webarchive|url=https://web.archive.org/web/20120127023222/http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059%3Aentry%3Dbutyrum# |date=27 January 2012 }}, Charlton T. Lewis, Charles Short, ''A Latin Dictionary'', on Perseus&lt;/ref&gt; which is the [[Latinisation (literature)|latinisation]] of the [[Greek language|Greek]] βούτυρον (''bouturon'').&lt;ref&gt;[http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0057%3Aentry%3Dbou%2Fturon βούτυρον] {{Webarchive|url=https://web.archive.org/web/20120317032537/http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0057%3Aentry%3Dbou%2Fturon# |date=17 March 2012 }}, Henry George Liddell, Robert Scott, ''A Greek-English Lexicon'', on Perseus&lt;/ref&gt;&lt;ref&gt;[http://oxforddictionaries.com/view/entry/m_en_gb0112520#m_en_gb0112520 butter] {{Webarchive|url=https://web.archive.org/web/20101114104253/http://oxforddictionaries.com/view/entry/m_en_gb0112520#m_en_gb0112520#m_en_gb0112520 |date=14 November 2010 }}, Oxford Dictionaries&lt;/ref&gt; This may be a compound of βοῦς (''bous''), &quot;ox, cow&quot;&lt;ref&gt;[http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0057%3Aentry%3Dbou%3Ds βοῦς] {{Webarchive|url=https://web.archive.org/web/20120317024014/http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0057%3Aentry%3Dbou%3Ds# |date=17 March 2012 }}, Henry George Liddell, Robert Scott, ''A Greek-English Lexicon'', on Perseus&lt;/ref&gt; + τυρός (''turos''), &quot;cheese&quot;, that is &quot;cow-cheese&quot;.&lt;ref&gt;[http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0057%3Aentry%3Dturo%2Fs τυρός] {{Webarchive|url=https://web.archive.org/web/20120316230327/http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0057%3Aentry%3Dturo%2Fs# |date=16 March 2012 }}, Henry George Liddell, Robert Scott, ''A Greek-English Lexicon'', on Perseus&lt;/ref&gt;&lt;ref&gt;Beekes, Robert Stephen Paul, and Lucien Van Beek. Etymological dictionary of Greek. Vol. 2. Leiden: Brill, 2014&lt;/ref&gt; The word ''turos'' (&quot;cheese&quot;) is attested in [[Mycenaean Greek]].&lt;ref&gt;[http://www.palaeolexicon.com/default.aspx?static=12&amp;wid=572 Palaeolexicon] {{Webarchive|url=https://web.archive.org/web/20120304074111/http://www.palaeolexicon.com/default.aspx?static=12&amp;wid=572# |date=4 March 2012 }}, Word study tool of ancient languages&lt;/ref&gt; The latinized form is found in the name [[butyric acid]], a compound found in [[Rancidification|rancid]] butter and dairy products such as [[Parmigiano-Reggiano|Parmesan cheese]].
+
+In general use, the term &quot;butter&quot; refers to the [[spread (food)|spread]] dairy product when unqualified by other descriptors. The word commonly is used to describe [[purée]]d vegetable or [[nut butter|seed]] and [[nut (fruit)|nut]] products such as [[peanut butter]] and [[almond butter]]. It is often applied to spread [[Fruit butter|fruit products]] such as [[apple butter]]. [[Fat]]s such as [[cocoa butter]] and [[shea butter]] that remain solid at room temperature are also known as &quot;butters&quot;. Non-dairy items that have a dairy-butter consistency may use &quot;butter&quot; to call that consistency to mind, including food items such as [[maple butter]] and [[Tremella mesenterica|witch's butter]] and nonfood items such as [[baby bottom butter]], [[hyena butter]], and [[rock butter]].
+
+==Production==
+{{Main|Churning (butter)}}
+[[File:Churning butter.jpg|thumb|Churning cream into butter using a hand-held mixer.]]
+[[Homogenization (chemistry)|Unhomogenized]] milk and cream contain [[butterfat]] in [[microscopic]] globules. These globules are surrounded by membranes made of [[phospholipid]]s ([[fatty acid]] [[emulsifier]]s) and [[protein]]s, which prevent the fat in milk from pooling together into a single mass. Butter is produced by agitating cream, which damages these membranes and allows the milk fats to conjoin, separating from the other parts of the cream. Variations in the production method will create butters with different consistencies, mostly due to the butterfat composition in the finished product. Butter contains fat in three separate forms: free butterfat, butterfat [[crystals]], and undamaged fat globules. In the finished product, different proportions of these forms result in different consistencies within the butter; butters with many crystals are harder than butters dominated by free fats.
+
+Churning produces small butter grains floating in the water-based portion of the cream. This watery liquid is called [[buttermilk]]—although the buttermilk most common today is instead a directly fermented skimmed milk. The buttermilk is drained off; sometimes more buttermilk is removed by rinsing the grains with water. Then the grains are &quot;worked&quot;: pressed and kneaded together. When prepared manually, this is done using wooden boards called [[scotch hands]]. This consolidates the butter into a solid mass and breaks up embedded pockets of buttermilk or water into tiny droplets.
+
+Commercial butter is about 80% butterfat and 15% water; traditionally made butter may have as little as 65% fat and 30% water. Butterfat is a mixture of [[triglyceride]], a tri[[ester]] derived from [[glycerol]] and three of any of several [[fatty acid]] groups.&lt;ref&gt;Rolf Jost &quot;Milk and Dairy Products&quot; Ullmann's Encyclopedia of Industrial Chemistry, Wiley-VCH, Weinheim, 2002. {{DOI|10.1002/14356007.a16_589.pub3}}&lt;/ref&gt; Butter becomes [[rancidification|rancid]] when these chains break down into smaller components, like [[butyric acid]] and [[diacetyl]]. The density of butter is 0.911&amp;nbsp;g/cm&lt;sup&gt;3&lt;/sup&gt; (0.527&amp;nbsp;[[Ounce|oz]]/in&lt;sup&gt;3&lt;/sup&gt;), about the same as [[ice]].
+
+In some countries, butter is [[Butter grading|given a grade]] before commercial distribution.
+
+==Types==
+Before modern factory butter making, cream was usually collected from several milkings and was therefore several days old and somewhat fermented by the time it was made into butter. Butter made from a fermented cream is known as '''cultured butter'''. During fermentation, the cream naturally sours as [[bacterium|bacteria]] convert [[lactose|milk sugars]] into [[lactic acid]]. The fermentation process produces additional aroma compounds, including [[diacetyl]], which makes for a fuller-flavored and more &quot;buttery&quot; tasting product.&lt;ref name=&quot;McGee&quot;&gt;{{cite book|last=McGee|first=Harold|author-link=Harold McGee|title=On Food and Cooking: The Science and Lore of the Kitchen|date=2004|publisher=[[Charles Scribner's Sons|Scribner]]|location=[[New York, New York]]|isbn=978-0-684-80001-1|lccn=2004058999|oclc=56590708}}&lt;/ref&gt;{{rp|page=35}} Today, cultured butter is usually made from pasteurized cream whose fermentation is produced by the introduction of ''[[Lactococcus]]'' and ''[[Leuconostoc]]'' bacteria.
+
+[[Image:Milkproducts.svg|thumb|275px|Chart of milk products and production relationships, including butter.]]
+Another method for producing cultured butter, developed in the early 1970s, is to produce butter from fresh cream and then incorporate bacterial cultures and lactic acid. Using this method, the cultured butter flavor grows as the butter is aged in cold storage. For manufacturers, this method is more efficient, since aging the cream used to make butter takes significantly more space than simply storing the finished butter product. A method to make an artificial simulation of cultured butter is to add lactic acid and flavor compounds directly to the fresh-cream butter; while this more efficient process is claimed to simulate the taste of cultured butter, the product produced is not cultured but is instead flavored.
+
+Dairy products are often [[pasteurization|pasteurized]] during production to kill [[pathogen]]ic bacteria and other [[microbe]]s. Butter made from pasteurized fresh cream is called '''sweet cream butter'''. Production of sweet cream butter first became common in the 19th century, with the development of [[refrigeration]] and the mechanical [[cream separator]].&lt;ref name=&quot;McGee&quot;/&gt;{{rp|page=33}} Butter made from fresh or cultured unpasteurized cream is called '''raw cream butter'''. While butter made from pasteurized cream may keep for several months, raw cream butter has a [[shelf life]] of roughly ten days.
+
+Throughout [[continental Europe]], cultured butter is preferred, while sweet cream butter dominates in the United States and the [[United Kingdom]]. Cultured butter is sometimes labeled &quot;European-style&quot; butter in the United States, although cultured butter is made and sold by some, especially Amish, dairies. Commercial raw cream butter is virtually unheard-of in the United States. Raw cream butter is generally only found made at home by consumers who have purchased raw whole milk directly from dairy farmers, skimmed the cream themselves, and made butter with it. It is rare in Europe as well.&lt;ref name=&quot;McGee&quot;/&gt;{{rp|page=34}}
+
+Several &quot;spreadable&quot; butters have been developed. These remain softer at colder temperatures and are therefore easier to use directly out of refrigeration. Some methods modify the makeup of the butter's fat through chemical manipulation of the finished product, some manipulate the cattle's feed, and some incorporate [[vegetable oil]] into the butter. &quot;Whipped&quot; butter, another product designed to be more spreadable, is aerated by incorporating [[nitrogen]] gas—normal air is not used to avoid [[oxidation]] and [[rancidification|rancidity]].
+
+All categories of butter are sold in both salted and unsalted forms. Either granular [[edible salt|salt]] or a strong [[brine]] are added to salted butter during processing. In addition to enhanced flavor, the addition of salt acts as a [[preservative]]. The amount of [[butterfat]] in the finished product is a vital aspect of production. In the United States, products sold as &quot;butter&quot; must contain at least 80% butterfat. In practice, most American butters contain slightly more than that, averaging around 81% butterfat. European butters generally have a higher ratio—up to 85%.
+
+[[File:Butterschmalz-2.jpg|thumb|left|upright=0.7|Liquid [[clarified butter]]]]
+[[Clarified butter]] is butter with almost all of its water and milk solids removed, leaving almost-pure butterfat. Clarified butter is made by heating butter to its [[melting point]] and then allowing it to cool; after settling, the remaining components separate by density. At the top, [[whey]] proteins form a skin, which is removed. The resulting butterfat is then poured off from the mixture of water and [[casein]] proteins that settle to the bottom.&lt;ref name=&quot;McGee&quot;/&gt;{{rp|page=37}}

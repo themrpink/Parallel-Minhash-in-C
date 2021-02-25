@@ -1,0 +1,168 @@
+From a geometric standpoint, if we consider &lt;math&gt;f(x\mid\theta)&lt;/math&gt; as a function of two variables then the family of probability distributions can be viewed as a family of curves parallel to the &lt;math&gt;x&lt;/math&gt;-axis, while the family of likelihood functions is the orthogonal curves parallel to the &lt;math&gt;\theta&lt;/math&gt;-axis.
+
+====Likelihoods for continuous distributions====
+
+The use of the [[probability density function|probability density]] in specifying the likelihood function above is justified as follows. Given an observation &lt;math&gt;x_j&lt;/math&gt;, the likelihood for the interval &lt;math&gt;[x_j, x_j + h]&lt;/math&gt;, where &lt;math&gt;h &gt; 0&lt;/math&gt; is a constant, is given by &lt;math&gt; \mathcal{L}(\theta\mid x \in [x_j, x_j + h]) &lt;/math&gt;. Observe that
+
+: &lt;math&gt; \operatorname{argmax}_\theta \mathcal{L}(\theta\mid x \in [x_j, x_j + h]) = \operatorname{argmax}_\theta \frac{1}{h} \mathcal{L}(\theta\mid x \in [x_j, x_j + h]) &lt;/math&gt;,
+
+since &lt;math&gt; h &lt;/math&gt; is positive and constant. Because
+
+: &lt;math&gt; 
+\operatorname{argmax}_\theta \frac 1 h \mathcal{L}(\theta\mid x \in [x_j, x_j + h]) = \operatorname{argmax}_\theta \frac 1 h \Pr(x_j \leq x \leq x_j + h \mid \theta)
+ = \operatorname{argmax}_\theta \frac 1 h \int_{x_j}^{x_j+h} f(x\mid \theta) \,dx,
+&lt;/math&gt;
+
+where &lt;math&gt; f(x\mid \theta) &lt;/math&gt; is the probability density function, it follows that
+
+: &lt;math&gt; \operatorname{argmax}_\theta \mathcal{L}(\theta\mid x \in [x_j, x_j + h]) = \operatorname{argmax}_\theta \frac{1}{h} \int_{x_j}^{x_j+h} f(x\mid\theta) \,dx &lt;/math&gt;.
+
+The first [[fundamental theorem of calculus]] and the [[l'Hôpital's rule]] together provide that
+: &lt;math&gt;
+\begin{align}
+&amp; \lim_{h \to 0^{+}} \frac 1 h \int_{x_j}^{x_j+h} f(x\mid\theta) \,dx = \lim_{h\to 0^{+}} \frac{\frac{d}{dh} \int_{x_j}^{x_j+h} f(x\mid \theta) \,dx}{\frac{dh}{dh}} \\[4pt]
+= {} &amp; \lim_{h\to 0^{+}} \frac{f(x_j + h \mid \theta)}{1} = f(x_j \mid \theta).
+\end{align}
+&lt;/math&gt;
+
+Then
+
+: &lt;math&gt;
+\begin{align}
+&amp; \operatorname{argmax}_\theta \mathcal{L}(\theta\mid x_j) = \operatorname{argmax}_\theta \left[ \lim_{h\to 0^{+}} \mathcal{L}(\theta\mid x \in [x_j, x_j + h]) \right] \\[4pt]
+= {} &amp; \operatorname{argmax}_\theta \left[ \lim_{h\to 0^{+}} \frac{1}{h} \int_{x_j}^{x_j+h} f(x\mid\theta) \,dx \right] = \operatorname{argmax}_\theta f(x_j \mid \theta).
+\end{align}
+&lt;/math&gt;
+
+Therefore,
+
+: &lt;math&gt; \operatorname{argmax}_\theta \mathcal{L}(\theta\mid x_j) = \operatorname{argmax}_\theta f(x_j \mid \theta), \!&lt;/math&gt;
+
+and so maximizing the probability density at &lt;math&gt; x_j &lt;/math&gt; amounts to maximizing the likelihood of the specific observation &lt;math&gt; x_j &lt;/math&gt;.
+
+===Likelihoods for mixed continuous&amp;ndash;discrete distributions===
+The above can be extended in a simple way to allow consideration of distributions which contain both discrete and continuous components. Suppose that the distribution consists of a number of discrete probability masses &lt;math&gt;p_k \theta&lt;/math&gt; and a density &lt;math&gt;f(x\mid\theta)&lt;/math&gt;, where the sum of all the &lt;math&gt;p&lt;/math&gt;'s added to the integral of &lt;math&gt;f&lt;/math&gt; is always one. Assuming that it is possible to distinguish an observation corresponding to one of the discrete probability masses from one which corresponds to the density component, the likelihood function for an observation from the continuous component can be dealt with in the manner shown above. For an observation from the discrete component, the likelihood function for an observation from the discrete component is simply
+
+:&lt;math&gt;\mathcal{L}(\theta \mid x )= p_k(\theta), \!&lt;/math&gt;
+
+where &lt;math&gt;k&lt;/math&gt; is the index of the discrete probability mass corresponding to observation &lt;math&gt;x&lt;/math&gt;, because maximizing the probability mass (or probability) at &lt;math&gt;x&lt;/math&gt; amounts to maximizing the likelihood of the specific observation.
+
+The fact that the likelihood function can be defined in a way that includes contributions that are not commensurate (the density and the probability mass) arises from the way in which the likelihood function is defined up to a constant of proportionality, where this &quot;constant&quot; can change with the observation &lt;math&gt;x&lt;/math&gt;, but not with the parameter &lt;math&gt;\theta&lt;/math&gt;.
+
+=== Regularity conditions ===
+In the context of parameter estimation, the likelihood function is usually assumed to obey certain conditions, known as regularity conditions. These conditions are {{em|assumed}} in various proofs involving likelihood functions, and need to be verified in each particular application. For maximum likelihood estimation, the existence of a global maximum of the likelihood function is of the utmost importance. By the [[extreme value theorem]], a [[Continuous function|continuous]] likelihood function on a [[compactness|compact]] parameter space suffices for the existence of a maximum likelihood estimator.&lt;ref&gt;{{cite book |first1=Christian |last1=Gouriéroux |author-link=Christian Gouriéroux |first2=Alain |last2=Monfort |title=Statistics and Econometric Models |location=New York |publisher=Cambridge University Press |year=1995 |isbn=0-521-40551-3 |page=161 |url=https://books.google.com/books?id=gqI-pAP2JZ8C&amp;pg=PA161 }}&lt;/ref&gt; While the continuity assumption is usually met, the compactness assumption about the parameter space is often not, as the bounds of the true parameter values are unknown. In that case, [[Concave function|concavity]] of the likelihood function plays a key role.
+
+More specifically, if the likelihood function is twice continuously differentiable on the &lt;var&gt;k&lt;/var&gt;-dimensional parameter space &lt;math&gt;\Theta&lt;/math&gt; assumed to be an [[Open set|open]] [[Connected space|connected]] subset of &lt;math&gt;\mathbb{R}^{k}&lt;/math&gt;, there exists a unique maximum &lt;math&gt;\hat{\theta} \in \Theta&lt;/math&gt; if
+:&lt;math&gt;\mathbf{H}(\theta) = \left\{ \frac{\partial^{2} L}{\partial \theta_{i} \partial \theta_{j} } \right\}&lt;/math&gt; is [[negative definite]] at every &lt;math&gt;\theta \in \Theta&lt;/math&gt; for which gradient &lt;math&gt;\nabla L = \left\{ \partial L / \partial \theta_{i} \right\}&lt;/math&gt; vanishes, and
+:&lt;math&gt;\lim_{\theta \to \partial \Theta} L(\theta) = 0&lt;/math&gt;, i.e. the likelihood function approaches a constant on the [[Boundary (topology)|boundary]] of the parameter space, which may include the points at infinity if &lt;math&gt;\Theta&lt;/math&gt; is unbounded.
+Mäkeläinen et al. prove this result using [[Morse theory]] while informally appealing to a mountain pass property.&lt;ref&gt;{{cite journal |first1=Timo |last1=Mäkeläinen |first2=Klaus |last2=Schmidt |first3=George P. H. |last3=Styan |title=On the Existence and Uniqueness of the Maximum Likelihood Estimate of a Vector-Valued Parameter in Fixed-Size Samples |journal=[[Annals of Statistics]] |volume=9 |issue=4 |year=1981 |pages=758–767 |doi=10.1214/aos/1176345516 |jstor=2240844 |doi-access=free }}&lt;/ref&gt; Mascarenhas restates their proof using the [[mountain pass theorem]].&lt;ref&gt;{{cite journal |first=W. F. |last=Mascarenhas |title=A Mountain Pass Lemma and its implications regarding the uniqueness of constrained minimizers |journal=Optimization |volume=60 |issue=8–9 |year=2011 |pages=1121–1159 |doi=10.1080/02331934.2010.527973 |s2cid=15896597 }}&lt;/ref&gt;
+
+In the proofs of [[Consistent estimator|consistency]] and asymptotic normality of the maximum likelihood estimator, additional assumptions are made about the probability densities that form the basis of a particular likelihood function. These conditions were first established by Chanda.&lt;ref&gt;{{cite journal |first=K. C. |last=Chanda |title=A Note on the Consistency and Maxima of the Roots of Likelihood Equations |journal=[[Biometrika]] |volume=41 |issue=1–2 |year=1954 |pages=56–61 |doi=10.2307/2333005 |jstor=2333005 }}&lt;/ref&gt; In particular, for [[almost all]] &lt;math&gt;x&lt;/math&gt;, and for all &lt;math&gt;\theta \in \Theta&lt;/math&gt;,
+:&lt;math&gt;\frac{\partial \log f}{\partial \theta_{r}} \,, \quad \frac{\partial^{2} \log f}{\partial \theta_{r} \partial \theta_{s}} \,, \quad \frac{\partial^{3} \log f}{\partial \theta_{r} \partial \theta_{s} \partial \theta_{t}}&lt;/math&gt;
+exist for all &lt;math&gt;r, s, t = 1, 2, \ldots, k&lt;/math&gt; in order to ensure the existence of a [[Taylor expansion]]. Second, for almost all &lt;math&gt;x&lt;/math&gt; and for every &lt;math&gt;\theta \in \Theta&lt;/math&gt; it must be that
+:&lt;math&gt;\left| \frac{\partial f}{\partial \theta_{r}} \right| &lt; F_r(x) \,, \quad \left| \frac{\partial^{2} f}{\partial \theta_{r} \partial \theta_{s}} \right| &lt; F_{rs}(x) \,, \quad \left| \frac{\partial^{3} f}{\partial \theta_{r} \partial \theta_{s} \partial \theta_{t}} \right| &lt; H_{rst}(x)&lt;/math&gt;
+where &lt;math&gt;H&lt;/math&gt; is such that &lt;math&gt;\int_{-\infty}^{\infty} H_{rst}(z) \mathrm{d}z \leq M &lt; \infty&lt;/math&gt;. This boundedness of the derivatives is needed to allow for [[differentiation under the integral sign]]. And lastly, it is assumed that the [[information matrix]],
+:&lt;math&gt;\mathbf{I}(\theta) = \int_{-\infty}^{\infty} \frac{\partial \log f}{\partial \theta_{r}} \frac{\partial \log f}{\partial \theta_{s}} f \mathrm{d}z&lt;/math&gt;
+is [[positive definite]] and &lt;math&gt;\left| \mathbf{I}(\theta) \right|&lt;/math&gt; is finite. This ensures that the [[Score (statistics)|score]] has a finite variance.&lt;ref&gt;{{cite book |first1=Edward |last1=Greenberg |first2=Charles E. Jr. |last2=Webster |title=Advanced Econometrics: A Bridge to the Literature |location=New York |publisher=John Wiley &amp; Sons |year=1983 |isbn=0-471-09077-8 |pages=24–25 }}&lt;/ref&gt;
+
+The above conditions are sufficient, but not necessary. That is, a model that does not meet these regularity conditions may or may not have a maximum likelihood estimator of the properties mentioned above. Further, in case of non-independently or non-identically distributed observations additional properties may need to be assumed.
+
+==Likelihood ratio and relative likelihood==
+===Likelihood ratio===
+A ''likelihood ratio'' is the ratio of any two specified likelihoods, frequently written as:
+:&lt;math&gt;\Lambda(\theta_1:\theta_2 \mid x) = \frac{\mathcal{L}(\theta_1 \mid x)}{\mathcal{L}(\theta_2 \mid x)}&lt;/math&gt;
+
+The likelihood ratio is central to [[likelihoodist statistics]]: the ''[[law of likelihood]]'' states that degree to which data (considered as evidence) supports one parameter value versus another is measured by the likelihood ratio.
+
+In [[frequentist inference]], the likelihood ratio is the basis for a [[test statistic]], the so-called [[likelihood-ratio test]]. By the [[Neyman–Pearson lemma]], this is the most [[Statistical power|powerful]] test for comparing two [[simple hypothesis|simple hypotheses]] at a given [[significance level]]. Numerous other tests can be viewed as likelihood-ratio tests or approximations thereof.&lt;ref&gt;{{cite journal |first=A. |last=Buse |title=The Likelihood Ratio, Wald, and Lagrange Multiplier Tests: An Expository Note |journal=[[The American Statistician]] |volume=36 |issue=3a |year=1982 |pages=153–157 |doi=10.1080/00031305.1982.10482817 }}&lt;/ref&gt; The asymptotic distribution of the log-likelihood ratio, considered as a test statistic, is given by [[Wilks' theorem]].
+
+The likelihood ratio is also of central importance in [[Bayesian inference]], where it is known as the [[Bayes factor]], and is used in [[Bayes' rule]]. Stated in terms of [[odds]], Bayes' rule is that the ''posterior'' odds of two alternatives, {{tmath|A_1}} and {{tmath|A_2}}, given an event {{tmath|B}}, is the ''prior'' odds, times the likelihood ratio. As an equation:
+:&lt;math&gt;O(A_1:A_2 \mid B) = O(A_1:A_2) \cdot \Lambda(A_1:A_2 \mid B).&lt;/math&gt;
+
+The likelihood ratio is not directly used in AIC-based statistics. Instead, what is used is the relative likelihood of models (see below).
+
+====Distinction to odds ratio====
+The likelihood ratio of two models, given the same event, may be contrasted with the [[odds]] of two events, given the same model. In terms of a parametrized probability mass function {{tmath|p_\theta(x)}}, the likelihood ratio of two values of the parameter {{tmath|\theta_1}} and {{tmath|\theta_2}}, given an outcome {{tmath|x}} is:
+:&lt;math&gt;\Lambda(\theta_1:\theta_2 \mid x) = p_{\theta_1}(x) : p_{\theta_2}(x),&lt;/math&gt; 
+while the odds of two outcomes, {{tmath|x_1}} and {{tmath|x_2}}, given a value of the parameter {{tmath|\theta}}, is:
+:&lt;math&gt;O(x_1:x_2 \mid \theta) = p_\theta (x_1) : p_\theta (x_2).&lt;/math&gt; 
+This highlights the difference between likelihood and odds: in likelihood, one compares models (parameters), holding data fixed; while in odds, one compares events (outcomes, data), holding the model fixed.
+
+The [[odds ratio]] is a ratio of two conditional odds (of an event, given another event being present or absent). However, the odds ratio can also be interpreted as a ratio of two likelihoods ratios, if one considers one of the events to be more easily observable than the other. See [[diagnostic odds ratio]], where the result of a [[diagnostic test]] is more easily observable than the presence or absence of an underlying [[medical condition]].
+
+===Relative likelihood function===
+{{See also|Relative likelihood}}
+Since the actual value of the likelihood function depends on the sample, it is often convenient to work with a standardized measure. Suppose that the [[maximum likelihood estimate]] for the parameter {{mvar|&amp;theta;}} is &lt;math&gt;\hat{\theta}&lt;/math&gt;.  Relative plausibilities of other {{mvar|&amp;theta;}} values may be found by comparing the likelihoods of those other values with the likelihood of &lt;math&gt;\hat{\theta}&lt;/math&gt;.  The '''relative likelihood''' of {{mvar|&amp;theta;}} is defined to be&lt;ref name='Kalbfleisch'&gt;{{citation | author-link= James G. Kalbfleisch | last= Kalbfleisch | first= J. G. | year=1985 | title= Probability and Statistical Inference | publisher= Springer}} (§9.3).&lt;/ref&gt;&lt;ref&gt;{{citation| last= Azzalini | first= A. | title= Statistical Inference—Based on the likelihood | year= 1996 | publisher= [[Chapman &amp; Hall]] | url= https://books.google.com/books?id=hyN6gXHvSo0C | isbn= 9780412606502 }} (§1.4.2).&lt;/ref&gt;&lt;ref name='Sprott'&gt;Sprott, D. A. (2000), ''Statistical Inference in Science'', Springer (chap.&amp;nbsp;2).&lt;/ref&gt;&lt;ref&gt;Davison, A. C. (2008), ''Statistical Models'', [[Cambridge University Press]] (§4.1.2).&lt;/ref&gt;&lt;ref&gt;{{citation|first1= L. | last1= Held | first2= D. S. | last2= Sabanés Bové | title= Applied Statistical Inference—Likelihood and Bayes | year= 2014 | publisher= Springer}} (§2.1).&lt;/ref&gt; 
+: &lt;math&gt;R(\theta) = \frac{\mathcal{L}(\theta \mid x)}{\mathcal{L}(\hat{\theta} \mid x)}.&lt;/math&gt;
+Thus, the relative likelihood is the likelihood ratio (discussed above) with the fixed denominator &lt;math&gt; \mathcal{L}(\hat{\theta})&lt;/math&gt;. This corresponds to standardizing the likelihood to have a maximum of 1.
+
+====Likelihood region====
+A '''likelihood region''' is the set of all values of {{mvar|&amp;theta;}} whose relative likelihood is greater than or equal to a given threshold. In terms of percentages, a '''{{mvar|p}}% likelihood region''' for {{mvar|&amp;theta;}} is defined to be&lt;ref name='Kalbfleisch'/&gt;&lt;ref name='Sprott'/&gt;&lt;ref name=&quot;Rossi2018&quot;&gt;{{citation | last= Rossi | first= R. J. | year= 2018 | title= Mathematical Statistics | publisher= [[Wiley (publisher)|Wiley]] | page= 267 }}.&lt;/ref&gt;
+
+:&lt;math&gt;
+\left\{\theta : R(\theta) \ge \frac p {100} \right\}.
+&lt;/math&gt;
+
+If {{mvar|&amp;theta;}} is a single real parameter, a {{mvar|p}}% likelihood region will usually comprise an [[Interval (mathematics)|interval]] of real values. If the region does comprise an interval, then it is called a '''likelihood interval'''.&lt;ref name='Kalbfleisch'/&gt;&lt;ref name='Sprott'/&gt;&lt;ref name=Hudson&gt;{{Citation
+| last1 = Hudson | first1 = D. J.
+| title = Interval estimation from the likelihood function
+| journal = [[Journal of the Royal Statistical Society, Series B]]
+| volume = 33
+| issue = 2
+| pages = 256–262
+| year = 1971 
+}}.&lt;/ref&gt;
+
+Likelihood intervals, and more generally likelihood regions, are used for [[interval estimation]] within likelihoodist statistics: they are similar to [[confidence interval]]s in frequentist statistics and [[credible interval]]s in Bayesian statistics. Likelihood intervals are interpreted directly in terms of relative likelihood, not in terms of [[coverage probability]] (frequentism) or [[posterior probability]] (Bayesianism).
+
+Given a model, likelihood intervals can be compared to confidence intervals. If {{mvar|&amp;theta;}} is a single real parameter, then under certain conditions, a 14.65% likelihood interval (about 1:7 likelihood) for {{mvar|&amp;theta;}} will be the same as a 95% confidence interval (19/20 coverage probability).&lt;ref name='Kalbfleisch'/&gt;&lt;ref name=&quot;Rossi2018&quot;/&gt; In a slightly different formulation suited to the use of log-likelihoods (see [[Likelihood-ratio test#Distribution: Wilks.27 theorem|Wilks' theorem]]), the test statistic is twice the difference in log-likelihoods and the probability distribution of the test statistic is approximately a [[chi-squared distribution]] with degrees-of-freedom (df) equal to the difference in df's between the two models (therefore, the {{mvar|e}}&lt;sup&gt;&amp;minus;2&lt;/sup&gt; likelihood interval is the same as the 0.954 confidence interval; assuming difference in df's to be 1).&lt;ref name=&quot;Rossi2018&quot;/&gt;&lt;ref name=Hudson/&gt;
+
+==Likelihoods that eliminate nuisance parameters==
+In many cases, the likelihood is a function of more than one parameter but interest focuses on the estimation of only one, or at most a few of them, with the others being considered as [[nuisance parameter]]s. Several alternative approaches have been developed to eliminate such nuisance parameters, so that a likelihood can be written as a function of only the parameter (or parameters) of interest: the main approaches are profile, conditional, and marginal likelihoods.&lt;ref&gt;{{cite book |title=In All Likelihood: Statistical Modelling and Inference Using Likelihood |first=Yudi |last=Pawitan |year=2001 |publisher= [[Oxford University Press]] }}&lt;/ref&gt;&lt;ref&gt;{{cite web | author = Wen Hsiang Wei |url= http://web.thu.edu.tw/wenwei/www/glmpdfmargin.htm |title = Generalized Linear Model - course notes | pages = Chapter 5 | publisher = [[Tunghai University]] | location= Taichung, Taiwan | access-date = 2017-10-01 }}&lt;/ref&gt; These approaches are also useful when a high-dimensional likelihood surface needs to be reduced to one or two parameters of interest in order to allow a [[Graph of a function|graph]].
+
+===Profile likelihood===
+It is possible to reduce the dimensions by concentrating the likelihood function for a subset of parameters by expressing the nuisance parameters as functions of the parameters of interest and replacing them in the likelihood function.&lt;ref&gt;{{cite book |first=Takeshi |last=Amemiya |author-link=Takeshi Amemiya |title=Advanced Econometrics |chapter=Concentrated Likelihood Function |location=Cambridge |publisher=Harvard University Press |year=1985 |pages=[https://archive.org/details/advancedeconomet00amem/page/125 125–127] |isbn=978-0-674-00560-0 |chapter-url=https://books.google.com/books?id=0bzGQE14CwEC&amp;pg=PA125 |url-access=registration |url=https://archive.org/details/advancedeconomet00amem/page/125 }}&lt;/ref&gt;&lt;ref&gt;{{cite book |first1=Russell |last1=Davidson |first2=James G. |last2=MacKinnon |author-link2=James G. MacKinnon |title=Estimation and Inference in Econometrics |chapter=Concentrating the Loglikelihood Function |location=New York |publisher=Oxford University Press |year=1993 |pages=267–269 |isbn=978-0-19-506011-9 }}&lt;/ref&gt; In general, for a likelihood function depending on the parameter vector &lt;math&gt;\mathbf{\theta}&lt;/math&gt; that can be partitioned into &lt;math&gt;\mathbf{\theta} = \left( \mathbf{\theta}_{1} : \mathbf{\theta}_{2} \right)&lt;/math&gt;, and where a correspondence &lt;math&gt;\mathbf{\hat{\theta}}_{2} = \mathbf{\hat{\theta}}_{2} \left( \mathbf{\theta}_{1} \right)&lt;/math&gt; can be determined explicitly, concentration reduces [[Computational complexity|computational burden]] of the original maximization problem.&lt;ref&gt;{{cite book |first1=Christian |last1=Gourieroux |first2=Alain |last2=Monfort |title=Statistics and Econometric Models |chapter=Concentrated Likelihood Function |location=New York |publisher=Cambridge University Press |year=1995 |isbn=978-0-521-40551-5 |pages=170–175 |chapter-url=https://books.google.com/books?id=gqI-pAP2JZ8C&amp;pg=PA170 }}&lt;/ref&gt;
+
+For instance, in a [[linear regression]] with normally distributed errors, &lt;math&gt;\mathbf{y} = \mathbf{X} \beta + u&lt;/math&gt;, the coefficient vector could be [[Partition of a set|partitioned]] into &lt;math&gt;\beta = \left[ \beta_{1} : \beta_{2} \right]&lt;/math&gt; (and consequently the [[design matrix]] &lt;math&gt;\mathbf{X} = \left[ \mathbf{X}_{1} : \mathbf{X}_{2} \right]&lt;/math&gt;). Maximizing with respect to &lt;math&gt;\beta_{2}&lt;/math&gt; yields an optimal value function &lt;math&gt;\beta_{2} (\beta_{1}) = \left( \mathbf{X}_{2}^{\mathsf{T}} \mathbf{X}_{2} \right)^{-1} \mathbf{X}_{2}^{\mathsf{T}} \left( \mathbf{y} - \mathbf{X}_{1} \beta_{1} \right)&lt;/math&gt;. Using this result, the maximum likelihood estimator for &lt;math&gt;\beta_{1}&lt;/math&gt; can then be derived as
+:&lt;math&gt;\hat{\beta}_{1} = \left( \mathbf{X}_{1}^{\mathsf{T}} \left( \mathbf{I} - \mathbf{P}_{2} \right) \mathbf{X}_{1} \right)^{-1} \mathbf{X}_{1}^{\mathsf{T}} \left( \mathbf{I} - \mathbf{P}_{2} \right) \mathbf{y}&lt;/math&gt;
+where &lt;math&gt;\mathbf{P}_{2} = \mathbf{X}_{2} \left( \mathbf{X}_{2}^{\mathsf{T}} \mathbf{X}_{2} \right)^{-1} \mathbf{X}_{2}^{\mathsf{T}}&lt;/math&gt; is the [[projection matrix]] of &lt;math&gt;\mathbf{X}_{2}&lt;/math&gt;. This result is known as the [[Frisch–Waugh–Lovell theorem]].
+
+Since graphically the procedure of concentration is equivalent to slicing the likelihood surface along the ridge of values of the nuisance parameter &lt;math&gt;\beta_{2}&lt;/math&gt; that maximizes the likelihood function, creating an [[Contour line|isometric]] [[Topographic profile|profile]] of the likelihood function for a given &lt;math&gt;\beta_{1}&lt;/math&gt;, the result of this procedure is also known as '''profile likelihood'''.&lt;ref&gt;{{citation |first=Andrew |last=Pickles |title=An Introduction to Likelihood Analysis |location=Norwich |publisher=W. H. Hutchins &amp; Sons |year=1985 |isbn=0-86094-190-6 |pages=[https://archive.org/details/introductiontoli0000pick/page/21 21–24] |mode=cs1 |url=https://archive.org/details/introductiontoli0000pick/page/21 }}&lt;/ref&gt;&lt;ref&gt;{{cite book |first=Benjamin M. |last=Bolker |title=Ecological Models and Data in R |publisher=Princeton University Press |year=2008 |isbn=978-0-691-12522-0 |pages=187–189 |url=https://books.google.com/books?id=flyBd1rpqeoC&amp;pg=PA188 }}&lt;/ref&gt; In addition to being graphed, the profile likelihood can also be used to compute [[confidence interval]]s that often have better small-sample properties than those based on asymptotic [[Standard error (statistics)|standard errors]] calculated from the full likelihood.&lt;ref&gt;{{citation |first=Murray |last=Aitkin |chapter=Direct Likelihood Inference |title=GLIM 82: Proceedings of the International Conference on Generalised Linear Models |publisher=Springer |year=1982 |isbn=0-387-90777-7 |pages=76–86 |mode=cs1 }}&lt;/ref&gt;&lt;ref&gt;{{citation |first1=D. J. |last1=Venzon |first2=S. H. |last2=Moolgavkar |title=A Method for Computing Profile-Likelihood-Based Confidence Intervals |journal=[[Journal of the Royal Statistical Society]] |series=Series C (Applied Statistics) |volume=37 |issue=1 |year=1988 |pages=87–94 |doi=10.2307/2347496 |jstor=2347496 |mode=cs1 }}&lt;/ref&gt;
+
+===Conditional likelihood===
+Sometimes it is possible to find a [[sufficient statistic]] for the nuisance parameters, and conditioning on this statistic results in a likelihood which does not depend on the nuisance parameters.&lt;ref&gt;{{cite journal |first1=J. D. |last1=Kalbfleisch |first2=D. A. |last2=Sprott |title=Marginal and Conditional Likelihoods |journal=Sankhyā: The Indian Journal of Statistics |series=Series A |volume=35 |issue=3 |year=1973 |pages=311–328 |jstor=25049882 }}&lt;/ref&gt;
+
+One example occurs in 2×2 tables, where conditioning on all four marginal totals leads to a conditional likelihood based on the non-central [[hypergeometric distribution]]. This form of conditioning is also the basis for [[Fisher's exact test]].
+
+===Marginal likelihood===
+{{Main|Marginal likelihood}}
+Sometimes we can remove the nuisance parameters by considering a likelihood based on only part of the information in the data, for example by using the set of ranks rather than the numerical values. Another example occurs in linear [[mixed model]]s, where considering a likelihood for the residuals only after fitting the fixed effects leads to [[residual maximum likelihood]] estimation of the variance components.
+
+===Partial likelihood===
+A partial likelihood is an adaption of the full likelihood such that only a part of the parameters (the parameters of interest) occur in it.&lt;ref&gt;
+{{citation
+ |last=Cox |first=D. R. |author-link=David Cox (statistician)
+ |title=Partial likelihood
+ |journal=[[Biometrika]]
+ |year=1975 |volume=62 |issue=2 |pages=269&amp;ndash;276
+ |doi=10.1093/biomet/62.2.269 |mr=0400509
+|mode=cs1 }}&lt;/ref&gt; It is a key component of the [[proportional hazards model]]: using a restriction on the hazard function, the likelihood does not contain the shape of the hazard over time.
+
+==Products of likelihoods==
+The likelihood, given two or more [[independence (probability theory)|independent]] [[Event (probability theory)|events]], is the product of the likelihoods of each of the individual events:
+:&lt;math&gt;\Lambda(A \mid X_1 \land X_2) = \Lambda(A \mid X_1) \cdot \Lambda(A \mid X_2)&lt;/math&gt;
+This follows from the definition of independence in probability: the probabilities of two independent events happening, given a model, is the product of the probabilities.
+
+This is particularly important when the events are from [[independent and identically distributed random variables]], such as independent observations or [[sampling with replacement]]. In such a situation, the likelihood function factors into a product of individual likelihood functions.
+
+The empty product has value 1, which corresponds to the likelihood, given no event, being 1: before any data, the likelihood is always 1. This is similar to a [[uniform prior]] in Bayesian statistics, but in likelihoodist statistics this is not an [[improper prior]] because likelihoods are not integrated.
+
+==Log-likelihood==
+{{see also|Log-probability}}
+'''Log-likelihood function''' is a logarithmic transformation of the likelihood function, often denoted by a lowercase {{math|''l''}} or {{tmath|\ell}}, to contrast with the uppercase {{math|''L''}} or &lt;math&gt;\mathcal{L}&lt;/math&gt; for the likelihood. Because logarithms are [[strictly increasing]] functions, maximizing the likelihood is equivalent to maximizing the log-likelihood. But for practical purposes it is more convenient to work with the log-likelihood function in [[maximum likelihood estimation]], in particular since most common [[probability distribution]]s—notably the [[exponential family]]—are only [[Logarithmically concave function|logarithmically concave]],&lt;ref&gt;{{citation |first1=Robert E. |last1=Kass |first2=Paul W. |last2=Vos |title=Geometrical Foundations of Asymptotic Inference |location=New York |publisher=John Wiley &amp; Sons |year=1997 |isbn=0-471-82668-5 |page=14 |url=https://books.google.com/books?id=e43EAIfUPCwC&amp;pg=PA14 |mode=cs1 }}&lt;/ref&gt;&lt;ref&gt;{{cite web |first=Alecos |last=Papadopoulos |title=Why we always put log() before the joint pdf when we use MLE (Maximum likelihood Estimation)? |date=September 25, 2013 |work=[[Stack Exchange]] |url=https://stats.stackexchange.com/q/70975 }}&lt;/ref&gt; and [[Concave function|concavity]] of the [[objective function]] plays a key role in the [[Mathematical optimization|maximization]].
+
+Given the independence of each event, the overall log-likelihood of intersection equals the sum of the log-likelihoods of the individual events. This is analogous to the fact that the overall [[log-probability]] is the sum of the log-probability of the individual events. In addition to the mathematical convenience from this, the adding process of log-likelihood has an intuitive interpretation, as often expressed as &quot;support&quot; from the data. When the parameters are estimated using the log-likelihood for the [[maximum likelihood estimation]], each data point is used by being added to the total log-likelihood. As the data can be viewed as an evidence that support the estimated parameters, this process can be interpreted as &quot;support from independent evidence ''adds&quot;,'' and the log-likelihood is the &quot;weight of evidence&quot;. Interpreting negative log-probability as [[information content]] or [[surprisal]], the support (log-likelihood) of a model, given an event, is the negative of the surprisal of the event, given the model: a model is supported by an event to the extent that the event is unsurprising, given the model.
+
+A logarithm of a likelihood ratio is equal to the difference of the log-likelihoods:
+
+:&lt;math&gt;\log \frac{L(A)}{L(B)} = \log L(A) - \log L(B) = \ell(A) - \ell(B).&lt;/math&gt;

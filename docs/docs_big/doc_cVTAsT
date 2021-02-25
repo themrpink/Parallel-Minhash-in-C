@@ -1,0 +1,274 @@
+* &quot;All A are B,&quot; and &quot;No A are B&quot; are termed [[Universal proposition|''universal'' propositions]];
+* &quot;Some A are B&quot; and &quot;Some A are not B&quot; are termed [[Particular proposition|''particular'' propositions]].
+
+More modern logicians allow some variation. Each of the premises has one term in common with the conclusion: in a major premise, this is the ''major term'' (i.e., the [[Predicate (grammar)|predicate]] of the conclusion); in a minor premise, this is the ''minor term'' (i.e., the subject of the conclusion). For example:
+
+:'''Major premise''': All humans are mortal.
+:'''Minor premise''': All Greeks are humans.
+:'''Conclusion''': All Greeks are mortal.
+
+Each of the three distinct terms represents a category. From the example above, ''humans'', ''mortal'', and ''Greeks'': ''mortal'' is the major term, and ''Greeks'' the minor term. The premises also have one term in common with each other, which is known as the ''middle term''; in this example, ''humans''. Both of the premises are universal, as is the conclusion.
+
+:'''Major premise''': All mortals die.
+:'''Minor premise''': All men are mortals.
+:'''Conclusion''': All men die.
+
+Here, the major term is ''die'', the minor term is ''men'', and the middle term is ''mortals''. Again, both premises are universal, hence so is the conclusion.
+
+=== Polysyllogism ===
+{{Main|Polysyllogism}}
+A polysyllogism, or a '''sorites''', is a form of argument in which a series of incomplete syllogisms is so arranged that the predicate of each premise forms the subject of the next until the subject of the first is joined with the predicate of the last in the conclusion. For example, one might argue that all lions are big cats, all big cats are predators, and all predators are carnivores. To conclude that therefore all lions are carnivores is to construct a sorites argument.
+
+==Types&lt;!--linked from 'Term logic'--&gt;==
+{{Multiple issues|{{Original research section|date=July 2020}}
+{{Unreferenced section|date=July 2020}}|section=yes}}
+[[File:Square of opposition, set diagrams.svg|thumb|Relationships between the four types of propositions in the [[square of opposition]]&lt;br /&gt;&lt;br /&gt;(Black areas are empty,&lt;br /&gt;red areas are nonempty.)]]
+{{further|List of valid argument forms}}
+
+There are infinitely many possible syllogisms, but only 256 logically distinct types and only 24 valid types (enumerated below). A syllogism takes the form (note: M&amp;nbsp;– Middle, S&amp;nbsp;– subject, P&amp;nbsp;– predicate.):
+
+:'''Major premise''': All M are P.
+:'''Minor premise''': All S are M.
+:'''Conclusion''': All S are P.
+
+The premises and conclusion of a syllogism can be any of four types, which are labeled by letters&lt;ref&gt;According to [[Copi]], p. 127: 'The letter names are presumed to come from the Latin words &quot;'''''A'''''ff'''''I'''''rmo&quot; and &quot;n'''''E'''''g'''''O''''',&quot; which mean &quot;I affirm&quot; and &quot;I deny,&quot; respectively; the first capitalized letter of each word is for universal, the second for particular'&lt;/ref&gt; as follows. The meaning of the letters is given by the table:
+
+{| class=&quot;wikitable&quot;
+|-
+! code
+! quantifier
+! subject
+! copula
+! predicate
+! type
+! example
+|-
+| A
+| All
+| S
+| are
+| P
+| universal affirmative
+| All humans are mortal.
+|-
+| E
+| No
+| S
+| are
+| P
+| universal negative
+| No humans are perfect.
+|-
+| I
+| Some
+| S
+| are
+| P
+| particular affirmative
+| Some humans are healthy.
+|-
+| O
+| Some
+| S
+| are not
+| P
+| particular negative
+| Some humans are not clever.
+|}
+
+In ''[[Prior Analytics]]'', Aristotle uses mostly the letters A, B, and C (Greek letters ''[[alpha]]'', ''[[beta]]'', and ''[[gamma]]'') as term place holders, rather than giving concrete examples. It is traditional to use ''is'' rather than ''are'' as the [[Copula (linguistics)|copula]], hence ''All A is B'' rather than ''All As are Bs''. It is traditional and convenient practice to use a, e, i, o as [[Infix notation|infix operators]] so the categorical statements can be written succinctly. The following table shows the longer form, the succinct shorthand, and equivalent expressions in predicate logic:
+
+{| class=&quot;wikitable&quot;
+|-
+! Form
+! Shorthand
+! Predicate logic
+|-
+| All A is B
+| AaB
+| &lt;math&gt;\forall x (A(x) \rightarrow B(x))&lt;/math&gt;&amp;nbsp; ''or'' &amp;nbsp;&lt;math&gt;\neg \exist x (A(x) \land \neg B(x))&lt;/math&gt;
+|-
+|No A is B
+|AeB
+| &lt;math&gt;\neg \exist x (A(x) \land B(x))&lt;/math&gt;&amp;nbsp; ''or'' &amp;nbsp;&lt;math&gt;\forall x (A(x) \rightarrow \neg B(x))&lt;/math&gt;
+|-
+|Some A is B
+|AiB
+| &lt;math&gt;\exist x (A(x) \land B(x))&lt;/math&gt;
+|-
+|Some A is not B
+|AoB
+| &lt;math&gt;\exist x (A(x) \land \neg B(x))&lt;/math&gt;
+|}
+
+The convention here is that the letter S is the subject of the conclusion, P is the predicate of the conclusion, and M is the middle term.  The major premise links M with P and the minor premise links M with S.  However, the middle term can be either the subject or the predicate of each premise where it appears.  The differing positions of the major, minor, and middle terms gives rise to another classification of syllogisms known as the ''figure''.  Given that in each case the conclusion is S-P, the four figures are:
+
+{| class=&quot;wikitable&quot;
+|
+! Figure 1
+! Figure 2
+! Figure 3
+! Figure 4
+|-
+! Major premise
+| M–P
+| P–M
+| M–P
+| P–M
+|-
+! Minor premise
+| S–M
+| S–M
+| M–S
+| M–S
+|}
+
+(Note, however, that, following Aristotle's treatment of the figures, some logicians—e.g., [[Peter Abelard]] and [[John Buridan]]—reject the fourth figure as a figure distinct from the first.)
+
+Putting it all together, there are 256 possible types of syllogisms (or 512 if the order of the major and minor premises is changed, though this makes no difference logically). Each premise and the conclusion can be of type A, E, I or O, and the syllogism can be any of the four figures.  A syllogism can be described briefly by giving the letters for the premises and conclusion followed by the number for the figure.  For example, the syllogism BARBARA below is AAA-1, or &quot;A-A-A in the first figure&quot;.
+
+The vast majority of the 256 possible forms of syllogism are invalid (the conclusion does not [[logical consequence|follow logically]] from the premises).  The table below shows the valid forms. Even some of these are sometimes considered to commit the [[existential fallacy]], meaning they are invalid if they mention an empty category. These controversial patterns are marked in ''italics''. All but four of the patterns in italics (felapton, darapti, fesapo and bamalip) are weakened moods, i.e. it is possible to draw a stronger conclusion from the premises.
+
+{| class=&quot;wikitable&quot;
+|-
+! Figure 1
+! Figure 2
+! Figure 3
+! Figure 4
+|-
+|B'''a'''rb'''a'''r'''a'''
+|C'''e'''s'''a'''r'''e'''
+|D'''a'''t'''i'''s'''i'''
+|C'''a'''l'''e'''m'''e'''s
+|-
+|C'''e'''l'''a'''r'''e'''nt
+|C'''a'''m'''e'''str'''e'''s
+|D'''i'''s'''a'''m'''i'''s
+|D'''i'''m'''a'''t'''i'''s
+|-
+|D'''a'''r'''ii'''
+|F'''e'''st'''i'''n'''o'''
+|F'''e'''r'''i'''s'''o'''n
+|Fr'''e'''s'''i'''s'''o'''n
+|-
+|F'''e'''r'''io'''
+|B'''a'''r'''o'''c'''o'''
+|B'''o'''c'''a'''rd'''o'''
+| ''C'''a'''l'''e'''m'''o'''s''
+|-
+| ''B'''a'''rb'''a'''r'''i'''''
+| ''C'''e'''s'''a'''r'''o'''''
+| ''F'''e'''l'''a'''pt'''o'''n''
+| ''F'''e'''s'''a'''p'''o'''''
+|-
+| ''C'''e'''l'''a'''r'''o'''nt''
+| ''C'''a'''m'''e'''str'''o'''s''
+| ''D'''a'''r'''a'''pt'''i'''''
+| ''B'''a'''m'''a'''l'''i'''p''
+|}
+
+The letters A, E, I, and O have been used since the [[Scholasticism|medieval Schools]] to form [[mnemonic]] names for the forms as follows: 'Barbara' stands for AAA, 'Celarent' for EAE, etc.
+
+Next to each premise and conclusion is a shorthand description of the sentence.  So in AAI-3, the premise &quot;All squares are rectangles&quot; becomes &quot;MaP&quot;; the symbols mean that the first term (&quot;square&quot;) is the middle term, the second term (&quot;rectangle&quot;) is the predicate of the conclusion, and the relationship between the two terms is labeled &quot;a&quot; (All M are P).
+
+The following table shows all syllogisms that are essentially different. The similar syllogisms share the same premises, just written in a different way. For example &quot;Some pets are kittens&quot; (SiM in [[Syllogism#Darii (AII-1)|Darii]]) could also be written as &quot;Some kittens are pets&quot; (MiS in Datisi).
+
+In the Venn diagrams, the black areas indicate no elements, and the red areas indicate at least one element.  In the predicate logic expressions, a horizontal bar over an expression means to negate (&quot;logical not&quot;) the result of that expression.
+
+It is also possible to use [[graph (discrete mathematics)|graphs]] (consisting of vertices and edges) to evaluate syllogisms.&lt;ref&gt;https://www.youtube.com/watch?v=MXRwmOpgqLw&lt;/ref&gt;
+
+===Examples===
+
+{{SyllogismImages|Barbara|Greeks|men|mortal}}
+
+====Barbara (AAA-1){{anchor|Modus Barbara}}====
+{{SyllogismSentences|All men are mortal. (MaP)|All Greeks are men. (SaM)|All Greeks are mortal. (SaP)}}
+
+{{SyllogismImages|Celarent|snake|reptile|fur}}
+
+====Celarent (EAE-1){{anchor|Modus Celarent}}====
+Similar: Cesare (EAE-2)
+{{SyllogismSentences|No reptile has fur. (MeP)|All snakes are reptiles. (SaM)|No snake has fur. (SeP)}}
+
+{{clear}}
+{{anchor|Modus Camestres}}
+{| class=&quot;collapsible collapsed&quot; style=&quot;width: 100%; border: 1px solid #aaaaaa;&quot;
+! bgcolor=&quot;#ccccff&quot;| Camestres (AEE-2) 
+|-
+|
+{{SyllogismImages|Camestres|fur|reptile|snake}}
+Camestres is essentially like Celarent with S and P exchanged.&lt;br&gt;
+Similar: Calemes (AEE-4)
+{{SyllogismSentences|All snakes are reptiles. (PaM)|No fur bearing animal is a reptile. (SeM)|No fur bearing animal is a snake. (SeP)}}
+|}
+
+{{SyllogismImages|Darii|pet|rabbit|fur}}
+
+====Darii (AII-1){{anchor|Modus Darii}}====
+Similar: Datisi (AII-3) 
+{{SyllogismSentences|All rabbits have fur. (MaP)|Some pets are rabbits. (SiM)|Some pets have fur. (SiP)}}
+
+{{clear}}
+{{anchor|Modus Disamis}}
+{| class=&quot;collapsible collapsed&quot; style=&quot;width: 100%; border: 1px solid #aaaaaa;&quot;
+! bgcolor=&quot;#ccccff&quot;| Disamis (IAI-3)
+|-
+|
+{{SyllogismImages|Disamis|fur|rabbit|pet}}
+Disamis is essentially like Darii with S and P exchanged.&lt;br&gt;
+Similar: Dimatis (IAI-4)
+{{SyllogismSentences|Some rabbits are pets. (MiP)|All rabbits have fur. (MaS)|Some fur bearing animals are pets. (SiP)}}
+|}
+
+{{SyllogismImages|Ferio|reading|homework|fun}}
+
+====Ferio (EIO-1){{anchor|Modus Ferio}}====
+Similar: Festino (EIO-2), Ferison (EIO-3), Fresison (EIO-4)
+{{SyllogismSentences|No homework is fun. (MeP)|Some reading is homework. (SiM)|Some reading is not fun. (SoP)}}
+
+{{SyllogismImages|Baroco|pet|mammal|cat}}
+
+====Baroco (AOO-2){{anchor|Modus Baroco}}====
+{{SyllogismSentences|All cats are mammals. (PaM)|Some pets are not mammals. (SoM)|Some pets are not cats. (SoP)}}
+
+{{SyllogismImages|Bocardo|mammal|cat|pet}}
+
+====Bocardo (OAO-3){{anchor|Modus Bocardo}}====
+{{SyllogismSentences|Some cats are not pets. (MoP)|All cats are mammals. (MaS)|Some mammals are not pets. (SoP)}}
+
+{{clear}}
+----
+
+{{SyllogismImages|Barbari|Greek|man|mortal}}
+
+====''Barbari (AAI-1)''{{anchor|Modus Barbari}}====
+{{SyllogismSentences|All men are mortal. (MaP)|All Greeks are men. (SaM)|Some Greeks are mortal. (SiP)}} &lt;!--- &quot;Some&quot; in the conclusion is correct! ---&gt;
+
+{{clear}}
+{{anchor|Modus Bamalip}}
+{| class=&quot;collapsible collapsed&quot; style=&quot;width: 100%; border: 1px solid #aaaaaa;&quot;
+! bgcolor=&quot;#ccccff&quot;| ''Bamalip (AAI-4)'' 
+|-
+|
+{{SyllogismImages|Bamalip|mortal|man|Greek}}
+''Bamalip'' is exactly like ''Barbari'' with S and P exchanged: 
+{{SyllogismSentences|All Greeks are men. (PaM)|All men are mortals. (MaS)|Some mortals are Greek. (SiP)}}
+|}
+
+{{SyllogismImages|Celaront|snake|reptile|fur}}
+
+====''Celaront (EAO-1)''{{anchor|Modus Celaront}}====
+Similar: ''Cesaro (EAO-2)''
+{{SyllogismSentences|No reptiles have fur. (MeP)|All snakes are reptiles. (SaM)|Some snakes have no fur. (SoP)}} &lt;!--- &quot;Some&quot; in the conclusion is correct! ---&gt;
+
+{{SyllogismImages|Camestros|human|hooves|horse}}
+
+====''Camestros (AEO-2)''{{anchor|Modus Camestros}}====
+Similar: ''Calemos (AEO-4)''
+{{SyllogismSentences|All horses have hooves. (PaM)|No humans have hooves. (SeM)|Some humans are not horses. (SoP)}} &lt;!--- &quot;Some&quot; in the conclusion is correct! ---&gt;
+
+{{SyllogismImages|Felapton|plant|flower|animal}}
+
+====''Felapton (EAO-3)''{{anchor|Modus Felapton}}====
+Similar: ''Fesapo (EAO-4)''
+{{SyllogismSentences|No flowers are animals. (MeP)|All flowers are plants. (MaS)|Some plants are not animals. (SoP)}} &lt;!--- &quot;Some&quot; in the conclusion is correct! ---&gt;

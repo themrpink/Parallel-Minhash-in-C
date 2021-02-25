@@ -1,0 +1,442 @@
+If the respective impedances of the branches of the hybrid that are connected to the conjugate sides of the hybrid are known, hybrid balance may be computed by the formula for [[return loss]]. 
+
+{{FS1037C MS188}}
+
+[[Category:Telecommunications engineering]]
+[[Category:Electrical parameters]]</text>
+      <sha1>fxnyr0tkp9nvq6nqepa0yexfct233w9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Hybrid coil</title>
+    <ns>0</ns>
+    <id>41246</id>
+    <revision>
+      <id>917710426</id>
+      <parentid>882210215</parentid>
+      <timestamp>2019-09-25T02:45:57Z</timestamp>
+      <contributor>
+        <username>GoingBatty</username>
+        <id>11555324</id>
+      </contributor>
+      <minor />
+      <comment>/* top */[[WP:AWB/GF|General fixes]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="5679" xml:space="preserve">{{Multiple issues|
+{{more footnotes|date=May 2011}}
+{{more citations needed|date=May 2011}}
+}}
+
+[[File:HybridConjugate.jpg|thumb|120px|W and Y, X and Z are conjugate pairs]]
+
+A '''hybrid coil''' (or '''bridge transformer''', or sometimes '''hybrid''') is a [[transformer]] that has three windings, and which is designed to be configured as a [[electrical network|circuit]] having four [[port (circuit theory)|ports]] that are conjugate in pairs.
+
+A signal arriving at one port is divided equally between the two adjacent ports but does not appear at the opposite port. In the schematic diagram, the signal into W  splits between X and Z, and no signal passes to Y. Similarly, signals into X split to W and Y with none to Z, etc.
+
+Correct operation requires matched [[characteristic impedance]] at all four ports.  Hybrids are a class of [[directional coupler]] in which the input port power is split equally between the two output ports.  Forms of hybrid other than transfomer coils are possible; any format of directional coupler can be designed to be a hybrid.  These formats include [[transmission line]]s and [[waveguide]]s.
+
+== Explanation ==
+[[File:TwoWireRepeater.jpg|thumb|150px|left|Using hybrids for bidirectional amplification]]The primary use of a [[voiceband]] hybrid coil is to convert between [[Two-wire circuit|2-wire]] and [[Four-wire circuit|4-wire]] operation in sequential sections of a [[information transfer|communications]] circuit, for example in a [[four-wire terminating set]].  Such conversion was necessary when [[repeater]]s were introduced in a 2-wire circuit, a frequent practice at early 20th century [[telephony]].  Without hybrids, the output of one amplifier feeds directly into the input of the other, resulting in a howling situation (upper diagram). By using hybrids, the outputs and inputs are isolated, resulting in correct 2-wire repeater operation. Late in the century, this practice became rare but hybrids continued in use in [[line card]]s.
+
+===Hybrid coil circuit diagrams===
+Hybrids are realized using [[transformer]]s. Two versions of transformer hybrids were used, the single transformer version providing unbalanced outputs with one end [[Ground (electricity)|grounded]], and the double transformer version providing [[Balanced circuit|balanced ports]]. [[Image:DoubleTransformerHybrid.jpg|thumb|right|180px|Wiring diagram of a double transformer hybrid]]
+
+====Single transformer hybrid====
+[[File:SingleTransformerHybrid.jpg|thumb|180px|left|Wiring diagram of a single transformer hybrid]]For use in [[Two-wire circuit|2-wire]] [[repeater]]s, the single transformer version suffices, since amplifiers in the repeaters have grounded inputs and outputs. X, Y, and Z share a [[Ground (electricity)|common ground]]. As shown at left, signal into W, the 2-wire port, will appear at X and Z. But since Y is bridged from center of coil to center of X and Z, no signal appears. Signal into X will appear at W and Y. But signal at Z is the difference of what appears at Y and, through the transformer coil, at W, which is zero. Similar reasoning proves both pairs, W &amp; Y, X &amp; Z, are conjugates.
+
+====Double transformer hybrid====
+When both the [[Two-wire circuit|2-wire]] and the [[Four-wire circuit|4-wire circuits]] must be [[Balanced circuit|balanced]], double transformer hybrids are used, as shown at right. Signal into port W splits between X and Z, but due to reversed connection to the windings, cancel at port Y. Signal into port X goes to W and Y. But due to reversed connection to ports W and Y, Z gets no signal. Thus the pairs, W &amp; Y, X &amp; Z, are conjugates.
+
+== Applications ==
+[[Telephone hybrid]]s are used in [[telephone exchange]]s to convert the 4-wire appearance to the 2-wire [[last mile]] connection to the subscriber's [[telephone]].  A different kind of hybrid is used in telephone [[handset]]s to convert the four wires of the transmitter (earpiece) and receiver (microphone) to the 2-wire line connection.  This kind of hybrid is more commonly called an '''induction coil''' due to its derivation from high-voltage [[induction coil]]s.  It does not produce a high voltage, but like the high-voltage variety, it is a [[step-up transformer]] in order to [[impedance matching|impedance match]] the low-impedance [[Carbon microphone|carbon button transmitter]] to the higher impedance parts of the system.  The simple induction coil later evolved into a form of hybrid as a [[sidetone]] reduction measure, or volume of microphone output that was fed back to the earpiece. Without this, the phone user's own voice would be louder in the earpiece than the other party's.&lt;ref&gt;Joseph Carr, Steve Winder, Stephen Bigelow, ''Understanding Telephone Electronics'', pp. 68-70, Newnes, 2001 {{ISBN|0080520030}}.&lt;/ref&gt;&lt;ref&gt;Lewis Coe, ''The Telephone and Its Several Inventors: A History'', pp. 124, 173, McFarland, 2006 {{ISBN|0786426098}}.&lt;/ref&gt;  Today, the transformer version of the hybrid has been replaced by [[Power dividers and directional couplers#6 dB resistive bridge hybrid|resistor networks]] and compact IC versions, which use [[integrated circuit]] electronics to do the job of the hybrid coil.
+
+Radio-frequency hybrids are used to split radio signals, including television.  The splitter divides the [[Antenna (radio)|antenna]] signal to feed multiple receivers.
+
+==See also==
+* [[Magic tee]]
+* [[Rat-race coupler]]
+
+==References==
+{{reflist}}
+{{FS1037C MS188}}
+
+==External links==
+* Douglas Rice (2008) [http://www.dougrice.plus.com/dougnapTheory/index.htm  Modelling Telephony Hybrids as 2 × 2 Matrices]
+
+{{Electric transformers}}
+
+[[Category:Electric transformers]]
+[[Category:Telecommunications equipment]]</text>
+      <sha1>a7ae02dpndo729sxap5d53iaedtvlqq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Hybrid routing</title>
+    <ns>0</ns>
+    <id>41247</id>
+    <redirect title="Routing in the PSTN" />
+    <revision>
+      <id>853654934</id>
+      <parentid>848138018</parentid>
+      <timestamp>2018-08-06T04:42:00Z</timestamp>
+      <contributor>
+        <username>Premeditated Chaos</username>
+        <id>31530</id>
+      </contributor>
+      <comment>merged to [[Routing in the PSTN]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="33" xml:space="preserve">#redirect [[Routing in the PSTN]]</text>
+      <sha1>k0etdp4wueavqrg99xubtv0qaon56ds</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Hydroxyl ion absorption</title>
+    <ns>0</ns>
+    <id>41248</id>
+    <revision>
+      <id>646719209</id>
+      <parentid>594056744</parentid>
+      <timestamp>2015-02-11T23:33:31Z</timestamp>
+      <contributor>
+        <username>Leyo</username>
+        <id>2320974</id>
+      </contributor>
+      <minor />
+      <comment>correct [[minus sign]] in superscript</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="702" xml:space="preserve">'''Hydroxyl ion absorption''' is the [[Absorption (optics)|absorption]] in [[optical fiber]]s of [[electromagnetic wave]]s, including the near-[[infrared]], due to the presence of trapped [[hydroxyl]] [[ions]] remaining from water as a contaminant. 
+
+The hydroxyl (OH&lt;sup&gt;−&lt;/sup&gt;) ion, can penetrate [[glass]] during or after product fabrication, resulting in significant [[attenuation]] of discrete optical wavelengths, ''e.g.'', centred at 1.383 μm, used for [[telecommunication|communications]] via optical fibres.
+
+
+==See also==
+*[[Water absorption]]
+
+==References==
+{{FS1037C}}
+
+[[Category:Fiber optics]]
+[[Category:Glass engineering and science]]
+
+{{analytical-chemistry-stub}}
+{{optics-stub}}</text>
+      <sha1>cjd7kfid830n27o3bpywx8wrkkf7eiv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Identification, friend or foe</title>
+    <ns>0</ns>
+    <id>41249</id>
+    <redirect title="Identification friend or foe" />
+    <revision>
+      <id>294155246</id>
+      <parentid>60346709</parentid>
+      <timestamp>2009-06-03T12:14:48Z</timestamp>
+      <contributor>
+        <username>Ahunt</username>
+        <id>253891</id>
+      </contributor>
+      <comment>fixed redirect to correct article</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="42" xml:space="preserve">#redirect [[Identification friend or foe]]</text>
+      <sha1>em7m8d2io4sdu5lmx54gu40wogzbb8a</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Identifier</title>
+    <ns>0</ns>
+    <id>41250</id>
+    <revision>
+      <id>991189333</id>
+      <parentid>990783079</parentid>
+      <timestamp>2020-11-28T19:25:53Z</timestamp>
+      <contributor>
+        <username>ZedsZen</username>
+        <id>33813232</id>
+      </contributor>
+      <minor />
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12311" xml:space="preserve">An '''identifier''' is a name that identifies (that is, labels the identity of) either a unique object or a unique ''class'' of objects, where the &quot;object&quot; or class may be an idea, physical [countable] object (or class thereof), or physical [noncountable] substance (or class thereof). The abbreviation '''ID''' often refers to identity, identification (the process of identifying), or an identifier (that is, an instance of identification). An identifier may be a word, number, letter, symbol, or any combination of those.
+
+The words, numbers, letters, or symbols may follow an encoding system (wherein letters, digits, words, or symbols ''stand for'' (represent) ideas or longer names) or they may simply be arbitrary. When an identifier follows an encoding system, it is often referred to as a '''code''' or '''nbsp;code'''.  For instance th metadata registry standard defines a code as ''system of valid symbols that substitute for longer values'' in contrast to identifiers without symbolic meaning. Identifiers that do not follow any encoding scheme are often said to be '''arbitrary&amp;nbsp;IDs'''; they are arbitrarily assigned and have no greater meaning. (Sometimes identifiers are called &quot;codes&quot; even when they are actually arbitrary, whether because the speaker believes that they have deeper meaning or simply because they are speaking casually and imprecisely.)
+
+The unique identifier ('''UID''') is an identifier that refers to ''only one instance''—only one particular object in the universe. A part number is an identifier, but it is not a ''unique'' identifier—for that, a serial number is needed, to identify ''each instance'' of the part design. Thus the ''identifier'' &quot;Model&amp;nbsp;T&quot; identifies the ''class'' ''(model)'' of automobiles that Ford's Model&amp;nbsp;T comprises; whereas the ''unique identifier'' &quot;Model&amp;nbsp;T&amp;nbsp;Serial Number&amp;nbsp;159,862&quot; identifies one specific member of that class—that is, one particular Model&amp;nbsp;T car, owned by one specific person.
+
+The concepts of ''name'' and ''identifier'' are denotatively equal, and the terms are thus denotatively [[synym]]ous; but they are not always [[cotation|connotatively]] synonymous, because '''[[ode name]]s''' and '''ID numbers''' are often connotatively distinguished from names in the sense of traditionaural language]] naming. For example, both Zawinski]]&quot; and &quot;[[Netscape]] employee number 20&quot; are identifiers for the same specific c]] one.
+
+==Metadata==
+In [[metadata]], an identifier is a language-independent label, sign or token that uniquely identifies an object within an [[identification scheme]]. The suffix &quot;identifier&quot; is also used as a [[representation term]] when naming a [[data element]].
+
+ID codes may inherently carry [[metadata]] along with them. For example, when you know that the food package in front of you has the identifier &quot;2011-09-25T15:42Z-MFR5-P02-243-45&quot;, you not only have that data, you also have the metadata that tells you that it was packaged on September 25, 2011, at 3:42pm UTC, manufactured by Licensed Vendor Number 5, at the Peoria, IL, USA plant, in Building 2, and was the 243rd package off the line in that shift, and was inspected by Inspector Number 45.
+
+Arbitrary identifiers might lack metadata. For example, if a food package just says 100054678214, its ID may not tell anything except identity—no date, manufacturer name, production sequence rank, or inspector number. In some cases, arbitrary identifiers such as sequential serial numbers leak information (i.e. the [[German tank problem]]). Opaque identifiers—identifiers designed to avoid leaking even that small amount of information—include &quot;really [[opaque pointer]]s&quot; and [[universally unique identifier#Version 4 (random)|Version 4 UUIDs]].
+
+== In computer science ==
+&lt;!-- [[Identifier (computer science)]] redirects here --&gt;
+
+In [[computer science]], identifiers (IDs) are [[Lexical (semiotics)|lexical]] [[Token (parser)|tokens]] that name [[Entity class|entities]]. Identifiers are used extensively in virtually all [[information processing system]]s. Identifying entities makes it possible to refer to them, which is essential for any kind of symbolic processing.
+
+=== In computer languages ===
+{{main article|Identifier (computer languages)}}
+In [[computer language]]s, identifiers are [[Token (parser)|tokens]] (also called [[symbol]]s) which name language entities. Some of the kinds of entities an identifier might denote include [[variable (programming)|variables]], [[data type|types]], [[label (programming language)|labels]], [[subroutine]]s,  and [[modular programming|packages]].
+
+== Ambiguity ==
+
+===Identifiers (IDs) versus Unique identifiers (UIDs)===
+{{main article|Unique identifier}}
+Many resources may carry multiple identifiers. Typical examples are:
+* One person with multiple names, nicknames, and forms of address (titles, salutations)
+** ''For example:'' One specific person may be identified by all of the following identifiers: Jane&amp;nbsp;Smith; Jane&amp;nbsp;Elizabeth&amp;nbsp;Meredith&amp;nbsp;Smith; Jane&amp;nbsp;E.&amp;nbsp;M.&amp;nbsp;Smith; Jane&amp;nbsp;E.&amp;nbsp;Smith; Janie&amp;nbsp;Smith; Janie; Little&amp;nbsp;Janie (as opposed to her mother or sister or cousin, Big&amp;nbsp;Janie); Aunt&amp;nbsp;Jane; Auntie&amp;nbsp;Janie; Mom; Grandmom; Nana; Kelly's&amp;nbsp;mother; Billy's&amp;nbsp;grandmother; Ms.&amp;nbsp;Smith; Dr.&amp;nbsp;Smith; Jane&amp;nbsp;E.&amp;nbsp;Smith,&amp;nbsp;PhD; and Fuzzy (her jocular nickname at work).
+* One document with multiple versions&lt;ref name=paid&gt;{{cite web
+  | last = [[University of Glasgow]]
+  | title = Procedure for Applying Identifiers to Documents
+  | url = http://www.gla.ac.uk/infostrat/ERM/Docs/procref.htm
+  | accessdate = 28 April 2009
+  | archive-url = https://web.archive.org/web/20110605081415/http://www.gla.ac.uk/infostrat/ERM/Docs/procref.htm
+  | archive-date = 5 June 2011
+  | url-status = dead
+  }}&lt;/ref&gt;
+* One substance with multiple names (for example, [[Chemical Abstracts Service|CAS]] index names versus [[IUPAC]] names;&lt;ref name=icn&gt;{{cite web
+  | last = [[University of Pennsylvania]]
+  | title = Information on Chemical Nomenclature
+  | url = http://gethelp.library.upenn.edu/guides/scitech/chemnom.html
+  | accessdate = 28 April 2009
+  }}&lt;/ref&gt; [[International Nonproprietary Name|INN]] generic drug names versus [[United States Adopted Name|USAN]] generic drug names versus brand names)
+
+The inverse is also possible, where multiple resources are represented with the same identifier (discussed below).
+
+===Implicit context and namespace conflicts===
+{{see also|Naming collision}}
+Many [[code]]s and [[nomenclature|nomenclatural]] systems originate within a small [[namespace]]. Over the years, some of them bleed into larger namespaces (as people interact in ways they formerly hadn't, e.g., cross-border trade, scientific collaboration, military alliance, and general cultural interconnection or assimilation). When such dissemination happens, the limitations of the original naming convention, which had formerly been latent and moot, become painfully apparent, often necessitating [[retronym]]y, [[synonym]]ity,
+translation/[[transcoding]], and so on. Such limitations generally accompany the shift away from the original context to the broader one. Typically the system shows implicit context (context was formerly assumed, and narrow), lack of capacity (e.g., low number  of possible IDs, reflecting the outmoded narrow context), lack of [[extensibility]] (no features defined and reserved against future needs), and lack of specificity and disambiguating capability (related to the context shift, where longstanding uniqueness encounters novel nonuniqueness). Within computer science, this problem is called [[naming collision]]. The story of the origination and expansion of the [[CODEN]] system provides a good case example in a recent-decades, technical-nomenclature context. The capitalization variations seen with [[proper noun#Specific designators|specific designators]] reveals an instance of this problem occurring in [[natural language]]s, where the proper&amp;nbsp;noun/common&amp;nbsp;noun distinction (and its complications) must be dealt with. A universe in which every object had a UID would not need any namespaces, which is to say that it would constitute one gigantic namespace; but human minds could never keep track of, or semantically interrelate, so many UIDs.
+
+== Identifiers in various disciplines ==
+{{main|:Category:Identifiers}}
+{| class=&quot;wikitable&quot;
+|-
+! Identifier !! Scope
+|-
+| [[atomic number]], corresponding one-to-one with [[List of chemical element name etymologies|element name]] || international (via [[International scientific vocabulary|ISV]])
+|-
+| [[Australian Business Number]] || Australian
+|-
+| [[Commercial and Government Entity|CAGE code]] || U.S. and [[NATO]]
+|-
+| [[CAS registry number]] || originated in U.S.; today international (via [[International scientific vocabulary|ISV]])
+|-
+| [[CODEN]] || originated in U.S.; today international
+|-
+| [[Digital object identifier]] (DOI, doi) || [[Handle System]] [[Namespace]], international scope
+|-
+| [[Deutsches Institut für Normung|DIN]] standard number || originated in Germany; today international
+|-
+| [[E number]] || originated in E.U.; may be seen internationally
+|-
+| [[Enzyme Commission number|EC number]] ||
+|-
+| [[Employer Identification Number]] (EIN) || U.S.
+|-
+| Electronic Identifier Serial Publicaction (EISP) || international
+|-
+| [[Global Trade Item Number]] || international
+|-
+| [[Group identifier]] || many scopes, e.g., specific computer systems
+|-
+| [[International Chemical Identifier]] || international
+|-
+| [[International Standard Book Number]] (ISBN) || ISBN is part of the [[International Article Number (EAN)|EAN]] [[Namespace]]; international scope
+|-
+| International eBook Identifier Number (IEIN) || international
+|-
+| [[International Standard Serial Number]] (ISSN) || international
+|-
+| [[International Organization for Standardization|ISO]] standard number, e.g., [[ISO 8601]] || international
+|-
+| [[Library of Congress Control Number]] || U.S., with some international bibliographic usefulness
+|-
+| [[Personal identification number]] || many scopes, e.g., banks, governments
+|-
+| [[Personal identification number (Denmark)]] || Denmark
+|-
+| [[Pharmaceutical code]] || Many different systems
+|-
+| Product batch number ||
+|-
+| [[Serial Item and Contribution Identifier]] || U.S., with some international bibliographic usefulness
+|-
+| [[Serial number]] ||  many scopes, e.g., company-specific, government-specific
+|-
+| Service batch number ||
+|-
+| [[Social Security Number]] || U.S.
+|-
+| [[Tax file number]] || Australian 
+|-
+| Unique Article Identifier (UAI) || international
+|-
+| [[International Standard University Code]] || Higher educational institution verification code
+|}
+
+== See also ==
+{{columns-list|colwidth=30em|
+* [[Barcode]]
+* [[Binomial nomenclature]]
+* [[British Approved Name]]
+* [[Data descriptor]]
+* [[Data element]]
+* [[Descriptor (disambiguation)|Descriptor]]
+* [[Diagnosis code]]
+* [[Document management system]]
+* [[File descriptor]]
+* [[Food labeling regulations]]
+* [[Gene nomenclature]]
+* [[Handle (computing)]]
+* [[Identification (disambiguation)|Identification]]
+* [[Identity (object-oriented programming)]]
+* [[Identity document]]
+* [[Index term]]
+* [[Marketing part number]]
+* [[Metadata]]
+* [[Name binding]]
+* [[Namespace]]
+* [[Naming convention (programming)]]
+* [[National identification number]]
+* [[Nomenclature]] – contains various standardized naming systems
+* [[Nomenclature code]]
+** [[Chemical nomenclature]]
+** [[International Code of Nomenclature for algae, fungi, and plants]]
+** [[International Code of Nomenclature of Bacteria]]
+** [[International Code of Nomenclature for Cultivated Plants]]
+** [[International Code of Zoological Nomenclature]]
+* [[Function overloading|Overloading]]
+* [[Part number]]
+* [[Personally identifiable information]]
+* [[Product code (disambiguation)|Product code]]
+* [[Reference (computer science)]]
+* [[Referent]]
+* [[Representation term]]
+* [[Systematized Nomenclature of Medicine]]
+* [[Uniform resource identifier]] (URI)
+* [[Unique identifier]]
+* [[Unique key]]
+}}
+
+== References ==
+{{Wiktionary|identifier}}
+{{Commons category|Identifiers}}
+{{reflist}}
+{{Personal names}}
+[[Category:Identifiers| ]]
+[[Category:Programming language concepts]]
+[[Category:Metadata]]</text>
+      <sha1>cpb9aukpx4zoh4k26b7reslo8m5tcb6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Image antenna</title>
+    <ns>0</ns>
+    <id>41251</id>
+    <revision>
+      <id>820110583</id>
+      <parentid>639509750</parentid>
+      <timestamp>2018-01-13T03:16:31Z</timestamp>
+      <contributor>
+        <ip>172.56.16.154</ip>
+      </contributor>
+      <comment>added [[Category:Antennas (radio)]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2556" xml:space="preserve">[[Image:Monopole and image antenna.svg|thumb|upright=1.5|Due to its image in the ground plane ''(dotted lines)'', a [[monopole antenna]] has the same [[radiation pattern]] over perfect ground as a [[dipole antenna]] in free space with twice the voltage]]
+
+In [[telecommunication]]s and [[antenna (radio)|antenna]] design, an '''image antenna''' is an electrical mirror-image of an [[antenna (radio)|antenna]] element formed by the radio waves reflecting from a conductive surface called a [[ground plane]], such as the surface of the earth. It is used as a geometrical technique in calculating the [[radiation pattern]] of the antenna.
+
+When a radio antenna is mounted above a conductive surface such as the [[ground (electricity)|earth]], the radio waves directed down toward the surface reflect off it.  The radiation received at a distant point is the sum of two contributions: the waves that travel directly from the antenna to the point, and the waves that reach the point after reflecting off the ground plane.  Because of the reflection, these second waves appear to come from a second antenna behind the plane, just as a visible object in front of a flat [[mirror]] forms a [[virtual image]] that seems to lie behind the mirror.  The [[radiation pattern]] of the antenna is exactly the same as it would be if the ground plane were replaced by a mirror image of the antenna, located an equal distance behind the plane.   This second apparent source of radio waves is the image antenna.
+
+The image antenna is used in calculating [[electric field]] vectors, [[magnetic field]] vectors, and [[electromagnetic field]]s emanating from the real antenna, particularly in the vicinity of the antenna and along the ground. Each charge and current in the real antenna has its counterpart in the image, and may also be considered as a source of [[radiation]].  
+
+To form an image of the antenna above it, the [[ground plane]] need not be grounded to the Earth.  Many antenna types, such as [[reflective array antenna]]s, use flat surfaces of metal or metal screen to reflect radio waves from the antenna elements, and these can be analyzed using image antennas.  If there is more than one reflective surface in the antenna, as in a [[corner reflector]] antenna, each surface forms its own image of the antenna elements.    In order to form an image, the ground plane surface must generally have dimensions of at least a quarter-[[wavelength]] of the radio waves used.
+
+{{FS1037C MS188}}
+
+[[Category:Radio frequency antenna types]]
+[[Category:Antennas (radio)]]</text>
+      <sha1>3xqrf807vt8tyh3oalf8mo48l96b3ks</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Image frequency</title>
+    <ns>0</ns>
+    <id>41252</id>
+    <redirect title="Superheterodyne receiver" />
+    <revision>
+      <id>983561062</id>
+      <parentid>838788291</parentid>
+      <timestamp>2020-10-14T22:56:37Z</timestamp>
+      <contributor>
+        <username>A876</username>
+        <id>1234701</id>
+      </contributor>
+      <comment>section name changed. target new anchor.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="102" xml:space="preserve">#REDIRECT [[Superheterodyne receiver#Image frequency]]
+
+{{R to section}}
+[[Category:Frequency mixers]]</text>
+      <sha1>hqzzcsenn1pa15nyfws4d0w5pxon6rc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Image rejection ratio</title>
+    <ns>0</ns>
+    <id>41253</id>
+    <redirect title="Image response" />
+    <revision>
+      <id>522520425</id>
+      <parentid>410656983</parentid>
+      <timestamp>2012-11-11T19:35:17Z</timestamp>
+      <contributor>
+        <username>Wtshymanski</username>
+        <id>139104</id>
+      </contributor>
+      <comment>redirected and merged</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="28" xml:space="preserve">#REDIRECT [[Image response]]</text>
+      <sha1>e2s5d2y2hof8a0dwkfey8f7460nmotm</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Improved-definition television</title>
+    <ns>0</ns>
+    <id>41254</id>
+    <revision>
+      <id>563153225</id>
+      <parentid>476472331</parentid>
+      <timestamp>2013-07-06T20:23:53Z</timestamp>
+      <contributor>
+        <username>BD2412</username>
+        <id>196446</id>
+      </contributor>
+      <minor />
+      <comment>minor fixes, mostly [[Wikipedia:Disambiguation pages with links|disambig links]] using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="830" xml:space="preserve">'''Improved-definition television''' (IDTV) or '''enhanced-quality television''' transmitters and receivers exceed the performance requirements of the [[NTSC standard]], while remaining within the general parameters of NTSC emissions standards. 
+
+IDTV improvements may be made at the [[television]] transmitter or receiver. Improvements include enhancements in encoding, [[Digital data|digital]] filtering, scan interpolation, interlaced [[line (video)|line]] scanning, and [[ghost (television)|ghost]] cancellation. 
+
+IDTV improvements must allow the TV [[Signalling (telecommunication)|signal]] to be transmitted and received in the standard 4:3 [[aspect ratio (image)|aspect ratio]].
+
+==See also==
+* [[Comb filter]]
+* [[Federal Standard 1037C]]
+* [[Video scaler]]
+
+==References==
+{{FS1037C}}

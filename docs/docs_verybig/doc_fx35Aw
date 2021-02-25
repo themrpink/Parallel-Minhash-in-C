@@ -1,0 +1,369 @@
+gnuplot also provides scripting capabilities, looping, functions, text processing, variables, macros, arbitrary pre-processing of input data (usually across columns), as well ability to perform non-linear multi-dimensional multi-set weighted data fitting (see [[Curve fitting]] and [[Levenberg–Marquardt algorithm]]).
+
+The gnuplot core code is programmed in [[C (programming language)|C]]. Modular subsystems for output via [[Qt (software)|Qt]], [[wxWidgets]], and LaTeX/TikZ/ConTeXt are written in [[C++]] and [[Lua (programming language)|Lua]].
+
+[[File:Gnuplot-in-action.png|thumb|upright=1.4|gnuplot in interactive use.]]
+The code below creates the graph to the right.
+&lt;syntaxhighlight lang=&quot;gnuplot&quot;&gt;
+set title &quot;Some Math Functions&quot;
+set xrange [-10:10]
+set yrange [-2:2]
+set zeroaxis
+plot (x/4)**2, sin(x), 1/x
+&lt;/syntaxhighlight&gt;
+
+[[File:Gnuplot.ogv|thumb|Sample Video]]
+{{Gallery
+|width=240
+|height=160
+|File:Gnuplot tcp analysis.png|alt2=Thousands of dots plotted, forming a pattern|A [[scatter plot]] of samples from a text file.
+|File:Logarithmic spiral.svg|alt3=|A logarithmic spiral.
+}}
+
+The name of this program was originally chosen to avoid conflicts with a program called &quot;newplot&quot;, and was originally a compromise between &quot;llamaplot&quot; and &quot;nplot&quot;.&lt;ref&gt;[http://www.gnuplot.info/faq/faq.html#SECTION00032000000000000000 Gnuplot FAQ]&lt;/ref&gt;
+
+== Distribution terms ==
+{{Infobox software license
+| name            = gnuplot License
+| image           = 
+| caption         =
+| author          = Thomas Williams, Colin Kelley
+| version         = 
+| publisher       = 
+| date            = 1986 – 1993, 1998, 2004
+| OSI approved    = Yes
+| Debian approved = Yes
+| FSF approved    = Yes
+| GPL compatible  = No&lt;ref name=&quot;gnulicense&quot;&gt;{{cite web | url=https://directory.fsf.org/wiki/License:Gnuplot | title=License:Gnuplot | publisher=Free Software Foundation | accessdate=2018-11-19}}&lt;/ref&gt;
+| copyleft        = No
+| linking         = 
+| website         = https://sourceforge.net/p/gnuplot/gnuplot-main/ci/master/tree/Copyright
+}}
+
+Despite gnuplot's name, it is not named after, part of or related to the [[GNU Project]], nor does it use the [[GNU General Public License]]. It was named as part of a compromise by the original authors, punning on ''[[gnu]]'' (the animal) and ''newplot''.&lt;ref name=&quot;gnuplot faq&quot;&gt;{{cite web | url=http://www.gnuplot.info/faq/faq.html#x1-70001.2 | title=1.2 How did it come about and why is it called gnuplot? | publisher=gnuplot | accessdate=2015-02-21}}&lt;/ref&gt;
+
+Official source code to gnuplot is freely redistributable, but modified versions thereof are not. The gnuplot license instead recommends distribution of patches against official releases, optionally accompanied by officially released source code. Binaries may be distributed along with the unmodified source code and any patches applied thereto. Contact information must be supplied with derived works for [[technical support]] for the modified software.&lt;ref name=lice&gt;{{cite web
+|url=https://sourceforge.net/p/gnuplot/gnuplot-main/ci/master/tree/Copyright
+|title=gnuplot licence}}&lt;/ref&gt;
+
+&lt;blockquote&gt;
+Permission to modify the software is granted, but not the right to distribute the complete modified source code. Modifications are to be distributed as patches to the released version.
+&lt;/blockquote&gt;
+
+Despite this restriction, gnuplot is accepted and used by many [[GNU packages]] and is widely included in [[Linux distributions]] including the stricter ones such as [[Debian]] and [[Fedora (operating system)|Fedora]]. The [[Open-source software#The Open Source Definition|OSI Open Source Definition]] and the [[Debian Free Software Guidelines]] specifically allow for restrictions on distribution of modified source code, given explicit permission to distribute both patches and source code.
+
+Newer gnuplot modules (e.g. Qt, wxWidgets, and cairo drivers) have been contributed under dual-licensing terms, e.g. gnuplot + BSD or gnuplot + GPL.
+
+== GUIs and programs that use gnuplot ==
+Several third-party programs have [[graphical user interface]]s that can be used to generate graphs using gnuplot as the plotting engine. These include:
+
+* [[gretl]], a [[statistics package]] for [[econometrics]]
+* JGNUPlot, a java-based GUI&lt;ref&gt;http://jgp.sourceforge.net/&lt;/ref&gt;
+* Kayali&lt;ref&gt;http://kayali.sourceforge.net/index.htm&lt;/ref&gt; a [[computer algebra system]]
+* xldlas, an old X11 statistics package&lt;ref&gt;{{Cite web |url=http://linux.maruhn.com/sec/xldlas.html |title=Archived copy |access-date=2014-10-30 |archive-url=https://web.archive.org/web/20141031022018/http://linux.maruhn.com/sec/xldlas.html |archive-date=2014-10-31 |url-status=dead }}&lt;/ref&gt;
+* gnuplotxyz, an old Windows program&lt;ref&gt;http://www.uni-hamburg.de/Wiss/FB/15/Sustainability/schneider/gnuplot/&lt;/ref&gt;
+* wxPinter, a graphical plot manager for gnuplot&lt;ref&gt;{{cite web|title = Steingrube|url = http://www.steingrube-home.de/software_wxPinter.html|website = www.steingrube-home.de|accessdate = 2015-08-21|first = Daniel S.|last = Steingrube|archive-url = https://web.archive.org/web/20151026154709/http://www.steingrube-home.de/software_wxPinter.html|archive-date = 2015-10-26|url-status = dead}}&lt;/ref&gt;
+* [[Maxima (software)|Maxima]] is a text-based [[computer algebra system]] which itself has several third-party GUIs.
+
+Other programs that use gnuplot include:
+* [[GNU Octave]], a mathematical programming language 
+* statist, a terminal-based program&lt;ref&gt;http://wald.intevation.org/projects/statist/&lt;/ref&gt;
+* gplot.pl provides a simpler command-line interface.&lt;ref&gt;http://gplot.sourceforge.net/&lt;/ref&gt;
+* [http://github.com/dkogan/feedgnuplot feedgnuplot] provides a plotting of stored and realtime data from a pipe.
+* ElchemeaAnalytical,&lt;ref&gt;https://www.elchemea.com/&lt;/ref&gt; an [[Impedance spectroscopy]] plotting and fitting program developed by DTU Energy&lt;ref&gt;http://www.energy.dtu.dk/english&lt;/ref&gt;
+* Gnuplot [https://sourceforge.net/projects/gnuplot-add-in-for-excel/ add-in for MS-Excel]
+* Calc, the [[GNU Emacs]] calculator&lt;ref&gt;{{cite web |last1=Gillespie |first1=Dave |title=The GNU Emacs Calculator |url=https://www.gnu.org/software/emacs/manual/html_node/calc/Graphics.html#Graphics |website=www.gnu.org |publisher=Free Software Foundation, Inc. |accessdate=13 November 2020 |page=&quot;Graphics&quot;}}&lt;/ref&gt;
+
+== Programming and application interfaces ==
+gnuplot can be used from various programming languages to graph data, including [[Perl]] (via [[Perl Data Language|PDL]] and other [[CPAN]] packages), [[Python (programming language)|Python]] (via [https://github.com/dkogan/gnuplotlib gnuplotlib], [http://gnuplot-py.sourceforge.net/ Gnuplot-py] and [[SageMath]]), [[R (programming language)|R]] via ([https://cran.r-project.org/web/packages/Rgnuplot/Rgnuplot.pdf Rgnuplot]), [[Julia (programming language)|Julia]] (via [https://github.com/mbaz/Gaston.jl Gaston.jl]), [[Java (programming language)|Java]] (via [https://github.com/mleoking/JavaGnuplotHybrid JavaGnuplotHybrid] and [http://jgnuplot.sourceforge.net/ jgnuplot]), [[Ruby (programming language)|Ruby]] (via [https://github.com/rdp/ruby_gnuplot Ruby Gnuplot]), [[Ch (computer programming)|Ch]] (via [http://www.softintegration.com/docs/ch/plot/ Ch Gnuplot]), [[Haskell (programming language)|Haskell]] (via [https://www.haskell.org/haskellwiki/Gnuplot Haskell gnuplot]), [[Fortran 95]],&lt;ref&gt;{{cite web|last1=Singh|first1=Madhusudan|title=gnuplotfortran - the Fortran 95 interface to gnuplot|url=http://gnuplotfortran.sourceforge.net|website=gnuplotfortran.sourceforge.net|accessdate=10 May 2016}}&lt;/ref&gt; [[Smalltalk]] ([[Squeak]] and [[GNU Smalltalk]]) and [[Rust (programming language)|Rust]] (via [https://github.com/SiegeLord/RustGnuplot RustGnuplot]).
+
+gnuplot also supports [[Pipe (Unix)|piping]], which is typical of scripts.&lt;ref&gt;[http://linuxgazette.net/168/misc/lg/2_cent_tip__piping_to_gnu_plot_from_c.html Piping to GNU Plot from C by Amit Saha]&lt;/ref&gt; For script-driven graphics, gnuplot is by far the most popular program.{{citation needed|date=October 2014}}
+
+== Gnuplot output formats ==
+Gnuplot allows you to display or store plots in several ways:&lt;ref&gt;http://www.gnuplot.info/&lt;/ref&gt;&lt;ref&gt;http://fm137.ugr.es/imnf/descargas/archivos/manual-gnuplot.pdf&lt;/ref&gt;
+*On the console (output modes dumb, sixel)
+*In a desktop window (output modes qt, wxt, x11, aquaterm, win, ...)
+*Embedded in a web page (output modes svg, HTML5, png, jpeg, animated gif, ...)
+*File formats designed for document processing (output modes PostScript, PDF, cgm, emf, LaTeX variants, ...)
+
+== See also ==
+{{Portal|Free and open-source software}}
+
+* [[List of graphing software]]
+
+== References ==
+{{Reflist|30em}}
+
+== Further reading and external links ==
+{{Commons category|Gnuplot}}
+{{Wikibooks|gnuplot}}
+{{Wikibooks|Ad Hoc Data Analysis From The Unix Command Line|Quick Plotting With gnuplot}}
+
+* {{Official website|http://www.gnuplot.info/}}
+* {{SourceForge|gnuplot}}
+* [https://alogus.com/publishing/gnuplot5/ Gnuplot 5]: an interactive ebook about gnuplot v.5.
+* [http://www.gnuplotting.org/ gnuplotting]: a blog of gnuplot examples and tips
+* [http://spplotters.blogspot.com/ spplotters]: a blog of gnuplot examples and tips
+* [http://gnuplot-surprising.blogspot.com/ gnuplot surprising]: a blog of gnuplot examples and tips
+* {{Curlie|Science/Math/Software/Graphing/Gnuplot/}}
+* {{cite book|author=Philipp K. Janert|title=Gnuplot in Action|isbn=978-1933988399|publisher=Manning Publications|year=2009}} 
+* {{cite book|author=Lee Phillips|title=gnuplot Cookbook|isbn=978-1849517249|publisher=Packt Publishing|year=2012}}
+* {{cite book|last=Williams|first=Thomas|last2=Kelley|first2=Colin|title=Gnuplot 5.0|isbn=978-988-14436-4-9|publisher=Samurai Media Limited|year=2015}}
+* [https://web.archive.org/web/20071027111440/http://www-128.ibm.com/developerworks/library/l-gnuplot/ Visualize your data with gnuplot]: an IBM tutorial
+
+{{Authority control}}
+
+[[Category:Articles containing video clips]]
+[[Category:Computer animation]]
+[[Category:Cross-platform free software]]
+[[Category:Data analysis software]]
+[[Category:Free 3D graphics software]]
+[[Category:Free educational software]]
+[[Category:Free mathematics software]]
+[[Category:Free plotting software]]
+[[Category:Free software programmed in C]]
+[[Category:Plotting software]]
+[[Category:Regression and curve fitting software]]
+[[Category:Software that uses wxWidgets]]</text>
+      <sha1>ek88qta6injzsqtcjm5wqc2cey51fnq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Wassenaar Arrangement</title>
+    <ns>0</ns>
+    <id>43602</id>
+    <revision>
+      <id>962545549</id>
+      <parentid>957545895</parentid>
+      <timestamp>2020-06-14T17:52:26Z</timestamp>
+      <contributor>
+        <username>Poti100</username>
+        <id>26586917</id>
+      </contributor>
+      <comment>/* Membership */  removed UK from EU</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12513" xml:space="preserve">{{Use dmy dates|date=October 2013}}
+{{distinguish|text=the [[Wassenaar Agreement]]}}
+[[Image:Wassenaar Arrangement members map.svg|thumb|350px|right|Participating states of the Wassenaar Arrangement]]
+'''The Wassenaar Arrangement on Export Controls for Conventional Arms and Dual-Use Goods and Technologies''' is a [[multilateral export control regime]] (MECR) with 42 participating states including many former [[Comecon]] ([[Warsaw Pact]]) countries.
+
+The Wassenaar Arrangement was established to contribute to regional and international security and stability by promoting transparency and greater responsibility in transfers of conventional arms and [[dual-use technology|dual-use goods and technologies]], thus preventing destabilizing accumulations. Participating states seek, through their national policies, to ensure that transfers of these items do not contribute to the development or enhancement of military capabilities which undermine these goals, and are not diverted to support such capabilities.
+
+It is the successor to the [[Cold war|Cold War]]-era [[Coordinating Committee for Multilateral Export Controls]] (COCOM), and was established on 12 July 1996, in [[Wassenaar]], the [[Netherlands]], which is near [[The Hague]]. The Wassenaar Arrangement is considerably less strict than COCOM, focusing primarily on the transparency of national export control regimes and not granting veto power to individual members over organizational decisions. A Secretariat for administering the agreement is located in [[Vienna]], Austria. Like COCOM, however, it is not a treaty, and therefore is not legally binding.
+
+Every six months member countries exchange information on deliveries of conventional arms to non-Wassenaar members that fall under eight broad weapons categories: battle tanks, [[armoured fighting vehicle]]s (AFVs), large-caliber artillery, military aircraft, military helicopters, warships, missiles or missile systems, and [[small arms]] and light weapons.
+
+== Control lists ==
+The outline of the arrangement is set out in a document entitled &quot;Guidelines &amp; Procedures, including the Initial Elements&quot;.&lt;ref&gt;[https://www.wassenaar.org/app/uploads/2015/06/WA-DOC-17-PUB-001-Public-Docs-Vol-I-Founding-Documents.pdf#page=7 Guidelines &amp; Procedures, including the Initial Elements] The Wassenaar Arrangement&lt;/ref&gt; The [http://www.wassenaar.org/control-lists/ list of restricted technologies] is broken into two parts, the &quot;List of Dual-Use Goods and Technologies&quot; (also known as the ''Basic List'') and the &quot;Munitions List&quot;. The Basic List is composed of ten categories based on increasing levels of sophistication:
+
+* Category 1 – Special Materials and Related Equipment
+* Category 2 – [[Materials Processing]]
+* Category 3 – [[Electronics]]
+* Category 4 – [[Computers]]
+* Category 5 – Part 1 – [[Telecommunications]]
+* Category 5 – Part 2 – [[Information Security]]
+* Category 6 – [[Sensor]]s and [[Laser]]s
+* Category 7 – [[Navigation]] and [[Avionics]]
+* Category 8 – [[Marine (ocean)|Marine]]
+* Category 9 – [[Aerospace]] and [[Air propulsion|Propulsion]]
+
+Basic List has two nested subsections—Sensitive and Very Sensitive. Items of the Very Sensitive List include materials for [[stealth technology]]—&lt;nowiki/&gt;i.e., equipment that could be used for submarine detection, advanced [[radar]], and [[jet engine]] technologies.
+
+The Munitions List has 22 categories, which are not labeled.
+
+In order for an item to be placed on the lists, Member States must take into account the following 
+[https://www.wassenaar.org/app/uploads/2016/01/08Criteria-for-the-Selection-of-Dual-Use-Goods-including-Sensitive-and-Very-Sensitive-Items.pdf criteria]:
+* Foreign availability outside Participating States
+* Ability to effectively control the export of the goods
+* Ability to make a clear and objective specification of the item.
+* Controlled by another regime, such as the [[Australia Group]], [[Nuclear Suppliers Group]], or [[Missile Technology Control Regime]]
+
+== Membership ==
+{{As of|2018|02}}, the 42 participating states are: &lt;ref&gt;[http://www.wassenaar.org/participants/index.html Participating States] The Wassenaar Arrangement&lt;/ref&gt; 
+* {{flag|Argentina}}
+* {{flag|Australia}} 
+* {{flag|Austria}} {{flagicon|EU}}
+* {{flag|Belgium}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Bulgaria}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Canada}} {{flagicon|NATO}}
+* {{flag|Croatia}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Czech Republic}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Denmark}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Estonia}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Finland}} {{flagicon|EU}}
+* {{flag|France}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Germany}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Greece}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Hungary}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|India}} 
+* {{flag|Ireland}} {{flagicon|EU}}
+* {{flag|Italy}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Japan}}
+* {{flag|Latvia}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Lithuania}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Luxembourg}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Malta}} {{flagicon|EU}}
+* {{flag|Mexico}}
+* {{flag|Netherlands}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|New Zealand}}
+* {{flag|Norway}} {{flagicon|NATO}}
+* {{flag|Poland}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Portugal}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Republic of Korea}}
+* {{flag|Romania}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Russia}}
+* {{flag|Slovakia}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Slovenia}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|South Africa}}
+* {{flag|Spain}} {{flagicon|EU}} {{flagicon|NATO}}
+* {{flag|Sweden}} {{flagicon|EU}}
+* {{flag|Switzerland}}
+* {{flag|Turkey}} {{flagicon|NATO}}
+* {{flag|Ukraine}}
+* {{flag|United Kingdom}}{{flagicon|NATO}}
+* {{flag|United States of America}} {{flagicon|NATO}}
+
+
+{{flagicon|EU}} – [[European Union]] member state. {{flagicon|NATO}} - [[NATO]] member.  
+
+{{flag|Albania}}, {{flag|Chile}}, {{flag|Cyprus}}, {{flag|Iceland}} &amp; {{flag|Serbia}} are not members of the Wassenaar Agreement. {{flag|PRC}} &amp; {{flag|Israel}} see below.
+
+=== Admission requirements ===
+Admission requires states to:
+* Be a producer or exporter of arms or sensitive industrial equipment
+* Maintain non-proliferation policies and appropriate national policies, including adherence to:
+** Non-proliferation policies, such as (where applicable) the [[Nuclear Suppliers Group]], the [[Missile Technology Control Regime]], and the [[Australia Group]]
+** [[Nuclear Non-Proliferation Treaty]], the [[Biological Weapons Convention]], the [[Chemical Weapons Convention]] and, where applicable, [[START I]] (including the [[Lisbon Protocol]]) 
+* Maintain fully effective [[export control]]s
+
+The People's Republic of China and Israel are not members. The Arrangement is open on a global and non-discriminatory basis to prospective adherents that comply with the agreed criteria. Admission of new members requires the [[Unanimity|consensus of all members]]. 
+
+[[India]] joined as the 42nd participating state on 07 December 2017. &quot;Wassenaar Arrangement participating states reviewed the progress of a number of current membership applications and agreed at the plenary meeting to admit India which will become the Arrangement's 42nd participating state as soon as the necessary procedural arrangements for joining the WA are completed,&quot; the grouping said in a statement. &lt;ref name=&quot;WA_Plenary_2017&quot;&gt;{{cite web|url=https://www.wassenaar.org/app/uploads/2017/12/WA-Plenary-2017-Chairs-Statement.pdf|title=Statement Issued by the Plenary Chair on 2017 Outcomes of the Wassenaar Arrangement|date=7 December 2017|accessdate=7 December 2017}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.thehindu.com/news/national/wassenaar-arrangement-decides-to-make-india-its-member/article21293077.ece|title=Wassenaar Arrangement decides to make India its member|date=8 December 2017|publisher=|via=www.thehindu.com}}&lt;/ref&gt; India's application was supported by Russia, USA, France and Germany.&lt;ref&gt;{{cite web|url=http://www.business-standard.com/article/news-ians/india-becomes-member-of-key-export-control-regime-117120800044_1.html|title=India becomes member of key export control regime|last=IANS|date=8 December 2017|publisher=|via=Business Standard}}&lt;/ref&gt;
+
+== 2013 amendments ==
+In December 2013, the list of export restricted technologies was amended to include internet-based surveillance systems. New technologies placed under the export control regime include &quot;intrusion software&quot;—software designed to defeat a computer or network's protective measures so as to extract data or information—as well as [[Internet protocol suite|IP]] [[Computer and network surveillance|network surveillance]] systems. 
+
+The purpose of the amendments was to prevent Western technology companies from selling surveillance technology to governments known to abuse human rights. However, some technology companies have expressed concerns that the scope of the controls may be too broad, limiting security researchers' ability to identify and correct security vulnerabilities. [[Google]] and [[Facebook]] criticized the agreement for the restrictions it will place on activities like [[penetration test]]ing, sharing information about threats, and [[bug bounty program]]s.&lt;ref&gt;{{Cite web|title = Google says controversial export proposal would make the world 'less secure'|url = https://www.theverge.com/2015/7/20/9005351/google-wassenaar-arrangement-proposal-comments|website = The Verge|accessdate = 2015-07-30}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|title = Wassenaar rules are not the right direction - Facebook U.S. Public Policy {{!}} Facebook|url = https://www.facebook.com/uspublicpolicy/posts/1047027321981746|website = www.facebook.com|accessdate = 2015-07-30}}&lt;/ref&gt; They argue that the restrictions will weaken the [[computer security|security]] of participating nations and do little to curb threats from non-participant nations.&lt;ref&gt;{{Cite web|title = Cyber industry assails anti-hacking regulations|url = http://thehill.com/regulation/cybersecurity/248579-cyber-industry-assails-anti-hacking-regulations|accessdate = 2015-07-30}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|title = The international rules that have the security world on alert|url = https://www.theverge.com/2015/5/22/8644185/wassenaar-arrangement-export-zero-day-research|website = The Verge|accessdate = 2015-07-30}}&lt;/ref&gt;
+
+==See also==
+* [[Arms Export Control Act]]
+* [[Defense Security Cooperation Agency]]
+* [[Export Control Classification Number]]
+* [[International Traffic in Arms Regulations]]
+
+==References==
+{{Reflist}}
+
+==External links==
+{{Library resources box}}
+
+* [http://www.wassenaar.org Wassenaar Arrangement]
+
+[[Category:Arms control treaties]]
+[[Category:Treaties establishing intergovernmental organizations]]
+[[Category:Export and import control]]
+[[Category:Treaties concluded in 1995]]
+[[Category:Treaties entered into force in 1996]]
+[[Category:Treaties of Argentina]]
+[[Category:Treaties of Australia]]
+[[Category:Treaties of Belgium]]
+[[Category:Treaties of Canada]]
+[[Category:Treaties of the Czech Republic]]
+[[Category:Treaties of Denmark]]
+[[Category:Treaties of Estonia]]
+[[Category:Treaties of Finland]]
+[[Category:Treaties of Ireland]]
+[[Category:Treaties of Japan]]
+[[Category:Treaties of Latvia]]
+[[Category:Treaties of Lithuania]]
+[[Category:Treaties of Luxembourg]]
+[[Category:Treaties of Malta]]
+[[Category:Treaties of Mexico]]
+[[Category:Treaties of New Zealand]]
+[[Category:Treaties of Norway]]
+[[Category:Treaties of South Korea]]
+[[Category:Treaties of Romania]]
+[[Category:Treaties of Slovakia]]
+[[Category:Treaties of Slovenia]]
+[[Category:Treaties of Sweden]]
+[[Category:Treaties of Turkey]]
+[[Category:Treaties of Ukraine]]
+[[Category:Treaties of the United Kingdom]]
+[[Category:Treaties of the United States]]
+[[Category:Treaties of France]]
+[[Category:Treaties of Germany]]
+[[Category:Treaties of Poland]]
+[[Category:Treaties of Italy]]
+[[Category:Treaties of Russia]]
+[[Category:Treaties of Portugal]]
+[[Category:Treaties of Spain]]
+[[Category:Treaties of the Netherlands]]
+[[Category:Treaties of Hungary]]
+[[Category:Treaties of Bulgaria]]
+[[Category:Treaties of Greece]]
+[[Category:Treaties of Croatia]]
+[[Category:Treaties of South Africa]]
+[[Category:Treaties of Austria]]
+[[Category:Treaties of Switzerland]]
+[[Category:Wassenaar]]
+[[Category:Organisations based in Vienna]]
+[[Category:International organisations based in Austria]]</text>
+      <sha1>hdsvhh5jlh24p3haregfrv9upz5x5mf</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Stack pointer</title>
+    <ns>0</ns>
+    <id>43603</id>
+    <redirect title="Call stack" />
+    <revision>
+      <id>846441612</id>
+      <parentid>783875432</parentid>
+      <timestamp>2018-06-18T20:21:38Z</timestamp>
+      <contributor>
+        <username>Christian75</username>
+        <id>1306352</id>
+      </contributor>
+      <comment>{{R from merge|Stack (abstract data type)}}</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="132" xml:space="preserve">#REDIRECT [[Call stack#STACK-POINTER]]
+
+{{Redirect category shell|1=
+{{R to section}}
+{{R from merge|Stack (abstract data type)}}
+}}</text>
+      <sha1>d9xev9uyc2necit3l3bdmv8srpm5e89</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Bud</title>
+    <ns>0</ns>
+    <id>43604</id>
+    <revision>
+      <id>968538022</id>
+      <parentid>968144698</parentid>
+      <timestamp>2020-07-20T00:27:51Z</timestamp>
+      <contributor>
+        <username>HDORS</username>
+        <id>37708075</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="7402" xml:space="preserve">{{short description|Immature or embryonic shoot}}
+{{Redirect|1=Flower bud|2=EP of GFriend|3=Flower Bud}}
+{{For|usage in [[asexual reproduction]]|Budding}}
+{{Other uses}}
+[[File:Fagus sylvatica bud.jpg|thumb|right|[[European beech]] (''Fagus sylvatica'') bud]]
+In [[botany]], a '''bud''' is an undeveloped or [[Plant embryogenesis|embryonic]] [[shoot]] and normally occurs in the [[axil]] of a [[leaf]] or at the tip of a [[Plant stem|stem]]. Once formed, a bud may remain for some time in a [[dormancy|dormant]] condition, or it may form a shoot immediately. Buds may be specialized to develop flowers or short shoots, or may have the potential for general shoot development. The term bud is also used in [[zoology]], where it refers to an outgrowth from the body which can develop into a new individual.
+
+==Overview==
+[[File:Halesia carolina, skubblare, Manie van der Schijff BT, a.jpg|thumb|right|250px|[[Inflorescence]] bud scales in ''[[Halesia carolina]]'']]
+The buds of many [[woody plant]]s, especially in temperate or cold climates, are protected by a covering of modified leaves called ''scales'' which tightly enclose the more delicate parts of the bud. Many bud scales are covered by a gummy substance which serves as added protection. When the bud develops, the scales may enlarge somewhat but usually just drop off, leaving a series of horizontally-elongated [[scar]]s on the surface of the growing stem. By means of these scars one can determine the age of any young branch, since each year's growth ends in the formation of a bud, the formation of which produces an additional group of bud scale scars. Continued growth of the branch causes these scars to be obliterated after a few years so that the total age of older branches cannot be determined by this means.
+
+In many plants scales do not form over the bud, and the bud is then called a naked bud.&lt;ref&gt;Walters, Dirk R., and David J. Keil. 1996. ''Vascular plant taxonomy''. Dubuque, Iowa: Kendall/Hunt Pub. Co. page 598.&lt;/ref&gt; The minute underdeveloped leaves in such buds are often excessively hairy. Naked buds are found in some shrubs, like some species of the [[Sumac]] and [[Viburnum]]s (''Viburnum alnifolium'' and ''V. lantana'')&lt;ref&gt;Cronquist, Arthur, and Henry A. Gleason. 1991. ''Manual of Vascular Plants of Northeastern United States and Adjacent Canada''. Bronx, New York: New York Botanical Garden Press. page 512.&lt;/ref&gt; and in [[herbaceous]] plants. In many of the latter, buds are even more reduced, often consisting of undifferentiated masses of cells in the axils of leaves. A terminal bud occurs on the end of a stem and lateral buds are found on the side. A head of [[cabbage]] (see [[Brassica]]) is an exceptionally large terminal bud, while [[Brussels sprout]]s are large lateral buds.
+
+Since buds are formed in the axils of leaves, their distribution on the stem is the same as that of leaves. There are alternate, opposite, and whorled buds, as well as the terminal bud at the tip of the stem. In many plants buds appear in unexpected places: these are known as adventitious buds.&lt;ref&gt;Coulter, John G. 1913.'' Plant life and plant uses; an elementary textbook, a foundation for the study of agriculture, domestic science or college botany''. New York: American book company. page 188&lt;/ref&gt;
+
+Often it is possible to find a bud in a remarkable series of gradations of bud scales. In the [[Aesculus|buckeye]], for example, one may see a complete gradation from the small brown outer scale through larger scales which on unfolding become somewhat green to the inner scales of the bud, which are remarkably leaf-like. Such a series suggests that the scales of the bud are in truth leaves, modified to protect the more delicate parts of the plant during unfavorable periods.

@@ -1,0 +1,668 @@
+=== Semisimple rings ===
+A ring is called a [[semisimple ring]] if it is [[semisimple module|semisimple as a left module]] (or right module) over itself, that is, a direct sum of simple modules. A ring is called a [[semiprimitive ring]] if its [[Jacobson radical]] is zero. (The Jacobson radical is the intersection of all maximal left ideals.) A ring is semisimple if and only if it is [[artinian ring|artinian]] and is semiprimitive.
+
+An algebra over a field ''k'' is artinian if and only if it has finite dimension. Thus, a semisimple algebra over a field is necessarily finite-dimensional, while a simple algebra may have infinite dimension, for example, the [[ring of differential operators]].
+
+Any module over a semisimple ring is semisimple. (Proof: any free module over a semisimple ring is clearly semisimple and any module is a quotient of a free module.)
+
+Examples of semisimple rings:
+* A matrix ring over a division ring is semisimple (actually simple).
+* The group ring &lt;math&gt;k[G]&lt;/math&gt; of a finite group ''G'' over a field ''k'' is semisimple if the characteristic of ''k'' does not divide the order of ''G''. ([[Maschke's theorem]])
+* The [[Weyl algebra]] (over a field) is a simple ring; it is not semisimple since it has infinite dimension and thus not artinian.
+* [[Clifford algebra]]s are semisimple.
+
+Semisimplicity is closely related to separability. An [[algebra over a field|algebra]] ''A'' over a field ''k'' is said to be [[separable algebra|separable]] if the base extension &lt;math&gt;A \otimes_k F&lt;/math&gt; is semisimple for any [[field extension]] &lt;math&gt;F/k&lt;/math&gt;. If ''A'' happens to be a field, then this is equivalent to the usual definition in field theory (cf. [[separable extension]].)
+
+=== Central simple algebra and Brauer group ===
+{{main|Central simple algebra}}
+
+For a field ''k'', a ''k''-algebra is central if its center is ''k'' and is simple if it is a [[simple ring]]. Since the center of a simple ''k''-algebra is a field, any simple ''k''-algebra is a central simple algebra over its center. In this section, a central simple algebra is assumed to have finite dimension. Also, we mostly fix the base field; thus, an algebra refers to a ''k''-algebra. The matrix ring of size ''n'' over a ring ''R'' will be denoted by &lt;math&gt;R_n&lt;/math&gt;.
+
+The [[Skolem–Noether theorem]] states any automorphism of a central simple algebra is inner.
+
+Two central simple algebras ''A'' and ''B'' are said to be ''similar'' if there are integers ''n'' and ''m'' such that &lt;math&gt;A \otimes_k k_n \approx B \otimes_k k_m&lt;/math&gt;.&lt;ref name=&quot;harvnb|Milne|CFT|loc=Ch IV, §2&quot;&gt;{{harvnb|Milne|CFT|loc=Ch IV, §2}}&lt;/ref&gt; Since &lt;math&gt;k_n \otimes_k k_m \simeq k_{nm}&lt;/math&gt;, the similarity is an equivalence relation. The similarity classes &lt;math&gt;[A]&lt;/math&gt; with the multiplication &lt;math&gt;[A][B] = \left[A \otimes_k B\right]&lt;/math&gt; form an abelian group called the [[Brauer group]] of ''k'' and is denoted by &lt;math&gt;\operatorname{Br}(k)&lt;/math&gt;. By the [[Artin–Wedderburn theorem]], a central simple algebra is the matrix ring of a division ring; thus, each similarity class is represented by a unique division ring.
+
+For example, &lt;math&gt;\operatorname{Br}(k)&lt;/math&gt; is trivial if ''k'' is a finite field or an algebraically closed field (more generally [[quasi-algebraically closed field]]; cf. [[Tsen's theorem]]). &lt;math&gt;\operatorname{Br}(\mathbb{R})&lt;/math&gt; has order 2 (a special case of the [[Frobenius theorem (real division algebras)|theorem of Frobenius]]). Finally, if ''k'' is a nonarchimedean [[local field]] (for example, &lt;math&gt;\mathbb{Q}_p&lt;/math&gt;), then &lt;math&gt;\operatorname{Br}(k) = \mathbb{Q}/\mathbb{Z}&lt;/math&gt; through the [[Hasse invariant of an algebra|invariant map]].
+
+Now, if ''F'' is a field extension of ''k'', then the base extension &lt;math&gt;- \otimes_k F&lt;/math&gt; induces &lt;math&gt;\operatorname{Br}(k) \to \operatorname{Br}(F)&lt;/math&gt;. Its kernel is denoted by &lt;math&gt;\operatorname{Br}(F/k)&lt;/math&gt;. It consists of &lt;math&gt;[A]&lt;/math&gt; such that &lt;math&gt;A \otimes_k F&lt;/math&gt; is a matrix ring over ''F'' (that is, ''A'' is split by ''F''.) If the extension is finite and Galois, then &lt;math&gt;\operatorname{Br}(F/k)&lt;/math&gt; is canonically isomorphic to &lt;math&gt;H^2\left(\operatorname{Gal}(F/k), k^*\right)&lt;/math&gt;.&lt;ref&gt;Serre, J-P ., Applications algébriques de la cohomologie des groupes, I, II, Séminaire Henri Cartan, 1950/51 [http://www.numdam.org/numdam-bin/feuilleter?id=SHC_1950-1951__3_]&lt;/ref&gt;
+
+[[Azumaya algebra]]s generalize the notion of central simple algebras to a commutative local ring.
+
+=== Valuation ring ===
+{{main|Valuation ring}}
+
+If ''K'' is a field, a [[valuation (algebra)|valuation]] ''v'' is a group homomorphism from the multiplicative group ''K''&lt;sup&gt;*&lt;/sup&gt; to a totally ordered abelian group ''G'' such that, for any ''f'', ''g'' in ''K'' with ''f'' + ''g'' nonzero, ''v''(''f'' + ''g'') ≥ min{''v''(''f''), ''v''(''g'')}. The [[valuation ring]] of ''v'' is the subring of ''K'' consisting of zero and all nonzero ''f'' such that ''v''(''f'') ≥ 0.
+
+Examples: {{unordered list
+| The field of [[formal Laurent series]] &lt;math&gt;k(\!(t)\!)&lt;/math&gt; over a field ''k'' comes with the valuation ''v'' such that ''v''(''f'') is the least degree of a nonzero term in ''f''; the valuation ring of ''v'' is the [[formal power series ring]] &lt;math&gt;k[\![t]\!]&lt;/math&gt;.
+| More generally, given a field ''k'' and a totally ordered abelian group ''G'', let &lt;math&gt;k(\!(G)\!)&lt;/math&gt; be the set of all functions from ''G'' to ''k'' whose supports (the sets of points at which the functions are nonzero) are [[well ordered]]. It is a field with the multiplication given by [[convolution]]:
+: &lt;math&gt;(f*g)(t) = \sum_{s \in G} f(s)g(t - s)&lt;/math&gt;.
+
+It also comes with the valuation ''v'' such that ''v''(''f'') is the least element in the support of ''f''. The subring consisting of elements with finite support is called the [[group ring]] of ''G'' (which makes sense even if ''G'' is not commutative). If ''G'' is the ring of integers, then we recover the previous example (by identifying ''f'' with the series whose ''n''-th coefficient is ''f''(''n'').)
+}}
+
+See also: [[Novikov ring]] and [[uniserial ring]].
+
+== Rings with extra structure ==
+A ring may be viewed as an [[abelian group]] (by using the addition operation), with extra structure: namely, ring multiplication. In the same way, there are other mathematical objects which may be considered as rings with extra structure. For example:
+* An [[associative algebra]] is a ring that is also a [[vector space]] over a field ''K'' such that the scalar multiplication is compatible with the ring multiplication. For instance, the set of ''n''-by-''n'' matrices over the real field '''R''' has dimension ''n''&lt;sup&gt;2&lt;/sup&gt; as a real vector space.
+* A ring ''R'' is a [[topological ring]] if its set of elements ''R'' is given a [[topological space|topology]] which makes the addition map ( &lt;math&gt;+ : R\times R \to R\,&lt;/math&gt;) and the multiplication map ( &lt;math&gt;\cdot : R\times R \to R\,&lt;/math&gt;) to be both [[Continuous function (topology)|continuous]] as maps between topological spaces (where ''X'' × ''X'' inherits the [[product topology]] or any other product in the category). For example, ''n''-by-''n'' matrices over the real numbers could be given either the [[Euclidean topology]], or the [[Zariski topology]], and in either case one would obtain a topological ring.
+* A [[λ-ring]] is a commutative ring ''R'' together with operations λ&lt;sup&gt;''n''&lt;/sup&gt;: ''R'' → ''R'' that are like ''n''-th [[exterior power]]s:
+::&lt;math&gt;\lambda^n(x + y) = \sum_0^n \lambda^i(x) \lambda^{n-i}(y)&lt;/math&gt;.
+:For example, '''Z''' is a λ-ring with &lt;math&gt;\lambda^n(x) = \binom{x}{n}&lt;/math&gt;, the [[binomial coefficient]]s. The notion plays a central rule in the algebraic approach to the [[Riemann–Roch theorem]].
+* A [[totally ordered ring]] is a ring with a [[total ordering]] that is compatible with ring operations.&lt;!-- Z is characterized as a certain unique ordered ring. Can’t remember the precise statement.--&gt;
+
+== Some examples of the ubiquity of rings ==
+Many different kinds of [[mathematical object]]s can be fruitfully analyzed in terms of some [[functor|associated ring]].
+
+=== Cohomology ring of a topological space ===
+To any [[topological space]] ''X'' one can associate its integral [[cohomology ring]]
+:&lt;math&gt;H^*(X,\mathbb{Z}) = \bigoplus_{i=0}^{\infty} H^i(X,\mathbb{Z}),&lt;/math&gt;
+a [[graded ring]]. There are also [[homology group]]s &lt;math&gt;H_i(X,\mathbb{Z})&lt;/math&gt; of a space, and indeed these were defined first, as a useful tool for distinguishing between certain pairs of topological spaces, like the [[sphere]]s and [[torus|tori]], for which the methods of [[point-set topology]] are not well-suited. [[Cohomology group]]s were later defined in terms of homology groups in a way which is roughly analogous to the dual of a [[vector space]]. To know each individual integral homology group is essentially the same as knowing each individual integral cohomology group, because of the [[universal coefficient theorem]]. However, the advantage of the cohomology groups is that there is a [[cup product|natural product]], which is analogous to the observation that one can multiply pointwise a ''k''-[[multilinear form]] and an ''l''-multilinear form to get a (''k'' + ''l'')-multilinear form.
+
+The ring structure in cohomology provides the foundation for [[characteristic class]]es of [[fiber bundle]]s, intersection theory on manifolds and [[algebraic variety|algebraic varieties]], [[Schubert calculus]] and much more.
+
+=== Burnside ring of a group ===
+To any [[group (mathematics)|group]] is associated its [[Burnside ring]] which uses a ring to describe the various ways the group can [[Group action (mathematics)|act]] on a finite set. The Burnside ring's additive group is the [[free abelian group]] whose basis are the transitive actions of the group and whose addition is the disjoint union of the action. Expressing an action in terms of the basis is decomposing an action into its transitive constituents. The multiplication is easily expressed in terms of the [[representation ring]]: the multiplication in the Burnside ring is formed by writing the tensor product of two permutation modules as a permutation module. The ring structure allows a formal way of subtracting one action from another. Since the Burnside ring is contained as a finite index subring of the representation ring, one can pass easily from one to the other by extending the coefficients from integers to the rational numbers.
+
+=== Representation ring of a group ring ===
+To any [[group ring]] or [[Hopf algebra]] is associated its [[representation ring]] or &quot;Green ring&quot;. The representation ring's additive group is the free abelian group whose basis are the indecomposable modules and whose addition corresponds to the direct sum. Expressing a module in terms of the basis is finding an indecomposable decomposition of the module. The multiplication is the tensor product. When the algebra is semisimple, the representation ring is just the character ring from [[character theory]], which is more or less the [[Grothendieck group]] given a ring structure.
+
+=== Function field of an irreducible algebraic variety ===
+To any irreducible [[algebraic variety]] is associated its [[function field of an algebraic variety|function field]]. The points of an algebraic variety correspond to [[valuation ring]]s contained in the function field and containing the [[coordinate ring]]. The study of [[algebraic geometry]] makes heavy use of [[commutative algebra]] to study geometric concepts in terms of ring-theoretic properties. [[Birational geometry]] studies maps between the subrings of the function field.
+
+=== Face ring of a simplicial complex ===
+Every [[simplicial complex]] has an associated face ring, also called its [[Stanley–Reisner ring]]. This ring reflects many of the combinatorial properties of the simplicial complex, so it is of particular interest in [[algebraic combinatorics]]. In particular, the algebraic geometry of the Stanley–Reisner ring was used to characterize the numbers of faces in each dimension of [[simplicial polytope]]s.
+
+== Category-theoretic description ==
+{{main|Category of rings}}
+
+Every ring can be thought of as a [[monoid (category theory)|monoid]] in '''Ab''', the [[category of abelian groups]] (thought of as a [[monoidal category]] under the [[tensor product of abelian groups|tensor product of &lt;math&gt;{\mathbb Z}&lt;/math&gt;-modules]]). The monoid action of a ring ''R'' on an abelian group is simply an [[module (mathematics)|''R''-module]]. Essentially, an ''R''-module is a generalization of the notion of a [[vector space]] – where rather than a vector space over a field, one has a &quot;vector space over a ring&quot;.
+
+Let (''A'', +) be an abelian group and let End(''A'') be its [[endomorphism ring]] (see above). Note that, essentially, End(''A'') is the set of all morphisms of ''A'', where if ''f'' is in End(''A''), and ''g'' is in End(''A''), the following rules may be used to compute ''f'' + ''g'' and ''f'' '''·''' ''g'':
+
+* (''f'' +&amp;thinsp;''g'')(''x'') = ''f''(''x'')&amp;thinsp;+&amp;thinsp;''g''(''x'')
+* (''f'' '''·'''&amp;thinsp;''g'')(''x'') = ''f''(''g''(''x''))
+
+where + as in ''f''(''x'') + ''g''(''x'') is addition in ''A'', and function composition is denoted from right to left. Therefore, [[functor|associated]] to any abelian group, is a ring. Conversely, given any ring, (''R'', +, '''·''' ), (''R'', +) is an abelian group. Furthermore, for every ''r'' in ''R'', right (or left) multiplication by ''r'' gives rise to a morphism of (''R'', +), by right (or left) distributivity. Let ''A'' = (''R'', +). Consider those [[endomorphism]]s of ''A'', that &quot;factor through&quot; right (or left) multiplication of ''R''. In other words, let End&lt;sub&gt;''R''&lt;/sub&gt;(''A'') be the set of all morphisms ''m'' of ''A'', having the property that ''m''(''r'' '''·'''&amp;thinsp;''x'') = ''r'' '''·''' ''m''(''x''). It was seen that every ''r'' in ''R'' gives rise to a morphism of ''A'': right multiplication by ''r''. It is in fact true that this association of any element of ''R'', to a morphism of ''A'', as a function from ''R'' to End&lt;sub&gt;''R''&lt;/sub&gt;(''A''), is an isomorphism of rings. In this sense, therefore, any ring can be viewed as the endomorphism ring of some abelian ''X''-group (by ''X''-group, it is meant a group with ''X'' being its [[Group with operators|set of operators]]).&lt;ref&gt;Jacobson (2009), p. 162, Theorem 3.2.&lt;/ref&gt; In essence, the most general form of a ring, is the endomorphism group of some abelian ''X''-group.
+
+Any ring can be seen as a [[preadditive category]] with a single object. It is therefore natural to consider arbitrary preadditive categories to be generalizations of rings. And indeed, many definitions and theorems originally given for rings can be translated to this more general context. [[Additive functor]]s between preadditive categories generalize the concept of ring homomorphism, and ideals in additive categories can be defined as sets of [[morphism]]s closed under addition and under composition with arbitrary morphisms.
+
+== Generalization ==
+Algebraists have defined structures more general than rings by weakening or dropping some of ring axioms.
+
+=== Rng ===
+A [[rng (algebra)|rng]] is the same as a ring, except that the existence of a multiplicative identity is not assumed.&lt;ref&gt;Jacobson 2009.&lt;/ref&gt;
+
+=== Nonassociative ring ===
+A [[nonassociative ring]] is an algebraic structure that satisfies all of the ring axioms except the associative property and the existence of a multiplicative identity. A notable example is a [[Lie algebra]]. There exists some structure theory&lt;!-- developed by Jacobson? --&gt; for such algebras that generalizes the analogous results for Lie algebras and associative algebras.{{citation needed|date=November 2013}}
+
+=== Semiring ===
+A [[semiring]] (sometimes ''rig'') is obtained by weakening the assumption that (''R'',&amp;nbsp;+) is an abelian group to the assumption that (''R'',&amp;nbsp;+) is a commutative monoid, and adding the axiom that 0 · ''a'' = ''a'' · 0 = 0 for all ''a'' in ''R'' (since it no longer follows from the other axioms).
+
+Examples:
+* the non-negative integers &lt;math&gt;\{0,1,2,\ldots\}&lt;/math&gt; with ordinary addition and multiplication;
+* the [[tropical semiring]].
+
+== Other ring-like objects ==
+
+=== Ring object in a category ===
+Let ''C'' be a category with finite [[Product (category theory)|products]]. Let pt denote a [[terminal object]] of ''C'' (an empty product). A '''ring object''' in ''C'' is an object ''R'' equipped with morphisms &lt;math&gt;R \times R\;\stackrel{a}\to\,R&lt;/math&gt; (addition), &lt;math&gt;R \times R\;\stackrel{m}\to\,R&lt;/math&gt; (multiplication), &lt;math&gt;\operatorname{pt}\stackrel{0}\to\,R&lt;/math&gt; (additive identity), &lt;math&gt;R\;\stackrel{i}\to\,R&lt;/math&gt; (additive inverse), and &lt;math&gt;\operatorname{pt}\stackrel{1}\to\,R&lt;/math&gt; (multiplicative identity) satisfying the usual ring axioms. Equivalently, a ring object is an object ''R'' equipped with a factorization of its functor of points &lt;math&gt;h_R = \operatorname{Hom}(-,R) : C^{\operatorname{op}} \to \mathbf{Sets}&lt;/math&gt; through the category of rings: &lt;math&gt;C^{\operatorname{op}} \to \mathbf{Rings} \stackrel{\textrm{forgetful}}\longrightarrow \mathbf{Sets}&lt;/math&gt;.
+
+=== Ring scheme ===
+In algebraic geometry, a '''ring scheme''' over a base [[Scheme (mathematics)|scheme]] {{math|''S''}} is a ring object in the category of {{math|''S''}}-schemes. One example is the ring scheme {{math|W&lt;sub&gt;''n''&lt;/sub&gt;}} over {{math|Spec '''Z'''}}, which for any commutative ring {{math|''A''}} returns the ring {{math|W&lt;sub&gt;''n''&lt;/sub&gt;(''A'')}} of {{math|''p''}}-isotypic Witt vectors of length {{math|''n''}} over {{math|''A''}}.&lt;ref&gt;Serre, p.&amp;nbsp;44.&lt;/ref&gt;
+
+=== Ring spectrum ===
+In [[algebraic topology]], a [[ring spectrum]] is a [[spectrum (topology)|spectrum]] ''X'' together with a multiplication &lt;math&gt;\mu \colon X \wedge X \to X&lt;/math&gt; and a unit map &lt;math&gt;S \to X&lt;/math&gt; from the [[sphere spectrum]] ''S'', such that the ring axiom diagrams commute up to homotopy. In practice, it is common to define a ring spectrum as a [[monoid object]] in a good category of spectra such as the category of [[symmetric spectrum|symmetric spectra]].
+
+== See also ==
+{{Wikibooks|Abstract Algebra/Rings}}
+{{Div col|colwidth=18em}}
+* [[Algebra over a commutative ring]]
+* [[Categorical ring]]
+* [[Category of rings]]
+* [[Glossary of ring theory]]
+* [[Nonassociative ring]]
+* [[Ring of sets]]
+* [[Semiring]]
+* [[Spectrum of a ring]]
+* [[Simplicial commutative ring]]
+{{Div col end}}
+Special types of rings:
+{{Div col|colwidth=22em}}
+* [[Boolean ring]]
+* [[Dedekind ring]]
+* [[Differential ring]]
+* [[Exponential field|Exponential ring]]
+* [[Finite ring]]
+* [[Lie ring]]
+* [[Local ring]]
+* [[Noetherian ring|Noetherian]] and [[artinian ring]]s
+* [[Ordered ring]]
+* [[Poisson ring]]
+* [[Reduced ring]]
+* [[Regular ring]]
+* [[Ring of periods]]
+* [[SBI ring]]
+* [[Valuation ring]] and [[discrete valuation ring]]
+{{Div col end}}
+
+== Notes ==
+{{refbegin}}
+{{cnote|a|Some authors only require that a ring be a [[semigroup]] under multiplication; that is, do not require that there be a multiplicative identity (1). See the section [[#Notes on the definition|Notes on the definition]] for more details.}}
+{{cnote|b|Elements which do have multiplicative inverses are called [[unit (ring theory)|units]], see {{Harvard citations|nb = yes|last = Lang|year = 2002|loc =§II.1, p. 84}}.}}
+{{cnote|c|The closure axiom is already implied by the condition that +/• be a binary operation. Some authors therefore omit this axiom. {{Harvard citations|nb = yes|last = Lang|year = 2002}}}}
+{{cnote|d|The transition from the integers to the rationals by adding fractions is generalized by the [[quotient field]].}}
+{{cnote|e|Many authors include [[commutative ring|commutativity of rings]] in the set of ''ring axioms'' ([[Ring (mathematics)#Formal definition|see above]]) and therefore refer to &quot;commutative rings&quot; as just &quot;rings&quot;.}}
+{{refend}}
+
+== Citations ==
+{{reflist|30em}}
+
+== References ==
+
+=== General references ===
+{{refbegin}}
+* {{Cite book
+ | last=Artin
+ | first=Michael
+ | author-link=Michael Artin
+ | title=Algebra
+ | publisher=Prentice-Hall
+ | year=1991
+}}
+* {{Cite book
+ | last1=Atiyah
+ | first1=Michael
+ | author1-link=Michael Atiyah
+ | last2=Macdonald
+ | first2=Ian G.
+ | author2-link=Ian G. Macdonald
+ | title=Introduction to commutative algebra
+ | publisher=Addison–Wesley
+ | year=1969
+}}
+* {{Cite book
+ | last1=Bourbaki
+ | first1=N.
+ | author1-link=Nicolas Bourbaki
+ | title=Algebra I, Chapters 1-3
+ | publisher=Springer
+ | year=1998
+}}
+* {{Citation
+ | last1=Cohn
+ | first1=Paul Moritz
+ | title=Basic algebra: groups, rings, and fields
+ | year=2003
+ | publisher=Springer
+ | isbn=978-1-85233-587-8
+}}.
+* {{Cite book
+ | last=Eisenbud
+ | first=David
+ | author-link=David Eisenbud
+ | title=Commutative algebra with a view toward algebraic geometry
+ | publisher=Springer
+ | year=1995
+}}
+* {{Cite book
+ | last1=Gallian
+ | first1=Joseph A.
+ | title=Contemporary Abstract Algebra, Sixth Edition.
+ | publisher=Houghton Mifflin
+ | year=2006
+ | isbn=9780618514717
+}}
+* {{Cite book
+ | title=Radical Theory of Rings
+ | publisher= Chapman &amp; Hall/CRC Pure and Applied Mathematics
+ | first1=J.W.
+ | last1=Gardner
+ | first2=R.
+ | last2=Wiegandt
+ | year=2003
+ | isbn=0824750330
+}}
+* {{Cite book
+ | last=Herstein
+ | first=I. N.
+ | author-link=Israel Nathan Herstein
+ | others=With an afterword by Lance W. Small
+ | title=Noncommutative rings
+ | series=Carus Mathematical Monographs
+ | volume=15
+ | publisher=Mathematical Association of America
+ | year=1994
+ | origyear=reprint of the 1968 original
+ | isbn=0-88385-015-X
+}}
+* {{Cite book
+ | last1=Hungerford
+ | first1=Thomas W.
+ | title=Abstract Algebra: an Introduction, Second Edition.
+ | publisher=Brooks/Cole
+ | year=1997
+ | isbn=9780030105593
+}}
+* {{Cite book
+ | last=Jacobson
+ | first=Nathan
+ | author-link=Nathan Jacobson
+ | title=Basic algebra
+ | edition=2nd
+ | volume=1
+ | publisher=Dover
+ | year=2009
+ | isbn=978-0-486-47189-1
+}}
+* {{Cite journal
+ | last=Jacobson
+ | first=Nathan
+ | author-link=Nathan Jacobson
+ | title=Structure of rings
+ | journal=American Mathematical Society Colloquium Publications
+ | volume=37
+ | edition=Revised
+ | year=1964
+}}
+* {{Cite journal
+ | last=Jacobson
+ | first=Nathan
+ | author-link=Nathan Jacobson
+ | title=The Theory of Rings
+ | journal=American Mathematical Society Mathematical Surveys
+ | volume=I
+ | year=1943
+}}
+* {{Citation
+ | last1=Kaplansky
+ | first1=Irving
+ | author1-link=Irving Kaplansky
+ | title=Commutative rings
+ | publisher=[[University of Chicago Press]]
+ | edition=Revised
+ | mr=0345945
+ | year=1974
+ | isbn=0-226-42454-5
+ | url=https://archive.org/details/commutativerings00irvi
+ }}.
+* {{Cite book
+ | last=Lam
+ | first=Tsit Yuen
+ | author-link=Tsit Yuen Lam
+ | title=A first course in noncommutative rings
+ | edition=2nd
+ | series=Graduate Texts in Mathematics
+ | volume=131
+ | publisher=Springer
+ | year=2001
+ | isbn=0-387-95183-0
+}}
+* {{Cite book
+ | last=Lam
+ | first=Tsit Yuen
+ | author-link=Tsit Yuen Lam
+ | title=Exercises in classical ring theory
+ | edition=2nd
+ | series=Problem Books in Mathematics
+ | publisher=Springer
+ | year=2003
+ | isbn=0-387-00500-5
+}}
+* {{Cite book
+ | last=Lam
+ | first=Tsit Yuen
+ | author-link=Tsit Yuen Lam
+ | title=Lectures on modules and rings
+ | series=Graduate Texts in Mathematics
+ | volume=189
+ | publisher=Springer
+ | year=1999
+ | isbn=0-387-98428-3
+}}
+* {{Lang Algebra|edition=3r}}.
+* {{Cite book
+ | last1=Matsumura
+ | first1=Hideyuki
+ | title=Commutative Ring Theory
+ | publisher=[[Cambridge University Press]]
+ | edition=2nd
+ | series=Cambridge Studies in Advanced Mathematics
+ | year=1989
+ | isbn=978-0-521-36764-6
+}}
+* {{Cite web
+ | last=Milne
+ | first=J.
+ | title=A primer of commutative algebra
+ | url=http://www.jmilne.org/math/xnotes/ca.html
+}}
+* {{Citation
+ | last1=Rotman
+ | first1=Joseph
+ | title=Galois Theory
+ | publisher=Springer
+ | edition=2nd
+ | year=1998
+ | isbn=0-387-98541-7
+}}.
+* {{Citation
+ | last1=van der Waerden
+ | first1=Bartel Leendert
+ | author1-link=Bartel Leendert van der Waerden
+ | title=Moderne Algebra. Teil I
+ | publisher=Springer
+ | series= Die Grundlehren der mathematischen Wissenschaften
+ | volume=33
+ | isbn=978-3-540-56799-8
+ | year=1930
+| mr=0009016
+ | title-link=Moderne Algebra
+ }}.
+* {{Cite book
+ | last1=Warner
+ | first1=Seth
+ | title=Modern Algebra
+ | publisher=Dover
+ | year=1965
+ | isbn=9780486663418
+}}
+* {{Cite book
+ | first1=Raymond Louis
+ | last1=Wilder
+ | title=Introduction to Foundations of Mathematics
+ | publisher=Wiley
+ | year=1965
+}}
+* {{Cite book
+ | last1=Zariski
+ | first1=Oscar
+ | last2=Samuel
+ | first2=Pierre
+ | title=Commutative Algebra
+ | volume=1
+ | publisher=Van Nostrand
+ | year=1958
+}}
+{{refend}}
+
+=== Special references ===
+{{refbegin}}
+* {{Citation
+ | last1=Balcerzyk
+ | first1=Stanisław
+ | last2=Józefiak
+ | first2=Tadeusz
+ | title=Commutative Noetherian and Krull rings
+ | publisher=Ellis Horwood Ltd.
+ | location=Chichester
+ | series=Mathematics and its Applications
+ | year=1989
+ | isbn=978-0-13-155615-7
+}}.
+* {{Citation
+ | last1=Balcerzyk
+ | first1=Stanisław
+ | last2=Józefiak
+ | first2=Tadeusz
+ | title=Dimension, multiplicity and homological methods
+ | publisher=Ellis Horwood Ltd.
+ | location=Chichester
+ | series=Mathematics and its Applications
+ | isbn=978-0-13-155623-2
+ | year=1989
+}}.
+* {{Cite journal
+ | last=Ballieu
+ | first=R.
+ | title=Anneaux finis; systèmes hypercomplexes de rang trois sur un corps commutatif
+ | journal=Ann. Soc. Sci. Bruxelles
+ | volume=I
+ | issue=61
+ | pages=222–227
+ | year=1947
+}}
+* {{Cite book
+ | last1=Berrick
+ | first1=A. J.
+ | last2=Keating
+ | first2=M. E.
+ | title=An Introduction to Rings and Modules with K-Theory in View
+ | publisher=Cambridge University Press
+ | year=2000
+}}
+* {{citation|title=Skew Fields: Theory of General Division Rings|volume=57|series=Encyclopedia of Mathematics and its Applications|first=Paul Moritz|last=Cohn|publisher=Cambridge University Press|year=1995|isbn=9780521432177|url-access=registration|url=https://archive.org/details/skewfieldstheory0000cohn}}.
+* {{Citation
+ | last1=Eisenbud
+ | first1=David
+ | author1-link=David Eisenbud
+ | title=Commutative algebra. With a view toward algebraic geometry.
+ | publisher=Springer
+ | series=Graduate Texts in Mathematics
+ | volume=150
+ | mr=1322960
+ | year=1995
+ | isbn=978-0-387-94268-1
+}}.
+* {{Cite journal
+ | last1=Gilmer
+ | first1=R.
+ | last2=Mott
+ | first2=J.
+ | title=Associative Rings of Order
+ | journal=Proc. Japan Acad.
+ | volume=49
+ | pages=795–799
+ | year=1973
+ | doi=10.3792/pja/1195519146
+| doi-access=free
+ }}
+* {{Cite book
+ | last1=Harris
+ | first1=J. W.
+ | last2=Stocker
+ | first2=H.
+ | title=Handbook of Mathematics and Computational Science
+ | publisher=Springer
+ | year=1998
+}}
+* {{Citation
+ | last1=Jacobson
+ | first1=Nathan
+ | author1-link=Nathan Jacobson
+ | title=Structure theory of algebraic algebras of bounded degree
+ | journal=[[Annals of Mathematics]]
+ | issn=0003-486X
+ | volume=46
+ | issue=4
+ | pages=695–707
+ | doi=10.2307/1969205
+ | jstor=1969205
+ | publisher=Annals of Mathematics
+ | year=1945
+}}.
+* {{Cite book
+ | last=Knuth
+ | first=D. E.
+ | author-link=Donald Knuth
+ | title=The Art of Computer Programming
+ | volume=Vol. 2: Seminumerical Algorithms
+ | edition=3rd
+ | publisher=Addison–Wesley
+ | year=1998
+}}
+* {{Cite book
+ | last1=Korn
+ | first1=G. A.
+ | last2=Korn
+ | first2=T. M.
+ | title=Mathematical Handbook for Scientists and Engineers
+ | publisher=Dover
+ | year=2000
+ | isbn=9780486411477
+ | url=https://books.google.com/books?id=xUQc0RZhQnAC&amp;q=ring
+}}
+* {{Cite web
+ | last=Milne
+ | first=J.
+ | title=Class field theory
+ | url=http://www.jmilne.org/math/CourseNotes/cft.html
+}}
+* {{Citation
+ | last1=Nagata
+ | first1=Masayoshi
+ | author1-link=Masayoshi Nagata
+ | title=Local rings
+ | publisher=Interscience Publishers
+ | series=Interscience Tracts in Pure and Applied Mathematics
+ | year=1962
+ | origyear=1975 reprint
+ | mr=0155856
+ | volume=13
+ | isbn=978-0-88275-228-0
+}}.
+* {{Cite book
+ | last=Pierce
+ | first=Richard S.
+ | title=Associative algebras
+ | series=Graduate Texts in Mathematics
+ | volume=88
+ | publisher=Springer
+ | year=1982
+ | isbn=0-387-90693-2
+ | url=https://archive.org/details/associativealgeb00pier_0
+ }}
+* {{Citation
+ | last=Poonen
+ | first=Bjorn
+ | author1-link=Bjorn Poonen
+ | title=Why all rings should have a 1
+ | year=2014
+ | arxiv=1404.0135
+ | url=https://math.mit.edu/~poonen/papers/ring.pdf
+}}
+* {{Citation
+ | last=Serre
+ | first=Jean-Pierre
+ | author1-link=Jean-Pierre Serre
+ | title=Local fields
+ | series=Graduate Texts in Mathematics
+ | volume=67
+ | publisher=Springer
+ | year=1979
+}}.
+* {{Citation
+ | last=Springer
+ | first=Tonny A.
+ | title=Invariant theory
+ | series=Lecture Notes in Mathematics
+ | volume=585
+ | publisher=Springer
+ | year=1977
+ | url=https://books.google.com/books?id=pTV7CwAAQBAJ&amp;q=ring
+| isbn=9783540373704
+ }}.
+* {{Cite web
+ | last=Weibel
+ | first=Charles
+ | title=The K-book: An introduction to algebraic K-theory
+ | url=http://www.math.rutgers.edu/~weibel/Kbook.html
+}}
+* {{Cite book
+ | last1=Zariski
+ | first1=Oscar
+ | author1-link=Oscar Zariski
+ | last2=Samuel
+ | first2=Pierre
+ | author2-link=Pierre Samuel
+ | title=Commutative algebra
+ | series=Graduate Texts in Mathematics
+ | volume=28-29
+ | publisher=Springer
+ | year=1975
+ | isbn=0-387-90089-6
+}}
+{{refend}}
+
+=== Primary sources ===
+{{refbegin}}
+* {{Cite journal
+ | last=Fraenkel
+ | first=A.
+ | author-link=Abraham Fraenkel
+ | title=Über die Teiler der Null und die Zerlegung von Ringen
+ | journal=J. Reine Angew. Math.
+ | volume=145
+ | pages=139–176
+ | year=1915
+}}
+* {{Cite journal
+ | last=Hilbert
+ | first=David
+ | author-link=David Hilbert
+ | title=Die Theorie der algebraischen Zahlkörper
+ | journal=Jahresbericht der Deutschen Mathematiker-Vereinigung
+ | volume=4
+ | year=1897
+}}
+* {{Cite journal
+ | last=Noether
+ | first=Emmy
+ | author-link=Emmy Noether
+ | title=Idealtheorie in Ringbereichen
+ | journal=Math. Annalen
+ | volume=83
+ | issue=1–2
+ | pages=24–66
+ | year=1921
+ | doi=10.1007/bf01464225
+| s2cid=121594471
+ | url=https://zenodo.org/record/1428306
+ }}
+{{refend}}
+
+=== Historical references ===
+{{refbegin}}
+* [http://www-gap.dcs.st-and.ac.uk/~history/HistTopics/Ring_theory.html History of ring theory at the MacTutor Archive]
+* [[Garrett Birkhoff]] and [[Saunders Mac Lane]] (1996) ''A Survey of Modern Algebra'', 5th ed. New York: Macmillan.
+* Bronshtein, I. N. and Semendyayev, K. A. (2004) [[Bronshtein and Semendyayev|Handbook of Mathematics]], 4th ed. New York: Springer-Verlag {{isbn|3-540-43491-7}}.
+* Faith, Carl (1999) ''Rings and things and a fine array of twentieth century associative algebra''. Mathematical Surveys and Monographs, 65. [[American Mathematical Society]] {{isbn|0-8218-0993-8}}.
+* Itô, K. editor (1986) &quot;Rings.&quot; §368 in ''Encyclopedic Dictionary of Mathematics'', 2nd ed., Vol. 2. Cambridge, MA: [[MIT Press]].
+* [[Israel Kleiner (mathematician)|Israel Kleiner]] (1996) &quot;The Genesis of the Abstract Ring Concept&quot;, [[American Mathematical Monthly]] 103: 417–424 {{doi|10.2307/2974935}}
+* Kleiner, I. (1998) &quot;From numbers to rings: the early history of ring theory&quot;, [[Elemente der Mathematik]] 53: 18–35.
+* [[B. L. van der Waerden]] (1985) ''A History of Algebra'', Springer-Verlag,
+{{refend}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Ring (Mathematics)}}
+[[Category:Algebraic structures]]
+[[Category:Ring theory]]</text>
+      <sha1>tghw5s0witdkltmxod0j85080maiihu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Caesar cipher</title>
+    <ns>0</ns>
+    <id>48405</id>
+    <revision>
+      <id>991569879</id>
+      <parentid>991568716</parentid>
+      <timestamp>2020-11-30T19:17:44Z</timestamp>
+      <contributor>
+        <username>Slykos</username>
+        <id>40635536</id>
+      </contributor>
+      <minor />
+      <comment>Reverted 1 edit by [[Special:Contributions/65.18.115.116|65.18.115.116]] ([[User talk:65.18.115.116|talk]]) to last revision by ProcBot</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18676" xml:space="preserve">{{short description|Simple and widely known encryption technique}}
+{{featuredarticle}}
+[[File:Caesar cipher left shift of 3.svg|thumb|The action of a Caesar cipher is to replace each plaintext letter with a different one a fixed number of places down the alphabet. The cipher illustrated here uses a left shift of three, so that (for example) each occurrence of {{mono|E}} in the plaintext becomes {{mono|B}} in the ciphertext.]]
+&lt;!--
+{{Infobox block cipher
+| name           = Caesar cipher
+| image          = [[Image:Caesar cipher left shift of 3.svg|320px]]
+| caption        = The action of a Caesar cipher is to replace each plaintext letter with a different one a fixed number of places down the alphabet. The cipher illustrated here uses a left shift of three, so that (for example) each occurrence of {{mono|E}} in the plaintext becomes {{mono|B}} in the ciphertext.

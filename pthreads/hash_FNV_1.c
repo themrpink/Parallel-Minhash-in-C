@@ -213,11 +213,11 @@ pthread_mutex_t lock;
 pthread_mutex_t lockhashes[MUTEX_GROUP];
 
 typedef struct {
-    long* rank;
+    long rank;
     char** shingles;
     long tot_shingles;
     long long unsigned *hashed_shingles;
-    long long unsigned *minhash;
+    long long unsigned minhash;
     long long unsigned *minhashes[PRIMES_SIZE];
 } create_hash_args ;
 
@@ -263,9 +263,7 @@ void *create_hash(void *args) {
 
 
 }
-/*
- * applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
- */
+
 void *get_all_minashes(void *args){
     long numThread=((create_hash_args*)args)->rank;
     long count;
@@ -287,8 +285,8 @@ void *get_all_minashes(void *args){
             hash = ((create_hash_args*)args)->hashed_shingles[count] ^ rands[i];
 
             pthread_mutex_lock(&lockhashes[(i/MUTEX_GROUP)]);
-            if(hash < ((create_hash_args*)args)->minhashes[i])
-                ((create_hash_args*)args)->minhashes[i] = hash;
+            if(hash < *((create_hash_args*)args)->minhashes[i])
+                *((create_hash_args*)args)->minhashes[i] = hash;
             pthread_mutex_unlock(&lockhashes[(i/MUTEX_GROUP)]);
         }
 
@@ -315,7 +313,7 @@ long long unsigned *get_signatures(char **shingles, long long int tot_shingles) 
         args[i].hashed_shingles=hashed_shingles;
         args[i].minhash=minhash;
         for (int j = 0; j <PRIMES_SIZE ; ++j) {
-            args[i].minhashes[j] = MAX_LONG_LONG_U;
+            *args[i].minhashes[j] = MAX_LONG_LONG_U;
         }
 
     }
@@ -344,10 +342,10 @@ long long unsigned *get_signatures(char **shingles, long long int tot_shingles) 
         pthread_join(threads[j],NULL);
     }
     for (int i = 0; i < PRIMES_SIZE; ++i) {
-        *(signatures+i+1)=args[i].minhashes[i];
+        *(signatures+i+1)=*args[i].minhashes[i];
     }
     destroy_mutex();
-    exectimes(elapsed, GET_SIGNATURES, SET_TIME);
+    //exectimes(elapsed, GET_SIGNATURES, SET_TIME);
 
     free(hashed_shingles);
     return signatures;
@@ -371,3 +369,5 @@ void destroy_mutex(){
     }
     pthread_mutex_destroy(&lock);
 }
+
+

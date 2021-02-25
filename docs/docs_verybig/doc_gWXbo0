@@ -1,0 +1,238 @@
+== General ==
+The noise figure is the difference in [[decibel]]s (dB) between the noise output of the actual receiver to the noise output of an “ideal” receiver with the same overall [[Gain (electronics)|gain]] and [[Bandwidth (signal processing)|bandwidth]] when the receivers are connected to matched sources at the standard [[noise temperature]] ''T''&lt;sub&gt;0&lt;/sub&gt; (usually 290&amp;nbsp;K). The noise power from a simple [[Electrical load|load]] is equal to ''kTB'', where ''k'' is [[Boltzmann's constant]], ''T'' is the [[absolute temperature]] of the load (for example a [[resistor]]), and ''B'' is the measurement bandwidth.
+
+This makes the noise figure a useful [[figure of merit]] for terrestrial systems, where the antenna effective temperature is usually near the standard 290&amp;nbsp;K.  In this case, one receiver with a noise figure, say 2&amp;nbsp;dB better than another, will have an output signal to noise ratio that is about 2&amp;nbsp;dB better than the other. However, in the case of satellite communications systems, where the receiver antenna is pointed out into cold space, the antenna effective temperature is often colder than 290&amp;nbsp;K.&lt;ref&gt;{{Harvnb|Agilent|2010|p=7}}&lt;/ref&gt; In these cases a 2&amp;nbsp;dB improvement in receiver noise figure will result in more than a 2&amp;nbsp;dB improvement in the output signal to noise ratio. For this reason, the related figure of ''[[Effective input noise temperature|effective noise temperature]]'' is therefore often used instead of the noise figure for characterizing satellite-communication receivers and [[low-noise amplifier]]s.
+
+In [[heterodyne]] systems, output noise power includes spurious contributions from image-[[frequency]] transformation, but the portion attributable to thermal noise in the input termination at standard noise temperature includes only that which appears in the output via the principal frequency transformation of the [[system]] and excludes that which appears via the [[image frequency]] transformation.
+
+== Definition ==
+The '''noise factor''' {{math|''F''}} of a system is defined as&lt;ref name=&quot;:0&quot;&gt;{{Harvnb|Agilent|2010|p=5}}.&lt;/ref&gt;
+{{Equation box 1
+|indent =
+|title=
+|equation = &lt;math&gt;F = \frac{\mathrm{SNR}_\text{i}}{\mathrm{SNR}_\text{o}}&lt;/math&gt;
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+where {{math|SNR&lt;sub&gt;i&lt;/sub&gt;}} and {{math|SNR&lt;sub&gt;o&lt;/sub&gt;}} are the input and output [[signal-to-noise ratio]]s respectively. The {{math|SNR}} quantities are power ratios. 
+The noise figure {{math|NF}} is defined as the noise factor in dB:
+{{Equation box 1
+|indent =
+|title=
+|equation = &lt;math&gt;\mathrm{NF} = 10 \log_{10}(F) = 10 \log_{10}\left(\frac{\mathrm{SNR}_\text{i}}{\mathrm{SNR}_\text{o}}\right) = \mathrm{SNR}_\text{i, dB} - \mathrm{SNR}_\text{o, dB}&lt;/math&gt;
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+where {{math|SNR&lt;sub&gt;i,&amp;nbsp;dB&lt;/sub&gt;}} and {{math|SNR&lt;sub&gt;o,&amp;nbsp;dB&lt;/sub&gt;}} are in [[decibel]]s (dB).
+These formulae are only valid when the input termination is at standard [[noise temperature]] {{math|1=''T''&lt;sub&gt;0&lt;/sub&gt; = 290&amp;nbsp;K}}, although in practice small differences in temperature do not significantly affect the values.
+
+The noise factor of a device is related to its [[noise temperature]] {{math|''T''&lt;sub&gt;e&lt;/sub&gt;}}:&lt;ref&gt;{{Harvnb|Agilent|2010|p=7}} with some rearrangement from {{math|1=''T''&lt;sub&gt;e&lt;/sub&gt; = ''T''&lt;sub&gt;0&lt;/sub&gt;(''F'' − 1)}}.&lt;/ref&gt;
+:&lt;math&gt;F = 1 + \frac{T_\text{e}}{T_0}.&lt;/math&gt;
+
+[[Attenuator (electronics)|Attenuators]] have a noise factor {{math|''F''}} equal to their attenuation ratio {{math|''L''}} when their physical temperature equals {{math|''T''&lt;sub&gt;0&lt;/sub&gt;}}. More generally, for an attenuator at a physical temperature {{math|''T''}}, the noise temperature is {{math|1=''T''&lt;sub&gt;e&lt;/sub&gt; = (''L'' &amp;minus; 1)''T''}}, giving a noise factor
+:&lt;math&gt;F = 1 + \frac{(L - 1)T}{T_0}.&lt;/math&gt;
+
+== Noise factor of cascaded devices ==
+{{Main|Friis formulas for noise}}
+If several devices are cascaded, the total noise factor can be found with [[Friis formulas for noise|Friis' formula]]:&lt;ref&gt;{{Harvnb|Agilent|2010|p=8}}.&lt;/ref&gt;
+:&lt;math&gt;F = F_1 + \frac{F_2 - 1}{G_1} + \frac{F_3 - 1}{G_1  G_2} + \frac{F_4 - 1}{G_1 G_2 G_3} + \cdots + \frac{F_n - 1}{G_1 G_2 G_3 \cdots G_{n-1}},&lt;/math&gt;
+where {{math|''F''&lt;sub&gt;''n''&lt;/sub&gt;}} is the noise factor for the {{math|''n''}}-th device, and {{math|''G''&lt;sub&gt;''n''&lt;/sub&gt;}} is the [[power gain]] (linear, not in dB) of the {{math|''n''}}-th device. The first amplifier in a chain usually has the most significant effect on the total noise figure because the noise figures of the following stages are reduced by stage gains. Consequently, the first amplifier usually has a low noise figure, and the noise figure requirements of subsequent stages is usually more relaxed.&lt;!-- yes, the input might be an attenuator or a mixer, so the second stage becomes critical. --&gt;
+
+==Noise factor as a function of additional noise==
+[[File:NoiseFactorDefinition.svg|right|thumb|600px|The source outputs a signal of power &lt;math&gt;S_i&lt;/math&gt; and noise of power &lt;math&gt;N_i&lt;/math&gt;. Both signal and noise get amplified. However, in addition to the amplified noise from the source, the amplifier adds additional noise to its output denoted &lt;math&gt;N_a&lt;/math&gt;. Therefore, the SNR at the amplifier's output is lower than at its input.]]
+The noise factor may be expressed as a function of the additional output referred noise power &lt;math&gt;N_a&lt;/math&gt; and the power gain &lt;math&gt;G&lt;/math&gt; of an amplifier.
+{{Equation box 1
+|indent =
+|title=
+|equation = &lt;math&gt;F = 1 + \frac{N_a}{N_i G}&lt;/math&gt;
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+
+===Derivation===
+From the definition of noise factor&lt;ref name=&quot;:0&quot; /&gt;
+
+:&lt;math&gt;F = \frac{\mathrm{SNR}_\text{i}}{\mathrm{SNR}_\text{o}}=\frac{\frac{S_i}{N_i}}{\frac{S_o}{N_o}},&lt;/math&gt;
+
+and assuming a system which has a noisy single stage amplifier. The [[Signal-to-noise ratio|signal to noise ratio]] of this amplifier would include its own output referred noise &lt;math&gt;N_a&lt;/math&gt;, the amplified signal &lt;math&gt;S_iG&lt;/math&gt; and the amplified input noise &lt;math&gt;N_iG&lt;/math&gt;,
+
+:&lt;math&gt;\frac{S_o}{N_o}=\frac{S_iG}{N_a+N_iG}&lt;/math&gt;
+
+Substituting the output [[Signal-to-noise ratio|SNR]] to the noise factor definition,&lt;ref&gt;Aspen Core. [https://m.eet.com/media/1163845/4065-download_a_word_document.doc Derivation of noise figure equations (DOCX)], pp. 3–4&lt;/ref&gt;
+
+:&lt;math&gt;F = \frac{\frac{S_i}{N_i}}{\frac{S_iG}{N_a+N_iG}}=\frac{N_a+N_iG}{N_iG} = 1 + \frac{N_a}{N_iG}&lt;/math&gt;
+
+== See also ==
+
+* [[Noise]]
+* [[Noise (electronic)]]
+* [[Noise figure meter]]
+* [[Noise (electronics)|Noise level]] 
+* [[Thermal noise]]
+* [[Signal-to-noise ratio]]
+* [[Y-factor]]
+
+==References==
+{{Reflist}}
+
+*{{Citation |last=Agilent |title=Fundamentals of RF and Microwave Noise Figure Measurements |date=August 5, 2010 |url=http://literature.cdn.keysight.com/litweb/pdf/5952-8255E.pdf |series=Application Note |id=57-1 }}
+
+==External links==
+* [http://www.emtalk.com/tools/noise-figure-calculator.php Noise Figure Calculator] 2- to 30-Stage Cascade
+* [https://web.archive.org/web/20120316061413/http://testrf.com/2011/noise-figure-uncertainties-y-factor-method/ Noise Figure and Y Factor Method Basics and Tutorial]
+* [https://toyproblem.github.io/phone-noise-figure/ Mobile phone noise figure]
+
+{{Noise}}
+
+{{FS1037C MS188}}
+
+[[Category:Noise (electronics)]]
+[[Category:Radar signal processing]]
+[[Category:Acoustics]]
+[[Category:Sound]]</text>
+      <sha1>3ni8ur53rx4ei6uxz9o3v1pa8pkplnk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Noise level</title>
+    <ns>0</ns>
+    <id>41418</id>
+    <revision>
+      <id>985116258</id>
+      <parentid>985112546</parentid>
+      <timestamp>2020-10-24T01:44:11Z</timestamp>
+      <contributor>
+        <username>Peter Horn</username>
+        <id>897817</id>
+      </contributor>
+      <comment>[[environmental noise]] → [[Environmental noise]] Capital</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="191" xml:space="preserve">The '''noise level''' is the level of [[Noise (disambiguation)|noise]]. Specifically, it may refer to:
+* [[Noise (electronics)]]
+* [[Ambient noise level]]
+* [[Environmental noise]]
+{{disamb}}</text>
+      <sha1>1bb6138e9e6yso7mpsilxv1hz6sdl0h</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Noise power</title>
+    <ns>0</ns>
+    <id>41419</id>
+    <revision>
+      <id>757719575</id>
+      <parentid>736379688</parentid>
+      <timestamp>2017-01-01T09:52:47Z</timestamp>
+      <contributor>
+        <username>Marcocapelle</username>
+        <id>14965160</id>
+      </contributor>
+      <comment>removed [[Category:Noise]]; added [[Category:Noise (electronics)]] using [[WP:HC|HotCat]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="843" xml:space="preserve">In [[telecommunication]], the term '''noise power''' has the following meanings: 
+
+# The measured total [[Noise (signal processing)|noise]] in a given [[Bandwidth (signal processing)|bandwidth]] at the input or output of a device when the signal is not present; the integral of [[noise spectral density]] over the bandwidth
+# The [[Power (physics)|power]] generated by a random electromagnetic process.  
+# Interfering and unwanted power in an electrical device or [[system]]. 
+# In the [[acceptance test]]ing of [[radio]] transmitters, the [[mean power]] supplied to the [[antenna (electronics)|antenna]] [[transmission line]] by a radio transmitter when loaded with [[noise]] having a Gaussian amplitude-vs.-[[frequency]] distribution.
+
+==References==
+{{FS1037C MS188}}
+
+[[Category:Telecommunication theory]]
+[[Category:Noise (electronics)]]</text>
+      <sha1>7y3qn5m4mi3eicfmmqhz6x582qjoj5p</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Noise temperature</title>
+    <ns>0</ns>
+    <id>41420</id>
+    <revision>
+      <id>984207527</id>
+      <parentid>982201322</parentid>
+      <timestamp>2020-10-18T20:43:58Z</timestamp>
+      <contributor>
+        <username>Interferometrist</username>
+        <id>6270086</id>
+      </contributor>
+      <comment>Undid revision 982201322 by [[Special:Contributions/137.205.1.181|137.205.1.181]] ([[User talk:137.205.1.181|talk]]) Was correct to call it noise FIGURE</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="11349" xml:space="preserve">{{More citations needed|date=November 2017}}
+
+In electronics, '''noise temperature''' is one way of expressing the level of available noise power introduced by a component or source. The [[power spectral density]] of the noise is expressed in terms of the temperature (in [[kelvins]]) that would produce that level of [[Johnson–Nyquist noise]], thus:
+
+:&lt;math&gt;\frac{P_N}{B} = k_B T   &lt;/math&gt;
+where:
+
+*&lt;math&gt; P_N&lt;/math&gt; is the noise power (in W, watts)
+*&lt;math&gt; B&lt;/math&gt; is the total [[Bandwidth (signal processing)|bandwidth]] (Hz, hertz) over which that noise power is measured
+*&lt;math&gt; k_B&lt;/math&gt; is the [[Boltzmann constant]] (1.381×10&lt;sup&gt;−23&lt;/sup&gt; J/K, joules per kelvin)
+*&lt;math&gt; T&lt;/math&gt; is the noise temperature (K, kelvin)
+
+Thus the noise temperature is proportional to the power spectral density of the noise,  &lt;math&gt;P_N/ B&lt;/math&gt;. That is the power that would be absorbed from the component or source by a [[impedance matching|matched load]]. Noise temperature is generally a function of frequency, unlike that of an ideal resistor which is simply equal to the actual temperature of the resistor at all frequencies.
+
+==Noise voltage and current==
+A noisy component may be modelled as a noiseless component in series with a noisy voltage source producing a voltage of  ''v&lt;sub&gt;n&lt;/sub&gt;'', or as a noiseless component in parallel with a noisy current source producing a current of  ''i&lt;sub&gt;n&lt;/sub&gt;''. This equivalent voltage or current corresponds to the above power spectral density &lt;math&gt;\frac{P} {B}&lt;/math&gt;, and would have a mean squared amplitude over a bandwidth ''B'' of:
+
+:&lt;math&gt;\begin{align}
+  \frac{\bar{v}_n^2}{B} &amp;= 4 k_B R T \\
+  \\
+  \frac{\bar{i}_n^2}{B} &amp;= 4 k_B G T
+\end{align}&lt;/math&gt;
+
+where ''R'' is the resistive part of the component's [[electrical impedance|impedance]] or ''G'' is the conductance (real part) of the component's [[admittance]]. Speaking of noise temperature therefore offers a fair comparison between components having different impedances rather than specifying the noise voltage and qualifying that number by mentioning the component's resistance. It is also more accessible than speaking of the noise's power spectral density (in watts per hertz) since it is expressed as an ordinary temperature which can be compared to the noise level of an ideal resistor at room temperature (290&amp;nbsp;K).
+
+Note that one can only speak of the noise temperature of a component or source whose impedance has a substantial (and measurable) resistive component. Thus it doesn't make sense to talk about the noise temperature of a capacitor or of a voltage source. The noise temperature of an [[amplifier]] refers to the noise that would be added at the amplifier's ''input'' (relative to the input impedance of the amplifier) in order to account for the added noise observed following amplification.
+
+==Application to communication systems==
+A communications system is typically made up of a [[transmitter]], a [[communication channel]], and a [[Receiver (radio)|receiver]]. The communications channel may consist of a combination of different physical media, resulting in an electrical signal presented to the receiver. Whatever physical media a channel consists of, the transmitted signal will be attenuated and corrupted with [[Additive white Gaussian noise|additive noise]].&lt;ref&gt;Proakis, John G., and Masoud Salehi. ''Fundamentals of Communication Systems''.  Upper Saddle River, New Jersey:  Prentice Hall, 2005.  {{ISBN|0-13-147135-X}}.&lt;/ref&gt;
+
+The additive noise in a receiving system can be of thermal origin ([[Johnson–Nyquist noise|thermal noise]]) or can be from other noise-generating processes. Most noise processes will have a [[white noise|white]] spectrum, at least over the bandwidth of interest, identical to that of thermal noise. Since they are indistinguishable, the contributions of all noise sources can be lumped together and regarded as a level of thermal noise. The noise power spectral density generated by all these sources (&lt;math&gt; P / B&lt;/math&gt;) can be described by assigning to the noise a temperature &lt;math&gt;T&lt;/math&gt; as defined above:&lt;ref&gt;Skolnik, Merrill I., Radar Handbook (2nd Edition).  McGraw-Hill, 1990.  {{ISBN|978-0-07-057913-2}}&lt;/ref&gt;
+
+:&lt;math&gt;T = \frac{P}{B} \cdot \frac{1}{k_B}&lt;/math&gt;
+
+In a wireless communications receiver, the  equivalent input noise temperature &lt;math&gt;T_\text{eq}&lt;/math&gt; would equal the sum of two noise temperatures:
+
+:&lt;math&gt;T_\text{eq} = T_\text{ant} + T_\text{sys}&lt;/math&gt;
+
+The [[antenna noise temperature]] &lt;math&gt;T_\text{ant}&lt;/math&gt; gives the noise power seen at the output of the antenna.&lt;ref&gt;The physical temperature of the antenna generally has little or no effect on &lt;math&gt;T_\text{ant}&lt;/math&gt;&lt;/ref&gt; The noise temperature of the receiver circuitry &lt;math&gt;T_\text{sys}&lt;/math&gt; represents noise generated by noisy components inside the receiver.
+
+Note that &lt;math&gt; T_\text{eq}&lt;/math&gt; refers not to the noise at the output of the receiver after amplification, but the [[equivalent input|equivalent ''input'']] noise power. In other words, the output of the receiver reflects that of a noiseless amplifier whose input had a noise level not of &lt;math&gt;T_\text{ant}&lt;/math&gt; but of &lt;math&gt;T_\text{eq}&lt;/math&gt;. Thus the figure of merit of a communications system is not the noise level at the speaker of a radio, for instance, since that depends on the setting of the receiver's gain. Rather we ask how much noise the receiver ''added'' to the original noise level before its gain was applied. That additional noise level is &lt;math&gt;B k_B T_\text{sys}&lt;/math&gt;. If a signal is present, then the decrease in signal to noise ratio incurred using the receiver system with a noise temperature of &lt;math&gt;T_\text{sys}&lt;/math&gt; is proportional to &lt;math&gt;1/T_\text{ant} - 1/(T_\text{ant} + T_\text{sys})&lt;/math&gt;.
+
+==Noise factor and noise figure==
+{{main|Noise figure}}
+One use of noise temperature is in the definition of a system's [[Noise figure|noise factor]] or [[noise figure]]. The noise factor specifies the increase in noise power (referred to the input of an amplifier) due to a component or system when its input noise temperature is &lt;math&gt; T_{0}&lt;/math&gt;.
+
+:&lt;math&gt;F = \frac{T_0 + T_\text{sys}}{T_0}&lt;/math&gt;
+
+&lt;math&gt;T_0&lt;/math&gt; is customarily taken to be room temperature, 290&amp;nbsp;K.
+
+The noise factor (a linear term) is more often expressed as the ''noise figure'' (in [[decibels]]) using the conversion:
+:&lt;math&gt;NF = 10 \log_{10} (F)&lt;/math&gt;
+
+The noise figure can also be seen as the decrease in [[signal-to-noise ratio]] (SNR) caused by passing a signal through a system if the original signal had a noise temperature of 290&amp;nbsp;K. This is a common way of expressing the noise contributed by a radio frequency amplifier regardless of the amplifier's gain. For instance, assume an amplifier has a noise temperature 870&amp;nbsp;K and thus a noise figure of 6&amp;nbsp;dB. If that amplifier is used to amplify a source having a noise temperature of about room temperature (290&amp;nbsp;K), as many sources do, then the insertion of that amplifier would reduce the SNR of a signal by 6&amp;nbsp;dB. This simple relationship is frequently applicable where the source's noise is of thermal origin since a passive transducer will often have a noise temperature similar to 290&amp;nbsp;K.
+
+However, in many cases the input source's noise temperature is much higher, such as an antenna at lower frequencies where atmospheric noise dominates. Then there will be little degradation of the SNR. On the other hand, a good satellite dish looking through the atmosphere into space (so that it sees a much lower noise temperature) would have the SNR of a signal degraded by ''more'' than 6&amp;nbsp;dB. In those cases a reference to the amplifier's noise temperature itself, rather than the noise figure defined according to room temperature, is more appropriate.
+
+== Noise temperature of cascaded devices ==
+{{Main|Friis formulas for noise}}
+The noise temperature of an amplifier is commonly measured using the [[Y-factor]] method. If there are multiple amplifiers in cascade, the noise temperature of the cascade can be calculated using the [[Friis formulas for noise|Friis equation]]:&lt;ref name=&quot;mcclaning&quot;&gt;McClaning, Kevin, and Tom Vito. ''Radio Receiver Design.''  Atlanta, GA:  Noble Publishing Corporation, 2000.  {{ISBN|1-884932-07-X}}.&lt;/ref&gt;
+
+:&lt;math&gt;T_\text{eq} = T_1 + \frac{T_2}{G_1} + \frac{T_3}{G_1 G_2} + \cdots&lt;/math&gt;
+
+where
+*&lt;math&gt; T_\text{eq}&lt;/math&gt; = resulting noise temperature referred to the input
+*&lt;math&gt; T_1&lt;/math&gt; = noise temperature of the first component in the cascade
+*&lt;math&gt; T_2&lt;/math&gt; = noise temperature of the second component in the cascade
+*&lt;math&gt; T_3&lt;/math&gt; = noise temperature of the third component in the cascade
+*&lt;math&gt; G_1&lt;/math&gt; = power gain of the first component in the cascade
+*&lt;math&gt; G_2&lt;/math&gt; = power gain of the second component in the cascade
+
+Therefore, the amplifier chain can be modelled as a [[black box]] having a gain of &lt;math&gt;G_1 \cdot G_2 \cdot G_3 \cdots&lt;/math&gt; and a noise figure given by &lt;math&gt;NF = 10 \log_{10} (1 + T_\text{eq}/290)&lt;/math&gt;. In the usual case where the gains of the amplifier's stages are much greater than one, then it can be seen that the noise temperatures of the earlier stages have a much greater influence on the resulting noise temperature than those later in the chain. One can appreciate that the noise introduced by the first stage, for instance, is amplified by all of the stages whereas the noise introduced by later stages undergoes lesser amplification. Another way of looking at it is that the signal applied to a later stage already has a high noise level, due to amplification of noise by the previous stages, so that the noise contribution of that stage to that already amplified signal is of less significance.

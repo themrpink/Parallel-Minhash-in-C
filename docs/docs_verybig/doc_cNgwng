@@ -1,0 +1,362 @@
+==See also==
+*[[Right to know]]
+*[[Rule of law]]
+*[[Nonviolence]]
+*[[Radicalism (historical)]]
+*[[Italian Radicals (disambiguation)]]
+*[[Liberalism and radicalism in Italy]]
+
+== References ==
+{{Reflist|30em}}
+
+== External links ==
+*{{Official website|https://www.nrptt.org}} (English-language version)
+*{{Official website|http://www.radicalparty.org/it}} (Italian-language version)
+
+[[Category:Radical parties]]
+[[Category:Radical parties in Italy]]
+[[Category:Transnational political parties]]
+[[Category:Nonviolence]]
+[[Category:Organizations with general consultative status to the United Nations Economic and Social Council]]
+[[Category:Cosmopolitanism]]</text>
+      <sha1>hidd384ensy739xj3hk9ghubp2am649</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Phrase structure rules</title>
+    <ns>0</ns>
+    <id>45068</id>
+    <revision>
+      <id>980966294</id>
+      <parentid>980966216</parentid>
+      <timestamp>2020-09-29T14:24:22Z</timestamp>
+      <contributor>
+        <username>User3749</username>
+        <id>39053499</id>
+      </contributor>
+      <comment>Reverting edit(s) by [[Special:Contributions/2600:1700:88E1:9B0:159B:5C31:B5C6:EA3C|2600:1700:88E1:9B0:159B:5C31:B5C6:EA3C]] ([[User_talk:2600:1700:88E1:9B0:159B:5C31:B5C6:EA3C|talk]]) to rev. 923229181 by 98.186.121.210: [[WP:CRV|Unexplained content removal]] [[w:en:WP:RW|(RW 15)]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10399" xml:space="preserve">'''Phrase structure rules''' are a type of [[rewrite rule]] used to describe a given language's [[syntax]] and are closely associated with the early stages of [[transformational grammar]], proposed by [[Noam Chomsky]] in 1957.&lt;ref&gt;For general discussions of phrase structure rules, see for instance Borsley (1991:34ff.), Brinton (2000:165), Falk (2001:46ff.).&lt;/ref&gt; They are used to break down a natural [[language]] sentence into its constituent parts, also known as [[syntactic category|syntactic categories]], including both lexical categories ([[part of speech|parts of speech]]) and [[phrase|phrasal]] categories. A grammar that uses phrase structure rules is a type of [[phrase structure grammar]]&lt;!-- [needs clarification or removal:] - except in [[computer science]], where it is known as just a [[Formal grammar|grammar]], usually [[context-free grammar|context-free]]--&gt;. Phrase structure rules as they are commonly employed operate according to the [[constituent (linguistics)|constituency]] relation, and a grammar that employs phrase structure rules is therefore a [[phrase structure grammar|''constituency grammar'']]; as such, it stands in contrast to [[dependency grammar|''dependency grammars'']], which are based on the [[government (linguistics)|dependency]] relation.&lt;ref&gt;Dependency grammars are associated above all with the work of Lucien Tesnière (1959).&lt;/ref&gt;
+
+==Definition and examples==
+Phrase structure rules are usually of the following form:
+
+:&lt;math&gt;A \to B \quad C&lt;/math&gt;
+
+meaning that the [[constituent (linguistics)|constituent]] &lt;math&gt;A&lt;/math&gt; is separated into the two subconstituents &lt;math&gt;B&lt;/math&gt; and &lt;math&gt;C&lt;/math&gt;. Some examples for English are as follows:
+
+:&lt;chem&gt;S -&gt; NP \quad VP&lt;/chem&gt;
+:&lt;chem&gt;NP -&gt; (Det) \quad N1&lt;/chem&gt;
+:&lt;chem&gt;N1 -&gt; (AP) \quad N1 \quad (PP)&lt;/chem&gt;
+
+The first rule reads: A S ([[Sentence (linguistics)|sentence]]) consists of a NP ([[noun phrase]]) followed by a VP ([[verb phrase]]). The second rule reads: A noun phrase consists of an optional Det ([[determiner]]) followed by a N (noun). The third rule means that a N (noun) can be preceded by an optional AP ([[adjective phrase]]) and followed by an optional PP ([[prepositional phrase]]). The round brackets indicate optional constituents.
+
+Beginning with the sentence symbol S, and applying the phrase structure rules successively, finally applying replacement rules to substitute actual words for the abstract symbols, it is possible to generate many proper sentences of English (or whichever language the rules are specified for). If the rules are correct, then any sentence produced in this way ought to be grammatically (syntactically) [[grammaticality|correct]]. It is also to be expected that the rules will generate syntactically correct but [[semantics|semantically]] nonsensical sentences, such as the following well-known example:
+
+::[[Colorless green ideas sleep furiously]]
+
+This sentence was constructed by [[Noam Chomsky]] as an illustration that phrase structure rules are capable of generating syntactically correct but semantically incorrect sentences. Phrase structure rules break sentences down into their constituent parts. These constituents are often represented as [[parse tree|tree structures]] ([[dendrogram]]s). The tree for Chomsky's sentence can be rendered as follows:
+
+:[[image:cgisf-tgg.svg|300px|Colorless green ideas sleep furiously.]]
+
+A constituent is any word or combination of words that is dominated by a single node. Thus each individual word is a constituent. Further, the subject NP ''Colorless green ideas'', the minor NP ''green ideas'', and the VP ''sleep furiously'' are constituents. Phrase structure rules and the tree structures that are associated with them are a form of [[immediate constituent analysis]].
+
+In [[transformational grammar]], systems of phrase structure rules are supplemented by transformation rules, which act on an existing syntactic structure to produce a new one (performing such operations as [[negation (linguistics)|negation]], [[passivization]], etc.). These transformations are not strictly required for generation, as the sentences they produce could be generated by a suitably expanded system of phrase structure rules alone, but transformations provide greater economy and enable significant relations between sentences to be reflected in the grammar.
+
+==Top down==
+An important aspect of phrase structure rules is that they view sentence structure from the top down. The category on the left of the arrow is a greater constituent and the immediate constituents to the right of the arrow are lesser constituents. Constituents are successively broken down into their parts as one moves down a list of phrase structure rules for a given sentence. This top-down view of sentence structure stands in contrast to much work done in modern theoretical syntax. In [[Minimalist program|Minimalism]]&lt;ref&gt;See for instance Chomsky (1995).&lt;/ref&gt; for instance, sentence structure is generated from the bottom up. The operation [[Merge (linguistics)|Merge]] merges smaller constituents to create greater constituents until the greatest constituent (i.e. the sentence) is reached. In this regard, theoretical syntax abandoned phrase structure rules long ago, although their importance for [[computational linguistics]] seems to remain intact.
+
+==Alternative approaches==
+===Constituency vs. dependency===
+Phrase structure rules as they are commonly employed result in a view of sentence structure that is ''constituency-based''. Thus, grammars that employ phrase structure rules are ''constituency grammars'' (= [[phrase structure grammar]]s), as opposed to ''[[dependency grammar]]s'',&lt;ref&gt;The most comprehensive source on dependency grammar is Ágel et al. (2003/6).&lt;/ref&gt; which view sentence structure as ''dependency-based''. What this means is that for phrase structure rules to be applicable at all, one has to pursue a constituency-based understanding of sentence structure. The constituency relation is a one-to-one-or-more correspondence. For every word in a sentence, there is at least one node in the syntactic structure that corresponds to that word. The dependency relation, in contrast, is a one-to-one relation; for every word in the sentence, there is exactly one node in the syntactic structure that corresponds to that word. The distinction is illustrated with the following trees:
+
+:[[File:Phrase structure rules.jpg|Phrase structure rules: Constituency vs. dependency]]
+
+The constituency tree on the left could be generated by phrase structure rules. The sentence S is broken down into smaller and smaller constituent parts. The dependency tree on the right could not, in contrast, be generated by phrase structure rules (at least not as they are commonly interpreted).
+
+===Representational grammars===
+A number of representational phrase structure theories of grammar never acknowledged phrase structure rules, but have pursued instead an understanding of sentence structure in terms the notion of [[Schema (psychology)|schema]]. Here phrase structures are not derived from rules that combine words, but from the specification or instantiation of syntactic schemata or configurations, often expressing some kind of semantic content independently of the specific words that appear in them. This approach is essentially equivalent to a system of phrase structure rules combined with a non[[compositionality|compositional]] [[semantics|semantic]] theory, since grammatical formalisms based on rewriting rules are generally equivalent in power to those based on substitution into schemata.
+
+So in this type of approach, instead of being derived from the application of a number of phrase structure rules, the sentence ''Colorless green ideas sleep furiously'' would be generated by filling the words into the slots of a schema having the following structure:
+
+::[NP[ADJ N] VP[V] AP&lt;nowiki&gt;[ADV]]&lt;/nowiki&gt;
+
+And which would express the following conceptual content:
+
+::X DOES Y IN THE MANNER OF Z
+
+Though they are non-compositional, such models are monotonic. This approach is highly developed within [[Construction grammar]]&lt;ref&gt;Concerning Construction Grammar, see Goldberg (2006).&lt;/ref&gt; and has had some influence in [[Head-Driven Phrase Structure Grammar]]&lt;ref&gt;Concerning Head-Driven Phrase Structure Grammar, see Pollard and Sag (1994).&lt;/ref&gt; and [[Lexical Functional Grammar]],&lt;ref&gt;Concerning Lexical Functional Grammar, see Bresnan (2001).&lt;/ref&gt; the latter two clearly qualifying as phrase structure grammars.
+
+==See also==
+{{div col|colwidth=22em}}
+*[[Constituent (linguistics)|Constituent]]
+*[[Dependency grammar]]
+*[[Immediate constituent analysis]]
+*[[Phrase]]
+*[[Phrase structure grammar]]
+*[[Syntactic category]]
+{{div col end}}
+
+==Notes==
+{{Reflist}}
+
+==References==
+{{refbegin|2}}
+*Ágel, V., Ludwig Eichinger, Hans-Werner Eroms, Peter Hellwig, Hans Heringer, and Hennig Lobin (eds.) 2003/6. [https://books.google.com/books?id=GWhp8IJ20X4C&amp;printsec=frontcover#v=onepage&amp;q=%22Phrase%20structure%20rules%22&amp;f=false Dependency and Valency: An International Handbook of Contemporary Research]. Berlin: Walter de Gruyter.
+*Borsley, R. 1991. Syntactic theory: A unified approach. London: Edward Arnold.
+*Bresnan, Joan 2001. Lexical Functional Syntax.
+*Brinton, L. 2000. [https://books.google.com/books?id=9MO7Mlg2RnMC&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false The structure of modern English]. Amsterdam: John Benjamins Publishing Company.
+*Carnie, A. 2013. [https://books.google.com/books?id=or-Y3c9dY4UC&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false Syntax: A Generative Introduction], 3rd edition. Oxford: Blackwell Publishing.
+*Chomsky, N. 1957. Syntactic Structures. The Hague/Paris: Mouton.
+*Chomsky, N. 1995. The Minimalist Program. Cambridge, Mass.: The MIT Press.
+*Falk, Y. 2001. Lexical-Functional Grammar: An introduction to parallel constraint-based syntax. Stanford, CA: CSLI Publications.
+*Goldberg, A. 2006. [https://books.google.com/books?id=n1rsCecF-_4C&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false Constructions at Work: The Nature of Generalization in Language]. Oxford University Press.
+*Pollard, C. and I. Sag 1994. [https://books.google.com/books?id=Ftvg8Vo3QHwC&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false Head-driven phrase structure grammar]. Chicago: University of Chicago Press.
+*Tesnière, L. 1959. Éleménts de syntaxe structurale. Paris: Klincksieck.
+
+[[Category:Grammar frameworks]]</text>
+      <sha1>1qrtrtq8oodcbfhyowalnrw15az7zps</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Semantic property</title>
+    <ns>0</ns>
+    <id>45070</id>
+    <revision>
+      <id>926448322</id>
+      <parentid>894181675</parentid>
+      <timestamp>2019-11-16T13:17:45Z</timestamp>
+      <contributor>
+        <username>InternetArchiveBot</username>
+        <id>27015025</id>
+      </contributor>
+      <comment>Bluelink 1 book for [[WP:V|verifiability]].) #IABot (v2.0) ([[User:GreenC bot|GreenC bot]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4017" xml:space="preserve">'''Semantic properties''' or '''meaning properties''' are those aspects of a linguistic unit, such as a [[morpheme]], [[word]], or [[Sentence (linguistics)|sentence]], that contribute to the meaning of that unit. Basic semantic properties include being ''meaningful'' or ''meaningless'' – for example, whether a given word is part of a language's lexicon with a generally understood meaning; ''[[polysemy]]'', having multiple, typically related, meanings; ''[[ambiguity]]'', having meanings which aren't necessarily related; and ''anomaly'', where the elements of a unit are semantically incompatible with each other, although possibly grammatically sound. Beyond the expression itself, there are higher-level '''semantic relations''' that describe the relationship between units: these include [[synonym]]y, [[antonym]]y, and [[hyponymy]].&lt;ref&gt;Akmajian, Adrian; Richard A. Demers, Ann K. Farmer, Robert M. Harnish (2001). ''Linguistics: An Introduction to Language and Communication''. MIT Press. {{ISBN|0-262-51123-1}}. pp. 237–241&lt;/ref&gt;&lt;ref&gt;Small, Steven Lawrence; Cottrell, Garrison Weeks &amp; Tanenhaus, Michael K. (1988). ''Lexical ambiguity resolution: perspectives from psycholinguistics, neuropsychology, and artificial intelligence''. Morgan Kaufmann. {{ISBN|0-934613-50-8}}, {{ISBN|978-0-934613-50-7}}.&lt;/ref&gt;&lt;ref&gt;Murphy, M. Lynne (2003). ''Semantic Relations and the Lexicon: Antonymy, Synonymy, and Other Paradigms.'' Cambridge University Press. {{ISBN|0-521-78067-5}}, {{ISBN|978-0-521-78067-4}}.&lt;/ref&gt;
+
+Besides basic properties of semantics, semantic property is also sometimes used to describe the semantic components of a word, such as ''man'' assuming that the referent is ''human'', ''male'', and ''adult'', or ''female'' being a common component of ''girl'', ''woman'', and ''actress''. In this sense, semantic properties are used to define the [[semantic field]] of a word or set of words.&lt;ref&gt;Brinton, Laurel J. (2000). ''The structure of modern English: a linguistic introduction''. Illustrated edition. John Benjamins Publishing Company. {{ISBN|9027225672}}, 9789027225672. p.112&lt;/ref&gt;&lt;ref&gt;Leech, Geoffrey (1974). ''Semantics''. Pelican Books. {{ISBN|0-14-021694-4}}. pp. 96-102&lt;/ref&gt;
+
+==Semantic Properties of Nouns==
+
+Semantic properties of nouns/entities can be divided into eight classes: [[specificity (linguistics)|specificity]], [[boundedness (linguistics)|boundedness]], [[animacy]], [[grammatical gender|gender]], [[kinship terminology|kinship]], [[honorific|social status]], physical properties, and function.&lt;ref&gt;{{cite book|last1=Frawley|first1=William|title=Linguistic Semantics|date=1992|publisher=Routledge|location=New York|page=138}}&lt;/ref&gt;
+
+'''Physical properties''' refer to how an entity exists in space. It can include shape, size, and material, for example.&lt;ref&gt;{{cite book|last1=Frawley|first1=William|title=Linguistic Semantics|date=1992|publisher=Routledge|location=New York|page=121}}&lt;/ref&gt;
+
+The '''function''' class of semantic properties refers to noun class markers that indicate the purpose of an entity or how humans utilize an entity. 
+For example, in the Dyirbal language, the morpheme ''balam'' marks each entity in its noun class with the semantic property of edibility,&lt;ref&gt;{{cite book|last1=Lakoff|first1=George|title=Women, Fire, and Dangerous Things|url=https://archive.org/details/womenfiredangero00lako|url-access=registration|date=1987|publisher=University of Chicago|location=Chicago|page=[https://archive.org/details/womenfiredangero00lako/page/93 93]}}&lt;/ref&gt; and Burmese encodes the semantic property for the ability to cut or pierce. Encoding the functional property for transportation, housing, and speech are also attested in world languages.&lt;ref&gt;{{cite book|last1=Frawley|first1=William|title=Linguistic Semantics|date=1992|publisher=Routledge|location=New York|pages=129–130}}&lt;/ref&gt;
+
+==Notes==
+{{Reflist}}
+
+==See also==
+* [[Semantic class]]
+* [[Semantic feature]]
+
+{{DEFAULTSORT:Semantic Property}}
+[[Category:Semantics]]
+
+
+{{semantics-stub}}</text>
+      <sha1>pb966uhxtfhokvk1lyzxdfkw952q8t7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Semantic class</title>
+    <ns>0</ns>
+    <id>45071</id>
+    <revision>
+      <id>989405124</id>
+      <parentid>927329991</parentid>
+      <timestamp>2020-11-18T20:09:17Z</timestamp>
+      <contributor>
+        <username>Jarble</username>
+        <id>7226930</id>
+      </contributor>
+      <minor />
+      <comment>linking</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1281" xml:space="preserve">{{More citations needed|date=March 2007}}
+A '''semantic class''' contains words that share a [[semantic feature]].  For example within nouns there are two sub classes, concrete nouns and [[abstract noun]]s. The concrete nouns include people, plants, animals, materials and objects while the abstract nouns refer to concepts such as qualities, actions, and processes. According to the nature of the noun, they are categorized into different semantic classes. Semantic classes may intersect. The intersection of ''female'' and ''young'' can be ''girl''.
+  
+==See also==
+* [[Semantic property]]
+* [[Categorization]]
+* [[Semantic field]]
+
+==References==
+ {{Reflist}}
+* {{cite web|url=http://www.canoo.net/services/OnlineGrammar/Wort/Nomen/Bedeutung/index.html?lang=en|title=Semantic classes|work=canoonet|accessdate=July 20, 2016|archive-url=https://web.archive.org/web/20160809002402/http://www.canoo.net/services/OnlineGrammar/Wort/Nomen/Bedeutung/index.html?lang=en|archive-date=August 9, 2016|url-status=dead}}
+
+{{DEFAULTSORT:Semantic Class}}
+[[Category:Semantics]]
+
+
+{{semantics-stub}}
+
+[[es:Campo semántico]]
+[[fr:Classe sémantique]]
+[[kk:Семантикалық өріс]]
+[[ru:Семантическое поле]]
+[[ta:சொற்பொருள் வகுப்பு]]</text>
+      <sha1>iq3x9t0chrw6w5voxypej0prkx5if8u</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Semantic feature</title>
+    <ns>0</ns>
+    <id>45072</id>
+    <revision>
+      <id>978524087</id>
+      <parentid>965292492</parentid>
+      <timestamp>2020-09-15T12:23:45Z</timestamp>
+      <contributor>
+        <ip>103.70.198.23</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6323" xml:space="preserve">'''Semantic features''' represent the basic conceptual components of meaning for any lexical item.&lt;ref name=&quot;language_intro&quot;/&gt;
+An individual semantic feature constitutes one component of a word's [[intention]], which is the inherent sense or concept evoked.{{sfnp|O'Grady|Archibald|Aronoff|Rees-Miller|2010|p=619}}
+Linguistic meaning of a word is proposed to arise from contrasts and significant differences with other words.
+Semantic features enable linguistics to explain how words that share certain features may be members of the same [[semantic domain]].
+Correspondingly, the contrast in meanings of words is explained by diverging semantic features.
+For example, ''father'' and ''son'' share the common components of &quot;human&quot;, &quot;kinship&quot;, &quot;male&quot; and are thus part of a semantic domain of male family relations.
+They differ in terms of &quot;generation&quot; and &quot;adulthood&quot;, which is what gives each its individual meaning.&lt;ref name=&quot;nida&quot;/&gt;
+
+== Theoretical context ==
+The analysis of semantic features is utilized in the field of linguistic semantics, more specifically the subfields of [[lexical semantics]],{{sfnp|Palmer|1981|pp=67–114}} and [[lexicology]].{{sfn|Bussmann|1996}}
+One aim of these subfields is to explain the meaning of a word in terms of their relationships with other words.{{sfnp|Palmer|1981|p=83}}
+In order to accomplish this aim, one approach is to analyze the internal semantic structure of a word as composed of a number of distinct and minimal components of meaning.{{sfnp|Palmer|1981|p=108}}
+This approach is called [[componential analysis]], also known as semantic decomposition.{{sfnp|O'Grady|Archibald|Aronoff|Rees-Miller|2010|p=210}}
+Semantic decomposition allows any given lexical item to be defined based on minimal elements of meaning, which are called semantic features.
+The term ''semantic feature'' is usually used interchangeably with the term ''semantic component''.{{sfnp|Lipka|1990|p=98}}
+Additionally, semantic features/semantic components are also often referred to as [[Semantic property|semantic properties]].{{sfnp|Palmer|1981|pp=191, 198, 200}}
+
+The theory of componential analysis and semantic features is not the only approach to analyzing the semantic structure of words.
+An alternative direction of research that contrasts with componential analysis is [[Prototype theory|prototype semantics]].{{sfnp|Lipka|1990|p=98}}
+
+== Notation ==
+The '''semantic features''' of a word can be notated using a binary feature notation common to the framework of [[componential analysis]].{{sfnp|Bussmann|1996|p=219}}
+A [[semantic property]] is specified in square brackets and a plus or minus sign indicates the existence or non-existence of that property.{{sfnp|Lipka|1990|p=108}}
+
+* ''cat'' is
+** [+animate],
+** [+domesticated],
+** [+feline]
+* ''puma'' is
+** [+animate],
+** [&amp;minus;domesticated],
+** [+feline]
+* ''dog'' is
+** [+animate],
+** [+domesticated],
+** [&amp;minus;feline]
+* ''wolf'' is
+** [+animate],
+** [&amp;minus;domesticated]
+** [&amp;minus;feline]
+
+Intersecting [[semantic class]]es share the same features.
+Some features need not be specifically mentioned as their presence or absence is obvious from another feature.
+This is a [[Redundancy (linguistics)|redundancy]] rule.
+
+== References ==
+&lt;references&gt;
+&lt;ref name=&quot;language_intro&quot;&gt;{{Cite book
+| title             = An Introduction to Language
+| last1             = Fromkin
+| first1            = Victoria
+| last2             = Rodman
+| first2            = Robert
+| last3             = Hyams
+| first3            = Nina
+| edition           = 10th
+| year              = 2014
+| location          = Boston, MA
+| publisher         = Wadsworth, Cengage Learning
+| pages             = 578
+| isbn              = 978-1-133-31068-6
+| chapter           = Semantics: The Meanings of Language
+}}&lt;/ref&gt;
+&lt;ref name=&quot;nida&quot;&gt;{{cite book
+| title             = Componential analysis of meaning : an introduction to semantic structures
+| last1             = Nida
+| first1            = Eugene A.
+| edition           = 2nd
+| year              = 1979
+| location          = The Hague
+| publisher         = Mouton
+| isbn              = 90-279-7927-8
+| pages             = 32–33
+}}&lt;/ref&gt;
+&lt;/references&gt;
+
+== Bibliography ==
+{{refbegin}}
+* {{cite book
+| title             = Routledge dictionary of language and linguistics
+| last1             = Bussmann
+| first1            = Hadumod
+| translator-last1  = Trauth
+| translator-first1 = Gregory
+| translator-last2  = Kazzazi
+| translator-first2 = Kerstin
+| editor1-last      = Trauth
+| editor1-first     = Gregory
+| editor2-last      = Kazzazi
+| editor2-first     = Kerstin
+| edition           = 2nd completely revised
+| year              = 1996
+| location          = London
+| publisher         = Routledge
+| isbn              = 0-415-02225-8
+| ref               = harv
+}}
+* {{cite book
+| title             = An outline of English lexicology&amp;nbsp;: lexical structure, word semantics, and word-formation
+| last1             = Lipka
+| first1            = Leonhard
+| edition           = 2nd
+| year              = 1990
+| location          = Tübingen
+| publisher         = Niemeyer
+| isbn              = 3-484-41003-5
+| series            = Forschung&amp;nbsp;&amp; Studium Anglistik
+| issn              = 0178-7861
+| ref               = harv
+}}
+* {{cite book
+| title             = Contemporary Linguistics: An Introduction
+| last1             = O'Grady
+| first1            = William
+| last2             = Archibald
+| first2            = John
+| last3             = Aronoff
+| first3            = Mark
+| last4             = Rees-Miller
+| first4            = Janie
+| edition           = 6th
+| year              = 2010
+| location          = Boston, MA
+| publisher         = Bedford/St. Martin's
+| isbn              = 978-0-312-55528-3
+| ref               = harv
+}}
+* {{cite book
+| title             = Semantics
+| url             = https://archive.org/details/semantics00palm
+| url-access        = registration
+| last1             = Palmer
+| first1            = Frank&amp;nbsp;R.
+| edition           = 2nd
+| year              = 1981
+| location          = Cambridge
+| publisher         = Cambridge Univ. Press
+| isbn              = 0-521-28376-0
+| ref               = harv
+}}
+{{refend}}
+
+[[Category:Semantics]]

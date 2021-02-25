@@ -1,0 +1,254 @@
+It can be seen that there is a dispersion of the control bits referring to a tributary that causes them to be in separate groups. Spreading out the J-bits (control bits), reduces the probability of errors occurring in them, and a wrong decision being made as to whether or not they have been used as a useful data bit. If the wrong decision is made, there is not only an error in the output data, but also a slip of one bit; that is, the loss or repetition of one bit of information.
+
+===Managing alarms in higher-level hierarchies===
+The A-bit of the FAS in 8, 34, and 140&amp;nbsp;Mbit/s frames enables the multiplexers that correspond to these hierarchies to transmit alarm indications to the far ends when a multiplexer detects an alarm condition.
+
+In addition, 140&amp;nbsp;Mbit/s multiplexers also transmit an alarm indication when faced with the loss of frame alignment of the 34-Mbit/s signals received inside the 140&amp;nbsp;Mbit/s signals, as well as in the NFAS of the 34&amp;nbsp;Mbit/s signal that has lost its alignment (bit 11 of group I changes from &quot;0&quot; to &quot;1&quot;) in the return channel.
+
+===Glossary===
+* Link – a unidirectional channel residing in one timeslot of an E1 or T1 Line, carrying 64&amp;nbsp;kbit/s (64,000&amp;nbsp;bit/s) raw digital data
+* Line – a unidirectional E1 or T1 physical connection
+* Trunk – a bidirectional E1 or T1 physical connection
+
+==Hierarchy levels==
+The [[Plesiochronous Digital Hierarchy|PDH]] based on the E0 signal rate is designed so that each higher level can [[Multiplexing|multiplex]] a set of lower level signals. Framed E1 is designed to carry 30 or 31 E0 data channels plus 1 or 2 special channels, all other levels are designed to carry 4 signals from the level below. Because of the necessity for overhead bits, and justification bits to account for rate differences between sections of the network, each subsequent level has a capacity greater than would be expected from simply multiplying the lower level signal rate (so for example E2 is 8.448&amp;nbsp;Mbit/s and not 8.192&amp;nbsp;Mbit/s as one might expect when multiplying the E1 rate by 4).
+
+Note, because bit interleaving is used, it is very difficult to demultiplex low level tributaries directly, requiring equipment to individually demultiplex every single level down to the one that is required.
+
+{{see also|Comparison of T-carrier and E-carrier systems}}
+
+==See also==
+* [[Digital Signal 0|D 0 (DS0)]]
+* [[Digital Signal 1|Digital Signal 1 (DS1, T1)]]
+* [[HDB3]] encoding scheme
+* [[List of device bandwidths]]
+* [[Multiplexing]]
+* [[Plesiochronous Digital Hierarchy]]
+* [[STM-1]]
+* [[T-carrier]]
+* [[Time-division multiplexing]]
+* [[Nonblocking minimal spanning switch]] - discussion of practical telephone switches.
+* [[Clos network]] - the mathematics of telephone switches.
+
+==References==
+{{Reflist}}
+
+==External links==
+* [https://web.archive.org/web/20111203104329/http://www.ss7-training.net/sigtran-training/main.html Signaling System No. 7 (SS7/C7): Protocol, Architecture, and Services eBook ]
+{{Use dmy dates|date=July 2020}}
+
+{{DEFAULTSORT:E-Carrier}}
+[[Category:Telecommunications standards]]
+[[Category:Multiplexing]]</text>
+      <sha1>fgdcncryjcpo00nowpgd1pv5bdh4m64</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>E1</title>
+    <ns>0</ns>
+    <id>46730</id>
+    <revision>
+      <id>989657929</id>
+      <parentid>989647927</parentid>
+      <timestamp>2020-11-20T07:43:08Z</timestamp>
+      <contributor>
+        <username>HueMan1</username>
+        <id>32206216</id>
+      </contributor>
+      <minor />
+      <comment>/* Roads */clean up</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4580" xml:space="preserve">{{wiktionary|e1}}
+'''E1''', '''E01''', '''E.I''' or '''E-1''' may refer to:
+
+{{TOC right}}
+
+== Transport ==
+
+=== Trains and locomotives ===
+* [[E1 Series Shinkansen]], a Japanese high-speed train
+* [[Bavarian E I]], a German steam engines locomotive model
+* [[EMC E1]], a diesel locomotive
+* [[LB&amp;SCR E1 class]], an 1874 British 0-6-0 steam locomotive
+* [[NCC Class E1]], a [[Steam locomotives of Ireland#Northern Counties Committee (1903–1949)|Northern Counties Committee Irish steam locomotive]]
+* [[NER Class E1]], an 1898 class of small 0-6-0T steam locomotive
+* [[PRR E1]], an American PRR 4-4-2 steam locomotive
+* [[SP&amp;S Class E-1]], a 1934 steam locomotives class
+
+=== Aircraft ===
+* [[Azcárate O-E-1|Azcárate E-1]], a Mexican sesquiplane trainer
+* [[Fokker E.I]], a German fighter aircraft
+* [[Grumman E-1 Tracer]], an American airborne early warning aircraft
+* [[Hydra Technologies Gavilán|Hydra Technologies E1 Gavilán]], a hand-launched Mexican unmanned electronic surveillance drone
+* [[Junkers E.I]], the Idflieg designation for the 1916 Junkers J1 monoplane
+* [[LVG E.I]], a 1915 German two-seat monoplane
+* [[NFW E.I]], a 1917 German monoplane fighter  
+* [[Pfalz E.I]], a Morane-Saulnier H monoplane built under licence for Germany
+* [[Siemens-Schuckert E.I]], a 1915 German single seat monoplane
+* [[Standard E-1]], a 1917 early American Army fighter aircraft
+
+=== Submarines ===
+* [[HMS E1|HMS ''E1'']], an E-class submarine of the Royal Navy
+* [[USS E-1 (SS-24)|USS ''E-1'' (SS-24)]], a 1917 E-class submarine of the United States Navy
+
+=== Roads ===
+* E01, [[Southern Expressway (Sri Lanka)|Southern Expressway]] in Sri Lanka.
+* [[European route E01]], from Northern Ireland to Spain.
+* [[E1 European long distance path]], a long-distance hiking route from Norway to Italy.
+* [[London Buses route E1]], a transport for London contracted bus route.
+* [[Tomei Expressway]] and [[Meishin Expressway]], route E1 in Japan.
+* [[North–South Expressway Northern Route]] and [[New Klang Valley Expressway]], route E1 in Malaysia.
+* [[E1 expressway (Philippines)]] ([[North Luzon Expressway]], [[Subic–Clark–Tarlac Expressway]], and [[Tarlac–Pangasinan–La Union Expressway]]), expressway route in the Philippines.
+* [[E1 expressway (Pakistan)]]
+
+== Science and mathematics ==
+* [[Exponential integral|Exponential integral, &lt;math&gt;E_1(z)= \int_1^\infty \frac{e^{-tz}}{t}\, {\rm d}t~&lt;/math&gt;]], mathematical function
+* the [[E1 series (number series)]] of preferred numbers
+
+=== Biochemistry ===
+* [[E1 (HCV)]], a viral structural protein found in hepatitis C
+* E1, a [[Elimination reaction#E1 mechanism|unimolecular elimination mechanism in organic chemistry]]
+* E1-enzymes, also known as [[Ubiquitin-activating enzyme]]s, an enzyme which catalyzes the first step in the ubiquitination reaction, which targets a protein for degradation via a proteasome]
+* [[E1 regulatory sequence]] for the insulin gene
+* [[Estrone]], a hormone
+* [[Pyruvate dehydrogenase]] (E1), the first component enzyme of pyruvate dehydrogenase complex
+* [[Acireductone synthase]], an enzyme
+* [[Haplogroup E1 (Y-DNA)]], a human Y-chromosome DNA haplogroup
+
+=== Medicine ===
+* [[E1-isoprostane]], a type of isoprostane
+* E01, the [[ICD-10 Chapter IV: Endocrine, nutritional and metabolic diseases]] code for ''Iodine-deficiency-related thyroid disorders and allied conditions''
+
+== Brands, models and companies ==
+* E1 Corp., a Korean chemical and oil company, member of the [[LS Group]]
+* [[Honda E1]], a predecessor of the ASIMO humanoid robot
+* E1, a [[Mazda E engine#E1|Mazda E type piston engine]]
+* [[Olympus E-1]], a digital single-lens reflex camera
+* [[Entertainment One]], an international media company
+* [[E1 Music]], an independent record label in the United States
+* EnterpriseOne, an [[Enterprise resource planning|ERP]] software originally by [[JD Edwards]], now sold by [[Oracle Corporation|Oracle]]
+
+== Places ==
+* [[E1 (Jerusalem)]], an area east of Jerusalem in the West Bank.
+* [[E1 postcode district]], London
+
+== Other uses==
+* E01, ECO code for the closed variation of the [[Catalan Opening]] in chess
+* [[E-1 (rank)]], the pay grade for enlisted ranks of Private, Airman Basic, and Seaman Recruit in the United States Military
+* [[E1 grade]],  a difficulty level in rock climbing
+* [[E-1 (rocket engine)]], a liquid propellant rocket engine
+* E1 carrier, an [[E-carrier]] European telecommunications standard
+* E1, an AMD CPU from the [[Bobcat (microarchitecture)]] family
+
+== See also ==
+* [[1E (disambiguation)]]
+
+{{Letter-Number Combination Disambiguation}}</text>
+      <sha1>kosflqy0m3leu7cctehhw0vkt7ayr5i</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Narses</title>
+    <ns>0</ns>
+    <id>46732</id>
+    <revision>
+      <id>990204376</id>
+      <parentid>987413779</parentid>
+      <timestamp>2020-11-23T11:26:15Z</timestamp>
+      <contributor>
+        <username>Gog the Mild</username>
+        <id>21177078</id>
+      </contributor>
+      <minor />
+      <comment>General [[WP:MOS|formatting]] by [[User:Ohconfucius/script|script]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="27700" xml:space="preserve">{{other people}}
+{{Infobox military person
+|name=Narses
+|native_name=
+{{plainlist|
+* {{lang-hy|Նարսես}}
+* {{lang-el|Ναρσής}}
+}}
+|image=Narses.jpg
+|image_size=250
+|caption=Man traditionally identified as Narses,{{citation needed|date=April 2014}} from the mosaic depicting Justinian and his entourage in the [[Basilica of San Vitale]], [[Ravenna]]
+|birth_date=478 or 480
+|death_date=566 or 573
+|allegiance=[[Byzantine Empire]]
+|branch=[[Byzantine Army]]
+|rank=General
+|battles=
+{{plainlist|
+* [[Nika riots|Nika Rebellion]]
+* [[Gothic War (535–554)|Gothic War]]
+*: [[Battle of Taginae]]
+*: [[Battle of Mons Lactarius]]
+*: [[Battle of the Volturnus (554)|Battle of the Volturnus]]
+}}
+}}
+'''Narses''' (also sometimes written '''Nerses'''; {{lang-hy|Նարսես}};{{citation needed|date=October 2018}} {{lang-el|Ναρσής}}; 478–573) was, with [[Belisarius]], one of the great [[general]]s in the service of the [[Byzantine Emperor]] [[Justinian I]] during the [[Gothic War (535–554)|Roman reconquest]] that took place during Justinian's reign. Narses was a Romanized [[Armenians|Armenian]].&lt;ref&gt;&quot;The new Byzantine commander there [Italy], the Armenian eunuch Narses, proved a match for the daring Totila...&quot; The Cambridge Ancient History, Vol. 14: Late Antiquity, p. 534 (2007)&lt;/ref&gt; He spent most of his life as an important [[eunuch]] in the palace of the emperors in [[Constantinople]].
+
+==Origins==
+Narses was of Armenian descent and a member of the [[Kamsarakan]] Armenian noble family, which was an offshoot of the [[House of Karen]], a noble [[Parthia]]n clan.&lt;ref&gt;John H. Rosser. Historical Dictionary of Byzantium. – Scarecrow Press, 2011. – P. 199.&quot;''Armenians were a significant minority within the empire. In the sixth century, Justinian I's General Narses was Armenian. The emperor Maurice (582—602) may have been Armenian. In the ninth and 10th centuries there were several Armenian emperors, including Leo V, Basil I, Romanos I Lekapenos, and John I Tzimiskes. Theodora, the wife of Theophilios, was Armenian.''&quot;&lt;/ref&gt;&lt;ref&gt;http://www.iranicaonline.org/articles/kamsarakan&lt;/ref&gt;{{sfn|Kaldellis|2019|pp=59}} His first mention in a primary source is by [[Procopius]] in AD 530.&lt;ref&gt;Procopius, History of the Wars I. xv.31. The Loeb Classical Library. Trans. H.B. Dewing. (Cambridge: Harvard University Press, 1954) Vol. I 139.
+&lt;/ref&gt;{{better source|date=April 2016}} The year of Narses' birth is unknown; historians have given dates including 478, 479 and 480. The year of his death is also unknown, with dates given between 566 and 574, making him eighty-six to ninety-six years old at his death. His family and lineage is also completely unknown, with many different stories told about his origins and how he became a eunuch.
+
+[[Agathias]] Scholasticus of Myrina described him thus: &quot;He was a man of sound mind, and clever at adapting himself to the times. He was not versed in literature nor practiced in oratory, [but] made for it by the fertility of his wits,&quot; and as &quot;small and of a lean habit, but stronger and more high-spirited than would have been believed.&quot;&lt;ref&gt;Agathias Scholasticus cited by Fauber, L.H. Narses Hammer of the Goths. (New York: St. Martin's Press, 1990) 15.&lt;/ref&gt;
+
+==Religion==
+Narses was reported to be a very pious man with a special devotion to the Virgin Mary. [[Evagrius Scholasticus]] in Ecclesiastica Historia reported that she would tell him the proper time to attack, and Narses would never engage in battle without her consent.&lt;ref&gt;Scholasticus, Evagrius. Ecclesiastical History. Trans. E. Walford (London: Samuel Bagster and Sons, 1846) Book iv. 214-15.&lt;/ref&gt; Narses also was reported to be generous to the poor and zealous when it came to restoring churches. He was so devoted to [[prayer]]s and [[vigil]]s that &quot;he obtained victory more by the supplications he poured forth to [[God]], than by arms of war.&quot;&lt;ref&gt;Paul the Deacon. History of the Langobards. Trans. William D. Foulke. (Philadelphia: University of Pennsylvania, 1907) 56.&lt;/ref&gt; Before accepting supreme command of the army, Narses built a church and [[monastery]] in Cappadocia, intent upon going there upon his retirement.&lt;ref&gt;W.G. Holmes, The Age of Justinian and Theodora. (London: Gorgias Press, 1905) Vol II 648.&lt;/ref&gt;
+
+==Early career==
+How or when Narses arrived in Constantinople, or how he found a footing in the ''[[Officium (ancient Rome)|officium]]'' of the Grand Chamberlain (''[[praepositus sacri cubiculi]]''), remains unknown. The first time he was mentioned by Procopius in 530&amp;nbsp;AD, Narses was the Emperor [[Justinian I]]'s steward. He was a high treasurer, who dealt with the emperor's finances and payments from the imperial treasury. Narses rose through the ranks and even became the commander of the eunuch bodyguard for the Emperor and eventually became the Grand Chamberlain and Master of Soldiers (''[[magister militum]]'').&lt;ref&gt;Fauber. Narses. 17–18.&lt;/ref&gt;
+
+==Nika riots==
+Narses had a limited involvement in the [[Nika riots]] in 532, in that he was instructed by Justinian or [[Theodora (wife of Justinian I)|Theodora]] to take, from the treasury, funds sufficient to bribe the Blue Faction's leaders. Narses appealed to their party loyalty. He reminded them that [[Hypatius (consul 500)|Hypatius]], the man they were about to declare emperor, was a Green, unlike Justinian, who supported the Blues. Either the money or his words were convincing, so that soon the Blues began to acclaim Justinian and turned against Hypatius and the Greens.&lt;ref&gt;Fauber. Narses. 39–40.&lt;/ref&gt; Narses himself may have been with the men that dragged Hypatius from the throne on the Imperial Stand.
+
+==Military career==
+Narses' involvement and help in suppressing the Nika Riots suddenly found him in charge of a moderately-sized army that would go to Italy to help Belisarius. The army arrived in June of 538 probably in Ancona and consisted of roughly 7,000 soldiers.&lt;ref&gt;Teall, John. &quot;The Barbarians in Justinian's Armies&quot;. ''Speculum'' Vol. 40 No. 2 Apr. 1965. 302.&lt;/ref&gt; (Every army that Narses commanded was made up of very diverse peoples, drawing from many of the surrounding tribes.) Procopius referred to Narses as the eunuch and keeper of the royal treasuries, and described him as &quot;keen and more energetic than would be expected of a eunuch&quot;.&lt;ref&gt;Procopius. ''History''. xxv. 26 Vol. I 247.&lt;/ref&gt; Narses met with Belisarius at Firmum where a council of war was held. The council discussed what should happen at Rimini and with the commander of troops, John. Narses commented that he had already been punished for his &quot;insolence&quot; and that if the Goths took Rimini then it could turn the tide of the war.&lt;ref&gt;Procopius. ''History''. xxx. 54 Vol. I 555, 557.&lt;/ref&gt; Belisarius and Narses led a column of troops through inland mountainous routes to descend upon Rimini from the northwest.
+
+John owed his thanks to Narses for convincing Belisarius, and according to Procopius, commented on the relationship between the two men. &quot;And from that time both these men [Belisarius and Narses] began to regard each other with great suspicion.&quot;&lt;ref&gt;Procopius, ''History''. xviii. 3 Vol. IV 19.&lt;/ref&gt; During the autumn and winter months of 538–39, the Army in Italy was divided into two parties, between Belisarius and Narses.&lt;ref&gt;Browning, Robert. ''Justinian and Theodora''. (London: Thames &amp; Hudson, rev. ed. 1987) 111.&lt;/ref&gt; Justinian himself dispatched a letter to Belisarius, stating that &quot;We have not sent our steward Narses to Italy in order to command the army; for we wish Belisarius alone to command the whole army in whatever manner seems to him best, and it is the duty of all of you to follow him in the interest of the state.&quot;&lt;ref&gt;Procopius. ''History''. xviii. 28 Vol. IV 27.&lt;/ref&gt; The division however remained and the city of Milan was to fall victim to the divided command. Narses was recalled to Constantinople, but not in disgrace, as he was allowed to retain some of his barbarian guardsmen.&lt;ref&gt;Procopius. ''History''. xxii. 4–5 Vol. IV 57.&lt;/ref&gt;
+
+After being recalled, Narses seemed to have lost &quot;none of his favour at court, [and] remained the most trusted servant and minister of the Emperor and his consort.&quot;&lt;ref&gt;Dunlap, James E. ''The Office of the Grand Chamberlain in the Later Roman and Byzantine Empires''. (London: Macmillan Press, 1924) 287.&lt;/ref&gt; For the next twelve years, 539-51, there is little historical reference to Narses and he seemed to work more behind the scenes. In 541, Narses was believed to have helped the Empress Theodora and Antonina (wife of Belisarius) with the overthrow of [[John the Cappadocian]]. In 545, Justinian sent Narses to the rulers of the [[Heruli]], to recruit troops since he was popular among that barbarian nation.&lt;ref&gt;Procopius. ''History''. xxv. 26 Vol. IV 261.&lt;/ref&gt;
+
+Narses was also very active in Justinian's persecution campaigns against Paganism. Around 535, the emperor sent him to Philae in Egypt, where a temple of Isis was still active, to eradicate the cult. Narses imprisoned the priests and looted the temple. Shortly after, the local bishop Theodore converted the temple into a church.&lt;ref name=&quot;google&quot;&gt;{{cite book|title=New Testament Tools and Studies|author=Metzger, B.M.|date=1960|publisher=E.J. Brill|url=https://books.google.com/books?id=3pM3AAAAIAAJ|page=114|accessdate=2014-12-07}}&lt;/ref&gt;
+
+==Return to Italy==
+Finally in 551, Narses was sent back to Italy, where he was to achieve his greatest victories. [[Germanus (cousin of Justinian I)|Germanus]], a cousin of the Emperor, was appointed by Justinian to finish what Belisarius had started a decade before. However, on his way to Italy in 550, Germanus fell ill and &quot;abruptly reached the term of life.&quot;&lt;ref&gt;Procopius. ''History''. xl. 9 Vol. V 41.&lt;/ref&gt; Narses was appointed the new commander of the army, given supreme command and returned to Italy where twelve years previously he had been recalled. Many historians believe that Narses was put in command because of his old age, so that he would never be able to rebel successfully against Justinian.
+
+Narses' greatest asset in his newfound position was to have access to the Emperor's financial resources. With the treasury, Narses was able to amass anywhere between 20,000 and 30,000 troops.&lt;ref&gt;Teall. ''The Barbarians''. 304.&lt;/ref&gt; Narses also seemed to be well liked by many of the soldiers of fortune, as he had treated them &quot;especially well&quot;.&lt;ref&gt;Procopius. ''History''. xxvi. 17 Vol. V 333.&lt;/ref&gt; Procopius reported that Narses had built an army that in the requirement of men and arms was &quot;worthy of the Roman Empire&quot;.&lt;ref&gt;Procopius. ''History''. xxvi.30–31. Vol. V  329.&lt;/ref&gt; The army reflected many of Narses' previous commands, in that most of the troops were barbarians.
+
+Narses was to take more than a year to reach Italy after his appointment, as his entire army made a long march along the coast of the Adriatic Sea. [[Totila]] the Ostrogothic king controlled the sea of eastern Italy and hampered supply ships that set sail for Narses' army. John from Salona led 38 ships and Valerian sailed with 12 to meet Totila's force and bring relief to Ancona.&lt;ref&gt;Fauber. ''Narses''. 73–74.&lt;/ref&gt; Procopius described the subsequent [[Battle of Sena Gallica (551)|Battle of Sena Gallica]] as a naval battle that resembled a battle on land. &quot;There were arrows discharged and fighting at close quarters with sword and spear, just as on a battle field.&quot;&lt;ref&gt;Procopius. ''History''. xxiii.32 Vol. V 297.&lt;/ref&gt; The Byzantine victory at Sena Gallica was overwhelming, as 36 of the 47 Gothic ships were destroyed, and Gibal, a Gothic admiral, was captured. Historian Archibald R. Lewis pointed out that victory could only come to Narses after Totila's sea dominance was brought to an end.&lt;ref&gt;Lewis, Archibald R. ''Naval Power and Trade in the Mediterranean''. (Princeton: Princeton University Press, 1951) 25.&lt;/ref&gt;
+
+There were a number of reasons that Narses' march was very slow. Totila had dispatched various troops to employ delaying tactics and the Franks were enemies of Narses' allies the [[Lombards]], and did not allow free passage. Procopius stated that Narses was &quot;completely bewildered&quot;, but John was familiar with that part of Italy and advised him how to continue.&lt;ref&gt;Procopius. ''History''. xxvi. 24 Vol. V 337.&lt;/ref&gt; Using this advice, Narses was able to reach Ravenna unopposed. Totila may have believed that Narses was going to come from the sea, whence all the previous invasions had come.&lt;ref&gt;Liddell Hart, B.H. ''Strategy''. (New York: Frederick A Praeger, 1957) 70.&lt;/ref&gt;
+
+==Battle of Taginae==
+On his way to seek Totila's main army, Narses encountered a small Gothic garrison at the town of Rimini. John, who had previously been in command at Rimini when it was besieged by Gothic forces, again gave advice to Narses on how to proceed. The exact route taken was not precisely indicated by Procopius and has led to confusion on the reconstruction of the coming battles. Procopius referred to the next battle as &quot;Busta Gallorum&quot;,&lt;ref&gt;Procopius. History. xxix.5 Vol. V 353.&lt;/ref&gt; but many historians now refer to it as the [[Battle of Taginae]].
+
+Narses sent word to Totila and gave him a chance to either surrender, or give the day in which the battle would take place. Procopius quoted Totila's response, &quot;At the end of eight days let us match our strength.&quot;&lt;ref&gt;Procopius. History. xxix. 8 Vol. V 355.&lt;/ref&gt; Narses was not fooled by this and preferred the tactical defensive upon meeting Totila, as his army would have been larger than that of Totila. The following battle would be Narses' ultimate victory, and would set the estimation of his military talents as not inferior to those of Belisarius.
+
+==Tactics==
+Narses' great success at the Battle of Taginae was to come from the disposition of his forces before the battle began. Narses arrayed his troops in a &quot;crescent shaped&quot;&lt;ref&gt;Rance, Philip. &quot;Narses and the Battle of Taginae (Busta Gallorum)&quot;. ''Historia: Zeitschrift für Alte Geschichte'' Vol. 54, No. 4  (2005),  424.&lt;/ref&gt; formation with mostly infantry in the middle, flanked by archers. The infantry were in fact dismounted barbarian cavalry, since many of the Goths thought that typical infantry was frail and would flee in the face of a charge. Some historians feel there may have been a political motivation by placing the Heruli and Lombards in the centre dismounted, Narses possibly suspecting them of having sympathy or admiration for Totila.&lt;ref&gt;Gibbon, Edward. ''The History of the Decline and Fall of the Roman Empire''. Ch. XLIII. 266.&lt;/ref&gt;
+
+On the sides of the crescent, foot-archers were placed, and this enabled them to destroy the Gothic cavalry through enfilading fire. (This disposition of the archers and their effect upon the battle is strikingly parallel to the later [[Battle of Agincourt]].{{citation needed|date=June 2016}})  Next, Narses placed much of his cavalry on the immediate sides of the dismounted infantry. Normally the cavalry would have been behind the centre, but they were not meant to aid any of the struggling line. Instead they were used to deliver a surprise attack on the Goths when they became fully enveloped. Narses knew that Totila would take the advantage of attacking the &quot;weak&quot; centre, and therefore allowed Narses to completely destroy the Ostrogothic army. Procopius said that Totila had been &quot;out-generalled by his own folly&quot;,&lt;ref&gt;Procopius. ''History''. xxxii. 7 Vol. V 377.&lt;/ref&gt; because Totila had instructed his troops to only engage with spears, as he thought a quick strike would win the battle.
+
+Totila sent wave after wave of troops, who became so disorganized by the raining arrow storm that by the time they met the dismounted infantrymen they were completely broken. The Gothic infantry never even engaged in actual combat as they hesitated to advance far enough to actually become effective. They were kept in the rear of the advance, fearing that Narses' horsemen would outflank them from the hill. Finally, Totila's cavalry was pressed backwards onto their own line of infantry, Narses then charged with his own cavalry, which had been held in reserve.&lt;ref&gt;Liddell. ''Strategy''. 71.&lt;/ref&gt; The retreat quickly turned into a rout, as the Gothic cavalry rushed right over the infantry, who joined them in the withdrawal.&lt;ref&gt;Bury. ''History of the Later Roman Empire. From the Death of Theodosius I to the Death of Justinian. Vol. II'' (London: Macmillan Press, 1958) 267.&lt;/ref&gt;
+
+Totila himself was killed at this battle and Procopius gave two versions as to the fate of the Ostrogothic king. The first has Totila initially surviving the battle and fleeing the field of battle with only five of his followers. Asbad, leader of the Gepids, overtook him and drove his spear into Totila. The body was immediately taken to the village of Caprae where it was hurriedly buried.&lt;ref&gt;Procopius. ''History''. xxxii. 22–28 Vol. V 383-85.&lt;/ref&gt; In the second version, Totila was mortally wounded in the first wave, struck by a bowman who did not even recognize his target.&lt;ref&gt;Procopius. ''History''. xxxii. 33–35 Vol. V 387-89.&lt;/ref&gt; The first is more widely accepted by historians, as later a Gothic woman revealed where Totila was buried and the body was exhumed and positively identified.
+
+==Rome==
+Narses marched to Rome after the Battle of Taginae and had to conduct a short siege of the city. Narses attacked on one side with a large contingent of archers, while John assaulted another part of the walls.&lt;ref&gt;Procopius. History. xxxiii.18–19 Vol. V 395.&lt;/ref&gt; From Rome, Narses would work to remove all of the remaining Ostrogothic forces from Italy. The next major move that Narses undertook was to capture the treasury of Totila that was held in Cumae. Both Procopius and Agathias wrote of the strength of the fortress at Cumae. Procopius called it, &quot;an exceedingly strong fortress,&quot;&lt;ref&gt;Procopius. History. xxxiv. 19 Vol. V 405.&lt;/ref&gt; and Agathias declared it &quot;very well fortified.&quot;&lt;ref&gt;Fauber, Narses. 101.&lt;/ref&gt;
+
+As parts of the army were sent throughout the country to deal with [[Teia]]s (the son of Totila, and new Gothic king), a considerable detachment was sent to Campania to take Cumae. Teias followed the example set by Narses on his march into Italy and marched around the Imperial Army. After engaging Narses in small skirmishes for nearly two months, Teias retreated into the mountains. They maneuvered onto [[Mons Lactarius]], where they soon faced death from starvation.
+
+==Battle of Mons Lactarius==
+The Goths suddenly came down the mountain in a compact phalanx, catching the army off guard who were also on foot.&lt;ref&gt;Rance. Battle of Taginae. 437.&lt;/ref&gt; The reasons why the Goths attacked horseless is unknown, but the suddenness of the attack seemed to be the reason that Narses fought horseless as well. The ensuing battle was fought for two days and Procopius described the bravery of King Teias. He first introduced the battle as &quot;a battle of great note,&quot; and the heroism displayed by King Teias was not &quot;inferior to any of the heroes of legend.&quot;&lt;ref&gt;Procopius. History. xxxv.22–26 Vol. V 413.&lt;/ref&gt; It may be noted that Procopius did not witness any of the battle, and only retold it from the account of others.
+
+Teias led the charge towards Narses. [[Procopius]] recounts that every time his shield was filled with arrows, he received another from his man-at-arms. Finally when a spear struck his shield, he received another but was struck with a mortal blow. The soldier cut off his head to display to the Goths their king had died, but instead of disheartening the Goths, it reinvigorated them to fight for another day.&lt;ref&gt;Procopius. History. xxxv.26–31 Vol. V 415-17.&lt;/ref&gt; The second day was much like the first, as the Goths charged and fought on foot, involving little to no tactics. Finally, the Goths sent some of their officers to Narses who said they would surrender if they were allowed to leave the country safely. Narses, who received more advice from John, accepted those terms of surrender.&lt;ref&gt;Procopius. History. xxxv.33–35 Vol. V 417-19.&lt;/ref&gt;
+
+==Final battles==
+After the final defeat of the Goths, the [[Franks]], led by the brothers Leutharis and Buccillinus, attempted to invade the recently reconquered lands. From the ''[[Liber Pontificalis]]'': &quot;They (The Franks) in like manner wasted Italy. But with the help of the Lord they too were destroyed by Narses. And all Italy rejoiced.&quot;&lt;ref&gt;''The Book of the Popes (Liber Pontificalis)''. Trans. L.R. Loomis. (Merchantville, NJ: Evolution Publishing, 2006) 164.&lt;/ref&gt; For the next year or two, Narses crossed the countryside, reinstituting Byzantine rule and laying siege to towns that resisted. But as more and more Franks poured over the Alps, Narses regrouped in Rome, and once spring came, marched his army against them.&lt;ref&gt;Fauber. ''Narses''. 119.&lt;/ref&gt; The Franks, led by the two brothers, were pursuing separate routes, but plundering the whole time.
+
+At the [[Battle of the Volturnus (554)|Battle of Casilinum]], Narses put true heavy infantry in the centre, instead of dismounted cavalry. These were hand picked troops, &quot;Ante-signani&quot;, who wore long clad coats of mail that went down to their feet.&lt;ref&gt;Fauber. ''Narses''. 125.&lt;/ref&gt; Highly trained cavalry were on the flanks, armed with everything that the army carried. On the opposing side, [[Agathias]] describes the Franks as, &quot;Very rude and without cavalry. Their swords were worn on the left leg, and their main weapons were the throwing ax and hooked javelins.&quot;&lt;ref&gt;Agathias, ''The Histories'', Book II. Translated by Joseph D. Frendo. (Berlin: Walter de Gruyter, 1975) 36–38.&lt;/ref&gt; The Franks attacked Narses' centre, which was initially pushed back but was reinforced by the Herulis, who slowed the attackers.&lt;ref&gt;Oman, C. W. C. ''The Art of War In the Middle Ages''. (New York: Cornell University Press, 1953), p. 18.&lt;/ref&gt;

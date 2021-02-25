@@ -1,0 +1,158 @@
+:&lt;math&gt;\frac{1}{k_n(k_{n+1}+k_n)}&lt; \left|x-\frac{h_n}{k_n}\right|&lt; \frac{1}{k_nk_{n+1}}. &lt;/math&gt;
+&lt;/blockquote&gt;
+
+'''Corollary 1:''' A convergent is nearer to the limit of the continued fraction than any fraction whose denominator is less than that of the convergent.
+
+'''Corollary 2:''' A convergent obtained by terminating the continued fraction just before a large term is a close approximation to the limit of the continued fraction.
+
+==Semiconvergents==&lt;!-- This section is linked from [[Complete quotient]] --&gt;
+
+If
+
+:&lt;math&gt; \frac{h_{n-1}}{k_{n-1}},\frac{h_n}{k_n} &lt;/math&gt;
+
+are consecutive convergents, then any fractions of the form
+
+: &lt;math&gt; \frac{h_{n-1} + mh_n}{k_{n-1} + mk_n},&lt;/math&gt;
+
+where &lt;math&gt;m&lt;/math&gt; is an integer such that &lt;math&gt;0\leq m\leq a_{n+1}&lt;/math&gt;, are called ''semiconvergents'', ''secondary convergents'', or ''intermediate fractions''. The &lt;math&gt;(m+1)&lt;/math&gt;-st semiconvergent equals the [[Mediant (mathematics)|mediant]] of the &lt;math&gt;m&lt;/math&gt;-th one and the convergent &lt;math&gt;\tfrac{h_n}{k_n}&lt;/math&gt;. Sometimes the term is taken to mean that being a semiconvergent excludes the possibility of being a convergent (i.e., &lt;math&gt;0&lt;m&lt;a_{n+1}&lt;/math&gt;), rather than that a convergent is a kind of semiconvergent.
+
+It follows that semiconvergents represent a [[monotonic sequence]] of fractions between the convergents &lt;math&gt;\tfrac{h_{n-1}}{k_{n-1}}&lt;/math&gt; (corresponding to &lt;math&gt;m=0&lt;/math&gt;) and &lt;math&gt;\tfrac{h_{n+1}}{k_{n+1}}&lt;/math&gt; (corresponding to &lt;math&gt;m=a_{n+1}&lt;/math&gt;). The consecutive semiconvergents &lt;math&gt;\tfrac{a}{b}&lt;/math&gt; and &lt;math&gt;\tfrac{c}{d}&lt;/math&gt; satisfy the property &lt;math&gt;ad - bc = \pm 1&lt;/math&gt;.
+
+If a [[Diophantine approximation|rational approximation]] &lt;math&gt;\tfrac{p}{q}&lt;/math&gt; to a real number &lt;math&gt;x&lt;/math&gt; is such that the value &lt;math&gt;\left|x-\tfrac{p}{q}\right|&lt;/math&gt; is smaller than that of any approximation with a smaller denominator, then &lt;math&gt;\tfrac{p}{q}&lt;/math&gt; is a semiconvergent of the continued fraction expansion of &lt;math&gt;x&lt;/math&gt;. The converse is not true, however.
+
+==Best rational approximations==
+{{See also|Diophantine approximation|Padé approximant}}
+
+One can choose to define a ''best rational approximation'' to a real number {{mvar|x}} as a rational number {{sfrac|{{mvar|n}}|{{mvar|d}}}}, {{math|''d'' &gt; 0}}, that is closer to {{mvar|x}} than any approximation with a smaller or equal denominator. The simple continued fraction for {{mvar|x}} can be used to generate ''all'' of the best rational approximations for {{mvar|x}} by applying these three rules:
+
+#Truncate the continued fraction, and reduce its last term by a chosen amount (possibly zero).
+#The reduced term cannot have less than half its original value.
+#If the final term is even, half its value is admissible only if the corresponding semiconvergent is better than the previous convergent. (See below.)
+
+For example, 0.84375 has continued fraction [0;1,5,2,2]. Here are all of its best rational approximations.
+
+:{| class=&quot;wikitable&quot;
+|- align=&quot;center&quot;
+! Continued fraction
+|  [0;1]  ||  [0;1,3]  ||  [0;1,4]  ||  [0;1,5]  ||  [0;1,5,2]  ||  [0;1,5,2,1]  ||  [0;1,5,2,2] 
+|- align=&quot;center&quot;
+! Rational approximation
+| 1 || {{sfrac|3|4}} || {{sfrac|4|5}} || {{sfrac|5|6}} || {{sfrac|11|13}} || {{sfrac|16|19}} || {{sfrac|27|32}}
+|- align=&quot;center&quot;
+! Decimal equivalent
+| 1 || 0.75 || 0.8 || ~0.83333 || ~0.84615 || ~0.84211 || 0.84375
+|- align=&quot;center&quot;
+! Error
+| +18.519% || −11.111% || −5.1852% || −1.2346% || +0.28490% || −0.19493% || 0%
+|}
+
+The strictly monotonic increase in the denominators as additional terms are included permits an algorithm to impose a limit, either on size of denominator or closeness of approximation.
+
+The &quot;half rule&quot; mentioned above requires that when {{mvar|a}}{{sub|{{mvar|k}}}} is even, the halved term {{mvar|a}}{{sub|{{mvar|k}}}}/2 is admissible if and only if {{math|{{!}}''x'' − [''a''{{sub|0}} ; ''a''{{sub|1}}, ..., ''a''{{sub|''k'' − 1}}]{{!}} &gt; {{!}}''x'' − [''a''{{sub|0}} ; ''a''{{sub|1}}, ..., ''a''{{sub|''k'' − 1}}, ''a''{{sub|''k''}}/2]{{!}}}}&lt;ref name=thill&gt;{{citation |author=M. Thill |title=A more precise rounding algorithm for rational numbers |year=2008 |journal=Computing |volume=82 |pages=189–198 |doi=10.1007/s00607-008-0006-7}}&lt;/ref&gt; This is equivalent&lt;ref name=thill/&gt; to:&lt;ref&gt;{{Citation |editor-last=Paeth |editor-first=Alan W. |first=Ken |last=Shoemake |title=Graphic Gems V |chapter=I.4: Rational Approximation |chapter-url=https://books.google.com/books?id=8CGj9_ZlFKoC&amp;pg=PA25 |pages=25–31 |publisher=Academic Press |year=1995 |location=San Diego, California |isbn=0-12-543455-3}}&lt;/ref&gt;
+
+:{{math|[''a''{{sub|''k''}}; ''a''{{sub|''k'' − 1}}, ..., ''a''{{sub|1}}] &gt; [''a''{{sub|''k''}}; ''a''{{sub|''k'' + 1}}, ...]}}.
+
+The convergents to {{mvar|x}} are &quot;best approximations&quot; in a much stronger sense than the one defined above. Namely, {{mvar|n}}/{{mvar|d}} is a convergent for {{mvar|x}} if and only if {{math|{{!}}''dx'' − ''n''{{!}}}} has the smallest value among the analogous expressions for all rational approximations {{mvar|m}}/{{mvar|c}} with {{math|''c'' ≤ ''d''}}; that is, we have {{math|{{!}}''dx'' − ''n''{{!}} &lt; {{!}}''cx'' − ''m''{{!}}}} so long as {{math|''c'' &lt; ''d''}}. (Note also that {{math|{{!}}''d&lt;sub&gt;k&lt;/sub&gt;x'' − ''n&lt;sub&gt;k&lt;/sub&gt;''{{!}} → 0}} as {{math|''k'' → ∞}}.)
+
+=== Best rational within an interval ===
+A rational that falls within the interval {{open-open|''x'', ''y''}}, for {{math|0 &lt; {{mvar|x}} &lt; {{mvar|y}}}}, can be found with the continued fractions for {{mvar|x}} and {{mvar|y}}. When both {{mvar|x}} and {{mvar|y}} are irrational and
+:{{math|''x'' {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ''a''{{sub|2}}, ..., ''a''{{sub|''k'' − 1}}, ''a''{{sub|''k''}}, ''a''{{sub|''k'' + 1}}, ...]}}
+:{{math|''y'' {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ''a''{{sub|2}}, ..., ''a''{{sub|''k'' − 1}}, ''b''{{sub|''k''}}, ''b''{{sub|''k'' + 1}}, ...]}}
+where {{mvar|x}} and {{mvar|y}} have identical continued fraction expansions up through {{math|''a''&lt;sub&gt;''k''−1&lt;/sub&gt;}}, a rational that falls within the interval {{open-open|''x'', ''y''}} is given by the finite continued fraction,
+:{{math|''z''(''x'',''y'') {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ''a''{{sub|2}}, ..., ''a''{{sub|''k'' − 1}}, min(''a''{{sub|''k''}}, ''b''{{sub|''k''}}) + 1]}}
+This rational will be best in the sense that no other rational in {{open-open|''x'', ''y''}} will have a smaller numerator or a smaller denominator.{{Citation needed|date=June 2019}}
+
+If {{mvar|x}} is rational, it will have ''two'' continued fraction representations that are ''finite'', {{math|''x''&lt;sub&gt;1&lt;/sub&gt;}} and {{math|''x''&lt;sub&gt;2&lt;/sub&gt;}}, and similarly a rational&amp;nbsp;{{mvar|y}} will have two representations, {{math|''y''&lt;sub&gt;1&lt;/sub&gt;}} and {{math|''y''&lt;sub&gt;2&lt;/sub&gt;}}. The coefficients beyond the last in any of these representations should be interpreted as {{math|+∞}}; and the best rational will be one of {{math|''z''(''x''&lt;sub&gt;1&lt;/sub&gt;, ''y''&lt;sub&gt;1&lt;/sub&gt;)}}, {{math|''z''(''x''&lt;sub&gt;1&lt;/sub&gt;, ''y''&lt;sub&gt;2&lt;/sub&gt;)}}, {{math|''z''(''x''&lt;sub&gt;2&lt;/sub&gt;, ''y''&lt;sub&gt;1&lt;/sub&gt;)}}, or {{math|''z''(''x''&lt;sub&gt;2&lt;/sub&gt;, ''y''&lt;sub&gt;2&lt;/sub&gt;)}}.
+
+For example, the decimal representation 3.1416 could be rounded from any number in the interval {{closed-open|3.14155, 3.14165}}. The continued fraction representations of 3.14155 and 3.14165 are
+:{{math|3.14155 {{=}} [3; 7, 15, 2, 7, 1, 4, 1, 1] {{=}} [3; 7, 15, 2, 7, 1, 4, 2]}}
+:{{math|3.14165 {{=}} [3; 7, 16, 1, 3, 4, 2, 3, 1] {{=}} [3; 7, 16, 1, 3, 4, 2, 4]}}
+and the best rational between these two is
+:{{math|[3; 7, 16] {{=}} {{sfrac|355|113}} {{=}} 3.1415929....}}
+Thus, {{sfrac|355|113}} is the best rational number corresponding to the rounded decimal number 3.1416, in the sense that no other rational number that would be rounded to 3.1416 will have a smaller numerator or a smaller denominator.
+
+=== Interval for a convergent ===
+A rational number, which can be expressed as finite continued fraction in two ways,
+:{{math|''z'' {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ..., ''a''{{sub|''k'' − 1}}, ''a''{{sub|''k''}}, 1] {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ..., ''a''{{sub|''k'' − 1}}, ''a''{{sub|''k''}} + 1]}}
+will be one of the convergents for the continued fraction expansion of a number, if and only if the number is strictly between
+:{{math|''x'' {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ..., ''a''{{sub|''k'' − 1}}, ''a''{{sub|''k''}}, 2]}} and
+:{{math|''y'' {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ..., ''a''{{sub|''k'' − 1}}, ''a''{{sub|''k''}} + 2]}}
+The numbers {{mvar|x}} and {{mvar|y}} are formed by incrementing the last coefficient in the two representations for {{mvar|z}}. It is the case that {{math|''x'' &lt; ''y''}} when {{mvar|k}} is even, and {{math|''x'' &gt; ''y''}} when {{mvar|k}} is odd.
+
+For example, the number {{sfrac|355|113}} has the continued fraction representations
+:{{sfrac|355|113}} = [3; 7, 15, 1] = [3; 7, 16]
+and thus {{sfrac|355|113}} is a convergent of any number strictly between
+:{| cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;
+| align=&quot;right&quot; | {{math|[3; 7, 15, 2]}} ||{{=}}|| {{math|{{sfrac|688|219}} ≈ 3.1415525}}
+|-
+| align=&quot;right&quot; | {{math|[3; 7, 17]}} ||{{=}}|| {{math|{{sfrac|377|120}} ≈ 3.1416667}}
+|}
+
+==Comparison==
+Consider {{math|''x'' {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ...]}} and {{math|''y'' {{=}} [''b''{{sub|0}}; ''b''{{sub|1}}, ...]}}. If {{mvar|k}} is the smallest index for which {{math|''a''{{sub|''k''}}}} is unequal to {{math|''b''{{sub|''k''}}}} then {{math|''x'' &lt; ''y''}} if {{math|(−1){{sup|''k''}}(''a''{{sub|''k''}} − ''b''{{sub|''k''}}) &lt; 0}} and {{math|''y'' &lt; ''x''}} otherwise.
+
+If there is no such {{mvar|k}}, but one expansion is shorter than the other, say {{math|''x'' {{=}} [''a''{{sub|0}}; ''a''{{sub|1}}, ..., ''a''{{sub|''n''}}]}} and {{math|''y'' {{=}} [''b''{{sub|0}}; ''b''{{sub|1}}, ..., ''b''{{sub|''n''}}, ''b''{{sub|''n'' + 1}}, ...]}} with {{math|''a''{{sub|''i''}} {{=}} ''b''{{sub|''i''}}}} for {{math|0 ≤ ''i'' ≤ ''n''}}, then {{math|''x'' &lt; ''y''}} if {{mvar|n}} is even and {{math|''y'' &lt; ''x''}} if {{mvar|n}} is odd.
+
+==Continued fraction expansions of {{pi}}==
+To calculate the convergents of [[pi|{{pi}}]] we may set {{math|''a''{{sub|0}} {{=}} ⌊{{pi}}⌋ {{=}} 3}}, define {{math|''u''{{sub|1}} {{=}} {{sfrac|1|{{pi}} − 3}} ≈ 7.0625}} and {{math|''a''{{sub|1}} {{=}} ⌊''u''{{sub|1}}⌋ {{=}} 7}}, {{math|''u''{{sub|2}} {{=}} {{sfrac|1|''u''{{sub|1}} − 7}} ≈ 15.9966}} and {{math|''a''{{sub|2}} {{=}} ⌊''u''{{sub|2}}⌋ {{=}} 15}}, {{math|''u''{{sub|3}} {{=}} {{sfrac|1|''u''{{sub|2}} − 15}} ≈ 1.0034}}. Continuing like this, one can determine the infinite continued fraction of {{pi}} as
+:[3;7,15,1,292,1,1,...] {{OEIS|A001203}}.
+The fourth convergent of {{pi}} is [3;7,15,1] = {{sfrac|355|113}} = 3.14159292035..., sometimes called [[Milü]], which is fairly close to the true value of {{pi}}.
+
+Let us suppose that the quotients found are, as above, [3;7,15,1]. The following is a rule by which we can write down at once the convergent fractions which result from these quotients without developing the continued fraction.
+
+The first quotient, supposed divided by unity, will give the first fraction, which will be too small, namely, {{sfrac|3|1}}. Then, multiplying the numerator and denominator of this fraction by the second quotient and adding unity to the numerator, we shall have the second fraction, {{sfrac|22|7}}, which will be too large. Multiplying in like manner the numerator and denominator of this fraction by the third quotient, and adding to the numerator the numerator of the preceding fraction, and to the denominator the denominator of the preceding fraction, we shall have the third fraction, which will be too small. Thus, the third quotient being 15, we have for our numerator {{nowrap|(22 × 15 {{=}} 330) + 3 {{=}} 333}}, and for our denominator, {{nowrap|(7 × 15 {{=}} 105) + 1 {{=}} 106}}. The third convergent, therefore, is {{sfrac|333|106}}. We proceed in the same manner for the fourth convergent. The fourth quotient being 1, we say 333 times 1 is 333, and this plus 22, the numerator of the fraction preceding, is 355; similarly, 106 times 1 is 106, and this plus 7 is 113.
+In this manner, by employing the four quotients [3;7,15,1], we obtain the four fractions:
+:{{sfrac|3|1}}, {{sfrac|22|7}}, {{sfrac|333|106}}, {{sfrac|355|113}}, ....
+[[File:Continued fraction expansion of Pi .png|thumb|The following Maple code will generate continued fraction expansions of Pi]]
+To sum up, the pattern is
+&lt;small&gt;'''&lt;math&gt; Numerator_i = Numerator_{(i-1)} \cdot Quotient_i + Numerator_{(i-2)} &lt;/math&gt;
+&lt;math&gt; Denominator_i = Denominator_{(i-1)} \cdot Quotient_i + Denominator_{(i-2)} &lt;/math&gt;'''
+&lt;/small&gt;
+
+These convergents are alternately smaller and larger than the true value of {{pi}}, and approach nearer and nearer to {{pi}}. The difference between a given convergent and {{pi}} is less than the reciprocal of the product of the denominators of that convergent and the next convergent. For example, the fraction {{sfrac|22|7}} is greater than {{pi}}, but {{sfrac|22|7}} − {{pi}} is less than {{sfrac|1|7 × 106}}&amp;nbsp;=&amp;nbsp;{{sfrac|1|742}} (in fact, {{sfrac|22|7}} − {{pi}} is just more than {{sfrac|1|791}} = {{sfrac|1|7 × 113}}).
+
+The demonstration of the foregoing properties is deduced from the fact that if we seek the difference between one of the convergent fractions and the next adjacent to it we shall obtain a fraction of which the numerator is always unity and the denominator the product of the two denominators. Thus the difference between {{sfrac|22|7}} and {{sfrac|3|1}} is {{sfrac|1|7}}, in excess; between {{sfrac|333|106}} and {{sfrac|22|7}}, {{sfrac|1|742}}, in deficit; between {{sfrac|355|113}} and {{sfrac|333|106}}, {{sfrac|1|11978}}, in excess; and so on. The result being, that by employing this series of differences we can express in another and very simple manner the fractions with which we are here concerned, by means of a second series of fractions of which the numerators are all unity and the denominators successively be the product of every two adjacent denominators. Instead of the fractions written above, we have thus the series:
+
+:{{sfrac|3|1}} + {{sfrac|1|1 × 7}} − {{sfrac|1|7 × 106}} + {{sfrac|1|106 × 113}} − ...
+
+The first term, as we see, is the first fraction; the first and second together give the second fraction, {{sfrac|22|7}}; the first, the second and the third give the third fraction {{sfrac|333|106}}, and so on with the rest; the result being that the series entire is equivalent to the original value.
+
+==Generalized continued fraction==
+{{main|Generalized continued fraction}}
+
+A generalized continued fraction is an expression of the form
+
+:&lt;math&gt;x = b_0 + \cfrac{a_1}{b_1 + \cfrac{a_2}{b_2 + \cfrac{a_3}{b_3 + \cfrac{a_4}{b_4 + \ddots\,}}}}&lt;/math&gt;
+
+where the ''a''&lt;sub&gt;''n''&lt;/sub&gt; (''n'' &amp;gt; 0) are the partial numerators, the ''b''&lt;sub&gt;''n''&lt;/sub&gt; are the partial denominators, and the leading term ''b''&lt;sub&gt;0&lt;/sub&gt; is called the ''integer'' part of the continued fraction.
+
+To illustrate the use of generalized continued fractions, consider the following example. The sequence of partial denominators of the simple continued fraction of {{pi}} does not show any obvious pattern:
+
+:&lt;math&gt;\pi=[3;7,15,1,292,1,1,1,2,1,3,1,\ldots]&lt;/math&gt;
+
+or
+
+:&lt;math&gt;\pi=3+\cfrac{1}{7+\cfrac{1}{15+\cfrac{1}{1+\cfrac{1}{292+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{3+\cfrac{1}{1+\ddots}}}}}}}}}}}&lt;/math&gt;
+
+However, several generalized continued fractions for {{pi}} have a perfectly regular structure, such as:
+
+:&lt;math&gt;
+\pi=\cfrac{4}{1+\cfrac{1^2}{2+\cfrac{3^2}{2+\cfrac{5^2}{2+\cfrac{7^2}{2+\cfrac{9^2}{2+\ddots}}}}}}
+=\cfrac{4}{1+\cfrac{1^2}{3+\cfrac{2^2}{5+\cfrac{3^2}{7+\cfrac{4^2}{9+\ddots}}}}}
+=3+\cfrac{1^2}{6+\cfrac{3^2}{6+\cfrac{5^2}{6+\cfrac{7^2}{6+\cfrac{9^2}{6+\ddots}}}}}
+&lt;/math&gt;
+
+:&lt;math&gt;\displaystyle \pi=2+\cfrac{2}{1+\cfrac{1}{1/2+\cfrac{1}{1/3+\cfrac{1}{1/4+\ddots}}}}=2+\cfrac{2}{1+\cfrac{1\cdot2}{1+\cfrac{2\cdot3}{1+\cfrac{3\cdot4}{1+\ddots}}}}&lt;/math&gt;
+
+:&lt;math&gt; \displaystyle \pi=2+\cfrac{4}{3+\cfrac{1\cdot3}{4+\cfrac{3\cdot5}{4+\cfrac{5\cdot7}{4+\ddots}}}}&lt;/math&gt;
+
+The first two of these are special cases of the [[Inverse trigonometric functions#Variant: Continued fractions for arctangent|arctangent]] function with {{pi}} = 4 arctan (1).
+
+:&lt;math&gt;
+\pi=3+\cfrac{1^3}{6+\cfrac{1^3+2^3}{6+\cfrac{1^3+2^3+3^3+4^3}{6+\cfrac{1^3+2^3 +3^3+4^3+5^3+6^3}{6+\cfrac{1^3+2^3+3^3+4^3+5^3+6^3+7^3+8^3}{6+\ddots}}}}}
+&lt;/math&gt;
+
+The continued fraction of &lt;math&gt;\pi&lt;/math&gt; above consisting of cubes uses the Nilakantha series and an exploit from Leonhard Euler.&lt;ref&gt;{{Cite web|url=https://www.theoremoftheday.org/NumberTheory/EulerCF/TotDEulerCF.pdf|title=Theorem of the Day: Theorem no. 203|last=Foster|first=Tony|date=June 22, 2015|publisher=Robin Whitty|access-date=June 25, 2015}}&lt;/ref&gt;
+
+==Other continued fraction expansions==

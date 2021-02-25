@@ -1,0 +1,215 @@
+If the end of a pipe is closed, the pressure is maximal since the closed end of the pipe exerts a force that restricts the movement of air. This corresponds to a pressure anti-node. If the end of the pipe is open, the pressure variations are very small, corresponding to a pressure node.&lt;ref name=&quot;HyperPhyiscs Standing Waves&quot;&gt;{{cite web| last=Nave| first= C. R.| title = Standing Waves| series = HyperPhysics| publisher = Georgia State University| year = 2016| url = http://hyperphysics.phy-astr.gsu.edu/hbase/Waves/standw.html| access-date = August 23, 2020}}&lt;/ref&gt;{{sfn|Streets|2010|p=6}} The exact location of the pressure node at an open end is actually slightly beyond the open end of the pipe, so the effective length of the pipe for the purpose of determining resonant frequencies is slightly longer than its physical length.{{sfn|Halliday|Resnick|Walker|2005|p=457}} This difference in length is ignored in this example. In terms of reflections, open ends partially reflect waves back into the pipe, allowing some energy to be released into the outside air. Ideally, closed ends reflect the entire wave back in the other direction.{{sfn|Halliday|Resnick|Walker|2005|p=457}}{{sfn|Streets|2010|p=15}}
+
+First consider a pipe that is open at both ends, for example an open [[organ pipe]] or a [[recorder (musical instrument)|recorder]]. Given that the pressure must be zero at both open ends, the boundary conditions are analogous to the string with two fixed ends,
+:&lt;math&gt; \Delta p(0,t) = 0,&lt;/math&gt;
+:&lt;math&gt; \Delta p(L,t) = 2p_\text{max}\sin \left({2\pi L \over \lambda} \right) \cos(\omega t) = 0,&lt;/math&gt;
+
+which only occurs when the wavelength of standing waves is{{sfn|Halliday|Resnick|Walker|2005|p=457}}
+:&lt;math&gt; \lambda = \frac{2L}{n}, &lt;/math&gt;
+:&lt;math&gt; n = 1, 2, 3, \ldots, &lt;/math&gt;
+
+or equivalently when the frequency is{{sfn|Halliday|Resnick|Walker|2005|p=457}}{{sfn|Serway|Faughn|1992|p=478}}
+:&lt;math&gt; f = \frac{nv}{2L},&lt;/math&gt;
+
+where ''v'' is the [[speed of sound]].
+
+Next, consider a pipe that is open and therefore has a pressure node at {{nowrap|''x'' {{=}} 0}} and closed and therefore has a pressure anti-node at {{nowrap|''x'' {{=}} ''L''}}. Examples include a bottle and a [[clarinet]]. This pipe has boundary conditions analogous to the string with only one fixed end. Its standing waves have wavelengths restricted to{{sfn|Halliday|Resnick|Walker|2005|p=457}}
+:&lt;math&gt; \lambda = \frac{4L}{n}, &lt;/math&gt;
+:&lt;math&gt; n = 1, 3, 5, \ldots, &lt;/math&gt;
+
+or equivalently the frequency of standing waves is restricted to{{sfn|Halliday|Resnick|Walker|2005|p=458}}{{sfn|Serway|Faughn|1992|p=478}}
+:&lt;math&gt; f = \frac{nv}{4L}.&lt;/math&gt;
+
+Note that for the case where one end is closed, ''n'' only takes odd values just like in the case of the string fixed at only one end.
+
+[[Image:Molecule2.gif|thumb|upright|Molecular representation of a standing wave with {{nowrap|''n'' {{=}} 2}} for a pipe that is closed at both ends. Considering longitudinal displacement, note that the molecules at the ends and the molecules in the middle are not displaced by the wave, representing nodes of longitudinal displacement. Halfway between the nodes there are longitudinal displacement anti-nodes where molecules are maximally displaced. Considering pressure, note that the molecules are maximally compressed and expanded at the ends and in the middle, representing pressure anti-nodes. Halfway between the anti-nodes are pressure nodes where the molecules are neither compressed nor expanded as they move.]]
+
+So far, the wave has been written in terms of its pressure as a function of position ''x'' and time. Alternatively, the wave can be written in terms of its longitudinal displacement of air, where air in a segment of the pipe moves back and forth slightly in the ''x''-direction as the pressure varies and waves travel in either or both directions. The change in pressure Δ''p'' and longitudinal displacement ''s'' are related as{{sfn|Halliday|Resnick|Walker|2005|p=451}}
+:&lt;math&gt; \Delta p = -\rho v^2 \frac{\partial s}{\partial x}, &lt;/math&gt;
+
+where ''ρ'' is the [[density]] of the air. In terms of longitudinal displacement, closed ends of pipes correspond to nodes since air movement is restricted and open ends correspond to anti-nodes since the air is free to move.{{sfn|Halliday|Resnick|Walker|2005|p=457}}{{sfn|Serway|Faughn|1992|p=477}} A similar, easier to visualize phenomenon occurs in longitudinal waves propagating along a spring.&lt;ref&gt;{{cite AV media| last = Thomas-Palmer| first = Jonathan| date = October 16, 2019| title = Longitudinal Standing Waves Demonstration| url = https://www.flippingphysics.com/standing-wave-longitudinal.html | access-date = August 23, 2020 | publisher = Flipping Physics| time = 4:11| id = YouTube video ID: 3QbmvunlQR0}}&lt;/ref&gt;
+
+We can also consider a pipe that is closed at both ends. In this case, both ends will be pressure anti-nodes or equivalently both ends will be displacement nodes. This example is analogous to the case where both ends are open, except the standing wave pattern has a {{frac|π|2}} phase shift along the ''x''-direction to shift the location of the nodes and anti-nodes. For example, the longest wavelength that resonates–the fundamental mode–is again twice the length of the pipe, except that the ends of the pipe have pressure anti-nodes instead of pressure nodes. Between the ends there is one pressure node. In the case of two closed ends, the wavelength is again restricted to
+:&lt;math&gt; \lambda = \frac{2L}{n}, &lt;/math&gt;
+:&lt;math&gt; n = 1, 2, 3, \ldots, &lt;/math&gt;
+
+and the frequency is again restricted to
+:&lt;math&gt; f = \frac{nv}{2L}.&lt;/math&gt;
+
+A [[Rubens' tube]] provides a way to visualize the pressure variations of the standing waves in a tube with two closed ends.&lt;ref&gt;{{cite AV media| last = Mould| first = Steve| date = April 13, 2017| title = A better description of resonance| url = https://www.youtube.com/watch?v=dihQuwrf9yQ | access-date = August 23, 2020 | publisher = YouTube| time = 6:04| id = YouTube video ID: dihQuwrf9yQ}}&lt;/ref&gt;
+
+==Standing wave ratio, phase, and energy transfer==
+{{main|Standing wave ratio}}
+If the two oppositely moving traveling waves are not of the same amplitude, they will not cancel completely at the nodes, the points where the waves are 180° out of phase, so the amplitude of the standing wave will not be zero at the nodes, but merely a minimum.  [[Standing wave ratio]] (SWR) is the ratio of the amplitude at the antinode (maximum) to the amplitude at the node (minimum).  A pure standing wave will have an infinite SWR.  It will also have a constant [[Phase (waves)|phase]] at any point in space (but it may undergo a 180° inversion every half cycle).  A finite, non-zero SWR indicates a wave that is partially stationary and partially travelling.  Such waves can be decomposed into a [[superposition principle|superposition]] of two waves: a travelling wave component and a stationary wave component.  An SWR of one indicates that the wave does not have a stationary component – it is purely a travelling wave, since the ratio of amplitudes is equal to 1.&lt;ref&gt;R S Rao, ''Microwave Engineering'', pp. 153–154, PHI Learning, 2015 {{ISBN|8120351592}}.&lt;/ref&gt;
+
+A pure standing wave does not transfer energy from the source to the destination.&lt;ref&gt;K A Tsokos, ''Physics for the IB Diploma'', p. 251, Cambridge University Press, 2010 {{ISBN|0521138213}}.&lt;/ref&gt;  However, the wave is still subject to losses in the medium.  Such losses will manifest as a finite SWR, indicating a travelling wave component leaving the source to supply the losses.  Even though the SWR is now finite, it may still be the case that no energy reaches the destination because the travelling component is purely supplying the losses.  However, in a lossless medium, a finite SWR implies a definite transfer of energy to the destination.
+
+==Examples==
+One easy example to understand standing waves is two people shaking either end of a [[jump rope]].  If they shake in sync the rope can form a regular pattern of waves oscillating up and down, with stationary points along the rope where the rope is almost still (nodes) and points where the arc of the rope is maximum (antinodes).
+
+===Acoustic resonance===
+{{Main|Acoustic resonance}}
+
+[[File:Rotatingsaturnhexagon gif.ogv|frame|right|[[Saturn's hexagon|The hexagonal cloud feature]] at the north pole of Saturn was initially thought to be standing [[Rossby wave]]s.&lt;ref&gt;[http://pubs.giss.nasa.gov/docs/1990/1990_Allison_etal.pdf A Wave Dynamical Interpretation of Saturn's Polar Region] {{webarchive|url=https://web.archive.org/web/20111021145109/http://pubs.giss.nasa.gov/docs/1990/1990_Allison_etal.pdf |date=2011-10-21 }}, M. Allison, D. A. Godfrey, R. F. Beebe, Science vol. 247, pg. 1061 (1990)&lt;/ref&gt; However, this explanation has recently been disputed.&lt;ref&gt;{{cite journal | doi = 10.1016/j.icarus.2009.10.022 | bibcode=2010Icar..206..755B | volume=206 | issue=2 | title=A laboratory model of Saturn's North Polar Hexagon | year=2010 | journal=Icarus | pages=755–763 | last1 = Barbosa Aguiar | first1 = Ana C.}}&lt;/ref&gt;]]
+Standing waves are also observed in physical media such as strings and columns of air. Any waves traveling along the medium will reflect back when they reach the end. This effect is most noticeable in musical instruments where, at various multiples of a [[vibrating string]] or [[air column]]'s [[natural frequency]], a standing wave is created, allowing [[harmonics]] to be identified. Nodes occur at fixed ends and anti-nodes at open ends. If fixed at only one end, only odd-numbered harmonics are available. At the open end of a pipe the anti-node will not be exactly at the end as it is altered by its contact with the air and so [[end correction]] is used to place it exactly. The density of a string will affect the frequency at which harmonics will be produced; the greater the density the lower the frequency needs to be to produce a standing wave of the same harmonic.
+
+===Visible light===
+Standing waves are also observed in optical media such as [[Waveguide (optics)|optical waveguides]] and [[optical cavity|optical cavities]]. [[Laser]]s use optical cavities in the form of a pair of facing mirrors, which constitute a [[Fabry–Pérot interferometer]]. The [[Active laser medium|gain medium]] in the cavity (such as a [[crystal]]) emits light [[Coherence (physics)|coherently]], exciting standing waves of light in the cavity.&lt;ref&gt;{{cite book |first1=Frank L. |last1=Pedrotti |first2=Leno M. |last2=Pedrotti |date=2017 |title= Introduction to Optics |publisher=[[Cambridge University Press]] |edition=3 |isbn= 978-1108428262}}&lt;/ref&gt; The wavelength of light is very short (in the range of [[nanometer]]s, 10&lt;sup&gt;−9&lt;/sup&gt; m) so the standing waves are microscopic in size. One use for standing light waves is to measure small distances, using [[optical flat]]s.
+
+===X-rays===
+Interference between [[X-ray]] beams can form an [[X-ray standing wave]] (XSW) field.&lt;ref name=&quot;batterman_1964&quot;&gt;{{cite journal | doi = 10.1103/RevModPhys.36.681 | bibcode=1964RvMP...36..681B | volume=36 | issue=3 | title=Dynamical Diffraction of X Rays by Perfect Crystals | year=1964 | journal=Reviews of Modern Physics | pages=681–717 | last1 = Batterman | first1 = Boris W. | last2 = Cole | first2 = Henderson}}&lt;/ref&gt; Because of the short wavelength of X-rays (less than 1 nanometer), this phenomenon can be exploited for measuring atomic-scale events at material [[Surface science|surfaces]]. The XSW is generated in the region where an X-ray beam interferes with a [[Bragg diffraction|diffracted]] beam from a nearly perfect [[single crystal]] surface or a reflection from an [[X-ray reflectivity|X-ray mirror]]. By tuning the crystal geometry or X-ray wavelength, the XSW can be translated in space, causing a shift in the [[X-ray fluorescence]] or [[photoelectron]] yield from the atoms near the surface. This shift can be analyzed to pinpoint the location of a particular atomic species relative to the underlying [[crystal structure]] or mirror surface. The XSW method has been used to clarify the atomic-scale details of [[Semiconductor doping|dopants]] in semiconductors,&lt;ref&gt;{{cite journal | doi = 10.1103/PhysRevLett.22.703 | bibcode=1969PhRvL..22..703B | volume=22 | issue=14 | title=Detection of Foreign Atom Sites by Their X-Ray Fluorescence Scattering | year=1969 | journal=Physical Review Letters | pages=703–705 | last1 = Batterman | first1 = Boris W.}}&lt;/ref&gt; atomic and molecular [[adsorption]] on surfaces,&lt;ref&gt;{{cite journal | doi = 10.1103/PhysRevLett.49.560 | bibcode=1982PhRvL..49..560G | volume=49 | issue=8 | title=Solution to the Surface Registration Problem Using X-Ray Standing Waves | year=1982 | journal=Physical Review Letters | pages=560–563 | last1 = Golovchenko | first1 = J. A. | last2 = Patel | first2 = J. R. | last3 = Kaplan | first3 = D. R. | last4 = Cowan | first4 = P. L. | last5 = Bedzyk | first5 = M. J.| url=https://dash.harvard.edu/bitstream/handle/1/29407052/SolutionToTheSurfaceRegistrationProblem.pdf?sequence=1 }}&lt;/ref&gt; and chemical transformations involved in [[Heterogeneous catalysis|catalysis]].&lt;ref&gt;{{cite journal | last1 = Feng | first1 = Z. | last2 = Kim | first2 = C.-Y. | last3 = Elam | first3 = J.W. | last4 = Ma | first4 = Q. | last5 = Zhang | first5 = Z. | last6 = Bedzyk | first6 = M.J. | year = 2009 | title = Direct Atomic-Scale Observation of Redox-Induced Cation Dynamics in an Oxide-Supported Monolayer Catalyst: WO&lt;sub&gt;''x''&lt;/sub&gt;/α-Fe&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;3&lt;/sub&gt;(0001) | journal = J. Am. Chem. Soc. | volume = 131 | issue = 51| pages = 18200–18201 | doi = 10.1021/ja906816y | pmid = 20028144 }}&lt;/ref&gt;
+
+===Mechanical waves===
+[[File:Great Falls National Park - kayak surfing - 4.webm|thumb|Kayakers surfing a [[:en:Standing wave|standing wave]] in [[:en:Great Falls National Park|Great Falls National Park]].]]
+Standing waves can be mechanically induced into a solid medium using resonance.  One easy to understand example is two people shaking either end of a jump rope.  If they shake in sync, the rope will form a regular pattern with nodes and antinodes and appear to be stationary, hence the name standing wave.  Similarly a cantilever beam can have a standing wave imposed on it by applying a base excitation. In this case the free end moves the greatest distance laterally compared to any location along the beam.  Such a device can be used as a [[sensor]] to track changes in [[natural frequency|frequency]] or [[phase shift|phase]] of the resonance of the fiber. One application is as a measurement device for [[dimensional metrology]].&lt;ref&gt;{{Cite journal | doi=10.1063/1.2052027|title = Development of a virtual probe tip with an application to high aspect ratio microscale features| journal=Review of Scientific Instruments| volume=76| issue=9| pages=095112–095112–8|year = 2005|last1 = Bauza|first1 = Marcin B.| last2=Hocken| first2=Robert J.| last3=Smith| first3=Stuart T.| last4=Woody| first4=Shane C.| bibcode=2005RScI...76i5112B}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.insitutec.com|title=Precision Engineering and Manufacturing Solutions – IST Precision|website=www.insitutec.com|access-date=28 April 2018|url-status=live|archive-url=https://web.archive.org/web/20160731063517/http://www.insitutec.com/|archive-date=31 July 2016}}&lt;/ref&gt;
+
+===Seismic waves===
+Standing surface waves on the Earth are observed as [[seismic wave#Free oscillations of the Earth|free oscillations of the Earth]].
+
+===Faraday waves===
+The [[Faraday wave]] is a non-linear standing wave at the air-liquid interface induced by hydrodynamic instability. It can be used as a liquid-based template to assemble microscale materials.&lt;ref&gt;{{cite journal | doi = 10.1002/adma.201402079 | pmid=24956442 | volume=26 | issue=34 | title=Microscale Assembly Directed by Liquid-Based Template | year=2014 | journal=Advanced Materials | pages=5936–5941 | last1 = Chen | first1 = Pu| pmc=4159433 }}&lt;/ref&gt;
+
+==See also==
+===Waves===
+{{columns-list|colwidth=20em|
+* [[Index of wave articles]]:
+* [[Amphidromic point]]
+* [[Clapotis]]
+* [[Longitudinal mode]]
+* [[Mode-locking]]
+* [[Metachronal rhythm]]
+* [[Resonant room modes]]
+* [[Seiche]]
+* [[Trumpet]]
+* [[Kundt's tube]]
+}}
+===Electronics===
+{{columns-list|colwidth=20em|
+* [[Index of electronics articles]]:
+* [[Cavity resonator]]
+* [[Characteristic impedance]]
+* [[Cymatics]]
+* [[Electrical impedance|Impedance]]
+* [[Normal mode]]
+}}
+
+==Notes==
+{{reflist}}
+
+==References==
+*{{cite book| title = Fundamentals of Physics| last1 = Halliday| first1 = David| last2 = Resnick| first2 = Robert| last3 = Walker| first3 = Jearl| edition = 7th| publisher = John Wiley &amp; Sons| date = 2005| isbn = 0-471-42959-7}}
+*{{cite book| title = College Physics| last1 = Serway| first1 = Raymond A.| last2= Faughn| first2 = Jerry S.| edition = 3rd| publisher = Saunders College Publishing| date = 1992| isbn = 0-03-076377-0}}
+*{{cite web| last=Streets| first= J.| title = Chapter 16 - Superposition and Standing Waves| series = PHYS122 Fundamentals of Physics II| department = Department of Physics| publisher = University of Maryland| year = 2010| url = http://www.physics.umd.edu/courses/Phys122/Streets/16_Superposition_and_Standing_Waves.pdf| access-date=August 23, 2020}}
+
+{{Authority control}}
+
+{{Acoustics}}
+{{Strings (music)}}
+
+{{DEFAULTSORT:Standing Wave}}
+[[Category:Wave mechanics]]
+[[Category:Articles containing video clips]]</text>
+      <sha1>l0qa4rbox1l528hcw0q2sduot7r2e84</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Standing wave ratio</title>
+    <ns>0</ns>
+    <id>41742</id>
+    <revision>
+      <id>991158160</id>
+      <parentid>979378036</parentid>
+      <timestamp>2020-11-28T16:12:46Z</timestamp>
+      <contributor>
+        <username>Widefox</username>
+        <id>1588193</id>
+      </contributor>
+      <comment>Importing Wikidata [[Wikipedia:Short description|short description]]: &quot;Measure of impedance matching of loads to the characteristic impedance of a transmission line or waveguide&quot; ([[Wikipedia:Shortdesc helper|Shortdesc helper]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="29856" xml:space="preserve">{{short description|Measure of impedance matching of loads to the characteristic impedance of a transmission line or waveguide}}
+In [[Radio-frequency engineering|radio engineering]] and [[telecommunication]]s, '''standing wave ratio''' ('''SWR''') is a measure of [[impedance matching]] of [[Electrical load|load]]s to the [[characteristic impedance]] of a [[transmission line]] or [[waveguide]]. Impedance mismatches result in [[standing wave]]s along the transmission line, and SWR is defined as the ratio of the partial [[standing wave]]'s amplitude at an antinode (maximum) to the amplitude at a [[node (physics)|node]] (minimum) along the line.
+
+The SWR is usually thought of in terms of the  maximum and minimum AC [[voltage]]s along the transmission line, thus called the  '''voltage standing wave ratio''' or '''VSWR''' (sometimes pronounced &quot;vizwar&quot;&lt;ref name=&quot;Knott&quot;&gt;
+{{cite book
+  | last1 = Knott
+  | first1 = Eugene F.
+  | last2 = Shaeffer
+  | first2 = John F.
+  | last3 = Tuley
+  | first3 = Michael T.
+  | title = Radar cross section
+  | series = SciTech Radar and Defense Series
+  | edition = 2nd
+  | publisher = SciTech Publishing
+  | year = 2004
+  | page = 374
+  | url = https://books.google.com/books?id=0WuGjb8sqCUC&amp;pg=PA374#v=onepage&amp;q&amp;f=false
+  | isbn = 978-1-891121-25-8}}
+&lt;/ref&gt;&lt;ref name=&quot;Schaub&quot;&gt;
+{{cite book
+  | last1 = Schaub
+  | first1 = Keith B.
+  | last2 = Kelly
+  | first2 = Joe
+  | title = Production testing of RF and system-on-a-chip devices for wireless communications
+  | series = Artech House microwave library
+  | publisher = Artech House
+  | year = 2004
+  | page = 93
+  | url = https://books.google.com/books?id=26RfoKg2UxIC&amp;pg=PA93#v=onepage&amp;q&amp;f=false
+  | isbn = 978-1-58053-692-9}}&lt;/ref&gt;). For example, the VSWR value 1.2:1 denotes that an AC voltage due to standing waves along the transmission line will have a peak value 1.2 times that of the minimum AC voltage along that line, provided the line is at least one half wavelength long. The SWR can as well be defined as the ratio of the maximum amplitude to minimum amplitude of the transmission line's [[Current (electricity)|current]]s, [[electric field strength]], or the magnetic field strength. Neglecting transmission line loss, these ratios are identical.
+
+The '''power standing wave ratio''' ('''PSWR''') is defined as the square of the VSWR,&lt;ref&gt;Samuel Silver, ''Microwave Antenna Theory and Design'', p. 28, IEE, 1984 (originally published 1949) {{ISBN|0863410170}}&lt;/ref&gt; however, this deprecated terminology has no physical relation to actual powers involved in transmission.
+
+SWR is usually measured using a dedicated instrument called an [[SWR meter]]. Since SWR is a measure of the load impedance relative to the characteristic impedance of the transmission line in use (which together determine the [[reflection coefficient]] as described [[#Relationship to the reflection coefficient|below]]), a given SWR meter can only interpret the impedance it sees in terms of SWR if it has been designed for that particular characteristic impedance. In practice most transmission lines used in these applications are [[coaxial cable]]s with an impedance of either 50 or 75 [[ohm]]s, so most SWR meters correspond to one of these.
+
+Checking the SWR is a standard procedure in a radio station. Although the same information could be obtained by measuring the load's impedance with an [[impedance analyzer]] (or &quot;impedance bridge&quot;), the SWR meter is simpler and more robust for this purpose. By measuring the magnitude of the impedance mismatch at the transmitter output it reveals problems due to either the antenna or the transmission line.
+
+==Impedance matching==
+{{Main|Impedance matching}}
+SWR is used as a measure of [[impedance matching]] of a load to the [[characteristic impedance]] of a transmission line carrying [[radio frequency]] (RF) signals. This especially applies to transmission lines connecting [[transmitter|radio transmitters]] and receivers with their [[Antenna (radio)|antenna]]s, as well as similar uses of RF cables such as [[cable television]] connections to TV receivers and [[distribution amplifier]]s. Impedance matching is achieved when the source impedance is the [[complex conjugate]] of the load impedance. The easiest way of achieving this, and the way that minimizes losses along the transmission line, is for the imaginary part of the [[complex number|complex impedance]] of both the source and load to be zero, that is, pure resistances, equal to the characteristic impedance of the transmission line. When there is a mismatch between the load impedance and the transmission line, part of the forward wave sent toward the load is reflected back along the transmission line towards the source. The source then sees a different impedance than it expects which can lead to lesser (or in some cases, more) power being supplied by it, the result being very sensitive to the [[electrical length]] of the transmission line.
+
+Such a mismatch is usually undesired and results in [[standing wave]]s along the transmission line which magnifies transmission line losses (significant at higher frequencies and for longer cables). The SWR is a measure of the depth of those standing waves and is, therefore, a measure of the matching of the load to the transmission line. A matched load would result in an SWR of 1:1 implying no reflected wave. An infinite SWR represents complete reflection by a load unable to absorb electrical power, with all the incident power reflected back towards the source.
+
+It should be understood that the match of a load to the transmission line is different from the match of a ''source'' to the transmission line or the match of a source to the load ''seen through'' the transmission line. For instance, if there is a perfect match between the load impedance ''Z''&lt;sub&gt;load&lt;/sub&gt; and the source impedance ''Z''&lt;sub&gt;source&lt;/sub&gt;=''Z''&lt;sup&gt;*&lt;/sup&gt;&lt;sub&gt;load&lt;/sub&gt;, that perfect match will remain if the source and load are connected through a transmission line with an electrical length of one half wavelength (or a multiple of one half wavelengths) using a transmission line of ''any'' characteristic impedance ''Z''&lt;sub&gt;0&lt;/sub&gt;. However the SWR will generally not be 1:1, depending only on ''Z''&lt;sub&gt;load&lt;/sub&gt; and ''Z''&lt;sub&gt;0&lt;/sub&gt;. With a different length of transmission line, the source will see a different impedance than ''Z''&lt;sub&gt;load&lt;/sub&gt; which may or may not be a good match to the source. Sometimes this is deliberate, as when a [[Quarter-wave impedance transformer|quarter-wave matching section]] is used to improve the match between an otherwise mismatched source and load.
+
+However typical [[radio frequency|RF]] sources such as transmitters and signal generators are designed to look into a purely resistive load impedance such as 50Ω or 75Ω, corresponding to common transmission lines' characteristic impedances. In those cases, matching the load to the transmission line, ''Z''&lt;sub&gt;load&lt;/sub&gt;=''Z''&lt;sub&gt;0&lt;/sub&gt;, ''always'' ensures that the source will see the same load impedance as if the transmission line weren't there. This is identical to a 1:1 SWR. This condition ( ''Z''&lt;sub&gt;load&lt;/sub&gt;=''Z''&lt;sub&gt;0&lt;/sub&gt;) also means that the load seen by the source is independent of the transmission line's electrical length. Since the electrical length of a physical segment of transmission line depends on the signal frequency, violation of this condition means that the impedance seen by the source through the transmission line becomes a function of frequency (especially if the line is long), even if ''Z''&lt;sub&gt;load&lt;/sub&gt; is frequency-independent. So in practice, a good SWR (near 1:1) implies a transmitter's output seeing the exact impedance it expects for optimum and safe operation.
+
+==Relationship to the reflection coefficient==
+[[File:Standing wave 2.gif|thumb|350px|right|Incident wave (blue) is fully reflected (red wave) out of phase at short-circuited end of transmission line, creating a net voltage (black) standing wave. Γ = −1, SWR = ∞.]]
+[[File:StandingWaves-3.png|thumb|500px|right|Standing waves on transmission line, net voltage shown in different colors during one period of oscillation. Incoming wave from left (amplitude = 1) is partially reflected with (top to bottom) Γ = 0.6, −0.333, and 0.8 ∠60°. Resulting SWR = 4, 2, 9.]]
+The voltage component of a standing wave in a uniform [[transmission line]] consists of the forward wave (with [[Phasor|complex]] amplitude &lt;math&gt;V_f&lt;/math&gt;) superimposed on the reflected wave (with complex amplitude &lt;math&gt;V_r&lt;/math&gt;).
+
+A wave is partly reflected when a transmission line is terminated with other than an impedance equal to its [[characteristic impedance]].  The [[reflection coefficient]] &lt;math&gt;\Gamma&lt;/math&gt; can be defined as:
+
+:&lt;math&gt;\Gamma = \frac{V_r}{V_f}.&lt;/math&gt;
+
+or
+
+:&lt;math&gt;\Gamma = {Z_L - Z_O\over Z_L + Z_O}&lt;/math&gt;
+
+&lt;math&gt;\Gamma&lt;/math&gt; is a [[complex number]] that describes both the magnitude and the phase shift of the reflection.  The simplest cases with &lt;math&gt;\Gamma&lt;/math&gt; ''measured at the load'' are:
+* &lt;math&gt;\Gamma = -1&lt;/math&gt;: complete negative reflection, when the line is short-circuited,
+* &lt;math&gt;\Gamma = 0&lt;/math&gt;: no reflection, when the line is perfectly matched,
+* &lt;math&gt;\Gamma = +1&lt;/math&gt;: complete positive reflection, when the line is open-circuited.
+
+The SWR directly corresponds to the [[magnitude (mathematics)#Complex numbers|magnitude]] of &lt;math&gt;\Gamma&lt;/math&gt;.
+
+At some points along the line the forward and reflected waves [[wave interference|interfere]] constructively, exactly in phase, with the resulting amplitude &lt;math&gt;V_\text{max}&lt;/math&gt; given by the sum of their those waves' amplitudes:
+
+:&lt;math&gt;\begin{align}
+  |V_\text{max}| &amp;= |V_f| + |V_r| \\
+                 &amp;= |V_f| + |\Gamma V_f| \\
+                 &amp;= (1 + |\Gamma|) |V_f|.
+\end{align}&lt;/math&gt;
+
+At other points, the waves interfere 180° out of phase with the amplitudes partially cancelling:
+
+:&lt;math&gt;\begin{align}
+  |V_\text{min}| &amp;= |V_f| - |V_r| \\
+                 &amp;= |V_f| - |\Gamma V_f| \\
+                 &amp;= (1 - |\Gamma|) |V_f|.
+\end{align}&lt;/math&gt;
+
+The voltage standing wave ratio is then

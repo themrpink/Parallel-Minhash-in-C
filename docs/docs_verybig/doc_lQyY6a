@@ -1,0 +1,215 @@
+where ''R''&lt;sub&gt;E&lt;/sub&gt; is the radius of the Earth, ''ψ'' is the dip of the horizon and ''δ'' is the refraction of the horizon. The dip is determined fairly simply from
+
+:&lt;math&gt;\cos \psi = \frac{{R}_{\text{E}}{\mu}_{0}}{\left( {{R}_{\text{E}}}+h \right)\mu } \,,&lt;/math&gt;
+
+where ''h'' is the observer's height above the Earth, ''μ'' is the index of refraction of air at the observer's height, and ''μ''&lt;sub&gt;0&lt;/sub&gt; is the index of refraction of air at Earth's surface.
+
+The refraction must be found by integration of
+
+:&lt;math&gt;\delta =-\int_{0}^{h}{\tan \phi \frac{\text{d}\mu }{\mu }} \,,&lt;/math&gt;
+
+where &lt;math&gt;\phi\,\!&lt;/math&gt; is the angle between the ray and a line through the center of the Earth. The angles ''ψ'' and &lt;math&gt;\phi\,\!&lt;/math&gt; are related by
+
+:&lt;math&gt;\phi =90{}^\circ -\psi \,.&lt;/math&gt;
+
+;Simple method—Young
+A much simpler approach, which produces essentially the same results as the first-order approximation described above, uses the geometrical model but uses a radius {{nowrap|1=''R′'' = 7/6 ''R''&lt;sub&gt;E&lt;/sub&gt;}}. The distance to the horizon is then&lt;ref name=&quot;ATYoungDistToHoriz&quot;/&gt;
+
+:&lt;math&gt;d=\sqrt{2 R^\prime h} \,.&lt;/math&gt;
+
+Taking the radius of the Earth as 6371&amp;nbsp;km, with ''d'' in km and ''h'' in m,
+
+:&lt;math&gt;d \approx 3.86 \sqrt{h} \,;&lt;/math&gt;
+
+with ''d'' in mi and ''h'' in ft,
+
+:&lt;math&gt;d \approx 1.32 \sqrt{h} \,.&lt;/math&gt;
+
+Results from Young's method are quite close to those from Sweer's method, and are sufficiently accurate for many purposes.
+
+==Curvature of the horizon{{anchor|Curvature}}==
+{{Multiple issues|section=yes|
+{{Unreferenced section|date=June 2013}}
+{{Expand section|1=examples and additional citations|demospace=main|date=June 2013}}
+}}
+[[File:A colorful view of airglow layers at Earth's horizon.jpg|thumb|right|The curvature of the horizon is easily seen in this 2008 photograph, taken from a [[Space Shuttle]] at an altitude of {{cvt|226|km|mi}}.]]
+
+From a point above Earth's surface, the horizon appears slightly [[wikt:convex|convex]]; it is a [[circular arc]]. The following [[formula]] expresses the basic geometrical relationship between this visual curvature &lt;math&gt;\kappa&lt;/math&gt;, the altitude &lt;math&gt;h&lt;/math&gt;, and Earth's radius &lt;math&gt;R&lt;/math&gt;:
+:&lt;math&gt; \kappa=\sqrt{\left(1+\frac{h}{R}\right)^2-1}\ &lt;/math&gt;
+
+The curvature is the reciprocal of the curvature [[angular diameter|angular radius]] in [[radian]]s. A curvature of 1.0 appears as a circle of an angular radius of 57.3° corresponding to an altitude of approximately {{cvt|2640|km|mi}} above Earth's surface. At an altitude of {{cvt|10|km|mi ft}}, the [[cruise (aeronautics)|cruising]] altitude of a typical airliner, the mathematical curvature of the horizon is about 0.056, the same curvature of the rim of circle with a radius of 10&amp;nbsp;m that is viewed from 56&amp;nbsp;cm directly above the center of the circle. However, the apparent curvature is less than that due to [[atmospheric refraction|refraction]] of light by the atmosphere and the [[cloud cover|obscuration]] of the horizon by high cloud layers that reduce the altitude above the visual surface.
+
+==Vanishing points==
+[[File:TwoPointPerspective.png|thumb|right|210px|Two points on the horizon are at the intersections of the lines extending the segments representing the edges of the building in the foreground. The horizon line coincides here with the line at the top of the doors and windows.]]
+{{main|Vanishing point}}
+The horizon is a key feature of the [[picture plane]] in the science of [[graphical perspective]]. Assuming the picture plane stands vertical to ground, and ''P'' is the perpendicular projection of the eye point ''O'' on the picture plane, the horizon is defined as the horizontal line through ''P''. The point ''P'' is the vanishing point of lines perpendicular to the picture. If ''S'' is another point on the horizon, then it is the vanishing point for all lines [[parallel lines|parallel]] to ''OS''. But [[Brook Taylor]] (1719) indicated that the horizon plane determined by ''O'' and the horizon was like any other [[plane (geometry)|plane]]:
+:The term of Horizontal Line, for instance, is apt to confine the Notions of a Learner to the Plane of the Horizon, and to make him imagine, that that Plane enjoys some particular Privileges, which make the Figures in it more easy and more convenient to be described, by the means of that Horizontal Line, than the Figures in any other plane;…But in this Book I make no difference between the Plane of the Horizon, and any other Plane whatsoever...&lt;ref&gt;{{cite book|authors=[[Brook Taylor|Taylor, Brook]] |page=1719|title=New Principles of Perspective}}&lt;/ref&gt;&lt;ref&gt;{{cite news|author= [[Kirsti Andersen|Anderson, Kirsti]] |date=1991|title= Brook Taylor’s Work on Linear Perspective|page= 151|publisher= Springer|isbn=0-387-97486-5}}&lt;/ref&gt;
+The peculiar geometry of perspective where parallel lines converge in the distance, stimulated the development of [[projective geometry]] which posits a [[point at infinity]] where parallel lines meet. In her book ''Geometry of an Art'' (2007), [[Kirsti Andersen]] described the evolution of perspective drawing and science up to 1800, noting that vanishing points need not be on the horizon. In a chapter titled &quot;Horizon&quot;, [[John Stillwell]] recounted how projective geometry has led to [[incidence geometry]], the modern abstract study of line intersection. Stillwell also ventured into [[foundations of mathematics#Projective geometry|foundations of mathematics]] in a section titled &quot;What are the Laws of Algebra ?&quot; The &quot;algebra of points&quot;, originally given by [[Karl von Staudt]] deriving the axioms of a [[field (mathematics)|field]] was deconstructed in the twentieth century, yielding a wide variety of mathematical possibilities. Stillwell states
+:This discovery from 100 years ago seems capable of turning mathematics upside down, though it has not yet been fully absorbed by the mathematical community. Not only does it defy the trend of turning geometry into algebra, it suggests that both geometry and algebra have a simpler foundation than previously thought.&lt;ref&gt;{{cite news|author=[[John Stillwell|Stillwell, John]] |date=2006|title= Yearning for the Impossible|url=https://archive.org/details/yearningforimpos00stil|url-access=registration|work= Horizon|pages=[https://archive.org/details/yearningforimpos00stil/page/n60 47]–76|publisher= [[A K Peters, Ltd.]]|isbn= 1-56881-254-X}}&lt;/ref&gt;
+
+== See also ==
+* [[Aerial landscape art]]
+* [[Atmospheric refraction]]
+* [[Dawn]]
+* [[Dusk]]
+* [[Horizontal and vertical]]
+* [[Landscape]]
+** [[Landscape art]]
+* Limb
+** [[Limb darkening]]
+** [[Lunar limb]]
+* [[Radar horizon]]
+* [[Radio horizon]]
+* [[Sextant]]
+
+== References ==
+{{reflist}}
+
+==Further reading==
+* {{cite news|url=http://mintaka.sdsu.edu/GF/explain/atmos_refr/dip.html |title=Dip of the Horizon|work=Green Flash website (Sections: Astronomical Refraction, Horizon Grouping)| author=Young, Andrew T. |publisher=San Diego State University Department of Astronomy|accessdate=April 16, 2011 }}
+
+== External links ==
+
+[[Category:Horizontal coordinate system]]
+[[Category:Celestial coordinate system]]</text>
+      <sha1>am2iuxlcqs448gz826n7wom9xszevyb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Prince regent</title>
+    <ns>0</ns>
+    <id>48911</id>
+    <revision>
+      <id>978288163</id>
+      <parentid>978287877</parentid>
+      <timestamp>2020-09-14T00:57:41Z</timestamp>
+      <contributor>
+        <ip>2601:8C3:8280:820:21B3:E53B:6802:F6ED</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="11190" xml:space="preserve">{{short description|Prince who rules in place of a monarch due to incapacity or absence}}
+{{other uses}}
+{{Royal and noble ranks}}
+[[File:King George IV when Prince Regent (1762-1830), by Henry Bone.jpg|thumb|right|[[George IV of the United Kingdom]], as prince regent, while his father was mentally incapable between 1811 and 1820.  By [[Henry Bone]]]]
+
+A '''prince regent''', or princess regent, is a [[prince]] or [[princess]] who rules a monarchy as [[regent]] instead of a [[monarch]], e.g., as a result of the Sovereign's incapacity (minority or illness) or absence (remoteness, such as exile or long voyage, or simply no incumbent).
+
+While the term itself can have the generic meaning and refer to any prince or princess who fills the role of regent, historically it has mainly been used to describe a small number of individual princes and princesses who were regents of non-[[principalities]].
+
+==Prince regent in the United Kingdom==
+{{Further|Regency Acts}}
+In the English language the title ''Prince Regent'' is most commonly associated with [[George IV of the United Kingdom|George IV]], who held the style ''[[Royal Highness|HRH]]'' '''The Prince Regent''' during the incapacity, by dint of mental illness, of his father, [[George III of the United Kingdom|George III]] (see [[Regent]] for other regents). [[Regent's Park]], [[Regent Street]] and [[Regent's Canal]] (which he commissioned) in [[London]], were all named in honour of him. The architect [[John Nash (architect)|John Nash]], under the patronage of HRH The Prince Regent, planned a palatial summer residence for the prince, 50 detached villas in a parkland setting and elegant terraces around the exterior of the park. This was all part of an ambitious plan, to develop The Regent's Park and lay out an elegant new street, Regent's Street, to link it to [[St James's Park]] and the prince's London residence, [[Carlton House]]. &lt;ref&gt;{{cite book|url=https://www.royalparks.org.uk/parks/the-regents-park/about-regents-park/landscape-history| title=Landscape History |publisher=RoyalParks.org.uk |date= |accessdate=27 October 2016}}&lt;/ref&gt; [[Regent Terrace]] in [[Edinburgh]] is also named after the Prince Regent, who visited the area in 1822.
+
+This period is known as the [[British Regency]], or just the Regency.
+
+The title was conferred by the [[Care of King During his Illness, etc. Act 1811|Regency Act]] on 5 February 1811. Subject to certain limitations for a period, the prince regent was able to exercise the full powers of the King. The precedent of the Regency Crisis of 1788 (from which George III recovered before it was necessary to appoint a regent) was followed. The [[Prince of Wales]] continued as regent until his father's death in 1820, when he became [[George IV of the United Kingdom|George IV]].
+
+On 27 November 2019, it was rumoured that [[Queen Elizabeth II]] may step down from her duties (at the age of 95) as queen and pass it on to her son. As of May of 2021 [[Prince Charles]] - if true - would become Prince Regent in her stead.&lt;ref&gt;https://metro.co.uk/2019/11/27/queen-retire-18-months-charles-become-prince-regent-11228168/&lt;/ref&gt; These are only rumours since The Queen has stated on the occasion of her Diamond Jubilee in her speech to Parliament “With the support of my family, rededicate myself to the service of our great country and its people now ''and in the years to come''.”&lt;ref&gt;{{cite news |title=Diamond Jubilee: Queen Rededicates Herself to UK |url= https://www.bbc.co.uk/news/uk-politics-17438874 |accessdate=28 November 2019 |work=BBC News |date=20 March 2012}}&lt;/ref&gt;
+
+==Prince regent in Germany==
+In Germany, the title ''Prinzregent'' (literally prince regent) is most commonly associated with [[Luitpold, Prince Regent of Bavaria|Prince Luitpold of Bavaria]], who served as regent for two of his nephews, King [[Ludwig II of Bavaria]], who was declared mentally incompetent in 1886, and King [[Otto of Bavaria]] (who had been declared insane in 1875) from 1886 until 1912.
+
+The years of Luitpold's regency were marked by tremendous artistic and cultural activity in Bavaria, where they are known after the regencies as the ''Prinzregentenjahre'' or the ''Prinzregentenzeit''. Numerous streets in Bavarian cities and towns are called ''Prinzregentenstraße''. Many institutions are named in Luitpold's honour, ''e.g.'', the ''[[Prinzregententheater]]'' in Munich. ''[[Prinzregententorte]]'' is a multi-layered cake with chocolate butter cream named in Luitpold's honour.
+
+At Luitpold's death in 1912, his son [[Ludwig III of Bavaria|Prince Ludwig]] succeeded as prince regent. Ludwig held the title for less than a year, since the Bavarian Legislature decided to recognise him as king.
+
+==Prince regent in Belgium==
+*The first head of state of Belgium after it seceded from the Dutch monarchy in 1831 was a regent (but not a prince in his own right), baron [[Erasme Louis Surlet de Chokier]], before the new nation, which had chosen to become a parliamentary monarchy, had its first king sworn into the constitution.
+*[[Prince Charles of Belgium]] served as prince regent of Belgium from 1944 to 1950 during the German captivity and exile to Switzerland of his elder brother, King [[Leopold III of Belgium]].
+
+==Prince regent in Bulgaria==
+[[Image:BASA-3K-15-273-9-Prince Kyril of Bulgaria.jpeg|thumb|150px|left|[[Kiril, Prince of Preslav|The Prince Regent Kyril, Prince of Preslav]]]]
+[[Kiril, Prince of Preslav]] was appointed head of a regency council by the Bulgarian parliament following the death of his brother, Tsar [[Boris III of Bulgaria|Boris III]] on 28 August 1943, to act as Head of State until the late Tsar's son and successor, Tsar [[Simeon II of Bulgaria|Simeon II]], reached the age of 18 years. On 5 September 1944 the Soviet Union declared war on the [[Kingdom of Bulgaria]] and on 8 September Soviet armies crossed the Romanian border and occupied the country. On 1 February 1945 the prince regent Kyril, and the two other former regents - Professor [[Bogdan Filov]] and General [[Nikola Mikhov]], as well as a range of former cabinet ministers, royal advisors and 67 MPs were executed.
+
+==Prince Lieutenant in Luxembourg==
+The heir-apparent or heir-presumptive to the [[grand duke of Luxembourg]] may be titled ''prince-lieutenant'' ('prince deputy') during a period in which [[Grand Duke of Luxembourg|the incumbent]] remains formally on the grand ducal throne, but (progressively, most) functions of the crown are performed by the 'monarch [[apprentice]]', as [[Jean, Grand Duke of Luxembourg|prince Jean]] did 4 May 1961 &amp;ndash; 12 November 1964 in the last years of his mother [[Charlotte, Grand Duchess of Luxembourg|Charlotte]]'s reign until she abdicated and he succeeded to the grand ducal throne (she lived until 1985), and Jean's own son [[Henri, Grand Duke of Luxembourg|prince Henri]] 3 March 1998 &amp;ndash; 7 October 2000 until his father abdicated and he succeeded (Jean lived until 2019).
+
+==Queen regent==
+If a king is unable to perform his duties then his consort or the [[queen mother]] may act for him as a ''Queen Regent''. Queen mothers have acted in this way in the [[Kingdom of Eswatini]].
+
+==Other notable princes regent==
+:''More prince-regents (often without such specific title) are to be found in [[List of regents]].''
+*[[Duke of Zhou]] Dan served as prince regent for his nephew [[King Cheng of Zhou]] until the latter came of age.&lt;ref&gt;{{cite av media |last1=袁|first1=腾飞 |script-title=zh:腾飞五千年之中华文明起源10 王的叔叔不好 |url=https://www.youtube.com/watch?v=MftIyBmp_54 |url-access=registration |via=YouTube |publisher=Tengfei Official |access-date=5 May 2016}}{{Self-published source|date=May 2017}}&lt;/ref&gt;
+*[[Philippe II, Duke of Orléans]] was Regent of France from the death of Louis XIV in 1715 until Louis XV came of age in 1723; this is also used as a period label for many aspects of French history, as &quot;Régence&quot; in French.   
+*[[Frederick VI of Denmark|Crown Prince Frederick of Denmark]] served as regent from 1784 to 1808 for his father, King [[Christian VII of Denmark]], who was insane.
+*[[Wilhelm I of Germany|Prince William of Prussia]] served as regent from 1858 to 1861 for his older brother King [[Frederick William IV of Prussia]], who had become mentally unfit to rule.
+*[[Dorgon|Prince Dorgon]] of the early [[Qing dynasty]] served as regent for his nephew, the [[Shunzhi Emperor]], from 1643 to 1650, because the latter was only six at the time of his ascension. Dorgon was instrumental in moving Manchu forces into Beijing in 1644, proclaiming the Qing dynasty to be the legitimate successor to the [[Ming dynasty]]. In Qing dynasty historical records, Dorgon was the first to be referred to as ''Shezhengwang'' (摄政王; &quot;Prince regent&quot;).
+*[[Rameses the Great]]
+*[[Zaifeng, Prince Chun|Prince Chun]] of the late Qing dynasty served as regent from 1908 to 1911 for his son [[Puyi]], the Xuantong Emperor. Apart from Dorgon, Zaifeng was the only person in Chinese history who was specifically referred to as prince regent.
+*[[Emperor Shōwa|Crown Prince Hirohito]] served as regent from 1921 to 1926 for his ailing father, [[Emperor Taishō]].
+*[[Prince Paul of Yugoslavia]] from 1934 to 1941, known in [[Serbian language|Serbian]] as ''Његово Краљевско Височанство, Кнез Намесник'' (English: His Royal Highness The Prince Regent) served as regent for his first cousin once removed, King [[Peter II of Yugoslavia|Peter II]] who was a minor.
+* [[John VI of Portugal|John, Prince of Brazil]] (1767–1826) served as regent of Portugal for his mother Queen [[Maria I of Portugal|Maria I]], who had become mentally unfit to rule, from 1799 to 1816.  His regency was associated with the [[transfer of the Portuguese court to Brazil]].
+*[[Princess]] [[Erelu Kuti]] of [[Lagos]], a [[Yoruba people|Yoruba]] [[chieftain|chieftess]] of the eighteenth century who served as [[Queen mothers (Africa)|queen mother]] of a line of [[tribal king]]s. The successors to the [[noble title]] that now shares her name have all subsequently served as regent of Lagos following the death of a reigning [[Oba (ruler)|oba]]. Princesses are traditionally called upon to serve as regents in this fashion in most of the other kingdoms of [[Yorubaland]] as well. In [[Akure Kingdom|Akure]], for example, the eldest daughter of a recently deceased king ruled in his stead until a substantive successor to the royal title was chosen by the college of noble [[kingmaker]]s, a period that lasted for an unusually long six years due to a succession crisis in the state.
+*[[Chieftain|Chief]] [[Tshekedi Khama]] of the [[Bamangwato]], a [[Tswana people|Tswana]] prince who served as regent during the reign of his famous nephew, Sir [[Seretse Khama]]. He opposed Sir Seretse's marriage to [[Ruth Williams Khama|Lady Khama]] on the grounds that it would have an adverse effect on the chieftaincy, and attempted to claim the tribal throne in his stead thereafter because of it. He was ultimately unsuccessful.
+
+==References==
+{{Reflist}}
+
+==External links==
+
+{{DEFAULTSORT:Prince regent}}
+[[Category:Regents]]
+[[Category:Princes| ]]
+[[Category:Royal titles]]</text>
+      <sha1>hhyhn5bwdb5w7ksf4hsmq1ri09tzfh3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Caroline of Brunswick</title>
+    <ns>0</ns>
+    <id>48913</id>
+    <revision>
+      <id>991596212</id>
+      <parentid>989829095</parentid>
+      <timestamp>2020-11-30T21:51:46Z</timestamp>
+      <contributor>
+        <username>Surtsicna</username>
+        <id>6488475</id>
+      </contributor>
+      <comment>redundant</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="47608" xml:space="preserve">{{EngvarB|date=October 2013}}
+{{Use dmy dates|date=May 2020}}
+{{Infobox royalty
+| image = QueenCaroline1820.jpg
+| caption = Portrait c. 1820 by [[James Lonsdale (painter)|James Lonsdale]], &quot;Principal Painter in Ordinary to the Queen&quot;. Her wedding ring is displayed prominently to emphasise fidelity to [[marriage vows]].
+| succession = [[Queen consort of the United Kingdom]] {{nowrap|and [[List of Hanoverian consorts|Hanover]]}}
+| reign   = 29 January 1820 – 7 August 1821
+| reign-type = Tenure
+| spouse  = {{marriage|[[George IV of the United Kingdom]]|1795|1796|end=separated}}
+| issue  = [[Princess Charlotte of Wales]]
+| house = [[House of Brunswick-Bevern|Brunswick-Bevern]]
+| full name = Caroline Amalie Elisabeth
+| father = [[Charles William Ferdinand, Duke of Brunswick]]
+| mother = [[Princess Augusta of Great Britain]]
+| birth_date = {{Birth date|df=yes|1768|5|17}}
+| birth_place = [[Braunschweig|Brunswick]], [[Principality of Brunswick-Wolfenbüttel|Brunswick-Wolfenbüttel]], [[Holy Roman Empire]]
+| death_date = {{Death date and age|df=yes|1821|8|7|1768|5|17}}
+| death_place = [[Hammersmith]], [[Middlesex]], England
+| burial_date = 25 August 1821
+| burial_place = [[Brunswick Cathedral]]
+}}
+'''Caroline of Brunswick''' (Caroline Amelia Elizabeth; {{Lang-de|Caroline Amalie Elisabeth von Braunschweig-Wolfenbüttel}}; 17 May 1768&amp;nbsp;– 7 August 1821) was [[List of British consorts|queen of the United Kingdom]] and [[Kingdom of Hanover|Hanover]] as the wife of [[King George IV]] from 29 January 1820 until her death in 1821. She was the [[Princess of Wales]] from 1795 to 1820.
+
+The daughter of [[Charles William Ferdinand, Duke of Brunswick]], and [[Princess Augusta of Great Britain]], Caroline was engaged to her first cousin, George, in 1794, despite their never having met. He was already illegally married to [[Maria Fitzherbert]]. George and Caroline married the following year but separated shortly after the birth of their only child, [[Princess Charlotte of Wales]], in 1796. By 1806, rumours that Caroline had taken lovers and had an illegitimate child led to an investigation into her private life. The dignitaries who led the investigation concluded that there was &quot;no foundation&quot; to the rumours, but Caroline's access to her daughter was nonetheless restricted. In 1814, Caroline moved to Italy, where she employed Bartolomeo Pergami as a servant. Pergami soon became Caroline's closest companion, and it was widely assumed that they were lovers. In 1817, Caroline was devastated when Charlotte died in childbirth. She heard the news from a passing courier as George had refused to write and tell her. He was determined to divorce Caroline, and set up a second investigation to collect evidence of her adultery.
+
+In 1820, George became [[Monarchy of the United Kingdom|king of the United Kingdom]] and [[Kingdom of Hanover|Hanover]]. He hated his wife, vowed she would never be queen and insisted on a divorce, which she refused. A legal divorce was possible but difficult to obtain. Caroline returned to Britain to assert her position as queen. She was wildly popular with the British people, who sympathised with her and despised the new king for his immoral behaviour. On the basis of the loose evidence collected against her, George attempted to divorce her by introducing the [[Pains and Penalties Bill 1820]] to Parliament, but he and the bill were so unpopular, and Caroline so popular with the masses, that it was withdrawn by the [[Liverpool ministry]]. In July 1821, Caroline was barred from the [[Coronation of the British monarch|coronation]] on the orders of her husband. She fell ill in London and died three weeks later. Her funeral procession passed through London on its way to her native [[Braunschweig]], where she was buried.
+
+==Early life==
+Caroline was born a princess of [[Braunschweig]], known in English as ''Brunswick'', with the courtesy title of Duchess of Brunswick-Wolfenbüttel, on 17 May 1768 at [[Braunschweig]]  in Germany. She was the daughter of [[Charles William Ferdinand, Duke of Brunswick|Charles William Ferdinand]], Duke of [[Principality of Brunswick-Wolfenbüttel|Brunswick-Wolfenbüttel]], and his wife [[Princess Augusta of Great Britain]], eldest sister of [[George III of the United Kingdom|King George III]].&lt;ref&gt;{{cite ODNB|id=4722 |title=Caroline [Princess Caroline of Brunswick-Wolfenbüttel] |first=E. A. |last=Smith}}&lt;/ref&gt;
+
+Caroline was brought up in a difficult family situation. Her mother resented her father's open adultery with Baroness Luise von [[:de:Haus Hertefeld|Hertefeld]], whom he had installed as his official mistress in 1777, and Caroline was later to confide to Lady Charlotte Campbell that she was often tired of becoming a &quot;shuttlecock&quot; between her parents, as whenever she was civil to one of them, she was scolded by the other.&lt;ref name=&quot;flora&quot;/&gt;
+
+She was educated by governesses, but the only subject in which she was given a higher education was music.&lt;ref name=&quot;flora&quot;/&gt; From 1783 until 1791, [[Eleonore von Grothaus|Countess Eleonore von Münster]] was her governess, and won her affection, but never managed to teach her to spell correctly, as Caroline preferred to dictate to a secretary.&lt;ref name=&quot;flora&quot;/&gt; Caroline could understand English and French, but her father admitted that she was lacking in education.&lt;ref&gt;Plowden, p. 44&lt;/ref&gt;
+
+According to Caroline's mother, who was British, all German princesses learned English in the hope that they would be chosen to marry [[George IV of the United Kingdom|George, Prince of Wales]], George III's eldest son and heir apparent and Caroline's first cousin.&lt;ref&gt;Plowden, p. 6&lt;/ref&gt;
+
+[[John Stanley, 1st Baron Stanley of Alderley|John Stanley]], later 1st Baron Stanley of Alderley, saw her in 1781, and noted that she was an attractive girl with curly, fair hair.&lt;ref&gt;Plowden, pp. 5–6&lt;/ref&gt; In 1784, she was described as a beauty, and two years later, [[Honoré Gabriel Riqueti, comte de Mirabeau]] described her as &quot;most amiable, lively, playful, witty and handsome&quot;.&lt;ref name=flora&gt;Fraser, Flora: ''The Unruly Queen: The Life of Queen Caroline''&lt;/ref&gt;
+
+Caroline was brought up with an extreme degree of seclusion from contact with the opposite sex even for her own time.&lt;ref name=flora/&gt; She was reportedly constantly supervised by her governess and elder ladies, restricted to her room when the family was entertaining guests and ordered to keep away from the windows.&lt;ref name=flora/&gt; She was normally refused permission to attend balls and court functions, and when allowed, she was forbidden to dance. Abbé Baron commented during the winter of 1789–90: &quot;She is supervised with the greatest severity, as they claim she is already aware of what she is missing. I doubt if the torches of [[Hymen (god)|Hymen]] will illuminate for her. Although always attired with style and elegance, she is never allowed to dance&quot;, and that as soon as the first dance begun, she was forced to sit down at the whist table with three old ladies.&lt;ref name=flora/&gt;
+
+A rare occasion was the wedding of her elder brother Charles, when she was finally allowed to dance, though only with her brother, the groom, and her new brother-in-law, the Prince of Orange – she was, however, still forbidden to dine alone with her brother.&lt;ref name=flora/&gt;
+
+Her secluded isolation tormented her, which was demonstrated when she was later again banned from attending a ball. She simulated an illness so severe that her parents left the ball to see her. When they arrived, she claimed to be in labour and forced them to send for a midwife. When the midwife arrived, she stopped her simulation and asked her mother: &quot;Now, Madam, will you keep me another time from a ball?&quot;&lt;ref name=flora/&gt;

@@ -1,0 +1,216 @@
+A bottleneck edge is the highest weighted edge in a spanning tree. A spanning tree is a '''[[minimum bottleneck spanning tree]]''' (or '''MBST''') if the graph does not contain a spanning tree with a smaller bottleneck edge weight. A MST is necessarily a MBST (provable by the [[#Cut property|cut property]]), but a MBST is not necessarily a MST.&lt;ref&gt;{{cite web|url=http://flashing-thoughts.blogspot.ru/2010/06/everything-about-bottleneck-spanning.html|title=Everything about Bottleneck Spanning Tree|website=flashing-thoughts.blogspot.ru|accessdate=4 April 2018}}&lt;/ref&gt;&lt;ref&gt;http://pages.cpsc.ucalgary.ca/~dcatalin/413/t4.pdf&lt;/ref&gt;
+
+==References==
+{{Reflist|30em}}
+
+==Further reading==
+* [http://citeseer.ist.psu.edu/nesetril00otakar.html Otakar Boruvka on Minimum Spanning Tree Problem (translation of the both 1926 papers, comments, history) (2000)] [[Jaroslav Nešetřil]], Eva Milková, Helena Nesetrilová. (Section 7 gives his algorithm, which looks like a cross between Prim's and Kruskal's.)
+* [[Thomas H. Cormen]], [[Charles E. Leiserson]], [[Ronald L. Rivest]], and [[Clifford Stein]]. ''[[Introduction to Algorithms]]'', Second Edition. MIT Press and McGraw-Hill, 2001. {{isbn|0-262-03293-7}}. Chapter 23: Minimum Spanning Trees, pp.&amp;nbsp;561&amp;ndash;579.
+* Eisner, Jason (1997). [http://www.cs.jhu.edu/~jason/papers/eisner.mst-tutorial.pdf State-of-the-art algorithms for minimum spanning trees: A tutorial discussion]. Manuscript, University of Pennsylvania, April. 78 pp.
+* Kromkowski, John David. &quot;Still Unmelted after All These Years&quot;, in Annual Editions, Race and Ethnic Relations, 17/e (2009 McGraw Hill) (Using minimum spanning tree as method of demographic analysis of ethnic diversity across the United States).
+
+==External links==
+{{commonscat|Minimum spanning trees}}
+
+* [http://www.boost.org/libs/graph/doc/table_of_contents.html Implemented in BGL, the Boost Graph Library]
+* [http://www.cs.sunysb.edu/~algorith/files/minimum-spanning-tree.shtml The Stony Brook Algorithm Repository - Minimum Spanning Tree codes]
+* [https://web.archive.org/web/20100317031339/http://www.codeplex.com/quickgraph Implemented in QuickGraph for .Net]
+
+[[Category:Spanning tree]]
+[[Category:Polynomial-time problems]]</text>
+      <sha1>g4tee86ksbybuz7w4zc7j0l95s3e15v</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Time-division multiplexing</title>
+    <ns>0</ns>
+    <id>41796</id>
+    <revision>
+      <id>984333447</id>
+      <parentid>966563215</parentid>
+      <timestamp>2020-10-19T15:33:42Z</timestamp>
+      <contributor>
+        <username>Jim.henderson</username>
+        <id>2255048</id>
+      </contributor>
+      <comment>1922 diagram</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="13720" xml:space="preserve">{{Use American English|date = March 2019}}
+{{Short description|multiplexing technique for digital signals}}
+{{Use mdy dates|date = March 2019}}
+{{Multiplex techniques}}
+'''Time-division multiplexing''' ('''TDM''') is a method of transmitting and receiving independent signals over a common signal path by means of synchronized switches at each end of the transmission line so that each signal appears on the line only a fraction of time in an alternating pattern.  This method transmits two or more digital signals or analog signals over a common channel.  It can be used when the [[bit rate]] of the transmission medium exceeds that of the signal to be transmitted.  This form of signal [[multiplexing]] was developed in [[telecommunications]] for [[telegraphy]] systems in the late 19th century, but found its most common application in [[Digital data|digital]] telephony in the second half of the 20th century.
+
+==History==
+[[File:EB1922 Telegraph - Simplified Terminal Circuit of Multiplex Printer System.jpg|left|thumb|340x340px|Telegraphic multiplexer, from 1922 ''Britannica'']]
+Time-division multiplexing was first developed for applications in [[Electrical telegraph|telegraphy]] to route multiple transmissions simultaneously over a single transmission line. In the 1870s, [[Émile Baudot]] developed a time-multiplexing system of multiple [[Hughes telegraph]] machines.
+
+In 1944, the [[British Army]] used the Wireless Set No. 10 to multiplex 10 telephone conversations over a [[microwave relay]] as far as 50 miles. This allowed commanders in the field to keep in contact with the staff in England across the [[English Channel]].&lt;ref&gt;[https://histru.bournemouth.ac.uk/CHiDE/Oral_History_of_Defence_Electronics/ws10_intro.htm Wireless Set No. 10]&lt;/ref&gt;
+
+In 1953 a 24-channel TDM was placed in commercial operation by RCA Communications to send audio information between RCA's facility on Broad Street, New York, their transmitting station at Rocky Point and the receiving station at Riverhead, Long Island, New York. The communication was by a microwave system throughout Long Island. The experimental TDM system was developed by RCA Laboratories between 1950 and 1953.&lt;ref&gt;{{patent|US|2919308|&quot;Time Division Multiplex System for Signals of Different Bandwidth&quot;}}&lt;/ref&gt;
+
+In 1962, engineers from Bell Labs developed the first D1 channel banks, which combined 24 digitized voice calls over a four-wire copper trunk between Bell [[telephone exchange|central office]] analogue switches. A channel bank sliced a 1.544 Mbit/s digital signal into 8,000 separate frames, each composed of 24 contiguous bytes. Each byte represented a single telephone call encoded into a constant bit rate signal of 64 kbit/s. Channel banks used the fixed position (temporal alignment) of one byte in the frame to identify the call it belonged to.&lt;ref name=&quot;carriedo&quot;&gt;{{cite web|url=http://www.dit.upm.es/infowin/atmeurope/CH2/atmbackg.html|title=ATM: Origins and State of the Art|author1=María Isabel Gandía Carriedo|date=31 August 1998|publisher=Universidad Politécnica de Madrid|archiveurl=https://web.archive.org/web/20060623211435/http://www.dit.upm.es/infowin/atmeurope/CH2/atmbackg.html |archivedate=23 June 2006|accessdate=2009-09-23}}&lt;/ref&gt;
+
+==Technology==
+Time-division multiplexing is used primarily for [[Digital data|digital]] signals, but may be applied in  [[Pulse-amplitude modulation|analog]] [[multiplexing]] in which two or more signals or [[bit stream]]s are transferred appearing simultaneously as sub-channels in one communication channel, but are physically taking turns on the channel.&lt;ref name=&quot;Kourtis&quot;&gt;{{cite journal |doi=10.1080/00207219308925891 |first1=A. |last1=Kourtis |first2=K. |last2=Dangkis |first3=V. |last3=Zacharapoulos  |first4=C. |last4=Mantakas |title = Analogue time division multiplexing |
+journal = International Journal of Electronics |
+volume = 74 |
+number = 6 |
+pages = 901-907 |
+year  = 1993 | 
+publisher = Taylor &amp; Francis | 
+url= https://doi.org/10.1080/00207219308925891
+}}&lt;/ref&gt; The time domain is divided into several recurrent ''time slots'' of fixed length, one for each sub-channel. A sample byte or data block of sub-channel 1 is transmitted during time slot 1, sub-channel 2 during time slot 2, etc. One TDM [[Frame (networking)|frame]] consists of one time slot per sub-channel plus a synchronization channel and sometimes error correction channel before the synchronization. After the last sub-channel, error correction, and synchronization, the cycle starts all over again with a new frame, starting with the second sample, byte or data block from sub-channel 1, etc.
+
+==Application examples==
+* The [[plesiochronous digital hierarchy]] (PDH) system,  also known as the [[Pulse-code modulation|PCM]] system, for digital transmission of several telephone calls over the same four-wire copper cable ([[T-carrier]] or [[E-carrier]]) or fiber cable in the circuit switched digital telephone network
+* The [[synchronous optical networking|synchronous digital hierarchy (SDH)/synchronous optical networking (SONET)]] network transmission standards that have replaced PDH.
+* The [[Basic Rate Interface]] and [[Primary Rate Interface]] for the [[Integrated Services Digital Network]] (ISDN).
+* The [[RIFF (File format)|RIFF]] (WAV) audio standard interleaves left and right stereo signals on a per-sample basis
+
+TDM can be further extended into the [[time-division multiple access]] (TDMA) scheme, where several stations connected to the same physical medium, for example sharing the same [[Frequency-division multiplexing|frequency]] channel, can communicate. Application examples include:
+* The [[Global system for mobile communications|GSM]] telephone system
+* The Tactical Data Links [[Link 16]] and [[Link 22]]
+
+==Multiplexed digital transmission==
+In circuit-switched networks, such as the [[public switched telephone network]] (PSTN), it is desirable to transmit multiple subscriber calls over the same transmission medium to effectively utilize the bandwidth of the medium.&lt;ref name=&quot;hanrahn&quot;&gt;
+{{cite book
+| last = Hanrahan
+| first = H.E.
+| title = Integrated Digital Communications
+| publisher = School of Electrical and Information Engineering, University of the Witwatersrand
+| location = Johannesburg, South Africa
+| year = 2005
+}}&lt;/ref&gt;  TDM allows transmitting and receiving telephone switches to create channels (''tributaries'') within a transmission stream. A standard [[DS0]] voice signal has a data bit rate of 64 kbit/s.&lt;ref name=&quot;hanrahn&quot; /&gt;&lt;ref name=&quot;ericsson&quot;&gt;{{cite web|website=[[Ericsson]]|title=Understanding Telecommunications|url= http://www.ericsson.com/support/telecom/index.shtml|archive-url=https://web.archive.org/web/20040413074912/http://www.ericsson.com/support/telecom/index.shtml|archive-date=April 13, 2004}}&lt;/ref&gt; A TDM circuit runs at a much higher signal bandwidth, permitting the bandwidth to be divided into time frames (time slots) for each voice signal which is multiplexed onto the line by the transmitter. If the TDM frame consists of ''n'' voice frames, the line bandwidth is ''n''*64 kbit/s.&lt;ref name=&quot;hanrahn&quot; /&gt;
+
+Each voice time slot in the TDM frame is called a channel. In European systems, standard TDM frames contain 30 digital voice channels (E1), and in American systems (T1), they contain 24 channels. Both standards also contain extra bits (or bit time slots) for signaling and synchronization bits.&lt;ref name=&quot;hanrahn&quot; /&gt;
+
+Multiplexing more than 24 or 30 digital voice channels is called ''higher order multiplexing''. Higher order multiplexing is accomplished by multiplexing the standard TDM frames. For example, a European 120 channel TDM frame is formed by multiplexing four standard 30 channel TDM frames. At each higher order multiplex, four TDM frames from the immediate lower order are combined, creating multiplexes with a bandwidth of ''n''*64 kbit/s, where ''n'' = 120, 480, 1920, etc.&lt;ref name=&quot;hanrahn&quot; /&gt;
+
+==Telecommunications systems==
+There are three types of synchronous TDM: T1, SONET/SDH, and ISDN.&lt;ref name=&quot;White&quot;&gt;{{cite book
+| last = White
+| first = Curt
+| year = 2007
+| title = Data Communications and Computer Networks
+| publisher = Thomson Course Technology
+| location = Boston, MA
+| pages = [https://archive.org/details/datacommunicatio00whit_0/page/143 143–152]
+| isbn = 1-4188-3610-9
+| url-access = registration
+| url = https://archive.org/details/datacommunicatio00whit_0/page/143
+}}&lt;/ref&gt;
+
+[[Plesiochronous digital hierarchy]] (PDH) was developed as a standard for multiplexing higher order frames. PDH created larger numbers of channels by multiplexing the standard Europeans 30 channel TDM frames. This solution worked for a while; however PDH suffered from several inherent drawbacks which ultimately resulted in the development of the [[Synchronous Digital Hierarchy]] (SDH). The requirements which drove the development of SDH were these:&lt;ref name=&quot;hanrahn&quot; /&gt;&lt;ref name=&quot;ericsson&quot; /&gt;
+
+*Be synchronous &amp;ndash; All clocks in the system must align with a reference clock.
+*Be service-oriented &amp;ndash; SDH must route traffic from End Exchange to End Exchange without worrying about exchanges in between, where the bandwidth can be reserved at a fixed level for a fixed period of time.
+*Allow frames of any size to be removed or inserted into an SDH frame of any size.
+*Easily manageable with the capability of transferring management data across links.
+*Provide high levels of recovery from faults.
+*Provide high data rates by multiplexing any size frame, limited only by technology.
+*Give reduced bit rate errors.
+
+SDH has become the primary transmission protocol in most PSTN networks. It was developed to allow streams 1.544 Mbit/s and above to be multiplexed, in order to create larger SDH frames known as Synchronous Transport Modules (STM). The STM-1 frame consists of smaller streams that are multiplexed to create a 155.52 Mbit/s frame. SDH can also multiplex packet based frames e.g. [[Ethernet]], PPP and ATM.&lt;ref name=&quot;hanrahn&quot; /&gt;&lt;ref name=&quot;ericsson&quot; /&gt;
+
+While SDH is considered to be a transmission protocol (Layer 1 in the [[OSI reference model|OSI Reference Model]]), it also performs some switching functions, as stated in the third bullet point requirement listed above.&lt;ref name=&quot;hanrahn&quot; /&gt; The most common SDH Networking functions are these:
+
+*''SDH Crossconnect'' &amp;ndash; The SDH Crossconnect is the SDH version of a Time-Space-Time crosspoint switch. It connects any channel on any of its inputs to any channel on any of its outputs. The SDH Crossconnect is used in Transit Exchanges, where all inputs and outputs are connected to other exchanges.&lt;ref name=&quot;hanrahn&quot; /&gt;
+*''SDH Add-Drop Multiplexer'' &amp;ndash; The SDH Add-Drop Multiplexer (ADM) can add or remove any multiplexed frame down to 1.544Mb. Below this level, standard TDM can be performed. SDH ADMs can also perform the task of an SDH Crossconnect and are used in End Exchanges where the channels from subscribers are connected to the core PSTN network.&lt;ref name=&quot;hanrahn&quot; /&gt;
+
+SDH network functions are connected using high-speed optic fibre. Optic fibre uses light pulses to transmit data and is therefore extremely fast. Modern optic fibre transmission makes use of [[wavelength-division multiplexing]] (WDM) where signals transmitted across the fibre are transmitted at different wavelengths, creating additional channels for transmission. This increases the speed and capacity of the link, which in turn reduces both unit and total costs.&lt;ref name=&quot;hanrahn&quot; /&gt;&lt;ref name=&quot;ericsson&quot; /&gt;
+
+==Statistical time-division multiplexing==
+[[Statistical time-division multiplexing]] (STDM) is an advanced version of TDM in which both the address of the terminal and the data itself are transmitted together for better routing. Using STDM allows bandwidth to be split over one line. Many college and corporate campuses use this type of TDM to distribute bandwidth.
+
+On a 10-Mbit line entering a network, STDM can be used to provide 178 terminals with a dedicated 56k connection (178 * 56k = 9.96Mb). A more common use however is to only grant the bandwidth when that much is needed. STDM does not reserve a time slot for each terminal, rather it assigns a slot when the terminal is requiring data to be sent or received.
+
+In its primary form, TDM is used for [[circuit mode]] communication with a fixed number of channels and constant bandwidth per channel. Bandwidth reservation distinguishes time-division multiplexing from [[statistical multiplexing]] such as statistical time-division multiplexing. In pure TDM, the time slots are recurrent in a fixed order and pre-allocated to the channels, rather than scheduled on a packet-by-packet basis.
+
+In [[dynamic TDMA]], a [[scheduling algorithm]] dynamically reserves a variable number of time slots in each frame to variable bit-rate data streams, based on the traffic demand of each data stream.&lt;ref name=Miao&gt;{{cite book|author1=[[Guowang Miao]]|author2=Jens Zander|author3=Ki Won Sung|author4=Ben Slimane|title=Fundamentals of Mobile Data Networks|publisher=[[Cambridge University Press]]|isbn=1107143217|year=2016}}&lt;/ref&gt; Dynamic TDMA is used in:
+* [[HIPERLAN/2]]
+* [[Dynamic synchronous transfer mode]]
+* [[IEEE 802.16a]]
+
+Asynchronous time-division multiplexing (ATDM),&lt;ref name=&quot;White&quot; /&gt; is an alternative nomenclature in which STDM designates synchronous time-division multiplexing, the older method that uses fixed time slots.
+
+==See also==	
+* [[Frequency-division multiplexing]]
+* [[McASP]]
+* [[Route reestablishment notification]]
+* [[Time-division duplex]]
+
+==References==
+* {{FS1037C MS188}}
+{{reflist}}
+
+{{Telecommunications}}
+
+{{DEFAULTSORT:Time-Division Multiplexing}}
+[[Category:Multiplexing]]
+[[Category:Synchronization]]
+
+[[he:ריבוב#TDM]]</text>
+      <sha1>0ez76essblz6r1a9f2ibkqxl9z3qwe2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Time-domain reflectometer</title>
+    <ns>0</ns>
+    <id>41797</id>
+    <revision>
+      <id>990834313</id>
+      <parentid>961506369</parentid>
+      <timestamp>2020-11-26T19:34:38Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 5 templates: del empty params (4×); hyphenate params (3×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="26083" xml:space="preserve">[[File:Megger Time-Domain Reflectometer MTDR1.jpg|thumb|Time-domain reflectometer for [[Electrical cable|cable]] fault detection]]A '''time-domain reflectometer''' ('''TDR''') is an electronic instrument used to determine the characteristics of [[Transmission line|electrical lines]] by observing [[Reflection (electrical)|reflected]] [[waveform]]s.
+It can be used to characterize and locate faults in metallic cables (for example, [[twisted pair|twisted pair wire]] or [[coaxial cable]]).&lt;ref&gt;{{FS1037C}}&lt;/ref&gt; 
+It can also be used to locate discontinuities in a connector, [[printed circuit board]], or any other electrical path. 
+
+== Description ==
+A TDR measures reflections along a conductor. In order to measure those reflections, the TDR will transmit an incident signal onto the conductor and listen for its [[signal reflection|reflections]]. If the conductor is of a uniform [[Electrical impedance|impedance]] and is properly [[Electrical termination|terminated]], then there will be no reflections and the remaining incident signal will be absorbed at the far-end by the termination. Instead, if there are impedance variations, then some of the incident signal will be reflected back to the source. A TDR is similar in principle to [[radar]].
+
+[[File:Partial transmittance.gif|thumb|Signal (or energy) transmitted and reflected from a discontinuity]]
+
+The [[Electrical impedance|impedance]] of the [[Discontinuity (transmission lines)|discontinuity]] can be determined from the [[amplitude]] of the reflected signal. The [[distance]] to the reflecting impedance can also be determined from the [[time]] that a [[Pulse (signal processing)|pulse]] takes to return. The limitation of this method is the minimum system [[rise time]]. The total rise time consists of the combined rise time of the driving pulse and that of the [[oscilloscope]] or sampler that monitors the reflections.
+
+===Method===
+The TDR analysis begins with the propagation of a [[Step function|step]] or impulse of [[energy]] into a [[system]] and the subsequent observation of the energy reflected by the system. By analyzing the magnitude, duration and shape of the reflected waveform, the nature of the impedance variation in the transmission system can be determined.
+
+If a pure [[Resistor|resistive load]] is placed on the output of the [[Time-domain reflectometer|reflectometer]] and a [[Step function|step signal]] is applied, a step signal is observed on the display, and its height is a function of the resistance. The magnitude of the step produced by the resistive load may be expressed as a fraction of the input signal as given by:
+
+:&lt;math&gt;\rho = \frac{R_L - Z_0}{R_L + Z_0}&lt;/math&gt;
+
+where &lt;math&gt;Z_0&lt;/math&gt; is the [[characteristic impedance]] of the [[transmission line]].
+
+=== Reflection===
+Generally, the reflections will have the same shape as the incident signal, but their sign and magnitude depend on the change in impedance level.  If there is a step increase in the impedance, then the reflection will have the same sign as the incident signal; if there is a step decrease in impedance, the reflection will have the opposite sign.  The magnitude of the reflection depends not only on the amount of the impedance change, but also upon the loss in the conductor.
+
+The reflections are measured at the [[Input/output|output/input]] to the TDR and displayed or plotted as a function of time.  Alternatively, the display can be read as a function of [[Electrical cable|cable]] length because the speed of signal propagation is almost constant for a given transmission medium.
+
+Because of its sensitivity to impedance variations, a TDR may be used to verify cable impedance characteristics, [[Fusion splicing|splice]] and [[electrical connector|connector]] locations and associated losses, and estimate cable lengths.
+
+===Incident signal===
+TDRs use different incident signals. Some TDRs transmit a [[pulse]] along the conductor; the resolution of such instruments is often the width of the pulse. Narrow pulses can offer good resolution, but they have high frequency signal components that are attenuated in long cables.  The shape of the pulse is often a half cycle sinusoid.&lt;ref&gt;1983 Tektronix Catalog, pages 140–141, the 1503 uses &quot;1/2-sine-shaped pulses&quot; and has a 3-foot resolution and a range of 50,000 feet.&lt;/ref&gt; For longer cables, wider pulse widths are used.
+
+Fast [[rise time]] steps are also used.  Instead of looking for the reflection of a complete pulse, the instrument is concerned with the rising edge, which can be very fast.&lt;ref&gt;1983 Tektronix Catalog, pages 140–141, the 1502 uses a step (system rise time less than 140&amp;nbsp;ps), has a resolution of 0.6&amp;nbsp;inch and a range of 2,000&amp;nbsp;feet.&lt;/ref&gt;  A 1970s technology TDR used steps with a rise time of 25&amp;nbsp;ps.&lt;ref&gt;1983 Tektronix Catalog, page 289, S-52 pulse generator has a 25-ps risetime.&lt;/ref&gt;&lt;ref&gt;{{citation |title=S-6 Sampling Head |series=Instruction Manual |date=September 1982 |publisher=Tektronix |location=Beaverton, OR}}  First printing is 1982, but copyright notice includes 1971.&lt;/ref&gt;&lt;ref&gt;{{citation |title=7S12 TDR/Sampler |series=Instruction Manual |date=November 1971 |publisher=Tektronix |location=Beaverton, OR}}&lt;/ref&gt;
+
+Still other TDRs transmit complex signals and detect reflections with correlation techniques. See [[spread-spectrum time-domain reflectometry]].
+
+===Variations and extensions===
+The equivalent device for [[optical fiber]] is an [[optical time-domain reflectometer]].
+
+{{anchor|TDT}}'''Time-domain transmissometry''' ('''TDT''') is an analogous technique that measures the transmitted (rather than reflected) impulse. Together, they provide a powerful means of analysing electrical or optical transmission media such as [[coaxial cable]] and [[optical fiber]].  
+
+Variations of TDR exist. For example, [[spread-spectrum time-domain reflectometry]] (SSTDR) is used to detect intermittent faults in complex and high-noise systems such as aircraft wiring.&lt;ref&gt;Smth,Paul, Furse, Cynthia and Gunther, Jacob. &quot;Analysis of Spread Spectrum Time Domain Reflectometry for [http://livewiretest.com/analysis-of-spread-spectrum-time-domain-reflectometry-for-wire-fault-location/ Wire Fault Location] {{Webarchive|url=https://www.webcitation.org/5wQrUbdfD?url=http://livewiretest.com/analysis-of-spread-spectrum-time-domain-reflectometry-for-wire-fault-location/ |date=2011-02-12 }}.&quot; IEEE Sensors Journal. December, 2005.&lt;/ref&gt; Coherent optical time domain reflectometry (COTDR) is another variant, used in optical systems, in which the returned signal is mixed with a local oscillator and then filtered to reduce noise.&lt;ref&gt;José Chesnoy (ed.), ''Undersea Fiber Communication Systems'', Elsevier Science, 2002, {{ISBN|0-12-171408-X}}, p.171 (COTDR)&lt;/ref&gt;
+
+==Example traces==
+These traces were produced by a time-domain reflectometer made from common lab equipment connected to approximately {{convert|100|feet|m}} of coaxial cable having a [[characteristic impedance]] of 50&amp;nbsp;ohms. The propagation velocity of this cable is approximately 66% of the speed of light in a vacuum.

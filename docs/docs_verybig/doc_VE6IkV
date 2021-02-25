@@ -1,0 +1,224 @@
+The term '''monotonic transformation''' (or '''monotone transformation''') can also possibly cause some confusion because it refers to a transformation by a strictly increasing function. This is the case in economics with respect to the ordinal properties of a [[utility function]] being preserved across a monotonic transform (see also [[monotone preferences]]).&lt;ref&gt;See the section on Cardinal Versus Ordinal Utility in {{harvtxt|Simon|Blume|1994}}.&lt;/ref&gt; In this context, what we are calling a &quot;monotonic transformation&quot; is, more accurately, called a &quot;positive monotonic transformation&quot;, in order to distinguish it from a “negative monotonic transformation,” which reverses the order of the numbers.&lt;ref&gt;{{cite book |last=Varian |first=Hal R. |title=Intermediate Microeconomics |edition=8th |year=2010 |publisher=W. W. Norton &amp; Company |page=56 |isbn=9780393934243}}&lt;/ref&gt;
+
+=== Some basic applications and results ===
+The following properties are true for a monotonic function &lt;math&gt;f\colon \mathbb{R} \to \mathbb{R}&lt;/math&gt;:
+*&lt;math&gt;f&lt;/math&gt; has [[limit of a function|limits]] from the right and from the left at every point of its [[Domain of a function|domain]];
+*&lt;math&gt;f&lt;/math&gt; has a limit at positive or negative infinity (&amp;thinsp;&lt;math&gt;\pm\infty&lt;/math&gt;&amp;thinsp;) of either a real number, &lt;math&gt;\infty&lt;/math&gt;, or &lt;math&gt;\left(-\infty\right)&lt;/math&gt;.
+*&lt;math&gt;f&lt;/math&gt; can only have [[jump discontinuity|jump discontinuities]];
+*&lt;math&gt;f&lt;/math&gt; can only have [[countable|countably]] many [[discontinuity (mathematics)|discontinuities]] in its domain.  The discontinuities, however, do not necessarily consist of isolated points and may even be dense in an interval (''a'',''b'').
+
+These properties are the reason why monotonic functions are useful in technical work in [[mathematical analysis|analysis]]. Some more facts about these functions are:
+*if &lt;math&gt;f&lt;/math&gt; is a monotonic function defined on an [[interval (mathematics)|interval]] &lt;math&gt;I&lt;/math&gt;, then &lt;math&gt;f&lt;/math&gt; is [[derivative|differentiable]] [[almost everywhere]] on &lt;math&gt;I&lt;/math&gt;, i.e. the set of numbers &lt;math&gt;x&lt;/math&gt; in &lt;math&gt;I&lt;/math&gt; such that &lt;math&gt;f&lt;/math&gt; is not differentiable in &lt;math&gt;x&lt;/math&gt; has [[Lebesgue measure|Lebesgue]] [[measure zero]]. In addition, this result cannot be improved to countable: see [[Cantor function]].
+*if this set is countable, then &lt;math&gt;f&lt;/math&gt; if absolutely continuous.
+*if &lt;math&gt;f&lt;/math&gt; is a monotonic function defined on an interval &lt;math&gt;\left[a, b\right]&lt;/math&gt;, then &lt;math&gt;f&lt;/math&gt; is [[Riemann integral|Riemann integrable]].
+
+An important application of monotonic functions is in [[probability theory]]. If &lt;math&gt;X&lt;/math&gt; is a [[random variable]], its [[cumulative distribution function]] &lt;math&gt;F_X\!\left(x\right) = \text{Prob}\!\left(X \leq x\right)&lt;/math&gt; is a monotonically increasing function.
+
+A function is ''[[unimodal function|unimodal]]'' if it is monotonically increasing up to some point (the ''[[Mode (statistics)|mode]]'') and then monotonically decreasing.
+
+When &lt;math&gt;f&lt;/math&gt; is a ''strictly monotonic'' function, then &lt;math&gt;f&lt;/math&gt; is [[Injective function|injective]] on its domain, and if &lt;math&gt;T&lt;/math&gt; is the [[Range of a function|range]] of &lt;math&gt;f&lt;/math&gt;, then there is an [[inverse function]] on &lt;math&gt;T&lt;/math&gt; for &lt;math&gt;f&lt;/math&gt;.
+In contrast, each constant function is monotonic, but not injective,&lt;ref&gt;if its domain has more than one element&lt;/ref&gt; and hence cannot have an inverse.
+
+== Monotonicity in topology ==
+
+A map ''&lt;math&gt;f: X \rightarrow Y&lt;/math&gt;'' is said to be '''monotone''' if each of its fibers is connected i.e. for each element ''&lt;math&gt;y&lt;/math&gt;'' in &lt;math&gt;Y&lt;/math&gt; the (possibly empty) set &lt;math&gt;f^{-1}(y)&lt;/math&gt; is connected.
+
+== Monotonicity in functional analysis ==
+
+In [[functional analysis]] on a [[topological vector space]] &lt;math&gt;X&lt;/math&gt;, a (possibly non-linear) operator &lt;math&gt;T: X \rightarrow X^*&lt;/math&gt; is said to be a '''monotone operator''' if
+
+:&lt;math&gt;(Tu - Tv, u - v) \geq 0 \quad \forall u,v \in X.&lt;/math&gt;
+
+[[Kachurovskii's theorem]] shows that [[convex function]]s on [[Banach space]]s have monotonic operators as their derivatives.
+
+A subset &lt;math&gt;G&lt;/math&gt; of &lt;math&gt;X \times X^*&lt;/math&gt; is said to be a '''monotone set''' if for every pair &lt;math&gt;[u_1, w_1]&lt;/math&gt; and &lt;math&gt;[u_2, w_2]&lt;/math&gt; in &lt;math&gt;G&lt;/math&gt;,
+
+:&lt;math&gt;(w_1 - w_2, u_1 - u_2) \geq 0.&lt;/math&gt;
+
+&lt;math&gt;G&lt;/math&gt; is said to be '''maximal monotone''' if it is maximal among all monotone sets in the sense of set inclusion.  The graph of a monotone operator &lt;math&gt;G(T)&lt;/math&gt; is a monotone set. A monotone operator is said to be '''maximal monotone''' if its graph is a '''maximal monotone set'''.
+
+== Monotonicity in order theory ==
+
+Order theory deals with arbitrary [[partially ordered set]]s and [[preorder|preordered sets]] as a generalization of real numbers. The above definition of monotonicity is relevant in these cases as well. However, the terms &quot;increasing&quot; and &quot;decreasing&quot; are avoided, since their conventional pictorial representation does not apply to orders that are not [[total order|total]]. Furthermore, the [[strict order|strict]] relations &lt; and &gt; are of little use in many non-total orders and hence no additional terminology is introduced for them.
+
+Letting ≤ denote the partial order relation of any partially ordered set, a '''monotone''' function, also called '''isotone''', or '''{{visible anchor|order-preserving}}''', satisfies the property
+
+: ''x'' ≤ ''y'' implies ''f''(''x'') ≤ ''f''(''y''),
+
+for all ''x'' and ''y'' in its domain. The composite of two monotone mappings is also monotone.
+
+The [[duality (order theory)|dual]] notion is often called '''antitone''', '''anti-monotone''', or '''order-reversing'''. Hence, an antitone function ''f'' satisfies the property
+
+: ''x'' ≤ ''y'' implies ''f''(''y'') ≤ ''f''(''x''),
+
+for all ''x'' and ''y'' in its domain.
+
+A [[constant function]] is both monotone and antitone; conversely, if ''f'' is both monotone and antitone, and if the domain of ''f'' is a [[lattice (order)|lattice]], then ''f'' must be constant.
+
+Monotone functions are central in order theory. They appear in most articles on the subject and examples from special applications are found in these places. Some notable special monotone functions are [[order embedding]]s (functions for which ''x'' ≤ ''y'' [[if and only if]] ''f''(''x'') ≤ ''f''(''y'')) and [[order isomorphism]]s ([[surjective]] order embeddings).
+
+== Monotonicity in the context of search algorithms ==
+In the context of [[search algorithm]]s monotonicity (also called consistency) is a condition applied to [[heuristic function]]s.  A heuristic ''h(n)'' is monotonic if, for every node ''n'' and every successor ''n''' of ''n'' generated by any action ''a'', the estimated cost of reaching the goal from ''n'' is no greater than the step cost of getting to '' n' '' plus the estimated cost of reaching the goal from '' n' '',
+
+:&lt;math&gt;h(n) \leq c(n, a, n') + h(n').&lt;/math&gt;
+
+This is a form of [[triangle inequality]], with ''n'', ''n''', and the goal ''G&lt;sub&gt;n&lt;/sub&gt;'' closest to ''n''.  Because every monotonic heuristic is also [[admissible heuristic|admissible]], monotonicity is a stricter requirement than admissibility.  Some [[heuristic algorithm]]s such as [[A* search algorithm|A*]] can be proven [[asymptotically optimal algorithm|optimal]] provided that the heuristic they use is monotonic.&lt;ref&gt;Conditions for optimality:  Admissibility and consistency pg. 94-95 {{Harv|Russell|Norvig|2010}}.&lt;/ref&gt;
+
+== Boolean functions ==
+{| style=&quot;float:right;&quot;
+| [[File:Hasse3 x impl y and z.svg|thumb|With the nonmonotonic function &quot;if ''a'' then both ''b'' and ''c''&quot;, {{color|#c00000|false}} nodes appear above {{color|#00c000|true}} nodes.]]
+|}
+{| style=&quot;float:right;&quot;
+| [[File:Hasse3 ge2.svg|thumb|Hasse diagram of the monotonic function &quot;at least two of ''a'',''b'',''c'' hold&quot;. Colors indicate function output values.]]
+|}
+In [[Boolean algebra (logic)|Boolean algebra]], a monotonic function is one such that for all ''a''&lt;sub&gt;''i''&lt;/sub&gt; and ''b''&lt;sub&gt;''i''&lt;/sub&gt; in {0,1}, if ''a''&lt;sub&gt;1&lt;/sub&gt; ≤ ''b''&lt;sub&gt;1&lt;/sub&gt;, ''a''&lt;sub&gt;2&lt;/sub&gt; ≤ ''b''&lt;sub&gt;2&lt;/sub&gt;, ..., ''a''&lt;sub&gt;''n''&lt;/sub&gt; ≤ ''b''&lt;sub&gt;''n''&lt;/sub&gt; (i.e. the Cartesian product {0, 1}&lt;sup&gt;''n''&lt;/sup&gt; is ordered [[Coordinatewise order|coordinatewise]]), then f(''a''&lt;sub&gt;1&lt;/sub&gt;, ..., ''a''&lt;sub&gt;''n''&lt;/sub&gt;) ≤ f(''b''&lt;sub&gt;1&lt;/sub&gt;, ..., ''b''&lt;sub&gt;''n''&lt;/sub&gt;). In other words, a Boolean function is monotonic if, for every combination of inputs, switching one of the inputs from false to true can only cause the output to switch from false to true and not from true to false. Graphically, this means that an ''n''-ary Boolean function is monotonic when its representation as an [[hypercube|''n''-cube]] labelled with truth values has no upward edge from ''true'' to ''false''.  (This labelled [[Hasse diagram]] is the [[Duality (mathematics)#Dimension-reversing dualities|dual]] of the function's labelled [[Venn diagram]], which is the more common representation for {{nowrap|''n'' ≤ 3}}.)
+
+The monotonic Boolean functions are precisely those that can be defined by an expression combining the inputs (which may appear more than once) using only the operators ''[[logical conjunction|and]]'' and ''[[logical disjunction|or]]'' (in particular ''[[negation|not]]'' is forbidden). For instance &quot;at least two of ''a'',''b'',''c'' hold&quot; is a monotonic function of ''a'',''b'',''c'', since it can be written for instance as ((''a'' and ''b'') or (''a'' and ''c'') or (''b'' and ''c'')).
+
+The number of such functions on ''n'' variables is known as the [[Dedekind number]] of ''n''.
+
+== See also ==
+* [[Monotone cubic interpolation]]
+* [[Pseudo-monotone operator]]
+* [[Spearman's rank correlation coefficient]] - measure of monotonicity in a set of data
+* [[Total monotonicity]]
+* [[Cyclical monotonicity]]
+
+== Notes ==
+{{reflist}}
+
+== Bibliography ==
+*{{cite book
+ | last = Bartle
+ | first = Robert G.
+ | title = The elements of real analysis
+ | edition = second
+ | year = 1976
+}}
+*{{cite book
+ | last = Grätzer
+ | first = George
+ | title = Lattice theory: first concepts and distributive lattices
+ | year = 1971
+ | isbn = 0-7167-0442-0
+}}
+*{{cite book
+ | last       = Pemberton
+ | first      = Malcolm
+ |author2=Rau, Nicholas
+ | title      = Mathematics for economists: an introductory textbook
+ | publisher  = Manchester University Press
+ | year       = 2001
+ | pages      =
+ | isbn       = 0-7190-3341-1
+}}
+* {{cite book
+|author1=Renardy, Michael  |author2=Rogers, Robert C.
+ |name-list-style=amp |    title = An introduction to partial differential equations
+|   series = Texts in Applied Mathematics 13
+|  edition = Second
+|publisher = Springer-Verlag
+| location = New York
+|     year = 2004
+|    pages = 356
+|       isbn = 0-387-00444-0
+}}
+*{{cite book
+ |author1=Riesz, Frigyes  |author2=Béla Szőkefalvi-Nagy
+  |name-list-style=amp | title = Functional Analysis
+ | year = 1990
+| publisher = Courier Dover Publications
+| isbn = 978-0-486-66289-3
+}}
+*{{cite book
+ | last=Russell |first=Stuart J. |last2=Norvig |first2=Peter |ref=harv
+ | title = Artificial Intelligence:  A Modern Approach
+ | year = 2010
+ | edition = 3rd
+ | publisher = Prentice Hall
+ | publication-place = Upper Saddle River, New Jersey
+ | isbn = 978-0-13-604259-4
+}}
+*{{cite book
+ | last = Simon |first=Carl P. |first2=Lawrence |last2=Blume |ref=harv
+ | title = Mathematics for Economists
+ | edition = first
+ | date = April 1994
+ | isbn = 978-0-393-95733-4
+}} (Definition 9.31)
+
+== External links ==
+* {{springer|title=Monotone function|id=p/m064830}}
+* [http://demonstrations.wolfram.com/ConvergenceOfAMonotonicSequence/ Convergence of a Monotonic Sequence] by Anik Debnath and Thomas Roxlo (The Harker School), [[Wolfram Demonstrations Project]].
+* {{MathWorld |title=Monotonic Function |id=MonotonicFunction}}
+
+[[Category:Functional analysis]]
+[[Category:Order theory]]
+[[Category:Real analysis]]
+[[Category:Types of functions]]</text>
+      <sha1>0wr9fwldahvsm9epp1qzlqjmnxi0o4w</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Ben Jonson</title>
+    <ns>0</ns>
+    <id>48261</id>
+    <revision>
+      <id>991297707</id>
+      <parentid>990377086</parentid>
+      <timestamp>2020-11-29T09:39:45Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 26 templates: del empty params (4×); hyphenate params (8×); del |ref=harv (2×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="70944" xml:space="preserve">{{other people||Ben Johnson (disambiguation)}}
+{{short description|17th-century English playwright, poet, and actor}}
+{{Use British English|date=January 2014}}
+{{Use dmy dates|date=January 2014}}
+{{Infobox writer
+| name        = Ben Jonson
+| image       = Benjamin Jonson by Abraham van Blyenberch.jpg
+| caption     = Ben Jonson (c. 1617), by [[Abraham Blyenberch]]; oil on canvas painting at the [[National Portrait Gallery, London]]
+| birth_date  = c. 11 June 1572
+| birth_place = [[Westminster]], London, England
+| death_date  = c. 16 August 1637 (aged 65)
+| death_place = London,&lt;ref&gt;[https://www.bibalex.org/libraries/presentation/static/Jonson_Ben_eng_1302.pdf Ben Jonson - Bibliotheca Alexandrina]&lt;/ref&gt; England
+| nationality = English
+| occupation  = Playwright, poet
+| signature   = Ben Jonson Signature.svg
+}}
+
+'''Benjamin Jonson''' (c. 11 June 1572 – c. 16 August 1637&lt;ref&gt;{{Cite journal|last=Bland|first=Mark|date=2004|title=Ben Jonson and the Legacies of the Past|jstor=10.1525/hlq.2004.67.3.371|journal=Huntington Library Quarterly|volume=67|issue=3|pages=371–400|doi=10.1525/hlq.2004.67.3.371}}&lt;/ref&gt;) was an English playwright and poet, whose artistry exerted a lasting influence upon English poetry and stage comedy. He popularised the [[comedy of humours]]. He is best known for the [[satire|satirical]] plays ''[[Every Man in His Humour]]''&lt;ref name=EB1911&gt;{{Cite EB1911 |wstitle=Jonson, Ben |volume=15 |pages=502–507 |first=Adolphus William |last=Ward}}&lt;/ref&gt; (1598), ''[[Volpone|Volpone, or The Fox]]'' (c. 1606), ''[[The Alchemist (play)|The Alchemist]]'' (1610) and ''[[Bartholomew Fair (play)|Bartholomew Fair]]'' (1614) and for his [[Lyric poetry|lyric]] and [[epigram]]matic poetry. &quot;He is generally regarded as the second most important English dramatist, after [[William Shakespeare]], during the reign of [[James VI and I|James I]].&quot;&lt;ref&gt;{{Britannica|306058}}&lt;/ref&gt;
+
+Jonson was a [[Classics|classically educated]], well-read and cultured man of the [[English Renaissance]] with an appetite for controversy (personal and political, artistic and intellectual) whose cultural influence was of unparalleled breadth upon the playwrights and the poets of the [[Jacobean era]] (1603–1625) and of the [[Caroline era]] (1625–1642).&lt;ref name=&quot;autogenerated388&quot;&gt;&quot;Ben Jonson&quot;, ''Grolier Encyclopedia of Knowledge'', volume 10, p. 388.&lt;/ref&gt;&lt;ref name=&quot;StewartHarp2000&quot;&gt;{{Cite book |last=Evans |first=Robert C |year=2000 |editor=Harp, Richard |editor2=Stewart, Stanley |title=The Cambridge companion to Ben Jonson |publisher=Cambridge University Press |location=Cambridge, England |isbn=0-521-64678-2 |pages=[https://archive.org/details/cambridgecompani00harp_0/page/189 189–202] |chapter=Jonson's critical heritage |chapter-url=https://archive.org/details/cambridgecompani00harp_0/page/189 }}&lt;/ref&gt;
+
+==Early life==
+[[File:William Camden by Marcus Gheeraerts the Younger.jpg|thumb|right|250px|[[Westminster School]] master [[William Camden]] cultivated the artistic genius of Ben Jonson.]]
+
+[[File:Attributed to Abraham van Blijenberch - William Drummond of Hawthornden, 1585 - 1649. Poet - Google Art Project.jpg|thumb|right|250px|The Scottish poet [[William Drummond of Hawthornden]] was friend and confidant to Jonson.]]
+In midlife, Jonson claimed that his paternal grandfather, who 'served King Henry 8 and was a gentleman',&lt;ref&gt;{{Cite ODNB | url=http://www.oxforddnb.com/view/10.1093/ref:odnb/9780198614128.001.0001/odnb-9780198614128-e-15116 | doi=10.1093/ref:odnb/15116| year=2004| last1=Donaldson| first1=Ian| title=Jonson, Benjamin &amp;#91;Ben&amp;#93; (1572–1637), poet and playwright &amp;#124; Oxford Dictionary of National Biography}}&lt;/ref&gt; was a member of the extended Johnston family of [[Annandale]] in the [[Dumfries and Galloway]], a genealogy that is attested by the three spindles ([[rhombus|rhombi]]) in the Jonson family [[coat of arms]]: one spindle is a diamond-shaped [[Heraldry|heraldic]] device used by the Johnston family.
+
+Jonson's father lost his property, was imprisoned, and suffered [[forfeiture (law)|forfeiture]] under [[Mary I of England|Queen Mary]]; having become a clergyman upon his release, he died a month before his son's birth.&lt;ref&gt;{{Cite ODNB | url=http://www.oxforddnb.com/view/10.1093/ref:odnb/9780198614128.001.0001/odnb-9780198614128-e-15116 | doi=10.1093/ref:odnb/15116| year=2004| last1=Donaldson| first1=Ian| title=Jonson, Benjamin &amp;#91;Ben&amp;#93; (1572–1637), poet and playwright &amp;#124; Oxford Dictionary of National Biography}}&lt;/ref&gt; Jonson's mother married a master [[bricklayer]] two years later.&lt;ref name=&quot;Robert Chambers, Book of Days&quot;&gt;Robert Chambers, Book of Days&lt;/ref&gt;&lt;ref&gt;&quot;Ben Jonson&quot;, Encyclopædia Britannica, 15th Edition, pp. 611&lt;/ref&gt; Jonson attended school in [[St Martin's Lane]].&lt;ref name=EB1911/&gt; Later, a family friend paid for his studies at [[Westminster School]], where the [[antiquarian]], historian, [[topographer]] and [[officer of arms]], [[William Camden]] (1551–1623) was one of his masters. In the event, the pupil and the master became friends, and the intellectual influence of Camden's broad-ranging scholarship upon Jonson's art and [[style (fiction)|literary style]] remained notable, until Camden's death in 1623.
+
+On leaving Westminster School, Jonson was to have attended the [[University of Cambridge]], to continue his book learning but did not, because of his unwilled apprenticeship to his bricklayer stepfather.&lt;ref name=&quot;autogenerated388&quot;/&gt;&lt;ref name=&quot;Robert Chambers, Book of Days&quot;/&gt; According to the churchman and historian [[Thomas Fuller]] (1608–61), Jonson at this time built a garden wall in [[Lincoln's Inn]]. After having been an apprentice bricklayer, Ben Jonson went to the [[Netherlands]] and volunteered to soldier with the English regiments of [[Francis Vere]] (1560–1609) in [[Flanders]].
+
+The ''Hawthornden Manuscripts'' (1619), of the conversations between Ben Jonson and the poet [[William Drummond of Hawthornden]]&lt;ref name=EB1911/&gt; (1585–1649), report that, when in Flanders, Jonson engaged, fought and killed an enemy soldier in [[single combat]], and took for trophies the weapons of the vanquished soldier.&lt;ref name=Hawthornden&gt;{{Cite book |last=Drummond |first=William |year=1619 |title=Heads of a Conversation betwixt the Famous Poet Ben Johnson and William Drummond of Hawthornden, January 1619 |url=https://books.google.com/books?id=ubHPBcMk2OMC&amp;q=%22William+Drummond%22+jonson}}&lt;/ref&gt; After his military activity on the Continent, Jonson returned to England and worked as an actor and as a playwright. As an actor, Jonson was the protagonist “Hieronimo” (Geronimo) in the play ''[[The Spanish Tragedy]]'' (ca. 1586), by [[Thomas Kyd]] (1558–94), the first [[revenge tragedy]] in English literature. Moreover, by 1597, he was a working playwright employed by [[Philip Henslowe]], the leading producer for the English public theatre; by the next year, the production of ''[[Every Man in His Humour]]'' (1598) had established Jonson's reputation as a dramatist.&lt;ref&gt;&quot;Ben Jonson&quot;, Encyclopædia Britannica, 15th Edition, p. 611&lt;/ref&gt;&lt;ref&gt;&quot;Thomas Kyd&quot;, ''Grolier Encyclopedia of Knowledge'', volume 11, p. 122.&lt;/ref&gt;
+
+Regarding his marriage Jonson described his wife to William Drummond as &quot;a shrew, yet honest&quot;. The identity of Jonson's wife has always been obscure, yet she sometimes is identified as &quot;Ann Lewis&quot;, the woman who married a Benjamin Jonson in 1594, at the church of [[St Magnus-the-Martyr]], near [[London Bridge]].&lt;ref name=&quot;autogenerated612&quot;&gt;&quot;Ben Jonson&quot;, Encyclopædia Britannica, 15th Edition, p. 612.&lt;/ref&gt; Concerning the family of Anne Lewis and Ben Jonson, the St. Martin's Church registers indicate that Mary Jonson, their eldest daughter, died in November 1593, at six months of age. Then a decade later, in 1603, Benjamin Jonson, their eldest son, died of [[Bubonic plague]] when he was seven years old; to lament and honour the dead boy, Benjamin Jonson ''père'' wrote the elegiac ''[[On My First Sonne]]'' (1603). Moreover, 32 years later, a second son, also named Benjamin Jonson, died in 1635. In that period, Ann Lewis and Ben Jonson lived separate lives for five years; their matrimonial arrangement cast Ann Lewis as the housewife Jonson, and Ben Jonson as the artist who enjoyed the residential hospitality of his patrons, Sir Robert Townshend and Lord Aubigny, [[Esme Stuart, 3rd Duke of Lennox]].&lt;ref name=&quot;autogenerated612&quot;/&gt;
+
+==Career==
+By summer 1597, Jonson had a fixed engagement in the [[Admiral's Men]], then performing under [[Philip Henslowe]]'s management at [[The Rose (theatre)|The Rose]].&lt;ref name=EB1911/&gt; [[John Aubrey]] reports, on uncertain authority, that Jonson was not successful as an actor; whatever his skills as an actor, he was evidently more valuable to the company as a writer.&lt;ref&gt;{{cite journal|last1=Bowers|first1=Fredson T.|title=Ben Jonson the Actor|journal=Studies in Philology|date=July 1937|volume=34|issue=3|pages=392–406|jstor=4172372}}&lt;/ref&gt;
+
+By this time Jonson had begun to write original plays for the Admiral's Men; in 1598 he was mentioned by [[Francis Meres]] in his ''Palladis Tamia'' as one of &quot;the best for tragedy.&quot;&lt;ref name=EB1911/&gt; None of his early tragedies survive, however. An undated comedy, ''[[The Case is Altered]]'', may be his earliest surviving play.&lt;ref&gt;{{cite book|last=Miola|first=Robert S.|year=2012|title=The Cambridge Edition of the Works of Ben Jonson|publisher=Cambridge University Press|location=Cambridge, UK|chapter=The Case Is Altered, Introduction}}&lt;/ref&gt;
+
+In 1597 a play which he co-wrote with [[Thomas Nashe]], ''[[The Isle of Dogs (play)|The Isle of Dogs]]'', was suppressed after causing great offence. Arrest warrants for Jonson and Nashe were issued by Queen [[Elizabeth I]]'s so-called interrogator, [[Richard Topcliffe]]. Jonson was jailed in [[Marshalsea Prison]] and charged with &quot;Leude and mutynous behaviour&quot;, while Nashe managed to escape to [[Great Yarmouth]]. Two of the actors, [[Gabriel Spenser]] and Robert Shaw, were also imprisoned. A year later, Jonson was again briefly imprisoned, this time in [[Newgate Prison]], for killing Gabriel Spenser in a [[duel]] on 22 September 1598 in Hogsden Fields&lt;ref name=Hawthornden/&gt; (today part of [[Hoxton]]). Tried on a charge of [[manslaughter]], Jonson pleaded guilty but was released by [[benefit of clergy]],&lt;ref name=EB1911/&gt; a legal ploy through which he gained leniency by reciting a brief bible verse (the [[neck-verse]]), forfeiting his 'goods and chattels' and being branded on his left thumb.&lt;ref name=EB1911/&gt; While in jail Jonson converted to Catholicism, possibly through the influence of fellow-prisoner Father [[Thomas Wright (writer)|Thomas Wright]], a [[Jesuit]] priest.&lt;ref name=&quot;ID2008&quot;&gt;{{Cite ODNB |last=Donaldson |first=Ian |year=2008 |title=Oxford Dictionary of National Biography |location=Oxford, England |chapter=Benjamin Jonson (1572–1637) |doi=10.1093/ref:odnb/15116|title-link=Oxford Dictionary of National Biography }}&lt;/ref&gt;
+
+In 1598 Jonson produced his first great success, ''[[Every Man in His Humour]]'', capitalising on the vogue for humorous plays which [[George Chapman]] had begun with ''[[An Humorous Day's Mirth]]''. [[William Shakespeare]] was among the first actors to be cast. Jonson followed this in 1599 with ''[[Every Man out of His Humour]]'', a pedantic attempt to imitate [[Aristophanes]]. It is not known whether this was a success on stage, but when published it proved popular and went through several editions.{{Citation needed|date=September 2016}}
+
+Jonson's other work for the theatre in the last years of [[Elizabeth I]]'s reign was marked by fighting and controversy. ''[[Cynthia's Revels]]'' was produced by the [[Children of the Chapel]] Royal at [[Blackfriars Theatre]] in 1600. It satirised both [[John Marston (poet)|John Marston]], who Jonson believed had accused him of lustfulness in ''[[Histriomastix (play)|Histriomastix]]'', and [[Thomas Dekker (poet)|Thomas Dekker]]. Jonson attacked the two poets again in ''[[Poetaster (play)|Poetaster]]'' (1601). Dekker responded with ''[[Satiromastix]]'', subtitled &quot;the untrussing of the humorous poet&quot;.&lt;ref name=EB1911/&gt; The final scene of this play, whilst certainly not to be taken at face value as a portrait of Jonson, offers a caricature that is recognisable from Drummond's report – boasting about himself and condemning other poets, criticising performances of his plays and calling attention to himself in any available way.{{Citation needed|date=September 2016}}
+
+This &quot;[[War of the Theatres]]&quot; appears to have ended with reconciliation on all sides. Jonson collaborated with Dekker on a pageant welcoming [[James I of England|James I]] to England in 1603 although Drummond reports that Jonson called Dekker a rogue. Marston dedicated ''The Malcontent'' to Jonson and the two collaborated with Chapman on ''[[Eastward Ho]]'', a 1605 play whose anti-Scottish sentiment briefly landed both Jonson and Chapman in jail.&lt;ref&gt;{{cite journal|last1=Gossett|first1=Suzanne|title=Marston, Collaboration, and &quot;Eastward Ho!&quot;|journal=Renaissance Drama|date=2004|volume=33|pages=181–200|jstor=41917391|series=New series|doi=10.1086/rd.33.41917391|s2cid=191392739}}&lt;/ref&gt;

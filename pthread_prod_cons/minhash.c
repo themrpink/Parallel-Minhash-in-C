@@ -31,14 +31,14 @@ void *minHash(void * args){
         end_loop = argomenti->numberOfFiles;
 
     for (int i = start_loop; i < end_loop; ++i) {
-          
+
         filename = (char*)consumer(argomenti->files_struct);
         argomenti->files[i] = strdup(filename);
 
         long fileSize = 0;
         char *filesContent;
         filesContent = get_file_string_cleaned(filename, &fileSize);
-
+  
         long numb_shingles = fileSize - K_SHINGLE + 1;
         char **shingles = (char **) malloc(numb_shingles * sizeof(char *));
         shingle_extract_buf(filesContent, numb_shingles, shingles);

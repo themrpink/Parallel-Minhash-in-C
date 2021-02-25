@@ -1,0 +1,139 @@
+:&lt;math&gt;Z_\mathrm{in}(\ell) = j\,Z_0\,\tan(\beta \ell). \,&lt;/math&gt;
+
+====Open====
+{{main|stub (electronics)#Open_circuited_stub|l1=stub}}
+For the case of an open load (i.e. &lt;math&gt;Z_\mathrm{L} = \infty&lt;/math&gt;), the input impedance is once again imaginary and periodic
+
+:&lt;math&gt;Z_\mathrm{in}(\ell) = -j\,Z_0 \cot(\beta \ell). \,&lt;/math&gt;
+
+===Stepped transmission line===
+[[Image:Segments.jpg|thumb|right|350px|A simple example of stepped transmission line consisting of three segments.]]
+A stepped transmission line is used for broad range [[impedance matching]]. It can be considered as multiple transmission line segments connected in series, with the characteristic impedance of each individual element to be &lt;math&gt;Z_\mathrm{0,i}&lt;/math&gt;.&lt;ref&gt;{{cite journal |last1=Qian |first1=Chunqi |last2=Brey |first2=William W. |year=2009 |title=Impedance matching with an adjustable segmented transmission line |journal=Journal of Magnetic Resonance |volume=199 |issue=1 |pages=104–110 |bibcode=2009JMagR.199..104Q |doi=10.1016/j.jmr.2009.04.005 |pmid=19406676}}&lt;/ref&gt; The input impedance can be obtained from the successive application of the chain relation
+
+:&lt;math&gt;Z_\mathrm{i+1} = Z_\mathrm{0,i}\,\frac{\,Z_\mathrm{i} + j\,Z_\mathrm{0,i}\,\tan(\beta_\mathrm{i} \ell_\mathrm{i})\,}{Z_\mathrm{0,i} + j\,Z_\mathrm{i}\,\tan(\beta_\mathrm{i} \ell_\mathrm{i})}\,&lt;/math&gt;
+
+where &lt;math&gt;\beta_\mathrm{i}&lt;/math&gt; is the wave number of the &lt;math&gt;\mathrm{i}&lt;/math&gt;-th transmission line segment and &lt;math&gt;\ell_\mathrm{i}&lt;/math&gt; is the length of this segment, and &lt;math&gt;Z_\mathrm{i}&lt;/math&gt; is the front-end impedance that loads the &lt;math&gt;\mathrm{i}&lt;/math&gt;-th segment.
+
+[[Image:PolarSmith.jpg|thumb|The impedance transformation circle along a transmission line whose characteristic impedance &lt;math&gt;Z_\mathrm{0,i}&lt;/math&gt; is smaller than that of the input cable &lt;math&gt;Z_0&lt;/math&gt;. And as a result, the impedance curve is off-centred towards the &lt;math&gt;-x&lt;/math&gt; axis. Conversely, if &lt;math&gt;Z_\mathrm{0,i} &gt; Z_0&lt;/math&gt;, the impedance curve should be off-centred towards the &lt;math&gt;+x&lt;/math&gt; axis.]]
+Because the characteristic impedance of each transmission line segment &lt;math&gt;Z_\mathrm{0,i}&lt;/math&gt; is often different from the impedance &lt;math&gt;Z_0&lt;/math&gt; of the fourth, input cable (only shown as an arrow marked &lt;math&gt;Z_0&lt;/math&gt; on the left side of the diagram above), the impedance transformation circle is off-centred along the &lt;math&gt;x&lt;/math&gt; axis of the [[Smith Chart]] whose impedance representation is usually normalized against &lt;math&gt;Z_0&lt;/math&gt;.
+
+The stepped transmission line is an example of a [[distributed-element circuit]]. A large variety of other circuits can also be constructed with transmission lines including [[distributed-element filter|filters]], [[power dividers and directional couplers]].
+
+==Practical types==
+&lt;!-- This section is linked from [[Wikipedia:Proposed mergers]] --&gt;
+
+===Coaxial cable===
+{{Main|coaxial cable}}
+Coaxial lines confine virtually all of the electromagnetic wave to the area inside the cable. Coaxial lines can therefore be bent and twisted (subject to limits) without negative effects, and they can be strapped to conductive supports without inducing unwanted currents in them.
+In radio-frequency applications up to a few gigahertz, the wave propagates in the [[transverse wave|transverse]] electric and magnetic mode (TEM) only, which means that the electric and magnetic fields are both perpendicular to the direction of propagation (the electric field is radial, and the magnetic field is circumferential). However, at frequencies for which the wavelength (in the dielectric) is significantly shorter than the circumference of the cable other [[transverse mode]]s can propagate. These modes are classified into two groups, transverse electric (TE) and transverse magnetic (TM) [[waveguide]] modes. When more than one mode can exist, bends and other irregularities in the cable geometry can cause power to be transferred from one mode to another.
+
+The most common use for coaxial cables is for television and other signals with bandwidth of multiple megahertz. In the middle 20th&amp;nbsp;century they carried [[long distance telephone]] connections.
+
+===Planar lines===
+{{main|Planar transmission line}}
+
+====Microstrip====
+[[Image:Solec Kujawski longwave antenna feeder.jpg|thumb|right|A type of transmission line called a ''cage line'', used for high power, low frequency applications. It functions similarly to a large coaxial cable. This example is the antenna [[feed line]] for a [[longwave]] radio transmitter in [[Poland]], which operates at a frequency of 225&amp;nbsp;kHz and a power of 1200&amp;nbsp;kW.]]
+{{Main|microstrip}}
+A microstrip circuit uses a thin flat conductor which is [[Parallel (geometry)|parallel]] to a [[ground plane]]. Microstrip can be made by having a strip of copper on one side of a [[printed circuit board]] (PCB) or ceramic substrate while the other side is a continuous ground plane. The width of the strip, the thickness of the insulating layer (PCB or ceramic) and the [[dielectric constant]] of the insulating layer determine the characteristic impedance. Microstrip is an open structure whereas coaxial cable is a closed structure.
+
+====Stripline====
+{{main|Stripline}}
+A stripline circuit uses a flat strip of metal which is sandwiched between two parallel ground planes. The insulating material of the substrate forms a dielectric. The width of the strip, the thickness of the substrate and the relative permittivity of the substrate determine the characteristic impedance of the strip which is a transmission line.
+
+====Coplanar waveguide====
+{{main|Coplanar waveguide}}
+A coplanar waveguide consists of a center strip and two adjacent outer conductors, all three of them flat structures that are deposited onto the same insulating substrate and thus are located in the same plane (&quot;coplanar&quot;). The width of the center conductor, the distance between inner and outer conductors, and the relative permittivity of the substrate determine the characteristic impedance of the coplanar transmission line.
+
+===Balanced lines===
+{{Main|Balanced line}}
+A balanced line is a transmission line consisting of two conductors of the same type, and equal impedance to ground and other circuits.  There are many formats of balanced lines, amongst the most common are twisted pair, star quad and twin-lead.
+
+====Twisted pair====
+{{Main|Twisted pair}}
+Twisted pairs are commonly used for terrestrial [[telephone]] communications.  In such cables, many pairs are grouped together in a single cable, from two to several thousand.&lt;ref&gt;Syed V. Ahamed, Victor B. Lawrence, ''Design and engineering of intelligent communication systems'', pp.130–131, Springer, 1997 {{ISBN|0-7923-9870-X}}.&lt;/ref&gt;  The format is also used for data network distribution inside buildings, but the cable is more expensive because the transmission line parameters are tightly controlled.
+
+====Star quad====
+{{Main|Star quad cable}}
+Star quad is a four-conductor cable in which all four conductors are twisted together around the cable axis.  It is sometimes used for two circuits, such as [[4-wire]] telephony and other telecommunications applications.  In this configuration each pair uses two non-adjacent conductors.  Other times it is used for a single, [[balanced line]], such as audio applications and [[2-wire]] telephony.  In this configuration two non-adjacent conductors are terminated together at both ends of the cable, and the other two conductors are also terminated together.
+
+When used for two circuits, crosstalk is reduced relative to cables with two separate twisted pairs.
+
+When used for a single, [[balanced line]], magnetic interference picked up by the cable arrives as a virtually perfect common mode signal, which is easily removed by coupling transformers.
+
+The combined benefits of twisting, balanced signalling, and quadrupole pattern give outstanding noise immunity, especially advantageous for low signal level applications such as microphone cables, even when installed very close to a power cable.&lt;ref&gt;''[http://benchmarkmedia.com/blogs/application_notes/116637511-the-importance-of-star-quad-microphone-cable The Importance of Star-Quad Microphone Cable]''&lt;/ref&gt;&lt;ref&gt;''[http://www.canare.com/UploadedDocuments/A%20Technical%20Paper%20-%20Evaluating%20Microphone%20Cable%20Perfrmance%20and%20Specifications.pdf Evaluating Microphone Cable Performance &amp; Specifications]''&lt;/ref&gt;&lt;ref&gt;''[http://www.canare.com/UploadedDocuments/Cat11_p35.pdf The Star Quad Story]''&lt;/ref&gt;&lt;ref&gt;''[https://www.soundonsound.com/sos/nov09/articles/qa1109_4.htm What's Special About Star-Quad Cable?]''&lt;/ref&gt;&lt;ref&gt;''[http://www.belden.com/blog/broadcastav/How-Starquad-Works.cfm How Starquad Works]''&lt;/ref&gt; The disadvantage is that star quad, in combining two conductors, typically has double the capacitance of similar two-conductor twisted and shielded audio cable. High capacitance causes increasing distortion and greater loss of high frequencies as distance increases.&lt;ref&gt;{{cite book|last=Lampen|first=Stephen H.|title=Audio/Video Cable Installer's Pocket Guide|year=2002|publisher=McGraw-Hill|isbn=978-0071386210|pages=32, 110, 112}}&lt;/ref&gt;&lt;ref&gt;{{cite book|last=Rayburn|first=Ray|title=Eargle's The Microphone Book: From Mono to Stereo to Surround – A Guide to Microphone Design and Application|url=https://archive.org/details/earglesmicrophon00rayb|url-access=limited|edition=3|year=2011|publisher=Focal Press|isbn=978-0240820750|pages=[https://archive.org/details/earglesmicrophon00rayb/page/n168 164]–166}}&lt;/ref&gt;
+
+====Twin-lead====
+{{Main|Twin-lead}}
+Twin-lead consists of a pair of conductors held apart by a continuous insulator.  By holding the conductors a known distance apart, the geometry is fixed and the line characteristics are reliably consistent.  It is lower loss than coaxial cable because the characteristic impedance of twin-lead is generally higher than coaxial cable, leading to lower resistive losses due to the reduced current.  However, it is more susceptible to interference.
+
+====Lecher lines====
+{{Main|Lecher lines}}
+Lecher lines are a form of parallel conductor that can be used at [[Ultra high frequency|UHF]] for creating resonant circuits.  They are a convenient practical format that fills the gap between [[Lumped-element model|lumped]] components (used at [[High frequency|HF]]/[[VHF]]) and [[Resonant cavity|resonant cavities]] (used at [[Ultra high frequency|UHF]]/[[Super high frequency|SHF]]).
+
+===Single-wire line===
+[[Unbalanced line]]s were formerly much used for telegraph transmission, but this form of communication has now fallen into disuse.  Cables are similar to twisted pair in that many cores are bundled into the same cable but only one conductor is provided per circuit and there is no twisting.  All the circuits on the same route use a common path for the return current (earth return).  There is a [[Electric power transmission|power transmission]] version of [[single-wire earth return]] in use in many locations.
+
+==General applications==
+
+===Signal transfer===
+
+Electrical transmission lines are very widely used to transmit high frequency signals over long or short distances with minimum power loss.  One familiar example is the [[down lead]] from a TV or radio [[Antenna (radio)|aerial]] to the receiver.
+
+===Pulse generation===
+
+Transmission lines are also used as pulse generators. By charging the transmission line and then discharging it into a [[resistive]] load, a rectangular pulse equal in length to twice the [[electrical length]] of the line can be obtained, although with half the voltage. A [[Blumlein transmission line]] is a related pulse forming device that overcomes this limitation. These are sometimes used as the [[pulsed power]] sources for [[radar]] [[transmitters]] and other devices.
+
+===Stub filters===
+{{see also|Distributed-element filter#Stub band-pass filters}}
+If a short-circuited or open-circuited transmission line is wired in parallel with a line used to transfer signals from point A to point B, then it will function as a filter. The method for making stubs is similar to the method for using Lecher lines for crude frequency measurement, but it is 'working backwards'. One method recommended in the [[Radio Society of Great Britain|RSGB]]'s radiocommunication handbook is to take an open-circuited length of transmission line wired in parallel with the [[feed line|feeder]] delivering signals from an aerial. By cutting the free end of the transmission line, a minimum in the strength of the signal observed at a receiver can be found. At this stage the stub filter will reject this frequency and the odd harmonics, but if the free end of the stub is shorted then the stub will become a filter rejecting the even harmonics.
+
+==Sound==
+
+The theory of [[sound wave]] propagation is very similar mathematically to that of electromagnetic waves, so techniques from transmission line theory are also used to build structures to conduct acoustic waves; and these are called [[acoustic transmission line]]s.
+
+==See also==
+{{Commons category |Transmission lines}}
+* [[Artificial transmission line]]
+* [[Longitudinal wave|Longitudinal electromagnetic wave]]
+* [[Propagation velocity]]
+* [[Radio frequency power transmission]]
+* [[Time domain reflectometer]]
+
+==References==
+''Part of this article was derived from [[Federal Standard 1037C]].''
+{{Reflist|25em}}
+
+*{{cite journal |last=Steinmetz |first=Charles Proteus |authorlink=Charles Proteus Steinmetz |title=The natural period of a transmission line and the frequency of lightning discharge therefrom |journal=The Electrical World |date=27 August 1898 |pages=203–205}}
+
+*{{cite book |title=Electromagnetism |url=https://archive.org/details/electromagnetism0000gran |url-access=registration |edition=2nd |last=Grant |first=I.S. |last2=Phillips |first2=W.R. |publisher=John Wiley |isbn= 978-0-471-92712-9 |date=1991-08-26}}
+
+* {{cite book |title=Fundamentals of Applied Electromagnetics |edition=2004 media |last=Ulaby |first=F.T. |publisher=Prentice Hall |isbn=978-0-13-185089-7 |year=2004}}
+
+* {{cite book |title=Radio communication handbook |year=1982 |page=20 |chapter=Chapter 17 |publisher=[[Radio Society of Great Britain]] |isbn=978-0-900612-58-9}}
+
+* {{cite journal |last1=Naredo |first1=J.L. |first2= A.C. |last2=Soudack |first3=J.R. |last3=Marti |title=Simulation of transients on transmission lines with corona via the method of characteristics |journal=IEE Proceedings - Generation, Transmission and Distribution |volume=142 |issue=1 |pages=81 |date=Jan 1995 |issn=1350-2360 |doi=10.1049/ip-gtd:19951488}}
+
+==Further reading==
+* {{cite conference |url=https://babel.hathitrust.org/cgi/pt?id=coo.31924066336946;view=1up;seq=115 |conference=Annual Dinner of the Institute at the Waldorf-Astoria &lt;!-- [[Transactions of the American Institute of Electrical Engineers]] --&gt; |publisher=American Institute of Electrical Engineers |place=New York |date=13 January 1902 |title=Honoring of Guglielmo Marconi |df=dmy-all}}
+
+* {{cite web |publisher=Avant! Software |archive-date=2005-09-25 |df=dmy-all |archive-url=https://web.archive.org/web/20050925041320/http://www.ece.cmu.edu/~ee762/hspice-docs/html/hspice_and_qrg/hspice_2001_2-124.html |url=http://www.ece.cmu.edu/~ee762/hspice-docs/html/hspice_and_qrg/hspice_2001_2-124.html |title=Using Transmission Line Equations and Parameters |series=Star-Hspice Manual |date=June 2001}}
+
+* {{cite journal |doi=10.1088/0022-3727/23/2/001 |title=On the propagation of inhomogeneous waves |journal=Journal of Physics D: Applied Physics |volume=23 |issue=2 |pages=129–135 |year=1990 |last=Cornille |first=P.|bibcode=1990JPhD...23..129C }}
+
+* {{cite book |author=Farlow, S.J. |authorlink= Stanley Farlow |title=Partial Differential Equations for Scientists and Engineers |publisher=J. Wiley and Sons |year=1982 |page=126 |isbn=0-471-08639-8}}
+
+* {{cite journal |last=Kupershmidt |first=Boris A. |year=1998 |title=Remarks on random evolutions in Hamiltonian representation |id=Math-ph/9810020 |journal=J. Nonlinear Math. Phys. |volume=5 |issue=4 |pages=383–395|doi=10.2991/jnmp.1998.5.4.10 |arxiv=math-ph/9810020 |bibcode=1998JNMP....5..483K }}
+
+* {{cite web |url=http://cktse.eie.polyu.edu.hk/eie403/ |title=Transmission line matching |id=EIE403 |series=High Frequency Circuit Design |department=Department of Electronic and Information Engineering |publisher=Hong Kong Polytechnic University |format=PDF}}
+
+* {{cite web |author=Wilson, B. |date=2005-10-19 |df=dmy-all |archive-url=https://web.archive.org/web/20060109065828/http://cnx.rice.edu/content/m1044/latest/ |archive-date=2006-01-09 |url=http://cnx.rice.edu/content/m1044/latest/ |title=Telegrapher's Equations |series=Connexions}}
+
+* {{cite thesis |first=John Greaton |last=Wöhlbier |year=2000 |type=M.S. |archive-url=https://web.archive.org/web/20060619072607/http://www.wildwestwohlbiers.org/john/files/ms_thesis.pdf |archive-date=2006-06-19 |df=dmy-all |url=http://www.wildwestwohlbiers.org/john/files/ms_thesis.pdf |at=§&quot;Fundamental Equation&quot; and §&quot;Transforming the Telegrapher's Equations&quot; |title=Modeling and Analysis of a Traveling Wave under Multitone Excitation |publisher=University of Wisconsin |place=Madison, WI |department=Electrical and Computer Engineering}}
+
+* {{cite web |publisher=Keysight Technologies |series=Educational Resources |title=Wave Propagation along a Transmission Line |url=http://www.keysight.com/find/nw_xline |type=Educational Java Applet}} (May need to add &quot;http://www.keysight.com&quot; to your Java Exception Site list.)
+
+* {{cite journal |doi=10.1016/j.jmr.2009.04.005 |pmid=19406676 |title=Impedance matching with an adjustable, segmented transmission line |journal=Journal of Magnetic Resonance |volume=199 |issue=1 |pages=104–110 |year=2009 |last1=Qian |first1=Chunqi |last2=Brey |first2=William W. |bibcode=2009JMagR.199..104Q}}
+
+==External links==
+* {{cite web |url=http://terahertz.tudelft.nl/Research/project.php?id=74&amp;ti=27 |title=Transmission Line Calculator (Including radiation and surface-wave excitation losses) |website=terahertz.tudelft.nl |publisher=[[Technical University of Delft]] |place=Delft, NL}}
