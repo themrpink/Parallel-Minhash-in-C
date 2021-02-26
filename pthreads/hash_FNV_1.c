@@ -236,30 +236,6 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash){
     return 0;
 }
 
-typedef struct {
-    long* rank;
-    char** shingles;
-    long tot_shingles;
-    long long unsigned *hashed_shingles;
-    long long unsigned *minhash;
-    long long unsigned *minhashes[PRIMES_SIZE];
-} create_hash_args ;
-
-int hash_FNV_1a(char *shingle, long long unsigned *hash){
-
-    long long unsigned FNV_offset_basis = FNV_OFFSET_BASIS;
-    long long unsigned prime = FNV_PRIME;
-
-    *hash = FNV_offset_basis;
-
-    for(int i=0; i<K_SHINGLE; i++){
-        (*hash) *= prime;
-        (*hash) ^= shingle[i];
-    }
-
-    return 0;
-}
-
 void *create_hash(void *args) {
     long numThread=((create_hash_args*)args)->rank;
     long count;
