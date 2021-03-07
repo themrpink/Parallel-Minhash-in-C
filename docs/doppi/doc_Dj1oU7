@@ -1,0 +1,277 @@
+==External links==
+*[http://www.villageofpeotone.com/ Village of Peotone, Illinois]
+{{Coord|display=title|41.329445|-87.795138}}
+
+{{Will County, Illinois}}
+
+{{authority control}}
+
+[[Category:Villages in Will County, Illinois]]
+[[Category:Villages in Illinois]]</text>
+      <sha1>d2ielknfku2aqvcp7aemw3l62d08v8d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>A priori (disambiguation)</title>
+    <ns>0</ns>
+    <id>48166</id>
+    <revision>
+      <id>970504662</id>
+      <parentid>970502755</parentid>
+      <timestamp>2020-07-31T17:46:18Z</timestamp>
+      <contributor>
+        <ip>82.24.65.28</ip>
+      </contributor>
+      <comment>Corrected definition of a priori language</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="910" xml:space="preserve">{{wiktionary|a priori}}
+'''''[[A priori]]''''' (Latin, 'from the earlier') is a term used in philosophy and epistemology. 
+
+'''''A priori''''' or '''''apriori''''' may also refer to:
+
+* [[A priori language|''A priori'' language]], a type of constructed language
+* [[A priori estimate|''A priori'' estimate]], in the theory of partial differential equations
+* [[A priori probability|''A priori'' probability]], a probability derived by deductive reasoning
+* [[Apriori algorithm]], an algorithm used with databases
+* [[aPriori Capital Partners]], a private equity investment firm 
+* [[Apriori Control]] (Apriori, LLC), later Reach-In, a technology company
+
+==See also==
+*{{intitle|apriori}}
+*{{intitle|a priori}}
+* [[A posteriori (disambiguation)|''A posteriori'' (disambiguation)]]
+* [[Priory]], a monastery headed by a prior or prioress
+* ''[[Ex-ante]]'', a Latin phrase meaning 'before the event'
+{{disambig}}</text>
+      <sha1>mcgawxhzayq7kne26y40w8r0ypkkwhy</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Congruence relation</title>
+    <ns>0</ns>
+    <id>48167</id>
+    <revision>
+      <id>979584574</id>
+      <parentid>979313377</parentid>
+      <timestamp>2020-09-21T15:23:16Z</timestamp>
+      <contributor>
+        <username>JayBeeEll</username>
+        <id>13974845</id>
+      </contributor>
+      <comment>Undid revision 979313377 by [[Special:Contributions/Miaumee|Miaumee]] ([[User talk:Miaumee|talk]]) Per [[User talk:Miaumee]], this is apparently the preferred response to poor editing</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10369" xml:space="preserve">{{no footnotes|date=February 2015}}
+{{For|the term as used in elementary geometry|congruence (geometry)}}
+{{for|linear congruence equations|solving linear congruences}}
+
+In [[abstract algebra]], a '''congruence relation''' (or simply '''congruence''') is an [[equivalence relation]] on an [[algebraic structure]] (such as a [[group (mathematics)|group]], [[ring (mathematics)|ring]], or [[vector space]]) that is compatible with the structure in the sense that algebraic operations done with equivalent elements will yield equivalent elements.&lt;ref&gt;Hungerford,  Thomas W.. ''Algebra''. Springer-Verlag, 1974, p. 27&lt;/ref&gt;  Every congruence relation has a corresponding [[Equivalence class|quotient]] structure, whose elements are the [[equivalence class]]es (or '''congruence classes''') for the relation.&lt;ref&gt;Hungerford, 1974, p. 26&lt;/ref&gt;
+
+==Basic example==
+{{About|the ''(mod n)'' notation|the binary ''mod'' operation|modulo operation|section=yes}}
+
+The prototypical example of a congruence relation is [[Modular arithmetic#Congruence relation|congruence modulo &lt;math&gt;n&lt;/math&gt;]] on the set of [[integer]]s.  For a given [[positive integer]] &lt;math&gt;n&lt;/math&gt;, two integers &lt;math&gt;a&lt;/math&gt; and &lt;math&gt;b&lt;/math&gt; are called '''congruent modulo &lt;math&gt;n&lt;/math&gt;''', written
+: &lt;math&gt;a \equiv b \pmod{n}&lt;/math&gt;
+if &lt;math&gt;a - b&lt;/math&gt; is [[divisible]] by &lt;math&gt;n&lt;/math&gt; (or equivalently if &lt;math&gt;a&lt;/math&gt; and &lt;math&gt;b&lt;/math&gt; have the same [[remainder]] when divided by &lt;math&gt;n&lt;/math&gt;).
+
+For example, &lt;math&gt;37&lt;/math&gt; and &lt;math&gt;57&lt;/math&gt; are congruent modulo &lt;math&gt;10&lt;/math&gt;,
+
+: &lt;math&gt;37 \equiv 57 \pmod{10}&lt;/math&gt;
+
+since &lt;math&gt;37 - 57 = -20&lt;/math&gt; is a multiple of 10, or equivalently since both &lt;math&gt;37&lt;/math&gt; and &lt;math&gt;57&lt;/math&gt; have a remainder of &lt;math&gt;7&lt;/math&gt; when divided by &lt;math&gt;10&lt;/math&gt;.
+
+Congruence modulo &lt;math&gt;n&lt;/math&gt; (for a fixed &lt;math&gt;n&lt;/math&gt;) is compatible with both [[addition]] and [[multiplication]] on the integers.  That is,
+
+if
+
+: &lt;math&gt;a_1 \equiv a_2 \pmod{n} &lt;/math&gt; and &lt;math&gt; b_1 \equiv b_2 \pmod{n}&lt;/math&gt;
+
+then
+
+: &lt;math&gt;a_1 + b_1 \equiv a_2 + b_2 \pmod{n} &lt;/math&gt;  and  &lt;math&gt; a_1 b_1 \equiv a_2b_2 \pmod{n}&lt;/math&gt;
+
+The corresponding addition and multiplication of equivalence classes is known as [[modular arithmetic]].  From the point of view of abstract algebra, congruence modulo &lt;math&gt;n&lt;/math&gt; is a congruence relation on the [[ring (mathematics)|ring]] of integers, and arithmetic modulo &lt;math&gt;n&lt;/math&gt; occurs on the corresponding [[quotient ring]].
+
+==Definition==
+The definition of a congruence depends on the type of [[algebraic structure]] under consideration.  Particular definitions of congruence can be made for [[group (mathematics)|groups]], [[ring (mathematics)|rings]], [[vector space]]s, [[module (mathematics)|modules]], [[semigroup]]s, [[lattice (order)|lattices]], and so forth.  The common theme is that a congruence is an [[equivalence relation]] on an algebraic object that is compatible with the algebraic structure, in the sense that the [[Operation (mathematics)|operations]] are [[well-defined]] on the [[equivalence classes]].
+
+For example, a group is an algebraic object consisting of a [[set (mathematics)|set]] together with a single [[binary operation]], satisfying certain axioms.  If &lt;math&gt;G&lt;/math&gt; is a group with operation &lt;math&gt;\ast&lt;/math&gt;, a '''congruence relation''' on &lt;math&gt;G&lt;/math&gt; is an equivalence relation &lt;math&gt;\equiv&lt;/math&gt; on the elements of &lt;math&gt;G&lt;/math&gt; satisfying
+:&lt;math&gt;g_1 \equiv g_2 \ \ \,&lt;/math&gt; and &lt;math&gt;\ \ \, h_1 \equiv h_2 \implies g_1 \ast h_1 \equiv g_2 \ast h_2&lt;/math&gt; 
+for all &lt;math&gt;g_1&lt;/math&gt;, &lt;math&gt;g_2&lt;/math&gt;, &lt;math&gt;h_1&lt;/math&gt;, &lt;math&gt;h_2 \in G&lt;/math&gt;. For a congruence on a group, the equivalence class containing the [[identity element]] is always a [[normal subgroup]], and the other equivalence classes are the [[coset]]s of this subgroup.  Together, these equivalence classes are the elements of a [[quotient group]].
+
+When an algebraic structure includes more than one operation, congruence relations are required to be compatible with each operation.  For example, a ring possesses both addition and multiplication, and a congruence relation on a ring must satisfy
+:&lt;math&gt;r_1 + s_1 \equiv r_2 + s_2 \text{ and } r_1 s_1 \equiv r_2 s_2&lt;/math&gt;
+whenever &lt;math&gt;r_1 \equiv r_2 \text{ and } s_1 \equiv s_2&lt;/math&gt;. For a congruence on a ring, the equivalence class containing 0 is always a two-sided [[Ideal (ring theory)|ideal]], and the two operations on the set of equivalence classes define the corresponding quotient ring.
+
+The general notion of a congruence relation can be given a formal definition in the context of [[universal algebra]], a field which studies ideas common to all [[algebraic structures]].  In this setting, a congruence relation is an equivalence relation &lt;math&gt;\equiv&lt;/math&gt; on an algebraic structure that satisfies
+:&lt;math&gt;\mu \left( a_1\text{, } a_2\text{, }\ldots{}\text{, } a_n \right) \equiv \mu \left( a_1'\text{, } a_2'\text{, }\ldots{}\text{, } a_n' \right)&lt;/math&gt;
+for every &lt;math&gt;n&lt;/math&gt;-ary operation &lt;math&gt;\mu&lt;/math&gt; and all elements &lt;math&gt;a_1\text{, } \ldots{}\text{, } a_n\text{, } a_1'\text{, } \ldots{}\text{, } a_n' &lt;/math&gt; such that &lt;math&gt;a_i \equiv a_i' &lt;/math&gt; for each &lt;math&gt;i = 1, ..., n.&lt;/math&gt;
+
+==Relation with homomorphisms==
+If &lt;math&gt;f:A\, \rightarrow B&lt;/math&gt; is a [[homomorphism]] between two algebraic structures (such as [[group homomorphism|homomorphism of groups]], or a [[linear map]] between [[vector space]]s), then the relation &lt;math&gt;R&lt;/math&gt; defined by
+
+:&lt;math&gt;a_1\, R\, a_2&lt;/math&gt; if and only if &lt;math&gt;f \left(a_1\right) = f\left(a_2\right)&lt;/math&gt; 
+
+is a congruence relation.  By the [[first isomorphism theorem]], the [[image (mathematics)|image]] of ''A'' under &lt;math&gt;f&lt;/math&gt; is a substructure of ''B'' [[Isomorphism|isomorphic]] to the quotient of ''A'' by this congruence.
+
+==Congruences of groups, and normal subgroups and ideals==
+In the particular case of [[group (mathematics)|groups]], congruence relations can be described in elementary terms as follows:
+If ''G'' is a group (with [[identity element]] ''e'' and operation *) and ~ is a [[binary relation]] on ''G'', then ~ is a congruence whenever:
+#[[Given any]] element ''a'' of ''G'', ''a'' ~ ''a'' ('''[[Reflexive relation|reflexivity]]''');
+#Given any elements ''a'' and ''b'' of ''G'', [[material conditional|if]] ''a'' ~ ''b'', then ''b'' ~ ''a'' ('''[[Symmetric relation|symmetry]]''');
+#Given any elements ''a'', ''b'', and ''c'' of ''G'', if ''a'' ~ ''b'' [[logical conjunction|and]] ''b'' ~ ''c'', then ''a'' ~ ''c'' ('''[[Transitive relation|transitivity]]''');
+#Given any elements ''a'', ''a' '', ''b'', and ''b' '' of ''G'', if ''a'' ~ ''a' '' and ''b'' ~ ''b' '', then ''a'' * ''b'' ~ ''a' '' * ''b' '';
+#Given any elements ''a'' and ''a' '' of ''G'', if ''a'' ~ ''a' '', then ''a''&lt;sup&gt;&amp;minus;1&lt;/sup&gt; ~ ''a' ''&lt;sup&gt;&amp;minus;1&lt;/sup&gt; (this can actually be proven from the other four, so is strictly redundant).
+
+Conditions 1, 2, and 3 say that ~ is an [[equivalence relation]].
+
+A congruence ~ is determined entirely by the set {''a'' ∈ ''G'' : ''a'' ~ ''e''} of those elements of ''G'' that are congruent to the identity element, and this set is a [[normal subgroup]].
+Specifically, ''a'' ~ ''b'' if and only if ''b''&lt;sup&gt;&amp;minus;1&lt;/sup&gt; * ''a'' ~ ''e''.
+So instead of talking about congruences on groups, people usually speak in terms of normal subgroups of them; in fact, every congruence corresponds uniquely to some normal subgroup of ''G''.
+
+=== Ideals of rings and the general case ===
+
+A similar trick allows one to speak of kernels in [[ring (mathematics)|ring theory]] as [[ideal (ring theory)|ideals]] instead of congruence relations, and in [[module (mathematics)|module theory]] as [[submodule]]s instead of congruence relations.
+
+A more general situation where this trick is possible is with [[Omega-group]]s (in the general sense allowing operators with multiple arity). But this cannot be done with, for example, [[monoid]]s, so the study of congruence relations plays a more central role in monoid theory.
+
+==Universal algebra==
+
+The idea is generalized in [[universal algebra]]:
+A congruence relation on an algebra ''A'' is a [[subset]] of the [[direct product]] ''A'' &amp;times; ''A'' that is both an [[equivalence relation]] on ''A'' and a [[subalgebra]] of ''A'' &amp;times; ''A''.
+
+The [[kernel (universal algebra)|kernel]] of a [[homomorphism]] is always a congruence. Indeed, every congruence arises as a kernel.
+For a given congruence ~ on ''A'', the set ''A''/~ of [[equivalence class]]es can be given the structure of an algebra in a natural fashion, the [[quotient (universal algebra)|quotient algebra]].
+The function that maps every element of ''A'' to its equivalence class is a homomorphism, and the kernel of this homomorphism is ~.
+
+The [[lattice (order)|lattice]] '''Con'''(''A'') of all congruence relations on an algebra ''A'' is [[algebraic lattice|algebraic]].
+
+[[John M. Howie]] described how [[semigroup]] theory illustrates congruence relations in universal algebra:
+:In a group a congruence is determined if we know a single congruence class, in particular if we know the normal subgroup which is the class containing the identity. Similarly, in a ring a congruence is determined if we know the ideal which is the congruence class containing the zero. In semigroups there is no such fortunate occurrence, and we are therefore faced with the necessity of studying congruences as such. More than anything else, it is this necessity that gives semigroup theory its characteristic flavour. Semigroups are in fact the first and simplest type of algebra to which the methods of universal algebra must be applied…&lt;ref&gt;J. M. Howie (1975) ''An Introduction to Semigroup Theory'', page v, [[Academic Press]]&lt;/ref&gt;
+
+==See also==
+*[[Table of congruences]]
+*[[Linear congruence theorem]]
+*[[Congruence lattice problem]]
+
+==Notes==
+{{reflist}}
+
+==References==
+* Horn and Johnson, ''Matrix Analysis,'' Cambridge University Press, 1985. {{ISBN|0-521-38632-2}}. (Section 4.5 discusses congruency of matrices.)
+* {{cite book |last=Rosen |first=Kenneth H |title=Discrete Mathematics and Its Applications |publisher=McGraw-Hill Education |year=2012 |isbn=978-0077418939}}
+
+
+{{DEFAULTSORT:Congruence Relation}}
+[[Category:Modular arithmetic]]
+[[Category:Algebra]]
+[[Category:Binary relations]]
+[[Category:Equivalence (mathematics)]]</text>
+      <sha1>p6lo7fei5hhdjpcdtn4quap3hmv99lu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>A posteriori</title>
+    <ns>0</ns>
+    <id>48168</id>
+    <redirect title="A priori and a posteriori" />
+    <revision>
+      <id>791603354</id>
+      <parentid>791603318</parentid>
+      <timestamp>2017-07-21T09:26:35Z</timestamp>
+      <contributor>
+        <username>Yelysavet</username>
+        <id>18882995</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[A priori and a posteriori]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="62" xml:space="preserve">#REDIRECT [[A priori and a posteriori]]
+
+{{wikidata redirect}}</text>
+      <sha1>7g5kno0ft4tpq90scnkudq1kewqwotb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Factor ring</title>
+    <ns>0</ns>
+    <id>48170</id>
+    <redirect title="Quotient ring" />
+    <revision>
+      <id>40275680</id>
+      <parentid>15943212</parentid>
+      <timestamp>2006-02-19T12:32:58Z</timestamp>
+      <contributor>
+        <username>MathMartin</username>
+        <id>29707</id>
+      </contributor>
+      <comment>disamb</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="27" xml:space="preserve">#REDIRECT [[quotient ring]]</text>
+      <sha1>p0s5j09vyygfxsm8sum5i0o5r52jbov</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Adrienne Rich</title>
+    <ns>0</ns>
+    <id>48171</id>
+    <revision>
+      <id>990714494</id>
+      <parentid>988432775</parentid>
+      <timestamp>2020-11-26T02:46:11Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 65 templates: rep cmtd params (1×); del empty params (22×); hyphenate params (20×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="46957" xml:space="preserve">{{short description|American poet, essayist and feminist}}
+{{Infobox writer
+| image        = Adrienne Rich 1980.jpg
+| caption      = Rich in 1980
+| image_size   = 160px
+| birth_name   = Adrienne Cecile Rich
+| birth_date   = {{birth date|1929|5|16}}
+| birth_place  = [[Baltimore, Maryland]], U.S.
+| death_date   = {{death date and age|2012|3|27|1929|5|16}}
+| death_place  = [[Santa Cruz, California]], U.S.
+| occupation   = Poet, non-fiction writer, essayist
+| genre        = Poetry, non-fiction
+| notableworks = ''Diving Into the Wreck''
+| awards       = {{awd|[[National Book Award]]|1974}}{{awd| [[Bollingen Prize]] |2003}}{{awd| [[Griffin Poetry Prize]] |2010}}
+|spouse={{marriage|[[Alfred Haskell Conrad]]|1953|1970|end = died}}
+|children = 3
+|partner=[[Michelle Cliff]] (1976–2012)
+| education     = [[Radcliffe College]]
+}}
+
+'''Adrienne Cecile Rich''' ({{IPAc-en|æ|d|r|iː|ɛ|n}};{{fix|text=lacks stress|date=June 2017}} May 16, 1929 – March 27, 2012) was an American poet, essayist and [[Feminism|feminist]]. She was called &quot;one of the most widely read and influential poets of the second half of the 20th century&quot;,&lt;ref&gt;Nelson, Cary, editor. ''Anthology of Modern American Poetry''. Oxford University Press. 2000.&lt;/ref&gt;&lt;ref&gt;{{cite news|url=http://latimesblogs.latimes.com/jacketcopy/2012/03/adrienne-rich.html |title=Poet Adrienne Rich, 82, has died |work=Los Angeles Times |access-date=March 29, 2012 |date=March 28, 2012}}&lt;/ref&gt; and was credited with bringing &quot;the oppression of women and lesbians to the forefront of poetic discourse.&quot;&lt;ref&gt;{{cite news|url=https://www.theguardian.com/books/2012/mar/29/adrienne-rich-poet-essayist-dies|title=Adrienne Rich, award-winning poet and essayist, dies|first=Alison|last=Flood|work=The Guardian |date=March 29, 2012|access-date=March 29, 2012}}&lt;/ref&gt; Rich criticized rigid forms of feminist identities, and valorized what she coined the &quot;lesbian continuum,&quot; which is a female continuum of solidarity and creativity that impacts and fills women's lives.&lt;ref&gt;{{Cite book|title=Routledge International Encyclopedia of Queer Culture|last=Gerstner|first=David A.|publisher=Routledge Taylor and Francis Group|year=2006|isbn=0-415-30651-5|location=New York|pages=[https://archive.org/details/routledgeinterna0000unse/page/484 484]|url=https://archive.org/details/routledgeinterna0000unse/page/484}}&lt;/ref&gt;
+
+Her first collection of poetry, ''A Change of World'', was selected by renowned poet [[W. H. Auden]] for the [[Yale Series of Younger Poets Award]]. Auden went on to write the introduction to the published volume. She famously declined the [[National Medal of Arts]], protesting the vote by [[Speaker of the United States House of Representatives|House Speaker]] [[Newt Gingrich]] to end funding for the [[National Endowment for the Arts]].
+
+==Early life and education==
+
+Adrienne Rich was born in [[Baltimore]], Maryland, the elder of two sisters. Her father, renowned pathologist [[Arnold Rice Rich]], was the chairman {{Use mdy dates|date=April 2012}}of [[pathology]] at [[Johns Hopkins Medical School|The Johns Hopkins Medical School]]. Her mother, Helen Elizabeth (Jones) Rich,&lt;ref&gt;{{cite web|url=http://jwa.org/encyclopedia/article/rich-adrienne-cecile |title=Adrienne Cecile Rich |publisher=Jewish Women's Archive |access-date=March 29, 2012}}&lt;/ref&gt; was a concert pianist and a composer. Her father was from a Jewish family,&lt;ref&gt;{{cite book|last=Langdell|first=Cheri Colby|title=Adrienne Rich: the moment of change|year=2004|publisher=Greenwood Publishing Group, Incorporated|isbn=978-0-313-31605-0|page=20}}&lt;/ref&gt;  and her mother was a Southern Protestant;&lt;ref&gt;{{cite book|url=https://books.google.com/books?id=QyvXLgnTNpIC&amp;q=%22around+that+time%22+Adrienne+Rich&amp;pg=PA274 |title=A to Z of American women writers – Carol Kort |date=October 30, 2007|isbn=9781438107936|last1=Kort |first1=Carol }}&lt;/ref&gt; the girls were raised as Christians. Adrienne Rich's early poetic influence stemmed from her father, who encouraged her to read but also to write her own poetry. Her interest in literature was sparked within her father's library, where she read the work of writers such as [[Ibsen]],&lt;ref Name=&quot;Shuman1278&quot;&gt;Shuman (2002)  p1278&lt;/ref&gt; [[Matthew Arnold|Arnold]], [[William Blake|Blake]], [[John Keats|Keats]], [[Dante Gabriel Rossetti]], and [[Alfred, Lord Tennyson|Tennyson]]. Her father was ambitious for Adrienne and &quot;planned to create a prodigy.&quot; Adrienne Rich and her younger sister were home schooled by their mother until Adrienne began public education in the fourth grade. The poems ''Sources'' and ''After Dark'' document her relationship with her father, describing how she worked hard to fulfill her parents' ambitions for her—moving into a world in which she was expected to excel.&lt;ref Name=&quot;Shuman1278&quot;/&gt;&lt;ref&gt;''Critical Survey of Poetry'' (1992) Ed. Frank Northen Magill, Salem Press, p2752&lt;/ref&gt;
+
+In later years, Rich went to [[Roland Park Country School]], which she described as a &quot;good old fashioned girls' school [that] gave us fine role models of single women who were intellectually impassioned.&quot;&lt;ref Name=&quot;Martin&quot;&gt;Martin, Wendy (1984) ''An American triptych: Anne Bradstreet, Emily Dickinson, Adrienne Rich'' The University of North Carolina Press p174 {{ISBN|0-8078-4112-9}}&lt;/ref&gt; After graduating from high school, Rich earned her college diploma at [[Radcliffe College]], where she focused primarily on poetry and learning writing craft, encountering no women teachers at all.&lt;ref Name=&quot;Martin&quot;/&gt; In 1951, her last year at college, Rich's first collection of poetry, ''A Change of World'', was selected by the senior poet [[W. H. Auden]] for the [[Yale Series of Younger Poets Award]]; he went on to write the introduction to the published volume. Following her graduation, Rich received a [[John Simon Guggenheim Memorial Foundation|Guggenheim Fellowship]] to study at Oxford for a year. Following a visit to Florence, she chose not to return to Oxford, and spent her remaining time in Europe writing and exploring Italy.&lt;ref Name=&quot;Pioneer&quot;/&gt;
+
+==Early career: 1953–75==
+In 1953, Rich married [[Alfred Haskell Conrad]], an economics professor at [[Harvard University]] she met as an undergraduate. She said of the match: &quot;I married in part because I knew no better way to disconnect from my first family.  I wanted what I saw as a full woman's life, whatever was possible.&quot;&lt;ref Name=&quot;Pioneer&quot;/&gt; They settled in [[Cambridge, Massachusetts]], and had three sons. In 1955, she published her second volume, ''The Diamond Cutters'', a collection she said she wished had not been published, saying &quot;a lot of the poems are incredibly derivative,&quot; and citing a &quot;pressure to produce again... to make sure I was still a poet.&quot; &lt;ref Name=&quot;Pioneer&quot;/&gt; That year she also received the Ridgely Torrence Memorial Award from the Poetry Society of America.&lt;ref name=&quot;Langdell&quot;/&gt; Her three children were born in 1955 (David), 1957 (Pablo) and 1959 (Jacob).
+
+{{quote box |width=300px |align=right |bgcolor=#FFFFF0 |salign=right
+ |quote  ={{poemquote|
+We are, I am, you are
+by cowardice or courage
+the one who find our way
+back to this scene
+carrying a knife, a camera
+a book of myths
+in which
+our names do not appear.}}
+ |source = —From &quot;Diving into the Wreck&quot;&lt;br/&gt; ''Diving into the Wreck: Poems 1971–1972'' (1973)&lt;ref name=&quot;legend&quot;&gt;{{cite web |url=http://www.poets.org/viewmedia.php/prmMID/15228 |title=Diving into the Wreck |publisher=The Academy of American Poets |access-date=March 29, 2012 |url-status=dead |archive-url=https://web.archive.org/web/20120329124018/http://www.poets.org/viewmedia.php/prmMID/15228 |archive-date=March 29, 2012 |df=mdy-all }}&lt;/ref&gt;}}
+
+The 1960s began a period of change in Rich's life: she received the National Institute of Arts and Letters award (1960), her second Guggenheim Fellowship to work at the Netherlands Economic Institute (1961), and the [[Bollingen Foundation]] grant for the translation of Dutch poetry (1962).&lt;ref Name=&quot;Langdell&quot;&gt;{{cite book|last=Langdell|first=Cherl Colby|title=Adrienne Rich: The Moment of Change|year=2004|publisher=Praeger Publishers|location=Westport, CT|pages=xv}}&lt;/ref&gt;&lt;ref&gt;{{cite web|title=American Academy of Arts and Letters |url=http://www.artsandletters.org/awards2_popup.php?abbrev=Academy |work=American Academy of Arts and Letter Award Winners |access-date=December 12, 2011 |url-status=dead |archive-url=https://web.archive.org/web/20081013232000/http://www.artsandletters.org/awards2_popup.php?abbrev=Academy |archive-date=October 13, 2008 }}&lt;/ref&gt;&lt;ref Name=&quot;Shuman1281&quot;/&gt; In 1963, Rich published her third collection, ''Snapshots of a Daughter-in-Law'', which was a much more personal work examining her female identity, reflecting the increasing tensions she experienced as a wife and mother in the 1950s, marking a substantial change in Rich's style and subject matter. In her 1982 essay &quot;Split at the Root: An Essay on Jewish Identity&quot;, Rich states: &quot;The experience of motherhood was eventually to radicalize me.&quot; The book met with harsh reviews. She comments, &quot;I was seen as 'bitter' and 'personal'; and to be personal was to be disqualified, and that was very shaking because I'd really gone out on a limb ... I realised I'd gotten slapped over the wrist, and I didn't attempt that kind of thing again for a long time.&quot;&lt;ref Name=&quot;Pioneer&quot;/&gt;

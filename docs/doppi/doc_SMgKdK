@@ -1,0 +1,262 @@
+:&lt;math&gt;\mbox{Insertion loss (dB)} = 10 \log_{10} {\left|V_1\right|^2 \over \left|V_2\right|^2} = 20 \log_{10} {\left|V_1\right| \over \left|V_2\right|}&lt;/math&gt;
+
+For passive filters, |''V''&lt;sub&gt;2&lt;/sub&gt;| will be smaller than |''V''&lt;sub&gt;1&lt;/sub&gt;|. In this case, the insertion loss is positive and measures how much smaller the signal is after adding the filter.
+
+==Link with scattering parameters==
+
+In case the two measurement ports use the same reference impedance, the insertion loss (&lt;math&gt;IL&lt;/math&gt;) is defined as:&lt;ref&gt;Pozar, David M.; ''Microwave Engineering, Third Edition''&lt;/ref&gt;&lt;ref&gt;Collin, Robert E.; ''Foundations For Microwave Engineering, Second Edition''&lt;/ref&gt; 
+
+:&lt;math&gt; IL = -20\log_{10}\left|S_{21}\right| \,\text{dB}&lt;/math&gt;.
+
+Here &lt;math&gt;S_{21}&lt;/math&gt; is one of the [[Scattering parameters#Insertion loss|scattering parameters]]. Insertion loss is the extra loss produced by the introduction of the [[Device under test|DUT]] between the 2 reference planes of the measurement. The extra loss can be introduced by intrinsic loss in the DUT and/or mismatch. In case of extra loss the insertion loss is defined to be positive.
+
+==See also==
+* [[Mismatch loss]]
+* [[Return loss]]
+
+==References==
+&lt;references/&gt;
+*{{FS1037C}}
+
+[[Category:Telecommunications engineering]]</text>
+      <sha1>b5bb5jllebyi6iwupqotio1ko7x7qi5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Inside plant</title>
+    <ns>0</ns>
+    <id>41267</id>
+    <revision>
+      <id>985855677</id>
+      <parentid>985847687</parentid>
+      <timestamp>2020-10-28T10:32:11Z</timestamp>
+      <contributor>
+        <username>Korg</username>
+        <id>263660</id>
+      </contributor>
+      <comment>rv</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2941" xml:space="preserve">In [[telecommunication]], the term '''inside plant''' has the following meanings:
+
+*All the cabling and equipment installed in a [[telecommunications facility]], including the [[main distribution frame]] (MDF) and all the equipment extending inward therefrom, such as [[PABX]] or [[telephone exchange|central office]] equipment, MDF [[heat coil]] protectors, and grounding systems.  
+*In [[radio]] and [[radar]] systems, all [[communications-electronics]] (C-E) equipment that is installed in buildings.
+
+Around the turn of the 21st century, [[DSLAM]]s became an important part of [[telephone company]] inside plant. Inside plant will also have [[distribution frame]]s and other equipment including [[passive optical network]] (name depends on the Service Provider).
+
+==Power==
+A typical power system for a switching office in an inside plant consists of the elements listed below: 
+*AC power system
+**AC input switch gear
+**Standby AC plant (where appropriate)
+**AC distribution system (essential and non-essential loads)
+**AC backup systems for uninterruptible loads and protected loads
+*DC power system
+**Rectifiers and plant controls
+**[[Storage batteries]]
+**DC distribution system.
+For safety and reliability reasons, it is desirable that all telecommunications loads be DC powered with minimal AC-powered devices used. Telcordia [http://telecom-info.telcordia.com/site-cgi/ido/docs.cgi?ID=SEARCH&amp;DOCUMENT=GR-513&amp; GR-513, Power Requirements in Telecommunications Plant (LSSGR Section 13)], contains detailed industry requirements for using power in an inside plant.
+
+Both integrated and isolated bonding networks as per Telcordia [http://telecom-info.telcordia.com/site-cgi/ido/docs.cgi?ID=SEARCH&amp;DOCUMENT=GR-295&amp; GR-295, Mesh and Isolated Bonding Networks: Definition and Application to Telephone Central Offices], are a technically viable means to ground and bond the equipment in a safe and effective manner. However, the integrated or mesh bonding schemes are preferred over isolated bonding networks because of the added costs and efforts required to manage, control, and maintain the isolation for the equipment, particularly during equipment upgrade and modifications to the plant. This preference is based on a pragmatic desire for lower costs and ease of management, and to simplify operations during plant modifications/upgrades.
+
+For a comprehensive analysis of the energy efficiency and environmental soundness of a power system, one should ideally consider a wider range of factors than strict energy conversion AC-to-DC power efficiency. These environmental factors cover a wider vision known as [[Industrial Ecology]] within which each manufacturing step of the products need to be considered from a [[Design for Environment]] (DfE) factors standpoint.
+
+==See also==
+* [[Outside plant]]
+
+==Sources==
+*{{FS1037C MS188}}
+
+{{Telecommunications}}
+
+[[Category:Telecommunications infrastructure]]
+
+
+{{telecommunications-stub}}</text>
+      <sha1>r7cibwrxwkjoyavj3p8ngux7cr9tjcj</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Intelligent Network</title>
+    <ns>0</ns>
+    <id>41268</id>
+    <revision>
+      <id>989487937</id>
+      <parentid>901369782</parentid>
+      <timestamp>2020-11-19T07:46:32Z</timestamp>
+      <contributor>
+        <username>WikiCleanerBot</username>
+        <id>18872885</id>
+      </contributor>
+      <minor />
+      <comment>v2.04b - [[User:WikiCleanerBot#T20|Bot T20 CW#61]] - [[WP:WCW]] project (Reference before punctuation)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="14737" xml:space="preserve">{{More footnotes|date=April 2009}}
+
+The '''Intelligent Network''' ('''IN''') is the standard [[network architecture]] specified in the [http://www.itu.int/rec/T-REC-Q.1200/en/ ITU-T Q.1200 series recommendations].  It is intended for fixed as well as [[Global System for Mobile Communications|mobile]] [[telecommunication|telecom]] networks. It allows operators to differentiate themselves by providing [[value-added service]]s in addition to the standard telecom services such as [[PSTN]], [[ISDN]] on fixed networks, and [[GSM services]] on [[Mobile phone|mobile phones]] or other mobile devices.
+
+The intelligence is provided by network nodes on the [[service layer]], distinct from the [[telephone exchange|switching]] layer of the [[core network]], as opposed to solutions based on intelligence in the core [[telephone exchange|switches]] or equipment. The IN nodes are typically owned by [[telecommunications service provider]]s such as a [[telephone company]] or [[mobile phone operator]].
+
+IN is supported by the [[Signaling System 7|Signaling System #7 (SS7)]] protocol between network switching centers and other network nodes owned by network operators.
+
+==Examples of IN services==
+
+* [[Televoting]]
+* [[Call screening]]
+* [[Local number portability]]
+* [[Toll-free telephone number|Toll-free calls]]/Freephone
+* [[Prepaid telephone calls|Prepaid calling]]
+* Account card calling
+* [[Virtual private network]]s (such as family group calling)
+* [[Centrex]] service (Virtual [[Private branch exchange|PBX]])
+* Private-number plans (with numbers remaining unpublished in directories)
+* [[Universal Personal Telecommunications]] service (a universal personal telephone number)
+* Mass-calling service
+* Prefix free dialing from cellphones abroad
+* Seamless [[Multimedia Messaging Service|MMS]] message access from abroad
+* [[Collect call|Reverse charging]]
+* Home Area Discount
+* [[Premium-rate telephone number|Premium Rate]] calls
+* [[Call distribution]] based on various criteria associated with the call
+** [[Location-based routing]]
+** Time-based routing
+** Proportional call distribution (such as between two or more call centres or offices)
+* Call queueing
+* [[Call transfer]]
+
+==History and key concepts==
+The IN concepts, architecture and protocols were originally developed as standards by the [[ITU-T]] which is the [[standardization]] committee of the [[International Telecommunication Union]]; prior to this a number of telecommunications providers had proprietary implementations.&lt;ref&gt;[http://www.google.com/patents?vid=USPAT4191860 http://www.google.com/patents?vid=USPAT4191860], Early patent for proprietary IN Services&lt;/ref&gt; The primary aim of the IN was to enhance the core telephony services offered by traditional telecommunications networks, which usually amounted to making and receiving voice calls, sometimes with call divert. This core would then provide a basis upon which [[Telephone company|operators]] could build services in addition to those already present on a standard [[Telephone switch|telephone exchange]].
+
+A complete description of the IN emerged in a set of [[ITU-T]] standards named [http://www.itu.int/rec/T-REC-Q.1210/en/ Q.1210] to [http://www.itu.int/rec/T-REC-Q.1219/en/ Q.1219], or Capability Set One (CS-1) as they became known.  The standards defined a complete architecture including the architectural view, state machines, physical implementation and protocols.  They were universally embraced by telecom suppliers and operators, although many variants were derived for use in different parts of the world (see [[#Variants|Variants]] below).
+
+Following the success of CS-1, further enhancements followed in the form of CS-2.  Although the standards were completed, they were not as widely implemented as CS-1, partly because of the increasing power of the variants, but also partly because they addressed issues which pushed traditional telephone exchanges to their limits.
+
+&lt;!-- Image with unknown copyright status removed: [[File:IntelligentNetwork.jpg|thumbnail|right|300px|Intelligent Network schematic diagram]] --&gt;
+The major driver behind the development of the IN was the need for a more flexible way of adding sophisticated services to the existing network. Before the IN was developed, all new features and/or services had to be implemented directly in the core switch systems. This made for long release cycles as the software testing had to be extensive and thorough to prevent the network from failing. With the advent of the IN, most of these services (such as toll-free numbers and geographical number portability) were moved out of the core switch systems and into self-contained nodes, creating a modular and more secure network that allowed the service providers themselves to develop variations and value-added services to their networks without submitting a request to the core switch manufacturer and waiting for the long development process. The initial use of IN technology was for number translation services, e.g. when translating toll-free numbers to regular [[PSTN]] numbers; much more complex services have since been built on the IN, such as [[Custom Local Area Signaling Services]] (CLASS) and prepaid telephone calls.
+
+==SS7 architecture==
+The main concepts (functional view) surrounding IN services or architecture are connected with [[Signaling System 7|SS7]] architecture:
+
+* ''Service Switching Function'' (SSF) or ''[[Service switching point|Service Switching Point]]'' (SSP) is co-located with the telephone exchange, and acts as the trigger point for further services to be invoked during a call.  The SSP implements the Basic Call State Machine (BCSM) which is a [[Finite state machine]] that represents an abstract view of a call from beginning to end (off hook, dialing, answer, no answer, busy, hang up, etc.).  As each state is traversed, the exchange encounters ''Detection Points (DPs)'' at which the SSP may invoke a query to the SCP to wait for further instructions on how to proceed.  This query is usually called a trigger.  Trigger criteria are defined by the operator and might include the subscriber calling number or the dialed number. The SSF is responsible for controlling calls requiring value added services.
+* ''Service Control Function'' (SCF) or ''[[Service control point|Service Control Point]]'' (SCP) is a separate set of platforms that receive queries from the SSP.  The SCP contains service logic which implements the behaviour desired by the operator, i.e., the services.  During service logic processing, additional data required to process the call may be obtained from the SDF.  The logic on the SCP is created using the SCE.
+* ''Service Data Function'' (SDF) or ''[[Service data point|Service Data Point]]'' (SDP) is a database that contains additional subscriber data, or other data required to process a call.  For example, the subscriber's remaining prepaid credit may be stored in the SDF to be queried in real-time during the call.  The SDF may be a separate platform or co-located with the SCP.
+* ''Service Management Function'' (SMF) or ''Service Management Point'' (SMP) is a platform or cluster of platforms that operators use to monitor and manage the IN services. It contains the management database which stores the services' configuration, collects the statistics and alarms, and stores the Call Data Reports and Event Data Reports.
+* ''Service Creation Environment'' (SCE) is the development environment used to create the services present on the SCP.  Although the standards permit any type of environment, it is fairly rare to see low level languages like [[C (programming language)|C]] used.  Instead, proprietary graphical languages are used to enable telecom engineers to create services directly. The languages are usually of the [[Fourth-generation programming language|fourth-generation]] type, and the engineer may use a [[graphical interface]] to build or change a service.
+* ''Specialized Resource Function'' (SRF) or ''Intelligent Peripheral'' (IP) is a node which can connect to both the SSP and the SCP and deliver special resources into the call, mostly related to voice communication, for example to play voice announcements or collect [[DTMF]] tones from the user.
+
+==Protocols==
+The core elements described above use standard protocols to communicate with each other. The use of standard protocols allows different manufacturers to concentrate on different parts of the architecture and be confident that they will all work together in any combination.
+
+The interfaces between the SSP and the SCP are [[Signalling System No. 7|SS7]] based and have similarities with [[Internet protocol suite|TCP/IP]] protocols.  The SS7 protocols implement much of the [[OSI seven-layer model]].  This means that the IN standards only had to define the [[application layer]], which is called the Intelligent Networks Application Part or [[INAP]].  The INAP messages are encoded using [[Abstract syntax notation one|ASN.1]].
+
+The interface between the SCP and the SDP is defined in the standards to be an [[X.500]] Directory Access Protocol or DAP. A more lightweight interface called [[Lightweight Directory Access Protocol|LDAP]] has emerged from the [[Internet Engineering Task Force|IETF]] which is considerably simpler to implement, so many SCPs have implemented that instead.
+
+==Variants==
+The core CS-1 specifications were adopted and extended by other standards bodies.  European flavours were developed by [[ETSI]], American flavours were developed by [[American National Standards Institute|ANSI]], and Japanese variants also exist.  The main reasons for producing variants in each region was to ensure interoperability between equipment manufactured and deployed locally (for example different versions of the underlying SS7 protocols exist between the regions).
+
+New functionality was also added which meant that variants diverged from each other and the main ITU-T standard.  The biggest variant was called [[Customised Applications for Mobile networks Enhanced Logic]], or CAMEL for short.  This allowed for extensions to be made for the [[mobile phone]] environment, and allowed [[mobile phone operator]]s to offer the same IN services to subscribers while they are [[roaming]] as they receive in the home network.
+
+CAMEL has become a major standard in its own right and is currently maintained by [[3GPP]].  The last major release of the standard was CAMEL phase 4.  It is the only IN standard currently being actively worked on.
+
+Bellcore (subsequently [[Telcordia Technologies]]) developed the '''Advanced Intelligent Network''' (AIN) as the variant of Intelligent Network for North America, and performed the standardization of the AIN on behalf of the major US operators. The original goal of AIN was AIN 1.0, which was specified in the early 1990s (''AIN Release 1'', Bellcore SR-NWT-002247, 1993).&lt;ref&gt;[http://telecom-info.telcordia.com/site-cgi/ido/docs.cgi?ID=SEARCH&amp;DOCUMENT=SR-NWT-002247&amp; SR-NWT-002247]&lt;/ref&gt; AIN 1.0 proved technically infeasible to implement, which led to the definition of simplified AIN 0.1 and AIN 0.2 specifications.  In North America, Telcordia SR-3511 (originally known as TA-1129+)&lt;ref name=&quot;sr3511&quot;&gt;[http://telecom-info.telcordia.com/site-cgi/ido/docs.cgi?ID=SEARCH&amp;DOCUMENT=SR-3511&amp; SR-3511]&lt;/ref&gt; and GR-1129-CORE protocols serve to link switches with the IN systems such as [[Service Control Point]]s (SCPs) or Service Nodes.&lt;ref name=&quot;gr1129&quot;&gt;[http://telecom-info.telcordia.com/site-cgi/ido/docs.cgi?ID=SEARCH&amp;DOCUMENT=GR-1129&amp; GR-1129-CORE]&lt;/ref&gt; SR-3511 details a TCP/IP-based protocol which directly connects the SCP and Service Node.&lt;ref name=&quot;sr3511&quot;/&gt;  GR-1129-CORE provides generic requirements for an ISDN-based protocol which connects the SCP to the Service Node via the SSP.&lt;ref name=&quot;gr1129&quot;/&gt;
+
+==Future==
+While activity in development of IN standards has declined in recent years, there are many systems deployed across the world which use this technology.  The architecture has proved to be not only stable, but also a continuing source of revenue with new services added all the time.  Manufacturers continue to support the equipment and obsolescence is not an issue.
+
+Nevertheless, new technologies and architectures are emerging, especially in the area of [[VoIP]] and [[Session Initiation Protocol|SIP]]. More attention is being paid to the use of [[Application programming interface|API]]s in preference to protocols like INAP, and new standards have emerged in the form of [[JAIN]] and [[Parlay X|Parlay]].  From a technical viewpoint, the SCE is beginning to move away from its proprietary graphical origins and is moving towards a [[Java (programming language)|Java]] [[application server]] environment.
+
+The meaning of &quot;intelligent network&quot; is evolving in time, largely driven by breakthroughs in computation and algorithms. From networks enhanced by more flexible algorithms and more advanced protocols, to networks designed using data-driven models &lt;ref&gt;[https://www.mdpi.com/1424-8220/16/6/790/htm M. Kulin, C. Fortuna, E. De Poorter, D. Deschrijver and I. Moerman, Data-Driven Design of Intelligent Wireless Networks: An Overview and Tutorial, Sensors 2016, 16(6), 790; doi:10.3390/s16060790]&lt;/ref&gt; to AI enabled networks.&lt;ref&gt;[https://ieeexplore.ieee.org/document/8360430 M. G. Kibria et al, Big Data Analytics, Machine Learning, and Artificial Intelligence in Next-Generation Wireless Networks, IEEE Access, Vol. 6, 17 May 2018, DOI: 10.1109/ACCESS.2018.2837692]&lt;/ref&gt;
+
+==See also==
+* [[IP Multimedia Subsystem]]
+* [[Service layer]]
+* [[Value-added service]]
+
+==Notes==
+{{reflist}}
+
+==References==
+* Ambrosch, W.D., Maher, A., Sasscer, B. (editors) ''The Intelligent Network: A Joint Study by Bell Atlantic. IBM and Siemens'', [[Springer Science+Business Media|Springer-Verlag]], 1989. {{ISBN|3-540-50897-X}}. {{ISBN|0-387-50897-X}}. Also known as the ''green book'' due to the cover .
+* Faynberg, I., Gabuzda, L.R., Kaplan, M.P., and Shah, N.J. ''The Intelligent Network Standards: Their Application to Services'', McGraw-Hill,  1997, {{ISBN|0-07-021422-0}}.
+* Magedanz, T., and Popescu-Zeletin, R.. ''Intelligent Networks: Basic Technology, Standards and Evolution'', Thompson Computer Press, 1996. {{ISBN|1-85032-293-7}}.
+* Intelligent Networks By John R. Anderson, Institution of Electrical Engineers,2002. {{ISBN|0-85296-977-5}}, {{ISBN|978-0-85296-977-9}}
+
+==External links==
+* [https://web.archive.org/web/20110724182457/http://www.item.ntnu.no/fag/ttm4130/stottelitteratur/IN.pdf Tutorial on Intelligent Networks (archived 24 July 2011)]
+
+{{DEFAULTSORT:Intelligent Network}}
+[[Category:ITU-T recommendations]]
+[[Category:GSM standard]]
+[[Category:Signaling System 7]]
+[[Category:Network architecture]]</text>
+      <sha1>qz3gmq3k9koia2054xgnrwteim6xp49</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Intensity modulation</title>
+    <ns>0</ns>
+    <id>41269</id>
+    <revision>
+      <id>816404787</id>
+      <parentid>786019724</parentid>
+      <timestamp>2017-12-21T03:35:56Z</timestamp>
+      <contributor>
+        <username>Quantumavik</username>
+        <id>12261251</id>
+      </contributor>
+      <comment>Added stub mark</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2326" xml:space="preserve">In [[optical communications]], '''intensity modulation''' ('''IM''') is a form of [[modulation]] in which the optical [[Power (physics)|power]] output of a source is varied in accordance with some characteristic of the modulating [[Signal (information theory)|signal]].  The envelope of the modulated optical signal is an analog of the modulating signal in the sense that the instantaneous power of the envelope is an analog of the characteristic of interest in the modulating signal. 
+
+Recovery of the modulating signal is usually by direct detection, not [[Heterodyne|heterodyning]].  However, [[optical heterodyne detection]] is possible and has been actively studied since 1979. Bell Laboratories had a working, but impractical, system in 1969.&lt;ref&gt;T. Okoshi, ''Coherent Optical Fiber Communications'', pages 2-3, Springer, 1988 {{ISBN|9027726779}}.&lt;/ref&gt; Heterodyne and [[homodyne]] systems are of interest because they are expected to produce an increase in sensitivity of up to {{nowrap|20 dB}}&lt;ref&gt;T. G. Hodgkinson, D. W. Smith, R. Wyatt, D. J. Malyon, &quot;Coherent optical fibre transmission systems&quot;, in Bishnu P Pal (ed), ''Fundamentals Of Fibre Optics In Telecommunication And Sensor Systems'' ,page 470, Bohem Press, 1992 {{ISBN|8122404693}}.&lt;/ref&gt; allowing longer hops between islands for instance.  Such systems also have the important advantage of very narrow channel spacing in optical [[frequency-division multiplexing]] (OFDM) systems.&lt;ref&gt;Chinlon Lin, &quot;Opto-electronics and the information age: a perspective&quot;, in Bishnu P Pal (ed), ''Fundamentals Of Fibre Optics In Telecommunication And Sensor Systems'' ,page 20, Bohem Press, 1992 {{ISBN|8122404693}}.&lt;/ref&gt;  OFDM is a step beyond [[wavelength-division multiplexing]] (WDM).  Normal WDM using direct detection does not achieve anything like the close channel spacing of [[radio frequency]] FDM.&lt;ref&gt;Ananth Selvarajan, Subrat Kar, T. Srinivas. ''Optical Fiber Communication: Principles and Systems'', page 129, Tata McGraw-Hill Education, 2003 {{ISBN|0070445567}}.&lt;/ref&gt;
+
+==References==
+{{reflist}}
+{{FS1037C MS188}}
+
+==Further reading==
+*William Shieh, Ivan Djordjevic, ''OFDM for Optical Communications'', Academic Press, 2009 {{ISBN|0-12-374879-8}}.
+
+{{Optical telecommunication}}
+{{Telecommunications}}{{Optics-stub}}
+[[Category:Optical communications]]</text>
+      <sha1>mkm1mdv2gopfn3gammvk517tbnoke15</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Intercept</title>
+    <ns>0</ns>
+    <id>41270</id>
+    <revision>
+      <id>743686958</id>
+      <parentid>743685408</parentid>
+      <timestamp>2016-10-10T18:37:36Z</timestamp>
+      <contributor>
+        <username>Dual Freq</username>
+        <id>578219</id>
+      </contributor>
+      <minor />
+      <comment>Reverted edits by [[Special:Contribs/94.193.228.204|94.193.228.204]] ([[User talk:94.193.228.204|talk]]) to last version by Kethrus</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1164" xml:space="preserve">{{wiktionary|intercept}}
+'''Intercept''' may refer to:
+*[[Root of a function|X-intercept]], the point where a line crosses the x-axis
+*[[Y-intercept]], the point where a line crosses the y-axis
+*[[Interception]], a play in various forms of football
+*''[[The Mona Intercept]]'', a 1980 thriller novel by Donald Hamilton
+*[[Operation Intercept]], an anti-drug measure announced by President Nixon
+*[[Telephone tapping]], the monitoring of telephone and Internet conversations by a third party
+*[[Tax refund intercept]]
+*[[Samsung Intercept]] (SPH-M910), an Android smartphone
+*[[Visual Intercept]], a Microsoft Windows based software defect tracking system
+*[[Intermodulation Intercept Point]], a measure of an electrical device's linearity
+*[[Intercept message]], a telephone recording informing the caller that the call cannot be completed
+*''[[The Intercept]]'', an online news publication edited by Glenn Greenwald, Laura Poitras, and Jeremy Scahill
+
+==See also==
+*[[Interception (disambiguation)]]
+*[[Interceptor (disambiguation)]]
+*[[Intercept theorem]], an important theorem in elementary geometry about the ratios of various line segments

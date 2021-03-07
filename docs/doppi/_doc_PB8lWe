@@ -1,0 +1,335 @@
+An engineered radio communication system designer will analyze the coverage area desired and select repeater locations, elevations, antennas, operating frequencies and power levels to permit a predictable level of reliable communication over the designed coverage area.
+
+==Data handling==
+Repeaters can be divided into two types depending on the type of data they handle:
+
+===Analog repeater===
+This type is used in channels that transmit data in the form of an [[analog signal]] in which the voltage or current is proportional to the [[amplitude]] of the signal, as in an [[audio signal]].  They are also used in trunklines that transmit multiple signals using [[frequency division multiplexing]] (FDM). Analog repeaters are composed of a linear amplifier, and may include [[electronic filter]]s to compensate for frequency and phase distortion in the line.
+
+===Digital repeater===
+The '''digipeater''' is used in channels that transmit data by [[Binary code|binary]] [[Digital signal (electronics)|digital signal]]s, in which the data is in the form of pulses with only two possible values, representing the [[binary digit]]s 1 and 0.  A digital repeater amplifies the signal, and it also may retime, resynchronize, and reshape the pulses.  A repeater that performs the retiming or resynchronizing functions may be called a '''[[regenerator (telecommunication)|regenerator]]'''.
+
+==See also==
+{{div col|colwidth=23em}}
+* [[12-channel carrier system]]
+* [[ADSL loop extender]]
+* [[Cellular repeater]]
+* [[Complementary ground component]]
+* [[Fiber media converter]]
+* [[PLC carrier repeating station]]
+* [[Relay (disambiguation)]]
+* [[Repeater (disambiguation)]]
+* [[Repeater insertion]] in integrated circuits
+* [[Signal strength]]
+* [[Transponder]]
+* [[Wireless Distribution System]]
+* [[Wireless repeater]]
+{{div col end}}
+
+==References==
+{{Reflist}}
+
+==External links==
+* The [[Bell system]] technical journal: [https://archive.org/details/bstj43-4-1243 Repeaters and Equalizers for the SD Submarine Cable System]
+* [http://repeaters.in Amateur Radio Repeaters in India]
+* [http://przemienniki.net/ Amateur Radio Repeaters in Europe]
+
+[[Category:Telecommunications equipment]]
+[[Category:Mobile technology]]
+[[Category:Radio electronics]]
+[[Category:Physical layer protocols]]</text>
+      <sha1>avz1zbncfrl7hddgfcl2fkui2ead7oy</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Repeating coil</title>
+    <ns>0</ns>
+    <id>41656</id>
+    <revision>
+      <id>991545244</id>
+      <parentid>947318899</parentid>
+      <timestamp>2020-11-30T16:53:17Z</timestamp>
+      <contributor>
+        <username>ProcBot</username>
+        <id>39734652</id>
+      </contributor>
+      <minor />
+      <comment>[[Wikipedia:Bots/Requests for approval/ProcBot 7|Task 7]]: Implement [[Wikipedia:Templates_for_discussion/Log/2020_November_6|TfD]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1341" xml:space="preserve">{{short description|Voice-frequency transformer}}
+In [[telecommunication]]s, a '''repeating coil''' is a [[voice-frequency]] [[transformer]] characterized by a closed [[magnetic core]], a pair of identical [[balanced line|balanced]] primary ([[line (electrical engineering)|line]]) [[winding]]s, a pair of identical but not necessarily balanced secondary (drop) windings, and low [[Attenuation|transmission loss]] at [[Voice frequency|voice frequencies]].   It permits transfer of voice [[current (electricity)|current]]s from one winding to another by [[magnetic]] [[Electromagnetic induction|induction]], matches line and [[Drop (telecommunication)|drop]] [[Electrical impedance|impedance]]s, and prevents direct [[electrical conduction|conduction]] between the line and the drop.
+
+It is a special application of an [[isolation transformer]], and is often used to prevent [[ground loop (electricity)|ground loop]]s or earth loops, which cause humming or buzzing in [[sound reproduction|audio]] [[Electronic circuit|circuits]].  It also prevents low [[direct current]] [[voltage]]s from passing.
+
+==References==
+{{Reflist}}
+
+{{Electric transformers}}
+{{Spoken Wikipedia|En-Repeating coil-article.ogg|date=2016-04-18}}
+
+{{FS1037C MS188}}
+
+[[Category:Electromagnetic coils]]
+[[Category:Telephony equipment]]
+[[Category:Electric transformers]]</text>
+      <sha1>r8dplltyq7wk8ju55hojopyk7fzgmug</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Reproduction speed</title>
+    <ns>0</ns>
+    <id>41657</id>
+    <revision>
+      <id>986585090</id>
+      <parentid>513038319</parentid>
+      <timestamp>2020-11-01T19:36:31Z</timestamp>
+      <contributor>
+        <username>Emir of Wikipedia</username>
+        <id>28856560</id>
+      </contributor>
+      <comment>Added {{[[Template:No footnotes|No footnotes]]}} tag</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="622" xml:space="preserve">{{No footnotes|date=November 2020}}
+In [[telecommunication]], the term '''reproduction speed''' has the following meanings: 
+
+# In [[Fax|facsimile]] systems, the rate at which recorded [[Copying|copy]] is produced. (The reproduction speed is usually expressed (a) as the area of recorded copy produced per unit [[time]], such as square meters per second or (b) as the number of pages per minute.)
+#In duplicating equipment, the rate at which copies are made. (The reproduction speed is usually expressed in pages per minute.)
+
+==References==
+{{FS1037C MS188}}
+
+[[Category:Fax]]
+[[Category:Photocopiers]]
+
+{{Telecomm-stub}}</text>
+      <sha1>ccf60hf11ki217vw9dnbvuxieubtmmi</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Reradiation</title>
+    <ns>0</ns>
+    <id>41658</id>
+    <revision>
+      <id>832699271</id>
+      <parentid>747363160</parentid>
+      <timestamp>2018-03-27T14:25:55Z</timestamp>
+      <contributor>
+        <username>Monolithica</username>
+        <id>33397814</id>
+      </contributor>
+      <comment>Amplitude modulation (AM) broadcasting transmissions</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1017" xml:space="preserve">In [[telecommunication]], the term '''reradiation''' has the following meanings:
+
+#[[Electromagnetic radiation]], at the same or different wavelengths, ''i.e.,'' frequencies, of energy received from an incident wave.
+#Undesirable radiation of signals locally generated in a [[radio]] receiver.  This type of radiation might cause [[Interference (communication)|interference]] or reveal the location of the device.'''
+
+[[Near and far field|Near-field]] effects of an [[AM (radio)|AM]] [[Antenna (radio)|antenna]] may extend out two miles (3&amp;nbsp;km) or more. [[Cellular network|Cellular]] and [[microwave]] towers within this radius can reflect the AM [[Signal (electronics)|signal]] out at a different [[frequency]].  This process results in interfering frequencies called '''reradiation'''.&lt;ref&gt;[http://www.lbagroup.com/associates/lbatn102.php Detuning Communications Towers Solves Reradiation Problem: Technical Note 102]&lt;/ref&gt;
+{{FS1037C MS188}}
+
+{{Reflist}}
+
+[[Category:Radio communications]]
+
+
+{{radio-comm-stub}}</text>
+      <sha1>1plc5q199qrw9o575ylro4e1ki4fwj7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Resolution</title>
+    <ns>0</ns>
+    <id>41659</id>
+    <revision>
+      <id>986503958</id>
+      <parentid>985817493</parentid>
+      <timestamp>2020-11-01T08:02:41Z</timestamp>
+      <contributor>
+        <username>DoubleGrazing</username>
+        <id>2386927</id>
+      </contributor>
+      <comment>/* Measurements */ added distance resolution</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6815" xml:space="preserve">{{wiktionary|resolution|Resolving}}
+'''Resolution(s)''' may refer to:
+&lt;!--Organinzed per [[WP:LONGDAB]]--&gt;
+{{TOC right}}
+
+== Common meanings ==
+* [[Resolution (debate)]], the statement which is debated in policy debate
+* [[Resolution (law)]], a written motion adopted by a deliberative body
+* [[New Year's resolution]], a commitment that an individual makes at New Year's Day
+* [[Dispute resolution]], the settlement of a disagreement
+
+== Science, technology, and mathematics ==
+=== Mathematics and logic ===
+* [[Resolution (algebra)]], an exact sequence in homological algebra
+* [[Resolution (logic)]], a rule of inference used for automated theorem proving
+* [[Standard resolution]], the bar construction of resolutions in homological algebra
+* [[Resolution of singularities]] in algebraic geometry
+
+=== Measurements ===
+* [[Resolution (audio)]], a measure of digital audio quality
+* [[Resolution (electron density)]], the quality of an X-ray crystallography or cryo-electron microscopy data set
+* [[Angular resolution]], the capability of an optical or other sensor to discern small objects
+* [[Depositional resolution]], the age difference of fossils contained in one stratum
+* [[Display resolution]], the number of distinct pixels in each dimension that can be displayed on a display device
+** [[Graphic display resolutions]], a list of particular display resolutions
+* [[Distance resolution]], the minimum distance that can be accurately measured
+* [[Image resolution]], a measure of the amount of detail in an image
+* [[Optical resolution]], the capability of an optical system to distinguish, find, or record details
+* [[Printing resolution]], the number of individual dots a printer can produce within a unit of distance (e.g., [[dots per inch]])
+* [[Sensor resolution]], the smallest change a sensor can detect in the quantity that it is measuring
+* [[Spectral resolution]], the capability of an optical system to distinguish different frequencies
+* [[Spectrometer|Resolution of a spectrometer]], the ability to distinguish two close-lying energies (or wavelengths, or frequencies, or masses)
+* [[Resolution (chromatography)]], the separation of peaks in a chromatogram
+* [[Resolution (mass spectrometry)]], the ability to distinguish peaks in a mass spectrum
+* [[Spatial resolution]], the pixel width on the ground
+* [[Temporal resolution]], the sampling frequency of a digital audio device
+* In number storage, the resolution is the reciprocal of the [[unit in the last place]]
+
+=== Other uses in science and technology ===
+* [[Resolution (beam engine)|''Resolution'' (beam engine)]], an early steam engine at Coalbrookdale
+* [[Chiral resolution]], a process in stereochemistry for the separation of racemic compounds into their enantiomers
+* URL resolution, a process in interpreting [[URL]]s
+
+== Arts and entertainment ==
+=== Film and television ===
+* [[Resolutions (Star Trek: Voyager)|&quot;Resolutions&quot; (''Star Trek: Voyager'')]], a 1996 second-season episode of ''Star Trek: Voyager''
+* [[Resolution (film)|''Resolution'' (film)]], a 2012 horror movie
+* [[Resolution (Doctor Who)|&quot;Resolution&quot; (''Doctor Who'')]], a special episode of ''Doctor Who''
+
+=== Literature and poetry ===
+* [[Resolution (meter)]], the replacement of one longum with two brevia
+* &quot;Resolution&quot;, a poem by [[Bertolt Brecht]]
+* [[Contemplation (short story collection)#&quot;Resolutions&quot;|''Resolutions'' (short story)]], a 1911 short story by Franz Kafka
+* [[Resolution (novel)|''Resolution'' (novel)]], a 2008 novel by Robert B. Parker, a Western, sequel to ''Appaloosa''
+
+=== Music ===
+* [[Resolution (music)]], the move of a note or chord from dissonance to consonance
+
+==== Albums ====
+* [[Resolution (38 Special album)|''Resolution'' (38 Special album)]], 1997
+* [[Resolution (BoDeans album)|''Resolution'' (BoDeans album)]], 2004
+* [[Resolution (Hamiet Bluiett album)|''Resolution'' (Hamiet Bluiett album)]], 1977
+* [[Resolution (Hidden in Plain View album)|''Resolution'' (Hidden in Plain View album)]], 2007
+* [[Resolution (Lamb of God album)|''Resolution'' (Lamb of God album)]], 2012
+* [[Resolution (Andy Timmons album)|''Resolution'' (Andy Timmons album)]], 2006
+* [[Resolution (Andy Pratt album)|''Resolution'' (Andy Pratt album)]], 1976
+* [[Resolutions (album)|''Resolutions'' (album)]], a 2011 album by Dave Hause
+
+==== Songs ====
+* [[Resolution (Matt Corby song)|&quot;Resolution&quot; (Matt Corby song)]], 2013
+* [[Resolution (Nick Lachey song)|&quot;Resolution&quot; (Nick Lachey song)]], a 2006 song by Nick Lachey from ''What's Left of Me''
+* &quot;Resolution&quot;, a [[John Coltrane]] (1926–1967) song from ''A Love Supreme''
+* &quot;[[The Resolution]]&quot;, a 2008 Jack's Mannequin song from ''The Glass Passenger''
+* &quot;Resolution&quot;, a Mahavishnu Orchestra song from the album ''[[Birds of Fire]]''
+* &quot;Resolution&quot;, by [[Romantic Mode]], the second opening theme for the anime ''After War Gundam X''
+* &quot;Resolution&quot;, by [[Haruka Tomatsu]], the first opening theme for the anime ''Sword Art Online: Alicization War of Underworld''
+
+== Business and organizations ==
+* [[Corporate resolution]], a legal document defining which individuals are authorized to act on behalf of a corporation
+* [[Resolution (talent agency)]], a talent agency in Los Angeles, New York, and Nashville
+* [[Resolution Copper]], a copper mining project near Superior, Arizona
+* [[Resolution Foundation]], an independent British think tank established in 2005
+* [[Resolution Limited]], a Guernsey-based investor in insurance companies
+* [[Resolution plc]], a defunct manager of in-force UK life funds acquired by Pearl Group in 2008
+
+== Places ==
+* [[Resolution, United States Virgin Islands]]
+* [[Resolution Island (Nunavut)]], in the Arctic region of Canada
+* [[Resolution Island, New Zealand]], the largest (uninhabited) island in Fiordland, in the southwest of New Zealand
+* Resolution Island, a fictional island in the novel ''[[Brown on Resolution]]''
+* [[Fort Resolution]], a hamlet in the South Slave Region of the Northwest Territories, Canada
+
+== Vessels ==
+* ''Resolution'', a Douglas DC-6 aircraft, [[BCPA Flight 304]], which crashed near San Francisco in 1953
+* [[Resolution (1793 ship)|''Resolution'' (1793 ship)]], an American trading vessel whose crew were massacred in 1794
+* [[HMNZS Resolution (A14)|HMNZS ''Resolution'' (A14)]], Royal New Zealand Navy surveillance ship
+* [[HMS Resolution|HMS ''Resolution'']], any of several British Royal Navy ships
+* [[TIV MPI Resolution|TIV ''Resolution'']], the world's first turbine installation vessel
+* [[Resolution-class submarine|''Resolution''-class submarine]], British Royal Navy
+* [[Resolution (1802 ship)|''Resolution'' (1802 ship)]], a brig built in Spain and launched in 1802
+
+&lt;!--Organinzed per [[WP:LONGDAB]]--&gt;
+
+== See also ==
+* [[Resolve (disambiguation)]]
+* [[Resolved (disambiguation)]]
+
+{{Disambiguation|geo}}</text>
+      <sha1>chrumduyvalyrkjntnxqiaqz0v1oi6c</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Resonance</title>
+    <ns>0</ns>
+    <id>41660</id>
+    <revision>
+      <id>989960289</id>
+      <parentid>988934719</parentid>
+      <timestamp>2020-11-22T00:28:21Z</timestamp>
+      <contributor>
+        <username>YuriNikolai</username>
+        <id>27925711</id>
+      </contributor>
+      <comment>Adding local [[Wikipedia:Short description|short description]]: &quot;Tendency to oscillate at certain frequencies&quot;, overriding Wikidata description &quot;phenomenon in which a vibrating system or external force drives another system to oscillate with greater amplitude at specific frequencies&quot; ([[Wikipedia:Shortdesc helper|Shortdesc helper]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="58632" xml:space="preserve">{{short description|Tendency to oscillate at certain frequencies}}
+{{About|resonance in physics}}
+{{redirect|Resonate}}
+{{Redirect|Resonant|the phonological term|Sonorant}}
+[[File:Resonance.PNG|thumb|upright=2|Increase of amplitude as damping decreases and frequency approaches resonant frequency of a driven [[damping|damped]] [[simple harmonic oscillator]].&lt;ref&gt;{{cite book | author = Katsuhiko Ogata | title = System Dynamics | edition = 4th | publisher = University of Minnesota | year = 2005 | page = 617 }}&lt;/ref&gt;&lt;ref&gt;{{cite book | title = Optics, 3E | author = [[Ajoy Ghatak]] | edition = 3rd | publisher = Tata McGraw-Hill | year = 2005 | isbn = 978-0-07-058583-6 | page = 6.10 | url = https://books.google.com/books?id=jStDc2LmU5IC&amp;q=damping-decreases+resonance+amplitude&amp;pg=PT97
+ }}&lt;/ref&gt;]]
+
+'''Resonance''' describes the phenomenon of increased [[amplitude]] that occurs when the [[frequency]] of a  [[Periodic function|periodically]] applied [[force]] (or a [[Fourier analysis|Fourier component]] of it) is equal or close to a [[natural frequency]] of the system on which it acts. When an [[Oscillation|oscillating]] force is applied at a '''resonant frequency''' of a dynamical system, the system will oscillate at a higher amplitude than when the same force is applied at other, non-resonant frequencies.&lt;ref name = &quot;Resnick and Halliday&quot;&gt;{{cite book
+| title = Physics
+| authors = Resnick and Halliday
+| edition = 3rd
+| publisher = John Wiley &amp; Sons
+| date = 1977
+| isbn = 9780471717164
+| quote = There is a characteristic value of the driving frequency ''ω&quot;'' at which the amplitude of oscillation is a maximum. This condition is called ''resonance'' and the value of ''ω&quot;'' at which resonance occurs is called the ''resonant frequency''. 
+| page = 324}}&lt;/ref&gt;
+
+Frequencies at which the response amplitude is a [[relative maximum]] are also known as '''resonant frequencies''' or '''resonance frequencies''' of the system.&lt;ref name = &quot;Resnick and Halliday&quot;/&gt; Small periodic forces that are near a resonant frequency of the system have the ability to produce large amplitude oscillations in the system due to the storage of [[vibrational energy]].
+
+Resonance phenomena occur with all types of vibrations or [[wave]]s: there is [[mechanical resonance]], [[acoustic resonance]], [[Electromagnetic radiation|electromagnetic]] resonance, [[nuclear magnetic resonance]] (NMR), [[electron paramagnetic resonance|electron spin resonance]] (ESR) and resonance of quantum [[wave function]]s. Resonant systems can be used to generate vibrations of a specific frequency (e.g., [[musical instrument]]s), or pick out specific frequencies from a complex vibration containing many frequencies (e.g., filters).
+
+The term ''resonance'' (from [[Latin]] ''resonantia'', 'echo', from ''resonare'', 'resound') originated from the field of acoustics, particularly the [[sympathetic resonance]] observed in musical instruments, e.g., when one string starts to vibrate and produce sound after a different one is struck. Another example, [[electrical resonance]], occurs in a [[Electrical network|circuit]] with [[capacitor]]s and [[inductor]]s because the collapsing magnetic field of the inductor generates an electric current in its windings that charges the capacitor, and then the discharging capacitor provides an electric current that builds the magnetic field in the inductor. Once the circuit is charged, the oscillation is self-sustaining, and there is no external periodic driving action.{{clarify|date=December 2019}}  This is analogous to a mechanical [[pendulum]], where [[mechanical energy]] is converted back and forth between [[kinetic energy|kinetic]] and [[potential energy|potential]], and both systems are forms of [[simple harmonic oscillator]]s.
+
+==Overview==
+
+Resonance occurs when a system is able to store and easily transfer energy between two or more different [[storage mode]]s (such as kinetic energy and potential energy in the case of a simple pendulum). However, there are some losses from cycle to cycle, called [[damping]]. When damping is small, the resonant frequency is approximately equal to the [[natural frequency]] of the system, which is a frequency of unforced vibrations. Some systems have multiple, distinct, resonant frequencies.
+
+==Examples==
+[[File:Little girl on swing.jpg|thumb|Pushing a person in a [[swing (seat)|swing]] is a common example of resonance. The loaded swing, a [[pendulum]], has a [[natural frequency]] of oscillation, its resonant frequency, and resists being pushed at a faster or slower rate.]]
+
+A familiar example is a playground [[Swing (seat)|swing]], which acts as a [[pendulum]]. Pushing a person in a swing in time with the natural interval of the swing (its resonant frequency) makes the swing go higher and higher (maximum amplitude), while attempts to push the swing at a faster or slower tempo produce smaller arcs. This is because the energy the swing absorbs is maximized when the pushes match the swing's natural oscillations.
+
+Resonance occurs widely in nature, and is exploited in many manmade devices. It is the mechanism by which virtually all [[sinusoidal]] waves and vibrations are generated. Many sounds we hear, such as when hard objects of [[metal]], [[glass]], or [[wood]] are struck, are caused by brief resonant vibrations in the object. Light and other short wavelength [[electromagnetic radiation]] is produced by resonance on an [[Atomic spacing|atomic scale]], such as [[electron]]s in atoms.  Other examples of resonance:
+
+* Timekeeping mechanisms of modern clocks and watches, e.g., the [[balance wheel]] in a mechanical [[watch]] and the [[quartz crystal]] in a [[quartz watch]]
+* [[Tidal resonance]] of the [[Bay of Fundy]]
+* [[Acoustic resonance]]s of [[musical instruments]] and the human [[vocal tract]]
+* Shattering of a crystal wineglass when exposed to a musical tone of the right pitch (its resonant frequency)
+* [[Friction idiophone]]s, such as making a glass object (glass, bottle, vase) [[vibration|vibrate]] by rubbing around its rim with a fingertip
+* [[Electrical resonance]] of [[tuned circuit]]s in [[radio]]s and [[TV]]s that allow radio frequencies to be selectively received
+* Creation of [[Coherence (physics)|coherent]] light by [[optical resonance]] in a [[laser]] [[Optical cavity|cavity]]
+* [[Orbital resonance]] as exemplified by some [[natural satellite|moons]] of the [[solar system]]'s [[gas giants]]
+* Material resonances in atomic scale are the basis of several [[spectroscopy|spectroscopic]] techniques that are used in [[condensed matter physics]]
+**[[Electron spin resonance]]
+**[[Mössbauer effect]]
+**[[Nuclear magnetic resonance]]
+
+===Tacoma Narrows Bridge===
+{{Main|Tacoma Narrows Bridge (1940)}}
+
+The dramatically visible, rhythmic twisting that resulted in the 1940 collapse of &quot;Galloping Gertie&quot;, the original [[Tacoma Narrows Bridge (1940)|Tacoma Narrows Bridge]], is mistakenly characterized as an example of resonance phenomenon in certain textbooks.&lt;ref name = &quot;Resnick and Halliday&quot;/&gt; The catastrophic vibrations that destroyed the bridge were not due to simple mechanical resonance, but to a more complicated interaction between the bridge and the winds passing through it—a phenomenon known as [[aeroelasticity#Flutter|aeroelastic flutter]], which is a [[self oscillation]] or a kind of &quot;self-sustaining vibration&quot; as referred to in the nonlinear theory of vibrations. [[Robert H. Scanlan]], father of [[bridge engineering|bridge]] [[aerodynamics]], has written an article about this misunderstanding.&lt;ref name = &quot;Billah and Scanlan&quot;&gt;{{cite journal |url=http://www.ketchum.org/billah/Billah-Scanlan.pdf |title=Resonance, Tacoma Narrows Bridge Failure, and Undergraduate Physics Textbooks |author=K.&amp;nbsp;Yusuf Billah and Robert H. Scanlan |year=1991 |journal=[[American Journal of Physics]] |volume=59 |issue=2 |pages=118–124 |accessdate=2011-05-29 |bibcode = 1991AmJPh..59..118B |doi = 10.1119/1.16590 }}&lt;/ref&gt;
+
+===International Space Station===

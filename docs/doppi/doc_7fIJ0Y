@@ -1,0 +1,333 @@
+*{{Cite book
+ | ref = harv
+ | last=Lang
+ | first=Serge
+ | authorlink=Serge Lang
+ | title=Algebra
+ | publisher=[[Springer Science+Business Media|Springer]]
+ | series=[[Graduate Texts in Mathematics]]
+ | year=2002
+ | isbn=0-387-95385-X
+}}
+
+{{DEFAULTSORT:Kernel (Algebra)}}
+[[Category:Algebra]]
+[[Category:Isomorphism theorems]]
+[[Category:Linear algebra]]</text>
+      <sha1>mqy4s72hlk4kp4ysh9x776fxcbehzas</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Isomorphism theorems</title>
+    <ns>0</ns>
+    <id>45241</id>
+    <revision>
+      <id>990922393</id>
+      <parentid>987948386</parentid>
+      <timestamp>2020-11-27T07:52:31Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 14 templates: del empty params (1×); hyphenate params (1×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="22762" xml:space="preserve">{{short description|Group of mathematical theorems}}
+In [[mathematics]], specifically [[abstract algebra]], the '''isomorphism theorems''' (also known as '''Noether's isomorphism theorems''') are [[theorem]]s that describe the relationship between [[quotient]]s, [[homomorphism]]s, and [[subobject]]s.  Versions of the theorems exist for [[group (mathematics)|groups]], [[ring (mathematics)|rings]], [[vector space]]s, [[module (mathematics)|modules]], [[Lie algebra]]s, and various other [[algebraic structure]]s.  In [[universal algebra]], the isomorphism theorems can be generalized to the context of algebras and [[congruence relation|congruence]]s.
+
+== History ==
+The isomorphism theorems were formulated in some generality for homomorphisms of modules by [[Emmy Noether]] in her paper ''Abstrakter Aufbau der Idealtheorie in algebraischen Zahl- und Funktionenkörpern'', which was published in 1927 in [[Mathematische Annalen]].  Less general versions of these theorems can be found in work of [[Richard Dedekind]] and previous papers by Noether.
+
+Three years later, [[Bartel Leendert van der Waerden|B.L. van der Waerden]] published his influential ''Algebra,'' the first [[abstract algebra]] textbook that took the [[Group (mathematics)|groups]]-[[Ring (mathematics)|rings]]-[[Field (mathematics)|fields]] approach to the subject. Van der Waerden credited lectures by Noether on [[group theory]] and [[Emil Artin]] on algebra, as well as a seminar conducted by Artin, [[Wilhelm Blaschke]], [[Otto Schreier]], and van der Waerden himself on [[ideal (ring theory)|ideals]] as the main references. The three isomorphism theorems, called ''homomorphism theorem'', and ''two laws of isomorphism'' when applied to groups, appear explicitly.
+
+== Groups ==
+We first present the isomorphism theorems of the [[abstract group|group]]s.
+
+=== Note on numbers and names ===
+Below we present four theorems, labelled A, B, C and D. They are often numbered as &quot;First isomorphism theorem&quot;, &quot;Second...&quot; and so on; however, there is no universal agreement on the numbering. Here we give some examples of the group isomorphism theorems (Notice these theorems have analogs for rings and modules.) in the literature:
+
+&lt;!-- Do not expand this list indiscriminantly. This is here just to show the lack of the established convention. --&gt;
+{| class=&quot;wikitable&quot;
+|+ Comparison of the names of the group isomorphism theorems
+|
+| style=&quot;text-align: center;&quot; |Author
+! Theorem A
+! Theorem B
+! Theorem C
+|-
+| rowspan=4 | No &quot;third&quot; theorem
+! Jacobson&lt;ref&gt;Jacobson (2009), sec 1.10&lt;/ref&gt;
+| Fundamental theorem of homomorphisms
+| (second isomorphism theorem)
+| &quot;''often called the first isomorphism theorem''&quot;
+|-
+! van der Waerden,&lt;ref&gt;van der Waerden, ''[[Moderne Algebra|Algebra]]'' (1994).&lt;/ref&gt; Durbin{{refn| ''[the names are] essentially the same as [van der Waerden 1994]''&lt;ref&gt;Durbin (2009), sec. 54&lt;/ref&gt;}}
+| Fundamental theorem of homomorphisms
+| first isomorphism theorem
+| second isomorphism theorem
+|-
+! Knapp&lt;ref&gt;Knapp (2016), sec IV 2&lt;/ref&gt;
+| (no name)
+| Second isomorphism theorem
+| First isomorphism theorem
+|-
+! Grillet&lt;ref&gt;Grillet (2007), sec. I 5&lt;/ref&gt;
+| Homomorphism theorem
+| Second isomorphism theorem
+| First isomorphism theorem
+|-
+| rowspan=2 | Three numbered theorems
+| (Other convention mentioned in Grillet)
+| First isomorphism theorem
+| Third isomorphism theorem
+| Second isomorphism theorem
+|-
+! Rotman&lt;ref&gt;Rotman (2003), sec. 2.6&lt;/ref&gt;
+| First isomorphism theorem
+| Second isomorphism theorem
+| Third isomorphism theorem
+
+|-
+| rowspan=2 | No numbering
+! Milne&lt;ref name=&quot;milne&quot;&gt;Milne (2013), Chap. 1, sec. ''Theorems concerning homomorphisms''&lt;/ref&gt;
+| Homomorphism theorem
+| Isomorphism theorem
+| Correspondence theorem
+|-
+! Scott&lt;ref&gt;Scott (1964), secs 2.2 and 2.3&lt;/ref&gt;
+| Homomorphism theorem
+| Isomorphism theorem
+| Freshman theorem
+|}
+&lt;!-- Do not expand this list indiscriminantly. This is here just to show the lack of the established convention. --&gt;
+It is less common to include the Theorem D, usually known as the &quot;[[lattice theorem]]&quot; or the &quot;correspondence theorem&quot;, to one of isomorphism theorems, but when they do, it is the last one.
+
+=== Statement of the theorems ===
+
+====Theorem A====
+{{see also | Fundamental theorem on homomorphisms}}
+
+[[Image:First-isomorphism-theorem.svg|thumb|Diagram of the fundamental theorem on homomorphisms]]
+
+Let ''G'' and ''H'' be groups, and let ''φ'':&amp;nbsp;''G''&amp;nbsp;→&amp;nbsp;''H'' be a [[group homomorphism|homomorphism]].  Then:
+# The [[Kernel (algebra)#Group homomorphisms|kernel]] of ''φ'' is a [[normal subgroup]] of ''G'',
+# The [[image (mathematics)|image]] of ''φ'' is a [[subgroup]] of ''H'', and
+# The image of ''φ'' is [[group isomorphism|isomorphic]] to the [[quotient group]] ''G''&amp;nbsp;/&amp;nbsp;ker(''φ'').
+In particular, if ''φ'' is [[surjective function|surjective]] then ''H'' is isomorphic to ''G''&amp;nbsp;/&amp;nbsp;ker(''φ'').
+
+====Theorem B====
+[[File:Diagram for the First Isomorphism Theorem.png|thumb|Diagram for the theorem B]]
+Let &lt;math&gt;G&lt;/math&gt; be a group.  Let &lt;math&gt;S&lt;/math&gt; be a subgroup of &lt;math&gt;G&lt;/math&gt;, and let &lt;math&gt;N&lt;/math&gt; be a normal subgroup of &lt;math&gt;G&lt;/math&gt;.  Then the following hold:
+# The [[product of group subsets|product]] &lt;math&gt;SN&lt;/math&gt; is a subgroup of &lt;math&gt;G&lt;/math&gt;,
+# The [[intersection (set theory)|intersection]] &lt;math&gt;S \cap N&lt;/math&gt; is a normal subgroup of &lt;math&gt;S&lt;/math&gt;, and
+# The quotient groups &lt;math&gt;(SN)/N&lt;/math&gt; and &lt;math&gt;S/(S\cap N)&lt;/math&gt; are isomorphic.
+Technically, it is not necessary for &lt;math&gt;N&lt;/math&gt; to be a normal subgroup, as long as &lt;math&gt;S&lt;/math&gt; is a subgroup of the [[normalizer]] of &lt;math&gt;N&lt;/math&gt; in &lt;math&gt;G&lt;/math&gt;.  In this case, the intersection &lt;math&gt;S \cap N&lt;/math&gt; is not a normal subgroup of  &lt;math&gt;G&lt;/math&gt;, but it is still a normal subgroup of &lt;math&gt;S&lt;/math&gt;.
+
+This theorem is sometimes called the &quot;isomorphism theorem&quot;,&lt;ref name=&quot;milne&quot;/&gt; &quot;diamond theorem&quot;&lt;ref name=&quot;Isaacs1994&quot;&gt;{{cite book|author=I. Martin Isaacs|title=Algebra: A Graduate Course|url=https://archive.org/details/algebragraduatec00isaa|url-access=limited|year=1994|publisher=American Mathematical Soc.|isbn=978-0-8218-4799-2|page=[https://archive.org/details/algebragraduatec00isaa/page/n45 33]}}&lt;/ref&gt; or the &quot;parallelogram theorem&quot;.&lt;ref name=&quot;Cohn2000&quot;&gt;{{cite book|author=[[Paul Moritz Cohn]]|title=Classic Algebra|url=https://archive.org/details/classicalgebra00cohn_300|url-access=limited|year=2000|publisher=Wiley|isbn=978-0-471-87731-8|page=[https://archive.org/details/classicalgebra00cohn_300/page/n256 245]}}&lt;/ref&gt;
+
+An application of the second isomorphism theorem identifies [[projective linear group]]s: for example, the group on the [[complex projective line]] starts with setting &lt;math&gt;G = GL_2(\mathbb{C})&lt;/math&gt;, the group of invertible 2x2 complex matrices, &lt;math&gt;S = SL_2(\mathbb{C})&lt;/math&gt;, the subgroup of determinant 1 matrices, and &lt;math&gt;N&lt;/math&gt; the normal subgroup of scalar matrices &lt;math&gt;\mathbb{C}^{\times}\!I = \left\{\bigl( \begin{smallmatrix} a &amp; 0 \\ 0 &amp; a \end{smallmatrix} \bigr) : a \in \mathbb{C}^{\times} \right\}&lt;/math&gt;, we have &lt;math&gt;S \cap N=\{\pm I\}&lt;/math&gt;, where &lt;math&gt;I&lt;/math&gt; is the identity matrix, and &lt;math&gt;SN = GL_2(\mathbb{C})&lt;/math&gt;. Then the second isomorphism theorem states that:
+
+&lt;blockquote&gt;&lt;math&gt;PGL_2(\mathbb{C})
+:= GL_2(\mathbb{C})/(\mathbb{C}^{\times}\!I) \cong SL_2(\mathbb{C})/\{\pm I\} =: PSL_2(\mathbb{C})&lt;/math&gt;&lt;/blockquote&gt;
+
+====Theorem C====
+Let &lt;math&gt;G&lt;/math&gt; be a group, and &lt;math&gt;N&lt;/math&gt; a normal subgroup of &lt;math&gt;G&lt;/math&gt;.
+Then
+# If &lt;math&gt;K&lt;/math&gt; is a subgroup of &lt;math&gt;G&lt;/math&gt; such that &lt;math&gt;N \subseteq K \subseteq G&lt;/math&gt;, then &lt;math&gt;G/N&lt;/math&gt; has a subgroup isomorphic to &lt;math&gt;K/N&lt;/math&gt;.
+# Every subgroup of &lt;math&gt;G/N&lt;/math&gt; is of the form &lt;math&gt;K/N&lt;/math&gt; for some subgroup &lt;math&gt;K&lt;/math&gt; of &lt;math&gt;G&lt;/math&gt; such that &lt;math&gt;N \subseteq K \subseteq G&lt;/math&gt;.
+# If &lt;math&gt;K&lt;/math&gt; is a normal subgroup of &lt;math&gt;G&lt;/math&gt; such that &lt;math&gt;N \subseteq K \subseteq G&lt;/math&gt;, then &lt;math&gt;G/N&lt;/math&gt; has a normal subgroup isomorphic to&lt;math&gt;K/N&lt;/math&gt;.
+# Every normal subgroup of &lt;math&gt;G/N&lt;/math&gt; is of the form &lt;math&gt;K/N&lt;/math&gt;, for some normal subgroup &lt;math&gt;K&lt;/math&gt; of &lt;math&gt;G&lt;/math&gt; such that &lt;math&gt;N \subseteq K \subseteq G&lt;/math&gt;.
+# If &lt;math&gt;K&lt;/math&gt; is a normal subgroup of &lt;math&gt;G&lt;/math&gt; such that &lt;math&gt;N \subseteq K \subseteq G&lt;/math&gt;, then the quotient group &lt;math&gt;(G/N)/(K/N)&lt;/math&gt; is isomorphic to &lt;math&gt;G/K&lt;/math&gt;.
+
+====Theorem D====
+{{main | lattice theorem}}
+The [[Correspondence theorem (group theory)|correspondence theorem]] (also known as the lattice theorem) is sometimes called the third or fourth isomorphism theorem.
+
+The [[Zassenhaus lemma]] (also known as the butterfly lemma) is sometimes called the fourth isomorphism theorem.{{citation needed |date=September 2019}}
+
+=== Discussion ===
+
+The first isomorphism theorem can be expressed in [[category theory|category theoretical]] language by saying that the [[category of groups]] is (normal epi, mono)-factorizable; in other words, the [[normal morphism|normal epimorphisms]] and the [[monomorphism]]s form a [[factorization system]] for the category.  This is captured in the [[commutative diagram]] in the margin, which shows the objects and morphisms whose existence can be deduced from the morphism &lt;math&gt; f : G \rightarrow H&lt;/math&gt;.  The diagram shows that every morphism in the category of groups has a [[Kernel (category theory)|kernel]] in the category theoretical sense; the arbitrary morphism ''f'' factors into &lt;math&gt;\iota \circ \pi&lt;/math&gt;, where ''ι'' is a monomorphism and ''π'' is an epimorphism (in a conormal category, all epimorphisms are normal).  This is represented in the diagram by an object &lt;math&gt;\ker f&lt;/math&gt; and a monomorphism &lt;math&gt;\kappa: \ker f \rightarrow G&lt;/math&gt; (kernels are always monomorphisms), which complete the short [[exact sequence]] running from the lower left to the upper right of the diagram.  The use of the exact sequence convention saves us from having to draw the [[zero morphism]]s from &lt;math&gt;\ker f&lt;/math&gt; to &lt;math&gt;H&lt;/math&gt; and &lt;math&gt;G / \ker f&lt;/math&gt;.
+
+If the sequence is right split (i. e., there is a morphism ''σ'' that maps &lt;math&gt;G / \ker f&lt;/math&gt; to a {{pi}}-preimage of itself), then ''G'' is the [[semidirect product]] of the normal subgroup &lt;math&gt;\operatorname{im} \kappa&lt;/math&gt; and the subgroup &lt;math&gt;\operatorname{im} \sigma&lt;/math&gt;.  If it is left split (i. e., there exists some &lt;math&gt;\rho: G \rightarrow \ker f&lt;/math&gt; such that &lt;math&gt;\rho \circ \kappa = \operatorname{id}_{\ker f}&lt;/math&gt;), then it must also be right split, and &lt;math&gt;\operatorname{im} \kappa \times \operatorname{im} \sigma&lt;/math&gt; is a [[direct product]] decomposition of ''G''.  In general, the existence of a right split does not imply the existence of a left split; but in an [[abelian category]] (such as the abelian groups), left splits and right splits are equivalent by the [[splitting lemma]], and a right split is sufficient to produce a [[Direct sum of groups|direct sum]] decomposition &lt;math&gt;\operatorname{im} \kappa \oplus \operatorname{im} \sigma&lt;/math&gt;.  In an abelian category, all monomorphisms are also normal, and the diagram may be extended by a second short exact sequence &lt;math&gt;0 \rightarrow G / \ker f \rightarrow H \rightarrow \operatorname{coker} f \rightarrow 0&lt;/math&gt;.
+
+In the second isomorphism theorem, the product ''SN'' is the [[join (mathematics)|join]] of ''S'' and ''N'' in the [[lattice of subgroups]] of ''G'', while the intersection ''S''&amp;nbsp;∩&amp;nbsp;''N'' is the [[meet (mathematics)|meet]].
+
+The third isomorphism theorem is generalized by the [[nine lemma]] to [[abelian categories]] and more general maps between objects.
+
+== Rings ==
+The statements of the theorems for [[ring (mathematics)|rings]] are similar, with the notion of a normal subgroup replaced by the notion of an [[ideal (ring theory)|ideal]].
+
+=== Theorem A ===
+Let ''R'' and ''S'' be rings, and let ''φ'':&amp;nbsp;''R''&amp;nbsp;→&amp;nbsp;''S'' be a [[ring homomorphism]].  Then:
+# The [[Kernel (algebra)#Ring homomorphisms|kernel]] of ''φ'' is an ideal of ''R'',
+# The [[image (mathematics)|image]] of ''φ'' is a [[subring]] of ''S'', and
+# The image of ''φ'' is isomorphic to the [[quotient ring]] ''R''&amp;nbsp;/&amp;nbsp;ker(''φ'').
+In particular, if ''φ'' is [[surjective function|surjective]] then ''S'' is isomorphic to ''R''&amp;nbsp;/&amp;nbsp;ker(''φ'').
+
+=== Theorem B ===
+Let ''R'' be a ring.  Let ''S'' be a subring of ''R'', and let ''I'' be an ideal of ''R''.  Then:
+# The sum ''S''&amp;nbsp;+&amp;nbsp;''I''&amp;nbsp;=&amp;nbsp;{''s''&amp;nbsp;+&amp;nbsp;''i''&amp;nbsp;|&amp;nbsp;''s''&amp;nbsp;∈&amp;nbsp;''S'',&amp;nbsp;''i''&amp;nbsp;∈&amp;nbsp;''I''} is a subring of ''R'',
+# The intersection ''S''&amp;nbsp;∩&amp;nbsp;''I'' is an ideal of ''S'', and
+# The quotient rings (''S''&amp;nbsp;+&amp;nbsp;''I'')&amp;nbsp;/&amp;nbsp;''I'' and ''S''&amp;nbsp;/&amp;nbsp;(''S''&amp;nbsp;∩&amp;nbsp;''I'') are isomorphic.
+
+=== Theorem C===
+Let ''R'' be a ring, and ''I'' an ideal of ''R''.
+Then
+# If &lt;math&gt;A&lt;/math&gt; is a subring of &lt;math&gt;R&lt;/math&gt; such that &lt;math&gt;I \subseteq A \subseteq R&lt;/math&gt;, then &lt;math&gt;A/I&lt;/math&gt; is a subring of &lt;math&gt;R/I&lt;/math&gt;.
+# Every subring of &lt;math&gt;R/I&lt;/math&gt; is of the form &lt;math&gt;A/I&lt;/math&gt;, for some subring &lt;math&gt;A&lt;/math&gt; of &lt;math&gt;R&lt;/math&gt; such that &lt;math&gt;I \subseteq A \subseteq R&lt;/math&gt;.
+# If &lt;math&gt;J&lt;/math&gt; is an ideal of &lt;math&gt;R&lt;/math&gt; such that &lt;math&gt;I \subseteq J \subseteq R&lt;/math&gt;, then &lt;math&gt;J/I&lt;/math&gt; is an ideal of &lt;math&gt;R/I&lt;/math&gt;.
+# Every ideal of &lt;math&gt;R/I&lt;/math&gt; is of the form &lt;math&gt;J/I&lt;/math&gt;, for some ideal &lt;math&gt;J&lt;/math&gt; of &lt;math&gt;R&lt;/math&gt; such that &lt;math&gt;I \subseteq J \subseteq R&lt;/math&gt;.
+# If &lt;math&gt;J&lt;/math&gt; is an ideal of &lt;math&gt;R&lt;/math&gt; such that &lt;math&gt;I \subseteq J \subseteq R&lt;/math&gt;, then the quotient ring &lt;math&gt;(R/I)/(J/I)&lt;/math&gt; is isomorphic to &lt;math&gt;R/J&lt;/math&gt;.
+
+=== Theorem D===
+Let &lt;math&gt;I&lt;/math&gt; be an ideal of &lt;math&gt;R&lt;/math&gt;. The correspondence &lt;math&gt;A\leftrightarrow A/I&lt;/math&gt; is an inclusion preserving bijection between the set of subrings &lt;math&gt;A&lt;/math&gt; of &lt;math&gt;R&lt;/math&gt; that contain &lt;math&gt;I&lt;/math&gt; and the set of subrings of &lt;math&gt;R/I&lt;/math&gt;. Furthermore, &lt;math&gt;A&lt;/math&gt; (a subring containing &lt;math&gt;I&lt;/math&gt;) is an ideal of &lt;math&gt;R&lt;/math&gt; if and only if &lt;math&gt;A/I&lt;/math&gt; is an ideal of &lt;math&gt;R/I&lt;/math&gt;.&lt;ref&gt;{{cite book | last1=Dummit | first1=David S. | first2=Richard M. | last2=Foote |  title=Abstract algebra | url=https://archive.org/details/abstractalgebra00dumm_304 | url-access=limited | location=Hoboken, NJ | publisher=Wiley | date=2004 | page=[https://archive.org/details/abstractalgebra00dumm_304/page/n259 246] | isbn=978-0-471-43334-7}}&lt;/ref&gt;
+
+== Modules ==
+The statements of the isomorphism theorems for [[module (mathematics)|modules]] are particularly simple, since it is possible to form a [[quotient module]] from any [[submodule]].  The isomorphism theorems for [[vector space]]s (modules over a field) and [[abelian group]]s (modules over &lt;math&gt;\mathbb{Z}&lt;/math&gt;) are special cases of these.  For finite-dimensional vector spaces, all of these theorems follow from the [[rank–nullity theorem]].
+
+In the following, &quot;module&quot; will mean &quot;''R''-module&quot; for some fixed ring ''R''.
+
+=== Theorem A ===
+Let ''M'' and ''N'' be modules, and let ''φ'':&amp;nbsp;''M''&amp;nbsp;→&amp;nbsp;''N'' be a [[module homomorphism]].  Then:
+# The [[kernel (algebra)|kernel]] of ''φ'' is a submodule of ''M'',
+# The [[image (mathematics)|image]] of ''φ'' is a submodule of ''N'', and
+# The image of ''φ'' is isomorphic to the [[quotient module]] ''M''&amp;nbsp;/&amp;nbsp;ker(''φ'').
+In particular, if ''φ'' is surjective then ''N'' is isomorphic to ''M''&amp;nbsp;/&amp;nbsp;ker(''φ'').
+
+===Theorem B===
+Let ''M'' be a module, and let ''S'' and ''T'' be submodules of ''M''.  Then:
+# The sum ''S''&amp;nbsp;+&amp;nbsp;''T''&amp;nbsp;=&amp;nbsp;{''s''&amp;nbsp;+&amp;nbsp;''t''&amp;nbsp;|&amp;nbsp;''s''&amp;nbsp;∈&amp;nbsp;''S'',&amp;nbsp;''t''&amp;nbsp;∈&amp;nbsp;''T''} is a submodule of ''M'',
+# The intersection ''S''&amp;nbsp;∩&amp;nbsp;''T'' is a submodule of ''M'', and
+# The quotient modules (''S''&amp;nbsp;+&amp;nbsp;''T'')&amp;nbsp;/&amp;nbsp;''T'' and ''S''&amp;nbsp;/&amp;nbsp;(''S''&amp;nbsp;∩&amp;nbsp;''T'') are isomorphic.
+
+===Theorem C===
+Let ''M'' be a module, ''T'' a submodule of ''M''.
+
+# If &lt;math&gt;S&lt;/math&gt; is a submodule of &lt;math&gt;M&lt;/math&gt; such that &lt;math&gt;T \subseteq S \subseteq M&lt;/math&gt;, then &lt;math&gt;S/T&lt;/math&gt; is a submodule of &lt;math&gt;M/T&lt;/math&gt;.
+# Every submodule of &lt;math&gt;M/T&lt;/math&gt; is of the form &lt;math&gt;S/T&lt;/math&gt;, for some submodule &lt;math&gt;S&lt;/math&gt; of &lt;math&gt;M&lt;/math&gt; such that &lt;math&gt;T \subseteq S \subseteq M&lt;/math&gt;.
+# If &lt;math&gt;S&lt;/math&gt; is a submodule of &lt;math&gt;M&lt;/math&gt; such that &lt;math&gt;T \subseteq S \subseteq M&lt;/math&gt;, then the quotient module &lt;math&gt;(M/T)/(S/T)&lt;/math&gt; is isomorphic to &lt;math&gt;M/S&lt;/math&gt;.
+&lt;!-- We also need to mention the isomorphism theorems for topological vector spaces, Banach algebras etc. --&gt;
+
+===Theorem D===
+Let &lt;math&gt;M&lt;/math&gt; be a module, &lt;math&gt;N&lt;/math&gt; a submodule of &lt;math&gt;M&lt;/math&gt;. There is a bijection between the submodules of &lt;math&gt;M&lt;/math&gt; that contain &lt;math&gt;N&lt;/math&gt; and the submodules of &lt;math&gt;M/N&lt;/math&gt;. The correspondence is given by &lt;math&gt;A\leftrightarrow A/N&lt;/math&gt; for all &lt;math&gt;A\supseteq N&lt;/math&gt;. This correspondence commutes with the processes of taking sums and intersections (i.e., is a lattice isomorphism between the lattice of submodules of &lt;math&gt;M/N&lt;/math&gt; and the lattice of submodules of &lt;math&gt;M&lt;/math&gt; that contain &lt;math&gt;N&lt;/math&gt;).&lt;ref&gt;Dummit and Foote (2004), p. 349&lt;/ref&gt;
+
+== General ==
+To generalise this to [[universal algebra]], normal subgroups need to be replaced by [[congruence relation]]s.
+
+A '''congruence''' on an [[universal algebra|algebra]] &lt;math&gt;A&lt;/math&gt; is an equivalence relation &lt;math&gt;\Phi\subseteq A \times A&lt;/math&gt; that forms a subalgebra of &lt;math&gt;A \times A&lt;/math&gt; considered as an algebra with componentwise operations.  One can make the set of equivalence classes &lt;math&gt;A/\Phi&lt;/math&gt; into an algebra of the same type by defining the operations via representatives; this will be well-defined since &lt;math&gt;\Phi&lt;/math&gt; is a subalgebra of &lt;math&gt;A \times A&lt;/math&gt;. The resulting structure is the [[quotient (universal algebra)|quotient algebra]].
+
+=== Theorem A===
+Let &lt;math&gt;f:A \rightarrow B&lt;/math&gt; be an algebra [[homomorphism]].  Then the image of &lt;math&gt; f &lt;/math&gt; is a subalgebra of &lt;math&gt;B&lt;/math&gt;, the relation given by &lt;math&gt;\Phi:f(x)=f(y)&lt;/math&gt; (i.e. the [[Kernel (set theory)|kernel]] of &lt;math&gt;f&lt;/math&gt;) is a congruence on &lt;math&gt;A&lt;/math&gt;, and the algebras &lt;math&gt; \ A/\Phi \ &lt;/math&gt; and &lt;math&gt;\operatorname{im} f&lt;/math&gt; are isomorphic. (Note that in the case of a group, &lt;math&gt;f(x) = f(y)&lt;/math&gt; iff &lt;math&gt;f(x y^{ - 1} ) = 1&lt;/math&gt;, so one recovers the notion of kernel used in group theory in this case.)
+
+=== Theorem B===
+Given an algebra &lt;math&gt;A&lt;/math&gt;, a subalgebra &lt;math&gt;B&lt;/math&gt; of &lt;math&gt;A&lt;/math&gt;, and a congruence &lt;math&gt;\Phi&lt;/math&gt; on &lt;math&gt;A&lt;/math&gt;, let &lt;math&gt;\Phi_B = \Phi \cap (B \times B)&lt;/math&gt; be the trace of &lt;math&gt;\Phi&lt;/math&gt; in &lt;math&gt;B&lt;/math&gt; and &lt;math&gt;[B]^\Phi=\{K \in A/\Phi: K \cap B \neq\emptyset\}&lt;/math&gt; the collection of equivalence classes that intersect &lt;math&gt;B&lt;/math&gt;. Then
+# &lt;math&gt;\Phi_B&lt;/math&gt; is a congruence on &lt;math&gt;B&lt;/math&gt;,
+# &lt;math&gt; \ [B]^\Phi&lt;/math&gt; is a subalgebra of &lt;math&gt;A/\Phi&lt;/math&gt;, and
+# the algebra &lt;math&gt;[B]^\Phi&lt;/math&gt; is isomorphic to the algebra &lt;math&gt;B/\Phi_B&lt;/math&gt;.
+
+=== Theorem C ===
+Let &lt;math&gt;A&lt;/math&gt; be an algebra and &lt;math&gt;\Phi, \Psi&lt;/math&gt; two congruence relations on &lt;math&gt;A&lt;/math&gt; such that &lt;math&gt;\Psi \subseteq \Phi&lt;/math&gt;. Then &lt;math&gt;\Phi/\Psi= \{ ([a']_\Psi,[a'']_\Psi): (a',a'')\in \Phi\} = [\ ]_\Psi \circ \Phi \circ [\ ]_\Psi^{-1}&lt;/math&gt; is a congruence on &lt;math&gt;A/\Psi&lt;/math&gt;, and &lt;math&gt;A/\Phi&lt;/math&gt; is isomorphic to &lt;math&gt;(A/\Psi)/(\Phi/\Psi)&lt;/math&gt;.
+
+=== Theorem D ===
+Let &lt;math&gt;A&lt;/math&gt; be an algebra and denote &lt;math&gt;\operatorname{Con}A&lt;/math&gt; the set of all congruences on &lt;math&gt;A&lt;/math&gt;. The set
+&lt;math&gt;\operatorname{Con}A&lt;/math&gt; is a complete lattice ordered by inclusion.&lt;ref&gt;Stanley and Sankappanavar (2012), p. 37&lt;/ref&gt;
+If &lt;math&gt;\Phi\in\operatorname{Con}A&lt;/math&gt; is a congruence and we denote by &lt;math&gt;\left[\Phi,A\times A\right]\subseteq\operatorname{Con}A&lt;/math&gt; the set of all congruences that contain &lt;math&gt;\Phi&lt;/math&gt; (i.e. &lt;math&gt;\left[\Phi,A\times A\right]&lt;/math&gt; is a principal [[filter (mathematics)|filter]] in &lt;math&gt;\operatorname{Con}A&lt;/math&gt;, moreover it is a sublattice), then
+the map  &lt;math&gt;\alpha:\left[\Phi,A\times A\right]\to\operatorname{Con}(A/\Phi),\Psi\mapsto\Psi/\Phi&lt;/math&gt; is a lattice isomorphism.&lt;ref&gt;Stanley and Sankappanavar (2012), p. 49&lt;/ref&gt;&lt;ref&gt;{{cite web |last1=William Sun |first1=(https://math.stackexchange.com/users/413924/william-sun) |title=Is there a general form of the correspondence theorem? |url=https://math.stackexchange.com/q/2850331 |website=Mathematics StackExchange |access-date=20 July 2019}}&lt;/ref&gt;
+
+== Note ==
+&lt;references/&gt;
+
+== References ==
+* [[Emmy Noether]], ''Abstrakter Aufbau der Idealtheorie in algebraischen Zahl- und Funktionenkörpern'', [[Mathematische Annalen]] '''96'''  (1927) pp.&amp;nbsp;26–61
+* [[Colin McLarty]], &quot;Emmy Noether's 'Set Theoretic' Topology: From Dedekind to the rise of functors&quot;. ''The Architecture of Modern Mathematics: Essays in history and philosophy'' (edited by [[Jeremy Gray]] and José Ferreirós), Oxford University Press (2006) pp.&amp;nbsp;211–35.
+* {{Citation| last=Jacobson| first=Nathan| author-link=Nathan Jacobson| date=2009| title=Basic algebra| edition= 2nd| volume = 1 | publisher=Dover| isbn = 9780486471891}}
+* Paul M. Cohn, ''Universal algebra'', Chapter II.3 p.&amp;nbsp;57
+* {{Citation | last=Milne | first=James S. | title=Group Theory | year=2013 | version = 3.13 |  url=http://www.jmilne.org/math/}}
+* {{citation | last=van der Waerden | first=B. I. | title=[[Moderne Algebra|Algebra]] | edition= 9 | volume=1 | publisher=Springer-Verlag | year=1994}}
+* {{cite book | last1=Dummit | first1=David S. | first2=Richard M. | last2=Foote |  title=Abstract algebra | location=Hoboken, NJ | publisher=Wiley | date=2004 | isbn=978-0-471-43334-7}}
+* {{cite book |last1=Burris |first1=Stanley |last2=Sankappanavar |first2=H. P. |title=A Course in Universal Algebra |date=2012 |url=https://www.math.uwaterloo.ca/~snburris/htdocs/UALG/univ-algebra2012.pdf |isbn=978-0-9880552-0-9}}
+* {{citation | author=W. R. Scott | title=Group Theory | publisher=Prentice Hall | year=1964}}
+* {{cite book|author=John R. Durbin|title=Modern Algebra: An Introduction|year=2009|edition= 6|publisher=Wiley|isbn=978-0-470-38443-5}}
+* {{citation | title=Basic Algebra | author=Anthony W. Knapp | edition= Digital second | year=2016}}
+* {{citation | author=Pierre Antoine Grillet | title=Abstract Algebra| edition= 2 | publisher=Springer | year=2007}}
+* {{citation | author = Joseph J. Rotman | title=Advanced Modern Algebra | publisher=Prentice Hall | edition= 2 | year=2003 | isbn=0130878685 }}
+
+[[Category:Isomorphism theorems| ]]</text>
+      <sha1>2rg9s0rqbhkf1xm74f6wg0ittigypvt</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Reds (film)</title>
+    <ns>0</ns>
+    <id>45242</id>
+    <revision>
+      <id>991560866</id>
+      <parentid>991246037</parentid>
+      <timestamp>2020-11-30T18:25:04Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 14 templates: del empty params (1×); hyphenate params (5×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30234" xml:space="preserve">{{For|other films named ''Red''|Red (disambiguation)#Films}}
+{{short description|1981 historical drama film epic by Warren Beatty}}
+{{Use mdy dates|date=November 2016}}
+{{Infobox film
+| name           = Reds
+| image          = Redsposter.jpg
+| caption        = Theatrical release poster
+| director       = [[Warren Beatty]]
+| producer       = Warren Beatty
+| screenplay     = {{Plainlist|
+* Warren Beatty
+* [[Trevor Griffiths]]
+}}
+| starring       = {{plainlist|
+* Warren Beatty
+* [[Diane Keaton]]
+* [[Edward Herrmann]]
+* [[Jerzy Kosinski]]
+* [[Jack Nicholson]]
+* [[Paul Sorvino]]
+* [[Maureen Stapleton]]
+}}
+| music          = {{Plainlist|
+* [[Stephen Sondheim]]
+* [[Dave Grusin]]
+}}
+| cinematography = [[Vittorio Storaro]]
+| editing        = {{Plainlist|
+* [[Dede Allen]]
+* [[Craig McKay (film editor)|Craig McKay]]
+}}
+| studio         = {{Plainlist|
+* Barclays Mercantile Industrial Finance
+* JRS Productions
+}}
+| distributor    = [[Paramount Pictures]]
+| released       = {{Film date|1981|12|04}}
+| runtime        = 195 minutes&lt;!--Theatrical runtime: 195:19--&gt;&lt;ref&gt;{{cite web | url=http://bbfc.co.uk/releases/reds-2 | title=''Reds'' (AA) (CUT) | work=[[British Board of Film Classification]] | date=January 25, 1982 | accessdate=November 22, 2016}}&lt;/ref&gt;
+| country        = United States
+| language       = {{Plainlist|
+* English
+* Russian
+* German
+}}
+| budget         = $32 million
+| gross          = $40.4 million&lt;ref name=&quot;box office&quot;&gt;{{cite web |url=http://www.boxofficemojo.com/movies/?id=reds.htm |title=Reds (1981) |website=Box Office Mojo |accessdate=May 2, 2016}}&lt;/ref&gt;
+}}
+
+'''''Reds''''' is a 1981 American [[epic film|epic]] [[historical drama|historical drama film]], co-written, produced, and directed by [[Warren Beatty]], about the life and career of [[John Reed (journalist)|John Reed]], the journalist and writer who chronicled the [[Russian Revolution of 1917|Russian Revolution]] in his 1919 book ''[[Ten Days That Shook the World]]''. Beatty stars in the lead role alongside [[Diane Keaton]] as [[Louise Bryant]] and [[Jack Nicholson]] as [[Eugene O'Neill]].
+
+The supporting cast includes [[Edward Herrmann]], [[Jerzy Kosinski]], [[Paul Sorvino]], [[Maureen Stapleton]], [[Gene Hackman]], [[Ramon Bieri]], [[Nicolas Coster]], and [[M. Emmet Walsh]]. The film also features, as &quot;witnesses,&quot; interviews with the 98-year-old radical educator and peace activist [[Scott Nearing]], author [[Dorothy Frooks]], reporter and author [[George Seldes]], [[civil liberties]] advocate [[Roger Nash Baldwin|Roger Baldwin]], and the American writer [[Henry Miller]], among others.
+
+Beatty was awarded the [[Academy Award for Best Director]] and the film was nominated for [[Academy Award for Best Picture|Best Picture]], but lost to ''[[Chariots of Fire]]''. Beatty, Keaton, Nicholson, and Stapleton were nominated for [[Academy Award for Best Actor|Best Actor]], [[Academy Award for Best Actress|Best Actress]], [[Academy Award for Best Supporting Actor|Best Supporting Actor]] and [[Academy Award for Best Supporting Actress|Best Supporting Actress]], respectively. Stapleton was the only one of the four to win.{{efn|Beatty and Keaton lost to [[Henry Fonda]] and [[Katharine Hepburn]] for ''[[On Golden Pond (1981 film)|On Golden Pond]]'' and Nicholson lost to [[John Gielgud]] for ''[[Arthur (1981 film)|Arthur]]''.}} Beatty became the third person to be nominated for Academy Awards in the categories Best Actor, Director, and, with co-writer Trevor Griffiths, [[Academy Award for Best Original Screenplay|Original Screenplay]]—losing again to ''Chariots of Fire''—for a film nominated for Best Picture.{{Efn|This was done previously by [[Orson Welles]] for ''[[Citizen Kane]]'' and [[Woody Allen]] for ''[[Annie Hall]]''.}}
+
+In June 2008, the [[American Film Institute]] revealed &quot;[[AFI's 10 Top 10]]&quot;–the best ten films in ten &quot;classic&quot; American film genres–after polling over 1,500 people from the film community. ''Reds'' came in ninth in the epic genre.&lt;ref&gt;{{cite web | title=Top 10 Epic | url=http://www.afi.com/10top10/epic.html | publisher=[[American Film Institute]] | accessdate=2008-06-18 | archive-url=https://web.archive.org/web/20080619174209/http://www.afi.com/10top10/epic.html | archive-date=June 19, 2008}}&lt;/ref&gt;
+
+{{TOC limit|3}}

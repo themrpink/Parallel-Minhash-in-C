@@ -1,0 +1,151 @@
+A factory produces an item using three machines—A, B, and C—which account for 20%, 30%, and 50% of its output, respectively. Of the items produced by machine A, 5% are defective; similarly, 3% of machine B's items and 1% of machine C's are defective. If a randomly selected item is defective, what is the probability it was produced by machine C?
+
+Once again, the answer can be reached without using the formula by applying the conditions to a hypothetical number of cases. For example, if the factory produces 1,000 items, 200 will be produced by Machine A, 300 by Machine B, and 500 by Machine C. Machine A will produce 5% &amp;times; 200 = 10 defective items, Machine B 3% &amp;times; 300 = 9, and Machine C 1% &amp;times; 500 = 5, for a total of 24. Thus, the likelihood that a randomly selected defective item was produced by machine C is 5/24 (~20.83%). 
+
+This problem can also be solved using Bayes' theorem: Let ''X&lt;sub&gt;i&lt;/sub&gt;'' denote the event that a randomly chosen item was made by the ''i'' &lt;sup&gt;th&lt;/sup&gt; machine (for ''i''&amp;nbsp;= A,B,C). Let ''Y'' denote the event that a randomly chosen item is defective. Then, we are given the following information:
+:&lt;math&gt;P(X_A) = 0.2, \quad P(X_B) = 0.3, \quad  P(X_C) = 0.5.&lt;/math&gt;
+If the item was made by the first machine, then the probability that it is defective is 0.05; that is, ''P''(''Y''&amp;thinsp;|&amp;thinsp;''X''&lt;sub&gt;A&lt;/sub&gt;) = 0.05. Overall, we have
+
+:&lt;math&gt;P(Y| X_A) = 0.05, \quad  P(Y |X_B) = 0.03, \quad  P(Y| X_C) = 0.01.&lt;/math&gt;
+
+To answer the original question, we first find ''P''(Y). That can be done in the following way:
+
+:&lt;math&gt;P(Y) = \sum_i  P(Y| X_i) P(X_i) = (0.05)(0.2) + (0.03)(0.3) + (0.01)(0.5) = 0.024.&lt;/math&gt;
+
+Hence, 2.4% of the total output is defective.
+
+We are given that ''Y'' has occurred, and we want to calculate the conditional
+probability of ''X''&lt;sub&gt;C&lt;/sub&gt;. By Bayes' theorem,
+
+:&lt;math&gt;P(X_C|Y) = \frac{P(Y | X_C) P(X_C)}{P(Y)} = \frac{0.01 \cdot 0.50}{0.024} = \frac{5}{24}&lt;/math&gt;
+
+Given that the item is defective, the probability that it was made by machine C is 5/24. Although machine C produces half of the total output, it produces a much smaller fraction of the defective items. Hence the knowledge that the item selected was defective enables us to replace the prior probability ''P''(''X''&lt;sub&gt;C&lt;/sub&gt;)&amp;nbsp;= 1/2 by the smaller posterior probability ''P''(X&lt;sub&gt;C&lt;/sub&gt;&amp;thinsp;|&amp;thinsp;''Y'')&amp;nbsp;= 5/24.
+
+==Interpretations==
+[[File:Bayes theorem visualisation.svg|thumb|192px|Figure 2: A geometric visualisation of Bayes' theorem.]]
+The interpretation of Bayes' rule depends on the [[Probability interpretations|interpretation of probability]] ascribed to the terms. The two main interpretations are described below. Figure 2 shows a geometric visualization similar to Figure 1. Gerd Gigerenzer and co-authors have pushed hard for teaching Bayes  Rule this way, with special emphasis on teaching it to physicians.&lt;ref&gt;{{cite journal |last1=Gigerenzer |first1=Gerd |last2=Hoffrage |first2=Ulrich |title=How to improve Bayesian reasoning without instruction: Frequency formats. |journal=Psychological Review |date=1995 |volume=102 |issue=4 |pages=684–704 |doi=10.1037/0033-295X.102.4.684 |citeseerx=10.1.1.128.3201 }}&lt;/ref&gt; An example is Will Kurt's webpage,&quot;Bayes' Theorem with Lego,&quot; later turned into the book, ''Bayesian Statistics the Fun Way: Understanding Statistics and Probability with Star Wars, LEGO, and Rubber Ducks.'' Zhu and Gigerenzer found in 2006 that whereas  0% of 4th, 5th, and 6th-graders could solve  word problems after being taught with formulas, 19%, 39%, and 53% could after being taught with frequency boxes, and that the learning was either thorough or zero.&lt;ref&gt;{{cite journal |last1=Zhu |first1=Liqi |last2=Gigerenzer |first2=Gerd |title=Children can solve Bayesian problems: the role of representation in mental computation |journal=Cognition |date=January 2006 |volume=98 |issue=3 |pages=287–308 |doi=10.1016/j.cognition.2004.12.003 |pmid=16399266 |hdl=11858/00-001M-0000-0024-FEFD-A |hdl-access=free }}&lt;/ref&gt;
+
+===Bayesian interpretation===
+In the [[Bayesian probability|Bayesian (or epistemological) interpretation]], probability measures a &quot;degree of belief&quot;. Bayes' theorem   links the degree of belief in a proposition before and after accounting for evidence. For example, suppose it is believed with 50% certainty that a coin is twice as likely to land heads than tails. If the coin is flipped a number of times and the outcomes observed, that degree of belief will probably rise or fall, but might even   remain the same, depending on the results.  For proposition ''A'' and evidence ''B'',
+
+:* ''P'' (''A''), the ''prior'', is the initial degree of belief in ''A''.
+:* ''P'' (''A''&amp;thinsp;|&amp;thinsp;''B''), the ''posterior'', is the degree of belief after incorporating news that ''B'' is true.
+:* the quotient {{sfrac|''P''(''B''&amp;thinsp;{{!}}&amp;thinsp;''A'')|''P''(''B'')}} represents the support ''B'' provides for ''A''.
+
+For more on the application of Bayes' theorem under the Bayesian interpretation of probability, see [[Bayesian inference]].
+
+===Frequentist interpretation===
+[[File:Bayes theorem tree diagrams.svg|thumb|Figure 3: Illustration of frequentist interpretation with [[Tree diagram (probability theory)|tree diagrams]].  ]]
+
+In the [[Frequentist interpretation of probability|frequentist interpretation]], probability measures a &quot;proportion of outcomes&quot;. For example, suppose an experiment is performed many times. ''P''(''A'') is the proportion of outcomes with property ''A'' (the prior)  and ''P''(''B'') is the proportion with property ''B''. ''P''(''B''&amp;thinsp;|&amp;thinsp;''A'') is the proportion of outcomes with property ''B'' ''out of'' outcomes with property ''A'', and ''P''(''A''&amp;thinsp;|&amp;thinsp;''B'') is the proportion of those with ''A'' ''out of'' those with&amp;nbsp;''B'' (the posterior).
+
+The role of Bayes' theorem is best visualized with tree diagrams such as Figure 3. The two diagrams partition the same outcomes by ''A'' and ''B'' in opposite orders, to obtain the inverse probabilities. Bayes' theorem  links  the  different partitionings.
+
+====Example====
+[[File:Bayes theorem simple example tree.svg|thumb|Figure 4: Tree diagram illustrating the beetle example. ''R, C, P'' and &lt;math&gt; \overline{P} &lt;/math&gt; are the events  rare, common, pattern and no pattern. Percentages in parentheses are calculated. Three independent values are given, so it is possible to calculate the inverse tree.]]
+
+An [[Entomology|entomologist]] spots what might, due to the pattern on its back, be a rare [[subspecies]] of [[beetle]]. A full 98% of  the members of the rare subspecies have the pattern, so  ''P''(Pattern&amp;nbsp;|&amp;nbsp;Rare) = 98%.  Only 5% of members of  the common subspecies  have the pattern. The rare subspecies  is   0.1% of the total population. How likely is the beetle having the pattern to be rare: what is ''P''(Rare&amp;nbsp;|&amp;nbsp;Pattern)? 
+
+From the extended form of Bayes' theorem (since any beetle  is either rare or common),
+
+: &lt;math&gt;
+\begin{align}
+P(\text{Rare} \mid \text{Pattern}) &amp;= \frac{P(\text{Pattern} \mid \text{Rare})P(\text{Rare})} {P(\text{Pattern})}\\
+[8pt] &amp;= \frac{P(\text{Pattern}\mid \text{Rare})P(\text{Rare})} {P(\text{Pattern} \mid \text{Rare}) P(\text{Rare}) + P(\text{Pattern}\mid \text{Common})P(\text{Common})}\\
+[8pt] &amp;= \frac{0.98 \times 0.001} {0.98 \times 0.001 + 0.05 \times 0.999}\\
+[8pt] &amp;\approx 1.9\%
+\end{align}
+&lt;/math&gt;
+
+==Forms==
+
+===Events===
+
+====Simple form====
+For events ''A'' and ''B'', provided that ''P''(''B'')&amp;nbsp;≠&amp;nbsp;0,
+
+:&lt;math&gt;P(A| B) = \frac{P(B |  A) P(A)}{P(B)}\cdot &lt;/math&gt;
+
+In many applications, for instance in [[Bayesian inference]], the event ''B'' is fixed in the discussion, and we wish to consider the impact of its having been observed on our belief in various possible events ''A''. In such a situation the denominator of the last expression, the probability of the given evidence ''B'', is fixed; what we want to vary is ''A''. Bayes' theorem then shows that the posterior probabilities are [[proportionality (mathematics)|proportional]] to the numerator, so the last equation becomes: 
+
+:&lt;math&gt;P(A| B) \propto P(A) \cdot P(B| A) &lt;/math&gt;  .
+
+In words, the posterior is proportional to the prior times the likelihood.&lt;ref&gt;
+
+{{Cite book
+ |last=Lee
+ |first=Peter M.
+ |title=Bayesian Statistics
+ |chapter-url=http://www-users.york.ac.uk/~pml1/bayes/book.htm
+ |publisher=[[John Wiley &amp; Sons|Wiley]]
+ |year=2012
+ |isbn=978-1-1183-3257-3 &lt;!-- |isbn=978-1-1183-5977-8 --&gt;
+ |chapter=Chapter 1
+}}
+
+&lt;/ref&gt;
+
+If events ''A''&lt;sub&gt;1&lt;/sub&gt;, ''A''&lt;sub&gt;2&lt;/sub&gt;, ..., are mutually exclusive and exhaustive, i.e., one of them is certain to occur but no two can occur together,    we can determine the proportionality constant by using the fact that their probabilities must add up to one. For instance, for a given event ''A'', the event ''A'' itself and its complement ¬''A'' are exclusive and exhaustive. Denoting the constant of proportionality by ''c'' we have
+
+:&lt;math&gt;P(A| B) = c \cdot P(A) \cdot P(B| A) \text{ and } P(\neg A| B) = c \cdot P(\neg A) \cdot P(B| \neg A). &lt;/math&gt;
+
+Adding these two formulas we deduce that
+
+:&lt;math&gt; 1 = c \cdot (P(B| A)\cdot P(A) + P(B| \neg A) \cdot P(\neg A)),&lt;/math&gt;
+
+or
+
+:&lt;math&gt; c = \frac{1}{P(B| A)\cdot P(A) + P(B| \neg A) \cdot P(\neg A)}  = \frac 1 {P(B)}. &lt;/math&gt;
+
+====Alternative form====
+{| class=&quot;infobox wikitable&quot; style=&quot;font-size:100%;&quot;
+|+ [[Contingency table]]
+! {{diagonal split header|&lt;br /&gt;Proposition|&amp;nbsp; Background}} !! B !! &amp;not;B&lt;br /&gt;(not B) !! rowspan=&quot;5&quot; style=&quot;padding:0;&quot;| !! Total
+|-
+! A
+| |'''P(B|A)&amp;middot;P(A)'''&lt;br /&gt;= P(A|B)&amp;middot;P(B) || |'''P(&amp;not;B|A)&amp;middot;P(A)'''&lt;br /&gt;= P(A|&amp;not;B)&amp;middot;P(&amp;not;B) || '''P(A)'''
+|-
+! &amp;not;A&lt;br /&gt;(not A)
+| |'''P(B|&amp;not;A)&amp;middot;P(&amp;not;A)'''&lt;br /&gt;= P(&amp;not;A|B)&amp;middot;P(B) || |'''P(&amp;not;B|&amp;not;A)&amp;middot;P(&amp;not;A)'''&lt;br /&gt;= P(&amp;not;A|&amp;not;B)&amp;middot;P(&amp;not;B) || '''P(&amp;not;A) =&lt;br /&gt;1&amp;minus;P(A)'''
+|-
+| colspan=&quot;5&quot; style=&quot;padding:0;&quot;|
+|-
+! Total
+| &amp;nbsp;&amp;nbsp; P(B) || &amp;nbsp;&amp;nbsp; P(&amp;not;B) = 1&amp;minus;P(B) || style=&quot;text-align:center;&quot;|1
+|}
+Another form of Bayes' theorem  for two competing statements or hypotheses is:
+
+:&lt;math&gt;P(A| B) = \frac{P(B| A) P(A)}{ P(B| A) P(A) + P(B| \neg A) P(\neg A)}.&lt;/math&gt;
+
+For an epistemological interpretation:
+
+For proposition ''A'' and evidence or background ''B'',&lt;ref&gt;{{cite web|title=Bayes' Theorem: Introduction|url=http://www.trinity.edu/cbrown/bayesweb/|website=Trinity University|url-status=dead|archive-url=https://web.archive.org/web/20040821012342/http://www.trinity.edu/cbrown/bayesweb/|archive-date=21 August 2004|access-date=5 August 2014}}&lt;/ref&gt;
+
+* &lt;math&gt;P(A)&lt;/math&gt; is the [[prior probability]],   the initial degree of belief in ''A''.
+* &lt;math&gt;P(\neg A)&lt;/math&gt; is the corresponding   initial degree of belief  in  ''not-A'', that  ''A'' is false,  where &lt;math&gt; P(\neg A) =1-P(A) &lt;/math&gt;
+* &lt;math&gt;P(B| A)&lt;/math&gt; is the [[conditional probability]] or likelihood,  the degree of belief in ''B''  given that  proposition ''A'' is true.
+* &lt;math&gt;P(B|\neg A)&lt;/math&gt; is the [[conditional probability]] or likelihood,   the degree of belief in ''B''  given that proposition ''A'' is false.
+* &lt;math&gt;P(A| B)&lt;/math&gt; is the [[posterior probability]],   the probability  of ''A'' after taking into account ''B''.
+
+====Extended form====
+Often, for some [[partition of a set|partition]] {''A&lt;sub&gt;j&lt;/sub&gt;''} of the [[sample space]], the [[Sample space|event space]] is given  in terms of ''P''(''A&lt;sub&gt;j&lt;/sub&gt;'') and ''P''(''B''&amp;nbsp;|&amp;nbsp;''A&lt;sub&gt;j&lt;/sub&gt;''). It is then useful to compute ''P''(''B'') using the [[law of total probability]]:
+
+:&lt;math&gt;P(B) = {\sum_j P(B| A_j) P(A_j)},&lt;/math&gt;
+:&lt;math&gt;\Rightarrow P(A_i| B) = \frac{P(B| A_i) P(A_i)}{\sum\limits_j P(B| A_j) P(A_j)}\cdot&lt;/math&gt;
+
+In the special case where ''A'' is a [[binary variable]]:
+
+:&lt;math&gt;P(A| B) = \frac{P(B| A) P(A)}{ P(B| A) P(A) + P(B| \neg A) P(\neg A)}\cdot&lt;/math&gt;
+
+===Random variables===
+[[File:Bayes continuous diagram.svg|thumb|Figure 5:   Bayes' theorem  applied to an event space generated by continuous random variables ''X'' and ''Y''. There exists an instance of Bayes' theorem for each point in the [[Domain of a function|domain]]. In practice, these instances might be parametrized by writing the specified probability densities as a [[Function (Mathematics)|function]] of ''x'' and ''y''.]]
+Consider a [[sample space]] Ω generated by two [[random variables]] ''X'' and ''Y''. In principle, Bayes' theorem applies to the events ''A''&amp;nbsp;=&amp;nbsp;{''X''&amp;nbsp;=&amp;nbsp;''x''} and ''B''&amp;nbsp;=&amp;nbsp;{''Y''&amp;nbsp;=&amp;nbsp;''y''}.
+
+:&lt;math&gt;P( X{=}x  | Y {=} y) = \frac{P(Y{=}y | X{=}x) P(X{=}x)}{P(Y{=}y)}&lt;/math&gt;
+
+However, terms become 0 at points where either variable has finite [[probability density function|probability density]]. To remain useful, Bayes' theorem must be formulated in terms of the relevant densities (see [[#Derivation|Derivation]]).
+
+====Simple form====
+If ''X'' is continuous and ''Y'' is discrete,
+
+:&lt;math&gt;f_{X | Y{=}y}(x) = \frac{P(Y{=}y| X{=}x) f_X(x)}{P(Y{=}y)}&lt;/math&gt;

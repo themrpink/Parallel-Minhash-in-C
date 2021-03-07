@@ -1,0 +1,118 @@
+See [[wikipedia:Bug reports/History|History]].
+
+== Upload files ==
+
+The upload files page doesn't have a image uploading policy or something like that: We should not use formats like [[GIF]], with can cause patent problems, or like [[Windows bitmap|BMP]]. with are not optimal. I suggest [[PNG]] and [[JPEG]].
+:Very few web browsers support MNG (the animated version of PNG).  [[Mozilla]] does, but Microsoft Internet Explorer (&amp;gt;90% of users) doesn't.  What format should we use for animations? --[[user:Damian Yerrick|Damian Yerrick]]
+
+Also, we probably have no need for .exe or .mp3 files--do we?
+:WAV is not optimal, and MP3 has patent problems. Use [[Ogg]] [[Vorbis]] instead. --[[user:Damian Yerrick|Damian Yerrick]]
+
+2002-06-21: A file with an ampersand in its name cannot be deleted. The file is &amp;amp;#1603;&amp;amp;#1575;&amp;amp;#1587; &amp;amp;#1575;&amp;amp;#1604;&amp;amp;#1593;&amp;amp;#1575;&amp;amp;#1604;&amp;amp;#1605; 01.jpg (كاس العالم 01.jpg) and several sysops have tried to delete it to no avail. -[[user:PierreAbbat|phma]]
+
+2002-06-23: Some upload log entries are missing. cutelayout.bmp was never uploaded, but it was deleted; and sxvspork.zip was uploaded and never deleted, but it isn't there. -[[user:PierreAbbat|phma]]
+
+== Statistics ==
+== New pages ==
+
+I just got a set of SQL error messages, and one meaningless line of content, dated 31 December 1969, from the &quot;New Pages&quot; page. Here's the output:
+
+Warning: Supplied argument is not a valid MySQL result resource in /home/wiki-newest/work-http/wikiUser.php on line 150
+
+Warning: Supplied argument is not a valid MySQL result resource in /home/wiki-newest/work-http/wikiUser.php on line 157
+
+Warning: Cannot add header information - headers already sent by (output started at /home/wiki-newest/work-http/wikiUser.php:150) in /home/wiki-newest/work-http/wiki.phtml on line 84
+
+Warning: Cannot add header information - headers already sent by (output started at /home/wiki-newest/work-http/wikiUser.php:150) in /home/wiki-newest/work-http/wiki.phtml on line 86
+New pages
+162.83.143.161
+Log in | Help
+[[Main Page]]
+Main Page | Recent Changes | Random Page | Special Pages
+
+These are the last 100 new pages on Wikipedia in the last 3 days.
+View the last 50 | 100 | 250 | 500 | 1000 | 2500 | 5000 changes; View the last 1 | 2 | 3 | 5 | 7 | 14 days
+Legend : M=Minor edit ; N=New article.
+
+Wednesday, December 31, 1969
+
+    * (diff) ; 15:59 . . .
+
+[end quoted output] Current time is 9:00 p.m., EDT, on 29 April 2002 (I think that's 6 p.m. server time, but I'm not sure.) [[user:Vicki Rosenzweig|Vicki Rosenzweig]]
+
+:Hmm.... the line numbers are in the function that checks your login cookie against the user database, which clearly has failed (error messages, and an IP address shown instead of your login name), though that should be completely independent of the special page, which gets loaded after the login check. The lack of results in the article list also seems to imply that the database isn't returning results... I can access [[special:NewPages]] now, both logged in and not, and everything seems fine; my first guess is a temporary problem connecting to the database server (load-related?) -- try it again, if it's still showing the above symptoms (and is it only that page, or others as well?) my second guess would be some glitch in your login cookie; the system doesn't currently gracefully handle problems in that department. Try clearing the cookie in your browser settings and logging in again. [[user:Brion VIBBER|Brion VIBBER]], Tuesday, April 30, 2002
+
+== Orphans ==
+
+'''&quot;Orphans&quot; page isn't completely correct'''
+
+For instance, Godfrey_Reggio is not and never has been an orphan page; it was created long after the article for his documentary ''Koyaanisqatsi''.  Similar issue with other articles listed.
+
+I've noticed that &quot;Orphans&quot; gets confused by whether a title contains spaces or underscores between its words.  
+
+If an article is created with underscores, but all the links to it have spaces, then it
+is listed as an orphan.  I've noticed that in the URLs, the strings &quot;%20&quot;, &quot;_&quot;, and &quot;+&quot; can be 
+used interchangeably.  &quot;Orphans&quot; should be updated to treat all three the same.
+
+Also, pages that could be usefully listed as Orphans are not, e.g.,
+&quot;Society for Worldwide Interbank Financial Telecommunication&quot; is not
+listed, presumably becaused &quot;SWIFT&quot; redirects to it.  However nothing
+links to SWIFT and it looks like redirections are not counted as
+Orphans.
+:This should be fixed if the proposed Islands page (showing all pages unreachable from [[Main Page]]) is implemented.
+
+For some time I've noticed that the year pages for 803 to 809 keep appearing on the orphan list.  Yet when I go there and check out the links they do have links, even if only to each other.  Maybe somebody with a better understanding of the site's innards can have a look at this. --[[user:Eclecticology|Eclecticology]], Wednesday, June 5, 2002
+
+== Most wanted ==
+
+'''Articles with trailing spaces''' (2002/02/04)
+
+A link of the form [[Kingdom of Israel | Israel]] (note the spaces in the link source) causes the Most Wanted page to think that an article called Kingdom_of_Israel_ (note the trainling underscore) is required. I have created a redirect to Kingdom_of_Israel to fix this particular case.
+
+'''Existing page linked from Most Wanted'''
+
+On the [[special:WantedPages|Most Wanted]]-page a link to [[Unit interval]] is listed, but the article already exists. -- [[user:JeLuF|JeLuF]]
+
+Yet another sql error? 
+At the top of the most-wanted page I get this error, and the rest of the page is entirely blank after the [50 most-wanted pages] header.
+
+Warning: Supplied argument is not a valid MySQL result resource in
+/home/wiki-newest/work-http/special_wantedpages.php on line 22 ~[[user:Karen Johnson|Karen Johnson]] Wed 5th May 2002
+
+:Same bug as the &quot;line 99&quot; error on regular pages -- the &lt;code&gt;unlinked&lt;/code&gt; table is fubared. (&quot;Can't open file: 'unlinked.MYD'. (errno: 145)&quot; -- this is not a good thing!) Someone with access to the server needs to fix it. [[user:Brion VIBBER|Brion VIBBER]], Wednesday, May 8, 2002
+
+== Most popular ==
+
+== All pages ==
+
+=== Page is enormous ===
+
+This page is rather large, it took my Mozilla 1.0rc3 about 5 minutes to display it after download. How about splitting it alphabetically into 26 pages, plus another for numbers and non-alphanumerics? There's a long tradition of encyclopedias coming in alphabetical volumes, anyway. [[user:Bryan Derksen|Bryan Derksen]]
+
+== Random Page ==
+
+== Stub articles ==
+
+I've run into a couple of odd problems while browsing through the stub articles pages. Firstly, there's an article with bold tags in its title that is messing up the table on
+
+http://www.wikipedia.com/wiki/special%3AShortPages&amp;startat=241&amp;showLinksThere=0
+
+The article in question is  displayed as 241(16 chars) &lt;nowiki&gt;[[&lt;/nowiki&gt;'''devotchka'''|Bdevotchka/b&lt;nowiki&gt;]]&lt;/nowiki&gt;, if people have been cleaning up stub articles since I posted this it may be earlier in the listing. Its row in the table appears to be mixed in with the subsequent row in the table, and afterward the columns of the table are misaligned. It also destroys the link at the bottom of the table leading to the next larger set of short articles.
+
+:Found another example: 385(27 chars) &lt;nowiki&gt;[[&lt;/nowiki&gt;Upload/loa1[1].jpg|Upload/loa11.jpg&lt;nowiki&gt;]]&lt;/nowiki&gt; also screws up the table, and doesn't appear to exist.
+
+::I have deleted the articles in question (relics of long-fixed search page and title bugs), so it should be gone from the list now. The table screwup problem is due to a more recent bug (see top of this page) with links with bad titles, which has been fixed in the code but not yet installed. [[user:Brion VIBBER|Brion VIBBER]]
+
+Secondly, there are a whole bunch of articles listed as having a length of 27 characters which don't appear to exist at all. For some examples, see here:
+
+http://www.wikipedia.com/wiki/special%3AShortPages&amp;startat=321&amp;showLinksThere=0
+
+When I click on these links, I go straight into edit mode as if they were new. I believe that the 27 characters the stub finder claims these articles to have are &quot;Describe the new page here.&quot; [[user:Bryan Derksen|Bryan Derksen]]
+
+:That seems to be a feature: a page that somebody saved without actually editing anything (and thus containing only the new-page message) comes up in edit mode. On the other hand, we probably shouldn't actually save a page that contains only the new-page message. [[user:Brion VIBBER|Brion VIBBER]], Saturday, April 6, 2002
+
+== Long articles ==
+
+== List users ==
+
+== My watchlist ==

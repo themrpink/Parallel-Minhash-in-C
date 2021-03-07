@@ -1,0 +1,124 @@
+The values of the two integrals are the same in all cases in which both ''X'' and ''g''(''X'') actually have probability density functions.  It is not necessary that ''g'' be a [[one-to-one function]].  In some cases the latter integral is computed much more easily than the former. See [[Law of the unconscious statistician]].
+
+===Scalar to scalar===
+
+Let &lt;math&gt; g:{\mathbb R} \rightarrow {\mathbb R} &lt;/math&gt; be a [[monotonic function]], then the resulting density function is
+
+: &lt;math&gt;f_Y(y) =f_X\big(g^{-1}(y)\big)  \left| \frac{d}{dy} \big(g^{-1}(y)\big) \right|.&lt;/math&gt;
+
+Here ''g''&lt;sup&gt;−1&lt;/sup&gt; denotes the [[inverse function]].
+
+This follows from the fact that the probability contained in a differential area must be invariant under change of variables. That is,
+
+: &lt;math&gt;\left| f_Y(y)\, dy \right| = \left| f_X(x)\, dx \right|,&lt;/math&gt;
+
+or
+
+: &lt;math&gt;f_Y(y) = \left| \frac{dx}{dy} \right| f_X(x) = \left| \frac{d}{dy} (x) \right| f_X(x) = \left| \frac{d}{dy} \big(g^{-1}(y)\big) \right| f_X\big(g^{-1}(y)\big) = {\big|\big(g^{-1}\big)'(y)\big|} \cdot f_X\big(g^{-1}(y)\big) .&lt;/math&gt;
+
+For functions that are not monotonic, the probability density function for ''y'' is
+
+: &lt;math&gt;\sum_{k=1}^{n(y)} \left| \frac{d}{dy} g^{-1}_{k}(y) \right| \cdot f_X\big(g^{-1}_{k}(y)\big),&lt;/math&gt;
+
+where ''n''(''y'') is the number of solutions in ''x'' for the equation &lt;math&gt;g(x)=y&lt;/math&gt;, and &lt;math&gt;g_k^{-1}(y)&lt;/math&gt; are these solutions.
+
+===Vector to vector===
+
+The above formulas can be generalized to variables (which we will again call ''y'') depending on more than one other variable. ''f''(''x''&lt;sub&gt;1&lt;/sub&gt;, ..., ''x''&lt;sub&gt;''n''&lt;/sub&gt;) shall denote the probability density function of the variables that ''y'' depends on, and the dependence shall be {{nowrap|''y {{=}} g''(''x''&lt;sub&gt;1&lt;/sub&gt;, …, ''x''&lt;sub&gt;''n''&lt;/sub&gt;)}}. Then, the resulting density function is{{Citation needed|date=October 2013}}
+
+:&lt;math&gt; \int\limits_{y = g(x_1, \ldots, x_n)} \frac{f(x_1,\ldots, x_n)}{\sqrt{\sum_{j=1}^n \frac{\partial g}{\partial x_j}(x_1, \ldots, x_n)^2}} \,dV,&lt;/math&gt;
+
+where the integral is over the entire (''n'' − 1)-dimensional solution of the subscripted equation and the symbolic ''dV'' must be replaced by a parametrization of this solution for a particular calculation; the variables ''x''&lt;sub&gt;1&lt;/sub&gt;, ..., ''x''&lt;sub&gt;''n''&lt;/sub&gt; are then of course functions of this parametrization.
+
+This derives from the following, perhaps more intuitive representation: Suppose '''''x''''' is an ''n''-dimensional random variable with joint density ''f''. If {{nowrap|'''''y''''' {{=}} ''H''('''''x''''')}}, where ''H'' is a [[bijective]], [[differentiable function]], then '''''y''''' has density ''g'':
+
+:&lt;math&gt; g(\mathbf{y}) = f\Big(H^{-1}(\mathbf{y})\Big)\left\vert \det\left[\frac{dH^{-1}(\mathbf{z})}{d\mathbf{z}}\Bigg \vert_{\mathbf{z}=\mathbf{y}}\right]\right \vert&lt;/math&gt;
+
+with the differential regarded as the [[Jacobian matrix and determinant|Jacobian]] of the inverse of ''H(.)'', evaluated at '''''y'''''.&lt;ref&gt;{{cite book |first=Jay L. |last=Devore |first2=Kenneth N. |last2=Berk |title=Modern Mathematical Statistics with Applications |location= |publisher=Cengage |year=2007 |isbn=0-534-40473-1 |page=263 |url=https://books.google.com/books?id=3X7Qca6CcfkC&amp;pg=PA263 }}&lt;/ref&gt;
+
+For example, in the 2-dimensional case '''x'''&amp;nbsp;= (''x''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;''x''&lt;sub&gt;2&lt;/sub&gt;), suppose the transform ''H'' is given as ''y''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;= ''H''&lt;sub&gt;1&lt;/sub&gt;(''x''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;''x''&lt;sub&gt;2&lt;/sub&gt;), ''y''&lt;sub&gt;2&lt;/sub&gt;&amp;nbsp;= ''H''&lt;sub&gt;2&lt;/sub&gt;(''x''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;''x''&lt;sub&gt;2&lt;/sub&gt;) with inverses ''x''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;= ''H''&lt;sub&gt;1&lt;/sub&gt;&lt;sup&gt;−1&lt;/sup&gt;(''y''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;''y''&lt;sub&gt;2&lt;/sub&gt;), ''x''&lt;sub&gt;2&lt;/sub&gt;&amp;nbsp;= ''H''&lt;sub&gt;2&lt;/sub&gt;&lt;sup&gt;−1&lt;/sup&gt;(''y''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;''y''&lt;sub&gt;2&lt;/sub&gt;).  The joint distribution for '''y'''&amp;nbsp;= (''y''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;y&lt;sub&gt;2&lt;/sub&gt;) has density&lt;ref&gt;{{Cite book |title=Elementary Probability |last=David |first=Stirzaker |date=2007-01-01 |publisher=Cambridge University Press |isbn=0521534283 |oclc=851313783}}&lt;/ref&gt;
+
+:&lt;math&gt;g(y_1,y_2) = f_{X_1,X_2}\big(H_1^{-1}(y_1,y_2), H_2^{-1}(y_1,y_2)\big) \left\vert \frac{\partial H_1^{-1}}{\partial y_1} \frac{\partial H_2^{-1}}{\partial y_2} - \frac{\partial H_1^{-1}}{\partial y_2} \frac{\partial H_2^{-1}}{\partial y_1} \right\vert.&lt;/math&gt;
+
+===Vector to scalar===
+
+Let &lt;math&gt; V:{\mathbb R}^n \rightarrow {\mathbb R} &lt;/math&gt; be a differentiable function and &lt;math&gt; X &lt;/math&gt; be a random vector taking values in &lt;math&gt; {\mathbb R}^n &lt;/math&gt;, &lt;math&gt; f_X(\cdot) &lt;/math&gt; be the probability density function of &lt;math&gt; X &lt;/math&gt; and &lt;math&gt; \delta(\cdot) &lt;/math&gt;  be the [[Dirac delta]] function. It is possible to use the formulas above to determine &lt;math&gt; f_Y(\cdot) &lt;/math&gt;, the probability density function of &lt;math&gt; Y=V(X) &lt;/math&gt;, which will be given by
+
+:&lt;math&gt;f_Y(y) = \int_{{\mathbb R}^n} f_{X}(\mathbf{x}) \delta\big(y - V(\mathbf{x})\big) \,d \mathbf{x}.&lt;/math&gt;
+
+This result leads to the [[Law of the unconscious statistician]]:
+
+:&lt;math&gt;\operatorname{E}_Y[Y]=\int_{{\mathbb R}} y f_Y(y) dy = \int_{{\mathbb R}} y \int_{{\mathbb R}^n} f_{X}(\mathbf{x}) \delta\big(y - V(\mathbf{x})\big) \,d \mathbf{x} dy = \int_{{\mathbb R}^n} \int_{{\mathbb R}} y f_{X}(\mathbf{x}) \delta\big(y - V(\mathbf{x})\big) \, dy d \mathbf{x}= \int_{{\mathbb R}^n} V(\mathbf{x}) f_{X}(\mathbf{x}) d \mathbf{x}=\operatorname{E}_X[V(X)].&lt;/math&gt;
+
+''Proof:''
+
+Let &lt;math&gt;Z&lt;/math&gt; be a collapsed random variable with probability density function &lt;math&gt;p_Z(z)=\delta(z)&lt;/math&gt; (''i.e.'' a constant equal to zero). Let the random vector &lt;math&gt;\tilde{X}&lt;/math&gt; and the transform  &lt;math&gt;H&lt;/math&gt; be defined as
+:&lt;math&gt;H(Z,X)=\begin{bmatrix} Z+V(X)\\ X\end{bmatrix}=\begin{bmatrix} Y\\ \tilde{X}\end{bmatrix}&lt;/math&gt;.
+
+It is clear that &lt;math&gt;H&lt;/math&gt; is a bijective mapping, and the Jacobian of &lt;math&gt;H^{-1}&lt;/math&gt; is given by:
+
+:&lt;math&gt;\frac{dH^{-1}(y,\tilde{\mathbf{x}})}{dy\,d\tilde{\mathbf{x}}}=\begin{bmatrix} 1 &amp; -\frac{dV(\tilde{\mathbf{x}})}{d\tilde{\mathbf{x}}}\\ \mathbf{0}_{n\times1} &amp; \mathbf{I}_{n\times n} \end{bmatrix}&lt;/math&gt;,
+which is an upper triangular matrix with ones on the main diagonal, therefore its determinant is 1. Applying the change of variable theorem from the previous section we obtain that
+:&lt;math&gt;f_{Y,X}(y,x) = f_{X}(\mathbf{x}) \delta\big(y - V(\mathbf{x})\big)&lt;/math&gt;,
+
+which if marginalized over &lt;math&gt;x&lt;/math&gt; leads to the desired probability density function.
+
+==Sums of independent random variables==
+{{See also|List of convolutions of probability distributions}}
+
+The probability density function of the sum of two [[statistical independence|independent]] random variables ''U'' and ''V'', each of which has a probability density function, is the [[convolution]] of their separate density functions:
+
+:&lt;math&gt;
+f_{U+V}(x) = \int_{-\infty}^\infty f_U(y) f_V(x - y)\,dy
+= \left( f_{U} * f_{V} \right) (x)
+&lt;/math&gt;
+
+It is possible to generalize the previous relation to a sum of N independent random variables, with densities ''U''&lt;sub&gt;1&lt;/sub&gt;, ..., ''U&lt;sub&gt;N&lt;/sub&gt;'':
+
+:&lt;math&gt;
+f_{U_1 + \cdots + U_N}(x)
+= \left( f_{U_1} * \cdots * f_{U_N} \right) (x)
+&lt;/math&gt;
+
+This can be derived from a two-way change of variables involving ''Y=U+V'' and ''Z=V'', similarly to the example below for the quotient of independent random variables.
+
+==Products and quotients of independent random variables==
+{{See also|Product distribution|Ratio distribution}}
+
+Given two independent random variables ''U'' and ''V'', each of which has a probability density function, the density of the product ''Y''&amp;nbsp;=&amp;nbsp;''UV'' and quotient ''Y''=''U''/''V'' can be computed by a change of variables.
+
+===Example: Quotient distribution===
+To compute the quotient ''Y''&amp;nbsp;=&amp;nbsp;''U''/''V'' of two independent random variables ''U'' and ''V'', define the following transformation:
+
+:&lt;math&gt;Y=U/V&lt;/math&gt;
+:&lt;math&gt;Z=V&lt;/math&gt;
+
+Then, the joint density ''p''(''y'',''z'') can be computed by a change of variables from ''U,V'' to ''Y,Z'', and ''Y'' can be derived by [[marginalizing out]] ''Z'' from the joint density.
+
+The inverse transformation is
+
+:&lt;math&gt;U = YZ&lt;/math&gt;
+:&lt;math&gt;V = Z&lt;/math&gt;
+
+The [[Jacobian matrix]] &lt;math&gt;J(U,V\mid Y,Z)&lt;/math&gt; of this transformation is
+
+:&lt;math&gt;
+\begin{vmatrix}
+\frac{\partial u}{\partial y} &amp; \frac{\partial u}{\partial z} \\
+\frac{\partial v}{\partial y} &amp; \frac{\partial v}{\partial z}
+\end{vmatrix}
+=
+\begin{vmatrix}
+z &amp; y \\
+0 &amp; 1
+\end{vmatrix}
+= |z| .
+&lt;/math&gt;
+
+Thus:
+
+: &lt;math&gt;p(y,z) = p(u,v)\,J(u,v\mid y,z) = p(u)\,p(v)\,J(u,v\mid y,z) = p_U(yz)\,p_V(z)\, |z| .&lt;/math&gt;
+
+And the distribution of ''Y'' can be computed by [[marginalizing out]] ''Z'':
+
+:&lt;math&gt;p(y) = \int_{-\infty}^\infty p_U(yz)\,p_V(z)\, |z| \, dz&lt;/math&gt;

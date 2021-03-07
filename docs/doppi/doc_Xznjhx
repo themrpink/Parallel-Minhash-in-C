@@ -1,0 +1,242 @@
+===Pawn promotion===
+When a pawn [[promotion (chess)|promotes]], the piece promoted to is indicated at the end of the move notation, for example: '''e8Q''' (promoting to queen). Sometimes an equals sign or parentheses are used: '''e8=Q''' or '''e8(Q)''', but neither format is a [[FIDE]] standard. In [[Portable Game Notation]] (PGN), pawn promotion is always indicated using the equals sign format ('''e8=Q''').
+
+In older books, pawn promotions can be found using a forward slash: '''e8/Q'''.
+
+===&lt;span id=&quot;=&quot;&gt;&lt;/span&gt;Draw offer===
+FIDE specifies draw offers to be recorded by an equals sign with parentheses &quot;(=)&quot; after the move on the {{chessgloss|score sheet}}.{{refn|Article 9.1.2.2 in FIDE Laws of Chess&lt;ref name=&quot;FideLawsOfChess&quot;/&gt;}} This is not usually included in published game scores.
+
+===Castling &lt;span id=&quot;0-0&quot;&gt;&lt;/span&gt;&lt;span id=&quot;0-0-0&quot;&gt;&lt;/span&gt;===
+[[Castling]] is indicated by the special notations '''0-0''' (for {{chessgloss|kingside}} castling) and '''0-0-0''' ({{chessgloss|queenside}} castling). While the FIDE standard {{refn|Appendix C.13 in FIDE Laws of Chess&lt;ref name=&quot;FideLawsOfChess&quot;/&gt;}} is to use the digit zero ('''0-0''' and '''0-0-0'''), [[Portable Game Notation|PGN]] uses the uppercase letter ''O'' ('''O-O''' and '''O-O-O''').&lt;ref&gt;{{citation|last=Burgess|first=Graham|author-link=Graham Burgess|title=The Mammoth Book of Chess|date=2000|orig-year=1997|publisher=Carroll &amp; Graph|isbn=0-7867-0725-9|page=517|quote=The main differences from standard Algebraic are that there is both a dot and a space after each move number, and an upper case &quot;O&quot; is used instead of a zero in the notation for castling.  Presumably these were initially just one individual's personal foible (or error) in the early days of chess on the Internet, but the standard is now established.}}&lt;/ref&gt;
+
+===Check &lt;span id=&quot;+&quot;&gt;&lt;/span&gt;&lt;span id=&quot;++&quot;&gt;&lt;/span&gt;=== 
+A move that places the opponent's [[king (chess)|king]] in [[check (chess)|check]] usually has the symbol &quot;+&quot; appended. Alternatively, sometimes a [[Dagger (typography)|dagger]] (†) or the abbreviation &quot;ch&quot; is used. [[Double check]] is commonly indicated the same as check, but is sometimes represented specially as &quot;dbl ch&quot;, or in older books as &quot;++&quot;. Some publications indicate a [[discovered check]] with an abbreviation such as &quot;dis ch&quot;. The ''Encyclopaedia of Chess Openings'' omits any indication of check.
+
+===Checkmate &lt;span id=&quot;Mate&quot;&gt;&lt;/span&gt;&lt;span id=&quot;mate&quot;&gt;&lt;/span&gt;&lt;span id=&quot;#&quot;&gt;&lt;/span&gt;===
+[[Checkmate]] at the completion of moves is represented by the symbol &quot;#&quot; in standard FIDE notation and PGN. The word ''mate'' is commonly used instead; occasionally a double dagger (‡) or a double plus sign (++) is used.{{cn|date=September 2020}} A checkmate is represented by &quot;≠&quot; (the [[Equal sign#Not equal|not equal sign]]) in the [[List of macOS components#Chess|macOS chess application]]. In [[Russian language|Russian]] and ex-[[USSR]] publications, where captures are indicated by &quot;:&quot;, checkmate can also be represented by &quot;X&quot;, &quot;x&quot;, or &quot;×&quot;.
+
+===End of game &lt;span id=&quot;1–0&quot;&gt;&lt;/span&gt;&lt;span id=&quot;0–1&quot;&gt;&lt;/span&gt;&lt;span id=&quot;½–½&quot;&gt;&lt;/span&gt;&lt;span id=&quot;0—0&quot;&gt;&lt;/span&gt;&lt;span id=&quot;½—0&quot;&gt;&lt;/span&gt;&lt;span id=&quot;0—½&quot;&gt;&lt;/span&gt;&lt;span id=&quot;+/−&quot;&gt;&lt;/span&gt;&lt;span id=&quot;−/+&quot;&gt;&lt;/span&gt;&lt;span id=&quot;−/−&quot;&gt;&lt;/span&gt;===
+The notation '''1–0''' at the completion of moves indicates that White won, '''0–1''' indicates that Black won, and '''½–½''' indicates a [[draw (chess)|draw]]. In case of forfeit, scores 0–0, ½–0, and 0–½ are also possible. If player(s) lost by default, results are +/−, −/+, or −/−.
+
+Often there is no indication regarding how a player won or lost (other than checkmate, see above), so simply 1–0 or 0–1 may be written to show that one player [[Rules of chess#Resigning|resigned]] or lost due to [[time control]] or forfeit. (Similarly, there is more than one way for a game to end in a draw.) Sometimes direct information is given by the words &quot;White resigns&quot; or &quot;Black resigns&quot;, though this is not considered part of the notation but rather a return to the surrounding narrative text.
+
+==Notation for a series of moves==
+A game or series of moves is generally written in one of two ways.
+{{Chess diagram
+| tright
+|
+|rd|  |bd|qd|kd|bd|nd|rd
+|  |pd|pd|pd|  |pd|pd|pd
+|pd|  |nd|  |  |  |  |  
+|  |bl|  |  |pd|  |  |  
+|  |  |  |  |pl|  |  |  
+|  |  |  |  |  |nl|  |  
+|pl|pl|pl|pl|  |pl|pl|pl
+|rl|nl|bl|ql|kl|  |  |rl
+| Position after 1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 
+}}
+*In two columns, as White/Black pairs, preceded by the move number and a period:
+*:'''1. e4 e5'''
+*:'''2. Nf3 Nc6'''
+*:'''3. Bb5 a6'''
+*Horizontally:
+*:'''1. e4 e5 2. Nf3 Nc6 3. Bb5 a6'''
+
+Moves may be interspersed with commentary (''annotations''). When the {{chessgloss|game score}} resumes with a Black move, an [[ellipsis]] (...) fills the position of the White move, for example:
+
+:'''1. e4 e5 2. Nf3'''
+::White attacks the black e-pawn.
+:'''2... Nc6'''
+::Black defends and develops simultaneously.
+:'''3. Bb5'''
+::White plays the [[Ruy Lopez]].
+:'''3... a6'''
+::Black elects [[Ruy Lopez#Morphy Defence: alternatives to Closed Defence|Morphy's Defence]].
+
+==History==
+Descriptive notation was usual in the Middle Ages in Europe. A form of algebraic chess notation that seems to have been borrowed from Muslim chess, however, appeared in Europe in a 12th-century manuscript referred to as MS. Paris Fr. 1173 (PP.). The files run from ''a'' to ''h'', just as they do in the current standard algebraic notation. The ranks, however, are also designated by letters, with the exception of the 8th rank which is distinct because it has no letter. The ranks are lettered in reverse – from the 7th to the 1st: ''k'', ''l'', ''m'', ''n'', ''o'', ''p'', ''q''.&lt;ref name=&quot;:0&quot;&gt;{{Cite book |last=Murray |first=Harold James Ruthven |url=http://archive.org/details/AHistoryOfChessHJRMurray |title=A History of Chess |date=1913 |publisher=Oxford : Clarendon Press |isbn= |location= |pages=469–70 }}&lt;/ref&gt;
+
+Another system of notation using only letters appears in a book of Mediaeval chess, Rechenmeister [[Jacob Köbel]]'s ''Schachzabel Spiel'' of 1520.&lt;ref name=&quot;:0&quot; /&gt;
+
+Algebraic notation is described in 1847 by Howard Staunton in his book ''The Chess-Player's Handbook''. Staunton credits the idea to German authors, and in particular to &quot;[[Aaron Alexandre|Alexandre]], [[Carl Jaenisch|Jaenisch]] and the '[[Handbuch des Schachspiels|Handbuch]].{{' &quot;}}&lt;ref&gt;{{Cite book|last=Staunton|first=Howard|url=https://books.google.com/books?id=tchh5AGWYj4C&amp;q=Staunton+%22Chess-Player%27s+Handbook%22|title=The Chess-Player's Handbook. A Popular and Scientific Introduction to the Game of Chess, Exemplified in Games Actually Played by the Greatest Masters and Illustrated by Numerous Diagrams of Original And Remarkable Positions. Second edition, revised|date=1866|publisher=Bell &amp; Daldy|isbn=|location=London|pages=501|language=en}}&lt;/ref&gt;
+
+&lt;gallery mode=&quot;packed&quot; heights=&quot;230px&quot;&gt;
+File:Ms. Paris 1173.png|Chess diagram found in a French manuscript dated 1173 
+File:Jacob Köbel 1520.png|Chess diagram from [[Jacob Köbel]]'s 1520 German book about Mediaeval chess, ''Schachzabel Spiel''
+File:Chess diagram from Howard Staunton's &quot;The Chess-Player's Handbook&quot; (1947).png|Chess diagram showing algebraic notation in Howard Staunton's ''The Chess-Player's Handbook''
+&lt;/gallery&gt;
+
+==Piece names in various languages==
+The table contains names for all the pieces as well as the words for ''chess'', ''check'', and ''checkmate'' in several languages.&lt;ref&gt;Sources for this section include Wikipedia articles in various languages. Note that the symbol for pawn is not used in algebraic notation. [https://web.archive.org/web/20091027093550/http://www.geocities.com/TimesSquare/Metro/9154/nap-pieces.htm Archived] 2009-10-25.&lt;/ref&gt; NB: ''alfil''  is a chess-specific [[loanword]] from Arabic which has lost its original meaning of &quot;elephant&quot; in the European languages that use it for the piece called ''bishop'' in English.
+
+{{chess names}}
+
+==Similar notations==
+Besides the FIDE standard (or short) algebraic notation ('''SAN''') already described, several similar systems have been used.
+
+===Figurine algebraic notation===
+{{Contains special characters
+| section    = section
+| special    = chess piece figurines
+| fix        = Help:Multilingual support
+}}
+'''Figurine algebraic notation''' (or '''FAN''') is a widely used variation of algebraic notation which substitutes a [[Chess symbols in Unicode|piece symbol]] for the letter representing a piece, for example: '''♞c6''' in place of '''Nc6'''. (Pawns are unlabeled, just like in regular algebraic notation.) This enables moves to be read independent of language.
+
+The Unicode [[Miscellaneous Symbols]] set includes all the symbols necessary for FAN. In order to display or print these symbols, one has to have one or more [[font]]s with good [[Unicode]] support installed on the computer, that the Web page, or word processor document, etc., uses.&lt;ref&gt;{{cite web |url=http://www.alanwood.net/unicode/miscellaneous_symbols.html |title=Test for Unicode support in Web browsers}}&lt;/ref&gt;
+
+===Long algebraic notation===
+Some computer programs (and people) use a variant of algebraic chess notation termed ''long algebraic notation'' or ''fully expanded algebraic notation''. In long algebraic notation, moves specify both the starting and ending squares, for example: '''e2e4'''. Sometimes these are separated by a hyphen, for example:  '''Nb1-c3'''. Captures are still indicated using &quot;x&quot;: '''Rd3xd7'''.
+
+The long notation takes more space and thus is not as commonly used; however, it has the advantage of clarity, particularly for less-skilled players or players learning the game. Some books using primarily short algebraic notation use the long notation instead of the disambiguation forms described earlier.
+
+A form of long algebraic notation (without piece names) is also notably used by the [[Universal Chess Interface|Universal Chess Interface (UCI)]] standard, which is a common way for graphical chess programs to communicate with chess engines (e.g., for [[Artificial intelligence|AI]]).
+
+===ICCF numeric notation===
+In international [[correspondence chess]] the use of algebraic notation may cause confusion, since different languages employ different names (and therefore different letters) for the pieces; hence the standard for transmitting moves in this form of chess is [[ICCF numeric notation]]. In recent years, the majority of correspondence games have been played on on-line servers rather than by email or post, leading to a decline in the use of ICCF numeric notation.
+
+==PGN for computer storage==
+Chess games are often stored in computer files using [[Portable Game Notation]] (PGN),&lt;ref&gt;[http://www.saremba.de/chessgml/standards/pgn/pgn-complete.htm Standard: Portable Game Notation Specification and Implementation Guide]&lt;/ref&gt;
+which uses algebraic chess notation as well as additional markings to codify a game. As mentioned, PGN requires an uppercase letter ''O'' to represent castling (e.g. '''O-O'''), while the FIDE Handbook uses the digit zero ('''0-0''').
+
+==Annotation symbols==
+{{main article|Chess annotation symbols}}
+Though not technically a part of algebraic notation, the following are some symbols commonly used by annotators, for example in publications ''[[Chess Informant]]'' and ''[[Encyclopaedia of Chess Openings]]'', to give evaluative comment on a move or position.
+
+''On moves:''
+* ! {{pad|0.5em}}an excellent move
+* !! {{pad|0.5em}}a particularly good—and usually surprising—move
+* ? {{pad|0.5em}}a bad move; a mistake
+* ?? {{pad|0.5em}}a [[Blunder (chess)|blunder]]
+* !? {{pad|0.5em}}an interesting move that may not be best
+* ?! {{pad|0.5em}}a dubious move or move that may turn out to be bad
+* {{big|⌓}} {{pad|0.5em}}a better move than the one played
+* {{big|□}} {{pad|0.5em}}the only reasonable move, or the only move available
+* TN (or N) {{pad|0.5em}}a {{chessgloss|theoretical novelty}}
+
+''On positions:''
+* = {{pad|0.5em}}{{chessgloss|equality|equal chances}} for both players
+* +/= (or ⩲) {{pad|0.5em}}White has a slight plus
+* =/+ (or ⩱) {{pad|0.5em}}Black has a slight plus
+* +/− (or ±) {{pad|0.5em}}White has a clear plus
+* −/+ (or ∓) {{pad|0.5em}}Black has a clear plus
+* +− {{pad|0.5em}}White has a winning advantage
+* −+ {{pad|0.5em}}Black has a winning advantage
+* ∞ {{pad|0.5em}}unclear whether either side has an advantage
+* =/∞ {{pad|0.5em}}whoever is down in {{chessgloss|material}} has [[Compensation (chess)|compensation]] for it
+
+The symbol chosen is simply appended to the end of the move notation, for example: [[Englund Gambit#Soller Gambit|1.d4 e5?! 2.dxe5 f6 3.e4! Nc6 4.Bc4+/−]]
+
+== See also ==
+*[[Chess notation]]
+
+==References==
+{{reflist|30em}}
+
+==External links==
+{{wikibooks|Chess|Notating The Game}}
+{{wiktionary|algebraic notation|Appendix:Algebraic notation}}
+*[https://handbook.fide.com/chapter/E012018 FIDE Laws of Chess] (see Appendix C. Algebraic notation)
+*[https://web.archive.org/web/20100630072825/http://www.humanbenchmark.com/tests/chess/notation/ Algebraic Chess Notation Exercise]
+
+{{chess}}
+
+[[Category:Chess notation]]
+
+[[bg:Шахматна нотация#Алгебрична шахматна нотация]]</text>
+      <sha1>034o8gu770d3ywqzghy6cmdmuoltjsc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Milk bar</title>
+    <ns>0</ns>
+    <id>48310</id>
+    <revision>
+      <id>988095065</id>
+      <parentid>987902565</parentid>
+      <timestamp>2020-11-11T01:20:48Z</timestamp>
+      <contributor>
+        <username>Ser Amantio di Nicolao</username>
+        <id>753665</id>
+      </contributor>
+      <comment>Filled in 1 bare reference(s) with reFill 2</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6226" xml:space="preserve">{{Other uses}}
+{{Refimprove|date=January 2007}}
+[[File:Milk Bar, Miller Street.jpg|thumb|300px|right|A milk bar in the [[Melbourne]] suburb of [[Fitzroy North, Victoria|Fitzroy North]]]]
+
+In [[Australia]], a '''milk bar''' is a [[suburban]] local [[general store]]. Similar terms include [[tuck shop]]s, [[delicatessen]]s or &quot;delis&quot;, and [[corner shop|corner shops or corner stores]] (although by definition these are different establishments). Milk bars are traditionally a place where people pick up newspapers, and fast-food items like fish and chips and hamburgers, and where people can purchase [[milkshake]]s and snacks. They are essentially a smaller scale suburban form of the [[convenience store]] but are more likely to be &quot;Mum and Pop&quot; small business and not larger franchised operations.
+
+==History==
+[[File:Central Station milk bar, 1946 (4009463159).jpg|thumb|[[Central Railway Station, Sydney]] milk bar, 1946]] 
+The first business using the name &quot;milk bar&quot; was started in India in 1930 by an Englishman, James Meadow Charles when he opened &quot;Lake View Milk Bar&quot; at [[Bangalore]]. The concept soon spread to the [[United Kingdom]], where it was encouraged by the [[Temperance Society]] as a morally acceptable alternative to the pub, and over 1,000 milk bars had opened nationally by the end of 1936. Milk bars were known in the United States at least as early as 1940 as evidenced by contemporary radio recordings.{{citation needed|date=October 2020}}
+
+By the late 1940s, milk bars had evolved to not only sell [[groceries]], but also be places where young people could buy ready-made food and [[non-alcoholic drink]]s, and could socialise. Milk bars often used to include [[jukebox]]es and [[pinball machine]]s (later upgraded to [[video game]]s), with tables and chairs to encourage patrons to linger and spend more money.
+
+The milk bar as a social venue was gradually replaced by [[fast food]] franchises, such as [[McDonald's]], and [[shopping mall]]s. Much of the elaborate decor has disappeared from the remaining milk bars. They are still found in many areas, often serving as [[convenience stores]].
+
+==Modern era==
+===Australia===
+Milk bars in Australia today almost universally sell [[ice cream]]s, [[candy|lollies]], [[chocolate]] bars, [[soft drink]]s, [[newspaper]]s, [[bread]], [[cigarettes]] and occasionally [[fast food]]. Most generally serve milk (in cartons or bottles) or other dairy related products. Although there are far fewer milk bars than there were during the 1970s and 80s due to changing shopping habits, most people living in suburban areas still have a milk bar within walking distance or a short drive of their home.
+
+===United Kingdom===
+In the United Kingdom, the National Milk Bar [[Franchising|franchise]] was founded by [[Robert William Griffiths]] as an ordinary café/restaurant chain which is related to the original milk bars in name only.&lt;ref&gt;{{cite web | title=A tribute to National Milk Bars | url=http://www.theresposh.com/NMB/ | accessdate=2007-06-27}}&lt;/ref&gt; Once numbering around 20 outlets, which were located in Wales and near the [[England-Wales border|Welsh border in England]], now only one remains.&lt;ref&gt;[https://www.bbc.co.uk/news/uk-wales-mid-wales-12038590 BBC News] One shop left as Aberystwyth National Milk Bar closes (Dec 2010)&lt;/ref&gt; In the UK, [[corner shop]]s serve a similar function to milk bars in modern Australia, providing everyday groceries, sweets, newspapers and such.
+
+There is a campaign in the [[United Kingdom|UK]] to encourage school children to consume more [[dairy product]]s, by installing 'milk bars' in schools{{cn|date=April 2020}}. The idea is that if the dairy products are attractively presented and properly stored, the children will be more willing to buy them. The organisers behind the project work to develop links with school caterers, so that the handling of milk and dairy produce can be improved, and they promote milk consumption and encourage milk drinking to become a habit that will be carried into adulthood. The milk bar project has been extremely successful in [[Scotland]] for 18 years, and it is currently being extended across England and [[Wales]]{{cn|date=April 2020}}.
+
+[[File:DarlingIslandJunction.jpg|thumb|right|Milk Bar film-set from [[Strictly Ballroom]] at former Darling Island Junction rail yard, [[Pyrmont, New South Wales|Pyrmont]].]]
+
+==Similar establishments==
+A &quot;dairy bar&quot; is the term for a similar restaurant/store common in the [[Northeastern United States]], especially [[Upstate New York]], which is a large producer of dairy products. A &quot;malt shop&quot; (named for the ingredient in a malted milkshake) is very similar to a milk or dairy bar, serving milkshakes and soft drinks as well as limited foods, such as hamburgers and sandwiches. Although there are still a few around, these have largely fallen out of fashion in favor of fast food.&lt;ref&gt;{{Cite web|url=http://www.wisegeek.com/what-is-a-malt-shop.htm|title=What is a Malt Shop? (with picture)|website=wiseGEEK}}&lt;/ref&gt;
+
+The term [[dairy (store)|dairy]] is also used for these establishments in some places, particularly in [[New Zealand]].&lt;ref&gt;{{Cite web|last=|first=|date=|title=The Kiwi Dairy {{!}} New Zealand|url=https://www.newzealand.com/us/article/the-kiwi-dairy/|url-status=dead|archive-url=https://web.archive.org/web/20140108192416/https://www.newzealand.com/us/article/the-kiwi-dairy/|archive-date=January 8, 2014|access-date=2018-06-07|website=www.newzealand.com|language=en-us}}&lt;/ref&gt;
+
+The term [[bar mleczny]] (milk bar) in [[Poland]] is used to describe popular and cheap cafeterias from the [[communist]] era that still exist today. They provide a wide range of government-subsidised meals. In 2011, however, the Polish Government began to withdraw their subsidies, and this has led to protests by people opposed to their closure.&lt;ref&gt;{{cite news| url=http://news.bbc.co.uk/2/hi/programmes/fast_track/9714943.stm | work=BBC News | title=Eating cheap - Polish style | date=2012-04-25}}&lt;/ref&gt;
+
+==See also==
+* [[Milkman]]
+*[[Newsagent's shop|Newsagency]]
+
+==References==
+{{commons}}
+&lt;references /&gt;
+
+{{DEFAULTSORT:Milk Bar}}
+[[Category:Food retailing]]
+[[Category:Retailing in Australia]]
+[[Category:Restaurants by type]]</text>
+      <sha1>pqxi9z7tcfhw4zusp6i3amfr4sy3fup</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Iguazu Falls</title>
+    <ns>0</ns>
+    <id>48312</id>
+    <revision>
+      <id>991398313</id>
+      <parentid>988173421</parentid>
+      <timestamp>2020-11-29T21:16:44Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 17 templates: del empty params (1×); cvt lang vals (3×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="24246" xml:space="preserve">{{Use dmy dates|date=March 2020}}
+{{Infobox waterfall
+| name = Iguazú Falls
+| image = Cataratas.jpg
+| image_size     = 300px
+| caption = 
+| location = [[Argentina]]: [[Misiones Province]]&lt;br /&gt;[[Brazil]]: [[Paraná (state)|Paraná State]]
+| coords = {{coord|25|41|12|S|54|26|41|W|type:waterbody_region:BR_dim:5000|display=inline,title}}
+| watercourse = [[Iguazu River]]
+
+| height_longest = {{convert|82|m|ft|0}}&lt;ref name=&quot;Britannica&quot;/&gt;
+| average_width = 
+| number_drops = 275&lt;ref name=&quot;Britannica&quot;/&gt;
+| average_flow = {{convert|1756|m3/s|cuft/s|-1|abbr=on}}&lt;ref name=&quot;Britannica&quot;/&gt;
+}}
+'''Iguazú Falls''' or '''Iguaçu Falls''' ({{lang-es|Cataratas del Iguazú|links=no}} {{IPA-es|kataˈɾatas ðel iɣwaˈsu|}}; {{lang-gn|Chororõ Yguasu}} {{IPA-gn|ɕoɾo'ɾõ ɨɣʷa'su|}}; {{lang-pt|Cataratas do Iguaçu}} {{IPA-pt|kataˈɾatɐs du iɡwaˈsu|}}) are [[waterfall]]s of the [[Iguazu River]] on the [[Argentina–Brazil border|border]] of the [[Provinces of Argentina|Argentine province]] of [[Misiones Province|Misiones]] and the [[Brazil]]ian state of [[Paraná (state)|Paraná]]. Together, they make up the largest waterfall in the world.&lt;ref&gt;{{citation |author=Dominic Couzens|url=https://books.google.com/books?id=gJVLXG-LOcMC&amp;pg=PA228|title=Top 100 Birding Sites of the World|date=2008|publisher=University of California Press|isbn=978-0-52-025932-4|p=228}}&lt;/ref&gt; The falls divide the river into the upper and lower Iguazu. The Iguazu River rises near the heart of the city of [[Curitiba]]. For most of its course, the river flows through [[Brazil]]; however, most of the falls are on the Argentine side. Below its confluence with the San Antonio River, the Iguazu River forms the border between [[Argentina]] and Brazil.

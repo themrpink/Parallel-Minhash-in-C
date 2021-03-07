@@ -1,0 +1,210 @@
+In [[game theory]], the '''Nash equilibrium''', named after the mathematician [[John Forbes Nash Jr.]], is a proposed [[solution concept|solution]] of a [[non-cooperative game]] involving two or more players in which each player is assumed to know the equilibrium strategies of the other players, and no player has anything to gain by changing only their own strategy.&lt;ref name=&quot;Osborne&quot;&gt;{{Cite book |title=A Course in Game Theory |last=Osborne |first=Martin J. |last2=Rubinstein |first2=Ariel |date=12 Jul 1994 |publisher=MIT |isbn=9780262150415 |location=Cambridge, MA |page=14 |author-link2=Ariel Rubinstein}}&lt;/ref&gt;The utilization of Nash Equilibriums, and its principals date data back to the time of Cournot, a prominent Philosopher and mathematician who pioneered the understanding of economic equilibria.  &lt;ref&gt;Kreps D.M. (1987) Nash Equilibrium. In: Palgrave Macmillan (eds) The New Palgrave Dictionary of Economics. Palgrave Macmillan, London. &lt;/ref&gt;
+
+If each player has chosen a strategy—an action plan choosing its own action based on what it has seen happen so far in the game—and no player can increase its own expected payoff by changing its strategy while the other players keep theirs unchanged, then the current set of strategy choices constitutes a Nash equilibrium.
+
+If two players [[Alice and Bob]] choose strategies A and B, (A, B) is a Nash equilibrium if Alice has no other strategy available that does better than A at maximizing her payoff in response to Bob choosing B, and Bob has no other strategy available that does better than B at maximizing his payoff in response to Alice choosing A. In a game in which Carol and Dan are also players, (A, B, C, D) is a Nash equilibrium if A is Alice's best response to (B, C, D), B is Bob's best response to (A, C, D), and so forth.
+
+Nash showed that there is a Nash equilibrium for every finite game: see further the article on [[Strategy (game theory)|strategy]].
+
+==Applications==
+Game theorists use Nash equilibrium to analyze the outcome of the [[strategy|strategic interaction]] of several [[decision making|decision makers]]. In a strategic interaction, the outcome for each decision-maker depends on the decisions of the others as well as their own. The simple insight underlying Nash's idea is that one cannot predict the choices of multiple decision makers if one analyzes those decisions in isolation. Instead, one must ask what each player would do taking into account what she/he expects the others to do. Nash equilibrium requires that their choices be consistent: no player wishes to undo their decision given what the others are deciding. 
+
+The concept has been used to analyze hostile situations like wars and arms races&lt;ref&gt;Schelling, Thomas, ''[https://books.google.com/books?id=7RkL4Z8Yg5AC&amp;dq=thoma+schelling+strategy+of+conflict&amp;printsec=frontcover&amp;source=bn&amp;hl=en&amp;ei=xuSjSbK-I4-O_gai_ticBQ&amp;sa=X&amp;oi=book_result&amp;resnum=4&amp;ct=result#PPP13,M1 The Strategy of Conflict]'', copyright 1960, 1980, Harvard University Press, {{isbn|0-674-84031-3}}.&lt;/ref&gt; (see [[prisoner's dilemma]]), and also how conflict may be mitigated by repeated interaction (see [[tit-for-tat]]). It has also been used to study to what extent people with different preferences can cooperate (see [[Battle of the sexes (game theory)|battle of the sexes]]), and whether they will take risks to achieve a cooperative outcome (see [[stag hunt]]). It has been used to study the adoption of [[technical standard]]s,{{citation needed|date=June 2012}} and also the occurrence of [[bank run]]s and [[Currency crisis|currency crises]] (see [[coordination game]]). Other applications include traffic flow (see [[Wardrop's principle]]), how to organize auctions (see [[auction theory]]), the outcome of efforts exerted by multiple parties in the education process,&lt;ref&gt;{{Cite journal | doi = 10.1162/REST_a_00013| title = Must Try Harder: Evaluating the Role of Effort in Educational Attainment| journal = Review of Economics and Statistics| volume = 92| issue = 3| pages = 577| year = 2010| last1 = De Fraja | first1 = G. | last2 = Oliveira | first2 = T. | last3 = Zanchi | first3 = L. }}&lt;/ref&gt; regulatory legislation such as environmental regulations (see [[tragedy of the commons]]),&lt;ref&gt;{{Cite journal | doi = 10.1111/j.1467-9248.1996.tb00338.x| title = Game Theory and the Politics of Global Warming: The State of Play and Beyond| journal = Political Studies| volume = 44| issue = 5| pages = 850–871| year = 1996| last1 = Ward | first1 = H. }},&lt;/ref&gt; natural resource management,&lt;ref&gt;{{Cite journal | doi = 10.1093/icesjms/fsx062| title = Risks and benefits of catching pretty good yield in multispecies mixed fisheries |
+ journal = ICES Journal of Marine Science | volume = 74 | issue = 8 | pages = 2097–2106 | year = 2017| last1 = Thorpe | first1 = Robert B. | last2 = Jennings | first2 = Simon | last3 = Dolder | first3 = Paul J. | doi-access = free }},&lt;/ref&gt; analysing strategies in marketing,&lt;ref&gt;{{Cite web|title = Marketing Lessons from Dr. Nash - Andrew Frank|url = http://blogs.gartner.com/andrew_frank/2015/05/25/marketing-lessons-from-dr-nash/|access-date = 2015-08-30|date = 2015-05-25}}&lt;/ref&gt;  even penalty kicks in [[association football|football]] (see [[matching pennies]]),&lt;ref&gt;{{Cite journal | doi = 10.1257/00028280260344678| title = Testing Mixed-Strategy Equilibria when Players Are Heterogeneous: The Case of Penalty Kicks in Soccer| journal = American Economic Review| volume = 92| issue = 4| pages = 1138| year = 2002| last1 = Chiappori | first1 = P. -A. | last2 = Levitt | first2 = S. | last3 = Groseclose | first3 = T. | url = http://pricetheory.uchicago.edu/levitt/Papers/ChiapporiGrosecloseLevitt2002.pdf| citeseerx = 10.1.1.178.1646}}&lt;/ref&gt; energy systems, transportation systems, evacuation problems&lt;ref&gt;{{Cite journal|last=Djehiche|first=B.|last2=Tcheukam|first2=A.|last3=Tembine|first3=H.|date=2017|title=A Mean-Field Game of Evacuation in Multilevel Building|journal=IEEE Transactions on Automatic Control|volume=62|issue=10|pages=5154–5169|doi=10.1109/TAC.2017.2679487|issn=0018-9286}}&lt;/ref&gt; and wireless communications.&lt;ref&gt;{{Cite journal|last=Djehiche|first=Boualem|last2=Tcheukam|first2=Alain|last3=Tembine|first3=Hamidou|date=2017-09-27|title=Mean-Field-Type Games in Engineering|journal= AIMS Electronics and Electrical Engineering|volume=1|pages=18–73|language=en|doi=10.3934/ElectrEng.2017.1.18|arxiv=1605.03281}}&lt;/ref&gt;
+
+==History==
+Nash equilibrium is named after American mathematician [[John Forbes Nash, Jr.|John Forbes Nash, Jr]]. The same idea was used in a particular application in 1838 by [[Antoine Augustin Cournot]] in his theory of [[oligopoly]].&lt;ref&gt;Cournot A. (1838) Researches on the Mathematical Principles of the Theory of Wealth&lt;/ref&gt; In Cournot's theory, each of several firms choose how much output to produce to maximize its profit. The best output for one firm depends on the outputs of the others. A [[Cournot equilibrium]] occurs when each firm's output maximizes its profits given the output of the other firms,  which is a [[pure strategy|pure-strategy]] Nash equilibrium. Cournot also introduced the concept of [[best response]] dynamics in his analysis of the stability of equilibrium. Cournot did not use the idea in any other applications, however, or define it generally.
+
+The modern game-theoretic concept of Nash equilibrium is instead defined in terms of [[mixed strategy|mixed strategies]], where players choose a probability distribution over possible actions (rather than choosing a deterministic action to be played with certainty). The concept of a mixed-strategy equilibrium was introduced by [[John von Neumann]] and [[Oskar Morgenstern]] in their 1944 book ''The Theory of Games and Economic Behavior''. However, their analysis was restricted to the special case of [[zero-sum]] games. They showed that a mixed-strategy Nash equilibrium will exist for any zero-sum game with a finite set of actions.&lt;ref&gt;J. Von Neumann, O. Morgenstern, ''[https://archive.org/stream/theoryofgamesand030098mbp#page/n5/mode/2up Theory of Games and Economic Behavior]'', copyright 1944, 1953, Princeton University Press&lt;/ref&gt; The contribution of Nash in his 1951 article &quot;Non-Cooperative Games&quot; was to define a mixed-strategy Nash equilibrium for any game with a finite set of actions and prove that at least one (mixed-strategy) Nash equilibrium must exist in such a game. The key to Nash's ability to prove existence far more generally than von Neumann lay in his definition of equilibrium. According to Nash, &quot;an equilibrium point is an n-tuple such that each player's mixed strategy maximizes his payoff if the strategies of the others are held fixed. Thus each player's strategy is optimal against those of the others.&quot; Just putting the problem in this framework allowed Nash to employ the [[Kakutani fixed-point theorem]] in his 1950 paper, and a variant upon it in his 1951 paper used the [[Brouwer fixed-point theorem]] to prove that there had to exist at least one mixed strategy profile that mapped back into itself for finite-player (not necessarily zero-sum) games; namely, a strategy profile that did not call for a shift in strategies that could improve payoffs.&lt;ref&gt;{{Cite journal |last=Carmona |first=Guilherme |first2=Konrad |last2=Podczeck |year=2009|title=On the Existence of Pure Strategy Nash Equilibria in Large Games |ssrn=882466 |journal=[[Journal of Economic Theory]] |volume=144 |issue=3 |pages=1300–1319 |doi=10.1016/j.jet.2008.11.009 |url=http://fesrvsd.fe.unl.pt/WPFEUNL/WP2008/wp531.pdf }}&lt;/ref&gt;
+
+Since the development of the Nash equilibrium concept, game theorists have discovered that it makes misleading predictions (or fails to make a unique prediction) in certain circumstances. They have proposed many related [[solution concept]]s (also called 'refinements' of Nash equilibria) designed to overcome perceived flaws in the Nash concept. One particularly important issue is that some Nash equilibria may be based on threats that are not '[[credibility|credible]]'. In 1965 [[Reinhard Selten]] proposed [[subgame perfect equilibrium]] as a refinement that eliminates equilibria which depend on [[non-credible threats]]. Other extensions of the Nash equilibrium concept have addressed what happens if a game is [[Repeated game|repeated]], or what happens if a game is played in the [[Global game|absence of complete information]]. However, subsequent refinements and extensions of Nash equilibrium share the main insight on which Nash's concept rests: the equilibrium is a set of strategies such that each player's strategy is optimal given the choices of the others.
+
+==Definitions==
+
+===Nash Equilibrium===
+Informally, a strategy profile is a Nash equilibrium if no player can do better by unilaterally changing their strategy. To see what this means, imagine that each player is told the strategies of the others. Suppose then that each player asks themselves: &quot;Knowing the strategies of the other players, and treating the strategies of the other players as set in stone, can I benefit by changing my strategy?&quot;
+
+If any player could answer &quot;Yes&quot;, then that set of strategies is not a Nash equilibrium. But if every player prefers not to switch (or is indifferent between switching and not) then the strategy profile is a Nash equilibrium. Thus, each strategy in a Nash equilibrium is a [[best response]] to all other strategies in that equilibrium.&lt;ref name=&quot;preliminaries&quot;&gt;{{cite web|last=von Ahn|first=Luis|title=Preliminaries of Game Theory|url=http://www.scienceoftheweb.org/15-396/lectures_f11/lecture09.pdf|url-status=dead|archive-url=https://web.archive.org/web/20111018035629if_/http://scienceoftheweb.org/15-396/lectures_f11/lecture09.pdf|archive-date=2011-10-18|access-date=2008-11-07}}&lt;/ref&gt;
+
+The Nash equilibrium may sometimes appear non-rational in a third-person perspective. This is because a Nash equilibrium is not necessarily [[Pareto efficiency|Pareto optimal]].
+
+The Nash equilibrium may also have non-rational consequences in [[sequential game]]s because players may &quot;threaten&quot; each other with non-rational moves. For such games the [[subgame perfect Nash equilibrium]] may be more meaningful as a tool of analysis.
+
+=== Strict/Weak Equilibrium ===
+Suppose that in the Nash equilibrium, each player asks themselves: &quot;Knowing the strategies of the other players, and treating the strategies of the other players as set in stone, would I suffer a loss by changing my strategy?&quot;
+
+If every player's answer is &quot;Yes&quot;, then the equilibrium is classified as a ''strict Nash equilibrium''.&lt;ref&gt;{{Cite web|url=http://hoylab.cornell.edu/nash.html|title=Nash Equilibria|website=hoylab.cornell.edu|access-date=2019-12-08}}&lt;/ref&gt; 
+
+If instead, for some player, there is exact equality between the strategy in Nash equilibrium and some other strategy that gives exactly the same payout (i.e. this player is indifferent between switching and not), then the equilibrium is classified as a ''weak Nash equilibrium''.
+
+A game can have a [[Pure strategy|pure-strategy]] or a [[Mixed strategy|mixed-strategy]] Nash equilibrium. (In the latter a pure strategy is chosen [[stochastic]]ally with a fixed [[probability]]).
+
+===Nash's Existence Theorem===
+Nash proved that if [[strategy (game theory)#Pure and mixed strategies|mixed strategies]] (where a player chooses probabilities of using various pure strategies) are allowed, then every game with a finite number of players in which each player can choose from finitely many pure strategies has at least one Nash equilibrium, which might be a pure strategy for each player or might be a probability distribution over strategies for each player.
+
+Nash equilibria need not exist if the set of choices is infinite and non-compact. An example is a game where two players simultaneously name a number and the player naming the larger number wins. Another example is where each of two players chooses a real number strictly less than 5 and the winner is whoever has the biggest number; no biggest number strictly less than 5 exists (if the number could equal 5, the Nash equilibrium would have both players choosing 5 and tying the game). However, a Nash equilibrium exists if the set of choices is [[compact space|compact]] with each player's payoff continuous in the strategies of all the players.&lt;ref&gt;MIT OpenCourseWare. 6.254: Game Theory with Engineering Applications, Spring 2010. [https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-254-game-theory-with-engineering-applications-spring-2010/lecture-notes/MIT6_254S10_lec06.pdf Lecture 6: Continuous and Discontinuous Games].&lt;/ref&gt;
+
+== Examples ==
+
+=== Coordination game ===
+{{Main|Coordination game}}
+
+{| align=right border=&quot;1&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;margin: 1em 1em 1em 1em; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse; font-size: 95%;&quot; class=&quot;wikitable&quot;
+|+ align=bottom |''A sample coordination game showing relative payoff for player 1 (row) / player 2 (column) with each combination
+! {{diagonal split header|&lt;br /&gt;Player 1|Player 2}}
+!style=&quot;width: 90px&quot;|Player 2 adopts strategy A
+!style=&quot;width: 90px&quot;|Player 2 adopts strategy B
+|-
+!style=&quot;width: 90px&quot;|Player 1 adopts strategy A
+|{{diagonal split header|''4'' | ''4''|transparent}}
+|{{diagonal split header|''1'' | ''3''|transparent}}
+|-
+!Player 1 adopts strategy B
+|{{diagonal split header|''3'' | ''1''|transparent}}
+|{{diagonal split header|''2'' | ''2''|transparent}}
+|-
+|}
+
+The ''coordination game'' is a classic ([[symmetric game|symmetric]]) two player, two [[strategy (game theory)|strategy]] game, with an example [[payoff matrix]] shown to the right. The players should thus coordinate, both adopting strategy A, to receive the highest payoff; i.e., 4. If both players chose strategy B though, there is still a Nash equilibrium. Although each player is awarded less than optimal payoff, neither player has incentive to change strategy due to a reduction in the immediate payoff (from 2 to 1).
+
+A famous example of this type of game was called the [[stag hunt]]; in the game two players may choose to hunt a stag or a rabbit, the former providing more meat (4 utility units) than the latter (1 utility unit). The caveat is that the stag must be cooperatively hunted, so if one player attempts to hunt the stag, while the other hunts the rabbit, she/he will fail in hunting (0 utility units), whereas if they both hunt it they will split the payoff (2, 2). The game hence exhibits two equilibria at (stag, stag) and (rabbit, rabbit) and hence the players' optimal strategy depend on their expectation on what the other player may do. If one hunter trusts that the other will hunt the stag, they should hunt the stag; however if they suspect that the other will hunt the rabbit, they should hunt the rabbit. This game was used as an analogy for social cooperation, since much of the benefit that people gain in society depends upon people cooperating and implicitly trusting one another to act in a manner corresponding with cooperation.
+
+Another example of a coordination game is the setting where two technologies are available to two firms with comparable products, and they have to elect a strategy to become the market standard. If both firms agree on the chosen technology, high sales are expected for both firms. If the firms do not agree on the standard technology, few sales result. Both strategies are Nash equilibria of the game.
+
+Driving on a road against an oncoming car, and having to choose either to swerve on the left or to swerve on the right of the road, is also a coordination game. For example, with payoffs 10 meaning no crash and 0 meaning a crash, the coordination game can be defined with the following payoff matrix:
+
+{| align=left border=&quot;1&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;margin: 1em 1em 1em 1em; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse; font-size: 95%&quot; class=&quot;wikitable&quot;
+|+ align=bottom |''The driving game''
+! {{diagonal split header|Driver 1 | Driver 2}}
+!Drive on the Left
+!Drive on the Right
+|-
+!Drive on the Left
+|{{diagonal split header|10| 10|transparent}}
+|{{diagonal split header|0| 0|transparent}}
+|-
+!Drive on the Right
+|{{diagonal split header|0| 0|transparent}}
+|{{diagonal split header|10| 10|transparent}}
+|-
+|}
+
+In this case there are two pure-strategy Nash equilibria, when both choose to either drive on the left or on the right. If we admit [[mixed strategy|mixed strategies]] (where a pure strategy is chosen at random, subject to some fixed probability), then there are three Nash equilibria for the same case: two we have seen from the pure-strategy form, where the probabilities are (0%, 100%) for player one, (0%, 100%) for player two; and (100%, 0%) for player one, (100%, 0%) for player two respectively. We add another where the probabilities for each player are (50%, 50%).
+
+{{Clear left}}
+
+=== Prisoner's dilemma ===
+{{Main|Prisoner's dilemma}}
+{| align=right border=&quot;1&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;margin: 1em 1em 1em 1em; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse; font-size: 95%; text-align:center&quot; class=&quot;wikitable&quot;
+|+ align=bottom | ''Example PD payoff matrix
+! {{diagonal split header|Prisoner 1 | Prisoner 2}}
+!scope=&quot;col&quot; style=&quot;color: #900&quot;|Cooperate (with other)
+!scope=&quot;col&quot; style=&quot;color: #900&quot;|Defect (betray other)
+|-
+!scope=&quot;row&quot; style=&quot;color: #009&quot;|Cooperate (with other)
+|&lt;span style=&quot;color: #009&quot;&gt;−1&lt;/span&gt;, &lt;span style=&quot;color: #900&quot;&gt;−1&lt;/span&gt;
+|&lt;span style=&quot;color: #009&quot;&gt;−3&lt;/span&gt;, &lt;span style=&quot;color: #900&quot;&gt;0&lt;/span&gt;
+|-
+!scope=&quot;row&quot; style=&quot;color: #009&quot;|Defect (betray other)
+|&lt;span style=&quot;color: #009&quot;&gt;0&lt;/span&gt;, &lt;span style=&quot;color: #900&quot;&gt;−3&lt;/span&gt;
+|&lt;span style=&quot;color: #009&quot;&gt;−2&lt;/span&gt;, &lt;span style=&quot;color: #900&quot;&gt;−2&lt;/span&gt;
+|}
+Imagine two prisoners held in separate cells, interrogated simultaneously, and offered deals (lighter jail sentences) for betraying their fellow criminal. They can &quot;cooperate&quot; (with the other prisoner) by not snitching, or &quot;defect&quot; by betraying the other. However, there is a catch; if both players defect, then they both serve a longer sentence than if neither said anything. Lower jail sentences are interpreted as higher payoffs (shown in the table).
+
+The prisoner's dilemma has a similar matrix as depicted for the coordination game, but the maximum reward for each player (in this case, a minimum loss of 0) is obtained only when the players' decisions are different. Each player improves their own situation by switching from &quot;cooperating&quot; to &quot;defecting&quot;, given knowledge that the other player's best decision is to &quot;defect&quot;. The prisoner's dilemma thus has a single Nash equilibrium: both players choosing to defect.
+
+What has long made this an interesting case to study is the fact that this scenario is globally inferior to &quot;both cooperating&quot;. That is, both players would be better off if they both chose to &quot;cooperate&quot; instead of both choosing to defect. However, each player could improve their own situation by breaking the mutual cooperation, no matter how the other player possibly (or certainly) changes their decision.
+
+=== Network traffic ===
+{{See also|Braess's paradox}}
+[[File:Nash graph equilibrium.png|thumb|250px|Sample network graph. Values on edges are the travel time experienced by a 'car' traveling down that edge. {{mvar|x}} is the number of cars traveling via that edge.]]
+An application of Nash equilibria is in determining the expected flow of traffic in a network. Consider the graph on the right. If we assume that there are {{mvar|x}} &quot;cars&quot; traveling from A to D, what is the expected distribution of traffic in the network?
+
+This situation can be modeled as a &quot;game&quot; where every traveler has a choice of 3 strategies, where each strategy is a route from A to D (either {{math|ABD}}, {{math|ABCD}}, or {{math|ACD}}). The &quot;payoff&quot; of each strategy is the travel time of each route. In the graph on the right, a car travelling via {{math|ABD}} experiences travel time of {{math|(1+''x''/100)+2}}, where {{mvar|x}} is the number of cars traveling on edge {{math|AB}}. Thus, payoffs for any given strategy depend on the choices of the other players, as is usual. However, the goal, in this case, is to minimize travel time, not maximize it. Equilibrium will occur when the time on all paths is exactly the same. When that happens, no single driver has any incentive to switch routes, since it can only add to their travel time. For the graph on the right, if, for example, 100 cars are travelling from A to D, then equilibrium will occur when 25 drivers travel via {{math|ABD}}, 50 via {{math|ABCD}}, and 25 via {{math|ACD}}. Every driver now has a total travel time of 3.75 (to see this, note that a total of 75 cars take the {{math|AB}} edge, and likewise, 75 cars take the {{math|CD}} edge).&lt;!-- 25 drivers travel via ABD and 50 via ABCD, so 75 cars travel on edge AB. Similarly, 75 cars travel on edge CD. It takes (1 + 75/100) + 2 = 3.75 to travel via ABD. The travel time of the other routes is the same. --&gt;
+
+Notice that this distribution is not, actually, socially optimal. If the 100 cars agreed that 50 travel via {{math|ABD}} and the other 50 through {{math|ACD}}, then travel time for any single car would actually be 3.5, which is less than 3.75. This is also the Nash equilibrium if the path between B and C is removed, which means that adding another possible route can decrease the efficiency of the system, a phenomenon known as [[Braess's paradox]].
+
+=== Competition game ===
+{| align=right border=&quot;1&quot; cellpadding=&quot;1&quot; cellspacing=&quot;0&quot; style=&quot;margin: 1em 1em 1em 1em; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse; font-size: 95%;&quot; class=&quot;wikitable&quot;
+|+ align=bottom |''A competition game''
+! {{diagonal split header|&lt;br /&gt;Player 1|Player 2}}
+! Choose '0'
+! Choose '1'
+! Choose '2'
+! Choose '3'
+|-
+! Choose '0'
+|align=center style=&quot;background: #ffb1ba&quot;|''0'', ''0''
+|align=center|''2'', ''−2''
+|align=center|''2'', ''−2''
+|align=center|''2'', ''−2''
+|-
+! Choose '1'
+|align=center|''−2'', ''2''
+|align=center|''1'', ''1''
+|align=center style=&quot;background: #d264ff&quot;|''3'', ''−1''
+|align=center|''3'', ''−1''
+|-
+! Choose '2'
+|align=center|''−2'', ''2''
+|align=center style=&quot;background: #cedff2;&quot;|''−1'', ''3''
+|align=center style=&quot;background: #66ff66;&quot;|''2'', ''2''
+|align=center|''4'', ''0''
+|-
+! Choose '3'
+|align=center|''−2'', ''2''
+|align=center|''−1'', ''3''
+|align=center|''0'', ''4''
+|align=center|''3'', ''3''
+|}
+
+This can be illustrated by a two-player game in which both players simultaneously choose an integer from 0 to 3 and they both win the smaller of the two numbers in points. In addition, if one player chooses a larger number than the other, then they have to give up two points to the other.
+
+This game has a unique pure-strategy Nash equilibrium: both players choosing 0 (highlighted in light red). Any other strategy can be improved by a player switching their number to one less than that of the other player. In the adjacent table, if the game begins at the green square, it is in player 1's interest to move to the purple square and it is in player 2's interest to move to the blue square. Although it would not fit the definition of a competition game, if the game is modified so that the two players win the named amount if they both choose the same number, and otherwise win nothing, then there are 4 Nash equilibria: (0,0), (1,1), (2,2), and (3,3).
+
+=== Nash equilibria in a payoff matrix ===
+There is an easy numerical way to identify Nash equilibria on a payoff matrix. It is especially helpful in two-person games where players have more than two strategies. In this case formal analysis may become too long. This rule does not apply to the case where mixed (stochastic) strategies are of interest. '''The rule goes as follows: if the first payoff number, in the payoff pair of the cell, is the maximum of the column of the cell and if the second number is the maximum of the row of the cell - then the cell represents a Nash equilibrium.'''
+
+{| align=&quot;left&quot; border=&quot;1&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;margin: 1em; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse; font-size: 95%;&quot; class=&quot;wikitable&quot;
+|++ align=bottom |''A payoff matrix – Nash equilibria in bold''
+! {{diagonal split header|&lt;br /&gt;Player 1|Player 2}}
+!Option A
+!Option B
+!Option C
+|-
+!Option A
+|align=center|0, 0
+|align=center|'''25, 40'''
+|align=center|5, 10
+|-
+!Option B
+|align=center|'''40, 25'''
+|align=center|0, 0
+|align=center|5, 15
+|-
+!Option C
+|align=center|10, 5
+|align=center|15, 5
+|align=center|'''10, 10'''
+|-
+|}
+
+We can apply this rule to a 3×3 matrix:
+
+Using the rule, we can very quickly (much faster than with formal analysis) see that the Nash equilibria cells are (B,A), (A,B), and (C,C). Indeed, for cell (B,A) 40 is the maximum of the first column and 25 is the maximum of the second row. For (A,B) 25 is the maximum of the second column and 40 is the maximum of the first row. Same for cell (C,C). For other cells, either one or both of the duplet members are not the maximum of the corresponding rows and columns.
+
+This said, the actual mechanics of finding equilibrium cells is obvious: find the maximum of a column and check if the second member of the pair is the maximum of the row. If these conditions are met, the cell represents a Nash equilibrium. Check all columns this way to find all NE cells. An N×N matrix may have between 0 and N×N [[pure strategy|pure-strategy]] Nash equilibria.
+
+{{clear}}&lt;!-- layout fix for wide screens --&gt;
+
+== Stability ==
+The concept of [[Stability theory|stability]], useful in the analysis of many kinds of equilibria, can also be applied to Nash equilibria.
+
+A Nash equilibrium for a mixed-strategy game is stable if a small change (specifically, an infinitesimal change) in probabilities for one player leads to a situation where two conditions hold:
+
+# the player who did not change has no better strategy in the new circumstance
+# the player who did change is now playing with a strictly worse strategy.
+
+If these cases are both met, then a player with the small change in their mixed strategy will return immediately to the Nash equilibrium. The equilibrium is said to be stable. If condition one does not hold then the equilibrium is unstable. If only condition one holds then there are likely to be an infinite number of optimal strategies for the player who changed.
+
+In the &quot;driving game&quot; example above there are both stable and unstable equilibria. The equilibria involving mixed strategies with 100% probabilities are stable. If either player changes their probabilities slightly, they will be both at a disadvantage, and their opponent will have no reason to change their strategy in turn. The (50%,50%) equilibrium is unstable. If either player changes their probabilities (which would neither benefit or damage the [[Expected value|expectation]] of the player who did the change, if the other player's mixed strategy is still (50%,50%)), then the other player immediately has a better strategy at either (0%, 100%) or (100%, 0%).

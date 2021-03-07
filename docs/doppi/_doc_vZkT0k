@@ -1,0 +1,176 @@
+:&lt;math&gt;f_{\mathbf{Y}}(y)=\frac{f_{\mathbf{X}}(\mathcal{A}^{-1}(y-b))}{|\det\mathcal{A}|}&lt;/math&gt;.
+
+===Invertible mappings===
+More generally we can study invertible mappings of random vectors.&lt;ref name=Lapidoth&gt;{{cite book |last=Lapidoth |first=Amos |title=A Foundation in Digital Communication |location= |publisher=Cambridge University Press |edition= |year=2009 |isbn=978-0-521-19395-5 }}&lt;/ref&gt;{{rp|p.290–291}}
+
+Let &lt;math&gt;g&lt;/math&gt; be a one-to-one mapping from an open subset &lt;math&gt;\mathcal{D}&lt;/math&gt; of &lt;math&gt;\mathbb{R}^n&lt;/math&gt; onto a subset &lt;math&gt;\mathcal{R}&lt;/math&gt; of &lt;math&gt;\mathbb{R}^n&lt;/math&gt;, let &lt;math&gt;g&lt;/math&gt; have continuous partial derivatives in &lt;math&gt;\mathcal{D}&lt;/math&gt; and let the [[Jacobian_matrix_and_determinant|Jacobian determinant]] of &lt;math&gt;g&lt;/math&gt; be zero at no point of &lt;math&gt;\mathcal{D}&lt;/math&gt;. Assume that the real random vector &lt;math&gt;\mathbf{X}&lt;/math&gt; has a probability density function &lt;math&gt;f_{\mathbf{X}}(\mathbf{x})&lt;/math&gt; and satisfies &lt;math&gt; P(\mathbf{X} \in \mathcal{D}) = 1&lt;/math&gt;. Then the random vector &lt;math&gt;\mathbf{Y}=g(\mathbf{X})&lt;/math&gt; is of probability density
+
+:&lt;math&gt;\left. f_{\mathbf{Y}}(\mathbf{y})=\frac{f_{\mathbf{X}}(\mathbf{x})}{\left |\det\frac{\partial g(\mathbf{x})}{\partial \mathbf{x}}\right |} \right |_{\mathbf{x}=g^{-1}(\mathbf{y})} \mathbf{1}(\mathbf{y} \in R_\mathbf{Y})&lt;/math&gt;
+
+where &lt;math&gt;\mathbf{1}&lt;/math&gt; denotes the [[indicator function]] and set &lt;math&gt;R_\mathbf{Y} = \{ \mathbf{y} = g(\mathbf{x}): f_{\mathbf{X}}(\mathbf{x}) &gt; 0 \} \subseteq \mathcal{R} &lt;/math&gt; denotes support of &lt;math&gt;\mathbf{Y}&lt;/math&gt;.
+
+==Expected value==
+The [[expected value]] or mean of a random vector &lt;math&gt;\mathbf{X}&lt;/math&gt; is a fixed vector &lt;math&gt;\operatorname{E}[\mathbf{X}]&lt;/math&gt; whose elements are the expected values of the respective random variables.&lt;ref name=Gubner&gt;{{cite book |first=John A. |last=Gubner |year=2006 |title=Probability and Random Processes for Electrical and Computer Engineers |publisher=Cambridge University Press |isbn=978-0-521-86470-1}}&lt;/ref&gt;{{rp|p.333}}
+
+{{Equation box 1
+|indent =
+|title=
+|equation = {{NumBlk||&lt;math&gt;\operatorname{E}[\mathbf{X}] = (\operatorname{E}[X_1],...,\operatorname{E}[X_n])^{\mathrm T} &lt;/math&gt;|{{EquationRef|Eq.2}}}}
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+
+==Covariance and cross-covariance==
+===Definitions===
+The '''[[covariance matrix]]''' (also called '''second central moment''' or variance-covariance matrix) of an &lt;math&gt;n \times 1&lt;/math&gt; random vector is an &lt;math&gt;n \times n&lt;/math&gt; [[Matrix (mathematics)|matrix]] whose (''i,j'')&lt;sup&gt;th&lt;/sup&gt; element is the [[covariance]] between the ''i''&lt;sup&gt; th&lt;/sup&gt; and the ''j''&lt;sup&gt; th&lt;/sup&gt; random variables. The covariance matrix is the expected value, element by element, of the &lt;math&gt;n \times n&lt;/math&gt; matrix [[matrix multiplication|computed as]] &lt;math&gt;[\mathbf{X}-\operatorname{E}[\mathbf{X}]][\mathbf{X}-\operatorname{E}[\mathbf{X}]]^T&lt;/math&gt;, where the superscript T refers to the transpose of the indicated vector:&lt;ref name=Lapidoth/&gt;{{rp|p. 464}}&lt;ref name=Gubner/&gt;{{rp|p.335}}
+
+{{Equation box 1
+|indent =
+|title=
+|equation = {{NumBlk||&lt;math&gt;\operatorname{K}_{\mathbf{X}\mathbf{X}} = \operatorname{Var}[\mathbf{X}]=\operatorname{E}[(\mathbf{X}-\operatorname{E}[\mathbf{X}])(\mathbf{X}-\operatorname{E}[\mathbf{X}])^{T}] = \operatorname{E}[\mathbf{X} \mathbf{X}^T] - \operatorname{E}[\mathbf{X}]\operatorname{E}[\mathbf{X}]^T&lt;/math&gt;|{{EquationRef|Eq.3}}}}
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+
+By extension, the '''[[cross-covariance matrix]]''' between two random vectors &lt;math&gt;\mathbf{X}&lt;/math&gt; and &lt;math&gt;\mathbf{Y}&lt;/math&gt; (&lt;math&gt;\mathbf{X}&lt;/math&gt; having &lt;math&gt;n&lt;/math&gt; elements and &lt;math&gt;\mathbf{Y}&lt;/math&gt; having &lt;math&gt;p&lt;/math&gt; elements) is the &lt;math&gt;n \times p&lt;/math&gt; matrix&lt;ref name=Gubner/&gt;{{rp|p.336}}
+
+{{Equation box 1
+|indent =
+|title=
+|equation = {{NumBlk||&lt;math&gt;\operatorname{K}_{\mathbf{X}\mathbf{Y}} = \operatorname{Cov}[\mathbf{X},\mathbf{Y}]=\operatorname{E}[(\mathbf{X}-\operatorname{E}[\mathbf{X}])(\mathbf{Y}-\operatorname{E}[\mathbf{Y}])^{T}] = \operatorname{E}[\mathbf{X} \mathbf{Y}^T] - \operatorname{E}[\mathbf{X}]\operatorname{E}[\mathbf{Y}]^T&lt;/math&gt;|{{EquationRef|Eq.4}}}}
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+
+where again the matrix expectation is taken element-by-element in the matrix. Here the (''i,j'')&lt;sup&gt;th&lt;/sup&gt; element is the covariance between the ''i''&lt;sup&gt; th&lt;/sup&gt; element of &lt;math&gt;\mathbf{X}&lt;/math&gt; and the ''j''&lt;sup&gt; th&lt;/sup&gt; element of &lt;math&gt;\mathbf{Y}&lt;/math&gt;.
+
+===Properties===
+The covariance matrix is a [[symmetric matrix]], i.e.&lt;ref name=Lapidoth/&gt;{{rp|p. 466}}
+:&lt;math&gt;\operatorname{K}_{\mathbf{X}\mathbf{X}}^T = \operatorname{K}_{\mathbf{X}\mathbf{X}}&lt;/math&gt;.
+
+The covariance matrix is a [[positive semidefinite matrix]], i.e.&lt;ref name=Lapidoth/&gt;{{rp|p. 465}}
+:&lt;math&gt;\mathbf{a}^T \operatorname{K}_{\mathbf{X}\mathbf{X}} \mathbf{a} \ge 0 \quad \text{for all } \mathbf{a} \in \mathbb{R}^n&lt;/math&gt;.
+
+The cross-covariance matrix &lt;math&gt;\operatorname{Cov}[\mathbf{Y},\mathbf{X}]&lt;/math&gt; is simply the transpose of the matrix &lt;math&gt;\operatorname{Cov}[\mathbf{X},\mathbf{Y}]&lt;/math&gt;, i.e.
+:&lt;math&gt;\operatorname{K}_{\mathbf{Y}\mathbf{X}} = \operatorname{K}_{\mathbf{X}\mathbf{Y}}^T&lt;/math&gt;.
+
+===Uncorrelatedness===
+Two random vectors &lt;math&gt;\mathbf{X}=(X_1,...,X_m)^T &lt;/math&gt; and &lt;math&gt;\mathbf{Y}=(Y_1,...,Y_n)^T &lt;/math&gt; are called '''uncorrelated''' if
+:&lt;math&gt;\operatorname{E}[\mathbf{X} \mathbf{Y}^T] = \operatorname{E}[\mathbf{X}]\operatorname{E}[\mathbf{Y}]^T&lt;/math&gt;.
+
+They are uncorrelated if and only if their cross-covariance matrix &lt;math&gt;\operatorname{K}_{\mathbf{X}\mathbf{Y}}&lt;/math&gt; is zero.&lt;ref name=Gubner/&gt;{{rp|p.337}}
+
+==Correlation and cross-correlation==
+===Definitions===
+The '''[[Autocorrelation matrix|correlation matrix]]''' (also called '''second moment''') of an &lt;math&gt;n \times 1&lt;/math&gt; random vector is an &lt;math&gt;n \times n&lt;/math&gt; matrix whose (''i,j'')&lt;sup&gt;th&lt;/sup&gt; element is the correlation between the ''i''&lt;sup&gt; th&lt;/sup&gt; and the ''j''&lt;sup&gt; th&lt;/sup&gt; random variables. The correlation matrix is the expected value, element by element, of the &lt;math&gt;n \times n&lt;/math&gt; matrix computed as &lt;math&gt;\mathbf{X} \mathbf{X}^T&lt;/math&gt;, where the superscript T refers to the transpose of the indicated vector&lt;ref name=Papoulis&gt;{{cite book |last=Papoulis |first=Athanasius |title=Probability, Random Variables and Stochastic Processes |location= |publisher=McGraw-Hill |edition=Third |year=1991 |isbn=0-07-048477-5 }}&lt;/ref&gt;{{rp|p.190}}&lt;ref name=Gubner/&gt;{{rp|p.334}}:
+
+{{Equation box 1
+|indent =
+|title=
+|equation = {{NumBlk||&lt;math&gt;\operatorname{R}_{\mathbf{X}\mathbf{X}} = \operatorname{E}[\mathbf{X} \mathbf{X}^{\mathrm T}]&lt;/math&gt;|{{EquationRef|Eq.5}}}}
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+
+By extension, the '''cross-correlation matrix''' between two random vectors &lt;math&gt;\mathbf{X}&lt;/math&gt; and &lt;math&gt;\mathbf{Y}&lt;/math&gt; (&lt;math&gt;\mathbf{X}&lt;/math&gt; having &lt;math&gt;n&lt;/math&gt; elements and &lt;math&gt;\mathbf{Y}&lt;/math&gt; having &lt;math&gt;p&lt;/math&gt; elements) is the &lt;math&gt;n \times p&lt;/math&gt; matrix
+
+{{Equation box 1
+|indent =
+|title=
+|equation = {{NumBlk||&lt;math&gt;\operatorname{R}_{\mathbf{X}\mathbf{Y}} = \operatorname{E}[\mathbf{X} \mathbf{Y}^T]&lt;/math&gt;|{{EquationRef|Eq.6}}}}
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+
+===Properties===
+The correlation matrix is related to the covariance matrix by
+:&lt;math&gt;\operatorname{R}_{\mathbf{X}\mathbf{X}} = \operatorname{K}_{\mathbf{X}\mathbf{X}} + \operatorname{E}[\mathbf{X}]\operatorname{E}[\mathbf{X}]^T&lt;/math&gt;.
+Similarly for the cross-correlation matrix and the cross-covariance matrix:
+:&lt;math&gt;\operatorname{R}_{\mathbf{X}\mathbf{Y}} = \operatorname{K}_{\mathbf{X}\mathbf{Y}} + \operatorname{E}[\mathbf{X}]\operatorname{E}[\mathbf{Y}]^T&lt;/math&gt;
+
+==Orthogonality==
+Two random vectors of the same size &lt;math&gt;\mathbf{X}=(X_1,...,X_n)^T &lt;/math&gt; and &lt;math&gt;\mathbf{Y}=(Y_1,...,Y_n)^T &lt;/math&gt; are called '''orthogonal''' if
+:&lt;math&gt;\operatorname{E}[\mathbf{X}^T \mathbf{Y}] = 0&lt;/math&gt;.
+
+==Independence==
+{{main|Independence (probability theory)}}
+Two random vectors &lt;math&gt;\mathbf{X}&lt;/math&gt; and &lt;math&gt;\mathbf{Y}&lt;/math&gt; are called '''independent''' if for all &lt;math&gt;\mathbf{x}&lt;/math&gt; and &lt;math&gt;\mathbf{y}&lt;/math&gt;
+:&lt;math&gt;F_{\mathbf{X,Y}}(\mathbf{x,y}) = F_{\mathbf{X}}(\mathbf{x}) \cdot F_{\mathbf{Y}}(\mathbf{y})&lt;/math&gt;
+where &lt;math&gt;F_{\mathbf{X}}(\mathbf{x})&lt;/math&gt; and &lt;math&gt;F_{\mathbf{Y}}(\mathbf{y})&lt;/math&gt; denote the cumulative distribution functions of &lt;math&gt;\mathbf{X}&lt;/math&gt; and &lt;math&gt;\mathbf{Y}&lt;/math&gt; and&lt;math&gt;F_{\mathbf{X,Y}}(\mathbf{x,y})&lt;/math&gt; denotes their joint cumulative distribution function. Independence of &lt;math&gt;\mathbf{X}&lt;/math&gt; and &lt;math&gt;\mathbf{Y}&lt;/math&gt; is often denoted by &lt;math&gt;\mathbf{X} \perp\!\!\!\perp \mathbf{Y}&lt;/math&gt;.
+Written component-wise, &lt;math&gt;\mathbf{X}&lt;/math&gt; and &lt;math&gt;\mathbf{Y}&lt;/math&gt; are called independent if for all &lt;math&gt;x_1,\ldots,x_m,y_1,\ldots,y_n&lt;/math&gt;
+:&lt;math&gt;F_{X_1,\ldots,X_m,Y_1,\ldots,Y_n}(x_1,\ldots,x_m,y_1,\ldots,y_n) = F_{X_1,\ldots,X_m}(x_1,\ldots,x_m) \cdot F_{Y_1,\ldots,Y_n}(y_1,\ldots,y_n)&lt;/math&gt;.
+
+==Characteristic function==
+The [[Characteristic function (probability theory)|characteristic function]] of a random vector &lt;math&gt; \mathbf{X} &lt;/math&gt; with &lt;math&gt; n &lt;/math&gt; components is a function &lt;math&gt;\mathbb{R}^n \to \mathbb{C}&lt;/math&gt; that maps every vector &lt;math&gt;\mathbf{\omega} = (\omega_1,\ldots,\omega_n)^T&lt;/math&gt; to a complex number. It is defined by&lt;ref name=Lapidoth/&gt;{{rp|p. 468}}
+
+:&lt;math&gt; \varphi_{\mathbf{X}}(\mathbf{\omega}) = \operatorname{E} \left [ e^{i(\mathbf{\omega}^T \mathbf{X})} \right ] = \operatorname{E} \left [ e^{i( \omega_1 X_1 + \ldots + \omega_n X_n)} \right ]&lt;/math&gt;.
+
+==Further properties==
+===Expectation of a quadratic form===
+One can take the expectation of a [[Quadratic form (statistics)|quadratic form]] in the random vector &lt;math&gt;\mathbf{X}&lt;/math&gt; as follows:&lt;ref name=Kendrick&gt;{{cite book |last=Kendrick |first=David |title=Stochastic Control for Economic Models |location= |publisher=McGraw-Hill |year=1981 |isbn=0-07-033962-7 }}&lt;/ref&gt;{{rp|p.170–171}}
+
+:&lt;math&gt;\operatorname{E}[\mathbf{X}^{T}A\mathbf{X}] = \operatorname{E}[\mathbf{X}]^{T}A\operatorname{E}[\mathbf{X}] + \operatorname{tr}(A K_{\mathbf{X}\mathbf{X}}),&lt;/math&gt;
+
+where &lt;math&gt;K_{\mathbf{X}\mathbf{X}}&lt;/math&gt; is the covariance matrix of &lt;math&gt;\mathbf{X}&lt;/math&gt; and &lt;math&gt;\operatorname{tr}&lt;/math&gt; refers to the [[Trace (linear algebra)|trace]] of a matrix — that is, to the sum of the elements on its main diagonal (from upper left to lower right).  Since the quadratic form is a scalar, so is its expectation.
+
+'''Proof''': Let &lt;math&gt;\mathbf{z}&lt;/math&gt; be an &lt;math&gt;m \times 1&lt;/math&gt; random vector with &lt;math&gt;\operatorname{E}[\mathbf{z}] = \mu&lt;/math&gt; and &lt;math&gt;\operatorname{Cov}[\mathbf{z}]= V&lt;/math&gt; and let &lt;math&gt;A&lt;/math&gt; be an &lt;math&gt;m \times m&lt;/math&gt; non-stochastic matrix.
+
+Then based on the formula for the covariance, if we denote &lt;math&gt;\mathbf{z}^T = \mathbf{X}&lt;/math&gt; and &lt;math&gt;\mathbf{z}^T A^T = \mathbf{Y}&lt;/math&gt;, we see that:
+
+:&lt;math&gt;\operatorname{Cov}[\mathbf{X},\mathbf{Y}] = \operatorname{E}[\mathbf{X}\mathbf{Y}^T]-\operatorname{E}[\mathbf{X}]\operatorname{E}[\mathbf{Y}]^T &lt;/math&gt;
+
+Hence
+
+:&lt;math&gt;\begin{align}
+\operatorname{E}[XY^T]   &amp;= \operatorname{Cov}[X,Y]+\operatorname{E}[X]\operatorname{E}[Y]^T \\
+\operatorname{E}[z^T Az] &amp;= \operatorname{Cov}[z^T,z^T A^T] + \operatorname{E}[z^T]\operatorname{E}[z^T A^T ]^T  \\
+&amp;=\operatorname{Cov}[z^T , z^T A^T] + \mu^T (\mu^T A^T)^T \\
+&amp;=\operatorname{Cov}[z^T , z^T A^T] + \mu^T A \mu ,
+\end{align}&lt;/math&gt;
+
+which leaves us to show that
+
+:&lt;math&gt;\operatorname{Cov}[z^T , z^T A^T ]=\operatorname{tr}(AV).&lt;/math&gt;
+
+This is true based on the fact that one can [[Trace (linear algebra)#Properties|cyclically permute matrices when taking a trace]] without changing the end result (e.g.: &lt;math&gt;\operatorname{tr}(AB) = \operatorname{tr}(BA)&lt;/math&gt;).
+
+We see [[Covariance#Definition|that]]
+
+:&lt;math&gt;\begin{align}
+\operatorname{Cov}[z^T,z^T A^T] &amp;= \operatorname{E} \left[\left(z^T - E(z^T) \right)\left(z^T A^T - E\left(z^T A^T \right) \right)^T \right] \\
+&amp;= \operatorname{E} \left[ (z^T - \mu^T) (z^T A^T - \mu^T A^T )^T \right]\\
+&amp;= \operatorname{E} \left[ (z - \mu)^T (Az - A\mu) \right].
+\end{align}&lt;/math&gt;
+
+And since
+
+:&lt;math&gt;\left( {z - \mu } \right)^T \left( {Az - A\mu } \right)&lt;/math&gt;
+
+is a [[scalar (mathematics)|scalar]], then
+
+:&lt;math&gt;(z - \mu)^T ( Az - A\mu)= \operatorname{tr}\left( {(z - \mu )^T (Az - A\mu )} \right) = \operatorname{tr} \left((z - \mu )^T A(z - \mu ) \right)&lt;/math&gt;
+
+trivially. Using the permutation we get:
+
+:&lt;math&gt;\operatorname{tr}\left( {(z - \mu )^T A(z - \mu )} \right) = \operatorname{tr}\left( {A(z - \mu )(z - \mu )^T} \right),&lt;/math&gt;
+
+and by plugging this into the original formula we get:
+
+:&lt;math&gt;\begin{align}
+\operatorname{Cov} \left[ {z^T,z^T A^T} \right] &amp;= E\left[ {\left( {z - \mu } \right)^T (Az - A\mu)} \right] \\
+&amp;= E \left[ \operatorname{tr}\left( A(z - \mu )(z - \mu )^T \right) \right] \\
+&amp;= \operatorname{tr} \left( {A \cdot \operatorname{E} \left((z - \mu )(z - \mu )^T \right) } \right) \\
+&amp;= \operatorname{tr} (A V). 
+\end{align}&lt;/math&gt;
+
+===Expectation of the product of two different quadratic forms===
+One can take the expectation of the product of two different quadratic forms in a zero-mean [[Joint normality|Gaussian]] random vector &lt;math&gt;\mathbf{X}&lt;/math&gt; as follows:&lt;ref name=Kendrick/&gt;{{rp|pp. 162–176}}
+
+:&lt;math&gt;\operatorname{E}\left[(\mathbf{X}^{T}A\mathbf{X})(\mathbf{X}^{T}B\mathbf{X})\right] = 2\operatorname{tr}(A K_{\mathbf{X}\mathbf{X}} B K_{\mathbf{X}\mathbf{X}}) + \operatorname{tr}(A K_{\mathbf{X}\mathbf{X}})\operatorname{tr}(B K_{\mathbf{X}\mathbf{X}})&lt;/math&gt;
+
+where again &lt;math&gt;K_{\mathbf{X}\mathbf{X}}&lt;/math&gt; is the covariance matrix of &lt;math&gt;\mathbf{X}&lt;/math&gt;. Again, since both quadratic forms are scalars and hence their product is a scalar, the expectation of their product is also a scalar.

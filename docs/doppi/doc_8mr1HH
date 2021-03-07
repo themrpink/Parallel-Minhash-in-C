@@ -1,0 +1,159 @@
+The Reed–Solomon code, like the [[convolutional code]], is a transparent code. This means that if the channel symbols have been [[bitwise NOT|inverted]] somewhere along the line, the decoders will still operate. The result will be the inversion of the original data. However, the Reed–Solomon code loses its transparency when the code is shortened. The &quot;missing&quot; bits in a shortened code need to be filled by either zeros or ones, depending on whether the data is complemented or not. (To put it another way, if the symbols are inverted, then the zero-fill needs to be inverted to a one-fill.) For this reason it is mandatory that the sense of the data (i.e., true or complemented) be resolved before Reed–Solomon decoding.
+
+Whether the Reed–Solomon code is [[cyclic code|cyclic]] or not depends on subtle details of the construction. In the original view of Reed and Solomon, where the codewords are the values of a polynomial, one can choose the sequence of evaluation points in such a way as to make the code cyclic. In particular, if &lt;math&gt;\alpha&lt;/math&gt; is a [[primitive root modulo n|primitive root]] of the field &lt;math&gt;F&lt;/math&gt;, then by definition all non-zero elements of &lt;math&gt;F&lt;/math&gt; take the form &lt;math&gt;\alpha^i&lt;/math&gt; for  &lt;math&gt;i\in\{1,\dots,q-1\}&lt;/math&gt;, where &lt;math&gt;q=|F|&lt;/math&gt;.  Each polynomial &lt;math&gt;p&lt;/math&gt; over &lt;math&gt;F&lt;/math&gt; gives rise to a codeword &lt;math&gt;(p(\alpha^1),\dots,p(\alpha^{q-1}))&lt;/math&gt;. Since the function &lt;math&gt;a\mapsto p(\alpha a)&lt;/math&gt; is also a polynomial of the same degree, this function gives rise to a codeword &lt;math&gt;(p(\alpha^2),\dots,p(\alpha^{q}))&lt;/math&gt;; since &lt;math&gt;\alpha^{q}=\alpha^1&lt;/math&gt; holds, this codeword is the [[circular shift|cyclic left-shift]] of the original codeword derived from &lt;math&gt;p&lt;/math&gt;. So choosing a sequence of primitive root powers as the evaluation points makes the original view Reed–Solomon code [[cyclic code|cyclic]]. Reed–Solomon codes in the BCH view are always cyclic because [[BCH code#Properties|BCH codes are cyclic]].
+
+===Remarks===
+
+Designers are not required to use the &quot;natural&quot; sizes of Reed–Solomon code blocks. A technique known as &quot;shortening&quot; can produce a smaller code of any desired size from a larger code. For example, the widely used (255,223) code can be converted to a (160,128) code by padding the unused portion of the source block with 95 binary zeroes and not transmitting them. At the decoder, the same portion of the block is loaded locally with binary zeroes. The Delsarte–Goethals–Seidel&lt;ref&gt;{{Citation |first=Florian |last=Pfender |first2=Günter M. |last2=Ziegler |title=Kissing Numbers, Sphere Packings, and Some Unexpected Proofs |journal=Notices of the American Mathematical Society |volume=51 |issue=8 |pages=873&amp;ndash;883 |date=September 2004 |url=http://www.ams.org/notices/200408/fea-pfender.pdf |access-date=2009-09-28 |archive-date=2008-05-09 |archive-url=https://web.archive.org/web/20080509183217/http://www.ams.org/notices/200408/fea-pfender.pdf |url-status=live }}. Explains the Delsarte-Goethals-Seidel theorem as used in the context of the error correcting code for [[compact disc]].&lt;/ref&gt; theorem illustrates an example of an application of shortened Reed–Solomon codes. In parallel to shortening, a technique known as [[puncturing]] allows omitting some of the encoded parity symbols.
+
+== BCH view decoders ==
+
+The decoders described in this section use the BCH view of a codeword as a sequence of coefficients. They use a fixed generator polynomial known to both encoder and decoder.
+
+=== Peterson–Gorenstein–Zierler decoder ===
+
+{{main|BCH code#Peterson–Gorenstein–Zierler algorithm|l1=Peterson–Gorenstein–Zierler algorithm}}
+
+Daniel Gorenstein and Neal Zierler developed a decoder that was described in a MIT Lincoln Laboratory report by Zierler in January 1960 and later in a paper in June 1961.&lt;ref&gt;D. Gorenstein and N. Zierler, &quot;A class of cyclic linear error-correcting codes in p^m symbols,&quot; J. SIAM, vol. 9, pp. 207–214, June 1961&lt;/ref&gt; The Gorenstein–Zierler decoder and the related work on BCH codes are described in a book ''Error Correcting Codes'' by [[W. Wesley Peterson]] (1961).&lt;ref&gt;''Error Correcting Codes'' by W Wesley Peterson, 1961&lt;/ref&gt;
+
+====Formulation====
+
+The transmitted message, &lt;math&gt;(c_0, \ldots, c_i, \ldots,c_{n-1})&lt;/math&gt;, is viewed as the coefficients of a polynomial ''s''(''x'') that is divisible by a generator polynomial ''g''(''x'').
+:&lt;math&gt;s(x) = \sum_{i = 0}^{n-1}  c_i x^i&lt;/math&gt;
+:&lt;math&gt;g(x) = \prod_{j=1}^{n-k} (x - \alpha^j), &lt;/math&gt;
+
+where ''α'' is a primitive root.
+
+Since ''s''(''x'') is a multiple of the generator ''g''(''x''), it follows that it &quot;inherits&quot; all its roots:
+:&lt;math&gt;s(\alpha^j) = 0, \ j=1,2,\ldots,n-k&lt;/math&gt;
+
+The transmitted polynomial is corrupted in transit by an error polynomial ''e''(''x'') to produce the received polynomial ''r''(''x'').
+:&lt;math&gt;r(x) = s(x) + e(x)&lt;/math&gt;
+:&lt;math&gt;e(x) = \sum_{i=0}^{n-1} e_i   x^i &lt;/math&gt;
+
+where ''e&lt;sub&gt;i&lt;/sub&gt;'' is the coefficient for the ''i''-th power of ''x''.  Coefficient ''e&lt;sub&gt;i&lt;/sub&gt;'' will be zero if there is no error at that power of ''x'' and nonzero if there is an error.  If there are ''ν'' errors at distinct powers ''i&lt;sub&gt;k&lt;/sub&gt;'' of ''x'', then
+
+:&lt;math&gt;e(x) = \sum_{k=1}^\nu e_{i_k} x^{i_k}&lt;/math&gt;
+
+The goal of the decoder is to find the number of errors (''ν''), the positions of the errors (''i&lt;sub&gt;k&lt;/sub&gt;''), and the error values at those positions (''e&lt;sub&gt;i&lt;sub&gt;k&lt;/sub&gt;&lt;/sub&gt;''). From those, ''e''(''x'') can be calculated and subtracted from ''r''(''x'') to get the originally sent message ''s''(''x'').
+
+====Syndrome decoding====
+
+The decoder starts by evaluating the polynomial as received at certain points. We call the results of that evaluation the &quot;syndromes&quot;, ''S''&lt;sub&gt;''j''&lt;/sub&gt;. They are defined as:
+:&lt;math&gt;
+\begin{align}
+S_j &amp;= r(\alpha^j) = s(\alpha^j) + e(\alpha^j) = 0 + e(\alpha^j) = e(\alpha^j), \ j=1,2,\ldots,n-k \\
+    &amp;= \sum_{k=1}^\nu e_{i_k} \left( \alpha^j \right)^{i_k}
+\end{align}
+&lt;/math&gt;
+
+The advantage of looking at the syndromes is that the message polynomial drops out. In other words, the syndromes only relate to the error, and are unaffected by the actual contents of the message being transmitted. If the syndromes are all zero, the algorithm stops here and reports that the message was not corrupted in transit.
+
+====Error locators and error values====
+&lt;!-- There's confusion between index k and the k in (n,k). Literature also has confusion? Or does it use kappa? --&gt;
+
+For convenience, define the '''error locators''' ''X&lt;sub&gt;k&lt;/sub&gt;'' and '''error values''' ''Y&lt;sub&gt;k&lt;/sub&gt;'' as:
+:&lt;math&gt; X_k = \alpha^{i_k}, \  Y_k = e_{i_k} &lt;/math&gt;
+
+Then the syndromes can be written in terms of these error locators and error values as
+:&lt;math&gt;  S_j =  \sum_{k=1}^{\nu} Y_k X_k^{j} &lt;/math&gt;
+
+This definition of the syndrome values is equivalent to the previous since &lt;math&gt;(\alpha^j)^{i_k} = \alpha ^ {j*i_k} = (\alpha^{i_k})^j = X_k^j&lt;/math&gt;.
+
+The syndromes give a system of ''n''&amp;nbsp;&amp;minus;&amp;nbsp;''k'' ≥ 2''ν'' equations in 2''ν'' unknowns, but that system of equations is nonlinear in the ''X&lt;sub&gt;k&lt;/sub&gt;'' and does not have an obvious solution.  However, if the ''X&lt;sub&gt;k&lt;/sub&gt;'' were known (see below), then the syndrome equations provide a linear system of equations that can easily be solved for the ''Y&lt;sub&gt;k&lt;/sub&gt;'' error values.
+&lt;!--
+Vandermonde comment. Matrix equation --&gt;
+
+:&lt;math&gt;\begin{bmatrix}
+X_1^1 &amp; X_2^1 &amp; \cdots &amp; X_\nu^1 \\
+X_1^2 &amp; X_2^2 &amp; \cdots &amp; X_\nu^2 \\
+\vdots &amp; \vdots &amp;&amp; \vdots \\
+X_1^{n-k} &amp; X_2^{n-k} &amp; \cdots &amp; X_\nu^{n-k} \\
+\end{bmatrix}
+\begin{bmatrix}
+Y_1 \\ Y_2 \\ \vdots \\ Y_\nu
+\end{bmatrix}
+= 
+\begin{bmatrix}
+S_1 \\ S_2 \\ \vdots \\ S_{n-k}
+\end{bmatrix}
+&lt;/math&gt;
+
+Consequently, the problem is finding the ''X&lt;sub&gt;k&lt;/sub&gt;'', because then the leftmost matrix would be known, and both sides of the equation could be multiplied by its inverse, yielding Y''&lt;sub&gt;k&lt;/sub&gt;''
+
+In the variant of this algorithm where the locations of the errors are already known (when it is being used as an [[erasure code]]), this is the end. The error locations (''X&lt;sub&gt;k&lt;/sub&gt;'') are already known by some other method (for example, in a FM transmission, the sections where the bitstream was unclear or overcome with interference are probabilistically determinable from frequency analysis). In this scenario, up to &lt;math&gt;n-k&lt;/math&gt; errors can be corrected.
+
+The rest of the algorithm serves to locate the errors, and will require syndrome values up to &lt;math&gt;2v&lt;/math&gt;, instead of just the &lt;math&gt;v&lt;/math&gt; used thus far. This is why 2x as many error correcting symbols need to be added as can be corrected without knowing their locations.
+
+====Error locator polynomial====
+
+There is a linear recurrence relation that gives rise to a system of linear equations. Solving those equations identifies those error locations ''X&lt;sub&gt;k&lt;/sub&gt;''.
+&lt;!--This is credited to Daniel Gorenstein and Neal Zierler in the book Error Correcting Codes by Peterson - 1961 --&gt;
+&lt;!--Petersons decoder is a simplified implementation for bit oriented BCH codes where the error values only have magnitude one. --&gt;
+
+Define the '''error locator polynomial''' Λ(''x'') as
+
+:&lt;math&gt;\Lambda(x) = \prod_{k=1}^\nu (1 - x X_k ) = 1 + \Lambda_1 x^1 + \Lambda_2 x^2 + \cdots + \Lambda_\nu x^\nu&lt;/math&gt;
+
+The zeros of Λ(''x'') are the reciprocals &lt;math&gt;X_k^{-1}&lt;/math&gt;. This follows from the above product notation construction since if &lt;math&gt;x=X_k^{-1}&lt;/math&gt; then one of the multiplied terms will be zero &lt;math&gt;(1 - X_k^{-1} \cdot X_k) = 1 - 1 = 0&lt;/math&gt;, making the whole polynomial evaluate to zero.
+:&lt;math&gt; \Lambda(X_k^{-1}) = 0 &lt;/math&gt;
+
+Let &lt;math&gt;j&lt;/math&gt; be any integer such that &lt;math&gt;1 \leq j \leq \nu&lt;/math&gt;. Multiply both sides by &lt;math&gt;Y_k X_k^{j+\nu}&lt;/math&gt; and it will still be zero. 
+
+:&lt;math&gt;
+\begin{align}
+&amp; Y_k X_k^{j+\nu} \Lambda(X_k^{-1}) = 0. \\
+&amp; Y_k X_k^{j+\nu} (1 + \Lambda_1 X_k^{-1} + \Lambda_2 X_k^{-2} + \cdots + \Lambda_\nu X_k^{-\nu}) = 0. \\ 
+&amp; Y_k X_k^{j+\nu} + \Lambda_1 Y_k X_k^{j+\nu} X_k^{-1} + \Lambda_2 Y_k X_k^{j+\nu} X_k^{-2} + \cdots + \Lambda_\nu Y_k X_k^{j+\nu} X_k^{-\nu} = 0. \\
+&amp; Y_k X_k^{j+\nu} + \Lambda_1 Y_k X_k^{j+\nu-1} + \Lambda_2 Y_k X_k^{j+\nu -2} + \cdots + \Lambda_{\nu} Y_k X_k^j = 0. \\
+\end{align}
+&lt;/math&gt;
+
+Sum for ''k'' = 1 to ''ν'' and it will still be zero.
+
+:&lt;math&gt;\begin{align}
+&amp; \sum_{k=1}^\nu \left( Y_k X_k^{j+\nu} + \Lambda_1 Y_k X_k^{j+\nu-1} + \Lambda_2 Y_k X_k^{j+\nu -2} + \cdots + \Lambda_{\nu} Y_k X_k^{j} \right) = 0  \\
+\end{align}&lt;/math&gt;
+
+Collect each term into its own sum.
+:&lt;math&gt;\begin{align}
+&amp; \left(\sum_{k=1}^\nu  Y_k X_k^{j+\nu} \right) + \left(\sum_{k=1}^\nu \Lambda_1 Y_k X_k^{j+\nu-1}\right) + \left(\sum_{k=1}^\nu \Lambda_2 Y_k X_k^{j+\nu -2}\right) + \cdots + \left(\sum_{k=1}^\nu \Lambda_\nu Y_k X_k^j \right) = 0
+\end{align}&lt;/math&gt;
+
+Extract the constant values of &lt;math&gt;\Lambda&lt;/math&gt; that are unaffected by the summation.
+
+:&lt;math&gt;\begin{align}
+&amp; \left(\sum_{k=1}^\nu  Y_k X_k^{j+\nu} \right) + \Lambda_1 \left(\sum_{k=1}^\nu Y_k X_k^{j+\nu-1}\right) + \Lambda_2 \left(\sum_{k=1}^\nu Y_k X_k^{j+\nu -2}\right) + \cdots + \Lambda_\nu \left(\sum_{k=1}^\nu Y_k X_k^j \right) = 0
+\end{align}&lt;/math&gt;
+
+These summations are now equivalent to the syndrome values, which we know and can substitute in! This therefore reduces to
+
+:&lt;math&gt; S_{j + \nu} + \Lambda_1 S_{j+\nu-1} + \cdots + \Lambda_{\nu-1} S_{j+1} + \Lambda_{\nu} S_j   = 0 \, &lt;/math&gt;
+
+Subtracting &lt;math&gt;S_{j+\nu}&lt;/math&gt; from both sides yields
+
+:&lt;math&gt; S_j \Lambda_{\nu} + S_{j+1}\Lambda_{\nu-1} + \cdots + S_{j+\nu-1} \Lambda_1 = - S_{j + \nu} \ &lt;/math&gt;
+
+Recall that ''j'' was chosen to be any integer between 1 and ''v'' inclusive, and this equivalence is true for any and all such values. Therefore, we have ''v'' linear equations, not just one. This system of linear equations can therefore be solved for the coefficients Λ&lt;sub&gt;''i''&lt;/sub&gt; of the error location polynomial:
+
+:&lt;math&gt;\begin{bmatrix}
+S_1 &amp; S_2 &amp; \cdots &amp; S_{\nu} \\
+S_2 &amp; S_3 &amp; \cdots &amp; S_{\nu+1} \\
+\vdots &amp; \vdots &amp;&amp; \vdots \\
+S_{\nu} &amp; S_{\nu+1} &amp; \cdots &amp; S_{2\nu-1}
+\end{bmatrix}
+\begin{bmatrix}
+\Lambda_{\nu} \\ \Lambda_{\nu-1} \\ \vdots \\ \Lambda_1
+\end{bmatrix}
+= 
+\begin{bmatrix}
+- S_{\nu+1} \\ - S_{\nu+2} \\ \vdots \\ - S_{\nu+\nu}
+\end{bmatrix}
+&lt;/math&gt;
+The above assumes the decoder knows the number of errors ''ν'', but that number has not been determined yet. The PGZ decoder does not determine ''ν'' directly but rather searches for it by trying successive values. The decoder first assumes the largest value for a trial ''ν'' and sets up the linear system for that value. If the equations can be solved (i.e., the matrix determinant is nonzero), then that trial value is the number of errors. If the linear system cannot be solved, then the trial ''ν'' is reduced by one and the next smaller system is examined. {{Harv|Gill|n.d.|p=35}}
+
+====Find the roots of the error locator polynomial====
+
+Use the coefficients Λ&lt;sub&gt;''i''&lt;/sub&gt; found in the last step to build the error location polynomial. The roots of the error location polynomial can be found by exhaustive search. The error locators ''X&lt;sub&gt;k&lt;/sub&gt;'' are the reciprocals of those roots. The order of coefficients of the error location polynomial can be reversed, in which case the roots of that reversed polynomial are the error locators &lt;math&gt;X_k&lt;/math&gt; (not their reciprocals &lt;math&gt;X_k^{-1}&lt;/math&gt;). [[Chien search]] is an efficient implementation of this step.
+
+====Calculate the error values====

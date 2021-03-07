@@ -1,0 +1,261 @@
+====Generally considered helpful====
+The following are standard practice:
+* improving existing citations by adding missing information, such as by replacing bare URLs with full bibliographic citations: an improvement because it aids [[WP:Verifiabilty|verifiability]], and fights [[WP:Link rot|link rot]];
+* replacing some or all general references with inline citations: an improvement because it provides more verifiable information to the reader, and helps maintain text–source integrity;
+* imposing one style on an article with inconsistent citation styles (e.g., some of the citations in footnotes and others as parenthetical references): an improvement because it makes the citations easier to understand and edit;
+* fixing errors in citation coding, including incorrectly used template parameters, and &lt;code&gt;&lt;nowiki&gt;&lt;ref&gt;&lt;/nowiki&gt;&lt;/code&gt; markup problems: an improvement because it helps the citations to be parsed correctly;
+* combining duplicate citations {{crossref|(see {{section link||Duplicate citations}}, above)}}.
+
+==Handling links in citations==
+As noted above under [[#What information to include|&quot;What information to include&quot;]], it is helpful to include hyperlinks to source material, when available. Here we note some issues concerning these links.
+===Avoid embedded links===
+{{Shortcut|WP:CS:EMBED}}
+Embedded links to external websites should not be used as a form of inline citation, because they are highly susceptible to [[WP:Linkrot|linkrot]]. Wikipedia allowed this in its early years—for example by adding a link after a sentence, like this: &lt;nowiki&gt;[http://media.guardian.co.uk/site/story/0,14173,1601858,00.html]&lt;/nowiki&gt;, which is rendered as: [http://media.guardian.co.uk/site/story/0,14173,1601858,00.html]. This is no longer recommended. Raw links are not recommended in lieu of properly written out citations, even if placed between ref tags, like this &lt;code&gt;&lt;nowiki&gt;&lt;ref&gt;[http://media.guardian.co.uk/site/story/0,14173,1601858,00.html]&lt;/ref&gt;&lt;/nowiki&gt;&lt;/code&gt;. Since any citation that accurately identifies the source is better than none, do not revert the good-faith addition of partial citations. They should be considered temporary, and replaced with more complete, properly formatted citations as soon as possible.
+
+Embedded links should never be used to place [[WP:EL|external links]] in the content of an article, like this: {{!xt|&quot;[http://apple.com {{!xt|Apple, Inc.}}] announced their latest product ...&quot;}}.
+
+===Convenience links===
+{{see|Wikipedia:Copyrights#Linking to copyrighted works|Help:Citation Style 1#Online sources}}
+A ''convenience link'' is a link to a copy of your source on a web page provided by someone other than the original publisher or author. For example, a copy of a newspaper article no longer available on the newspaper's website may be hosted elsewhere. When offering convenience links, it is important to be reasonably certain that the convenience copy is a true copy of the original, without any changes or inappropriate commentary, and that it does not infringe the original publisher's copyright. Accuracy can be assumed when the hosting website appears reliable.
+
+For [[Scholarly communication|academic sources]], the convenience link is typically a reprint provided by an [[open-access repository]], such as the author's university's library or [[institutional repository]]. Such [[green open access]] links are generally preferable to [[paywall]]ed or otherwise commercial and [[Free content|unfree]] sources.
+
+Where several sites host a copy of the material, the site selected as the convenience link should be the one whose general content appears most in line with [[Wikipedia:Neutral point of view]] and [[Wikipedia:Verifiability]].
+
+===Indicating availability===
+{{Shortcut|WP:INDICATEAVAIL}}
+If your source is not available online, it should be available in reputable libraries, archives, or collections. If a citation without an external link is challenged as unavailable, any of the following is sufficient to show the material to be reasonably available (though not necessarily [[Wikipedia:Verifiability#Reliable sources|reliable]]): providing an [[ISBN]] or [[OCLC]] number; linking to an established Wikipedia article about the source (the work, its author, or its publisher); or directly quoting the material on the talk page, [[WP:COPYVIO|briefly]] and in context.
+
+===Links to sources===
+{{Shortcut|WP:SOURCELINKS}}
+For a source available in [[hardcopy]], [[microform]], and/or [[Online and offline|online]], omit, in most cases, which one you read. While it is useful to cite author, title, edition (1st, 2nd, etc.), and similar information, it generally is not important to cite a database such as [[ProQuest]], [[EBSCOhost]], or [[JSTOR]] (see the [[list of academic databases and search engines]]) or to link to such a database requiring a subscription or a third party's login. The basic bibliographic information you provide should be enough to search for the source in any of these databases that have the source. Don't add a URL that has a part of a password embedded in the URL. However, you may provide the [[Wikipedia:Digital Object Identifier|DOI]], [[Wikipedia:ISBN|ISBN]], or another uniform identifier, if available. If the publisher offers a link to the source or its abstract that does not require a payment or a third party's login for access, you may provide the URL for that link. If the source only exists online, give the link even if access is restricted (see [[WP:PAYWALL]]).
+
+===Preventing and repairing dead links &lt;span id=&quot;Dead links&quot;&gt;&lt;/span&gt;===
+{{see also|Wikipedia:Link rot|Help:Archiving a source}}
+{{Shortcut|WP:DEADREF}}
+
+To help prevent [[Wikipedia:Dead external links|dead links]], persistent identifiers are available for some sources. Some journal articles have a [[digital object identifier]] (DOI); some online newspapers and blogs, and also Wikipedia, have [[permalink]]s that are stable. When permanent links aren't available, consider archiving the referenced document when writing the article; on-demand web archiving services such as the [[Wayback Machine]] (https://web.archive.org/save) or [[archive.today]] (https://archive.today) are fairly easy to use (see [[Wikipedia:Citing sources/Further considerations#Pre-emptive archiving|pre-emptive archiving]]).
+
+'''Do not delete a citation merely because the URL is not working'''. Dead links should be repaired or replaced if possible. If you encounter a dead URL being used as a reliable source to support article content, follow these steps prior to deleting it:
+
+# '''Confirm status''': First, check the link to confirm that it is dead and not temporarily down. Search the website to see whether it has been rearranged. The online service [https://www.isitdownrightnow.com/ &quot;Is it down right now?&quot;] can help to determine if a ''site'' is down, and any information known.
+# '''Check for a changed URL on the same Web site''': Pages are frequently moved to different location on the same site as they become archive content rather than news. The site's error page may have a &quot;Search&quot; box; alternatively, in the popular Google search engine the keyterm &quot;site:&quot; is used, as in ⟨site:en.wikipedia.org &quot;New Zealand police vehicle markings and livery&quot;⟩.
+# '''Check for web archives''': Many [[Web archiving]] services exist (for a full list, see: [[Wikipedia:List of web archives on Wikipedia]]); link to their archive of the URL's content, if available. Examples:
+#* [[Internet Archive]] has billions of archived web pages. See [[Wikipedia:Using the Wayback Machine]].
+#* [[archive.today]] See [[Wikipedia:Using archive.today]]
+#* [[WebCite]] has billions of archived web pages. See [[Wikipedia:Using WebCite]].
+#* The [[UK Government Web Archive]] (https://www.nationalarchives.gov.uk/webarchive/) preserves 1500 UK central government websites.
+#* The [https://www.webarchive.org.uk/mementos/search Mementos interface] allows you to search multiple [[Web archiving|archiving services]] with a single request using the [[Memento Project|Memento]] protocol. Unfortunately, the Mementos web page interface removes any [[Query string|parameters]] which are passed with the URL. If the URL contains a &quot;?&quot; it is unlikely to work properly. When entering the URL into the Mementos interface manually, the most common change needed is to change &quot;?&quot; to &quot;%3F&quot;. While making only this change will not be sufficient in all cases, it will work most of the time. The bookmarklet in the table below will properly encode URLs such that searches will work.
+::If multiple archive dates are available, try to use one that is most likely to be the contents of the page seen by the editor who entered the reference on the {{para|access-date}}. If that parameter is not specified, a [http://wikipedia.ramselehof.de/wikiblame.php?lang=en search of the article's revision history] can be performed to determine when the link was added to the article.
+::For most citation templates, archive locations are entered using the {{para|archive-url}}, {{para|archive-date}} and {{para|url-status}} parameters. The primary link is switched to the archive link when {{para|url-status|dead}}. This retains the original link location for reference.
+::If the web page now leads to a completely different website, set {{para|url-status|usurped}} to hide the original website link in the citation.
+::''Note:'' Some archives currently operate with a delay of ~18 months before a link is made public. As a result, editors should wait ~24 months after the link is first tagged as dead before declaring that no web archive exists. Dead URLs to reliable sources should normally be tagged with {{Tlx|dead link|date{{=}}{{CURRENTMONTHNAME}} {{CURRENTYEAR}}}}, so that you can estimate how long the link has been dead.
+::'''Bookmarklets''' to check common archive sites for archives of the current page:
+::;Archive.org: &lt;syntaxhighlight lang=&quot;javascript&quot; inline style=&quot;white-space:-moz-pre-wrap; white-space:-pre-wrap; white-space:-o-pre-wrap; white-space:pre-wrap; word-wrap:break-word;&quot;&gt;javascript:void(window.open('https://web.archive.org/web/*/'+location.href))&lt;/syntaxhighlight&gt;
+::;archive.today / archive.is: &lt;syntaxhighlight lang=&quot;javascript&quot; inline style=&quot;white-space:-moz-pre-wrap; white-space:-pre-wrap; white-space:-o-pre-wrap; white-space:pre-wrap; word-wrap:break-word;&quot;&gt;javascript:void(window.open('https://archive.today/?run=1&amp;url='+location.href))&lt;/syntaxhighlight&gt;
+::;Mementos interface: &lt;syntaxhighlight lang=&quot;javascript&quot; inline style=&quot;white-space:-moz-pre-wrap; white-space:-pre-wrap; white-space:-o-pre-wrap; white-space:pre-wrap; word-wrap:break-word;&quot;&gt;javascript:void(window.open('http://www.webarchive.org.uk/mementos/search/'+encodeURIComponent(location.href)+'?referrer='+encodeURIComponent(document.referrer)))&lt;/syntaxhighlight&gt;
+# &lt;li value=&quot;4&quot;&gt;'''Remove convenience links''': If the material was published on paper (e.g., academic journal, newspaper article, magazine, book), then the dead URL is not necessary. Simply remove the dead URL, leaving the remainder of the reference intact.&lt;/li&gt;
+# '''Find a replacement source''': Search the web for quoted text, the article title, and parts of the URL. Consider contacting the website/person that originally published the reference and asking them to republish it. Ask other editors for help finding the reference somewhere else, including the user who added the reference. Find a different source that says essentially the same thing as the reference in question.
+# '''Remove hopelessly-lost web-only sources''': If the source material does not exist offline, {{em|and}} if there is no archived version of the web page (be sure to wait ~24 months), {{em|and}} if you cannot find another copy of the material, then the dead citation should be removed and the material it supports should be regarded as unverified if there is no other supporting citation. If it is material that is [[WP:MINREF|specifically required by policy to have an inline citation]], then please consider tagging it with {{tlx|citation needed}}. It may be appropriate for you to move the citation to the talk page with an explanation, and notify the editor who added the now-dead link.
+
+==Text–source integrity==
+{{anchor|INTEGRITY}}{{shortcut|WP:INTEGRITY}}
+{{redirect|WP:INTEGRITY|WikiProject Integrity|WP:WPINTEGRITY}}
+When using inline citations, it is important to maintain text–source integrity. The point of an inline citation is to allow readers and other editors to check that the material is sourced; that point is lost if the citation is not clearly placed. The distance between material and its source is a matter of editorial judgment, but adding text without clearly placing its source may lead to allegations of [[WP:NOR|original research]], of violations of the [[WP:V|sourcing policy]], and even of [[WP:PLAGFORM|plagiarism]].
+
+===Keeping citations close===
+
+Editors should exercise caution when rearranging or inserting material to ensure that text–source relationships are maintained. References need not be moved solely to maintain the chronological order of footnotes as they appear in the article, and should not be moved if doing so might break the text–source relationship.
+
+If a sentence or paragraph is footnoted with a source, adding new material that is not supported by the existing source to the sentence/paragraph, without a source for the new text, is highly misleading if placed to appear that the cited source supports it. When new text is inserted into a paragraph, make sure it is supported by the existing or a new source. For example, when editing text originally reading
+&lt;blockquote style=&quot;background:white; padding:1em; border:1px solid #999;&quot;&gt;&lt;!--code for display--&gt;
+The sun is pretty big.&lt;sup id=&quot;nbFoot01a&quot; class=&quot;reference&quot;&gt;[[#noteFoot01a|[1]]]&lt;/sup&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot;font-size:medium&quot;&gt;Notes&lt;/span&gt;
+----
+&lt;ol class=&quot;references&quot;&gt;
+&lt;li id=&quot;noteFoot01a&quot;
+&gt;'''[[#nbFoot01a|^]]''' Miller, Edward. ''The Sun''. Academic Press, 2005, p. 1.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+an edit that does not imply that the new material is sourced by the same reference is
+&lt;blockquote style=&quot;background:white; padding:1em; border:1px solid #999;&quot;&gt;&lt;!--code for display--&gt;
+The sun is pretty big.&lt;sup id=&quot;nbFoot01a&quot; class=&quot;reference&quot;&gt;[[#noteFoot01a|[1]]]&lt;/sup&gt; The sun is also quite hot.&lt;sup id=&quot;nbFoot03a&quot; class=&quot;reference&quot;&gt;[[#noteFoot03a|[2]]]&lt;/sup&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot;font-size:medium&quot;&gt;Notes&lt;/span&gt;
+----
+&lt;ol class=&quot;references&quot;&gt;
+&lt;li id=&quot;noteFoot01a&quot;
+&gt;'''[[#nbFoot01a|^]]''' Miller, Edward. ''The Sun''. Academic Press, 2005, p. 1.&lt;/li&gt;
+&lt;li id=&quot;noteFoot03a&quot;
+&gt;'''[[#nbFoot03a|^]]''' Smith, John. ''The Sun's Heat''. Academic Press, 2005, p. 2.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+Do not add other facts or assertions into a fully cited paragraph or sentence:
+
+&lt;blockquote style=&quot;background:white; padding:1em; border:1px solid #999;&quot;&gt;&lt;!--code for display--&gt;{{cross}}
+The sun is pretty big, but the moon is not so big.&lt;sup id=&quot;nbFoot01a&quot; class=&quot;reference&quot;&gt;[[#noteFoot01a|[1]]]&lt;/sup&gt; The sun is also quite hot.&lt;sup id=&quot;nbFoot03a&quot; class=&quot;reference&quot;&gt;[[#noteFoot03a|[2]]]&lt;/sup&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot;font-size:medium&quot;&gt;Notes&lt;/span&gt;
+----
+&lt;ol class=&quot;references&quot;&gt;
+&lt;li id=&quot;noteFoot01a&quot;
+&gt;'''[[#nbFoot01a|^]]''' Miller, Edward. ''The Sun''. Academic Press, 2005, p. 1.&lt;/li&gt;
+&lt;li id=&quot;noteFoot03a&quot;
+&gt;'''[[#nbFoot03a|^]]''' Smith, John. ''The Sun's Heat''. Academic Press, 2005, p. 2.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+Include a source to support the new information. There are several ways to write this, including:
+
+&lt;blockquote style=&quot;background:white; padding:1em; border:1px solid #999;&quot;&gt;&lt;!--code for display--&gt;{{tick}}
+The sun is pretty big,&lt;sup id=&quot;nbFoot01a&quot; class=&quot;reference&quot;&gt;[[#noteFoot01a|[1]]]&lt;/sup&gt; but the moon is not so big.&lt;sup id=&quot;nbFoot02a&quot; class=&quot;reference&quot;&gt;[[#noteFoot02a|[2]]]&lt;/sup&gt; The sun is also quite hot.&lt;sup id=&quot;nbFoot03a&quot; class=&quot;reference&quot;&gt;[[#noteFoot03a|[3]]]&lt;/sup&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot;font-size:medium&quot;&gt;Notes&lt;/span&gt;
+----
+&lt;ol class=&quot;references&quot;&gt;
+&lt;li id=&quot;noteFoot01a&quot;
+&gt;'''[[#nbFoot01a|^]]''' Miller, Edward. ''The Sun''. Academic Press, 2005, p. 1.&lt;/li&gt;
+&lt;li id=&quot;noteFoot02a&quot;
+&gt;'''[[#nbFoot02a|^]]''' Brown, Rebecca. &quot;Size of the Moon&quot;, ''Scientific American'', 51(78):46.&lt;/li&gt;
+&lt;li id=&quot;noteFoot03a&quot;
+&gt;'''[[#nbFoot03a|^]]''' Smith, John. ''The Sun's Heat''. Academic Press, 2005, p. 2.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+===Bundling citations===
+{{shortcut|WP:CITEBUNDLE|WP:BUNDLING}}
+{{main|Help:Citation merging}}
+{{see|Wikipedia:Citation overkill}}
+Sometimes the article is more readable if multiple citations are bundled into a single footnote. For example, when there are multiple sources for a given sentence, and each source applies to the entire sentence, the sources can be placed at the end of the sentence, like this.{{dummy ref|4}}{{dummy ref|5}}{{dummy ref|6}}{{dummy ref|7}} Or they can be bundled into one footnote at the end of the sentence or paragraph, like this.{{dummy ref|4}}
+
+Bundling is also useful if the sources each support a different portion of the preceding text, or if the sources all support the same text. Bundling has several advantages:
+:*It helps readers and other editors see at a glance which source supports which point, maintaining [[#Text–source integrity|text–source integrity]];
+:*It avoids the visual clutter of multiple clickable footnotes inside a sentence or paragraph;
+:*It avoids the confusion of having multiple sources listed separately after sentences, with no indication of which source to check for each part of the text, such as this.{{dummy ref|1}}{{dummy ref|2}}{{dummy ref|3}}{{dummy ref|4}}
+:*It makes it less likely that inline citations will be moved inadvertently when text is re-arranged, because the footnote states clearly which source supports which point.
+
+To concatenate multiple citations for the same content, semicolons (or another character appropriate to the article's style) can be used.  Alternatively, the template {{tl|multiref}} may be used.
+
+&lt;blockquote style=&quot;background:white; padding:1em; border:1px solid #999;&quot;&gt;&lt;!--code for display--&gt;
+The sun is pretty big, bright and hot.&lt;sup id=&quot;nbFoot04a&quot; class=&quot;reference&quot;&gt;[[#noteFoot04a|[1]]]&lt;/sup&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot;font-size:medium&quot;&gt;Notes&lt;/span&gt;
+----
+&lt;ol class=&quot;references&quot;&gt;
+'''Semicolons'''
+
+&lt;li id=&quot;noteFoot04a&quot; value=&quot;1&quot;&gt;
+ '''[[#nbFoot04a|^]]''' Miller, Edward. ''The Sun''. Academic Press, 2005, p. 1; Brown, Rebecca. &quot;The Solar System&quot;, ''Scientific American'', 51(78):46; Smith, John. ''The Earth's Star''. Academic Press, 2005, p. 2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+For multiple citations in a single footnote, each in reference to specific statements, there are several layouts available, as illustrated below. Within a given article only a single layout should be used.
+&lt;blockquote style=&quot;background:white; padding:1em; border:1px solid #999;&quot;&gt;&lt;!--code for display--&gt;
+The sun is pretty big, but the moon is not so big. The sun is also quite hot.&lt;sup id=&quot;nbFoot01a&quot; class=&quot;reference&quot;&gt;[[#noteFoot01a|[1]]]&lt;/sup&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot;font-size:medium&quot;&gt;Notes&lt;/span&gt;
+----
+&lt;ol class=&quot;references&quot;&gt;
+'''Bullets'''
+
+&lt;li id=&quot;noteFoot01a&quot; value=&quot;1&quot;&gt;
+ '''[[#nbFoot01a|^]]''' For the sun's size, see Miller, Edward. ''The Sun''. Academic Press, 2005, p. 1.
+* For the moon's size, see Brown, Rebecca. &quot;Size of the Moon&quot;, ''Scientific American'', 51(78):46.
+* For the sun's heat, see Smith, John. ''The Sun's Heat''. Academic Press, 2005, p. 2.&lt;/li&gt;
+
+'''Line breaks'''
+&lt;li id=&quot;noteFoot02a&quot; value=&quot;1&quot;&gt;
+'''[[#nbFoot02a|^]]''' For the sun's size, see Miller, Edward. ''The Sun''. Academic Press, 2005, p. 1.
+&lt;br /&gt;For the moon's size, see Brown, Rebecca. &quot;Size of the Moon&quot;, ''Scientific American'', 51(78):46.
+&lt;br /&gt;For the sun's heat, see Smith, John. ''The Sun's Heat''. Academic Press, 2005, p. 2.&lt;/li&gt;
+
+'''Paragraph'''
+&lt;li id=&quot;noteFoot03a&quot; value=&quot;1&quot;&gt;
+'''[[#nbFoot03a|^]]''' For the sun's size, see Miller, Edward. ''The Sun''. Academic Press, 2005, p. 1. For the moon's size, see Brown, Rebecca. &quot;Size of the Moon&quot;, ''Scientific American'', 51(78):46. For the sun's heat, see Smith, John. ''The Sun's Heat''. Academic Press, 2005, p. 2.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+However, using line breaks to separate list items breaches {{section link|WP:Accessibility|Nobreaks}}: {{tq|&quot;Do not separate list items with line breaks ({{tag|br|o}}). Use {{tl|plainlist}} / {{tl|unbulleted list}} ...&quot;}}.
+
+==In-text attribution==
+{{Shortcut|WP:INTEXT}}
+{{see|Wikipedia:Neutral point of view#Attributing and specifying biased statements|Wikipedia:Manual of Style#Point of view}}
+'''In-text attribution''' is the attribution inside a sentence of material to its source, in addition to an [[WP:INCITE|inline citation]] after the sentence. In-text attribution should be used with [[direct speech]] (a source's words between quotation marks or as a [[block quotation]]); [[indirect speech]] (a source's words modified without quotation marks); and [[WP:close paraphrasing|close paraphrasing]]. It can also be used when loosely summarizing a source's position in your own words. It avoids inadvertent plagiarism and helps the reader see where a position is coming from. An inline citation should follow the attribution, usually at the end of the sentence or paragraph in question.
+
+For example:
+
+{{quotation|{{cross}} To reach fair decisions, parties must consider matters as if behind a [[veil of ignorance]].{{dummy ref|2}} }}
+{{quotation|{{tick}} [[John Rawls]] argues that, to reach fair decisions, parties must consider matters as if behind a [[veil of ignorance]].{{dummy ref|2}} }}
+{{quotation|{{tick}} [[John Rawls]] argues that, to reach fair decisions, parties must consider matters as if &quot;situated behind a [[veil of ignorance]]&quot;.{{dummy ref|2}} }}
+
+When using in-text attribution, make sure it doesn't lead to an inadvertent [[WP:UNDUE|neutrality]] violation. For example, the following implies parity between the sources, without making clear that the position of Darwin is the [[WP:WEIGHT|majority view]]:
+
+{{quotation|{{cross}} [[Charles Darwin]] says that human beings evolved through [[natural selection]], but John Smith writes that we arrived here in pods from Mars.}}
+
+{{quotation|{{tick}} Humans evolved through [[natural selection]], as first explained in [[Charles Darwin]]'s ''[[The Descent of Man, and Selection in Relation to Sex]]''.}}
+
+Neutrality issues apart, there are other ways in-text attribution can mislead. The sentence below suggests ''The New York Times'' has alone made this important discovery:
+
+{{quotation|{{cross}} According to ''The New York Times'', the sun will set in the west this evening.}}
+{{quotation|{{tick}} The sun sets in the west each evening.}}
+
+It is preferable not to clutter articles with information best left to the references. Interested readers can click on the ref to find out the publishing journal:
+
+{{quotation|{{cross}} In an article published in ''The Lancet'' in 2012, researchers announced the discovery of the new tissue type.{{dummy ref|3}} }}
+{{quotation|{{tick}} The discovery of the new tissue type was first published by researchers in 2012.{{dummy ref|3}} }}
+
+Simple facts such as this can have inline citations to reliable sources as an aid to the reader, but normally the text itself is best left as a plain statement without in-text attribution:
+
+{{quotation|{{tick}} By mass, oxygen is the third most abundant element in the universe after hydrogen and helium.{{dummy ref|4}} }}
+
+==&lt;span id=&quot;General reference&quot;&gt;&lt;/span&gt;General references==
+{{shortcut|WP:GENREF}}
+A general reference is a citation to a reliable source that supports content, but is not linked to any particular text in the article through an inline citation. General references are usually listed at the end of the article in a &quot;References&quot; section, and are usually sorted by the last name of the author or the editor. General reference sections are most likely to be found in underdeveloped articles, especially when all article content is supported by a single source. The disadvantage of general references is that [[#Text–source integrity|text–source integrity]] is lost, unless the article is very short. They are frequently reworked by later editors into inline citations.
+
+The appearance of a general references section is the same as those given above in the sections on [[#Short citations|short citations]] and [[#Parenthetical referencing|parenthetical references]]. If both cited and uncited references exist, their distinction can be highlighted with separate section names, e.g., &quot;References&quot; and &quot;General references&quot;.
+
+==&lt;span id=&quot;Unsourced material&quot;&gt;&lt;/span&gt;Dealing with unsourced material==
+&lt;!-- This Anchor tag serves to provide a permanent target for incoming section links. Please do not move it out of the section heading, even though it disrupts edit summary generation (you can manually fix the edit summary before saving your changes). Please do not modify it, even if you modify the section title. See [[Template:Anchor]] for details. (This text: [[Template:Anchor comment]]) --&gt;
+{{Shortcut|WP:NOCITE|WP:BLPCITE}}
+If an article has no references at all, then:
+* If the entire article is [[WP:PN|&quot;Patent Nonsense&quot;]], tag it for [[WP:CSD|speedy deletion]] using criterion G1.
+* If the article is a biography of a living person, it can be tagged with &lt;nowiki&gt;{{subst:prod blp}}&lt;/nowiki&gt; to propose deletion. If it's a biography of a living person and is an attack page, then it should be tagged for speedy deletion using criterion G10, which will blank the page.
+* If the article doesn't fit into the above two categories, then consider finding references yourself, or commenting on the article talk page or the talk page of the article creator. You may also tag the article with the {{tlx|unreferenced}} template and consider nominating it for [[WP:AFD|deletion]].
+
+For individual unreferenced claims in an article:
+* If the article is a biography of a living person, then any {{em|contentious}} material must be removed immediately: see [[WP:Biographies of living persons|Biographies of living persons]]. If the unreferenced material is seriously inappropriate, it may need to be hidden from general view, in which case [[WP:RFO|request admin assistance]].
+* If the material added appears to be false or an expression of opinion, remove it and inform the editor who added the unsourced material. The {{tlx|uw-unsourced1}} template may be placed on their talk page.
+* In any other case consider finding references yourself, or commenting on the article talk page or the talk page of the editor who added the unsourced material. You may place a {{tlx|citation needed}} or {{tlx|dubious}} tag against the added text.
+
+==Citation templates and tools==
+{{shortcut|WP:CITECONSENSUS}}
+{{see|Wikipedia:Citation templates|Help:Citation tools}}
+{{for|a comparison of citations using templates with citations written freehand|Wikipedia:Citing sources/Example edits for different methods#Footnotes}}
+
+[[WP:Citation templates|Citation templates]] can be used to format citations in a consistent way. The use of citation templates is neither encouraged nor discouraged: an article should not be switched between templated and non-templated citations without good reason and consensus – see [[#Variation in citation methods|&quot;Variation in citation methods&quot;]], above.
+
+If citation templates are used in an article, the parameters should be accurate. It is inappropriate to set parameters to false values to cause the template to render as if it were written in some style other than the style normally produced by the template (e.g., [[The MLA Style Manual|MLA style]]).
+
+===Metadata===
+Citations may be accompanied by metadata, though it is not mandatory. Most citation templates on Wikipedia use the [[COinS]] standard. Metadata such as this allow browser plugins and other automated software to make citation data accessible to the user, for instance by providing links to their library's online copies of the cited works. In articles that format citations manually, metadata may be added manually in a span, according to the [http://ocoins.info/ COinS specification].
+
+{{anchor|generators}}
+===Citation generation tools===
+* [[User:Ark25/RefScript]], a JavaScript bookmarklet – creates references in one click, works for many newspapers
+* [[User:V111P/js/WebRef]], a script or bookmarklet  automating the filling of the {{tl|cite web}} template. You use the script on the page you want to cite.
+* [[User:Badgettrg]], [http://sumsearch.org/cite/ Biomedical citation maker]. uses Pubmed ID (PMID) or DOI or PMCID or NCT. Adds links to [http://annals.org/aim/journal-club ACP Journal Club] and [http://ebm.bmj.com/ Evidence-Based Medicine] comments if present.
+* [[User:Zhaofeng Li/reFill]] – adds titles to bare url references and other cleanup
+* [[Template:Ref info]], which can aid evaluating what kind of citation style was used to write the article
+* Based on [[Wikipedia:The Wikipedia Library/Citoid|Citoid]]:
+** [[Wikipedia:VisualEditor/User guide#Using standard cite templates|Cite templates in Visual Editor]]
+** [[User:Salix alba/Citoid]] a client for the [[mw:citoid]] server which generates {{cs1}} templates from urls.
+* [https://github.com/Apoc2400/Reftag RefTag]:
+** [http://reftag.appspot.com/ Reftag for Google Books] – converts bare Google book links into {{tl|cite book}} format.
+** [http://reftag.appspot.com/doiweb.py Reftag for DOI]
+** [http://reftag.appspot.com/nytweb.py Reftag for New York Times]
+* Hosted on tools.wmflabs.org:
+** [[Wikipedia:refToolbar 2.0]], used in the Source Editor
+** [[User:Citation bot|Citation bot]]
+** [http://tools.wmflabs.org/yadkard/ Yadkard]: A web-based tool for generating [[Help:Shortened footnotes|shortened footnotes]] and citation using Google Books URLs, DOI or ISBN. Also supports some news websites.
+** [https://tools.wmflabs.org/citation-template-filling/cgi-bin/index.cgi?ddb=&amp;type=pubmed_id&amp;id=&amp;add_param_space=1&amp;add_ref_tag=1&amp;full_journal_title=1 Wikipedia template filling] – generates [[Vancouver style]] citations from PMIDs ([[PubMed]] IDs).

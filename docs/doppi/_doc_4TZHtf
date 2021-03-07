@@ -1,0 +1,248 @@
+Creating objects directly within the class that requires the objects is inflexible
+because it commits the class to particular objects and makes it impossible to change the instantiation later independently from (without having to change) the class.
+It stops the class from being reusable if other objects are required,
+and it makes the class hard to test because real objects cannot be replaced with mock objects.
+
+The Abstract Factory design pattern describes how to solve such problems:
+* Encapsulate object creation in a separate (factory) object. That is, define an interface (AbstractFactory) for creating objects, and implement the interface.
+* A class delegates object creation to a factory object instead of creating objects directly.
+
+This makes a class independent of how its objects are created (which concrete classes are instantiated).
+A class can be configured with a factory object, which it uses to create objects, and even more, the factory object can be exchanged at run-time.
+{{See also|#UML diagram}}
+
+==Definition==
+The essence of the Abstract Factory Pattern is to &quot;Provide an interface for creating families of related or dependent objects without specifying their concrete classes.&quot;.&lt;ref&gt;{{cite web | url = http://www.informit.com/ | title = Design Patterns: Abstract Factory | first = Erich | last = Gamma
+ |author2=Richard Helm|author3=Ralph Johnson|author4=John M. Vlissides | date = 2009-10-23 | publisher = informIT | archiveurl = http://www.informit.com/articles/article.aspx?p=1398599 | archivedate = 2009-10-23 | accessdate = 2012-05-16 | quote = Object Creational: Abstract Factory: Intent: Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+}}&lt;/ref&gt;
+
+==Usage==
+The ''factory'' determines the actual ''concrete'' type of [[object (computer science)|object]] to be created, and it is here that the object is actually created (in C++, for instance, by the '''new''' [[operator (programming)|operator]]). However, the factory only returns an ''abstract'' [[pointer (computer programming)|pointer]] to the created [[object (computer science)|concrete object]].
+
+This insulates client code from [[object creation]] by having clients ask a [[factory object]] to create an object of the desired [[abstract type]] and to return an abstract pointer to the object.&lt;ref&gt;{{cite web | url = http://www.codeproject.com/ | title = Object Design for the Perplexed | first = David | last = Veeneman | date = 2009-10-23 | publisher = The Code Project | archiveurl = http://www.codeproject.com/Articles/4079/Object-Design-for-the-Perplexed | archivedate = 2011-09-18 | accessdate = 2012-05-16 | quote = The factory insulates the client from changes to the product or how it is created, and it can provide this insulation across objects derived from very different abstract interfaces.
+}}&lt;/ref&gt;
+
+As the factory only returns an abstract pointer, the client code (that requested the object from the factory) does not know &amp;mdash; and is not burdened by &amp;mdash; the actual concrete type of the object that was just created. However, the type of a concrete object (and hence a concrete factory) is known by the abstract factory; for instance, the factory may read it from a configuration file. The client has no need to specify the type, since it has already been specified in the configuration file. In particular, this means:
+
+* The client code has no knowledge whatsoever of the concrete [[Data type|type]], not needing to include any [[header file]]s or [[Class (computer science)|class]] [[Declaration (computer science)|declaration]]s related to it. The client code deals only with the abstract type. Objects of a concrete type are indeed created by the factory, but the client code accesses such objects only through their [[abstract interface]].&lt;ref name=&quot;implementation&quot;&gt;{{cite web | url = http://www.oodesign.com/abstract-factory-pattern.html | title = Abstract Factory: Implementation | publisher = OODesign.com | accessdate = 2012-05-16
+}}&lt;/ref&gt;
+* Adding new concrete types is done by modifying the client code to use a different factory, a modification that is typically one line in one file. The different factory then creates objects of a ''different'' concrete type, but still returns a pointer of the ''same'' abstract type as before &amp;mdash; thus insulating the client code from change. This is significantly easier than modifying the client code to instantiate a new type, which would require changing ''every'' location in the code where a new object is created (as well as making sure that all such code locations also have knowledge of the new concrete type, by including for instance a concrete class header file). If all factory objects are stored globally in a [[singleton pattern|singleton]] object, and all client code goes through the singleton to access the proper factory for object creation, then changing factories is as easy as changing the singleton object.&lt;ref name=&quot;implementation&quot; /&gt;
+
+== Structure ==
+
+=== UML diagram ===
+{{Plain image with caption|Image:Abstract factory.svg|width=259px|align=right|caption='''Class diagram example'''
+The method &lt;code&gt;createButton&lt;/code&gt; on the &lt;code&gt;GUIFactory&lt;/code&gt; interface returns objects of type &lt;code&gt;Button&lt;/code&gt;. What implementation of &lt;code&gt;Button&lt;/code&gt; is returned depends on which implementation of &lt;code&gt;GUIFactory&lt;/code&gt; is handling the method call.}}
+{{Plain image with caption|File:w3sDesign Abstract Factory Design Pattern UML.jpg|A sample UML class and sequence diagram for the Abstract Factory design pattern.
+&lt;ref&gt;{{cite web|title=The Abstract Factory design pattern - Structure and Collaboration|url=http://w3sdesign.com/?gr=c01&amp;ugr=struct|website=w3sDesign.com|accessdate=2017-08-12}}&lt;/ref&gt;|700px|align=left}}{{-}}
+In the above [[Unified Modeling Language|UML]] [[class diagram]], 
+the &lt;code&gt;Client&lt;/code&gt; class that requires &lt;code&gt;ProductA&lt;/code&gt; and &lt;code&gt;ProductB&lt;/code&gt; objects does not instantiate the &lt;code&gt;ProductA1&lt;/code&gt; and &lt;code&gt;ProductB1&lt;/code&gt; classes directly.
+Instead, the &lt;code&gt;Client&lt;/code&gt; refers to the &lt;code&gt;AbstractFactory&lt;/code&gt; interface for creating objects,
+which makes the &lt;code&gt;Client&lt;/code&gt; independent of how the objects are created (which concrete classes are instantiated).
+The &lt;code&gt;Factory1&lt;/code&gt; class implements the &lt;code&gt;AbstractFactory&lt;/code&gt; interface by instantiating the &lt;code&gt;ProductA1&lt;/code&gt; and &lt;code&gt;ProductB1&lt;/code&gt; classes.
+&lt;br&gt;
+The [[Unified Modeling Language|UML]] [[sequence diagram]] shows the run-time interactions: 
+The &lt;code&gt;Client&lt;/code&gt; object calls &lt;code&gt;createProductA()&lt;/code&gt; on the &lt;code&gt;Factory1&lt;/code&gt; object, which creates and returns a &lt;code&gt;ProductA1&lt;/code&gt; object.
+Thereafter, 
+the &lt;code&gt;Client&lt;/code&gt; calls &lt;code&gt;createProductB()&lt;/code&gt; on &lt;code&gt;Factory1&lt;/code&gt;, which creates and returns a &lt;code&gt;ProductB1&lt;/code&gt; object.
+
+=== Lepus3 chart ===
+
+{{Plain image with caption|Abstract Factory in LePUS3 vector.svg|[http://www.lepus.org.uk/ref/legend/legend.xml legend]|569|center|bottom|triangle}}
+
+== [[Python (programming language)|Python]] example ==
+&lt;syntaxhighlight lang=&quot;python&quot;&gt;
+from abc import ABC, abstractmethod
+from sys import platform
+
+
+class Button(ABC):
+    @abstractmethod
+    def paint(self):
+        pass
+
+
+class LinuxButton(Button):
+    def paint(self):
+        return &quot;Render a button in a Linux style&quot;
+
+
+class WindowsButton(Button):
+    def paint(self):
+        return &quot;Render a button in a Windows style&quot;
+
+
+class MacOSButton(Button):
+    def paint(self):
+        return &quot;Render a button in a MacOS style&quot;
+
+
+class GUIFactory(ABC):
+    @abstractmethod
+    def create_button(self):
+        pass
+
+
+class LinuxFactory(GUIFactory):
+    def create_button(self):
+        return LinuxButton()
+
+
+class WindowsFactory(GUIFactory):
+    def create_button(self):
+        return WindowsButton()
+
+
+class MacOSFactory(GUIFactory):
+    def create_button(self):
+        return MacOSButton()
+
+
+if platform == &quot;linux&quot;:
+    factory = LinuxFactory()
+elif platform == &quot;darwin&quot;:
+    factory = MacOSFactory()
+elif platform == &quot;win32&quot;:
+    factory = WindowsFactory()
+else:
+    raise NotImplementedError(f&quot;Not implemented for your platform: {platform}&quot;)
+
+button = factory.create_button()
+result = button.paint()
+print(result)
+&lt;/syntaxhighlight&gt;
+
+Alternative implementation using the classes themselves as factories:
+
+&lt;syntaxhighlight lang=&quot;python&quot;&gt;
+from abc import ABC, abstractmethod
+from sys import platform
+
+
+class Button(ABC):
+    @abstractmethod
+    def paint(self):
+        pass
+
+
+class LinuxButton(Button):
+    def paint(self):
+        return &quot;Render a button in a Linux style&quot;
+
+
+class WindowsButton(Button):
+    def paint(self):
+        return &quot;Render a button in a Windows style&quot;
+
+
+class MacOSButton(Button):
+    def paint(self):
+        return &quot;Render a button in a MacOS style&quot;
+
+
+if platform == &quot;linux&quot;:
+    factory = LinuxButton
+elif platform == &quot;darwin&quot;:
+    factory = MacOSButton
+elif platform == &quot;win32&quot;:
+    factory = WindowsButton
+else:
+    raise NotImplementedError(f&quot;Not implemented for your platform: {platform}&quot;)
+
+button = factory()
+result = button.paint()
+print(result)
+&lt;/syntaxhighlight&gt;
+&lt;!--
+Please note that Wikipedia:WikiProject_Computer_science/Manual_of_style discourages multiple
+source code implementations and recommends Python as a language designed for readability.
+--&gt;
+
+== See also ==
+* [[Concrete class]]
+* [[Factory method pattern]]
+* [[Object creation]]
+* [[Software design pattern]]
+
+==References==
+{{Reflist}}
+
+==External links==
+{{Wikibooks|Computer Science Design Patterns|Abstract Factory|Abstract Factory in action}}
+* [http://designpattern.co.il/AbstractFactory.html Abstract Factory] implementation in Java
+* {{Commons-inline|Abstract factory}}
+* [https://web.archive.org/web/20080415015154/http://www.lepus.org.uk/ref/companion/AbstractFactory.xml Abstract Factory] UML diagram + formal specification in LePUS3 and Class-Z (a Design Description Language)
+* [https://web.archive.org/web/20151101110755/http://www.patterns.pl/abstractfactory.html Abstract Factory] Abstract Factory implementation example
+
+{{Design Patterns Patterns}}
+
+[[Category:Software design patterns]]
+[[Category:Articles with example C++ code]]
+[[Category:Articles with example Java code]]
+[[Category:Articles with example Python (programming language) code]]</text>
+      <sha1>n5y75270zirb293gva555w0va76fd7s</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Telecommunications link</title>
+    <ns>0</ns>
+    <id>41837</id>
+    <revision>
+      <id>984307185</id>
+      <parentid>979472718</parentid>
+      <timestamp>2020-10-19T11:59:17Z</timestamp>
+      <contributor>
+        <username>Kvng</username>
+        <id>910180</id>
+      </contributor>
+      <minor />
+      <comment>endmatter formatting</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6280" xml:space="preserve">{{redirect|Uplink}}
+{{Use British English|date=April 2020}}
+{{merge from|Data link|date=September 2020}}
+
+In a [[telecommunications network]], a '''link''' is a [[communication channel]] that connects two or more devices for the purpose of [[data transmission]]. The link may be a dedicated [[physical link]] or a [[virtual circuit]] that uses one or more physical links or shares a physical link with other telecommunications links.
+
+A telecommunications link is generally based on one of several types of information transmission paths such as those provided by [[communication satellite]]s, terrestrial radio communications infrastructure and [[computer network]]s to connect two or more points.
+
+The term ''link'' is widely used in computer networking to refer to the communications facilities that connect nodes of a network.&lt;ref name=&quot;atis&quot;&gt;{{cite web|url=http://www.atis.org/glossary/definition.aspx?id=4188|title=network topology|author=ATIS committee PRQC|publisher=[[Alliance for Telecommunications Industry Solutions]]|work=ATIS Telecom Glossary 2007|accessdate=2008-10-10}}&lt;/ref&gt;{{Efn|Sometimes the communications facilities that provide the communications channel that constitutes a link are also included in the definition of ''link''.}}
+
+==Types==
+
+===Point-to-point===&lt;!-- This section is linked from [[Packet]] --&gt;
+A [[point-to-point link]] is a dedicated link that connects exactly two communication facilities (e.g., two [[Node (networking)|nodes]] of a network, an intercom station at an entryway with a single internal intercom station, a radio path between two points, etc.).
+
+===Broadcast===
+Broadcast links connect two or more nodes and support ''broadcast transmission'', where one node can transmit so that all other nodes can receive the same transmission. [[Ethernet]] is an example.
+
+===Multipoint===
+Also known as a ''multidrop'' link, a multipoint link is a link that connects ''two or more'' nodes.  Also known as general topology networks, these include [[Asynchronous Transfer Mode|ATM]] and [[Frame Relay]] links, as well as [[X.25]] networks when used as links for a network layer protocol like [[Internet Protocol|IP]].
+
+Unlike broadcast links, there is no mechanism to efficiently send a single message to all other nodes without copying and retransmitting the message.
+
+===Point-to-multipoint===
+A [[point-to-multipoint link]] (or simply a ''multipoint'') is a specific type of multipoint link which consists of a central connection endpoint (CE) that is connected to multiple peripheral CEs. Any transmission of data that originates from the central CE is received by all of the peripheral CEs while any transmission of data that originates from any of the peripheral CEs is only received by the central CE.
+
+=== Private and public ===
+Links are often referred to by terms that refer to the ownership or accessibility of the link.
+* A ''private link'' is a link that is either owned by a specific entity or a link that is only accessible by a specific entity.
+* A ''public link'' is a link that uses the public switched telephone network or other public utility or entity to provide the link and which may also be accessible by anyone.
+
+== Direction ==
+[[File:Uplink y Downlink.jpg|thumb|250px|&lt;center&gt; ''Feeder links'', here: ''uplink / downlink''&lt;/center&gt;]]
+
+=== Uplink ===
+*Pertaining to [[radiocommunication service]], an '''uplink''' (UL or U/L) is the portion of a [[feeder link]] used for the transmission of signals from an [[earth station]] to a [[space radio station]], [[space radio system]] or [[high altitude platform station]].
+*Pertaining to [[Global System for Mobile Communications|GSM]] and cellular networks, the radio uplink is the transmission path from the [[mobile station]] (cell phone) to a [[base transceiver station|base station]] (cell site). Traffic and signalling flowing within the [[Base Station Subsystem|BSS]] and [[Network and Switching Subsystem|NSS]] may also be identified as uplink and downlink.
+*Pertaining to computer networks, an uplink is a connection from [[data communications equipment]] toward the [[network core]]. This is also known as an [[upstream (networking)|upstream]] connection.
+
+=== Downlink ===
+*Pertaining to [[radiocommunication service]], a '''downlink''' (DL or D/L) is the portion of a [[feeder link]] used for the transmission of signals from a [[space radio station]], [[space radio system]] or [[high altitude platform station]] to an [[earth station]].
+*In the context of satellite communications, a '''downlink''' (DL) is the link from a satellite to a ground station.
+*Pertaining to cellular networks, the radio downlink is the transmission path from a cell site to the cell phone. Traffic and signalling flowing within the [[base station subsystem]] (BSS) and [[network switching subsystem]] (NSS) may also be identified as uplink and downlink.
+*Pertaining to computer networks, a downlink is a connection from data communications equipment towards [[data terminal equipment]]. This is also known as a [[downstream (networking)|downstream]] connection.
+
+=== Forward link ===
+A '''forward link''' is the link from a fixed location (e.g., a [[base station]]) to a mobile user. If the link includes a [[communications satellite|communications relay satellite]], the forward link will consist of both an [[uplink]] (base station to satellite) and a downlink (satellite to mobile user).&lt;ref&gt;[http://www.scatmag.com/technical/techarticle-mar05.pdf Basics of C &amp; Ku Band] Scatmag.com&lt;/ref&gt;

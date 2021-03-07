@@ -1,0 +1,193 @@
+==References==
+{{Reflist}}
+
+[[Category:Ancient Roman prosopographical lists]]
+[[Category:Ancient Roman cognomina]]
+[[Category:Cornelii Cinnae|+]]
+
+
+{{ancientRome-bio-stub}}</text>
+      <sha1>g950f2i2reowju3ph0evyfspbg4do7i</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Painter's algorithm</title>
+    <ns>0</ns>
+    <id>47028</id>
+    <revision>
+      <id>991448098</id>
+      <parentid>991447963</parentid>
+      <timestamp>2020-11-30T02:59:44Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: journal, volume, url, title. URLs might have been internationalized/anonymized. Add: bibcode, s2cid, author pars. 1-1. Removed parameters. Some additions/deletions were actually parameter name changes. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by Headbomb | via #UCB_toolbar</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12676" xml:space="preserve">{{Distinguish|Schlemiel the Painter's algorithm}}
+The '''painter’s algorithm''' (also '''depth-sort algorithm''' and '''priority fill''') is an algorithm for [[Hidden surface determination#Visible%20surface%20determination|visible surface determination]] in [[3D computer graphics]] that works on a [[polygon|polygon-by-polygon]] basis rather than a [[pixel|pixel-by-pixel]], row by row, or area by area basis of other [[Hidden surface removal|Hidden Surface Removal]] algorithms.&lt;ref&gt;{{Cite journal|last=Appel|first=Arthur|date=1968|editor-last=Morrel|editor-first=A. J. H.|title=On calculating the illusion of reality|url=http://graphics.stanford.edu/courses/Appel.pdf|journal=Information Processing, Proceedings of IFIP Congress 1968, Edinburgh, UK, 5-10 August 1968, Volume 2 - Hardware, Applications|volume=|pages=945–950|via=}}&lt;/ref&gt;&lt;ref&gt;{{Cite journal|last=Romney|first=Gordon Wilson|date=1969-09-01|title=Computer Assisted Assembly and Rendering of Solids.|url=https://apps.dtic.mil/sti/citations/AD0753673|language=en}}&lt;/ref&gt;&lt;ref&gt;Gary Scott Watkins. 1970. [https://ia800301.us.archive.org/29/items/utech-csc-70-101_watkins_dissertation_jun70/UTECH-CSc-70-101_Watkins_Dissertation_Jun70.pdf &quot;A real time visible surface algorithm. Ph.D. Dissertation.&quot;] The University of Utah. Order Number: AAI7023061.&lt;/ref&gt; The painter’s algorithm creates images by sorting the polygons within the image by their depth and placing each polygon in order from the farthest to the closest object.&lt;ref name=&quot;:0&quot; /&gt;&lt;ref&gt;{{Cite journal|last=Bouknight|first=W. Jack|date=1970-09-01|title=A procedure for generation of three-dimensional half-toned computer graphics presentations|url=https://doi.org/10.1145/362736.362739|journal=Communications of the ACM|volume=13|issue=9|pages=527–536|doi=10.1145/362736.362739|s2cid=15941472|issn=0001-0782}}&lt;/ref&gt;
+
+The painter's algorithm was initially proposed as a basic method to address the [[Hidden-surface determination]] problem by [[Martin Newell (computer scientist)|Martin Newell]], [[Dick Newell|Richard Newell]], and Tom Sancha in 1972, while all three were working at [[CADCentre]].&lt;ref name=&quot;:0&quot;&gt;{{Cite journal|last1=Newell|first1=M. E.|last2=Newell|first2=R. G.|last3=Sancha|first3=T. L.|date=1972-08-01|title=A solution to the hidden surface problem|url=https://ohiostate.pressbooks.pub/app/uploads/sites/45/2017/09/newell-newell-sancha.pdf|journal=Proceedings of the ACM Annual Conference - Volume 1|series=ACM '72|location=Boston, Massachusetts, USA|publisher=Association for Computing Machinery|volume=1|pages=443–450|doi=10.1145/800193.569954|isbn=978-1-4503-7491-0|s2cid=13829930|via=}}&lt;/ref&gt; The name &quot;painter's algorithm&quot; refers to the technique employed by many painters where they begin by painting distant parts of a scene before parts that are nearer, thereby covering some areas of distant parts.&lt;ref&gt;{{Cite book|last=Berland|first=Dinah|title=Historical Painting Techniques, Materials, and Studio Practice|publisher=The Getty Conservation Institute|year=1995|isbn=|location=https://www.getty.edu/conservation/publications_resources/pdf_publications/pdf/historical_paintings.pdf|pages=}}&lt;/ref&gt;&lt;ref&gt;{{Cite journal|last1=Wylie|first1=Chris|last2=Romney|first2=Gordon|last3=Evans|first3=David|last4=Erdahl|first4=Alan|date=1967-11-14|title=Half-tone perspective drawings by computer|url=https://doi.org/10.1145/1465611.1465619|journal=Proceedings of the November 14–16, 1967, Fall Joint Computer Conference|series=AFIPS '67 (Fall)|location=Anaheim, California|publisher=Association for Computing Machinery|pages=49–58|doi=10.1145/1465611.1465619|isbn=978-1-4503-7896-3|s2cid=3282975}}&lt;/ref&gt; Similarly, the painter's algorithm sorts all the polygons in a scene by their depth and then paints them in this order, farthest to closest.&lt;ref name=&quot;:2&quot;&gt;{{Cite book|last=Desai|first=Apurva|title=Computer Graphics|publisher=PHI Learning Pvt. Ltd.|year=2008|isbn=|location=https://books.google.com/books?id=WQiIj8ZS0IoC&amp;pg=PA256&amp;lpg=PA256&amp;dq=%22hewells%22+painter%27s+algorithm&amp;source=bl&amp;ots=HbWXoialNt&amp;sig=ACfU3U0do0uKya5QGDaBUKKrXoYJ3uULdA&amp;hl=en&amp;sa=X&amp;ved=2ahUKEwjh1tC14MHsAhUogK0KHWS5BsQQ6AEwAnoECAoQAg#v=onepage&amp;q&amp;f=false|pages=}}&lt;/ref&gt; It will paint over the parts that are normally not visible — thus solving the visibility problem — at the cost of having painted invisible areas of distant objects.&lt;ref name=&quot;:1&quot;&gt;{{Cite book|last=de Berg|first=Mark|title=Computational Geometry|publisher=Springer|year=2008|isbn=|location=https://people.inf.elte.hu/fekete/algoritmusok_msc/terinfo_geom/konyvek/Computational%20Geometry%20-%20Algorithms%20and%20Applications,%203rd%20Ed.pdf|pages=}}&lt;/ref&gt; The ordering used by the algorithm is called a '''&lt;nowiki&gt;depth order'&lt;/nowiki&gt;'' and does not have to respect the numerical distances to the parts of the scene: the essential property of this ordering is, rather, that if one object obscures part of another, then the first object is painted after the object that it obscures.&lt;ref name=&quot;:1&quot; /&gt; Thus, a valid ordering can be described as a [[topological ordering]] of a [[directed acyclic graph]] representing occlusions between objects.&lt;ref&gt;{{Cite book|title=Ray Shooting, Depth Orders and Hidden Surface Removal|volume=703|series=Lecture Notes in Computer Science|first=Mark|last=de Berg|publisher=Springer|year=1993|isbn=9783540570202|url=https://books.google.com/books?id=b1INPTC3w_QC&amp;pg=PA130|page=130|postscript=&lt;!-- Bot inserted parameter. Either remove it; or change its value to &quot;.&quot; for the cite to end in a &quot;.&quot;, as necessary. --&gt;&amp;#123;&amp;#123;inconsistent citations&amp;#125;&amp;#125;}}.&lt;/ref&gt;{{wide image|Painter's algorithm.svg|600px|The distant mountains are painted first, followed by the closer meadows; finally, the trees, are painted. Although some trees are more distant from the viewpoint than some parts of the meadows, the ordering (mountains, meadows, trees) forms a valid depth order, because no object in the ordering obscures any part of a later object.}}
+
+== Algorithm ==
+Conceptually Painter’s Algorithm works as follows:
+
+# Sort each polygon by depth
+# Place each polygon from the furthest polygon to the closest polygon
+
+=== Pseudo-code ===
+ 1  '''sort''' ''polygons'' by ''depth''
+ 2  '''for each''' ''polygon'' ''p'':
+ 3      '''for each''' ''pixel'' that ''p'' covers:
+ 4          '''paint''' ''p.color'' on ''pixel''
+
+=== Time-Complexity ===
+The painter's algorithm's time-complexity is heavily dependent on the sorting algorithm used to order the polygons. Assuming the use of the most optimal sorting algorithm, painter's algorithm has a worst-case complexity of ''[[Big O notation|O]]''(''n'' log ''n + m*n''), where ''n'' is the number of polygons and ''m'' is the number of pixels to be filled.
+
+=== Space-Complexity ===
+
+The painter's algorithm's worst-case space-complexity is ''O''(''n+m''), where ''n'' is the number of polygons and ''m'' is the number of pixels to be filled.
+
+== Advantages ==
+There are two primary technical requisites that favor the use of the painter’s algorithm.
+
+=== Basic Graphical Structure ===
+The painter’s algorithm is not as complex in structure as its other depth sorting algorithm counterparts.&lt;ref name=&quot;:1&quot; /&gt;&lt;ref&gt;{{Cite journal|last=Warnock|first=John E.|date=1969-06-01|title=A Hidden Surface Algorithm for Computer Generated Halftone Pictures|url=https://apps.dtic.mil/sti/citations/AD0753671|language=en}}&lt;/ref&gt; Components such as the depth-based rendering order, as employed by the painter’s algorithm, are one of the simplest ways to designate the order of graphical production.&lt;ref name=&quot;:2&quot; /&gt; This simplicity makes it useful in basic computer graphics output scenarios where an unsophisticated render will need to be made with little struggle.&lt;ref name=&quot;:1&quot; /&gt; 
+
+=== Memory Efficiency ===
+In the early 70s, when the painter’s algorithm was developed, physical memory was relatively small&lt;ref&gt;{{Cite journal|last1=Freiser|first1=M.|last2=Marcus|first2=P.|date=June 1969|title=A survey of some physical limitations on computer elements|url=https://ieeexplore.ieee.org/document/1066403|journal=IEEE Transactions on Magnetics|volume=5|issue=2|pages=82–90|doi=10.1109/TMAG.1969.1066403|bibcode=1969ITM.....5...82F|issn=1941-0069}}&lt;/ref&gt;. This required programs to manage memory as efficiently as possible to conduct large tasks without crashing. The painter’s algorithm prioritizes the efficient use of memory but at the expense of higher processing power since all parts of all images must be rendered.&lt;ref name=&quot;:1&quot; /&gt;[[File:Painters problem.svg|thumb|right|Overlapping polygons can cause the algorithm to fail|285x285px]]
+== Limitations ==
+The algorithm can fail in some cases, including cyclic overlap or piercing polygons.
+=== Cyclical Overlapping ===
+In the case of cyclic overlap, as shown in the figure to the right, Polygons A, B, and C overlap each other in such a way that it is impossible to determine which polygon is above the others. In this case, the offending polygons must be cut to allow sorting.&lt;ref name=&quot;:0&quot; /&gt;
+
+=== Piercing Polygons ===
+The case of piercing polygons arises when one polygon intersects another. Similar to cyclic overlap, this problem may be resolved by cutting the offending polygons.&lt;ref name=&quot;:0&quot; /&gt;
+
+=== Efficiency ===
+In basic implementations, the painter's algorithm can be inefficient. It forces the system to [[rendering (computer graphics)|render]] each point on every polygon in the visible set, even if that polygon is occluded in the finished scene. This means that, for detailed scenes, the painter's algorithm can overly tax the computer hardware.
+== Variants ==
+
+=== Extended painter's algorithm ===
+[[Newell's algorithm]], proposed as the extended algorithm to painter's algorithm, provides a method for cutting cyclical and piercing polygons.&lt;ref name=&quot;:0&quot; /&gt;
+
+=== Reverse painter's algorithm ===
+Another variant of painter's algorithm includes '''reverse painter's algorithm'''. Reverse painter's algorithm paints objects nearest to the viewer first — with the rule that paint must never be applied to parts of the image that are already painted (unless they are partially transparent).  In a computer graphic system, this can be very efficient since it is not necessary to calculate the colors (using lighting, texturing, and such) for parts of a distant scene that are hidden by nearby objects.  However, the reverse algorithm suffers from many of the same problems as the standard version.
+
+== Other computer graphics algorithms ==
+The flaws of painter's algorithm led to the development of [[Z-buffering|Z-buffer]] techniques, which can be viewed as a development of the painter's algorithm by resolving depth conflicts on a pixel-by-pixel basis, reducing the need for a depth-based rendering order.&lt;ref&gt;{{Cite book|last=Nyberg|first=Daniel|url=http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-130849|title=Analysis of Two Common Hidden Surface Removal Algorithms, Painter&amp;apos;s Algorithm &amp; Z-Buffering.|date=2011}}&lt;/ref&gt; Even in such systems, a variant of the painter's algorithm is sometimes employed. As Z-buffer implementations generally rely on fixed-precision depth-buffer registers implemented in hardware, there is scope for visibility problems due to rounding error. These are overlaps or gaps at joints between polygons.  To avoid this, some graphics engine implementations &quot;overrender&quot;{{Citation needed|date=January 2008}}, drawing the affected edges of both polygons in the order given by the painter's algorithm.  This means that some pixels are actually drawn twice (as in the full painter's algorithm), but this happens on only small parts of the image and has a negligible performance effect.
+
+==References==
+* {{cite book |last1        = Foley
+ |first1       = James
+ |authorlink  = James D. Foley
+ |title       = Computer Graphics: Principles and Practice
+ |publisher   = [[Addison-Wesley]]
+ |year        = 1990
+ |location    = Reading, MA, USA
+ |page        = [https://archive.org/details/computergraphics00fole/page/1174 1174]
+ |isbn        = 0-201-12110-7
+ |last2       = Feiner
+ |first2      = Steven K.
+ |last3       = Hughes
+ |first3      = John F.
+ |title-link = Computer Graphics: Principles and Practice
+ |authorlink3 = John F. Hughes (computer scientist)
+}}
+&lt;references /&gt;
+{{commons category|Painter's problem}}
+
+== External Links ==
+
+* [http://www.cs.cmu.edu/afs/cs/project/anim/ph/463.96/pub/www/notes/zbuf.2.pdf Painter’s &amp; Z-Buffer Algorithms and Polygon Rendering]
+* https://www.clear.rice.edu/comp360/lectures/old/HiddenSurfText.pdf
+* https://www.cs.princeton.edu/courses/archive/spring01/cs598b/papers/greene93.pdf
+
+[[Category:3D computer graphics]]
+[[Category:Computer graphics algorithms]]</text>
+      <sha1>rn8hd7fw1gfrux4akrtj01mfkd35w7l</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Scanline rendering</title>
+    <ns>0</ns>
+    <id>47029</id>
+    <revision>
+      <id>951084039</id>
+      <parentid>944813327</parentid>
+      <timestamp>2020-04-15T11:43:53Z</timestamp>
+      <contributor>
+        <username>The Anome</username>
+        <id>76</id>
+      </contributor>
+      <comment>Changing [[Wikipedia:Short description|short description]] from &quot;rendering method&quot; to &quot;3D computer graphics image rendering method&quot; ([[Wikipedia:Shortdesc helper|Shortdesc helper]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="7523" xml:space="preserve">{{short description|3D computer graphics image rendering method}}
+[[File:Scan-line algorithm.svg|thumbnail|right|Scan-line algorithm example]]
+'''Scanline rendering''' (also '''scan line rendering''' and '''scan-line rendering''') is an algorithm for [[Hidden surface determination#Visible surface determination|visible surface determination]], in [[3D computer graphics]],
+that works on a row-by-row basis rather than a [[polygon]]-by-polygon or [[pixel]]-by-pixel basis.  All of the polygons to be rendered are first sorted by the top y coordinate at which they first appear, then each row or [[scan line]] of the image is computed using the intersection of a scanline with the polygons on the front of the sorted list, while the sorted list is updated to discard no-longer-visible polygons as the active scan line is advanced down the picture.
+
+The main advantage of this method is that sorting [[vertex (geometry)|vertices]] along the normal of the scanning plane reduces the number of comparisons between edges.  Another advantage is that it is not necessary to translate the coordinates of all vertices from the main memory into the working memory&amp;mdash;only vertices defining edges that intersect the current scan line need to be in active memory, and each vertex is read in only once. The main memory is often very slow compared to the link between the central processing unit and [[cache memory]], and thus avoiding re-accessing vertices in main memory can provide a substantial speedup.
+
+This kind of algorithm can be easily integrated with many other graphics techniques, such as the [[Phong reflection model]] or the [[Z-buffer]] algorithm.
+
+==Algorithm==
+
+The usual method starts with edges of projected polygons inserted into buckets, one per scanline; the rasterizer maintains an active edge table (''AET''). Entries maintain sort links, X coordinates, gradients, and references to the polygons they bound. To rasterize the next scanline, the edges no longer relevant are removed; new edges from the current scanlines' Y-bucket are added, inserted sorted by X coordinate. The active edge table entries have X and other parameter information incremented.
+Active edge table entries are maintained in an X-sorted list by [[bubble sort]], effecting a change when 2 edges cross.
+After updating edges, the active edge table is traversed in X order to emit only the visible spans, maintaining a Z-sorted active Span table, inserting and deleting the surfaces when edges are crossed.{{Cn|date=November 2015}}
+
+==Variants==
+
+A hybrid between this and [[Z-buffering]] does away with the active edge table sorting, and instead rasterizes one scanline at a time into a Z-buffer, maintaining active polygon spans from one scanline to the next.
+
+In another variant, an ID buffer is rasterized in an intermediate step, allowing [[deferred shading]] of the resulting visible pixels.
+
+==History==
+
+The first publication of the scanline rendering technique was probably by Wylie, Romney, Evans, and Erdahl in 1967.&lt;ref&gt;Wylie, C, Romney, G W, Evans, D C, and Erdahl, A, &quot;Halftone Perspective Drawings by Computer,&quot; Proc. AFIPS FJCC 1967, Vol. 31, 49&lt;/ref&gt;
+
+Other early developments of the scanline rendering method were by Bouknight in 1969,&lt;ref&gt;Bouknight W.J, &quot;[https://www.ideals.illinois.edu/bitstream/handle/2142/74694/B7-432.pdf?sequence=2 An Improved Procedure for Generation of Half-tone Computer Graphics Representation],&quot; UI, Coordinated Science Laboratory, Sept 1969&lt;/ref&gt; and Newell, Newell, and Sancha in 1972.&lt;ref&gt;Newell, M E, Newell R. G, and Sancha, T.L, &quot;A New Approach to the Shaded Picture Problem,&quot; Proc ACM National Conf. 1972&lt;/ref&gt;  Much of the early work on these methods was done in [[Ivan Sutherland]]'s graphics group at the [[University of Utah]], and at the [[Evans &amp; Sutherland]] company in [[Salt Lake City]].
+
+==Use in realtime rendering==
+
+The early Evans &amp; Sutherland ESIG line of image-generators (IGs) employed the technique in hardware 'on the fly', to generate images one raster-line at a time without a [[framebuffer]], saving the need for then costly memory. Later variants used a hybrid approach.
+
+The [[Nintendo DS]] is the latest hardware to render 3D scenes in this manner, with the option of caching the rasterized images into VRAM.
+
+The [[Sprite (computer graphics)|sprite hardware]] prevalent in 1980s games machines can be considered a simple 2D form of scanline rendering.
+
+The technique was used in the first Quake engine for software rendering of environments (but moving objects were [[Z-buffering|Z-buffered]] over the top). Static scenery used [[Binary space partitioning|BSP]]-derived sorting for priority. It proved better than [[Z-buffering|Z-buffer]]/[[Painter's algorithm|painter's]] type algorithms at handling scenes of high depth complexity with costly pixel operations (i.e. perspective-correct [[texture mapping]] without hardware assist). This use preceded the widespread adoption of Z-buffer-based GPUs now common in PCs.
+
+Sony experimented with software scanline renderers on a second [[Cell (microprocessor)|Cell]] processor during the development of the [[PlayStation 3]], before settling on a conventional CPU/GPU arrangement.
+
+==Similar techniques==
+A similar principle is employed in [[tiled rendering]] (most famously the [[PowerVR]] 3D chip); that is, primitives are sorted into screen space, then rendered in fast on-chip memory, one tile at a time. The [[Dreamcast]] provided a mode for rasterizing one row of tiles at a time for direct raster scanout, saving the need for a complete framebuffer, somewhat in the spirit of hardware scanline rendering.
+
+Some software rasterizers use 'span buffering' (or 'coverage buffering'), in which a list of sorted, clipped spans are stored in scanline buckets. Primitives would be successively added to this datastructure, before rasterizing only the visible pixels in a final stage.
+
+==Comparison with Z-buffer algorithm==
+
+The main advantage of scanline rendering over [[Z-buffering]] is that the number of times visible pixels are processed is kept to the absolute minimum which is always one time if no transparency effects are used—a benefit for the case of high resolution or expensive shading computations.
+
+In modern Z-buffer systems, similar benefits can be gained through rough front-to-back sorting (approaching the 'reverse painters algorithm'), early Z-reject (in conjunction with hierarchical Z), and less common deferred rendering techniques possible on programmable GPUs.
+
+Scanline techniques working on the raster have the drawback that overload is not handled gracefully.
+
+The technique is not considered to scale well as the number of primitives increases. This is because of the size of the intermediate datastructures required during rendering—which can exceed the size of a Z-buffer for a complex scene.
+
+Consequently, in contemporary interactive graphics applications, the Z-buffer has become ubiquitous. The Z-buffer allows larger volumes of primitives to be traversed linearly, in parallel, in a manner friendly to modern hardware. Transformed coordinates, attribute gradients, etc., need never leave the graphics chip; only the visible pixels and depth values are stored.
+
+==See also==
+
+* [[Raster scan]]
+* [[Ray tracing (graphics)|Ray tracing]]
+* [[Z-buffering]]
+
+==References==
+{{Reflist}}
+
+==External links==
+* [http://www.cs.utah.edu/about/history/ University of Utah Graphics Group History]

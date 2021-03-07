@@ -1,0 +1,146 @@
+Suppose that the output voltage of interest in the RLC circuit is the voltage across the inductor ''and'' the capacitor combined in series. Equation ({{EquationNote|4}}) showed that the sum of the voltages across the three circuit elements sums to the input voltage, so measuring the output voltage as the sum of the inductor and capacitor voltages combined is the same as ''v''&lt;sub&gt;''in''&lt;/sub&gt; minus the voltage drop across the resistor. The previous example showed that at the natural frequency of the system, the amplitude of the voltage drop across the resistor ''equals'' the amplitude of ''v''&lt;sub&gt;''in''&lt;/sub&gt;, and therefore the voltage across the inductor and capacitor combined has zero amplitude. We can show this with the transfer function.
+
+The sum of the inductor and capacitor voltages is
+:&lt;math&gt;V_{out}(s) = (sL+\frac{1}{sC})I(s),&lt;/math&gt;
+:&lt;math&gt;V_{out}(s) = \frac{s^2+\frac{1}{LC}}{s^2 + \frac{R}{L}s + \frac{1}{LC}} V_{in}(s).&lt;/math&gt;
+
+Using the same natural frequency and damping ratios as the previous examples, the transfer function is
+:&lt;math&gt;H(s) = \frac{s^2+\omega_0^2}{s^2 + 2\zeta\omega_0s + \omega_0^2}.&lt;/math&gt;
+
+Note that this transfer has the same poles as the previous examples but has zeroes at
+{{NumBlk|:|&lt;math&gt;s = \pm i\omega_0.&lt;/math&gt;|{{EquationRef|7}}}}
+
+Evaluating the transfer function along the imaginary axis, its gain is
+:&lt;math&gt;G(\omega) = \frac{\omega_0^2-\omega^2}{\sqrt{\left(2\omega\omega_0\zeta\right)^2 + (\omega_0^2 - \omega^2)^2}}.&lt;/math&gt;
+
+Rather than look for resonance, i.e., peaks of the gain, notice that the gain goes to zero at ''ω'' = ''ω''&lt;sub&gt;0&lt;/sub&gt;, which complements our analysis of the resistor's voltage. This is called '''antiresonance''', which has the opposite effect of resonance. Rather than result in outputs that are disproportionately large at this frequency, this circuit with this choice of output has no response at all at this frequency.&lt;ref name=&quot;CheeverSysBehav&quot;/&gt; The frequency that is filtered out corresponds exactly to the zeroes of the transfer function, which were shown in Equation ({{EquationNote|7}}) and were on the imaginary axis.
+
+==== Relationships between resonance and frequency response in the RLC series circuit example ====
+These RLC circuit examples illustrate how resonance is related to the frequency response of the system. Specifically, these examples illustrate:
+* How resonant frequencies can be found by looking for peaks in the gain of the transfer function between the input and output of the system, for example in a Bode magnitude plot
+* How the resonant frequency for a single system can be different for different choices of system output
+* The connection between the system's natural frequency, the system's damping ratio, and the system's resonant frequency
+* The connection between the system's natural frequency and the magnitude of the transfer function's poles, pointed out in Equation ({{EquationNote|5}}), and therefore a connection between the poles and the resonant frequency
+* A connection between the transfer function's zeroes and the shape of the gain as a function of frequency, and therefore a connection between the zeroes and the resonant frequency that maximizes gain
+* A connection between the transfer function's zeroes and antiresonance
+
+The next section extends these concepts to resonance in a general linear system.
+
+=== Generalizing resonance and antiresonance for linear systems ===
+
+Next consider an arbitrary linear system with multiple inputs and outputs. For example, in [[state-space representation]] a third order [[linear time-invariant system]] with three inputs and two outputs might be written as
+: &lt;math&gt;\begin{bmatrix} \dot{x}_1 \\ \dot{x}_2 \\ \dot{x}_3 \end{bmatrix} =
+ A \begin{bmatrix} x_1(t) \\ x_2(t) \\ x_3(t) \end{bmatrix} + B \begin{bmatrix} u_1(t) \\ u_2(t) \\ u_3(t) \end{bmatrix},&lt;/math&gt;
+: &lt;math&gt;\begin{bmatrix} y_1(t) \\ y_2(t) \end{bmatrix} = C \begin{bmatrix} x_1(t) \\ x_2(t) \\ x_3(t) \end{bmatrix} + D \begin{bmatrix} u_1(t) \\ u_2(t) \\ u_3(t) \end{bmatrix},&lt;/math&gt; 
+
+where ''u''&lt;sub&gt;''i''&lt;/sub&gt;(''t'') are the inputs, ''x''&lt;sub&gt;''i''&lt;/sub&gt;(t) are the state variables,  ''y''&lt;sub&gt;''i''&lt;/sub&gt;(''t'') are the outputs, and ''A'', ''B'', ''C'', and ''D'' are matrices describing the dynamics between the variables.
+
+This system has a [[transfer function matrix]] whose elements are the transfer functions between the various inputs and outputs. For example,
+:&lt;math&gt;
+\begin{bmatrix} Y_1(s) \\ Y_2(s) \end{bmatrix} = 
+\begin{bmatrix} 
+H_{11}(s) &amp; H_{12}(s) &amp; H_{13}(s) \\
+H_{21}(s) &amp; H_{22}(s) &amp; H_{23}(s)
+\end{bmatrix}
+\begin{bmatrix} U_1(s) \\ U_2(s) \\ U_3(s) \end{bmatrix}.
+&lt;/math&gt;
+
+Each ''H''&lt;sub&gt;''ij''&lt;/sub&gt;(''s'') is a scalar transfer function linking one of the inputs to one of the outputs. The RLC circuit examples above had one input voltage and showed four possible output voltages–across the capacitor, across the inductor, across the resistor, and across the capacitor and inductor combined in series–each with its own transfer function. If the RLC circuit were set up to measure all four of these output voltages, that system would have a 4×1 transfer function matrix linking the single input to each of the four outputs.
+
+Evaluated along the imaginary axis, each ''H''&lt;sub&gt;''ij''&lt;/sub&gt;(''iω'') can be written as a gain and phase shift,
+:&lt;math&gt;H_{ij}(i\omega) = G_{ij}(\omega)e^{i\Phi_{ij}(\omega)}.&lt;/math&gt;
+
+Peaks in the gain at certain frequencies correspond to resonances between that transfer function's input and output, assuming the system is [[exponential stability|stable]].
+
+Each transfer function ''H''&lt;sub&gt;''ij''&lt;/sub&gt;(''s'') can also be written as a fraction whose numerator and denominator are polynomials of ''s''.
+:&lt;math&gt;H_{ij}(s) = \frac{N_{ij}(s)}{D_{ij}(s)}.&lt;/math&gt;
+
+The complex roots of the numerator are called zeroes, and the complex roots of the denominator are called poles. For a stable system, the positions of these poles and zeroes on the complex plane give some indication of whether the system can resonate or antiresonate and at which frequencies. In particular, any stable or [[marginal stability|marginally stable]], complex conjugate pair of poles with imaginary components can be written in terms of a natural frequency and a damping ratio as
+:&lt;math&gt;s = -\zeta\omega_0 \pm i\omega_0\sqrt{1-\zeta^2},&lt;/math&gt;
+
+as in Equation ({{EquationNote|5}}). The natural frequency ''ω''&lt;sub&gt;0&lt;/sub&gt; of that pole is the magnitude of the position of the pole on the complex plane and the damping ratio of that pole determines how quickly that oscillation decays. In general,&lt;ref name=&quot;Hardt2004&quot;&gt;{{cite web|last = Hardt| first = David| title = Understanding Poles and Zeros| series = 2.14 Analysis and Design of Feedback Control Systems| department = Department of Mechanical Engineering| publisher = Massachusetts Institute of Technology| year = 2004| url = https://web.mit.edu/2.14/www/Handouts/PoleZero.pdf| accessdate=April 18, 2020}}&lt;/ref&gt;
+* Complex conjugate pairs of ''poles'' near the imaginary axis correspond to a peak or resonance in the frequency response in the vicinity of the pole's natural frequency. If the pair of poles is ''on'' the imaginary axis, the gain is infinite at that frequency.
+* Complex conjugate pairs of ''zeroes'' near the imaginary axis correspond to a notch or antiresonance in the frequency response in the vicinity of the zero's frequency, i.e., the frequency equal to the magnitude of the zero. If the pair of zeroes is ''on'' the imaginary axis, the gain is zero at that frequency.
+
+In the RLC circuit example, the first generalization relating poles to resonance is observed in Equation ({{EquationNote|5}}). The second generalization relating zeroes to antiresonance is observed in Equation ({{EquationNote|7}}). In the examples of the harmonic oscillator, the RLC circuit capacitor voltage, and the RLC circuit inductor voltage, &quot;poles near the imaginary axis&quot; corresponds to the significantly underdamped condition ζ &lt; 1/&lt;math&gt;\sqrt{2}&lt;/math&gt;.
+
+== Standing waves and resonance of continuous linear systems ==
+{{main|Standing wave}}
+
+A physical system can have as many natural frequencies as it has [[degrees of freedom (engineering)|degrees of freedom]]; each degree of freedom can vibrate as a [[harmonic oscillator]]. Systems with one degree of freedom, such as the mass on a spring and RLC circuit examples described earlier, have one natural frequency and can resonate near that natural frequency. A higher order system with two degrees of freedom, such as [[Double pendulum|coupled pendulums]] and [[resonant transformer]]s, can have two natural frequencies and can resonate near each of those frequencies. As the number of coupled harmonic oscillators grows, the time it takes to transfer energy from one to the next becomes significant. Systems with very large numbers of degrees of freedom can be thought of as [[continuum mechanics|continuous]] rather than as discrete oscillators coupled together. Energy transfers from one oscillator to the next in the form of waves. For example, the string of a guitar or the surface of water in a bowl can be modeled as a continuum of small coupled oscillators and waves can travel along them. In many cases these systems have the potential to resonate at certain frequencies, forming [[standing wave]]s with large-amplitude oscillations at fixed positions. Resonance in the form of standing waves underlies many familiar phenomena, such as the sound produced by musical instruments, electromagnetic cavities used in lasers and microwave ovens, and energy levels of atoms.
+
+An example of standing waves described in many introductory physics textbooks is the case of standing waves on a string.&lt;ref&gt;{{cite book| title = Fundamentals of Physics| last1 = Halliday| first1 = David| last2 = Resnick| first2 = Robert| last3 = Walker| first3 = Jearl| edition = 7th| publisher = John Wiley &amp; Sons| date = 2005| isbn = 0-471-42959-7| page=434| ref=harv}}
+&lt;/ref&gt;&lt;ref&gt;{{cite book| title = College Physics| last1 = Serway| first1 = Raymond A.| last2= Faughn| first2 = Jerry S.| edition = 3rd| publisher = Saunders College Publishing| date = 1992| isbn = 0-03-076377-0| page=475-476| ref=harv}}&lt;/ref&gt; Consider a string of length ''L'' that is fixed at both ends. The string can be driven at any frequency causing a wave at that frequency to propagate along the string–though we'll see that only certain frequencies resonate. Waves from a driving force [[Reflection (physics)|reflect]] off the ends of the string, so eventually a steady state is reached with waves traveling in both directions along the string. The waves [[wave interference|interfere]], so the waveform observed on the string is the sum or [[superposition principle|superposition]] of the left- and right-traveling waves.
+
+[[Image:Standing waves on a string.gif|thumb|upright|Standing waves in a string&amp;nbsp;&amp;ndash; the [[fundamental frequency|fundamental]] mode and the first 5 [[harmonic]]s.]]
+
+At certain driving frequencies–in this example any frequency that makes the length of the string an integer number of half wavelengths–the left- and right-traveling waves interfere in a special way where at certain fixed positions the string is never displaced. These positions are called nodes and include the two fixed ends. Between the nodes, the string has large-amplitude oscillations that do not travel along the string. Exactly halfway between the nodes the oscillations have the largest amplitude and these positions are called anti-nodes.&lt;ref&gt;{{cite AV media | date = May 21, 2014 | title = String Resonance | url = http://digitalsoundandmusic.com/video/?tutorial=oZ38Y0K8e-Y | access-date = August 22, 2020 | publisher = Digital Sound &amp; Music | id = YouTube Video ID: oZ38Y0K8e-Y}}&lt;/ref&gt;
+
+For a string with fixed ends at {{nowrap|''x'' {{=}} 0}} and {{nowrap|''x'' {{=}} ''L''}}, the displacement of the string can be written as
+:&lt;math&gt; y(x,t) = 2y_\text{max}\sin \left({2\pi x \over \lambda} \right) \cos(\omega t), &lt;/math&gt;
+
+where
+*''y''(''x'',''t'') is the lateral displacement of the string as a function of position ''x'' and time ''t'' as it is stretched by waves,
+*''ω'' is the [[angular frequency]] or equivalently ''2π'' times the [[frequency]] ''f'',
+*''λ'' is the [[wavelength]] of the wave,
+*The left- and right- traveling waves that are interfering to form the standing wave each have amplitude ''y''&lt;sub&gt;max&lt;/sub&gt;.
+
+Note that this is a wave that does not travel. It oscillates in time with an amplitude that varies as a function of position ''x''. Because the string has a finite length, only certain frequencies correspond to the right relationship between length ''L'' and wavelength ''λ'' to resonate.  The frequencies that resonate can be written as
+:&lt;math&gt; f = \frac{nv}{2L}, &lt;/math&gt;
+:&lt;math&gt;n = 1, 2, 3, \ldots &lt;/math&gt;
+
+where ''v'' is the speed of the wave along the string. Equivalently, the wavelengths that resonate can be written as
+:&lt;math&gt; \lambda = \frac{v}{f} = \frac{2L}{n}, &lt;/math&gt;
+:&lt;math&gt;n = 1, 2, 3, \ldots &lt;/math&gt;
+
+The standing wave with {{nowrap|''n'' {{=}} 1}} oscillates at the [[fundamental frequency]] and has a wavelength that is twice the length of the string. Higher integer values of ''n'' correspond to modes of oscillation called [[harmonic]]s or [[overtone]]s. The graphic above shows the first six modes of oscillation for a string with two fixed ends.
+
+==Types of resonance==
+
+===Mechanical and acoustic resonance===
+{{Main|Mechanical resonance|Acoustic resonance|String resonance}}
+[[File:Resonating mass experiment.jpg|thumb|upright|School resonating mass experiment]]
+
+[[Mechanical resonance]] is the tendency of a [[mechanics|mechanical system]] to absorb more energy when the [[frequency]] of its oscillations matches the system's [[natural frequency]] of [[vibration]] than it does at other frequencies. It may cause violent swaying motions and even catastrophic failure in improperly constructed structures including bridges, buildings, trains, and aircraft. When designing objects, [[engineers]]  must ensure the mechanical resonance frequencies of the component parts do not match driving vibrational frequencies of motors or other oscillating parts, a phenomenon known as [[mechanical resonance#Resonance disaster|resonance disaster]].
+
+Avoiding resonance disasters is a major concern in every building, tower, and [[bridge]] [[construction]] project. As a countermeasure, [[shock mount]]s can be installed to absorb resonant frequencies and thus dissipate the absorbed energy. The [[Taipei 101]] building relies on a {{convert|660|t|ST|adj=mid|[[pendulum]]}}—a [[tuned mass damper]]—to cancel resonance. Furthermore, the structure is designed to resonate at a frequency that does not typically occur. Buildings in [[seismic]] zones are often constructed to take into account the oscillating frequencies of expected ground motion. In addition, [[engineer]]s designing objects having engines must ensure that the mechanical resonant frequencies of the component parts do not match driving vibrational frequencies of the motors or other strongly oscillating parts.
+
+[[Clock]]s keep time by mechanical resonance in a [[balance wheel]], [[pendulum]], or [[Quartz clock|quartz crystal]].
+
+The cadence of runners has been hypothesized to be energetically favorable due to resonance between the elastic energy stored in the lower limb and the mass of the runner.&lt;ref name=&quot;Snyder and Farley. Energetically optimal stride frequency in running: the effects of incline and decline&quot;&gt;{{cite journal|last1=Snyder|last2=Farley|title=Energetically optimal stride frequency in running: the effects of incline and decline|journal=[[The Journal of Experimental Biology]] |date=2011|volume=214|issue=12|pages=2089–95|ref=Snyder and Farley. Energetically optimal stride frequency in running: the effects of incline and decline|doi=10.1242/jeb.053157|pmid=21613526|doi-access=free}}&lt;/ref&gt;
+
+[[Acoustic resonance]] is a branch of [[mechanical resonance]] that is concerned with the mechanical vibrations across the frequency range of human hearing, in other words [[sound]]. For humans, hearing is normally limited to frequencies between about 20&amp;nbsp;[[Hertz|Hz]] and 20,000&amp;nbsp;Hz (20&amp;nbsp;[[kHz]]),&lt;ref&gt;[[Harry F. Olson]] [https://books.google.com/books?id=RUDTFBbb7jAC&amp;pg=PA248 ''Music, Physics and Engineering.''] Dover Publications, 1967, pp. 248–249. &quot;Under very favorable conditions most individuals can obtain tonal characteristics as low as 12 Hz.&quot;&lt;/ref&gt;  Many objects and materials act as resonators  with resonant frequencies within this range, and when struck vibrate mechanically, pushing on the surrounding air to create sound waves.  This is the source of many percussive sounds we hear.   
+
+Acoustic resonance is an important consideration for instrument builders, as most acoustic [[Musical instrument|instruments]] use [[resonator]]s, such as the [[string resonance|strings]] and body of a [[violin]], the length of tube in a [[flute]], and the shape of, and tension on, a drum membrane.
+
+Like mechanical resonance, acoustic resonance can result in catastrophic failure of the object at resonance. The classic example of this is breaking a wine glass with sound at the precise resonant frequency of the glass, although this is difficult in practice.&lt;ref&gt;{{cite web|url = http://demoweb.physics.ucla.edu/content/50-breaking-glass-sound|title =  Breaking Glass with Sound|publisher = UCLA Physics &amp; Astronomy|website = Instructional Resource Lab}}&lt;/ref&gt;
+
+===Electrical resonance===
+{{Main|Electrical resonance}}
+[[Image:Tuned circuit animation 3.gif|thumb|upright=1.1|Animation illustrating electrical resonance in a [[tuned circuit]], consisting of a [[capacitor]] (C) and an [[inductor]] (L) connected together. Charge flows back and forth between the capacitor plates through the inductor.  Energy oscillates back and forth between the capacitor's [[electric field]] ({{mvar|E}}) and the inductor's [[magnetic field]] ({{mvar|B}}). ]]
+
+[[Electrical resonance]] occurs in an [[electrical network|electric circuit]] at a particular ''resonant frequency'' when the [[Electrical impedance|impedance]] of the circuit is at a minimum in a series circuit or at maximum in a parallel circuit (usually when the [[transfer function]] peaks in absolute value). Resonance in circuits are used for both transmitting and receiving wireless communications such as television, cell phones and radio.&lt;ref&gt;{{cite web|title=The Physics Of Resonance|url=http://www.intuitor.com/resonance/circuits.html|website=Intuitor|accessdate=10 July 2017}}&lt;/ref&gt;
+
+===Optical resonance===
+{{Main|Optical cavity}}
+
+An [[optical cavity]], also called an ''optical resonator'', is an arrangement of [[mirror]]s that forms a [[standing wave]] [[cavity resonator]] for [[light wave]]s. Optical cavities are a major component of [[laser]]s, surrounding the [[gain medium]] and providing [[feedback]] of the laser light. They are also used in [[optical parametric oscillator]]s and some [[interferometer]]s. Light confined in the cavity reflects multiple times producing standing waves for certain resonant frequencies. The standing wave patterns produced are called &quot;modes&quot;. [[Longitudinal mode]]s differ only in frequency while [[transverse mode]]s differ for different frequencies and have different intensity patterns across the cross-section of the beam. [[Optical ring resonators|Ring resonators]] and [[Whispering gallery|whispering galleries]] are examples of optical resonators that do not form standing waves.
+
+Different resonator types are distinguished by the focal lengths of the two mirrors and the distance between them; flat mirrors are not often used because of the difficulty of aligning them precisely. The geometry (resonator type) must be chosen so the beam remains stable, i.e., the beam size does not continue to grow with each reflection. Resonator types are also designed to meet other criteria such as minimum beam waist or having no focal point (and therefore intense light at that point) inside the cavity.
+
+Optical cavities are designed to have a very large [[Q factor|''Q'' factor]].&lt;ref&gt;[http://www.rp-photonics.com/q_factor.html Encyclopedia of Laser Physics and Technology - ''Q'' factor, quality factor, cavity, resonator, oscillator, frequency standards&lt;!-- Bot generated title --&gt;]&lt;/ref&gt; A beam reflects a large number of times with little [[attenuation]]—therefore the frequency [[line width]] of the beam is small compared to the frequency of the laser.
+
+Additional optical resonances are [[guided-mode resonance]]s and [[surface plasmon resonance]], which result in anomalous reflection and high evanescent fields at resonance. In this case, the resonant modes are guided modes of a waveguide or surface plasmon modes of a dielectric-metallic interface. These modes are usually excited by a subwavelength grating.
+
+===Orbital resonance===
+{{Main|Orbital resonance}}
+
+In [[celestial mechanics]], an [[orbital resonance]] occurs when two [[orbit]]ing bodies exert a regular, periodic gravitational influence on each other, usually due to their [[orbital period]]s being related by a ratio of two small integers. Orbital resonances greatly enhance the mutual gravitational influence of the bodies. In most cases, this results in an ''unstable'' interaction, in which the bodies exchange momentum and shift orbits until the resonance no longer exists. Under some circumstances, a resonant system can be stable and self-correcting, so that the bodies remain in resonance. Examples are the 1:2:4 resonance of [[Jupiter]]'s moons [[Ganymede (moon)|Ganymede]], [[Europa (moon)|Europa]], and [[Io (moon)|Io]], and the 2:3 resonance between [[Pluto]] and [[Neptune]]. Unstable resonances with [[Saturn]]'s inner moons give rise to gaps in the [[rings of Saturn]]. The special case of 1:1 resonance (between bodies with similar orbital radii) causes large Solar System bodies to [[Clearing the neighbourhood|clear the neighborhood]] around their orbits by ejecting nearly everything else around them; this effect is used in the current [[definition of planet|definition of a planet]].
+
+=== Atomic, particle, and molecular resonance ===
+{{Main|Nuclear magnetic resonance|Resonance (particle physics)}}
+
+[[File:HWB-NMR - 900MHz - 21.2 Tesla.jpg|thumb|upright|NMR Magnet at HWB-NMR, Birmingham, UK. In its strong 21.2-[[Tesla (unit)|tesla]] field, the proton resonance is at 900&amp;nbsp;MHz.]]
+[[Nuclear magnetic resonance]] (NMR) is the name given to a physical resonance phenomenon involving the observation of specific [[quantum mechanics|quantum mechanical]] [[magnetism|magnetic]] properties of an [[atom]]ic [[atomic nucleus|nucleus]] in the presence of an applied, external magnetic field. Many scientific techniques exploit NMR phenomena to study [[molecular physics]], [[crystallography|crystal]]s, and non-crystalline materials through [[NMR spectroscopy]]. NMR is also routinely used in advanced medical imaging techniques, such as in [[magnetic resonance imaging]] (MRI).
+
+All nuclei containing odd numbers of [[nucleon]]s have an intrinsic [[magnetic moment]] and [[angular momentum]]. A key feature of NMR is that the resonant frequency of a particular substance is directly proportional to the strength of the applied magnetic field. It is this feature that is exploited in imaging techniques; if a sample is placed in a non-uniform magnetic field then the resonant frequencies of the sample's nuclei depend on where in the field they are located. Therefore, the particle can be located quite precisely by its resonant frequency.

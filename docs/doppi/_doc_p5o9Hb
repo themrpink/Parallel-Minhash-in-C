@@ -1,0 +1,350 @@
+Common Syntax examples:
+
+  '''ON''' ''condition'' '''GOTO''' ''label''
+
+=== Exceptions ===
+
+{{main article|Exception handling}}
+
+Modern languages have a specialized structured construct for exception handling which does not rely on the use of &lt;code&gt;GOTO&lt;/code&gt; or (multi-level) breaks or returns. For example, in C++ one can write:
+
+&lt;syntaxhighlight lang=&quot;cpp&quot;&gt;
+try {
+    xxx1                                  // Somewhere in here
+    xxx2                                  //     use: '''throw''' someValue;
+    xxx3
+} catch (someClass&amp; someId) {             // catch value of someClass
+    actionForSomeClass 
+} catch (someType&amp; anotherId) {           // catch value of someType
+    actionForSomeType
+} catch (...) {                           // catch anything not already caught
+    actionForAnythingElse
+}
+&lt;/syntaxhighlight&gt;
+
+Any number and variety of &lt;code&gt;catch&lt;/code&gt; clauses can be used above. If there is no &lt;code&gt;catch&lt;/code&gt; matching a particular &lt;code&gt;throw&lt;/code&gt;, control percolates back through subroutine calls and/or nested blocks until a matching &lt;code&gt;catch&lt;/code&gt; is found or until the end of the main program is reached, at which point the program is forcibly stopped with a suitable error message.
+
+Via C++'s influence, &lt;code&gt;catch&lt;/code&gt; is the keyword reserved for declaring a pattern-matching exception handler in other languages popular today, like Java or C#. Some other languages like Ada use the keyword &lt;code&gt;exception&lt;/code&gt; to introduce an exception handler and then may even employ a different keyword (&lt;code&gt;when&lt;/code&gt; in Ada) for the pattern matching. A few languages like [[AppleScript]] incorporate placeholders in the exception handler syntax to automatically extract several pieces of information when the exception occurs. This approach is exemplified below by the &lt;code&gt;on error&lt;/code&gt; construct from AppleScript:&lt;!-- Here, it would help to explain what all those &quot;from&quot;, &quot;to&quot;, and &quot;partial results&quot; bits do.--&gt;
+
+&lt;syntaxhighlight lang = &quot;applescript&quot;&gt;
+try
+    set myNumber to myNumber / 0
+on error e  number n  from f  to t  partial result pr
+    if ( e = &quot;Can't divide by zero&quot; ) then display dialog &quot;You must not do that&quot;
+end try
+&lt;/syntaxhighlight&gt;
+
+David Watt's 2004 textbook also analyzes exception handling in the framework of sequencers (introduced in this article in the section on early exits from loops). Watt notes that an abnormal situation, generally exemplified with arithmetic overflows or [[input/output]] failures like file not found, is a kind of error that &quot;is detected in some low-level program unit, but [for which] a handler is more naturally located in a high-level program unit&quot;. For example, a program might contain several calls to read files, but the action to perform when a file is not found depends on the meaning (purpose) of the file in question to the program and thus a handling routine for this abnormal situation cannot be located in low-level system code. Watts further notes that introducing status flags testing in the caller, as single-exit structured programming or even (multi-exit) return sequencers would entail, results in a situation where &quot;the application code tends to get cluttered by tests of status flags&quot; and that &quot;the programmer might forgetfully or lazily omit to test a status flag. In fact, abnormal situations represented by status flags are by default ignored!&quot; Watt notes that in contrast to status flags testing, exceptions have the opposite [[default (computer science)|default behavior]], causing the program to terminate unless the programmer explicitly deals with the exception in some way, possibly by adding explicit code to ignore it. Based on these arguments, Watt concludes that jump sequencers or escape sequencers aren't as suitable as a dedicated exception sequencer with the semantics discussed above.&lt;ref&gt;{{cite book|author1=David Anthony Watt|author2=William Findlay|title=Programming language design concepts|year=2004|publisher=John Wiley &amp; Sons|isbn=978-0-470-85320-7|pages=221–222}}&lt;/ref&gt;
+
+In Object Pascal, D, Java, C#, and Python a &lt;code&gt;finally&lt;/code&gt; clause can be added to the &lt;code&gt;try&lt;/code&gt; construct. No matter how control leaves the &lt;code&gt;try&lt;/code&gt; the code inside the &lt;code&gt;finally&lt;/code&gt; clause is guaranteed to execute. This is useful when writing code that must relinquish an expensive resource (such as an opened file or a database connection) when finished processing:
+
+&lt;syntaxhighlight lang=&quot;csharp&quot;&gt;
+FileStream stm = null;                    // C# example
+try {
+    stm = new FileStream (&quot;logfile.txt&quot;, FileMode.Create);
+    return ProcessStuff(stm);             // may throw an exception
+} finally {
+    if (stm != null)
+        stm.Close();
+}
+&lt;/syntaxhighlight&gt;
+
+Since this pattern is fairly common, C# has a special syntax:
+
+&lt;syntaxhighlight lang=&quot;csharp&quot;&gt;
+using (var stm = new FileStream(&quot;logfile.txt&quot;, FileMode.Create))
+{
+    return ProcessStuff(stm ); // may throw an exception
+}
+&lt;/syntaxhighlight&gt;
+
+Upon leaving the &lt;code&gt;using&lt;/code&gt;-block, the compiler guarantees that the &lt;code&gt;stm&lt;/code&gt; object is released, effectively [[Name binding|binding]] the variable to the file stream while abstracting from the side effects of initializing and releasing the file. Python's &lt;code&gt;with&lt;/code&gt; statement and Ruby's block argument to &lt;code&gt;File.open&lt;/code&gt; are used to similar effect.
+
+All the languages mentioned above define standard exceptions and the circumstances under which they are thrown.
+Users can throw exceptions of their own; in fact C++ allows users to throw and catch almost any type, including basic types like &lt;code&gt;int&lt;/code&gt;, whereas other languages like Java aren't as permissive.
+
+=== Continuations ===
+
+{{main article|Continuation}}
+
+=== Async ===
+C# 5.0 introduced the async keyword for supporting [[asynchronous I/O]] in a &quot;direct style&quot;.
+
+=== Generators ===
+
+[[Generator (computer science)|Generators]], also known as semicoroutines, allow control to be yielded to a consumer method temporarily, typically using a {{Python|yield}} keyword ([https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield yield description]) . Like the async keyword, this supports programming in a &quot;direct style&quot;.
+
+=== Coroutines ===
+
+[[Coroutines]] are functions that can yield control to each other - a form of [[co-operative multitasking]] without threads.
+
+Coroutines can be implemented as a library if the programming language provides either continuations or generators - so the distinction between coroutines and generators in practice is a technical detail.
+
+=== Non-local control flow cross reference ===
+
+{| class=&quot;wikitable&quot;
+|-
+! [[Programming language]]
+! conditions
+! exceptions
+! generators/coroutines
+! async
+|-
+| [[Ada (programming language)|Ada]]
+| {{no}}
+| {{yes}}
+| ?
+| ?
+|- 
+| [[C (programming language)|C]]
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+|- 
+| [[C++]]
+| {{no}}
+| {{yes}}
+| {{yes|yes, by using BOOST}}
+| ?
+|-
+| [[C Sharp (programming language)|C#]]
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+|-
+| [[COBOL]]
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+|-
+| [[Common Lisp]]
+| {{yes}}
+| {{no}}
+| ?
+| ?
+|-
+| [[D (programming language)|D]]
+| {{no}}
+| {{yes}}
+| {{yes}}
+| ?
+|- 
+| [[Eiffel (programming language)|Eiffel]]
+| {{no}}
+| {{yes}}
+| ?
+| ?
+|-
+| [[Erlang (programming language)|Erlang]]
+| {{no}}
+| {{yes}}
+| {{yes}}
+| ?
+|-
+| [[F Sharp (programming language)|F#]]
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+|-
+| [[Go (programming language)|Go]]
+| {{no}}
+| {{yes}}
+| {{yes}}
+| ?
+|-
+| [[Haskell (programming language)|Haskell]]
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+|-
+| [[Java (programming language)|Java]]
+| {{no}}
+| {{yes}}
+| {{no}}
+| {{no}}
+|-
+| [[JavaScript]]
+| ?
+| {{yes}}
+| {{yes|Yes, ES6}}
+| {{yes|Yes, Stage 3}}
+|-
+| [[Objective-C]]
+| {{no}}
+| {{yes}}
+| {{no}}
+| ?
+|-
+| [[PHP]]
+| {{no}}
+| {{yes}}
+| {{yes}}
+| ?
+|-
+| [[PL/I]]
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+|-
+| [[Python (programming language)|Python]]
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{yes}}&lt;ref&gt;https://docs.python.org/3/library/asyncio.html&lt;/ref&gt;
+|-
+| [[REBOL]]
+| {{yes}}
+| {{yes}}
+| {{no}}
+| ?
+|-
+| [[Ruby (programming language)|Ruby]]
+| {{no}}
+| {{yes}}
+| {{yes}}
+| ?
+|-
+| [[Rust (programming language)|Rust]]
+| {{no}}
+| {{yes}}
+| {{yes|experimental}} &lt;ref&gt;https://doc.rust-lang.org/beta/unstable-book/language-features/generators.html&lt;/ref&gt;&lt;ref&gt;https://docs.rs/corona/0.4.3/corona/&lt;/ref&gt;
+| {{yes}}&lt;ref&gt;https://rust-lang.github.io/async-book/&lt;/ref&gt;
+|-
+| [[Scala (programming language)|Scala]]
+| {{no}}
+| {{yes}}
+| {{yes|via experimental extension}}&lt;ref&gt;http://storm-enroute.com/coroutines/&lt;/ref&gt;
+| {{yes|via experimental extension}}
+|-
+| [[Tcl]]
+| {{yes|via traces}}
+| {{yes}}
+| {{yes}}
+| {{yes|via event loop}}
+|-
+| [[Visual Basic .NET]]
+| {{yes}}
+| {{yes}}
+| {{no}}
+| ?
+|-
+| [[PowerShell]]
+| {{no}}
+| {{yes}}
+| {{no}}
+| ?
+|}
+
+== Proposed control structures ==
+
+In a spoof [[Datamation]] article&lt;ref&gt;[http://www.fortran.com/fortran/come_from.html We don't know where to GOTO if we don't know where we've COME FROM. This (spoof) linguistic innovation lives up to all expectations.] {{Webarchive|url=https://web.archive.org/web/20180716171336/http://www.fortran.com/fortran/come_from.html |date=2018-07-16 }} By R. Lawrence Clark* From Datamation, December, 1973&lt;/ref&gt; in 1973, R. Lawrence Clark suggested that the GOTO statement could be replaced by the [[COMEFROM]] statement, and provides some entertaining examples.  COMEFROM was implemented in one [[esoteric programming language]] named [[INTERCAL]].
+
+[[Donald Knuth]]'s 1974 article &quot;Structured Programming with go to Statements&quot;,&lt;ref&gt;Knuth, Donald E. &quot;Structured Programming with go to Statements&quot; [[ACM Computing Surveys]] 6(4):261-301, December 1974.&lt;/ref&gt; identifies two situations which were not covered by the control structures listed above, and gave examples of control structures which could handle these situations. Despite their utility, these constructs have not yet found their way into mainstream programming languages.
+
+=== Loop with test in the middle ===
+
+The following was proposed by [[Ole-Johan Dahl|Dahl]] in 1972:&lt;ref&gt;Dahl &amp; Dijkstra &amp; Hoare, &quot;Structured Programming&quot; Academic Press, 1972.&lt;/ref&gt;
+
+    '''loop'''                           '''loop'''
+        xxx1                           read(char);
+    '''while''' test;                    '''while''' '''not''' atEndOfFile;
+        xxx2                           write(char);
+    '''repeat''';                        '''repeat''';
+
+If ''xxx1'' is omitted, we get a loop with the test at the top (a traditional '''while''' loop). If ''xxx2'' is omitted, we get a loop with the test at the bottom, equivalent to a '''do while''' loop in many languages. If '''while''' is omitted, we get an infinite loop. The construction here can be thought of as a '''do''' loop with the while check in the middle. Hence this single construction can replace several constructions in most programming languages.
+
+Languages lacking this construct generally emulate it using an equivalent infinite-loop-with-break idiom:
+ '''while''' (true) {
+     xxx1
+     '''if''' ('''not''' test)
+         '''break'''
+     xxx2
+ }
+
+A possible variant is to allow more than one '''while''' test; within the loop, but the use of '''exitwhen''' (see next section) appears to cover this case better.
+
+In [[Ada (programming language)|Ada]], the above loop construct ('''loop'''-'''while'''-'''repeat''') can be represented using a standard infinite loop ('''loop''' - '''end loop''') that has an '''exit when''' clause in the middle (not to be confused with the '''exitwhen''' statement in the following section).
+
+&lt;syntaxhighlight lang=&quot;ada&quot;&gt;
+with Ada.Text_IO;
+with Ada.Integer_Text_IO;
+
+procedure Print_Squares is 
+    X : Integer;
+begin
+    Read_Data : loop
+        Ada.Integer_Text_IO.Get(X);
+    exit Read_Data when X = 0;
+        Ada.Text IO.Put (X * X);
+        Ada.Text IO.New_Line;
+    end loop Read_Data;
+end Print_Squares;
+&lt;/syntaxhighlight&gt;
+
+Naming a loop (like ''Read_Data'' in this example) is optional but permits leaving the outer loop of several nested loops.
+
+=== Multiple early exit/exit from nested loops ===
+
+This was proposed by [[Zahn's construct|Zahn]] in 1974.&lt;ref&gt;Zahn, C. T. &quot;A control statement for natural top-down structured programming&quot; presented at Symposium on Programming Languages, Paris, 1974.&lt;/ref&gt; A modified version is presented here.
+    '''exitwhen''' EventA '''or''' EventB '''or''' EventC;
+        xxx
+    '''exits'''
+        EventA: actionA
+        EventB: actionB
+        EventC: actionC
+    '''endexit''';
+
+'''exitwhen''' is used to specify the events which may occur within ''xxx'',
+their occurrence is indicated by using the name of the event as a statement.
+When some event does occur, the relevant action is carried out, and then control passes just after '''endexit'''.
+This construction provides a very clear separation between determining that some situation applies, and the action to be taken for that situation.
+
+'''exitwhen''' is conceptually similar to [[exception handling]], and exceptions or similar constructs are used for this purpose in many languages.
+
+The following simple example involves searching a two-dimensional table for a particular item.
+
+    '''exitwhen''' found '''or''' missing;
+        '''for''' I := 1 '''to''' N '''do'''
+            '''for''' J := 1 '''to''' M '''do'''
+                '''if''' table[I,J] = target '''then''' found;
+        missing;
+    '''exits'''
+        found:   print (&quot;item is in table&quot;);
+        missing: print (&quot;item is not in table&quot;);
+    '''endexit''';
+
+== Security ==
+One way to attack a piece of software is to redirect the flow of execution of a program. A variety of [[control-flow integrity]] techniques, including [[Stack canary|stack canaries]], [[buffer overflow protection]], shadow stacks, and [[Virtual method table|vtable]] pointer verification, are used to defend against these attacks.&lt;ref&gt;{{Cite web|url=https://nebelwelt.net/blog/20141007-CFICPSCPIdiffs.html|title=On differences between the CFI, CPS, and CPI properties|last1=Payer|first1=Mathias|authorlink1=Mathias Payer |last2=Kuznetsov|first2=Volodymyr|date=|website=nebelwelt.net|publisher=|access-date=2016-06-01}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=http://www.darkreading.com/vulnerabilities---threats/adobe-flash-bug-discovery-leads-to-new-attack-mitigation-method/d/d-id/1323092|title=Adobe Flash Bug Discovery Leads To New Attack Mitigation Method|website=Dark Reading|access-date=2016-06-01}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=http://www.prnewswire.com/news-releases/endgame-to-present-at-black-hat-usa-2016-300267060.html|title=Endgame to Present at Black Hat USA 2016|last=Endgame|website=www.prnewswire.com|access-date=2016-06-01}}&lt;/ref&gt;
+
+== See also ==
+
+* [[Branch (computer science)]]
+* [[Control flow analysis]]
+* [[Control flow diagram]]
+* [[Control flow graph]]
+* [[Control table]]
+* [[Coroutine]]
+* [[Cyclomatic complexity]]
+* [[DRAKON|Drakon-chart]]
+* [[Flowchart]]
+* [[GOTO]]
+* [[Jeroo]], helps learn control structures
+* [[Main loop]]
+* [[Recursion]]
+* [[Scheduling (computing)]]
+* [[Spaghetti code]]
+* [[Structured programming]]
+* [[Subroutine]]
+* [[Switch statement]], alters control flow conditionally
+
+== References ==
+{{Reflist}}
+
+== Further reading ==
+* Hoare, C. A. R. &quot;Partition: Algorithm 63,&quot; &quot;Quicksort: Algorithm 64,&quot; and &quot;Find: Algorithm 65.&quot; Comm. ACM 4, 321-322, 1961.

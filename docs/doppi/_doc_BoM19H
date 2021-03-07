@@ -1,0 +1,317 @@
+[[Electron paramagnetic resonance]], otherwise known as ''electron spin resonance'' (ESR), is a spectroscopic technique similar to NMR, but uses unpaired electrons instead. Materials for which this can be applied are much more limited since the material needs to both have an unpaired spin and be [[paramagnetic]].
+
+The [[Mössbauer effect]] is the resonant and [[recoil]]-free emission and absorption of [[gamma ray]] photons by atoms bound in a solid form.
+
+[[Resonance (particle physics)|Resonance in particle physics]] appears in similar circumstances to [[classical physics]] at the level of [[quantum mechanics]] and [[quantum field theory]]. However, they can also be thought of as unstable particles, with the formula above valid if ''Γ'' is the [[Particle decay#Decay rate|decay rate]] and ''Ω'' replaced by the particle's mass ''M''. In that case, the formula comes from the particle's [[Propagator (Quantum Theory)|propagator]], with its mass replaced by the [[complex number]] ''M''&amp;nbsp;+&amp;nbsp;''iΓ''. The formula is further related to the particle's [[Particle decay#Decay rate|decay rate]] by the [[optical theorem]].
+
+== Q factor==
+{{Main|Q factor}}
+The [[Q factor|''Q'' factor]] or ''quality factor'' is a [[Dimensionless quantity|dimensionless]] parameter that describes how [[damping|under-damped]] an [[oscillation|oscillator]] or [[resonator]] is,&lt;ref&gt;{{cite book | title = Electric Power Transformer Engineering | author = James H. Harlow | publisher = CRC Press | year = 2004 | isbn = 978-0-8493-1704-0 | pages = 2–216
+ | url = https://books.google.com/books?id=DANXjaoaucYC&amp;q=q-factor+damping&amp;pg=PT241
+ }}&lt;/ref&gt;  or equivalently, characterizes a resonator's [[bandwidth (signal processing)|bandwidth]] relative to its center frequency.&lt;ref&gt;{{cite book
+ | title = Electronic Circuits: Fundamentals and Applications | author = Michael H. Tooley | publisher = Newnes | year = 2006 | isbn = 978-0-7506-6923-8
+ | pages = 77–78 | url = https://books.google.com/books?id=8fuppV9O7xwC&amp;q=q-factor+bandwidth&amp;pg=PA77
+ }}&lt;/ref&gt;
+Higher ''Q'' indicates a lower rate of energy loss relative to the stored energy of the oscillator, i.e., the oscillations die out more slowly. A pendulum suspended from a high-quality bearing, oscillating in air, has a high ''Q'', while a pendulum immersed in oil has a low ''Q''. To sustain a system in resonance in constant amplitude by providing power externally, the energy provided in each cycle must be less than the energy stored in the system (i.e., the sum of the potential and kinetic) by a factor of {{sfrac|''Q''|2{{pi}}}}. Oscillators with high-quality factors have low [[damping]], which tends to make them ring longer.
+
+[[sine wave|Sinusoidally]] driven [[resonator]]s having higher Q factors resonate with greater amplitudes (at the resonant frequency) but have a smaller range of frequencies around the frequency at which they resonate. The range of frequencies at which the oscillator resonates is called the bandwidth. Thus, a high-''Q'' [[RLC circuit|tuned circuit]] in a radio receiver would be more difficult to tune, but would have greater [[selectivity (electronic)|selectivity]], it would do a better job of filtering out signals from other stations that lie nearby on the spectrum. High Q oscillators operate over a smaller range of frequencies and are more stable. (See [[oscillator phase noise]].)
+
+The quality factor of oscillators varies substantially from system to system. Systems for which damping is important (such as dampers keeping a door from slamming shut) have ''Q''&amp;nbsp;=&amp;nbsp;{{sfrac|1|2}}. Clocks, lasers, and other systems that need either strong resonance or high frequency stability need high-quality factors. [[Tuning fork]]s have quality factors around ''Q''&amp;nbsp;=&amp;nbsp;1000. The quality factor of [[atomic clock]]s and some high-''Q'' [[optical cavity|lasers]] can reach as high as 10&lt;sup&gt;11&lt;/sup&gt;&lt;ref&gt;[http://www.rp-photonics.com/q_factor.html Encyclopedia of Laser Physics and Technology: ''Q'' factor]&lt;/ref&gt; and higher.&lt;ref&gt;[http://tf.nist.gov/general/enc-q.htm Time and Frequency from A to Z: Q to Ra] {{webarchive|url=https://web.archive.org/web/20080504160852/http://tf.nist.gov/general/enc-q.htm |date=2008-05-04 }}&lt;/ref&gt;
+
+There are many alternate quantities used by physicists and engineers to describe how damped an oscillator is that are closely related to its quality factor. Important examples include: the [[damping ratio]], [[bandwidth (signal processing)|relative bandwidth]], [[oscillator linewidth|linewidth]], and bandwidth measured in [[Octave (electronics)|octave]]s.
+
+==Universal resonance curve==
+[[File:Universal Resonance Curve.svg|thumb|upright=1.3|&quot;Universal Resonance Curve&quot;, a symmetric approximation to the normalized response of a resonant circuit; [[abscissa]] values are deviation from center frequency, in units of center frequency divided by 2Q; [[ordinate]] is relative amplitude, and phase in cycles; dashed curves compare the range of responses of real two-pole circuits for a ''Q'' value of 5; for higher ''Q'' values, there is less deviation from the universal curve. Crosses mark the edges of the 3&amp;nbsp;dB bandwidth (gain 0.707, phase shift 45° or 0.125 cycle).]]
+
+The exact response of a resonance, especially for frequencies far from the resonant frequency, depends on the details of the physical system, and is usually not exactly symmetric about the resonant frequency, as illustrated for the [[simple harmonic oscillator]] above.
+For a lightly [[damping|damped]] linear oscillator with a resonance frequency ''Ω'', the ''intensity'' of oscillations ''I'' when the system is driven with a driving frequency ''ω'' is typically approximated by a formula that is symmetric about the resonance frequency:&lt;ref&gt;
+{{cite book
+ | title = Lasers
+ | author = A. E. Siegman
+ | publisher = University Science Books
+ | year = 1986
+ | isbn = 978-0-935702-11-8
+ | pages = [https://archive.org/details/lasers0000sieg/page/105 105]–108
+ | url = https://archive.org/details/lasers0000sieg
+ | url-access = registration
+ | quote = resonance-approximation amplitude linewidth frequency Lorentzian real.
+ }}&lt;/ref&gt;
+
+: &lt;math&gt;I(\omega) \equiv |\chi|^2  \propto \frac{1}{(\omega - \Omega)^2 + \left( \frac{\Gamma}{2} \right)^2 }.&lt;/math&gt;
+
+Where the susceptibility &lt;math&gt;\chi(\omega) &lt;/math&gt; links the amplitude of the oscillator to the driving force in frequency space:&lt;ref&gt;
+{{cite news
+ | title = Cavity optomechanics
+ | author = Aspelmeyer M.
+ |display-authors=etal
+ | publisher = Review of modern physics
+ | year = 2014
+ | pages = 1397
+ }}&lt;/ref&gt;
+
+&lt;math&gt; x(\omega) = \chi(\omega) F(\omega) &lt;/math&gt;
+
+:
+The intensity is defined as the square of the amplitude of the oscillations. This is a [[Lorentzian function]], or [[Cauchy distribution]], and this response is found in many physical situations involving resonant systems. ''Γ'' is a parameter dependent on the [[harmonic oscillator|damping]] of the oscillator, and is known as the ''linewidth'' of the resonance. Heavily damped oscillators tend to have broad linewidths, and respond to a wider range of driving frequencies around the resonant frequency. The linewidth is [[Proportionality (mathematics)|inversely proportional]] to the [[Q factor|''Q'' factor]], which is a measure of the sharpness of the resonance.
+
+In [[radio engineering]] and [[electronics engineering]], this approximate symmetric response is known as the ''universal resonance curve'', a concept introduced by [[Frederick E. Terman]] in 1932 to simplify the approximate analysis of radio circuits with a range of center frequencies and ''Q'' values.&lt;ref&gt;{{cite book | title = Radio Engineering | author = Frederick Emmons Terman | publisher = McGraw-Hill Book Company | year = 1932 | url = https://archive.org/details/radioengineering00term
+ | url-access = registration | quote = terman frederick universal. }}&lt;/ref&gt;&lt;ref&gt;{{cite book | title = Circuits, Signals, and Systems | author = William McC. Siebert
+ | publisher = MIT Press | year = 1986 | isbn = 978-0-262-19229-3 | page = 113 | url = https://books.google.com/books?id=zBTUiIrb2WIC&amp;q=siebert+universal-resonance-curve&amp;pg=PA113
+ }}&lt;/ref&gt;
+
+==See also==
+{{Wikipedia books|Resonance}}
+{{Portal|Electronics|Physics}}
+{{Div col|colwidth=20em|small=yes}}
+* [[Acoustic resonance]]
+* [[Antiresonance]]
+* [[Center frequency]]
+* [[Cymatics]]
+* [[Damping]]
+* [[Driven harmonic motion]]
+* [[Earthquake engineering]]
+* [[Electrical resonance]]
+* [[Electric dipole spin resonance]] 
+* [[Formant]]
+* [[Harmonic oscillator]]
+* [[Electrical impedance|Impedance]]
+* [[Limbic resonance]]
+* [[Nonlinear resonance]]
+* [[Parametric oscillator]]
+* [[Positive feedback]]
+* [[Q factor]]
+* [[Resonance disaster]]
+* [[Resonator]]
+* [[Schumann resonance]]
+* [[Simple harmonic motion]]
+* [[Stochastic resonance]]
+* [[Sympathetic string]]
+* [[Tuned circuit]]
+* [[Vibration]]
+{{Div col end}}
+
+==References==
+{{Reflist|30em}}
+
+==External links==
+{{Commonscat}}
+*[http://www.answers.com/topic/resonance Definition of Resonance] - &quot;The increase in amplitude of oscillation of an electric or mechanical system exposed to a periodic force whose frequency is equal or very close to the natural undamped frequency of the system.&quot;
+*[http://www.lightandmatter.com/html_books/lm/ch18/ch18.html Resonance] - a chapter from an online textbook
+*[[Brian Greene|Greene, Brian]], &quot;''[https://www.pbs.org/wgbh/nova/elegant/resonance.html Resonance in strings]''&quot;. [[The Elegant Universe]], [[Nova (American TV program)|NOVA]] ([[Public Broadcasting Service|PBS]])
+*[http://hyperphysics.phy-astr.gsu.edu/hbase/sound/rescon.html#c1 Hyperphysics section on resonance concepts]
+*[http://users.ece.gatech.edu/~mleach/misc/resonance.html Resonance versus resonant] (usage of terms)
+*[http://www.johnsankey.ca/bottom.html Wood and Air Resonance in a Harpsichord]
+*[http://www.phy.hk/wiki/englishhtm/StatWave.htm Java applet] demonstrating resonances on a string when the frequency of the driving force is varied
+*[http://phy.hk/wiki/englishhtm/Resonance.htm Java applet] demonstrating the occurrence of resonance when the driving frequency matches with the natural frequency of an oscillator
+*[http://www.acoustics.salford.ac.uk/acoustics_info/glass Breaking glass with sound], including high-speed footage of glass breaking
+
+{{Authority control}}
+
+[[Category:Resonance| ]]
+[[Category:Antennas (radio)]]</text>
+      <sha1>sr58ryk7qilip5hnp0k7rqbuawhrfd0</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Response</title>
+    <ns>0</ns>
+    <id>41661</id>
+    <revision>
+      <id>891846812</id>
+      <parentid>888171577</parentid>
+      <timestamp>2019-04-10T14:35:35Z</timestamp>
+      <contributor>
+        <username>Narky Blert</username>
+        <id>22041646</id>
+      </contributor>
+      <comment>/* See also */ Redlinked SA deleted</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1387" xml:space="preserve">{{Wiktionary|response|respond|rejoinder}}
+
+'''Response''' may refer to:
+*[[Call and response (music)]], a common musical structure
+*[[Reaction (disambiguation)]]
+*[[Request–response]]
+**[[Output (computing)|Output]] or response, the result of telecommunications input
+*[[Response (liturgy)]], a line answering a versicle
+*[[Response (music)]] or antiphon, a response to a psalm or other part of a religious service
+*Response, a phase in [[emergency management]]
+*[[Response rate (survey)]]
+
+==Proper names and titles==
+*''Response'', a print and online magazine of Christian thought published by [[Seattle Pacific University]]
+*[[Response (album)|''Response'' (album)]], a studio album by Phil Wickham
+*[[Response (company)]], a call centre company based in Scotland
+*[[The Response (film)|''The Response'' (film)]]
+*The [[National War Memorial (Canada)]], titled ''The Response''
+*The [[Northumberland Fusiliers Memorial]] in Newcastle upon Tyne, titled &quot;The Response&quot;
+
+==See also==
+*[[Action (disambiguation)]]
+*[[Answer (disambiguation)]]
+*[[Reply (disambiguation)]]
+*[[Response variable]], or the realization thereof
+*[[Responsions]], an examination formerly required for a degree at Oxford University
+*[[Stimulus (disambiguation)]], evokes a response
+*[[Stimulus–response model]], in statistics
+*[[Transient response]] (electrical and mechanical engineering)
+
+{{Disambiguation}}</text>
+      <sha1>nuhreszeim1fbepylskty7usaja4abf</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Response time (technology)</title>
+    <ns>0</ns>
+    <id>41662</id>
+    <revision>
+      <id>963445988</id>
+      <parentid>945107302</parentid>
+      <timestamp>2020-06-19T21:04:51Z</timestamp>
+      <contributor>
+        <username>Spencer</username>
+        <id>1667683</id>
+      </contributor>
+      <comment>/* Computing */ rm spam/coi with unreliable source</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4392" xml:space="preserve">{{lead too short|date=December 2017}}
+In [[technology]], '''response time''' is the [[time]] a [[system]] or [[functional unit]] takes to react to a given input.
+
+== Computing ==
+Response time is the total amount of time it takes to respond to a request for service. That service can be anything from a memory fetch, to a disk IO, to a complex database query, or loading a full web page. Ignoring transmission time for a moment, the response time is the sum of the service time and wait time. The service time is the time it takes to do the work you requested. For a given request the service time varies little as the workload increases – to do X amount of work it always takes X amount of time. The wait time is how long the request had to wait in a [[Queue (abstract data type)|queue]] before being serviced and it varies from zero, when no waiting is required, to a large multiple of the service time, as many requests are already in the queue and have to be serviced first.
+
+With basic queueing theory math&lt;ref&gt;{{cite book  | last = Wescott | first = Bob | title = The Every Computer Performance Book, Chapter 3: Useful laws | url= https://www.amazon.com/Every-Computer-Performance-Book-Computers/dp/1482657759/  | publisher = [[CreateSpace]] | date = 2013  | isbn = 1482657759}}&lt;/ref&gt; you can calculate how the average wait time increases as the device providing the service goes from 0-100% busy. As the device becomes busier, the average wait time increases in a [[Nonlinear system|non-linear]] fashion. The busier the device is, the more dramatic the response time increases will seem as you approach 100% busy; all of that increase is caused by increases in wait time, which is the result of all the requests waiting in queue that have to run first.
+
+Transmission time gets added to response time when your request and the resulting response has to travel over a network and it can be very significant.&lt;ref&gt;{{cite web | last = Leighton | first = Tom | journal = Communications of the ACM | volume = Volume 52 | issue = Issue 2 | pages = 44–51 | title = Improving Performance on the Internet | url = http://cacm.acm.org/magazines/2009/2/19323-improving-performance-on-the-internet/fulltext}}&lt;/ref&gt; Transmission time can include [[Propagation delay#Networking|propagation delays]] due to distance (the speed of light is finite), delays due to [[Error detection and correction#Internet|transmission errors]], and data communication bandwidth limits (especially at the [[last mile]]) slowing the transmission speed of the request or the reply.
+
+==Real-time systems==
+In real-time systems the response time of a task or thread is defined as the time elapsed between the dispatch (time when task is ready to execute) to the time when it finishes its job (one dispatch). Response time is different from [[Worst-case execution time|WCET]] which is the maximum time the task would take if it were to execute without interference. It is also different from deadline which is the length of time during which the task's output would be valid in the context of the specific system. And it has a relation to the [[Time to first byte|TTFB]], which is the time between the dispatch and the time when the response starts.
+
+==Display technologies==
+
+Response time is the amount of time a [[pixel]] in a display takes to change. It is measured in [[millisecond]]s (ms). Lower numbers mean faster transitions and therefore fewer visible image artifacts. Display monitors with long response times would create [[display motion blur]] around moving objects, making them unacceptable for rapidly moving images. Response times are usually measured from grey-to-grey transitions, based on a VESA industry standard from the 10% to the 90% points in the pixel response curve.&lt;ref&gt;{{cite web|website=Blur Busters|last1=Rejhon|first1=Mark|title = GtG versus MPRT: Frequently Asked Questions About Display Pixel Response | url = https://www.blurbusters.com/gtg-versus-mprt-frequently-asked-questions-about-display-pixel-response/}}&lt;/ref&gt;&lt;ref&gt;{{cite web|last1=Simmons|first1=Adam|title=Factors Affecting PC Monitor Responsiveness|website=PC Monitors| url=https://pcmonitors.info/articles/factors-affecting-pc-monitor-responsiveness}}&lt;/ref&gt;
+
+==See also==
+
+* [[Latency (engineering)]]
+* [[Interrupt latency]]
+* [[Application Response Measurement]]
+
+==References==
+{{Reflist}}
+
+[[Category:Television technology]]</text>
+      <sha1>p8dphwinvae25q7hc6kazewrsi8izjd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Responsivity</title>
+    <ns>0</ns>
+    <id>41663</id>
+    <revision>
+      <id>949473935</id>
+      <parentid>855888237</parentid>
+      <timestamp>2020-04-06T17:46:08Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: url. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Activated by Zppix | [[Category:Electronics stubs‎]] | via #UCB_Category</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3634" xml:space="preserve">'''Responsivity'''  measures the input–output [[Gain (electronics)|gain]] of a detector system. In the specific case of a [[photodetector]], responsivity measures the electrical output per optical input. 
+
+The responsivity of a photodetector is usually expressed in units of either [[ampere]]s or [[volt]]s per [[watt]] of incident [[radiant flux|radiant power]]. For a system that responds [[linear]]ly to its input, there is a unique responsivity.  For [[nonlinear system]]s, the responsivity is the [[Derivative|local slope]]. Many common photodetectors respond linearly as a function of the incident power.  
+
+Responsivity is a function of the [[wavelength]] of the incident [[Electromagnetic radiation|radiation]] and of the sensor properties, such as the [[bandgap]] of the material of which the photodetector is made.&lt;ref&gt;{{Cite web|url=https://www.rp-photonics.com/responsivity.html|title=Encyclopedia of Laser Physics and Technology - responsivity, photodetectors, photodiodes, sensitivity|last=Paschotta|first=Dr. Rüdiger|website=www.rp-photonics.com|language=en|access-date=2018-08-21}}&lt;/ref&gt; One simple expression for the responsivity ''R'' of a photodetector in which an optical signal is converted into an electric current (known as a [[photocurrent]]) is 
+
+&lt;math&gt;R=\eta\frac{q}{hf}\approx\eta\frac{\lambda_{(\mu m)}}{1.23985(\mu m\times W/A)}&lt;/math&gt;
+
+where &lt;math&gt;\eta&lt;/math&gt; is the [[quantum efficiency]] (the conversion efficiency of photons to electrons) of the detector for a given wavelength, &lt;math&gt;q&lt;/math&gt; is the [[electron charge]], &lt;math&gt;f&lt;/math&gt; is the frequency of the optical signal, and &lt;math&gt;h&lt;/math&gt; is [[Planck's constant]].&lt;ref&gt;{{cite book | title = Multielement Detection Systems for Spectrochemical Analysis | author = Kenneth W. Busch, Marianna A. Busch | publisher = Wiley-Interscience | year = 1990 | isbn = 0-471-81974-3 
+ | url = https://books.google.com/?id=9H0W1J-Rku4C&amp;pg=PA371&amp;dq=responsivity }}&lt;/ref&gt; This expression is also given in terms of &lt;math&gt;\lambda&lt;/math&gt;, the wavelength of the optical signal, and has units of amperes per watt (A/W).
+
+The term responsivity is also used to summarize input–output relationship in non-electrical systems. For example, a neuroscientist may measure how neurons in the visual pathway respond to light.  In this case, responsivity summarizes the change in the neural response per unit signal strength. The responsivity in these applications can have a variety of units. The signal strength typically is controlled by varying either intensity (intensity-response function) or contrast (contrast-response function).  The neural response measure depends on the part of the nervous system under study.  For example, at the level of the retinal cones, the response might be in photocurrent. In the central nervous system the response is usually spikes per second. In functional neuroimaging, the response measure is usually BOLD contrast.  The responsivity units reflect the relevant stimulus and physiological units. 
+
+When describing an [[amplifier]], the more common term is [[Gain (electronics)|gain]].  
+
+''Deprecated synonym'' '''[[Sensitivity (electronics)|sensitivity]].'''  A system's sensitivity is the inverse of the stimulus level required to produce a threshold response, with the threshold typically chosen just above the noise level.
+
+== See also ==
+*[[Noise-equivalent power]]
+*[[Responsiveness]], a related concept from [[interaction design]] / [[human-computer interaction|HCI]].
+*[[Specific detectivity]]
+*[[Spectral sensitivity]]
+
+==References==
+{{reflist}}
+
+{{FS1037C MS188}}
+
+[[Category:Electrical parameters]]
+
+{{electronics-stub}}</text>
+      <sha1>lmr8f7kgxa4xwy0bot6p17qf1jtv3v5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Restoration</title>
+    <ns>0</ns>
+    <id>41664</id>
+    <revision>
+      <id>989263127</id>
+      <parentid>984088144</parentid>
+      <timestamp>2020-11-18T00:03:49Z</timestamp>
+      <contributor>
+        <username>Srnec</username>
+        <id>494861</id>
+      </contributor>
+      <comment>/* History */ +2</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3867" xml:space="preserve">{{selfref|To restore an article that has been deleted, see [[Wikipedia:Undeletion policy]].}}
+{{wiktionary|restoration}}
+'''Restoration''' is the act of restoring something to its original state and may refer to:
+* [[Conservation and restoration of cultural heritage]]
+* [[Restoration style]]
+
+{{TOC right}}
+==Film and television==
+* [[The Restoration (1909 film)|''The Restoration'' (1909 film)]], a film by D.W. Griffith starring [[Mary Pickford filmography|Mary Pickford]]
+* [[The Restoration (1910 film)|''The Restoration'' (1910 film)]], an American silent short drama produced by the Thanhouser Company
+* [[Restoration (1995 film)|''Restoration'' (1995 film)]], a film by Michael Hoffman starring Robert Downey Jr
+* [[Restoration (2011 film)|''Restoration'' (2011 film)]], an Israeli film by Yossi Madmoni
+* [[Restoration (2016 film)|''Restoration'' (2016 film)]], an Australian science fiction thriller by Stuart Willis
+* [[Restoration (TV series)|''Restoration'' (TV series)]], a BBC TV series
+* [[Restoration (Arrow)|&quot;Restoration&quot; (''Arrow'')]], an episode of ''Arrow''
+
+== History ==
+* [[Kenmu Restoration]] (1333) in Japan
+* [[The Restoration]] (1660) in England, Wales and associated realms
+** [[Restoration (Ireland)]]
+** [[Restoration (Scotland)]]
+** [[Restoration in the English colonies]]
+** [[Restoration and Regeneration in Switzerland]] (1814–1830)
+* [[First Restoration]] in France (1814)
+* [[Bourbon Restoration]] in France (1815)
+* [[Meiji Restoration]] (1868) in Japan
+* [[Restoration (Spain)]] (1874–1931), also called the Bourbon Restoration
+* [[Manchu Restoration]] (1917) in China
+
+==Literature==
+* [[Restoration (Berg novel)|''Restoration'' (Berg novel)]], a 2002 novel by Carol Berg
+* [[Restoration (Ólafsson novel)|''Restoration'' (Ólafsson novel)]], a 2012 novel by Ólafur Jóhann Ólafsson
+* [[Restoration (Tremain novel)|''Restoration'' (Tremain novel)]], a 1989 novel by Rose Tremain set during the English Revolution
+* [[Restoration (newspaper)|''Restoration'' (newspaper)]], a Catholic newspaper published by the Madonna House Apostolate
+
+==Music==
+* [[Restorations (band)]], an American rock band
+* [[Restoration (EP)|''Restoration'' (EP)]], an EP by Haken
+* [[Restoration (Lecrae album)|''Restoration'' (Lecrae album)]]
+* ''Restoration'', half of the ''[[Revamp &amp; Restoration#Restoration|Revamp &amp; Restoration]]'' double tribute album to Elton John and Bernie Taupin
+
+== Religion ==
+* [[Restoration (Latter Day Saints)]], doctrine of the Latter Day Saint movement
+* [[Restoration branches]], independent Latter Day Saints organizations
+* [[Restoration Movement]], a Christian movement originating in the 19th century that seeks to restore the doctrine and practice of the early church

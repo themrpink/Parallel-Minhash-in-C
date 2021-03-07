@@ -1,0 +1,194 @@
+The basis of Fourier's work was his clear conception and definition of [[thermal conductivity]]. He assumed that, all else being the same, the flux of heat is strictly proportional to the gradient of temperature. Although undoubtedly true for small temperature gradients, strictly proportional behavior will be lost when real materials (e.g. ones having a thermal conductivity that is a function of temperature) are subjected to large temperature gradients.
+
+A similar assumption is made in the statement of Ohm's law: other things being alike, the strength of the current at each point is proportional to the gradient of electric potential. The accuracy of the assumption that flow is proportional to the gradient is more readily tested, using modern measurement methods, for the electrical case than for the heat case.
+
+==Other versions==
+Ohm's law, in the form above, is an extremely useful equation in the field of electrical/electronic engineering because it describes how voltage, current and resistance are interrelated on a &quot;macroscopic&quot; level, that is, commonly, as circuit elements in an [[electrical circuit]]. Physicists who study the electrical properties of matter at the microscopic level use a closely related and more general [[Vector (mathematics and physics)|vector]] equation, sometimes also referred to as Ohm's law, having variables that are closely related to the V, I, and R [[scalar (mathematics)|scalar]] variables of Ohm's law, but which are each functions of position within the conductor.  Physicists often use this continuum form of Ohm's Law:&lt;ref&gt;{{cite book
+ | title = Physics for scientists and engineers
+ | author = Lerner, Lawrence S.
+ | publisher = Jones &amp; Bartlett
+ | year = 1977
+ | isbn = 978-0-7637-0460-5
+ | page = 736
+ | url = https://books.google.com/books?id=Nv5GAyAdijoC&amp;pg=PA736
+ }}&lt;/ref&gt;
+
+:&lt;math&gt;
+\mathbf{E} = \rho \mathbf{J}
+&lt;/math&gt;
+
+where &quot;'''E'''&quot; is the [[electric field]] vector with units of volts per meter (analogous to &quot;V&quot; of Ohm's law which has units of volts), &quot;'''J'''&quot; is the [[current density]] vector with units of amperes per unit area (analogous to &quot;I&quot; of Ohm's law which has units of amperes), and &quot;ρ&quot; (Greek &quot;rho&quot;) is the [[resistivity]] with units of ohm·meters (analogous to &quot;R&quot; of Ohm's law which has units of ohms).  The above equation is sometimes written&lt;ref&gt;Seymour J, ''Physical Electronics'', Pitman, 1972, pp. 53–54&lt;/ref&gt; as '''J''' = &lt;math&gt;\sigma&lt;/math&gt;'''E''' where &quot;σ&quot; (Greek &quot;sigma&quot;) is the [[electrical conductivity|conductivity]] which is the reciprocal of ρ.
+
+[[File:Ohms law vectors.svg|thumb|290px|Current flowing through a uniform cylindrical conductor (such as a round wire) with a uniform field applied.]]
+The voltage between two points is defined as:&lt;ref&gt;Lerner L, ''Physics for scientists and engineers'', Jones &amp; Bartlett, 1997, [https://books.google.com/books?id=Nv5GAyAdijoC&amp;pg=PA685 pp. 685–686]&lt;/ref&gt;
+
+:&lt;math&gt;{\Delta V} = -\int {\mathbf E \cdot d \mathbf l} &lt;/math&gt;
+
+with &lt;math&gt;d \mathbf l&lt;/math&gt; the element of path along the integration of electric field vector '''E'''. If the applied '''E''' field is uniform and oriented along the length of the conductor as shown in the figure, then defining the voltage V in the usual convention of being opposite in direction to the field (see figure), and with the understanding that the voltage V is measured differentially across the length of the conductor allowing us to drop the Δ symbol, the above vector equation reduces to the scalar equation:
+
+:&lt;math&gt;V = {E}{l}  \ \  \text{or} \ \ E = \frac{V}{l}. &lt;/math&gt;
+
+Since the '''E''' field is uniform in the direction of wire length, for a conductor having uniformly consistent resistivity ρ, the current density '''J''' will also be uniform in any cross-sectional area and oriented in the direction of wire length, so we may write:&lt;ref name=lerner732&gt;Lerner L, ''Physics for scientists and engineers'', Jones &amp; Bartlett, 1997, [https://books.google.com/books?id=Nv5GAyAdijoC&amp;pg=PA732 pp. 732–733]&lt;/ref&gt;
+
+:&lt;math&gt; J = \frac{I}{a}.&lt;/math&gt;
+
+Substituting the above 2 results (for ''E'' and ''J'' respectively) into the continuum form shown at the beginning of this section:
+
+:&lt;math&gt;\frac{V}{l} = \frac{I}{a}\rho \qquad \text{or} \qquad V = I \rho \frac{l}{a}.&lt;/math&gt;
+
+The [[electrical resistance]] of a uniform conductor is given in terms of [[resistivity]] by:&lt;ref name=lerner732/&gt;
+:&lt;math&gt;{R} = \rho \frac{l}{a} &lt;/math&gt;
+where ''l'' is the length of the conductor in [[International System of Units|SI]] units of meters, ''a'' is the cross-sectional area (for a round wire ''a'' = ''πr''&lt;sup&gt;2&lt;/sup&gt; if ''r'' is radius) in units of meters squared, and ρ is the resistivity in units of ohm·meters.
+
+After substitution of ''R'' from the above equation into the equation preceding it, the continuum form of Ohm's law for a uniform field (and uniform current density) oriented along the length of the conductor reduces to the more familiar form:
+:&lt;math&gt;{V}={I}{R}. \ &lt;/math&gt;
+
+A perfect crystal lattice, with low enough thermal motion and no deviations from periodic structure, would have no [[resistivity]],&lt;ref&gt;Seymour J, ''Physical Electronics'', pp. 48–49, Pitman, 1972&lt;/ref&gt; but a real metal has [[crystallographic defect]]s, impurities, multiple [[isotope]]s, and thermal motion of the atoms. Electrons [[scattering|scatter]] from all of these, resulting in resistance to their flow.
+
+The more complex generalized forms of Ohm's law are important to [[condensed matter physics]], which studies the properties of [[matter]] and, in particular, its [[electronic structure]]. In broad terms, they fall under the topic of [[constitutive equations]] and the theory of [[Green–Kubo relations|transport coefficients]].
+
+===Magnetic effects===
+If an external '''B'''-field is present and the conductor is not at rest but moving at velocity '''v''', then an extra term must be added to account for the current induced by the [[Lorentz force]] on the charge carriers.
+:&lt;math&gt;\mathbf{J} = \sigma (\mathbf{E} + \mathbf{v}\times\mathbf{B})&lt;/math&gt;
+
+In the [[rest frame]] of the moving conductor this term drops out because '''v'''= 0. There is no contradiction because the electric field in the rest frame differs from the '''E'''-field in the lab frame: '''E′'''  = '''E''' + '''v'''×'''B'''.
+Electric and magnetic fields are relative, see [[Lorentz transformation]].
+
+If the current '''J''' is alternating because the applied voltage or '''E'''-field varies in time, then reactance must be added to resistance to account for self-inductance, see [[electrical impedance]]. The reactance may be strong if the frequency is high or the conductor is coiled.
+
+===Conductive fluids===
+In a conductive fluid, such as a [[plasma (physics)|plasma]], there is a similar effect. Consider a fluid moving with the velocity &lt;math&gt;\mathbf{v}&lt;/math&gt; in a magnetic field &lt;math&gt;\mathbf{B}&lt;/math&gt;. The relative motion induces an electric field &lt;math&gt;\mathbf{E}&lt;/math&gt; which exerts [[electric force]] on the charged particles giving rise to an [[electric current]] &lt;math&gt;\mathbf{J}&lt;/math&gt;. The equation of motion for the electron gas, with a [[number density]] &lt;math&gt;n_e&lt;/math&gt;, is written as
+
+:&lt;math&gt; m_en_e{d\mathbf{v}_e\over dt}=-n_e e \mathbf{E}+ n_e m_e \nu (\mathbf{v}_i-\mathbf{v}_e)-en_e\mathbf{v}_e\times \mathbf{B}, &lt;/math&gt;
+
+where &lt;math&gt;e&lt;/math&gt;, &lt;math&gt;m_e&lt;/math&gt; and &lt;math&gt;\mathbf{v}_e&lt;/math&gt; are the charge, mass and velocity of the electrons, respectively. Also, &lt;math&gt;\nu&lt;/math&gt; is the frequency of collisions of the electrons with ions which have a velocity field &lt;math&gt;\mathbf{v}_i&lt;/math&gt;. Since, the electron has a very small mass compared with that of ions, we can ignore the left hand side of the above equation to write
+
+:&lt;math&gt; \sigma(\mathbf{E}+\mathbf{v}\times \mathbf{B})=\mathbf{J}, &lt;/math&gt;
+
+where we have used the definition of the [[current density]], and also put &lt;math&gt;\sigma={n_e e^2\over \nu m_e}&lt;/math&gt; which is the [[electrical conductivity]]. This equation can also be equivalently written as
+
+: &lt;math&gt; \mathbf{E}+\mathbf{v}\times \mathbf{B}=\rho\mathbf{J}, &lt;/math&gt;
+
+where &lt;math&gt;\rho=\sigma^{-1}&lt;/math&gt; is the [[electrical resistivity]]. It is also common to write &lt;math&gt;\eta&lt;/math&gt; instead of &lt;math&gt;\rho&lt;/math&gt; which can be confusing since it is the same notation used for the magnetic diffusivity defined as &lt;math&gt;\eta=1/\mu_0\sigma&lt;/math&gt;.
+
+==See also==
+{{Portal|Electronics}}
+* [[Fick's law of diffusion]]
+* [[Magnetic circuit#Hopkinson's law: the magnetic analogy to Ohm's law|Hopkinson's law]] (&quot;Ohm's law for magnetics&quot;)
+* [[Maximum power transfer theorem]]
+* [[Norton's theorem]]
+* [[Sheet resistance]]
+* [[Superposition theorem]]
+* [[Thermal noise]]
+* [[Thévenin's theorem]]
+
+==References==
+{{Reflist}}
+
+==External links and further reading==
+{{commons category|Ohm's law}}
+* [http://www.ibiblio.org/kuphaldt/electricCircuits/DC/DC_2.html ''Ohm's Law''] chapter from [http://www.ibiblio.org/kuphaldt/electricCircuits/DC/index.html ''Lessons In Electric Circuits Vol 1 DC''] book and [http://www.ibiblio.org/kuphaldt/electricCircuits/ series].
+* John C. Shedd and Mayo D. Hershey,[https://books.google.com/books?id=8CQDAAAAMBAJ&amp;pg=PA599&amp;dq=%22Popular+Science%22+%22Ohm's+law%22&amp;hl=en&amp;ei=stULTZfxDMbKhAfxlr3-Cw&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=1&amp;ved=0CCMQ6AEwAA#v=onepage&amp;q&amp;f=false &quot;The History of Ohm's Law&quot;],  ''[[Popular Science]]'', December 1913, pp. 599–614, Bonnier Corporation {{ISSN|0161-7370}}, gives the history of Ohm's investigations, prior work, Ohm's false equation in the first paper, illustration of Ohm's experimental apparatus.
+* {{cite journal|doi=10.1119/1.1969620|title=Resistance to Ohm's Law|journal=American Journal of Physics|volume=31|issue=7|pages=536–547|year=1963|last1=Schagrin|first1=Morton L.|url=https://semanticscholar.org/paper/4a60d79b70aeca6ae2509820f60fe517550a4f3b|bibcode=1963AmJPh..31..536S|s2cid=120421759}} Explores the conceptual change underlying Ohm's experimental work.
+* Kenneth L. Caneva, [http://www.encyclopedia.com/topic/Georg_Simon_Ohm.aspx#1 &quot;Ohm, Georg Simon.&quot;] ''[[Complete Dictionary of Scientific Biography]]''. 2008
+* [[s:Scientific Memoirs/2/The Galvanic Circuit investigated Mathematically]], a translation of Ohm's original paper.
+
+{{Authority control}}
+
+{{DEFAULTSORT:Ohm's Law}}
+[[Category:Electronic engineering]]
+[[Category:Circuit theorems]]
+[[Category:Empirical laws]]
+[[Category:Electrical resistance and conductance]]
+[[Category:Voltage]]
+[[Category:Georg Ohm|Law]]</text>
+      <sha1>a4rb64ykkre3o9hzvadjkga09mmn263</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Optical character recognition</title>
+    <ns>0</ns>
+    <id>49091</id>
+    <revision>
+      <id>991037155</id>
+      <parentid>989353224</parentid>
+      <timestamp>2020-11-27T22:48:34Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 36 templates: del empty params (43×); hyphenate params (18×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="35407" xml:space="preserve">{{EngvarB|date=January 2019}}{{Short description|Computer recognition of visual text}}
+{{Use mdy dates|date = January 2019}}
+[[File:Portable scanner and OCR (video).webm|thumb|300px|Video of the process of scanning and real-time optical character recognition (OCR) with a portable scanner.]]
+
+'''Optical character recognition''' or '''optical character reader''' ('''OCR''') is the [[electronics|electronic]] or [[machine|mechanical]] conversion of [[image]]s of typed, handwritten or printed text into machine-encoded text, whether from a scanned document, a photo of a document, a scene-photo (for example the text on signs and billboards in a landscape photo) or from subtitle text superimposed on an image (for example: from a television broadcast).&lt;ref&gt;{{cite web|last=OnDemand|first=HPE Haven|title=OCR Document|url=https://dev.havenondemand.com/apis/ocrdocument#overview|url-status=dead|archive-url=https://web.archive.org/web/20160415060125/https://dev.havenondemand.com/apis/ocrdocument|archive-date=April 15, 2016}}&lt;/ref&gt;
+
+Widely used as a form of [[data entry]] from printed paper data records – whether passport documents, invoices, [[bank statement]]s, computerized receipts, business cards, mail, printouts of static-data, or any suitable documentation – it is a common method of digitizing printed texts so that they can be electronically edited, searched, stored more compactly, displayed on-line, and used in machine processes such as [[cognitive computing]], [[machine translation]], (extracted) [[text-to-speech]], key data and [[text mining]]. OCR is a field of research in [[pattern recognition]], [[artificial intelligence]] and [[computer vision]].
+
+Early versions needed to be trained with images of each character, and worked on one font at a time. Advanced systems capable of producing a high degree of recognition accuracy for most fonts are now common, and with support for a variety of digital image file format inputs.&lt;ref&gt;{{cite web|last=OnDemand|first=HPE Haven|title=undefined|url=https://dev.havenondemand.com/docs/ImageFormats.html|url-status=dead|archive-url=https://web.archive.org/web/20160419063444/https://dev.havenondemand.com/docs/ImageFormats.html|archive-date=April 19, 2016}}&lt;/ref&gt; Some systems are capable of reproducing formatted output that closely approximates the original page including images, columns, and other non-textual components.
+
+==History==
+{{see also|Timeline of optical character recognition}}
+Early optical character recognition may be traced to technologies involving telegraphy and creating reading devices for the blind.&lt;ref name=Scantz82&gt;{{cite book|last=Schantz|first=Herbert F.|title=The history of OCR, optical character recognition|url=https://archive.org/details/historyofocropti0000scha|url-access=registration|year=1982|publisher=Recognition Technologies Users Association|location=[Manchester Center, Vt.]|isbn=9780943072012}}&lt;/ref&gt; In 1914, [[Emanuel Goldberg]] developed a machine that read characters and converted them into standard telegraph code.&lt;ref&gt;{{cite book |last1=Dhavale |first1=Sunita Vikrant |title=Advanced Image-Based Spam Detection and Filtering Techniques |publisher=IGI Global |location=Hershey, PA |isbn=9781683180142 |page=91 |url=https://books.google.com/books?id=InFxDgAAQBAJ&amp;q=1914+Emanuel+Goldberg&amp;pg=PA91 |access-date=27 September 2019|date=March 10, 2017 }}&lt;/ref&gt; Concurrently, Edmund Fournier d'Albe developed the [[Optophone]], a handheld scanner that when moved across a printed page, produced tones that corresponded to specific letters or characters.&lt;ref&gt;{{cite journal|last=d'Albe|first=E. E. F.|title=On a Type-Reading Optophone|journal=Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences|date=1 July 1914|volume=90|issue=619|pages=373–375|doi=10.1098/rspa.1914.0061|bibcode=1914RSPSA..90..373D|doi-access=free}}&lt;/ref&gt;
+
+In the late 1920s and into the 1930s [[Emanuel Goldberg]] developed what he called a &quot;Statistical Machine&quot; for searching [[Microform|microfilm]] archives using an optical code recognition system. In 1931 he was granted USA Patent number 1,838,389 for the invention. The patent was acquired by [[IBM]].
+
+===Blind and visually impaired users===
+In 1974, [[Ray Kurzweil]] started the company Kurzweil Computer Products, Inc. and continued development of omni-[[typeface|font]] OCR, which could recognize text printed in virtually any font (Kurzweil is often credited with inventing omni-font OCR, but it was in use by companies, including CompuScan, in the late 1960s and 1970s&lt;ref name=Scantz82/&gt;&lt;ref&gt;{{cite journal |journal=Data Processing Magazine |title=The History of OCR |volume=12 |year=1970 |page=46}}&lt;/ref&gt;). Kurzweil decided that the best application of this technology would be to create a reading machine for the blind, which would allow blind people to have a computer read text to them out loud. This device required the invention of two enabling technologies{{spaced ndash}}the [[Charge-coupled device|CCD]] [[flatbed scanner]] and the text-to-speech synthesizer. On January 13, 1976, the successful finished product was unveiled during a widely reported news conference headed by Kurzweil and the leaders of the [[National Federation of the Blind]].{{Citation needed|date=October 2011}} In 1978, Kurzweil Computer Products began selling a commercial version of the optical character recognition computer program. [[LexisNexis]] was one of the first customers, and bought the program to upload legal paper and news documents onto its nascent online databases. Two years later, Kurzweil sold his company to [[Xerox]], which had an interest in further commercializing paper-to-computer text conversion. Xerox eventually spun it off as [[Scansoft]], which merged with [[Nuance Communications]].
+
+In the 2000s, OCR was made available online as a service (WebOCR), in a [[cloud computing]] environment, and in mobile applications like real-time translation of foreign-language signs on a [[smartphone]]. With the advent of smart-phones and [[smartglasses]], OCR can be used in internet connected mobile device applications that extract text captured using the device's camera. These devices that do not have OCR functionality built into the operating system will typically use an OCR [[Application programming interface|API]] to extract the text from the image file captured and provided by the device.&lt;ref&gt;{{cite web|date=27 June 2015|title=Extracting text from images using OCR on Android|url=https://community.havenondemand.com/t5/Blog/Extracting-text-from-images-using-OCR-on-Android/ba-p/1883|url-status=dead|archive-url=https://web.archive.org/web/20160315001012/https://community.havenondemand.com/t5/Blog/Extracting-text-from-images-using-OCR-on-Android/ba-p/1883|archive-date=March 15, 2016}}&lt;/ref&gt;&lt;ref&gt;{{cite web|date=23 October 2014|title=[Tutorial] OCR on Google Glass|url=https://community.havenondemand.com/t5/Blog/Tutorial-OCR-on-Google-Glass/ba-p/1164|url-status=dead|archive-url=https://web.archive.org/web/20160305231423/https://community.havenondemand.com/t5/Blog/Tutorial-OCR-on-Google-Glass/ba-p/1164|archive-date=March 5, 2016}}&lt;/ref&gt; The OCR API returns the extracted text, along with information about the location of the detected text in the original image back to the device app for further processing (such as text-to-speech) or display.
+
+[[Comparison of optical character recognition software|Various commercial and open source OCR systems]] are available for most common [[writing system]]s, including Latin, Cyrillic, Arabic, Hebrew, Indic, Bengali (Bangla), Devanagari, Tamil, Chinese, Japanese, and Korean characters.
+
+==Applications==
+OCR engines have been developed into many kinds of domain-specific OCR applications, such as receipt OCR, invoice OCR, check OCR, legal billing document OCR.
+
+They can be used for:
+* [[Data entry clerk|Data entry]] for business documents, e.g. [[check clearing|Cheque]], passport, invoice, bank statement and receipt
+* [[Automatic number plate recognition]]
+*In airports, for passport recognition and [[information extraction]]
+* Automatic insurance documents key information extraction{{citation needed|date=February 2020}}
+* [[Traffic sign recognition]]&lt;ref name=&quot;Zeng2015&quot;&gt;{{cite book|author=Qing-An Zeng|title=Wireless Communications, Networking and Applications: Proceedings of WCNA 2014|url=https://books.google.com/books?id=vCnUCgAAQBAJ|date=28 October 2015|publisher=Springer|isbn=978-81-322-2580-5}}&lt;/ref&gt;
+* Extracting business card information into a contact list&lt;ref&gt;{{cite web|date=22 July 2014|title=[javascript] Using OCR and Entity Extraction for LinkedIn Company Lookup|url=https://community.havenondemand.com/t5/Blog/javascript-Using-OCR-and-Entity-Extraction-for-LinkedIn-Company/ba-p/460|url-status=dead|archive-url=https://web.archive.org/web/20160417145657/https://community.havenondemand.com/t5/Blog/javascript-Using-OCR-and-Entity-Extraction-for-LinkedIn-Company/ba-p/460|archive-date=April 17, 2016}}&lt;/ref&gt;
+* More quickly make textual versions of printed documents, e.g. [[book scanning]] for [[Project Gutenberg]]
+* Make electronic images of printed documents searchable, e.g. [[Google Books]]
+* Converting handwriting in real-time to control a computer ([[pen computing]])
+* Defeating [[CAPTCHA]] anti-bot systems, though these are specifically designed to prevent OCR.&lt;ref&gt;{{cite web|url=http://www.andrewt.net/blog/how-to-crack-captchas/ |title=How To Crack Captchas |publisher=andrewt.net |date=2006-06-28 |access-date=2013-06-16}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.cs.sfu.ca/~mori/research/gimpy/ |title=Breaking a Visual CAPTCHA |publisher=Cs.sfu.ca |date=2002-12-10 |access-date=2013-06-16}}&lt;/ref&gt;&lt;ref&gt;{{cite web|author=John Resig |url=http://ejohn.org/blog/ocr-and-neural-nets-in-javascript/ |title=John Resig – OCR and Neural Nets in JavaScript |publisher=Ejohn.org |date=2009-01-23 |access-date=2013-06-16}}&lt;/ref&gt; The purpose can also be to test the robustness of CAPTCHA anti-bot systems.
+* Assistive technology for blind and visually impaired users
+*Writing the instructions for vehicles by identifying CAD images in a database that are appropriate to the vehicle design as it changes in real time.
+*Making scanned documents searchable by converting them to searchable PDFs
+
+==Types==
+* Optical character recognition (OCR){{spaced ndash}}targets typewritten text, one [[glyph]] or [[character (symbol)|character]] at a time.
+* Optical word recognition{{spaced ndash}}targets typewritten text, one word at a time (for languages that use a [[Space (punctuation)|space]] as a [[word divider]]). (Usually just called &quot;OCR&quot;.)
+* [[Intelligent character recognition]] (ICR){{spaced ndash}}also targets handwritten [[printscript]] or [[cursive]] text one glyph or character at a time, usually involving [[machine learning]].
+* [[Intelligent word recognition]] (IWR){{spaced ndash}}also targets handwritten [[printscript]] or [[cursive]] text, one word at a time. This is especially useful for languages where glyphs are not separated in cursive script.
+
+OCR is generally an &quot;offline&quot; process, which analyses a static document. There are cloud based services which provide an online OCR API service. [[Handwriting movement analysis]] can be used as input to [[handwriting recognition]].&lt;ref&gt;{{Cite journal | last1 = Tappert | first1 = C. C. | last2 = Suen | first2 = C. Y. | last3 = Wakahara | first3 = T. | doi = 10.1109/34.57669 | title = The state of the art in online handwriting recognition | journal = IEEE Transactions on Pattern Analysis and Machine Intelligence | volume = 12 | issue = 8 | pages = 787 | year = 1990 | s2cid = 42920826 | url = https://semanticscholar.org/paper/a5b3ce16666f0d9a7ac1636370a58838a7843b0f }}&lt;/ref&gt; Instead of merely using the shapes of glyphs and words, this technique is able to capture motions, such as the order in which [[Segment (handwriting)|segments]] are drawn, the direction, and the pattern of putting the pen down and lifting it. This additional information can make the end-to-end process more accurate. This technology is also known as &quot;on-line character recognition&quot;, &quot;dynamic character recognition&quot;, &quot;real-time character recognition&quot;, and &quot;intelligent character recognition&quot;.
+
+==Techniques==
+
+===Pre-processing===
+OCR software often &quot;pre-processes&quot; images to improve the chances of successful recognition. Techniques include:&lt;ref name=&quot;nicomsoft&quot;&gt;{{cite web|url=https://www.nicomsoft.com/optical-character-recognition-ocr-how-it-works/ |title=Optical Character Recognition (OCR) – How it works |publisher=Nicomsoft.com |access-date=2013-06-16}}&lt;/ref&gt;
+* De-[[Skew (fax)|skew]]{{spaced ndash}}If the document was not aligned properly when scanned, it may need to be tilted a few degrees clockwise or counterclockwise in order to make lines of text perfectly horizontal or vertical.
+* [[Despeckle]]{{spaced ndash}}remove positive and negative spots, smoothing edges
+* Binarisation{{spaced ndash}}Convert an image from color or [[greyscale]] to black-and-white (called a &quot;[[binary image]]&quot; because there are two colors). The task of binarisation is performed as a simple way of separating the text (or any other desired image component) from the background.&lt;ref name=&quot;Sezgin2004&quot;&gt;{{cite journal|last1=Sezgin|first1=Mehmet|last2=Sankur|first2=Bulent|date=2004|title=Survey over image thresholding techniques and quantitative performance evaluation|url=http://webdocs.cs.ualberta.ca/~nray1/CMPUT605/track3_papers/Threshold_survey.pdf|journal=Journal of Electronic Imaging|volume=13|issue=1|page=146|bibcode=2004JEI....13..146S|doi=10.1117/1.1631315|archive-url=https://web.archive.org/web/20151016080410/http://webdocs.cs.ualberta.ca/~nray1/CMPUT605/track3_papers/Threshold_survey.pdf|archive-date=October 16, 2015|access-date=2 May 2015}}&lt;/ref&gt; The task of binarisation itself is necessary since most commercial recognition algorithms work only on binary images since it proves to be simpler to do so.&lt;ref name=&quot;Gupta2007&quot;&gt;{{cite journal|last1=Gupta|first1=Maya R.|last2=Jacobson|first2=Nathaniel P.|last3=Garcia|first3=Eric K.|date=2007|title=OCR binarisation and image pre-processing for searching historical documents.|url=http://www.rfai.li.univ-tours.fr/fr/ressources/_dh/DOC/DocOCR/OCRbinarisation.pdf|journal=Pattern Recognition|volume=40|issue=2|page=389|doi=10.1016/j.patcog.2006.04.043|archive-url=https://web.archive.org/web/20151016080410/http://www.rfai.li.univ-tours.fr/fr/ressources/_dh/DOC/DocOCR/OCRbinarisation.pdf|archive-date=October 16, 2015|access-date=2 May 2015}}&lt;/ref&gt; In addition, the effectiveness of the binarisation step influences to a significant extent the quality of the character recognition stage and the careful decisions are made in the choice of the binarisation employed for a given input image type; since the quality of the binarisation method employed to obtain the binary result depends on the type of the input image (scanned document, scene text image, historical degraded document etc.).&lt;ref name=Trier1995&gt;{{cite journal|last1=Trier|first1=Oeivind Due|last2=Jain|first2=Anil K.|title=Goal-directed evaluation of binarisation methods.|journal=IEEE Transactions on Pattern Analysis and Machine Intelligence|date=1995|volume=17|issue=12|pages=1191–1201|url=http://heim.ifi.uio.no/inf386/trier2.pdf|access-date=2 May 2015|doi=10.1109/34.476511}}&lt;/ref&gt;&lt;ref name=&quot;Milyaev2013&quot;&gt;{{cite journal|last1=Milyaev|first1=Sergey|last2=Barinova|first2=Olga|last3=Novikova|first3=Tatiana|last4=Kohli|first4=Pushmeet|last5=Lempitsky|first5=Victor|date=2013|title=Image binarisation for end-to-end text understanding in natural images.|url=https://www.microsoft.com/en-us/research/wp-content/uploads/2016/11/mbnlk_icdar2013.pdf|journal=Document Analysis and Recognition (ICDAR) 2013|volume=12th International Conference on|pages=128–132|doi=10.1109/ICDAR.2013.33|isbn=978-0-7695-4999-6|s2cid=8947361|access-date=2 May 2015}}&lt;/ref&gt;
+* Line removal{{spaced ndash}}Cleans up non-glyph boxes and lines
+* [[Document Layout Analysis|Layout analysis]] or &quot;zoning&quot;{{spaced ndash}}Identifies columns, paragraphs, captions, etc. as distinct blocks. Especially important in [[Column (typography)|multi-column layouts]] and [[Table (information)|tables]].
+* Line and word detection{{spaced ndash}}Establishes baseline for word and character shapes, separates words if necessary.
+* Script recognition{{spaced ndash}}In multilingual documents, the script may change at the level of the words and hence, identification of the script is necessary, before the right OCR can be invoked to handle the specific script.&lt;ref&gt;{{Cite journal  | last1=Pati  | first1=P.B.  | last2= Ramakrishnan    |  first2=A.G.  |  title = Word Level Multi-script Identification  | date =1987-05-29  | journal=Pattern Recognition Letters | volume=29  | issue=9  | pages=1218–1229  | doi=10.1016/j.patrec.2008.01.027 }}&lt;/ref&gt;
+* Character isolation or &quot;segmentation&quot;{{spaced ndash}}For per-character OCR, multiple characters that are connected due to image artifacts must be separated; single characters that are broken into multiple pieces due to artifacts must be connected.
+* Normalize [[aspect ratio]] and [[Scale (ratio)|scale]]&lt;ref&gt;{{cite web|url=http://blog.damiles.com/2008/11/20/basic-ocr-in-opencv.html |title=Basic OCR in OpenCV &amp;#124; Damiles |publisher=Blog.damiles.com |access-date=2013-06-16|date=2008-11-20 }}&lt;/ref&gt;
+
+Segmentation of [[fixed-pitch font]]s is accomplished relatively simply by aligning the image to a uniform grid based on where vertical grid lines will least often intersect black areas. For [[proportional font]]s, more sophisticated techniques are needed because whitespace between letters can sometimes be greater than that between words, and vertical lines can intersect more than one character.&lt;ref name=&quot;Tesseract overview&quot; /&gt;
+
+===Text recognition===
+There are two basic types of core OCR algorithm, which may produce a ranked list of candidate characters.&lt;ref&gt;{{cite web|url=http://www.dataid.com/aboutocr.htm |title=OCR Introduction |publisher=Dataid.com |access-date=2013-06-16}}&lt;/ref&gt;
+
+* ''Matrix matching'' involves comparing an image to a stored glyph on a pixel-by-pixel basis; it is also known as &quot;pattern matching&quot;, &quot;[[pattern recognition]]&quot;, or &quot;[[digital image correlation|image correlation]]&quot;. This relies on the input glyph being correctly isolated from the rest of the image, and on the stored glyph being in a similar font and at the same scale. This technique works best with typewritten text and does not work well when new fonts are encountered. This is the technique the early physical photocell-based OCR implemented, rather directly.
+
+* ''Feature extraction'' decomposes glyphs into &quot;features&quot; like lines, closed loops, line direction, and line intersections. The extraction features reduces the dimensionality of the representation and makes the recognition process computationally efficient. These features are compared with an abstract vector-like representation of a character, which might reduce to one or more glyph prototypes. General techniques of [[Feature detection (computer vision)|feature detection in computer vision]] are applicable to this type of OCR, which is commonly seen in &quot;intelligent&quot; [[handwriting recognition]] and indeed most modern OCR software.&lt;ref name=&quot;ocrwizard&quot;&gt;{{cite web|title=How OCR Software Works|url=http://ocrwizard.com/ocr-software/how-ocr-software-works.html|url-status=dead|archive-url=https://web.archive.org/web/20090816210246/http://ocrwizard.com/ocr-software/how-ocr-software-works.html|archive-date=August 16, 2009|access-date=2013-06-16|publisher=OCRWizard}}&lt;/ref&gt; [[Nearest neighbour classifiers]] such as the [[k-nearest neighbors algorithm]] are used to compare image features with stored glyph features and choose the nearest match.&lt;ref&gt;{{cite web|url=http://blog.damiles.com/2008/11/14/the-basic-patter-recognition-and-classification-with-opencv.html |title=The basic pattern recognition and classification with openCV &amp;#124; Damiles |publisher=Blog.damiles.com |access-date=2013-06-16|date=2008-11-14 }}&lt;/ref&gt;

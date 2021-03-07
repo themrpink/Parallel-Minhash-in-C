@@ -1,0 +1,261 @@
+    public RmiServer() throws RemoteException {
+        super(0); // required to avoid the 'rmic' step, see below
+    }
+
+    public String getMessage() {
+        return MESSAGE;
+    }
+
+    public static void main(String args[]) throws Exception {
+        System.out.println(&quot;RMI server started&quot;);
+
+        try { //special exception handler for registry creation
+            LocateRegistry.createRegistry(1099);
+            System.out.println(&quot;java RMI registry created.&quot;);
+        } catch (RemoteException e) {
+            //do nothing, error means registry already exists
+            System.out.println(&quot;java RMI registry already exists.&quot;);
+        }
+           
+        //Instantiate RmiServer
+        RmiServer server = new RmiServer();
+
+        // Bind this object instance to the name &quot;RmiServer&quot;
+        Naming.rebind(&quot;//localhost/RmiServer&quot;, server);
+        System.out.println(&quot;PeerServer bound in registry&quot;);
+    }
+}
+&lt;/syntaxhighlight&gt;
+
+'''&lt;code&gt;RmiServerIntf&lt;/code&gt; interface''' — defines the interface that is used by the client and implemented by the server.
+
+&lt;syntaxhighlight lang=java&gt;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface RmiServerIntf extends Remote {
+    String getMessage() throws RemoteException;
+}
+&lt;/syntaxhighlight&gt;
+
+'''&lt;code&gt;RmiClient&lt;/code&gt; class''' &amp;mdash; this is the client which gets the reference (a proxy) to the remote object living on the server and invokes its method to get a message. If the server object implemented java.io.Serializable instead of java.rmi.Remote, it would be serialized and passed to the client as a value.&lt;ref&gt;{{cite web |last1=Wilson |first1=M. Jeff |date=2000-11-10 |df=mdy |url=https://www.infoworld.com/article/2076234/get-smart-with-proxies-and-rmi.html |title=Get smart with proxies and RMI |work=[[JavaWorld]] |accessdate=2020-07-18}}&lt;/ref&gt;
+
+&lt;syntaxhighlight lang=java&gt;
+import java.rmi.Naming;
+
+public class RmiClient {
+    public static void main(String args[]) throws Exception {
+        RmiServerIntf server = (RmiServerIntf)Naming.lookup(&quot;//localhost/RmiServer&quot;);
+        System.out.println(server.getMessage());
+    }
+}
+&lt;/syntaxhighlight&gt;
+
+Before running this example, we need to make a 'stub' file for the interface we used. For this task we have the RMI compiler - 'rmic'
+*Note: we make a stub file from the '*.class' file with the implementation of the remote interface, not from the '*.java' file.
+&lt;syntaxhighlight lang=dos&gt;
+rmic RmiServer
+&lt;/syntaxhighlight&gt;
+Note that since version 5.0 of J2SE support for dynamically generated stub files has been added, and rmic is only provided for backwards compatibility with earlier runtimes,&lt;ref&gt;{{cite web|title=Java RMI Release Notes|url=http://docs.oracle.com/javase/1.5.0/docs/guide/rmi/relnotes.html|publisher=Oracle|accessdate=9 May 2012}}&lt;/ref&gt; or for programs that don't provide an explicit port number (or zero) when exporting remote objects, which is required for generated stubs to be possible, as described in the Javadoc for UnicastRemoteObject. See the comment in the constructor above.
+
+==References==
+{{reflist}}
+
+==External links==
+*{{cite web |title=Remote Method Invocation Home |url=http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136424.html |website= Oracle Technology Network for Java Developers |publisher=[[Oracle Corporation]] |location=Redwood Shores, CA, USA |accessdate=2014-07-14}}
+* [http://download.oracle.com/javase/tutorial/rmi/index.html The Java RMI tutorial] - a good starting point to learn RMI. Also check the [http://java.sun.com/j2se/1.5.0/docs/guide/rmi/hello/hello-world.html Hello World in RMI]
+* [http://java.sun.com/developer/onlineTraining/rmi/RMI.html the Java RMI online training] - Very good for training JavaRMI and as reference
+* [http://docs.oracle.com/javase/7/docs/technotes/guides/rmi/index.html The RMI page in the JDK docs]
+* {{Javadoc:SE|package=java.rmi|java/rmi}} (Sun's Java API Reference for the RMI package)
+* {{cite paper | author1= Ann Wollrath | author2= Roger Riggs | author3 = Jim Waldo |author3link=Jim Waldo
+  | title= A Distributed Object Model for the Java System | version= | pages= | publisher= | doi=
+  | url=http://pdos.csail.mit.edu/6.824/papers/waldo-rmi.pdf | format= PDF | accessdate= 2009-02-11}}
+* [http://docs.oracle.com/cd/E12840_01/wls/docs103/rmi/rmi_intro.html Programming WebLogic RMI] - an introduction to RMI in Oracle Weblogic.
+* [http://notes.corewebprogramming.com/student/RMI.pdf General Remote Method Invocation]
+
+[[Category:Java platform|RMI]]
+[[Category:Remote procedure call]]
+[[Category:Articles with example Java code]]</text>
+      <sha1>5jbi948ggobgal1qe3so7mc4u8n8ese</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Common Object Request Broker Architecture</title>
+    <ns>0</ns>
+    <id>43285</id>
+    <revision>
+      <id>975337890</id>
+      <parentid>972379185</parentid>
+      <timestamp>2020-08-27T23:13:25Z</timestamp>
+      <contributor>
+        <username>Esprit15d</username>
+        <id>379272</id>
+      </contributor>
+      <minor />
+      <comment>/* VMCID (Vendor Minor Codeset ID) */clean up, [[WP:AWB/T|typo(s) fixed]]: 3-13 → 3–13</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="35127" xml:space="preserve">{{more footnotes|date=February 2009}}
+{{Use dmy dates|date=December 2019}}
+{{Infobox standardref
+| title              = Common Object Request Broker Architecture
+| status             = Published
+| year_started       = {{Start date and age|1991}}
+| version            = 3.3
+| versionDate        = {{Start date and age|2012|10}}
+| preview            = 
+| previewDate        = 
+| organization       = [[Object Management Group]]
+| base_standards     =
+| related_standards  = 
+| abbreviation       = CORBA  
+| domain             = 
+| license            =
+| website            = {{URL|corba.org/}}
+}}
+The  '''Common Object Request Broker Architecture''' ('''CORBA''') is a [[Standardization|standard]] defined by the [[Object Management Group]] (OMG) designed to facilitate the communication of systems that are deployed on diverse platforms. CORBA enables collaboration between systems on different operating systems, [[programming language]]s, and computing hardware. CORBA uses an object-oriented model although the systems that use the CORBA do not have to be object-oriented. CORBA is an example of the [[distributed object]] paradigm.
+
+== Overview==
+CORBA enables communication between software written in different languages and running on different computers. Implementation details from specific operating systems, programming languages, and hardware platforms are all removed from the responsibility of developers who use CORBA. CORBA normalizes the method-call semantics between application objects residing either in the same address-space (application) or in remote address-spaces (same host, or remote host on a network). Version 1.0 was released in October 1991.
+
+CORBA uses an [[interface definition language]] (IDL) to specify the interfaces that objects present to the outer world. CORBA then specifies a ''mapping'' from IDL to a specific implementation language like [[C++]] or [[Java (programming language)|Java]]. Standard mappings exist for [[Ada (programming language)|Ada]], [[C (programming language)|C]], [[C++]], [[C++11]], [[COBOL]], [[Java (programming language)|Java]], [[Lisp (programming language)|Lisp]], [[PL/I]], [[Object Pascal]], [[Python (programming language)|Python]], [[Ruby (programming language)|Ruby]] and [[Smalltalk]]. Non-standard mappings exist for [[C Sharp (programming language)|C#]], [[Erlang (programming language)|Erlang]], [[Perl]], [[Tcl]] and [[Visual Basic]] implemented by [[object request broker]]s (ORBs) written for those languages.
+
+The CORBA specification dictates there shall be an ORB through which an application would interact with other objects. This is how it is implemented in practice:
+
+# The application simply initializes the ORB, and accesses an internal ''Object Adapter'', which maintains things like reference counting, object (and reference) instantiation policies, and object lifetime policies. 
+# The Object Adapter is used to register instances of the ''generated code classes''. Generated code classes are the result of compiling the user IDL code, which translates the high-level interface definition into an OS- and language-specific class base for use by the user application. This step is necessary in order to enforce CORBA semantics and provide a clean user process for interfacing with the CORBA infrastructure.
+
+Some IDL mappings are more difficult to use than others. For example, due to the nature of Java, the IDL-Java mapping is rather straightforward and makes usage of CORBA very simple in a Java application. This is also true of the IDL to Python mapping. The C++ mapping requires the programmer to learn datatypes that predate the C++ [[Standard Template Library]] (STL). By contrast, the C++11 mapping is easier to use, but requires heavy use of the STL. Since the C language is not object-oriented, the IDL to C mapping requires a C programmer to manually emulate object-oriented features.
+
+In order to build a system that uses or implements a CORBA-based distributed object interface, a developer must either obtain or write the IDL code that defines the object-oriented interface to the logic the system will use or implement. Typically, an ORB implementation includes a tool called an IDL compiler that translates the IDL interface into the target language for use in that part of the system. A traditional compiler then compiles the generated code to create the linkable-object files for use in the application. This diagram illustrates how the generated code is used within the CORBA infrastructure:
+
+[[Image:orb.svg|center|Illustration of the autogeneration of the infrastructure code from an interface defined using the CORBA IDL]]
+
+This figure illustrates the high-level paradigm for remote interprocess communications using CORBA. The CORBA specification further addresses data typing, exceptions, network protocols, communication timeouts, etc. For example: Normally the server side has the [[Portable Object Adapter]] (POA) that redirects calls either to the local [[Servant (CORBA)|servants]] or (to balance the load) to the other servers. The CORBA specification (and thus this figure) leaves various aspects of distributed system to the application to define including object lifetimes (although reference counting semantics are available to applications), redundancy/fail-over, memory management, dynamic load balancing, and application-oriented models such as the separation between display/data/control semantics (e.g. see [[Model–view–controller]]), etc.
+
+In addition to providing users with a language and a platform-neutral [[remote procedure call]] (RPC) specification, CORBA defines commonly needed services such as transactions and security, events, time, and other domain-specific interface models.
+
+== Versions history ==
+This table presents the history of CORBA standard versions.&lt;ref&gt;{{cite web
+| url=http://www.omg.org/gettingstarted/history_of_corba.htm
+| title=History of CORBA
+| publisher=[[Object Management Group]]
+| accessdate=12 March 2017}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+| url=http://www.corba.org/history_of_corba.htm
+| title=History of CORBA
+| publisher=[[Object Management Group]]
+| accessdate=4 June 2017}}&lt;/ref&gt;
+{| class=&quot;wikitable&quot;
+|-
+!width=60| Version
+!width=110| Version Date
+!width=400| Highlights
+|-
+|1.0||October 1991||First version, C mapping
+|-
+|1.1||February 1992||Interoperability, C++ mapping
+|-
+|1.2||December 1993||-
+|-
+|2.0||August 1996||First major update of the standard, also dubbed '''CORBA 2'''
+|-
+|2.1||August 1997||-
+|-
+|2.2||February 1998||Java mapping
+|-
+|2.3||June 1999||-
+|-
+|2.4||August 2000||-
+|-
+|2.5||September 2001||-
+|-
+|2.6||December 2001||-
+|-
+|3.0||July 2002||Second major update of the standard, also dubbed '''CORBA 3'''&lt;br/&gt;CORBA Component Model (CCM)
+|-
+|3.0.1||November 2002||-
+|-
+|3.0.2||December 2002||-
+|-
+|3.0.3||March 2004||-
+|-
+|3.1||January 2008||-
+|-
+|3.1.1||August 2011||Adopted as 2012 edition of ISO/IEC 19500
+|-
+|3.2||November 2011||-
+|-
+|3.3||November 2012||Addition of ZIOP
+|-
+|}
+
+== Servants ==
+A '''servant''' is the invocation target containing methods for handling the [[remote method invocation]]s. In the newer CORBA versions, the remote object (on the server side) is split into the '''object''' ''(that is exposed to remote invocations)'' and '''servant''' ''(to which the former part [[Forwarding (object-oriented programming)|forwards]] the method calls)''. It can be one ''servant'' per remote ''object'', or the same servant can support several (possibly all) objects, associated with the given [[Portable Object Adapter]]. The ''servant'' for each ''object'' can be set or found &quot;once and forever&quot; (servant activation) or dynamically chosen each time the method on that object is invoked (servant location). Both servant locator and servant activator can forward the calls to another server. In total, this system provides a very powerful means to balance the load, distributing requests between several machines. In the object-oriented languages, both remote ''object'' and its ''servant'' are objects from the viewpoint of the object-oriented programming.
+
+''Incarnation'' is the act of associating a servant with a CORBA object so that it may service requests.  Incarnation provides a concrete servant form for the virtual CORBA object. Activation and deactivation refer only to CORBA objects, while the terms incarnation and etherealization refer to servants.  However, the lifetimes of objects and servants are independent.  You always incarnate a servant before calling activate_object(), but the reverse is also possible, create_reference() activates an object without incarnating a servant, and servant incarnation is later done on demand with a Servant Manager.
+
+The ''{{visible anchor|Portable Object Adapter}}'' (POA) is the CORBA object responsible for splitting the server side remote invocation handler into the remote ''object'' and its ''servant''. The object is exposed for the remote invocations, while the servant contains the methods that are actually handling the requests. The servant for each object can be chosen either statically (once) or dynamically (for each remote invocation), in both cases allowing the call forwarding to another server.
+
+On the server side, the POAs form a tree-like structure, where each POA is responsible for one or more objects being served. The branches of this tree can be independently activated/deactivated, have the different code for the servant location or activation and the different request handling policies.
+
+== Features ==
+The following describes some of the most significant ways that CORBA can be used to facilitate communication among distributed objects.
+
+=== Objects By Reference ===
+This reference is either acquired through a stringified [[Uniform Resource Locator]] (URL), NameService lookup (similar to [[Domain Name System]] (DNS)), or passed-in as a method parameter during a call.
+
+Object references are lightweight objects matching the interface of the real object (remote or local). Method calls on the reference result in subsequent calls to the ORB and blocking on the thread while waiting for a reply, success or failure. The parameters, return data (if any), and exception data are marshaled internally by the ORB according to the local language and OS mapping.
+
+=== Data By Value ===
+The CORBA Interface Definition Language provides the language- and OS-neutral inter-object communication definition. CORBA Objects are passed by reference, while data (integers, doubles, structs, enums, etc.) are passed by value. The combination of Objects-by-reference and data-by-value provides the means to enforce great data typing while compiling clients and servers, yet preserve the flexibility inherent in the CORBA problem-space.
+
+===Objects By Value (OBV)===
+Apart from remote objects, the CORBA and [[RMI-IIOP]] define the concept of the OBV and Valuetypes. The code inside the methods of Valuetype objects is executed locally by default. If the OBV has been received from the remote side, the needed code must be either ''[[A priori and a posteriori|a priori]]'' known for both sides or dynamically downloaded from the sender. To make this possible, the record, defining OBV, contains the Code Base that is a space-separated list of [[Uniform Resource Locator|URL]]s whence this code should be downloaded. The OBV can also have the remote methods.
+
+===CORBA Component Model (CCM)===
+CORBA Component Model (CCM) is an addition to the family of CORBA definitions.&lt;ref&gt;{{cite web
+| url=http://www.drdobbs.com/the-corba-component-model/184403888
+| title=The CORBA Component Model
+| publisher=[[Dr. Dobb's Journal]]
+| date=1 September 2004
+| accessdate=13 March 2017}}&lt;/ref&gt; It was introduced with CORBA 3 and it describes a standard application framework for CORBA components. Though not dependent on &quot;language dependent [[Enterprise Java Beans]] (EJB)&quot;, it is a more general form of EJB, providing four component types instead of the two that EJB defines. It provides an abstraction of entities that can provide and accept services through well-defined named interfaces called ''ports''.
+
+The CCM has a component container, where software components can be deployed. The container offers a set of services that the components can use. These services include (but are not limited to) [[Notification system|notification]], [[authentication]], [[persistence (computer science)|persistence]] and [[transaction processing]]. These are the most-used services any distributed system requires, and, by moving the implementation of these services from the software components to the component container, the complexity of the components is dramatically reduced.
+
+=== Portable interceptors ===
+Portable interceptors are the &quot;hooks&quot;, used by CORBA and [[RMI-IIOP]] to mediate the most important functions of the CORBA system. The CORBA standard defines the following types of interceptors:
+
+# [[Interoperable Object Reference|IOR]] interceptors mediate the creation of the new references to the remote objects, presented by the current server.
+# Client interceptors usually mediate the remote method calls on the client (caller) side. If the object [[Servant (CORBA)|Servant]] exists on the same server where the method is invoked, they also mediate the local calls.
+# Server interceptors mediate the handling of the remote method calls on the server (handler) side.
+
+The interceptors can attach the specific information to the messages being sent and IORs being created. This information can be later read by the corresponding interceptor on the remote side. Interceptors can also throw forwarding exceptions, redirecting request to another target.
+
+===General InterORB Protocol (GIOP)===
+{{Main|General Inter-ORB Protocol}}
+The [[General Inter-ORB Protocol|GIOP]] is an abstract protocol by which [[Object request broker]]s (ORBs) communicate. Standards associated with the protocol are maintained by the [[Object Management Group]] (OMG). The GIOP architecture provides several concrete protocols, including:
+
+# Internet InterORB Protocol (IIOP) &amp;ndash; The Internet Inter-Orb Protocol is an implementation of the GIOP for use over the [[Internet]], and provides a mapping between GIOP messages and the [[Internet protocol suite|TCP/IP]] layer.
+# SSL InterORB Protocol (SSLIOP) &amp;ndash; SSLIOP is IIOP over [[Secure Sockets Layer|SSL]], providing [[encryption]] and [[authentication]].
+# HyperText InterORB Protocol (HTIOP) &amp;ndash; HTIOP is IIOP over [[HTTP]], providing transparent proxy bypassing.
+# Zipped IOP (ZIOP) &amp;ndash; A zipped version of GIOP that reduces the bandwidth usage.
+
+===VMCID (Vendor Minor Codeset ID)===
+Each standard CORBA exception includes a minor code to designate the subcategory of the exception. Minor exception codes are of type unsigned long and consist of a 20-bit &quot;Vendor Minor Codeset ID&quot; (VMCID), which occupies the high order 20 bits, and the minor code proper which occupies the low order 12 bits.
+
+Minor codes for the standard exceptions are prefaced by the VMCID assigned to OMG, defined as the unsigned long constant CORBA::OMGVMCID, which has the VMCID allocated to OMG occupying the high order 20 bits. The minor exception codes associated with the standard exceptions that are found in Table 3–13 on page 3-58 are or-ed with OMGVMCID to get the minor code value that is returned in the ex_body structure (see Section 3.17.1, &quot;Standard Exception Definitions&quot;, on page 3-52 and Section 3.17.2, &quot;Standard Minor Exception Codes&quot;, on page 3-58).
+
+Within a vendor assigned space, the assignment of values to minor codes is left to the vendor. Vendors may request allocation of VMCIDs by sending email to tagrequest@omg.org. A list of currently assigned VMCIDs can be found on the OMG website at: http://www.omg.org/cgi-bin/doc?vendor-tags
+
+The VMCID 0 and 0xfffff are reserved for experimental use. The VMCID OMGVMCID (Section 3.17.1, &quot;Standard Exception Definitions&quot;, on page 3-52) and 1 through 0xf are reserved for OMG use.
+
+[http://www.omg.org/cgi-bin/doc?formal/98-12-01 The Common Object Request Broker: Architecture and Specification (CORBA 2.3)]
+
+===Corba Location (CorbaLoc)===
+Corba Location (CorbaLoc) refers to a stringified object reference for a CORBA object that looks similar to a URL.
+
+All CORBA products must support two OMG-defined URLs: &quot;{{mono|corbaloc:}}&quot; and &quot;{{mono|corbaname:}}&quot;. The purpose of these is to provide a human readable and editable way to specify a location where an IOR can be obtained.
+
+An example of corbaloc is shown below:
+
+: {{mono|corbaloc::160.45.110.41:38693/StandardNS/NameServer-POA/_root}}

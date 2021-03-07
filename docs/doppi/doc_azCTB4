@@ -1,0 +1,591 @@
+=== Condition-controlled loops ===
+
+{{main article|While loop|Do while loop}}
+
+Most programming languages have constructions for repeating a loop until some condition changes.
+Some variations test the condition at the start of the loop; others test it at the end.
+If the test is at the start, the body may be skipped completely; if it is at the end, the body is always executed at least once.
+
+    DO WHILE (test)          | '''repeat''' 
+        xxx                  |     xxx 
+    LOOP                     | '''until''' test;
+ ----------------------------------------------
+    '''while''' (test) {           | '''do'''
+        xxx                  |     xxx
+    }                        | '''while''' (test);
+
+A [[control break]] is a value change detection method used within ordinary loops to trigger processing for groups of values.  Values are monitored within the loop and a change diverts program flow to the handling of the group event associated with them.
+
+    DO UNTIL (End-of-File)
+       IF new-zipcode &lt;&gt; current-zipcode
+          display_tally(current-zipcode, zipcount)
+          
+          current-zipcode = new-zipcode
+          zipcount = 0
+       ENDIF
+       
+       zipcount++
+    LOOP
+
+=== Collection-controlled loops ===
+
+{{main article|Foreach loop|l1=Foreach}}
+Several programming languages (e.g., [[Ada (programming language)|Ada]], [[D (programming language)|D]], [[C++11]], [[Smalltalk]], [[PHP]], [[Perl]], [[Object Pascal]], [[Java (programming language)|Java]], [[C Sharp (programming language)|C#]], [[MATLAB]], [[Visual Basic]], [[Ruby (programming language)|Ruby]], [[Python (programming language)|Python]], [[JavaScript]], [[Fortran 95]] and later) have special constructs which allow implicit looping through all elements of an array, or all members of a set or collection.
+
+    someCollection '''do''': [:eachElement |xxx].
+
+    '''for''' Item '''in''' Collection '''do''' '''begin''' xxx '''end''';
+ 
+    '''foreach''' (item; myCollection) { xxx }
+ 
+    '''foreach''' someArray { xxx }
+ 
+    '''foreach''' ($someArray as $k =&gt; $v) { xxx }
+ 
+    Collection&lt;String&gt; coll; '''for''' (String s : coll) {}
+ 
+    '''foreach''' ('''string''' s '''in''' myStringCollection) { xxx }
+ 
+    someCollection | ForEach-Object { $_ }
+
+    '''forall''' ( index = first:last:step... )
+[[Scala (programming language)|Scala]] has [[Scala (programming language)#For-expressions|for-expressions]], which generalise collection-controlled loops, and also support other uses, such as [[asynchronous programming]]. [[Haskell (programming language)|Haskell]] has do-expressions and comprehensions, which together provide similar function to for-expressions in Scala.
+
+=== General iteration ===
+
+General iteration constructs such as C's &lt;code&gt;for&lt;/code&gt; statement and [[Common Lisp]]'s &lt;code&gt;do&lt;/code&gt; form can be used to express any of the above sorts of loops, and others, such as looping over some number of collections in parallel. Where a more specific looping construct can be used, it is usually preferred over the general iteration construct, since it often makes the purpose of the expression clearer.
+
+=== Infinite loops ===
+{{main article|Infinite loop}}
+
+[[Infinite loop]]s are used to assure a program segment loops forever or until an exceptional condition arises, such as an error. For instance, an event-driven program (such as a [[Server (computing)|server]]) should loop forever, handling events as they occur, only stopping when the process is terminated by an operator.
+
+Infinite loops can be implemented using other control flow constructs. Most commonly, in unstructured programming this is jump back up (goto), while in structured programming this is an indefinite loop (while loop) set to never end, either by omitting the condition or explicitly setting it to true, as &lt;code&gt;while (true) ...&lt;/code&gt;. Some languages have special constructs for infinite loops, typically by omitting the condition from an indefinite loop. Examples include Ada (&lt;code&gt;loop ... end loop&lt;/code&gt;),&lt;ref&gt;[[b:Ada Programming/Control#Endless Loop|Ada Programming: Control: Endless Loop]]&lt;/ref&gt; Fortran (&lt;code&gt;DO ... END DO&lt;/code&gt;), Go (&lt;code&gt;for { ... }&lt;/code&gt;), and Ruby (&lt;code&gt;loop do ... end&lt;/code&gt;).
+
+Often, an infinite loop is unintentionally created by a programming error in a condition-controlled loop, wherein the loop condition uses variables that never change within the loop.
+
+=== Continuation with next iteration ===
+
+Sometimes within the body of a loop there is a desire to skip the remainder of the loop body and continue with the next iteration of the loop. Some languages provide a statement such as &lt;code&gt;continue&lt;/code&gt; (most languages), &lt;code&gt;skip&lt;/code&gt;,&lt;ref&gt;{{Cite web|title=What is a loop and how we can use them?|url=http://www.megacpptutorials.com/2012/12/what-is-loop.html|access-date=2020-05-25}}&lt;/ref&gt; or &lt;code&gt;next&lt;/code&gt; (Perl and Ruby), which will do this.  The effect is to prematurely terminate the innermost loop body and then resume as normal with the next iteration.  If the iteration is the last one in the loop, the effect is to terminate the entire loop early.
+
+=== Redo current iteration ===
+
+Some languages, like Perl&lt;ref&gt;{{Cite web|title=redo - perldoc.perl.org|url=https://perldoc.perl.org/functions/redo.html|access-date=2020-09-25|website=perldoc.perl.org}}&lt;/ref&gt; and Ruby,&lt;ref&gt;{{Cite web|title=control_expressions - Documentation for Ruby 2.4.0|url=https://docs.ruby-lang.org/en/2.4.0/syntax/control_expressions_rdoc.html|access-date=2020-09-25|website=docs.ruby-lang.org}}&lt;/ref&gt; have a &lt;code&gt;redo&lt;/code&gt; statement that restarts the current iteration from the start.
+
+=== Restart loop ===
+
+Ruby has a &lt;code&gt;retry&lt;/code&gt; statement that restarts the entire loop from the initial iteration.&lt;ref&gt;{{Cite web|title=control_expressions - Documentation for Ruby 2.3.0|url=https://docs.ruby-lang.org/en/2.3.0/syntax/control_expressions_rdoc.html|access-date=2020-09-25|website=docs.ruby-lang.org}}&lt;/ref&gt;
+
+=== Early exit from loops ===
+
+When using a count-controlled loop to search through a table, it might be desirable to stop searching as soon as the required item is found. Some programming languages provide a statement such as &lt;code&gt;break&lt;/code&gt; (most languages), &lt;code&gt;Exit&lt;/code&gt; (Visual Basic), or &lt;code&gt;last&lt;/code&gt; (Perl), which effect is to terminate the current loop immediately, and transfer control to the statement immediately after that loop.  Another term for early-exit loops is [[loop-and-a-half]].
+
+The following example is done in [[Ada (programming language)|Ada]] which supports both ''early exit from loops'' and ''[[Control flow#Loop with test in the middle|loops with test in the middle]]''. Both features are very similar and comparing both code snippets will show the difference: ''early exit'' must be combined with an '''if''' statement while a ''condition in the middle'' is a self-contained construct.
+
+&lt;syntaxhighlight lang=&quot;ada&quot;&gt;
+with Ada.Text IO;
+with Ada.Integer Text IO;
+
+procedure Print_Squares is 
+    X : Integer;
+begin
+    Read_Data : loop
+        Ada.Integer Text IO.Get(X);
+    exit Read_Data when X = 0;
+        Ada.Text IO.Put (X * X);
+        Ada.Text IO.New_Line;
+    end loop Read_Data;
+end Print_Squares;
+&lt;/syntaxhighlight&gt;
+
+[[Python (programming language)|Python]] supports conditional execution of code depending on whether a loop was exited early (with a &lt;code&gt;break&lt;/code&gt; statement) or not by using an else-clause with the loop.  For example,
+
+&lt;syntaxhighlight lang=&quot;python&quot;&gt;
+for n in set_of_numbers:
+    if isprime(n):
+        print(&quot;Set contains a prime number&quot;)
+        break
+else:
+    print(&quot;Set did not contain any prime numbers&quot;)
+&lt;/syntaxhighlight&gt;
+
+The &lt;code&gt;else&lt;/code&gt; clause in the above example is linked to the &lt;code&gt;for&lt;/code&gt; statement, and not the inner &lt;code&gt;if&lt;/code&gt; statement. Both Python's &lt;code&gt;for&lt;/code&gt; and &lt;code&gt;while&lt;/code&gt; loops support such an else clause, which is executed only if early exit of the loop has not occurred.
+
+Some languages support breaking out of nested loops; in theory circles, these are called multi-level breaks. One common use example is searching a multi-dimensional table. This can be done either via multilevel breaks (break out of ''N'' levels), as in bash&lt;ref&gt;Advanced Bash Scripting Guide: [http://tldp.org/LDP/abs/html/loopcontrol.html 11.3. Loop Control]&lt;/ref&gt; and PHP,&lt;ref&gt;PHP Manual: &quot;[http://php.net/manual/en/control-structures.break.php break]&quot;&lt;/ref&gt; or via labeled breaks (break out and continue at given label), as in Java and Perl.&lt;ref&gt;perldoc: [http://perldoc.perl.org/functions/last.html last]&lt;/ref&gt; Alternatives to multilevel breaks include single breaks, together with a state variable which is tested to break out another level; exceptions, which are caught at the level being broken out to; placing the nested loops in a function and using return to effect termination of the entire nested loop; or using a label and a goto statement. C does not include a multilevel break, and the usual alternative is to use a goto to implement a labeled break.&lt;ref&gt;comp.lang.c FAQ list · &quot;[http://c-faq.com/misc/multibreak.html Question 20.20b]&quot;&lt;/ref&gt; Python does not have a multilevel break or continue – this was proposed in [https://www.python.org/dev/peps/pep-3136/ PEP 3136], and rejected on the basis that the added complexity was not worth the rare legitimate use.&lt;ref&gt;[http://mail.python.org/pipermail/python-3000/2007-July/008663.html &lt;nowiki&gt;[&lt;/nowiki&gt;Python-3000&lt;nowiki&gt;]&lt;/nowiki&gt; Announcing PEP 3136], Guido van Rossum&lt;/ref&gt;
+
+The notion of multi-level breaks is of some interest in [[theoretical computer science]], because it gives rise to what is today called the ''Kosaraju hierarchy''.&lt;ref name=kozen&gt;{{cite book |doi= 10.1007/978-3-540-70594-9_11 |chapter=The Böhm–Jacopini Theorem Is False, Propositionally |volume=5133 |date=2008 |pages=177–192 |first=Dexter |last=Kozen|title=Mathematics of Program Construction |series=Lecture Notes in Computer Science |isbn=978-3-540-70593-2 |url=http://www.cs.cornell.edu/~kozen/papers/BohmJacopini.pdf |citeseerx=10.1.1.218.9241 }}&lt;/ref&gt; In 1973 [[S. Rao Kosaraju]] refined the [[structured program theorem]] by proving that it is possible to avoid adding additional variables in structured programming, as long as arbitrary-depth, multi-level breaks from loops are allowed.&lt;ref&gt;Kosaraju, S. Rao. &quot;Analysis of structured programs,&quot; Proc. Fifth Annual ACM Syrup.
+Theory of Computing, (May 1973), 240-252; also in J. Computer and System Sciences, 9,
+3 (December 1974). cited by {{cite journal
+ |  author = Donald Knuth
+ |  author-link = Donald Knuth
+ |   title = Structured Programming with go to Statements
+ | journal = Computing Surveys
+ |  volume = 6
+ |   issue = 4
+ |    year = 1974
+ |     url = 
+ |   pages = 261–301
+ |   doi = 10.1145/356635.356640
+|  citeseerx = 10.1.1.103.6084
+ | s2cid = 207630080
+ }}&lt;/ref&gt; Furthermore, Kosaraju proved that a strict hierarchy of programs exists: for every integer ''n'', there exists a program containing a multi-level break of depth ''n'' that cannot be rewritten as a program with multi-level breaks of depth less than ''n'' without introducing added variables.&lt;ref name=&quot;kozen&quot;/&gt;
+
+One can also &lt;code&gt;return&lt;/code&gt; out of a subroutine executing the looped statements, breaking out of both the nested loop and the subroutine. There are other [[#Proposed control structures|proposed control structures]] for multiple breaks, but these are generally implemented as exceptions instead.
+
+In his 2004 textbook, [[David Watt (computer scientist)|David Watt]] uses Tennent's notion of [[S-algol|sequencer]] to explain the similarity between multi-level breaks and return statements. Watt notes that a class of sequencers known as ''escape sequencers'', defined as &quot;sequencer that terminates execution of a textually enclosing command or procedure&quot;, encompasses both breaks from loops (including multi-level breaks) and return statements. As commonly implemented, however, return sequencers may also carry a (return) value, whereas the break sequencer as implemented in contemporary languages usually cannot.&lt;ref name=&quot;WattFindlay2004b&quot;&gt;{{cite book|author1=David Anthony Watt|author2=William Findlay|title=Programming language design concepts|year=2004|publisher=John Wiley &amp; Sons|isbn=978-0-470-85320-7|pages=215–221}}&lt;/ref&gt;
+
+=== Loop variants and invariants ===
+
+[[Loop variant]]s and [[loop invariant]]s are used to express correctness of loops.&lt;ref&gt;{{cite book|last=Meyer|first=Bertrand|title=Eiffel: The Language|year=1991|publisher=Prentice Hall|pages=129–131}}&lt;/ref&gt;
+
+In practical terms, a loop variant is an integer expression which has an initial non-negative value. The variant's value must decrease during each loop iteration but must never become negative during the correct execution of the loop. Loop variants are used to guarantee that loops will terminate.
+
+A loop invariant is an assertion which must be true before the first loop iteration and remain true after each iteration. This implies that when a loop terminates correctly, both the exit condition and the loop invariant are satisfied. Loop invariants are used to monitor specific properties of a loop during successive iterations.
+
+Some programming languages, such as [[Eiffel (programming language)|Eiffel]] contain native support for loop variants and invariants. In other cases, support is an add-on, such as the [[Java Modeling Language]]'s specification for [http://www.eecs.ucf.edu/~leavens/JML//jmlrefman/jmlrefman_12.html#SEC168 loop statements] in [[Java (programming language)|Java]].
+
+=== Loop sublanguage ===
+
+Some [[Lisp (programming language)|Lisp]] dialects provide an extensive sublanguage for describing Loops. An early example can be found in Conversional Lisp of [[Interlisp]]. [[Common Lisp]]&lt;ref&gt;{{cite web|title=Common Lisp LOOP macro|url=http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm}}&lt;/ref&gt; provides a Loop macro which implements such a sublanguage.
+
+=== Loop system cross-reference table ===
+{{Split|Comparison of programming languages (control flow)|date=May 2016}}&lt;!-- See also Category:Programming language comparisons. --&gt;
+
+{| class=&quot;wikitable&quot;
+|-
+! rowspan=2 |[[Programming language]]
+! colspan=3 | conditional
+! colspan=4 | loop
+! rowspan=2 | early exit
+! rowspan=2 | loop continuation
+! rowspan=2 | redo
+! rowspan=2 | retry
+! colspan=2 | correctness facilities
+|-
+! begin
+! middle
+! end
+! count
+! collection
+! general
+! infinite {{ref_label|loop_infinite|1|a}}
+! variant
+! invariant
+|-
+| [[Ada (programming language)|Ada]]
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{partial|arrays}}
+| {{no}}
+| {{yes}}
+| {{yes|deep nested}}
+| {{no}}
+|
+|
+|
+|
+|- 
+|-
+| [[APL (programming language)|APL]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{partial|deep nested}} {{ref_label|deep_break_c|3|a}}
+| {{yes}}
+| {{no}}
+| {{no}}
+|
+|
+|-
+| [[C (programming language)|C]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}} {{ref_label|loop_for|2|a}}
+| {{no}}
+| {{yes}}
+| {{no}}
+| {{partial|deep nested}} {{ref_label|deep_break_c|3|a}}
+| {{partial|deep nested}} {{ref_label|deep_break_c|3|a}}
+| {{no}}
+|
+|
+|
+|- 
+| [[C++]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}} {{ref_label|loop_for|2|b}}
+| {{yes}} {{ref_label|loop_foreach|9|a}}
+| {{yes}}
+| {{no}}
+| {{partial|deep nested}} {{ref_label|deep_break_c|3|b}}
+| {{partial|deep nested}} {{ref_label|deep_break_c|3|a}}
+| {{no}}
+|
+|
+|
+|-
+| [[C Sharp (programming language)|C#]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}} {{ref_label|loop_for|2|c}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{partial|deep nested}} {{ref_label|deep_break_c|3|c}}
+| {{partial|deep nested}} {{ref_label|deep_break_c|3|a}}
+|
+|
+|
+|
+|-
+| [[COBOL]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}}
+| {{partial|deep nested}} {{ref_label|cobol_deep_exit|15|a}}
+| {{partial|deep nested}} {{ref_label|cobol_deep_exit|14|a}}
+| {{no}}
+|
+|
+|
+|-
+| [[Common Lisp]]
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{partial|builtin only}} {{ref_label|cl_sequence_type|16|a}}
+| {{yes}}
+| {{yes}}
+| {{yes|deep nested}}
+| {{no}}
+|
+|
+|
+|
+|- 
+| [[D (programming language)|D]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}{{ref_label|DInfinite|14|a}}
+| {{yes|deep nested}}
+| {{yes|deep nested}}
+| {{no}}
+|
+|
+|
+|-
+| [[Eiffel (programming language)|Eiffel]]
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{yes}} {{ref_label|count_loop_eiffel|10|a}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{partial|one level}} {{ref_label|count_loop_eiffel|10|a}}
+| {{no}}
+| {{no}}
+| {{no}} {{ref_label|retry_in_eiffel|11|a}}
+| {{partial|integer only}} {{ref_label|integer_variant|13|a}}
+| {{yes}}
+|-
+| [[F Sharp (programming language)|F#]]
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}} {{ref_label|deep_break_e|6|b}}
+| {{no}}
+| {{no}}
+|
+|
+|
+|-
+| [[FORTRAN 77]]
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{partial|one level}}
+| {{yes }}
+|
+|
+|
+|
+|-
+| [[Fortran 90]]
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{yes|deep nested}}
+| {{yes}}
+|
+|
+|
+|
+|-
+| [[Fortran 95]] and later
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{partial|arrays}}
+| {{no}}
+| {{yes}}
+| {{yes|deep nested}}
+| {{yes}}
+|
+|
+|
+|
+|-
+| [[Haskell (programming language)|Haskell]]
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}} {{ref_label|deep_break_e|6|a}}
+| {{no}}
+| {{no}}
+|
+|
+|
+|-
+| [[Java (programming language)|Java]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}} {{ref_label|loop_for|2|d}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{yes|deep nested}}
+| {{yes|deep nested}}
+| {{no}}
+|
+|{{yes|non-native}} {{ref_label|requires_JML|12|a}}
+|{{yes|non-native}} {{ref_label|requires_JML|12|a}}
+|-
+| [[JavaScript]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}} {{ref_label|loop_for|2|g}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{yes|deep nested}}
+| {{yes|deep nested}}
+| {{no}}
+|
+|
+|-
+| Natural
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+|
+|-
+| [[OCaml]]
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{yes|arrays,lists}}
+| {{no}}
+| {{no}}
+| {{no}} {{ref_label|deep_break_e|6|b}}
+| {{no}}
+| {{no}}
+|
+|
+|
+|- 
+| [[PHP]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}} {{ref_label|loop_for|2|e}} {{ref_label|loop_for|5|b}}
+| {{yes}} {{ref_label|loop_phpforeach|4|a}}
+| {{yes}}
+| {{no}}
+| {{yes|deep nested}}
+| {{yes|deep nested}}
+| {{no}}
+|
+|
+|
+|- 
+| [[Perl]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}} {{ref_label|loop_for|2|f}} {{ref_label|loop_for|5|c}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{yes|deep nested}}
+| {{yes|deep nested}}
+| {{yes}}
+|
+|
+|
+|-
+| [[Python (programming language)|Python]]
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}} {{ref_label|loop_range|5|a}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{partial|deep nested}} {{ref_label|deep_break_e|6|c}}
+| {{partial|deep nested}} {{ref_label|deep_break_e|6|c}}
+| {{no}}
+|
+|
+|
+|-
+| [[REBOL]]
+| {{no}} {{ref_label|while|7|a}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}} {{ref_label|user|8|a}}
+| {{yes}}
+| {{partial|one level}} {{ref_label|deep_break_e|6|d}}
+| {{no}}
+| {{no}}
+|
+|
+|
+|-
+| [[Ruby (programming language)|Ruby]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{partial|deep nested}} {{ref_label|deep_break_e|6|e}}
+| {{partial|deep nested}} {{ref_label|deep_break_e|6|e}}
+| {{yes}}
+| {{yes}}
+|
+|
+|-
+| [[Standard ML]]
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{yes|arrays,lists}}
+| {{no}}
+| {{no}}
+| {{no}} {{ref_label|deep_break_e|6|b}}
+| {{no}}
+| {{no}}
+|
+|
+|
+|-
+| [[Visual Basic .NET]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{partial|one level per type of loop}}
+| {{partial|one level per type of loop}}
+|
+|
+|
+|
+|- 
+| [[PowerShell]]
+| {{yes}}
+| {{no}}
+| {{yes}}
+| {{no}} {{ref_label|loop_for|2|h}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{dunno}}
+| {{yes}}
+|
+|
+|
+|
+|}
+# {{note label|loop_infinite|1|a}} &lt;code&gt;while (true)&lt;/code&gt; does not count as an infinite loop for this purpose, because it is not a dedicated language structure.
+# {{note label|loop for|2|a}}{{note_label|loop_for|2|b}}{{note_label|loop_for|2|c}}{{note_label|loop_for|2|d}}{{note_label|loop_for|2|e}}{{note_label|loop_for|2|f}}{{note_label|loop_for|2|g}}{{note_label|loop_for|2|h}} C's &lt;code&gt;for (''init''; ''test''; ''increment'')&lt;/code&gt; loop is a general loop construct, not specifically a counting one, although it is often used for that.
+# {{note label|deep_break_c|3|a}}{{note label|deep_break_c|3|b}}{{note label|deep_break_c|3|c}} Deep breaks may be accomplished in APL, C, C++ and C# through the use of labels and gotos.
+# {{note label|loop_phpforeach|4|a}} Iteration over objects was [http://www.php.net/manual/en/language.oop5.iterations.php added] in PHP 5.
+# {{note label|loop_range|5|a}}{{note label|loop_range|5|b}}{{note label|loop_range|5|c}} A counting loop can be simulated by iterating over an incrementing list or generator, for instance, Python's &lt;code&gt;range()&lt;/code&gt;.
+# {{note label|deep_break_e|6|a}}{{note label|deep_break_e|6|b}}{{note label|deep_break_e|6|c}}{{note label|deep_break_e|6|d}}{{note label|deep_break_e|6|e}} Deep breaks may be accomplished through the use of exception handling.
+# {{note_label|while|7|a}} There is no special construct, since the &lt;code&gt;while&lt;/code&gt; function can be used for this.
+# {{note_label|user|8|a}} There is no special construct, but users can define general loop functions.
+# {{note_label|loop_foreach|9|a}} The [[C++11]] standard introduced the [[C++11#Range-based for-loop|range-based for]]. In the [[Standard Template Library|STL]], there is a &lt;code&gt;std::for_each&lt;/code&gt; [[template (programming)|template]] function which can iterate on STL [[Container (data structure)|containers]] and call a [[unary function]] for each element.&lt;ref&gt;[http://www.sgi.com/tech/stl/for_each.html for_each]. Sgi.com. Retrieved on 2010-11-09.&lt;/ref&gt; The functionality also can be constructed as [[C preprocessor#Macro definition and expansion|macro]] on these containers.&lt;ref&gt;[http://boost-sandbox.sourceforge.net/libs/foreach/doc/html/ Chapter 1. Boost.Foreach]. Boost-sandbox.sourceforge.net (2009-12-19). Retrieved on 2010-11-09.&lt;/ref&gt;
+# {{note_label|count_loop_eiffel|10|a}} Count-controlled looping is effected by iteration across an integer interval; early exit by including an additional condition for exit.
+# {{note_label|retry_in_eiffel|11|a}} Eiffel supports a reserved word &lt;code&gt;retry&lt;/code&gt;, however it is used in [[Exception handling#Exception handling based on design by contract|exception handling]], not loop control.
+# {{note_label|requires_JML|12|a}} Requires [[Java Modeling Language]] (JML) behavioral interface specification language.
+# {{note_label|integer_variant|13|a}} Requires loop variants to be integers; transfinite variants are not supported.  [http://archive.eiffel.com/doc/faq/variant.html]
+# {{note_label|DInfinite|13|a}} D supports infinite collections, and the ability to iterate over those collections. This does not require any special construct.
+# {{note_label|cobol_deep_exit|14|a}} Deep breaks can be achieved using &lt;code&gt;GO TO&lt;/code&gt; and procedures.
+# {{note_label|cl_sequence_type|14|a}} Common Lisp predates the concept of generic collection type.
+
+== Structured non-local control flow ==
+
+Many programming languages, especially those favoring more dynamic styles of programming, offer constructs for ''non-local control flow''. These cause the flow of execution to jump out of a given context and resume at some predeclared point. ''[[Exception handling#Condition systems|Conditions]]'', ''[[Exception handling|exceptions]]'' and ''[[continuation]]s'' are three common sorts of non-local control constructs; more exotic ones also exist, such as [[Generator (computer programming)|generators]], [[coroutine]]s and the [[Futures and promises|async]] keyword.
+
+=== Conditions ===
+
+[[PL/I]] has some 22 standard conditions (e.g., ZERODIVIDE SUBSCRIPTRANGE ENDFILE) which can be raised and which can be intercepted by: ON ''condition'' action; Programmers can also define and use their own named conditions.
+
+Like the ''unstructured if'', only one statement can be specified so in many cases a GOTO is needed to decide where flow of control should resume.
+
+Unfortunately, some implementations had a substantial overhead in both space and time (especially SUBSCRIPTRANGE), so many programmers tried to avoid using conditions.

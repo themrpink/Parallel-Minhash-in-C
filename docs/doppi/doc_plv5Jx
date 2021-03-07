@@ -1,0 +1,263 @@
+In 2010 [[David Field (astrophysicist)|David Field]] found that [[prosaic film]]s of chemicals such as nitrous oxide or propane exhibited ferroelectric properties.{{citation needed|date=April 2016}} This new class of ferroelectric materials exhibit &quot;[[spontelectrics|spontelectric]]&quot; properties, and may have wide-ranging applications in device and nano-technology and also influence the electrical nature of dust in the interstellar medium.
+
+Other ferroelectric materials used include [[triglycine sulfate]], [[polyvinylidene fluoride]] (PVDF) and [[lithium tantalate]].&lt;ref name=&quot;Aggarwal&quot;&gt;{{cite web |url=https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20110008068_2011008855.pdf |title=Pyroelectric Materials for Uncooled Infrared Detectors: Processing, Properties, and Applications |last=Aggarwal |first=M.D. |author2=A.K. Batra |author3=P. Guggilla |author4=M.E. Edwards |author5=B.G. Penn |author6=J.R. Currie Jr. |date=March 2010 |publisher=[[NASA]] 
+|page=3 |accessdate=26 July 2013}}&lt;/ref&gt;
+
+It should be possible to produce materials which combine both ferroelectric and metallic properties simultaneously, at room temperature.&lt;ref&gt;https://www.rutgers.edu/news/rutgers-physicists-create-new-class-2d-artificial-materials&lt;/ref&gt; According to research published in 2018 in ''Nature Communications'',&lt;ref&gt;{{cite journal |last1=Cao |first1=Yanwei |last2=Wang |first2=Zhen |last3=Park |first3=Se Young |last4=Yuan |first4=Yakun |last5=Liu |first5=Xiaoran |last6=Nikitin |first6=Sergey M. |last7=Akamatsu |first7=Hirofumi |last8=Kareev |first8=M. |last9=Middey |first9=S. |last10=Meyers |first10=D. |last11=Thompson |first11=P. |last12=Ryan |first12=P. J. |last13=Shafer |first13=Padraic |last14=N’Diaye |first14=A. |last15=Arenholz |first15=E. |last16=Gopalan |first16=Venkatraman |last17=Zhu |first17=Yimei |last18=Rabe |first18=Karin M.|author18-link= Karin M. Rabe |last19=Chakhalian |first19=J. |title=Artificial two-dimensional polar metal at room temperature |journal=Nature Communications |date=18 April 2018 |volume=9 |issue=1 |pages=1547 |doi=10.1038/s41467-018-03964-9 |pmid=29670098 |pmc=5906683 |arxiv=1804.05487 |bibcode=2018NatCo...9.1547C }}&lt;/ref&gt; scientists were able to produce a &quot;two-dimensional&quot; sheet of material which was both &quot;ferroelectric&quot; (had a polar crystal structure) and which conducted electricity.
+
+==Theory==
+An introduction to Landau theory can be found here.&lt;ref name=&quot;P. Chandra&quot;&gt;{{Cite arxiv|author1=P. Chandra |author2=P.B. Littlewood |title=A Landau Primer for Ferroelectrics|eprint=cond-mat/0609347 |year=2006 }}&lt;/ref&gt;
+Based on [[Ginzburg–Landau theory]], the free energy of a ferroelectric material, in the absence of an electric field and applied stress may be written as a [[Taylor series|Taylor expansion]] in terms of the order parameter, ''P''.  If a sixth order expansion is used (i.e. 8th order and higher terms truncated), the free energy is given by:
+
+:&lt;math&gt;
+\begin{array} {ll}
+\Delta E= &amp; \frac{1}{2}\alpha_0\left(T-T_0\right)\left(P_x^2+P_y^2+P_z^2\right)+
+\frac{1}{4}\alpha_{11}\left(P_x^4+P_y^4+P_z^4\right)\\
+&amp; +\frac{1}{2}\alpha_{12}\left(P_x^2 P_y^2+P_y^2 P_z^2+P_z^2P_x^2\right)\\
+&amp; +\frac{1}{6}\alpha_{111}\left(P_x^6+P_y^6+P_z^6\right)\\
+&amp; +\frac{1}{2}\alpha_{112}\left[P_x^4\left(P_y^2+P_z^2\right)
++P_y^4\left(P_x^2+P_z^2\right)+P_z^4\left(P_x^2+P_y^2\right)\right]\\
+&amp; +\frac{1}{2}\alpha_{123}P_x^2P_y^2P_z^2
+\end{array}
+&lt;/math&gt;
+
+where P&lt;sub&gt;x&lt;/sub&gt;, P&lt;sub&gt;y&lt;/sub&gt;, and P&lt;sub&gt;z&lt;/sub&gt; are the components of the polarization vector in the x, y, and z directions respectively, and the coefficients, &lt;math&gt;\alpha_i, \alpha_{ij}, \alpha_{ijk}&lt;/math&gt; must be consistent with the crystal symmetry.  To investigate domain formation and other phenomena in ferroelectrics, these equations are often used in the context of a [[Phase field models|phase field model]].  Typically, this involves adding a gradient term, an electrostatic term and an elastic term to the free energy.  The equations are then discretized onto a grid using the [[finite difference method]] and solved subject to the constraints of [[Gauss's law]] and [[Linear elasticity]].
+
+In all known ferroelectrics, &lt;math&gt;\alpha_0 &gt; 0&lt;/math&gt; and &lt;math&gt;\alpha_{111} &gt; 0&lt;/math&gt;.  These coefficients may be obtained experimentally or from ab-initio simulations.  For ferroelectrics with a first order phase transition, &lt;math&gt;\alpha_{11} &lt; 0&lt;/math&gt;,  whereas &lt;math&gt;\alpha_{11} &gt; 0&lt;/math&gt; for a second order phase transition.
+
+The spontaneous polarization, ''P&lt;sub&gt;s&lt;/sub&gt;'' of a ferroelectric for a cubic to tetragonal phase transition may be obtained by considering the 1D expression of the free energy which is:
+
+:&lt;math&gt;
+\Delta E=\frac{1}{2}\alpha_0\left(T-T_0\right)P_x^2+\frac{1}{4}\alpha_{11}P_x^4+\frac{1}{6}\alpha_{111}P_x^6
+&lt;/math&gt;
+
+This free energy has the shape of a double well potential with two free energy minima at &lt;math&gt;P = \pm P_s&lt;/math&gt;, where  ''P&lt;sub&gt;s&lt;/sub&gt;'' is the spontaneous polarization.  At these two minima, the derivative of the free energy is zero, i.e.:
+
+:&lt;math&gt;
+\frac{\partial \Delta E}{\partial P_x}=\alpha_0\left(T-T_0\right)P_x+\alpha_{11}P_x^3+\alpha_{111}P_x^5=0
+&lt;/math&gt;
+
+:&lt;math&gt;
+P_x \left[ \alpha_0\left(T-T_0\right)+\alpha_{11}P_x^2+\alpha_{111}P_x^4\right]=0
+&lt;/math&gt;
+
+Since ''P&lt;sub&gt;x&lt;/sub&gt; = 0'' corresponds to a free energy maxima in the ferroelectric phase, the spontaneous polarization, ''P&lt;sub&gt;s&lt;/sub&gt;'', is obtained from the solution of the equation:
+:&lt;math&gt;
+\alpha_0\left(T-T_0\right)+\alpha_{11}P_x^2+\alpha_{111}P_x^4=0
+&lt;/math&gt;
+
+which is:
+
+:&lt;math&gt;P_s^2=\frac{1}{2\alpha_{111}}\left[-\alpha_{11}\pm\sqrt{\alpha_{11}^2-4\alpha_0\alpha_{111}\left(T-T_0\right)}\right]&lt;/math&gt;
+
+and elimination of solutions yielding a negative square root (for either the first or second order phase transitions) gives:
+
+:&lt;math&gt;P_s=\sqrt{\frac{1}{2\alpha_{111}}\left[-\alpha_{11}+\sqrt{\alpha_{11}^2-4\alpha_0\alpha_{111}\left(T-T_0\right)}\right]}&lt;/math&gt;
+
+If &lt;math&gt;\alpha_{11}=0&lt;/math&gt;, using the same approach as above, the spontaneous polarization may be obtained as:
+
+:&lt;math&gt;P_s=\sqrt{-\frac{\alpha_0\left(T-T_0\right)}{\alpha_{111}}}&lt;/math&gt;
+
+The hysteresis loop (P&lt;sub&gt;x&lt;/sub&gt; versus E&lt;sub&gt;x&lt;/sub&gt;) may be obtained from the free energy expansion by adding another electrostatic term, E&lt;sub&gt;x&lt;/sub&gt; P&lt;sub&gt;x&lt;/sub&gt;, as follows:
+
+:&lt;math&gt;
+\Delta E=\frac{1}{2}\alpha_0\left(T-T_0\right)P_x^2+\frac{1}{4}\alpha_{11}P_x^4+\frac{1}{6}\alpha_{111}P_x^6 - E_x P_x
+&lt;/math&gt;
+
+:&lt;math&gt;
+\frac{\partial \Delta E}{\partial P_x}=\alpha_0\left(T-T_0\right)P_x+\alpha_{11}P_x^3+\alpha_{111}P_x^5 - E_x = 0
+&lt;/math&gt;
+
+:&lt;math&gt;
+E_x=\alpha_0\left(T-T_0\right)P_x+\alpha_{11}P_x^3+\alpha_{111}P_x^5
+&lt;/math&gt;
+
+Plotting E&lt;sub&gt;x&lt;/sub&gt; as a function of P&lt;sub&gt;x&lt;/sub&gt; and reflecting the graph about the 45 degree line gives an 'S' shaped curve.  The central part of the 'S' corresponds to a free energy [[Second derivative test|local maximum]] (since &lt;math&gt;\frac{\partial^2 \Delta E}{\partial P_x^2}&lt;0&lt;/math&gt; ).  Elimination of this region, and connection of the top and bottom portions of the 'S' curve by vertical lines at the discontinuities gives the hysteresis loop.
+
+==See also==
+{{Col-begin}}
+{{Col-1-of-3}}
+*[[:Category:Ferroelectric materials]]
+*[[Ferroelectric capacitor]]
+*[[FeRAM]]
+*[[Ferroelectric polymers]]
+*[[Piezoresponse Force Microscopy]]
+{{Col-2-of-3}}
+'''Physics'''
+*[[Paraelectricity]]
+*[[Piezoelectricity]]
+*[[Pyroelectricity]]
+*[[Antiferroelectricity]]
+*[[Ferroelasticity]]
+*[[Flexoelectricity]]
+*[[Condensed matter physics]]
+*[[Spintronics]]
+*[[Ceramic]]s
+*[[Multiferroics]]
+{{Col-2-of-3}}
+'''Lists'''
+*[[Examples of electrical phenomena]]
+*[[List of physics topics]]
+*[[List of electronics topics]]
+{{col-end}}
+
+==References==
+{{Reflist|30em}}
+
+==Further reading==
+*{{Cite book|title=Domain Structure in Ferroelectrics and Related Materials |author=A. S. Sidorkin |year=2006 |publisher=Cambridge University Press |isbn=978-1-904602-14-9}}
+*{{Cite book|title=Physics of Ferroelectrics: A modern perspective |author1=Karin M Rabe |author1-link= Karin M. Rabe |author2=Jean-Marc Triscone |author3=Charles H Ahn |year= 2007 |publisher =Springer |isbn=978-3-540-34591-6}}
+*{{Cite book|title=Effective Field Approach to Phase Transitions and Some Applications to Ferroelectrics |author=Julio A. Gonzalo |isbn=978-981-256-875-5 |year=2006 |publisher=World Scientific}}
+
+==External links==
+*[http://www.doitpoms.ac.uk/tlplib/ferroelectrics/index.php A useful starter on ferroelectrics]
+*[http://mini.physics.sunysb.edu/~mdawber/ A ferroelectrics research group at Stony Brook University]
+
+{{Polarization states}}
+
+{{Authority control}}
+
+[[Category:Condensed matter physics]]
+[[Category:Electric and magnetic fields in matter]]
+[[Category:Electrical phenomena]]
+[[Category:Magnetism]]
+[[Category:Phases of matter]]
+[[Category:Hysteresis]]</text>
+      <sha1>oa5nahj1gf58t0adjtp325tdv04xf7e</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Plow</title>
+    <ns>0</ns>
+    <id>44709</id>
+    <redirect title="Plough" />
+    <revision>
+      <id>929479876</id>
+      <parentid>741182624</parentid>
+      <timestamp>2019-12-06T03:00:40Z</timestamp>
+      <contributor>
+        <username>GameMaster3019</username>
+        <id>37902882</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="20" xml:space="preserve">#REDIRECT [[Plough]]</text>
+      <sha1>l0rcpgsgsgybxuj1r9zzbojxdt2t2h0</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Thomas Kyd</title>
+    <ns>0</ns>
+    <id>44710</id>
+    <revision>
+      <id>978031807</id>
+      <parentid>978031791</parentid>
+      <timestamp>2020-09-12T13:42:48Z</timestamp>
+      <contributor>
+        <username>ClueBot NG</username>
+        <id>13286072</id>
+      </contributor>
+      <minor />
+      <comment>Reverting possible vandalism by [[Special:Contribs/2A02:C7F:6C02:A400:1DE0:6C8A:621B:32A0|2A02:C7F:6C02:A400:1DE0:6C8A:621B:32A0]] to version by Madler. [[WP:CBFP|Report False Positive?]] Thanks, [[WP:CBNG|ClueBot NG]]. (3775222) (Bot)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10845" xml:space="preserve">{{refimprove|date=April 2019}}
+{{short description|16th-century English dramatist}}
+{{Other people|Thomas Kidd}}
+{{Use British English|date=November 2013}}
+{{Use dmy dates|date=November 2013}}
+'''Thomas Kyd''' (baptised 6 November 1558; buried 15 August 1594) was an English [[playwright]], the author of ''[[The Spanish Tragedy]]'', and one of the most important figures in the development of [[Elizabethan theatre|Elizabethan drama]].
+
+Although well known in his own time, Kyd fell into obscurity until 1773 when [[Thomas Hawkins (literary editor)|Thomas Hawkins]], an early editor of ''The Spanish Tragedy'', discovered that Kyd was named as its author by [[Thomas Heywood]] in his ''Apologie for Actors'' (1612). A hundred years later, scholars in Germany and England began to shed light on his life and work, including the controversial finding that he may have been the author of a ''Hamlet'' play pre-dating Shakespeare's, which is now known as the ''[[Ur-Hamlet]]''.
+
+==Early life==
+Thomas Kyd was the son of Francis and Anna Kyd. There are no records of the day he was born, but he was baptised in the church of [[St Mary Woolnoth]] in the Ward of Langborn, Lombard Street, London on 6 November 1558. The baptismal register at St Mary Woolnoth carries this entry: &quot;Thomas, son of Francis Kydd, Citizen and Writer of the Courte Letter of London&quot;. Francis Kydd was a [[scrivener]] and in 1580 was warden of the [[Scriveners' Company]].
+
+In October 1565 the young Kyd was enrolled in the newly founded [[Merchant Taylors' School, Northwood|Merchant Taylors' School]], whose headmaster was [[Richard Mulcaster]]. Fellow students included [[Edmund Spenser]] and [[Thomas Lodge]]. Here, Kyd received a well-rounded education, thanks to Mulcaster's progressive ideas. Apart from Latin and Greek, the curriculum included music, drama, physical education, and &quot;good manners&quot;. There is no evidence that Kyd went on to university. He may have followed in his father's professional footsteps because there are two letters written by him and his writing style is similar to that of a scrivener.
+
+==Career==
+[[File:The Spanish Tragedy.jpg|thumb|Title page of Kyd's ''[[The Spanish Tragedy]],'' with a woodcut showing (left) the hung body of Horatio discovered by (centre) [[Hieronymo]]; and [[Bel-imperia]] being taken from the scene by a [[blackface]] Lorenzo (right).]]
+
+Evidence suggests that in the 1580s Kyd became an important playwright, but little is known about his activity. [[Francis Meres]] placed him among &quot;our best for tragedy&quot; and Heywood elsewhere called him &quot;Famous Kyd&quot;. [[Ben Jonson]] mentions him in the same breath as [[Christopher Marlowe]] (with whom, in London, Kyd at one time shared a room) and [[John Lyly]] in the [[Shakespeare]] First Folio.
+
+''[[The Spanish Tragedy|The Spanish Tragedie]]'' was probably written in the mid to late 1580s. The earliest surviving edition was printed in 1592; the full title being, ''The Spanish Tragedie, Containing the lamentable end of Don Horatio, and Bel-imperia: with the pittifull death of olde Hieronimo''. However, the play was usually known simply as &quot;Hieronimo&quot;, after the [[protagonist]]. It was arguably the most popular play of the &quot;Age of Shakespeare&quot; and set new standards in effective plot construction and character development. In 1602 a version of the play with &quot;additions&quot; was published. [[Philip Henslowe]]'s diary records payment to [[Ben Jonson]] for additions that year, but it is disputed whether the published additions reflect Jonson's work or if they were actually composed for a 1597 revival of ''The Spanish Tragedy'' also mentioned by Henslowe.
+
+Other works by Kyd are his translations of [[Torquato Tasso]]'s ''Padre di Famiglia'', published as ''The Householder's Philosophy'' (1588); and [[Robert Garnier]]'s ''[[Cornélie (play)|Cornélie]]'' (1594). Plays attributed in whole or in part to Kyd include ''[[Soliman and Perseda]]'', ''[[King Leir]]'', ''[[Arden of Faversham]]'' and ''[[Edward III (play)|Edward III]]''. A play related to ''The Spanish Tragedy'' called ''The First Part of Hieronimo'' (surviving in a quarto of 1605) may be a [[bad quarto]] or [[memorial reconstruction]] of a play by Kyd, or it may be an inferior writer's burlesque of ''The Spanish Tragedy'' inspired by that play's popularity.&lt;ref&gt;Thomas Kyd, ''The First Part of Hieronimo'' and ''The Spanish Tragedy'', ed. Andrew S. Cairncross, Regents Renaissance Drama Series, Lincoln, Neb., 1967, p. xiv.&lt;/ref&gt; Kyd is more generally accepted to have been the author of a ''Hamlet'', the precursor of the Shakespearean play (see: [[Ur-Hamlet]]). 
+
+The success of Kyd's plays extended to Europe. Versions of ''The Spanish Tragedy'' and his ''Hamlet'' were popular in Germany and the [[Netherlands]] for generations. The influence of these plays on European drama was largely the reason for the interest in Kyd among German scholars in the nineteenth century.
+
+==Later life==
+From 1587 to 1593 Kyd was in the service of an unidentified noble, since, after his imprisonment in 1593 (see below), he wrote of having lost &quot;the favours of my Lord, whom I haue servd almost theis vi yeres nowe&quot;. Proposed nobles include the [[Henry Radclyffe, 4th Earl of Sussex|Earl of Sussex]],&lt;ref&gt;Arthur Freeman, ''Thomas Kyd: Facts and Problems'', Oxford, 1967&lt;/ref&gt; the [[Henry Herbert, 2nd Earl of Pembroke|Earl of Pembroke]],&lt;ref&gt;Lukas Erne, [https://books.google.com/books?id=qjMVA_FmHHEC Beyond the Spanish Tragedy: A Study of the Works of Thomas Kyd], Manchester University Press 2002, {{ISBN|0-7190-6093-1}}&lt;/ref&gt; and [[Ferdinando Stanley, 5th Earl of Derby|Lord Strange]].&lt;ref&gt;Charles Nicholl, ''The reckoning: the murder of Christopher Marlowe'', University Of Chicago Press, 1995, {{ISBN|0-226-58024-5}}, p. 225&lt;/ref&gt;  He may have worked as a secretary, if he did not also write plays. Around 1591 [[Christopher Marlowe]] also joined this patron's service, and for a while Marlowe and Kyd shared lodgings, and perhaps even ideas.
+
+On 11 May 1593 the [[Privy Council of the United Kingdom|Privy Council]] ordered the arrest of the authors of &quot;divers lewd and mutinous libels&quot; which had been posted around London. The next day, Kyd was among those arrested; he would later believe that he had been the victim of an informer. His lodgings were searched and instead of evidence of the &quot;libels&quot; there was found an [[Arianism|Arianist]] tract, described by an investigator as &quot;vile heretical conceits denying the eternal deity of Jesus Christ found amongst the papers of Thos. Kydd ''(sic)'', prisoner ... which he affirmeth he had from C. Marley ''(sic)''&quot;. It is believed that Kyd was tortured brutally to obtain this information. Kyd told authorities the writings found in his possession belonged to Christopher Marlowe, a fellow dramatist and former roommate. Kyd “accused his former roommate of being a blasphemous traitor, an atheist who believed that Jesus Christ was a homosexual,”&lt;ref&gt;Gainor, J. Ellen., Stanton B. Garner, and Martin Puchner. The Norton Anthology of Drama. Second ed. Vol. 1. New York: W.W. Norton, 2009. Print. &lt;/ref&gt; an uninformed confusion over the Arian and Early Gnostic concept of [[homoousios]] ({{lang-grc|ὁμοούσιος}}). Unfortunately, Kyd was with Marlowe at the wrong place at the wrong time. Marlowe was summoned by the Privy Council after these events, and, while waiting for a decision on his case, was killed in an incident in [[Deptford]] involving known government agents.
+
+Kyd was eventually released but was not accepted back into his lord's service. Believing he was under suspicion of atheism himself, he wrote to the [[Lord Keeper]], Sir John Puckering, protesting his innocence, but his efforts to clear his name were apparently fruitless. The last we hear from the playwright is the publication of ''Cornelia'' early in 1594. In the dedication to the Countess of Sussex he alludes to the &quot;bitter times and privy broken passions&quot; he had endured. Kyd died later that year at the age of 35, and was buried on 15 August in [[St Mary Colechurch]] in London. In December of that same year, Kyd's mother legally renounced the administration of his estate, probably because it was debt-ridden.
+
+St Mary Colechurch was destroyed in the [[Great Fire of London]] in 1666, and not rebuilt. Thus Thomas Kyd's grave was lost to posterity.
+
+==Works==
+The dates of composition are approximate.&lt;ref&gt;https://www.unige.ch/lettres/angle/en/collaborateurs/modernearly/erne/publications/books/beyond-the-spanish-tragedy-a-study-of-the-works-of-thomas-kyd/&lt;/ref&gt;
+
+* ''Don Horatio'' (partially extant in ''The First Part of Hieronimo'', ''c''. 1586)
+* ''[[The Spanish Tragedy]]'' (''c''. 1587)
+* ''The Householder's Philosophy'' (translation, 1588)
+* ''[[Arden of Faversham]]'' (attributed, 1592)
+* ''Soliman and Perseda'' (attributed, ''c''. 1593)
+* ''[[Cornelia (play)|Cornelia]]'' (translation of [[Robert Garnier]], 1594)
+* ''[[King Leir]]'' (attributed, 1594)
+
+==References==
+{{Reflist}}
+
+===Bibliography===
+*Philip Edwards, ''The Spanish Tragedy'', Methuen, 1959, reprinted 1974. {{ISBN|0-416-27920-1}}.
+*Charles Nicholl, ''The Reckoning: The Murder of Christopher Marlowe'', Vintage, 2002 (revised edition). {{ISBN|0-09-943747-3}} (especially for the circumstances surrounding Kyd's arrest).
+
+==External links==
+{{wikiquote|Thomas Kyd}}
+{{wikisource author}}
+{{Commons category|Thomas Kyd}}
+* [http://www.luminarium.org/renlit/kyd.htm Thomas Kyd] at the Lumniarum website
+* {{Gutenberg author |id=Kyd,+Thomas | name=Thomas Kyd}}
+* {{Internet Archive author |sname=Thomas Kyd}}
+* {{Librivox author |id=2755}}
+* *[http://www.gutenberg.org/dirs/etext04/spatr10.txt The Spanish Tragedie] Full text of the play
+* {{webarchive |url=https://web.archive.org/web/20090401195103/http://www.elizabethanauthors.com/span1.htm |date=1 April 2009 |title=The Spanish Tragedy }} Full text of the play, modern spelling
+* [https://archive.org/details/The_Spanish_Tragedy_for_a_Modern_Audience The Spanish Tragedy] Shorter version of the play for a modern audience
+* {{webarchive |url=https://web.archive.org/web/20050519073317/http://facstaff.uwa.edu/rmu/kyd.htm |date=19 May 2005 |title=Thomas Kyd and The Spanish Tragedy }} (University of West Alabama)
+* [https://web.archive.org/web/20030802125850/http://parallel.park.uga.edu/~jnettles/kyd.html Perverse justice in Kyd's Spanish Tragedy, by John Nettles] (University of Georgia)
+
+{{Authority control}}
+
+{{DEFAULTSORT:Kyd, Thomas}}
+[[Category:1558 births]]
+[[Category:1594 deaths]]
+[[Category:English Renaissance dramatists]]
+[[Category:People educated at Merchant Taylors' School, Northwood]]
+[[Category:16th-century English writers]]
+[[Category:16th-century male writers]]
+[[Category:16th-century English dramatists and playwrights]]
+[[Category:English male dramatists and playwrights]]
+[[Category:University Wits]]</text>
+      <sha1>1gd3rkgmd42a1iuclw2u5uxix9as5cl</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Early texts of Shakespeare's works</title>
+    <ns>0</ns>
+    <id>44711</id>
+    <revision>
+      <id>977149494</id>
+      <parentid>975490723</parentid>
+      <timestamp>2020-09-07T05:46:25Z</timestamp>
+      <contributor>
+        <username>Aoujwt</username>
+        <id>39948076</id>
+      </contributor>
+      <minor />
+      <comment>added a citation</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="14357" xml:space="preserve">{{short description|late 16th and early 17th-century editions of William Shakespeare's works}}
+[[Image:Bad_quarto%2C_good_quarto%2C_first_folio.png|thumb|320px|Comparison of the 'To be, or not to be' soliloquy in the first three editions of Hamlet, showing the varying quality of the text in the [[Hamlet Q1|Bad Quarto]] (Q1), the Good Quarto (Q2) and the [[First Folio]]]]
+The earliest texts of [[William Shakespeare]]'s works were published during the 16th and 17th centuries in [[quarto]] or [[folio]] format. Folios are large, tall volumes; quartos are smaller, roughly half the size. The publications of the latter are usually abbreviated to Q1, Q2, etc., where the letter stands for &quot;quarto&quot; and the number for the first, second, or third edition published.

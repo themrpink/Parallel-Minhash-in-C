@@ -1,0 +1,125 @@
+'''Simple searches failing with apostrophes''' (2002/02/04)
+
+A search for 'benfords law' failed to find the [[benford's law]] article. (I put in a redirect to fix this, but this is such a common case that this is arguably a bug.)
+
+'''Related: account creation fails when password contains a n apostrophe''' (2002/02/27)
+
+'''Searches also fail with hyphens''' (2002/02/12)
+
+Probably related to the apostrophe above; a search on 'Kraft-Ebbing', 'Bulwer-Lytton' or 'Sacher-Masoch' comes up blank, in spite of there being articles on all these people; a search for 'Lytton' though, does come up with the correct page, so the problem appears to be the non-aphanumeric character. [[user:Malcolm Farmer|Malcolm Farmer]]
+
+'''Searches now reject hyphens''' (2002/03/05)
+
+I re-ran the search for a term with a hyphen: I tried looking for  &quot;[[Bain-marie]]&quot; and instead of coming up blank as previously, the search now returns:
+
+ Sorry, your boolean search query contains the following errors:  
+  &quot;bain&quot;  [!! SYNTAX ERROR: illegal symbol '-'; ignored] 
+
+   AND &quot;marie&quot; 
+
+[[user:Malcolm Farmer|Malcolm Farmer]]
+
+:This is not a bug, it's a feature: before, the search failed silently, now it tells you why it fails. See [[wikipedia:Searching]]. [[user:AxelBoldt|AxelBoldt]]
+
+::The fact that it fails instead of doing the right thing is a bug. &lt;kbd&gt;Judeo-Christian&lt;/kbd&gt; should be transformed into &lt;kbd&gt;&quot;Judeo Christian&quot;&lt;/kbd&gt; (or &lt;kbd&gt;Judeo Christian&lt;/kbd&gt; if you don't support phrase search). --[[user:Damian Yerrick|Damian Yerrick]]
+
+----
+
+2002/07/14 .... This bloody thing turned up zilch when I searched for &quot;golden mean&quot;.
+
+----
+
+When i was searching for 'grammar' i got this ugly error, so you might want to check it out.
+
+A database query syntax error has occurred. The last attempted database query was: &quot;SELECT cur_id,cur_namespace,cur_title,cur_text FROM cur,searchindex WHERE cur_id=si_page AND ( (MATCH (si_title) AGAINST ('grammar')) ) AND cur_namespace IN () LIMIT 0, 20&quot; from within function &quot;SearchEngine::showResults&quot;. MySQL returned error &quot;1064: You have an error in your SQL syntax. Check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 0, 20' at line 1&quot;. 
+
+[[user:murtzunel|MurtZ]]</text>
+      <sha1>ewtpqpubiyu1kvgvex1cvbk9ey0j1oq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Wikipedia:Special pages bug reports</title>
+    <ns>4</ns>
+    <id>50267</id>
+    <revision>
+      <id>421916577</id>
+      <parentid>367377227</parentid>
+      <timestamp>2011-04-02T02:00:21Z</timestamp>
+      <contributor>
+        <username>Yobot</username>
+        <id>7328338</id>
+      </contributor>
+      <minor />
+      <comment>/* Upload files */Double brackets in external links + [[WP:GENFIXES|general fixes]] using [[Project:AWB|AWB]] (7670)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="20350" xml:space="preserve">{{historical}}
+
+'''This is an archive only of bug reports from Phase II of the Wikipedia software (used before June 20, 2002). Please see [[Wikipedia:Bug reports]] for instructions on adding bug reports for the current system.'''
+
+return to [[wikipedia:Bug reports/Phase II]]
+
+This page lists bugs reported in special pages (interactive pages in the special: namespace).
+Pages should be listed by their name in the default skin.
+
+== Recent Changes ==
+
+The Recent Change page has many design flaws.  
+
+When I want to list all the new changes since my last visit to the site, I can only see the most recent 100 changes. Given all the minor changes are always included, one exceeds the 100 entries limit in a few hours, if you are away for more than a day, you have serious trouble seeing the complete list. It may not be problem for the wikipediaholics who check the Recent Change page every 30 seconds, but it simply does not work for the regular users.  
+
+I tried using the max count and the age link, they also have design flaws and do not work intuitively.  
+When I click last seven days, it shows only 100 entries that cover only half a day, (same problem as above).  
+When I click last 2500 entries, it either fails to return anything or it covers only the last 3 days. i.e. There is no way to ask for last seven day without count limit, or a count limit but no age limit.  
+
+::'''workaround''': Since the 100 count limit can be easily reached, it becomes the limiting factor.  In effect, all the links, 1 day, 2 days, 3 days, 5 days, 7 days, 14 days all give the same 100 result.  To workaround this problem, you can right click on these links and copy its URL iinto the address field of the browser, change the count limit and hit ENTER.
+
+RecentChanges regularly claims (2 Changes) if there was only one. Except for new pages, it always counts one to many. [[user:AxelBoldt|AxelBoldt]]
+
+----
+'''Changes to the [[http://www.wikipedia.com/wiki main page]] show up wrong'''
+
+Every time the main page is edited, the [[special:RecentChanges]] shows a date a long way in the past and only the diff and the changes can be clicked.  The person doing the edits is also not visible.  The entry in the Recent Changes looks like this:
+
+ Wednesday, December 31, 1969
+
+    * (diff) ; 15:59 (75 changes) . . .
+
+It should have looked like this:
+
+    * (diff) Main Page; 15:59 (75 changes) . . . xxx
+
+Another oddity: after another page is edited, the name of that page ends up in place of the Main page and the entry in the Recent Changes than looks like this:
+
+ Wednesday, December 31, 1969
+
+    * (diff) Vicki Rosenzweig; 15:59 (75 changes) . . .
+
+
+
+
+
+----
+'''&quot;List only new changes&quot; doesn't work'''
+
+(2002/1/26) On [[special:RecentChanges]], the link saying &quot;list only new changes&quot; consistently returns an empty list, even after waiting a while. --[[user:AxelBoldt|AxelBoldt]]
+
+:Right! Same here. Maybe because i'm using a +8 hours offset?  --[[user:Luis Oliveira|Luis Oliveira]]
+
+::Yes, there's a bug in the time zone handling code. I am on Central time (Server time + 2h) which I set in my user preferences and I noticed that the &quot;List only new changes&quot; link returns something only after I wait for 2 hours, and then only those changes that have occurred two hours since I last accessed RecentChanges. [[user:AxelBoldt|AxelBoldt]]
+
+'''minor edits showing up even if turned off''' (2002/03/05)
+
+And with bad links and dates?
+
+'''minor edits hide the major edits''' (2002/04/12)
+
+When I turn off the minor edits in the preference, I would expect the most recent major edit would take its place.
+
+For example, the history shows that an article was edited (major) at 1pm, and the same article was edited again (minor) at 1:02pm.  In the Recent Change page, both the 1pm and 1:02pm edits become invisible if the preference is set to hide minor edits.
+
+== Edit this page ==
+
+See [[wikipedia:Bug reports/Editing|Editing]].
+
+== History ==

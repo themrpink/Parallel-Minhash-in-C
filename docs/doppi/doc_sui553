@@ -1,0 +1,224 @@
+for i = first, last, delta do  --delta may be negative, allowing the for loop to count down or up
+  --statements
+  --example: print(i)
+end
+&lt;/syntaxhighlight&gt;
+
+The generic &lt;code&gt;for&lt;/code&gt; loop:
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+for key, value in pairs(_G) do
+  print(key, value)
+end
+&lt;/syntaxhighlight&gt;
+would iterate over the table &lt;code&gt;_G&lt;/code&gt; using the standard iterator function &lt;code&gt;pairs&lt;/code&gt;, until it returns &lt;code&gt;nil&lt;/code&gt;.
+
+You can also do a nested loop, which is a loop inside of another loop.
+
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+local grid = {
+  { 11, 12, 13 },
+  { 21, 22, 23 },
+  { 31, 32, 33 }
+}
+
+for y, row in ipairs(grid) do
+  for x, value in ipairs(row) do
+    print(x, y, grid[y][x])
+  end
+end
+&lt;/syntaxhighlight&gt;
+
+=== Functions ===
+
+Lua's treatment of functions as [[first-class function|first-class]] values is shown in the following example, where the print function's behavior is modified:
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+do
+  local oldprint = print
+  -- Store current print function as oldprint
+  function print(s)
+    --[[ Redefine print function. The usual print function can still be used
+      through oldprint. The new one has only one argument.]]
+    oldprint(s == &quot;foo&quot; and &quot;bar&quot; or s)
+  end
+end
+&lt;/syntaxhighlight&gt;
+Any future calls to &lt;code&gt;print&lt;/code&gt; will now be routed through the new function, and because of Lua's [[Scope (programming)#Lexical scoping|lexical scoping]], the old print function will only be accessible by the new, modified print.
+
+Lua also supports [[Closure (computer programming)|closures]], as demonstrated below:
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+function addto(x)
+  -- Return a new function that adds x to the argument
+  return function(y)
+    --[=[ When we refer to the variable x, which is outside the current
+      scope and whose lifetime would be shorter than that of this anonymous
+      function, Lua creates a closure.]=]
+    return x + y
+  end
+end
+fourplus = addto(4)
+print(fourplus(3))  -- Prints 7
+
+--This can also be achieved by calling the function in the following way:
+print(addto(4)(3))
+--[[ This is because we are calling the returned function from 'addto(4)' with the argument '3' directly.
+  This also helps to reduce data cost and up performance if being called iteratively.
+]]
+&lt;/syntaxhighlight&gt;
+A new closure for the variable &lt;code&gt;x&lt;/code&gt; is created every time &lt;code&gt;addto&lt;/code&gt; is called, so that each new anonymous function returned will always access its own &lt;code&gt;x&lt;/code&gt; parameter. The closure is managed by Lua's garbage collector, just like any other object.
+
+=== Tables ===
+
+Tables are the most important data structures (and, by design, the only built-in [[composite data type]]) in Lua and are the foundation of all user-created types. They are [[associative array]]s with addition of automatic numeric key and special syntax.
+
+A table is a collection of key and data pairs, where the data is referenced by key; in other words, it is a [[hash table|hashed]] heterogeneous associative array.
+
+Tables are created using the &lt;code&gt;{}&lt;/code&gt; constructor syntax.
+
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+a_table = {} -- Creates a new, empty table
+&lt;/syntaxhighlight&gt;
+
+Tables are always passed by reference (see [[Call by sharing]]).
+
+A key (index) can be any value except &lt;code&gt;nil&lt;/code&gt; and [[NaN]], including functions.
+
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+a_table = {x = 10}  -- Creates a new table, with one entry mapping &quot;x&quot; to the number 10.
+print(a_table[&quot;x&quot;]) -- Prints the value associated with the string key, in this case 10.
+b_table = a_table
+b_table[&quot;x&quot;] = 20   -- The value in the table has been changed to 20.
+print(b_table[&quot;x&quot;]) -- Prints 20.
+print(a_table[&quot;x&quot;]) -- Also prints 20, because a_table and b_table both refer to the same table.
+&lt;/syntaxhighlight&gt;
+
+A table is often used as [[object composition|structure]] (or [[Record (computer science)|record]]) by using [[string (computer science)|strings]] as keys. Because such use is very common, Lua features a special syntax for accessing such fields.&lt;ref&gt;{{cite web|url=https://www.lua.org/manual/5.1/manual.html#2.3|title=Lua 5.1 Reference Manual|accessdate=2014-02-27|year=2014}}&lt;/ref&gt;
+
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+point = { x = 10, y = 20 }   -- Create new table
+print(point[&quot;x&quot;])            -- Prints 10
+print(point.x)               -- Has exactly the same meaning as line above. The easier-to-read dot notation is just syntactic sugar.
+&lt;/syntaxhighlight&gt;
+
+By using a table to store related functions, it can act as a namespace.
+
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+Point = {}
+
+Point.new = function(x, y)
+  return {x = x, y = y}  --  return {[&quot;x&quot;] = x, [&quot;y&quot;] = y}
+end
+
+Point.set_x = function(point, x)
+  point.x = x  --  point[&quot;x&quot;] = x;
+end
+&lt;/syntaxhighlight&gt;
+
+Tables are automatically assigned a numerical key, enabling them to be used as an [[array data type]]. The first automatic index is 1 rather than 0 as it is for many other programming languages (though an explicit index of 0 is allowed).
+
+A numeric key &lt;code&gt;1&lt;/code&gt; is distinct from a string key &lt;code&gt;&quot;1&quot;&lt;/code&gt;.
+
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+array = { &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; }   -- Indices are assigned automatically.
+print(array[2])                  -- Prints &quot;b&quot;. Automatic indexing in Lua starts at 1.
+print(#array)                    -- Prints 4.  # is the length operator for tables and strings.
+array[0] = &quot;z&quot;                   -- Zero is a legal index.
+print(#array)                    -- Still prints 4, as Lua arrays are 1-based.
+&lt;/syntaxhighlight&gt;
+
+The length of a table &lt;code&gt;t&lt;/code&gt; is defined to be any integer index &lt;code&gt;n&lt;/code&gt; such that &lt;code&gt;t[n]&lt;/code&gt; is not &lt;code&gt;nil&lt;/code&gt; and &lt;code&gt;t[n+1]&lt;/code&gt; is &lt;code&gt;nil&lt;/code&gt;; moreover, if &lt;code&gt;t[1]&lt;/code&gt; is &lt;code&gt;nil&lt;/code&gt;, &lt;code&gt;n&lt;/code&gt; can be zero. For a regular array, with non-nil values from 1 to a given &lt;code&gt;n&lt;/code&gt;, its length is exactly that &lt;code&gt;n&lt;/code&gt;, the index of its last value. If the array has &quot;holes&quot; (that is, nil values between other non-nil values), then &lt;code&gt;#t&lt;/code&gt; can be any of the indices that directly precedes a &lt;code&gt;nil&lt;/code&gt; value (that is, it may consider any such nil value as the end of the array).&lt;ref&gt;{{cite web|url=https://www.lua.org/manual/5.1/manual.html#2.5.5|title=Lua 5.1 Reference Manual|accessdate=2012-10-16|year=2012}}&lt;/ref&gt;
+
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+ExampleTable =
+{
+  {1, 2, 3, 4},
+  {5, 6, 7, 8}
+}
+print(ExampleTable[1][3]) -- Prints &quot;3&quot;
+print(ExampleTable[2][4]) -- Prints &quot;8&quot;
+&lt;/syntaxhighlight&gt;
+
+A table can be an array of objects.
+
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+function Point(x, y)        -- &quot;Point&quot; object constructor
+  return { x = x, y = y }   -- Creates and returns a new object (table)
+end
+array = { Point(10, 20), Point(30, 40), Point(50, 60) }   -- Creates array of points
+                        -- array = { { x = 10, y = 20 }, { x = 30, y = 40 }, { x = 50, y = 60 } };
+print(array[2].y)                                         -- Prints 40
+&lt;/syntaxhighlight&gt;
+
+Using a hash map to emulate an array normally is slower than using an actual array; however, Lua tables are optimized for use as arrays to help avoid this issue.&lt;ref name=lobject_h_array&gt;{{cite web|url=https://www.lua.org/source/5.1/lobject.h.html#array|title=Lua 5.1 Source Code|accessdate=2011-03-24|year=2006}}&lt;/ref&gt;&lt;!-- I'd like to find a message on the mailing list from one of the developers, but I can't. Oh well, source code is a pretty trustworthy reference. --&gt;
+
+=== Metatables ===
+Extensible semantics is a key feature of Lua, and the [[metatable]] concept allows Lua's tables to be customized in powerful ways.  The following example demonstrates an &quot;infinite&quot; table.  For any &lt;code&gt;n&lt;/code&gt;, &lt;code&gt;fibs[n]&lt;/code&gt; will give the &lt;code&gt;n&lt;/code&gt;-th [[Fibonacci number]] using [[dynamic programming]] and [[memoization]].
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+fibs = { 1, 1 }                                -- Initial values for fibs[1] and fibs[2].
+setmetatable(fibs, {
+  __index = function(values, n)                --[[__index is a function predefined by Lua, 
+                                                   it is called if key &quot;n&quot; does not exist.]]
+    values[n] = values[n - 1] + values[n - 2]  -- Calculate and memorize fibs[n].
+    return values[n]
+  end
+})
+&lt;/syntaxhighlight&gt;
+
+=== Object-oriented programming ===
+
+Although Lua does not have a built-in concept of [[class (computer science)|classes]], [[object-oriented programming]] can be achieved using two language features: [[first-class function]]s and tables. By placing functions and related data into a table, an object is formed. [[Inheritance (object-oriented programming)|Inheritance]] (both single and multiple) can be implemented using the [[metatable]] mechanism, telling the object to look up nonexistent methods and fields in parent object(s).
+
+There is no such concept as &quot;class&quot; with these techniques; rather, [[prototype-based programming|prototypes]] are used, similar to [[Self (programming language)|Self]] or [[JavaScript]]. New objects are created either with a [[factory method pattern|factory method]] (that constructs new objects from scratch) or by cloning an existing object.
+
+Lua provides some [[syntactic sugar]] to facilitate object orientation. To declare [[Method (computer science)|member functions]] inside a prototype table, one can use {{code |lang=lua |function table:func(args)}}, which is equivalent to {{code |lang=lua |function table.func(self, args)}}. Calling class methods also makes use of the colon: {{code |lang=lua |object:func(args)}} is equivalent to {{code |lang=lua |object.func(object, args)}}.
+
+Creating a basic [[Vector (geometry)|vector]] object:
+&lt;syntaxhighlight lang=&quot;lua&quot;&gt;
+local Vector = {}
+Vector.__index = Vector
+
+function Vector:new(x, y, z)    -- The constructor
+  return setmetatable({x = x, y = y, z = z}, Vector)
+end
+
+function Vector:magnitude()     -- Another method
+  -- Reference the implicit object using self
+  return math.sqrt(self.x^2 + self.y^2 + self.z^2)
+end
+
+local vec = Vector:new(0, 1, 0) -- Create a vector
+print(vec:magnitude())          -- Call a method (output: 1)
+print(vec.x)                    -- Access a member variable (output: 0)
+&lt;/syntaxhighlight&gt;
+
+== Implementation ==
+
+Lua programs are not [[interpreted language|interpreted]] directly from the textual Lua file, but are [[compiler|compiled]] into [[bytecode]], which is then run on the Lua [[virtual machine]]. The compilation process is typically invisible to the user and is performed during [[Run time (program lifecycle phase)|run-time]], but it can be done offline in order to increase loading performance or reduce the memory footprint of the host environment by leaving out the compiler. Lua bytecode can also be produced and executed from within Lua, using the &lt;code&gt;dump&lt;/code&gt; function from the string library and the &lt;code&gt;load/loadstring/loadfile&lt;/code&gt; functions. Lua version 5.3.4 is implemented in approximately 24,000 lines of C code.&lt;ref name=&quot;luaspe&quot; /&gt;&lt;ref name=&quot;luaabout&quot; /&gt;
+
+Like most CPUs, and unlike most virtual machines (which are [[stack machine|stack-based]]), the Lua VM is [[register machine|register-based]], and therefore more closely resembles an actual hardware design. The register architecture both avoids excessive copying of values and reduces the total number of instructions per function. The virtual machine of Lua 5 is one of the first register-based pure VMs to have a wide use.&lt;ref name=lua5impl&gt;{{cite journal| last1 = Ierusalimschy | first1 = R. | last2 = Figueiredo | first2 = L. H. | last3 = Celes | first3 = W. | title = The implementation of Lua 5.0| journal = J. Of Universal Comp. Sci.| volume = 11| issue = 7| pages = 1159–1176| year = 2005| url = http://www.jucs.org/jucs_11_7/the_implementation_of_lua/jucs_11_7_1159_1176_defigueiredo.html}}&lt;/ref&gt; [[Parrot virtual machine|Parrot]] and [[Android (operating system)|Android]]'s [[Dalvik (software)|Dalvik]] are two other well-known register-based VMs.  PCScheme's VM was also register-based.&lt;ref&gt;{{cite book|title=PC Scheme: Users Guide and Language Reference Manual, Trade Edition | last1=Texas Instruments| year=1990 | isbn=0-262-70040-9}}&lt;/ref&gt;
+
+This example is the bytecode listing of the factorial function defined above (as shown by the &lt;code&gt;luac&lt;/code&gt; 5.1 compiler):&lt;ref name=luavm51instr&gt;{{cite web| author = Kein-Hong Man| title = A No-Frills Introduction to Lua 5.1 VM Instructions| year = 2006| url = http://luaforge.net/docman/view.php/83/98/ANoFrillsIntroToLua51VMInstructions.pdf| access-date = 20 December 2008| archive-url = https://web.archive.org/web/20100619191457/http://luaforge.net/docman/view.php/83/98/ANoFrillsIntroToLua51VMInstructions.pdf| archive-date = 19 June 2010| url-status = dead| df = dmy-all}}&lt;/ref&gt;
+
+ function &lt;factorial.lua:1,7&gt; (9 instructions, 36 bytes at 0x8063c60)
+ 1 param, 6 slots, 0 upvalues, 6 locals, 2 constants, 0 functions
+ 	1	[2]	LOADK    	1 -1	; 1
+ 	2	[3]	LOADK    	2 -2	; 2
+ 	3	[3]	MOVE     	3 0
+ 	4	[3]	LOADK    	4 -1	; 1
+ 	5	[3]	FORPREP  	2 1	; to 7
+ 	6	[4]	MUL      	1 1 5
+ 	7	[3]	FORLOOP  	2 -2	; to 6
+ 	8	[6]	RETURN   	1 2
+ 	9	[7]	RETURN   	0 1
+
+== C API ==
+
+Lua is intended to be embedded into other applications, and provides a [[C (programming language)|C]] [[Application Programming Interface|API]] for this purpose. The API is divided into two parts: the Lua core and the Lua auxiliary library.&lt;ref name=&quot;luarefman&quot;&gt;{{cite web| url = https://www.lua.org/manual/5.2/| title = Lua 5.2 Reference Manual| publisher = Lua.org| accessdate = 2012-10-23}}&lt;/ref&gt; The Lua API's design eliminates the need for manual [[Reference counting|reference management]] in C code, unlike [[Python (programming language)|Python]]'s API. The API, like the language, is minimalistic. Advanced functionality is provided by the auxiliary library, which consists largely of [[preprocessor]] [[Macro (computer science)|macros]] which assist with complex table operations.
+
+The Lua C API is [[Stack (data structure)|stack]] based. Lua provides functions to push and pop most simple C data types (integers, floats, etc.) to and from the stack, as well as functions for manipulating tables through the stack. The Lua stack is somewhat different from a traditional stack; the stack can be indexed directly, for example. Negative indices indicate offsets from the top of the stack. For example, −1&lt;!-- not a hyphen --&gt; is the top (most recently pushed value), while positive indices indicate offsets from the bottom (oldest value). [[Marshalling (computer science)|Marshalling]] data between C and Lua functions is also done using the stack. To call a Lua function, arguments are pushed onto the stack, and then the &lt;code&gt;lua_call&lt;/code&gt; is used to call the actual function. When writing a C function to be directly called from Lua, the arguments are read from the stack.
+
+Here is an example of calling a Lua function from C:
+
+&lt;syntaxhighlight lang=&quot;c&quot;&gt;
+#include &lt;stdio.h&gt;
+#include &lt;lua.h&gt; // Lua main library (lua_*)
+#include &lt;lauxlib.h&gt; // Lua auxiliary library (luaL_*)

@@ -1,0 +1,327 @@
+:''P'' is the pressure
+:''V'' is the volume
+:''N'' is the number of gas molecules
+:''k'' is the [[Boltzmann constant]] (1.381×10&lt;sup&gt;−23 &lt;/sup&gt;J·K&lt;sup&gt;−1&lt;/sup&gt; in SI units)
+:''T'' is the temperature (K)
+
+These equations are exact only for an [[ideal gas]], which neglects various intermolecular effects (see [[real gas]]). However, the ideal gas law is a good approximation for most gases under moderate pressure and temperature.
+
+This law has the following important consequences:
+# If temperature and pressure are kept constant, then the volume of the gas is directly proportional to the number of molecules of gas.
+# If the temperature and volume remain constant, then the pressure of the gas changes is directly proportional to the number of molecules of gas present.
+# If the number of gas molecules and the temperature remain constant, then the pressure is inversely proportional to the volume.
+# If the temperature changes and the number of gas molecules are kept constant, then either pressure or volume (or both) will change in direct proportion to the temperature.
+
+==Other gas laws==
+;[[Graham's law]]: states that the rate at which gas molecules [[diffusion|diffuse]] is inversely proportional to the square root of the gas density at constant temperature. Combined with Avogadro's law (i.e. since equal volumes have equal number of molecules) this is the same as being inversely proportional to the root of the molecular weight.
+;[[Dalton's law]] of [[partial pressure]]s: states that the pressure of a mixture of gases simply is the sum of the [[partial pressures]] of the individual components. Dalton's law is as follows:
+:
+:&lt;math&gt; P_{\rm total} = P_1 + P_2 + P_3 + ... + P_n \equiv \sum_{i=1}^n P_i \,&lt;/math&gt;,
+:
+:and all component gases and the mixture are at the same temperature and volume
+:where ''P''&lt;sub&gt;Total&lt;/sub&gt; is the total pressure of the gas mixture
+:''P''&lt;sub&gt;i&lt;/sub&gt; is the partial pressure, or pressure of the component gas at the given volume and temperature.
+:
+;[[Amagat's law]] of [[Partial gas volume|partial volumes]]: states that the volume of a mixture of gases (or the volume of the container) simply is the sum of the partial volumes of the individual components. Amagat's law is as follows:
+:
+:&lt;math&gt; V_{\rm total} = V_1 + V_2 + V_3 + ... + V_n \equiv \sum_{i=1}^n V_i \,&lt;/math&gt;,
+:
+:and all component gases and the mixture are at the same temperature and pressure
+:where ''V''&lt;sub&gt;Total&lt;/sub&gt; is the total volume of the gas mixture, or the volume of the container,
+:''V''&lt;sub&gt;i&lt;/sub&gt; is the partial volume, or volume of the component gas at the given pressure and temperature.
+:
+;[[Henry's law]]: states that ''At constant temperature, the amount of a given gas dissolved in a given type and volume of liquid is directly proportional to the [[partial pressure]] of that gas in equilibrium with that liquid.''
+:
+:&lt;math&gt; p = k_{\rm H}\, c&lt;/math&gt;
+:
+;[[Real gas law]]: formulated by [[Johannes Diderik van der Waals]] (1873).
+
+==References==
+*{{Cite book |author1=Castka, Joseph F. |author2=Metcalfe, H. Clark |author3=Davis, Raymond E. |author4=Williams, John E. | title=Modern Chemistry | publisher=Holt, Rinehart and Winston | year=2002 | isbn=0-03-056537-5}}
+*{{Cite book | author=Guch, Ian | title=The Complete Idiot's Guide to Chemistry | publisher=Alpha, Penguin Group Inc. | year=2003 | isbn=1-59257-101-8 | url=https://archive.org/details/completeidiotsgu00guch }}
+*{{Cite book | author=Zumdahl, Steven S | title=Chemical Principles | publisher=Houghton Mifflin Company | year=1998 | isbn=0-395-83995-5 | url=https://archive.org/details/chemicalprincipl00zumd_1 }}
+
+==External links==
+*{{Commonscat-inline}}
+
+{{Underwater diving|scidiv}}
+{{authority control}}
+
+[[Category:Gas laws| ]]
+[[Category:History of thermodynamics]]</text>
+      <sha1>norji60fkl40gctx2qla5kelqhsnnol</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Golomb ruler</title>
+    <ns>0</ns>
+    <id>48211</id>
+    <revision>
+      <id>990030480</id>
+      <parentid>985406690</parentid>
+      <timestamp>2020-11-22T11:26:25Z</timestamp>
+      <contributor>
+        <username>Shard9</username>
+        <id>21248947</id>
+      </contributor>
+      <minor />
+      <comment>/* Known optimal Golomb rulers */ Cleanup ref placements and distributed.net-link</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="16703" xml:space="preserve">{{Other uses|Ruler (disambiguation)}}
+{{Redirect|OGR|the OGR geospatial data programming library|GDAL}}
+
+[[Image:Golomb Ruler-4.svg|thumb|Golomb ruler of order 4 and length 6. This ruler is both ''optimal'' and ''perfect''.]]
+[[Image:perfect_cyclic_Golomb_rulers.svg|thumb|The perfect cyclic Golomb rulers (also called difference sets) with the specified order.]]
+In [[mathematics]], a '''Golomb ruler''' is a [[Set (mathematics)|set]] of marks at [[integer]] positions along an imaginary ruler such that no two pairs of marks are the same distance apart. The number of marks on the ruler is its ''order'', and the largest distance between two of its marks is its ''length''. Translation and reflection of a Golomb ruler are considered trivial, so the smallest mark is customarily put at 0 and the next mark at the smaller of its two possible values.
+
+The Golomb ruler was named for [[Solomon W. Golomb]] and discovered independently by {{harvtxt|Sidon|1932}}&lt;ref&gt;{{cite journal | last1 = Sidon | first1 = S. | year = 1932 | title = Ein Satz über trigonometrische Polynome und seine Anwendungen in der Theorie der Fourier-Reihen | url = | journal = Mathematische Annalen | volume = 106 | issue = | pages = 536–539 | doi = 10.1007/BF01455900 | ref=harv }}&lt;/ref&gt; and {{harvtxt|Babcock|1953}}.&lt;ref&gt;{{cite journal | last1 = Babcock | first1 = Wallace C. | year = 1953 | title = Intermodulation Interference in Radio Systems/Frequency of Occurrence and Control by Channel Selection | url = | journal = Bell System Technical Journal | volume = 31 | issue = | pages = 63–73 | ref=harv }}&lt;/ref&gt; [[Sophie Piccard]] also published early research on these sets, in 1939, stating as a theorem the claim that two Golomb rulers with the same [[distance set]] must be [[congruence (geometry)|congruent]]. This turned out to be false for six-point rulers, but true otherwise.&lt;ref&gt;{{cite journal
+ | last1 = Bekir | first1 = Ahmad
+ | last2 = Golomb | first2 = Solomon W. | author2-link = Solomon W. Golomb
+ | doi = 10.1109/TIT.2007.899468
+ | issue = 8
+ | journal = [[IEEE Transactions on Information Theory]]
+ | mr = 2400501
+ | pages = 2864–2867
+ | title = There are no further counterexamples to S. Piccard's theorem
+ | volume = 53
+ | year = 2007}}.&lt;/ref&gt;
+
+There is no requirement that a Golomb ruler be able to measure ''all'' distances up to its length, but if it does, it is called a ''perfect'' Golomb ruler. It has been proven that no perfect Golomb ruler exists for five or more marks.&lt;ref name=&quot;mcgill.ca&quot;/&gt; A Golomb ruler is ''optimal'' if no shorter Golomb ruler of the same order exists. Creating Golomb rulers is easy, but proving the optimal Golomb ruler (or rulers) for a specified order is computationally very challenging.
+
+[[Distributed.net]] has completed distributed massively [[parallel computing|parallel searches]] for optimal order-24 through order-27 Golomb rulers, each time confirming the suspected candidate ruler.&lt;ref name=&quot;distributed.net OGR-24 completion announcement&quot;&gt;
+{{cite web |url=http://blogs.distributed.net/2004/11/01/10/24/nugget/ |title=distributed.net - OGR-24 completion announcement |accessdate=2014-02-25 |format= |work=}}
+&lt;/ref&gt;&lt;ref name=&quot;distributed.net OGR-25 completion announcement&quot;&gt;
+{{cite web |url=http://blogs.distributed.net/2008/10/25/23/14/bovine/ |title=distributed.net - OGR-25 completion announcement |accessdate=2014-02-25 |format= |work=}}
+&lt;/ref&gt;&lt;ref name=&quot;distributed.net OGR-26 completion announcement&quot;&gt;
+{{cite web |url=http://blogs.distributed.net/2009/02/24/17/26/bovine/ |title=distributed.net - OGR-26 completion announcement |accessdate=2014-02-25 |format= |work=}}&lt;/ref&gt;&lt;ref name=&quot;distributed.net OGR-27 completion announcement&quot;&gt;
+{{cite web |url=http://blogs.distributed.net/2014/02/ |title=distributed.net - OGR-27 completion announcement |accessdate=2014-02-25 |format= |work=}}&lt;/ref&gt; In February 2014, distributed.net began the search to find optimal Golomb rulers (''OGRs'') of order-28.
+
+Currently, the complexity of finding OGRs of arbitrary order ''n'' (where ''n'' is given in unary) is unknown. In the past there was some speculation that it is an [[NP-hard]] problem.&lt;ref name=&quot;mcgill.ca&quot;&gt;{{cite web|url=http://cgm.cs.mcgill.ca/~athens/cs507/Projects/2003/JustinColannino|title=Modular and Regular Golomb Rulers}}&lt;/ref&gt; Problems related to the construction of Golomb Rulers are provably shown to be NP-hard, where it is also noted that no known NP-complete problem has similar flavor to finding Golomb Rulers.&lt;ref&gt;{{cite journal |author=Meyer C, Papakonstantinou PA |title=On the complexity of constructing Golomb Rulers |journal=Discrete Applied Mathematics |volume=157 |issue=4 |date=February 2009 |pages=738–748 |doi=10.1016/j.dam.2008.07.006}}&lt;/ref&gt;
+
+==Definitions==
+
+===Golomb rulers as sets===
+A set of integers &lt;math&gt;A = \{a_1,a_2,...,a_m\}&lt;/math&gt; where &lt;math&gt;a_1 &lt; a_2 &lt; ... &lt; a_m&lt;/math&gt; is a Golomb ruler if and only if
+
+&lt;center&gt;&lt;math&gt;\text{for all } i,j,k,l \in \left\{1,2,...,m\right\} \text{such that } i \neq j \text{ and } k \neq l,\ a_i - a_j = a_k - a_l \iff i=k \text{ and } j=l.&lt;/math&gt;&lt;ref&gt;{{Cite journal
+  | last = Dimitromanolakis
+  | first = Apostolos
+  | title = Analysis of the Golomb Ruler and the Sidon Set Problems, and Determination of Large, Near-Optimal Golomb Rulers
+  | url = http://www.cs.toronto.edu/%7Eapostol/golomb/main.pdf
+  | accessdate = 2009-12-20
+  | format = PDF}}&lt;/ref&gt;&lt;/center&gt;
+
+The ''order'' of such a Golomb ruler is &lt;math&gt;m&lt;/math&gt; and its ''length'' is &lt;math&gt;a_m - a_1&lt;/math&gt;. The [[canonical form]] has &lt;math&gt;a_1 = 0&lt;/math&gt; and, if &lt;math&gt;m&gt;2&lt;/math&gt;, &lt;math&gt;a_2 - a_1 &lt; a_m - a_{m-1}&lt;/math&gt;. Such a form can be achieved through translation and reflection.
+
+===Golomb rulers as functions===
+An [[injective]] [[Function (mathematics)|function]] &lt;math&gt;f:\left\{1,2,...,m\right\} \to \left\{0,1,...,n\right\}&lt;/math&gt; with &lt;math&gt;f(1) = 0&lt;/math&gt; and &lt;math&gt;f(m) = n&lt;/math&gt; is a Golomb ruler if and only if
+
+&lt;center&gt;&lt;math&gt;\text{for all } i,j,k,l \in \left\{1,2,...,m\right\} \text{such that } i \neq j \text{ and } k \neq l, f(i)-f(j) = f(k)-f(l) \iff i=k \text{ and } j=l.&lt;/math&gt;&lt;ref name=&quot;Drakakis&quot;&gt;{{Cite journal
+  | last = Drakakis
+  | first = Konstantinos
+  | title = A Review Of The Available Construction Methods For Golomb Rulers
+  | journal = Advances in Mathematics of Communications
+  | volume = 3
+  | issue = 3
+  | pages = 235–250
+  | year = 2009
+  | doi = 10.3934/amc.2009.3.235| doi-access = free
+  }}&lt;/ref&gt;{{rp|236}}&lt;/center&gt;
+
+The ''order'' of such a Golomb ruler is &lt;math&gt;m&lt;/math&gt; and its ''length'' is &lt;math&gt;n&lt;/math&gt;. The canonical form has 
+:&lt;math&gt;f(2)&lt;f(m)-f(m-1)&lt;/math&gt; if &lt;math&gt;m&gt;2&lt;/math&gt;.
+
+===Optimality===
+
+A Golomb ruler of order &lt;var&gt;m&lt;/var&gt; with length &lt;var&gt;n&lt;/var&gt; may be [[Optimization (mathematics)|optimal]] in either of two respects:&lt;ref name=&quot;Drakakis&quot;/&gt;{{rp|237}}
+
+* It may be ''optimally dense'', exhibiting maximal &lt;var&gt;m&lt;/var&gt; for the specific value of &lt;var&gt;n&lt;/var&gt;,
+* It may be ''optimally short'', exhibiting minimal &lt;var&gt;n&lt;/var&gt; for the specific value of &lt;var&gt;m&lt;/var&gt;.
+
+The general term ''optimal Golomb ruler'' is used to refer to the second type of optimality.
+
+== Practical applications ==
+[[Image:Golomb ruler conference room.svg|thumb|300px|Example of a conference room with proportions of a [0, 2, 7, 8, 11] Golomb ruler, making it configurable to 10 different sizes.&lt;ref name=&quot;ErdősTurán1941&quot;/&gt;]]
+
+===Information theory and error correction===
+Golomb rulers are used within [[Information Theory]] related to [[Error Correction|error correcting codes]].&lt;ref name=&quot;titlestats.A class of binary recurrent codes with limited error propagation&quot;&gt;{{cite journal |title=A class of binary recurrent codes with limited error propagation |date=January 1967 |journal=IEEE Transactions on Information Theory |author=Robinson J, Bernstein A |volume=13 |issue=1 |pages=106–113 |doi=10.1109/TIT.1967.1053951}}&lt;/ref&gt;
+
+===Radio frequency selection===
+Golomb rulers are used in the selection of radio frequencies to reduce the effects of [[intermodulation interference]] with both [[Earth|terrestrial]]&lt;ref name=&quot;titlestats.Intermodulation Interference in Radio Systems&quot;&gt;{{cite web |url=http://www.alcatel-lucent.com/bstj/vol32-1953/articles/bstj32-1-63.pdf |title=Intermodulation Interference in Radio Systems|accessdate=2011-03-14|format=excerpt|work=}}&lt;/ref&gt; and [[Outer space|extraterrestrial]]&lt;ref name=&quot;titlestats.Carrier frequency assignment for nonlinear repeaters&quot;&gt;{{cite journal|title=Carrier frequency assignment for nonlinear repeaters|journal=Comsat Technical Review|volume=7|pages=227|type=abstract|bibcode=1977COMTR...7..227F|last1=Fang|first1=R. J. F.|last2=Sandrin|first2=W. A.|year=1977}}&lt;/ref&gt; applications.
+
+===Radio antenna placement===
+Golomb rulers are used in the design of phased arrays of radio antennas. Antennas in a [0,1,4,6] Golomb ruler configuration can often be seen at AM tower or cell sites. In radio astronomy one-dimensional synthesis arrays can have the antennas in a Golomb ruler configuration in order to obtain minimum redundancy of the Fourier component sampling.&lt;ref&gt;{{cite book |last=Thompson |first=A. Richard |last2=Moran |first2=James M. |last3=Swenson |first3=George W. |title=Interferometry and Synthesis in Radio Astronomy |url=https://archive.org/details/interferometrysy00thom_120 |url-access=limited |publisher=Wiley-VCH |edition=Second |year=2004 |page=[https://archive.org/details/interferometrysy00thom_120/page/n162 142] |isbn=978-0471254928}}&lt;/ref&gt;&lt;ref&gt;{{cite journal |last=Arsac |first=J. |title=Transmissions des frequences spatiales dans les systemes recepteurs d'ondes courtes |language=fr |trans-title=Transmissions of spatial frequencies in shortwave receiver systems |journal=Optica Acta |volume=2 |issue=112 |year=1955}}&lt;/ref&gt;
+
+===Current transformers===
+Multi-ratio [[current transformer]]s use Golomb rulers to place transformer tap points.
+
+==Methods of construction==
+
+A number of construction methods produce [[asymptotically optimal]] Golomb rulers.
+
+===Erdős–Turán construction===
+{{anchor|Erdős–Turan construction}}
+
+The following construction, due to [[Paul Erdős]] and [[Pál Turán]], produces a Golomb ruler for every odd prime p.&lt;ref name=&quot;ErdősTurán1941&quot;&gt;{{Cite journal
+  | doi = 10.1112/jlms/s1-16.4.212
+  | last = Erdős
+  | first = Paul
+  | authorlink = Paul Erdős
+  | last2 = Turán
+  | first2 = Pál
+  | authorlink2 = Pál Turán
+  | title = On a problem of Sidon in additive number theory and some related problems
+  | journal = Journal of the London Mathematical Society
+  | volume = 16
+  | issue = 4
+  | pages = 212–215
+  | year = 1941}}&lt;/ref&gt;
+
+&lt;center&gt;&lt;math&gt;2pk+(k^2\,\bmod\,p),k\in[0,p-1]&lt;/math&gt;&lt;/center&gt;
+
+==Known optimal Golomb rulers==
+The following table contains all known optimal Golomb rulers, excluding those with marks in the reverse order. The first four are [[Perfect ruler|perfect]].
+
+{| class=&quot;wikitable&quot;
+! Order !! Length !! Marks !! Proven{{ref label|unknown_index|*|^ *}} !! Proof discovered by
+|-
+| 1 || 0 || '''0''' || 1952&lt;ref name=&quot;mathpuzzles&quot;&gt;http://mathpuzzle.com/MAA/30-Rulers%20and%20Arrays/mathgames_11_15_04.html&lt;/ref&gt;|| Wallace Babcock
+|-
+| 2 || 1 || '''0 1''' || 1952&lt;ref name=&quot;mathpuzzles&quot; /&gt;|| Wallace Babcock
+|-
+| 3 || 3 || '''0 1 3''' || 1952&lt;ref name=&quot;mathpuzzles&quot; /&gt;|| Wallace Babcock
+|-
+| 4 || 6 || '''0 1 4 6''' || 1952&lt;ref name=&quot;mathpuzzles&quot; /&gt;|| Wallace Babcock
+|-
+| 5 || 11 || 0 1 4 9 11 &lt;br /&gt; 0 2 7 8 11 || c. 1967&lt;ref name=&quot;shearer&quot;&gt;{{cite web|url= http://www.research.ibm.com/people/s/shearer/grtab.html |title= table of lengths of shortest known rulers | publisher= [[IBM]] |accessdate= 2013-11-28 }}&lt;/ref&gt; || John P. Robinson and Arthur J. Bernstein
+|-
+| 6 || 17 || 0 1 4 10 12 17 &lt;br /&gt; 0 1 4 10 15 17 &lt;br /&gt; 0 1 8 11 13 17 &lt;br /&gt; 0 1 8 12 14 17 || c. 1967&lt;ref name=&quot;shearer&quot; /&gt; || John P. Robinson and Arthur J. Bernstein
+|-
+| 7 || 25 || 0 1 4 10 18 23 25 &lt;br /&gt; 0 1 7 11 20 23 25 &lt;br /&gt; 0 1 11 16 19 23 25 &lt;br /&gt; 0 2 3 10 16 21 25 &lt;br /&gt; 0 2 7 13 21 22 25 || c. 1967&lt;ref name=&quot;shearer&quot; /&gt; || John P. Robinson and Arthur J. Bernstein
+|-
+| 8 || 34 || 0 1 4 9 15 22 32 34 || 1972&lt;ref name=&quot;shearer&quot; /&gt; || William Mixon
+|-
+| 9 || 44 || 0 1 5 12 25 27 35 41 44 || 1972&lt;ref name=&quot;shearer&quot; /&gt; || William Mixon
+|-
+| 10 || 55 || 0 1 6 10 23 26 34 41 53 55 || 1972&lt;ref name=&quot;shearer&quot; /&gt; || William Mixon
+|-
+| 11 || 72 || 0 1 4 13 28 33 47 54 64 70 72 &lt;br /&gt; 0 1 9 19 24 31 52 56 58 69 72 || 1972&lt;ref name=&quot;shearer&quot; /&gt; || William Mixon
+|-
+| 12 || 85 || 0 2 6 24 29 40 43 55 68 75 76 85 || 1979&lt;ref name=&quot;shearer&quot; /&gt; || John P. Robinson
+|-
+| 13 || 106 || 0 2 5 25 37 43 59 70 85 89 98 99 106 || 1981&lt;ref name=&quot;shearer&quot; /&gt; || John P. Robinson
+|-
+| 14 || 127 || 0 4 6 20 35 52 59 77 78 86 89 99 122 127 || 1985&lt;ref name=&quot;shearer&quot; /&gt; || James B. Shearer
+|-
+| 15 || 151 || 0 4 20 30 57 59 62 76 100 111 123 136 144 145 151 || 1985&lt;ref name=&quot;shearer&quot; /&gt; || James B. Shearer
+|-
+| 16 || 177 || 0 1 4 11 26 32 56 68 76 115 117 134 150 163 168 177 || 1986&lt;ref name=&quot;shearer&quot; /&gt; || James B. Shearer
+|-
+| 17 || 199 || 0 5 7 17 52 56 67 80 81 100 122 138 159 165 168 191 199 || 1993&lt;ref name=&quot;shearer&quot; /&gt; || W. Olin Sibert
+|-
+| 18 || 216 || 0 2 10 22 53 56 82 83 89 98 130 148 153 167 188 192 205 216 || 1993&lt;ref name=&quot;shearer&quot; /&gt; || W. Olin Sibert
+|-
+| 19 || 246 || 0 1 6 25 32 72 100 108 120 130 153 169 187 190 204 231 233 242 246 || 1994&lt;ref name=&quot;shearer&quot; /&gt; || Apostolos Dollas, William T. Rankin and David McCracken
+|-
+| 20 || 283 || 0 1 8 11 68 77 94 116 121 156 158 179 194 208 212 228 240 253 259 283 || 1997?&lt;ref name=&quot;shearer&quot; /&gt; || Mark Garry, David Vanderschel et al. (web project)
+|-
+| 21 || 333 || 0 2 24 56 77 82 83 95 129 144 179 186 195 255 265 285 293 296 310 329 333 || 8 May 1998&lt;ref name=&quot;org2021&quot;&gt;{{cite web|url= http://members.aol.com/golomb20/index.html |title= In Search Of The Optimal 20 &amp; 21 Mark Golomb Rulers (archived) | publisher= Mark Garry, David Vanderschel, et al |archiveurl=https://web.archive.org/web/19981206073704/http://members.aol.com/golomb20/index.html |archivedate=1998-12-06}}&lt;/ref&gt; || Mark Garry, David Vanderschel et al. (web project)
+|-
+| 22 || 356 || 0 1 9 14 43 70 106 122 124 128 159 179 204 223 253 263 270 291 330 341 353 356 || 1999&lt;ref name=&quot;shearer&quot; /&gt; || Mark Garry, David Vanderschel et al. (web project)
+|-
+| 23 || 372 || 0 3 7 17 61 66 91 99 114 159 171 199 200 226 235 246 277 316 329 348 350 366 372 || 1999&lt;ref name=&quot;shearer&quot; /&gt; || Mark Garry, David Vanderschel et al. (web project)
+|-
+| 24 || 425 || 0 9 33 37 38 97 122 129 140 142 152 191 205 208 252 278 286 326 332 353 368 384 403 425 || 13 October 2004&lt;ref name=&quot;distributed.net OGR-24 completion announcement&quot; /&gt; || [[distributed.net]]
+|-
+| 25 || 480 || 0 12 29 39 72 91 146 157 160 161 166 191 207 214 258 290 316 354 372 394 396 431 459 467 480 || 25 October 2008&lt;ref name=&quot;distributed.net OGR-25 completion announcement&quot; /&gt; || [[distributed.net]]
+|-
+| 26 || 492 || 0 1 33 83 104 110 124 163 185 200 203 249 251 258 314 318 343 356 386 430 440 456 464 475 487 492 || 24 February 2009&lt;ref name=&quot;distributed.net OGR-26 completion announcement&quot; /&gt; || [[distributed.net]]
+|-
+| 27 || 553 || 0 3 15 41 66 95 97 106 142 152 220 221 225 242 295 330 338 354 382 388 402 415 486 504 523 546 553 || 19 February 2014&lt;ref name=&quot;distributed.net OGR-27 completion announcement&quot; /&gt; || [[distributed.net]]
+|-
+|}
+
+{{note label|unknown_index|*|^ *}} &lt;small&gt;The optimal ruler would have been known before this date; this date represents that date when it was discovered to be optimal (because all other rulers were proven to not be smaller). For example, the ruler that turned out to be optimal for order 26 was recorded on 10 October 2007, but it was not known to be optimal until all other possibilities were exhausted on 24 February 2009.&lt;/small&gt;
+
+==See also==
+* [[Costas array]]
+* [[Sparse ruler]]
+* [[Perfect ruler]]
+* [[Sidon sequence]]
+* [[distributed.net]]
+* [[BOINC]]
+* [[Distributed Computing]]
+
+==References==
+{{Reflist}}
+* {{cite journal|first=Martin|last=Gardner|authorlink=Martin Gardner|title=Mathematical games|journal=[[Scientific American]]|date=March 1972|pages=108–112}}
+
+==External links==
+* [https://web.archive.org/web/20171225101048/http://www.research.ibm.com/people/s/shearer/grule.html James B. Shearer's Golomb ruler pages]
+* [http://www.distributed.net/OGR distributed.net: Project OGR]
+* [https://web.archive.org/web/20071112013839/http://members.aol.com/golomb20/ In Search Of The Optimal 20, 21 &amp; 22 Mark Golomb Rulers]
+* [http://www3.telus.net/millerlf/g3-records.html Golomb rulers up to length of over 200]
+
+{{DEFAULTSORT:Golomb Ruler}}
+[[Category:Length, distance, or range measuring devices]]
+[[Category:Number theory]]
+[[Category:Antennas (radio)]]
+[[Category:Distributed computing projects]]</text>
+      <sha1>am2mj4n57bhq55605zt959ubsbbvu6d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Ice cream</title>
+    <ns>0</ns>
+    <id>48212</id>
+    <revision>
+      <id>991279012</id>
+      <parentid>990292681</parentid>
+      <timestamp>2020-11-29T06:25:51Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 54 templates: del empty params (30×); hyphenate params (38×); cvt lang vals (1×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="54157" xml:space="preserve">{{Short description|A frozen dessert}}
+{{Other uses}}
+{{pp-move-indef}}
+{{Use dmy dates|date=August 2018}}
+{{Use British English Oxford spelling|date=March 2020}}
+{{pp-semi-vandalism|small=yes}}
+{{Infobox food
+| name = Ice cream 
+| image = File:Ice cream with whipped cream, chocolate syrup, and a wafer (cropped).jpg
+| caption = Ice cream served with [[whipped cream]], chocolate sauce and a [[wafer]]
+| alternate_name =
+| origin =
+| creator =
+| course = Dessert
+| served = Frozen
+| main_ingredient = [[Milk]], [[cream]], sweetener
+| variations = [[Gelato]], [[frozen custard]]
+| other =
+}}
+
+'''Ice cream''' (derived from earlier '''iced cream''' or '''cream ice''')&lt;ref&gt;{{cite book|last=Beeton|first=Isabella|author-link=Isabella Beeton|title=Mrs Beeton's Cookery Book|year=1911|pages=258–60}}&lt;/ref&gt; is a sweetened [[frozen food]] typically eaten as a [[snack]] or [[dessert]]. It may be made from [[dairy product|dairy]] [[milk]] or [[cream]] and is flavoured with a sweetener, either [[sugar]] or an [[sugar substitute|alternative]], and any [[spice]], such as [[Chocolate|cocoa]] or [[vanilla]]. [[Food coloring|Colourings]] are usually added, in addition to stabilizers. The mixture is stirred to incorporate air spaces and cooled below the freezing point of water to prevent detectable [[ice crystal]]s from forming. The result is a smooth, semi-solid foam that is solid at very low temperatures (below {{convert|35|F|C|order=flip|disp=or}}). It becomes more malleable as its temperature increases.
+
+The meaning of the name &quot;ice cream&quot; varies from one country to another. Terms such as &quot;[[frozen custard]],&quot; &quot;[[frozen yogurt]],&quot; &quot;[[sorbet]],&quot; &quot;[[gelato]],&quot; and others are used to distinguish different varieties and styles. In some countries, such as the United States, &quot;ice cream&quot; applies only to a specific variety, and most governments regulate the commercial use of the various terms according to the relative quantities of the main ingredients, notably the amount of cream.&lt;ref&gt;{{cite web |url=http://www.idfa.org/news--views/media-kits/ice-cream/ice-cream-labeling/ |title=Ice Cream Labeling: What Does it all Mean? |access-date=9 August 2008 |publisher=[[International Foodservice Distributors Association]]|archive-url = https://web.archive.org/web/20080514083818/http://www.idfa.org/facts/icmonth/page5.cfm |archive-date = 14 May 2008}}&lt;/ref&gt; Products that do not meet the criteria to be called ice cream are sometimes labelled &quot;'''frozen dairy dessert'''&quot; instead.&lt;ref&gt;{{cite web|url=https://www.nytimes.com/2013/04/17/dining/remembering-when-breyers-ice-cream-was-you-know-ice-cream.html|title=Ice Cream's Identity Crisis|date=17 April 2013|work=The New York Times|access-date=1 January 2017}}&lt;/ref&gt; In other countries, such as [[Italy]] and [[Argentina]], one word is used for all variants. Analogues made from dairy alternatives, such as [[Goat#Milk, butter and cheese|goat's]] or [[sheep milk|sheep's milk]], or [[milk substitute]]s (e.g., [[soy milk|soy]], [[Plant milk|cashew]], [[coconut milk|coconut]],  [[almond milk]] or [[tofu]]), are available for those who are [[lactose intolerance|lactose intolerant]], [[Milk allergy|allergic to dairy protein]], or [[vegan]].
+
+Ice cream may be served in dishes, for eating with a spoon, or licked from edible cones. Ice cream may be served with other desserts, such as [[apple pie]], or as an ingredient in [[ice cream float]]s, [[sundae]]s, [[milkshake]]s, [[ice cream cake]]s and even baked items, such as [[Baked Alaska]].
+
+== History ==
+
+===Origins===
+The origins of frozen desserts are unknown, though there are several often repeated legends dated as early as the [[3rd millennium BC|3rd millennium]] BCE in [[ancient China]]. According to one legendary origin myth, the Roman Emperor [[Nero]] had ice collected from the [[Apennine Mountains]] to produce the first [[sorbet]] mixed with honey and wine.&lt;ref name=weir/&gt;&lt;ref name=CIA/&gt; Other legends say ice cream originated in the [[Mongolian empire]] and first spread to China during its [[Mongol invasions and conquests|expansion]].&lt;ref name=rsc&gt;{{cite book |last=Clarke |first=Chris |title=Science of Ice Cream |year=2004 |url=https://archive.org/details/scienceicecream00clar_002 |url-access=limited |publisher=Royal Society of chemistry |page=[https://archive.org/details/scienceicecream00clar_002/page/n21 4]}}&lt;/ref&gt;
+
+Its spread throughout Europe is sometimes attributed to Arab traders, but more often to [[Marco Polo]]. Though it's not mentioned in any of his writings, Polo is often credited with introducing sorbet-style desserts to Italy after learning of it during his travels to China.&lt;ref name=CIA/&gt;&lt;ref name=weir/&gt;&lt;ref name=tsm/&gt; The Italian duchess [[Catherine de' Medici]] is said to have introduced flavored sorbet ices to France when she brought some Italian chefs with her to France upon marrying the [[Duke of Orléans]] ([[Henry II of France]]) in 1533.&lt;ref name=&quot;Cool&quot;&gt;{{cite book |last=Powell |first=Marilyn |year=2005 |title=Cool: The Story of Ice Cream |url=https://archive.org/details/coolstoryoficecr0000powe |location=[[Toronto]] |publisher=Penguin Canada |isbn=978-0-14-305258-6 |oclc=59136553 |url-access=registration }}&lt;/ref&gt;&lt;ref name=CIA&gt;{{cite book |last=Migoya |first=Francisco J. |title=Frozen Desserts |publisher=The Culinary Institute of America|date=2008}}&lt;/ref&gt; One hundred years later, [[Charles I of England]] was reportedly so impressed by the &quot;frozen snow&quot; that he offered his own ice cream maker a lifetime [[pension]] in return for keeping the formula secret, so that ice cream could be a [[royal prerogative]].&lt;ref&gt;{{cite web |last=Goff |first=H. Douglas |url=http://www.foodsci.uoguelph.ca/dairyedu/ichist.html |title=Ice Cream History and Folklore |work=Dairy Science and Technology Education Series |publisher=[[University of Guelph]] |access-date=9 August 2008}}&lt;/ref&gt; There is no evidence to support any of these legends.&lt;ref name=weir&gt;{{cite book |last1=Weir |first1=Caroline |last2=Weir |first2= Robin |title=Ice Creams, Sorbets &amp; Gelati:The Definitive Guide |date=2010 |page=9}}&lt;/ref&gt;&lt;ref name=rsc/&gt;
+
+Snow was used to cool drinks in Greece around 500 BC and [[Hippocrates]] is known to have criticized chilled drinks for causing &quot;fluxes of the stomach&quot;.&lt;ref name=tsm/&gt; Snow collected from the lower slopes of mountains was unsanitary and iced drinks were believed to cause convulsions, [[colic]] and a host of other ailments.&lt;ref name=ocss/&gt;&lt;ref name=weir/&gt; [[Seneca the Younger|Seneca]] criticized the extravagant costs associated with iced desserts in an era without refrigeration.&lt;ref name=tsm&gt;{{cite book |last=Toussaint-Samat |first=Maguelonne |title=A History of Food |url=https://archive.org/details/historyfood00tous |url-access=limited |date=2009 |publisher=Wiley |page=[https://archive.org/details/historyfood00tous/page/n698 675]}}&lt;/ref&gt;
+
+Despite this, ice and snow were prized ingredients in ancient cuisines including [[Japanese cuisine|Japanese]], [[Chinese cuisine|Chinese]], [[ancient Greek cuisine|Greek]] and [[ancient Roman cuisine|Roman]] cuisines.&lt;ref name=ocss&gt;{{cite book |editor-last=Goldstein |editor-first=Darra |title=The Oxford Companion to Sugar and Sweets |date=2015}}&lt;/ref&gt; Ancient Egyptian [[hieroglyphs]] show a snow-filled vessel next to fruit juice.&lt;ref name=CIA/&gt; There are [[Tang dynasty]] records of a chilled dessert made with flour, [[camphor]] and [[water buffalo]] milk and recipes for snow-chilled sweets are included in a 1st-century Roman recipe book. There are Persian records from the 2nd century AD for sweetened chilled drinks with ice made by freezing water in the desert at night.&lt;ref name=rsc/&gt;
+
+Ice cream was made possible only by the discovery of the [[endothermic]] effect. Prior to this, cream could only be chilled but not frozen. It was the addition of salt, that lowered the melting point of ice, which had the effect of drawing heat from the cream and allowing it to freeze. The first known record of this comes from the Indian poem ''[[Pancatantra]]'', dating to the 4th century AD.&lt;ref name=CIA/&gt; The earliest written description of the process is known not from culinary texts, but the 13th-century writings of [[Ibn Abu Usaybia]] concerning medicine. The technique of &quot;freezing&quot; is not known from any European sources prior to the 16th century.&lt;ref name=ocss/&gt;

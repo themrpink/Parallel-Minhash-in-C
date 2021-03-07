@@ -1,17 +1,17 @@
 #!/bin/bash
 
 main_path=
-docs_path=("../docs/docs_small" "../docs/docs_big" "../docs/docs_verybig")
+docs_path=("../docs/docs_small" "../docs/docs_medium" "../docs/docs_big" "../docs/doppi")
 
 usage() { 
-            echo "Uso:"
-            echo '[ -d <path> ]  directory documenti, default: ["../docs/docs_small" "../docs/docs_medium" "../docs/docs_big"]'
+            echo "Uso:" 
             echo "-s per versione seriale"
             echo "-o per versione omp"
             echo "-p per versione pthread"
             echo "-c per versione pthread con produttore-consumatore"
+            echo '-[ -d <path> ]  directory documenti, default: ["../docs/docs_small" "../docs/docs_medium" "../docs/docs_big" "../docs/doppi"]'
             echo "-h help"
-            exit 0 
+            exit 1 
 }
 
 esegui_in_parallelo() {
@@ -35,8 +35,8 @@ esegui_in_parallelo() {
 esegui_in_serie() {
 
     IFS=" "
-    docs_path = $1
-    main_path = $2
+    time_file=$1
+    main_path=$2
     for dir in "${docs_path[@]}"; do
         echo "--> esegue $main_path,  cartella documenti: $dir" 
         echo "cartella documenti: $dir" >> ${time_file}
@@ -61,7 +61,8 @@ do
         arr+=( "s" )
         ;;
 
-    o)  arr+=( "o" )
+    o)  
+        arr+=( "o" )
         ;;
 
     p)  
@@ -73,9 +74,11 @@ do
         ;;
 
     d)  
+        echo "ok"
         docs_path=( ${OPTARG} )
-        if [ "$#" -le 2  ]; then
-        usage
+        if [ -z "$OPTARG" ]; then
+            echo "-d: manca il path"
+            usage
         fi
         ;;
 

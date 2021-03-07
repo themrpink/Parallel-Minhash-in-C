@@ -1,0 +1,537 @@
+===Mac OS X Server 10.1 (Puma)===
+'''Released''': September 25, 2001
+
+Mac OS X Server 10.1 featured improved performance, increased system stability, and decreased file transfer times compared to Mac OS X Server 10.0. Support was added for RAID 0 and RAID 1 storage configurations, and Mac OS 9.2.1 in NetBoot.&lt;ref&gt;{{Cite web|title=Major Mac OS X Server v10.1 Update Now Available|url=https://www.apple.com/newsroom/2001/09/25Major-Mac-OS-X-Server-v10-1-Update-Now-Available/|access-date=2020-11-21|website=Apple Newsroom|language=en-US}}&lt;/ref&gt;
+
+===Mac OS X Server 10.2 (Jaguar)===
+'''Released''': August 23, 2002
+
+The 10.2 Mac OS X Server release includes updated [[Apple Open Directory|Open Directory]] user and file management, which with this release is based on [[Lightweight Directory Access Protocol|LDAP]], beginning the deprecation of the NeXT-originated [[NetInfo]] architecture. The new Workgroup Manager interface improved configuration significantly. The release also saw major updates to [[NetBoot]] and [[NetInstall]]. Many common network services are provided such as [[Network Time Protocol|NTP]], [[Simple network management protocol|SNMP]], web server ([[Apache HTTP Server|Apache]]), mail server ([[Postfix (software)|Postfix]] and [[Cyrus (imapd)|Cyrus]]), LDAP ([[OpenLDAP]]), [[Apple Filing Protocol|AFP]], and print server. The inclusion of [[Samba software|Samba]] version 3 allows tight integration with [[Microsoft Windows|Windows]] clients and servers. [[MySQL]] v4.0.16 and [[PHP]] v4.3.7 are also included.
+
+===Mac OS X Server 10.3 (Panther)===
+'''Released''': October 24, 2003
+
+The 10.3 Mac OS X Server release includes updated [[Apple Open Directory|Open Directory]] user and file management, which with this release is based on [[Lightweight Directory Access Protocol|LDAP]], beginning the deprecation of the NeXT-originated [[NetInfo]] architecture. The new Workgroup Manager interface improved configuration significantly. Many common network services are provided such as [[Network Time Protocol|NTP]], [[Simple network management protocol|SNMP]], web server ([[Apache HTTP Server|Apache]]), mail server ([[Postfix (software)|Postfix]] and [[Cyrus (imapd)|Cyrus]]), LDAP ([[OpenLDAP]]), [[Apple Filing Protocol|AFP]], and print server. The inclusion of [[Samba software|Samba]] version 3 allows tight integration with [[Microsoft Windows|Windows]] clients and servers. [[MySQL]] v4.0.16 and [[PHP]] v4.3.7 are also included.{{citation needed|date=February 2018}}
+
+===Mac OS X Server 10.4 (Tiger)===
+'''Released''': April 29, 2005
+
+The 10.4 release adds [[64-bit]] application support, [[Access Control Lists]], [[Xgrid]], [[link aggregation]], [[e-mail spam]] filtering ([[SpamAssassin]]), virus detection ([[ClamAV]]), Gateway Setup Assistant, and servers for [[Apple Software Update|Software Update]], [[iChat Server]] using [[Extensible Messaging and Presence Protocol|XMPP]],&lt;ref&gt;{{cite web|url=https://www.apple.com/server/macosx/collaborationservices.html|archive-url=https://web.archive.org/web/20060813212747/http://www.apple.com/server/macosx/collaborationservices.html |title= Apple - Mac OS X Server - Collaboration Services|archive-date=August 13, 2006|accessdate=November 25, 2012}}&lt;/ref&gt; Boot Camp Assistant, Dashboard, and weblogs.
+
+On August 10, 2006, Apple announced the first [[Universal Binary]] release of Mac OS X Server, version 10.4.7, supporting both PowerPC and Intel processors. At the same time Apple announced the release of the Intel-based [[Mac Pro]] and [[Xserve]] systems.
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.4
+!10.4.11
+|-
+![[PHP]]
+| rowspan=&quot;4&quot; |?
+|4.4.9
+|-
+![[MySQL]]
+|4.1.22
+|-
+![[Apache HTTP Server|Apache]]
+|1.3.41
+|-
+![[BIND]]
+|9.3.6-P2
+|}
+
+===Mac OS X Server 10.5 (Leopard Server)===
+[[Image:Leopard Server 10.5.png|thumb|right|The Mac OS X Leopard Server running Server Admin on Desktop]]
+'''Released''': October 26, 2007.
+Leopard Server sold for $999 for an unlimited-client license.&lt;ref name=&quot;In depth with Lion OS X Server&quot;&gt;[http://www.anandtech.com/show/4547/mac-os-x-lion-server-review In depth with Lion OS X Server] – Anandtech, August 2, 2011&lt;/ref&gt; Mac OS&amp;nbsp;X Server version 10.5.x ‘Leopard’ was the last major version of Mac OS&amp;nbsp;X Server to support [[PowerPC]]-based servers and workstations such as the Apple [[Xserve G5]] and [[Power Mac G5]].
+
+'''Features'''
+* [[RADIUS]] Server. Leopard Server includes [[FreeRADIUS]] for network authentication. It ships with support for wireless access stations however can be modified into a fully functioning FreeRADIUS server.&lt;ref&gt;[http://www.macosxhints.com/article.php?story=20071130134610850 Enable full RADIUS support on OS X Server]&lt;/ref&gt;
+* [[Ruby on Rails]].  Mac OS&amp;nbsp;X Server version 10.5 ‘Leopard’ was the first version to ship with [[Ruby on Rails]], the [[server-side]] [[Web framework|Web application framework]] used by sites such as [[GitHub]].&lt;ref&gt;{{citation|url=https://weblog.rubyonrails.org/2006/8/7/ruby-on-rails-will-ship-with-os-x-10-5-leopard/|title=Ruby on Rails will ship with OS X 10.5 (Leopard)|author=David|date=August 7, 2006|website=RubyOnRails.org}}&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.5
+!10.5.1
+!10.5.2
+!10.5.3
+!10.5.4
+!10.5.5
+!10.5.6
+!10.5.7
+!10.5.8
+!10.5.8 2010-007
+!10.5.8 2011-004
+|-
+![[PHP]]
+| colspan=&quot;3&quot; |5.2.4
+| colspan=&quot;2&quot; |5.2.5
+| colspan=&quot;2&quot; |5.2.6
+|5.2.8
+|5.2.11
+|5.2.14
+|
+|-
+![[MySQL]]
+| colspan=&quot;6&quot; |5.0.45
+| colspan=&quot;2&quot; |5.0.67
+|5.0.82
+|5.0.91
+|
+|-
+![[Apache HTTP Server|Apache]]
+| colspan=&quot;3&quot; |2.2.6
+| colspan=&quot;3&quot; |2.2.8
+|2.2.9
+|2.2.11
+|2.2.13
+|2.2.14
+|
+|-
+![[BIND]]
+| colspan=&quot;4&quot; |9.4.1-P1
+| colspan=&quot;3&quot; |9.4.2-P1
+|9.4.3-P1
+| colspan=&quot;2&quot; |9.4.2-P3
+|
+|-
+![[Ruby (programming language)|Ruby]]
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|1.8.6
+|-
+![[Ruby on Rails]]
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|1.2.6
+|}
+
+===Mac OS X Server 10.6 (Snow Leopard Server)===
+'''Released''': August 28, 2009
+
+Snow Leopard Server sold for $499 and included unlimited client licenses.&lt;ref name=&quot;In depth with Lion OS X Server&quot;/&gt;
+
+''New Features'':
+* Full [[64-bit computing|64-bit]] operating system. On appropriate systems with 4&amp;nbsp;GB of RAM or more, Snow Leopard Server uses a 64-bit kernel to address up to a theoretical 16&amp;nbsp;TB of RAM.&lt;ref&gt;{{cite web|title=Apple - Mac OS X Server Snow Leopard - 64-bit Computing |url=https://www.apple.com/server/macosx/technology/sixtyfour-bit.html |archive-url=https://web.archive.org/web/20110608204248/http://www.apple.com/server/macosx/technology/sixtyfour-bit.html |archive-date=June 8, 2011|accessdate=August 26, 2009}}&lt;/ref&gt;
+* [[iCal Server]] 2 with improved [[CalDAV]] support, a new web calendaring application, push notifications and the ability to send email invitations to non-iCal users.
+* [[Calendar and Contacts Server|Address Book Server]] provides a central location for users to store and access personal contacts across multiple Macs and synchronized iPhones. Based on the [[CardDAV]] protocol standard.
+* [[Wiki Server]] 2, with server side [[Quick Look]] and the ability to view wiki content on iPhone.
+* A new [[Mail server]] engine that supports push email so users receive immediate access to new messages. However, Apple's implementation of push email is not supported for Apple's iPhone.
+* Podcast Producer 2 with dual-source video support. Also includes a new Podcast Composer application to automate the production process, making it simple to create podcasts with a customized, consistent look and feel. Podcast Composer creates a workflow to add titles, transitions and effects, save to a desired format and share to wikis, blogs, [[iTunes]], [[iTunes U]], [[Final Cut Server]] or Podcast Library.
+* Mobile Access Server enables iPhone and Mac users to access secured network services, including corporate websites, online business applications, email, calendars and contacts. Without requiring additional software, Mobile Access Server acts as a reverse proxy server and provides SSL encryption and authentication between the user's iPhone or Mac and a private network.
+
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.6.0
+!10.6.1
+!10.6.2
+!10.6.3
+!10.6.4
+!10.6.5
+!10.6.6
+!10.6.7
+!10.6.8 (10K549)
+|-
+![[PHP]]
+|5.3.0
+| rowspan=&quot;4&quot; |?
+| rowspan=&quot;4&quot; |?
+| rowspan=&quot;4&quot; |?
+|5.3.2
+| colspan=&quot;2&quot; |5.3.3
+|5.3.4
+|5.3.15
+|-
+![[MySQL]]
+|5.0.82
+|5.0.7
+| colspan=&quot;3&quot; |5.0.91
+|5.0.92
+|-
+![[Apache HTTP Server|Apache]]
+|2.2.11
+|2.2.14
+| colspan=&quot;2&quot; |2.2.15
+|2.2.17
+|2.2.22
+|-
+![[BIND]]
+|9.6.0-P2
+| colspan=&quot;4&quot; |9.6.0-P2
+|9.6-ESV-R4-P3
+|}
+
+===Mac OS X 10.7 (Lion Server)===
+'''Released''': July 20, 2011
+
+In releasing the developer preview of [[Mac OS X Lion]] in February 2011, Apple indicated that beginning with Lion, Mac OS X Server would be bundled with the operating system and would not be marketed as a separate product.&lt;ref&gt;{{cite press release|url=https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/ |title=Apple Releases Developer Preview of Mac OS X Lion |publisher=Apple |date=February 24, 2011 |accessdate=March 14, 2018}}&lt;/ref&gt; However, a few months later, the company said it would instead sell the server components as a [[United States dollar|US$]]49.99 add-on to Lion, distributed through the [[Mac App Store]] (as well as Lion itself).&lt;ref name=&quot;lion-june-pr&quot;&gt;{{cite press release|url=https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/|title=Mac OS X Lion With 250 New Features Available in July From Mac App Store|publisher=Apple|date=June 6, 2011|accessdate=March 14, 2018}}&lt;/ref&gt; The combined cost of an upgrade to Lion and the purchase of the OS X Server add-on, which costs approximately US$50,&lt;ref name=&quot;In depth with Lion OS X Server&quot;/&gt; was nonetheless significantly lower than the retail cost of Snow Leopard Server (US$499).
+
+Lion Server came with unlimited client licenses as did Snow Leopard Server.
+
+Lion Server includes new versions of [[iCal Server]], [[Wiki Server]], and [[Mail Server]].&lt;ref name=&quot;lion-server-specs&quot;&gt;{{cite web |url=http://support.apple.com/kb/SP630 |title=OS X Lion Server - Technical Specifications |author=[[Apple Inc.]] |date=November 15, 2011 |accessdate=November 25, 2012}}&lt;/ref&gt; More significantly, Lion Server can be used for iOS mobile device management.
+
+Starting with Apple Mac OS&amp;nbsp;X Server Version 10.7 “Lion,” [[PostgreSQL]] replaces [[MySQL]] as the database provided with Mac OS&amp;nbsp;X Server, coinciding with [[Oracle Corporation]]’s acquisition of [[Sun Microsystems]] and Oracle’s subsequent attempts to tighten MySQL’s licensing restrictions and to exert influence on MySQL’s previously open and independent development model.&lt;ref&gt;{{cite web|url=https://www2.computerworld.com.au/article/457551/dead_database_walking_mysql_creator_why_future_belongs_mariadb/|title=Dead database walking: MySQL's creator on why the future belongs to MariaDB|last=Pearce|first=Rohan|date=2013-03-28|website=Computerworld.com.au|publisher=[[Computerworld]]|access-date=2020-10-07}}&lt;/ref&gt;
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.7
+!10.7.1
+!10.7.2
+!10.7.3 11D2001
+!10.7.4 11E53
+!10.7.5 11G63
+|-
+!Server.app
+| rowspan=&quot;7&quot; |?
+| rowspan=&quot;7&quot; |?
+| rowspan=&quot;7&quot; |?
+|1.3.1
+|1.4.3
+|1.5.0
+|-
+![[PHP]]
+|5.3.8
+|5.3.10
+|5.3.15
+|-
+!Postfix
+| colspan=&quot;3&quot; |2.8.4
+|-
+![[Python (programming language)|Python]]
+| colspan=&quot;3&quot; |2.7.1
+|-
+![[PostgreSQL]]
+| colspan=&quot;3&quot; |9.0.5
+|-
+![[Apache HTTP Server|Apache]]
+| colspan=&quot;2&quot; |2.2.21
+|2.2.22
+|-
+![[BIND]]
+| colspan=&quot;2&quot; |9.7.3-P3
+|9.7.6-P1
+|}
+
+===OS X 10.8 (Mountain Lion Server)===&lt;!-- renamed just &quot;OS X&quot; now --&gt;
+'''Released''': July 25, 2012.
+
+Like Lion, Mountain Lion had no separate server edition. An OS X Server package was available for Mountain Lion from the Mac App Store for US$19.99, which included a server management application called Server, as well as other additional administrative tools to manage client profiles and [[Xsan]].&lt;ref&gt;{{cite web|title=OS X Server|url=http://movies.apple.com/media/us/osx/2012/server/docs/OSXServer_Product_Overview.pdf|publisher=Apple Inc.|date=June 2012|accessdate=July 31, 2012}}&lt;/ref&gt;&lt;ref&gt;{{cite web|title=Server, simplified: A power user's guide to OS X Server|url=https://arstechnica.com/apple/2012/07/the-server-simplified-a-power-users-guide-to-os-x-server|author=Andrew Cunningham|website=Ars Technica|date=July 29, 2012|accessdate=July 31, 2012}}&lt;/ref&gt;
+
+Mountain Lion Server, like Lion Server, was provided with unlimited client licenses, and once purchased could be run on an unlimited number of systems.
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.8.0
+!10.8.1
+!10.8.2
+!10.8.3
+!10.8.4
+!10.8.5
+|-
+![[PHP]]
+| colspan=&quot;2&quot; rowspan=&quot;3&quot; |?
+| colspan=&quot;2&quot; rowspan=&quot;3&quot; |?
+|5.3.15
+|5.3.29
+|-
+![[Python (programming language)|Python]]
+| colspan=&quot;2&quot; | 2.7.2
+|-
+![[PostgreSQL]]
+| colspan=&quot;2&quot; |9.2.1
+|-
+![[Apache HTTP Server|Apache]]
+| colspan=&quot;2&quot; rowspan=&quot;3&quot; |?
+| colspan=&quot;2&quot; rowspan=&quot;3&quot; |?
+|2.2.22
+|2.2.29
+|-
+![[BIND]]
+|9.8.3-P1
+|?
+|-
+!OpenLDAP
+|?
+|2.4.28
+|}
+
+===OS X 10.9 (Mavericks Server)===
+'''Released''': October 22, 2013.
+
+There is no separate server edition of Mavericks, just as there was no separate server edition of Mountain Lion.&lt;ref name=&quot;mavericks-server-apple&quot;&gt;{{cite web|url=https://www.apple.com/osx/server/|title=OS X Server brings more power to your business.|publisher=Apple|accessdate=October 22, 2013}}&lt;/ref&gt; There is a package, available from the Mac App Store for $19.99, that includes a server management app called Server, as well as other additional administrative tools to manage client profiles and [[Xsan]],&lt;ref name=&quot;mavericks-server-apple&quot;/&gt; and once purchased can be run on an unlimited number of machines. Those enrolled in the Mac or iOS developer programs are given a code to download OS X Server for free.
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+!Software
+!Developer Preview 1
+!10.9.0
+!10.9.1
+!10.9.4
+!10.9.5
+|-
+![[Apache HTTP Server|Apache]]
+|2.2.24&lt;ref name=&quot;Get Apache, PHP and MySQL working on 10.9 Mavericks&quot;/&gt;
+| colspan=&quot;2&quot; |2.2.24
+| colspan=&quot;2&quot; |2.2.26
+|-
+![[BIND]]
+|?
+| colspan=&quot;4&quot; |9.9.2-P2
+|-
+|-
+![[PHP]]
+|5.3.25&lt;ref name=&quot;Get Apache, PHP and MySQL working on 10.9 Mavericks&quot;&gt;{{cite web | title=Get Apache, PHP and MySQL working on 10.9 Mavericks | publisher=Coolestguyontheplanet.com | url=http://coolestguyplanettech.com/downtown/get-apache-mysql-php-and-phpmyadmin-working-osx-109-mavericks | accessdate=June 26, 2013 | archive-url=https://web.archive.org/web/20130628031641/http://coolestguyplanettech.com/downtown/get-apache-mysql-php-and-phpmyadmin-working-osx-109-mavericks | archive-date=June 28, 2013 | url-status=dead }}&lt;/ref&gt;
+| colspan=&quot;2&quot; |5.4.17
+|5.4.24
+|5.4.30
+|-
+!Postfix
+| rowspan=&quot;3&quot; |?
+| colspan=&quot;2&quot; |?
+| colspan=&quot;2&quot; |2.9.4
+|-
+![[PostgreSQL]]
+| colspan=&quot;2&quot; |9.2.4
+| colspan=&quot;2&quot; |9.2.8
+|-
+![[Python (programming language)|Python]]
+| colspan=&quot;4&quot; |2.7.5
+|}
+
+===OS X 10.10 (Yosemite Server 4.0)===
+'''Released''': October 16, 2014.
+
+There is no separate server edition of Yosemite, just as there was no separate server edition of Mavericks. There is a package, available from the Mac App Store for $19.99, that includes a server management app called Server, as well as other additional administrative tools to manage client profiles and Xsan, and once purchased can be run on an unlimited number of machines. Those enrolled in the Mac or iOS developer programs are given a code to download OS X Server for free.
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.10.0
+!10.10.4
+!10.10.5
+|-
+![[Apache HTTP Server|Apache]]
+|2.4.9
+|2.4.10
+|2.4.16
+|-
+![[BIND]]
+| colspan=&quot;2&quot; |9.9.5
+|9.9.7-P2
+|-
+![[PHP]]
+|5.5.14
+|5.5.24
+|5.5.27
+|-
+!Postfix
+| colspan=&quot;3&quot; |2.11.0
+|-
+![[PostgreSQL]]
+| colspan=&quot;3&quot; |9.3.5
+|-
+![[Python (programming language)|Python]]
+| colspan=&quot;2&quot; |2.7.6
+|2.7.10
+|-
+!OpenLDAP
+| colspan=&quot;3&quot; |?
+|}
+
+===OS X 10.11 (Server 5.0)===
+'''Released:''' September 16, 2015.
+
+Version 5.0.3 of OS X Server operates with either OS X Yosemite 10.10.5 and OS X El Capitan 10.11.
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.11.0
+!10.11.1
+!10.11.2
+!10.11.3
+!10.11.4
+!10.11.5
+!10.11.6
+|-
+![[Apache HTTP Server|Apache]]
+| colspan=&quot;4&quot; |2.4.16
+| colspan=&quot;3&quot; |2.4.18
+|-
+![[BIND]]
+| colspan=&quot;2&quot; |9.9.7-P2
+| colspan=&quot;5&quot; |9.9.7-P3
+|-
+![[PHP]]
+|5.5.27
+|5.5.29
+| colspan=&quot;2&quot; |5.5.30
+|5.5.31
+|5.5.34
+|5.5.36
+|-
+!Postfix
+| colspan=&quot;7&quot; |2.11.0
+|-
+![[PostgreSQL]]
+| colspan=&quot;4&quot; |9.3.9
+| colspan=&quot;3&quot; |9.4.5
+|-
+![[Python (programming language)|Python]]
+| colspan=&quot;7&quot; |2.7.10
+|-
+!OpenLDAP
+| colspan=&quot;7&quot; |2.4.28
+|}
+
+===OS X 10.11 (Server 5.1)===
+'''Released:''' March 21, 2016.
+
+OS X Server 5.1 requires 10.11.4 El Capitan, and previous versions of OS X Server won't work on 10.11.4 El Capitan.
+
+===macOS 10.12 (Server 5.2)===
+'''Released:''' September 20, 2016.
+
+Version 5.2 of macOS Server operates with either OS X El Capitan 10.11 or macOS Sierra 10.12.
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.12.0
+!10.12.1
+!10.12.2
+!10.12.3
+!10.12.4
+!10.12.5
+!10.12.6
+|-
+![[Apache HTTP Server|Apache]]
+| colspan=&quot;2&quot; |2.4.23
+| colspan=&quot;4&quot; |2.4.25
+|2.4.26
+|-
+![[BIND]]
+| colspan=&quot;7&quot; |9.9.7-P3
+|-
+![[PHP]]
+|5.6.24
+|5.6.25
+|5.6.27
+|5.6.28
+| colspan=&quot;3&quot; |5.6.30
+|-
+!Postfix
+| colspan=&quot;7&quot; |3.1.1
+|-
+![[PostgreSQL]]
+| colspan=&quot;7&quot; |9.4.6
+|-
+![[Python (programming language)|Python]]
+| colspan=&quot;7&quot; |2.7.10
+|-
+!OpenLDAP
+| colspan=&quot;7&quot; |2.4.28
+|}
+
+===macOS 10.12 (Server 5.3)===
+'''Released:''' March 17, 2017.
+
+Version 5.3 of macOS Server only operates on macOS Sierra (10.12.4) and later.
+
+For macOS Server 5.3.1:
+
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.12.6
+|-
+![[Apache HTTP Server|Apache]]
+|2.4.28
+|-
+![[BIND]]
+|9.9.7-P3
+|-
+![[PHP]]
+|5.6.30
+|-
+!Postfix
+|3.1.6
+|-
+![[PostgreSQL]]
+|9.4.6
+|-
+![[Python (programming language)|Python]]
+|2.7.10
+|-
+!OpenLDAP
+|2.4.28
+|}
+
+===macOS 10.13 (Server 5.4)===
+'''Released:''' September 25, 2017.
+
+Version 5.4 of macOS Server only operates on macOS High Sierra (10.13) and later.
+
+===macOS 10.13.3 (Server 5.5)===
+'''Released:''' January 23, 2018.
+
+Version 5.5 of macOS Server only operates on macOS High Sierra (10.13.3) and later.
+
+===macOS 10.13.5 (Server 5.6)===
+'''Released:''' April 24, 2018.
+
+Version 5.6 of macOS Server only operates on macOS High Sierra (10.13.5) and later.
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|-
+!Software
+!10.13.5
+!10.13.6
+|-
+![[Apache HTTP Server|Apache]]
+| colspan=&quot;2&quot; |2.4.33
+|-
+![[BIND]]
+| colspan=&quot;2&quot; |9.9.7-P3
+|-
+![[PHP]]
+| colspan=&quot;2&quot; |7.1.16
+|-
+!Postfix
+| colspan=&quot;2&quot; |3.2.2
+|-
+![[PostgreSQL]]
+| colspan=&quot;2&quot; |9.4.15
+|-
+![[Python (programming language)|Python]]
+| colspan=&quot;2&quot; |2.7.10
+|-
+!OpenLDAP
+| colspan=&quot;2&quot; |2.4.28
+|}
+
+===macOS 10.14 (Server 5.7)===
+'''Released:''' September 28, 2018.
+
+Version 5.7 of macOS Server only operates on macOS Mojave (10.14) and later.
+
+With this version Apple stopped bundling open source services such as Calendar Server, Contacts Server, the Mail Server, DNS, DHCP, VPN Server, and Websites with macOS Server.&lt;ref name=&quot;mojave-server-changes&quot;&gt;{{cite web|url=https://support.apple.com/en-us/HT208312|title=Prepare for changes to macOS Server 5.7.1|publisher=Apple|accessdate=October 27, 2018}}&lt;/ref&gt; Included services are now limited to Profile Manager, Open Directory and Xsan.&lt;ref name=&quot;mojave-server-changes&quot;/&gt;
+
+===macOS 10.14 (Server 5.8)===
+'''Released:''' March 25, 2019.
+
+Version 5.8 of macOS Server only operates on macOS Mojave (10.14.4) and later. Profile Manager supports new restrictions, payloads, and commands.
+
+===macOS 10.15 (Server 5.9)===
+'''Released:''' October 8, 2019.

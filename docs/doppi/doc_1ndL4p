@@ -1,0 +1,306 @@
+The ''base'' is physically located between the ''emitter'' and the ''collector'' and is made from lightly doped, high-resistivity material. The collector surrounds the emitter region, making it almost impossible for the electrons injected into the base region to escape without being collected, thus making the resulting value of α very close to unity, and so, giving the transistor a large β. A cross-section view of a BJT indicates that the collector–base junction has a much larger area than the emitter–base junction.
+
+The bipolar junction transistor, unlike other transistors, is usually not a symmetrical device. This means that interchanging the collector and the emitter makes the transistor leave the forward active mode and start to operate in reverse mode. Because the transistor's internal structure is usually optimized for forward-mode operation, interchanging the collector and the emitter makes the values of α and β in reverse operation much smaller than those in forward operation; often the α of the reverse mode is lower than 0.5. The lack of symmetry is primarily due to the doping ratios of the emitter and the collector. The emitter is heavily doped, while the collector is lightly doped, allowing a large reverse bias voltage to be applied before the collector–base junction breaks down. The collector–base junction is reverse biased in normal operation. The reason the emitter is heavily doped is to increase the emitter injection efficiency: the ratio of carriers injected by the emitter to those injected by the base. For high current gain, most of the carriers injected into the emitter–base junction must come from the emitter.
+
+[[Image:Transistor-die-KSY34.jpg|thumb|right|200px|Die of a KSY34 high-frequency NPN transistor. Bond wires connect to the base and emitter]]
+
+The low-performance &quot;lateral&quot; bipolar transistors sometimes used in [[CMOS]] processes are sometimes designed symmetrically, that is, with no difference between forward and backward operation.
+
+Small changes in the voltage applied across the base–emitter terminals cause the current between the ''emitter'' and the ''collector'' to change significantly. This effect can be used to amplify the input voltage or current. BJTs can be thought of as voltage-controlled [[current source]]s, but are more simply characterized as current-controlled current sources, or current amplifiers, due to the low impedance at the base.
+
+Early transistors were made from [[germanium]] but most modern BJTs are made from [[silicon]]. A significant minority are also now made from [[gallium arsenide]], especially for very high speed applications (see HBT, below).
+
+
+The [[heterojunction bipolar transistor]] (HBT) is an improvement of the BJT that can handle signals of very high frequencies up to several hundred [[Hertz|GHz]]. It is common in modern ultrafast circuits, mostly [[Radio frequency|RF]] systems.&lt;ref name=Williams&gt;
+{{cite book
+|editor1-first=D.V.
+|editor1-last=Morgan
+|editor2-first=Robin H.
+|editor2-last=Williams
+|title=Physics and Technology of Heterojunction Devices
+|year= 1991
+|publisher=Institution of Electrical Engineers (Peter Peregrinus Ltd.)
+|location=London
+|isbn=978-0-86341-204-2
+|url=https://books.google.com/books?id=C98iH7UDtzwC&amp;q=%22SIGe+heterojunction%22&amp;pg=PA210
+}}&lt;/ref&gt;&lt;ref name=&quot;Ashburn&quot;&gt;{{cite book
+|author=Peter Ashburn
+|title=SiGe Heterojunction Bipolar Transistors
+|year= 2003
+|pages=Chapter 10
+|publisher= Wiley
+|location=New York
+|isbn=978-0-470-84838-8
+|url=http://worldcat.org/isbn/0470848383
+|nopp=true
+}}&lt;/ref&gt;
+
+[[File:Diagrama de Transistor NPN.svg|thumb|224x224px|Symbol for NPN bipolar transistor with current flow direction]]
+
+Two commonly used HBTs are silicon–germanium and aluminum gallium arsenide, though a wide variety of semiconductors may be used for the HBT structure. HBT structures are usually grown by [[epitaxy]] techniques like [[Metalorganic vapour phase epitaxy|MOCVD]] and [[Molecular beam epitaxy|MBE]].
+
+==Regions of operation==&lt;!-- This section is linked from [[Emitter-coupled logic]] --&gt;
+{| class=&quot;wikitable&quot; style=&quot;float:right; margin-left:1em;&quot;
+! rowspan=2 | Junction &lt;br/&gt;type
+! rowspan=2 | Applied &lt;br/&gt;voltages
+! colspan=2 | Junction bias
+! rowspan=2 | Mode
+|-
+! B-E
+! B-C
+|-
+| rowspan=4 | NPN
+| E &amp;lt; B &amp;lt; C || Forward || Reverse || Forward-active
+|-
+| E &amp;lt; B &amp;gt; C || Forward || Forward || Saturation
+|-
+| E &amp;gt; B &amp;lt; C || Reverse || Reverse || Cut-off
+|-
+| E &amp;gt; B &amp;gt; C || Reverse || Forward || Reverse-active
+|-
+| rowspan=4 | PNP
+| E &amp;lt; B &amp;lt; C || Reverse || Forward || Reverse-active
+|-
+| E &amp;lt; B &amp;gt; C || Reverse || Reverse || Cut-off
+|-
+| E &amp;gt; B &amp;lt; C || Forward || Forward || Saturation
+|-
+| E &amp;gt; B &amp;gt; C || Forward || Reverse || Forward-active
+|}
+
+Bipolar transistors have four distinct regions of operation, defined by BJT junction biases.
+
+;Forward-active (or simply ''active''): The base–emitter junction is forward biased and the base–collector junction is reverse biased. Most bipolar transistors are designed to afford the greatest common-emitter current gain, β&lt;sub&gt;F&lt;/sub&gt;, in forward-active mode. If this is the case, the collector–emitter current is approximately  [[Proportionality (mathematics)|proportional]] to the base current, but many times larger, for small base current variations.
+;Reverse-active (or ''inverse-active'' or ''inverted''): By reversing the biasing conditions of the forward-active region, a bipolar transistor goes into reverse-active mode. In this mode, the emitter and collector regions switch roles. Because most BJTs are designed to maximize current gain in forward-active mode, the β&lt;sub&gt;F&lt;/sub&gt; in inverted mode is several times smaller (2–3 times for the ordinary germanium transistor). This transistor mode is seldom used, usually being considered only for failsafe conditions and some types of [[Transistor–transistor_logic#Implementation|bipolar logic]]. The reverse bias breakdown voltage to the base may be an order of magnitude lower in this region.
+;Saturation: With both junctions forward-biased, a BJT is in saturation mode and facilitates high current conduction from the emitter to the collector (or the other direction in the case of NPN, with negatively charged carriers flowing from emitter to collector). This mode corresponds to a logical &quot;on&quot;, or a closed switch.
+;Cut-off: In cut-off, biasing conditions opposite of saturation (both junctions reverse biased) are present. There is very little current, which corresponds to a logical &quot;off&quot;, or an open switch.
+;[[Avalanche breakdown]] region:
+
+{{multiple image|caption_align=center|header_align=center
+ | align = right
+ | image1 = Input characteristic common-base silicon transistor-en.svg
+ | width1 = 130
+ | alt1 =
+ | caption1 = Input characteristics
+ | image2 = Output characteristic common-base silicon transistor-en.svg
+ | width2 = 170
+ | alt2 =   
+ | caption2  =  output characteristics 
+ | footer = Input and output characteristics for a common-base silicon transistor amplifier.
+}}
+
+The modes of operation can be described in terms of the applied voltages (this description applies to NPN transistors; polarities are reversed for PNP transistors):
+
+;Forward-active: Base higher than emitter, collector higher than base (in this mode the collector current is proportional to base current by &lt;math&gt;\beta_\text{F}&lt;/math&gt;).
+;Saturation: Base higher than emitter, but collector is not higher than base.
+;Cut-off: Base lower than emitter, but collector is higher than base. It means the transistor is not letting conventional current go through from collector to emitter.
+;Reverse-active: Base lower than emitter, collector lower than base: reverse conventional current goes through transistor.
+
+In terms of junction biasing: (''reverse biased base–collector junction'' means V{{sub|bc}} &amp;lt; 0 for NPN, opposite for PNP)
+
+Although these regions are well defined for sufficiently large applied voltage, they overlap somewhat for small (less than a few hundred millivolts) biases. For example, in the typical grounded-emitter configuration of an NPN BJT used as a pulldown switch in digital logic, the &quot;off&quot; state never involves a reverse-biased junction because the base voltage never goes below ground; nevertheless the forward bias is close enough to zero that essentially no current flows, so this end of the forward active region can be regarded as the cutoff region.
+
+===Active-mode transistors in circuits===
+[[File:NPN BJT - Structure &amp; circuit.svg|frame|right|Structure and use of NPN transistor. Arrow according to schematic.]]
+The diagram shows a schematic representation of an NPN transistor connected to two voltage sources. (The same description applies to a PNP transistor with reversed directions of current flow and applied voltage.)  This applied voltage causes the lower P-N junction to become forward biased, allowing a flow of electrons from the emitter into the base. In active mode, the electric field existing between base and collector (caused by ''V''&lt;sub&gt;CE&lt;/sub&gt;) will cause the majority of these electrons to cross the upper P-N junction into the collector to form the collector current ''I''&lt;sub&gt;C&lt;/sub&gt;. The remainder of the electrons recombine with holes, the majority carriers in the base, making a current through the base connection to form the base current, ''I''&lt;sub&gt;B&lt;/sub&gt;. As shown in the diagram, the emitter current, ''I''&lt;sub&gt;E&lt;/sub&gt;, is the total transistor current, which is the sum of the other terminal currents, (i.e., ''I''&lt;sub&gt;E&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;''I''&lt;sub&gt;B&lt;/sub&gt;&amp;nbsp;+&amp;nbsp;''I''&lt;sub&gt;C&lt;/sub&gt;).
+
+In the diagram, the arrows representing current point in the direction of [[conventional current]]&amp;nbsp;– the flow of electrons is in the opposite direction of the arrows because electrons carry negative [[electric charge]]. In active mode, the ratio of the collector current to the base current is called the ''DC current gain''. This gain is usually 100 or more, but robust circuit designs do not depend on the exact value (for example see [[op-amp]]). The value of this gain for DC signals is referred to as &lt;math&gt;h_{\text{FE}}&lt;/math&gt;, and the value of this gain for small signals is referred to as &lt;math&gt;h_{\text{fe}}&lt;/math&gt;. That is, when a small change in the currents occurs, and sufficient time has passed for the new condition to reach a steady state &lt;math&gt;h_{\text{fe}}&lt;/math&gt; is the ratio of the change in collector current to the change in base current. The symbol &lt;math&gt;\beta&lt;/math&gt; is used for both &lt;math&gt;h_{\text{FE}}&lt;/math&gt; and &lt;math&gt;h_{\text{fe}}&lt;/math&gt;.&lt;ref&gt;
+{{cite book
+ |author=[[Paul Horowitz]] and [[Winfield Hill]]
+ |title=The Art of Electronics
+ |edition=2nd
+ |year=1989
+ |pages=[https://archive.org/details/artofelectronics00horo/page/62 62&amp;ndash;66]
+ |publisher=Cambridge University Press
+ |isbn=978-0-521-37095-0
+ |title-link=The Art of Electronics
+ }}&lt;/ref&gt;
+
+The emitter current is related to &lt;math&gt;V_{\text{BE}}&lt;/math&gt; exponentially. At [[room temperature]], an increase in &lt;math&gt;V_{\text{BE}}&lt;/math&gt; by approximately 60&amp;nbsp;mV increases the emitter current by a factor of 10. Because the base current is approximately proportional to the collector and emitter currents, they vary in the same way.
+
+==History==
+The bipolar [[point-contact transistor]] was invented in December 1947&lt;ref&gt;{{cite web|url=http://www.computerhistory.org/semiconductor/timeline/1947-invention.html|title=1947: Invention of the Point-Contact Transistor - The Silicon Engine - Computer History Museum|access-date=August 10, 2016}}&lt;/ref&gt; at the [[Bell Telephone Laboratories]] by [[John Bardeen]] and [[Walter Brattain]] under the direction of [[William Shockley]]. The junction version known as the bipolar junction transistor (BJT), invented by Shockley in 1948,&lt;ref&gt;{{cite web|url=http://www.computerhistory.org/semiconductor/timeline/1948-conception.html|title=1948: Conception of the Junction Transistor - The Silicon Engine - Computer History Museum|access-date=August 10, 2016}}&lt;/ref&gt; was for three decades the device of choice in the design of discrete and [[integrated circuits]]. Nowadays, the use of the BJT has declined in favor of [[CMOS]] technology in the design of digital integrated circuits. The incidental low performance BJTs inherent in CMOS ICs, however, are often utilized as [[bandgap voltage reference]], [[silicon bandgap temperature sensor]] and to handle [[electrostatic discharge]].
+
+===Germanium transistors===
+The [[germanium]] transistor was more common in the 1950s and 1960s but has a greater tendency to exhibit [[thermal runaway]].
+
+===Early manufacturing techniques===
+Various methods of manufacturing bipolar transistors were developed.&lt;ref&gt;[http://hm-treasury.gov.uk/media/B/C/queen_mary_ip_research_institute_p5_043_762kb.pdf Third case study – the solid state advent] {{webarchive |url=https://web.archive.org/web/20070927032750/http://hm-treasury.gov.uk/media/B/C/queen_mary_ip_research_institute_p5_043_762kb.pdf |date=September 27, 2007 }} (PDF)&lt;/ref&gt;
+
+* [[Point-contact transistor]]&amp;nbsp;– first transistor ever constructed (December 1947), a bipolar transistor, limited commercial use due to high cost and noise.
+** [[Tetrode transistor|Tetrode point-contact transistor]] – Point-contact transistor having two emitters. It became obsolete in the middle 1950s.
+* Junction transistors
+** [[Grown-junction transistor]]{{spaced ndash}} first bipolar ''junction'' transistor made.&lt;ref&gt;[http://semiconductormuseum.com/PhotoGallery/PhotoGallery_M1752.htm Transistor Museum, Historic Transistor Photo Gallery, Bell Labs Type M1752''']&lt;/ref&gt; Invented by [[William Shockley]] at [[Bell Labs]] on June 23, 1948.&lt;ref&gt;{{cite book
+| last = Morris
+| first = Peter Robin
+| title = A History of the World Semiconductor Industry
+| series = IEE History of Technology Series 12
+| year = 1990
+| publisher = Peter Peregrinus Ltd.
+| location = London
+| isbn = 978-0-86341-227-1
+| page = 29
+| chapter = 4.2
+}}
+&lt;/ref&gt; Patent filed on June 26, 1948.
+** [[Alloy-junction transistor]]{{spaced ndash}} emitter and collector alloy beads fused to base. Developed at [[General Electric]] and [[RCA]]&lt;ref&gt;{{cite web |url=http://semiconductormuseum.com/PhotoGallery/PhotoGallery_TA153.htm |title=Transistor Museum Photo Gallery RCA TA153 |access-date=August 10, 2016}}&lt;/ref&gt; in 1951.
+*** [[Micro-alloy transistor]] (MAT){{spaced ndash}} high-speed type of alloy junction transistor. Developed at [[Philco]].&lt;ref&gt;{{cite book
+| title = High Speed Switching Transistor Handbook
+| edition = 2nd
+| year = 1963
+| publisher = Motorola
+| page = 17
+}}[https://groups.google.com/group/sci.electronics.components/tree/browse_frm/month/2003-04/c97c04dc783ab61e?rnum=21&amp;_done=%2Fgroup%2Fsci.electronics.components%2Fbrowse_frm%2Fmonth%2F2003-04%3F].&lt;/ref&gt;
+*** [[Micro-alloy diffused transistor]] (MADT){{spaced ndash}} high-speed type of alloy junction transistor, speedier than MAT, a [[diffused-base transistor]]. Developed at [[Philco]].
+*** [[Post-alloy diffused transistor]] (PADT){{spaced ndash}} high-speed type of alloy junction transistor, speedier than MAT, a [[diffused-base transistor]]. Developed at [[Philips]].
+** [[Tetrode transistor]]{{spaced ndash}} high-speed variant of grown-junction transistor&lt;ref&gt;[http://semiconductormuseum.com/PhotoGallery/PhotoGallery_3N22.htm Transistor Museum, Historic Transistor Photo Gallery, Western Electric 3N22].&lt;/ref&gt; or alloy junction transistor&lt;ref&gt;{{cite journal|doi=10.1109/T-ED.1957.14192|title=The tetrode power transistor|journal=IRE Transactions on Electron Devices|volume=4|issue=1|pages=1–5|year=1957|last1=Maupin|first1=J.T.|bibcode=1957ITED....4....1M|s2cid=51668235}}&lt;/ref&gt; with two connections to base.
+** [[Surface-barrier transistor]]{{spaced ndash}} high-speed metal-barrier junction transistor. Developed at [[Philco]]&lt;ref&gt;{{cite web |url=http://semiconductormuseum.com/PhotoGallery/PhotoGallery_A01.htm |title=Transistor Museum Photo Gallery Philco A01 Germanium Surface Barrier Transistor |access-date=August 10, 2016}}&lt;/ref&gt; in 1953.&lt;ref&gt;{{cite web |url=http://semiconductormuseum.com/PhotoGallery/PhotoGallery_SurfaceBarrier.htm |title=Transistor Museum Photo Gallery Germanium Surface Barrier Transistor |access-date=August 10, 2016}}&lt;/ref&gt;
+** [[Drift-field transistor]]{{spaced ndash}} high-speed bipolar junction transistor. Invented by [[Herbert Kroemer]]&lt;ref&gt;{{cite journal|doi=10.1109/16.960370|title=Herb's bipolar transistors|journal=IEEE Transactions on Electron Devices|volume=48|issue=11|pages=2473–2476|year=2001|last1=Brar|first1=B.|last2=Sullivan|first2=G.J.|last3=Asbeck|first3=P.M.|bibcode=2001ITED...48.2473B}}&lt;/ref&gt;&lt;ref&gt;{{cite journal|doi=10.1109/T-ED.1967.15902|title=Influence of mobility and lifetime variations on drift-field effects in silicon-junction devices|journal=IEEE Transactions on Electron Devices|volume=14|issue=2|pages=75–81|year=1967|last1=Bullis|first1=W.M.|last2=Runyan|first2=W.R.|bibcode=1967ITED...14...75B}}&lt;/ref&gt; at the Central Bureau of Telecommunications Technology of the German Postal Service, in 1953.
+** [[Spacistor]]{{spaced ndash}} around 1957.
+** [[Diffusion transistor]]{{spaced ndash}} modern type bipolar junction transistor. Prototypes&lt;ref&gt;{{cite web |url=http://semiconductormuseum.com/PhotoGallery/PhotoGallery_Prototype_DiffusedBase.htm |title=Transistor Museum Photo Gallery Bell Labs Prototype Diffused Base Germanium Silicon Transistor |access-date=August 10, 2016}}&lt;/ref&gt; developed at Bell Labs in 1954.
+*** [[Diffused-base transistor]]{{spaced ndash}} first implementation of diffusion transistor.
+*** [[Mesa transistor]]{{spaced ndash}} developed at [[Texas Instruments]] in 1957.
+*** [[Planar transistor]]{{spaced ndash}} the bipolar junction transistor that made mass-produced monolithic [[integrated circuit]]s possible. Developed by [[Jean Hoerni]]&lt;ref&gt;{{cite web |url=http://semiconductormuseum.com/PhotoGallery/PhotoGallery_2N1613.htm |title=Transistor Museum Photo Gallery Fairchild 2N1613 Early Silicon Planar Transistor |access-date=August 10, 2016}}&lt;/ref&gt; at [[Fairchild Semiconductor|Fairchild]] in 1959.
+** Epitaxial transistor&lt;ref&gt;{{cite web |url=http://www.computerhistory.org/semiconductor/timeline/1960-Epitaxial.html |title=1960: Epitaxial Deposition Process Enhances Transistor Performance – The Silicon Engine – Computer History Museum |access-date=August 10, 2016}}&lt;/ref&gt;{{spaced ndash}} a bipolar junction transistor made using vapor-phase deposition. See [[epitaxy]]. Allows very precise control of doping levels and gradients.
+
+==Theory and modeling==
+[[File:NPN Band Diagram Equilibrium.svg|350x350px|thumb|[[Band diagram]] for NPN transistor at equilibrium]]
+[[File:NPN Band Diagram Active.svg|thumb|348x348px|[[Band diagram]] for NPN transistor in active mode, showing injection of electrons from emitter to base, and their overshoot into the collector]]
+Transistors can be thought of as two diodes ([[P–N junction]]s) sharing a common region that minority carriers can move through. A PNP BJT will function like two diodes that share an N-type cathode region, and the NPN like two diodes sharing a P-type anode region.  Connecting two diodes with wires will not make a transistor, since minority carriers will not be able to get from one P–N junction to the other through the wire.
+
+Both types of BJT function by letting a small current input to the base control an amplified output from the collector. The result is that the transistor makes a good switch that is controlled by its base input. The BJT also makes a good amplifier, since it can multiply a weak input signal to about 100 times its original strength. Networks of transistors are used to make powerful amplifiers with many different applications. In the discussion below, focus is on the NPN bipolar transistor. In the NPN transistor in what is called active mode, the base–emitter voltage &lt;math&gt;V_{\text{BE}}&lt;/math&gt; and collector–base voltage &lt;math&gt;V_{\text{CB}}&lt;/math&gt; are positive, forward biasing the emitter–base junction and reverse-biasing the collector–base junction. In the active mode of operation, electrons are injected from the forward biased n-type emitter region into the p-type base where they diffuse as minority carriers to the reverse-biased n-type collector and are swept away by the electric field in the reverse-biased collector–base junction. For a figure describing forward and reverse bias, see [[Diode#Semiconductor diodes|semiconductor diodes]].
+
+===Large-signal models===
+In 1954, [[Jewell James Ebers]] and [[John L. Moll]] introduced their [[mathematical model]] of transistor currents:&lt;ref&gt;{{cite journal|doi=10.1109/jrproc.1954.274797|title=Large-Signal Behavior of Junction Transistors|journal=Proceedings of the IRE|volume=42|issue=12|pages=1761–1772|year=1954|last1=Ebers|first1=J.|last2=Moll|first2=J.|s2cid=51672011}}&lt;/ref&gt;
+
+====Ebers–Moll model{{Anchor|Ebers-Moll model|Ebers-Moll|Ebers–Moll}}====
+[[File:Ebers-Moll model schematic (NPN).svg|frame|Ebers&amp;ndash;Moll model for an NPN transistor.&lt;ref&gt;
+{{cite book
+ | title=Microelectronic Circuits, second ed.
+ | author=Adel S. Sedra and Kenneth C. Smith
+ | isbn=978-0-03-007328-1
+ | year=1987
+ | page=[https://archive.org/details/microelectronicc0000sedr/page/903 903]
+ | url=https://archive.org/details/microelectronicc0000sedr/page/903
+ }}&lt;/ref&gt; ''I''&lt;sub&gt;B&lt;/sub&gt;, ''I''&lt;sub&gt;C&lt;/sub&gt; and ''I''&lt;sub&gt;E&lt;/sub&gt; are the base, collector and emitter currents; ''I''&lt;sub&gt;CD&lt;/sub&gt; and ''I''&lt;sub&gt;ED&lt;/sub&gt; are the collector and emitter diode currents; ''α''&lt;sub&gt;F&lt;/sub&gt; and ''α''&lt;sub&gt;R&lt;/sub&gt; are the forward and reverse common-base current gains.]]
+[[File:Ebers-Moll model schematic (PNP).svg|frame|Ebers&amp;ndash;Moll model for a PNP transistor]]
+[[File:Approximated Ebers Moll.svg|frame|Approximated Ebers&amp;ndash;Moll model for an NPN transistor in the forward active mode. The collector diode is reverse-biased so ''I''&lt;sub&gt;CD&lt;/sub&gt; is virtually zero. Most of the emitter diode current (''α''&lt;sub&gt;F&lt;/sub&gt; is nearly 1) is drawn from the collector, providing the amplification of the base current.]]
+The DC emitter and collector currents in active mode are well modeled by an approximation to the Ebers–Moll model:
+
+: &lt;math&gt;\begin{align}
+  I_\text{E} &amp;= I_\text{ES} \left(e^\frac{V_\text{BE}}{V_\text{T}} - 1\right) \\
+  I_\text{C} &amp;= \alpha_\text{F} I_\text{E} \\
+  I_\text{B} &amp;= \left(1 - \alpha_\text{F}\right) I_\text{E}
+\end{align}&lt;/math&gt;
+
+The base internal current is mainly by diffusion (see [[Fick's law]]) and
+
+: &lt;math&gt;J_{n\,(\text{base})} = \frac{1}{W} q D_n n_{bo} e^{\frac{V_\text{EB}}{V_\text{T}}}&lt;/math&gt;
+
+where
+* &lt;math&gt;V_{\text{T}}&lt;/math&gt; is the [[Boltzmann constant#Role in semiconductor physics: the thermal voltage|thermal voltage]] &lt;math&gt;kT/q&lt;/math&gt; (approximately 26 mV at 300 K  ≈ room temperature).
+* &lt;math&gt;I_{\text{E}}&lt;/math&gt; is the emitter current
+* &lt;math&gt;I_{\text{C}}&lt;/math&gt; is the collector current
+* &lt;math&gt;\alpha_\text{F}&lt;/math&gt; is the common base forward short-circuit current gain (0.98 to 0.998)
+* &lt;math&gt;I_{\text{ES}}&lt;/math&gt; is the reverse saturation current of the base–emitter diode (on the order of 10&lt;sup&gt;−15&lt;/sup&gt; to 10&lt;sup&gt;−12&lt;/sup&gt; amperes)
+* &lt;math&gt;V_{\text{BE}}&lt;/math&gt; is the base–emitter voltage
+* &lt;math&gt;D_n&lt;/math&gt; is the diffusion constant for electrons in the p-type base
+* ''W'' is the base width
+
+The &lt;math&gt;\alpha&lt;/math&gt; and forward &lt;math&gt;\beta&lt;/math&gt; parameters are as described previously. A reverse &lt;math&gt;\beta&lt;/math&gt; is sometimes included in the model.
+
+The unapproximated Ebers&amp;ndash;Moll equations used to describe the three currents in any operating region are given below. These equations are based on the transport model for a bipolar junction transistor.&lt;ref name=Sedra&gt;
+{{cite book
+ |author=A.S. Sedra and K.C. Smith
+ |title=Microelectronic Circuits
+ |year= 2004
+ |edition=5th
+ |publisher=Oxford
+ |location=New York
+ |isbn=978-0-19-514251-8
+ |pages=Eqs.&amp;nbsp;4.103&amp;ndash;4.110, p.&amp;nbsp;305
+ |nopp=true
+}}&lt;/ref&gt;
+
+:&lt;math&gt;\begin{align}
+  i_{\text{C}} &amp;= I_\text{S} \left[                   \left(e^\frac{V_\text{BE}}{V_\text{T}} - e^\frac{V_\text{BC}}{V_\text{T}}\right) - \frac{1}{\beta_\text{R}} \left(e^\frac{V_\text{BC}}{V_\text{T}} - 1\right) \right]\\
+  i_{\text{B}} &amp;= I_\text{S} \left[ \frac{1}{\beta_\text{F}} \left(e^\frac{V_\text{BE}}{V_\text{T}} - 1                               \right) + \frac{1}{\beta_\text{R}} \left(e^\frac{V_\text{BC}}{V_\text{T}} - 1\right) \right]\\
+  i_{\text{E}} &amp;= I_\text{S} \left[                   \left(e^\frac{V_\text{BE}}{V_\text{T}} - e^\frac{V_\text{BC}}{V_\text{T}}\right) + \frac{1}{\beta_\text{F}} \left(e^\frac{V_\text{BE}}{V_\text{T}} - 1\right) \right]
+\end{align}&lt;/math&gt;
+
+where
+* &lt;math&gt;i_\text{C}&lt;/math&gt; is the collector current
+* &lt;math&gt;i_\text{B}&lt;/math&gt; is the base current
+* &lt;math&gt;i_\text{E}&lt;/math&gt; is the emitter current
+* &lt;math&gt;\beta_\text{F}&lt;/math&gt; is the forward common emitter current gain (20 to 500)
+* &lt;math&gt;\beta_\text{R}&lt;/math&gt; is the reverse common emitter current gain (0 to 20)
+* &lt;math&gt;I_\text{S}&lt;/math&gt; is the reverse saturation current (on the order of 10&lt;sup&gt;−15&lt;/sup&gt; to 10&lt;sup&gt;−12&lt;/sup&gt; amperes)
+* &lt;math&gt;V_\text{T}&lt;/math&gt; is the [[Boltzmann constant#Role in semiconductor physics: the thermal voltage|thermal voltage]] (approximately 26&amp;nbsp;mV at 300 K ≈ room temperature).
+* &lt;math&gt;V_\text{BE}&lt;/math&gt; is the base–emitter voltage
+* &lt;math&gt;V_\text{BC}&lt;/math&gt; is the base–collector voltage
+
+=====Base-width modulation=====
+[[File:Early effect (NPN).svg|frame| Top: NPN base width for low collector–base reverse bias; Bottom: narrower NPN base width for large collector–base reverse bias. Hashed regions are [[depletion width|depleted regions]].]]
+{{Main article|Early effect}}
+
+As the collector–base voltage (&lt;math&gt;V_\text{CB} = V_\text{CE} - V_\text{BE}&lt;/math&gt;) varies, the collector–base depletion region varies in size. An increase in the collector–base voltage, for example, causes a greater reverse bias across the collector–base junction, increasing the collector–base depletion region width, and decreasing the width of the base. This variation in base width often is called the ''[[Early effect]]'' after its discoverer [[James M. Early]].
+
+Narrowing of the base width has two consequences:
+
+* There is a lesser chance for recombination within the &quot;smaller&quot; base region.
+* The charge gradient is increased across the base, and consequently, the current of minority carriers injected across the emitter junction increases.
+
+Both factors increase the collector or &quot;output&quot; current of the transistor in response to an increase in the collector–base voltage.
+
+In the [[bipolar junction transistor#Regions of operation|forward-active region]], the Early effect modifies the collector current (&lt;math&gt;i_\text{C}&lt;/math&gt;) and the forward common emitter current gain (&lt;math&gt;\beta_\text{F}&lt;/math&gt;) as given by:{{Citation needed|date=November 2007}}
+
+:&lt;math&gt;\begin{align}
+      i_\text{C} &amp;= I_\text{S} \, e^\frac{v_\text{BE}}{V_\text{T}} \left(1 + \frac{V_\text{CE}}{V_\text{A}}\right) \\
+  \beta_\text{F} &amp;= \beta_{\text{F}0} \left(1 + \frac{V_\text{CB}}{V_\text{A}}\right) \\
+      r_\text{o} &amp;= \frac{V_\text{A}}{I_\text{C}}
+\end{align}&lt;/math&gt;
+
+where:
+* &lt;math&gt;V_\text{CE}&lt;/math&gt; is the collector–emitter voltage
+* &lt;math&gt;V_\text{A}&lt;/math&gt; is the Early voltage (15 V to 150 V)
+* &lt;math&gt;\beta_{\text{F}0}&lt;/math&gt; is forward common-emitter current gain when &lt;math&gt;V_\text{CB}&lt;/math&gt; = 0 V
+* &lt;math&gt;r_\text{o}&lt;/math&gt; is the output impedance
+* &lt;math&gt;I_\text{C}&lt;/math&gt; is the collector current
+
+=====Punchthrough=====
+When the base–collector voltage reaches a certain (device-specific) value, the base–collector depletion region boundary meets the base–emitter depletion region boundary. When in this state the transistor effectively has no base. The device thus loses all gain when in this state.
+
+====Gummel–Poon charge-control model====
+The [[Gummel–Poon model]]&lt;ref&gt;{{cite journal|doi=10.1002/j.1538-7305.1970.tb01803.x|title=An Integral Charge Control Model of Bipolar Transistors|journal=Bell System Technical Journal|volume=49|issue=5|pages=827–852|year=1970|last1=Gummel|first1=H. K.|last2=Poon|first2=H. C.}}&lt;/ref&gt; is a detailed charge-controlled model of BJT dynamics, which has been adopted and elaborated by others to explain transistor dynamics in greater detail than the terminal-based models typically do.&lt;ref&gt;{{cite web|url=http://ece-www.colorado.edu/~bart/book/book/chapter5/ch5_6.htm#5_6_2|title=Bipolar Junction Transistors|access-date=August 10, 2016}}&lt;/ref&gt; This model also includes the dependence of transistor &lt;math&gt;\beta&lt;/math&gt;-values upon the direct current levels in the transistor, which are assumed current-independent in the Ebers–Moll model.&lt;ref name=Sedra2&gt;
+{{cite book
+|author=A.S. Sedra and K.C. Smith
+|title=Microelectronic Circuits
+|url=https://archive.org/details/microelectronicc00sedr_571
+|url-access=limited
+|year= 2004
+|edition=5th
+|publisher=Oxford
+|location=New York
+|isbn=978-0-19-514251-8
+|page=[https://archive.org/details/microelectronicc00sedr_571/page/n538 509]
+}}&lt;/ref&gt;
+
+===Small-signal models===
+
+====Hybrid-pi model====
+[[File:Hybrid-pi detailed model.svg|thumb|370x370px|Hybrid-pi model]]
+{{Main article|hybrid-pi model}}
+
+The hybrid-pi model is a popular [[Electronic circuit|circuit]] model used for analyzing the [[small signal]] and AC behavior of bipolar junction and field effect [[transistors]]. Sometimes it is also called ''Giacoletto model'' because it was introduced by [[Lawrence J. Giacoletto|L.J. Giacoletto]] in 1969. The model can be quite accurate for low-frequency circuits and can easily be adapted for higher-frequency circuits with the addition of appropriate inter-electrode [[capacitance]]s and other parasitic elements.
+{{clear}}
+
+====h-parameter model====
+[[File:BJT h-parameters (generalised).svg|frame|Generalized h-parameter model of an NPN BJT.&lt;br /&gt;''Replace '''x''' with '''e''', '''b''' or '''c''' for CE, CB and CC topologies respectively.'']]
+Another model commonly used to analyze BJT circuits is the ''[[two-port network#Hybrid parameters (h-parameters)|h-parameter]]'' model, closely related to the [[hybrid-pi model]] and the [[admittance parameters|y-parameter]] [[two-port network#Y-parameters (admittance parameters)|two-port]], but using input current and output voltage as independent variables, rather than input and output voltages. This two-port network is particularly suited to BJTs as it lends itself easily to the analysis of circuit behaviour, and may be used to develop further accurate models. As shown, the term, ''x'', in the model represents a different BJT lead depending on the topology used. For common-emitter mode the various symbols take on the specific values as:
+* Terminal 1, base
+* Terminal 2, collector
+* Terminal 3 (common), emitter; giving ''x'' to be ''e''
+* ''i''&lt;sub&gt;i&lt;/sub&gt;, base current (''i''&lt;sub&gt;b&lt;/sub&gt;)
+* ''i''&lt;sub&gt;o&lt;/sub&gt;, collector current (''i''&lt;sub&gt;c&lt;/sub&gt;)
+* ''V''&lt;sub&gt;in&lt;/sub&gt;, base-to-emitter voltage (''V''&lt;sub&gt;BE&lt;/sub&gt;)
+* ''V''&lt;sub&gt;o&lt;/sub&gt;, collector-to-emitter voltage (''V''&lt;sub&gt;CE&lt;/sub&gt;)

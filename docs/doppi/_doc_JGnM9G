@@ -1,0 +1,115 @@
+Which of these one calls &quot;the&quot; geometric distribution is a matter of convention and convenience.
+
+These two different geometric distributions should not be confused with each other. Often, the name ''shifted'' geometric distribution is adopted for the former one (distribution of the number ''X''); however, to avoid ambiguity, it is considered wise to indicate which is intended, by mentioning the support explicitly.
+
+The geometric distribution gives the probability that the first occurrence of success requires ''k'' independent trials, each with success probability ''p''.&amp;nbsp;If the probability of success on each trial is ''p'', then the probability that the ''k''th trial (out of ''k'' trials) is the first success is
+
+:&lt;math&gt;\Pr(X = k) = (1-p)^{k-1}p&lt;/math&gt;
+
+for ''k'' = 1, 2, 3, ....
+
+The above form of the geometric distribution is used for modeling the number of trials up to and including the first success. By contrast, the following form of the geometric distribution is used for modeling the number of failures until the first success:
+
+:&lt;math&gt;\Pr(Y=k) =\Pr(X=k+1)= (1 - p)^k p&lt;/math&gt;
+
+for&amp;nbsp;''k''&amp;nbsp;=&amp;nbsp;0,&amp;nbsp;1,&amp;nbsp;2,&amp;nbsp;3,&amp;nbsp;....
+
+In either case, the sequence of probabilities is a [[geometric sequence]].
+
+For example, suppose an ordinary [[dice|die]] &lt;!-- &quot;die&quot; is the correct singular form of the plural &quot;dice.&quot; --&gt; is thrown repeatedly until the first time a &quot;1&quot; appears.  The probability distribution of the number of times it is thrown is supported on the infinite set {&amp;nbsp;1,&amp;nbsp;2,&amp;nbsp;3,&amp;nbsp;...&amp;nbsp;} and is a geometric distribution with ''p''&amp;nbsp;=&amp;nbsp;1/6.
+
+The geometric distribution is denoted by Geo(''p'') where 0 &lt; ''p'' ≤ 1. &lt;ref name=&quot;:0&quot;&gt;{{Cite book|title=A modern introduction to probability and statistics : understanding why and how|date=2005|publisher=Springer|others=Dekking, Michel, 1946-|isbn=9781852338961|location=London|pages=48–50, 61–62, 152|oclc=262680588}}&lt;/ref&gt;
+
+==Definitions==
+
+Consider a sequence of trials, where each trial has only two possible outcomes (designated failure and success). The probability of success is assumed to be the same for each trial. In such a sequence of trials, the geometric distribution is useful to model the number of failures before the first success. The distribution gives the probability that there are zero failures before the first success, one failure before the first success, two failures before the first success, and so on.
+
+===Assumptions: When is the geometric distribution an appropriate model?===
+
+The geometric distribution is an appropriate model if the following assumptions are true.
+
+*The phenomenon being modeled is a sequence of independent trials.
+*There are only two possible outcomes for each trial, often designated success or failure.
+*The probability of success, p, is the same for every trial.
+
+If these conditions are true, then the geometric random variable Y is the count of the number of failures before the first success. The possible number of failures before the first success is 0, 1, 2, 3, and so on. In the graphs above, this formulation is shown on the right.
+
+An alternative formulation is that the geometric random variable X is the total number of trials up to and including the first success, and the number of failures is ''X''&amp;nbsp;−&amp;nbsp;1. In the graphs above, this formulation is shown on the left.
+
+===Probability Outcomes Examples===
+The general formula to calculate the probability of ''k'' failures before the first success, where the probability of success is ''p'' and the probability of failure is&amp;nbsp;''q''&amp;nbsp;=&amp;nbsp;1&amp;nbsp;−&amp;nbsp;''p'', is
+
+:&lt;math&gt;\Pr(Y=k) = q^k\,p.&lt;/math&gt;
+
+for ''k'' = 0, 1, 2, 3, ....
+
+E1) A doctor is seeking an anti-depressant for a newly diagnosed patient. Suppose that, of the available anti-depressant drugs, the probability that any particular drug will be effective for a particular patient is ''p''&amp;nbsp;=&amp;nbsp;0.6. What is the probability that the first drug found to be effective for this patient is the first drug tried, the second drug tried, and so on? What is the expected number of drugs that will be tried to find one that is effective?
+
+The probability that the first drug works. There are zero failures before the first success. ''Y''&amp;nbsp;=&amp;nbsp;0 failures. The probability P(zero failures before first success) is simply the    probability that the first drug works.
+
+:&lt;math&gt;\Pr(Y=0) = q^0\,p\ = 0.4^0 \times 0.6 = 1  \times  0.6 = 0.6.&lt;/math&gt;
+
+The probability that the first drug fails, but the second drug works. There is one failure before the first success. Y= 1 failure. The probability for this sequence of events is P(first drug fails)  &lt;math&gt;\times&lt;/math&gt;  p(second drug is success) which is given by
+
+:&lt;math&gt;\Pr(Y=1) = q^1\,p\ = 0.4^1 \times 0.6 = 0.4  \times  0.6 = 0.24.&lt;/math&gt;
+
+The probability that the first drug fails, the second drug fails, but the third drug works. There are two failures before the first success. ''Y''&amp;nbsp;=&amp;nbsp;2&amp;nbsp;failures. The probability for this sequence of events is  P(first drug fails)  &lt;math&gt;\times&lt;/math&gt;  p(second drug fails)  &lt;math&gt;\times&lt;/math&gt; P(third drug is success)
+
+:&lt;math&gt;\Pr(Y=2) = q^2\,p, = 0.4^2 \times 0.6 = 0.096.&lt;/math&gt;
+
+E2) A newlywed couple plans to have children, and will continue until the first girl. What is the probability that there are zero boys before the first girl, one boy before the first girl, two boys before the first girl, and so on?
+
+The probability of having a girl (success) is p= 0.5 and the probability of having a boy (failure) is ''q''&amp;nbsp;=&amp;nbsp;1&amp;nbsp;−&amp;nbsp;''p''&amp;nbsp;=&amp;nbsp;0.5.
+
+The probability of no boys before the first girl is
+
+:&lt;math&gt;\Pr(Y=0) = q^0\,p\ = 0.5^0 \times 0.5 = 1  \times  0.5 = 0.5.&lt;/math&gt;
+
+The probability of one boy before the first girl is
+
+:&lt;math&gt;\Pr(Y=1) = q^1\,p\ = 0.5^1 \times 0.5 = 0.5  \times  0.5 = 0.25.&lt;/math&gt;
+
+The probability of two boys before the first girl is
+
+:&lt;math&gt;\Pr(Y=2) = q^2\,p\ = 0.5^2 \times 0.5 =  0.125.&lt;/math&gt;
+
+and so on.
+
+==Properties ==
+===Moments and cumulants===
+The [[expected value]] for the number of independent trials to get the first success, and the [[variance]] of a geometrically distributed [[random variable]] ''X'' is:
+
+:&lt;math&gt;\operatorname{E}(X) = \frac 1 p,
+ \qquad\operatorname{var}(X) = \frac{1-p}{p^2}.&lt;/math&gt;
+
+Similarly, the expected value and variance of the geometrically distributed random variable ''Y'' = ''X''&amp;nbsp;-&amp;nbsp;1 (See definition of distribution &lt;math&gt;Pr(Y=k)&lt;/math&gt;) is:
+
+:&lt;math&gt;\operatorname{E}(Y) = \frac{1-p} p,
+ \qquad\operatorname{var}(Y) = \frac{1-p}{p^2}.&lt;/math&gt;
+
+Let ''μ'' = (1&amp;nbsp;&amp;minus;&amp;nbsp;''p'')/''p'' be the expected value of ''Y''.  Then the [[cumulant]]s &lt;math&gt;\kappa_n&lt;/math&gt; of the probability distribution of ''Y'' satisfy the recursion
+
+:&lt;math&gt;\kappa_{n+1} = \mu(\mu+1) \frac{d\kappa_n}{d\mu}.&lt;/math&gt;
+
+''Outline of proof:'' That the expected value is (1&amp;nbsp;&amp;minus;&amp;nbsp;''p'')/''p'' can be shown in the following way. Let ''Y'' be as above.  Then
+
+: &lt;math&gt;
+\begin{align}
+\mathrm{E}(Y) &amp; {} =\sum_{k=0}^\infty (1-p)^k p\cdot k \\
+&amp; {} =p\sum_{k=0}^\infty(1-p)^k k \\
+&amp; {} = p (1-p) \sum_{k=0}^\infty (1-p)^{k-1}\cdot k\\
+&amp; {} = p (1-p) \left[\frac{d}{dp}\left(-\sum_{k=0}^\infty (1-p)^k\right)\right] \\
+&amp; {} =p(1-p)\frac{d}{dp}\left(-\frac{1}{p}\right)=\frac{1-p}{p}.
+\end{align}
+&lt;/math&gt;
+
+(The interchange of summation and differentiation is justified by the fact that convergent [[power series]] [[uniform convergence|converge uniformly]] on [[compact space|compact]] subsets of the set of points where they converge.)
+
+====Expected Value Examples ====
+E3) A patient is waiting for a suitable matching kidney donor for a transplant. If the probability that a randomly selected donor is a suitable match is p=0.1, what is the expected number of donors who will be tested before a matching donor is found?
+
+With ''p'' = 0.1, the mean number of failures before the first success is E(''Y'') = (1 − ''p'')/''p'' =(1 − 0.1)/0.1 = 9.
+
+For the alternative formulation, where ''X'' is the number of trials up to and including the first success, the expected value is E(''X'') = 1/''p'' = 1/0.1 = 10.
+
+For example 1 above, with ''p'' = 0.6, the mean number of failures before the first success is E(''Y'') = (1 − ''p'')/''p'' = (1 − 0.6)/0.6 = 0.67.

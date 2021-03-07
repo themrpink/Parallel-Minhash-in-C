@@ -1,0 +1,139 @@
+Under this parametrization the probability mass function will be
+: &lt;math&gt;
+    f(k; r, p) = \frac{\Gamma(k+r)}{k!\cdot\Gamma(r)}p^k(1-p)^r = \frac{\lambda^k}{k!} \cdot \frac{\Gamma(r+k)}{\Gamma(r)\;(r+\lambda)^k} \cdot \frac{1}{\left(1+\frac{\lambda}{r}\right)^{r}}
+  &lt;/math&gt;
+
+Now if we consider the limit as ''r'' → ∞, the second factor will converge to one, and the third to the exponent function:
+: &lt;math&gt;
+    \lim_{r\to\infty} f(k; r, p) = \frac{\lambda^k}{k!} \cdot 1 \cdot \frac{1}{e^\lambda},
+  &lt;/math&gt;
+which is the mass function of a [[Poisson distribution|Poisson-distributed]] random variable with expected value&amp;nbsp;''λ''.
+
+In other words, the alternatively parameterized negative binomial distribution [[convergence in distribution|converges]] to the Poisson distribution and ''r'' controls the deviation from the Poisson.  This makes the negative binomial distribution suitable as a robust alternative to the Poisson, which approaches the Poisson for large ''r'', but which has larger variance than the Poisson for small ''r''.
+: &lt;math&gt;
+    \operatorname{Poisson}(\lambda) = \lim_{r \to \infty} \operatorname{NB} \left(r, \frac{\lambda}{r + \lambda}\right).
+  &lt;/math&gt;
+
+===Gamma–Poisson mixture===
+The negative binomial distribution also arises as a continuous mixture of [[Poisson distribution]]s (i.e. a [[compound probability distribution]]) where the mixing distribution of the Poisson rate is a [[gamma distribution]]. That is, we can view the negative binomial as a {{nowrap|Poisson(''λ'')}} distribution, where ''λ'' is itself a random variable, distributed as a gamma distribution with shape = ''r'' and scale  ''θ'' = {{nowrap|''p''/(1 − ''p'')}} or correspondingly rate {{nowrap|1=''β'' = (1 − ''p'')/''p''}}.
+
+To display the intuition behind this statement, consider two independent Poisson processes, “Success” and “Failure”, with intensities ''p'' and 1&amp;nbsp;−&amp;nbsp;''p''. Together, the Success and Failure processes are equivalent to a single Poisson process of intensity 1, where an occurrence of the process is a success if a corresponding independent coin toss comes up heads with probability ''p''; otherwise, it is a failure. If ''r'' is a counting number, the coin tosses show that the count of successes before the ''r''th failure follows a negative binomial distribution with parameters ''r'' and ''p''. The count is also, however, the count of the Success Poisson process at the random time ''T'' of the ''r''th occurrence in the Failure Poisson process. The Success count follows a Poisson distribution with mean ''pT'', where ''T'' is the waiting time for ''r'' occurrences in a Poisson process of intensity 1&amp;nbsp;−&amp;nbsp;''p'', i.e., ''T'' is gamma-distributed with shape parameter ''r'' and intensity 1&amp;nbsp;−&amp;nbsp;''p''. Thus, the negative binomial distribution is equivalent to a Poisson distribution with mean ''pT'', where the random variate ''T'' is gamma-distributed with shape parameter ''r'' and intensity {{nowrap|(1 − ''p'')/''p''}}. The preceding paragraph follows, because ''λ''&amp;nbsp;=&amp;nbsp;''pT'' is gamma-distributed with shape parameter ''r'' and intensity {{nowrap|(1 − ''p'')/''p''}}.
+
+The following formal derivation (which does not depend on ''r'' being a counting number) confirms the intuition.
+
+: &lt;math&gt;\begin{align}
+    f(k; r, p) &amp; = \int_0^\infty f_{\operatorname{Poisson}(\lambda)}(k) \cdot f_{\operatorname{Gamma}\left(r,\, \frac{1-p}{p}\right)}(\lambda) \; \mathrm{d}\lambda \\[8pt]
+         &amp; = \int_0^\infty \frac{\lambda^k}{k!} e^{-\lambda} \cdot \lambda^{r-1}\frac{e^{-\lambda (1-p)/p}}{\big(\frac{p}{1-p}\big)^r\,\Gamma(r)} \; \mathrm{d}\lambda \\[8pt]
+         &amp; = \frac{(1-p)^r p^{-r}}{k!\,\Gamma(r)} \int_0^\infty \lambda^{r+k-1} e^{-\lambda/p} \;\mathrm{d}\lambda \\[8pt]
+         &amp; = \frac{(1-p)^r p^{-r}}{k!\,\Gamma(r)} \  p^{r+k} \, \Gamma(r+k) \\[8pt]
+         &amp; = \frac{\Gamma(r+k)}{k!\;\Gamma(r)} \; p^{k} (1-p)^r.
+\end{align}&lt;/math&gt;
+
+Because of this, the negative binomial distribution is also known as the '''gamma–Poisson (mixture) distribution'''. The negative binomial distribution was originally derived as a limiting case of the gamma-Poisson distribution.&lt;ref name=&quot;Greenwood1920&quot;&gt;{{cite journal |last1=Greenwood |first1=M. |last2=Yule |first2=G. U. |year=1920 |title=An inquiry into the nature of frequency distributions representative of multiple happenings with particular reference of multiple attacks of disease or of repeated accidents |journal=[[Journal of the Royal Statistical Society|J R Stat Soc]] |volume=83 |issue=2 |pages=255–279 |doi=10.2307/2341080 |jstor=2341080 |url=https://zenodo.org/record/1449492 }}&lt;/ref&gt;
+
+===Distribution of a sum of geometrically distributed random variables===
+
+If ''Y''&lt;sub&gt;''r''&lt;/sub&gt; is a random variable following the negative binomial distribution with parameters ''r'' and ''p'', and support {0,&amp;nbsp;1,&amp;nbsp;2,&amp;nbsp;...}, then ''Y''&lt;sub&gt;''r''&lt;/sub&gt; is a sum of ''r'' [[statistical independence|independent]] variables following the [[geometric distribution]] (on {0,&amp;nbsp;1,&amp;nbsp;2,&amp;nbsp;...}) with parameter ''p''. As a result of the [[central limit theorem]], ''Y''&lt;sub&gt;''r''&lt;/sub&gt; (properly scaled and shifted) is therefore approximately [[normal distribution|normal]] for sufficiently large&amp;nbsp;''r''.
+
+Furthermore, if ''B''&lt;sub&gt;''s''+''r''&lt;/sub&gt; is a random variable following the [[binomial distribution]] with parameters ''s''&amp;nbsp;+&amp;nbsp;''r'' and&amp;nbsp;1&amp;nbsp;−&amp;nbsp;''p'', then
+
+: &lt;math&gt;
+\begin{align}
+\Pr(Y_r \leq s) &amp; {} = 1 - I_p(s+1, r) \\[5pt]
+&amp; {} = 1 - I_{p}((s+r)-(r-1), (r-1)+1) \\[5pt]
+&amp; {} = 1 - \Pr(B_{s+r} \leq r-1) \\[5pt]
+&amp; {} = \Pr(B_{s+r} \geq r) \\[5pt]
+&amp; {} = \Pr(\text{after } s+r \text{ trials, there are at least } r \text{ successes}).
+\end{align}
+&lt;/math&gt;
+
+In this sense, the negative binomial distribution is the &quot;inverse&quot; of the binomial distribution.
+
+The sum of independent negative-binomially distributed random variables ''r''&lt;sub&gt;1&lt;/sub&gt; and ''r''&lt;sub&gt;2&lt;/sub&gt; with the same value for parameter ''p'' is negative-binomially distributed with the same ''p'' but with ''r''-value&amp;nbsp;''r''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;+&amp;nbsp;''r''&lt;sub&gt;2&lt;/sub&gt;.
+
+The negative binomial distribution is [[Infinite divisibility (probability)|infinitely divisible]], i.e., if ''Y'' has a negative binomial distribution, then for any positive integer ''n'', there exist independent identically distributed random variables ''Y''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;...,&amp;nbsp;''Y''&lt;sub&gt;''n''&lt;/sub&gt; whose sum has the same distribution that ''Y'' has.
+
+===Representation as compound Poisson distribution===
+The negative binomial distribution NB(''r'',''p'') can be represented as a [[compound Poisson distribution]]: Let {{nowrap|{''Y&lt;sub&gt;n&lt;/sub&gt;'', ''n'' ∈ ℕ&lt;sub&gt;0&lt;/sub&gt;}}} denote a sequence of [[independent and identically distributed random variables]], each one having the [[logarithmic distribution]] Log(''p''), with probability mass function
+
+: &lt;math&gt; f(k; r, p) =  \frac{-p^k}{k\ln(1-p)},\qquad k\in{\mathbb N}.&lt;/math&gt;
+
+Let ''N'' be a random variable, [[independence (probability theory)|independent]] of the sequence, and suppose that ''N'' has a [[Poisson distribution]] with mean {{nowrap|λ {{=}} −''r'' ln(1 − ''p'')}}. Then the random sum
+
+: &lt;math&gt;X=\sum_{n=1}^N Y_n&lt;/math&gt;
+
+is NB(''r'',''p'')-distributed. To prove this, we calculate the [[probability generating function]] ''G&lt;sub&gt;X&lt;/sub&gt;'' of ''X'', which is the composition of the probability generating functions ''G&lt;sub&gt;N&lt;/sub&gt;'' and ''G''&lt;sub&gt;''Y''&lt;sub&gt;1&lt;/sub&gt;&lt;/sub&gt;. Using
+
+:&lt;math&gt;G_N(z)=\exp(\lambda(z-1)),\qquad z\in\mathbb{R},&lt;/math&gt;
+
+and
+
+: &lt;math&gt;G_{Y_1}(z)=\frac{\ln(1-pz)}{\ln(1-p)},\qquad |z|&lt;\frac1p,&lt;/math&gt;
+
+we obtain
+
+: &lt;math&gt;
+\begin{align}G_X(z) &amp; =G_N(G_{Y_1}(z))\\[4pt]
+&amp;=\exp\biggl(\lambda\biggl(\frac{\ln(1-pz)}{\ln(1-p)}-1\biggr)\biggr)\\[4pt]
+&amp;=\exp\bigl(-r(\ln(1-pz)-\ln(1-p))\bigr)\\[4pt]
+&amp;=\biggl(\frac{1-p}{1-pz}\biggr)^r,\qquad |z|&lt;\frac1p,
+\end{align}
+&lt;/math&gt;
+
+which is the probability generating function of the NB(''r'',''p'') distribution.
+
+The following table describes four distributions related to the number of successes in a sequence of draws:
+{| class=&quot;wikitable&quot;
+|-
+!  !! With replacements !! No replacements
+|-
+| Given number of draws || [[binomial distribution]] || [[hypergeometric distribution]]
+|-
+| Given number of failures || negative binomial distribution || [[negative hypergeometric distribution]]
+|}
+
+===(a,b,0) class of distributions===
+
+The negative binomial, along with the Poisson and binomial distributions, is a member of the [[(a,b,0) class of distributions]]. All three of these distributions are special cases of the [[Panjer distribution]]. They are also members of the [[Natural exponential family]].
+
+==Statistical inference==
+
+===Parameter estimation===
+
+====MVUE for ''p''====
+
+Suppose ''p'' is unknown and an experiment is conducted where it is decided ahead of time that sampling will continue until ''r'' successes are found. A [[sufficient statistic]] for the experiment is ''k'', the number of failures.
+
+In estimating ''p'', the [[minimum variance unbiased estimator]] is
+
+: &lt;math&gt;\widehat{p}=\frac{r-1}{r+k-1}.&lt;/math&gt;
+
+====Maximum likelihood estimation====
+
+The [[maximum likelihood]] estimate of ''p'' is
+
+: &lt;math&gt;\widetilde{p}=\frac{r}{r+k},&lt;/math&gt;
+
+but this is a [[bias of an estimator|biased estimate]]. Its inverse (''r''&amp;nbsp;+&amp;nbsp;''k'')/''r'', is an unbiased estimate of 1/''p'', however.&lt;ref&gt;{{cite journal |first=J. B. S. |last=Haldane |authorlink=J. B. S. Haldane |title=On a Method of Estimating Frequencies |journal=[[Biometrika]] |volume=33 |issue=3 |year=1945 |pages=222–225 |jstor=2332299 |doi=10.1093/biomet/33.3.222|pmid=21006837 |hdl=10338.dmlcz/102575 |hdl-access=free }}&lt;/ref&gt;
+
+The maximum likelihood estimator only exists for samples for which the sample variance is larger than the sample mean.&lt;ref name=&quot;aramidis1999&quot;&gt;{{cite journal|last=Aramidis |first=K. |year=1999 |title=An EM algorithm for estimating negative binomial parameters |journal=[[Australian &amp; New Zealand Journal of Statistics]] |volume=41 |issue=2 |pages=213–221 |doi=10.1111/1467-842X.00075 |pmid=}}&lt;/ref&gt; The likelihood function for ''N'' [[independent and identically-distributed random variables|iid]] observations (''k''&lt;sub&gt;1&lt;/sub&gt;,&amp;nbsp;...,&amp;nbsp;''k''&lt;sub&gt;''N''&lt;/sub&gt;) is
+
+:&lt;math&gt;L(r,p)=\prod_{i=1}^N f(k_i;r,p)\,\!&lt;/math&gt;
+
+from which we calculate the log-likelihood function
+
+:&lt;math&gt;\ell(r,p) = \sum_{i=1}^N \ln(\Gamma(k_i + r)) - \sum_{i=1}^N \ln(k_i !) - N\ln(\Gamma(r)) + \sum_{i=1}^N k_i \ln(1-p) + Nr \ln(p).&lt;/math&gt;
+
+To find the maximum we take the partial derivatives with respect to ''r'' and ''p'' and set them equal to zero:
+
+:&lt;math&gt;\frac{\partial \ell(r,p)}{\partial p} = \left[\sum_{i=1}^N k_i \frac{1}{p}\right] - Nr \frac{1}{1-p} = 0&lt;/math&gt; and
+
+:&lt;math&gt;\frac{\partial \ell(r,p)}{\partial r} = \left[\sum_{i=1}^N \psi(k_i + r)\right] - N\psi(r) + N\ln(1-p) = 0&lt;/math&gt;
+
+where
+
+: &lt;math&gt;\psi(k) = \frac{\Gamma'(k)}{\Gamma(k)} \!&lt;/math&gt; is the [[digamma function]].
+
+Solving the first equation for ''p'' gives:
+
+:&lt;math&gt;p = \frac{\sum_{i=1}^N k_i} {Nr + \sum_{i=1}^N k_i}&lt;/math&gt;

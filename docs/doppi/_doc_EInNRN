@@ -1,0 +1,168 @@
+Arbitrary permutations are not allowed: in general,
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) \ne \operatorname{tr}(\mathbf{A}\mathbf{C}\mathbf{B}).&lt;/math&gt;
+
+However, if products of three [[symmetric matrix|symmetric]] matrices are considered, any permutation is allowed, since:
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) = \operatorname{tr}\left(\left(\mathbf{A}\mathbf{B}\mathbf{C}\right)^{\mathsf T}\right) =  \operatorname{tr}(\mathbf{C}\mathbf{B}\mathbf{A}) = \operatorname{tr}(\mathbf{A}\mathbf{C}\mathbf{B}),&lt;/math&gt;
+
+where the first equality is because the traces of a matrix and its transpose are equal. Note that this is not true in general for more than three factors.
+
+=== Trace of a matrix product ===
+Unlike the [[determinant]], the trace of the product is not the product of traces, that is there exist matrices {{math|'''A'''}} and {{math|'''B'''}} such that
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{A}\mathbf{B}) \ne \operatorname{tr}(\mathbf{A})\operatorname{tr}(\mathbf{B})&lt;/math&gt;
+
+For example, if
+:&lt;math&gt;
+  \mathbf{A} =
+  \begin{pmatrix}
+    0 &amp; 1 \\
+    0 &amp; 0
+  \end{pmatrix},\ \ 
+  \mathbf{B} =
+  \begin{pmatrix}
+    0 &amp; 0 \\
+    1 &amp; 0
+  \end{pmatrix},
+&lt;/math&gt;
+
+then the product is
+:&lt;math&gt;\mathbf{AB} =
+  \begin{pmatrix}
+    1 &amp; 0 \\
+    0 &amp; 0
+  \end{pmatrix},
+&lt;/math&gt;
+and the traces are
+&lt;math&gt;\operatorname{tr}(\mathbf{A}\mathbf{B}) = 1 \ne 0 \cdot 0 = \operatorname{tr}(\mathbf{A})\operatorname{tr}(\mathbf{B}).&lt;/math&gt;
+
+Moreover:
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{A}\mathbf{B}) = \operatorname{tr}(\mathbf{B}\mathbf{A})&lt;/math&gt;
+
+=== Trace of a Kronecker product ===
+The trace of the [[Kronecker product]] of two matrices is the product of their traces:
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{A} \otimes \mathbf{B}) = \operatorname{tr}(\mathbf{A})\operatorname{tr}(\mathbf{B}).&lt;/math&gt;
+
+===Full characterization of the trace===
+The following three properties:
+
+:&lt;math&gt;\begin{align}
+  \operatorname{tr}(\mathbf{A} + \mathbf{B}) &amp;= \operatorname{tr}(\mathbf{A}) + \operatorname{tr}(\mathbf{B}), \\
+     \operatorname{tr}(c\mathbf{A}) &amp;= c \operatorname{tr}(\mathbf{A}), \\
+     \operatorname{tr}(\mathbf{A}\mathbf{B}) &amp;= \operatorname{tr}(\mathbf{B}\mathbf{A}),
+\end{align}&lt;/math&gt;
+
+characterize the trace completely in the sense that follows. Let {{math|''f''}} be a [[linear functional]] on the space of square matrices satisfying {{math|''f''&amp;thinsp;(''xy'') {{=}} ''f''&amp;thinsp;(''yx'')}}. Then {{math|''f''}} and {{math|tr}} are proportional.&lt;ref group=&quot;note&quot;&gt;Proof: {{math|''f''&amp;thinsp;(''e&lt;sub&gt;ij&lt;/sub&gt;'') {{=}} 0}} if and only if {{math|''i'' ≠ ''j''}} and {{math|''f''&amp;thinsp;(''e&lt;sub&gt;jj&lt;/sub&gt;'') {{=}} ''f''&amp;thinsp;(''e''&lt;sub&gt;11&lt;/sub&gt;)}} (with the standard basis {{math|''e&lt;sub&gt;ij&lt;/sub&gt;''}}), and thus
+
+:&lt;math&gt;f(\mathbf{A}) = \sum_{i, j} [\mathbf{A}]_{ij} f\left(e_{ij}\right) = \sum_i [\mathbf{A}]_{ii} f\left(e_{11}\right) = f\left(e_{11}\right) \operatorname{tr}(\mathbf{A}).&lt;/math&gt;
+
+More abstractly, this corresponds to the decomposition
+
+:&lt;math&gt;\mathit{gl}_n = \mathit{sl}_n \oplus k,&lt;/math&gt;
+
+as {{math|tr(''AB'') {{=}} tr(''BA'')}} (equivalently, {{math|tr(['''A''','''B''']) {{=}} 0}}) defines the trace on {{math|''sl&lt;sub&gt;n&lt;/sub&gt;''}}, which has complement the scalar matrices, and leaves one degree of freedom: any such map is determined by its value on scalars, which is one scalar parameter and hence all are multiple of the trace, a nonzero such map.&lt;/ref&gt;
+
+=== Similarity invariance ===
+The trace is [[similarity invariance|similarity-invariant]], which means that for any square matrix {{math|'''A'''}} and any invertible matrix {{math|'''P'''}} of the same dimensions, the matrices {{math|'''A'''}} and {{math|'''P'''&lt;sup&gt;−1&lt;/sup&gt;'''AP'''}} have the same trace. This is because
+
+:&lt;math&gt;
+  \operatorname{tr}\left(\mathbf{P}^{-1}\mathbf{A}\mathbf{P}\right) =
+  \operatorname{tr}\left(\mathbf{P}^{-1}(\mathbf{A}\mathbf{P})\right) =
+  \operatorname{tr}\left((\mathbf{A}\mathbf{P}) \mathbf{P}^{-1}\right) =
+  \operatorname{tr}\left(\mathbf{A} \left(\mathbf{P}\mathbf{P}^{-1}\right)\right) =
+  \operatorname{tr}(\mathbf{A}).
+&lt;/math&gt;
+
+===Trace of product of symmetric and skew-symmetric matrix===
+If {{math|'''A'''}} is [[symmetric matrix|symmetric]] and {{math|'''B'''}} is [[skew-symmetric matrix|skew-symmetric]], then
+
+:&lt;math&gt;\operatorname{tr}(\mathbf{A}\mathbf{B}) = 0&lt;/math&gt;.
+
+===Relation to eigenvalues===
+====Trace of the identity matrix====
+The trace of the {{math|''n'' × ''n''}} [[identity matrix]] is the dimension of the space, namely {{mvar|n}}.&lt;ref name=&quot;:0&quot; /&gt;
+:&lt;math&gt;\operatorname{tr}\left(\mathbf{I}_n\right) = n&lt;/math&gt;
+This leads to [[Dimension (vector space)#Trace|generalizations of dimension using trace]].
+
+====Trace of an idempotent matrix====
+The trace of an [[idempotent matrix]] {{math|'''A'''}} (a matrix for which {{math|'''A'''&lt;sup&gt;2&lt;/sup&gt; {{=}} '''A'''}}) is the [[rank (linear algebra)|rank]] of {{math|'''A'''}}.
+
+====Trace of a nilpotent matrix====
+The trace of a [[nilpotent matrix]] is zero.
+
+When the characteristic of the base field is zero, the converse also holds: if {{math|tr('''A'''&lt;sup&gt;''k''&lt;/sup&gt;) {{=}} 0}} for all {{mvar|k}}, then {{math|'''A'''}} is nilpotent.
+
+When the characteristic {{math|''n'' &gt; 0}} is positive, the identity in {{mvar|n}} dimensions is a counterexample, as &lt;math&gt;\operatorname{tr}\left(\mathbf{I}_n^k\right) = \operatorname{tr}\left(\mathbf{I}_n\right) = n \equiv 0&lt;/math&gt;, but the identity is not nilpotent.
+
+====Trace equals sum of eigenvalues====
+More generally, if
+:&lt;math&gt;f(x)=\prod_{i=1}^k \left(x-\lambda_i\right)^{d_i}&lt;/math&gt;
+is the [[characteristic polynomial]] of a matrix {{math|'''A'''}}, then
+
+{{Equation box 1
+|indent=:
+|title=
+|equation = &lt;math&gt;\operatorname{tr}(\mathbf{A}) = \sum_{i=1}^k d_i \lambda_i&lt;/math&gt;
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+
+that is, the trace of a square matrix equals the sum of the eigenvalues counted with multiplicities.
+
+===Trace of commutator===
+When both {{math|'''A'''}} and {{math|'''B'''}} are {{math|''n'' × ''n''}} matrices, the trace of the (ring-theoretic) [[commutator]] of {{math|'''A'''}} and {{math|'''B'''}} vanishes: {{math|tr(['''A''','''B''']) {{=}} 0}}, because {{math|tr('''AB''') {{=}} tr('''BA''')}} and {{math|tr}} is linear. One can state this as &quot;the trace is a map of Lie algebras {{math|''gl&lt;sub&gt;n&lt;/sub&gt;'' → ''k''}} from operators to scalars&quot;, as the commutator of scalars is trivial (it is an Abelian Lie algebra). In particular, using similarity invariance, it follows that the identity matrix is never similar to the commutator of any pair of matrices.
+
+Conversely, any square matrix with zero trace is a linear combinations of the commutators of pairs of matrices.&lt;ref group=&quot;note&quot;&gt;Proof: {{math|&lt;math&gt;\mathfrak{sl}&lt;/math&gt;&lt;sub&gt;''n''&lt;/sub&gt;}} is a [[semisimple Lie algebra]] and thus every element in it is a linear combination of commutators of some pairs of elements, otherwise the [[derived algebra]] would be a proper ideal.&lt;/ref&gt; Moreover, any square matrix with zero trace is [[Bounded operator|unitarily equivalent]] to a square matrix with diagonal consisting of all zeros.
+
+===Trace of Hermitian matrix===
+The trace of a [[Hermitian matrix]] is real, because the elements on the diagonal are real.
+
+===Trace of permutation matrix===
+The trace of a [[permutation matrix]] is the number of [[Fixed point (mathematics)|fixed points]], because the diagonal term {{math|''a''&lt;sub&gt;''ii''&lt;/sub&gt;}} is 1 if the {{math|''i''}}th point is fixed and 0 otherwise.
+
+===Trace of projection matrix===
+The trace of a [[projection matrix]] is the dimension of the target space.
+
+:&lt;math&gt;\begin{align}
+                                  \mathbf{P}_\mathbf{X} &amp;= \mathbf{X}\left(\mathbf{X}^\mathsf{T} \mathbf{X}\right)^{-1} \mathbf{X}^\mathsf{T} \\[3pt]
+  \Longrightarrow
+    \operatorname{tr}\left(\mathbf{P}_\mathbf{X}\right) &amp;= \operatorname{rank}(\mathbf{X}).
+\end{align}&lt;/math&gt;
+
+The matrix {{math|'''P&lt;sub&gt;X&lt;/sub&gt;'''}} is idempotent, and more generally, the trace of any [[idempotent matrix]] equals its own rank.
+
+== Exponential trace ==
+Expressions like {{math|tr(exp('''A'''))}}, where {{math|'''A'''}} is a square matrix, occur so often in some fields (e.g. multivariate statistical theory), that a shorthand notation has become common:
+
+:&lt;math&gt;\operatorname{tre}(A) := \operatorname{tr}(\exp(A)).&lt;/math&gt;
+
+{{math|tre}} is sometimes referred to as the '''exponential trace''' function; it is used in the [[Golden–Thompson inequality]].
+
+== Trace of a linear operator ==
+In general, given some linear map {{math|''f'' : ''V'' → ''V''}} (where {{mvar|V}} is a finite-[[dimension (linear algebra)|dimensional]] [[vector space]]), we can define the trace of this map by considering the trace of a [[Representation theory|matrix representation]] of {{mvar|f}}, that is, choosing a [[basis (linear algebra)|basis]] for {{mvar|V}} and describing {{mvar|f}} as a matrix relative to this basis, and taking the trace of this square matrix. The result will not depend on the basis chosen, since different bases will give rise to [[matrix similarity|similar matrices]], allowing for the possibility of a basis-independent definition for the trace of a linear map.
+
+Such a definition can be given using the [[natural isomorphism|canonical isomorphism]] between the space {{math|End(''V'')}} of linear maps on {{mvar|V}} and {{math|''V'' ⊗ ''V''*}}, where {{math|''V''*}} is the [[dual space]] of {{mvar|V}}. Let {{mvar|v}} be in {{mvar|V}} and let {{mvar|f}} be in {{mvar|''V''*}}. Then the trace of the indecomposable element {{math|''v'' ⊗ ''f''}} is defined to be {{math|''f''&amp;thinsp;(''v'')}}; the trace of a general element is defined by linearity. Using an explicit basis for {{mvar|V}} and the corresponding dual basis for {{math|''V''*}}, one can show that this gives the same definition of the trace as given above.
+
+=== Eigenvalue relationships ===
+If {{math|'''A'''}} is a linear operator represented by a square matrix with [[real number|real]] or [[complex number|complex]] entries and if {{math|''λ''&lt;sub&gt;1&lt;/sub&gt;, …, ''λ&lt;sub&gt;n&lt;/sub&gt;''}} are the [[eigenvalue]]s of {{math|'''A'''}} (listed according to their [[algebraic multiplicity|algebraic multiplicities]]), then
+
+{{Equation box 1
+|indent=:
+|title=
+|equation = &lt;math&gt;\operatorname{tr}(\mathbf{A}) = \sum_i \lambda_i&lt;/math&gt;
+|cellpadding= 6
+|border
+|border colour = #0073CF
+|background colour=#F5FFFA}}
+
+This follows from the fact that {{math|'''A'''}} is always [[similar matrix|similar]] to its [[Jordan form]], an upper [[triangular matrix]] having {{math|''λ''&lt;sub&gt;1&lt;/sub&gt;, …, ''λ&lt;sub&gt;n&lt;/sub&gt;''}} on the main diagonal. In contrast, the [[determinant]] of {{math|'''A'''}} is the ''product'' of its eigenvalues; that is,
+
+:&lt;math&gt;\det(\mathbf{A}) = \prod_i \lambda_i.&lt;/math&gt;
+
+More generally,
+
+:&lt;math&gt;\operatorname{tr}\left(\mathbf{A}^k\right) = \sum_i \lambda_i^k.&lt;/math&gt;

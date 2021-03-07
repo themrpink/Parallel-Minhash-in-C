@@ -1,0 +1,239 @@
+The left inverse ''g'' is not necessarily an [[inverse function|inverse]] of ''f'', because the composition in the other order, {{nowrap|''f'' ∘ ''g''}}, may differ from the identity on ''Y''. In other words, an injective function can be  &quot;reversed&quot; by a left inverse, but is not necessarily [[inverse function|invertible]], which requires that the function is [[bijective]].
+
+== Injections may be made invertible ==
+
+In fact, to turn an injective function {{nowrap|''f'' : ''X'' → ''Y''}} into a [[bijective function|bijective]] (hence [[Inverse function|invertible]]) function, it suffices to replace its codomain ''Y'' by its actual range {{nowrap|1=''J'' = ''f''(''X'')}}. That is, let {{nowrap|''g'' : ''X'' → ''J''}} such that {{nowrap|1=''g''(''x'') = ''f''(''x'')}} for all ''x'' in ''X''; then ''g'' is bijective. Indeed, ''f'' can be factored as {{nowrap|incl&lt;sub&gt;''J'',''Y''&lt;/sub&gt; ∘ ''g''}}, where {{nowrap|incl&lt;sub&gt;''J'',''Y''&lt;/sub&gt;}} is the [[inclusion function]] from ''J'' into ''Y''.
+
+More generally, injective [[partial function]]s are called [[partial bijection]]s.
+
+== Other properties ==
+* If ''f'' and ''g'' are both injective, then {{nowrap|''f'' ∘ ''g''}} is injective.
+[[Image:Injective composition2.svg|thumb|300px|The composition of two injective functions is injective.]]
+* If {{nowrap|''g'' ∘ ''f''}} is injective, then ''f'' is injective (but ''g'' need not be).
+* {{nowrap|''f'' : ''X'' → ''Y''}} is injective if and only if, given any functions ''g'', {{nowrap|''h'' : ''W'' → ''X''}} whenever {{nowrap|1=''f'' ∘ ''g'' = ''f'' ∘ ''h''}}, then {{nowrap|1=''g'' = ''h''}}. In other words, injective functions are precisely the [[monomorphism]]s in the [[category theory|category]] '''[[Category of sets|Set]]''' of sets.
+* If {{nowrap|''f'' : ''X'' → ''Y''}} is injective and ''A'' is a [[subset]] of ''X'', then {{nowrap|1=''f''&lt;sup&gt;&amp;nbsp;&amp;minus;1&lt;/sup&gt;(''f''(''A'')) = ''A''}}. Thus, ''A'' can be recovered from its [[image (function)|image]] ''f''(''A'').
+* If {{nowrap|''f'' : ''X'' → ''Y''}} is injective and ''A'' and ''B'' are both subsets of ''X'', then {{nowrap|1=''f''(''A'' ∩ ''B'') = ''f''(''A'') ∩ ''f''(''B'')}}.
+* Every function {{nowrap|''h'' : ''W'' → ''Y''}} can be decomposed as {{nowrap|1=''h'' = ''f'' ∘ ''g''}} for a suitable injection ''f'' and surjection ''g''. This decomposition is unique [[up to isomorphism]], and ''f'' may be thought of as the [[inclusion function]] of the range ''h''(''W'') of ''h'' as a subset of the codomain ''Y'' of ''h''.
+* If {{nowrap|''f'' : ''X'' → ''Y''}} is an injective function, then ''Y'' has at least as many elements as ''X'', in the sense of [[cardinal number]]s. In particular, if, in addition, there is an injection from ''Y'' to ''X'', then ''X'' and ''Y'' have the same cardinal number. (This is known as the [[Cantor–Bernstein–Schroeder theorem]].)
+* If both ''X'' and ''Y'' are [[finite set|finite]] with the same number of elements, then {{nowrap|''f'' : ''X'' → ''Y''}} is injective if and only if ''f'' is [[surjective]] (in which case ''f'' is [[bijective]]).
+*An injective function which is a [[homomorphism]] between two algebraic structures is an [[embedding]].
+*Unlike surjectivity, which is a relation between the graph of a function and its codomain, injectivity is a property of the graph of the function alone; that is, whether a function ''f'' is injective can be decided by only considering the graph (and not the codomain) of ''f''.
+
+==Proving that functions are injective==
+A proof that a function ''f'' is injective depends on how the function is presented and what properties the function holds.
+For functions that are given by some formula there is a basic idea.
+We use the definition of injectivity, namely that if {{nowrap|1=''f''(''x'') = ''f''(''y'')}}, then {{nowrap|1=''x'' = ''y''}}.&lt;ref&gt;{{cite web|last=Williams|first=Peter|title=Proving Functions One-to-One|url=http://www.math.csusb.edu/notes/proofs/bpf/node4.html|archive-date= 4 June 2017|archive-url=https://web.archive.org/web/20170604162511/http://www.math.csusb.edu/notes/proofs/bpf/node4.html}}&lt;/ref&gt;
+
+Here is an example:
+: ''f'' = 2''x'' + 3
+
+Proof: Let {{nowrap|''f'' : ''X'' → ''Y''}}.  Suppose {{nowrap|1=''f''(''x'') = ''f''(''y'')}}.  So {{nowrap|1=2''x'' + 3 = 2''y'' + 3}} ⇒ {{nowrap|1=2''x'' = 2''y''}} ⇒ {{nowrap|1=''x'' = ''y''}}.  Therefore, it follows from the definition that ''f'' is injective.
+
+There are multiple other methods of proving that a function is injective.  For example, in calculus if ''f'' is a differentiable function defined on some interval, then it is sufficient to show that the derivative is always positive or always negative on that interval.  In linear algebra, if ''f'' is a linear transformation it is sufficient to show that the kernel of ''f'' contains only the zero vector.  If ''f'' is a function with finite domain it is sufficient to look through the list of images of each domain element and check that no image occurs twice on the list.
+
+A graphical approach for a real-valued function ''f'' of a real variable ''x'' is the [[horizontal line test]]. If every horizontal line intersects the curve of ''f(x)'' in at most one point, then ''f'' is injective or one-to-one.
+
+== See also ==
+* [[Bijection, injection and surjection]]
+* [[Injective metric space]]
+* [[Monotonic function]]
+* [[Univalent function]]
+
+== Notes ==
+{{Reflist}}
+
+== References ==
+* {{Citation | last1=Bartle | first1=Robert G. | title=The Elements of Real Analysis | publisher=[[John Wiley &amp; Sons]] | location=New York | edition=2nd | isbn=978-0-471-05464-1 | year=1976}}, p.&amp;nbsp;17 ''ff''.
+* {{Citation | last1=Halmos | first1=Paul R. | author1-link=Paul R. Halmos | title=[[Naive Set Theory (book)|Naive Set Theory]] | isbn=978-0-387-90092-6 | year=1974 | publisher=Springer | location=New York}}, p.&amp;nbsp;38 ''ff''.
+
+==External links==
+{{Commons category|Injectivity}}
+{{Wiktionary|injective}}
+*[http://jeff560.tripod.com/i.html Earliest Uses of Some of the Words of Mathematics: entry on Injection, Surjection and Bijection has the history of Injection and related terms.]
+*[http://www.khanacademy.org/math/linear-algebra/v/surjective--onto--and-injective--one-to-one--functions Khan Academy – Surjective (onto) and Injective (one-to-one) functions: Introduction to surjective and injective functions]
+
+[[Category:Functions and mappings]]
+[[Category:Basic concepts in set theory]]
+[[Category:Types of functions]]</text>
+      <sha1>a75kskmorq0p6xmknpghy3jn18ku1b4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Jazz music</title>
+    <ns>0</ns>
+    <id>45198</id>
+    <redirect title="Jazz" />
+    <revision>
+      <id>860119905</id>
+      <parentid>860119845</parentid>
+      <timestamp>2018-09-18T13:39:42Z</timestamp>
+      <contributor>
+        <username>Ost316</username>
+        <id>6289403</id>
+      </contributor>
+      <comment>err, {{R from unnecessary disambiguation}}</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="57" xml:space="preserve">#REDIRECT [[Jazz]]
+
+{{R from unnecessary disambiguation}}</text>
+      <sha1>2lxop7d7t6tv7op84x9w04yptpyq1w1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Inverse element</title>
+    <ns>0</ns>
+    <id>45199</id>
+    <revision>
+      <id>952990499</id>
+      <parentid>948432731</parentid>
+      <timestamp>2020-04-25T03:37:28Z</timestamp>
+      <contributor>
+        <ip>72.93.226.50</ip>
+      </contributor>
+      <comment>/* In a unital magma */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="14234" xml:space="preserve">{{See also|Inversion (disambiguation){{!}}Inversion}}
+
+In [[abstract algebra]], the idea of an '''inverse element''' generalises the concepts of [[additive inverse|negation (sign reversal)]] (in relation to [[addition]]) and [[Multiplicative inverse|reciprocation]] (in relation to [[multiplication]]). The intuition is of an element that can 'undo' the effect of combination with another given element. While the precise definition of an inverse element varies depending on the algebraic structure involved, these definitions coincide in a [[Group (mathematics)|group]].
+
+The word 'inverse' is derived from {{lang-la|[[wikt:inversus|inversus]]}} that means 'turned upside down', 'overturned'.
+
+== Formal definitions ==
+
+=== In a unital magma ===
+Let &lt;math&gt;S&lt;/math&gt; be a [[Set (mathematics)|set]] [[Closure (mathematics)|closed]] under a [[binary operation]] &lt;math&gt;*&lt;/math&gt; (i.e., a [[Magma (algebra)|magma]]). If &lt;math&gt;e&lt;/math&gt; is an [[identity element]] of &lt;math&gt;(S,*)&lt;/math&gt; (i.e., ''S'' is a unital magma) and &lt;math&gt;a*b=e&lt;/math&gt;, then &lt;math&gt;a&lt;/math&gt; is called a '''left inverse''' of &lt;math&gt;b&lt;/math&gt; and &lt;math&gt;b&lt;/math&gt; is called a '''right inverse''' of &lt;math&gt;a&lt;/math&gt;. If an element &lt;math&gt;x&lt;/math&gt; is both a left inverse and a right inverse of &lt;math&gt;y&lt;/math&gt;, then &lt;math&gt;x&lt;/math&gt; is called a '''two-sided inverse''', or simply an '''inverse''', of &lt;math&gt;y&lt;/math&gt;. An element with a two-sided inverse in &lt;math&gt;S&lt;/math&gt; is called '''invertible''' in &lt;math&gt;S&lt;/math&gt;. An element with an inverse element only on one side is '''left invertible''' or '''right invertible'''. A unital magma in which all elements are invertible is called a [[loop (mathematics)|loop]]. A loop whose binary operation satisfies the [[associative law]] is a [[group (mathematics)|group]].
+
+Just like &lt;math&gt;(S,*)&lt;/math&gt; can have several left identities or several right identities, it is possible for an element to have several left inverses or several right inverses (but note that their definition above uses a ''two-sided'' identity &lt;math&gt;e&lt;/math&gt;). It can even have several left inverses ''and'' several right inverses.
+
+If the operation &lt;math&gt;*&lt;/math&gt; is [[associative]] then if an element has both a left inverse and a right inverse, they are equal. In other words, in a [[monoid]] (an associative unital magma) every element has at most one inverse (as defined in this section). In a monoid, the set of (left and right) invertible elements is a [[group (mathematics)|group]], called the [[group of units]] of &lt;math&gt;S&lt;/math&gt;, and denoted by &lt;math&gt;U(S)&lt;/math&gt; or ''H''&lt;sub&gt;1&lt;/sub&gt;.
+
+A left-invertible element is left-[[cancellation property|cancellative]], and analogously for right and two-sided.
+
+=== In a semigroup ===
+{{main|Regular semigroup}}
+The definition in the previous section generalizes the notion of inverse in group relative to the notion of identity. It's also possible, albeit less obvious, to generalize the notion of an inverse by dropping the identity element but keeping associativity, i.e., in a [[semigroup]].
+
+In a semigroup ''S'' an element ''x'' is called '''(von Neumann) regular''' if there exists some element ''z'' in ''S'' such that ''xzx'' = ''x''; ''z'' is sometimes called a '''pseudoinverse'''. An element ''y'' is called (simply) an '''inverse''' of ''x'' if ''xyx'' = ''x'' and ''y'' = ''yxy''. Every regular element has at least one inverse: if ''x'' = ''xzx'' then it is easy to verify that ''y'' = ''zxz'' is an inverse of ''x'' as defined in this section. Another easy to prove fact: if ''y'' is an inverse of ''x'' then ''e'' = ''xy'' and ''f'' = ''yx'' are [[idempotent element|idempotent]]s, that is ''ee'' = ''e'' and ''ff'' = ''f''. Thus, every pair of (mutually) inverse elements gives rise to two idempotents, and ''ex'' = ''xf'' = ''x'', ''ye'' = ''fy'' = ''y'', and ''e'' acts as a left identity on ''x'', while ''f'' acts a right identity, and the left/right roles are reversed for ''y''. This simple observation can be generalized using [[Green's relations]]: every idempotent ''e'' in an arbitrary semigroup is a left identity for ''R&lt;sub&gt;e&lt;/sub&gt;'' and right identity for ''L&lt;sub&gt;e&lt;/sub&gt;''.&lt;ref&gt;Howie, prop. 2.3.3, p. 51&lt;/ref&gt; An intuitive description of this fact is that every pair of mutually inverse elements produces a local left identity, and respectively, a local right identity.
+
+In a monoid, the notion of inverse as defined in the previous section is strictly narrower than the definition given in this section. Only elements in the Green class  [[Green's relations#The H and D relations|''H''&lt;sub&gt;1&lt;/sub&gt;]] have an inverse from the unital magma perspective, whereas for any idempotent ''e'', the elements of ''H''&lt;sub&gt;e&lt;/sub&gt; have an inverse as defined in this section. Under this more general definition, inverses need not be unique (or exist) in an arbitrary semigroup or monoid. If all elements are regular, then the semigroup (or monoid) is called regular, and every element has at least one inverse. If every element has exactly one inverse as defined in this section, then the semigroup is called an [[inverse semigroup]]. Finally, an inverse semigroup with only one idempotent is a group. An inverse semigroup may have an [[absorbing element]] 0 because 000 = 0, whereas a group may not.
+
+Outside semigroup theory, a unique inverse as defined in this section is sometimes called a '''quasi-inverse'''. This is generally justified because in most applications (e.g., all examples in this article) associativity holds, which makes this notion a generalization of the left/right inverse relative to an identity.
+
+=== ''U''-semigroups ===
+
+A natural generalization of the inverse semigroup is to define an (arbitrary) unary operation ° such that (''a''°)° = ''a'' for all ''a'' in ''S''; this endows ''S'' with a type {{langle}}2,1{{rangle}} algebra. A semigroup endowed with such an operation is called a '''''U''-semigroup'''. Although it may seem that ''a''° will be the inverse of ''a'', this is not necessarily the case. In order to obtain interesting notion(s), the unary operation must somehow interact with the semigroup operation. Two classes of ''U''-semigroups have been studied:&lt;ref&gt;Howie p. 102&lt;/ref&gt;
+
+* '''''I''-semigroups''', in which the interaction axiom is ''aa''°''a'' = ''a''
+* '''[[Semigroup with involution|*-semigroups]]''', in which the interaction axiom is (''ab'')° = ''b''°''a''°. Such an operation is called an [[involution (mathematics)|involution]], and typically denoted by ''a''*
+
+Clearly a group is both an ''I''-semigroup and a *-semigroup. A class of semigroups important in semigroup theory are [[completely regular semigroup]]s; these are ''I''-semigroups in which one additionally has ''aa''° = ''a''°''a''; in other words every element has commuting pseudoinverse ''a''°. There are few concrete examples of such semigroups however; most are [[completely simple semigroup]]s. In contrast, a subclass of *-semigroups, the [[Semigroup with involution#Drazin|*-regular semigroup]]s (in the sense of Drazin), yield one of best known examples of a (unique) pseudoinverse, the [[Moore–Penrose inverse]]. In this case however the involution ''a''* is not the pseudoinverse. Rather, the pseudoinverse of ''x'' is the unique element ''y'' such that ''xyx'' = ''x'', ''yxy'' = ''y'',   (''xy'')* = ''xy'', (''yx'')* = ''yx''. Since *-regular semigroups generalize inverse semigroups, the unique element defined this way in a *-regular semigroup is called the '''generalized inverse''' or '''Penrose–Moore inverse'''.
+
+=== Rings and semirings ===
+{{main|Quasiregular element}}
+
+== Examples ==
+All examples in this section involve associative operators, thus we shall use the terms left/right inverse for the unital magma-based definition, and quasi-inverse for its more general version.
+
+=== Real numbers ===
+Every [[real number]] &lt;math&gt;x&lt;/math&gt; has an [[additive inverse]] (i.e., an inverse with respect to [[addition]]) given by &lt;math&gt;-x&lt;/math&gt;. Every nonzero real number &lt;math&gt;x&lt;/math&gt; has a [[multiplicative inverse]] (i.e., an inverse with respect to [[multiplication]]) given by &lt;math&gt;\frac 1{x}&lt;/math&gt; (or &lt;math&gt;x^{-1}&lt;/math&gt;). By contrast, [[0 (number)|zero]] has no multiplicative inverse, but it has a unique quasi-inverse, &quot;&lt;math&gt;0&lt;/math&gt;&quot; itself.
+
+=== Functions and partial functions ===
+A function &lt;math&gt;g&lt;/math&gt; is the left (resp. right) [[inverse function|inverse of a function]] &lt;math&gt;f&lt;/math&gt; (for [[function composition]]), if and only if &lt;math&gt;g \circ f&lt;/math&gt; (resp. &lt;math&gt;f \circ g&lt;/math&gt;) is the [[identity function]] on the [[domain of a function|domain]] (resp. [[codomain]]) of &lt;math&gt;f&lt;/math&gt;. The inverse of a function &lt;math&gt;f&lt;/math&gt; is often written &lt;math&gt;f^{-1}&lt;/math&gt;, but [[inverse function#Note on notation|this notation is sometimes ambiguous]]. Only [[bijection]]s have two-sided inverses, but ''any'' function has a quasi-inverse, i.e., the [[full transformation monoid]] is regular. The monoid of [[partial functions]] is also regular, whereas the [[symmetric inverse semigroup|monoid of injective partial transformations]] is the prototypical inverse semigroup.
+
+=== Galois connections ===
+The lower and upper adjoints in a (monotone) [[Galois connection]], ''L'' and ''G'' are quasi-inverses of each other, i.e. ''LGL'' = ''L'' and ''GLG'' = ''G'' and one uniquely determines the other. They are not left or right inverses of each other however.
+
+=== Matrices &lt;!-- [[Generalized inverse]] links here.  Please do not change. --&gt; ===
+A [[square matrix]] &lt;math&gt;M&lt;/math&gt; with entries in a [[field (mathematics)|field]] &lt;math&gt;K&lt;/math&gt; is invertible (in the set of all square matrices of the same size, under [[matrix multiplication]]) if and only if its [[determinant]] is different from zero. If the determinant of &lt;math&gt;M&lt;/math&gt; is zero, it is impossible for it to have a one-sided inverse; therefore a left inverse or right inverse implies the existence of the other one. See [[invertible matrix]] for more.
+
+More generally, a square matrix over a [[commutative ring]] &lt;math&gt;R&lt;/math&gt; is invertible [[if and only if]] its determinant is invertible in &lt;math&gt;R&lt;/math&gt;.
+
+Non-square matrices of [[full rank]] have several one-sided inverses:&lt;ref&gt;[http://ocw.mit.edu/OcwWeb/Mathematics/18-06Spring-2005/VideoLectures/detail/lecture33.htm MIT Professor Gilbert Strang Linear Algebra Lecture #33 – Left and Right Inverses; Pseudoinverse.]&lt;/ref&gt;
+* For &lt;math&gt;A:m\times n \mid m&gt;n&lt;/math&gt; we have left inverses, e.g.: &lt;math&gt;\underbrace{ \left(A^\text{T}A\right)^{-1}A^\text{T} }_{ A^{-1}_\text{left} } A = I_n&lt;/math&gt;
+* For &lt;math&gt;A:m\times n \mid m&lt;n&lt;/math&gt; we have right inverses, e.g.: &lt;math&gt;A \underbrace{ A^\text{T}\left(AA^\text{T}\right)^{-1} }_{ A^{-1}_\text{right} } = I_m&lt;/math&gt;
+
+The left inverse can be used to determine the least norm solution of &lt;math&gt;Ax = b&lt;/math&gt;, which is also the [[least squares]] formula for [[regression analysis|regression]] and is given by &lt;math&gt;x = \left(A^\text{T}A\right)^{-1}A^\text{T}b.&lt;/math&gt;
+
+No [[rank deficient]] matrix has any (even one-sided) inverse.  However, the [[Moore–Penrose inverse]] exists for all matrices, and coincides with the left or right (or true) inverse when it exists.
+
+As an example of matrix inverses, consider:
+
+: &lt;math&gt;A:2 \times 3 =
+  \begin{bmatrix}
+    1 &amp; 2 &amp; 3 \\
+    4 &amp; 5 &amp; 6
+  \end{bmatrix}
+&lt;/math&gt;
+
+So, as ''m'' &lt; ''n'', we have a right inverse, &lt;math&gt;A^{-1}_\text{right} = A^\text{T}\left(AA^\text{T}\right)^{-1}.&lt;/math&gt; By components it is computed as
+
+: &lt;math&gt;\begin{align}
+  AA^\text{T} &amp;= \begin{bmatrix}
+              1 &amp; 2 &amp; 3 \\
+              4 &amp; 5 &amp; 6
+            \end{bmatrix}\cdot
+            \begin{bmatrix}
+              1 &amp; 4\\
+              2 &amp; 5\\
+              3 &amp; 6
+            \end{bmatrix} =  
+            \begin{bmatrix}
+              14 &amp; 32\\
+              32 &amp; 77
+            \end{bmatrix} \\[3pt]
+  \left(AA^\text{T}\right)^{-1} &amp;= \begin{bmatrix}
+                     14 &amp; 32\\
+                     32 &amp; 77
+                   \end{bmatrix}^{-1} = \frac{1}{54}
+                   \begin{bmatrix}
+                      77 &amp; -32\\
+                     -32 &amp; 14
+                   \end{bmatrix} \\[3pt]
+  A^\text{T}\left(AA^\text{T}\right)^{-1} &amp;= \frac{1}{54}
+                   \begin{bmatrix}
+                     1 &amp; 4\\
+                     2 &amp; 5\\
+                     3 &amp; 6
+                   \end{bmatrix}\cdot
+                   \begin{bmatrix}
+                      77 &amp; -32\\
+                     -32 &amp; 14
+                   \end{bmatrix} = \frac{1}{18}
+                   \begin{bmatrix}
+                     -17 &amp; 8\\
+                      -2 &amp; 2\\
+                      13 &amp; -4
+                   \end{bmatrix} = A^{-1}_\text{right}
+\end{align}&lt;/math&gt;
+
+The left inverse doesn't exist, because
+
+: &lt;math&gt;
+  A^\text{T}A = \begin{bmatrix}
+             1 &amp; 4\\
+             2 &amp; 5\\
+             3 &amp; 6
+           \end{bmatrix} \cdot
+           \begin{bmatrix}
+             1 &amp; 2 &amp; 3 \\
+             4 &amp; 5 &amp; 6
+           \end{bmatrix} =
+           \begin{bmatrix}
+             17 &amp; 22 &amp; 27 \\
+             22 &amp; 29 &amp; 36\\
+             27 &amp; 36 &amp; 45
+           \end{bmatrix}
+&lt;/math&gt;
+
+which is a [[singular matrix]], and cannot be inverted.
+
+== See also ==
+*[[Loop (algebra)]]
+*[[Division ring]]
+*[[Unit (ring theory)]]
+*[[Latin square property]]
+
+==Notes==
+{{Reflist}}

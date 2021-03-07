@@ -1,0 +1,309 @@
+{{R to section}}</text>
+      <sha1>ojdc6nopn6d0bhpcpt00e9bh8b9100h</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Convergence in probability</title>
+    <ns>0</ns>
+    <id>50727</id>
+    <redirect title="Convergence of random variables" />
+    <revision>
+      <id>838789247</id>
+      <parentid>326355207</parentid>
+      <timestamp>2018-04-29T09:17:15Z</timestamp>
+      <contributor>
+        <username>The Transhumanist</username>
+        <id>1754504</id>
+      </contributor>
+      <comment>Add template{{R to section}} to categorize redirect using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="90" xml:space="preserve">#REDIRECT [[Convergence of random variables#Convergence in probability]]
+
+{{R to section}}</text>
+      <sha1>pv86f8178p03i3dt57clup0xo3qzzwt</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Convergence in mean</title>
+    <ns>0</ns>
+    <id>50728</id>
+    <redirect title="Convergence of random variables" />
+    <revision>
+      <id>952179687</id>
+      <parentid>952179654</parentid>
+      <timestamp>2020-04-20T23:25:18Z</timestamp>
+      <contributor>
+        <username>Wikisaurus</username>
+        <id>32001896</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[Convergence of random variables#Convergence in mean]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="83" xml:space="preserve">#REDIRECT [[Convergence of random variables#Convergence in mean]]
+
+{{R to section}}</text>
+      <sha1>mxzfqmkamxk3k2em8ogfizlkfw6c7d5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Almost sure convergence</title>
+    <ns>0</ns>
+    <id>50729</id>
+    <redirect title="Convergence of random variables" />
+    <revision>
+      <id>838789257</id>
+      <parentid>172696479</parentid>
+      <timestamp>2018-04-29T09:17:18Z</timestamp>
+      <contributor>
+        <username>The Transhumanist</username>
+        <id>1754504</id>
+      </contributor>
+      <comment>Add template{{R to section}} to categorize redirect using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="87" xml:space="preserve">#REDIRECT [[Convergence of random variables#Almost sure convergence]]
+
+{{R to section}}</text>
+      <sha1>jisatgv8iv5nsgj2b2520euncb9cph4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Extreme value theory</title>
+    <ns>0</ns>
+    <id>50732</id>
+    <revision>
+      <id>990789996</id>
+      <parentid>989172716</parentid>
+      <timestamp>2020-11-26T14:49:13Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 23 templates: del empty params (15×); hyphenate params (8×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="19682" xml:space="preserve">{{About|the statistical theory|the result in calculus|Extreme value theorem}}
+
+[[File:1755 Lisbon earthquake.jpg|thumb|Extreme value theory is used to model the risk of extreme, rare events, such as the [[1755 Lisbon earthquake]].]]
+
+'''Extreme value theory''' or '''extreme value analysis''' ('''EVA''')  is a branch of [[statistics]] dealing with the extreme [[Deviation (statistics)|deviation]]s from the [[median]] of [[probability distribution]]s. It seeks to assess, from a given ordered [[Sample (statistics)|sample]] of a given random variable, the probability of events that are more extreme than any previously observed. Extreme value analysis is widely used in many disciplines, such as [[structural engineering]], finance, [[earth science]]s, traffic prediction, and [[Engineering geology|geological engineering]]. For example, EVA might be used in the field of [[hydrology]] to estimate the probability of an unusually large flooding event, such as the [[100-year flood]]. Similarly, for the design of a [[breakwater (structure)|breakwater]], a [[coastal engineer]] would seek to estimate the 50-year wave and design the structure accordingly.
+
+== Data analysis ==
+
+Two approaches exist for practical extreme value analysis.
+
+The first method relies on deriving block maxima (minima) series as a preliminary step. In many situations it is customary and convenient to extract the annual maxima (minima), generating an &quot;Annual Maxima Series&quot; (AMS).
+
+The second method relies on extracting, from a continuous record, the peak values reached for any period during which values exceed a certain threshold (falls below a certain threshold). This method is generally referred to as the &quot;Peak Over Threshold&quot; &lt;ref&gt;{{cite journal | last1 = Leadbetter | first1 = M. R. | year = 1991 | title = On a basis for 'Peaks over Threshold' modeling | journal = Statistics and Probability Letters | volume = 12 | issue = 4| pages = 357–362 | doi = 10.1016/0167-7152(91)90107-3 }}&lt;/ref&gt; method (POT).
+
+For AMS data, the analysis may partly rely on the results of the [[Fisher–Tippett–Gnedenko theorem]], leading to the [[generalized extreme value distribution]] being selected for fitting.&lt;ref&gt;Fisher and Tippett (1928)&lt;/ref&gt;&lt;ref&gt;Gnedenko (1943)&lt;/ref&gt; However, in practice, various procedures are applied to select between a wider range of distributions. The theorem here relates to the limiting distributions for the minimum or the maximum of a very large collection of [[statistical independence|independent]] [[random variable]]s from the same distribution. Given that the number of relevant random events within a year may be rather limited, it is unsurprising that analyses of observed AMS data often lead to distributions other than the generalized extreme value distribution (GEVD) being selected.&lt;ref&gt;Embrechts, Klüppelberg, and Mikosch (1997)&lt;/ref&gt;
+
+For POT data, the analysis may involve fitting two distributions: one for the number of events in a time period considered and a second for the size of the exceedances.
+
+A common assumption for the first is the [[Poisson distribution]], with the [[generalized Pareto distribution]] being used for the exceedances. 
+A [[Power law#Estimating the exponent from empirical data 2|tail-fitting]] can be based on the [[Pickands–Balkema–de Haan theorem]].&lt;ref&gt;Pickands (1975)&lt;/ref&gt;&lt;ref&gt;Balkema and de Haan (1974)&lt;/ref&gt;
+
+Novak&lt;ref&gt;Novak (2011)&lt;/ref&gt; reserves the term “POT method” to the case where the threshold is non-random, and distinguishes it from the case where one deals with  exceedances of a random threshold.
+
+==Applications==
+Applications of extreme value theory include predicting the probability distribution of:
+* Extreme [[flood]]s; The size of [[freak wave]]s
+* [[Tornado]] outbreaks &lt;ref&gt;|doi=10.1126/science.aah7393&lt;/ref&gt;
+* Maximum sizes of ecological populations &lt;ref&gt;{{cite journal|last1=Batt|first1=Ryan D.|last2=Carpenter|first2=Stephen R.|last3=Ives|first3=Anthony R.|title=Extreme events in lake ecosystem time series|journal=Limnology and Oceanography Letters|volume=2|issue=3|pages=63|date=March 2017|doi=10.1002/lol2.10037|doi-access=free}}&lt;/ref&gt;
+* Side effects of drugs (e.g., [[Ximelagatran]])
+* The amounts of large [[insurance]] losses
+* [[Equity risk]]s; Day to day [[market risk]]
+* Mutational events during [[evolution]]
+* Large [[wildfire]]s&lt;ref&gt;Alvardo (1998, p.68.)&lt;/ref&gt;
+* Environmental loads on structures&lt;ref&gt;Makkonen (2008)&lt;/ref&gt;
+* Estimate fastest time humans are capable of running the [[100 metres]] sprint&lt;ref&gt;{{Citation|title=Ultimate 100m World Records Through Extreme-Value Theory|url=https://pure.uvt.nl/ws/files/1244969/j.1467-9574.2010.00470.x.pdf|year=2009|authors=J.H.J. Einmahl &amp; S.G.W.R. Smeets|journal=CentER Discussion Paper, Tilburg University|volume=57|access-date=2009-08-12|archive-url=https://web.archive.org/web/20160312023048/https://pure.uvt.nl/ws/files/1244969/j.1467-9574.2010.00470.x.pdf|archive-date=2016-03-12|url-status=dead}}&lt;/ref&gt; and performances in other athletic disciplines.&lt;ref&gt;{{Citation | authors = D. Gembris, J.Taylor &amp; D. Suter | title = Trends and random fluctuations in athletics | journal = Nature | volume = 417| issue =  6888| pages = 506 | year = 2002 | doi=10.1038/417506a | pmid=12037557| bibcode =  2002Natur.417..506G| hdl =  2003/25362| s2cid = 13469470 }}&lt;/ref&gt;&lt;ref&gt;{{Citation | authors = D. Gembris, J.Taylor &amp; D. Suter | title = Evolution of athletic records : Statistical effects versus real improvements | journal = Journal of Applied Statistics | volume = 34 | issue = 5 | pages = 529–545 | year = 2007 | doi=10.1080/02664760701234850| hdl =  2003/25404| s2cid = 55378036 }}&lt;/ref&gt;
+* Pipeline failures due to [[pitting corrosion]].
+* Anomalous IT network traffic, prevent attackers from reaching important data
+* Road safety analysis &lt;ref&gt;{{cite journal |last1=Songchitruksa |first1=P. |last2=Tarko |first2=A. P. |date=2006 |title=The extreme value theory approach to safety estimation |journal=Accident Analysis and Prevention |volume=38 |issue=4 |pages=811–822 |doi=10.1016/j.aap.2006.02.003 |pmid=16546103 }}&lt;/ref&gt;&lt;ref&gt;{{cite journal |last1=Orsini |first1=F. |last2=Gecchele |first2=G. |last3=Gastaldi |first3=M. |last4=Rossi |first4=R. |date=2019 |title=Collision prediction in roundabouts: a comparative study of extreme value theory approaches |journal=Transportmetrica A: Transport Science |volume=15 |issue=2 |pages=556–572 |doi=10.1080/23249935.2018.1515271 |s2cid=158343873 }}&lt;/ref&gt;
+* Wireless communications  &lt;ref&gt; C. G. Tsinos, F. Foukalas, T. Khattab and L. Lai, &quot;[https://ieeexplore.ieee.org/abstract/document/8052574 On Channel Selection for Carrier Aggregation Systems].&quot; IEEE Transactions on Communications, vol. 66, no. 2, Feb. 2018 )  808-818.&lt;/ref&gt;
+*Epidemics&lt;ref&gt;{{Cite journal|last=Wong|first=Felix|last2=Collins|first2=James J.|date=2020-11-02|title=Evidence that coronavirus superspreading is fat-tailed|url=https://www.pnas.org/content/early/2020/10/30/2018490117|journal=Proceedings of the National Academy of Sciences|language=en|doi=10.1073/pnas.2018490117|issn=0027-8424|pmid=33139561}}&lt;/ref&gt;
+
+==History==
+The field of extreme value theory was pioneered by [[Leonard Tippett]] (1902–1985). Tippett was employed by the [[British Cotton Industry Research Association]], where he worked to make cotton thread stronger. In his studies, he realized that the strength of a thread was controlled by the strength of its weakest fibres. With the help of [[R. A. Fisher]], Tippet obtained three asymptotic limits describing the distributions of extremes assuming independent variables. [[Emil Julius Gumbel]] codified this theory in his 1958 book ''Statistics of Extremes'', including the [[Gumbel distribution]]s that bear his name. These results can be extended to allowing for slight correlations between variables, but the classical theory does not extend to strong correlations of the order of the variance. One universality class of particular interest is that of [[log-correlated fields]], where the correlations decay logarithmically with the distance.
+
+A summary of historically important publications relating to extreme value theory can be found in the article [[List of publications in statistics#Extreme value theory|List of publications in statistics]].
+
+== Univariate theory ==
+
+Let &lt;math&gt;X_1, \dots, X_n&lt;/math&gt; be a sequence of [[independent and identically distributed]] random variables with [[cumulative distribution function]] ''F'' and let &lt;math&gt;M_n =\max(X_1,\dots,X_n)&lt;/math&gt; denote the maximum.
+
+In theory, the exact distribution of the maximum can be derived:
+:&lt;math&gt;
+\begin{align}
+\Pr(M_n \leq z) &amp; = \Pr(X_1 \leq z, \dots, X_n \leq z) \\
+&amp; = \Pr(X_1 \leq z) \cdots \Pr(X_n \leq z) = (F(z))^n.
+\end{align}
+&lt;/math&gt;
+
+The associated [[indicator function]] &lt;math&gt;I_n = I(M_n&gt;z)&lt;/math&gt; is a [[Bernoulli process]] with a success probability &lt;math&gt;p(z)=1-(F(z))^n&lt;/math&gt; that depends on the magnitude &lt;math&gt;z&lt;/math&gt; of the extreme event. The number of extreme events within &lt;math&gt;n&lt;/math&gt; trials thus follows a [[binomial distribution]] and the number of trials until an event occurs follows a [[geometric distribution]] with expected value and standard deviation of the same order &lt;math&gt;O(1/p(z))&lt;/math&gt;.
+
+In practice, we might not have the distribution function &lt;math&gt;F&lt;/math&gt; but the [[Fisher–Tippett–Gnedenko theorem]] provides an asymptotic result.  If there exist sequences of constants &lt;math&gt;a_n&gt;0 &lt;/math&gt; and &lt;math&gt;b_n\in \mathbb R &lt;/math&gt; such that
+
+:&lt;math&gt; \Pr\{(M_n-b_n)/a_n \leq z\} \rightarrow G(z) &lt;/math&gt;
+
+as &lt;math&gt;n \rightarrow \infty&lt;/math&gt; then
+
+:&lt;math&gt; G(z) \propto \exp \left[-(1+\zeta z)^{-1/\zeta} \right] &lt;/math&gt;
+
+where &lt;math&gt;\zeta&lt;/math&gt; depends on the tail shape of the distribution.
+When normalized, ''G'' belongs to one of the following non-[[degenerate distribution]] families:
+
+[[Weibull distribution|Weibull law]]: &lt;math&gt; G(z) = \begin{cases} \exp\left\{-\left( -\left( \frac{z-b}{a} \right) \right)^\alpha\right\} &amp; z&lt;b \\ 1 &amp; z\geq b \end{cases}&lt;/math&gt;
+when the distribution of &lt;math&gt;M_n&lt;/math&gt; has a light tail with finite upper bound.  Also known as Type 3.
+
+[[Gumbel distribution|Gumbel law]]: &lt;math&gt; G(z) = \exp\left\{-\exp\left(-\left(\frac{z-b}{a}\right)\right)\right\}\text{ for }z\in\mathbb R.&lt;/math&gt; when the distribution of &lt;math&gt;M_n&lt;/math&gt; has an exponential tail.  Also known as Type 1
+
+[[Fréchet distribution|Fréchet Law]]: &lt;math&gt; G(z) = \begin{cases} 0 &amp; z\leq b \\ \exp\left\{-\left(\frac{z-b}{a}\right)^{-\alpha}\right\} &amp; z&gt;b. \end{cases}&lt;/math&gt; when the distribution of &lt;math&gt;M_n&lt;/math&gt; has a [[Heavy-tailed distribution|heavy tail]] (including polynomial decay).  Also known as Type 2.
+
+In all cases,  &lt;math&gt;\alpha&gt;0&lt;/math&gt;.
+
+== Multivariate theory ==
+Extreme value theory in more than one variable introduces additional issues that have to be addressed. One problem that arises is that one must specify what constitutes an extreme event.&lt;ref name=&quot;:0&quot;&gt;{{Cite journal|last1=Morton|first1=I.D.|last2=Bowers|first2=J.|date=December 1996|title=Extreme value analysis in a multivariate offshore environment|journal=Applied Ocean Research|volume=18|issue=6|pages=303–317|doi=10.1016/s0141-1187(97)00007-2|issn=0141-1187}}&lt;/ref&gt; Although this is straightforward in the univariate case, there is no unambiguous way to do this in the multivariate case. The fundamental problem is that although it is possible to order a set of real-valued numbers, there is no natural way to order a set of vectors.
+
+As an example, in the univariate case, given a set of observations &lt;math&gt;x_i &lt;/math&gt; it is straightforward to find the most extreme event simply by taking the maximum (or minimum) of the observations. However, in the bivariate case, given a set of observations &lt;math&gt; (x_i, y_i) &lt;/math&gt;, it is not immediately clear how to find the most extreme event. Suppose that one has measured the values &lt;math&gt;(3, 4)&lt;/math&gt; at a specific time and the values &lt;math&gt;(5, 2)&lt;/math&gt; at a later time. Which of these events would be considered more extreme? There is no universal answer to this question.
+
+Another issue in the multivariate case is that the limiting model is not as fully prescribed as in the univariate case. In the univariate case, the model ([[Generalized extreme value distribution|GEV distribution]]) contains three parameters whose values are not predicted by the theory and must be obtained by fitting the distribution to the data. In the multivariate case, the model not only contains unknown parameters, but also a function whose exact form is not prescribed by the theory. However, this function must obey certain constraints.&lt;ref&gt;{{Cite book|title=Statistics of Extremes: Theory and Applications|last1=Beirlant|first1=Jan|last2=Goegebeur|first2=Yuri|last3=Teugels|first3=Jozef|last4=Segers|first4=Johan|date=2004-08-27|publisher=John Wiley &amp; Sons, Ltd|isbn=9780470012383|series=Wiley Series in Probability and Statistics|location=Chichester, UK|doi=10.1002/0470012382}}&lt;/ref&gt;&lt;ref&gt;{{Cite journal|last=Coles|first=Stuart|date=2001|title=An Introduction to Statistical Modeling of Extreme Values|journal=Springer Series in Statistics|doi=10.1007/978-1-4471-3675-0|issn=0172-7397|isbn=978-1-84996-874-4}}&lt;/ref&gt;
+
+As an example of an application, bivariate extreme value theory has been applied to ocean research.&lt;ref name=&quot;:0&quot; /&gt;&lt;ref&gt;{{Cite journal|last1=Zachary|first1=S.|last2=Feld|first2=G.|last3=Ward|first3=G.|last4=Wolfram|first4=J.|date=October 1998|title=Multivariate extrapolation in the offshore environment|journal=Applied Ocean Research|volume=20|issue=5|pages=273–295|doi=10.1016/s0141-1187(98)00027-3|issn=0141-1187}}&lt;/ref&gt;
+
+==See also==
+* [[Extreme risk]]
+* [[Extreme weather]]
+* [[Fisher–Tippett–Gnedenko theorem]]
+* [[Generalized extreme value distribution]]
+* [[Large deviation theory]]
+* [[Outlier]]
+* [[Pareto distribution]]
+* [[Pickands–Balkema–de Haan theorem]]
+* [[Rare events]]
+* [[Weibull distribution]]
+
+{{More footnotes|date=September 2010}}
+
+==Notes==
+{{Reflist}}
+
+==References==
+* {{Citation | url = http://www.fas.org/irp/agency/dod/jason/statistics.pdf | title = Statistics of Extreme Events with Application to Climate | last1 = Abarbanel | first1 = H. | last2 = Koonin | first2 = S. | last3 = Levine | first3 = H. | last4 = MacDonald | first4 = G. | last5 = Rothaus | first5 = O. | journal = JASON | volume = JSR-90-30S | date = January 1992 | access-date = 2015-03-03}}
+* {{Citation | url = http://www.vetmed.wsu.edu/org_nws/NWSci%20journal%20articles/1998%20files/Special%20addition%201/v72%20p66%20Alvarado%20et%20al.PDF | title = Modeling Large Forest Fires as Extreme Events | last1 = Alvarado | first1 = Ernesto | last2 = Sandberg | first2 = David V. | last3 = Pickford | first3 = Stewart G. | journal = Northwest Science | volume = 72 | date = 1998 | pages = 66–75 | access-date = 2009-02-06 | url-status = dead | archive-url = https://web.archive.org/web/20090226080558/http://www.vetmed.wsu.edu/org_nws/NWSci%20journal%20articles/1998%20files/Special%20addition%201/v72%20p66%20Alvarado%20et%20al.PDF | archive-date = 2009-02-26 }}
+* {{citation | last1 = Balkema | first1 = A. | author-link2 = Laurens de Haan | last2 = Laurens | year = 1974 | title = Residual life time at great age | journal = Annals of Probability | volume = 2 | issue = 5| pages = 792–804 | doi = 10.1214/aop/1176996548|jstor=2959306 | doi-access = free }}
+* Burry K.V. (1975). ''Statistical Methods in Applied Science''. John Wiley &amp; Sons.
+* Castillo E. (1988) ''Extreme value theory in engineering.'' Academic Press, Inc. New York. {{ISBN|0-12-163475-2}}.
+* Castillo, E., Hadi, A. S., Balakrishnan, N. and Sarabia, J. M. (2005) Extreme Value and Related Models with Applications in Engineering and Science, Wiley Series in Probability and Statistics Wiley, Hoboken, New Jersey. {{ISBN|0-471-67172-X}}.
+* Coles S. (2001) ''An Introduction to Statistical Modeling of Extreme Values''. Springer, London.
+* Embrechts P., [[Claudia Klüppelberg|Klüppelberg C.]] and Mikosch T. (1997) ''Modelling extremal events for insurance and finance''. Berlin: Spring Verlag
+* {{citation | last1 = Fisher | first1 = R.A. | last2 = Tippett | first2 = L.H.C. | year = 1928 | title = Limiting forms of the frequency distribution of the largest and smallest member of a sample | journal = Proc. Camb. Phil. Soc. | volume = 24 | issue = 2| pages = 180–190 | doi=10.1017/s0305004100015681| bibcode = 1928PCPS...24..180F }}
+* {{citation | last1 = Gnedenko | first1 = B.V. | year = 1943 | title = Sur la distribution limite du terme maximum d'une serie aleatoire | journal = [[Annals of Mathematics]] | volume = 44 | issue = 3| pages = 423–453 | doi=10.2307/1968974| jstor = 1968974 }}
+* {{Citation | url = http://archive.numdam.org/article/AIHP_1935__5_2_115_0.pdf | title = Les valeurs extrêmes des distributions statistiques | last = Gumbel | first = E.J. | journal =  Annales de l'Institut Henri Poincaré | volume = 5 | year =  1935 | pages = 115–158 | access-date = 2009-04-01 | issue = 2
+}}
+* {{Citation | first=E. J. | last = Gumbel | orig-year=1958 |year = 2004| title=Statistics of Extremes | publisher = Dover |location = Mineola, NY |isbn=978-0-486-43604-3 | url=https://books.google.com/books?id=kXCg8B5xSUwC&amp;pg=PP1}}
+* {{Citation | last =Makkonen  | first = L. | title = Problems in the extreme value analysis | journal = Structural Safety | volume = 30 | issue = 5 | pages = 405–419 | year = 2008 | doi = 10.1016/j.strusafe.2006.12.001}}
+* {{citation | last1 = Leadbetter | first1 = M. R. | year = 1991 | title = On a basis for 'Peaks over Threshold' modeling | journal = Statistics &amp; Probability Letters | volume = 12 | issue = 4| pages = 357–362 | doi=10.1016/0167-7152(91)90107-3}}
+* Leadbetter M.R., Lindgren G. and Rootzen H. (1982) ''Extremes and related properties of random sequences and processes.'' Springer-Verlag, New York.
+* {{citation | last1 = Lindgren | first1 = G. | last2 = Rootzen | first2 = H. | year = 1987 | title = Extreme values: Theory and technical applications | journal = Scandinavian Journal of Statistics, Theory and Applications | volume = 14 | pages = 241–279 }}
+* Novak S.Y. (2011) ''Extreme Value Methods with Applications to Finance''.  Chapman &amp; Hall/CRC Press, London. {{ISBN|978-1-4398-3574-6}} 
+* {{citation | last1 = Pickands | first1 = J | year = 1975 | title = Statistical inference using extreme order statistics | journal = Annals of Statistics | volume = 3 | pages = 119–131 | doi = 10.1214/aos/1176343003 | doi-access = free }}
+
+== Software ==
+
+* [https://cran.r-project.org/web/views/ExtremeValue.html Extreme Value Statistics in R] - Packages for extreme value statistics in R
+* [https://github.com/juliohm/ExtremeStats.jl ExtremeStats.jl] - Extreme Value Statistics in Julia
+* [https://github.com/jojal5/Extremes.jl Extremes.jl] - Extreme Value Statistics in Julia
+
+==External links==
+* [http://www.risknet.de/fileadmin/eLibrary/EVT-Paper-Roehrl-Chavez-Demoulin.pdf ''Extreme Value Theory can save your neck'' Easy non-mathematical introduction (pdf)]
+* [http://amir.eng.uci.edu/neva.php ''Source Code for Stationary and Nonstationary Extreme Value Analysis'' University of California, Irvine]
+* [http://www.bankofcanada.ca/wp-content/uploads/2010/01/wp00-20.pdf ''Steps in Applying Extreme Value Theory to Finance: A Review'']
+* [http://www.numdam.org/item?id=AIHP_1935__5_2_115_0 ''Les valeurs extrêmes des distributions statistiques'' Full-text access to conferences held by E. J. Gumbel in 1933–34, in French (pdf)]
+
+{{DEFAULTSORT:Extreme Value Theory}}
+[[Category:Actuarial science]]
+[[Category:Statistical theory]]
+[[Category:Extreme value data]]
+[[Category:Tails of probability distributions]]
+[[Category:Financial risk modeling]]</text>
+      <sha1>qcyjqir0dlvm5h8qcrmxfha33n4ont6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Prabuty</title>
+    <ns>0</ns>
+    <id>50735</id>
+    <revision>
+      <id>986087528</id>
+      <parentid>981749246</parentid>
+      <timestamp>2020-10-29T18:30:09Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <minor />
+      <comment>/* History */ Fixed use of deprecated HTML</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10359" xml:space="preserve">{{see also|Prabuty, Masovian Voivodeship}}
+{{Infobox settlement
+| name                            = Prabuty
+| image_skyline                   = Prabuty market square (2).jpg
+| image_caption                   = ''Rynek'' (Market Square) in Prabuty
+| image_shield                    = POL Prabuty COA.svg
+| image_flag                      = POL Prabuty flag.svg
+| pushpin_map                     = Poland#Poland Pomeranian Voivodeship
+| pushpin_label_position          = bottom
+| subdivision_type                = Country
+| subdivision_name                = {{POL}}
+| subdivision_type1               = [[Voivodeships of Poland|Voivodeship]]
+| subdivision_name1               = [[Pomeranian Voivodeship|Pomeranian]]
+| subdivision_type2               = [[Powiat|County]]
+| subdivision_name2               = [[Kwidzyn County|Kwidzyn]]
+| subdivision_type3               = [[Gmina]]
+| subdivision_name3               = [[Gmina Prabuty|Prabuty]]
+| leader_title                    = Mayor
+| leader_name                     = Marek Szulc
+| established_title = First mentioned
+| established_date = 1236
+| established_title3              = Town rights
+| established_date3               = 1330
+| area_total_km2                  = 7.92
+| population_as_of                = 2006
+| population_total                = 8488
+| population_density_km2          = auto
+| timezone                        = [[Central European Time|CET]]
+| utc_offset                      = +1
+| timezone_DST                    = [[Central European Summer Time|CEST]]
+| utc_offset_DST                  = +2
+| coordinates                     = {{coord|53|45|21|N|19|11|51|E|region:PL|display=inline,title}}
+| elevation_m                     = 90
+| postal_code_type                = Postal code
+| postal_code                     = 82–550
+| area_code                       = +48 55
+| blank_name                      = [[Polish car number plates|Car plates]]
+| blank_info                      = GKW
+| website                         = http://www.prabuty.pl
+}}
+
+'''Prabuty''' {{IPAc-pl|p|r|a|'|b|u|t|y}} ({{lang-de|Riesenburg}}) is a town in [[Kwidzyn County]] within the [[Pomeranian Voivodeship]] of northern [[Poland]]. Between 1975 and 1998, Prabuty were part of the [[Elbląg Voivodeship]].
+
+== Geographical location ==
+Prabuty is located approximately 18 kilometers east of [[Kwidzyn]], 100 kilometers southeast of [[Gdańsk]], 100 kilometers west of [[Olsztyn]], and 133 kilometers southwest of [[Kaliningrad]].
+
+Prabuty is a rail junction on the [[Warszawa]]–[[Gdynia]] railway.
+
+==History==
+[[File:Brama Kwidzyńska.JPG|thumb|left|180px|Kwidzyn Gate (''Brama Kwidzyńska'')]]
+In 1236, the [[Teutonic Knights]] under [[Henry III, Margrave of Meissen]], destroyed an [[Old Prussians|Old Prussian]] fortress between the lakes Dzierzgoń and Liwieniec. The settlement was first mentioned in 1250 as ''Riesenburg''. The village grew around the castle and received [[Culm law]] city rights on 30 October 1330&lt;ref name=his&gt;{{cite web|url= http://www.prabuty.pl/prabuty/content/view/15/34/|title= History of Prabuty|access-date= 2009-01-12|archive-url= https://web.archive.org/web/20080430025051/http://www.prabuty.pl/prabuty/content/view/15/34/|archive-date= 2008-04-30|url-status= dead}}&lt;/ref&gt; from bishop Rudolf of Pomerania (1322–1332). In 1379 the town was visited by Lithuanian duke [[Švitrigaila]].&lt;ref name=his/&gt;&lt;ref name=sgk&gt;''Słownik geograficzny Królestwa Polskiego i innych krajów słowiańskich'', Tom IX, Warszawa, 1888, p. 10 (in Polish)&lt;/ref&gt; In 1410 and 1414 it was captured by the Poles.&lt;ref name=sgk/&gt;
+
+Knights and [[squire]]s of the Prabuty district were co-founders of the anti-Teutonic [[Prussian Confederation]] in 1440.&lt;ref&gt;Karol Górski, ''Związek Pruski i poddanie się Prus Polsce: zbiór tekstów źródłowych'', Instytut Zachodni, Poznań, 1949, p. 10 (in Polish)&lt;/ref&gt; Since its establishment, part of the population wanted the town to join the organization.&lt;ref name=his/&gt; In 1451, the town council eventually joined the Prussian Confederation, but bishop Kaspar Linke expelled the councilors and confiscated their property. The town was accepted again by the organization in February 1454, and upon the request of the organization, in March 1454, Polish King [[Casimir IV Jagiellon]] incorporated the region and town to the [[Kingdom of Poland (1385–1569)|Kingdom of Poland]],&lt;ref&gt;Górski, p. XXXVIII, 54&lt;/ref&gt; and the [[Thirteen Years' War (1454–1466)|Thirteen Years' War]] broke out. Around that time, the town was mentioned in documents as ''Prabuth''.&lt;ref&gt;''Słownik geograficzny Królestwa Polskiego i innych krajów słowiańskich'', Tom IX, p. 9&lt;/ref&gt; After the [[Battle of Chojnice (1454)|Battle of Chojnice]], in which Polish forces were defeated, the town was forced to side with the Order again.&lt;ref name=sgk/&gt; After the war and the [[Second Peace of Thorn (1466)]], the town became a part of Poland as a [[fief]],&lt;ref&gt;Górski, p. 96-97, 214-215&lt;/ref&gt; although Pomesanian bishops retained their rule over the area. In 1525 the town became part of [[Ducal Prussia]], a vassal state of Poland. In 1556, a [[synod]] was held in the town.
+
+Riesenburg suffered during the 17th century [[Polish-Swedish wars]]. In 1628, half of it was burnt down, and in 1688 the remainder was burned.&lt;ref name=&quot;JFG&quot; /&gt; In 1722, fire caused destruction once again.&lt;ref name=&quot;JFG&quot; /&gt;
+
+In 1701, as part of Ducal Prussia, the town became a part of the [[Kingdom of Prussia]] and part of the newly created province of [[West Prussia]] in 1773. Despite this, as of 1789, Polish Protestant church services were still held in the town, and there was a Polish municipal school there.&lt;ref name=sgk/&gt; In 1871, the town became part of the [[German Empire]] in the framework of the Prussian-led [[unification of Germany]]. Until 1919, Riesenburg belonged to the administrative district of [[Regierungsbezirk Marienwerder]] in the [[Province of West Prussia]].
+
+After [[World War I]], [[East Prussian plebiscite|a referendum]] was held concerning the future nationality of the town, which remained part of [[Weimar Germany]]. From 1920 to 1939, Riesenburg belonged to the administrative district of [[Regierungsbezirk Westpreußen]] in the [[Province of East Prussia]] and from 1939 until 1945 to the district of [[Regierungsbezirk Marienwerder]] in the province of [[Reichsgau Danzig-West Prussia]].

@@ -1,0 +1,172 @@
+==Circular ambiguities==
+
+As noted above, sometimes an election has no Condorcet winner because there is no candidate who is preferred by voters to all other candidates. When this occurs the situation is known as a 'majority rule cycle', 'circular ambiguity', 'circular tie', 'Condorcet paradox', or simply a 'cycle'. This situation emerges when, once all votes have been tallied, the preferences of voters with respect to some candidates form a circle in which every candidate is beaten by at least one other candidate[[Intransitivity#Cycles|(Intransitivity]]). 
+
+For example, if there are three candidates, [[Rock-paper-scissors|Candidate Rock, Candidate Scissors, and Candidate Paper]], there will be no Condorcet winner if voters prefer Candidate Rock over Candidate Scissors and Scissors over Paper, but also Candidate Paper over Rock. Depending on the context in which elections are held, circular ambiguities may or may not be common, but there is no known case of a governmental election with ranked-choice voting in which a circular ambiguity is evident from the record of ranked ballots. Nonetheless a cycle is always possible, and so every Condorcet method should be capable of determining a winner when this contingency occurs. A mechanism for resolving an ambiguity is known as ambiguity resolution, cycle resolution method, or ''Condorcet completion method''.
+
+Circular ambiguities arise as a result of the [[voting paradox]]—the result of an election can be intransitive (forming a cycle) even though all individual voters expressed a transitive preference. In a Condorcet election it is impossible for the preferences of a single voter to be cyclical, because a voter must rank all candidates in order, from top-choice to bottom-choice, and can only rank each candidate once, but the paradox of voting means that it is still possible for a circular ambiguity in voter tallies to emerge.
+
+The idealized notion of a [[political spectrum]] is often used to describe political candidates and policies. Where this kind of spectrum exists, and voters prefer candidates who are closest to their own position on the spectrum, there is a Condorcet winner ([[Single peaked preferences|Black's Single-Peakedness Theorem]]).
+
+In Condorcet methods, as in most electoral systems, there is also the possibility of an ordinary tie. This occurs when two or more candidates tie with each other but defeat every other candidate. As in other systems this can be resolved by a random method such as the drawing of lots. Ties can also be settled through other methods like seeing which of the tied winners had the most first choice votes, but this and some other non-random methods may re-introduce a degree of tactical voting, especially if voters know the race will be close.
+
+The method used to resolve circular ambiguities is the main difference between the various Condorcet methods. There are countless ways in which this can be done, but every Condorcet method involves ignoring the majorities expressed by voters in at least some pairwise matchings. Some cycle resolution methods are Smith-efficient, meaning that they pass the [[Smith criterion]]. This guarantees that when there is a cycle (and no pairwise ties), only the candidates in the cycle can win, and that if there is a [[mutual majority criterion|mutual majority]], one of their preferred candidates will win. 
+
+Condorcet methods fit within two categories:
+
+* '''Two-method systems''', which use a separate method to handle cases in which there is no Condorcet winner
+* '''One-method systems''', which use a single method that, without any special handling, always identifies the winner to be the Condorcet winner
+
+Many one-method systems and some two-method systems will give the same result as each other if there are fewer than 4 candidates in the circular tie, and all voters separately rank at least two of those candidates. These include Smith-Minimax (Minimax but done only after all candidates not in the Smith set are eliminated), Ranked Pairs, and Schulze. For example, with three candidates in the Smith set in a Condorcet cycle, because Schulze and Ranked Pairs pass [[Independence of Smith-dominated alternatives|ISDA]], all candidates not in the Smith set can be eliminated first, and then for Schulze, dropping the weakest defeat of the three allows the candidate who had that weakest defeat to be the only candidate who can beat or tie all other candidates, while with Ranked Pairs, once the first two strongest defeats are locked in, the weakest can't, since it'd create a cycle, and so the candidate with the weakest defeat will have no defeats locked in against them).
+
+==Two-method systems==
+
+One family of Condorcet methods consists of systems that first conduct a series of pairwise comparisons and then, if there is no Condorcet winner, fall back to an entirely different, non-Condorcet method to determine a winner. The simplest such fall-back methods involve entirely disregarding the results of the pairwise comparisons. For example, the Black method chooses the Condorcet winner if it exists, but uses the [[Borda count]] instead if there is a cycle (the method is named for [[Duncan Black]]).
+
+A more sophisticated two-stage process is, in the event of a cycle, to use a separate voting system to find the winner but to restrict this second stage to a certain subset of candidates found by scrutinizing the results of the pairwise comparisons. Sets used for this purpose are defined so that they will always contain only the Condorcet winner if there is one, and will always, in any case, contain at least one candidate. Such sets include the
+
+* '''[[Smith set]]''': The smallest non-empty set of candidates in a particular election such that every candidate in the set can beat all candidates outside the set. It is easily shown that there is only one possible Smith set for each election.
+* '''[[Schwartz set]]''': This is the innermost unbeaten set, and is usually the same as the Smith set. It is defined as the union of all possible sets of candidates such that for every set:
+*#Every candidate inside the set is pairwise unbeatable by any other candidate outside the set (i.e., ties are allowed).
+*#No proper (smaller) subset of the set fulfills the first property.
+* '''[[Landau set]]''' (or '''uncovered set''' or '''Fishburn set'''): the set of candidates, such that each member, for every other candidate (including those inside the set), either beats this candidate or beats a third candidate that itself beats the candidate that is unbeaten by the member.
+
+One possible method is to apply [[instant-runoff voting]] in various ways, such as to the candidates of the Smith set. One variation of this method has been described as 'Smith/IRV', with another being [[Tideman's alternative method]]s. It's also possible to do &quot;Smith/Approval&quot; by allowing voters to rank candidates, and indicate which candidates they approve, such that the candidate in the Smith set approved by the most voters wins; this is often done using an approval threshold (i.e. if you approve your 3rd choice, you're automatically considered to approve your 1st and 2nd choices too). In Smith/Score, the candidate in the Smith set with the highest total score wins, with the pairwise comparisons done based on which candidates are scored higher than others. 
+
+==Single-method systems==
+
+Some Condorcet methods use a single procedure that inherently meets the Condorcet criteria and, without any extra procedure, also resolves circular ambiguities when they arise. In other words, these methods do not involve separate procedures for different situations. Typically these methods base their calculations on pairwise counts. These methods include:
+
+*'''[[Copeland's method]]''': This simple method involves electing the candidate who wins the most pairwise matchings. However, it often produces a tie.
+*'''[[Kemeny–Young method]]''': This method ranks all the choices from most popular and second-most popular down to least popular.
+* '''[[Minimax Condorcet|Minimax]]''': Also called ''Simpson'', ''Simpson–Kramer'', and ''Simple Condorcet'', this method chooses the candidate whose worst pairwise defeat is better than that of all other candidates. A refinement of this method involves restricting it to choosing a winner from among the Smith set; this has been called ''Smith/Minimax''.
+* '''[[Nanson's method]]''' and '''[[Baldwin's method]]''' combine Borda Count with an instant runoff procedure.
+* '''[[Dodgson's method]]''' extends the Condorcet method by swapping candidates until a Condorcet winner is found. The winner is the candidate which requires the minimum number of swaps.
+* '''[[Ranked pairs]]''' breaks each cycle in the pairwise preference graph by dropping the weakest majority in the cycle, thereby yielding a complete ranking of the candidates. This method is also known as ''Tideman'', after its inventor [[Nicolaus Tideman]].
+*'''[[Schulze method]]''' iteratively drops the weakest majority in the pairwise preference graph until the winner becomes well defined. This method is also known as ''Schwartz sequential dropping'' (SSD), ''cloneproof Schwartz sequential dropping'' (CSSD), ''beatpath method'', ''beatpath winner'', ''path voting'' and ''path winner''.
+
+Ranked Pairs and Schulze are procedurally in some sense opposite approaches (although they very frequently give the same results):
+* Ranked Pairs (and its variants) starts with the strongest defeats and uses as much information as it can without creating ambiguity.
+* Schulze repeatedly removes the weakest defeat until ambiguity is removed.
+
+Minimax could be considered as more &quot;blunt&quot; than either of these approaches, as instead of removing defeats it can be seen as immediately removing candidates by looking at the strongest defeats (although their victories are still considered for subsequent candidate eliminations). One way to think of it in terms of removing defeats is that Minimax removes each candidate's weakest defeats until some group of candidates with only pairwise ties between them have no defeats left, at which point the group ties to win.&lt;ref&gt;https://www.rangevoting.org/SchulzeExplan.html Schulze's beatpath voting method &quot;MinMax method: Eliminate successively the weakest pairwise defeat until there is a candidate whose defeats have all been eliminated.&quot;&lt;/ref&gt;
+
+===Kemeny–Young method===
+{{Main|Kemeny–Young method}}
+The Kemeny–Young method considers every possible sequence of choices in terms of which choice might be most popular, which choice might be second-most popular, and so on down to which choice might be least popular. Each such sequence is associated with a Kemeny score that is equal to the sum of the [[#Pairwise counting and matrices|pairwise counts]] that apply to the specified sequence. The sequence with the highest score is identified as the overall ranking, from most popular to least popular.
+
+When the pairwise counts are arranged in a matrix in which the choices appear in sequence from most popular (top and left) to least popular (bottom and right), the winning Kemeny score equals the sum of the counts in the upper-right, triangular half of the matrix (shown here in bold on a green background).
+
+{| class=&quot;wikitable&quot; style=&quot;text-align:center&quot;
+!
+! ...over '''Nashville'''
+! ...over '''Chattanooga'''
+! ...over '''Knoxville'''
+! ...over '''Memphis'''
+|-
+! Prefer '''Nashville'''...
+| —
+| style=&quot;background:#cfc;&quot;| '''68'''
+| style=&quot;background:#cfc;&quot;| '''68'''
+| style=&quot;background:#cfc;&quot;| '''58'''
+|-
+! Prefer '''Chattanooga'''...
+| 32
+| —
+| style=&quot;background:#cfc;&quot;| '''83'''
+| style=&quot;background:#cfc;&quot;| '''58'''
+|-
+! Prefer '''Knoxville'''...
+| 32
+| 17
+| —
+| style=&quot;background:#cfc;&quot;| '''58'''
+|-
+! Prefer '''Memphis'''...
+| 42
+| 42
+| 42
+| —
+|}
+
+In this example, the Kemeny Score of the sequence Nashville &gt; Chattanooga &gt; Knoxville &gt; Memphis would be 393.
+
+Calculating every Kemeny score requires considerable computation time in cases that involve more than a few choices. However, fast calculation methods based on [[integer programming]] allow a computation time in seconds for some cases with as many as 40 choices.
+
+===Ranked pairs===
+{{Main|Ranked pairs}}
+
+The order of finish is constructed a piece at a time by considering the (pairwise) majorities one at a time, from largest majority to smallest majority. For each majority, their higher-ranked candidate is placed ahead of their lower-ranked candidate in the (partially constructed) order of finish, except when their lower-ranked candidate has already been placed ahead of their higher-ranked candidate.
+
+For example, suppose the voters' orders of preference are such that 75% rank B over C, 65% rank A over B, and 60% rank C over A. (The three majorities are a [[rock paper scissors]] cycle.) Ranked pairs begins with the largest majority, who rank B over C, and places B ahead of C in the order of finish. Then it considers the second largest majority, who rank A over B, and places A ahead of B in the order of finish. At this point, it has been established that A finishes ahead of B and B finishes ahead of C, which implies A also finishes ahead of C. So when ranked pairs considers the third largest majority, who rank C over A, their lower-ranked candidate A has already been placed ahead of their higher-ranked candidate C, so C is not placed ahead of A. The order of finish is &quot;A, B, C&quot; and A is the winner.
+
+An equivalent definition is to find the order of finish that minimizes the size of the largest reversed majority. (In the 'lexicographical order' sense. If the largest majority reversed in two orders of finish is the same, the two orders of finish are compared by their second largest reversed majorities, etc. See [[Lexicographical order|the discussion of MinMax, MinLexMax and Ranked Pairs in the 'Motivation and uses' section of the Lexicographical Order article]]). (In the example, the order of finish &quot;A, B, C&quot; reverses the 60% who rank C over A. Any other order of finish would reverse a larger majority.) This definition is useful for simplifying some of the proofs of Ranked Pairs' properties, but the &quot;constructive&quot; definition executes much faster (small polynomial time).
+
+===Schulze method===
+{{Main|Schulze method}}
+
+The [[Schulze method]] resolves votes as follows:
+
+:At each stage, we proceed as follows:
+
+:# For each pair of undropped candidates X and Y: If there is a directed path of undropped links from candidate X to candidate Y, then we write &quot;X → Y&quot;; otherwise we write &quot;not X → Y&quot;.
+:# For each pair of undropped candidates V and W: If &quot;V → W&quot; and &quot;not W → V&quot;, then candidate W is dropped and all links, that start or end in candidate W, are dropped.
+:# The weakest undropped link is dropped. If several undropped links tie as weakest, all of them are dropped.
+
+:The procedure ends when all links have been dropped. The winners are the undropped candidates.
+
+In other words, this procedure repeatedly throws away the weakest pairwise defeat within the top set, until finally the number of votes left over produce an unambiguous decision.
+
+===Defeat strength===
+Some pairwise methods—including minimax, Ranked Pairs, and the Schulze method—resolve circular ambiguities based on the relative strength of the defeats. There are different ways to measure the strength of each defeat, and these include considering &quot;winning votes&quot; and &quot;margins&quot;:
+
+*'''Winning votes''': The number of votes on the winning side of a defeat.
+*'''Margins''': The number of votes on the winning side of the defeat, minus the number of votes on the losing side of the defeat.&lt;ref&gt;https://principles.liquidfeedback.org/The_Principles_of_LiquidFeedback_1st_edition_online_version.pdf&lt;/ref&gt;
+
+If voters do not rank their preferences for all of the candidates, these two approaches can yield different results. Consider, for example, the following election:
+
+{| class=&quot;wikitable&quot;
+|-
+!45 voters
+!11 voters
+!15 voters
+!29 voters
+|-
+|1. A
+|1. B
+|1. B
+|1. C
+|-
+|
+|
+|2. C
+|2. B
+|}
+
+The pairwise defeats are as follows:
+
+*B beats A, 55 to 45 (55 winning votes, a margin of 10 votes)
+*A beats C, 45 to 44 (45 winning votes, a margin of 1 vote)
+*C beats B, 29 to 26 (29 winning votes, a margin of 3 votes)
+
+Using the winning votes definition of defeat strength, the defeat of B by C is the weakest, and the defeat of A by B is the strongest. Using the margins definition of defeat strength, the defeat of C by A is the weakest, and the defeat of A by B is the strongest.
+
+Using winning votes as the definition of defeat strength, candidate B would win under minimax, Ranked Pairs and the Schulze method, but, using margins as the definition of defeat strength, candidate C would win in the same methods.
+
+If all voters give complete rankings of the candidates, then winning votes and margins will always produce the same result. The difference between them can only come into play when some voters declare equal preferences amongst candidates, as occurs implicitly if they do not rank all candidates, as in the example above.
+
+The choice between margins and winning votes is the subject of scholarly debate. Because all Condorcet methods always choose the Condorcet winner when one exists, the difference between methods only appears when cyclic ambiguity resolution is required. The argument for using winning votes follows from this: Because cycle resolution involves disenfranchising a selection of votes, then the selection should disenfranchise the fewest possible number of votes. When margins are used, the difference between the number of two candidates' votes may be small, but the number of votes may be very large—or not. Only methods employing winning votes satisfy [[plurality criterion|Woodall's plurality criterion]].
+
+An argument in favour of using margins is the fact that the result of a pairwise comparison is decided by the presence of more votes for one side than the other and thus that it follows naturally to assess the strength of a comparison by this &quot;surplus&quot; for the winning side. Otherwise, changing only a few votes from the winner to the loser could cause a sudden large change from a large score for one side to a large score for the other. In other words, one could consider losing votes being in fact disenfranchised when it comes to ambiguity resolution with winning votes. Also, using winning votes, a vote containing ties (possibly implicitly in the case of an incompletely ranked ballot) doesn't have the same effect as a number of equally weighted votes with total weight equaling one vote, such that the ties are broken in every possible way (a violation of [http://www.mcdougall.org.uk/VM/ISSUE3/P5.HTM Woodall's symmetric-completion criterion]), as opposed to margins.
+
+Under winning votes, if two more of the &quot;B&quot; voters decided to vote &quot;BC&quot;, the A-&gt;C arm of the cycle would be overturned and Condorcet would pick C instead of B. This is an example of &quot;Unburying&quot; or &quot;Later does harm&quot;. The margin method would pick C anyway.
+
+Under the margin method, if three more &quot;BC&quot; voters decided to &quot;bury&quot; C by just voting &quot;B&quot;, the A-&gt;C arm of the cycle would be strengthened and the resolution strategies would end up breaking the C-&gt;B arm and giving the win to B. This is an example of &quot;Burying&quot;. The winning votes method would pick B anyway.
+
+==Related terms==
+Other terms related to the Condorcet method are:
+;Condorcet loser:{{fact|date=October 2020}} the candidate who is less preferred than every other candidate in a pairwise matchup (preferred by fewer voters than any other candidate).
+;Weak Condorcet winner:{{fact|date=October 2020}} a candidate who beats or ties with every other candidate in a pairwise matchup (preferred by at least as many voters as any other candidate). There can be more than one weak Condorcet winner.&lt;ref&gt;{{cite journal |doi=10.1007/s11127-014-0180-4 |quote=A weak Condorcet winner (WCW) is an alternative, y, that no majority of voters rank below any other alternative, z, but is not a SCW [Condorcet winner].|title=Weak Condorcet winner(s) revisited|year=2014|last1=Felsenthal|first1=Dan S.|last2=Tideman|first2=Nicolaus|journal=Public Choice|volume=160|issue=3–4|pages=313–326|s2cid=154447142}}&lt;/ref&gt;
+;Weak Condorcet loser:{{fact|date=October 2020}} a candidate who is defeated by or ties with every other candidate in a pairwise matchup. Similarly, there can be more than one weak Condorcet loser.
+
+;Improved Condorcet winner:{{fact|date=October 2020}} in improved condorcet methods, additional rules for pairwise comparisons are introduced to handle ballots where candidates are tied, so that pairwise wins can not be changed by those tied ballots switching to a specific prerfence order. A strong improved condorcet winner in an improved condorcet method must also be a strong condorcet winner, but the converse need not hold. In tied at the top methods, the number of ballots where the candidates are tied at the top of the ballot is subtracted from the victory margin between the two candidates. This has the effect of introducing more ties in the pairwise comparison graph, but allows the method to satisfy the favourite betrayal criterion.

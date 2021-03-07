@@ -1,0 +1,198 @@
+In America, the NT1 is [[customer premises equipment]] (CPE) which is purchased and maintained by the user, which makes the U interface a [[User–network interface]] (UNI).&lt;ref name=&quot;burd&quot;&gt;{{cite book |url=https://books.google.com/books?id=Vxw6I2eC2RkC |chapter=Section 4.5: U interface standards |chapterurl=https://books.google.com/books?id=Vxw6I2eC2RkC&amp;pg=PA122 |last=Burd |first=Nick |date=1997 |publisher=Chapman &amp; Hall |location=London |title=ISDN Subscriber Loop|isbn=9780412497308 }}&lt;/ref&gt; The American variant is specified by the [[American National Standards Institute]] (ANSI) in T1.601.&lt;ref name=&quot;ansi&quot;&gt;{{cite web |url=http://www.etsi.org/deliver/etsi_etr/001_099/080/02_60/etr_080e02p.pdf |title=ETR 080: Digital transmission system on metallic local lines |publisher=ETSI |date=November 1996 |accessdate=2014-01-17}}&lt;/ref&gt;&lt;ref name=&quot;burd&quot;/&gt; In Europe, the NT1 belongs to the network operator, so the user doesn't have direct access to the U interface.&lt;ref name=&quot;burd&quot;/&gt; The European variant is specified by the [[European Telecommunications Standards Institute]] (ETSI) in recommendation ETR 080.&lt;ref name=&quot;etsi&quot;&gt;{{cite web |url=http://ftp.tiaonline.org/TR-30/TR-30.3/Public/xDSL%20Miscellaneous/T1_601_i3Draft.pdf |title=T1E1.4/98-004R2 DRAFT ANSI T1.601-1998: Integrated Services Digital Network (ISDN) Basic Access Interface for Use on Metallic Loops for Application on the Network Side of the NT (Layer 1 Specification) |date=1998 |accessdate=2014-01-17 |publisher=ANSI}}&lt;/ref&gt;&lt;ref name=&quot;burd&quot;/&gt; The [[ITU-T]] has issued recommendations G.960 and G.961 with world-wide scope, encompassing both the European and American variants of the U interface.&lt;ref name=&quot;burd&quot;/&gt;
+
+==Logical interface==
+Like all other ISDN basic rate interfaces, the U interface carries two B (bearer) channels at 64&amp;nbsp;kbit/s and one D (data) channel at 16&amp;nbsp;kbit/s for a combined bitrate of 144&amp;nbsp;kbit/s (2B+D).
+
+==Duplex transmission==
+While in a four-wire interface such as the ISDN [[S interface|S]] and [[T interface|T]]-interfaces one wire pair is available for each direction of transmission, a two-wire interface needs to implement both directions on a single wire pair. To that end, ITU-T recommendation G.961 specifies two [[duplex (telecommunications)|duplex]] transmission technologies for the ISDN U interface, either of which shall be used: [[Echo cancellation]] (ECH) and Time Compression Multiplex (TCM).&lt;ref name=&quot;G.961&quot;&gt;{{cite web|url=http://www.itu.int/rec/T-REC-G.961|title=G.961: Digital transmission system on metallic local lines for ISDN basic rate access |publisher=ITU-T |accessdate=2014-01-06 |date=March 1993}}&lt;/ref&gt;
+
+===Echo cancellation (ECH)===
+When a transmitter applies a signal to the wire-pair, parts of the signal will be [[signal reflection|reflected]] as a result of imperfect balance of the [[telephone hybrid|hybrid]] and because of impedance discontinuities on the line.&lt;ref name=&quot;G.961&quot;/&gt; These reflections return to the transmitter as an echo and are indistinguishable from a signal transmitted at the far end. In the echo cancellation (ECH) scheme, the transmitter locally simulates the echo it expects to receive, and subtracts it from the received signal.&lt;ref name=&quot;G.961&quot;/&gt;
+
+===Time Compression Multiplex (TCM)===
+{{Distinguish|Trellis coded modulation}}
+The Time Compression Multiplex (TCM) duplex method, also referred to as &quot;burst mode&quot;, solves the echo problem indirectly.&lt;ref name=&quot;G.961&quot;/&gt; The line is operated at a rate at least twice the signal rate and both ends of the line take turns transmitting, in a [[time-division duplex]] fashion.&lt;ref name=&quot;G.961&quot;/&gt;
+
+==Line Systems==
+ITU-T G.961 specifies four line systems for the ISDN U interface: [[MMS43]], [[2B1Q]], TCM, and SU32.&lt;ref name=&quot;G.961&quot;/&gt; All line systems except TCM use echo cancellation for duplex operation.&lt;ref name=&quot;G.961&quot;/&gt; The American standard ANSI T1.601 specifies the 2B1Q line system, the European ETSI TR 080 recommendation specifies 2B1Q and MMS43.&lt;ref name=&quot;burd&quot;/&gt;
+
+===MMMS43 (4B3T)===
+{{Main|4B3T}}
+The Modified Monitoring State Code mapping 4 bits into 3 ternary symbols (MMS43), which is also referred to as 4B3T (four binary, three ternary) is a line system used in Europe and elsewhere in the world. 4B3T is a &quot;block code&quot; that uses Return-to-Zero states on the line. 4B3T converts each group of 4 data bits into 3 &quot;ternary&quot; line signal states (3 symbols).  Echo cancellation techniques allow full-duplex operation on the line.
+
+MMS43 is defined in Appendix I of G.961,&lt;ref name=&quot;G.961&quot;/&gt; Annex B of ETR 080,&lt;ref name=&quot;etsi&quot;/&gt; and other national standards, like Germany's 1TR220. 4B3T can be transmitted reliably at up to {{val|4.2|u=km}} over {{val|0.4|u=mm}} cable or up to {{val|8.2|u=km}} over {{val|0.6|u=mm}} cable. An internal termination impedance of {{gaps|150|ohms}} is presented to the line at each end of the U-interface.
+
+A 1&amp;nbsp;ms frame carrying 144&amp;nbsp;bits of 2B+D data is mapped to 108 ternary symbols.&lt;ref name=&quot;G.961&quot;/&gt; These symbols are scrambled, with different scrambling codes for the two transmission directions, in order reduce correlation between transmitted and received signal.&lt;ref name=&quot;G.961&quot;/&gt; To this frame, an 11-symbol preamble and a symbol from the C&lt;sub&gt;L&lt;/sub&gt; channel are added, yielding a frame size of 120 ternary symbols and a symbol rate of 120&amp;nbsp;[[Baud|kilobaud]].&lt;ref name=&quot;G.961&quot;/&gt; The C&lt;sub&gt;L&lt;/sub&gt; channel is used to request activation or deactivation of a loopback in either the NT1 or a line regenerator.&lt;ref name=&quot;G.961&quot;/&gt;
+
+In 4B3T coding, there are three states presented to line: a positive pulse (+), a negative pulse (-), or a zero-state (no pulse: 0). An analogy here is that operation is similar to [[B8ZS]] or [[HDB3]] in T1/E1 systems, except that there is an actual gain in the information rate by coding 2&lt;sup&gt;4&lt;/sup&gt;=16 possible binary states to one of 3&lt;sup&gt;3&lt;/sup&gt;=27 ternary states. This added redundancy is used to generate a zero DC-bias signal.&lt;ref name=&quot;G.961&quot;/&gt;
+
+One requirement for line transmission is that there should be no [[DC bias|DC build-up]] on the line, so the accumulated DC build-up is monitored and the codewords are chosen accordingly. Of the 16 binary information words, some are always mapped to a DC-component free (ternary) code word, while others can be mapped to either one of two code words, one with a positive and the other with a negative DC-component.&lt;ref name=&quot;G.961&quot;/&gt; In the latter case, the transmitter chooses whether to send the code-word with negative or positive DC-component based on the accumulated DC-offset.&lt;ref name=&quot;G.961&quot;/&gt;
+
+===2B1Q===
+{{Main|2B1Q}}
+[[2B1Q]] coding is the standard used in North America, Italy, and Switzerland. 2B1Q means that two bits are combined to form a single Quaternary line state ([[symbol (data)|symbol]]). 2B1Q combines two bits at a time to be represented by one of four signal levels on the line. [[Echo cancellation]] techniques allow full-duplex operation on the line.
+
+2B1Q coding is defined in Appendix II of G.961,&lt;ref name=&quot;G.961&quot;/&gt; ANSI T1.601,&lt;ref name=&quot;ansi&quot;/&gt; and Annex A of ETR 080.&lt;ref name=&quot;etsi&quot;/&gt; It can operate at distances up to about 18,000 feet ({{val|5.5|u=km}}) with loss up to {{gaps|42|dB}}. An internal termination impedance of 135 ohms is presented to the line at each end of the U-interface.
+
+A 1.5&amp;nbsp;ms frame carrying 216 scrambled bits of 2B+D data is mapped to 108 quaternary symbols.&lt;ref name=&quot;G.961&quot;/&gt; To this frame, a 9-symbol preamble and 3 symbols from the C&lt;sub&gt;L&lt;/sub&gt; channel are added, yielding a frame size of 120 quaternary symbols and a symbol rate of 80&amp;nbsp;kilobaud.&lt;ref name=&quot;G.961&quot;/&gt; The C&lt;sub&gt;L&lt;/sub&gt; channel is used for communication between LT and NT1, a 12-bit [[cyclic redundancy check]] (CRC), and various other physical layer functions.&lt;ref name=&quot;G.961&quot;/&gt; The CRC covers one 12&amp;nbsp;ms multiframe (8×1.5&amp;nbsp;ms frames).&lt;ref name=&quot;G.961&quot;/&gt;
+
+===TCM / AMI===
+The TCM / AMI ISDN line system, also referred to as TCM-ISDN, is used by [[Nippon Telegraph and Telephone]] in its &quot;INS-Net 64&quot; service.&lt;ref name=&quot;inoue-tcm-isdn&quot;&gt;{{cite journal |title=Implementation in Japan (ISDN) |journal=IEEE Communications Magazine |volume=30 |issue=8 |pages=54–57 |doi=10.1109/35.149619 |date=August 1992 |publisher=IEEE |last=Inoue |first=O.}}&lt;/ref&gt;
+
+Appendix III of G.961 specifies a line system based on the [[#Time Compression Multiplex (TCM)|Time Compression Multiplex]] (TCM) duplex method and an [[alternate mark inversion]] (AMI) line code.&lt;ref name=&quot;G.961&quot;/&gt; The AMI line code maps one input bit to one ternary symbol.&lt;ref name=&quot;G.961&quot;/&gt; Like with MMS43, the ternary symbol can either be a positive (+), zero (0), or negative (-) voltage.&lt;ref name=&quot;G.961&quot;/&gt; A 0 bit is represented by a zero voltage, while a 1 bit is alternatingly represented by a positive and a negative voltage, resulting in a DC-bias free signal.&lt;ref name=&quot;G.961&quot;/&gt; In a 2.5&amp;nbsp;ms interval, each side can send a 1.178&amp;nbsp;ms frame representing 360&amp;nbsp;bits of 2B+D data.&lt;ref name=&quot;G.961&quot;/&gt; To the 2B+D data, an 8-bit preamble, 8 bits from the C&lt;sub&gt;L&lt;/sub&gt; channel, as well as a parity bit are added, yielding a frame size of 377&amp;nbsp;bits and a baud rate of 320&amp;nbsp;kilobaud.&lt;ref name=&quot;G.961&quot;/&gt; The C&lt;sub&gt;L&lt;/sub&gt; channel is used for operations and maintenance, as well transmitting a 12-bit CRC covering 4 frames.&lt;ref name=&quot;G.961&quot;/&gt;
+
+===SU32===
+Appendix IV of G.961 specifies a line system based on echo cancellation and a substitutional 3B2T (SU32) line code, which maps three bits into 2 ternary symbols.&lt;ref name=&quot;G.961&quot;/&gt; As with MMS43 and AMI, the ternary symbol can either be a positive (+), zero (0), or negative (-) voltage.&lt;ref name=&quot;G.961&quot;/&gt; The mapping from 2&lt;sup&gt;3&lt;/sup&gt;=8 to 3&lt;sup&gt;2&lt;/sup&gt;=9 symbols leaves one unused symbol.&lt;ref name=&quot;G.961&quot;/&gt; When two subsequent input (binary) information words are identical, the (ternary) code word is substituted by the unused code word.&lt;ref name=&quot;G.961&quot;/&gt; A 0.75&amp;nbsp;ms frame carrying 108 bits of 2B+D data is mapped to 72 ternary symbols.&lt;ref name=&quot;G.961&quot;/&gt; To this frame, a 6-symbol preamble, one CRC symbol, and 2 symbols from the C&lt;sub&gt;L&lt;/sub&gt; channel are added, yielding a frame size of 81 ternary symbols and a symbol rate of 108&amp;nbsp;kilobaud.&lt;ref name=&quot;G.961&quot;/&gt; The C&lt;sub&gt;L&lt;/sub&gt; channel is used for supervisory and maintenance functions between the LT and NT1.&lt;ref name=&quot;G.961&quot;/&gt; The 15-bit CRC covers 16 frames.&lt;ref name=&quot;G.961&quot;/&gt;
+
+==References==
+{{Reflist}}
+
+==See also==
+* [[ISDN]]
+* [[R interface]]
+* [[S interface]]
+* [[T interface]]
+* [[Up0-interface|U&lt;sub&gt;p0&lt;/sub&gt;-interface]]
+
+==Further reading==
+* {{cite journal|last1=Lechleider|first1=J.W.|title=Line codes for digital subscriber lines (ISDN basic access)|journal=IEEE Communications Magazine|volume=27|issue=9|year=1989|pages=25–32|issn=0163-6804|doi=10.1109/35.35509}}
+
+
+[[Category:ITU-T recommendations]]
+[[Category:Integrated Services Digital Network]]</text>
+      <sha1>5ptklsyjdg1d124y3azrnx3urqqelv0</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Unavailability</title>
+    <ns>0</ns>
+    <id>41833</id>
+    <revision>
+      <id>967360980</id>
+      <parentid>958629541</parentid>
+      <timestamp>2020-07-12T20:11:13Z</timestamp>
+      <contributor>
+        <username>MinusBot</username>
+        <id>30519056</id>
+      </contributor>
+      <minor />
+      <comment>Proper minus signs and other cleanup. Report bugs, errors, and suggestions at [[User talk:MinusBot]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3283" xml:space="preserve">'''Unavailability''' is the [[probability]] that an item will not operate correctly at a given time and under specified conditions. It opposes [[availability]].
+
+[[Numerical value]]s associated with the [[calculation]] of availability are often awkward, consisting of a series of 9s before reaching any significant numerical information (e.g. 0.9999999654). For this reason, it is more convenient to use the complement measure of availability, namely, unavailability. Expressed mathematically, unavailability is 1 minus the [[availability]]. Therefore, a [[system]] with availability 0.9999999654 is more concisely described as having an unavailability of 3.46 × 10&lt;sup&gt;−8&lt;/sup&gt;.
+
+== Calculations using unavailability ==
+Often [[Fault tree analysis|fault trees]] and [[reliability block diagram]]s will use unavailability of the various components in the calculation of the top level failure rates through AND gates or parallel redundant components.
+
+== Repairable Model ==
+'''Unavailability''' (Q), using the repairable model, may be expressed mathematically by the equation:
+
+: &lt;math&gt;Q = \frac{MTTR}{MTTR + MTBF}&lt;/math&gt;
+
+where MTTR is the mean time to repair, and MTBF is the mean time between failures of a repairable system. Alternatively, this can be written as:
+
+: &lt;math&gt;Q = \frac{\lambda}{\lambda + \mu}&lt;/math&gt;
+
+where λ is the failure rate and μ is the repair rate. When μ &gt;&gt; λ, the preceding formula is often approximated to:
+
+: &lt;math&gt;Q \approx \frac{\lambda}{\mu}&lt;/math&gt;
+
+== Non-Repairable Model ==
+For the non-repairable model of unavailability (Q), the unreliability function (often F(t) the CDF of the [[exponential distribution]]) is used to approximate the worst case unavailability. If the rate of failure is constant the [[Poisson distribution]] and [[exponential distribution]] describe this rate. The unreliability function approximating the worst case unavailability is as follows:
+
+:Q = 1 - e&lt;sup&gt;λt&lt;/sup&gt;
+
+Where t is the time at risk.
+
+== Telecommunications ==
+In [[telecommunication]], an unavailability is an expression of the degree to which a [[system]], subsystem, or equipment is not operable and not in a committable state at the start of a mission, when the mission is called for at an unknown, i.e. random, [[time]]. The conditions determining operability and committability must be specified.
+
+== Railway ==
+In the railway industry the railway normally keeps operating for 24 hours a day 7 days per week all year round making the idea of mission time meaningless. Both the repairable model and non-repairable model are known to be used in railway. The repairable model is used for total system availability or unavailability and the non-repairable model is used for system safety. Safe down time is the time between when a wrong side failure happens and when it is detected and mitigated.&lt;ref&gt;CENELEC EN 50129:2018&lt;/ref&gt;
+
+== Aerospace ==
+The aerospace industry often uses a mission time equal to the expected flight time given that certain pre-flight tests are performed.
+
+== Space ==
+The mission time for space systems may be as long as a satellite or system in orbit. Space systems are exceedingly hard to repair making mission time a consideration when evaluating unavailability.
+
+==References==
+{{Reflist}}
+
+[[Category:Systems engineering]]</text>
+      <sha1>i1yr0qakfw485au2e4iykonyhtxra47</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Uninterruptible power supply</title>
+    <ns>0</ns>
+    <id>41834</id>
+    <revision>
+      <id>990824161</id>
+      <parentid>990660817</parentid>
+      <timestamp>2020-11-26T18:25:39Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 31 templates: del empty params (5×); hyphenate params (23×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="47584" xml:space="preserve">{{short description|Electrical device that uses batteries to prevent any interruption of power flow}}
+{{multiple issues|
+{{lead too short|date=June 2018}}
+{{More citations needed|date=March 2009}}
+}}
+{{multiple image
+| align = right
+| image1 = UPSFrontView.jpg
+| width1 = 176
+| alt1 = 
+| caption1 = 
+| image2 = UPSRearView.jpg
+| width2 = 134
+| alt2 = 
+| caption2 = 
+| footer = A tower type UPS with one [[IEC 60320]] [[IEC 60320#C13/C14 coupler|C14]] input and three [[IEC 60320#C13/C14 coupler|C13]] outlets
+}}
+[[File:500kVA-UPS.jpg|right|thumb|A large data-center-scale UPS being installed by electricians]]
+
+An '''uninterruptible power supply''' or '''uninterruptible power source''' ('''UPS''') is an electrical apparatus that provides emergency power to a load when the input power source or [[Mains electricity|mains power]] fails. A UPS differs from an auxiliary or [[emergency power system]] or [[standby generator]] in that it will provide near-instantaneous protection from input power interruptions, by supplying energy stored in batteries, [[supercapacitor]]s, or [[flywheel]]s.  The on-battery run-time of most uninterruptible power sources is relatively short (only a few minutes) but sufficient to start a standby power source or properly shut down the protected equipment. It is a type of [[continual power system]].
+
+A UPS is typically used to protect hardware such as [[computer]]s, [[data center]]s, [[telecommunication]] equipment or other electrical equipment where an unexpected power disruption could cause injuries, fatalities, serious business disruption or data loss. UPS units range in size from units designed to protect a single computer without a video monitor (around 200 [[volt-ampere]] rating) to large units powering entire data centers or buildings.  The world's largest UPS, the 46-megawatt Battery Electric Storage System (BESS), in [[Fairbanks, Alaska]], powers the entire city and nearby rural communities during outages.&lt;ref&gt;{{cite web |url= http://www.eia.gov/todayinenergy/detail.cfm?id=6910#tabs_ElecStorage-5 |title=Electricity storage: Location, location, location … and cost – Battery storage for transmission support in Alaska |publisher=Energy Information Administration (EIA) |work=eia.gov |year=2012 |access-date=July 23, 2012}}&lt;/ref&gt;
+
+==Common power problems==
+The primary role of any UPS is to provide short-term power when the input power source fails. However, most UPS units are also capable in varying degrees of correcting common utility power problems:
+# [[Voltage spike]] or sustained [[overvoltage]]
+# Momentary or sustained [[Brownout (electricity)|reduction in input voltage]]
+# [[Voltage sag]]
+# Noise, defined as a [[Line noise|high frequency transient]] or [[Transient (oscillation)|oscillation]], usually injected into the line by nearby equipment
+# Instability of the [[mains frequency]]
+# [[Harmonic distortion]], defined as a departure from the ideal [[sinusoidal]] [[waveform]] expected on the line
+
+Some manufacturers of UPS units categorize their products in accordance with the number of power-related problems they address.&lt;ref&gt;E-book on choosing a UPS topology based on application type {{cite web|url=http://www.emersonnetworkpower.com/en-US/Brands/Liebert/Documents/White%20Papers/UPS%20Trap%20Doors%20for%20SMB.PDF|title=Avoiding Trap Doors Associated with Purchasing a UPS System|access-date=2018-12-11|archive-url=https://web.archive.org/web/20130326072420/http://www.emersonnetworkpower.com/en-US/Brands/Liebert/Documents/White%20Papers/UPS%20Trap%20Doors%20for%20SMB.PDF|archive-date=2013-03-26|url-status=dead}}&lt;/ref&gt;
+
+==Technologies==
+
+The three general categories of modern UPS systems are ''on-line'', ''line-interactive'' and ''standby'':&lt;ref&gt;{{citation |last=Solter |first=W. |chapter=A new international UPS classification by IEC 62040-3 |year=2002 |doi=10.1109/INTLEC.2002.1048709 |title=24th Annual International Telecommunications Energy Conference |pages=541–545 |isbn=0-7803-7512-2 |s2cid=195862090 }}&lt;/ref&gt;&lt;ref&gt;Detailed explanation of UPS topologies {{cite web|url=http://www.emersonnetworkpower.com/en-US/Brands/Liebert/Documents/White%20Papers/High-Availability%20Power%20Systems,%20Part%20I_UPS%20Internal%20Topology.pdf|title=High-Availability Power Systems, Part I: UPS Internal Topology|date=November 2000|access-date=2018-12-11|archive-url=https://web.archive.org/web/20130326072442/http://www.emersonnetworkpower.com/en-US/Brands/Liebert/Documents/White%20Papers/High-Availability%20Power%20Systems,%20Part%20I_UPS%20Internal%20Topology.pdf|archive-date=2013-03-26|url-status=dead}}&lt;/ref&gt;
+* An on-line UPS uses a &quot;double conversion&quot; method of accepting AC input, [[Rectifier|rectifying]] to DC for passing through the [[rechargeable battery]] (or battery strings), then inverting back to 120&amp;nbsp;V/230&amp;nbsp;V AC for powering the protected equipment.
+* A line-interactive UPS maintains the inverter in line and redirects the battery's DC current path from the normal charging mode to supplying current when power is lost.
+* In a standby (&quot;off-line&quot;) system the load is powered directly by the input power and the backup power circuitry is only invoked when the utility power fails.
+Most UPS below one kilo[[volt-ampere]] (1&amp;nbsp;kVA) are of the line-interactive or standby variety which are usually less expensive.
+
+For large power units, dynamic uninterruptible power supplies (DUPS) are sometimes used. A synchronous motor/alternator is connected on the mains via a [[Choke (electronics)|choke]]. Energy is stored in a [[flywheel]]. When the mains power fails, an eddy-current regulation maintains the power on the load as long as the flywheel's energy is not exhausted. DUPS are sometimes combined or integrated with a diesel generator that is turned on after a brief delay, forming a [[diesel rotary uninterruptible power supply]] (DRUPS).
+
+A [[fuel cell]] UPS was developed by the company Hydrogenics using hydrogen and a fuel cell as a power source, potentially providing long run times in a small space.&lt;ref&gt;{{cite web|url=http://www.hydrogenics.com/hydrogen-products-solutions/fuel-cell-power-systems/stationary-stand-by-power/telecom-data-centre-backup-power |title=Hydrogen Fuel Cell UPS}}&lt;/ref&gt; &lt;!-- the volumetric energy density of even liquid hydrogen is only about one fourth that of gasoline, and 150 bar compressed H2 is about one twentieth, so claim of &quot;long run times in a small space&quot; compared to diesel will require a ref. --&gt;
+
+===Offline/standby===
+[[Image:Standby UPS Diagram SVG.svg|thumb|350px|Offline/standby UPS: The green line illustrates the flow of electric power. Typical protection time: 5–20 minutes. Capacity expansion: Usually not available.]]
+
+The offline/standby UPS offers only the most basic features, providing surge protection and battery backup. The protected equipment is normally connected directly to incoming utility power. When the incoming voltage falls below or rises above a predetermined level the UPS turns on its internal DC-AC inverter circuitry, which is powered from an internal storage battery. The UPS then mechanically switches the connected equipment on to its DC-AC inverter output. The switch-over time can be as long as 25 milliseconds depending on the amount of time it takes the standby UPS to detect the lost utility voltage. The UPS will be designed to power certain equipment, such as a personal computer, without any objectionable dip or [[Brownout (electricity)|brownout]] to that device.
+
+===Line-interactive===
+[[Image:Line-Interactive UPS Diagram SVG.svg|thumb|500px|Line-interactive UPS: The green line illustrates the flow of electric power. Typical protection time: 5–30 minutes. Capacity expansion: several hours.]]
+
+The line-interactive UPS is similar in operation to a standby UPS, but with the addition of a multi-tap variable-voltage [[autotransformer]]. This is a special type of [[transformer]] that can add or subtract powered coils of wire, thereby increasing or decreasing the magnetic field and the output voltage of the transformer.  This may also be performed by a ''[[buck–boost transformer]]'' which is distinct from an autotransformer, since the former may be wired to provide [[galvanic isolation]].
