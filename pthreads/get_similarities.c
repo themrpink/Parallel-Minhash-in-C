@@ -10,6 +10,7 @@
 #define N_THREADS 4
 
 pthread_mutex_t lock;
+pthread_mutex_t lock_count_shared_signature;
 
 typedef struct {
     int index_inizio;
@@ -30,6 +31,12 @@ typedef struct {
     int index_fine;
     struct doc_couple* couples;
 } args_mergesort_docid ;
+
+typedef struct {
+    int rank;
+    struct doc_couple* couples;
+    int count;
+} args_count_shared_signature ;
 
 int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *signatures){
 
@@ -277,16 +284,30 @@ void mergesort_s_doc_id(struct doc_couple*  X, int index_inizio, int index_fine)
 int do_clustering(struct doc_couple* couples, int count) {
     struct timespec begin, end;
     clock_gettime(CLOCK_REALTIME, &begin);
+    pthread_mutex_init(&lock_count_shared_signature, NULL);
+    args_count_shared_signature args_shared_signature[N_THREADS];
+    pthread_t threads[N_THREADS];
+
+    for (int i = 0; i < N_THREADS; ++i) {
+        args_shared_signature[i].rank=i;
+        args_shared_signature[i].couples=couples;
+        args_shared_signature[i].count=count;
+    }
+    int j=0;
+    while(j<N_THREADS){
+        int thread_created=pthread_create(&threads[j],NULL,count_shared_signature,(void*)&args_shared_signature[j]);
+        if (thread_created==0){
+            j++;
+        }
+    }
+    for (int i = 0; i < N_THREADS; ++i) {
+        pthread_join(threads[i],NULL);
+    }
+    pthread_mutex_destroy(&lock_count_shared_signature);
 
     int index = 0;
     for (int i = 0; i < count; i++) {
         if (couples[i].shared_signatures != 0) {
-            for (int j = i + 1; j < count; j++) {
-                if (couples[i].doc_id == couples[j].doc_id && couples[i].doc2_id == couples[j].doc2_id) {
-                    couples[i].shared_signatures++;
-                    couples[j].shared_signatures = 0;
-                }
-            }
             couples[index] = couples[i];
             index++;
         }
@@ -297,6 +318,35 @@ int do_clustering(struct doc_couple* couples, int count) {
     realloc( couples, (index) * sizeof(struct doc_couple));
     return index;
 }
+
+void* count_shared_signature(void* args) {
+    long numThread = ((args_count_shared_signature *) args)->rank;
+    long firstRow = numThread * ((args_count_shared_signature *) args)->count / N_THREADS;
+
+    long lastRow;
+    if ((numThread + 1) == N_THREADS) {
+        lastRow = ((args_count_shared_signature *) args)->count;
+    } else {
+        lastRow = (numThread + 1) * ((args_count_shared_signature *) args)->count / N_THREADS;
+    }
+
+    for (int i = firstRow; i < lastRow; i++) {
+        if (((args_count_shared_signature *) args)->couples[i].shared_signatures != 0) {
+            int j = i + 1;
+            while (((args_count_shared_signature *) args)->couples[i].doc_id ==((args_count_shared_signature *) args)->couples[j].doc_id)
+                if (((args_count_shared_signature *) args)->couples[i].doc2_id ==((args_count_shared_signature *) args)->couples[j].doc2_id) {
+                    pthread_mutex_lock(&lock_count_shared_signature);
+                    ((args_count_shared_signature *) args)->couples[i].shared_signatures += ((args_count_shared_signature *) args)->couples[j].shared_signatures;
+                    ((args_count_shared_signature *) args)->couples[j].shared_signatures = 0;
+                    pthread_mutex_unlock(&lock_count_shared_signature);
+                }
+            j++;
+        }
+    }
+}
+
+
+
 void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files){
     double some_results[20] = {0};
     int doc1;

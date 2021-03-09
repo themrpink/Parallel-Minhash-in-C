@@ -66,6 +66,7 @@ void* mergesort_signatures(void* args);
 int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti);
 void* create_triplets(void* args);
 int do_clustering(struct doc_couple* couples, int count);
+void* count_shared_signature(void* args);
 void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files);
 #endif //MINHASHPROJECT_GET_SIMILARITIES_H
 
