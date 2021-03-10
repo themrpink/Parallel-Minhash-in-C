@@ -206,7 +206,7 @@ unsigned long long rands[] = {  13607075548612569373LLU,
                                 13211065264639032347LLU,
 };
 //endregion
-#define MUTEX_GROUP 20
+#define MUTEX_GROUP 199
 #define THREAD_COUNT 10
 pthread_t threads[THREAD_COUNT];
 pthread_mutex_t lock;
@@ -286,10 +286,10 @@ void *get_all_minashes(void *args){
         for(count=firstRow; count<lastRow; count++){
             hash = ((create_hash_args*)args)->hashed_shingles[count] ^ rands[i];
 
-            pthread_mutex_lock(&lockhashes[(i/MUTEX_GROUP)]);
+            pthread_mutex_lock(&lockhashes[(i)]);
             if(hash < ((create_hash_args*)args)->minhashes[i])
                 ((create_hash_args*)args)->minhashes[i] = hash;
-            pthread_mutex_unlock(&lockhashes[(i/MUTEX_GROUP)]);
+            pthread_mutex_unlock(&lockhashes[(i)]);
         }
 
     }
@@ -339,12 +339,14 @@ long long unsigned *get_signatures(char **shingles, long long int tot_shingles) 
             }
         }
     }
-    *signatures=args[i].minhash;
+
+
     for (int j = 0; j < THREAD_COUNT ; ++j) {
         pthread_join(threads[j],NULL);
     }
+    *signatures=args[i].minhash;
     for (int i = 0; i < PRIMES_SIZE; ++i) {
-        *(signatures+i+1)=args[i].minhashes[i];
+        *(signatures+i+1)=args[0].minhashes[i];
     }
     destroy_mutex();
     exectimes(elapsed, GET_SIGNATURES, SET_TIME);
