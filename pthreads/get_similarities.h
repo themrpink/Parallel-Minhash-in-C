@@ -33,16 +33,18 @@ struct doc_couple{
         Questo andrà nella funzione get_sketches ristrutturata
 
 */
-int get_sketches(int i, struct sign_doc *files_sketches, long long unsigned *signatures,char *filename);
+int get_sketches(int i, struct sign_doc *files_sketches, long long unsigned *signatures);
 
 
 /*
     merge sort con impostazione parallelizzabile.
 */
 void mergesort_s_doc_id(struct doc_couple*  X, int l, int n);
-void merge_signatures(struct sign_doc* X, int l, int m, int r);
-void merge_doc_id(struct doc_couple*  X, int l, int m, int r);
-void mergesort_s_signatures(struct sign_doc* X, int l, int n);
+void* mergesort_doc_id(void* args);
+void merge_doc_id(struct doc_couple*  X, int index_inizio, int valore_medio, int index_fine);
+void merge_signatures(struct sign_doc* X, int index_inizio, int valore_medio, int index_fine);
+void mergesort_s_signatures(struct sign_doc* X, int index_inizio, int indexFine);
+void* mergesort_signatures(void* args);
 /*
     confronta le signatures di tutti i documenti e salva quali hanno signatures in comune e quante.
     Restituisce anche una percentuale di somiglianza tra i documenti che hanno almeno una signatures in comune.
@@ -62,8 +64,9 @@ void mergesort_s_signatures(struct sign_doc* X, int l, int n);
 
 */
 int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti);
-int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct doc_couple* couples);
+void* create_triplets(void* args);
 int do_clustering(struct doc_couple* couples, int count);
+void* count_shared_signature(void* args);
 void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files);
 #endif //MINHASHPROJECT_GET_SIMILARITIES_H
 
