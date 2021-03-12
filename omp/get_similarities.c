@@ -8,7 +8,7 @@
 #define N_SIGNATURES 200
 
 //crea le coppie doc_id - signatures (200 coppie per ogni doc con tutte le sue signatures)
-int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *signatures, char *filename){
+int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *signatures){
    double start;
    double  end;
 
@@ -43,7 +43,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
    start=omp_get_wtime();
    #pragma omp parallel for 
    for(int i=0; i < numberOfFiles; i++){
-        get_sketches(i, files_sketches+(i*N_SIGNATURES) , *(minhashDocumenti+i), files[i]);
+        get_sketches(i, files_sketches+(i*N_SIGNATURES) , *(minhashDocumenti+i));
    }
 
    end = omp_get_wtime();
@@ -56,7 +56,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
  
    //crea le triple {doc1, doc2, shared_signatures}
    int count = create_triplets(files_sketches, numberOfFiles, couples);
-
+   free(files_sketches);
    //ordina per doc_id
    mergesort_s_doc_id(couples,0, count-1);
 
@@ -65,6 +65,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
 
 
    check_and_print_similarity(minhashDocumenti, couples, index, files);
+   free(couples);
    return 0;
 }
 
@@ -117,7 +118,7 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
    int *tmp = realloc( couples, (--count) * sizeof(struct doc_couple));
    if(tmp==NULL)
        exit(1);
-   free(files_sketches);
+
    return count;
 }
 
@@ -140,8 +141,12 @@ int do_clustering(struct doc_couple* couples, int count) {
                 if (couples[i].shared_signatures != 0) {
                     for (int j = i + 1; j < count; j++) {
                         if (couples[i].doc_id == couples[j].doc_id && couples[i].doc2_id == couples[j].doc2_id) {
-                            couples[i].shared_signatures++;
-                            couples[j].shared_signatures = 0;   
+                            #pragma omp critical
+                            {
+                                couples[i].shared_signatures+=couples[j].shared_signatures;
+                                couples[j].shared_signatures = 0;   
+                            }
+
                         }
                     }
                      // #pragma omp critical
@@ -286,7 +291,7 @@ void mergesort_s_doc_id_Serial(struct doc_couple*  X, int l, int n)
 
 
 
-void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files){
+void check_and_print_similarity(long long unsigned **minhashDocumenti, struct doc_couple* couples, int index, char **files){
     double some_results[20] = {0};
     int doc1;
     int doc2;
@@ -299,9 +304,11 @@ void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct d
         for(int signature=0; signature<N_SIGNATURES; signature++)
             if (minhashDocumenti[doc1][signature] == minhashDocumenti[doc2][signature])
                 shared+=1;
-        printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
-        printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
-        if(((float)shared/N_SIGNATURES)>0.5 && j<20)
+        if(shared > 5){
+            printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
+            printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
+        }
+        if(((float)shared/N_SIGNATURES)>0.5)
             some_results[j++] =(float)shared/N_SIGNATURES;
         shared=0;
     }
@@ -320,5 +327,5 @@ void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct d
     printf("\n\n");
     fprintf(fp, "\n");
     fclose(fp);
-    free(couples);
+    
 }

@@ -30,7 +30,7 @@ struct doc_couple{
         Crea le coppie doc_id - signatures (200 coppie per ogni doc con tutte le sue signatures)
 
 */
-int get_sketches(int i, struct sign_doc *files_sketches, long long unsigned *signatures,char *filename);
+int get_sketches(int i, struct sign_doc *files_sketches, long long unsigned *signatures);
 
 
 /*
