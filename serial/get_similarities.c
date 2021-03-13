@@ -213,8 +213,10 @@ void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct d
         for(int signature=0; signature<N_SIGNATURES; signature++)
             if (minhashDocumenti[doc1][signature] == minhashDocumenti[doc2][signature])
                 shared+=1;
-        printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
-        printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
+        if(shared > 5){
+            printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
+            printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
+        }
         if(((float)shared/N_SIGNATURES)>0.5 && j<20)
             some_results[j++] =(float)shared/N_SIGNATURES;
         shared=0;
