@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
 
     //test
     exectimes(NUMB_THREADS, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
-    //check_coherence(minhashDocumenti, numberOfFiles);
+    check_coherence(minhashDocumenti, numberOfFiles);
 
     return 0;
 }

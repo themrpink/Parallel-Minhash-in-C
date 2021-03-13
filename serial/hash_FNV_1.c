@@ -3,6 +3,7 @@
 #include <omp.h>
 #include "time_test.h"
 #include <stdio.h>
+//region rands
 unsigned long long rands[] = {  13607075548612569373LLU,
                                 6724581513526549887LLU,
                                 17106295739405559511LLU,
@@ -203,7 +204,7 @@ unsigned long long rands[] = {  13607075548612569373LLU,
                                 8160521925384610550LLU,
                                 13211065264639032347LLU,
 };
-
+//endregion
 
 
 int hash_FNV_1a(char *shingle, long long unsigned *hash){

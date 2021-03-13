@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
 
     //test
     exectimes(threads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
-    //check_coherence(minhashDocumenti, numberOfFiles);
+    check_coherence(minhashDocumenti, numberOfFiles);
 
     for (int i = 0; i < numberOfFiles; i++) {
         free(files[i]);

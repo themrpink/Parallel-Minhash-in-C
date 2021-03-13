@@ -16,7 +16,9 @@
 #define COEFFICIENTE_SIMILARITA 0.75
 //gcc -Wall -fopenmp -o main main.c documents_getters.c get_similarities.c hash_FNV_1.c  tokenizer.c shingle_extract.c time_test.c
 
-
+int cmpfunc (const void * a, const void * b) {
+    return strcmp( *(const char**)a, *(const char**)b );
+}
 
 //folder e ricerca dei fileparalleli
 int main(int argc, char *argv[]) {
@@ -29,6 +31,7 @@ int main(int argc, char *argv[]) {
         exit(EXITNOFILEFOUND);
     }
     printf("numero di file: %d\n", numberOfFiles);
+    qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc  );
     long long unsigned **minhashDocumenti = (long long unsigned **)malloc(numberOfFiles*sizeof (long long unsigned *));
 
     double start;
@@ -66,7 +69,7 @@ int main(int argc, char *argv[]) {
 
     //test
     exectimes(1, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
-    //check_coherence(minhashDocumenti, numberOfFiles);
+    check_coherence(minhashDocumenti, numberOfFiles);
 
     for (int i = 0; i < numberOfFiles; i++) {
         free(files[i]);
