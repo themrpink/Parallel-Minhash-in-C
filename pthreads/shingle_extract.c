@@ -14,8 +14,6 @@ typedef struct {
     long numb_shingles;
 } Create_shingles_args;
 
-
-
 void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
     double start;
     double end;
@@ -54,8 +52,7 @@ void *create_shingles(void* args){
     long firstRow=numThread*local_numb_shingles;
     long lastRow;
     if ((numThread+1)==thread_count){
-        int resto=((Create_shingles_args*)args)->numb_shingles%thread_count;
-         lastRow=(numThread+1)*local_numb_shingles-1+resto;
+         lastRow=((Create_shingles_args*)args)->numb_shingles-1;
     }else{
          lastRow=(numThread+1)*local_numb_shingles-1;
     }
@@ -70,26 +67,3 @@ void *create_shingles(void* args){
 
     }
 }
-
-
-
-
-
-/*
-void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
-    double start;
-    double end;
-
-    start=omp_get_wtime();
-    for(long long i=0; i<numb_shingles; i++)
-        shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
-
-    //li estrae e salva in **shingles
-    for(int count=0; count<numb_shingles; count++){
-        for(int pos=0; pos<K_SHINGLE; pos++)
-            shingles[count][pos]=buf[count+pos];   
-    }
-    end = omp_get_wtime();
-    exectimes(end-start, SHINGLE_EXTRACT, SET_TIME);
-}
-*/
