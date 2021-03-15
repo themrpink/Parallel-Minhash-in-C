@@ -208,7 +208,7 @@ unsigned long long rands[] = {  13607075548612569373LLU,
 };
 //endregion
 #define MUTEX_GROUP 199
-#define THREAD_COUNT 1
+#define THREAD_COUNT 4
 pthread_t threads[THREAD_COUNT];
 pthread_mutex_t lock;
 pthread_mutex_t lockhashes[MUTEX_GROUP];
@@ -219,7 +219,7 @@ typedef struct {
     long long tot_shingles;
     long long unsigned *hashed_shingles;
     long long unsigned *minhash;
-    long long unsigned *minhashes[PRIMES_SIZE];
+    long long unsigned *minhashes;
 } create_hash_args ;
 
 int hash_FNV_1a(char *shingle, long long unsigned *hash){
@@ -246,7 +246,7 @@ void *create_hash(void *args) {
     if ((numThread+1)==THREAD_COUNT){
         lastRow=((create_hash_args*)args)->tot_shingles;
     }else{
-        lastRow=(numThread+1)*local_numb_shingles-1;
+        lastRow=(numThread+1)*local_numb_shingles;
     }
 
     long long unsigned hash=0;
@@ -267,14 +267,14 @@ void *create_hash(void *args) {
  */
 void *get_all_minashes(void *args){
     long numThread=((create_hash_args*)args)->rank;
-    long count;
+    long long count;
     int local_numb_shingles=((create_hash_args*)args)->tot_shingles/THREAD_COUNT;
     long firstRow=numThread*local_numb_shingles;
     long lastRow;
     if ((numThread+1)==THREAD_COUNT){
         lastRow=((create_hash_args*)args)->tot_shingles;
     }else{
-        lastRow=(numThread+1)*local_numb_shingles-1;
+        lastRow=(numThread+1)*local_numb_shingles;
     }
 
     long long unsigned hash=0;
@@ -282,10 +282,10 @@ void *get_all_minashes(void *args){
     for(int i=0; i<PRIMES_SIZE; i++){
         for(count=firstRow; count<lastRow; count++){
             hash = ((create_hash_args*)args)->hashed_shingles[count] ^ rands[i];
-            pthread_mutex_lock(&lockhashes[(i)]);
+            pthread_mutex_lock(&lockhashes[i]);
             if(hash < ((create_hash_args*)args)->minhashes[i])
                 ((create_hash_args*)args)->minhashes[i] = hash;
-            pthread_mutex_unlock(&lockhashes[(i)]);
+            pthread_mutex_unlock(&lockhashes[i]);
         }
 
     }
@@ -298,17 +298,18 @@ long long unsigned *get_signatures(char **shingles, long long  tot_shingles) {
     long long unsigned *signatures;
     create_hash_args args[THREAD_COUNT];
     signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
-
+    long long unsigned minhashes[PRIMES_SIZE];
     create_mutex();
+    for (int j = 0; j <PRIMES_SIZE ; j++) {
+        minhashes[j]= MAX_LONG_LONG_U;
+    }
     for (int i = 0; i < THREAD_COUNT; ++i) {
         args[i].shingles=shingles;
         args[i].tot_shingles=tot_shingles;
         args[i].rank=i;
         args[i].hashed_shingles=hashed_shingles;
         args[i].minhash=&minhash;
-        for (int j = 0; j <PRIMES_SIZE ; ++j) {
-            args[i].minhashes[j] = MAX_LONG_LONG_U;
-        }
+        args[i].minhashes=minhashes;
 
     }
     int i=0;

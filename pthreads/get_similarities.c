@@ -72,7 +72,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
         if ((i+1)==N_THREADS){
             args[i].index_fine=files_sketchs_length-1;
         }else{
-            args[i].index_fine=((i+1)*files_sketchs_length/N_THREADS)-1;
+            args[i].index_fine=((i+1)*files_sketchs_length/N_THREADS);
         }
         args[i].files_sketches=files_sketches;
     }
