@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "time_test.h"
 #include <pthread.h>
-#include "omp.h"
+
 
 int thread_count=4;
 
