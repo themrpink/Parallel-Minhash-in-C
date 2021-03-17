@@ -74,7 +74,7 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         fprintf(fp, "MAIN:                      %.4f \n\n", time[MAIN]);
         fprintf(fp, "LIST_DIR:                  %s   \n\n", "incluso nel main");
         fprintf(fp, "COUNT_NUMBER_OF_FILES:     %s   \n\n", "incluso nel main");
-        fprintf(fp, "GET_FILE_STRINGS_CLEANED:  %s   \n\n", "incluso nel main");
+        fprintf(fp, "GET_FILE_STRINGS_CLEANED:  %f   \n\n", time[GET_FILE_STRINGS_CLEANED]);
         fprintf(fp, "COMPRESS_SPACES:           %s   \n\n", "incluso nel main");
         fprintf(fp, "SHINGLE_EXTRACT:           %.4f \n\n", time[SHINGLE_EXTRACT]);
         fprintf(fp, "GET_SIGNATURES:            %.4f \n\n", time[GET_SIGNATURES]);

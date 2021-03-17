@@ -6,6 +6,7 @@
 #include "string.h"
 #include "ctype.h"
 #include "time_test.h"
+#include <omp.h>
 #define EMPTY ""
 #define NUMB_THREADS 2
 

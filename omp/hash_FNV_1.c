@@ -224,8 +224,7 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash){
 
 
 long long unsigned* get_signatures(char **shingles, long long tot_shingles){
-    double start;
-    double  end;
+
     long long unsigned hash=0;
     long long unsigned minhash=MAX_LONG_LONG_U;
     long long unsigned *hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
@@ -235,7 +234,6 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
     if(signatures==NULL || hashed_shingles==NULL)
         exit(1);
 
-    start=omp_get_wtime();
 #pragma omp parallel private(hash)
     {
     long long unsigned hash_temp=0;
@@ -254,7 +252,6 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
         #pragma omp for private(hash_temp) reduction(min:minhash) schedule(static) 
         for(int i=0; i<PRIMES_SIZE; i++){
             minhash = MAX_LONG_LONG_U;
-            hash_temp=hash;
             for(long long j=0; j<tot_shingles; j++){
                 hash_temp = hashed_shingles[j] ^ rands[i];
 
@@ -264,8 +261,6 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
             *(signatures+i+1)=minhash;
         }
 }
-end = omp_get_wtime();
-    exectimes(end-start, GET_SIGNATURES, SET_TIME);
 
     free(hashed_shingles);
     return signatures;
