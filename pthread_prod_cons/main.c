@@ -20,11 +20,8 @@
 
 #define  EXITARGUMENTFAIL 20
 #define  EXITNOFILEFOUND  30
-#define COEFFICIENTE_SIMILARITA 0.75
-
-
-
-sem_t mutex; 
+//sem_t mutex; 
+pthread_mutex_t lock;
 
 int main(int argc, char *argv[]) {
 
@@ -60,6 +57,7 @@ int main(int argc, char *argv[]) {
     files_struct->queue = createQueue(10);
     getSignatures_struct->queue = createQueue(10);
     sem_init(&mutex, 0, 1);             //semaforo utilizzato in get_signatures(), inizializzato a 1 e abilitato per i thread
+    pthread_mutex_init(&lock, NULL);
 
     pthread_t *thread_handles;
     thread_handles = (pthread_t *) malloc((2*numberOfThreads+1) * sizeof(pthread_t));
@@ -87,6 +85,7 @@ int main(int argc, char *argv[]) {
             args_second_consumer[i-numberOfThreads-1].rank = i-numberOfThreads-1;
             args_second_consumer[i-numberOfThreads-1].numberOfFiles = numberOfFiles;
             args_second_consumer[i-numberOfThreads-1].mutex = &mutex;
+            args_second_consumer[i-numberOfThreads-1].lock = &lock;
             args_second_consumer[i-numberOfThreads-1].signatures_struct = getSignatures_struct;
             pthread_create(&thread_handles[i], NULL, get_signatures, (void *) &args_second_consumer[i-numberOfThreads-1]);
         }

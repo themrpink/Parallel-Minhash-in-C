@@ -68,7 +68,7 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         int numb_of_threads = value;
         char *filename = "pthread_time_log.txt";
         FILE *fp = fopen(filename, "a");
-        sprintf(buffer, "Number of threads: %d\n\n Elapsed times: \n\n", numb_of_threads);
+        sprintf(buffer, "Numero di threads: %d\n\n Elapsed times: \n\n", numb_of_threads);
         fwrite(buffer, strlen(buffer), 1, fp);
 
         fprintf(fp, "MAIN:                      %.4f \n\n", time[MAIN]);

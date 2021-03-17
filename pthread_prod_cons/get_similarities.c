@@ -78,7 +78,7 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
     /*
         ridimensiona l'array con ai primi "count" elementi (tutti quelli cioè che hanno shared_signatures=1)
     */
-    realloc( couples, (--count) * sizeof(struct doc_couple));
+    void* a = realloc( couples, (--count) * sizeof(struct doc_couple));
 
     free(files_sketches);
     return count;
@@ -107,7 +107,7 @@ int do_clustering(struct doc_couple* couples, int count) {
 
 
     exectimes(getElapsedTime(&begin, &end), DO_CLUSTERING, SET_TIME);
-    realloc( couples, (index) * sizeof(struct doc_couple));
+    void* a = realloc( couples, (index) * sizeof(struct doc_couple));
     return index;
 }
 

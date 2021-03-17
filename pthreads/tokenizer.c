@@ -7,7 +7,7 @@
 #include <pthread.h>
 #include "time_test.h"
 #define EMPTY ""
-#define NUMB_THREADS 8
+#define NUMB_THREADS 4
 
 char* get_file_string_cleaned(const char* file_path, long* fileLength){
 

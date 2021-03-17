@@ -10,6 +10,7 @@
 char* get_file_string_cleaned(const char* file_path,long* fileLength){
     double start;
     double  end;
+    start = omp_get_wtime();
     long length=0;
     char * testo;// = 0;
     FILE * fp = fopen (file_path, "rb");
@@ -28,8 +29,6 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
         compress_spaces(testo, length);
 
         int i, s = strlen(testo);
-
-        start = omp_get_wtime();
 
         for (i = 0; i < s; i++)
             testo[i] = tolower(testo[i]);

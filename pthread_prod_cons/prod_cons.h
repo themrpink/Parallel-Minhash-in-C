@@ -4,7 +4,7 @@
 
 #ifndef OMP_PROD_CONS_H
 #define OMP_PROD_CONS_H
-
+#include <pthread.h>
 #include "queue.h"
 #include <semaphore.h> 
 #include <unistd.h> 
@@ -77,6 +77,7 @@ typedef struct args_getSignatures_consumer {
     int rank;
     int numberOfFiles;
     sem_t *mutex; 
+    pthread_mutex_t *lock;
     Prod_Cons_Data *signatures_struct;
 }args_getSignatures_consumer;
 

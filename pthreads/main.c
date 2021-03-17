@@ -30,11 +30,10 @@ typedef struct MinHashParameters{
 void *minHash(void* args);
 
 int main(int argc, char *argv[]) {
-
+    
     char *folderName = argv[1];
     int thread_count = atoi(argv[2]);
     char **files;
-
     struct timespec begin, end;
     clock_gettime(CLOCK_REALTIME, &begin);
 
@@ -43,14 +42,14 @@ int main(int argc, char *argv[]) {
         exit(EXITNOFILEFOUND);
     }
     printf("numero di file: %d\n", numberOfFiles);
-    exectimes(getElapsedTime(&begin, &end), LIST_DIR, SET_TIME);
+    //exectimes(getElapsedTime(&begin, &end), LIST_DIR, SET_TIME);
 
     //ordina i nomi dei file giusto per far funzionare il test sulle signatures
-    qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc  );
+    //qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc  );
     long long unsigned **minhashDocumenti = (long long unsigned **) malloc(numberOfFiles*sizeof (long long unsigned*));
     
-    clock_gettime(CLOCK_REALTIME, &begin);
-    
+    //clock_gettime(CLOCK_REALTIME, &begin);
+
     if(thread_count>numberOfFiles)
         thread_count = numberOfFiles;
     pthread_t *thread_handles;
@@ -72,7 +71,6 @@ int main(int argc, char *argv[]) {
     for ( thread = 0; thread<thread_count; thread++)
         pthread_join(thread_handles[thread], NULL);
 
-
     exectimes(getElapsedTime(&begin, &end), MAIN, SET_TIME);
     
     clock_gettime(CLOCK_REALTIME, &begin);
@@ -83,7 +81,7 @@ int main(int argc, char *argv[]) {
     free(files);
 
     //test
-    exectimes(NUMB_THREADS, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
+    exectimes(thread_count, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
     check_coherence(minhashDocumenti, numberOfFiles);
 
     return 0;

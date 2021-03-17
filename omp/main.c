@@ -29,6 +29,9 @@ int main(int argc, char *argv[]) {
     omp_set_num_threads(threads);
     omp_set_nested(4);
 
+    double start;
+    double  end;
+    start = omp_get_wtime();
     char *folderName = argv[1];
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
@@ -38,13 +41,11 @@ int main(int argc, char *argv[]) {
     }
 
     //il quick sort ordina i nomi dei file giusto per far funzionare il test sulle signatures
-    qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc);
+    //qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc);
 
     long long unsigned **minhashDocumenti = (long long unsigned **)malloc(numberOfFiles*sizeof (long long unsigned *));
 
-    double start;
-    double  end;
-    start = omp_get_wtime();
+    
 
     #pragma omp parallel for schedule(static, 8)
     for (int i = 0; i < numberOfFiles; i++) {
@@ -59,8 +60,12 @@ int main(int argc, char *argv[]) {
             if(shingles==NULL)
                 exit(1);
             shingle_extract_buf(filesContent, numb_shingles, shingles);
-
+            
+            double start_get_signatures = omp_get_wtime();
             long long unsigned *signatures= get_signatures(shingles, numb_shingles);
+            double  end_get_signatures = omp_get_wtime();
+            exectimes(end_get_signatures-start_get_signatures, GET_SIGNATURES, SET_TIME);
+            
             minhashDocumenti[i] = signatures;
 
             for (int j = 0; j < numb_shingles; j++)

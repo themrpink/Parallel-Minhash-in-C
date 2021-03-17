@@ -1,0 +1,752 @@
+cartella documenti: ../docs/docs_small
+Number of threads: 1
+
+ Elapsed times: 
+
+MAIN:                      7.9348 
+
+LIST_DIR:                  0.0017 
+
+COUNT_NUMBER_OF_FILES:     0.0026 
+
+GET_FILE_STRINGS_CLEANED:  0.0166 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.8405 
+
+GET_SIGNATURES:            3.8903 
+
+FIND_SIMILARITY:           0.0021 
+
+GET_SKETCHES:              0.0000 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 2
+
+ Elapsed times: 
+
+MAIN:                      3.5808 
+
+LIST_DIR:                  0.0006 
+
+COUNT_NUMBER_OF_FILES:     0.0009 
+
+GET_FILE_STRINGS_CLEANED:  0.0076 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.4717 
+
+GET_SIGNATURES:            1.8840 
+
+FIND_SIMILARITY:           0.0054 
+
+GET_SKETCHES:              0.0019 
+
+CREATE_TRIPLETS:           0.0002 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 4
+
+ Elapsed times: 
+
+MAIN:                      2.4301 
+
+LIST_DIR:                  0.0009 
+
+COUNT_NUMBER_OF_FILES:     0.0013 
+
+GET_FILE_STRINGS_CLEANED:  0.0242 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.2132 
+
+GET_SIGNATURES:            1.0375 
+
+FIND_SIMILARITY:           0.0130 
+
+GET_SKETCHES:              0.0020 
+
+CREATE_TRIPLETS:           0.0008 
+
+DO_CLUSTERING:             0.0002 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 8
+
+ Elapsed times: 
+
+MAIN:                      2.3610 
+
+LIST_DIR:                  0.0029 
+
+COUNT_NUMBER_OF_FILES:     0.0037 
+
+GET_FILE_STRINGS_CLEANED:  0.0285 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.1763 
+
+GET_SIGNATURES:            0.8881 
+
+FIND_SIMILARITY:           0.0525 
+
+GET_SKETCHES:              0.0172 
+
+CREATE_TRIPLETS:           0.0051 
+
+DO_CLUSTERING:             0.0002 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 12
+
+ Elapsed times: 
+
+MAIN:                      2.6365 
+
+LIST_DIR:                  0.0011 
+
+COUNT_NUMBER_OF_FILES:     0.0017 
+
+GET_FILE_STRINGS_CLEANED:  0.0566 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.1722 
+
+GET_SIGNATURES:            0.9416 
+
+FIND_SIMILARITY:           0.0697 
+
+GET_SKETCHES:              0.0205 
+
+CREATE_TRIPLETS:           0.0136 
+
+DO_CLUSTERING:             0.0002 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 16
+
+ Elapsed times: 
+
+MAIN:                      2.6799 
+
+LIST_DIR:                  0.0012 
+
+COUNT_NUMBER_OF_FILES:     0.0018 
+
+GET_FILE_STRINGS_CLEANED:  0.0586 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.1846 
+
+GET_SIGNATURES:            0.9333 
+
+FIND_SIMILARITY:           0.0710 
+
+GET_SKETCHES:              0.0333 
+
+CREATE_TRIPLETS:           0.0128 
+
+DO_CLUSTERING:             0.0002 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 32
+
+ Elapsed times: 
+
+MAIN:                      3.1583 
+
+LIST_DIR:                  0.0014 
+
+COUNT_NUMBER_OF_FILES:     0.0026 
+
+GET_FILE_STRINGS_CLEANED:  0.0908 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.2136 
+
+GET_SIGNATURES:            1.0510 
+
+FIND_SIMILARITY:           0.1703 
+
+GET_SKETCHES:              0.0751 
+
+CREATE_TRIPLETS:           0.0511 
+
+DO_CLUSTERING:             0.0002 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 64
+
+ Elapsed times: 
+
+MAIN:                      3.8721 
+
+LIST_DIR:                  0.0031 
+
+COUNT_NUMBER_OF_FILES:     0.0052 
+
+GET_FILE_STRINGS_CLEANED:  0.1462 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.2908 
+
+GET_SIGNATURES:            1.2309 
+
+FIND_SIMILARITY:           0.4570 
+
+GET_SKETCHES:              0.2240 
+
+CREATE_TRIPLETS:           0.2033 
+
+DO_CLUSTERING:             0.0003 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_medium
+Number of threads: 1
+
+ Elapsed times: 
+
+MAIN:                      16.7782 
+
+LIST_DIR:                  0.0184 
+
+COUNT_NUMBER_OF_FILES:     0.0297 
+
+GET_FILE_STRINGS_CLEANED:  0.0001 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0066 
+
+GET_SIGNATURES:            0.0317 
+
+FIND_SIMILARITY:           0.1673 
+
+GET_SKETCHES:              0.0000 
+
+CREATE_TRIPLETS:           0.0009 
+
+DO_CLUSTERING:             0.1363 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_medium
+Number of threads: 2
+
+ Elapsed times: 
+
+MAIN:                      5.8551 
+
+LIST_DIR:                  0.0088 
+
+COUNT_NUMBER_OF_FILES:     0.0128 
+
+GET_FILE_STRINGS_CLEANED:  0.0005 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0055 
+
+GET_SIGNATURES:            0.0248 
+
+FIND_SIMILARITY:           0.2141 
+
+GET_SKETCHES:              0.0040 
+
+CREATE_TRIPLETS:           0.0034 
+
+DO_CLUSTERING:             0.1558 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_medium
+Number of threads: 4
+
+ Elapsed times: 
+
+MAIN:                      4.6413 
+
+LIST_DIR:                  0.0089 
+
+COUNT_NUMBER_OF_FILES:     0.0166 
+
+GET_FILE_STRINGS_CLEANED:  0.0147 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0187 
+
+GET_SIGNATURES:            0.0379 
+
+FIND_SIMILARITY:           0.2615 
+
+GET_SKETCHES:              0.0055 
+
+CREATE_TRIPLETS:           0.0092 
+
+DO_CLUSTERING:             0.1535 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_medium
+Number of threads: 8
+
+ Elapsed times: 
+
+MAIN:                      4.8764 
+
+LIST_DIR:                  0.0133 
+
+COUNT_NUMBER_OF_FILES:     0.0192 
+
+GET_FILE_STRINGS_CLEANED:  0.0402 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0345 
+
+GET_SIGNATURES:            0.0600 
+
+FIND_SIMILARITY:           0.3723 
+
+GET_SKETCHES:              0.0031 
+
+CREATE_TRIPLETS:           0.0214 
+
+DO_CLUSTERING:             0.1952 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_medium
+Number of threads: 12
+
+ Elapsed times: 
+
+MAIN:                      7.2187 
+
+LIST_DIR:                  0.0169 
+
+COUNT_NUMBER_OF_FILES:     0.0227 
+
+GET_FILE_STRINGS_CLEANED:  0.0759 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0829 
+
+GET_SIGNATURES:            0.1534 
+
+FIND_SIMILARITY:           0.4782 
+
+GET_SKETCHES:              0.0073 
+
+CREATE_TRIPLETS:           0.0417 
+
+DO_CLUSTERING:             0.1729 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_medium
+Number of threads: 16
+
+ Elapsed times: 
+
+MAIN:                      7.3661 
+
+LIST_DIR:                  0.0109 
+
+COUNT_NUMBER_OF_FILES:     0.0176 
+
+GET_FILE_STRINGS_CLEANED:  0.1263 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.1260 
+
+GET_SIGNATURES:            0.1517 
+
+FIND_SIMILARITY:           0.6096 
+
+GET_SKETCHES:              0.0135 
+
+CREATE_TRIPLETS:           0.0570 
+
+DO_CLUSTERING:             0.1930 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_medium
+Number of threads: 32
+
+ Elapsed times: 
+
+MAIN:                      8.5686 
+
+LIST_DIR:                  0.0114 
+
+COUNT_NUMBER_OF_FILES:     0.0221 
+
+GET_FILE_STRINGS_CLEANED:  0.2658 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.2139 
+
+GET_SIGNATURES:            0.2764 
+
+FIND_SIMILARITY:           1.0408 
+
+GET_SKETCHES:              0.0606 
+
+CREATE_TRIPLETS:           0.1050 
+
+DO_CLUSTERING:             0.1479 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_medium
+Number of threads: 64
+
+ Elapsed times: 
+
+MAIN:                      12.1739 
+
+LIST_DIR:                  0.0126 
+
+COUNT_NUMBER_OF_FILES:     0.0253 
+
+GET_FILE_STRINGS_CLEANED:  0.6367 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.5979 
+
+GET_SIGNATURES:            0.6470 
+
+FIND_SIMILARITY:           2.1982 
+
+GET_SKETCHES:              0.2852 
+
+CREATE_TRIPLETS:           0.2355 
+
+DO_CLUSTERING:             0.1511 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_big
+Number of threads: 1
+
+ Elapsed times: 
+
+MAIN:                      54.3850 
+
+LIST_DIR:                  0.0437 
+
+COUNT_NUMBER_OF_FILES:     0.0680 
+
+GET_FILE_STRINGS_CLEANED:  0.0002 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0112 
+
+GET_SIGNATURES:            0.0392 
+
+FIND_SIMILARITY:           6.7526 
+
+GET_SKETCHES:              0.0000 
+
+CREATE_TRIPLETS:           0.0035 
+
+DO_CLUSTERING:             6.6526 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_big
+Number of threads: 2
+
+ Elapsed times: 
+
+MAIN:                      21.5795 
+
+LIST_DIR:                  0.0241 
+
+COUNT_NUMBER_OF_FILES:     0.0345 
+
+GET_FILE_STRINGS_CLEANED:  0.0014 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0095 
+
+GET_SIGNATURES:            0.0410 
+
+FIND_SIMILARITY:           7.9755 
+
+GET_SKETCHES:              0.0040 
+
+CREATE_TRIPLETS:           0.0280 
+
+DO_CLUSTERING:             7.7503 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_big
+Number of threads: 4
+
+ Elapsed times: 
+
+MAIN:                      17.3503 
+
+LIST_DIR:                  0.0287 
+
+COUNT_NUMBER_OF_FILES:     0.0445 
+
+GET_FILE_STRINGS_CLEANED:  0.0195 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0308 
+
+GET_SIGNATURES:            0.0583 
+
+FIND_SIMILARITY:           7.6480 
+
+GET_SKETCHES:              0.0043 
+
+CREATE_TRIPLETS:           0.0829 
+
+DO_CLUSTERING:             7.2746 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_big
+Number of threads: 8
+
+ Elapsed times: 
+
+MAIN:                      17.4781 
+
+LIST_DIR:                  0.0235 
+
+COUNT_NUMBER_OF_FILES:     0.0330 
+
+GET_FILE_STRINGS_CLEANED:  0.0666 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0858 
+
+GET_SIGNATURES:            0.1526 
+
+FIND_SIMILARITY:           8.6840 
+
+GET_SKETCHES:              0.0040 
+
+CREATE_TRIPLETS:           0.1725 
+
+DO_CLUSTERING:             7.9893 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_big
+Number of threads: 12
+
+ Elapsed times: 
+
+MAIN:                      21.0635 
+
+LIST_DIR:                  0.0322 
+
+COUNT_NUMBER_OF_FILES:     0.0465 
+
+GET_FILE_STRINGS_CLEANED:  0.1123 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0945 
+
+GET_SIGNATURES:            0.1227 
+
+FIND_SIMILARITY:           8.9985 
+
+GET_SKETCHES:              0.0114 
+
+CREATE_TRIPLETS:           0.2849 
+
+DO_CLUSTERING:             7.8215 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_big
+Number of threads: 16
+
+ Elapsed times: 
+
+MAIN:                      21.0210 
+
+LIST_DIR:                  0.0256 
+
+COUNT_NUMBER_OF_FILES:     0.0394 
+
+GET_FILE_STRINGS_CLEANED:  0.1971 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.1750 
+
+GET_SIGNATURES:            0.2376 
+
+FIND_SIMILARITY:           8.4375 
+
+GET_SKETCHES:              0.0149 
+
+CREATE_TRIPLETS:           0.3029 
+
+DO_CLUSTERING:             7.1400 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_big
+Number of threads: 32
+
+ Elapsed times: 
+
+MAIN:                      25.9524 
+
+LIST_DIR:                  0.0297 
+
+COUNT_NUMBER_OF_FILES:     0.0465 
+
+GET_FILE_STRINGS_CLEANED:  0.2903 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.3124 
+
+GET_SIGNATURES:            0.3125 
+
+FIND_SIMILARITY:           10.5842 
+
+GET_SKETCHES:              0.0603 
+
+CREATE_TRIPLETS:           0.6116 
+
+DO_CLUSTERING:             7.8185 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/docs_big
+Number of threads: 64
+
+ Elapsed times: 
+
+MAIN:                      35.1736 
+
+LIST_DIR:                  0.0289 
+
+COUNT_NUMBER_OF_FILES:     0.0558 
+
+GET_FILE_STRINGS_CLEANED:  0.7010 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.7678 
+
+GET_SIGNATURES:            0.7446 
+
+FIND_SIMILARITY:           12.8277 
+
+GET_SKETCHES:              0.2476 
+
+CREATE_TRIPLETS:           1.0932 
+
+DO_CLUSTERING:             7.2137 
+
+MERGE_SORT:                0.0000 
+
+##############omp################ 
+
+cartella documenti: ../docs/doppi
+cartella documenti: ../docs/doppi
+cartella documenti: ../docs/doppi
+cartella documenti: ../docs/doppi
+cartella documenti: ../docs/doppi
+cartella documenti: ../docs/doppi
+cartella documenti: ../docs/doppi
+cartella documenti: ../docs/doppi

@@ -15,8 +15,8 @@ typedef struct {
 } Create_shingles_args;
 
 void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
-    double start;
-    double end;
+    double start=0;
+    double end=0;
 
     //void(*create_shingles_ptr)(void*)=create_shingles;
     pthread_t* thread_handles=malloc(thread_count*sizeof (pthread_t));

@@ -244,12 +244,14 @@ void *get_signatures(void *args){
     long long unsigned *hashed_shingles;
     long long unsigned *signatures;
     struct getSignatures_producer_args minHash_args;
- //   struct getSignatures_producer_args *minHash_args_p;
+
 
     signatures = (long long unsigned *)malloc(200*sizeof(long long unsigned));
-    sem_wait(argomenti->mutex); 
+    pthread_mutex_lock(argomenti->lock);
+    //sem_wait(argomenti->mutex); 
     while(0<files--){
-        sem_post(argomenti->mutex); 
+        //sem_post(argomenti->mutex); 
+        pthread_mutex_unlock(argomenti->lock);
         clock_gettime(CLOCK_REALTIME, &begin);
         hash=0;
         minhash=MAX_LONG_LONG_U;
@@ -296,9 +298,11 @@ void *get_signatures(void *args){
         free(shingles);
 
         free(hashed_shingles);
-        sem_wait(argomenti->mutex); 
+        //sem_wait(argomenti->mutex); 
+        pthread_mutex_lock(argomenti->lock);
     }
-    sem_post(argomenti->mutex);
+    //sem_post(argomenti->mutex);
+    pthread_mutex_unlock(argomenti->lock);
     //printf("closed while loop\n");
     return 0;
 }

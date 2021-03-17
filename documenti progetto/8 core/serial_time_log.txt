@@ -1,0 +1,124 @@
+cartella documenti: ../docs/docs_small
+Number of threads: 1
+
+ Elapsed times: 
+
+MAIN:                      6.3049 
+
+LIST_DIR:                  0.0014 
+
+COUNT_NUMBER_OF_FILES:     0.0026 
+
+GET_FILE_STRINGS_CLEANED:  0.0121 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.7284 
+
+GET_SIGNATURES:            2.9330 
+
+FIND_SIMILARITY:           0.0030 
+
+GET_SKETCHES:              0.0000 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0000 
+
+###########serial################ 
+
+cartella documenti: ../docs/docs_medium
+Number of threads: 1
+
+ Elapsed times: 
+
+MAIN:                      12.5284 
+
+LIST_DIR:                  0.0100 
+
+COUNT_NUMBER_OF_FILES:     0.0154 
+
+GET_FILE_STRINGS_CLEANED:  0.0002 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0060 
+
+GET_SIGNATURES:            0.0241 
+
+FIND_SIMILARITY:           0.1342 
+
+GET_SKETCHES:              0.0000 
+
+CREATE_TRIPLETS:           0.0005 
+
+DO_CLUSTERING:             0.0991 
+
+MERGE_SORT:                0.0000 
+
+###########serial################ 
+
+cartella documenti: ../docs/docs_big
+Number of threads: 1
+
+ Elapsed times: 
+
+MAIN:                      45.5291 
+
+LIST_DIR:                  0.0289 
+
+COUNT_NUMBER_OF_FILES:     0.0476 
+
+GET_FILE_STRINGS_CLEANED:  0.0001 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0076 
+
+GET_SIGNATURES:            0.0328 
+
+FIND_SIMILARITY:           7.7022 
+
+GET_SKETCHES:              0.0000 
+
+CREATE_TRIPLETS:           0.0028 
+
+DO_CLUSTERING:             7.5194 
+
+MERGE_SORT:                0.0000 
+
+###########serial################ 
+
+cartella documenti: ../docs/doppi
+Number of threads: 1
+
+ Elapsed times: 
+
+MAIN:                      26.0777 
+
+LIST_DIR:                  0.0204 
+
+COUNT_NUMBER_OF_FILES:     0.0399 
+
+GET_FILE_STRINGS_CLEANED:  0.0001 
+
+COMPRESS_SPACES:           0.0000 
+
+SHINGLE_EXTRACT:           0.0080 
+
+GET_SIGNATURES:            0.0293 
+
+FIND_SIMILARITY:           9.0249 
+
+GET_SKETCHES:              0.0000 
+
+CREATE_TRIPLETS:           0.0039 
+
+DO_CLUSTERING:             8.8661 
+
+MERGE_SORT:                0.0000 
+
+###########serial################ 
+
