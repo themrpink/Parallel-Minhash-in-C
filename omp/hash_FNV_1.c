@@ -237,7 +237,7 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
 #pragma omp parallel private(hash) num_threads(global_thread_numb) 
     {
     long long unsigned hash_temp=0;
-    #pragma omp for reduction(min:minhash) schedule(auto)
+    #pragma omp for reduction(min:minhash) schedule(auto) 
         for(long long j=0; j < tot_shingles; j++){
             //lancia la prima funzione di hash su ogni shingle
             hash_FNV_1a(shingles[j], &hash);

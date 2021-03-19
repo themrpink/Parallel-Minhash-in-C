@@ -77,7 +77,7 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
     long long unsigned signature_curr;
     int signature_succ;
 
-    #pragma omp parallel for private(signature_curr, signature_succ) shared(count, tot) //schedule(auto)
+    #pragma omp parallel for private(signature_curr, signature_succ) shared(count, tot) schedule(auto)
         for (int i = 0; i < tot; i++) {
 
         signature_curr = files_sketches[i].signature;
@@ -128,7 +128,7 @@ int do_clustering(struct doc_couple* couples, int count) {
         for (int i = 0; i < count; i++) {
             //se è diverso da 0 vuole dire che ancora non l`ho inserito
             if (couples[i].shared_signatures != 0) {
-                #pragma omp for //schedule(auto)
+                #pragma omp for schedule(auto)
                 for (int j = i + 1; j < count; j++) {
                     if (couples[i].doc_id == couples[j].doc_id && couples[i].doc2_id == couples[j].doc2_id) {
                         #pragma omp critical
