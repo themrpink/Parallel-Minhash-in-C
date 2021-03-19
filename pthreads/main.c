@@ -30,25 +30,21 @@ typedef struct MinHashParameters{
 void *minHash(void* args);
 
 int main(int argc, char *argv[]) {
-    
+
+    struct timespec begin, end;
+    clock_gettime(CLOCK_REALTIME, &begin);
+
     char *folderName = argv[1];
     int thread_count = atoi(argv[2]);
     char **files;
-    struct timespec begin, end;
-    clock_gettime(CLOCK_REALTIME, &begin);
 
     int numberOfFiles = list_dir(folderName, &files);
     if (numberOfFiles==0){
         exit(EXITNOFILEFOUND);
     }
     printf("numero di file: %d\n", numberOfFiles);
-    //exectimes(getElapsedTime(&begin, &end), LIST_DIR, SET_TIME);
 
-    //ordina i nomi dei file giusto per far funzionare il test sulle signatures
-    //qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc  );
     long long unsigned **minhashDocumenti = (long long unsigned **) malloc(numberOfFiles*sizeof (long long unsigned*));
-    
-    //clock_gettime(CLOCK_REALTIME, &begin);
 
     if(thread_count>numberOfFiles)
         thread_count = numberOfFiles;
@@ -90,7 +86,7 @@ int main(int argc, char *argv[]) {
 void* minHash( void *args){
 
     MinHashParameters *argomenti = (MinHashParameters*) args;
-    struct timespec begin, end;
+
     int start_loop = (argomenti->numberOfFiles / argomenti->numberOfThreads) * argomenti->rank;
     int end_loop = (argomenti->numberOfFiles / argomenti->numberOfThreads) * (1+argomenti->rank);
     if (1+argomenti->rank == argomenti->numberOfThreads-1)
@@ -100,23 +96,15 @@ void* minHash( void *args){
 
         long fileSize = 0;
         char *filesContent;
-
-        clock_gettime(CLOCK_REALTIME, &begin);
         filesContent = get_file_string_cleaned(argomenti->files[i], &fileSize);
-        exectimes(getElapsedTime(&begin, &end), GET_FILE_STRINGS_CLEANED, SET_TIME);
 
         long numb_shingles = fileSize - K_SHINGLE + 1;
         char **shingles = (char **) malloc(numb_shingles * sizeof(char *));
-        
-        clock_gettime(CLOCK_REALTIME, &begin);
         shingle_extract_buf(filesContent, numb_shingles, shingles);
-        exectimes(getElapsedTime(&begin, &end), SHINGLE_EXTRACT, SET_TIME);
-
-        clock_gettime(CLOCK_REALTIME, &begin);
+  
         long long unsigned *signatures = get_signatures(shingles, numb_shingles);
-        exectimes(getElapsedTime(&begin, &end), GET_SIGNATURES, SET_TIME);
-
         argomenti->minhashDocumenti[i] = signatures;
+
         for (int j = 0; j < numb_shingles; j++)
             free(shingles[j]);
         free(shingles);

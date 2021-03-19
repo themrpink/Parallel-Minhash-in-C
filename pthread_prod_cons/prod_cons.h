@@ -76,7 +76,7 @@ typedef struct args_minHash {
 typedef struct args_getSignatures_consumer {
     int rank;
     int numberOfFiles;
-    sem_t *mutex; 
+  //  sem_t *mutex; 
     pthread_mutex_t *lock;
     Prod_Cons_Data *signatures_struct;
 }args_getSignatures_consumer;

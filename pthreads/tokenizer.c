@@ -6,10 +6,14 @@
 #include <omp.h>
 #include <pthread.h>
 #include "time_test.h"
+#include <time.h>
+
 #define EMPTY ""
 #define NUMB_THREADS 4
 
 char* get_file_string_cleaned(const char* file_path, long* fileLength){
+    struct timespec begin, end;
+    clock_gettime(CLOCK_REALTIME, &begin);
 
     char * testo = 0;
     long length = 0;
@@ -49,7 +53,8 @@ char* get_file_string_cleaned(const char* file_path, long* fileLength){
 
         for ( thread = 0; thread<thread_count; thread++)
             pthread_join(thread_handles[thread], NULL);
-
+            
+        exectimes(getElapsedTime(&begin, &end), GET_FILE_STRINGS_CLEANED, SET_TIME);
         return testo;
     }else{
         *fileLength=0;

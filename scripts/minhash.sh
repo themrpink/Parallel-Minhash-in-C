@@ -31,6 +31,38 @@ esegui_in_parallelo() {
 
 }
 
+esegui_in_parallelo_OMP() {
+    
+    IFS=" "
+    time_file=$1
+    main_path=$2
+    for dir in "${docs_path[@]}"; do
+        for threads in 1 2 4 8 12 16 32 64; do
+            for global_threads in 1 2 4 8; do
+                echo "--> esegue $main_path con $threads thread, $global_threads nei nested threads del main cartella documenti: $dir" 
+                echo "cartella documenti: $dir" >> ${time_file}
+                echo "..."
+                echo $( ${main_path} "$dir" "$threads" "$global_threads" ) 
+                echo ""
+            done;
+        done;
+    done;
+    
+}
+
+esegui_in_parallelo_PROD_CONS() {
+    
+    IFS=" "
+    time_file=$1
+    main_path=$2
+    for dir in "${docs_path[@]}"; do
+        echo "--> esegue $main_path con $threads thread, $global_threads nei nested threads del main cartella documenti: $dir" 
+        echo "cartella documenti: $dir" >> ${time_file}
+        echo "..."
+        echo $( ${main_path} "$dir" ) 
+        echo ""
+    done;
+}
 
 esegui_in_serie() {
 
@@ -117,7 +149,7 @@ for arg in "${arr[@]}"; do
         main_path="./omp"
         time_file="omp_time_log.txt"
         echo "omp"
-        esegui_in_parallelo $time_file $main_path
+        esegui_in_parallelo_OMP $time_file $main_path
     fi
 
 done

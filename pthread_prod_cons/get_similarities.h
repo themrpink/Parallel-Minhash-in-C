@@ -13,15 +13,15 @@
 */
 struct sign_doc{
     long long unsigned signature;
-    long long unsigned doc_id;
+    int doc_id;
 };
 
 /*
     per la coppia di documenti, la shared_signatures indica quante signatures hanno in comune. Se questa coppia esiste, il valore minimo è 1.
 */
 struct doc_couple{
-    long long unsigned doc_id;
-    long long unsigned doc2_id;
+    int doc_id;
+    int doc2_id;
     int shared_signatures;
 };
 

@@ -21,6 +21,7 @@
 int list_dir(const char *nomeDirectory, char ***files) {
     double start;
     double  end;
+    start = omp_get_wtime();
 
     int numberOfFiles=0;
     int i=0;
@@ -38,7 +39,7 @@ int list_dir(const char *nomeDirectory, char ***files) {
 
 
         start = omp_get_wtime();
-        #pragma omp parallel
+        #pragma omp parallel 
         while ((entry = readdir(elemento)) != NULL) {
             const char *figlio;
             figlio = entry->d_name; 
@@ -100,13 +101,14 @@ int isRegularFile(const char *path) {
 int countNumberOfFiles(const char *nomeDirectory,DIR *elemento) {
     double start;
     double end;
-
+    start = omp_get_wtime();
+    
     int numberOfFiles = 0;
     struct dirent *entry;
 
-    start = omp_get_wtime();
+    
 
- #pragma omp parallel
+ #pragma omp parallel  
     while ((entry = readdir(elemento)) != NULL) {
         const char *figlio;
         figlio = entry->d_name; //

@@ -1,6 +1,7 @@
 #include "shingle_extract.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 #include "time_test.h"
 #include <pthread.h>
 #include "omp.h"
@@ -15,8 +16,8 @@ typedef struct {
 } Create_shingles_args;
 
 void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
-    double start=0;
-    double end=0;
+    struct timespec begin, end;
+    clock_gettime(CLOCK_REALTIME, &begin);
 
     //void(*create_shingles_ptr)(void*)=create_shingles;
     pthread_t* thread_handles=malloc(thread_count*sizeof (pthread_t));
@@ -42,7 +43,7 @@ void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
 
     shingles=argomenti[0].shingles;
     free(thread_handles);
-    exectimes(end-start, SHINGLE_EXTRACT, SET_TIME);
+    exectimes(getElapsedTime(&begin, &end), SHINGLE_EXTRACT, SET_TIME);
 }
 
 void *create_shingles(void* args){
