@@ -107,7 +107,6 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
 
 void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
 
-    FILE *results_serial = fopen("results_serial.txt", "r");
     FILE *results_omp = fopen("results_omp.txt", "w+");
 
     for(int i=0; i<numberOfFiles; i++)
@@ -116,25 +115,6 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
 
         }
 
-    rewind(results_omp);
-    if (results_serial == NULL){
-        printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con 0 thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
-        return;
-    }
-
-    int count = 0;
-    int c1;
-
-    //confronta i due file
-    while ((c1 = fgetc(results_omp)) != EOF) {
-       if(c1 != fgetc(results_serial))
-        count++;
-    }
-
-    if(count==0)
-        printf("--> OK, nessun problema di coerenza tra signatures  (tra file results_serial.txt e results_omp.txt)\n");
-    else
-        printf("--> ERRORE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_omp.txt\n\n", count);
     fclose(results_omp);
-    fclose(results_serial);
+
 }
