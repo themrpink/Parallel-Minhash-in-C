@@ -238,7 +238,7 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
     {
     long long unsigned hash_temp=0;
     #pragma omp for reduction(min:minhash) schedule(auto) 
-        for(long long j=0; j < tot_shingles; j++){
+        for(int j=0; j < tot_shingles; j++){
             //lancia la prima funzione di hash su ogni shingle
             hash_FNV_1a(shingles[j], &hash);
             hashed_shingles[j] = hash;
@@ -252,7 +252,7 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
         #pragma omp for private(hash_temp) reduction(min:minhash) schedule(auto) 
         for(int i=0; i<PRIMES_SIZE; i++){
             minhash = MAX_LONG_LONG_U;
-            for(long long j=0; j<tot_shingles; j++){
+            for(int j=0; j<tot_shingles; j++){
                 hash_temp = hashed_shingles[j] ^ rands[i];
 
                 if(hash_temp < minhash)

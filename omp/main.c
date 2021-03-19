@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
 
     long long unsigned **minhashDocumenti = (long long unsigned **)malloc(numberOfFiles*sizeof (long long unsigned *));
 
-    #pragma omp parallel for schedule(auto)
+    #pragma omp parallel for schedule(runtime)
     for (int i = 0; i < numberOfFiles; i++) {
 
             long fileSize = 0;
