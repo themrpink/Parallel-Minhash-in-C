@@ -64,11 +64,11 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
     }
     else if(task == EXPORT_LOG){
 
-        char buffer[100];
+        char buffer[120];
         int numb_of_threads = value;
         char *filename = "omp_time_log.txt";
         FILE *fp = fopen(filename, "a");
-        sprintf(buffer, "Number of threads: %d\n\n Elapsed times: \n\n", numb_of_threads);
+        sprintf(buffer, "Numero di threads: %d\nNumero di nested threads nelle funzioni interne al main: %d\n\n     Elapsed times: \n\n", numb_of_threads, global_thread_numb);
         fwrite(buffer, strlen(buffer), 1, fp);
 
         fprintf(fp, "MAIN:                      %.4f \n\n", time[MAIN]);
@@ -107,7 +107,6 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
 
 void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
 
-    FILE *results_serial = fopen("results_serial.txt", "r");
     FILE *results_omp = fopen("results_omp.txt", "w+");
 
     for(int i=0; i<numberOfFiles; i++)
@@ -116,25 +115,6 @@ void check_coherence(long long unsigned **minhashDocumenti, int numberOfFiles){
 
         }
 
-    rewind(results_omp);
-    if (results_serial == NULL){
-        printf("--> ERRORE: File seriale mancante:\nrieseguire il programma con 0 thread, rinominare il file \"results_omp.txt\" in \"results_serial.txt\" ed eseguire di nuovo in parallelo\n\n");
-        return;
-    }
-
-    int count = 0;
-    int c1;
-
-    //confronta i due file
-    while ((c1 = fgetc(results_omp)) != EOF) {
-       if(c1 != fgetc(results_serial))
-        count++;
-    }
-
-    if(count==0)
-        printf("--> OK, nessun problema di coerenza tra signatures  (tra file results_serial.txt e results_omp.txt)\n");
-    else
-        printf("--> ERRORE: \nProblema di coerenza delle signatures: sono diverse almeno %d volte\nControllare i file results_serial.txt e results_omp.txt\n\n", count);
     fclose(results_omp);
-    fclose(results_serial);
+
 }

@@ -1,5 +1,6 @@
 #include "hash_FNV_1.h"
 #include <stdlib.h>
+#include <time.h>
 #include "time_test.h"
 #include <pthread.h>
 #include <omp.h>
@@ -236,7 +237,8 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash){
     return 0;
 }
 
-void *create_hash(void *args) {
+void *create_hash(void *args) {      
+
     long numThread=((create_hash_args*)args)->rank;
     long count;
     int local_numb_shingles=((create_hash_args*)args)->tot_shingles/THREAD_COUNT;
@@ -295,8 +297,10 @@ void *get_all_minashes(void *args){
 }
 
 long long unsigned *get_signatures(char **shingles, long long  tot_shingles) {
+    struct timespec begin, end;
+    clock_gettime(CLOCK_REALTIME, &begin);
+
     pthread_t threads[THREAD_COUNT];
-    double elapsed=0;
     long long unsigned minhash=MAX_LONG_LONG_U;
     long long unsigned *hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
     long long unsigned *signatures;
@@ -346,10 +350,12 @@ long long unsigned *get_signatures(char **shingles, long long  tot_shingles) {
         *(signatures+i+1)=args[0].minhashes[i];
     }
     destroy_mutex(args);
-    exectimes(elapsed, GET_SIGNATURES, SET_TIME);
+    
+    exectimes(getElapsedTime(&begin, &end), GET_SIGNATURES, SET_TIME);
 
     free(hashed_shingles);
     free(minhashes);
+    
     return signatures;
 }
 

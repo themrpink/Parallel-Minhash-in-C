@@ -13,18 +13,17 @@
 
 #define  EXITARGUMENTFAIL 20
 #define  EXITNOFILEFOUND  30
-#define COEFFICIENTE_SIMILARITA 0.75
+
 //gcc -Wall -fopenmp -o main main.c documents_getters.c get_similarities.c hash_FNV_1.c  tokenizer.c shingle_extract.c time_test.c
-//sudo perf stat -e L1-dcache-load-misses ./main "/home/stefano/Scrivania/Collegamento a uni/terzo anno/multicore 2020/progetto/git/minhash-multicore/docs" 16
+//sudo perf stat -e L1-dcache-load-misses ./omp "../docs/docs_medium" 4 4
 //./main "/home/stefano/Scrivania/Collegamento a uni/terzo anno/multicore 2020/progetto/git/minhash-multicore/docs" 16
 
-//funzione di supporto per il quick sort
-int cmpfunc (const void * a, const void * b);
-
+int global_thread_numb = 2;
 
 int main(int argc, char *argv[]) {
 
     int threads=atoi(argv[2]);
+    global_thread_numb=atoi(argv[3]);
     printf("threads: %d\n", threads);
     omp_set_num_threads(threads);
     omp_set_nested(4);
@@ -40,14 +39,9 @@ int main(int argc, char *argv[]) {
         exit(EXITNOFILEFOUND);
     }
 
-    //il quick sort ordina i nomi dei file giusto per far funzionare il test sulle signatures
-    //qsort(files, numberOfFiles, sizeof(files[0]),cmpfunc);
-
     long long unsigned **minhashDocumenti = (long long unsigned **)malloc(numberOfFiles*sizeof (long long unsigned *));
 
-    
-
-    #pragma omp parallel for schedule(static, 8)
+    #pragma omp parallel for schedule(runtime)
     for (int i = 0; i < numberOfFiles; i++) {
 
             long fileSize = 0;
@@ -61,10 +55,7 @@ int main(int argc, char *argv[]) {
                 exit(1);
             shingle_extract_buf(filesContent, numb_shingles, shingles);
             
-            double start_get_signatures = omp_get_wtime();
             long long unsigned *signatures= get_signatures(shingles, numb_shingles);
-            double  end_get_signatures = omp_get_wtime();
-            exectimes(end_get_signatures-start_get_signatures, GET_SIGNATURES, SET_TIME);
             
             minhashDocumenti[i] = signatures;
 
@@ -95,6 +86,4 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-int cmpfunc (const void * a, const void * b) {
-    return strcmp( *(const char**)a, *(const char**)b );
-}
+

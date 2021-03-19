@@ -1,0 +1,252 @@
+###senza OMP in Shingle_extract ##########
+
+##### pthread ### prod-cons ############# 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 1
+
+ Elapsed times: 
+
+MAIN:                      5.7004 
+
+LIST_DIR:                  incluso nel main   
+
+COUNT_NUMBER_OF_FILES:     incluso nel main   
+
+GET_FILE_STRINGS_CLEANED:  0.044012   
+
+COMPRESS_SPACES:           incluso nel main   
+
+SHINGLE_EXTRACT:           0.8343 
+
+GET_SIGNATURES:            3.5219 
+
+FIND_SIMILARITY:           0.0037 
+
+GET_SKETCHES:              0.0001 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0025 
+
+##### pthread ### prod-cons ############# 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 2
+
+ Elapsed times: 
+
+MAIN:                      4.0488 
+
+LIST_DIR:                  incluso nel main   
+
+COUNT_NUMBER_OF_FILES:     incluso nel main   
+
+GET_FILE_STRINGS_CLEANED:  0.042968   
+
+COMPRESS_SPACES:           incluso nel main   
+
+SHINGLE_EXTRACT:           0.9103 
+
+GET_SIGNATURES:            3.2618 
+
+FIND_SIMILARITY:           0.0035 
+
+GET_SKETCHES:              0.0001 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0023 
+
+##### pthread ### prod-cons ############# 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 4
+
+ Elapsed times: 
+
+MAIN:                      4.1518 
+
+LIST_DIR:                  incluso nel main   
+
+COUNT_NUMBER_OF_FILES:     incluso nel main   
+
+GET_FILE_STRINGS_CLEANED:  0.072742   
+
+COMPRESS_SPACES:           incluso nel main   
+
+SHINGLE_EXTRACT:           1.0222 
+
+GET_SIGNATURES:            3.5247 
+
+FIND_SIMILARITY:           0.0035 
+
+GET_SKETCHES:              0.0001 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0024 
+
+##### pthread ### prod-cons ############# 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 8
+
+ Elapsed times: 
+
+MAIN:                      4.4372 
+
+LIST_DIR:                  incluso nel main   
+
+COUNT_NUMBER_OF_FILES:     incluso nel main   
+
+GET_FILE_STRINGS_CLEANED:  0.076746   
+
+COMPRESS_SPACES:           incluso nel main   
+
+SHINGLE_EXTRACT:           1.3154 
+
+GET_SIGNATURES:            3.8012 
+
+FIND_SIMILARITY:           0.0034 
+
+GET_SKETCHES:              0.0001 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0022 
+
+##### pthread ### prod-cons ############# 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 12
+
+ Elapsed times: 
+
+MAIN:                      4.5990 
+
+LIST_DIR:                  incluso nel main   
+
+COUNT_NUMBER_OF_FILES:     incluso nel main   
+
+GET_FILE_STRINGS_CLEANED:  0.093013   
+
+COMPRESS_SPACES:           incluso nel main   
+
+SHINGLE_EXTRACT:           1.3158 
+
+GET_SIGNATURES:            4.0130 
+
+FIND_SIMILARITY:           0.0037 
+
+GET_SKETCHES:              0.0001 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0026 
+
+##### pthread ### prod-cons ############# 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 16
+
+ Elapsed times: 
+
+MAIN:                      4.5424 
+
+LIST_DIR:                  incluso nel main   
+
+COUNT_NUMBER_OF_FILES:     incluso nel main   
+
+GET_FILE_STRINGS_CLEANED:  0.195857   
+
+COMPRESS_SPACES:           incluso nel main   
+
+SHINGLE_EXTRACT:           1.3487 
+
+GET_SIGNATURES:            3.8887 
+
+FIND_SIMILARITY:           0.0035 
+
+GET_SKETCHES:              0.0001 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0023 
+
+##### pthread ### prod-cons ############# 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 32
+
+ Elapsed times: 
+
+MAIN:                      4.6476 
+
+LIST_DIR:                  incluso nel main   
+
+COUNT_NUMBER_OF_FILES:     incluso nel main   
+
+GET_FILE_STRINGS_CLEANED:  0.275592   
+
+COMPRESS_SPACES:           incluso nel main   
+
+SHINGLE_EXTRACT:           1.3340 
+
+GET_SIGNATURES:            4.0819 
+
+FIND_SIMILARITY:           0.0036 
+
+GET_SKETCHES:              0.0001 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0000 
+
+MERGE_SORT:                0.0024 
+
+##### pthread ### prod-cons ############# 
+
+cartella documenti: ../docs/docs_small
+Number of threads: 64
+
+ Elapsed times: 
+
+MAIN:                      5.1108 
+
+LIST_DIR:                  incluso nel main   
+
+COUNT_NUMBER_OF_FILES:     incluso nel main   
+
+GET_FILE_STRINGS_CLEANED:  0.736015   
+
+COMPRESS_SPACES:           incluso nel main   
+
+SHINGLE_EXTRACT:           1.0218 
+
+GET_SIGNATURES:            4.9894 
+
+FIND_SIMILARITY:           0.0034 
+
+GET_SKETCHES:              0.0002 
+
+CREATE_TRIPLETS:           0.0001 
+
+DO_CLUSTERING:             0.0001 
+
+MERGE_SORT:                0.0025 
+
+##### pthread ### prod-cons ############# 
+

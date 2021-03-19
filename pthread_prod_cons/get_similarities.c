@@ -21,7 +21,6 @@ int get_sketches(int i, struct sign_doc *file_sketches, long long unsigned *sign
 
 int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti){
 
-    printf("ok\n");
     struct doc_couple* couples = (struct doc_couple*) malloc( ((numberOfFiles *(numberOfFiles+1))/2)* 200*sizeof(struct doc_couple));
     struct sign_doc* files_sketches = (struct sign_doc*) malloc(numberOfFiles * N_SIGNATURES * sizeof(struct sign_doc));
 
@@ -30,20 +29,20 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
     for(int i=0; i < numberOfFiles; i++)
         get_sketches(i, files_sketches+(i*N_SIGNATURES) , *(minhashDocumenti+i), files[i]);
     exectimes(getElapsedTime(&begin, &end), GET_SKETCHES, SET_TIME);
-    printf("ok1\n");
+
     clock_gettime(CLOCK_REALTIME, &begin);
     mergesort_s_signatures(files_sketches, 0, N_SIGNATURES*numberOfFiles-1);
     exectimes(getElapsedTime(&begin, &end), MERGE_SORT, SET_TIME);
-    printf("ok2\n");
+
     //crea le triple {doc1, doc2, shared_signatures}
     int count = create_triplets(files_sketches, numberOfFiles, couples);
-    printf("ok3\n");
+
     //ordina per doc_id
     mergesort_s_doc_id(couples,0, count-1);
-    printf("ok4\n");
+
     //raccogli le coppie di documenti che hanno almeno una signature in comune
     int index = do_clustering(couples, count);
-    printf("ok5\n");
+
     check_and_print_similarity(minhashDocumenti, couples, index, files);
     return 0;
 }
@@ -78,7 +77,7 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
     /*
         ridimensiona l'array con ai primi "count" elementi (tutti quelli cioè che hanno shared_signatures=1)
     */
-    void* a = realloc( couples, (--count) * sizeof(struct doc_couple));
+    void* a = realloc( couples, count * sizeof(struct doc_couple));
 
     free(files_sketches);
     return count;
@@ -107,7 +106,7 @@ int do_clustering(struct doc_couple* couples, int count) {
 
 
     exectimes(getElapsedTime(&begin, &end), DO_CLUSTERING, SET_TIME);
-    void* a = realloc( couples, (index) * sizeof(struct doc_couple));
+    void* a = realloc( couples, index * sizeof(struct doc_couple));
     return index;
 }
 
@@ -186,39 +185,44 @@ void mergesort_s_doc_id(struct doc_couple*  X, int l, int n)
 }
 
 
-void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files){
+void check_and_print_similarity(long long unsigned **minhashDocumenti, struct doc_couple* couples, int index, char **files){
     double some_results[20] = {0};
     int doc1;
     int doc2;
-    int shared=0;
     int j=0;
+    int count_files = 0;
     printf("\n\n");
     for(int i=0; i<index;i++){
         doc1 = couples[i].doc_id;
         doc2 = couples[i].doc2_id;
-        for(int signature=0; signature<N_SIGNATURES; signature++)
-            if (minhashDocumenti[doc1][signature] == minhashDocumenti[doc2][signature])
-                shared+=1;
-        printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], shared);
-        printf("similarità: %.3f\n\n",(float)shared/N_SIGNATURES);
-        if(((float)shared/N_SIGNATURES)>0.5 && j<20)
-            some_results[j++] =(float)shared/N_SIGNATURES;
-        shared=0;
+
+        if(couples[i].shared_signatures > 5){
+            printf("%s\n%s\n condividono: %d signature(s)\n", files[doc1], files[doc2], couples[i].shared_signatures);
+            printf("similarità: %.3f\n\n",(float)couples[i].shared_signatures/N_SIGNATURES);
+        }
+        if(((float)couples[i].shared_signatures/N_SIGNATURES)>0.5 && j<20){
+            some_results[j++] =(float)couples[i].shared_signatures/N_SIGNATURES;
+
+            count_files++;
+        }
+            
     }
 
     FILE *fp = fopen("similarity_results.txt", "a");
     printf("--> alcuni risultati di somiglianza tra files: (salvati anche in \"similarity_results.txt\")\n");
     int c = 0;
-    for(int i=0; i<20; i++)
+    if(j>20)
+        j=20;
+
+    for(int i=0; i<j; i++)
         if(some_results[i]>0){
             printf("%.3f  ", some_results[i]);
             fprintf(fp, "%.3f   ", some_results[i]);
-            c++;
         }
-    if(c==0)
+    if(count_files==0)
         printf("    nessuna somiglianza tra i files");
     printf("\n\n");
     fprintf(fp, "\n");
     fclose(fp);
-    free(couples);
+
 }

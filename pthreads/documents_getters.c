@@ -20,6 +20,9 @@
 
 int list_dir(char *nomeDirectory, char ***files) {
 
+    struct timespec begin, end;
+    clock_gettime(CLOCK_REALTIME, &begin);
+
         if (!exists(nomeDirectory) && !isDirectory(nomeDirectory))
             return 0;
 
@@ -57,6 +60,8 @@ int list_dir(char *nomeDirectory, char ***files) {
     if (closedir(elemento) != 0) {
         exit(EXITSYSCALLFAIL);
     }
+
+    exectimes(getElapsedTime(&begin, &end), LIST_DIR, SET_TIME);
     return numberOfFiles;
 }
 

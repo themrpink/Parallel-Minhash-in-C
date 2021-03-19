@@ -1,6 +1,7 @@
 
 #ifndef TIME_TEST_  /* Include guard */
 #define TIME_TEST_
+extern int global_thread_numb;
 
 enum Task{
     SET_TIME,
@@ -22,6 +23,8 @@ enum Function_name {
     MERGE_SORT,
     NUMBER_OF_FUNCTIONS
 };
+
+
 
 /*
     raccoglie i tempi di tutte le funzioni (specificate nel terzo parametro).

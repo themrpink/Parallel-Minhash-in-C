@@ -20,13 +20,17 @@
 
 #define  EXITARGUMENTFAIL 20
 #define  EXITNOFILEFOUND  30
+#define NUMBER_OF_THREADS 7
 //sem_t mutex; 
 pthread_mutex_t lock;
 
 int main(int argc, char *argv[]) {
 
+    struct timespec begin, end; 
+    clock_gettime(CLOCK_REALTIME, &begin);     //per misurare il tempo effettivo di computazione
+
     char *folderName = argv[1];
-    int numberOfThreads  = atoi(argv[2]);
+    int numberOfThreads  = NUMBER_OF_THREADS;
 
     int numberOfFiles = countNumberOfFiles(folderName);
     if (numberOfFiles == 0) {
@@ -36,12 +40,8 @@ int main(int argc, char *argv[]) {
     if(numberOfFiles<numberOfThreads)
         numberOfThreads = numberOfFiles;
     printf("numero di file: %d\n", numberOfFiles);
+
     char **files = (char**)calloc(numberOfFiles, sizeof(char*));
-
-    //per misurare il tempo effettivo di computazione
-    struct timespec begin, end; 
-    clock_gettime(CLOCK_REALTIME, &begin);
-
     long long unsigned **minhashDocumenti = (long long unsigned **) malloc(numberOfFiles*sizeof (long long unsigned*));
 
     //alloca memoria per i vari threads
@@ -56,47 +56,45 @@ int main(int argc, char *argv[]) {
     initialize(getSignatures_struct);
     files_struct->queue = createQueue(10);
     getSignatures_struct->queue = createQueue(10);
-    sem_init(&mutex, 0, 1);             //semaforo utilizzato in get_signatures(), inizializzato a 1 e abilitato per i thread
+   // sem_init(&mutex, 0, 1);             //semaforo utilizzato in get_signatures(), inizializzato a 1 e abilitato per i thread
     pthread_mutex_init(&lock, NULL);
 
     pthread_t *thread_handles;
     thread_handles = (pthread_t *) malloc((2*numberOfThreads+1) * sizeof(pthread_t));
 
     //lancia i threads
-    for(int i=0; i<2*numberOfThreads+1; i++){
+    for(int i=0; i<NUMBER_OF_THREADS; i++){
         if(i==0){                                                       //il primo thread è per il produttore list_dir()
             args_producer->files_struct = files_struct;
             args_producer->numberOfFiles = numberOfFiles;
             args_producer->nomeDirectory = folderName;
             pthread_create(&thread_handles[i], NULL, list_dir, (void *) args_producer);
         }
-            
-        else if (i <= numberOfThreads){                                 //questi thread sono per il produttore-consumatore minHash()
+        else if (i <= 2){                                              //questi thread sono per il produttore-consumatore minHash()
             args_first_consumer[i-1].files_struct = files_struct;
             args_first_consumer[i-1].files = files;
             args_first_consumer[i-1].rank = i-1;
-            args_first_consumer[i-1].numberOfThreads = numberOfThreads;
+            args_first_consumer[i-1].numberOfThreads = 2;
             args_first_consumer[i-1].numberOfFiles = numberOfFiles;
             args_first_consumer[i-1].minhashDocumenti = minhashDocumenti;
             args_first_consumer[i-1].signatures_struct = getSignatures_struct;
             pthread_create(&thread_handles[i], NULL, minHash, (void *) &args_first_consumer[i-1]);
         }
         else{                                                           //questi thread sono per il consumatore get_signatures()
-            args_second_consumer[i-numberOfThreads-1].rank = i-numberOfThreads-1;
-            args_second_consumer[i-numberOfThreads-1].numberOfFiles = numberOfFiles;
-            args_second_consumer[i-numberOfThreads-1].mutex = &mutex;
-            args_second_consumer[i-numberOfThreads-1].lock = &lock;
-            args_second_consumer[i-numberOfThreads-1].signatures_struct = getSignatures_struct;
-            pthread_create(&thread_handles[i], NULL, get_signatures, (void *) &args_second_consumer[i-numberOfThreads-1]);
+            args_second_consumer[i-2-1].rank = i-2-1;
+            args_second_consumer[i-2-1].numberOfFiles = numberOfFiles;
+            args_second_consumer[i-2-1].lock = &lock;
+            args_second_consumer[i-2-1].signatures_struct = getSignatures_struct;
+            pthread_create(&thread_handles[i], NULL, get_signatures, (void *) &args_second_consumer[i-2-1]);
         }
     }
 
-
-    for(int i=0; i<2*numberOfThreads+1; i++){ 
+    for(int i=0; i<NUMBER_OF_THREADS; i++){ 
+  //  for(int i=0; i<2*numberOfThreads+1; i++){ 
         pthread_join(thread_handles[i], NULL);
     }
-
-    sem_destroy(&mutex); 
+    pthread_mutex_destroy(&lock);
+    //sem_destroy(&mutex); 
     exectimes(getElapsedTime(&begin, &end), MAIN, SET_TIME);
 
     clock_gettime(CLOCK_REALTIME, &begin);
