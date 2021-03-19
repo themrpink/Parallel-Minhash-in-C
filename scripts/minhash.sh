@@ -131,7 +131,7 @@ for arg in "${arr[@]}"; do
         main_path="./pthread_prod_cons"
         time_file="pthread_prod_cons_time_log.txt"   
         echo "pthread producer-consumer"
-        esegui_in_parallelo $time_file $main_path
+        esegui_in_parallelo_PROD_CONS $time_file $main_path
 
     elif [ "$arg" = "s" ]; then
         main_path="./serial"
