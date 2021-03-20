@@ -6,7 +6,12 @@
 #include <omp.h>
 #include "time_test.h"
 #define EMPTY ""
-
+/**
+ * Dato un file lo tokenizza e restituisce la nuova dimensione tokenizzata in bytes.
+ * @param file_path
+ * @param fileLength
+ * @return
+ */
 char* get_file_string_cleaned(const char* file_path,long* fileLength){
     double start;
     double  end;
@@ -42,7 +47,12 @@ char* get_file_string_cleaned(const char* file_path,long* fileLength){
         return EMPTY;
     }
 }
-
+/**
+ * Funzione che tokenizza eliminando gli spazi, i caratteri non ASCII, i tab, ecc.
+ * @param str
+ * @param length
+ * @return
+ */
 int compress_spaces(char *str, long length){
     char *dst = str;
     int len=0;
