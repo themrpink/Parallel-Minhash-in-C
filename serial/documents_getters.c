@@ -14,7 +14,12 @@
 #include "documents_getters.h"
 
 
-
+/**
+ *  restituisce una lista dei files validi nella directory
+ * @param nomeDirectory
+ * @param files
+ * @return
+ */
 int list_dir(const char *nomeDirectory, char ***files) {
     int numberOfFiles=0;
     double start;
@@ -61,7 +66,11 @@ int list_dir(const char *nomeDirectory, char ***files) {
 
     return numberOfFiles;
 }
-
+/**
+ * controlla se il file esiste
+* @param path
+* @return
+*/
 int exists(const char *path) {
     struct stat statbuf;
     if (stat(path, &statbuf) == -1) {
@@ -71,21 +80,34 @@ int exists(const char *path) {
     }
     return 1;
 }
-
+/**
+ * controlla se il file è un directory
+ * @param path
+ * @return
+ */
 int isDirectory(const char *path) {
     struct stat statbuf;
     if (stat(path, &statbuf) != 0)
         return 0;
     return S_ISDIR(statbuf.st_mode);
 }
-
+/**
+ * controlla se il file è regolare
+ * @param path
+ * @return
+ */
 int isRegularFile(const char *path) {
     struct stat statbuf;
     if (stat(path, &statbuf) != 0)
         return 0;
     return S_ISREG(statbuf.st_mode);;
 }
-
+/**
+ * restituisce il numero di files nella directory
+ * @param nomeDirectory
+ * @param elemento
+ * @return
+ */
 int countNumberOfFiles(const char *nomeDirectory,DIR *elemento){
     double start;
     double  end;

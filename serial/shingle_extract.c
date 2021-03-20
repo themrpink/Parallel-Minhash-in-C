@@ -1,11 +1,14 @@
-
 #include "shingle_extract.h"
 #include <stdlib.h>
 #include <omp.h>
 #include "time_test.h"
 
-
-
+/**
+ * Dato il contenuto di un documento ne estrae gli shingles.
+ * @param buf
+ * @param numb_shingles
+ * @param shingles
+ */
 void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
     double start;
     double end;

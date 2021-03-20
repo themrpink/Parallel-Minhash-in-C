@@ -206,7 +206,12 @@ unsigned long long rands[] = {  13607075548612569373LLU,
 };
 //endregion
 
-
+/**
+ * versione originale della funzione di hash FNV_1a, dalla quale si ottiene la prima signature di ogni documento
+ * @param shingle
+ * @param hash
+ * @return
+ */
 int hash_FNV_1a(char *shingle, long long unsigned *hash){
 
     long long unsigned FNV_offset_basis = FNV_OFFSET_BASIS;
@@ -221,9 +226,13 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash){
 
     return 0;
 }
-
-
-
+/**
+ * funzione che si limita ad eseguire lo XOR tra i valori di hash degli shingles ottenuti con hash_FNV_1a() e 199 numeri random pre-generati, uguali per tutti i
+ * documenti. Di questi salva i minori, che compongono le 199+1 signatures di ogni ducumento.
+ * @param shingles
+ * @param tot_shingles
+ * @return
+ */
 long long unsigned* get_signatures(char **shingles, long long tot_shingles){
     double start;
     double  end;
