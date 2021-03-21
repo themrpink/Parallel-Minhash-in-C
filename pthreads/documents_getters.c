@@ -35,6 +35,8 @@ int list_dir(char *nomeDirectory, char ***files) {
         *files = (char**)calloc(numberOfFiles, sizeof(char*));
 
         int thread_count = NUMB_THREADS;
+
+        //se il numero dei thread è maggiore del numero dei files, allora numero thread = numero file
         if(NUMB_THREADS>numberOfFiles)
             thread_count = numberOfFiles;
         pthread_t *thread_handles;

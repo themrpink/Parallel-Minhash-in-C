@@ -219,7 +219,7 @@ typedef struct {
     long long unsigned *hashed_shingles;
     long long unsigned *minhash;
     long long unsigned *minhashes;
-    pthread_mutex_t lock;
+    pthread_mutex_t *lock;
 } create_hash_args ;
 
 int hash_FNV_1a(char *shingle, long long unsigned *hash){
@@ -260,10 +260,10 @@ void *create_hash(void *args) {
             minhash = hash;
     }
 
-    pthread_mutex_lock(&((create_hash_args*)args)->lock);
+    pthread_mutex_lock(((create_hash_args*)args)->lock);
     if(minhash < *((create_hash_args*)args)->minhash )
         *((create_hash_args*)args)->minhash = minhash;
-    pthread_mutex_unlock(&((create_hash_args*)args)->lock);
+    pthread_mutex_unlock(((create_hash_args*)args)->lock);
 }
 
 /*
@@ -301,6 +301,8 @@ long long unsigned *get_signatures(char **shingles, long long  tot_shingles) {
     clock_gettime(CLOCK_REALTIME, &begin);
 
     pthread_t threads[THREAD_COUNT];
+    pthread_mutex_t lock;
+    create_mutex(&lock);
     long long unsigned minhash=MAX_LONG_LONG_U;
     long long unsigned *hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
     long long unsigned *signatures;
@@ -318,7 +320,7 @@ long long unsigned *get_signatures(char **shingles, long long  tot_shingles) {
         args[i].hashed_shingles=hashed_shingles;
         args[i].minhash=&minhash;
         args[i].minhashes=minhashes;
-        create_mutex(&args[i]);
+        args[i].lock=&lock;
     }
 
     int i=0;
@@ -349,8 +351,7 @@ long long unsigned *get_signatures(char **shingles, long long  tot_shingles) {
     for (int i = 0; i < PRIMES_SIZE; ++i) {
         *(signatures+i+1)=args[0].minhashes[i];
     }
-    destroy_mutex(args);
-    
+    destroy_mutex(&lock);
     exectimes(getElapsedTime(&begin, &end), GET_SIGNATURES, SET_TIME);
 
     free(hashed_shingles);
@@ -359,14 +360,14 @@ long long unsigned *get_signatures(char **shingles, long long  tot_shingles) {
     return signatures;
 }
 
-int create_mutex(create_hash_args *args){
-    if (pthread_mutex_init(&args->lock, NULL) != 0){
+
+int create_mutex(pthread_mutex_t *lock){
+    if (pthread_mutex_init(lock, NULL) != 0){
         return 1;
     }
     return 0;
 }
 
-void destroy_mutex(create_hash_args *args){
-    pthread_mutex_destroy(&args->lock);
+void destroy_mutex(pthread_mutex_t *lock){
+    pthread_mutex_destroy(lock);
 }
-
