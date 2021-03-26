@@ -70,7 +70,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
     for (int i = 0; i < N_THREADS; ++i) {
         args[i].index_inizio=i*files_sketchs_length/N_THREADS;
         if ((i+1)==N_THREADS){
-            args[i].index_fine=files_sketchs_length-1;
+            args[i].index_fine=files_sketchs_length;
         }else{
             args[i].index_fine=((i+1)*files_sketchs_length/N_THREADS);
         }
@@ -130,15 +130,15 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
     for (int i = 0; i < N_THREADS; ++i) {
         args_merge_sort[i].index_inizio=i*count_triplets/N_THREADS;
         if ((i+1)==N_THREADS){
-            args_merge_sort[i].index_fine=count_triplets-1;
+            args_merge_sort[i].index_fine=count_triplets;
         }else{
-            args_merge_sort[i].index_fine=((i+1)*count_triplets/N_THREADS)-1;
+            args_merge_sort[i].index_fine=((i+1)*count_triplets/N_THREADS);
         }
         args_merge_sort[i].couples=couples;
     }
     j=0;
     while(j<N_THREADS){
-        int thread_created=pthread_create(&threads[j],NULL,mergesort_doc_id,(void*)&args[j]);
+        int thread_created=pthread_create(&threads[j],NULL,mergesort_doc_id,(void*)&args_merge_sort[j]);
         if (thread_created==0){
             j++;
         }
