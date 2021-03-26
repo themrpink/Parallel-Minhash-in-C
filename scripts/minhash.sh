@@ -1,7 +1,9 @@
 #!/bin/bash
 
+exec 2>&1
+#exec 2>>error.log
 main_path=
-docs_path=("../docs/docs_small" "../docs/docs_medium" "../docs/docs_big" "../docs/doppi")
+docs_path=("../docs/docs_verysmall" "../docs/docs_small" "../docs/docs_medium" "../docs/docs_large" "../docs/docs_verylarge")
 
 usage() { 
             echo "Uso:" 
@@ -9,7 +11,7 @@ usage() {
             echo "-o per versione omp"
             echo "-p per versione pthread"
             echo "-c per versione pthread con produttore-consumatore"
-            echo '-[ -d <path> ]  directory documenti, default: ["../docs/docs_small" "../docs/docs_medium" "../docs/docs_big" "../docs/doppi"]'
+            echo '-[ -d <path> ]  directory documenti, default: ["../docs/docs_verysmall" "../docs/docs_small" "../docs/docs_medium" "../docs/docs_big" "../docs/docs_verybig"]'
             echo "-h help"
             exit 1 
 }
@@ -38,7 +40,7 @@ esegui_in_parallelo_OMP() {
     main_path=$2
     for dir in "${docs_path[@]}"; do
         for threads in 1 2 4 8 12 16 32 64; do
-            for global_threads in 1 2 4 8; do
+            for global_threads in 1 2 4 8; do 
                 echo "--> esegue $main_path con $threads thread, $global_threads nei nested threads del main cartella documenti: $dir" 
                 echo "cartella documenti: $dir" >> ${time_file}
                 echo "..."
@@ -56,11 +58,13 @@ esegui_in_parallelo_PROD_CONS() {
     time_file=$1
     main_path=$2
     for dir in "${docs_path[@]}"; do
-        echo "--> esegue $main_path con $threads thread, $global_threads nei nested threads del main cartella documenti: $dir" 
-        echo "cartella documenti: $dir" >> ${time_file}
-        echo "..."
-        echo $( ${main_path} "$dir" ) 
-        echo ""
+        for threads in 4 7 10 13 16; do
+            echo "--> esegue $main_path con $threads,   cartella documenti: $dir" 
+            echo "cartella documenti: $dir" >> ${time_file}
+            echo "..."
+            echo $( ${main_path} "$dir" "$threads" ) 
+            echo ""
+        done;
     done;
 }
 
@@ -73,7 +77,7 @@ esegui_in_serie() {
         echo "--> esegue $main_path,  cartella documenti: $dir" 
         echo "cartella documenti: $dir" >> ${time_file}
         echo "..."
-        echo $( ${main_path} "$dir" )
+        echo $( ${main_path} "$dir" ) 
         echo ""
     done;
 }

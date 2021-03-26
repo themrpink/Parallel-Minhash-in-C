@@ -1,0 +1,36 @@
+Per realizzare i test è stata creata una funzione che raccoglie i tempi di tutte le funzioni dell'algoritmo.
+Di ognuna di queste viene considerato il tempo peggiore, ovvero il thread che ha richiesto più tempo.
+A seconda della libreria usata si sono utilizzate funzioni diverse per misurare il tempo, ma tutte equivalenti perchè basate sulla misurazione del walltime.
+I valori dei tempi misurati vengono poi salvati in un file txt formattato per una rapida consultazione e in un file csv. 
+Inoltre vengono salvati nel file similarity_results.txt i risultati in termini di similarità dell'algoritmo, da confrontare tra le varie versioni per controllarne 
+la correttezza.
+
+La versione parallelizzata con OpenMP è stata testata modificando il numero dei thread delle funzioni principali e quello delle funzioni interne 
+indipendentemente l'uno dall'altro. Questo ha permesso di valutare certe peculiarità dell'algoritmo.
+
+
+In particolare si è potuto verificare che il costo della funzione get_signatures aumenta proporzionalmente alla dimensione dei file (indicativamente la funzione impiega 0.03 secondi con un file di 40kb, mentre con un file di 4MB impiega circa 2.9 secondi).
+Il costo computazionale di questa funzione quando i file sono di grandi dimensioni diventa quindi significativo nell'algoritmo.
+Aumentando il numero di thread della funzione get_signatures, che è interna a una funzione del main a sua volta parallelizzata, si degradano le	 prestazioni generali ma 
+si migliorano notevolemente quelle della funzione get_signatures, poichè i thread si ripartiscono gli shingles relativi a uno stesso file. La distribuzione ottimale dei thread non dipende quindi esclusivamente dal numero di thread ma anche dalle dimensioni dei file.
+In presenza di file da confrontare di grandi dimensioni è sicuramente conveniente aumentare il numero di thread in cui suddividere il get_signatures.
+Un controllo delle dimensioni dei file al momento dell'estrazione dei nomi dalla cartella potrebbe essere un ottima soluzione per determinare a runtime 
+una ripartizione ottimale dei thread.
+Comunque, essendo il minhash utilizzato prevalentemente per documenti di piccole e medie dimensioni, abbiamo utilizzato file che variano dai 2kb ai 38kb
+per tutte le cartelle testate, così da creare una condizione equilibrata fra i vari test.
+Un altro elemento che condiziona le performance è il numero di file identici o molto simili tra loro.
+Il caso peggiore si ha quando tutti i documenti sono identici, nel senso che sono tutte copie dello stesso documento. In quel caso i costi computazionali del find_similarities() sono
+maggiori, perchè si trova a dover fare clustering delle signatures tra ogni documento e tutti gli altri documenti.
+Per tenere conto di questo abbiamo utilizzato nella cartella docs_big solo coppie di documenti identici, e si può osservare un aumento dei costi computazionali del ...% rispetto 
+alle cartelle con un numero basso di documenti identici o molto simili.
+
+inoltre in una prima fase di test si è tenuto conto delle seguenti caratteristiche:
+
+old
+serial
+6.5s
+1-4 2.13s    2-8 2,05s  4-1 5,21s  4-8 2.098s    8-2 3,2s   8-4 2.20s
+
+new
+serial 6.6s
+2-4 2,01s   2-8 2.5s  4-1 2,52s  4-2 2,1s   8-2 2,07s   8-4  2,1s
