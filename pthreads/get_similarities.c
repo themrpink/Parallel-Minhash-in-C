@@ -72,7 +72,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
         if ((i+1)==N_THREADS){
             args[i].index_fine=files_sketchs_length;
         }else{
-            args[i].index_fine=((i+1)*files_sketchs_length/N_THREADS);
+            args[i].index_fine=((i+1)*files_sketchs_length/N_THREADS)-1;
         }
         args[i].files_sketches=files_sketches;
     }
@@ -132,7 +132,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
         if ((i+1)==N_THREADS){
             args_merge_sort[i].index_fine=count_triplets;
         }else{
-            args_merge_sort[i].index_fine=((i+1)*count_triplets/N_THREADS);
+            args_merge_sort[i].index_fine=((i+1)*count_triplets/N_THREADS)-1;
         }
         args_merge_sort[i].couples=couples;
     }
