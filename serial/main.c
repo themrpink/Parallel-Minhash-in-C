@@ -57,11 +57,11 @@ int main(int argc, char *argv[]) {
     end = omp_get_wtime();
     exectimes(end-start, MAIN, SET_TIME);
 
-    start = omp_get_wtime();
+    double start2 = omp_get_wtime();
     find_similarity(numberOfFiles, files, minhashDocumenti);
     end = omp_get_wtime();
-    exectimes(end-start, FIND_SIMILARITY, SET_TIME);
-
+    exectimes(end-start2, FIND_SIMILARITY, SET_TIME);
+    exectimes(end-start, TOTAL_TIME, SET_TIME);   
 
     //test
     exectimes(1, NUMBER_OF_FUNCTIONS, EXPORT_LOG);

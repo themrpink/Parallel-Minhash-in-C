@@ -1,11 +1,5 @@
-
-
 #ifndef MINHASHPROJECT_GET_SIMILARITIES_H
 #define MINHASHPROJECT_GET_SIMILARITIES_H
-/*
-    in questo file vengono salvate le coppie id_documento - nome_documento
-*/
-#define DOC_ID_INDEX_FILE "index_file.txt"
 
 
 /*
@@ -36,17 +30,22 @@ struct doc_couple{
         Crea le coppie doc_id - signatures (200 coppie per ogni doc con tutte le sue signatures)
 
 */
-int get_sketches(int i, struct sign_doc *files_sketches, long long unsigned *signatures,char *filename);
+int get_sketches(int i, struct sign_doc *files_sketches, long long unsigned *signatures);
 
 
 /*
-    merge sort.
+    merge sort parallelo, per ordinare secondo il doc_id o secondo le signatures.
 */
 void mergesort_s_doc_id(struct doc_couple*  X, int l, int n);
-void merge_signatures(struct sign_doc* X, int l, int m, int r);
 void merge_doc_id(struct doc_couple*  X, int l, int m, int r);
 void mergesort_s_signatures(struct sign_doc* X, int l, int n);
+void merge_signatures(struct sign_doc* X, int l, int m, int r);
 
+/*
+    merge sort serial, usato dopo la prima chiamata ricorsiva parallela per evitare l'incremento esponenziale dei thread.
+*/
+void mergesort_s_signatures_Serial(struct sign_doc* X, int l, int n);
+void mergesort_s_doc_id_Serial(struct doc_couple*  X, int l, int n);
 
 /*
       III fase

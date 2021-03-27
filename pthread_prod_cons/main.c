@@ -1,17 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <pthread.h>
-#include <semaphore.h> 
+#include <pthread.h> 
 #include <unistd.h> 
 #include <time.h>
+#include <omp.h>
+#include <string.h>
+
 #include "hash_FNV_1.h"
 #include "shingle_extract.h"
 #include "documents_getters.h"
 #include "tokenizer.h"
 #include "get_similarities.h"
 #include "time_test.h"
-#include <string.h>
 #include "queue.h"
 #include "prod_cons.h"
 #include "minhash.h"
@@ -20,17 +21,22 @@
 
 #define  EXITARGUMENTFAIL 20
 #define  EXITNOFILEFOUND  30
-#define NUMBER_OF_THREADS 7
-//sem_t mutex; 
-pthread_mutex_t lock;
+ 
 
 int main(int argc, char *argv[]) {
 
-    struct timespec begin, end; 
-    clock_gettime(CLOCK_REALTIME, &begin);     //per misurare il tempo effettivo di computazione
+    omp_set_nested(1);
+    omp_set_dynamic(0);
+    omp_set_max_active_levels(2);
+
+    struct timespec begin, begin2, end, end2;
+    clock_gettime(CLOCK_REALTIME, &begin);
+    clock_gettime(CLOCK_REALTIME, &begin2);     //per misurare il tempo effettivo di computazione
 
     char *folderName = argv[1];
-    int numberOfThreads  = NUMBER_OF_THREADS;
+    int numberOfThreads = atoi(argv[2]);
+    int minhashTreads = (numberOfThreads-1)/3;
+    int getSignaturesThreads = numberOfThreads - 1 - minhashTreads;
 
     int numberOfFiles = countNumberOfFiles(folderName);
     if (numberOfFiles == 0) {
@@ -51,56 +57,54 @@ int main(int argc, char *argv[]) {
     Prod_Cons_Data *files_struct =                          (Prod_Cons_Data*)malloc(sizeof (Prod_Cons_Data));
     Prod_Cons_Data *getSignatures_struct =                  (Prod_Cons_Data*)malloc(sizeof (Prod_Cons_Data));
 
-    //inizializza i mutex, le code e il semaforo
+    //inizializza i mutex, le condition variable, le code, i thread
     initialize(files_struct);
     initialize(getSignatures_struct);
     files_struct->queue = createQueue(10);
     getSignatures_struct->queue = createQueue(10);
-   // sem_init(&mutex, 0, 1);             //semaforo utilizzato in get_signatures(), inizializzato a 1 e abilitato per i thread
-    pthread_mutex_init(&lock, NULL);
-
     pthread_t *thread_handles;
-    thread_handles = (pthread_t *) malloc((2*numberOfThreads+1) * sizeof(pthread_t));
+    thread_handles = (pthread_t *) malloc((numberOfThreads) * sizeof(pthread_t));
 
     //lancia i threads
-    for(int i=0; i<NUMBER_OF_THREADS; i++){
+    for(int i=0; i<numberOfThreads; i++){
         if(i==0){                                                       //il primo thread è per il produttore list_dir()
             args_producer->files_struct = files_struct;
             args_producer->numberOfFiles = numberOfFiles;
             args_producer->nomeDirectory = folderName;
             pthread_create(&thread_handles[i], NULL, list_dir, (void *) args_producer);
         }
-        else if (i <= 2){                                              //questi thread sono per il produttore-consumatore minHash()
+        else if (i <= minhashTreads){                                              //questi thread sono per il produttore-consumatore minHash()
             args_first_consumer[i-1].files_struct = files_struct;
             args_first_consumer[i-1].files = files;
             args_first_consumer[i-1].rank = i-1;
-            args_first_consumer[i-1].numberOfThreads = 2;
+            args_first_consumer[i-1].numberOfThreads = minhashTreads;
             args_first_consumer[i-1].numberOfFiles = numberOfFiles;
             args_first_consumer[i-1].minhashDocumenti = minhashDocumenti;
             args_first_consumer[i-1].signatures_struct = getSignatures_struct;
             pthread_create(&thread_handles[i], NULL, minHash, (void *) &args_first_consumer[i-1]);
         }
-        else{                                                           //questi thread sono per il consumatore get_signatures()
-            args_second_consumer[i-2-1].rank = i-2-1;
-            args_second_consumer[i-2-1].numberOfFiles = numberOfFiles;
-            args_second_consumer[i-2-1].lock = &lock;
-            args_second_consumer[i-2-1].signatures_struct = getSignatures_struct;
-            pthread_create(&thread_handles[i], NULL, get_signatures, (void *) &args_second_consumer[i-2-1]);
+        else {                                                           //questi thread sono per il consumatore get_signatures()
+            args_second_consumer[i-minhashTreads-1].rank = i-minhashTreads-1;
+            args_second_consumer[i-minhashTreads-1].numberOfFiles = numberOfFiles / (numberOfThreads-minhashTreads-1);
+            if(args_second_consumer[i-minhashTreads-1].rank== numberOfThreads-minhashTreads-1-1) 
+                args_second_consumer[i-minhashTreads-1].numberOfFiles += numberOfFiles % (numberOfThreads-minhashTreads-1);
+            args_second_consumer[i-minhashTreads-1].signatures_struct = getSignatures_struct;
+            pthread_create(&thread_handles[i], NULL, get_signatures, (void *) &args_second_consumer[i-minhashTreads-1]);
         }
     }
 
-    for(int i=0; i<NUMBER_OF_THREADS; i++){ 
+    for(int i=0; i<numberOfThreads; i++){ 
   //  for(int i=0; i<2*numberOfThreads+1; i++){ 
         pthread_join(thread_handles[i], NULL);
     }
-    pthread_mutex_destroy(&lock);
-    //sem_destroy(&mutex); 
+
     exectimes(getElapsedTime(&begin, &end), MAIN, SET_TIME);
 
     clock_gettime(CLOCK_REALTIME, &begin);
     find_similarity(numberOfFiles, files, minhashDocumenti);
     exectimes(getElapsedTime(&begin, &end), FIND_SIMILARITY, SET_TIME);
-
+    
+    exectimes(getElapsedTime(&begin2, &end2), TOTAL_TIME, SET_TIME);
     free(files);
     exectimes(numberOfThreads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
     //check_coherence(minhashDocumenti, numberOfFiles);

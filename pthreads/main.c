@@ -31,8 +31,9 @@ void *minHash(void* args);
 
 int main(int argc, char *argv[]) {
 
-    struct timespec begin, end;
+    struct timespec begin, begin2, end, end2;
     clock_gettime(CLOCK_REALTIME, &begin);
+    clock_gettime(CLOCK_REALTIME, &begin2);
 
     char *folderName = argv[1];
     int thread_count = atoi(argv[2]);
@@ -72,7 +73,8 @@ int main(int argc, char *argv[]) {
     clock_gettime(CLOCK_REALTIME, &begin);
     find_similarity(numberOfFiles, files, minhashDocumenti);
     exectimes(getElapsedTime(&begin, &end), FIND_SIMILARITY, SET_TIME);
-
+    
+    exectimes(getElapsedTime(&begin2, &end2), TOTAL_TIME, SET_TIME);
 
     free(files);
 

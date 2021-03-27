@@ -48,8 +48,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
 
     start=omp_get_wtime();
     mergesort_s_signatures(files_sketches, 0, N_SIGNATURES*numberOfFiles-1);
-    end = omp_get_wtime();
-    exectimes(elapsed, FIND_SIMILARITY, SET_TIME);
+
     
     //crea le triple {doc1, doc2, shared_signatures}
     int count = create_triplets(files_sketches, numberOfFiles, couples);
@@ -59,7 +58,8 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
 
     //raccoglie le coppie di documenti che hanno almeno una signature in comune
     int index = do_clustering(couples, count);
-
+    end = omp_get_wtime();
+    exectimes(elapsed, FIND_SIMILARITY, SET_TIME);
 
     check_and_print_similarity(minhashDocumenti, couples, index, files);
     free(couples);

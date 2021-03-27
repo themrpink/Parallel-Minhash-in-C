@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <omp.h>
 #include <unistd.h>
+
 #include "hash_FNV_1.h"
 #include "shingle_extract.h"
 #include "documents_getters.h"
@@ -26,7 +27,9 @@ int main(int argc, char *argv[]) {
     global_thread_numb=atoi(argv[3]);
     printf("threads: %d\n", threads);
     omp_set_num_threads(threads);
-    omp_set_nested(4);
+    omp_set_nested(1);
+    omp_set_dynamic(0);
+    omp_set_max_active_levels(3);
 
     double start;
     double  end;
@@ -41,7 +44,7 @@ int main(int argc, char *argv[]) {
 
     long long unsigned **minhashDocumenti = (long long unsigned **)malloc(numberOfFiles*sizeof (long long unsigned *));
 
-    #pragma omp parallel for schedule(runtime)
+    #pragma omp parallel for schedule(static)
     for (int i = 0; i < numberOfFiles; i++) {
 
             long fileSize = 0;
@@ -67,12 +70,12 @@ int main(int argc, char *argv[]) {
     
     end = omp_get_wtime();
     exectimes(end-start, MAIN, SET_TIME);
-
-    start = omp_get_wtime();
+    
+    double start2 = omp_get_wtime();
     find_similarity(numberOfFiles, files, minhashDocumenti);
     end = omp_get_wtime();
-    exectimes(end-start, FIND_SIMILARITY, SET_TIME);
-
+    exectimes(end-start2, FIND_SIMILARITY, SET_TIME);
+    exectimes(end-start, TOTAL_TIME, SET_TIME);
     //test
     exectimes(threads, NUMBER_OF_FUNCTIONS, EXPORT_LOG);
     check_coherence(minhashDocumenti, numberOfFiles);

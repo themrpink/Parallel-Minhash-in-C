@@ -58,6 +58,10 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
                 if(value>time[MERGE_SORT])
                 time[MERGE_SORT] = value;
                 break;
+            case TOTAL_TIME:
+                if(value>time[TOTAL_TIME])
+                time[TOTAL_TIME] = value;
+                break;
             default:
                 break;
         }
@@ -83,7 +87,7 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         fprintf(fp, "CREATE_TRIPLETS:           %.4f \n\n", time[CREATE_TRIPLETS]);
         fprintf(fp, "DO_CLUSTERING:             %.4f \n\n", time[DO_CLUSTERING]);
         fprintf(fp, "MERGE_SORT:                %.4f \n\n", time[MERGE_SORT]);
-
+        fprintf(fp, "TOTAL_TIME:                %.4f \n\n", time[TOTAL_TIME]);
         //salva i tempi dettagliati nel file TXT
         sprintf(buffer, "###########serial################ \n\n");
         fwrite(buffer, strlen(buffer), 1, fp);

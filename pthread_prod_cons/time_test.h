@@ -22,6 +22,7 @@ enum Function_name {
     CREATE_TRIPLETS,
     DO_CLUSTERING,
     MERGE_SORT,
+    TOTAL_TIME,
     NUMBER_OF_FUNCTIONS
 };
 
