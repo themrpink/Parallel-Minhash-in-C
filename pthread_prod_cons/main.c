@@ -36,8 +36,7 @@ int main(int argc, char *argv[]) {
     char *folderName = argv[1];
     int numberOfThreads = atoi(argv[2]);
     int minhashTreads = (numberOfThreads-1)/3;
-    int getSignaturesThreads = numberOfThreads - 1 - minhashTreads;
-
+    int getSignaturesThreads = numberOfThreads - minhashTreads - 1;
     int numberOfFiles = countNumberOfFiles(folderName);
     if (numberOfFiles == 0) {
         exit(EXITNOFILEFOUND);
@@ -52,8 +51,8 @@ int main(int argc, char *argv[]) {
 
     //alloca memoria per i vari threads
     args_list_dir *args_producer =                          (args_list_dir *) malloc(sizeof(args_list_dir) );
-    args_minHash *args_first_consumer =                     (args_minHash *) malloc(numberOfThreads*sizeof(args_minHash));
-    args_getSignatures_consumer *args_second_consumer =     (args_getSignatures_consumer*) malloc(numberOfThreads*sizeof(args_getSignatures_consumer));
+    args_minHash *args_first_consumer =                     (args_minHash *) malloc(minhashTreads*sizeof(args_minHash));
+    args_getSignatures_consumer *args_second_consumer =     (args_getSignatures_consumer*) malloc(getSignaturesThreads*sizeof(args_getSignatures_consumer));
     Prod_Cons_Data *files_struct =                          (Prod_Cons_Data*)malloc(sizeof (Prod_Cons_Data));
     Prod_Cons_Data *getSignatures_struct =                  (Prod_Cons_Data*)malloc(sizeof (Prod_Cons_Data));
 
@@ -67,7 +66,7 @@ int main(int argc, char *argv[]) {
 
     //lancia i threads
     for(int i=0; i<numberOfThreads; i++){
-        if(i==0){                                                       //il primo thread è per il produttore list_dir()
+        if(i<1){                                                       //il primo thread è per il produttore list_dir()
             args_producer->files_struct = files_struct;
             args_producer->numberOfFiles = numberOfFiles;
             args_producer->nomeDirectory = folderName;
@@ -94,7 +93,6 @@ int main(int argc, char *argv[]) {
     }
 
     for(int i=0; i<numberOfThreads; i++){ 
-  //  for(int i=0; i<2*numberOfThreads+1; i++){ 
         pthread_join(thread_handles[i], NULL);
     }
 

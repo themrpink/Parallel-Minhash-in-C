@@ -58,7 +58,7 @@ esegui_in_parallelo_PROD_CONS() {
     time_file=$1
     main_path=$2
     for dir in "${docs_path[@]}"; do
-        for threads in 4 7 10 13 16; do
+        for threads in 4 7 10 13 16; do 
             echo "--> esegue $main_path con $threads,   cartella documenti: $dir" 
             echo "cartella documenti: $dir" >> ${time_file}
             echo "..."
