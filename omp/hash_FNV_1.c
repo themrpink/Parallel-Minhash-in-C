@@ -249,7 +249,7 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
         *signatures=minhash;
         #pragma  omp barrier
         //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
-        #pragma omp for private(hash_temp) reduction(min:minhash) schedule(auto) 
+        #pragma omp for private(hash_temp, minhash) schedule(auto) 
         for(int i=0; i<PRIMES_SIZE; i++){
             minhash = MAX_LONG_LONG_U;
             for(int j=0; j<tot_shingles; j++){
