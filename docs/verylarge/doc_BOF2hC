@@ -1,0 +1,306 @@
+Support of error scanning functionality varies per optical drive manufacturer and model.&lt;ref name=QPx-Supported&gt;[https://qpxtool.sourceforge.io/supported.html List of supported devices by dosc quality scanning software ''QPxTool']&lt;/ref&gt;
+
+=== Error types ===
+There are different types of error measurements, including so-called ''&quot;C1&quot;'', ''&quot;[[C2 error|C2]]&quot;'' and ''&quot;CU&quot;'' errors [[Compact_disc#Measurement|on CDs]], and ''&quot;PI/PO (pairity inner/outer) errors&quot;'' and the more critical [[DVD#Disc_quality_measurements|''&quot;PI/PO failures&quot;'' on DVDs]]. Finer-grain error measurements on CDs supported by very few optical drives are called ''E11'', ''E21'', ''E31'', ''E21'', ''E22'', ''E32''.
+
+''&quot;CU&quot;'' and ''&quot;POF&quot;'' represent uncorrectable errors on data CDs and DVDs respectievly, thus [[data loss]], and can be a result of too many consecutive smaller errors.&lt;ref&gt;{{cite web |title=QPxTool glossary |url=https://qpxtool.sourceforge.io/glossar.html |website=qpxtool.sourceforge.io |publisher=QPxTool |access-date=22 July 2020 |ref=QPx-Glossary}}&lt;/ref&gt;
+
+Due to the weaker error correction used on [[Audio CD]]s ([[Compact Disc Digital Audio|Red Book]] standard) and [[Video CD]]s ([[White Book (CD standard)|White Book]] standard), [[C2 error]]s already lead to data loss. However, even with C2 errors, the damage is unhearable to some extent.
+
+[[Blu-Ray disc]]s use so-called ''LDC'' (''Long Distance Code''s) and ''BIS'' (''Burst Indication Subcode''s) error parameters. According to the developer of the ''Opti Drive Control'' software, a disc can be considered healthy at an ''LDC'' error rate below 13 and ''BIS'' error rate below 15.&lt;ref name=&quot;cdrinfo-BD&quot;&gt;{{cite web |title=Blu-Ray Writing Quality Tests Vol 2 |url=https://www.cdrinfo.com/Sections/Reviews/Print.aspx?ArticleId=25532 |website=www.cdrinfo.com |publisher=CDR info |access-date=1 August 2020 |date=2009-06-19}}&lt;/ref&gt;
+
+==Optical Disc manufacturing==
+{{Main|CD manufacturing}}
+Optical discs are made using replication. This process can be used with all disc types. Recordable discs have pre-recorded vital information, like manufacturer, disc type, maximum speeds, etc. In replication, a [[cleanroom]] with yellow light is necessary to protect light sensitive materials and to prevent dust from corrupting the data on the disc.  
+
+A glass master is used in replication. The master is placed in a machine that cleans it as much as possible using a rotating brush and deionized water, preparing it for the next step. In the next step, a surface analyzer inspects the cleanliness of the master before photoresist is applied on the master.
+ 
+The photoresist is baked in an oven to solidify it. Then, in the exposure process, the master is placed in a turntable where a laser selectively exposes the resist to light. At the same time, a developer and deionized water are applied to the disc to remove the exposed resist. This process forms the pits and lands that represent the data on the disc. 
+
+A thin coating of metal is then applied to the master, making a negative of the master with the pits and lands in it. The negative is then peeled off the master and coated in a thin layer of plastic. The plastic protects the coating while a punching press punches a hole into the center of the disc, and punches excess material. 
+
+The negative is now a stamper - a part of the mold that will be used for replication. It is placed on one side of the mold with the data side containing the pits and lands facing out. This is done inside an injection molding machine. The machine then closes the mold and injects polycarbonate in the cavity formed by the walls of the mold, which forms the disc with the data on it.
+
+The molten polycarbonate fills the pits or spaces between the lands on the negative, acquiring their shape when it solidifies. This step is somewhat similar to [[Production of phonograph records|record pressing]]. 
+
+The polycarbonate disc cools quickly and is promply removed from the machine, before forming another disc. The disc is then metallized, covered with a thin reflective layer of aluminum. The aluminum fills the space once occupied by the negative. 
+
+A layer of varnish is then applied to protect the aluminum coating and provide a surface suitable for printing. The varnish is applied near the center of the disc, and the disc is spun, evenly distributing the varnish on the surface of the disc. The varnish is hardened using UV light. The discs are then silkscreened or a label is otherwise applied.&lt;ref&gt;{{Cite web|url=https://www.singulus.com/en/skyline-ii.html|title=CD Production Replication Machine|first=SINGULUS TECHNOLOGIES|last=AG|date=March 3, 2020|website=www.singulus.com}}&lt;/ref&gt;&lt;ref&gt;https://www.singulus.com/fileadmin/user_upload/202003/SKYLINE_II_2_2020.pdf&lt;/ref&gt;
+
+Recordable discs add a dye layer, and rewritable discs add a phase change alloy layer instead, which is protected by upper and lower dielectric (electrically insulating) layers. The layers may be sputtered. The additional layer is between the grooves and the reflective layer of the disc. Grooves are made in recordable discs in place of the traditional pits and lands found in replicated discs, and the two can be made in the same exposure process. &lt;ref name=&quot;auto1&quot;&gt;{{Cite web |url=http://www.blu-raydisc.com/Assets/Downloadablefile/White_Paper_BD-R_7th_20150818_clean.pdf |title=Archived copy |access-date=2020-04-11 |archive-url=https://web.archive.org/web/20151016221203/http://www.blu-raydisc.com/Assets/Downloadablefile/White_Paper_BD-R_7th_20150818_clean.pdf |archive-date=2015-10-16 |url-status=live }}&lt;/ref&gt;&lt;ref name=&quot;auto3&quot;&gt;http://www.blu-raydisc.com/Assets/Downloadablefile/White_Paper_BD-RE_5th_20180216.pdf&lt;/ref&gt;&lt;ref name=&quot;auto2&quot;&gt;http://www.blu-raydisc.com/Assets/Downloadablefile/White_Paper_General_5th_20180216.pdf&lt;/ref&gt;&lt;ref&gt;{{Cite web |url=http://www.blu-raydisc.com/Assets/Downloadablefile/White%20Paper%20BD-ROM_Part1_9th_20150806_clean.pdf |title=Archived copy |access-date=2020-04-11 |archive-url=https://web.archive.org/web/20190531020530/http://www.blu-raydisc.com/Assets/Downloadablefile/White%20Paper%20BD-ROM_Part1_9th_20150806_clean.pdf |archive-date=2019-05-31 |url-status=live }}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=http://art-design-glossary.musabi.ac.jp/|title=MAU ART &amp; DESIGN GLOSSARY｜Musashino Art University|website=MAU ART &amp; DESIGN GLOSSARY｜Musashino Art University|access-date=2020-04-09|archive-url=https://web.archive.org/web/20191004043421/http://art-design-glossary.musabi.ac.jp/|archive-date=2019-10-04|url-status=live}}&lt;/ref&gt; In DVDs, the same processes as in CDs are carried out, but in a thinner disc. The thinner disc is then bonded to a second, equally thin but blank, disc using UV-curable [[Liquid optically clear adhesive]], forming a DVD disc. &lt;ref&gt;{{Cite web |url=https://electronics.howstuffworks.com/blu-ray2.htm |title=Archived copy |access-date=2020-04-21 |archive-url=https://web.archive.org/web/20191220124440/https://electronics.howstuffworks.com/blu-ray2.htm |archive-date=2019-12-20 |url-status=live }}&lt;/ref&gt;&lt;ref name=&quot;auto4&quot;/&gt;&lt;ref&gt;https://www.singulus.com/fileadmin/user_upload/202003/SPACELINE_II_2_2020.pdf&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://www.singulus.com/en/spaceline-ii.html|title=DVD Production Replication Machine|first=SINGULUS TECHNOLOGIES|last=AG|date=March 3, 2020|website=www.singulus.com}}&lt;/ref&gt; This leaves the data in the middle of the disc, which is necessary for DVDs to achieve their storage capacity. In multi layer discs, semi reflective instead of reflective coatings are used for all layers except the last layer, which is the deepest one and uses a traditional reflective coating.&lt;ref&gt;[https://web.archive.org/web/20200413022441/https://docs-europe.electrocomponents.com/webdocs/0bdc/0900766b80bdcccf.pdf]&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://www.techpowerup.com/10670/tdk-developing-quad-and-octal-layer-blu-ray-discs|title=TDK developing Quad and Octal layer Blu-ray discs|website=TechPowerUp}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://www.cdrom2go.com/dvd-plus-r-dl-double-layer|title=Knowledge Base {{pipe}} DVD+R DL - CDROM2GO|website=www.cdrom2go.com}}&lt;/ref&gt;
+
+Dual layer DVDs are made slightly differently. After metallization (with a thinner metal layer to allow some light to pass through), base and pit transfer resins are applied and pre-cured in the center of the disc. Then the disc is pressed again using a different stamper, and the resins are completely cured using UV light before being separated from the stamper. Then the disc receives another, thicker metallization layer, and is then bonded to the blank disc using LOCA glue. DVD-R DL and DVD+R DL discs receive a dye layer after curing, but before metallization. CD-R, DVD-R, and DVD+R discs receive the dye layer after pressing but before metallization. CD-RW, DVD-RW and DVD+RW receive a metal alloy layer sandwiched between 2 dielectric layers. HD-DVD is made in the same way as DVD. In recordable and rewritable media, most of the stamper is composed of grooves, not pits and lands. The grooves contain a [[wobble frequency]] that is used to locate the position of the reading or writing laser on the disc. DVDs use pre-pits instead, with a constant frequency wobble.  &lt;ref name=&quot;auto3&quot;/&gt;
+
+===Blu-ray===
+
+''HTL'' ([[Blu-ray_Disc_recordable#HTL_(high_to_low)|high-to-low type]]) Blu-ray discs are made differently. First, a [[silicon wafer]] is used instead of a glass master. The wafer is processed in the same way as a glass master would. 
+
+The wafer is then electroplated to form a 300-micron thick nickel stamper, which is peeled off from the wafer. The stamper is mounted onto a mold inside a press or embosser. 
+
+The polycarbonate discs are molded in a similar fashion to DVD and CD discs. If the discs being produced are BD-Rs or BD-REs, the mold is fitted with a stamper that stamps a groove pattern onto the discs, in lieu of the pits and lands found on BD-ROM discs.
+
+After cooling, a 35 nanometre-thick layer of silver alloy is applied to the disc using [[sputtering]].&lt;ref name=&quot;auto&quot;&gt;https://www.singulus.de/fileadmin/user_upload/202003/BLULINE_II_2_2020.pdf&lt;/ref&gt;&lt;ref&gt;https://hofa-shop.com/erp/owweb/spezi/en_14061.pdf&lt;/ref&gt;&lt;ref&gt;{{Cite web |url=https://www.digital-scrapbooking-storage.com/blu-ray-technology.html |title=Archived copy |access-date=2020-04-21 |archive-url=https://web.archive.org/web/20120305192336/http://www.digital-scrapbooking-storage.com/blu-ray-technology.html |archive-date=2012-03-05 |url-status=live }}&lt;/ref&gt; Then the second layer is made by applying base and pit transfer resins to the disc, and are pre-cured in its center. 
+
+After application and pre-curing, the disc is pressed or embossed using a stamper and the resins are immediately cured using intense UV light, before the disc is separated from the stamper. The stamper contains the data that will be transferred to the disc. This process is known as embossing and is the step that engraves the data onto the disc, replacing the pressing process used in the first layer, and it is also used for multi layer DVD discs. 
+
+Then, a 30 nanometre-thick layer of silver alloy is then sputtered onto the disc and the process is repeated as many times as required. Each repetition creates a new data layer. (The resins are applied again, pre-cured, stamped (with data or grooves) and cured, silver alloy is sputtered and so on) 
+
+BD-R and BD-RE discs receive (through sputtering) a metal (recording layer) alloy (that is sandwiched between two dielectric layers, also sputtered, in BD-RE), before receiving the 30 nanometre metallization (silver alloy, aluminum or gold) layer, which is sputtered. Alternatively, the silver alloy may be applied before the recording layer is applied.  Silver alloys are usually used in Blu-rays, and aluminum is usually used on CDs and DVDs. Gold is used in some &quot;Archival&quot; CDs and DVDs, since it is more chemically inert and resistant to corrosion than aluminum, which corrodes into [[aluminum oxide]], which can be seen in [[disc rot]] as transparent patches or dots in the disc, that prevent the disc from being read, since the laser light passes through the disc instead of being reflected back into the laser pickup assembly to be read. Normally aluminum doesn't corrode since it has a thin oxide layer that forms on contact with oxygen. In this case it can corrode due to its thinness.
+
+Then, the 98 micron-thick cover layer is applied using UV-curable [[liquid optically clear adhesive]], and a 2 micron-thick hard coat (such as [[Durabis]]) is also applied and cured using UV light. In the last step, a 10 nanometre-thick [[silicon nitride]] barrier layer is applied to the label side of the disc to protect against humidity. &lt;ref name=&quot;auto2&quot;/&gt;&lt;ref name=&quot;auto&quot;/&gt;&lt;ref&gt;https://www.singulus.com/uploads/tx_pspublications/BLULINE_II_2012.pdf&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://www.singulus.com/en/bluline-iii.html|title=Blu-ray Production Machine|first=SINGULUS TECHNOLOGIES|last=AG|date=March 3, 2020|website=www.singulus.com}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://www.singulus.com/en/bluline-ii.html|title=Blu-ray Production Machine|first=SINGULUS TECHNOLOGIES|last=AG|date=March 3, 2020|website=www.singulus.com}}&lt;/ref&gt;&lt;ref&gt;https://www.singulus.com/fileadmin/user_upload/202003/BLULINE_III_2_2020.pdf&lt;/ref&gt; Blu-rays have their data very close to the read surface of the disc, which is necessary for Blu-rays to achieve their capacity. 
+
+Discs in large quantities can either be replicated or duplicated. In replication, the process explained above is used to make the discs, while in duplication, CD-R, DVD-R or BD-R discs are recorded and finalized to prevent further recording and allow for wider compatibility.&lt;ref&gt;{{Cite web|url=https://www.replicat.com.au/content/replication-and-duplication|title=The Difference Between Replication &amp; Duplication {{pipe}} Replicat|website=www.replicat.com.au|access-date=2020-04-09|archive-url=https://web.archive.org/web/20200311170517/https://www.replicat.com.au/content/replication-and-duplication|archive-date=2020-03-11|url-status=live}}&lt;/ref&gt; (See [[Optical disc authoring]]). The equipment is also different: replication is carried out by fully automated purpose-built machinery whose cost is in the hundreds of thousands of US dollars in the used market,&lt;ref&gt;{{Cite web|url=http://www.cdvdpacking.com/A_Cinram/index.html|title=Cinram Machines|website=www.cdvdpacking.com|access-date=2020-04-11|archive-url=https://web.archive.org/web/20190930070519/http://www.cdvdpacking.com/A_Cinram/index.html|archive-date=2019-09-30|url-status=live}}&lt;/ref&gt; while duplication can be automated (using what's known as an autoloader&lt;ref&gt;{{Cite web|url=https://www.vinpowerdigital.com/products/aero220-s0t-bd-bk|title=Aero Blu-ray/DVD/CD Autoloader - CD Copier, DVD Duplicator, Blu-Ray Duplicator {{pipe}} Vinpower Digital|website=www.vinpowerdigital.com}}&lt;/ref&gt;) or be done by hand, and only requires a small tabletop duplicator. &lt;ref&gt;{{Cite web|url=https://www.vinpowerdigital.com/products/slimmicro_bd_s0|title=Slim Micro Blu-ray DVD CD Duplicator - CD Copier, DVD Duplicator, Blu-Ray Duplicator {{pipe}} Vinpower Digital|website=www.vinpowerdigital.com}}&lt;/ref&gt;
+
+==Specifications==
+{| class=&quot;wikitable&quot;
+|+ Base (1×) and (current) maximum speeds by generation
+!rowspan=&quot;2&quot;| Generation
+! Base
+!colspan=&quot;2&quot;| Max
+|-
+! (Mbit/s)
+! (Mbit/s)
+! ×
+|-
+| 1st (CD)
+| 1.17
+| 65.6 || 56× &lt;!-- speeds above 48x can result in [[CD shattering]], and so 48x and 52x are the most common maximum speeds for CD drives, though some drives have been sold at 56x [http://reviews.cnet.com/cd-drives/benq-656a-56x-cd/4505-3207_7-20383339.html] --&gt;
+|-
+| 2nd (DVD)
+| 10.57
+| 253.6 || 24× &lt;!-- industry maximum speed currently at 24x [http://www.pioneerelectronics.com/PUSA/Computer/Computer+Drives/DVR-S19MBK] --&gt;
+|-
+| 3rd (BD)
+| 36
+| 504 || 14×&lt;ref&gt;{{cite news |url=http://www.cdrlabs.com/Reviews/lg-bh14ns40-14x-blu-ray-disc-rewriter.html |title=LG BH14NS40 14x Blu-ray Disc ReWriter |publisher=CDRinfo.com |url-status=live |archive-url=https://web.archive.org/web/20121011141018/http://cdrlabs.com/Reviews/lg-bh14ns40-14x-blu-ray-disc-rewriter.html |archive-date=2012-10-11 }}&lt;/ref&gt;
+|-
+| 4th (AD)
+| ?
+| ? || 14×
+|}
+
+{| class=&quot;wikitable&quot;
+|+ Capacity and nomenclature&lt;ref&gt;{{cite web | url = http://www.mpeg.org/MPEG/DVD/Book_A/Specs.html | title = DVD, Book A – Physical parameters | publisher = MPEG | access-date = 2011-10-09 | url-status = live | archive-url = https://web.archive.org/web/20120117074555/http://www.mpeg.org/MPEG/DVD/Book_A/Specs.html | archive-date = 2012-01-17 }}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.cinram.com/dvd/tech/dvdindetail.pdf |archive-url=https://web.archive.org/web/20081029171711/http://www.cinram.com/dvd/tech/dvdindetail.pdf |archive-date=October 29, 2008 |title=DVD in Detail |publisher=Cinram |date=27 November 2000 |url-status=unfit }}&lt;/ref&gt;
+!colspan=&quot;2&quot; rowspan=&quot;2&quot;| Designation
+!rowspan=&quot;2&quot;| Sides !!rowspan=&quot;2&quot;| Layers&lt;br&gt;(total) !! Diameter !!colspan=&quot;2&quot;| Capacity &lt;!-- raw or user data? --&gt;
+|-
+! (cm) !! ([[Gigabyte|GB]])
+|-
+| BD ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 8 ||align=right| 7.8
+|-
+| BD ||title=&quot;single-sided, double-layer&quot;| SS DL
+|align=right| 1 ||align=right| 2 ||align=right| 8 ||align=right| 15.6
+|-
+| BD ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 12 ||align=right| 25
+|-
+| BD ||title=&quot;single-sided, double-layer&quot;| SS DL
+|align=right| 1 ||align=right| 2 ||align=right| 12 ||align=right| 50
+|-
+| BD ||title=&quot;single-sided, triple-layer&quot;| SS TL
+|align=right| 1 ||align=right| 3 ||align=right| 12 ||align=right| 100
+|-
+| BD ||title=&quot;single-sided, Quad-layer&quot;| SS QL
+|align=right| 1 ||align=right| 4 ||align=right| 12 ||align=right| 128
+|-
+| CD–ROM 74 min ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 12 ||align=right| 0.682
+|-
+| CD–ROM 80 min ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 12 ||align=right| 0.737
+|-
+| CD–ROM ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 8 ||align=right| 0.194
+|-
+| DDCD–ROM ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 12 ||align=right| 1.364
+|-
+| DDCD–ROM ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 8 ||align=right| 0.387
+|-
+| DVD–1 ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 8 ||align=right| 1.46
+|-
+| DVD–2 || title=&quot;single-sided, double-layer&quot;| SS DL
+|align=right| 1 ||align=right| 2 ||align=right| 8 ||align=right| 2.66
+|-
+| DVD–3 || title=&quot;double-sided, single-layer&quot;| DS SL
+|align=right| 2 ||align=right| 2 ||align=right| 8 ||align=right| 2.92
+&lt;!--|-
+| DVD–4? ||title=&quot;double-sided, double- and single-layer&quot;| DS DL/SL
+|align=right| 2 ||align=right| 3 ||align=right| 8 ||align=right| 4.12--&gt;&lt;!-- calculated, doubtful such discs ever existed --&gt;
+|-
+| DVD–4 ||title=&quot;double-sided, double-layer&quot;| DS DL
+|align=right| 2 ||align=right| 4 ||align=right| 8 ||align=right| 5.32
+|-
+| DVD–5 ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 12 ||align=right| 4.70
+|-
+| DVD–9 ||title=&quot;single-sided, double-layer&quot;| SS DL
+|align=right| 1 ||align=right| 2 ||align=right| 12 ||align=right| 8.54
+|-
+| DVD–10 ||title=&quot;double-sided, single-layer&quot;| DS SL
+|align=right| 2 ||align=right| 2 ||align=right| 12 ||align=right| 9.40
+|-
+| DVD–14 ||title=&quot;double-sided, double- and single-layer&quot;| DS DL/SL
+|align=right| 2 ||align=right| 3 ||align=right| 12 ||align=right| 13.24 &lt;!--calculated from data above--&gt;
+|-
+| DVD–18 ||title=&quot;double-sided, double-layer&quot;| DS DL
+|align=right| 2 ||align=right| 4 ||align=right| 12 ||align=right| 17.08
+|-
+| DVD–R 1.0 ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 12 ||align=right| 3.95
+|-
+| DVD–R (2.0), +R, –RW, +RW ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 12 ||align=right| 4.7
+|-
+| DVD-R, +R, –RW, +RW ||title=&quot;double-sided, single-layer&quot;| DS SL
+|align=right| 2 ||align=right| 2 ||align=right| 12 ||align=right| 9.40
+|-
+| DVD–RAM ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 8 ||align=right| 1.46&lt;!--*--&gt;
+|-
+| DVD–RAM ||title=&quot;double-sided, single-layer&quot;| DS SL
+|align=right| 2 ||align=right| 2 ||align=right| 8 ||align=right| 2.65&lt;!--*--&gt;
+|-
+| DVD–RAM 1.0 ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 12 ||align=right| 2.58
+|-
+| DVD–RAM 2.0 ||title=&quot;single-sided, single-layer&quot;| SS SL
+|align=right| 1 ||align=right| 1 ||align=right| 12 ||align=right| 4.70
+|-
+| DVD–RAM 1.0 ||title=&quot;double-sided, single-layer&quot;| DS SL
+|align=right| 2 ||align=right| 2 ||align=right| 12 ||align=right| 5.16
+|-
+| DVD–RAM 2.0 ||title=&quot;double-sided, single-layer&quot;| DS SL
+|align=right| 2 ||align=right| 2 ||align=right| 12 ||align=right| 9.40&lt;!--*--&gt;
+|}
+
+==References==
+{{reflist}}
+
+==See also==
+* [[List of optical disc manufacturers]]
+* [[Universal Disk Format]] (UDF)
+
+==External links==
+{{Commons category|Optical discs}}
+* {{cite web |title=Inventor of the Week Archive: The Digital Compact Disc |publisher=Massachusetts Institute of Technology |date=December 1999 |url=http://web.mit.edu/invent/iow/russell.html |access-date=2007-07-13 | archive-url = https://web.archive.org/web/20080619013250/http://web.mit.edu/invent/iow/russell.html | archive-date = 2008-06-19 }}
+* {{cite news|title=Scientist's invention was let go for a song|newspaper=The Seattle Times|date=November 29, 2004|url=https://archive.seattletimes.com/archive/?date=20041129&amp;slug=cdman29|access-date=2007-07-13|first=Brier|last=Dudley}}
+* {{cite web |title=David Gregg and the Optical Disk |publisher=About.com |url=http://inventors.about.com/library/inventors/blopticaldisk.htm |access-date=2007-07-13 }}
+* {{cite journal|last=Byers|first=Fred R.|date=2003|url=http://www.itl.nist.gov/iad/894.05/docs/CDandDVDCareandHandlingGuide.pdf|url-status=dead|title=Care and Handling of CDs and DVDs — A Guide for Librarians and Archivists|publisher=[[National Institute of Standards and Technology]]|archive-url=https://web.archive.org/web/20080923012505/http://www.itl.nist.gov/iad/894.05/docs/CDandDVDCareandHandlingGuide.pdf|archive-date=September 23, 2008|access-date=July 17, 2009}}
+* {{cite web | url = http://www.romeyn.ca/ | title = 50th-anniversary -of-the-optical-disc | first = Jacob | last = Romeyn }}
+* {{cite web | url = http://www.osta.org/ | title = Optical Storage Technology Association }}
+* {{cite journal | url = http://www.ant-audio.co.uk/Tape_Recording/Library/Reference_Guide_for_Optical_Media.pdf | title = Reference Guide for Optical Media | first = Terence | last = O'Kelly | publisher = Memorex Inc. }}
+* {{cite web | url = http://5eshs.hpdst.gr/abstracts/139 | title = The history of ideas &quot;the optical disc as a &quot;unique&quot; carrier of information in the systems management | publisher = European Society of the History of Science | access-date = 2013-06-11 | archive-url = https://web.archive.org/web/20150518082128/http://5eshs.hpdst.gr/abstracts/139 | archive-date = 2015-05-18 | url-status = dead }}
+* {{cite web | url = http://www.cedmagic.com/history/thomson-csf-1980.html | title = Thomson-CSF's transmissive videodisc }}
+* {{cite web |url=http://lib.utsa.edu/knowyourmedia/ |title=Know Your Digital Storage Media: a guide to the most common types of digital storage media found in archives |publisher=University of Texas at San Antonio |location=USA }}
+
+{{Optical storage media}}
+
+{{DEFAULTSORT:Optical Disc}}
+[[Category:Audiovisual introductions in 1884]]
+[[Category:Compact disc]]
+[[Category:DVD]]
+[[Category:Optical discs]]
+[[Category:Optical disc authoring]]
+[[Category:Optoelectronics]]
+[[Category:Optical computer storage media]]
+
+[[et:Optiline andmekandja]]</text>
+      <sha1>e3atsci60dq8kwbh259q5xy9tls2ywz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Normandie-Niemen</title>
+    <ns>0</ns>
+    <id>41459</id>
+    <redirect title="Escadron de Chasse 2/30 Normandie-Niemen" />
+    <revision>
+      <id>917743653</id>
+      <parentid>914323718</parentid>
+      <timestamp>2019-09-25T07:50:15Z</timestamp>
+      <contributor>
+        <username>Klbrain</username>
+        <id>11677590</id>
+      </contributor>
+      <comment>Merge to [[Escadron de Chasse 2/30 Normandie-Niemen]] following uncontested 2018 proposal; significant overlap of content; history section already covers historic designations</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="497" xml:space="preserve">#REDIRECT [[Escadron de Chasse 2/30 Normandie-Niemen]] {{R from merge}}
+
+[[Category:Military units and formations of France in World War II]]
+[[Category:French expatriate units and formations]]
+[[Category:Free French Forces]]
+[[Category:Companions of the Liberation]]
+[[Category:Military units and formations established in 1943]]
+[[Category:France–Soviet Union relations]]
+[[Category:1943 establishments in France]]
+[[Category:Military units and formations awarded the Order of the Red Banner]]</text>
+      <sha1>fnnzra6i0jrvgoqeg7xk4e3t9hywbfk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Optical isolator</title>
+    <ns>0</ns>
+    <id>41460</id>
+    <revision>
+      <id>953428357</id>
+      <parentid>950962148</parentid>
+      <timestamp>2020-04-27T07:04:25Z</timestamp>
+      <contributor>
+        <username>Chongkian</username>
+        <id>8766034</id>
+      </contributor>
+      <comment>add template</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="9334" xml:space="preserve">{{About|the optical component|the optoelectronic component|Opto-isolator}}
+
+[[File:Optical-isolator-linos 1.jpg|thumbnail|right|250px|Optical isolator for laser experiments]]
+
+An '''optical isolator''', or '''optical diode''', is an optical component which allows the transmission of light in only one direction. It is typically used to prevent unwanted [[feedback]] into an [[optical oscillator]], such as a [[laser cavity]]. 
+
+The operation of [some of] the devices depends on the [[Faraday effect]] (which in turn is produced by [[magneto-optic effect]]), which is used in the main component, the [[Faraday rotator]].
+
+
+==Theory==
+{{main|Faraday effect}}
+[[File:Isolator diagram.GIF|thumbnail|right|200px|Figure 1: The optical circuit symbol for an isolator]]
+[[File:Faraday-effect.svg|thumb|Faraday effect]]
+The main component of the optical isolator is the Faraday rotator. The magnetic field, '''&lt;math&gt;B&lt;/math&gt;''', applied to the Faraday rotator causes a rotation in the polarization of the light due to the Faraday effect. The angle of rotation, &lt;math&gt;\beta&lt;/math&gt;, is given by,
+:&lt;math&gt;\beta=\nu B d\,&lt;/math&gt;,
+where, &lt;math&gt;\nu&lt;/math&gt; is the [[Verdet constant]] of the material&lt;ref&gt;{{cite journal |last1=Vojna |first1=David |last2=Slezák |first2=Ondřej |last3=Lucianetti |first3=Antonio |last4=Mocek |first4=Tomáš |title=Verdet Constant of Magneto-Active Materials Developed for High-Power Faraday Devices |journal=Applied Sciences |date=2019 |volume=9 |issue=15 |page=3160 |doi=10.3390/app9153160 |url=https://www.mdpi.com/2076-3417/9/15/3160|doi-access=free }}&lt;/ref&gt; (amorphous or crystalline solid, or liquid, or crystalline liquid, or vaprous, or gaseous) of which the rotator is made, and &lt;math&gt;d&lt;/math&gt; is the length of the rotator. This is shown in Figure 2. Specifically for an optical isolator, the values are chosen to give a rotation of 45°.
+
+It has been shown that a crucial requirement for any kind of optical isolator (not only the Faraday isolator) is some kind of non-[[Reciprocity_(electromagnetism)|reciprocal]] optics &lt;ref&gt;{{cite journal|last1=Jalas|first1=Dirk|last2=Petrov|first2=Alexander|last3=Eich|first3=Manfred|last4=Freude|first4=Wolfgang|last5=Fan|first5=Shanhui|last6=Yu|first6=Zongfu|last7=Baets|first7=Roel|last8=Popović|first8=Miloš|last9=Melloni|first9=Andrea|last10=Joannopoulos|first10=John D.|last11=Vanwolleghem|first11=Mathias|last12=Doerr|first12=Christopher R.|last13=Renner|first13=Hagen|title=What is — and what is not — an optical isolator|journal=Nature Photonics|date=29 July 2013|volume=7|issue=8|pages=579–582|doi=10.1038/nphoton.2013.185|bibcode=2013NaPho...7..579J}}&lt;/ref&gt;
+
+==Polarization dependent isolator==
+[[File:Faraday isolator.svg|thumbnail|right|300px|Figure 2: Faraday isolator allows the transmission of light in only one direction. It is made of three parts, an input polarizer, a Faraday rotator and an analyzer.]]
+The polarization dependent isolator, or '''Faraday isolator''', is made of three parts, an input polarizer (polarized vertically), a Faraday rotator, and an output polarizer, called an analyzer (polarized at 45°).
+
+Light traveling in the forward direction becomes polarized vertically by the input polarizer.  The Faraday rotator will rotate the polarization by 45°. The analyzer then enables the light to be transmitted through the isolator.
+
+Light traveling in the backward direction becomes polarized at 45° by the analyzer.  The Faraday rotator will again rotate the polarization by 45°. This means the light is polarized horizontally (the direction of rotation is not sensitive to the direction of propagation). Since the polarizer is vertically aligned, the light will be extinguished.
+
+Figure 2 shows a Faraday rotator with an input polarizer, and an output analyzer.  For a polarization dependent isolator, the angle between the polarizer and the analyzer, &lt;math&gt;\beta&lt;/math&gt;, is set to 45°. The Faraday rotator is chosen to give a 45° rotation.
+
+Polarization dependent isolators are typically used in free space optical systems. This is because the polarization of the source is typically maintained by the system. In optical fibre systems, the polarization direction is typically dispersed in non polarization maintaining systems. Hence the angle of polarization will lead to a loss.
+
+==Polarization independent isolator==
+[[File:Optical isolator.GIF|thumbnail|right|250px|Figure 3: Polarization independent isolator]]
+The polarization independent isolator is made of three parts, an input [[Birefringence|birefringent]] wedge (with its ordinary polarization direction vertical and its extraordinary polarization direction horizontal), a Faraday rotator, and an output birefringent wedge (with its ordinary polarization direction at 45°, and its extraordinary polarization direction at −45°).&lt;ref&gt; http://www.fiber-optic-components.com/polarization-dependent-isolator-vs-polarization-independent-isolator.html &lt;/ref&gt; &lt;ref&gt; http://ecee.colorado.edu/~ecen5616/WebMaterial/19%20Polarization.pdf &lt;/ref&gt;
+
+Light traveling in the forward direction is split by the input birefringent wedge into its vertical (0°) and horizontal (90°) components, called the ordinary ray (o-ray) and the extraordinary ray (e-ray) respectively.  The Faraday rotator rotates both the o-ray and e-ray by 45°. This means the o-ray is now at 45°, and the e-ray is at −45°. The output birefringent wedge then recombines the two components.
+
+Light traveling in the backward direction is separated into the o-ray at 45, and the e-ray at −45° by the birefringent wedge.  The Faraday Rotator again rotates both the rays by 45°. Now the o-ray is at 90°, and the e-ray is at 0°. Instead of being focused by the second birefringent wedge, the rays diverge.
+
+Typically [[collimator]]s are used on either side of the isolator. In the transmitted direction the beam is split and then combined and focused into the output collimator. In the isolated direction the beam is split, and then diverged, so it does not focus at the collimator.
+
+Figure 3 shows the propagation of light through a polarization independent isolator. The forward travelling light is shown in blue, and the backward propagating light is shown in red. The rays were traced using an ordinary refractive index of 2, and an extraordinary refractive index of 3. The wedge angle is 7°.
+
+==The Faraday rotator==
+{{main|Faraday rotator}}
+The most important optical element in an isolator is the Faraday rotator. The characteristics that one looks for in a Faraday rotator optic include a high [[Verdet constant]], low [[absorption (optics)|absorption]] coefficient, low [[non-linear]] [[refractive index]] and high [[laser damage threshold|damage threshold]]. Also, to prevent [[self-focusing]] and other thermal related effects, the optic should be as short as possible. The two most commonly used materials for the 700–1100&amp;nbsp;nm range are [[terbium doped borosilicate]] glass and [[terbium gallium garnet]] crystal (TGG). For long distance fibre communication, typically at 1310&amp;nbsp;nm or 1550&amp;nbsp;nm, [[yttrium iron garnet]] crystals are used (YIG). Commercial YIG based Faraday isolators reach isolations higher than 30 [[Decibel|dB]].
+
+Optical isolators are different from 1/4 [[wave plate]] based isolators{{dubious|date=October 2016}}{{clarify|date=October 2016}} because the Faraday rotator provides non-reciprocal rotation while maintaining [[linear polarization]]. That is, the polarization rotation due to the Faraday rotator is always in the same relative direction. So in the forward direction, the rotation is positive 45°. In the reverse direction, the rotation is −45°. This is due to the change in the relative magnetic field direction, positive one way, negative the other. This then adds to a total of 90° when the light travels in the forward direction and then the negative direction. This allows the higher isolation to be achieved.

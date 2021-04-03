@@ -1,0 +1,198 @@
+In the case of the group [[GL(n)|{{math|GL(''n'')}}]] of [[invertible matrices]], the conjugacy relation is called  [[matrix similarity]].
+
+It can be easily shown that conjugacy is an equivalence relation and therefore partitions ''G'' into equivalence classes. (This means that every element of the group belongs to precisely one conjugacy class, and the classes Cl(''a'') and Cl(''b'') are equal [[if and only if]] ''a'' and ''b'' are conjugate, and [[Disjoint sets|disjoint]] otherwise.) The equivalence class that contains the element ''a'' in ''G'' is
+:{{math|1 = Cl(''a'') = { ''gag''&lt;sup&gt;−1&lt;/sup&gt; {{vbar}} g ∈ ''G'' } }}
+and is called the '''conjugacy class''' of {{math|''a''}}. The '''{{vanchor|class number}}'''&lt;!--boldface per WP:R#PLA--&gt; of {{math|''G''}} is the number of distinct (nonequivalent) conjugacy classes. All elements belonging to the same conjugacy class have the same [[Order (group theory)|order]].
+
+Conjugacy classes may be referred to by describing them, or more briefly by abbreviations such as &quot;6A&quot;, meaning &quot;a certain conjugacy class of order 6 elements&quot;, and &quot;6B&quot; would be a different conjugacy class of order 6 elements; the conjugacy class 1A is the conjugacy class of the identity. In some cases, conjugacy classes can be described in a uniform way; for example, in the [[symmetric group]] they can be described by cycle structure.
+
+==Examples==
+The symmetric group [[Dihedral group of order 6|''S''&lt;sub&gt;3&lt;/sub&gt;]], consisting of the 6 [[permutation]]s of three elements, has three conjugacy classes:
+:no change (abc → abc)
+:[[Cyclic_permutation#Transpositions|transposing]] two (abc → acb, abc → bac, abc → cba)
+:a [[cyclic permutation]] of all three (abc → bca, abc → cab)
+
+These three classes also correspond to the classification of the [[Isometry group|isometries]] of an [[equilateral triangle]]. 
+
+[[File:Symmetric group S4; conjugacy table.svg|thumb|300px|Table showing {{math|1 = ''bab''&lt;sup&gt;−1&lt;/sup&gt;}} for all pairs {{math|1 = (''a'', ''b'')}} with {{math|1 = ''a'', ''b'' ∈ ''S''&lt;sub&gt;4&lt;/sub&gt;}} &lt;small&gt;(compare [[:File:Symmetric group 4; permutation list.svg|numbered list]])&lt;/small&gt;. Each row contains all elements of the conjugacy class {{nowrap|of {{math|1 = ''a''}},}} and each column contains all elements of {{math|1 = ''S''&lt;sub&gt;4&lt;/sub&gt;}}.]]
+The '''symmetric group [[v:Symmetric group S4|''S''&lt;sub&gt;4&lt;/sub&gt;]]''', consisting of the 24 permutations of four elements, has five conjugacy classes, listed with their cycle structures and orders:
+:'''(1)&lt;sub&gt;4&lt;/sub&gt;'''&amp;nbsp;&amp;nbsp;&amp;nbsp; no change (1 element: { (1, 2, 3, 4) }).  The single row containing this conjugacy class is shown as a row of black circles in the adjacent table.
+:'''(2)'''&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; interchanging two (6 elements: { (1, 2, 4, 3), (1, 4, 3, 2), (1, 3, 2, 4), (4, 2, 3, 1), (3, 2, 1, 4), (2, 1, 3, 4) }).  The 6 rows containing this conjugacy class are highlighted in green in the adjacent table.
+:'''(3)'''&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; a cyclic permutation of three (8 elements:  { (1, 3, 4, 2), (1, 4, 2, 3), (3, 2, 4, 1), (4, 2, 1, 3), (4, 1, 3, 2), (2, 4, 3, 1), (3, 1, 2, 4), (2, 3, 1, 4) }).  The 8 rows containing this conjugacy class are shown with normal print (no boldface or color highlighting) in the adjacent table.
+:'''(4)'''&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; a cyclic permutation of all four (6 elements: { (2, 3, 4, 1), (2, 4, 1, 3), (3, 1, 4, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 3, 1, 2) }).  The 6 rows containing this conjugacy class are highlighted in orange in the adjacent table.
+:'''(2)(2)'''&amp;nbsp; interchanging two, and also the other two (3 elements:  { (2, 1, 4, 3), (4, 3, 2, 1), (3, 4, 1, 2) }).  The 3 rows containing this conjugacy class are shown with boldface entries in the adjacent table.
+
+The [[Octahedral symmetry#The isometries of the cube|proper rotations of the cube]], which can be characterized by permutations of the body diagonals, are also described by conjugation in ''S''&lt;sub&gt;4&lt;/sub&gt; .
+
+In general, the number of conjugacy classes in the '''symmetric group ''S''&lt;sub&gt;''n''&lt;/sub&gt;''' is equal to the number of [[integer partition]]s of ''n''.  This is because each conjugacy class corresponds to exactly one partition of {1, 2, ..., ''n''} into [[cycle notation|cycles]], up to permutation of the elements of {1, 2, ..., ''n''}.
+
+In general, the '''[[Euclidean group]]''' can be studied by [[conjugation of isometries in Euclidean space]].
+
+==Properties==
+* The identity element is always the only element in its class, that is {{math|Cl(''e'') {{equals}} {''e''} }}
+* If {{math|''G''}} is [[abelian group|abelian]], then {{math|''gag''&lt;sup&gt;−1&lt;/sup&gt; {{equals}} ''a''}} for all {{math|''a''}} and {{math|''g''}} in {{math|''G''}}; so {{math|Cl(''a'') {{equals}} {''a''} }} for all {{math|''a''}} in {{math|''G''}}.
+* If two elements {{math|''a''}} and {{math|''b''}} of {{math|''G''}} belong to the same conjugacy class (i.e., if they are conjugate), then they have the same [[order (group theory)|order]]. More generally, every statement about {{math|''a''}} can be translated into a statement about {{math|''b'' {{equals}} ''gag''&lt;sup&gt;−1&lt;/sup&gt;}}, because the map {{math|φ(''x'') {{equals}} ''gxg''&lt;sup&gt;−1&lt;/sup&gt;}} is an [[group isomorphism#Automorphisms|automorphism]] of {{math|''G''}}. See the next property for an example.
+* If {{math|''a''}} and {{math|''b''}} are conjugate, then so are their powers {{math|''a''&lt;sup&gt;''k''&lt;/sup&gt;}} and {{math|''b''&lt;sup&gt;''k''&lt;/sup&gt;}}. (Proof: if {{math|''a {{equals}} gbg''&lt;sup&gt;−1&lt;/sup&gt;}}, then {{math|''a''&lt;sup&gt;''k''&lt;/sup&gt; {{equals}} (''gbg''&lt;sup&gt;−1&lt;/sup&gt;)(''gbg''&lt;sup&gt;−1&lt;/sup&gt;) … (''gbg''&lt;sup&gt;−1&lt;/sup&gt;) {{equals}} ''gb''&lt;sup&gt;''k''&lt;/sup&gt;''g''&lt;sup&gt;−1&lt;/sup&gt;}}.) Thus taking {{math|''k''}}th powers gives a map on conjugacy classes, and one may consider which conjugacy classes are in its preimage. For example, in the symmetric group, the square of an element of type (3)(2) (a 3-cycle and a 2-cycle) is an element of type (3), therefore one of the power-up classes of (3) is the class (3)(2) (where {{math|''a''}} is a power-up class of {{math|''a''&lt;sup&gt;''k''&lt;/sup&gt;}}).
+* An element {{math|''a''}} of {{math|''G''}} lies in the [[center of a group|center]] {{math|Z(''G'')}} of {{math|''G''}} if and only if its conjugacy class has only one element, {{math|''a''}} itself. More generally, if {{math|C&lt;sub&gt;''G''&lt;/sub&gt;(''a'')}} denotes the ''[[centralizer]]'' of {{math|''a''}} in {{math|''G''}}, i.e., the [[subgroup]] consisting of all elements {{math|''g''}} such that {{math|''ga'' {{equals}} ''ag''}}, then the [[index of a subgroup|index]] {{math|[''G'' : C&lt;sub&gt;''G''&lt;/sub&gt;(''a'')]}} is equal to the number of elements in the conjugacy class of {{math|''a''}} (by the [[orbit-stabilizer theorem]]).
+*Take &lt;math&gt;\sigma \in S_{n}&lt;/math&gt; and let &lt;math&gt;m_{1}, m_{2}, ..., m_{s}&lt;/math&gt; be the distinct integers which appear as lengths of cycles in the cycle type of &lt;math&gt;\sigma&lt;/math&gt; (including 1-cycles). Let &lt;math&gt;k_{i}&lt;/math&gt; be the number of cycles of length &lt;math&gt;m_{i}&lt;/math&gt; in &lt;math&gt;\sigma&lt;/math&gt; for each &lt;math&gt;i = 1, 2, ..., s&lt;/math&gt; (so that &lt;math&gt;\sum\limits_{i=1}^{s}k_{i}m_{i}=n&lt;/math&gt;). Then the number of conjugates of &lt;math&gt;\sigma&lt;/math&gt; is:&lt;ref name=&quot;dummit&quot;&gt;&lt;/ref&gt;
+:&lt;math&gt;\frac{n!}{(k_{1}!m_{1}^{k_{1}})(k_{2}!m_{2}^{k_{2}})...(k_{s}!m_{s}^{k_{s}})}&lt;/math&gt;
+
+==Conjugacy as group action==&lt;!-- This section is linked from [[Quaternions and spatial rotation]] --&gt;
+
+If we define
+:{{math|''g . x'' {{equals}} ''gxg''&lt;sup&gt;−1&lt;/sup&gt;}}
+for any two elements {{math|''g''}} and {{math|''x''}} in {{math|''G''}}, then we have a [[Group action (mathematics)|group action]] of {{math|''G''}} on {{math|''G''}}. The [[Group action (mathematics)#Orbits and stabilizers|orbits]] of this action are the conjugacy classes, and the [[Group action (mathematics)#Orbits and stabilizers|stabilizer]] of a given element is the element's [[centralizer]].&lt;ref name=&quot;Grillet-2007-p56&quot;&gt;Grillet (2007), [{{Google books|plainurl=y|id=LJtyhu8-xYwC|page=56|text=the orbits are the conjugacy classes}} p. 56]&lt;/ref&gt;
+
+Similarly, we can define a group action of {{math|''G''}} on the set of all [[subset]]s of {{math|''G''}}, by writing
+:{{math|''g . S'' {{equals}} ''gSg''&lt;sup&gt;−1&lt;/sup&gt;}},
+or on the set of the subgroups of {{math|''G''}}.
+
+==Conjugacy class equation==
+
+If {{math|''G''}} is a [[finite group]], then for any group element {{math|''a''}}, the elements in the conjugacy class of {{math|''a''}} are in one-to-one correspondence with [[coset]]s of the [[centralizer]] {{math|C&lt;sub&gt;''G''&lt;/sub&gt;(''a'')}}. This can be seen by observing that any two elements {{math|''b''}} and {{math|''c''}} belonging to the same coset (and hence, {{math|1=''b'' {{equals}} ''cz''}} for some {{math|''z''}} in the centralizer {{math|C&lt;sub&gt;''G''&lt;/sub&gt;(''a'')}}&amp;#8239;) give rise to the same element when conjugating {{math|''a''}}: {{math|1=''bab''&lt;sup&gt;−1&lt;/sup&gt; {{equals}} ''cza''(''cz'')&lt;sup&gt;−1&lt;/sup&gt; {{equals}} ''czaz''&lt;sup&gt;−1&lt;/sup&gt;''c''&lt;sup&gt;−1&lt;/sup&gt; {{equals}} ''cazz''&lt;sup&gt;−1&lt;/sup&gt;''c''&lt;sup&gt;−1&lt;/sup&gt; {{equals}} ''cac''&lt;sup&gt;−1&lt;/sup&gt;}}. That can also be seen from the [[orbit-stabilizer theorem]], when considering the group as acting on itself through conjugation, so that orbits are conjugacy classes and stabilizer subgroups are centralizers. The converse holds as well.
+
+Thus the number of elements in the conjugacy class of {{math|''a''}} is the [[index of a subgroup|index]] {{math|[''G'' : C&lt;sub&gt;''G''&lt;/sub&gt;(''a'')]}} of the centralizer {{math|C&lt;sub&gt;''G''&lt;/sub&gt;(''a'')}} in {{math|''G''}}&amp;#8239;; hence the size of each conjugacy class divides the order of the group.
+
+Furthermore, if we choose a single representative element {{math|''x''&lt;sub&gt;''i''&lt;/sub&gt;}} from every conjugacy class, we infer from the disjointness of the conjugacy classes that {{math|1={{abs|''G''}} = ∑&lt;sub&gt;''i''&lt;/sub&gt; [''G'' : C&lt;sub&gt;''G''&lt;/sub&gt;(''x''&lt;sub&gt;''i''&lt;/sub&gt;)]}}, where {{math|C&lt;sub&gt;''G''&lt;/sub&gt;(''x''&lt;sub&gt;''i''&lt;/sub&gt;)}} is the centralizer of the element {{math|''x''&lt;sub&gt;''i''&lt;/sub&gt;}}. Observing that each element of the center {{math|Z(''G'')}} forms a conjugacy class containing just itself gives rise to the '''class equation''':&lt;ref&gt;Grillet (2007), [{{Google books|plainurl=y|id=LJtyhu8-xYwC|page=57|text=The Class Equation}} p. 57]&lt;/ref&gt;
+:{{math|{{abs|''G''}} {{equals}} {{abs|Z(''G'')}} + ∑&lt;sub&gt;''i''&lt;/sub&gt; [''G'' : C&lt;sub&gt;''G''&lt;/sub&gt;(''x''&lt;sub&gt;''i''&lt;/sub&gt;)]}}
+where the sum is over a representative element from each conjugacy class that is not in the center.
+
+Knowledge of the divisors of the group order {{math|{{abs|''G''}}}} can often be used to gain information about the order of the center or of the conjugacy classes.
+
+===Example===
+
+Consider a finite [[p-group|{{math|''p''}}-group]] {{math| ''G'' }} (that is, a group with order {{math|''p''&lt;sup&gt;''n''&lt;/sup&gt;}}, where {{math|''p''}} is a [[prime number]] and {{math| ''n'' &gt; 0 }}). We are going to prove that ''every finite ''{{math|''p''}}''-group has a non-[[Trivial (mathematics)|trivial]] center''.
+
+Since the order of any conjugacy class of {{math|''G''}} must divide the order of {{math|''G''}}, it follows that each conjugacy class {{math|''H''&lt;sub&gt;''i''&lt;/sub&gt;}} that is not in the center also has order some power of {{math|''p''&lt;sup&gt;''k''&lt;sub&gt;''i''&lt;/sub&gt;&lt;/sup&gt;}}, where {{math|0 &lt; ''k''&lt;sub&gt;''i''&lt;/sub&gt; &lt; ''n''}}. But then the class equation requires that {{math|1={{abs|''G''}} {{equals}} ''p''&lt;sup&gt;''n''&lt;/sup&gt; {{equals}} {{abs|Z(''G'')}} +  ∑&lt;sub&gt;''i''&lt;/sub&gt; ''p''&lt;sup&gt;''k''&lt;sub&gt;''i''&lt;/sub&gt;&lt;/sup&gt;}}. From this we see that {{math|''p''}} must divide {{math| {{abs|Z(''G'')}} }}, so {{math| {{abs|Z(''G'')}} &gt; 1 }}.
+
+In particular, when n = 2, {{math| ''G'' }} is an abelian group since for any group element {{math|''a''}} , {{math|''a''}} is of order {{math| ''p'' }} or {{math|''p''&lt;sup&gt;''2''&lt;/sup&gt;}}, if {{math|''a''}} is of order {{math|''p''&lt;sup&gt;''2''&lt;/sup&gt;}}, then {{math| ''G'' }} is isomorphic to cyclic group of order {{math|''p''&lt;sup&gt;''2''&lt;/sup&gt;}}, hence abelian. On the other hand, if any non-trivial element in {{math| ''G'' }} is of order {{math| ''p'' }}, hence by the conclusion above{{math| {{abs|Z(''G'')}} &gt; 1 }}, then {{math| {{abs|Z(''G'')}} {{=}} ''p'' &gt; 1 }} or {{math|''p''&lt;sup&gt;''2''&lt;/sup&gt;}}. We  only need to consider the case when {{math| {{abs|Z(''G'')}} {{=}} ''p'' &gt; 1 }}, then there is an element {{math|''b''}} of {{math| ''G'' }} which is not in the center of {{math| ''G'' }}. Note that {{math|''b''}} is of order {{math|''p''}}, so the subgroup of {{math|''G''}} generated by {{math|''b''}} contains {{math| ''p''}} elements and thus is a proper subset of {{math|C&lt;sub&gt;''G''&lt;/sub&gt;(''b'')}}, because {{math|C&lt;sub&gt;''G''&lt;/sub&gt;(''b'')}} includes all elements of this subgroup and the center which does not contain {{math|''b''}} but at least {{math| ''p''}} elements.  Hence the order of {{math|C&lt;sub&gt;''G''&lt;/sub&gt;(''b'')}} is strictly larger than {{math|''p''}}, therefore {{math|{{abs|C&lt;sub&gt;''G''&lt;/sub&gt;(''b'')}}}} = {{math|''p''&lt;sup&gt;''2''&lt;/sup&gt;}}, therefore {{math|''b''}} is an element of the center of {{math|''G''}}. Hence {{math|''G''}} is abelian and in fact isomorphic to the direct product of two cyclic groups each of order {{math|''p''}}.
+
+==Conjugacy of subgroups and general subsets==&lt;!-- This section is linked from [[Symmetry group]] --&gt;
+
+More generally, given any [[subset]] ''S'' of ''G'' (''S'' not necessarily a subgroup), we define a subset ''T'' of ''G'' to be conjugate to ''S'' if there exists some ''g'' in ''G'' such that ''T'' = ''gSg''&lt;sup&gt;−1&lt;/sup&gt;. We can define '''Cl(''S'')''' as the set of all subsets ''T'' of ''G'' such that ''T'' is conjugate to ''S''.
+
+A frequently used theorem is that, given any subset ''S'' of ''G'',  the [[coset|index]] of N(''S'') (the [[normalizer]] of ''S'') in ''G'' equals the order of Cl(''S''):
+
+:&lt;math&gt;|\operatorname{Cl}(S)| = [G : N(S)]&lt;/math&gt;
+
+This follows since, if ''g'' and ''h'' are in ''G'', then ''gSg''&lt;sup&gt;−1&lt;/sup&gt; = ''hSh''&lt;sup&gt;−1&lt;/sup&gt; if and only if ''g''&lt;sup&gt;−1&lt;/sup&gt;''h'' is in N(''S''), in other words, if and only if ''g'' and ''h'' are in the same [[coset]] of N(''S'').
+
+Note that this formula generalizes the one given earlier for the number of elements in a conjugacy class (let ''S'' = {''a''}).
+
+The above is particularly useful when talking about subgroups of ''G''. The subgroups can thus be divided into conjugacy classes, with two subgroups belonging to the same class if and only if they are conjugate.
+Conjugate subgroups are [[group isomorphism|isomorphic]], but isomorphic subgroups need not be conjugate. For example, an abelian group may have two different subgroups which are isomorphic, but they are never conjugate.
+
+==Geometric interpretation==
+
+Conjugacy classes in the [[fundamental group]] of a [[path-connected]] topological space can be thought of as equivalence classes of [[free loop]]s under free homotopy.
+
+==See also==
+* [[Topological conjugacy]]
+* [[FC-group]]
+* [[Conjugacy-closed subgroup]]
+
+==Notes==
+{{reflist}}
+
+==References==
+* {{cite book |last1=Grillet |first1=Pierre Antoine |authorlink1= |last2= |first2= |authorlink2= |title=Abstract algebra |url= |edition=2 |series=Graduate texts in mathematics |volume=242 |year=2007 |publisher=Springer |location= |isbn=978-0-387-71567-4 |id= }}
+
+==External links==
+* {{springer|title=Conjugate elements|id=p/c025010}}
+
+[[Category:Group theory]]</text>
+      <sha1>7hk5q6ml1o7wgem732zv05a0g2kftot</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Class equation</title>
+    <ns>0</ns>
+    <id>49177</id>
+    <redirect title="Conjugacy class" />
+    <revision>
+      <id>838789228</id>
+      <parentid>184128028</parentid>
+      <timestamp>2018-04-29T09:17:06Z</timestamp>
+      <contributor>
+        <username>The Transhumanist</username>
+        <id>1754504</id>
+      </contributor>
+      <comment>Add template{{R to section}} to categorize redirect using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="72" xml:space="preserve">#REDIRECT [[Conjugacy class#Conjugacy class equation]]
+
+{{R to section}}</text>
+      <sha1>7845q86aj2g0u454hixczqymz256fh1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Conjugate elements</title>
+    <ns>0</ns>
+    <id>49178</id>
+    <redirect title="Conjugate element (field theory)" />
+    <revision>
+      <id>461647302</id>
+      <parentid>15944117</parentid>
+      <timestamp>2011-11-20T20:06:15Z</timestamp>
+      <contributor>
+        <username>Isheden</username>
+        <id>8367108</id>
+      </contributor>
+      <comment>Changed redirect to &quot;Conjugate element&quot; in field theory</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="46" xml:space="preserve">#REDIRECT [[Conjugate element (field theory)]]</text>
+      <sha1>58omafw967xn3gtxigco6xd3h6m5wi2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Fuzzy logic</title>
+    <ns>0</ns>
+    <id>49180</id>
+    <revision>
+      <id>991255158</id>
+      <parentid>989784301</parentid>
+      <timestamp>2020-11-29T03:13:19Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 79 templates: del empty params (25×); hyphenate params (14×); del |ref=harv (6×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="49696" xml:space="preserve">{{About|the scientific theory of that name||Fuzzy logic (disambiguation)}}
+{{short description|System for reasoning about vagueness}}
+In [[fuzzy mathematics]], '''fuzzy logic''' is a form of [[many-valued logic]] in which the [[truth value]]s of variables may be any [[real number]] between 0 and 1 both inclusive. It is employed to handle the concept of partial truth, where the truth value may range between completely true and completely false.&lt;ref&gt;{{cite book |last1=Novák, V. |last2=Perfilieva, I. |last3=Močkoř, J.  |title=Mathematical principles of fuzzy logic |date=1999 |publisher=Kluwer Academic |location=Dordrecht |isbn=978-0-7923-8595-0 }}&lt;/ref&gt; By contrast, in [[Boolean algebra|Boolean logic]], the truth values of variables may only be the [[integer]] values 0 or 1.
+
+The term ''fuzzy logic'' was introduced with the 1965 proposal of [[fuzzy set theory]] by [[Lotfi A. Zadeh|Lotfi Zadeh]].&lt;ref&gt;{{cite encyclopedia |url=http://plato.stanford.edu/entries/logic-fuzzy/ |title=Fuzzy Logic |access-date=2008-09-30 |encyclopedia=Stanford Encyclopedia of Philosophy |publisher=Bryant University |date=2006-07-23 }}&lt;/ref&gt;&lt;ref&gt;{{cite journal | last1 = Zadeh | first1 = L.A. | year = 1965 | title = Fuzzy sets | journal = Information and Control | volume = 8 | issue = 3| pages = 338–353 | doi=10.1016/s0019-9958(65)90241-x| doi-access = free }}&lt;/ref&gt;  Fuzzy logic had, however,  been studied since the 1920s, as [[Łukasiewicz logic|infinite-valued logic]]—notably by [[Jan Łukasiewicz|Łukasiewicz]] and [[Alfred Tarski|Tarski]].&lt;ref&gt;{{cite journal | last1 = Pelletier | first1 = Francis Jeffry | year = 2000 | title = Review of ''Metamathematics of fuzzy logics'' | url = https://www.sfu.ca/~jeffpell/papers/ReviewHajek.pdf | journal = The Bulletin of Symbolic Logic | volume = 6 | issue = 3 | pages = 342–346 | jstor = 421060 | doi = 10.2307/421060 | url-status = live | archive-url = https://web.archive.org/web/20160303172812/http://www.sfu.ca/~jeffpell/papers/ReviewHajek.pdf | archive-date = 2016-03-03 }}&lt;/ref&gt;
+
+Fuzzy logic is based on the observation that people make decisions based on imprecise and non-numerical information. Fuzzy models or sets are mathematical means of representing [[vagueness]] and imprecise information (hence the term fuzzy). These models have the capability of recognising, representing, manipulating, interpreting, and utilising data and information that are vague and lack certainty.&lt;ref&gt;{{Cite web|url=https://mechanicalsite.com/157/what-is-fuzzy-logic|title=What is Fuzzy Logic? &quot;Mechanical Engineering Discussion Forum&quot;}}&lt;/ref&gt;
+
+Fuzzy logic has been applied to many fields, from [[control theory]] to [[artificial intelligence]].
+
+==Overview==
+[[Classical logic]] only permits conclusions which are either true or false. However, there are also propositions with variable answers, such as one might find when asking a group of people to identify a color.  In such instances, the truth appears as the result of reasoning from inexact or partial knowledge in which the sampled answers are mapped on a spectrum.&lt;ref&gt;https://www.youtube.com/watch?v=cGdRB1r_iC0}|title= Fuzzy Logic&lt;/ref&gt;
+
+Both degrees of truth and [[probability|probabilities]] range between 0 and 1 and hence may seem similar at first, but fuzzy logic uses degrees of truth as a [[mathematical model]] of ''vagueness'', while [[probability]] is a mathematical model of ''ignorance''.&lt;ref&gt;{{Cite book|url=https://books.google.com/books?id=QBBADwAAQBAJ&amp;q=Both+degrees+of+truth+and+probabilities+range+between+0+and+1+and+hence+may+seem+similar+at+first,+but+fuzzy+logic+uses+degrees+of+truth+as+a+mathematical+model+of+vagueness,+while+probability+is+a+mathematical+model+of+ignorance&amp;pg=SA4-PA13|title=Handbook of Research for Fluid and Solid Mechanics: Theory, Simulation, and Experiment|last1=Asli|first1=Kaveh Hariri|last2=Aliyev|first2=Soltan Ali Ogli|last3=Thomas|first3=Sabu|last4=Gopakumar|first4=Deepu A.|date=2017-11-23|publisher=CRC Press|isbn=9781315341507|language=en}}&lt;/ref&gt;
+
+===Applying truth values===
+A basic application might characterize various sub-ranges of a [[Variable (mathematics)|continuous variable]].  For instance, a temperature measurement for [[Anti-lock braking system|anti-lock brakes]] might have several separate membership functions defining particular temperature ranges needed to control the brakes properly. Each function maps the same temperature value to a truth value in the 0 to 1 range. These truth values can then be used to determine how the brakes should be controlled.&lt;ref&gt;{{Cite book|url=https://books.google.com/books?id=-ZXJDQAAQBAJ&amp;q=For+instance,+a+temperature+measurement+for+anti-lock+brakes+might+have+several+separate+membership+functions+defining+particular+temperature+ranges+needed+to+control+the+brakes+properly.+Each+function+maps+the+same+temperature+value+to+a+truth+value+in+the+0+to+1+range.+These+truth+values+can+then+be+used+to+determine+how+the+brakes+should+be+controlled&amp;pg=PA47|title=Optical Character Recognition Systems for Different Languages with Soft Computing|last1=Chaudhuri|first1=Arindam|last2=Mandaviya|first2=Krupa|last3=Badelia|first3=Pratixa|last4=Ghosh|first4=Soumya K.|date=2016-12-23|publisher=Springer|isbn=9783319502526|language=en}}&lt;/ref&gt; Fuzzy set theory provides a means for representing uncertainty.
+
+===Linguistic variables===
+While variables in mathematics usually take numerical values, in fuzzy logic applications, non-numeric values are often used to facilitate the expression of rules and facts.&lt;ref&gt;{{cite book |last1=Zadeh |first1=L. A. |display-authors=etal |title=Fuzzy Sets, Fuzzy Logic, Fuzzy Systems |date=1996 |publisher=World Scientific Press |isbn=978-981-02-2421-9 }}&lt;/ref&gt;
+
+A linguistic variable such as ''age'' may accept values such as ''young'' and its antonym ''old''.  Because natural languages do not always contain enough value terms to express a fuzzy value scale, it is common practice to modify linguistic values with [[adjectives]] or [[adverbs]].  For example, we can use the [[hedge (linguistics)|hedges]] ''rather'' and ''somewhat'' to construct the additional values ''rather old'' or ''somewhat young''.
+
+Fuzzification operations can map mathematical input values into fuzzy membership functions. And the opposite de-fuzzifying operations can be used to map a fuzzy output membership function into a &quot;crisp&quot; output value that can be then used for decision or control purposes.
+
+==Process==
+
+# Fuzzify all input values into fuzzy membership functions.
+# Execute all applicable rules in the rulebase to compute the fuzzy output functions.
+# De-fuzzify the fuzzy output functions to get &quot;crisp&quot; output values.
+
+===Fuzzification===
+
+Fuzzification is the process of assigning the numerical input of a system to fuzzy sets with some degree of membership. This degree of membership may be anywhere within the interval [0,1]. If it is 0 then the value does not belong to the given fuzzy set, and if it is 1 then the value completely belongs within the fuzzy set. Any value between 0 and 1 represents the degree of uncertainty that the value belongs in the set. These fuzzy sets are typically described by words, and so by assigning the system input to fuzzy sets, we can reason with it in a linguistically natural manner.

@@ -88,6 +88,7 @@ void exectimes(double value, enum Function_name function_name, enum Task task){
         fprintf(fp, "DO_CLUSTERING:             %.4f \n\n", time[DO_CLUSTERING]);
         fprintf(fp, "MERGE_SORT:                %.4f \n\n", time[MERGE_SORT]);
         fprintf(fp, "TOTAL_TIME:                %.4f \n\n", time[TOTAL_TIME]);
+        
         //salva i tempi dettagliati nel file TXT
         sprintf(buffer, "###########serial################ \n\n");
         fwrite(buffer, strlen(buffer), 1, fp);

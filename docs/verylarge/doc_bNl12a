@@ -1,0 +1,188 @@
+Normal-section azimuth is simpler to calculate; Bomford says Cunningham's formula is exact for any distance.{{citation needed|reason=No mention of (Guy) Bomford or Cunningham anywhere else on this page|date=September 2015}} If ''f'' is the flattening, and ''e'' the eccentricity, for the chosen spheroid (e.g., {{frac|{{val|298.257223563}}}} for [[World Geodetic System|WGS84]]) then
+
+: &lt;math&gt;\begin{align}
+         e^2 &amp;= f(2 - f) \\
+     1 - e^2 &amp;= (1 - f)^2 \\
+     \Lambda &amp;= \left(1 - e^2\right) \frac{\tan\varphi_2}{\tan\varphi_1} + e^2
+       \sqrt{\frac{1 + \left(1 - e^2\right)\left(\tan\varphi_2\right)^2}
+                  {1 + \left(1 - e^2\right)\left(\tan\varphi_1\right)^2}} \\
+  \tan\alpha &amp;= \frac{\sin L}{(\Lambda - \cos L)\sin\varphi_1}
+\end{align}&lt;/math&gt;
+
+If ''φ''&lt;sub&gt;1&lt;/sub&gt; = 0 then
+
+: &lt;math&gt;\tan\alpha = \frac{\sin L}{\left(1 - e^2\right)\tan\varphi_2}&lt;/math&gt;
+
+To calculate the azimuth of the sun or a star given its declination and hour angle at our location, we modify the formula for a spherical earth. Replace ''φ''&lt;sub&gt;2&lt;/sub&gt; with declination and longitude difference with hour angle, and change the sign (since the hour angle is positive westward instead of east).
+
+==Mapping==
+There is a wide variety of [[Map projection#Azimuthal .28projections onto a plane.29|azimuthal map projections]]. They all have the property that directions (the azimuths) from a central point are preserved. Some navigation systems use south as the reference plane. However, any direction can serve as the plane of reference, as long as it is clearly defined for everyone using that system.
+{|align=left
+|{{comparison_azimuthal_projections.svg|820px|}}
+|}
+{{clear}}
+
+==Astronomy==
+Used in celestial navigation, an ''azimuth'' is the direction of a celestial body from the observer.&lt;ref&gt;Rutstrum, Carl, The Wilderness Route Finder, University of Minnesota Press (2000), {{ISBN|0-8166-3661-3}}, p. 194&lt;/ref&gt; In astronomy, an ''azimuth'' is sometimes referred to as a [[bearing (navigation)|bearing]]. In modern [[astronomy]] azimuth is nearly always measured from the north.
+(The article on [[Celestial coordinate system|coordinate systems]], for example, uses a convention measuring from the south.) In former times, it was common to refer to azimuth from the south, as it was then zero at the same time that the [[hour angle]] of a [[star]] was zero. This assumes, however, that the star [[culmination|(upper) culminates]] in the south, which is only true if the star's [[declination]] is less than (i.e. further south than) the observer's [[latitude]].
+
+==Other systems==
+
+===Right ascension===
+If, instead of measuring from and along the horizon, the angles are measured from and along the [[celestial equator]], the angles are called [[right ascension]] if referenced to the Vernal Equinox, or hour angle if referenced to the [[celestial meridian]].
+
+===Horizontal coordinate===
+In the [[horizontal coordinate system]], used in [[celestial navigation]] and [[satellite dish]] installation, azimuth is one of the two [[coordinate system|coordinates]]. The other is [[Altitude (astronomy)|altitude]], sometimes called elevation above the horizon. See also: [[Sat finder]].
+
+===Polar coordinate===
+In mathematics, the azimuth angle of a point in [[cylindrical coordinate system|cylindrical coordinates]] or [[spherical coordinate system|spherical coordinates]] is the anticlockwise [[angle]] between the positive ''x''-axis and the projection of the [[Vector (geometry)|vector]] onto the ''xy''-[[plane (mathematics)|plane]]. The angle is the same as an angle in [[polar coordinates]] of the component of the vector in the ''xy''-plane and is normally measured in [[radian]]s rather than degrees. As well as measuring the angle differently, in mathematical applications [[theta]], ''θ'', is very often used to represent the azimuth rather than the representation of symbol  [[phi (letter)|phi]] ''φ''.
+
+==Other uses of the word==
+For [[tape drive|magnetic tape drives]], ''azimuth'' refers to the angle between the tape head(s) and tape.
+
+In [[sound localization]] experiments and literature, the ''azimuth'' refers to the angle the sound source makes compared to the imaginary straight line that is drawn from within the head through the area between the eyes.
+
+An [[azimuth thruster]] in [[shipbuilding]] is a [[propeller]] that can be rotated horizontally.
+
+==Etymology of the word==
+The word azimuth is in all European languages today. It originates from medieval Arabic ''al-sumūt'', pronounced ''as-sumūt'' in Arabic, meaning &quot;the directions&quot; (plural of Arabic ''al-samt'' = &quot;the direction&quot;). The Arabic word entered late medieval Latin in an astronomy context and in particular in the use of the Arabic version of the [[astrolabe]] astronomy instrument. The word's first record in English is in the 1390s in ''[[Treatise on the Astrolabe]]'' by [[Geoffrey Chaucer]]. The first known record in any Western language is in Spanish in the 1270s in an astronomy book that was largely derived from Arabic sources, the ''[[Libros del saber de astronomía]]'' commissioned by [[King Alfonso X]] of Castile.&lt;ref&gt;&quot;Azimuth&quot; at [https://archive.org/stream/oed01arch#page/602/mode/1up ''New English Dictionary on Historical Principles'']; &quot;azimut&quot; at [http://www.cnrtl.fr/definition/azimut ''Centre National de Ressources Textuelles et Lexicales'']; &quot;al-Samt&quot; at [http://referenceworks.brillonline.com/entries/encyclopaedia-of-islam-2/al-samt-SIM_6591 ''Brill's Encyclopedia of Islam'']; &quot;azimuth&quot; at [http://englishwordsofarabicancestry.wordpress.com/#cite_note-39 EnglishWordsOfArabicAncestry.wordpress.com] {{webarchive |url=https://web.archive.org/web/20140102020035/http://englishwordsofarabicancestry.wordpress.com/#cite_note-39 |date=January 2, 2014 }}. In Arabic the written ''al-sumūt'' is always pronounced ''as-sumūt'' (see [[Sun and moon letters|pronunciation of &quot;al-&quot; in Arabic]]).&lt;/ref&gt;
+
+==See also==
+{{Portal|Geography}}
+{{cols|colwidth=21em}}
+* [[Altitude (astronomy)]]
+* [[Azimuthal quantum number]]
+* [[Azimuthal equidistant projection]]
+* [[Bearing (navigation)]]
+* [[Clock position]]
+* [[Course (navigation)]]
+* [[Inclination]]
+* [[Longitude]]
+* [[Latitude]]
+* [[Magnetic declination]]
+* [[Panning (camera)]]
+* [[Relative bearing]]
+* [[Sextant]]
+* [[Solar azimuth angle]]
+* [[Sound localization|Sound Localization]]
+* [[Zenith]]
+{{colend}}
+
+==Notes==
+{{Reflist}}
+
+==References==
+* Rutstrum, Carl, ''The Wilderness Route Finder'', University of Minnesota Press (2000), {{ISBN|0-8166-3661-3}}
+* U.S. Army, ''Advanced Map and Aerial Photograph Reading'', FM 21–26, Headquarters, War Department, Washington, D.C. (17 September 1941)
+* U.S. Army, ''Advanced Map and Aerial Photograph Reading'', FM 21–26, Headquarters, War Department, Washington, D.C. (23 December 1944)
+* U.S. Army, ''Map Reading and Land Navigation'', FM 21–26, Headquarters, Dept. of the Army, Washington, D.C. (7 May 1993)
+
+==External links==
+{{Wiktionary|azimuth}}
+*{{Cite EB1911|wstitle=Azimuth |short=x}}
+*{{Cite Collier's|wstitle=Azimuth|year=1921 |short=x}}
+
+[[Category:Angle]]
+[[Category:Astronomy]]
+[[Category:Navigation]]
+[[Category:Surveying]]
+[[Category:Celestial coordinate system]]</text>
+      <sha1>pr3mkkht0m438rtahvvmi792upplbit</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Barometer</title>
+    <ns>0</ns>
+    <id>47488</id>
+    <revision>
+      <id>991479364</id>
+      <parentid>988274207</parentid>
+      <timestamp>2020-11-30T07:48:11Z</timestamp>
+      <contributor>
+        <ip>2402:8100:24C7:8587:589E:2BE:3695:A93A</ip>
+      </contributor>
+      <comment>/* Water barometers */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="40331" xml:space="preserve">{{short description|Scientific instrument used to measure atmospheric pressure}}
+{{broader|Pressure measurement}}
+{{Use British English|date=January 2020}}
+
+A '''barometer''' is a scientific instrument that is used to measure [[air pressure]] in a certain environment. Pressure tendency can forecast short term changes in the weather. Many measurements of air pressure are used within [[surface weather analysis]] to help find surface [[Trough (meteorology)|trough]]s, [[pressure system]]s and [[weather front|frontal boundaries]].
+
+Barometers and [[pressure altimeter]]s (the most basic and common type of altimeter) are essentially the same instrument, but used for different purposes. An altimeter is intended to be used at different levels matching the corresponding atmospheric pressure to the [[altitude]], while a barometer is kept at the same level and measures subtle pressure changes caused by weather and elements of weather.  The average atmospheric pressure on the earth's surface varies between 940 and 1040 hPa (mbar). The average atmospheric pressure at sea level is 1013 hPa (mbar).
+
+== Etymology ==
+The word &quot;[[wikt:barometer|barometer]]&quot; is derived from the {{lang-grc|[[wikt:βάρος|βάρος]]|báros}} meaning &quot;weight&quot;, and {{lang-grc|[[wikt:μέτρον|μέτρον]]|métron}} meaning &quot;measure&quot;.
+
+== History ==
+
+Although [[Evangelista Torricelli]] is universally credited with inventing the barometer in 1643,&lt;ref name=&quot;http://www.islandnet.com/~see/weather/history/barometerhistory1.htm&quot;&gt;{{cite web|url=http://www.islandnet.com/~see/weather/history/barometerhistory1.htm |title=The Invention of the Barometer |publisher=Islandnet.com |accessdate=2010-02-04}}&lt;/ref&gt;&lt;ref name=&quot;http://www.barometerfair.com/history_of_the_barometer.htm&quot;&gt;{{cite web |url=http://www.barometerfair.com/history_of_the_barometer.htm |title=History of the Barometer |publisher=Barometerfair.com |accessdate=2010-02-04 |url-status=dead |archiveurl=https://web.archive.org/web/20090925023810/http://www.barometerfair.com/history_of_the_barometer.htm |archivedate=2009-09-25 }}&lt;/ref&gt;&lt;ref name=&quot;http://www.juliantrubin.com/bigten/torricellibarometer.html&quot;&gt;{{cite web|url=http://www.juliantrubin.com/bigten/torricellibarometer.html |title=Evangelista Torricelli, The Invention of the Barometer |publisher=Juliantrubin.com |accessdate=2010-02-04| archiveurl= https://web.archive.org/web/20100209094157/http://www.juliantrubin.com/bigten/torricellibarometer.html| archivedate= 9 February 2010 | url-status= live}}&lt;/ref&gt; historical documentation also suggests [[Gasparo Berti]], an Italian mathematician and astronomer, unintentionally built a water barometer sometime between 1640 and 1643.&lt;ref name=&quot;http://www.islandnet.com/~see/weather/history/barometerhistory1.htm&quot;/&gt;&lt;ref&gt;{{cite encyclopedia | last =Drake | first =Stillman | title =Berti, Gasparo | encyclopedia = [[Dictionary of Scientific Biography]] | volume = 2 | pages =83–84 | publisher = Charles Scribner's Sons | location = New York | year = 1970 | isbn = 978-0-684-10114-9}}&lt;/ref&gt; French scientist and philosopher [[René Descartes]] described the design of an experiment to determine atmospheric pressure as early as 1631, but there is no evidence that he built a working barometer at that time.&lt;ref name=&quot;http://www.islandnet.com/~see/weather/history/barometerhistory1.htm&quot;/&gt;
+
+On 27 July 1630, [[Giovanni Battista Baliani]] wrote a letter to [[Galileo Galilei]] explaining an experiment he had made in which a [[siphon]], led over a hill about twenty-one meters high, failed to work. Galileo responded with an explanation of the phenomenon: he proposed that it was the power of a vacuum that held the water up, and at a certain height the amount of water simply became too much and the force could not hold any more, like a cord that can support only so much weight.&lt;ref name=&quot;Shea2003&quot;&gt;{{cite book|author=Shea, William R. |title=Designing Experiments &amp; Games of Chance: The Unconventional Science of Blaise Pascal|url=https://books.google.com/books?id=-x6B1Q5UoE4C&amp;pg=PA21|accessdate=10 October 2012|year=2003|publisher=Science History Publications|isbn=978-0-88135-376-1|pages=21–}}&lt;/ref&gt;&lt;ref name=&quot;History of the Barometer&quot;&gt;{{cite web|url=http://www.strange-loops.com/scibarometer.html |title=History of the Barometer |publisher=Strange-loops.com |date=2002-01-21 |accessdate=2010-02-04| archiveurl= https://web.archive.org/web/20100106074525/http://www.strange-loops.com/scibarometer.html| archivedate= 6 January 2010| url-status= live}}&lt;/ref&gt; This was a restatement of the theory of ''[[Horror vacui (physics)|horror vacui]]'' (&quot;nature abhors a vacuum&quot;), which dates to [[Aristotle]], and which Galileo restated as ''resistenza del vacuo''.
+
+Galileo's ideas reached Rome in December 1638 in his ''Discorsi''. Raffaele Magiotti and [[Gasparo Berti]] were excited by these ideas, and decided to seek a better way to attempt to produce a vacuum other than with a siphon. Magiotti devised such an experiment, and sometime between 1639 and 1641, Berti (with Magiotti, [[Athanasius Kircher]] and [[Niccolò Zucchi]] present) carried it out.&lt;ref name=&quot;History of the Barometer&quot;/&gt;
+
+Four accounts of Berti's experiment exist, but a simple model of his experiment consisted of filling with water a long tube that had both ends plugged, then standing the tube in a basin already full of water. The bottom end of the tube was opened, and water that had been inside of it poured out into the basin. However, only part of the water in the tube flowed out, and the level of the water inside the tube stayed at an exact level, which happened to be {{convert|10.3|m|ft|abbr=on}},&lt;ref&gt;{{cite book |last=Gillispie |first=Charles Coulston |authorlink1=Charles Coulston Gillispie |title=The Edge of Objectivity: An Essay in the History of Scientific Ideas |url=https://archive.org/details/edgeofobjectivit00char/page/99 |url-access=registration |year=1960 |publisher=Princeton University Press |isbn=0-691-02350-6 |pages=[https://archive.org/details/edgeofobjectivit00char/page/99 99–100] }}&lt;/ref&gt; the same height Baliani and Galileo had observed that was limited by the siphon. What was most important about this experiment was that the lowering water had left a space above it in the tube which had no intermediate contact with air to fill it up. This seemed to suggest the possibility of a vacuum existing in the space above the water.&lt;ref name=&quot;History of the Barometer&quot;/&gt;
+
+Torricelli, a friend and student of Galileo, interpreted the results of the experiments in a novel way. He proposed that the weight of the atmosphere, not an attracting force of the vacuum, held the water in the tube. In a letter to [[Michelangelo Ricci]] in 1644 concerning the experiments, he wrote:
+&lt;blockquote&gt;Many have said that a vacuum does not exist, others that it does exist in spite of the repugnance of nature and with difficulty; I know of no one who has said that it exists without difficulty and without a resistance from nature. I argued thus: If there can be found a manifest cause from which the resistance can be derived which is felt if we try to make a vacuum, it seems to me foolish to try to attribute to vacuum those operations which follow evidently from some other cause; and so by making some very easy calculations, I found that the cause assigned by me (that is, the weight of the atmosphere) ought by itself alone to offer a greater resistance than it does when we try to produce a vacuum.&lt;ref&gt;{{cite web|url=http://web.lemoyne.edu/~giunta/torr.html |title=Torricelli's letter to Michelangelo Ricci |publisher=Web.lemoyne.edu |accessdate=2010-02-04}}&lt;/ref&gt;&lt;/blockquote&gt;
+
+It was traditionally thought (especially by the Aristotelians) that the air did not have weight: that is, that the kilometers of air above the surface did not exert any weight on the bodies below it. Even Galileo had accepted the weightlessness of air as a simple truth. Torricelli questioned that assumption, and instead proposed that air had weight and that it was the latter (not the attracting force of the vacuum) which held (or rather, pushed) up the column of water. He thought that the level the water stayed at (c. 10.3&amp;nbsp;m) was reflective of the force of the air's weight pushing on it (specifically, pushing on the water in the basin and thus limiting how much water can fall from the tube into it). In other words, he viewed the barometer as a balance, an instrument for measurement (as opposed to merely being an instrument to create a vacuum), and because he was the first to view it this way, he is traditionally considered the inventor of the barometer (in the sense in which we now use the term).&lt;ref name=&quot;History of the Barometer&quot;/&gt;
+
+Because of rumors circulating in Torricelli's gossipy Italian neighbourhood, which included that he was engaged in some form of sorcery or witchcraft, Torricelli realized he had to keep his experiment secret to avoid the risk of being arrested. He needed to use a liquid that was heavier than water, and from his previous association and suggestions by Galileo, he deduced by using [[Mercury (element)|mercury]], a shorter tube could be used. With mercury, which is about 14 times denser than water, a tube only 80&amp;nbsp;cm was now needed, not 10.5&amp;nbsp;m.&lt;ref&gt;{{cite web|url=http://www.barometer.ws/history.html |title=Brief History of the Barometer |publisher=Barometer.ws |accessdate=2010-02-04| archiveurl= https://web.archive.org/web/20100114144734/http://www.barometer.ws/history.html| archivedate= 14 January 2010 | url-status= live}}&lt;/ref&gt;
+
+In 1646, [[Blaise Pascal]] along with [[Pierre Petit (engineer)|Pierre Petit]], had repeated and perfected Torricelli's experiment after hearing about it from [[Marin Mersenne]], who himself had been shown the experiment by Torricelli toward the end of 1644. Pascal further devised an experiment to test the Aristotelian proposition that it was vapours from the liquid that filled the space in a barometer. His experiment compared water with wine, and since the latter was considered more &quot;spiritous&quot;, the Aristotelians expected the wine to stand lower (since more vapours would mean more pushing down on the liquid column). Pascal performed the experiment publicly, inviting the Aristotelians to predict the outcome beforehand. The Aristotelians predicted the wine would stand lower. It did not.&lt;ref name=&quot;History of the Barometer&quot;/&gt;
+
+However, Pascal went even further to test the mechanical theory. If, as suspected by mechanical philosophers like Torricelli and Pascal, air had weight, the pressure would be less at higher altitudes. Therefore, Pascal wrote to his brother-in-law, Florin Perier, who lived near a mountain called the [[Puy de Dôme|Puy de Dome]], asking him to perform a crucial experiment. Perier was to take a barometer up the Puy de Dome and make measurements along the way of the height of the column of mercury. He was then to compare it to measurements taken at the foot of the mountain to see if those measurements taken higher up were in fact smaller. In September 1648, Perier carefully and meticulously carried out the experiment, and found that Pascal's predictions had been correct. The mercury barometer stood lower the higher one went.&lt;ref name=&quot;History of the Barometer&quot;/&gt;
+
+== Types ==
+
+=== Water barometers ===
+
+[[File:Barometer Goethe 01.jpg|thumb|Goethe's device]]
+
+The concept that decreasing atmospheric pressure predicts stormy weather, postulated by [[Lucien Vidi]], provides the theoretical basis for a weather prediction device called a &quot;weather glass&quot; or a &quot;Goethe barometer&quot; (named for [[Johann Wolfgang von Goethe]], the renowned German writer and [[polymath]] who developed a simple but effective weather ball barometer using the principles developed by [[Evangelista Torricelli|Torricelli]]).  The [[French language|French]] name, ''le baromètre Liègeois'', is used by some English speakers.&lt;ref name=&quot;turner&quot;&gt;Gerard L'E. Turner, ''Nineteenth Century Scientific Instruments'', Sotheby Publications, 1983, p 236, {{ISBN|0-85667-170-3}}&lt;/ref&gt;  This name reflects the origins of many early weather glasses – the glass blowers of [[Liège]], [[Belgium]].&lt;ref name=turner /&gt;&lt;ref name=zittle&gt;Claus Zittle, ''Philosophies of Technology: Francis Bacon and His Contemporaries'', BRILL 2008, pp 115, 116 {{ISBN|90-04-17050-2}}&lt;/ref&gt;
+
+The weather ball barometer consists of a glass container with a sealed body, half filled with water.  A narrow spout connects to the body below the water level and rises above the water level. The narrow spout is open to the atmosphere. When the air pressure is lower than it was at the time the body was sealed, the water level in the spout will rise above the water level in the body; when the air pressure is higher, the water level in the spout will drop below the water level in the body.  A variation of this type of barometer can be easily made at home.&lt;ref name=&quot;JET&quot;&gt;Jet Stream. [https://www.weather.gov/jetstream/ll_pressure Learning Lesson: Measure the Pressure – The &quot;Wet&quot; Barometer.] Retrieved on 2019-01-21.&lt;/ref&gt;
+
+=== Mercury barometers ===
+A [[Mercury (element)|mercury ]] barometer has a vertical glass tube closed at the top sitting in an open mercury-filled basin at the bottom. Mercury in the tube adjusts until the weight of it balances the atmospheric force exerted on the reservoir.  High atmospheric pressure places more force on the reservoir, forcing mercury higher in the column.  Low pressure allows the mercury to drop to a lower level in the column by lowering the force placed on the reservoir. Since higher temperature levels around the instrument will reduce the density of the mercury, the scale for reading the height of the mercury is adjusted to compensate for this effect.  The tube has to be at least as long as the amount dipping in the mercury + head space + the maximum length of the column.
+
+[[File:MercuryBarometer.svg|thumb|left|Schematic drawing of a simple mercury barometer with vertical [[Mercury (element)|mercury]] column and reservoir at base]]
+
+Torricelli documented that the height of the mercury in a barometer changed slightly each day and concluded that this was due to the changing pressure in the [[Earth's atmosphere|atmosphere]].&lt;ref name=&quot;http://www.islandnet.com/~see/weather/history/barometerhistory1.htm&quot;/&gt;  He wrote: &quot;We live submerged at the bottom of an ocean of elementary air, which is known by incontestable experiments to have weight&quot;.&lt;ref&gt;Strangeways, Ian. ''Measuring the Natural Environment''. Cambridge University Press, 2000, p. 92.&lt;/ref&gt; Inspired by Torricelli, [[Otto von Guericke]] on 5 December 1660 found that air pressure was unusually low and predicted a storm, which occurred the next day.&lt;ref name=&quot;ley196606&quot;&gt;{{Cite magazine
+ |last=Ley
+ |first=Willy
+ |date=June 1966
+ |title=The Re-Designed Solar System
+ |department=For Your Information
+ |url=https://archive.org/stream/Galaxy_v24n05_1966-06#page/n93/mode/2up
+ |magazine=Galaxy Science Fiction
+ |pages=94–106
+ |type=
+}}&lt;/ref&gt;
+
+[[File:Baro 3.png|thumb|upright|Fortin barometer]]
+The mercury barometer's design gives rise to the expression of atmospheric pressure in [[inch of mercury|inches]] or [[Millimeter of mercury|millimeters]] of mercury (mmHg).  A [[torr]] was originally defined as 1 mmHg.  The pressure is quoted as the level of the mercury's height in the vertical column.  Typically, atmospheric pressure is measured between {{convert|26.5|inch}} and {{convert|31.5|inch}} of Hg. One atmosphere (1 atm) is equivalent to {{convert|29.92|inch}} of mercury.
+
+[[File:Baro 2.png|thumb|upright|Reservoir of a Fortin barometer]]
+Design changes to make the instrument more sensitive, simpler to read, and easier to transport resulted in variations such as the basin, siphon, wheel, cistern, Fortin, multiple folded, stereometric, and balance barometers.
+
+On 5 June 2007, a [[European Union]] directive was enacted to restrict the sale of mercury, thus effectively ending the production of new mercury barometers in Europe.&lt;ref name=&quot;eu reuters&quot;&gt;{{cite news|url=https://www.reuters.com/article/environmentNews/idUSL0988544920070710|title=EU bans mercury in barometers, thermometers|author=Jones H.|date=10 July 2007|work=Reuters|accessdate=12 September 2017}}&lt;/ref&gt;
+
+==== Fitzroy barometer ====
+[[Robert Fitzroy|''Fitzroy'']] barometers combine the standard mercury barometer with a thermometer, as well as a guide of how to interpret pressure changes.
+
+==== Fortin barometer ====
+[[Jean Nicolas Fortin|Fortin]] barometers use a variable displacement mercury cistern, usually constructed with a thumbscrew pressing on a leather diaphragm bottom (V in the diagram).  This compensates for displacement of mercury in the column with varying pressure.  To use a Fortin barometer, the level of mercury is set to zero by using the thumbscrew to make an ivory pointer (O in the diagram) just touch the surface of the mercury.  The pressure is then read on the column by adjusting the [[vernier scale]] so that the mercury just touches the sightline at Z.  Some models also employ a valve for closing the cistern, enabling the mercury column to be forced to the top of the column for transport.  This prevents water-hammer damage to the column in transit.
+
+==== Wheel Barometers ====
+{{See also|Italians in the United Kingdom#15th to 18th centuries|label1=Italians in the United Kingdom 15th to 18th centuries}}
+A wheel barometer uses a &quot;J&quot; tube sealed at the top of the longer limb.  The shorter limb is open to the atmosphere and floating on top of the mercury there is a small glass float.  A fine silken thread is attached to the float which passes up over a wheel and then back down to a counterweight (usually protected in another tube).  The wheel turns the point on the front of the barometer.  As atmospheric pressure increases mercury moves from the short to the long limb, the float falls and the pointer moves.  When pressure increases the mercury moves back, lifting the float and turning the dial the other way.&lt;ref&gt;{{cite web|last=Hood|first=Jean|title=Barometers : History, working and styles|date=5 December 2017|url=http://www.jeanhood.co.uk/barometers_history_and_styles_etc.html|accessdate=21 June 2020}}&lt;/ref&gt;
+
+Around 1810 the wheel barometer, which could be read from a great distance, became the first practical and commercial instrument favoured by farmers and the educated classes in the UK. The face of the barometer was circular with a simple dial pointing to an easily readable scale: &quot;Rain - Change - Dry&quot; with the &quot;Change&quot; at the top centre of the dial. Later models added a barometric scale with finer graduations &quot;Stormy (28 inches of mercury), Much Rain (28.5), Rain (29), Change (29.5), Fair (30), Set fair (30.5), very dry(31)&quot;.
+
+Natalo Aiano is recognised as one of the finest makers of wheel barometers, an early pioneer in a wave of artisanal Italian instrument and barometer makers that were encouraged to emigrate to the UK. He listed as working in Holborn, London c.1785-1805.&lt;ref&gt;{{cite web |title=Natalo Aiano |url=https://www.aianos.co.uk/about-us/ |website=About us page |publisher=C. Aiano &amp; Sons Ltd.}}&lt;/ref&gt; From 1770 onwards a large number of Italians came to England because they were accomplished glass blowers or instrument makers. By 1840 it was fair to say that the Italians dominated the industry in England.&lt;ref&gt;{{cite book |last1=Nicholas |first1=Goodison |title=English barometers 1680-1860 : a history of domestic barometers and their makers and retailers |date=1977 |publisher=Antique Collectors' Club |isbn=978-0902028524 |edition=Rev. and enl.}}&lt;/ref&gt;
+
+===Vacuum pump oil barometer===

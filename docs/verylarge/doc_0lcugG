@@ -1,0 +1,292 @@
+The standard is not freely available and must be licensed. It is available from [[Philips]] and the IEC. {{As of|2013}}, Philips outsources licensing of the standard to Adminius, which charges {{US$|100}} for the ''Red Book'', plus {{US$|50}} each for the ''Subcode Channels R-W'' and ''CD Text Mode'' annexes.&lt;ref name=&quot;philips_red_book&quot;&gt;{{cite web|url=https://www.lscdweb.com/ordering/cd_products.html |title=CD Products |work=lscdweb.com |accessdate=2013-05-24}}&lt;/ref&gt;
+
+== Audio format ==
+The audio contained in a CD-DA consists of two-channel [[Signedness|signed]] 16-[[bit]] [[Pulse-code modulation|LPCM]] sampled at [[44,100 Hz]].
+
+The [[sampling rate]] is adapted from that attained when recording digital audio on [[videotape]] with a [[PCM adaptor]], an earlier way of storing digital audio.&lt;ref name=&quot;Auto45-4&quot;/&gt; An audio CD can represent frequencies up to 22.05&amp;nbsp;kHz, the [[Nyquist frequency]] of the [[44.1&amp;nbsp;kHz]] sample rate.
+
+There was a long debate over the use of 16-bit (Sony) or 14-bit (Philips) [[Quantization (sound processing)|quantization]], and 44,056 or 44,100 samples/s (Sony) or approximately 44,000 samples/s (Philips). When the Sony/Philips task force designed the Compact Disc, Philips had already developed a 14-bit [[Digital-to-analog converter|D/A converter]] (DAC), but Sony insisted on 16-bit. In the end Sony won, so 16 bits and 44.1 kilosamples per second prevailed. Philips found a way to produce 16-bit quality using its 14-bit DAC by using four times [[oversampling]].&lt;ref name=Immink /&gt;
+
+Some CDs are mastered with [[Emphasis (telecommunications)|pre-emphasis]], an artificial boost of high audio frequencies. The pre-emphasis improves the apparent signal-to-noise ratio by making better use of the channel's dynamic range. On playback, the player applies a de-emphasis filter to restore the frequency response curve to an overall flat one. Pre-emphasis time constants are 50µs and 15µs (9.49&amp;nbsp;dB boost at 20&amp;nbsp;kHz), and a binary flag in the disc [[subcode]] instructs the player to apply de-emphasis filtering if appropriate. Playback of such discs in a computer or 'ripping' to [[WAV|wave files]] typically does not take into account the pre-emphasis, so such files play back with a distorted frequency response.
+
+== Storage capacity and playing time ==
+The creators of the CD originally aimed at a playing time of 60&amp;nbsp;minutes with a disc diameter of 100&amp;nbsp;mm (Sony) or 115&amp;nbsp;mm (Philips).&lt;ref name=Immink2/&gt; Sony vice-president [[Norio Ohga]] suggested extending the capacity to 74 minutes to accommodate the recording of [[Wilhelm Furtwängler]] conducting [[Ludwig van Beethoven]]'s [[Symphony No. 9 (Beethoven)|Ninth Symphony]] at the 1951 [[Bayreuth Festival]].&lt;ref name=&quot;PhilBeet&quot;/&gt;&lt;ref name=&quot;Auto45-6&quot;/&gt; The additional 14-minute playing time subsequently required changing to a 120&amp;nbsp;mm disc. [[Kees Schouhamer Immink]], Philips' chief engineer, however, denies this, claiming that the increase was motivated by technical considerations, and that even after the increase in size, the Furtwängler recording would not have fit onto one of the earliest CDs.&lt;ref name=Immink /&gt;&lt;ref name=Immink2 /&gt;
+
+According to a ''[[Sunday Tribune]]'' interview,&lt;ref name=&quot;ferguscassidy&quot;/&gt; the story is slightly more involved. In 1979, Philips owned [[PolyGram]], one of the world's largest distributors of music. PolyGram had set up a large experimental CD plant in [[Hannover]], Germany, which could produce huge numbers of CDs having a diameter of 115&amp;nbsp;mm. Sony did not yet have such a facility. If Sony had agreed on the 115-mm disc, Philips would have had a significant competitive edge in the market. The long playing time of Beethoven's Ninth Symphony imposed by [[Norio Ohga|Ohga]] was used to push Philips to accept 120&amp;nbsp;mm, so that Philips' PolyGram lost its edge on disc fabrication.&lt;ref name=&quot;ferguscassidy&quot;/&gt;
+
+The 74-minute playing time of a CD, which is longer than the 22&amp;nbsp;minutes per side&lt;ref name=&quot;Auto45-7&quot;/&gt;&lt;ref name=&quot;Auto45-8&quot;/&gt; typical of [[LP record|long-playing]] (LP) [[vinyl album]]s, was often used to the CD's advantage during the early years when CDs and LPs vied for commercial sales. CDs would often be released with one or more bonus tracks, enticing consumers to buy the CD for the extra material. However, attempts to combine double LPs onto one CD occasionally resulted in the opposite situation in which the CD would instead offer less audio than the LP. One such example was with [[DJ Jazzy Jeff &amp; The Fresh Prince]]'s double-album ''[[He's the DJ, I'm the Rapper]]'', in which initial CD releases of the album had multiple tracks edited down for length in order to fit on a single disc; recent CD reissues package the album across two discs as a result. The emergence of 80-minute CDs allowed for some double albums that were previously edited for length or packaged as double-CDs to be re-released on a single disc, such as ''[[1999 (Prince album)|1999]]'' by [[Prince (musician)|Prince]] in the case of the former and ''[[Tommy (The Who album)|Tommy]]'' by [[the Who]] in the case of the latter.
+
+Playing times beyond 74&amp;nbsp;minutes are achieved by decreasing track pitch (the distance separating the track as it spirals the disc) in violation of strict ''Red Book'' standards. However, most players can still accommodate the more closely spaced data if it is still within ''Red Book'' tolerances.&lt;ref name=&quot;Auto45-9&quot;/&gt; Current manufacturing processes allow an audio CD to contain up to 80 minutes (variable from one replication plant to another) without requiring the content creator to sign a waiver releasing the plant owner from responsibility if the CD produced is marginally or entirely unreadable by some playback equipment. In current practice, maximum CD playing time has crept higher by reducing minimum engineering tolerances.
+
+This table shows the progression in the maximum duration of released audio CDs:
+{| class=&quot;wikitable&quot;
+|-
+! Title !! Artist !! Label !! Released !! Time
+|-
+| ''Mission of Burma'' (compilation) || [[Mission of Burma]] || [[Rykodisc]] || 1988 || 80:08&lt;ref name=&quot;Auto45-11&quot;/&gt;
+|-
+| ''Proclamation'' ([[bass trombone]] recital) || [[Douglas Yeo]] with [[Black Dyke Band]] || [[Doyen]] DOY CD 055 || 1996 || 80:17&lt;ref name=&quot;YeoDoug&quot;/&gt;
+|-
+| [[Pyotr Ilyich Tchaikovsky|Tchaikovsky]]'s ''[[The Nutcracker]]'' || [[Kirov Orchestra]] cond. [[Valery Gergiev]] || [[Philips Records|Philips]]/[[Polygram]] 462 114-2 || 1998 || 81:14{{Citation needed|date=July 2010}}
+|-
+| [[Anton Bruckner|Bruckner]]'s [[Symphony No. 5 (Bruckner)|Fifth]] (live) || [[Munich Philharmonic]] cond. [[Christian Thielemann]] || [[Deutsche Grammophon]] 477 5377 || 2004 || 82:34&lt;ref name=&quot;Auto45-10&quot;/&gt;
+|-
+|Chopin &amp; Schumann Etudes
+|[[Valentina Lisitsa]]
+|[[Decca Records|Decca]] 478 7697
+|2014
+|85:16&lt;ref&gt;{{Cite web|url=https://www.amazon.com/%C3%89tudes-Valentina-Lisitsa/dp/B00NVY8VJE|title=Valentina Lisitsa - Études - Amazon.com Music|website=www.amazon.com|access-date=2017-01-01}}&lt;/ref&gt;
+|-
+|So80s Presents Alphaville
+|[[Alphaville_(band)|Alphaville]] Curated By [[Blank_%26_Jones|Blank &amp; Jones]]
+|Soulfood
+|2014
+|85:10 and 85:57&lt;ref&gt;{{Cite web|url=https://www.discogs.com/Alphaville-Curated-By-Blank-Jones-So80s-Soeighties-Presents-Alphaville/master/780651}}&lt;/ref&gt;
+|-
+|Mozart Violin Concertos (Mozart 225 Box Set, CD75)
+|Various Artists
+|[[Decca Records|Decca]] / [[Deutsche Grammophon]] 478 9864
+|2016
+|86:30&lt;ref&gt;{{Cite news|url=http://www.kirkville.com/cds-longer-than-80-minutes-are-becoming-more-common/|title=CDs Longer than 80 Minutes Are Becoming More Common|last=McElhearn|first=Kirk|date=12 May 2017|work=Kirkville|access-date=2017-05-12|language=en-US}}&lt;/ref&gt;
+|-
+|}
+
+== Technical specifications ==
+
+=== Data encoding ===
+Each audio sample is a [[Signedness|signed]] 16-bit [[two's complement]] [[Integer (computer science)|integer]], with sample values ranging from −32768 to +32767. The source audio data is divided into frames, containing twelve [[Sampling (signal processing)|samples]] each (six left and six right samples, alternating), for a total of 192 bits (24 bytes) of audio data per frame.
+
+This stream of audio frames, as a whole, is then subjected to [[Cross-interleaved Reed–Solomon coding|CIRC]] encoding, which segments and rearranges the data and expands it with [[error correction code]]s in a way that allows occasional read errors to be detected and corrected. CIRC encoding interleaves the audio frames throughout the disc over several consecutive frames so that the information will be more resistant to [[burst error]]s. Therefore, a physical frame on the disc will actually contain information from multiple logical audio frames. This process adds 64 bits of [[error correction]] data to each frame. After this, 8 bits of [[Compact Disc subcode|subcode or subchannel data]] are added to each of these encoded frames, which is used for control and addressing when playing the CD.
+
+CIRC encoding plus the subcode byte generate 33-bytes long frames, called &quot;channel-data&quot; frames. These frames are then modulated through [[eight-to-fourteen modulation]] (EFM), where each 8-bit word is replaced with a corresponding 14-bit word designed to reduce the number of transitions between 0 and 1. This reduces the density of [[Compact disc#Physical details|physical pits]] on the disc and provides an additional degree of error tolerance. Three &quot;merging&quot; bits are added before each 14-bit word for disambiguation and synchronization. In total there are 33 × (14 + 3) = 561 bits. A 27-bit word (a 24-bit pattern plus 3 merging bits) is added to the beginning of each frame to assist with synchronization, so the reading device can locate frames easily. With this, a frame ends up containing 588 bits of &quot;channel data&quot; (which are decoded to only 192 bits music).
+
+The frames of channel data are finally written to disc physically in the form of [[Compact disc#Physical details|pits and lands]], with each pit or land representing a series of zeroes, and with the transition points—the edge of each pit—representing 1.
+A Red Book-compatible [[CD-R]] has pit-and-land-shaped spots on a layer of organic dye instead of actual pits and lands; a laser creates the spots by altering the reflective properties of the dye.
+
+Due to the weaker error correction [[CD-ROM#Sector_structure|sector structure]] used on audio CDs and [[video CD]]s (''[[CD-ROM#Mode_2_Form_2|Mode 2 Form 2]]'') than on data discs (''Mode 1'' or ''Mode 2 Form 1''), [[C2 error]]s are not correctable and signify data loss.&lt;ref&gt;{{cite web |title=Fehlerprotoll / Error Check CD  |url=https://just-add-grooves.de/faq-lexikon-cd-vinyl/94-fehlerprotoll-error-check-cd |language=de-de}}&lt;/ref&gt;&lt;ref name=wiethoff&gt;{{cite web |last1=Wiethoff, [[:de:Diplominformatiker|Diplominformatiker]] |first1=André |title=Exact Audio Copy – Audiodaten von optischen Speichermedien extrahieren |url=https://www.hs-rm.de/fileadmin/persons/khofmann/Gastvortraege/Vortragsfolien/20110415-wiethoff.pdf |accessdate=9 August 2020 |location=Vortrag am 15.4.2011 an der Hochschule Rhein-Main |pages=51–53 |language=de |date=2011-04-15}}&lt;/ref&gt; Even with uncorrectable errors, a compact disc player interpolates the [[loss of information|missing information]] with the aim of making the damage unhearable.&lt;ref&gt;{{cite web |title=CD |url=https://cs.stanford.edu/people/eroberts/cs201/projects/1997-98/optical-media/cd2.html |website=cs.stanford.edu |publisher=[[Stanford.edu]] |accessdate=9 August 2020 |language=en |quote=An added feature of audio CD’s is that in the event of damage, the missing data can be interpolated; that is to say, the information follows a predictable pattern that allows the missing value to be guessed at. So if an audio CD is damaged by dirt or a scratch, the missing data can be averaged from a pattern with no noticeable difference to the listener. This is something the next technology in optical digital memory, CD-ROM, cannot do because an executable program’s data doesn’t follow a natural law. An interpolation-based guess isn’t just slightly different; it's completely wrong. Because of this precision, CD-ROM drives for PC’s came later and much more expensive than audio.}}&lt;/ref&gt;
+
+=== Data structure ===
+[[File:Basic Illustration and mesures of a CD.png|thumb|This image of a [[CD-R]] demonstrates some of the visible features of an audio CD, including the lead-in, program area, and lead-out. A microscopic spiral of digital information begins near the disc's center and progresses toward the edge. The end of the data region and the lead-out can actually be anywhere, depending on how much data is recorded. Data-free areas of the disc and silent portions of the spiral reflect light differently, sometimes allowing track boundaries to be seen.]]
+The audio data stream in an audio CD is continuous, but has three parts. The main portion, which is further divided into playable audio tracks, is the ''program area''. This section is preceded by a ''lead-in'' track and followed by a ''lead-out'' track. The lead-in and lead-out tracks encode only silent audio, but all three sections contain [[subcode]] data streams.
+
+The lead-in's subcode contains repeated copies of the disc's Table of Contents (TOC), which provides an index of the start positions of the tracks in the program area and lead-out. The track positions are referenced by absolute [[timecode]], relative to the start of the program area, in MSF format: minutes, seconds, and fractional seconds called ''frames''. Each timecode frame is one seventy-fifth of a second, and corresponds to a block of 98 channel-data frames—ultimately, a block of 588 pairs of left and right audio samples. Timecode contained in the subchannel data allows the reading device to locate the region of the disc that corresponds to the timecode in the TOC. The TOC on discs is analogous to the [[partition table]] on [[hard drive]]s. Nonstandard or corrupted TOC records are abused as a form of [[CD/DVD copy protection]], in e.g. the [[key2Audio]] scheme.
+
+==== Tracks ====
+{{main|Track (CD)#Audio tracks}}
+The largest entity on a CD is called a track. A CD can contain up to 99 tracks (including a data track for [[Mixed Mode CD|mixed mode discs]]). Each track can in turn have up to 100 indexes, though players which handle this feature are rarely found outside of [[pro audio]], particularly radio broadcasting{{Citation needed|date=October 2012}}. The vast majority of songs are recorded under index 1, with the [[pre-gap]] being index 0. Sometimes [[hidden track]]s are placed at the end of the last track of the disc, often using index 2 or 3. This is also the case with some discs offering &quot;101 sound effects&quot;, with 100 and 101 being indexed as two and three on track 99. The index, if used, is occasionally put on the track listing as a decimal part of the track number, such as 99.2 or 99.3. ([[Information Society (band)|Information Society]]'s ''[[Hack (album)|Hack]]'' was one of very few CD releases to do this, following a release with an equally obscure [[CD+G]] feature.) The track and index structure of the CD were carried forward to the [[DVD]] format as title and chapter, respectively.
+
+Tracks, in turn, are divided into timecode frames (or sectors), which are further subdivided into channel-data frames.
+
+==== Frames and timecode frames ====
+{{main|Track (CD)#Sector structure}}
+The smallest entity in a CD is a channel-data ''frame'', which consists of 33 bytes and contains six complete 16-bit stereo samples: 24 bytes for the audio (two bytes × two channels × six samples = 24 bytes), eight CIRC error-correction bytes, and one [[Compact Disc subcode|subcode]] byte. As described in the &quot;Data encoding&quot; section, after the EFM modulation the number of bits in a frame totals 588.
+
+On a ''Red Book'' audio CD, data is addressed using the ''MSF scheme'', with [[timecode]]s expressed in minutes, seconds and another type of ''frames'' (mm:ss:ff), where one frame corresponds to 1/75 of a second of audio: 588 pairs of left and right samples. This timecode frame is distinct from the 33-byte channel-data frame described above, and is used for time display and positioning the reading laser. When editing and extracting CD audio, this timecode frame is the smallest addressable time interval for an audio CD; thus, track boundaries only occur on these frame boundaries. Each of these structures contains 98 channel-data frames, totaling 98 × 24 = 2,352 bytes of music. The CD is played at a speed of 75 frames (or sectors) per second, thus 44,100 samples or 176,400 bytes per second.
+
+In the 1990s, [[CD-ROM]] and related [[ripping|Digital Audio Extraction]] (DAE) technology introduced the term ''[[CD-ROM#CD-ROM format|sector]]'' to refer to each timecode frame, with each sector being identified by a sequential [[integer]] number starting at zero, and with tracks aligned on sector boundaries. An audio CD sector corresponds to 2,352 bytes of decoded data. The ''Red Book'' does not refer to sectors, nor does it distinguish the corresponding sections of the disc's data stream except as &quot;frames&quot; in the MSF addressing scheme.
+
+The following table shows the relation between tracks, timecode frames (sectors) and channel-data frames:
+
+{| class=&quot;wikitable&quot;
+|-
+! Track level
+| colspan = 6 | Track N
+|-
+! Timecode frame or sector level
+| colspan = 3 | Timecode frame or sector 1 (2,352 b of data)
+| Timecode frame or sector 2 (2,352 b of data)
+| ... 
+|-
+! Channel-data frame level
+| Channel-data frame 1 (24 b of data)
+| ... 
+| Channel-data frame 98 (24 b of data)
+| ... 
+| ... 
+|}
+
+=== Bit rate ===
+The audio [[bit rate]] for a ''Red Book'' audio CD is 1,411,200 [[bits per second]] (1,411 kbit/s) or 176,400 [[bytes per second]]; 2 channels × 44,100 samples per second per channel × 16 bits per sample. Audio data coming in from a CD is contained in sectors, each sector being 2,352 bytes, and with 75 sectors containing 1 second of audio. For comparison, the bit rate of a &quot;1×&quot; [[CD-ROM]] is defined as 2,048 bytes per sector × 75 sectors per second = 153,600 bytes per second. The remaining 304 bytes in a sector are used for additional data error correction.
+
+=== Data access from computers ===
+Unlike on a [[DVD]] or [[CD-ROM]], there are no &quot;[[computer file|file]]s&quot; on a ''Red Book'' audio CD; there is only one continuous stream of [[LPCM]] audio data, and a parallel, smaller set of 8 [[subcode]] data streams. Computer [[operating system]]s, however, may provide access to an audio CD as if it contains files. For example, [[Microsoft Windows|Windows]] represents the CD's Table of Contents as a set of [[Compact Disc Audio track]] (CDA) files, each file containing indexing information, not audio data. By contrast however, [[Finder (software)|Finder]] on [[macOS]] presents the CD's content as an actual set of files, with the [[Audio Interchange File Format|AIFF]]-extension, which can be copied directly, randomly and individually by track as if it were actual files, in reality macOS preforms its own as-needed-rips in the background completely transparent to the user. The copied tracks are fully playable and editable on the users computer.
+
+In a process called [[ripping]], digital audio extraction software can be used to read CD-DA audio data and store it in files. Common [[audio file format]]s for this purpose include [[WAV]] and AIFF, which simply preface the LPCM data with a short [[header (computing)|header]]; [[FLAC]], [[Apple Lossless|ALAC]], and [[Windows Media Audio#Windows Media Audio Lossless|Windows Media Audio Lossless]], which compress the LPCM data in ways that conserve space yet allow it to be restored without any changes; and various [[lossy compression|lossy]], [[perceptual audio coder|perceptual coding]] formats like [[MP3]], [[Advanced Audio Coding|AAC]], [[Opus (audio format)|Opus]], which modify and compress the audio data in ways that irreversibly change the audio, but that exploit features of human hearing to make the changes difficult to discern.
+
+== Format variations ==
+Recording publishers have created CDs that violate the ''Red Book'' standard. Some do so for the purpose of [[copy protection|copy prevention]], using systems like [[Copy Control]]. Some do so for extra features such as [[DualDisc]], which includes both a [[CD]] layer and a [[DVD]] layer whereby the CD layer is much thinner, 0.9&amp;nbsp;mm, than required by the ''Red Book'', which stipulates a nominal 1.2&amp;nbsp;mm, but at least 1.1&amp;nbsp;mm. Philips and many other companies have stated that including the Compact Disc Digital Audio logo on such non-conforming discs may constitute [[trademark]] infringement.
+
+[[Super Audio CD]] was a standard published in 1999 that aimed to provide better audio quality in CDs. [[DVD Audio]] emerged at around the same time.&lt;ref name=&quot;Auto45-12&quot;/&gt; The format was designed to feature audio of higher fidelity. It applies a higher sampling rate and uses 650&amp;nbsp;nm lasers. Neither format was widely accepted.
+
+== Copyright issues ==
+{{Main|Compact Disc and DVD copy protection}}
+There have been moves by the [[recording industry]] to make audio CDs (Compact Disc Digital Audio) unplayable on computer [[CD-ROM]] drives, to prevent the copying of music. This is done by intentionally introducing errors onto the disc that the embedded circuits on most stand-alone audio players can automatically compensate for, but which may confuse CD-ROM drives. Consumer rights advocates as of October 2001 pushed to require warning labels on compact discs that do not conform to the official Compact Disc Digital Audio standard (often called the [[#Standard|Red Book]]) to inform consumers which discs do not permit full [[fair use]] of their content.
+
+In 2005, [[Sony BMG Music Entertainment]] was criticized when a copy protection mechanism known as [[Extended Copy Protection]] (XCP) used on some of their audio CDs automatically and surreptitiously installed copy-prevention software on computers (see [[Sony BMG copy protection rootkit scandal]]). Such discs are not legally allowed to be called CDs or Compact Discs because they break the Red Book standard governing CDs, and Amazon.com for example describes them as &quot;copy protected discs&quot; rather than &quot;compact discs&quot; or &quot;CDs&quot;.
+
+== See also ==
+* [[Audio Interchange File Format]] (AIFF)
+* [[Digital rights management]]
+* [[Extended Copy Protection]]
+* [[Four-channel compact disc digital audio]]
+
+== References ==
+{{reflist|30em|refs=
+&lt;ref name=&quot;BBC&quot;&gt;{{cite news | url = http://news.bbc.co.uk/2/hi/technology/6950933.stm | title = How the CD was developed | work = BBC News | date = 17 August 2007 | accessdate = 2007-08-17 }}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-1&quot;&gt;{{cite web |url=http://www.philips-historische-producten.nl/cd-uk.html |title=Philips Compact Disc |work=Philips Historical Products |accessdate=2016-01-24 |archive-url=https://web.archive.org/web/20160425035643/http://www.philips-historische-producten.nl/cd-uk.html |archive-date=25 April 2016 |url-status=dead }}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-2&quot;&gt;{{ citation |url=https://webstore.iec.ch/publication/18347 |title=IEC 60908:1987 Compact disc digital audio system }}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-3&quot;&gt;{{ citation |url=https://webstore.iec.ch/preview/info_iec60908%7Bed2.0%7Db.pdf |title=IEC 60908:1999 Audio recording - Compact disc digital audio system }}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-4&quot;&gt;[http://stason.org/TULARC/pc/cd-recordable/2-35-Why-44-1KHz-Why-not-48KHz.html 2-35&lt;nowiki&gt;]&lt;/nowiki&gt; Why 44.1KHz? Why not 48KHz?]&lt;/ref&gt;
+&lt;ref name=&quot;PhilBeet&quot;&gt;{{cite web | url = http://www.marantzphilips.nl/The_cd_laser/ | title = Beethoven's Ninth Symphony of Greater Importance than Technology | author = Philips | accessdate = 2007-02-09 }}{{Dead link|date=July 2020 |bot=InternetArchiveBot |fix-attempted=yes }}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-6&quot;&gt;{{ cite web | url = http://www.aes.org/historical/store/oralhistory/?code=OHP-016-DVD | title = AES Oral History Project: Kees A.Schouhamer Immink | author = AES | accessdate = 2008-07-29 }}&lt;/ref&gt;
+&lt;ref name=&quot;ferguscassidy&quot;&gt;{{cite news | url = http://www.ferguscassidy.ie/ethos-23-Oct-2005.html | title = Great Lengths | last = Cassidy | first = Fergus | format = reprint | newspaper = [[Sunday Tribune]] | date = 23 October 2005 | archive-date=2007-10-12 | archiveurl=https://web.archive.org/web/20071012121905/http://ferguscassidy.ie/ethos-23-Oct-2005.html |accessdate = 2017-01-07 }}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-7&quot;&gt;{{cite book |last1=Hoffmann |first1=Frank |last2=Ferstler |first2=Howard |title=Encyclopedia of Recorded Sound |publisher=[[CRC Press]] |year=2005| page=1289 |isbn=978-0-415-93835-8}}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-8&quot;&gt;Goldmark, Peter. ''Maverick inventor; My Turbulent Years at CBS.'' New York: Saturday Review Press, 1973.&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-9&quot;&gt;{{ cite web |url=http://www.cdrfaq.org/faq03.html#S3-8 |title=CD-Recordable FAQ |author=Andy McFadden |date=9 January 2010 |accessdate=2010-12-30}}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-10&quot;&gt;{{ cite web |archive-url=https://web.archive.org/web/20130516001041/http://audaud.com/2005/07/bruckner-symphony-no-5-in-b-flat-major-original-version-munich-philharmonicchristian-thielemann-dgg/ |url=http://audaud.com/2005/07/bruckner-symphony-no-5-in-b-flat-major-original-version-munich-philharmonicchristian-thielemann-dgg/ |title= BRUCKNER: Symphony No. 5 in B flat major (original version) — Munich Philharmonic/Christian Thielemann — DGG - Audiophile Audition |publisher=Audiophile Audition |archive-date=2013-05-16}}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-11&quot;&gt;{{ cite web|url=http://www.discogs.com/Mission-Of-Burma-Mission-Of-Burma/release/1129709|title=Mission of Burma 1988 Rykodisc compilation information|publisher=discogs.com|accessdate=2011-01-18|quote=This Rykodisc release was the first compact disc to contain 80 minutes of music; 78 minutes had previously been the longest length possible to encode on a CD.}}&lt;/ref&gt;
+&lt;ref name=&quot;Auto45-12&quot;&gt;{{ cite web |last=Taylor |first=Jim |title=DVD FAQ |url=http://www.dvddemystified.com/dvdfaq.html |work=DVD Demystified |accessdate=21 August 2012 |url-status=dead |archiveurl=https://web.archive.org/web/20090822172353/http://www.dvddemystified.com/dvdfaq.html |archivedate=22 August 2009 }}&lt;/ref&gt;
+&lt;ref name=&quot;Immink2&quot;&gt;{{Cite journal 
+|journal=IEEE Information Theory Society Newsletter
+|volume=57 
+|date=2007
+|title=Shannon, Beethoven, and the Compact Disc
+|author=K. Schouhamer Immink 
+|authorlink=Kees Schouhamer Immink 
+|url=https://www.researchgate.net/publication/322951358
+|pages=42–46
+|accessdate=2018-02-06
+}}&lt;/ref&gt;
+&lt;ref name=&quot;Immink&quot;&gt;{{Cite journal 
+|journal=Journal of the Audio Engineering Society
+|volume=46
+|issue=5
+|date=1998
+|title=Compact Disc Story
+|author=K. Schouhamer Immink
+|authorlink=Kees Schouhamer Immink
+|url=https://www.researchgate.net/publication/294484774
+|pages=458–460
+|accessdate=2018-02-06
+}}&lt;/ref&gt;
+&lt;ref name=&quot;YeoDoug&quot;&gt;{{cite web |title=Complete Program Notes for ''Proclamation'' |url=http://www.yeodoug.com/publications/proclamation/procnotes.html |access-date=13 March 2016}}&lt;/ref&gt;
+}}
+
+== External links ==
+* [http://www.ip.philips.com/licensing/program/15 Philips' Audio Standards licensing info]
+* [https://webstore.iec.ch/preview/info_iec60908%7Bed2.0%7Db.pdf IEC 60908:1999 Audio recording - Compact disc digital audio system]
+* [http://wiki.multimedia.cx/index.php?title=PCM#Red_Book_CD_Audio MultimediaWiki article about PCM and ''Red Book'' CD Audio]
+{{List of IEC standards}}
+{{Rainbow Books}}
+{{Compact disc navbox}}
+{{Authority control}}
+
+[[Category:Audiovisual introductions in 1980]]
+[[Category:Audio storage]]
+[[Category:IEC 60908]]
+[[Category:Japanese inventions]]
+[[Category:Joint ventures]]
+[[Category:Rainbow Books]]</text>
+      <sha1>7qut2pbzy1nau428xp9lmc1kfiael8f</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Red book</title>
+    <ns>0</ns>
+    <id>41923</id>
+    <redirect title="Red Book" />
+    <revision>
+      <id>783874950</id>
+      <parentid>176830140</parentid>
+      <timestamp>2017-06-05T05:52:14Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="87" xml:space="preserve">#REDIRECT [[Red Book]]
+
+{{Redirect category shell|1=
+{{R from other capitalisation}}
+}}</text>
+      <sha1>fioojn092foumvti3jd4734r61kc3o6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Mnemonic major system</title>
+    <ns>0</ns>
+    <id>41924</id>
+    <revision>
+      <id>989255050</id>
+      <parentid>987091592</parentid>
+      <timestamp>2020-11-17T22:56:18Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: url. URLs might have been internationalized/anonymized. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by AManWithNoPlan | All pages linked from cached copy of User:AManWithNoPlan/sandbox2 | via #UCB_webform_linked 600/3968</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="32923" xml:space="preserve">{{Short description|Mnemonic technique}}
+The '''major system''' (also called the '''phonetic number system''', '''phonetic mnemonic system''', or '''Herigone's mnemonic system''') is a  [[mnemonic]] technique used to aid in memorizing numbers.
+
+The system works by converting numbers into [[consonant]]s, then into words by adding [[vowels]].  The system works on the principle that images can be remembered more easily than numbers.
+
+One notable explanation of this system was given in [[Martin Gardner]]'s book ''The First Scientific American Book of Mathematical Puzzles and Diversions'' (just ''Mathematical Puzzles and Diversions'' in the UK edition), which has since been republished in ''The New Martin Gardner Mathematical Library'' as ''Hexaflexagons, Probability Paradoxes, and the Tower of Hanoi''. In this, Gardner incorrectly attributes the system to [[Lewis Carroll]] (Carroll's system had the same basis but different associations).{{citation needed|date=July 2017}}
+
+==The system==
+Each numeral is associated with one or more consonants. (In other words, the link is to the sound, not the letter. For example, the letters C in &quot;cat&quot;, &quot;Cynthia&quot;, and &quot;cello&quot; each have different values in the system – 7, 0, and 6, respectively.) Vowels, [[semivowels]] and the consonant /h/ are ignored. These can be used as &quot;fillers&quot; to make sensible words from the resulting consonant sequences. A standard mapping&lt;ref&gt;{{cite book|last1=Hale-Evans|first1=Ron|title=Mind Performance Hacks|date=February 2006|publisher=O'Reilly|location=Sebastopol, CA|isbn=0-596-10153-8|page=[https://archive.org/details/mindperformanceh00hale/page/14 14]|edition=1|ref=Hale-Evans|url-access=registration|url=https://archive.org/details/mindperformanceh00hale/page/14}}&lt;/ref&gt; is:
+
+{| class=&quot;wikitable&quot;
+ |-
+ ! Numeral || [[English phonology#Consonants|Sounds]] ([[International Phonetic Alphabet|IPA]]) || [[English orthography#Consonants|Commonly associated letters]] || Mnemonic and remarks
+ |-
+ |0 ||/s/, /z/ ||''s'', soft ''c'', ''z'', ''x'' (in ''xylophone'')||''Zero'' begins with ''z'' (and /z/). Upper case ''S'' and ''Z'', as well as lower case ''s'' and ''z'', have ''zero'' vertical strokes each, as with the numeral ''0''. The alveolar fricatives /s/ and /z/ form a [[Voice (phonetics)|voiceless and voiced pair]].
+ |-
+ |1 ||/t/, /d/, /θ/, /ð/ ||''t'', ''d'' , ''th'' (both in ''thing'' and ''this'')||Upper case ''T'' and ''D'', as well as lower case ''t'' and ''d'' have ''one'' vertical stroke each, as with the numeral ''1''. The alveolar stops /t/ and /d/ form a voiceless and voiced pair, as do the similar-sounding dental fricatives /θ/ and /ð/, though some variant systems may omit the latter pair.
+ |-
+ |2 ||/n/ ||''n'' ||Upper case ''N'' and lower case ''n'' each have ''two'' vertical strokes and ''two'' points on the [[Baseline (typography)|baseline]].
+ |-
+ |3 ||/m/ ||''m'' ||Lower case ''m'' has ''three'' vertical strokes. Both upper case ''M'' and lower case ''m'' each have ''three'' points on the baseline and look like the numeral ''3'' on its side.
+ |-
+ |4 ||/r/ ||''r'', ''l'' (''as sounded in'' ''colonel'') ||''Four'' ends with ''r'' (and /r/ in rhotic accents).
+ |-
+ |5 ||/l/ ||''l'' ||''L'' is the [[Roman numeral]] for ''5''0. Among the ''five'' digits of one's ''l''eft hand, the thumb and index fingers also form an ''L''.
+ |-
+ |6 ||/tʃ/, /dʒ/, /ʃ/, /ʒ/ ||''ch'' (in ''cheese'' and ''chef''), ''j'', soft ''g'', ''sh'', ''c'' (''as sounded in cello'' and ''special''), ''cz'' (''as sounded in'' ''Czech''), ''s'' (''as sounded in'' ''tissue'' and ''vision''), ''sc'' (''as sounded in'' ''fascist''), ''sch'' (''as sounded in'' ''schwa'' and ''eschew''), ''t'' (''as sounded in'' ''ration'' and ''equation''), ''tsch'' (in ''putsch''), ''z'' (in ''seizure'') ||Upper case ''G'' and lower case ''g'' look like the numeral ''6'' flipped horizontally and rotated 180° respectively. Lower case [[Script typeface|script]] ''j'' tends to have a lower loop, like the numeral ''6''. In some [[serif]] fonts, upper case ''CH'', ''SH'' and ''ZH'' each have ''six'' serifs. The postalveolar affricates /tʃ/ and /dʒ/ form a voiceless and voiced pair, as do the similar-sounding postalveolar fricatives /ʃ/ and /ʒ/. ''CH''ur''ch'' has six letters.
+ |-
+ |7 ||/k/, /ɡ/ ||''k'', hard ''c'', ''q'', hard ''g, ch (as sounded in loch),''  ||Both upper case ''K'' and lower case ''k'' look like two small ''7''s on their sides. In some fonts, the lower-right part of the upper case ''G'' looks like a ''7''. ''G'' is also the 7th letter of the alphabet. The velar stops /k/ and /ɡ/ form a voiceless and voiced pair.
+ |-
+ |8 ||/f/, /v/ ||''f'', ''ph'' (in ''phone''), ''v, gh (as sounded in laugh)'' ||Lower case script ''f'', which tends to have an upper and lower loop, looks like a ''f''igure-''8''. The labiodental fricatives /f/ and /v/ form a voiceless and voiced pair.
+ |-
+ |9 ||/p/, /b/ ||''p'', ''b''||Upper case ''P'' and lower case ''p'' look like the numeral ''9'' flipped horizontally. Lower case ''b'' looks like the numeral ''9'' turned 180°. The labial stops /p/ and /b/ form a voiceless and voiced pair.
+ |-
+ |Unassigned ||/h/, /j/, /w/, [[English phonology#Vowels|vowel sounds]] ||''h'', ''y'', ''w'', ''a'', ''e'', ''i'', ''o'', ''u'', [[silent letter]]s, ''c'' (in ''packet'' and ''chutzpah''), ''d'' (in ''judge''), ''j'' (in ''Hallelujah'' and ''jalapeno''), ''ll'' (in ''tortilla''), the first ''p'' in ''sapphire'', ''t'' (in ''match''), one of doubled letters in most contexts ||[[Vowel]] sounds, [[semivowel]]s (/j/ and /w/) and /h/ do not correspond to any number. They can appear anywhere in a word without changing its number value.
+ |-
+ |(2, 27 or 7) ||/ŋ/ ||''ng'', ''n'' before ''k'', hard ''c'', ''q'', hard ''g'' or ''x''||Variant systems differ about whether /ŋ/ should encode ''2'' and classified together with /n/, ''7'' and classified together with /k/ and /ɡ/ or even ''27'' (e.g. ''ring'' could be ''42'', ''47'' or ''427''). When a /k/ and /ɡ/ is pronounced separately after the /ŋ/, variant systems that chose /ŋ/ to be ''27'' also disagree if an extra ''7'' should be written (e.g. ''finger'' could be ''8274'' or ''82774'', or if /ŋ/ is chosen to be ''7'', ''8774'').
+ |}
+
+The groups of similar sounds and the rules for applying the mappings are almost always fixed, but other hooks and mappings can be used as long as the person using the system can remember them and apply them consistently.
+
+Each numeral maps to a set of similar sounds with similar mouth and tongue positions. The link is [[phonetic]], that is to say, it is the consonant sounds that matter, not the spelling. Therefore, a word like ''action'' would encode the number ''762'' (/k/-/ʃ/-/n/), not ''712'' (''k''-''t''-''n''). Double letters are disregarded when not pronounced separately, e.g. ''muddy'' encodes ''31'' (/m/-/d/), not ''311'', but ''midday'' encodes ''311'' (/m/-/d/-/d/) while ''accept'' encodes ''7091'' (/k/-/s/-/p/-/t/) since the ''d''s and ''c''s are pronounced separately. ''x'' encodes ''70'' when pronounced as /ks/ or /gz/ (e.g. in ''fax'' and ''exam'') and ''76'' when pronounced /kʃ/ or /gʒ/ (e.g. in ''anxious'' or ''luxury''); ''z'' encodes ''10'' when pronounced /ts/ (e.g. in ''pizza''). In ''ghost'' (''701'', /ɡ/-/s/-/t/) and ''enough'' (''28'', /n/-/f/), ''gh'' is being encoded by different numerals. Usually, a [[Rhoticity in English|rhotic accent]] is assumed, e.g. ''fear'' would encode ''84'' (/f/-/r/) rather than ''8'' (/f/).
+
+Often the mapping is compact. ''Hindquarters'', for example, translates unambiguously to ''2174140'' (/n/-/d/-/k/-/r/-/t/-/r/-/z/), which amounts to a twelve-letter word encoded by seven digits in seven letters, and can be easily visualized.
+
+Each numeral maps to a set of similar sounds with similar mouth and tongue positions.
+For most people it would be easier to remember ''3.1415927'' (an approximation of the mathematical constant [[pi]]) as:
+: ''meteor'' (''314'', /m/-/t/-/r/)
+: ''tail'' (''15'', /t/-/l/)
+: ''pink'' (''927'', /p/-/ŋ/-/k/, and taking /ŋ/ to be ''2'')
+
+Short term visual memory of imagined scenes allows large numbers of digits to be memorized with ease, though usually only for a short time.
+
+Whilst this is unwieldy at first, with practice it can become a very effective technique.{{Citation needed|date=June 2015}} Longer-term memory may require the formulation of more object-related mnemonics with greater logical connection, perhaps forming grammatical sentences that apply to the matter rather than just strings of images.
+
+The system can be employed with phone numbers. One would typically make up multiple words, preferably a sentence, or an ordered sequence of images featuring the owner of the number.
+
+The Major System can be combined with a [[mnemonic peg system|peg system]] for remembering lists, and is sometimes used also as a method of generating the pegs. It can also be combined with other memory techniques such as rhyming, substitute words, or the [[method of loci]]. Repetition and concentration using the ordinary memory is still required.
+
+An advantage of the major system is that it is possible to use a computer to automatically translate the number into a set of words. One can then pick the best of several alternatives. Such programs include &quot;Numzi&quot;&lt;ref&gt;[http://numzi.com Numzi mnemonic search engine (bi-directional)]&lt;/ref&gt; &quot;Rememberg&quot;&lt;ref&gt;[http://www.rememberg.com Rememberg online mnemonic search engine]&lt;/ref&gt; &quot;Fonbee&quot;,&lt;ref&gt;[http://www.fonbee.com Fonbee Mnemonic Major System Encoder]&lt;/ref&gt; the [[freeware]] &quot;2Know&quot;,&lt;ref&gt;[http://www.got2know.net 2Know Mnemonic Software&lt;!-- Bot generated title --&gt;]&lt;/ref&gt; and the website &quot;pinfruit&quot;.&lt;ref&gt;[http://pinfruit.com/ Web application for the mnemonic major system]&lt;/ref&gt;

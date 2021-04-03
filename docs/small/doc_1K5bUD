@@ -1,0 +1,306 @@
+Known risks to the protocol include:
+* Carriers being attacked by [[birds of prey]]. RFC2549: &quot;Unintentional encapsulation in hawks has been known to occur, with decapsulation being messy and the packets mangled.&quot;
+* Carriers being blown off course. RFC1149: &quot;While broadcasting is not specified, storms can cause data loss.&quot;
+* The absence of viable local carriers. RFC6214: &quot;In some locations, such as New Zealand, a significant proportion of carriers are only able to execute short hops, and only at times when the background level of photon emission is extremely low.&quot; This describes the flightless and nocturnal nature of [[kiwi (bird)|kiwi]]s.
+* Loss of availability of species. such as the extinction of the [[Passenger Pigeon]].
+* Disease affecting the carriers. RFC6214: &quot;There is a known risk of infection by the so-called [[H5N1 virus]].&quot;
+* The network topologies supported for [[multicast]] communication are limited by the homing abilities of carries. RFC6214: &quot;... [carriers] prove to have no talent for multihoming, and in fact enter a routing loop whenever multihoming is attempted.&quot;
+
+== Other avian data transfer methods ==
+Rafting photographers already use pigeons as a [[sneakernet]] to transport digital photos on [[flash media]] from the camera to the tour operator.&lt;ref&gt;{{cite news| url=http://www.denverpost.com/2007/06/22/homing-pigeons-get-down-to-business-ferrying-rafting-company-photos/ | work=Denver Post | first=Katy | last=Human | title=Homing pigeons get down to business, ferrying rafting company photos | date=22 June 2007}}&lt;/ref&gt; Over a 30-mile distance, a single pigeon may be able to carry tens of gigabytes of data in around an hour, which on an average [[bandwidth (computing)|bandwidth]] basis compares very favorably to current ADSL standards, even when accounting for lost drives.&lt;ref&gt;{{cite web|url=http://www.notes.co.il/benbasat/5240.asp|archiveurl=https://web.archive.org/web/20080713090722/http://www.notes.co.il/benbasat/5240.asp |title=קצה - RIM - Ami Ben-Bassat's Blog|archivedate=13 July 2008|publisher=}}&lt;/ref&gt;
+
+On March 12 2004, [[Yossi Vardi]], Ami Ben-Bassat, and Guy Vardi sent 3 homing pigeons from a distance of 100 km, each carrying 20-22 tiny memory cards ([[M-Systems|Msystems]]' Disk-On-Chip) containing 1.3 GB, amounting in total of 4 GB of data, achieving an effective throughput of 2.27 Mbps. The purpose of the test was to measure and confirm an improvement over RFC 2549.&lt;ref&gt;{{Cite web|url=http://www.notes.co.il/benbasat/5240.asp|archive-url=https://web.archive.org/web/20040604151847/http://www.notes.co.il/benbasat/5240.asp|url-status=dead|archive-date=2004-06-04|title=קצה - RIM - Ami Ben-Bassat's Blog|date=2004-06-04|access-date=2019-06-06}}&lt;/ref&gt; Since the developers used flash memory instead of paper notes as specified by RFC 2549, the experiment was widely criticized as an example in which an optimized implementation breaks an official standard. {{Citation needed|reason=Who criticised?|date=September 2020}}
+
+Inspired by RFC 2549, on 9 September 2009, the marketing team of The Unlimited, a regional company in South Africa, decided to host a tongue-in-cheek &quot;Pigeon Race&quot; between their pet pigeon &quot;Winston&quot; and local telecom company [[Telkom SA]].  The race was to send 4 gigabytes of data from [[Howick, KwaZulu-Natal|Howick]] to [[Hillcrest, KwaZulu-Natal|Hillcrest]], approximately 60&amp;nbsp;km apart.  The pigeon carried a [[Secure Digital card|microSD]] card and competed against a Telkom [[ADSL]] line.&lt;ref&gt;[http://pigeonrace2009.co.za/ &quot;Pigeon Race 2009&quot;]&lt;/ref&gt; Winston beat the data transfer over Telkom's ADSL line, with a total time of two hours, six minutes and 57 seconds from uploading data on the microSD card to completion of download from card. At the time of Winston's victory, the ADSL transfer was just under 4% complete.&lt;ref&gt;{{cite news | url = https://www.reuters.com/article/2009/09/09/us-safrica-pigeon-idUSTRE5885PM20090909 | work=Reuters | first=Peroshni | last=Govender | title=Pigeon transfers data faster than South Africa's Telkom | date=9 September 2009}}&lt;/ref&gt;&lt;ref&gt;{{cite news | url = http://news.bbc.co.uk/2/hi/africa/8248056.stm | work=BBC News | title=SA pigeon 'faster than broadband' | date=10 September 2009}}&lt;/ref&gt;
+
+In November 2009 the Australian comedy/current-affairs television program [[Hungry Beast]] repeated this experiment. The Hungry Beast team took up the challenge after a fiery parliament session wherein the government of the time blasted the opposition for not supporting telecommunications investments, saying that if the opposition had their way, Australians would be doing data transfer over carrier pigeons. The Hungry Beast team had read about the South African experiment and assumed that, as a developed western country, Australia would have higher speeds. The experiment had the team transfer a 700MB file via three delivery methods to determine which was the fastest: A carrier pigeon with a [[microSD]] card, a car carrying a [[USB Stick]], and a [[Telstra]] (Australia's largest telecom provider) ADSL line. The data was to be transferred from [[Tarana, New South Wales|Tarana]] in rural [[New South Wales]] to the western-[[Sydney]] suburb of [[Prospect, New South Wales]], a distance of 132&amp;nbsp;km by road. Approximately halfway through the race the internet connection unexpectedly dropped and the transfer had to be restarted. The pigeon won the race with a time of approximately 1 hour 5 minutes, the car came in second at 2 hours 10 minutes, while the internet transfer did not finish, having dropped out a second time and not coming back. The estimated time to upload completion at one point was as high as 9 hours, and at no point did the estimated upload time fall below 4 hours.&lt;ref&gt;{{cite web | url = https://www.youtube.com/watch?v=ci2bFFGM8T8 | work=ABC Television/Hungry Beast | title=The Great Australian Internet Challenge | date=10 November 2009}}&lt;/ref&gt;
+
+A similar &quot;Pigeon Race&quot; was conducted in September 2010 by tech blogger (trefor.net) and ISP Timico CTO Trefor Davies with farmer Michelle Brumfield in rural [[Yorkshire, England]]: delivering a five-minute video to a [[British Broadcasting Corporation|BBC]] correspondent 75 miles away in [[Skegness, England|Skegness]]. The pigeon was pitted (carrying a memory card with a 300MB HD video of Davies having a haircut) against an upload to [[YouTube]] via [[British Telecom]] broadband; the pigeon was released at 11.05 am and arrived in the loft one hour and fifteen minutes later while the upload was still incomplete, having failed once in the interim.&lt;ref&gt;{{cite web|url=https://www.theregister.co.uk/2010/09/17/bt_bird/|title=BT feathers ruffled over pigeon-based file transfer caper|work=The Register|date=17 September 2010}}&lt;/ref&gt;&lt;ref&gt;{{citation| title=UK Business ISP Timico Challenges Pigeon to Beat Rural Broadband |publisher=ISPreview.com |date=2010-09-16 |url=http://www.ispreview.co.uk/story/2010/09/16/uk-business-isp-timico-challenges-pigeon-to-beat-rural-broadband.html}}&lt;/ref&gt;&lt;ref&gt;{{citation| url=https://www.bbc.co.uk/news/technology-11325452 |title=Pigeon flies past broadband in data speed race |publisher=BBC News Technology |date=2010-09-16}}&lt;/ref&gt;
+
+== See also ==
+* [[Pigeon post]]
+* [[Homing pigeon]]
+* [[April Fools' Day RFC]]
+* [[Hyper Text Coffee Pot Control Protocol]]
+* [[Semaphore Flag Signaling System]]
+* [[Sneakernet]]
+
+== References ==
+{{reflist}}
+
+== External links ==
+* [http://www.schneier.com/blog/archives/2008/06/carrier_pigeons.html &quot;Carrier Pigeons Bringing Contraband into Prisons&quot;], [[Bruce Schneier]], www.schneier.com (blog), June 27, 2008
+* [http://news.cnet.com/2100-1001-257064.html Pigeon-powered Internet takes flight], Stephen Shankland, [[CNET News]], May 4, 2001
+* [http://www.mg.co.za/article/2009-09-10-winston-the-homing-pigeon-draws-tweets-of-support &quot;Winston the homing pigeon draws tweets of support&quot;], The Mail and Guardian, September 10, 2009
+* [https://web.archive.org/web/20101023133741/http://theunlimited.co.za/ &quot;The Unlimited&quot;]
+* [http://www.mg.co.za/article/2009-09-10-pigeon-carries-data-bundles-faster-than-telkom Pigeon carries data bundles faster than Telkom], 10 Sep 2009, M&amp;G
+* [https://globalgamejam.org/2018/games/rfc1149 RFC1149 Game]
+
+{{IETF RFC 1st april}}
+
+{{DEFAULTSORT:Ip Over Avian Carriers}}
+[[Category:April Fools' Day jokes]]
+[[Category:Computer humor]]
+[[Category:Internet architecture]]
+[[Category:Link protocols]]
+[[Category:Physical layer protocols]]
+[[Category:Wireless networking]]
+[[Category:Domestic pigeons]]</text>
+      <sha1>mycz79h9g0qkflkvy8f1m9v3tvbzo72</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Clits</title>
+    <ns>0</ns>
+    <id>47103</id>
+    <redirect title="Clitoris" />
+    <revision>
+      <id>15942219</id>
+      <timestamp>2002-04-01T13:30:14Z</timestamp>
+      <contributor>
+        <username>The Anome</username>
+        <id>76</id>
+      </contributor>
+      <minor />
+      <comment>#REDIRECT [[Clitoris]] for failed search request</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="22" xml:space="preserve">#REDIRECT [[Clitoris]]</text>
+      <sha1>8kcagjgjvggrf6pjs3o268vxde84a6n</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>April fool</title>
+    <ns>0</ns>
+    <id>47105</id>
+    <redirect title="April Fools&#039; Day" />
+    <revision>
+      <id>548810012</id>
+      <parentid>548728922</parentid>
+      <timestamp>2013-04-05T09:59:35Z</timestamp>
+      <contributor>
+        <username>Widefox</username>
+        <id>1588193</id>
+      </contributor>
+      <comment>Undid revision 548728922 by [[Special:Contributions/M0rphzone|M0rphzone]] ([[User talk:M0rphzone|talk]]) -see article / UK / European tradition</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30" xml:space="preserve">#REDIRECT [[April Fools' Day]]</text>
+      <sha1>705mlao1s7hm9katwxtbjyrqvpbddep</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Alphonse de Polignac</title>
+    <ns>0</ns>
+    <id>47106</id>
+    <revision>
+      <id>952338850</id>
+      <parentid>947608066</parentid>
+      <timestamp>2020-04-21T19:06:03Z</timestamp>
+      <contributor>
+        <username>Vbrm</username>
+        <id>18321786</id>
+      </contributor>
+      <minor />
+      <comment>Adding a wikilink</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1525" xml:space="preserve">{{no footnotes|date=March 2013}}
+'''Alphonse de Polignac''' (1826&amp;ndash;1863) was a [[France|French]] [[mathematician]]. In 1849, the year he was admitted to [[Polytechnique]], he made what's known as [[Polignac's conjecture]]:&lt;ref&gt;{{cite journal |last1=de Polignac |first1=A. |title=Recherches nouvelles sur les nombres premiers |journal=Comptes rendus |date=1849 |volume=29 |pages=397-401 |url=https://babel.hathitrust.org/cgi/pt?id=mdp.39015035450967&amp;view=1up&amp;seq=411 |trans-title=New research on prime numbers |language=French}} 
+ From p. 400:  ''&quot;1&lt;sup&gt;er&lt;/sup&gt; ''Théorème.''  Tout nombre pair est égal à la différence de deux nombres premiers consécutifs d'une infinité de manières … &quot;'' (1&lt;sup&gt;st&lt;/sup&gt; Theorem.  Every even number is equal to the difference of two consecutive prime numbers in an infinite number of ways … )&lt;/ref&gt;
+
+:For every positive integer ''k'', there are infinitely many [[prime gap]]s of size 2''k''.
+
+The case ''k'' = 1 is the [[twin prime conjecture]].
+
+He also conjectured [[Romanov's theorem]].
+
+His father, [[Jules de Polignac]] (1780-1847) was prime minister of Charles X until the Bourbon dynasty was overthrown (1830).
+
+==See also==
+*[[de Polignac's formula]]
+*[[Polignac family]]
+
+==References==
+{{reflist}}
+*{{MathWorld|urlname=dePolignacsConjecture|title=de Polignac's Conjecture}}
+
+{{authority control}}
+
+{{DEFAULTSORT:Polignac, Alphonse De}}
+[[Category:1826 births]]
+[[Category:1863 deaths]]
+[[Category:19th-century French mathematicians]]
+
+{{France-mathematician-stub}}</text>
+      <sha1>6x7rbvmi5ouiwqyqlqilu9i3gpvrixc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Phosgene</title>
+    <ns>0</ns>
+    <id>47107</id>
+    <revision>
+      <id>978475275</id>
+      <parentid>978472922</parentid>
+      <timestamp>2020-09-15T04:26:40Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: title, isbn. Add: s2cid, issue. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by Abductive | [[Category:Chembox having DSD data]] | via #UCB_Category</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="22132" xml:space="preserve">{{short description|Chemical compound}}
+{{Distinguish|phosphine|phosphene|oxalyl chloride|phosgene oxime}}
+{{Chembox
+| Watchedfields = changed
+| verifiedrevid = 444050518
+| Reference=&lt;ref&gt;''[[Merck Index]]'', 11th Edition, '''7310'''.&lt;/ref&gt;
+| Name = Phosgene
+| ImageFileL1_Ref = {{chemboximage|correct|??}}
+| ImageFileL1 = Phosgene-dimensions-2D.svg
+| ImageNameL1 = Full structural formula with dimensions
+| ImageFileR1 = Phosgene-3D-vdW.png
+| ImageNameR1 = Space-filling model
+| ImageFile2 = Smelling Case of War Gases, Clifton Park Museum.jpg
+| ImageName2 = A bag of toxic gases use in chemical warfare; the leftmost one is phosgene
+| PIN = Carbonyl dichloride&lt;ref name=iupac2013&gt;{{cite book |title= Nomenclature of Organic Chemistry: IUPAC Recommendations and Preferred Names 2013 (Blue Book) |publisher= [[Royal Society of Chemistry|The Royal Society of Chemistry]] |date= 2014 |location= Cambridge |page= 798 |doi= 10.1039/9781849733069-FP001 |isbn= 978-0-85404-182-4}}&lt;/ref&gt;
+| OtherNames = Carbonyl chloride&lt;br/&gt;CG&lt;br/&gt;Carbon dichloride oxide&lt;br/&gt;Carbon oxychloride&lt;br/&gt;Chloroformyl chloride&lt;br/&gt;Dichloroformaldehyde&lt;br/&gt;Dichloromethanone&lt;br/&gt;Dichloromethanal
+|Section1={{Chembox Identifiers
+| ChEBI_Ref = {{ebicite|correct|EBI}}
+| ChEBI = 29365
+| SMILES = ClC(Cl)=O
+| ChemSpiderID_Ref = {{chemspidercite|correct|chemspider}}
+| ChemSpiderID = 6131
+| UNII_Ref = {{fdacite|correct|FDA}}
+| UNII = 117K140075
+| InChI = 1/CCl2O/c2-1(3)4
+| InChIKey = YGYAWVDWMABLBF-UHFFFAOYAH
+| StdInChI_Ref = {{stdinchicite|correct|chemspider}}
+| StdInChI = 1S/CCl2O/c2-1(3)4
+| StdInChIKey_Ref = {{stdinchicite|correct|chemspider}}
+| StdInChIKey = YGYAWVDWMABLBF-UHFFFAOYSA-N
+| CASNo = 75-44-5
+| CASNo_Ref = {{cascite|correct|CAS}}
+| RTECS = SY5600000
+| EINECS = 200-870-3
+| UNNumber = 1076
+| PubChem = 6371
+}}
+|Section2={{Chembox Properties
+| Formula = COCl&lt;sub&gt;2&lt;/sub&gt;, also CCl&lt;sub&gt;2&lt;/sub&gt;O
+| MolarMass = 98.92{{nbsp}}g/mol
+| Appearance = Colorless gas
+| Odor = Suffocating, like musty hay&lt;ref name=PGCH/&gt;
+| Density = 4.248{{nbsp}}g/L (15&amp;nbsp;°C, gas)&lt;br&gt;1.432{{nbsp}}g/cm&lt;sup&gt;3&lt;/sup&gt; (0&amp;nbsp;°C, liquid)
+| Solubility = Insoluble, reacts&lt;ref&gt;{{cite web |url=http://www.inchem.org/documents/icsc/icsc/eics0007.htm |title=PHOSGENE (cylinder) |work=Inchem (Chemical Safety Information from Intergovernmental Organizations) |publisher=International Programme on Chemical Safety and the European Commission}}&lt;/ref&gt;
+| SolubleOther = Soluble in [[benzene]], [[toluene]], [[acetic acid]]&lt;br&gt;Decomposes in [[alcohol]] and [[acid]]
+| MeltingPtC = −118
+| BoilingPtC = 8.3
+| VaporPressure = 1.6{{nbsp}}atm (20°C)&lt;ref name=PGCH/&gt;
+| MagSus = −48·10&lt;sup&gt;−6&lt;/sup&gt; cm&lt;sup&gt;3&lt;/sup&gt;/mol
+}}
+|Section3={{Chembox Structure
+| MolShape = Planar, trigonal
+| Dipole = 1.17{{nbsp}}[[Debye|D]]
+}}
+|Section7={{Chembox Hazards
+| ExternalSDS = [http://www.inchem.org/documents/icsc/icsc/eics0007.htm ICSC 0007]
+| EUClass = {{Hazchem T+}}
+| RPhrases = {{R26}} {{R34}}
+| SPhrases = {{(S1/2)}} {{S9}} {{S26}} {{S36/37/39}} {{S45}}
+| NFPA-H = 4
+| NFPA-F = 0
+| NFPA-R = 1
+| FlashPt = Non-flammable
+| TLV = 0.1{{nbsp}}ppm
+| PEL = TWA 0.1{{nbsp}}ppm (0.4{{nbsp}}mg/m&lt;sup&gt;3&lt;/sup&gt;)&lt;ref name=PGCH&gt;{{PGCH|0504}}&lt;/ref&gt;
+| IDLH = 2{{nbsp}}ppm&lt;ref name=PGCH/&gt;
+| REL = TWA 0.1{{nbsp}}ppm (0.4{{nbsp}}mg/m&lt;sup&gt;3&lt;/sup&gt;) C 0.2{{nbsp}}ppm (0.8{{nbsp}}mg/m&lt;sup&gt;3&lt;/sup&gt;) [15-minute]&lt;ref name=PGCH/&gt;
+| LC50 = 500{{nbsp}}ppm (human, 1{{nbsp}}min)&lt;br/&gt;340{{nbsp}}ppm (rat, 30{{nbsp}}min)&lt;br/&gt;438{{nbsp}}ppm (mouse, 30{{nbsp}}min)&lt;br/&gt;243{{nbsp}}ppm (rabbit, 30{{nbsp}}min)&lt;br/&gt;316{{nbsp}}ppm (guinea pig, 30{{nbsp}}min)&lt;br/&gt;1022{{nbsp}}ppm (dog, 20{{nbsp}}min)&lt;br/&gt;145{{nbsp}}ppm (monkey, 1{{nbsp}}min)&lt;ref name=IDLH&gt;{{IDLH|75445|Phosgene}}&lt;/ref&gt;
+| LCLo = 3{{nbsp}}ppm (human, 2.83{{nbsp}}h)&lt;br/&gt;30{{nbsp}}ppm (human, 17{{nbsp}}min)&lt;br/&gt;50{{nbsp}}ppm (mammal, 5{{nbsp}}min)&lt;br/&gt;88{{nbsp}}ppm (human, 30{{nbsp}}min)&lt;br/&gt;46{{nbsp}}ppm (cat, 15{{nbsp}}min)&lt;br/&gt;50{{nbsp}}ppm (human, 5{{nbsp}}min)&lt;br/&gt;2.7{{nbsp}}ppm (mammal, 30{{nbsp}}min)&lt;ref name=IDLH/&gt;
+}}
+|Section8={{Chembox Related
+| OtherCompounds = [[Thiophosgene]]&lt;br/&gt;[[Formaldehyde]]&lt;br/&gt;[[Carbonic acid]]&lt;br/&gt;[[Urea]]&lt;br/&gt;[[Carbon monoxide]]&lt;br/&gt;[[Chloroformic acid]]
+}}
+}}
+
+'''Phosgene''' is the [[organic chemical compound]] with the [[chemical formula|formula]] COCl&lt;sub&gt;2&lt;/sub&gt;. It is a colorless gas; in low concentrations, its odor resembles that of freshly cut hay or grass.&lt;ref&gt;[http://emedicine.medscape.com/article/832454-overview CBRNE - Lung-Damaging Agents, Phosgene] May 27, 2009&lt;/ref&gt; Phosgene is a valued industrial building block, especially for the production of urethanes and [[polycarbonate]] plastics. 
+
+It is very poisonous and was used as a [[chemical weapon]] during [[World War I]], when it was responsible for 85,000 deaths. 
+
+In addition to its industrial production, small amounts occur from the breakdown and the [[combustion]] of [[organochloride|organochlorine compound]]s.&lt;ref name=Ullmann&gt;{{Ullmann |author1= Wolfgang Schneider |author2= Werner Diller |title= Phosgene |doi= 10.1002/14356007.a19_411}}&lt;/ref&gt;
+
+==Structure and basic properties==
+Phosgene is a planar molecule as predicted by [[VSEPR theory]]. The C=O distance is 1.18&amp;nbsp;[[angstrom (unit)|Å]], the C−Cl distance is 1.74&amp;nbsp;Å and the Cl−C−Cl angle is 111.8°.&lt;ref&gt;{{cite journal |author1=Nakata, M. |author2=Kohata, K. |author3=Fukuyama, T. |author4=Kuchitsu, K. |title= Molecular Structure of Phosgene as Studied by Gas Electron Diffraction and Microwave Spectroscopy. The ''r&lt;sub&gt;z&lt;/sub&gt;'' Structure and Isotope Effect |journal= [[Journal of Molecular Spectroscopy]] |year= 1980 |volume= 83 |pages= 105–117 |doi=10.1016/0022-2852(80)90314-8}}&lt;/ref&gt; It is one of the simplest [[Acyl chloride|acyl chlorides]], being formally derived from [[carbonic acid]].
+
+==Production==
+Industrially, phosgene is produced by passing purified [[carbon monoxide]] and [[chlorine]] gas through a bed of porous [[activated carbon]], which serves as a [[catalyst]]:&lt;ref name=Ullmann/&gt;
+:CO + Cl&lt;sub&gt;2&lt;/sub&gt; → COCl&lt;sub&gt;2&lt;/sub&gt; (Δ''H''&lt;sub&gt;rxn&lt;/sub&gt; = −107.6 kJ/mol)
+
+The reaction is exothermic, therefore the reactor must be cooled. Typically, the reaction is conducted between 50 and 150&amp;nbsp;°C. Above 200&amp;nbsp;°C, phosgene reverts to carbon monoxide and chlorine, ''K''&lt;sub&gt;eq&lt;/sub&gt;(300&amp;nbsp;K) = 0.05. World production of this compound was estimated to be 2.74 million tonnes in 1989.&lt;ref name=Ullmann/&gt;
+
+Because of safety issues, phosgene is often produced and consumed within the same plant, and extraordinary measures are made to contain it. It is listed on [[list of Schedule 3 substances (CWC)|Schedule 3]] of the [[Chemical Weapons Convention]]: All production sites manufacturing more than 30 tonnes per year must be declared to the [[OPCW]].&lt;ref&gt;[http://www.opcw.org/html/db/cwc/eng/cwc_annex_verification_part_VIII.html Annex on Implementation and Verification (&quot;Verification Annex&quot;)&lt;!-- Bot generated title --&gt;] {{webarchive|url=https://web.archive.org/web/20060515151142/http://www.opcw.org/html/db/cwc/eng/cwc_annex_verification_part_VIII.html |date=2006-05-15}}.&lt;/ref&gt; Although less dangerous than many other [[chemical weapon]]s such as [[sarin]], phosgene is still regarded as a viable [[chemical warfare agent]] because it is so easy to manufacture when compared to the production requirements of more technically advanced chemical weapons such as the first-generation [[nerve agent]] [[tabun (nerve agent)|tabun]].&lt;ref&gt;https://itportal.decc.gov.uk/cwc_files/S2AAD_guidance.pdf.&lt;/ref&gt;
+
+===Inadvertent generation===
+
+Upon [[ultraviolet]] (UV) radiation in the presence of [[oxygen]], [[chloroform]] slowly converts into phosgene by a [[radical reaction]]. To suppress this [[photodegradation]], chloroform is often stored in brown-tinted glass containers and with a small percentage of ethanol added. [[Chlorinated solvent]]s used to remove oil from metals, such as automotive [[brake cleaner]]s, are converted to phosgene by the UV rays of [[arc welding]] processes.&lt;ref&gt;{{cite web|title=Common Cleaners Can Turn Into Poison Gas|url=http://www.brewracingframes.com/id75.htm|work=[[American Iron Magazine]]|publisher=TAM Communications|accessdate=14 October 2011|url-status=bot: unknown|archiveurl=https://web.archive.org/web/20090727012113/http://www.brewracingframes.com/id75.htm|archivedate=27 July 2009}}&lt;/ref&gt;
+
+Phosgene may also be produced during testing for leaks of older-style refrigerant gases. [[Chloromethane]]s ([[dichlorodifluoromethane|R12]], [[chlorodifluoromethane|R22]] and others) were formerly leak-tested ''in situ'' by employing a small gas torch ([[propane]], [[butane]], or [[propylene]] gas) with a sniffer tube and a copper reaction plate in the flame nozzle of the torch. If any refrigerant gas was leaking from a pipe or joint, the gas would be sucked into the flame through the sniffer tube and would cause a colour change of the gas flame to a bright greenish blue. In the process, phosgene gas would be created due to the thermal reaction. No valid statistics are available, but anecdotal reports suggest that numerous refrigeration technicians suffered the effects of phosgene poisoning due to their ignorance of the toxicity of phosgene, produced during such leak testing.{{citation needed|date=November 2013}} Electronic sensing of refrigerant gases phased out the use of flame testing for leaks in the 1980s. Similarly, phosgene poisoning is a possibility for people fighting fires that occur in the vicinity of refrigerant leaks from air-conditioning systems or refrigeration equipment, smoking in the vicinity of a [[freon]] refrigerant leak, or fighting fires using [[halomethane|halon]] or [[Halotron I|halotron]].{{citation needed|date=September 2014}}
+
+Phosgene can be released during building fires. In one instance, a deputy fire chief died ten days after inhaling fumes that wafted down outside a burning restaurant. After a two-day hospitalization he had appeared to recover, but ultimately suffered cardiac arrest at home following tracheobronchial inflammation, alveolar hemorrhage, and [[pulmonary edema]]. The phosgene was produced by decomposing [[Freon 22]] after flames ducted up from a grease fire heated an air-conditioning unit on the roof and ruptured a hose.&lt;ref&gt;{{cite web|url=https://www.firerecruit.com/articles/915407-Just-a-routine-fire|title=Just a routine fire|author=Fireground Medical Operations, Albert Einstein Medical Center}}&lt;/ref&gt;
+
+==History==
+Phosgene was synthesized by the [[Cornish people|Cornish]] chemist [[John Davy (chemist)|John Davy]] (1790–1868) in 1812 by exposing a mixture of carbon monoxide and chlorine to [[sunlight]]. He named it &quot;phosgene&quot; in reference of the use of light to promote the reaction; from [[Greek language|Greek]], ''phos'' (light) and ''gene'' (born).&lt;ref&gt;{{cite journal |title= On a gaseous compound of carbonic oxide and chlorine |author= John Davy |journal= Philosophical Transactions of the Royal Society of London |volume= 102 |year= 1812 |pages= 144–151 |url= https://babel.hathitrust.org/cgi/pt?id=mdp.39015034564289;view=1up;seq=162 |doi= 10.1098/rstl.1812.0008 |jstor=107310|doi-access= free }} Phosgene was named on p. 151: &quot; ... it will be necessary to designate it by some simple name. I venture to propose that of phosgene, or phosgene gas; from ''φως'', light, ''γινομαι'', to produce, which signifies formed by light; ... &quot;&lt;/ref&gt; It gradually became important in the chemical industry as the 19th century progressed, particularly in dye manufacturing.
+
+==Reactions and uses==
+The great majority of phosgene is used in the production of [[isocyanate]]s, the most important being [[toluene diisocyanate]] (TDI) and [[methylene diphenyl diisocyanate]] (MDI). These two isocyanates are precursors to [[polyurethane]]s.  The reaction of an organic substrate with phosgene is called '''phosgenation'''.
+
+===Synthesis of carbonates===
+Significant amounts are also used in the production of [[polycarbonate]]s by its reaction with [[bisphenol A]].&lt;ref name=Ullmann/&gt; [[Polycarbonate]]s are an important class of engineering [[thermoplastic]] found, for example, in lenses in eyeglasses. [[Diol]]s react with phosgene to give either linear or cyclic carbonates (R = H, alkyl, aryl):
+:HOCR&lt;sub&gt;2&lt;/sub&gt;−X−CR&lt;sub&gt;2&lt;/sub&gt;OH + COCl&lt;sub&gt;2&lt;/sub&gt; → {{frac|''n''}} [OCR&lt;sub&gt;2&lt;/sub&gt;−X−CR&lt;sub&gt;2&lt;/sub&gt;OC(O)−]&lt;sub&gt;''n''&lt;/sub&gt; + 2 HCl
+
+Phosgenation of [[hydroxamic acid]]s gives [[dioxazolone]], a class of cyclic [[carbonate esters]]:&lt;ref&gt;{{cite journal|title=1,3,4-Dioxazol-2-ones: a potentially hazardous class of compounds|author=Middleton, William J.|journal=Journal of Organic Chemistry|year=1983|volume=48|issue=21|page=3845-7|doi=10.1021/jo00169a059}}&lt;/ref&gt;
+:RC(O)NHOH  +  COCl&lt;sub&gt;2&lt;/sub&gt;  →   RC=NOCO&lt;sub&gt;2&lt;/sub&gt;  +  2 HCl
+
+===Synthesis of isocyanates===
+The synthesis of [[isocyanate]]s from amines illustrates the [[electrophilic]] character of this reagent and its use in introducing the equivalent of &quot;CO&lt;sup&gt;2+&lt;/sup&gt;&quot;:&lt;ref&gt;{{OrgSynth |author= R. L. Shriner, W. H. Horne, and R. F. B. Cox |title= p-Nitrophenyl Isocyanate |collvol= 2 |collvolpages= 453 |year= 1943 |prep= CV2P0453}}&lt;/ref&gt;
+:RNH&lt;sub&gt;2&lt;/sub&gt; + COCl&lt;sub&gt;2&lt;/sub&gt; → RN=C=O + 2 HCl (R = [[alkyl]], [[aryl]])
+Such reactions are conducted in the presence of a base such as [[pyridine]] that absorbs the [[hydrogen chloride]].
+
+===Laboratory uses===
+
+In the research laboratory phosgene still finds limited use in [[organic synthesis]]. A variety of substitutes have been developed, notably trichloromethyl chloroformate (&quot;[[diphosgene]]&quot;), a liquid at room temperature, and bis(trichloromethyl) carbonate (&quot;[[triphosgene]]&quot;), a crystalline substance.&lt;ref&gt;Hamley, P. &quot;Phosgene&quot; ''Encyclopedia of Reagents for Organic Synthesis'', 2001 John Wiley, New York. {{doi |10.1002/047084289X.rp149}}&lt;/ref&gt; Aside from the above reactions that are widely practiced industrially, phosgene is also used to produce [[acyl chloride]]s and [[carbon dioxide]] from [[carboxylic acid]]s:
+:RCO&lt;sub&gt;2&lt;/sub&gt;H + COCl&lt;sub&gt;2&lt;/sub&gt; → RC(O)Cl + HCl + CO&lt;sub&gt;2&lt;/sub&gt;
+
+Such acid chlorides react with amines and alcohols to give, respectively, amides and esters, which are commonly used intermediates. [[Thionyl chloride]] is more commonly and more safely employed for this application. A specific application for phosgene is the production of chloroformic esters:
+:ROH + COCl&lt;sub&gt;2&lt;/sub&gt; → ROC(O)Cl + HCl
+
+Phosgene is stored in metal cylinders. The outlet is always standard, a tapered thread that is known as CGA 160
+
+===Other chemistry===
+Although it is somewhat hydrophobic, phosgene reacts with [[water]] to release [[hydrogen chloride]] and [[carbon dioxide]]:
+:COCl&lt;sub&gt;2&lt;/sub&gt; + H&lt;sub&gt;2&lt;/sub&gt;O → CO&lt;sub&gt;2&lt;/sub&gt; + 2 HCl
+
+Analogously, with ammonia, one obtains [[urea]]:
+:COCl&lt;sub&gt;2&lt;/sub&gt; + 4 NH&lt;sub&gt;3&lt;/sub&gt; → CO(NH&lt;sub&gt;2&lt;/sub&gt;)&lt;sub&gt;2&lt;/sub&gt; + 2 NH&lt;sub&gt;4&lt;/sub&gt;Cl
+
+Halide exchange with [[nitrogen trifluoride]] and [[aluminium tribromide]] gives [[carbonyl fluoride|COF&lt;sub&gt;2&lt;/sub&gt;]] and [[carbonyl bromide|COBr&lt;sub&gt;2&lt;/sub&gt;]], respectively.&lt;ref name=Ullmann/&gt;
+
+===Chemical warfare===
+{{Further|Chemical weapons in World War I|Second Italo-Ethiopian War}}
+[[File:Phosgene poster ww2.jpg|right|thumb|US Army phosgene identification poster from [[World War II]]]]
+
+The collapse of international conventions against chemical weapons led to the widespread use of [[chlorine]] gas in World War I, but its lethal concentration of 0.1% was visible as a green cloud in the air, allowing troops to take readily available countermeasures. Phosgene, colorless with a more subtle &quot;moldy hay&quot; odor, was introduced by a group of French chemists led by [[Victor Grignard]] and first used by the French in 1915.&lt;ref&gt;{{cite book |first=Mary Jo |last=Nye |year=1999 |page=193 |title=Before big science: the pursuit of modern chemistry and physics, 1800–1940 |publisher=Harvard University Press |isbn=0-674-06382-1}}&lt;/ref&gt; It was also used in a mixture with an equal volume of chlorine, with the chlorine helping to spread the denser phosgene.&lt;ref name=&quot;cbwinfo&quot;&gt;{{cite web |author=Staff |year=2004 |url=http://cbwinfo.com/Chemical/Pulmonary/CG.shtml |title=Choking Agent: CG |publisher=CBWInfo |accessdate=2007-07-30 |url-status=dead |archiveurl=https://web.archive.org/web/20060218124704/http://cbwinfo.com/Chemical/Pulmonary/CG.shtml |archivedate=2006-02-18 }}&lt;/ref&gt;&lt;ref&gt;{{cite book |author=Kiester, Edwin |title=An Incomplete History of World War I |page=74 |volume=1 |publisher=Murdoch Books |year=2007 |isbn=978-1-74045-970-9 |display-authors=etal}}&lt;/ref&gt; Phosgene was more potent than chlorine, though some of the symptoms of exposure took 24 hours or more to manifest, meaning the victims were initially still capable of putting up a fight.&lt;ref&gt;{{cite web |author=Staff |date=22 February 2006 |url=http://www.bt.cdc.gov/agent/phosgene/basics/facts.asp |title=Facts About Phosgene |publisher=CDC |accessdate=2008-05-23 |url-status=dead |archiveurl=https://web.archive.org/web/20030417022453/http://www.bt.cdc.gov/agent/phosgene/basics/facts.asp |archivedate=17 April 2003 }}&lt;/ref&gt;
+
+Following the extensive use of phosgene gas in combat during [[World War I]], it was stockpiled by various countries as part of their secret chemical weapons programs.&lt;ref&gt;[http://lithgow.yourguide.com.au/news/local/news/general/chemical-warfare-left-its-legacy/1237570.aspx Base's phantom war reveals its secrets], ''Lithgow Mercury'', 7/08/2008&lt;/ref&gt;&lt;ref&gt;[http://lithgow.yourguide.com.au/news/local/news/general/chemical-warfare-left-its-legacy/1266856.aspx Chemical warfare left its legacy], ''Lithgow Mercury'', 9/09/2008&lt;/ref&gt;&lt;ref&gt;[http://www.mustardgas.org/wp-content/uploads/Chemical-Warfare-Left-Its-Legacy.pdf Chemical bombs sit metres from Lithgow families for 60 years], ''The Daily Telegraph'', September 22, 2008&lt;/ref&gt;
+
+In May 1928, eleven tons of phosgene escaped from a war surplus store in central Hamburg.&lt;ref name=Ryan154/&gt; Three hundred people were poisoned, of whom 10 died.&lt;ref name=Ryan154&gt;{{cite book |title=Phosgene and Related Carbonyl Halides |url=https://archive.org/details/phosgenerelatedc00tary |url-access=limited |last=Ryan |first=T.Anthony |year=1996 |publisher= Elsevier |location= |isbn=0444824456 |pages=[https://archive.org/details/phosgenerelatedc00tary/page/n200 154]–155}}&lt;/ref&gt;
+
+Phosgene was then only infrequently used by the [[Imperial Japanese Army]] against the Chinese during the [[Second Sino-Japanese War]].&lt;ref&gt;Yuki Tanaka, &quot;Poison Gas, the Story Japan Would Like to Forget&quot;, ''Bulletin of the Atomic Scientists'', October 1988, pp. 16–17&lt;/ref&gt; Gas weapons, such as phosgene, were produced by [[Unit 731]] and authorized by specific orders given by Hirohito ([[Emperor Showa]]) himself, transmitted by the [[Imperial General Headquarters|chief of staff of the army]]. For example, the Emperor authorized the use of toxic gas on 375 separate occasions during the [[Battle of Wuhan]] from August to October 1938.&lt;ref&gt;Y. Yoshimi and S. Matsuno, ''Dokugasusen Kankei Shiryô II, Kaisetsu, Jugonen Sensô Gokuhi Shiryoshu'', 1997, pp. 27–29&lt;/ref&gt;
+
+==Safety==
+Phosgene is an insidious poison as the odor may not be noticed and symptoms may be slow to appear.&lt;ref&gt;{{cite journal |title= Phosgene exposure: mechanisms of injury and treatment strategies |author1=Borak J. |author2=Diller W. F. |journal= Journal of Occupational and Environmental Medicine |year= 2001 |volume= 43 |issue= 2 |pages= 110–9 |pmid= 11227628 |doi= 10.1097/00043764-200102000-00008|s2cid=41169682 }}&lt;/ref&gt;
+
+The [[odor detection threshold]] for phosgene is 0.4 ppm, four times the [[threshold limit value]]. Its high [[toxicity]] arises from the action of the phosgene on the [[protein]]s in the pulmonary [[Pulmonary alveolus|alveoli]], the site of gas exchange: their damage disrupts the [[blood–air barrier]], causing suffocation. It reacts with the [[amine]]s of the proteins, causing crosslinking by formation of [[urea]]-like linkages, in accord with the reactions discussed above. Phosgene detection badges are worn by those at risk of exposure.&lt;ref name=Ullmann/&gt;

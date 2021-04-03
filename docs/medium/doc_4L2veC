@@ -1,0 +1,324 @@
+Multiple changes can be specified by separating multiple symbolic modes with commas (without spaces). If a user is not specified, &lt;code&gt;chmod&lt;/code&gt; will check the [[umask]] and the effect will be as if &quot;'''a'''&quot; was specified except bits that are set in the umask are not affected.&lt;ref&gt;{{Cite web|url=http://teaching.idallen.com/cst8207/19w/notes/510_umask.html|title=Permissions masking with umask, chmod, 777 octal permissions|website=teaching.idallen.com}}&lt;/ref&gt;
+
+====Symbolic examples====
+* Add write permission ({{Mono|w}}) to the Group's ({{Mono|g}}) access modes of a directory, allowing users in the same group to add files:
+&lt;syntaxhighlight lang=&quot;console&quot; &gt;
+$ ls -ld shared_dir # show access modes before chmod
+drwxr-xr-x   2 teamleader  usguys 96 Apr 8 12:53 shared_dir
+$ chmod  g+w shared_dir
+$ ls -ld shared_dir  # show access modes after chmod
+drwxrwxr-x   2 teamleader  usguys 96 Apr 8 12:53 shared_dir
+&lt;/syntaxhighlight&gt;
+
+* Remove write permissions ({{Mono|w}}) for all classes ({{Mono|a}}), preventing anyone from writing to the file:
+&lt;syntaxhighlight lang=&quot;console&quot;&gt;
+$ ls -l ourBestReferenceFile
+-rw-rw-r--   2 teamleader  usguys 96 Apr 8 12:53 ourBestReferenceFile
+$ chmod a-w ourBestReferenceFile
+$ ls -l ourBestReferenceFile
+-r--r--r--   2 teamleader  usguys 96 Apr 8 12:53 ourBestReferenceFile
+&lt;/syntaxhighlight&gt;
+
+* Set the permissions for the ''{{strong|u}}ser'' and the Group ({{Mono|ug}}) to read and execute ({{Mono|rx}}) only (no write permission) on {{Mono|referenceLib}}, preventing anyone to add files.
+&lt;syntaxhighlight lang=&quot;console&quot;&gt;
+$ ls -ld referenceLib
+drwxr-----   2 teamleader  usguys 96 Apr 8 12:53 referenceLib
+$ chmod ug=rx referenceLib
+$ ls -ld referenceLib
+dr-xr-x---   2 teamleader  usguys 96 Apr 8 12:53 referenceLib
+&lt;/syntaxhighlight&gt;
+
+===Special modes===
+{{See also|File system permissions}}
+
+The {{Mono|chmod}} command is also capable of changing the additional permissions or special modes of a file or directory. The symbolic modes use '{{Mono|s}}' to represent the ''[[setuid]]'' and ''[[setgid]]'' modes, and '{{Mono|t}}' to represent the ''[[Sticky bit|sticky]]'' mode. The modes are only applied to the appropriate classes, regardless of whether or not other classes are specified.
+
+Most operating systems support the specification of special modes using octal modes, but some do not. On these systems, only the symbolic modes can be used.
+
+===Command line examples===
+&lt;!-- Please keep meaningful names and use examples that someone might want. DGerman--&gt;
+{| class=&quot;wikitable&quot;
+! Command !! Explanation
+|-
+| &lt;code&gt;chmod a+r ''publicComments.txt''&lt;/code&gt; || adds read permission for all classes (i.e. ''{{strong|u}}ser'', ''Group'' and ''Others'')
+|-
+| &lt;code&gt;chmod a-x ''publicComments.txt''&lt;/code&gt; || removes execute permission for all classes
+|-
+| &lt;code&gt;chmod a+rx ''viewer.sh''&lt;/code&gt; || adds read and execute permissions for all classes
+|-
+| &lt;code&gt;chmod u=rw,g=r,o= ''internalPlan.txt''&lt;/code&gt; || sets read and write permission for ''{{strong|u}}ser'', sets read for ''Group'', and denies access for ''Others''
+|-
+| &lt;code&gt;chmod -R u+w,go-w ''docs''&lt;/code&gt; || adds write permission to the directory ''docs'' and all its contents (i.e. '''R'''ecursively) for owner, and removes write permission for group and others
+|-
+| &lt;code&gt;chmod ug=rw ''groupAgreements.txt''&lt;/code&gt; || sets read and write permissions for ''{{strong|u}}ser'' and ''Group''
+|-
+| &lt;code&gt;chmod 664 ''global.txt''&lt;/code&gt; || sets read and write permissions for ''{{strong|u}}ser'' and ''Group'', and provides read to ''Others''.
+|-
+| &lt;code&gt;chmod 744 ''myCV.txt''&lt;/code&gt; || sets read, write, and execute permissions for ''{{strong|u}}ser'', and sets read permission for ''Group'' and ''Others''
+|-
+| &lt;code&gt;chmod 1755 ''findReslts.sh''&lt;/code&gt; || sets sticky bit, sets read, write, and execute permissions for owner, and sets read and execute permissions for group and others (this suggests that the script be retained in memory)
+|-
+| &lt;code&gt;chmod 4755 ''setCtrls.sh''&lt;/code&gt; || sets ''[[Setuid|UID]]'', sets read, write, and execute permissions for ''{{strong|u}}ser'', and sets read and execute permissions for ''Group'' and ''Others''
+|-
+| &lt;code&gt;chmod 2755 ''setCtrls.sh''&lt;/code&gt; || sets ''[[Setgid|GID]]'', sets read, write, and execute permissions for ''{{strong|u}}ser'', and sets read and execute permissions for ''Group'' and ''Others''
+|-
+| &lt;code&gt;chmod -R u+rwX,g-rwx,o-rx ''personalStuff''&lt;/code&gt; || '''R'''ecursively (i.e. on all files and directories in ''personalStuff'') adds read, write, and special execution permissions for ''{{strong|u}}ser'', removes read, write, and execution permissions for ''Group'', and removes read and execution permissions for ''Others''
+|-
+| &lt;code&gt;chmod -R a-x+X ''publicDocs''&lt;/code&gt; || '''R'''ecursively (i.e. on all files and directories in ''publicDocs'') removes execute permission for all classes and adds special execution permission for all classes
+|}
+
+==System call==
+The [[POSIX]] standard defines the following [[function prototype]]:&lt;ref&gt;{{cite web|title=chmod function|url=http://pubs.opengroup.org/onlinepubs/9699919799/functions/chmod.html#tag_16_58|website=The Open Group Base Specifications Issue 7, 2013 Edition|publisher=The Open Group|accessdate=30 August 2015}}&lt;/ref&gt;
+ int chmod(const char *path, mode_t mode);
+
+The ''mode'' parameter is a bitfield composed of various flags:
+{| class=&quot;wikitable&quot;
+! Flag !! Octal value !! Purpose
+|-
+| S_ISUID || 04000 || Set user ID on execution
+|-
+| S_ISGID || 02000 || Set group ID on execution
+|-
+| S_ISVTX || 01000 || Sticky bit
+|-
+| S_IRUSR, S_IREAD || 00400 || Read by ''{{strong|u}}ser''
+|-
+| S_IWUSR, S_IWRITE || 00200 || Write by ''{{strong|u}}ser''
+|-
+| S_IXUSR, S_IEXEC || 00100 || Execute/search by ''{{strong|u}}ser''
+|-
+| S_IRGRP || 00040 || Read by group
+|-
+| S_IWGRP || 00020 || Write by group
+|-
+| S_IXGRP || 00010 || Execute/search by group
+|-
+| S_IROTH || 00004 || Read by others
+|-
+| S_IWOTH || 00002 || Write by others
+|-
+| S_IXOTH || 00001 || Execute/search by others
+|}
+
+==See also==
+* [[File system permissions]]
+* [[Modes (Unix)]]
+* &lt;code&gt;[[chattr]]&lt;/code&gt;, the command used to change the attributes of a file or directory on Linux systems
+* &lt;code&gt;[[chown]]&lt;/code&gt;, the command used to change the owner of a file or directory on Unix-like systems
+* &lt;code&gt;[[chgrp]]&lt;/code&gt;, the command used to change the group of a file or directory on Unix-like systems
+* &lt;code&gt;[[cacls]]&lt;/code&gt;, a command used on [[Windows NT]] and its derivatives to modify the access control lists associated with a file or directory
+* &lt;code&gt;[[attrib]]&lt;/code&gt;
+* &lt;code&gt;[[umask]]&lt;/code&gt;, restricts mode (permissions) at file or directory creation on Unix-like systems
+* [[User identifier]]
+* [[Group identifier]]
+* [[List of Unix commands]]
+
+==References==
+{{Reflist}}
+
+==External links==
+{{Wikibooks|Guide to Unix|Commands}}
+* {{man|1|chmod|FreeBSD|change file modes}}
+* {{man|1|chmod|Plan 9}}
+* {{man|1|chmod|Inferno}}
+* [https://www.gnu.org/software/coreutils/manual/html_node/chmod-invocation.html &lt;code&gt;chmod&lt;/code&gt;] — manual page from [[GNU]] [[coreutils]].
+* [https://www.gnu.org/software/coreutils/manual/html_node/Setting-Permissions.html GNU &quot;Setting Permissions&quot; manual]
+* [http://neosmart.net/dl.php?id=4 CHMOD-Win 3.0] &amp;mdash; Freeware Windows' ACL ←→ CHMOD converter.
+* [http://catcode.com/teachmod/index.html Beginners tutorial with on-line &quot;live&quot; example]
+
+{{Unix commands}}
+{{Use dmy dates|date=January 2018}}
+
+[[Category:File system permissions]]
+[[Category:Operating system security]]
+[[Category:Standard Unix programs]]
+[[Category:Unix file system-related software]]
+[[Category:Unix SUS2008 utilities]]
+[[Category:Plan 9 commands]]
+[[Category:Inferno (operating system) commands]]</text>
+      <sha1>hmiz82zbene2qn7vzf8ex4hugkrk44y</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>IP blocked</title>
+    <ns>0</ns>
+    <id>50625</id>
+    <redirect title="IP address blocking" />
+    <revision>
+      <id>489792872</id>
+      <parentid>72026777</parentid>
+      <timestamp>2012-04-29T14:58:31Z</timestamp>
+      <contributor>
+        <username>AvicBot</username>
+        <id>11952314</id>
+      </contributor>
+      <minor />
+      <comment>Robot: Fixing double redirect to [[IP address blocking]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="33" xml:space="preserve">#REDIRECT [[IP address blocking]]</text>
+      <sha1>i4kwuq3sywhuc3ulkoiafm6xd9i2ngx</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Conformal map</title>
+    <ns>0</ns>
+    <id>50627</id>
+    <revision>
+      <id>976566338</id>
+      <parentid>972662208</parentid>
+      <timestamp>2020-09-03T17:41:39Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: journal. Add: doi-broken-date, doi. Removed URL that duplicated unique identifier. Removed parameters. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by AManWithNoPlan | All pages linked from cached copy of User:AManWithNoPlan/sandbox2 | via #UCB_webform_linked</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="16229" xml:space="preserve">{{other uses|Conformal (disambiguation)}}
+
+[[Image:Conformal map.svg|right|thumb|A rectangular grid (top) and its image under a conformal map &lt;math&gt;f&lt;/math&gt; (bottom). It is seen that &lt;math&gt;f&lt;/math&gt; maps pairs of lines intersecting at 90° to pairs of curves still intersecting at 90°.]]
+
+In [[mathematics]], a '''conformal map''' is a [[function (mathematics)|function]] that locally preserves [[angle]]s, but not necessarily lengths.  
+
+More formally, let &lt;math&gt;U&lt;/math&gt; and &lt;math&gt;V&lt;/math&gt; be open subsets of &lt;math&gt;\mathbb{R}^n&lt;/math&gt;. A function &lt;math&gt;f:U\to V&lt;/math&gt; is called '''conformal''' (or '''angle-preserving''') at a point &lt;math&gt;u_0\in U&lt;/math&gt; if it preserves angles between directed [[curve]]s through &lt;math&gt;u_0&lt;/math&gt;, as well as preserving orientation. Conformal maps preserve both angles and the shapes of infinitesimally small figures, but not necessarily their size or [[curvature]].
+
+The conformal property may be described in terms of the [[Jacobian matrix and determinant|Jacobian]] derivative matrix of a [[coordinate transformation]]. The transformation is conformal whenever the Jacobian at each point is a positive scalar times a [[rotation matrix]] ([[Orthogonal matrix|orthogonal]] with determinant one). Some authors define conformality to include orientation-reversing mappings  whose Jacobians can be written as any scalar times any orthogonal matrix.&lt;ref&gt;{{Cite book|title=Inversion Theory and Conformal Mapping|volume = 9|last=Blair|first=David|s2cid = 118752074|date=2000-08-17|publisher=American Mathematical Society|isbn=978-0-8218-2636-2|series=The Student Mathematical Library|location=Providence, Rhode Island|doi = 10.1090/stml/009}}&lt;/ref&gt;
+
+For mappings in two dimensions, the (orientation-preserving) conformal mappings are precisely the locally invertible [[Holomorphic function|complex analytic]] functions. In three and higher dimensions, [[Liouville's theorem (conformal mappings)|Liouville's theorem]] sharply limits the conformal mappings to a few types.
+
+The notion of conformality generalizes in a natural way to maps between [[Riemannian manifold|Riemannian]] or [[semi-Riemannian manifold]]s.
+
+==Conformal maps in two dimensions==
+If &lt;math&gt;U&lt;/math&gt; is an [[open set|open subset]] of the complex plane &lt;math&gt;\mathbb{C}&lt;/math&gt;, then a [[function (mathematics)|function]] &lt;math&gt;f:U\to\mathbb{C}&lt;/math&gt; is conformal [[if and only if]] it is [[holomorphic function|holomorphic]] and its [[derivative]] is everywhere non-zero on &lt;math&gt;U&lt;/math&gt;. If &lt;math&gt;f&lt;/math&gt; is [[antiholomorphic function|antiholomorphic]] ([[complex conjugate|conjugate]] to a holomorphic function), it preserves angles but reverses their orientation.
+
+In the literature, there is another definition of conformal: a mapping &lt;math&gt;f&lt;/math&gt; which is one-to-one and holomorphic on an open set in the plane. The open mapping theorem forces the inverse function (defined on the image of &lt;math&gt;f&lt;/math&gt;) to be holomorphic. Thus, under this definition, a map is conformal [[if and only if]] it is biholomorphic. The two definitions for conformal maps are not equivalent. Being one-to-one and holomorphic implies having a non-zero derivative. However, the exponential function is a holomorphic function with a nonzero derivative, but is not one-to-one since it is periodic.&lt;ref&gt;Richard M. Timoney (2004), [http://www.maths.tcd.ie/~richardt/414/414-ch7.pdf Riemann mapping theorem] from [[Trinity College, Dublin]]&lt;/ref&gt;
+
+The [[Riemann mapping theorem]], one of the profound results of [[complex analysis]], states that any non-empty open [[simply connected]] proper subset of &lt;math&gt;\mathbb{C}&lt;/math&gt; admits a [[bijection|bijective]] conformal map to the open [[unit disk]] in &lt;math&gt;\mathbb{C}&lt;/math&gt;.
+
+=== Global conformal maps on the Riemann sphere === 
+
+A map of the [[Riemann sphere]] [[surjection|onto]] itself is conformal if and only if it is a [[Möbius transformation]]. 
+
+The complex conjugate of a Möbius transformation preserves angles, but reverses the orientation. For example, [[Inversive_geometry#Circle_inversion|circle inversions]].
+
+==Conformal maps in three or more dimensions==
+===Riemannian geometry===
+{{see also|Conformal geometry}}
+In [[Riemannian geometry]], two [[Riemannian metric]]s &lt;math&gt;g&lt;/math&gt; and &lt;math&gt;h&lt;/math&gt; on a smooth manifold &lt;math&gt;M&lt;/math&gt; are called '''conformally equivalent''' if &lt;math&gt; g = u h &lt;/math&gt; for some positive function &lt;math&gt;u&lt;/math&gt; on &lt;math&gt;M&lt;/math&gt;. The function &lt;math&gt;u&lt;/math&gt; is called the '''conformal factor'''.
+
+A [[diffeomorphism]] between two Riemannian manifolds is called a '''conformal map''' if the pulled back metric is conformally equivalent to the original one.  For example, [[stereographic projection]] of a [[sphere]] onto the [[plane (mathematics)|plane]] augmented with a [[point at infinity]] is a conformal map.
+
+One can also define a '''conformal structure''' on a smooth manifold, as a class of conformally equivalent [[Riemannian metric]]s.
+
+===Euclidean space===
+A [[Liouville's theorem (conformal mappings)|classical theorem]] of [[Joseph Liouville]] shows that there are much fewer conformal maps in higher dimensions than in two dimensions. Any conformal map on a portion of [[Euclidean space]] of dimension three or greater can be composed from three types of transformations: a [[homothetic transformation|homothety]], an [[isometry]], and a [[special conformal transformation]].
+
+==Applications==
+===Cartography===
+{{main|Conformal map projection}}
+In [[cartography]], several named [[map projection]]s, including the [[Mercator projection]] and the [[stereographic projection]] are conformal. These enjoy the property that the distortion of shapes can be made as small as desired by making the diameter of the mapped region small enough. 
+
+===Physics and engineering===
+Conformal mappings are invaluable for solving problems in engineering and physics that can be expressed in terms of functions of a complex variable yet exhibit inconvenient geometries. By choosing an appropriate mapping, the analyst can transform the inconvenient geometry into a much more convenient one. For example, one may wish to calculate the electric field, &lt;math&gt;E(z)&lt;/math&gt;, arising from a point charge located near the corner of two conducting planes separated by a certain angle (where &lt;math&gt;z&lt;/math&gt; is the complex coordinate of a point in 2-space). This problem ''per se'' is quite clumsy to solve in closed form. However, by employing a very simple conformal mapping, the inconvenient angle is mapped to one of precisely &lt;math&gt;\pi&lt;/math&gt; radians, meaning that the corner of two planes is transformed to a straight line. In this new domain, the problem (that of calculating the electric field impressed by a point charge located near a conducting wall) is quite easy to solve. The solution is obtained in this domain, &lt;math&gt;E(w)&lt;/math&gt;, and then mapped back to the original domain by noting that &lt;math&gt;w&lt;/math&gt; was obtained as a function (''viz''., the [[function composition|composition]] of &lt;math&gt;E&lt;/math&gt; and &lt;math&gt;w&lt;/math&gt;) of &lt;math&gt;z&lt;/math&gt;, whence &lt;math&gt;E(w)&lt;/math&gt; can be viewed as &lt;math&gt;E(w(z))&lt;/math&gt;, which is a function of &lt;math&gt;z&lt;/math&gt;, the original coordinate basis. Note that this application is not a contradiction to the fact that conformal mappings preserve angles, they do so only for points in the interior of their domain, and not at the boundary. Another example is the application of conformal mapping technique for solving the [[boundary value problem]] of [[Slosh dynamics|liquid sloshing]] in tanks.&lt;ref&gt;{{Cite journal|last1=Kolaei|first1=Amir|last2=Rakheja|first2=Subhash|last3=Richard|first3=Marc J.|date=2014-01-06|title=Range of applicability of the linear fluid slosh theory for predicting transient lateral slosh and roll stability of tank vehicles|url= |journal=Journal of Sound and Vibration|volume=333|issue=1|pages=263–282|doi=10.1016/j.jsv.2013.09.002|bibcode=2014JSV...333..263K}}&lt;/ref&gt;
+
+If a function is [[harmonic function|harmonic]] (that is, it satisfies [[Laplace's equation]] &lt;math&gt;\nabla^2 f=0&lt;/math&gt;) over a plane domain (which is two-dimensional), and is transformed via a conformal map to another plane domain, the transformation is also harmonic.  For this reason, any function which is defined by a [[potential]] can be transformed by a conformal map and still remain governed by a potential.  Examples in [[physics]] of equations defined by a potential include the [[electromagnetic field]], the [[gravitational field]], and, in [[fluid dynamics]], [[potential flow]], which is an approximation to fluid flow assuming constant [[density]], zero [[viscosity]], and [[irrotational vector field|irrotational flow]].  One example of a fluid dynamic application of a conformal map is the [[Joukowsky transform]].
+
+For discrete systems, Keyvan&lt;ref&gt;{{Cite journal|last=Noury|first=Keyvan|date=2020|title=A Psuedo S-plane Mapping of Z-plane Root Locus|journal=Asme Imece2020|volume=|pages=|doi=10.1115/IMECE2020-23096|doi-broken-date=2020-09-03}}&lt;/ref&gt; presented a way to convert discrete systems [[root locus]] into continuous [[root locus]] through a well-know conformal mapping in geometry (aka [[Inversive geometry|inversion mapping]]). 
+
+===Maxwell's equations===
+{{main|spherical wave transformation}}
+A large group of conformal maps for relating solutions of [[Maxwell's equations]] was identified by [[Ebenezer Cunningham]] (1908) and [[Harry Bateman]] (1910). Their training at Cambridge University had given them facility with the [[method of image charges]] and associated methods of images for spheres and inversion. As recounted by Andrew Warwick (2003) ''Masters of Theory'':
+&lt;ref&gt;{{cite book|last1=Warwick|first1=Andrew|title=Masters of theory : Cambridge and the rise of mathematical physics|url=https://archive.org/details/mastersoftheoryc0000warw|url-access=registration|date=2003|publisher=[[University of Chicago Press]]|pages=[https://archive.org/details/mastersoftheoryc0000warw/page/404 404–424]|isbn=978-0226873756}}&lt;/ref&gt;
+
+: Each four-dimensional solution could be inverted in a four-dimensional hyper-sphere of pseudo-radius &lt;math&gt;K&lt;/math&gt; in order to produce a new solution.
+Warwick highlights this &quot;new theorem of relativity&quot; as a Cambridge response to Einstein, and as founded on exercises using the method of inversion, such as found in [[James Hopwood Jeans]] textbook ''Mathematical Theory of Electricity and Magnetism''.
+
+===General relativity===
+In [[general relativity]], conformal maps are the simplest and thus most common type of causal transformations. Physically, these describe different universes in which all the same events and interactions are still (causally) possible, but a new additional force is necessary to effect this (that is, replication of all the same trajectories would necessitate departures from [[geodesic]] motion because the [[metric tensor (general relativity)|metric tensor]] is different). It is often used to try to make models amenable to extension beyond [[Gravitational singularity|curvature singularities]], for example to permit description of the universe even before the [[Big Bang]].
+
+==Pseudo-Riemannian geometry==
+In differential geometry a mapping is conformal ''when angles are preserved''. When the angle is related to the metric, it is sufficient for the mapping to result in a metric that is proportional to the original, as expressed above for Riemannian geometry or in the case of a [[conformal manifold]] with the type of [[metric tensor (general relativity)|metric tensor]] used in [[general relativity]]. An elementary consideration of [[surface (differential geometry)|surface]] mapping and linear algebra reveals potentially three types of angles: [[angle|circular angle]], [[hyperbolic angle]], and [[slope]]:
+
+Suppose &lt;math&gt;f: U \rightarrow \mathbb{C}&lt;/math&gt; is a mapping of surfaces parameterized by &lt;math&gt;(x,y)&lt;/math&gt; and &lt;math&gt;(u,v)&lt;/math&gt;. The [[Jacobian matrix]] of &lt;math&gt;f&lt;/math&gt; is formed by the four [[partial derivative]]s of &lt;math&gt;u&lt;/math&gt; and &lt;math&gt;v&lt;/math&gt; with respect to &lt;math&gt;x&lt;/math&gt; and &lt;math&gt;y&lt;/math&gt;.
+
+If the Jacobian &lt;math&gt;g&lt;/math&gt; has a non-zero [[determinant]], then &lt;math&gt;f&lt;/math&gt; is '''conformal with respect to one of the three angle types''', depending on the [[2 × 2 real matrices|real matrix]] expressed by the Jacobian &lt;math&gt;g&lt;/math&gt;.
+
+Indeed, any such &lt;math&gt;g&lt;/math&gt; lies in a particular ''planar'' commutative [[subring]], and &lt;math&gt;g&lt;/math&gt; has a [[polar decomposition#Alternative planar decompositions|polar decomposition]] determined by parameters of radial and angular nature. The radial parameter corresponds to a [[similarity (geometry)|similarity mapping]] and can be taken as 1 for purposes of conformal examination. The angular parameter of &lt;math&gt;g&lt;/math&gt; is one of the three types, slope, hyperbolic, or circular:
+* When the subring is isomorphic to the [[dual number]] plane, then &lt;math&gt;g&lt;/math&gt; acts as a [[shear mapping]] and preserves the dual angle.
+* When the subring is isomorphic to the [[split-complex number]] plane, then &lt;math&gt;g&lt;/math&gt; acts as a [[squeeze mapping]] and preserves the hyperbolic angle.
+* When the subring is isomorphic to the ordinary [[complex number]] plane, then &lt;math&gt;g&lt;/math&gt; acts as a [[rotation]] and preserves the circular angle.
+While describing analytic [[motor variable#Bireal variable|functions of a bireal variable]], U. Bencivenga and G. Fox have written about conformal maps that preserve the hyperbolic angle. In general, a [[linear fractional transformation]] on any one of the types of complex plane listed provides a conformal map.
+
+==See also==
+* [[Carathéodory's theorem (conformal mapping)|Carathéodory's theorem]] – A conformal map extends continuously to the boundary
+* [[Penrose diagram]]
+* [[Schwarz–Christoffel mapping]] – a conformal transformation of the upper half-plane onto the interior of a simple polygon
+* [[Special linear group]] – transformations that preserve volume (as opposed to angles) and orientation
+
+== References ==
+{{reflist}}
+
+== Further reading ==
+* {{Citation | last1=Ahlfors | first1=Lars V. | title=Conformal invariants: topics in geometric function theory | publisher=McGraw–Hill Book Co. | location=New York | mr=0357743 | year=1973}}
+* [[Constantin Carathéodory]] (1932) ''Conformal Representation'', Cambridge Tracts in Mathematics and Physics
+* {{Citation |last=Chanson |first=H. |authorlink=Hubert Chanson |title=Applied Hydrodynamics: An Introduction to Ideal and Real Fluid Flows |url=http://espace.library.uq.edu.au/view/UQ:191112 |publisher=CRC Press, Taylor &amp; Francis Group, Leiden, The Netherlands, 478 pages |year=2009 |isbn=978-0-415-49271-3}}
+* {{Citation | last1=Churchill | first1=Ruel V. | authorlink=Ruel Churchill | title=Complex Variables and Applications | publisher=McGraw–Hill Book Co. | location=New York | isbn=978-0-07-010855-4 | year=1974 | url-access=registration | url=https://archive.org/details/complexvariable00chur }}
+* {{springer|id=C/c024780|title=Conformal mapping|author=E.P. Dolzhenko}}
+* {{Citation | last1=Rudin | first1=Walter | author1-link=Walter Rudin | title=Real and complex analysis | publisher=McGraw–Hill Book Co. | location=New York | edition=3rd | isbn=978-0-07-054234-1 | mr=924157 | year=1987}}
+* {{MathWorld | urlname=ConformalMapping | title=Conformal Mapping }}
+
+== External links ==
+{{Commons category|Conformal mapping}}
+* [http://virtualmathmuseum.org/ConformalMaps/index.html Interactive visualizations of many conformal maps]
+* [http://demonstrations.wolfram.com/ConformalMaps/ Conformal Maps] by Michael Trott, [[Wolfram Demonstrations Project]].
+* [http://www.bru.hlphys.jku.at/conf_map/index.html Conformal Mapping images of current flow] in different geometries without and with magnetic field by Gerhard Brunthaler.
+* [https://www.flickr.com/photos/sbprzd/362529354 Conformal Transformation: from Circle to Square].
+* [http://www.davidbau.com/conformal Online Conformal Map Grapher].
+* [http://airfoil.dimanov.com/ Joukowski Transform Interactive WebApp]
+*A conformal mapping drawn by [http://escherdroste.math.leidenuniv.nl/index.php?menu=animation M. C. Escher]
+
+{{Authority control}}
+
+[[Category:Conformal mappings| ]]
+[[Category:Riemannian geometry]]
+[[Category:Map projections]]
+[[Category:Angle]]</text>
+      <sha1>9zsic305tspsmid5jk6updesz8v22hc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>James J. Hill</title>
+    <ns>0</ns>
+    <id>50628</id>
+    <revision>
+      <id>985960484</id>
+      <parentid>985960446</parentid>
+      <timestamp>2020-10-28T23:59:02Z</timestamp>
+      <contributor>
+        <username>CodingCyclone</username>
+        <id>39284064</id>
+      </contributor>
+      <minor />
+      <comment>Reverted 1 edit by [[Special:Contributions/2607:FEA8:4E00:9D30:15F9:7A98:265C:56E4|2607:FEA8:4E00:9D30:15F9:7A98:265C:56E4]] ([[User talk:2607:FEA8:4E00:9D30:15F9:7A98:265C:56E4|talk]]) to last revision by LizardJr8</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="37284" xml:space="preserve">{{Infobox person
+|name=James J. Hill
+|image=James J. Hill at 35.jpg
+|imagesize=
+|caption = Hill ''circa'' 1875
+|birth_name=James Jerome Hill
+|birth_date={{Birth date|1838|9|16}}
+|birth_place=[[Guelph/Eramosa|Eramosa Township, Ontario]], [[Upper Canada]]
+|death_date = {{Death date and age|1916|5|29|1838|9|16}}
+|death_place=[[St. Paul, Minnesota]], U.S.
+|occupation=Railroad tycoon
+|nationality = [[Canadian-American]]
+|spouse= Mary Theresa Mehegan
+|children= 10
+}}
+
+'''James Jerome Hill''' (September 16, 1838 – May 29, 1916), was a [[Canadian-American]] [[railroad]] executive. He was the [[chief executive officer]] of a family of lines headed by the [[Great Northern Railway (U.S.)|Great Northern Railway]], which served a substantial area of the Upper [[midwestern United States|Midwest]], the northern [[Great Plains]], and [[Pacific Northwest]]. Because of the size of this region and the economic dominance exerted by the Hill lines, Hill became known during his lifetime as &quot;The Empire Builder&quot;.
+
+==Biography==

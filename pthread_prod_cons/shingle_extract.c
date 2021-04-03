@@ -17,7 +17,7 @@ void shingle_extract_buf(char* buf, long numb_shingles, char **shingles){
             shingles[i] = (char *)malloc(K_SHINGLE*(sizeof(char)));
 
     
-    //#pragma omp parallel for collapse(2) num_threads(2) 
+  //  #pragma omp parallel for collapse(2) num_threads(2) 
         for (int count = 0; count < numb_shingles; count++) {
             for (int pos = 0; pos < K_SHINGLE; pos++){
                 shingles[count][pos] = buf[count + pos];

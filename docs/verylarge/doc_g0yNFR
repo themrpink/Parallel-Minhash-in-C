@@ -1,0 +1,729 @@
+[[File:16QAM Gray Coded.svg|200px|thumb|right|A Gray-coded constellation diagram for rectangular 16-[[Quadrature amplitude modulation|QAM]]]]
+
+Two-dimensional Gray codes are used in communication to minimize the number of bit errors in [[quadrature amplitude modulation]] adjacent points in the [[Constellation diagram|constellation]]. In a typical encoding the horizontal and vertical adjacent constellation points differ by a single bit, and diagonal adjacent points differ by 2 bits.&lt;ref name=&quot;Krishna_2008&quot;/&gt;
+
+== Gray isometry ==
+
+The bijective mapping { 0 ↔ 00, 1 ↔ 01, 2 ↔ 11, 3  ↔ 10 } establishes an [[isometry]] between the [[metric space]] over the [[finite field]] &lt;math&gt;\mathbb{Z}_2^2&lt;/math&gt; with the metric given by the [[Hamming distance]] and the metric space over the [[finite ring]] &lt;math&gt;\mathbb{Z}_4&lt;/math&gt; (the usual [[modular arithmetic]]) with the metric given by the [[Lee distance]]. The mapping is suitably extended to an isometry of the [[Hamming space]]s &lt;math&gt;\mathbb{Z}_2^{2m}&lt;/math&gt; and &lt;math&gt;\mathbb{Z}_4^m&lt;/math&gt;. Its importance lies in establishing a correspondence between various &quot;good&quot; but not necessarily [[linear code]]s as Gray-map images in &lt;math&gt;\mathbb{Z}_2^2&lt;/math&gt; of [[linear code#Generalization|ring-linear code]]s from &lt;math&gt;\mathbb{Z}_4&lt;/math&gt;.&lt;ref name=&quot;Greferath_2009&quot;/&gt;&lt;ref name=&quot;Hazewinkel-Sole_2016&quot;/&gt;
+
+== Related codes ==
+
+There are a number of binary codes similar to Gray codes, including:
+
+* {{anchor|Datex}}Datex codes aka Giannini codes (1954), as described by Carl P. Spaulding,&lt;ref name=&quot;Spaulding_1954&quot;/&gt;&lt;ref name=&quot;Spaulding_1965&quot;/&gt;&lt;ref name=&quot;Wheeler_1969&quot;/&gt;&lt;ref name=&quot;Dokter-Steinhauer_1973&quot;/&gt;&lt;ref name=&quot;Dokter-Steinhauer_1975&quot;/&gt;&lt;ref name=&quot;MIL_1991&quot;/&gt; use a variant of [[#O'Brien II|O'Brien code&amp;nbsp;II]].
+* {{anchor|Varec}} Codes used by Varec (ca. 1954),&lt;ref name=&quot;Varec_1954&quot;/&gt;&lt;ref name=&quot;Bishup-Repeta-Giarrizzo_1963&quot;/&gt;&lt;ref name=&quot;Whessoe_1993&quot;/&gt;&lt;ref name=&quot;Emerson&quot;/&gt; use a variant of [[#O'Brien I|O'Brien code I]] as well as base-12 and base-16 Gray code variants.
+* {{anchor|Lucal|MRB}}Lucal code (1959)&lt;ref name=&quot;Lucal_1959&quot;/&gt;&lt;ref name=&quot;Sellers-Hsiao-Bearnson_1968&quot;/&gt;&lt;ref name=&quot;Doran_2007&quot;/&gt; aka modified reflected binary code (MRB)&lt;ref name=&quot;Lucal_1959&quot;/&gt;&lt;ref name=&quot;Sellers-Hsiao-Bearnson_1968&quot;/&gt;
+* {{anchor|Gillham}}[[Gillham code]] (1961/1962),&lt;ref name=&quot;Wheeler_1969&quot;/&gt;&lt;ref name=&quot;Wightman_1972&quot;/&gt;&lt;ref name=&quot;MIL_1991&quot;/&gt;&lt;ref name=&quot;Phillips_1998&quot;/&gt;&lt;ref name=&quot;Stewart_2010&quot;/&gt; uses a variant of [[#Datex|Datex]] code and [[#O'Brien II|O'Brien code&amp;nbsp;II]].
+* {{anchor|Leslie-Russell}}Leslie and Russell code (1964)&lt;ref name=&quot;Leslie-Russell_1964&quot;/&gt;&lt;ref name=&quot;Russell_1964&quot;/&gt;&lt;ref name=&quot;Leslie_1974&quot;/&gt;&lt;ref name=&quot;Wightman_1972&quot;/&gt;
+* {{anchor|RRE}}Royal Radar Establishment code&lt;!-- TBD: somewhen between (1957 and 1972) --&gt;&lt;ref name=&quot;Wightman_1972&quot;/&gt;
+* {{anchor|Hoklas}}Hoklas code (1988)&lt;ref name=&quot;Hoklas_1989&quot;/&gt;&lt;ref name=&quot;Hoklas_2005_1&quot;/&gt;&lt;ref name=&quot;Hoklas_2005_2&quot;/&gt;
+
+The following [[binary-coded decimal]] (BCD) codes are Gray code variants as well:
+
+* {{anchor|Petherick|RAE}}Petherick code (1953),&lt;ref name=&quot;Petherick_1953&quot;/&gt;&lt;ref name=&quot;Petherick-Hopkins_1958&quot;/&gt;&lt;ref name=&quot;Baumgartner_1963&quot;/&gt;&lt;ref name=&quot;Charnley-Bidgood-Boardman_1965&quot;/&gt;&lt;ref name=&quot;Hoklas_2005_1&quot;/&gt;&lt;ref group=&quot;nb&quot; name=&quot;NB_Petherick_OBrien-II&quot;/&gt; also known as [[Royal Aircraft Establishment]] (RAE) code.&lt;ref name=&quot;Hollingdale_1958&quot;/&gt;
+* {{anchor|Foss|O'Brien|O'Brien I|Watts|O'Brien II}}O'Brien codes I and II (1955)&lt;ref name=&quot;O'Brien_1955&quot;/&gt;&lt;ref name=&quot;Steinbuch_1962&quot;/&gt;&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;/&gt;&lt;ref name=&quot;Dokter-Steinhauer_1973&quot;/&gt;&lt;ref name=&quot;Dokter-Steinhauer_1975&quot;/&gt;&lt;ref name=&quot;Hoklas_2005_1&quot;/&gt; (An O'Brien type-I code&lt;ref group=&quot;nb&quot; name=&quot;NB_OBrien-I_Glixon&quot;/&gt; was already described by Frederic A. Foss of [[IBM]]&lt;ref name=&quot;Foss_1954_1&quot;/&gt;&lt;ref name=&quot;Foss_1954_2&quot;/&gt; and used by [[#Varec|Varec]] in 1954. Later, it was also known as Watts code or Watts reflected decimal (WRD) code.&lt;ref name=&quot;Evans_1958&quot;/&gt;&lt;ref name=&quot;Evans_1960&quot;/&gt;&lt;ref name=&quot;Evans_1961&quot;/&gt;&lt;ref name=&quot;Benjamin-Nicholls_1963&quot;/&gt;&lt;ref name=&quot;Klinkowski_1964&quot;/&gt;&lt;ref name=&quot;Klinkowski_1966&quot;/&gt;&lt;ref name=&quot;EDN_1967&quot;/&gt;&lt;ref name=&quot;Toth-Zentai_1979&quot;/&gt;&lt;ref group=&quot;nb&quot; name=&quot;NB_Arithmetic_conversion&quot;/&gt; An O'Brien type-II code was already used by [[#Datex|Datex]] in 1954.&lt;ref group=&quot;nb&quot; name=&quot;NB_Petherick_OBrien-II&quot;/&gt;)
+* {{anchor|Gray excess|Gray–Stibitz}}Excess-3 Gray code (1956)&lt;ref name=&quot;Turvey_1956&quot;/&gt; (aka Gray [[excess-3]] code,&lt;ref name=&quot;Dokter-Steinhauer_1973&quot;/&gt;&lt;ref name=&quot;Dokter-Steinhauer_1975&quot;/&gt;&lt;ref name=&quot;MIL_1991&quot;/&gt; Gray 3-excess code, reflex excess-3 code, excess Gray code,&lt;ref name=&quot;Hoklas_2005_1&quot;/&gt; Gray excess code, 10-excess-3 Gray code or Gray–Stibitz code), described by Frank P. Turvey Jr. of [[International Telephone and Telegraph Corporation|ITT]].&lt;ref name=&quot;Turvey_1956&quot;/&gt;
+* {{anchor|Tompkins|Tompkins I|Tompkins II}}Tompkins codes I and II (1956)&lt;ref name=&quot;Tompkins_1956&quot;/&gt;&lt;ref name=&quot;Steinbuch_1962&quot;/&gt;&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;/&gt;&lt;ref name=&quot;Dokter-Steinhauer_1973&quot;/&gt;&lt;ref name=&quot;Dokter-Steinhauer_1975&quot;/&gt;&lt;ref name=&quot;Hoklas_2005_1&quot;/&gt;
+* {{anchor|Glixon}}Glixon code (1957)&lt;ref name=&quot;Glixon_1957&quot;/&gt;&lt;ref name=&quot;Borucki-Dittmann_1971&quot;/&gt;&lt;ref name=&quot;Kämmerer_1969&quot;/&gt;&lt;ref name=&quot;Steinbuch_1962&quot;/&gt;&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;/&gt;&lt;ref name=&quot;Dokter-Steinhauer_1973&quot;/&gt;&lt;ref name=&quot;Dokter-Steinhauer_1975&quot;/&gt;&lt;ref name=&quot;Hoklas_2005_1&quot;/&gt;&lt;ref group=&quot;nb&quot; name=&quot;NB_OBrien-I_Glixon&quot;/&gt;
+{|
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+ Decimal
+! &amp;nbsp;
+|-
+| 0
+|-
+| 1
+|-
+| 2
+|-
+| 3
+|-
+| 4
+|-
+| 5
+|-
+| 6
+|-
+| 7
+|-
+| 8
+|-
+| 9
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+{{anchor|Gray BCD}} Gray
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || 0 || 0 || 0
+|-
+| 0 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+{{anchor|Paul}} Paul
+! 4 !! 3 !! 2 !! 1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+ Glixon
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || 0 || 0 || 0
+|-
+| 0 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || 0
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+ Tompkins&amp;nbsp;I
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || 0 || 0 || 0
+|-
+| 0 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || 0
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+ O'Brien&amp;nbsp;I
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || 0 || 0 || 0
+|-
+| 0 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || 0
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+ Petherick
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+ O'Brien&amp;nbsp;II
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+{{anchor|Susskind}} Susskind
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+{{anchor|Klar}} Klar
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || 0 || 0 || 0
+|-
+| 0 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || 0
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+ Tompkins&amp;nbsp;II
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|}
+|
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;&quot;
+|+ {{nowrap|Excess-3 Gray}}
+! 4 !! 3 !! 2 !! 1
+|-
+| 0 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| 0 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1
+|-
+| style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || style=&quot;background:#0FF&quot;|1 || 0
+|-
+| style=&quot;background:#0FF&quot;|1 || 0 || style=&quot;background:#0FF&quot;|1 || 0
+|}
+|-
+| colspan=&quot;9&quot; style=&quot;text-align:left&quot; | References for code charts by {{nowrap|Gray,&lt;ref name=&quot;Steinbuch_1962&quot;/&gt;&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;/&gt;}} {{nowrap|Paul,&lt;ref name=&quot;Paul_1995&quot;/&gt;}} {{nowrap|Glixon,&lt;ref name=&quot;Glixon_1957&quot;/&gt;&lt;ref name=&quot;Steinbuch_1962&quot;/&gt;&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;/&gt;&lt;ref name=&quot;Borucki-Dittmann_1971&quot;/&gt;&lt;ref name=&quot;Kämmerer_1969&quot;/&gt;&lt;ref group=&quot;nb&quot; name=&quot;NB_OBrien-I_Glixon&quot;/&gt;}} {{nowrap|Tompkins I,&lt;ref name=&quot;Tompkins_1956&quot;/&gt;&lt;ref name=&quot;Steinbuch_1962&quot;/&gt;&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;/&gt;}} {{nowrap|O'Brien&amp;nbsp;I,&lt;ref name=&quot;O'Brien_1955&quot;/&gt;&lt;ref name=&quot;Steinbuch_1962&quot;/&gt;&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;/&gt;&lt;ref group=&quot;nb&quot; name=&quot;NB_OBrien-I_Glixon&quot;/&gt;}} {{nowrap|Petherick,&lt;ref name=&quot;Petherick_1953&quot;/&gt;&lt;ref name=&quot;Charnley-Bidgood-Boardman_1965&quot;/&gt;&lt;ref group=&quot;nb&quot; name=&quot;NB_Petherick_OBrien-II&quot;/&gt;}} {{nowrap|O'Brien&amp;nbsp;II,&lt;ref name=&quot;O'Brien_1955&quot;/&gt;&lt;ref name=&quot;Steinbuch_1962&quot;/&gt;&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;/&gt;&lt;ref group=&quot;nb&quot; name=&quot;NB_Petherick_OBrien-II&quot;/&gt;}} {{nowrap|Susskind,&lt;ref name=&quot;Susskind_1958&quot;/&gt;}} {{nowrap|Klar,&lt;ref name=&quot;Klar_1970&quot;/&gt;&lt;ref name=&quot;Klar_1989&quot;/&gt;}} {{nowrap|Tompkins II&lt;ref name=&quot;Tompkins_1956&quot;/&gt;&lt;ref name=&quot;Steinbuch_1962&quot;/&gt;&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;/&gt;}} and for {{nowrap|excess-3 Gray&lt;ref name=&quot;MIL_1991&quot;/&gt;&lt;ref name=&quot;Hoklas_2005_1&quot;/&gt;}}.
+|}
+
+== See also ==
+
+* [[Linear feedback shift register]]
+* [[De Bruijn sequence]] - a Gray code on a larger alphabet than {{math|{0,1}}}.  
+* [[Steinhaus–Johnson–Trotter algorithm]], an algorithm that generates Gray codes for the [[factorial number system]]
+* [[Minimum distance code]]
+
+==Notes==
+
+{{reflist|group=&quot;nb&quot;|refs=
+&lt;ref group=&quot;nb&quot; name=&quot;NB_OEIS_A007814&quot;&gt;Sequence 0, 1, 0, 2, 0, 1, 0, 3, … {{OEIS|id=A007814}}&lt;!-- https://web.archive.org/web/20200806210815/https://oeis.org/A007814 --&gt;.&lt;/ref&gt;
+&lt;ref group=&quot;nb&quot; name=&quot;NB_Petherick_OBrien-II&quot;&gt;By interchanging and inverting three bit columns, the [[#O'Brien II|O'Brien code II]] and the [[#Petherick|Petherick code]] can be transferred into each other.&lt;/ref&gt;
+&lt;ref group=&quot;nb&quot; name=&quot;NB_OBrien-I_Glixon&quot;&gt;By swapping two pairs of bit columns, individually shifting four bit columns and inverting one of them, the [[#Glixon|Glixon code]] and the [[#O'Brien I|O'Brien code I]] can be transferred into each other.&lt;/ref&gt;
+&lt;ref group=&quot;nb&quot; name=&quot;NB_Arithmetic_conversion&quot;&gt;By applying a simple ''inversion rule'', the Gray code and the [[#O'Brien I|O'Brien code I]] can be translated into the 8421 [[pure binary code]] and the 2421 [[Aiken code]], respectively, to ease arithmetic operations.{{citeref|Evans|1961|A}}&lt;/ref&gt;
+}}
+
+==References==
+
+{{reflist|refs=
+&lt;ref name=&quot;Gray_1947&quot;&gt;{{cite book |author-first=Frank |author-last=Gray |author-link=Frank Gray (researcher) |title=Pulse Code Communication |date=1953-03-17&lt;!-- gdate --&gt; |orig-date=1947-11-13&lt;!-- fdate --&gt; |publisher=[[Bell Telephone Laboratories, Incorporated]] |location=New York, USA |id={{US patent|2632058}}. Serial No. 785697 |url=https://patentimages.storage.googleapis.com/a3/d7/f2/0343f5f2c0cf50/US2632058.pdf |access-date=2020-08-05 |url-status=live |archive-url=https://web.archive.org/web/20200805094312/https://patentimages.storage.googleapis.com/a3/d7/f2/0343f5f2c0cf50/US2632058.pdf |archive-date=2020-08-05}} (13 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Breckman_1953&quot;&gt;{{cite book |author-first=Jack |author-last=Breckman |title=Encoding Circuit |date=1956-01-31&lt;!-- gdate --&gt; |orig-date=1953-12-31&lt;!-- fdate --&gt; |publisher=[[US Secretary of the Army]] |location=Long Branch, New Jersey, USA |id={{US patent|2733432}}. Serial No. 401738 |url=https://patentimages.storage.googleapis.com/46/90/d6/2ed9fb7a77e643/US2733432.pdf |access-date=2020-08-05 |url-status=live |archive-url=https://web.archive.org/web/20200805094857/https://patentimages.storage.googleapis.com/46/90/d6/2ed9fb7a77e643/US2733432.pdf |archive-date=2020-08-05}} (8 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Ragland-Schultheis_1953&quot;&gt;{{cite book |author-first1=Earl Albert |author-last1=Ragland |author-first2=Harry B. |author-last2=Schultheis, Jr. |title=Direction-Sensitive Binary Code Position Control System |date=1958-02-11&lt;!-- --&gt; |orig-date=1953-10-16&lt;!-- fdate --&gt; |publisher=Bendix Aviation Corporation |location=North Hollywood, California, USA |id={{US patent|2823345}}. Serial No. 386524 |url=https://patentimages.storage.googleapis.com/ad/74/b1/2b0aa965d0c1df/US2823345.pdf |access-date=2020-08-05 |url-status=live |archive-url=https://web.archive.org/web/20200805095445/https://patentimages.storage.googleapis.com/ad/74/b1/2b0aa965d0c1df/US2823345.pdf |archive-date=2020-08-05}} (10 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Domeshek-Reiner_1954&quot;&gt;{{cite book |author-first1=Sol |author-last1=Domeshek |author-first2=Stewart |author-last2=Reiner |title=Automatic Rectification System |date=1958-06-24&lt;!-- gdate --&gt; |orig-date=1954-01-08&lt;!-- fdate --&gt; |publisher=[[US Secretary of the Navy]] |location= |id={{US patent|2839974}}. Serial No. 403085 |url=https://patentimages.storage.googleapis.com/9d/bf/65/e676a661e1217e/US2839974.pdf |access-date=2020-08-05 |url-status=live |archive-url=https://web.archive.org/web/20200805100327/https://patentimages.storage.googleapis.com/9d/bf/65/e676a661e1217e/US2839974.pdf |archive-date=2020-08-05}} (8 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Hulst_1957&quot;&gt;{{cite book |title=Reflected binary code counter |author-first=George D. |author-last=Hulst |publisher=[[International Telephone and Telegraph Corporation]] (ITT) |location=Nutley, New Jersey, USA |date=1962-02-06&lt;!-- gdate --&gt; |orig-date=1957-11-15&lt;!-- fdate --&gt; |id={{US patent|3020481}}. Serial No. 696793 |url=https://patentimages.storage.googleapis.com/a2/e5/21/f5abbb073bf21c/US3020481.pdf |access-date=2020-08-06 |url-status=live |archive-url=https://web.archive.org/web/20200806210248/https://patentimages.storage.googleapis.com/a2/e5/21/f5abbb073bf21c/US3020481.pdf |archive-date=2020-08-06}} (5 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Doran_2007&quot;&gt;{{cite book |title=The Gray Code |series=CDMTCS Research Report Series |author-first=Robert &quot;Bob&quot; William |author-last=Doran |author-link=Robert William Doran |publisher=Centre for Discrete Mathematics and Theoretical Computer Science, [[University of Auckland]], New Zealand |date=March 2007 |id=CDMTCS-304 |url=https://www.cs.auckland.ac.nz/research/groups/CDMTCS//researchreports/304bob.pdf |access-date=2020-05-23 |url-status=live |archive-url=https://web.archive.org/web/20200522091749/https://www.cs.auckland.ac.nz/research/groups/CDMTCS//researchreports/304bob.pdf |archive-date=2020-05-22}} (25 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Turvey_1956&quot;&gt;{{cite web |title=Pulse-Count Coder |author-first=Frank P. |author-last=Turvey, Jr. |id={{US patent|2845617A}}. Serial No. 585494 |date=1958-07-29 |orig-date=1956-05-17 |publisher=[[International Telephone and Telegraph Corporation]] |location=Nutley, New Jersey, USA |url=https://patentimages.storage.googleapis.com/14/07/c6/404dafe27dc829/US2845617.pdf |access-date=2020-05-23 |url-status=live |archive-url=https://web.archive.org/web/20200523115811/https://patentimages.storage.googleapis.com/14/07/c6/404dafe27dc829/US2845617.pdf |archive-date=2020-05-23}} (5 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Winder_1959&quot;&gt;{{cite journal |title=Shaft Angle Encoders Afford High Accuracy |author-first=C. Farrell |author-last=Winder |journal=[[Electronic Industries (journal)|Electronic Industries]] |publisher=[[Chilton Company]] |volume=18 |number=10 |date=October 1959 |pages=76–80 |url=http://www.americanradiohistory.com/Archive-Electronic-Industries/50s/Electronic-Industries-1959-10.pdf |access-date=2018-01-14 |url-status=usurped |archive-url= |archive-date= |quote-page= |quote=[…] The type of code wheel most popular in [[optical encoder]]s contains a cyclic binary code pattern designed to give a cyclic sequence of &quot;on-off&quot; outputs. The cyclic binary code is also known as the cyclic progression code, the reflected binary code, and the Gray code. This code was originated by [[G. R. Stibitz]], of [[Bell Telephone Laboratories]], and was first proposed for [[pulse code modulation]] systems by [[Frank Gray (researcher)|Frank Gray]], also of BTL. Thus the name Gray code. It is also named as &quot;Unit Distance Code&quot; as any two adjacent codes is differ by one (1). The Gray or cyclic code is used mainly to eliminate the possibility of errors at code transition which could result in gross ambiguities. […]}}&lt;/ref&gt;
+&lt;ref name=&quot;Wakerly_1994&quot;&gt;{{cite book |title=Digital Design: Principles &amp; Practices |author-last=Wakerly |author-first=John F. |date=1994 |publisher=[[Prentice Hall]] |location=New Jersey, USA |isbn=0-13-211459-3 |id={{ISBN|978-0-13-211459-2}} |pages=48–49, 222}} (NB. The two page sections taken together say that [[K-map]]s are labeled with Gray code. The first section says that they are labeled with a code that changes only one bit between entries and the second section says that such a code is called Gray code.)&lt;/ref&gt;
+&lt;ref name=&quot;Brown_2012&quot;&gt;{{cite book |title=Boolean Reasoning – The Logic of Boolean Equations |author-first=Frank Markham |author-last=Brown |edition=&lt;!-- 2012 --&gt;reissue of 2nd |publisher=[[Dover Publications, Inc.]] |location=Mineola, New York |date=2012 |orig-date=2003, 1990 |isbn=978-0-486-42785-0 |page=49}} [&lt;!-- 1st edition --&gt;http://www2.fiit.stuba.sk/~kvasnicka/Free%20books/Brown_Boolean%20Reasoning.pdf 1st edition&lt;!-- https://web.archive.org/web/20170416231752/http://www2.fiit.stuba.sk/~kvasnicka/Free%20books/Brown_Boolean%20Reasoning.pdf --&gt;]&lt;/ref&gt;
+&lt;ref name=&quot;Händler_1958&quot;&gt;{{cite book |title=Ein Minimisierungsverfahren zur Synthese von Schaltkreisen (Minimisierungsgraphen) |language=de |author-first=Wolfgang |author-last=Händler |author-link=Wolfgang Händler |publisher=[[Technische Hochschule Darmstadt]] |location=Potsdam, Germany |date=1958 |id=D&amp;nbsp;17 |type=Dissertation |url=https://books.google.com/books?id=D58TAQAAIAAJ}} (73 pages+app.) [https://www.tib.eu/de/suchen/id/TIBKAT%3A044782241/Ein-Minimisierungsverfahren-zur-Synthese-von-Schaltkreisen/]&lt;/ref&gt;
+&lt;ref name=&quot;Steinbuch-Wagner_1967&quot;&gt;{{cite book |title=Taschenbuch der Nachrichtenverarbeitung |language=de |editor-first1=Karl W. |editor-last1=Steinbuch |editor-link1=Karl W. Steinbuch |editor-first2=Siegfried W. |editor-last2=Wagner |author-first1=Erich R. |author-last1=Berger |author-first2=Wolfgang |author-last2=Händler |author-link2=Wolfgang Händler |date=1967 |orig-date=1962 |edition=2 |publisher=[[Springer-Verlag OHG]] |location=Berlin, Germany |id=Title No. 1036 |lccn=67-21079 |pages=64, 1034–1035, 1036, 1038 |quote-page=64 |quote=[…] Übersichtlich ist die Darstellung nach ''[[Wolfgang Händler|Händler]]'', die sämtliche Punkte, numeriert nach dem ''Gray-Code'' […], auf dem Umfeld eines Kreises anordnet. Sie erfordert allerdings sehr viel Platz. […] |trans-quote=''Händler's'' diagram, where all points, numbered according to the ''Gray code'', are arranged on the circumference of a circle, is easily comprehensible. It needs, however, a lot of space.}}&lt;/ref&gt;
+&lt;ref name=&quot;ISER_1&quot;&gt;{{cite web |title=Informatik Sammlung Erlangen (ISER) |date=2012-03-13 |publisher=[[Friedrich-Alexander Universität]] |location=Erlangen, Germany |language=de |url=https://www.rrze.fau.de/wir-ueber-uns/kooperationen/iser.shtml |access-date=2017-04-12 |url-status=dead |archive-url=https://web.archive.org/web/20170516154655/https://www.rrze.fau.de/wir-ueber-uns/kooperationen/iser.shtml |archive-date=2017-05-16}}&lt;/ref&gt;
+&lt;ref name=&quot;ISER_2&quot;&gt;{{cite web |title=Informatik Sammlung Erlangen (ISER) – Impressum |date=2012-03-13 |publisher=[[Friedrich-Alexander Universität]] |location=Erlangen, Germany |language=de |url=http://www.iser.uni-erlangen.de:80/index.php?ort_id=327&amp;tree=0 |access-date=2017-04-15 |url-status=live |archive-url=https://web.archive.org/web/20120226004316/http://www.iser.uni-erlangen.de/index.php?ort_id=327&amp;tree=0 |archive-date=2012-02-26}}&lt;/ref&gt;
+&lt;ref name=&quot;Kautz_1958&quot;&gt;{{cite journal |author-last=Kautz |author-first=William H. |author-link=William H. Kautz |title=Unit-Distance Error-Checking Codes |journal=[[IRE Transactions on Electronic Computers]] |issn=0367-9950 |volume=EC-7 |issue=2 |date=June 1958 |doi=10.1109/TEC.1958.5222529 |s2cid=26649532 |pages=179–180}} (2 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Richards_1971&quot;&gt;{{cite book |author-first=Richard Kohler |author-last=Richards |title=Digital Design |chapter=Snake-in-the-Box Codes |publisher=[[Wiley-Interscience]], [[John Wiley &amp; Sons, Inc.]] |location=Ames, Iowa, USA |publication-place=New York, USA |date=January 1971 |isbn=0-471-71945-5 |lccn=73-147235 |pages=206–207}} (12+577+1 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Sellers-Hsiao-Bearnson_1968&quot;&gt;{{cite book |author-first1=Frederick F. |author-last1=Sellers, Jr. |author-first2=Mu-Yue |author-last2=Hsiao |author-first3=Leroy W. |author-last3=Bearnson |title=Error Detecting Logic for Digital Computers |publisher=[[McGraw-Hill Book Company]] |location=New York, USA |edition=1st |oclc=439460 |lccn=68-16491 |pages=152–164 |date=November 1968}}&lt;/ref&gt;
+&lt;ref name=&quot;Lucal_1959&quot;&gt;{{cite journal |author-first=Harold M. |author-last=Lucal |title=Arithmetic Operations for Digital Computers Using a Modified Reflected Binary |journal=[[IRE Transactions on Electronic Computers]] |volume=EC-8 |number=4 |pages=449–458 |date=December 1959 |issn=0367-9950 |doi=10.1109/TEC.1959.5222057 |s2cid=206673385 |url=http://ieeexplore.ieee.org/document/5222057/?reload=true}} (10 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Spaulding_1954&quot;&gt;{{cite web |title=Digital coding and translating system |author-first=Carl P. |author-last=Spaulding |publisher=Datex Corporation |location=Monrovia, California, USA |year=1965a&lt;!-- necessary for proper citeref linking --&gt; |date=1965-01-12&lt;!-- gdate --&gt; |orig-date=1954-03-09&lt;!-- fdate --&gt; |id={{US patent|3165731A}}. Serial No. 415058 |url=https://patentimages.storage.googleapis.com/7f/1d/09/6a9b1fa3e67cb8/US3165731.pdf |access-date=2018-01-21 |url-status=live |archive-url=https://web.archive.org/web/20200805101618/https://patentimages.storage.googleapis.com/7f/1d/09/6a9b1fa3e67cb8/US3165731.pdf |archive-date=2020-08-05}} (28 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Spaulding_1965&quot;&gt;{{cite book |title=How to Use Shaft Encoders |author-first=Carl P. |author-last=Spaulding |year=1965b&lt;!-- necessary for proper citeref linking --&gt; |date=1965-07-12 |publisher=Datex Corporation&lt;!-- Datex Div, of Conrac Corp. / a subsidiary of Giannini Control Corp. --&gt; |location=Monrovia, California, USA}} (85 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Foss_1954_1&quot;&gt;{{cite web |title=Control Systems |author-first=Frederic A. |author-last=Foss |date=1960-12-27&lt;!-- gdate --&gt; |orig-date=1954-12-17&lt;!-- fdate --&gt; |id={{US patent|2966670A}}. Serial No. 475945 |publisher=[[International Business Machines Corp]] |pages=Fig. 7, Fig. 8, Fig. 11 |no-pp=yes |url=https://patentimages.storage.googleapis.com/3d/a8/16/1dc616c432ca95/US2966670.pdf |access-date=2020-08-05 |url-status=live |archive-url=https://web.archive.org/web/20200621145238/https://patentimages.storage.googleapis.com/3d/a8/16/1dc616c432ca95/US2966670.pdf |archive-date=2020-06-21}} (14 pages) (NB. The author called his code 2*-4-2-1 (+9-±7-±3-±1) reflected&lt;!-- -coded --&gt; decimal code.)&lt;/ref&gt;
+&lt;ref name=&quot;Foss_1954_2&quot;&gt;{{cite journal |title=The Use of a Reflected Code in Digital Control Systems |author-first=Frederic A. |author-last=Foss |date=December 1954 |journal=[[IRE Transactions on Electronic Computers]] |volume=EC-3 |issue=4 |issn=2168-1740 |doi=10.1109/IREPGELC.1954.6499244 |pages=1–6}} (6 pages)&lt;/ref&gt;
+&lt;ref name=&quot;O'Brien_1955&quot;&gt;{{cite journal |author-first=Joseph A. |author-last=O'Brien |title=Cyclic Decimal Codes for Analogue to Digital Converters |journal=[[Transactions of the American Institute of Electrical Engineers, Part I: Communication and Electronics]] |location=Bell Telephone Laboratories, Whippany, New Jersey, USA |volume=75 |issue=2 |date=May 1956 |orig-date=1955-11-15, 1955-06-23 |issn=0097-2452 |doi=10.1109/TCE.1956.6372498 |id=Paper 56-21 |s2cid=51657314 |pages=120–122 |url=https://pdfslide.net/documents/cyclic-decimal-codes-for-analogue-to-digital-converters.html |access-date=2020-05-18}} (3 pages) (NB. This paper was prepared for presentation at the AIEE Winter General Meeting, New York, USA, 1956-01-30 to 1956-02-03.)&lt;/ref&gt;
+&lt;ref name=&quot;Tompkins_1956&quot;&gt;{{cite journal |author-first=Howard E. |author-last=Tompkins |title=Unit-Distance Binary-Decimal Codes for Two-Track Commutation |date=September 1956 |orig-date=1956-07-16 |journal=[[IRE Transactions on Electronic Computers]] |issn=0367-9950 |volume=EC-5 |issue=3 |doi=10.1109/TEC.1956.5219934 |series=Correspondence |location=[[Moore School of Electrical Engineering]], [[University of Pennsylvania]], Philadelphia, Pennsylvania, USA |page=139 |url=https://dokumen.tips/documents/unit-distance-binary-decimal-codes-for-two-track-commutation.html |access-date=2020-05-18}} (1 page)&lt;/ref&gt;
+&lt;ref name=&quot;Glixon_1957&quot;&gt;{{cite journal |date=March 1957 |title=Can You Take Advantage of the Cyclic Binary-Decimal Code? |author-first=Harry Robert |author-last=Glixon |journal=Control Engineering (CtE) |issn=0010-8049 |publisher=Technical Publishing Company |volume=4 |number=3 |pages=&lt;!-- 3, --&gt;87–91 |url=https://books.google.com/books?id=-_5IAQAAIAAJ}}&lt;!-- https://web.archive.org/web/20180115014809/https://donmooreswartales.com/2010/05/12/harry-glixon/ https://books.google.com/books?id=-_5IAQAAIAAJ&amp;focus=searchwithinvolume&amp;q=cyclic+binary+code --&gt; (5 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Steinbuch_1962&quot;&gt;{{cite book |title=Taschenbuch der Nachrichtenverarbeitung |language=de |editor-first=Karl W. |editor-last=Steinbuch |editor-link=Karl W. Steinbuch |date=1962 |edition=1 |publisher=[[Springer-Verlag OHG]] |location=Karlsruhe, Germany |publication-place=Berlin / Göttingen / New York |lccn=62-14511 |pages=71–74, 97, 761–764, 770, 1080–1081}}&lt;/ref&gt;
+&lt;ref name=&quot;Steinbuch-Weber-Heinemann_1974&quot;&gt;{{cite book |title=Taschenbuch der Informatik – Band II – Struktur und Programmierung von EDV-Systemen |language=de |editor-first1=Karl W. |editor-last1=Steinbuch |editor-link1=Karl W. Steinbuch |editor-first2=Wolfgang |editor-last2=Weber &lt;!-- |editor-link2=:de:Wolfgang Weber (Ingenieur)? --&gt; |editor-first3=Traute |editor-last3=Heinemann |date=1974 |orig-date=1967 |edition=3 |volume=2 |work=Taschenbuch der Nachrichtenverarbeitung |publisher=[[Springer Verlag]] |location=Berlin, Germany |isbn=3-540-06241-6 |id={{ISBN|978-3-540-06241-7}} |lccn=73-80607 |pages=98–100}}&lt;/ref&gt;
+&lt;ref name=&quot;Dokter-Steinhauer_1973&quot;&gt;{{cite book |title=Digital Electronics |author-first1=Folkert |author-last1=Dokter |author-first2=Jürgen |author-last2=Steinhauer |chapter=2.4. Coding numbers in the binary system |date=1973-06-18 |series=Philips Technical Library (PTL) / Macmillan Education |publisher=[[The Macmillan Press Ltd.]] / [[N. V. Philips' Gloeilampenfabrieken]] |edition=Reprint of 1st English |location=Eindhoven, Netherlands |sbn=333-13360-9 |isbn=978-1-349-01419-4 |doi=10.1007/978-1-349-01417-0 |pages=32, 39, 50–53 |chapter-url= |url=https://books.google.com/books?id=hlRdDwAAQBAJ |access-date=2020-05-11 |quote-page=53 |quote=[…] The [[#Datex|Datex code]] […] uses the [[#O'Brien II|O'Brien code II]] within each decade, and reflected decimal numbers for the decimal transitions. For further processing, code conversion to the natural decimal notation is necessary. Since the O'Brien II code forms a [[9s complement]], this does not give rise to particular difficulties: whenever the code word for the tens represents an odd number, the code words for the decimal units are given as the 9s complements by inversion of the fourth binary digit. […]}} (270 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Dokter-Steinhauer_1975&quot;&gt;{{cite book |author-first1=Folkert |author-last1=Dokter |author-first2=Jürgen |author-last2=Steinhauer |title=Digitale Elektronik in der Meßtechnik und Datenverarbeitung: Theoretische Grundlagen und Schaltungstechnik |chapter=2.4.4.6. Einschrittige Kodes |language=de |series=Philips Fachbücher |publisher=[[Deutsche Philips GmbH]] |publication-place=Hamburg, Germany |volume=I |date=1975 |orig-date=1969 |edition=improved and extended 5th |isbn=3-87145-272-6 |pages=41, 48, 51, 58, 60–61}} (xii+327+3 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Petherick_1953&quot;&gt;{{cite book |author-first=Edward John |author-last=Petherick |title=A Cyclic Progressive Binary-coded-decimal System of Representing Numbers |date=October 1953 |type=Technical Note MS15 |publisher=[[Royal Aircraft Establishment]] (RAE) |location=Farnborough, UK}} (4 pages) (NB. Sometimes referred to as ''A Cyclic-Coded Binary-Coded-Decimal System of Representing Numbers''.)&lt;/ref&gt;
+&lt;ref name=&quot;Petherick-Hopkins_1958&quot;&gt;{{cite book |author-first1=Edward John |author-last1=Petherick |author-first2=A. J. |author-last2=Hopkins |title=Some Recently Developed Digital Devices for Encoding the Rotations of Shafts |date=1958 |type=Technical Note MS21 |publisher=[[Royal Aircraft Establishment]] (RAE) |location=Farnborough, UK}}&lt;/ref&gt;
+&lt;ref name=&quot;Baumgartner_1963&quot;&gt;{{cite periodical |title=Digitizer als Analog-Digital-Wandler in der Steuer-, Meß- und Regeltechnik |periodical=Technische Mitteilungen |series=Relais, elektronische Geräte, Steuerungen |language=de |date=May 1963 |issue=13 |publisher=Franz Baumgartner (FraBa) |location=Cologne-Niehl, Germany |pages=1–2 |url=https://www.posital.com/media/posital_media/documents/TechnischeMitteilung_May1963.pdf |access-date=2020-05-21 |url-status=dead |archive-url=https://web.archive.org/web/20200521211656/https://www.posital.com/media/posital_media/documents/TechnischeMitteilung_May1963.pdf |archive-date=2020-05-21 |quote-pages=1–2 |quote=[…] Die Firma Harrison Reproduction Equipment, Farnborough/England […] hat in jahrelanger Entwicklung in Zusammenarbeit mit der Britischen Luftwaffe und britischen Industriebetrieben den mechanischen Digitizer […] zu einer technischen Reife gebracht, die fast allen Anforderungen […] genügt. […] Um bei der dezimalen Entschlüsselung des verwendeten Binärcodes zu eindeutigen und bei der Übergabe von einer Dezimalstelle zur anderen in der Reihenfolge immer richtigen Ergebnissen zu kommen, wurde ein spezieller Code entwickelt, der jede Möglichkeit einer Fehlaussage durch sein Prinzip ausschließt und der außerdem durch seinen Aufbau eine relativ einfache Entschlüsselung erlaubt. Der Code basiert auf dem [[#Petherick|Petherick-Code]]. […]}} (4 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Charnley-Bidgood-Boardman_1965&quot;&gt;{{cite journal |title=The Design of a Pneumatic Position Encoder |author-first1=C. J. |author-last1=Charnley |author-first2=R. E. |author-last2=Bidgood |author-first3=G. E. T. |author-last3=Boardman |journal=IFAC Proceedings Volumes |publisher=The College of Aeronautics, Cranfield, Bedford, England |volume=2 |issue=3 |date=October 1965 |pages=75–88 |id=Chapter 1.5. |doi=10.1016/S1474-6670(17)68955-9 |url=https://ac.els-cdn.com/S1474667017689559/1-s2.0-S1474667017689559-main.pdf?_tid=f0c1e48e-f95b-11e7-ad9a-00000aab0f01&amp;acdnat=1515956073_9006e89e176c6a840b5454c38525240b |access-date=2018-01-14}}&lt;/ref&gt;
+&lt;ref name=&quot;Wheeler_1969&quot;&gt;{{cite book |title=Analog to digital encoder |author-first=Edwin L. |author-last=Wheeler |publisher=Conrac Corporation |location=New York, USA |date=1969-12-30&lt;!-- gdate --&gt; |orig-date=1968-04-05&lt;!-- fdate --&gt; |id={{US patent|3487460A}}. Serial No. 719026 (397812&lt;!-- 1964-09-21 --&gt;) |url=https://patentimages.storage.googleapis.com/f0/c0/60/9c3231f7e8ed44/US3487460.pdf |access-date=2018-01-21 |url-status=live |archive-url=https://web.archive.org/web/20200805102804/https://patentimages.storage.googleapis.com/f0/c0/60/9c3231f7e8ed44/US3487460.pdf |archive-date=2020-08-05 |quote-page=column 9&lt;!-- rows 15–22 --&gt; |quote=[…] The [[MOA-Gillham code|MOA-GILLHAM code]] is essentially the combination of the Gray code discussed thereinabove and the well known [[#Datex|Datex code]]; the Datex code is disclosed in U.S. Patent {{citeref|Spaulding|1965a|3,165,731|style=plain}}. The arrangement is such that the Datex code defines the bits for the units count of the encoder and the Gray code defines the bits for each of the higher order decades, the tens, hundreds, etc. […]}} (11 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Bishup-Repeta-Giarrizzo_1963&quot;&gt;{{cite web |title=Telemetering and supervisory control system having normally continuous telemetering signals |id=US3397386A |author-first1=Bernard W. |author-last1=Bishup |author-first2=Anthony A. |author-last2=Repeta |author-first3=Frank C. |author-last3=Giarrizzo |publisher=Leeds and Northrup Co. |date=1968-08-13 |orig-date=1963-04-03 |url=https://patents.google.com/patent/US3397386A/en}} [https://patentimages.storage.googleapis.com/c8/f3/cc/936fef75655a2c/US3397386.pdf]&lt;/ref&gt;
+&lt;ref name=&quot;Savage_1997&quot;&gt;{{cite journal |author-first=Carla Diane |author-last=Savage |author-link=Carla Diane Savage |title=Long cycles in the middle two levels of the Boolean lattice |journal=[[Ars Combinatoria (journal)|Ars Combinatoria]] |issn=0381-7032 |volume=35 |issue=A |date=1997-01-16 |location=North Carolina State University, Raleigh, North Carolina, USA |s2cid=15975960 |citeseerx=10.1.1.39.2249 |pages=97–108 |url=http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=DACA73A3D791549CE05443B7948527EC?doi=10.1.1.39.2249&amp;rep=rep1&amp;type=pdf |access-date=2020-05-13 |url-status=live |archive-url=https://web.archive.org/web/20200513191647/http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=DACA73A3D791549CE05443B7948527EC?doi=10.1.1.39.2249&amp;rep=rep1&amp;type=pdf |archive-date=2020-05-13}} (15 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Phillips_1998&quot;&gt;{{cite web |title=Altitude – MODEC ASCII |author-first=Darryl |author-last=Phillips |date=2012-07-26 |orig-date=1998 |publisher=AirSport Avionics |url=http://www.airsport-corp.com/modecascii.txt |url-status=dead |archive-url=https://web.archive.org/web/20120726003224/http://www.airsport-corp.com/modecascii.txt |archive-date=2012-07-26}}&lt;/ref&gt;
+&lt;ref name=&quot;Stewart_2010&quot;&gt;{{cite web |title=Aviation Gray Code: Gillham Code Explained |date=2010-12-03 |author-first=K. |author-last=Stewart |publisher=Custom Computer Services (CCS) |url=http://www.ccsinfo.com/forum/viewtopic.php?p=140960#140960 |access-date=2018-01-14 |url-status=live |archive-url=https://web.archive.org/web/20180116184525/http://www.ccsinfo.com/forum/viewtopic.php?p=140960 |archive-date=2018-01-16}}&lt;/ref&gt;
+&lt;ref name=&quot;Leslie-Russell_1964&quot;&gt;{{cite book |title=A cyclic progressive decimal code for simple translation to decimal and analogue outputs |author-first1=William &quot;Bill&quot; H. P. |author-last1=Leslie |author-first2=A. |author-last2=Russell |publisher=[[National Engineering Laboratory]] |location=East Kilbride, Glasgow, UK |date=1964 |type=Report |id=NEL Report 129}} (17 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Russell_1964&quot;&gt;{{cite journal |title=Some Binary Codes and a Novel Five-Channel Code |author-first=A. |author-last=Russell |date=August 1964 |journal=Control (Systems, Instrumentation, Data Processing, Automation, Management, incorporating Automation Progress)&lt;!-- &quot;Control&quot; (London) is a predecessor of &quot;Control and Instrumentation&quot; (C&amp;I), ISSN 0010-8022, formed in April 1969 by merger with &quot;Measurement and Instrument Review&quot; (M&amp;I). --&gt; |volume=8 |number=74 |series=Special Features |publisher=Morgan-Grampain (Publishers) Limited |publication-place=London, UK |pages=399–404 |url=https://books.google.com/books?id=jf4eAAAAMAAJ |access-date=2020-06-22}} (6 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Leslie_1974&quot;&gt;{{cite book |title=Proceedings of the Fourteenth International Machine Tool Design and Research Conference, 12–14 September 1973 |chapter=The work on NC at NEL |author-first=William &quot;Bill&quot; H. P. |author-last=Leslie |editor-first1=Franz |editor-last1=Koenigsberger |editor-link1=:wikidata:Q55853774 |editor-first2=Stephen Albert |editor-last2=Tobias |publisher=[[The Macmillan Press Ltd]] |date=1974 |sbn=333-14913-0 |isbn=978-1-34901921-2 |id={{ISBN|1-34901921-6}} |lccn=73-16545 |pages=215–224 [215, 217] |url=https://books.google.com/books?id=bFVdDwAAQBAJ&amp;pg=PA215&amp;lpg=PA215 |chapter-url=https://link.springer.com/chapter/10.1007/978-1-349-01921-2_30}}&lt;/ref&gt;
+&lt;ref name=&quot;Wightman_1972&quot;&gt;{{cite book |author-first=Eric Jeffrey |author-last=Wightman |title=Instrumentation in Process Control |date=1972 |edition=1 |publisher=[[Butterworth &amp; Co (Publishers) Ltd]] |publication-place=London, UK |isbn=0-408-70293-1 |id={{ISBN|1-48316335-0|978-1-48316335-2}} |chapter=Chapter 6. Displacement measurement |pages=122–123 |chapter-url=https://books.google.com/books?id=8WEhBQAAQBAJ&amp;pg=PA122 |url=https://books.google.com/books?id=8WEhBQAAQBAJ |quote-page=122–123 |quote=[…] Other forms of code are also well known. Among these are the [[Royal Radar Establishment]] code; The [[Excess Three decimal code]]; [[Gillham code]] which is recommended by [[ICAO]] for automatic height transmission for [[air traffic control]] purposes; the [[Petherick code]], and the [[Leslie and Russell code]] of the [[National Engineering Laboratory]]. Each has its particular merits and they are offered as options by various encoder manufacturers. […]}} (12+367+5 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Varec_1954&quot;&gt;{{cite journal |title=…accurate liquid level metering – at ANY DISTANCE! |journal=Petroleum Refiner |volume=33 |number=9 |issn=0096-6517 |publisher=[[Gulf Publishing Company]] |date=September 1954 |type=Advertisement |page=368 |quote-page=368 |quote=[…] The complete dispatching operation, gauging, and remote control is integrated into one single unitized system when a &quot;Varec&quot; Pulse Code Telemetering System is installed. […] |url=https://books.google.com/books?id=B2Q7AAAAMAAJ&amp;q=%22Varec+pulse+code%22&amp;dq=%22Varec+pulse+code%22}}&lt;/ref&gt;
+&lt;ref name=&quot;Whessoe_1993&quot;&gt;{{cite book |title=Installation and Operations Manual for the Model 1900 Micro 4-Wire Transmitter |chapter=Encoder Pulse Format |publisher=[[Whessoe Varec, Inc.]] |location=Cypress, California, USA |id=33-08461 |date=January 1993 |orig-date=1991-07-01 |pages=04-4 – 04-8 |url=https://www.varec.com/web/wp-content/uploads/2018/05/IOM016_1900.pdf |access-date=2020-05-16 |url-status=live |archive-url=https://web.archive.org/web/20200516191438/https://www.varec.com/web/wp-content/uploads/2018/05/IOM016_1900.pdf |archive-date=2020-05-16}} (38 pages) (NB. Position 5 for &quot;Inches&quot; on page 04-8 should read &quot;0111&quot; rather than &quot;1111&quot;.)&lt;/ref&gt;
+&lt;ref name=&quot;Emerson&quot;&gt;{{cite book |title=Varec Model 1900 – Micro 4-Wire Transmitter (BSAP to Mark / Space Protocol (MSP)) – Application Notes |chapter=2.2.3.3 MSP Level Data Format |publisher=[[Emerson Electric]] |date= |pages=11–14 |url=https://www.emerson.com/documents/automation/manuals-guides-application-notes-varec-model-1900-protocol-ras-en-133360.pdf |access-date=2020-05-16 |url-status=live |archive-url=https://web.archive.org/web/20200516183338/https://www.emerson.com/documents/automation/manuals-guides-application-notes-varec-model-1900-protocol-ras-en-133360.pdf |archive-date=2020-05-16}} (vi+33 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Hoklas_1989&quot;&gt;{{cite web |title=Abtastvorrichtung zur digitalen Weg- oder Winkelmessung |language=de |author-first=Archibald |author-last=Hoklas |publisher={{ill|VEB Schiffselektronik Johannes Warnke|de}} |via={{ill|DEPATIS|de}} |date=1989-09-06&lt;!-- published --&gt; |orig-date=1988-04-29&lt;!-- filed --&gt; |id=GDR Patent DD271603A1. WP H 03 M / 315 194 8 |url=https://depatisnet.dpma.de/DepatisNet/depatisnet/DD000000271603A1_all_pages.pdf?window=1&amp;space=menu&amp;content=download_doc_verify&amp;action=download_doc&amp;docid=DD000000271603A1&amp;so=asc&amp;sf=vn&amp;firstdoc=0&amp;struct=&amp;Cl=2&amp;Bi=1&amp;Ab=1&amp;De=2&amp;Dr=5&amp;Pts=&amp;Pa=&amp;We=&amp;Sr=&amp;Eam=&amp;Cor=&amp;Aa=&amp;NrFaxPages=5&amp;pdfpage=2&amp;pdfmatrix=1x1&amp;origin=pdf_window&amp;verify_str=null&lt;!-- https://depatisnet.dpma.de/DepatisNet/depatisnet/DD000000271603A1_all_pages.pdf?docid=DD000000271603A1 --&gt; |access-date=2018-01-18 |url-status=dead |archive-url=https://web.archive.org/web/20180118015239/https://depatisnet.dpma.de/DepatisNet/depatisnet/DD000000271603A1_all_pages.pdf?window=1&amp;space=menu&amp;content=download_doc_verify&amp;action=download_doc&amp;docid=DD000000271603A1&amp;so=asc&amp;sf=vn&amp;firstdoc=0&amp;struct=&amp;Cl=2&amp;Bi=1&amp;Ab=1&amp;De=2&amp;Dr=5&amp;Pts=&amp;Pa=&amp;We=&amp;Sr=&amp;Eam=&amp;Cor=&amp;Aa=&amp;NrFaxPages=5&amp;pdfpage=2&amp;pdfmatrix=1x1&amp;origin=pdf_window&amp;verify_str=null |archive-date=2018-01-18}} [https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&amp;docid=DD000000271603A1] [https://depatisnet.dpma.de/DepatisNet/depatisnet?action=pdf&amp;docid=DD000000271603A1]&lt;/ref&gt;
+&lt;ref name=&quot;Hoklas_2005_1&quot;&gt;{{cite web |title=Gray code – Unit distance code |author-first=Archibald |author-last=Hoklas |date=2005 |url=http://www.ahok.de/en/hoklas-code.html |access-date=2018-01-15 |url-status=live |archive-url=https://web.archive.org/web/20180115012854/http://www.ahok.de/en/hoklas-code.html |archive-date=2018-01-15}}&lt;/ref&gt;
+&lt;ref name=&quot;Hoklas_2005_2&quot;&gt;{{cite web |title=Gray-Kode – Einschrittiger Abtastkode |language=de |author-first=Archibald |author-last=Hoklas |date=2005 |url=http://www.ahok.de/dt/hoklas-code.html |access-date=2018-01-15 |url-status=live |archive-url=https://web.archive.org/web/20180115012827/http://www.ahok.de/dt/hoklas-code.html |archive-date=2018-01-15}}&lt;/ref&gt;
+&lt;ref name=&quot;Klinkowski_1964&quot;&gt;{{cite web |title=Electronic Diode Matrix Decoder Circuits |author-first=James J. |author-last=Klinkowski |id={{US patent|3309695A}}. Serial No. 353845 |publisher=[[Burroughs Corporation]] |location=Detroit, Michigan, USA |date=1967-03-14 |orig-date=1964-03-23 |url=https://patentimages.storage.googleapis.com/71/6a/f4/044b43b93097e7/US3309695.pdf |access-date=2020-05-23 |url-status=live |archive-url=https://web.archive.org/web/20200523144819/https://patentimages.storage.googleapis.com/71/6a/f4/044b43b93097e7/US3309695.pdf |archive-date=2020-05-23}} (5 pages) [https://web.archive.org/web/20200805103732/https://patentimages.storage.googleapis.com/97/33/74/aec52610026e59/USRE26780.pdf&lt;!-- https://patentimages.storage.googleapis.com/97/33/74/aec52610026e59/USRE26780.pdf --&gt;]&lt;/ref&gt;
+&lt;ref name=&quot;Klinkowski_1966&quot;&gt;{{cite web |title=Binary-coded decimal signal converter |author-first=James J. |author-last=Klinkowski |id={{US patent|3504363A}}. Serial No. 603926 |publisher=[[Burroughs Corporation]] |location=Detroit, Michigan, USA |date=1970-03-31 |orig-date=1966-12-22 |url=https://patentimages.storage.googleapis.com/65/d6/45/f7837c143fa3da/US3504363.pdf |access-date=2020-05-23 |url-status=live |archive-url=https://web.archive.org/web/20200523145655/https://patentimages.storage.googleapis.com/65/d6/45/f7837c143fa3da/US3504363.pdf |archive-date=2020-05-23}} (7 pages)&lt;/ref&gt;
+&lt;ref name=&quot;EDN_1967&quot;&gt;{{cite journal |title=[unknown] |journal=[[Electrical Design News]] |issn=0012-7515 |publisher=[[Rogers Publishing Company]] |date=1967 |volume=12 |issue= |pages=&lt;!-- 44, 448? --&gt; |url=}} [https://books.google.com/books?id=MThAAQAAIAAJ&amp;q=%22Watts+code%22+%22Excess-3+Gray+Code%22&amp;dq=%22Watts+code%22+%22Excess-3+Gray+Code%22&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjzpIbVgMrpAhUBNOwKHd9CB1YQ6AEIMDAB][https://books.google.com/books?id=MThAAQAAIAAJ&amp;q=%22Watts+code%22+%22Excess-3+Gray+Code%22&amp;dq=%22Watts+code%22+%22Excess-3+Gray+Code%22&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjzpIbVgMrpAhUBNOwKHd9CB1YQ6AEIMDAB]&lt;/ref&gt;
+&lt;ref name=&quot;Toth-Zentai_1979&quot;&gt;{{cite journal |title=Some Problems Of Angular Rotational Digital Converters |author-first=Györgyi |author-last=Tóth-Zentai |volume=23 |number=3–4 |journal=Periodica Polytechnica Electrical Engineering |date=1979-10-05 |pages=265–270 [266] |location=Department of Electronics Technology, Technical University, Budapest, Hungary |url=https://pp.bme.hu/ee/article/view/4838 |access-date=2020-05-23}} (NB. Shows a 6-digit Watts code.&lt;!-- also mentions a scheme named V-logic --&gt;)&lt;/ref&gt;
+&lt;ref name=&quot;Pickover_2009&quot;&gt;{{cite book |url=https://books.google.com/books?id=JrslMKTgSZwC&amp;pg=PA392 |title=The Math Book: From Pythagoras to the 57th Dimension, 250 Milestones in the History of Mathematics |page=392 |author-first1=Clifford A. |author-last1=Pickover |publisher=[[Sterling Publishing Company]] |date=2009 |isbn=978-1-40275796-9}}&lt;/ref&gt;
+&lt;ref name=&quot;Knuth&quot;&gt;{{cite book |author-last=Knuth |author-first=Donald Ervin |author-link=Donald Ervin Knuth |chapter=Generating all ''n''-tuples |title=The Art of Computer Programming, Volume 4A: Enumeration and Backtracking |title-link=The Art of Computer Programming |volume=pre-fascicle 2a |date=2004-10-15 |chapter-url=http://www-cs-faculty.stanford.edu/~knuth/fasc2a.ps.gz}}&lt;/ref&gt;
+&lt;ref name=&quot;Heath_1961&quot;&gt;{{cite journal |title=Pioneers Of Binary Coding |author-first=F.&lt;!-- Fred? --&gt; G. |author-last=Heath |journal=[[Journal of the Institution of Electrical Engineers]] |publisher=[[Institution of Engineering and Technology]] (IET) |location=[[Manchester College of Science and Technology]], Faculty of Technology of the [[University of Manchester]], Manchester, UK |volume=7 |issue=81 |date=September 1961 |doi=10.1049/jiee-3.1961.0300 |pages=539–541 |url=https://ieeexplore.ieee.org/document/5324416 |access-date=2020-06-22}} (3 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Cattermole_1969&quot;&gt;{{cite book |author-first=Kenneth W. |author-last=Cattermole |title=Principles of pulse code modulation |edition=1 |publisher=[[Iliffe Books Ltd.]] / [[American Elsevier Publishing Company, Inc.]] |date=1969 |publication-place=London, UK / New York, USA |location=Harlow, Essex, UK |sbn=444-19747-8 |isbn=978-0-444-19747-4 |lccn=78-80432 |pages=245, 434 |quote-page=245 |quote=[…] &lt;!-- This was devised by Elisha Gray at some time before 1878, for telegraph usage; in recent times it has been used in electron-beam coding tubes […], and is generally applicable to parallel coders in which all the digits are produced simultaneously. […] --&gt;There seems to be some confusion about the attributation of this code, because two inventors named Gray have been associated with it. When I first heard the name I took it as referring to [[Elisha Gray]], and {{citeref|Heath|1961|Heath|style=plain}} testifies to his usage of it. Many people take it as referring to [[Frank Gray (researcher)|Frank Gray]] of [[Bell Telephone Laboratories]], who in 1947 first proposed its use in [[coding tube]]s: his patent is listed in the bibliography. &lt;!-- This is a particular interesting example of [[multiple invention]]. Two British engineers, C. W. Earp and M. F. Wintle, rediscovered it independently within a few month of F. Gray, some seventy years after E. Gray. --&gt;[…]}} (2+448+2 pages)&lt;!-- (NB. At least Charles William Earp's and Malcolm Frank Wintle's patent US2568724 describes a different code used for PCM.) --&gt;&lt;/ref&gt;
+&lt;ref name=&quot;Edwards_2004&quot;&gt;{{cite book |title=Cogwheels of the Mind: The Story of Venn Diagrams |author-first=Anthony William Fairbank |author-last=Edwards |author-link=Anthony William Fairbank Edwards |publisher=[[Johns Hopkins University Press]] |date=2004 |isbn=0-8018-7434-3 |id={{ISBN|978-0-8018-7434-5}} |location=Baltimore, Maryland, USA |pages=48, 50 |url=https://books.google.com/books?id=7_0Thy4V3JIC&amp;pg=PA65}}&lt;/ref&gt;
+&lt;ref name=&quot;Goodall_1951&quot;&gt;{{cite journal |author-first=William M. |author-last=Goodall |title=Television by Pulse Code Modulation |journal=[[Bell System Technical Journal]] |volume=30 |issue=1 |pages=33–49 |date=January 1951 |doi=10.1002/j.1538-7305.1951.tb01365.x}} (NB. Presented orally before the I.R.E. National Convention, New York City, March 1949.)&lt;/ref&gt;
+&lt;ref name=&quot;Bhat-Savage_1996&quot;&gt;{{cite journal |author-first1=Girish S. |author-last1=Bhat |author-first2=Carla Diane |author-last2=Savage |author-link2=Carla Diane Savage |title=Balanced Gray Codes |journal=[[Electronic Journal of Combinatorics]] |date=1996 |volume=3 |url=https://www.combinatorics.org/ojs/index.php/eljc/article/view/v3i1r25/ |issue=1 |doi=10.37236/1249 |doi-access=free}}&lt;/ref&gt;
+&lt;ref name=&quot;Donohue_2003&quot;&gt;{{cite web |author-first=Ryan |author-last=Donohue |title=Synchronization in Digital Logic Circuits |date=2003 |url=http://www.stanford.edu/class/ee183/handouts_spr2003/synchronization_pres.pdf |access-date=2018-01-15 |url-status=live |archive-url=https://web.archive.org/web/20180115012747/https://web.stanford.edu/class/ee183/handouts_spr2003/synchronization_pres.pdf |archive-date=2018-01-15}}&lt;/ref&gt;
+&lt;ref name=&quot;Mehta-Owens-Irwin_1996&quot;&gt;{{cite book |author-last1=Mehta |author-first1=Huzefa |author-last2=Owens |author-first2=Robert Michael |author-last3=Irwin |author-first3=Mary Jane &quot;Janie&quot; |date=1996-03-22 |issn=1066-1395 |doi=10.1109/GLSV.1996.497616 |url=http://ieeexplore.ieee.org/xpls/abs_all.jsp?tp=&amp;arnumber=497616&amp;isnumber=10625 |title=Some issues in Gray code addressing |journal=Proceedings of the 6th Great Lakes Symposium on VLSI (GLSVLSI 96) |publisher=[[IEEE Computer Society]] |isbn=978-0-8186-7502-7 |pages=178–181}}&lt;/ref&gt;
+&lt;ref name=&quot;Su-Tsui-Despain_1994&quot;&gt;{{cite report |author-first1=Ching-Long |author-last1=Su |author-first2=Chi-Ying |author-last2=Tsui |author-first3=Alvin M. |author-last3=Despain |url=http://www.scarpaz.com/2100-papers/Power%20Estimation/su94-low%20power%20architecture%20and%20compilation.pdf |title=Low Power Architecture Design and Compilation Techniques for High-Performance Processors |date=1994 |publisher=Advanced Computer Architecture Laboratory |id=ACAL-TR-94-01}}&lt;/ref&gt;
+&lt;ref name=&quot;Guo-Parameswaran_2010&quot;&gt;{{cite journal |author-first1=Hui |author-last1=Guo |author-first2=Sri |author-last2=Parameswaran |doi=10.1016/j.sysarc.2010.03.003 |volume=56 |issue=4–6 |date=April–June 2010 |title=Shifted Gray encoding to reduce instruction memory address bus switching for low-power embedded systems |journal=Journal of Systems Architecture |pages=180–190}}&lt;/ref&gt;
+&lt;ref name=&quot;Dietz&quot;&gt;{{cite web |author-first=Henry Gordon |author-last=Dietz |title=The Aggregate Magic Algorithms: Gray Code Conversion |url=http://aggregate.org/MAGIC/#Gray%20Code%20Conversion}}&lt;/ref&gt;
+&lt;ref name=&quot;Guan_1998&quot;&gt;{{cite journal |title=Generalized Gray Codes with Applications |author-last=Guan |author-first=Dah-Jyh |journal=Proceedings of the National Scientific Council, Republic of China, Part A |volume=22 |date=1998 |pages=841–848 |citeseerx=10.1.1.119.1344}}&lt;/ref&gt;
+&lt;ref name=&quot;Suparta_2005&quot;&gt;{{cite journal |author-first=I. Nengah |author-last=Suparta |title=A simple proof for the existence of exponentially balanced Gray codes |journal=[[Electronic Journal of Combinatorics]] |date=2005 |volume=12 |doi-access=free |doi=10.37236/1986}}&lt;/ref&gt;
+&lt;ref name=&quot;Flahive-Bose_2007&quot;&gt;{{cite journal |author-first1=Mary Elizabeth |author-last1=Flahive |author-link1=Mary Elizabeth Flahive |author-first2=Bella |author-last2=Bose |title=Balancing cyclic ''R''-ary Gray codes |journal=[[Electronic Journal of Combinatorics]] |date=2007 |volume=14 |doi-access=free |doi=10.37236/949}}&lt;/ref&gt;
+&lt;ref name=&quot;Strackx-Piessens_2016&quot;&gt;{{cite journal |author-first1=Raoul |author-last1=Strackx |author-first2=Frank |author-last2=Piessens |title=Ariadne: A Minimal Approach to State Continuity |journal=Usenix Security |date=2016 |volume=25 |url=https://distrinet.cs.kuleuven.be/software/sce/ariadne.html}}&lt;/ref&gt;
+&lt;ref name=&quot;Savage-Winkler_1995&quot;&gt;{{cite journal |author-first1=Carla Diane |author-last1=Savage |author-link1=Carla Diane Savage |author-first2=Peter |author-last2=Winkler |author-link2=Peter Winkler |title=Monotone Gray codes and the middle levels problem |journal=[[Journal of Combinatorial Theory, Series A]] |date=1995 |volume=70 |issn=0097-3165 |pages=230–248 |issue=2 |doi=10.1016/0097-3165(95)90091-8|doi-access=free}}&lt;/ref&gt;
+&lt;ref name=&quot;Goddyn_1999&quot;&gt;{{cite web |title=MATH 343 Applied Discrete Math Supplementary Materials |author-last=Goddyn |author-first=Luis |date=1999 |publisher=Department of Mathematics, [[Simon Fraser University]] |url=http://www.math.sfu.ca/~goddyn/Courses/343/supMaterials.pdf |url-status=dead |archive-url=https://web.archive.org/web/20150217160033/http://people.math.sfu.ca/~goddyn/Courses/343/supMaterials.pdf |archive-date=2015-02-17}}&lt;/ref&gt;
+&lt;ref name=&quot;Sawada-Wong_2007&quot;&gt;{{cite journal |author-first1=Joseph &quot;Joe&quot; |author-last1=Sawada |author-first2=Dennis Chi-Him |author-last2=Wong |title=A Fast Algorithm to generate Beckett–Gray codes |journal=Electronic Notes in Discrete Mathematics |volume=29 |pages=571–577 |date=2007 |doi=10.1016/j.endm.2007.07.091}}&lt;/ref&gt;
+&lt;ref name=&quot;Spedding_1994_1&quot;&gt;{{cite patent |inventor-last=Spedding |inventor-first=Norman Bruce&lt;!-- Industrial Research Limited --&gt; |pubdate=1994-10-28 |title=A position encoder |country=NZ |number=264738}}{{failed verification|date=July 2015}}&lt;/ref&gt;
+&lt;ref name=&quot;Spedding_1994_2&quot;&gt;{{cite web &lt;!-- |description= --&gt;|title=The following is a copy of the provisional patent filed on behalf of Industrial Research Limited on 1994-10-28 – NZ Patent 264738 |author-first=Norman Bruce |author-last=Spedding |publisher=Industrial Research Limited |date=1994-10-28 |id=NZ Patent 264738 |url=http://www.winzurf.co.nz/Single_Track_Grey_Code_Patent/Single_track_Grey_code_encoder_patent.pdf |access-date=2018-01-14 |url-status=live |archive-url=https://web.archive.org/web/20171029205005/http://www.winzurf.co.nz/Single_Track_Grey_Code_Patent/Single_track_Grey_code_encoder_patent.pdf |archive-date=2017-10-29}}&lt;/ref&gt;
+&lt;ref name=&quot;Hiltgen-Paterson-Brandestini_1996&quot;&gt;{{cite journal |title=Single-Track Gray Codes |author-last1=Hiltgen |author-first1=Alain P. |author-first2=Kenneth G. |author-last2=Paterson |author-first3=Marco |author-last3=Brandestini |journal=[[IEEE Transactions on Information Theory]] |volume=42 |issue=5 |date=September 1996 |pages=1555–1561 |doi=10.1109/18.532900 |zbl=857.94007 |url=http://ieeexplore.ieee.org/iel1/18/11236/00532900.pdf}}&lt;/ref&gt;
+&lt;ref name=&quot;Hiltgen-Paterson_2001&quot;&gt;{{cite journal |title=Single-Track Circuit Codes |author-last1=Hiltgen |author-first1=Alain P. |author-first2=Kenneth G. |author-last2=Paterson |journal=[[IEEE Transactions on Information Theory]] |volume=47 |issue=6 |date=September 2001 |pages=2587–2595 |doi=10.1109/18.945274 |citeseerx=10.1.1.10.8218 |url=http://www.hpl.hp.com/techreports/2000/HPL-2000-81.pdf |access-date=2018-01-15 |url-status=live |archive-url=https://web.archive.org/web/20180115013155/http://www.hpl.hp.com/techreports/2000/HPL-2000-81.pdf |archive-date=2018-01-15}}&lt;/ref&gt;
+&lt;ref name=&quot;Etzion-Schwartz_1999&quot;&gt;{{cite journal |title=The Structure of Single-Track Gray Codes |author-last1=Etzion |author-first1=Tuvi |author-first2=Moshe |author-last2=Schwartz |journal=[[IEEE Transactions on Information Theory]] |volume=IT-45 |issue=7 |date=November 1999 |orig-date=1998-05-17 |pages=2383–2396 |doi=10.1109/18.796379 |citeseerx=10.1.1.14.8333 |url=http://etzion.net.technion.ac.il/files/2016/02/P54.pdf |access-date=2018-01-15 |url-status=live |archive-url=https://web.archive.org/web/20180115022531/http://etzion.net.technion.ac.il/files/2016/02/P54.pdf |archive-date=2018-01-15}} [https://www.cs.technion.ac.il/users/wwwb/cgi-bin/tr-info.cgi?1998/CS/CS0937 Technical Report CS0937 &lt;!-- https://web.archive.org/web/20180115023816/https://www.cs.technion.ac.il/users/wwwb/cgi-bin/tr-info.cgi?1998/CS/CS0937 --&gt;]&lt;/ref&gt;
+&lt;ref name=&quot;Sillke_1997&quot;&gt;{{cite web |author-first=Torsten |author-last=Sillke |date=1997 |orig-date=1993-03-01 |title=Gray-Codes with few tracks (a question of Marco Brandestini) |url=http://www.mathematik.uni-bielefeld.de/~sillke/PROBLEMS/gray |access-date=2017-10-29 |url-status=live |archive-url=https://web.archive.org/web/20171029202303/https://www.math.uni-bielefeld.de/~sillke/PROBLEMS/gray |archive-date=2017-10-29}}&lt;/ref&gt;
+&lt;ref name=&quot;Etzion-Paterson_1996&quot;&gt;{{cite journal |title=Near Optimal Single-Track Gray Codes |author-first1=Tuvi |author-last1=Etzion |author-first2=Kenneth G. |author-last2=Paterson |journal=[[IEEE Transactions on Information Theory]] |volume=IT-42 |issue=3 |pages=779–789 |date=May 1996 |doi=10.1109/18.490544 |citeseerx=10.1.1.14.1527 |url=http://etzion.net.technion.ac.il/files/2016/02/P36.pdf |access-date=2018-04-08 |url-status=live |archive-url=https://web.archive.org/web/20161030214251/http://etzion.net.technion.ac.il/files/2016/02/P36.pdf |archive-date=2016-10-30}}&lt;/ref&gt;
+&lt;ref name=&quot;Ruskey_2005&quot;&gt;{{cite journal |title=A Survey of Venn Diagrams: Symmetric Diagrams |url=http://www.combinatorics.org/Surveys/ds5/VennSymmEJC.html |journal=[[Electronic Journal of Combinatorics]] |date=2005-06-18 |author-first1=Frank |author-last1=Ruskey |author-link1=Frank Ruskey |author-first2=Mark |author-last2=Weston |doi=10.37236/26 |doi-access=free |department=Dynamic Surveys}}&lt;/ref&gt;
+&lt;ref name=&quot;Alciatore-Histand_1999&quot;&gt;{{cite book |author-last1=Alciatore |author-first1=David G. |author-first2=Michael B. |author-last2=Histand |title=Mechatronics |date=1999 |publisher=[[McGraw–Hill Education]] – Europe |isbn=978-0-07-131444-2 |url=http://mechatronics.colostate.edu/}}&lt;/ref&gt;
+&lt;ref name=&quot;Krishna_2008&quot;&gt;{{cite web |author=Krishna |title=Gray code for QAM |date=2008-05-11 |url=http://www.dsprelated.com/showthread/comp.dsp/96917-1.php |access-date=2017-10-29 |url-status=live |archive-url=https://web.archive.org/web/20171029192539/https://www.dsprelated.com/showthread/comp.dsp/96917-1.php |archive-date=2017-10-29}}&lt;/ref&gt;
+&lt;ref name=&quot;Greferath_2009&quot;&gt;{{cite book |editor-first1=Massimiliano |editor-last1=Sala |editor-first2=Teo |editor-last2=Mora |editor-first3=Ludovic |editor-last3=Perret |editor-first4=Shojiro |editor-last4=Sakata |editor-first5=Carlo |editor-last5=Traverso |title=Gröbner Bases, Coding, and Cryptography |url=https://archive.org/details/grbnerbasescodin00sala |url-access=limited |date=2009 |publisher=[[Springer Science &amp; Business Media]] |isbn=978-3-540-93806-4 |chapter=An Introduction to Ring-Linear Coding Theory |author-first=Marcus |author-last=Greferath |page=[https://archive.org/details/grbnerbasescodin00sala/page/n226 220]}}&lt;/ref&gt;
+&lt;ref name=&quot;Hazewinkel-Sole_2016&quot;&gt;{{cite book |title=Kerdock and Preparata codes |author-first=Patrick |author-last=Solé |work=[[Encyclopedia of Mathematics]] |editor-first=Michiel |editor-last=Hazewinkel |editor-link=Michiel Hazewinkel |publisher=[[Springer Science+Business Media]] |date=2016-04-17 |isbn=1-4020-0609-8 |id={{ISBN|978-1-4020-0609-8}} |url=https://www.encyclopediaofmath.org/index.php/Kerdock_and_Preparata_codes |access-date=2017-10-29 |url-status=live |archive-url=https://web.archive.org/web/20171029191032/https://www.encyclopediaofmath.org/index.php/Kerdock_and_Preparata_codes |archive-date=2017-10-29}}&lt;/ref&gt;
+&lt;ref name=&quot;Evans_1958&quot;&gt;{{cite journal |title=[unknown] |author-first=David Silvester |author-last=Evans |volume=10–12 |page=87 |journal=Transactions |publisher=Institute of Measurement and Control |date=1958 |url=https://books.google.com/books?id=mwJvieqKGFsC&amp;q=%22Watts+code%22&amp;dq=%22Watts+code%22&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjM5-SRosrpAhVBmqQKHfulBZU4FBDoAQhqMAc}} (NB. The Watts code was called W.R.D. code or Watts Reflected Decimal to distinguish it from other codes used at [[Hilger &amp; Watts Ltd.]].)&lt;/ref&gt;
+&lt;ref name=&quot;Evans_1960&quot;&gt;{{cite book |title=Fundamentals of Digital Instrumentation |author-first=David Silvester |author-last=Evans |publisher=[[Hilger &amp; Watts Ltd]] |location=London, UK |edition=1 |date=1960 |url=https://books.google.com/books?id=gpVNAAAAYAAJ |access-date=2020-05-24}} (39 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Evans_1961&quot;&gt;{{cite book |title=Digital Data: Their derivation and reduction for analysis and process control |chapter=Chapter Three: Direct Reading from Coded Scales |author-first=David Silvester |author-last=Evans&lt;!-- M.I.E.E. --&gt; |edition=1&lt;!-- printed by J. W. Arrowsmith Ltd, Bristol, UK --&gt; |publisher=[[Hilger &amp; Watts Ltd]] / [[Interscience Publishers]] |location=London, UK |date=March 1961 |pages=18–23 |url=https://books.google.com/books?id=WOIJAAAAMAAJ |access-date=2020-05-24 |quote-page=20–23 |quote=[…] Decoding. […] To decode C.P.B or [[#Watts|W.R.D.]] codes, a simple inversion rule can be applied. The readings of the higher tracks determine the way in which the lower tracks are translated. The inversion rule is applied line by line for the C.P.B. and for the W.R.D it is applied decade by decade or line by line. Starting therefore with the top or slowest changing track of the C.P.B., if the result is odd (1) the next track value has to be inverted, i.e. 0 for 1 and 1 for 0. If, however, the first track is even (0), the second track is left as read, i.e. 0 for 0 and 1 for 1. Again, if the resultant reading of the second track is odd, the third track reading is inverted and so on. When an odd is changed to an even the line below is not inverted and when an even is changed to an odd the line below is inverted. The result of applying this rule to the pattern […] is the [[Pure binary code|pure binary]] (P.B.) pattern […] where each track or digit can be given a definite numerical value (in this instance 1, 2, 4, 8, etc.). […] Using the line-by-line inversion rule on the W.R.D. code produces [a] pattern [of [[Aiken code|1, 2, 4, 2 code]]] where again the digits can be given numerical values and summed decade by decade. The summing of the digits can be very useful, for example, in a high-speed scanning system; but in a parallel decoding system […], it is usual to treat each binary quartet or decade as an entity. In other words, if the first or more significant decade is odd, the second decade is rectified or complemented by inverting the D track and so on, the result being the repeating pattern of [rectified W.R.D. code]. This is an extremely easy thing to achieve since the only change required is the inversion of the meaning of the D track or complementing digit. […]}} (8+82 pages) (NB. The author does not mention Gray at all and calls the standard Gray code &quot;Cyclic Permuted Binary Code&quot; (C.P.B.), the book index erroneously lists it as &quot;cyclic pure binary code&quot;.)&lt;/ref&gt;
+&lt;ref name=&quot;Newson_1965&quot;&gt;{{cite book |title=Tables for the Binary Encoding of Angles |author-first=P. A. |author-last=Newson |location=[[United Kingdom Atomic Energy Authority]], Research Group, [[Atomic Energy Research Establishment]], Harwell, UK |date=1965 |edition=1 |publisher=[[H. M. Stationery Office]] |url=https://books.google.com/books?id=aUEgAQAAIAAJ |access-date=2020-05-24}} (12 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Benjamin-Nicholls_1963&quot;&gt;{{cite book |title=Measurement of Neutron Spectra by Semi-Automatic Scanning of Recoil Protons in Photographic Emulsions |chapter=3.2.2 Electromechanical Digitizers |author-first1=P. W. |author-last1=Benjamin |author-first2=G. S. |author-last2=Nicholls |location=[[United Kingdom Atomic Energy Authority]], [[Atomic Weapons Research Establishment]], UK |id=AWRE Report No. NR 5/63 |publisher=[[U.S. Department of Energy]] |date=1963 |pages=8–10, 19 |url=https://books.google.com/books?id=tD5YAAAAYAAJ&amp;pg=PT4}} [https://web.archive.org/web/20200525193325/https://books.googleusercontent.com/books/content?req=AKW5QadxAC8d1K6TXnjLMOKRt0wxLI2XEnyvs5b7wXlxCaZ4XdYW6qcmagghi7O1TLA4DL5nybOmiY0ue2ljEH9L2NvnP6Z6vN54dNvpxHnCIK79h1xoamtO5-waq-mDh2BPHJE9eJkmkoUl7uyPvrbWd7gNM8gpQKbx82WI_3gYiZHy-aHdQGQAFOkacvI1Kf52lu4i8_cuMNYztfa--t2eGiIk5ku1bP7T7n378Q2rNZRCMz3JCXeT0EzYNMkJzlpYSiP2FiQ8] (23 pages)&lt;/ref&gt;
+&lt;ref name=&quot;Hollingdale_1958&quot;&gt;{{cite book |title=Applications of Computers |chapter=Session 14. Data Processing |author-first=Stuart H. |author-last=Hollingdale |date=1958-09-19 |work=Atlas – Application of Computers, University of Nottingham 15–19 September 1958 |type=Conference paper |chapter-url=http://www.chilton-computing.org.uk/acl/literature/manuals/nottingham/p014.htm |url=http://www.chilton-computing.org.uk/acl/literature/manuals/nottingham/contents.htm |access-date=2020-05-25 |url-status=live |archive-url=https://web.archive.org/web/20200525151358/http://www.chilton-computing.org.uk/acl/literature/manuals/nottingham/p014.htm |archive-date=2020-05-25}}&lt;/ref&gt;
+&lt;ref name=&quot;Paul_1995&quot;&gt;{{cite web |author-first=Matthias R. |author-last=Paul |title=Unterbrechungsfreier Schleifencode |language=de |trans-title=Continuous loop code |version=1.02 |url=http://www.uni-bonn.de/~uzs180/download/mpbcd102.zip |date=1995-08-10 |orig-date=1994 |access-date=2008-02-11 |url-status=dead}}{{cbignore}} (NB. The author called this code {{lang|de|Schleifencode}} (English: &quot;loop code&quot;). It differs from Gray BCD code only in the encoding of state 0 to make it a cyclic unit-distance code for full-circle rotatory applications. Avoiding the all-zero code pattern allows for loop self-testing and to use the data lines for uninterrupted power distribution.)&lt;/ref&gt;
+&lt;ref name=&quot;Klar_1970&quot;&gt;{{cite book |title=Digitale Rechenautomaten – Eine Einführung |language=de |trans-title=Digital Computers – An Introduction |author-first=Rainer |author-last=Klar |publisher=[[Walter de Gruyter &amp; Co.]] / {{ill|G. J. Göschen'sche Verlagsbuchhandlung|de|G. J. Göschen’sche Verlagsbuchhandlung}} |publication-place=Berlin, Germany |series=Sammlung Göschen |volume=1241/1241a |date=1970-02-01 |isbn=3-11-083160-0 |id={{ISBN|978-3-11-083160-3}}. Archiv-Nr. 7990709. |page=17 |edition=1 |url=https://books.google.com/books?id=QnqVDwAAQBAJ&amp;pg=PA17 |access-date=2020-04-13 |url-status=live |archive-url=https://web.archive.org/web/20200601100645/https://books.google.de/books?id=QnqVDwAAQBAJ&amp;pg=PA17&amp;lpg=PA17&amp;redir_esc=y#v=onepage&amp;q&amp;f=false |archive-date=2020-06-01}} (205 pages) (NB. A 2019 reprint of the first edition is available under {{ISBN|3-11002793-3|978-3-11002793-8}}. A reworked and expanded {{citeref|Klar|1989|4th edition|style=plain}} exists as well.)&lt;/ref&gt;
+&lt;ref name=&quot;Klar_1989&quot;&gt;{{cite book |title=Digitale Rechenautomaten – Eine Einführung in die Struktur von Computerhardware |language=de |trans-title=Digital Computers – An Introduction into the structure of computer hardware |author-first=Rainer |author-last=Klar |publisher=[[Walter de Gruyter &amp; Co.]] |publication-place=Berlin, Germany |series=Sammlung Göschen |volume=2050 |date=1989 |orig-date=1988-10-01 |isbn=3-11011700-2 |id={{ISBN|978-3-11011700-4}} |page=28 |edition=4th reworked}} (320 pages) (NB. The author called this code {{lang|de|Einheitsabstandscode}} (English: &quot;unit-distance code&quot;). By swapping two bit columns and inverting one of them, it can be transferred into the [[#O'Brien II|O'Brien code II]], whereas by swapping and inverting two bit columns, it can be transferred into the [[#Petherick|Petherick code]].)&lt;/ref&gt;
+&lt;ref name=&quot;Susskind_1958&quot;&gt;{{cite book |title=Notes on Analog-Digital Conversion Techniques |chapter=III.F. Unit-Distance Codes / VI.E.2. Reflected Binary Codes |editor-first=Alfred Kriss |editor-last=Susskind&lt;!-- born 1923-10-04, Coblenz (Göda), Germany, died 1988-12-10 Bethesda, Maryland, USA --&gt; |author-first1=Alfred Kriss&lt;!-- Patent US3487460A erroneously refers to Alfred Kriss Susskind as Alfred N. Susskind: https://patents.google.com/patent/US3487460A --&gt; |author-last1=Susskind |author-first2=John Erwin |author-last2=Ward&lt;!-- born 1920 --&gt; |date=1958-03-28 |orig-date=1957, 1956 |edition=3 |publisher=[[Technology Press of the Massachusetts Institute of Technology]] / [[John Wiley &amp; Sons, Inc.]] / [[Chapman &amp; Hall, Ltd.]] |publication-place=New York, USA |location=Cambridge, Massachusetts, USA |series=Technology Books in Science and Engineering |volume=1 |pages=3-10–3-16 [3-13–3-16], 6-65–6-60 [6-60]}} (x+416+2 pages) (NB. The contents of the book was originally prepared by staff members of the [[MIT Servomechanisms Laboratory|Servomechanisms Laboraratory]], Department of Electrical Engineering, [[Massachusetts Institute of Technology|MIT]], for Special Summer Programs held in 1956 and 1957. Susskind's &quot;reading-type code&quot; is actually a minor variant of the code shown here with the two most significant bit columns swapped to better illustrate symmetries. Also, by swapping two bit columns and inverting one of them, the code can be transferred into the [[#Petherick|Petherick code]], whereas by swapping and inverting two bit columns, the code can be transferred into the [[#O'Brien II|O'Brien code II]].)&lt;/ref&gt;
+&lt;ref name=&quot;Kämmerer_1969&quot;&gt;{{cite book |title=Digitale Automaten – Theorie, Struktur, Technik, Programmieren |language=de |author-first=Wilhelm |author-last=Kämmerer |author-link=:de:Wilhelm Kämmerer |editor-first1=Hans |editor-last1=Frühauf |editor-link1=:de:Hans Frühauf |editor-first2=Wilhelm |editor-last2=Kämmerer |editor-first3=Kurz |editor-last3=Schröder |editor-first4=Helmut |editor-last4=Winkler |chapter=II.15. Informationsdarstellung im Automaten |edition=1 |date=May 1969 |publisher=[[Akademie-Verlag GmbH]] |publication-place=Berlin, Germany |location=Jena, Germany |volume=5 |id=License no. 202-100/416/69. Order no. 4666 ES 20 K 3. |series=Elektronisches Rechnen und Regeln |page=173 &lt;!-- |url=https://books.google.com/books?id=jkcgAQAAIAAJ&amp;dq=inauthor%3A%22Wilhelm+K%C3%A4mmerer%22&amp;focus=searchwithinvolume&amp;q= --&gt;}} (NB. A second edition 1973 exists as well. Like {{citeref|Borucki|Dittmann|1971|Borucki and Dittmann|style=plain}}, but without naming it Glixon code, the author creates a 20-cyclic tetradic code from Glixon code and a Glixon code variant with inverted high-order bit.)&lt;/ref&gt;
+&lt;ref name=&quot;Borucki-Dittmann_1971&quot;&gt;{{cite book |title=Digitale Meßtechnik: Eine Einführung |chapter=2.3 Gebräuchliche Codes in der digitalen Meßtechnik |language=de |author-first1=Lorenz |author-last1=Borucki |author-first2=Joachim |author-last2=Dittmann |date=1971  |orig-date=July 1970, 1966, Autumn 1965 |publisher=[[Springer-Verlag]] |publication-place=Berlin / Heidelberg, Germany |location=Krefeld / Karlsruhe, Germany |edition=2 |lccn=75-131547 |isbn=3-540-05058-2&lt;!-- this is the ISBN printed in the book --&gt; |id={{ISBN|978-3-642-80561-5}}&lt;!-- this is for reprints of the 2nd edition --&gt; |doi=10.1007/978-3-642-80560-8 |pages=10–23 [12–14]}} (viii+252 pages) [https://books.google.com/books?id=NwyCBwAAQBAJ&amp;pg=PA15&amp;lpg=PA15 1st edition] (NB. Like {{citeref|Kämmerer|1969|Kämmerer|style=plain}}, the authors describe a 6-bit 20-cyclic Glixon code.)&lt;/ref&gt;
+&lt;ref name=&quot;Chinal_1973&quot;&gt;{{cite book |title=Design Methods for Digital Systems |chapter=3.3. Unit Distance Codes |author-first=Jean P. |author-last=Chinal |language=en |publisher=[[Akademie-Verlag]] / [[Springer-Verlag]] |publication-place=Berlin, Germany |location=Paris, France |translator-first=Alan |translator-last1=Preston |translator-first2=Arthur |translator-last2=Summer |date=January 1973 |edition=1st English |id=License No. 202-100/542/73. Order No. 7617470(6047) ES 19 B 1 / 20 K 3 |isbn=978-0-387-05871-9 |doi=10.1007/978-3-642-86187-1_3|page=50 |url=https://books.google.com/books?id=8FnxCAAAQBAJ |access-date=2020-06-21}} (xviii+506 pages) (NB. The French 1967 original book was named &quot;Techniques Booléennes et Calculateurs Arithmétiques&quot;, published by {{ill|Éditions Dunod|fr}}.)&lt;/ref&gt;
+&lt;ref name=&quot;MIL_1991&quot;&gt;{{cite book |title=Military Handbook: Encoders – Shaft Angle To Digital |publisher=[[United States Department of Defense]] |id=MIL-HDBK-231A |date=1991-09-30 |url=http://everyspec.com/MIL-HDBK/MIL-HDBK-0200-0299/download.php?spec=MIL_HDBK_231A.1809.pdf |access-date=2020-07-25 |url-status=live |archive-url=https://web.archive.org/web/20200725051128/http://everyspec.com/MIL-HDBK/MIL-HDBK-0200-0299/download.php?spec=MIL_HDBK_231A.1809.pdf |archive-date=2020-07-25}} (NB. Supersedes MIL-HDBK-231(AS) (1970-07-01).)&lt;/ref&gt;
+}}
+
+==Further reading==
+
+* {{cite book |author-first=Richard Kohler |author-last=Richards |title=Arithmetic Operations in Digital Computers |publisher=[[D. Van Nostrand Co., Inc.]] |location=New York, USA |edition=5 |date=1955 |url=https://books.google.com/books?id=BI5QAAAAMAAJ}}
+* {{cite book |author-first=Richard Kohler |author-last=Richards |title=Electronic Digital Components and Circuits |publisher=[[D. Van Nostrand Co., Inc.]] |location= |edition= |date=1967 |pages=490, 500–504, 510–511}}
+* {{cite web |author-last=Black |author-first=Paul E. |title=Gray code |date=2004-02-25 |publisher=[[NIST]] |url=https://xlinux.nist.gov/dads/HTML/graycode.html}}
+* {{cite book |author-last1=Press |author-first1=William H. |author-last2=Teukolsky |author-first2=Saul A. |author-last3=Vetterling |author-first3=William T. |author-last4=Flannery |author-first4=Brian P. |date=2007 |title=Numerical Recipes: The Art of Scientific Computing |edition=3rd |publisher=[[Cambridge University Press]] |publication-place=New York, USA |isbn=978-0-521-88068-8 |chapter=Section 22.3. Gray Codes |chapter-url=http://apps.nrbook.com/empanel/index.html#pg=1166}}
+* {{cite journal |author-last=Savage |author-first=Carla Diane |author-link=Carla Diane Savage |title=A Survey of Combinatorial Gray Codes |journal=[[SIAM Review]] |publisher=[[Society for Industrial and Applied Mathematics]] (SIAM) |volume=39 |issue=4 |pages=605–629 |date=1997 |doi=10.1137/S0036144595295272 |url=http://www4.ncsu.edu/~savage/AVAILABLE_FOR_MAILING/survey.ps|jstor=2132693 |citeseerx=10.1.1.39.1924}}
+* {{cite book |author-last=Wilf |author-first=Herbert Saul |author-link=Herbert Saul Wilf |chapter=Chapters 1–3 |title=Combinatorial algorithms: An update |url=https://archive.org/details/combinatorialalg0000wilf |url-access=registration |publisher=[[Society for Industrial and Applied Mathematics]] (SIAM) |date=1989 |isbn=0-89871-231-9 |id={{ISBN|978-0-89871-231-5}}}}
+* {{cite book |author-first1=Megan |author-last1=Dewar |author-first2=Brett |author-last2=Stevens |title=Ordering Block Designs – Gray Codes, Universal Cycles and Configuration |publisher=[[Springer Science+Business Media]] |location=New York, USA |edition=1 |date=2012-08-29 |isbn=978-1-46144324-7 |id={{ISBN|1-46144324-5}} |series=CMS Books in Mathematics |issn=1613-5237 |doi=10.1007/978-1-4614-4325-4}}
+* {{cite web |title=Gray Code Fundamentals |work=Design How-To |at=Part 1 |author-first=Clive &quot;Max&quot; |author-last=Maxfield |date=2012-10-01 |orig-date=2011-05-28 |publisher=[[EETimes]] |url=https://www.eetimes.com/document.asp?doc_id=1278809 |access-date=2017-10-30 |url-status=live |archive-url=https://web.archive.org/web/20171030135842/https://www.eetimes.com/document.asp?doc_id=1278809 |archive-date=2017-10-30}} [https://www.eetimes.com/document.asp?doc_id=1278827&lt;!-- https://web.archive.org/web/20171030140209/https://www.eetimes.com/document.asp?doc_id=1278827 --&gt; Part 2] [https://www.eetimes.com/document.asp?doc_id=1278853&lt;!-- https://web.archive.org/web/20171030140323/https://www.eetimes.com/document.asp?doc_id=1278853 --&gt; Part 3]
+* {{cite book |title=Hacker's Delight |title-link=Hacker's Delight |chapter=Chapter 13: Gray Code |author-first=Henry S. |author-last=Warren, Jr. |date=2013 |edition=2 |publisher=[[Addison Wesley]] – [[Pearson Education, Inc.]] |isbn=978-0-321-84268-8 |pages=311–317&lt;!-- page 318 is blank --&gt;}} (7 pages)
+* {{cite journal |title=Computing Binary Combinatorial Gray Codes Via Exhaustive Search With SAT Solvers |author-last1=Zinovik |author-first1=Igor |author-last2=Kroening |author-first2=Daniel |author-last3=Chebiryak |author-first3=Yury |journal=[[IEEE Transactions on Information Theory]] |publisher=[[IEEE]] |volume=54 |issue=4 |date=2008-03-21 |pages=1819–1823 |doi=10.1109/TIT.2008.917695 |url=http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=4475352&amp;arnumber=4475394&amp;count=44&amp;index=39 |hdl=20.500.11850/11304 |hdl-access=free}} (5 pages)
+* {{cite journal |author-first=Joseph A. |author-last=O'Brien |title=Unit-Distance Binary-Decimal Code Translators |journal=[[IRE Transactions on Electronic Computers]] |location= |volume=EC-6 |issue=2 |date=June 1957 |issn=0367-9950 |doi=10.1109/TEC.1957.5221585 |pages=122–123 |url=https://www.researchgate.net/publication/250929745_Unit-Distance_Binary-Decimal_Code_Translators |access-date=2020-05-25}} (2 pages)
+* {{cite magazine |title=A decimal Gray code – Easily converted for shaft position coding |author-first=K. G. |author-last=Barr |location=Faculty of Natural Sciences, [[University of the West Indies]] |date=March 1981 |magazine=[[Wireless World]] |volume=87 |number=1542 |pages=86–87 |url=https://worldradiohistory.com/hd2/IDX-Site-Early-Radio/Archive-Wireless-World-IDX/80s/Wireless-World-1981-03-OCR-Page-0046.pdf |access-date=2020-07-28 |url-status=live |archive-url=https://web.archive.org/web/20200728093447/https://worldradiohistory.com/hd2/IDX-Site-Early-Radio/Archive-Wireless-World-IDX/80s/Wireless-World-1981-03-OCR-Page-0046.pdf |archive-date=2020-07-28}}
+
+== External links ==
+
+* [http://demonstrations.wolfram.com/BinaryGrayCode/ &quot;Gray Code&quot; demonstration] by Michael Schreiber, [[Wolfram Demonstrations Project]] (with Mathematica implementation). 2007.
+* [https://xlinux.nist.gov/dads/HTML/graycode.html NIST Dictionary of Algorithms and Data Structures: Gray code].
+* [https://web.archive.org/web/20151026021510/http://www.aip.de/~ast/EvolCompFAQ/Q21.htm Hitch Hiker's Guide to Evolutionary Computation, Q21: What are Gray codes, and why are they used?], including [[C (programming language)|C]] code to convert between binary and BRGC.
+* Dragos A. Harabor uses [https://web.archive.org/web/20151122120754/http://www.ugcs.caltech.edu/~dragos/3DP/coord.html Gray codes in a 3D digitizer].
+* Single-track gray codes, binary [[chain code]]s ([http://tinaja.com/text/chain01.html Lancaster 1994]), and [[linear feedback shift register]]s are all useful in finding one's absolute position on a single-track rotary encoder (or other position sensor).
+* [http://www.ams.org/featurecolumn/archive/gray.html AMS Column: Gray codes]
+* [http://www.bushytails.net/~randyg/encoder/encoderwheel.html Optical Encoder Wheel Generator]
+* [https://web.archive.org/web/20110724021700/http://prototalk.net/forums/showthread.php?t=78 ProtoTalk.net – Understanding Quadrature Encoding] – Covers quadrature encoding in more detail with a focus on robotic applications
+
+{{DEFAULTSORT:Gray Code}}
+[[Category:Data transmission]]
+[[Category:Numeral systems]]
+[[Category:Binary arithmetic]]
+[[Category:Non-standard positional numeral systems]]</text>
+      <sha1>4nfw5wa85i7tdah7kmsa53kv0gays7k</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Executive</title>
+    <ns>0</ns>
+    <id>50565</id>
+    <revision>
+      <id>976771628</id>
+      <parentid>962998610</parentid>
+      <timestamp>2020-09-04T22:20:37Z</timestamp>
+      <contributor>
+        <username>Bovlb</username>
+        <id>48025</id>
+      </contributor>
+      <comment>/* Arts, entertainment, and media */ +band</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2494" xml:space="preserve">{{Wiktionary}}
+'''Executive''' may refer to:
+{{toc right}}
+==Role, title, or function==
+* [[Executive (government)]], branch of government that has authority and responsibility for the administration of state bureaucracy
+* Executive, a [[senior management]] role in an organization
+** [[Chief executive officer]] (CEO), one of the highest-ranking corporate officers (executives) or administrators
+** [[Executive director]], the senior manager of an organization, company, or corporation
+** [[Executive education]], term used for programs at graduate-level business schools that aim to educate managers or entrepreneurs
+** [[Executive officer]], a high-ranking member of a corporation body, government or military
+** [[Business executive]], a person responsible for running an organization
+** [[Music executive]] or record executive, person within a record label who works in senior management
+** [[Studio executive]], employee of a film studio
+** [[Executive producer]], a person who oversees the production of an entertainment product
+* [[Account executive]], a job title given by a number of marketing agencies (usually to trainee staff who report to account managers)
+* [[Executive functions]] or executive system, theorized cognitive system in psychology that controls and manages other cognitive processes
+
+==Arts, entertainment, and media==
+* [[Executive (magazine)|''Executive'' (magazine)]], a Lebanese business monthly
+* [[The Executive (magazine)|''The Executive'' (magazine)]], a Singaporean business monthly
+* The Executive, a fictional raincoat in the ''Seinfeld'' episode &quot;[[The Raincoats (Seinfeld)|The Raincoats]]&quot;
+* The Executive, a musical band including [[Andrew Ridgeley]] and [[George Michael]] before the formation of [[Wham!]]
+
+==Brands and enterprises==
+* [[Chrysler Executive]], a car offered 1983–1986
+* [[Sinclair Executive]], an electronic calculator offered in the early 1970s
+
+==Computing and Technology==
+* [[Executive (operating system)]], the operating system for the ICL 290x range of computers
+* [[Architecture of Windows NT#Executive|The Windows Executive]], internal part of modern Microsoft Windows operating systems
+
+==Other uses==
+* [[Executive car]], in Britain: an automobile larger than a large family car
+* Executive [[paper size]] (often {{convert|7.25|×|10.5|in|mm}})
+
+==See also==
+* {{intitle|Executive}}
+* [[Executive order (disambiguation)]], a form of act issued by a number of the executive branch of a central government
+{{disambiguation}}</text>
+      <sha1>h9gsqpaw5m1o63u4itc04pvy6bwukr7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Gold code</title>
+    <ns>0</ns>
+    <id>50567</id>
+    <revision>
+      <id>935600628</id>
+      <parentid>929028498</parentid>
+      <timestamp>2020-01-13T15:53:55Z</timestamp>
+      <contributor>
+        <ip>114.36.81.56</ip>
+      </contributor>
+      <comment>The set of gold code sequences should include the two maximum length sequences as well.  See JPL's website.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3562" xml:space="preserve">{{About|binary codes used in telecommunications ([[CDMA]]) and [[GPS]]|the authentication codes used to command a launch of nuclear weapons|Gold Codes}}
+A '''Gold code''', also known as '''Gold sequence''', is a type of binary [[sequence]], used in [[telecommunication]] ([[CDMA]])&lt;ref&gt;{{cite web|last1=George |first1=M. |last2=Hamid |first2=M. |last3=Miller |first3=A. |title=Gold Code Generators in Virtex Devices |publisher=Xilinx.com |url=http://www.xilinx.com/support/documentation/application_notes/xapp217.pdf |url-status=dead |archiveurl=https://web.archive.org/web/20080705134550/http://www.xilinx.com/support/documentation/application_notes/xapp217.pdf |archivedate=July 5, 2008 }}&lt;/ref&gt; and satellite navigation ([[GPS]]).&lt;ref&gt;{{cite web |title=Transmitted GPS Signals |work=The GPS System |publisher=kowoma.de |url=http://www.kowoma.de/en/gps/signals.htm|archive-url=https://archive.is/20120804185510/http://www.kowoma.de/en/gps/signals.htm|url-status=dead|archive-date=2012-08-04}}&lt;/ref&gt; Gold codes are named after Robert Gold.&lt;ref&gt;{{cite web |title=Robert Gold, BS, MS, Ph.D. |date=2011 |publisher=Robert Gold Comm Systems|url=http://www.rgcsystems.com/ppl1_gold.htm}}&lt;/ref&gt;&lt;ref&gt;{{cite journal |author=Gold, R. |title=Optimal binary sequences for spread spectrum multiplexing (Corresp.) |journal=IEEE Transactions on Information Theory |volume=13 |issue=4 |pages=619–621 |date=October 1967 |doi=10.1109/TIT.1967.1054048 }}&lt;/ref&gt; Gold codes have bounded small [[cross-correlation]]s within a set, which is useful when multiple devices are broadcasting in the same frequency range.  A set of Gold code sequences consists of 2&lt;sup&gt;''n''&lt;/sup&gt; + 1 sequences each one with a period of 2&lt;sup&gt;''n''&lt;/sup&gt; &amp;minus; 1.
+
+A set of Gold codes can be generated with the following steps.  Pick two [[maximum length sequence]]s of the same length 2&lt;sup&gt;''n''&lt;/sup&gt; &amp;minus; 1 such that their absolute [[cross-correlation]] is less than or equal to 2&lt;sup&gt;(''n''+2)/2&lt;/sup&gt;, where ''n'' is the size of the [[linear feedback shift register]] used to generate the maximum length sequence (Gold '67).  The set of the 2&lt;sup&gt;''n''&lt;/sup&gt; &amp;minus; 1 [[exclusive-or]]s of the two sequences in their various phases (i.e. translated into all relative positions) together with the two maximum length sequences form a set of 2&lt;sup&gt;''n''&lt;/sup&gt; + 1  Gold code sequences.  The highest absolute cross-correlation in this set of codes is 2&lt;sup&gt;(''n''+2)/2&lt;/sup&gt; + 1 for even ''n'' and 2&lt;sup&gt;(''n''+1)/2&lt;/sup&gt; + 1 for odd ''n''.
+
+The [[exclusive or]] of two different Gold codes from the same set is another Gold code in some phase.
+
+Within a set of Gold codes about half of the codes are balanced{{spaced ndash}}the number of ones and zeros differs by only one.&lt;ref&gt;{{harvnb|Holmes|2007|p=100}}&lt;/ref&gt;
+
+Gold codes are used in [[GPS]]. The [[GPS signals#Coarse/acquisition code|GPS C/A]] ranging codes are Gold codes of period 1,023.
+
+==See also==
+*[[Kasami code]]
+*[[Hadamard code]]
+*[[Zadoff–Chu sequence]]
+*[[Complementary sequences]]
+*[[Space Network]] – a NASA system that uses Gold codes
+
+==References==
+{{Reflist}}
+
+==Further reading==
+*{{cite book |first=Jack K. |last=Holmes |title=Spread Spectrum Systems for GNSS and Wireless Communications |url=https://books.google.com/books?id=-AUfAQAAIAAJ |date=30 June 2007 |publisher=Artech House |isbn=978-1-59693-083-4 |volume=45 |series=GNSS Technology and Applications Series |ref=harv}}
+
+{{cdma}}
+
+{{DEFAULTSORT:Gold Code}}
+[[Category:Line codes]]
+
+{{telecomm-stub}}
+
+[[de:Linear rückgekoppeltes Schieberegister#Gold-Folgen]]</text>
+      <sha1>izncvzeuh06ctk6rln6d2v6peu025w1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Personal rapid transit</title>
+    <ns>0</ns>
+    <id>50568</id>
+    <revision>
+      <id>990425228</id>
+      <parentid>987773525</parentid>
+      <timestamp>2020-11-24T11:54:02Z</timestamp>
+      <contributor>
+        <username>WikiCleanerBot</username>
+        <id>18872885</id>
+      </contributor>
+      <minor />
+      <comment>v2.04b - [[User:WikiCleanerBot#T23|Bot T23 CW#558]] - Fix errors for [[WP:WCW|CW project]] (Duplicated reference - Title linked in text)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="69725" xml:space="preserve">[[File:ULTra 001.jpg|thumb|right|An [[ULTra]] PRT vehicle on a test track at [[London Heathrow Airport|Heathrow Airport]], [[London]]]]
+[[File:Morgantown PRT - Beechurst Station.jpg|thumb|right|A vehicle on [[West Virginia University]]'s [[Morgantown Personal Rapid Transit|PRT system]], [[Morgantown, West Virginia]]]]
+
+'''Personal rapid transit''' ('''PRT'''), also referred to as '''podcars''' or '''guided/railed taxis''', is a [[public transport]] mode featuring small automated vehicles operating on a network of specially built guideways. PRT is a type of [[automated guideway transit]] (AGT), a class of system which also includes larger vehicles all the way to small subway systems. In terms of routing, it tends towards [[personal public transport]] systems.
+
+PRT vehicles are sized for individual or small group travel, typically carrying no more than three to six passengers per vehicle.&lt;ref&gt;{{cite journal|last=Gilbert|first=Richard|author2=Perl, Anthony|title=Grid-connected vehicles as the core of future land-based transport systems|journal=Energy Policy|volume=35|issue=5|pages=3053–3060|doi=10.1016/j.enpol.2006.11.002|year=2007|citeseerx=10.1.1.661.3769}}&lt;/ref&gt; Guideways are arranged in a network topology, with all stations located on [[Siding (rail)|sidings]], and with frequent merge/diverge points. This allows for nonstop, point-to-point travel, bypassing all intermediate stations. The point-to-point service has been compared to a [[taxicab|taxi]] or a horizontal lift (elevator).
+
+Numerous PRT systems have been proposed but most have not been implemented. {{Asof|November 2016}}, only a handful of PRT systems are operational: [[Morgantown Personal Rapid Transit]] (the oldest and most extensive), in [[Morgantown, West Virginia]], has been in continuous operation since 1975. Since 2010 a 10-vehicle [[2getthere]] system has operated at [[Masdar City]], [[UAE]], and since 2011 a 21-vehicle [[Ultra (rapid transit)|Ultra PRT]] system has run at [[London Heathrow Airport]]. A 40-vehicle Vectus system with in-line stations officially opened in [[Suncheon, South Korea|Suncheon]],&lt;ref&gt;{{cite news|title=PRT System to Open for Suncheon Bay Garden Expo|url=http://kojects.com/2013/02/13/prt-system-to-open-in-april-for-suncheon-bay-garden-expo/#more-1411}}&lt;/ref&gt; [[South Korea]], in April 2014 after a year of testing.&lt;ref&gt;{{cite web|title=Suncheon Bay Project, South Korea|url=http://www.vectusprt.com/EN/first-project/}}&lt;/ref&gt;&lt;ref&gt;Masdar City and Suncheon have only two passenger stations while at Heathrow the two stations at the carpark are very close to one another. Masdar also has three freight stations.&lt;/ref&gt;
+
+==Overview==
+Most [[mass transit]] systems move people in groups over scheduled routes. This has inherent inefficiencies.&lt;ref name=&quot;ITNS November 2014&quot;&gt;{{cite web|url=http://www.advancedtransit.org/wp-content/uploads/2011/08/ITNS-11-2014.pdf|title=An Intelligent Transportation Network System: Rationale, Attributes, Status, Economics, Benefits, and Courses of Study for Engineers and Planners|author=J. Edward Anderson|date=November 2014}}&lt;/ref&gt; For passengers, time is wasted by waiting for the next vehicle to arrive, indirect routes to their destination, stopping for passengers with other destinations, and often confusing or inconsistent schedules. Slowing and accelerating large weights can undermine public transport's benefit to the environment while slowing other traffic.&lt;ref name=&quot;ITNS November 2014&quot; /&gt;
+
+Personal rapid transit systems attempt to eliminate these wastes by moving small groups nonstop in automated vehicles on fixed tracks. Passengers can ideally board a pod immediately upon arriving at a station, and can — with a sufficiently extensive network of tracks — take relatively direct routes to their destination without stops.&lt;ref name=&quot;ITNS November 2014&quot; /&gt;
+
+The low weight of PRT's small vehicles allows smaller guideways and support structures than mass transit systems like light rail.&lt;ref name=&quot;ITNS November 2014&quot; /&gt; The smaller structures translate into lower construction costs, smaller [[Track transition curve|easements]], and less visually obtrusive infrastructure.&lt;ref name=&quot;ITNS November 2014&quot; /&gt;
+
+As it stands, a citywide deployment with many lines and closely spaced stations, as envisioned by proponents, has yet to be constructed. Past projects have failed because of financing, cost overruns, regulatory conflicts, political issues, misapplied technology, and flaws in design, engineering or review.&lt;ref name=&quot;ITNS November 2014&quot; /&gt;
+
+However, the theory remains active. For example, from 2002–2005, the EDICT project, sponsored by the [[European Union]], conducted a study on the feasibility of PRT in four European cities. The study involved 12 research organizations, and concluded that PRT:&lt;ref name=&quot;EDICT&quot;&gt;[http://ec.europa.eu/research/environment/newsanddoc/article_2650_en.htm Moving ahead with PRT] {{Webarchive|url=https://web.archive.org/web/20060921115952/http://ec.europa.eu/research/environment/newsanddoc/article_2650_en.htm |date=2006-09-21 }} from ec.europa.eu&lt;/ref&gt;
+* would provide future cities &quot;a highly accessible, user-responsive, environmentally friendly transport system which offers a sustainable and economic solution.&quot;
+* could &quot;cover its operating costs, and provide a return which could pay for most, if not all, of its capital costs.&quot;
+* would provide &quot;a level of service which is superior to that available from conventional public transport.&quot;
+* would be &quot;well received by the public, both public transport and car users.&quot;
+The report also concluded that, despite these advantages, public authorities will not commit to building PRT because of the risks associated with being the first public implementation.&lt;ref name=&quot;EDICT&quot;/&gt;&lt;ref name=&quot;EDICTFinalReport&quot;&gt;[http://archive.cardiff.gov.uk/traffic/internet/jondutton/edict/current/CONTENT/Del10%20-%20Final%20Report.pdf EDICT Final Report (PDF)&quot;] {{Webarchive|url=https://web.archive.org/web/20150526165330/http://archive.cardiff.gov.uk/traffic/internet/jondutton/edict/current/CONTENT/Del10%20-%20Final%20Report.pdf |date=2015-05-26 }} from cardiff.gov.uk&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot; style=&quot;margin:auto;&quot;
+|+ '''Comparison of Personal Rapid Transit with existing transport systems'''
+|-
+|  style=&quot;text-align:right; vertical-align:top; padding:4px;&quot;|'''Similar to Cars / [[automobile]]s'''|[[taxicabs]]
+||
+* Vehicles are small—typically two to six passengers
+* Vehicles are individually hired, like taxis, and shared only with the passengers of one's choosing
+* Vehicles travel along a network of guideways, much like a network of streets.  Travel is point-to-point, with no intermediate stops or transfers
+* Potential for on-demand, around-the-clock availability
+* Stops are designed to be off the main guideway, allowing through traffic to bypass stations unimpeded
+|-
+|  style=&quot;text-align:right; vertical-align:top; padding:4px;&quot;|'''Similar to [[tram]]s, [[bus]]es, and [[monorail]]s'''
+||
+* A public amenity (although not necessarily publicly owned), shared by multiple users
+* Reduced local pollution (electric powered)
+* Passengers embark and disembark at discrete stations, analogous to [[bus stop]]s or [[taxi stand]]s
+|-
+|  style=&quot;text-align:right; vertical-align:top; padding:4px;&quot;|'''Similar to automated [[people mover]]s'''
+||
+* Fully automated, including vehicle control, routing, and collection of fares
+* Usually above the street—typically elevated—reducing land usage and congestion
+|-
+|  style=&quot;text-align:right; vertical-align:top; padding:4px;&quot;|'''Distinct features'''
+||
+* Vehicle movements may be coordinated, unlike the autonomous human control of cars and bikes
+* Small vehicle size allows infrastructure to be smaller than other transit modes
+* Automated vehicles can travel close together. Possibilities include dynamically combined &quot;trains&quot; of vehicles, separated by a few inches, to reduce [[drag (physics)|drag]] and increase speed, energy efficiency and passenger density
+|}
+
+The PRT acronym was introduced formally in 1978 by [[J. Edward Anderson]].&lt;ref&gt;J. Edward Anderson, [http://faculty.washington.edu/~jbs/itrans/PRT/Background.html &quot;What is Personal Rapid Transit?&quot;], University of Washington, 1978&lt;/ref&gt; The [[Advanced Transit Association]] (ATRA), a group which advocates the use of technological solutions to transit problems, compiled a definition in 1988 that can be seen here.&lt;ref&gt;{{cite web |url=http://faculty.washington.edu/jbs/itrans/PRT/Background.html |title=PRT Background |publisher=Faculty.washington.edu |accessdate=2012-10-17 |archive-url=https://web.archive.org/web/20120728094847/http://faculty.washington.edu/jbs/itrans/PRT/Background.html |archive-date=2012-07-28 |url-status=dead }}&lt;/ref&gt;
+
+==List of operational automated transit networks (ATN) systems==
+Currently, five advanced transit networks (ATN) systems are operational, and several more are in the planning stage.&lt;ref&gt;{{cite web|url=http://www.advancedtransit.org/advanced-transit/systems/|title=Advanced Transit &amp; Automated Transport Systems|work=ATRA}}&lt;/ref&gt;
+
+{| class=&quot;wikitable sortable&quot;
+|-
+! System
+! Manufacturer
+! Type
+! style=&quot;width: 200px;&quot; | Locations
+! Guideway
+! {{nowrap|Stations / vehicles}}
+! class=&quot;unsortable&quot; | Notes
+|- 
+| [[Morgantown Personal Rapid Transit|Morgantown PRT]]
+| [[Boeing]]
+| GRT
+| 
+* {{flagicon|United States}}[[Morgantown, West Virginia]], US (1975)&lt;ref name=&quot;Progressive Engineer&quot;&gt;{{cite journal| last=Gibson| first=Tom| title=Still in a Class of Its Own| journal=Progressive Engineer| url=http://www.progressiveengineer.com/PEWebBackissues2002/PEWeb%2024%20Mar%2002-2/PRT.htm| accessdate=2008-05-30| archive-url=https://web.archive.org/web/20120207004737/http://www.progressiveengineer.com/PEWebBackissues2002/PEWeb%2024%20Mar%2002-2/PRT.htm| archive-date=2012-02-07| url-status=dead}}&lt;/ref&gt;
+| {{convert|13.2|km|mi|1|abbr=on|sortable=on}}&lt;ref name=&quot;WVU1&quot;&gt;[http://admissions.wvu.edu/undergraduate/discover/prt.asp West Virginia University - PRT]&lt;/ref&gt;
+| 5&lt;ref name=&quot;WVU1&quot; /&gt; / 73&lt;ref name=&quot;Progressive Engineer&quot;/&gt;
+| Up to 20 passengers per vehicle, some rides not point-to-point during low usage periods&lt;ref name=&quot;Progressive Engineer&quot;/&gt;
+|- 
+| [[ParkShuttle]]
+| [https://web.archive.org/web/20161227195810/http://www.2getthere.eu/projects/rivium-grt/ 2getthere]
+| GRT
+|  
+* {{flagicon|Netherlands}}Rivium, the Netherlands (November 2005)
+| 1.8&amp;nbsp;km (1.1&amp;nbsp;mi)
+| 5
+| 2nd generation GRT (Group Rapid Transit) vehicles accommodate up to 24 passengers (12 seated). The vehicles operate on-schedule during peak hours, at a 2.5 minute interval, and can operate on demand during off-peak hours. The current system will operate until the end of 2018, after which it is expected to be replaced and expanded.&lt;ref&gt;{{cite web|title=RIVIUM GRT|url=https://www.2getthere.eu/projects/rivium-grt/|publisher=2getthere|accessdate=1 September 2017|archive-url=https://web.archive.org/web/20170310200020/http://www.2getthere.eu/projects/rivium-grt/|archive-date=2017-03-10|url-status=dead}}.  I pilot scheme operated on part of the current route between 1999 and 2005.&lt;/ref&gt;
+|- 
+| CyberCab
+| [http://www.2getthere.eu/ 2getthere]&lt;ref name=&quot;mogge1&quot;&gt;Mogge, John, ''[http://faculty.washington.edu/jbs/itrans/moggeprtpaper.pdf The Technology of Personal Transit],'' &quot;Figure 6. MASDAR Phase 1A Prototype Passenger PRT.&quot; Paper delivered at the [http://www.worldfutureenergysummit.com World Future Energy Summit], January 20, 2009. Available in WFES online media center.&lt;/ref&gt;
+| PRT
+| 
+* {{flagicon|United Arab Emirates}}[[Masdar City]], [[Abu Dhabi]], UAE (November 2010)
+| {{convert|1.5|km|mi|1|abbr=on|sortable=on}}
+| 2 passenger, 3 freight / 10 passenger, 3 freight&lt;ref&gt;{{cite web|url = http://www.advancedtransit.org/wp-content/uploads/2011/08/PRT-Vehicle-Architecture-and-Control-in-Masdar-City-M.-de-Graaf.pdf|title=PRT Vehicle Architecture and Control in Masdar City}}&lt;/ref&gt;
+| Initial plans called for cars to be banned, with PRT as the only powered intra-city transport&lt;ref name=&quot;panda&quot;&gt;[http://www.panda.org/wwf_news/press_releases/?121361 WWF, Abu Dhabi unveil plans for sustainable city]. World Wildlife Fund, January 13, 2008&lt;/ref&gt; (along with an inter-city light rail line&lt;ref name=&quot;intercity&quot;&gt;[https://www.theguardian.com/environment/2008/jan/21/climatechange.energy Desert state channels oil wealth into world's first sustainable city]). ''The Guardian'', January 21, 2008.&lt;/ref&gt;) In October 2010 it was announced the PRT would not expand beyond the pilot scheme due to the cost of creating the undercroft to segregate the system from pedestrian traffic.&lt;ref name=&quot;whymasdarscaleback&quot;/&gt;&lt;ref name=&quot;Masdarsinghub&quot;&gt;{{cite web|url=http://singularityhub.com/2011/03/01/masdar-city-abandons-public-transportation-system-of-the-future|title=Masdar City Abandons Transportation System of the Future|work=Singularity HUB}}&lt;/ref&gt; Plans now include electric cars and electric buses.&lt;ref&gt;{{cite web |title= Masdar City - Sustainability and the City - Transportation |url= http://masdarcity.ae/en/62/sustainability-and-the-city/transportation/ |access-date= 2013-06-30 |archive-url= https://web.archive.org/web/20130713185713/http://masdarcity.ae/en/62/sustainability-and-the-city/transportation |archive-date= 2013-07-13 |url-status= dead }}&lt;/ref&gt; In June 2013 a representative of the builder 2getthere said the freight vehicles had still not been put into service because they had not worked out how to get freight to and from the stations.&lt;ref&gt;{{cite web|title=Automated People Movers and Automated Transit Systems Conference|url=http://shanta-bonsall.com/?p=4|access-date=2013-07-28|archive-url=https://web.archive.org/web/20131029190129/http://shanta-bonsall.com/?p=4|archive-date=2013-10-29|url-status=dead}}&lt;/ref&gt;
+|- 
+| [[ULTra]] PRT
+| [[ULTra]]
+| PRT
+| 
+* {{flagicon|United Kingdom}}[[London Heathrow Airport|Heathrow Airport]], England, UK (June 2011) 
+| {{convert|3.8|km|mi|1|abbr=on|sortable=on}}&lt;ref name=&quot;HeathrowBAA&quot;&gt;[http://www.baa.com/portal/controller/dispatcher.jsp?CiID=4a1d6acc2fce6110VgnVCM10000036821c0a____&amp;ChID=b78aa08ae5c6d110VgnVCM10000036821c0a____&amp;Ct=B2C_CT_PRESS_RELEASE&amp;CtID=a22889d8759a0010VgnVCM200000357e120a____&amp;ChPath=Home^BAA+Airports^Press+releases BAA: Heathrow Transit System a World First], 18 December 2007&lt;/ref&gt;
+| 3 / 21&lt;ref name=&quot;HeathrowULTra&quot;&gt;{{cite web |url=http://www.ultraprt.com/applications/existing-systems/heathrow/ |title=ULTra - ULTra at London Heathrow Airport |publisher=Ultraprt.com |accessdate=2012-10-17 |url-status=dead |archiveurl=https://web.archive.org/web/20100330100608/http://www.ultraprt.com/applications/existing-systems/heathrow/ |archivedate=2010-03-30 }}&lt;/ref&gt;
+| The Heathrow PRT system became operational in 2011, connecting Terminal 5 with a long-term car park.&lt;ref name='heathrow-retail-travel'&gt;{{cite web | url = http://www.heathrowairport.com/about-us/partners-and-suppliers/retail-travel-services | title = Heathrow Retail Travel Services | accessdate = 2014-01-02 | quote = Heathrow Pod, began public service in 2011 and will carry around 500,000 passengers per year from the Terminal 5 business car park to the main terminal.}}&lt;/ref&gt; In May 2014 [[BAA Limited|BAA]] said in a draft 5-year plan that it would extend the system throughout the airport, but this was dropped from the final plan.
+|- 
+| Skycube&lt;ref name=&quot;vecsuncheon&quot;&gt;[http://joongangdaily.joins.com/article/view.asp?aid=2910573 Posco will help realize new rapid transit plan], Joong Ang Daily, 26 September 2009&lt;/ref&gt;
+| Vectus
+| PRT
+| 
+* {{flagicon|South Korea}}[[Suncheon, South Korea|Suncheon]], South Korea (September 2013)&lt;ref name=&quot;vecsuncheon&quot;/&gt;
+| {{convert|4.64|km|mi|1|abbr=on|sortable=on}}&lt;ref&gt;{{cite web|title = Korea's First Personal Rapid Transit (PRT), SkyCube |url=http://globalblog.posco.com/koreas-first-personal-rapid-transit-prt-skycube/}}&lt;/ref&gt;
+| 2 / 40&lt;ref name=&quot;vecsuncheon&quot;/&gt;
+| Connects the site of [[2013 Suncheon Garden Expo Korea]] to a station in the wetlands &quot;Buffer Area&quot; next to the Suncheon Literature Museum;&lt;ref&gt;{{cite web| url=http://eng.2013expo.or.kr/?r=ENG&amp;c=274/608&amp;m=festivalmnm&amp;front=view&amp;type=CTS00700016&amp;uid=74| title=Suncheon Literature Museum (pictorial map has representation of PRT connection)| access-date=2019-09-16| archive-url=https://web.archive.org/web/20181215122432/http://eng.2013expo.or.kr/?r=ENG&amp;c=274%2F608&amp;m=festivalmnm&amp;front=view&amp;type=CTS00700016&amp;uid=74| archive-date=2018-12-15| url-status=dead}}&lt;/ref&gt; the line runs parallel to the Suncheon-dong Stream.&lt;ref&gt;{{cite web| title = PRT System to Open for Suncheon Bay Garden Expo| url=http://kojects.com/2013/02/13/prt-system-to-open-in-april-for-suncheon-bay-garden-expo/}}&lt;/ref&gt; Stations are &quot;on-line.&quot;
+|}
+
+==List of ATN suppliers==
+{{main|List of automated transit networks suppliers}}
+The following list summarizes several well-known automated transit networks (ATN) suppliers as of 2014.&lt;ref&gt;{{cite web|url= http://transweb.sjsu.edu/PDFs/research/1227-automated-transit-networks.pdf |title=Automated Transit Networks(ATN): A Review of the Stateof the Industry and Prospectsfor the Future }}&lt;/ref&gt;
+
+* Revenue service: [[Boeing]] ([[Morgantown Personal Rapid Transit|Morgantown PRT]]), [[ULTra]], [http://www.2getthere.eu 2getthere], [https://web.archive.org/web/20090817143907/http://www.vectusprt.com/index.php Vectus].
+* Full test track: [http://www.modutram.com/ Modutram], [[Cabinentaxi]].&lt;ref&gt;{{cite web|url=http://faculty.washington.edu/jbs/itrans/cabin.htm |title=cabintaxi infopage |publisher=Faculty.washington.edu |date=2012-09-20 |accessdate=2012-10-17}}&lt;/ref&gt;
+* Mockups or scale models: [https://web.archive.org/web/20180806024515/http://ecoprt.com/ ecoPRT], [https://web.archive.org/web/20161208102113/http://www.engr.sjsu.edu/smssv/ Spartan Superway], [http://www.milotek.co.za/ Fultran], [https://web.archive.org/web/20061207093819/http://www.taxi2000.com/ Taxi 2000], [http://www.skycab.se/eng/?vision Skycab], MoveMile, EcoMobility, [https://web.archive.org/web/20141006083858/http://cybertran.com/ Cybertran], [[Shweeb]], [http://www.skyridetechnology.com SkyRide], [https://web.archive.org/web/20170924011049/http://www.tts-21.com/index_en.html Tubenet Transit Systems].
+* Historical: [[Computer-controlled Vehicle System|CVS]], [[Aramis (personal rapid transit)|Aramis]], PRT2000 (Raytheon),&lt;ref&gt;{{cite web|url=http://faculty.washington.edu/jbs/itrans/ray.htm |title=Raytheon's PRT 2000 infopage |publisher=Faculty.washington.edu |date=2002-08-18 |accessdate=2013-11-24}}&lt;/ref&gt; Monocab/[[Rohr ROMAG|ROMAG]].

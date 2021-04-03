@@ -1,0 +1,157 @@
+The [[rocket engine]]s for the [[International Space Station]] (ISS) are controlled by an [[autopilot]]. Ordinarily, uploaded parameters for controlling the engine control system for the Zvezda module make the rocket engines boost the International Space Station to a higher orbit. The rocket engines are [[hinge]]-mounted, and ordinarily the crew doesn't notice the operation. On January 14, 2009, however, the uploaded parameters made the autopilot swing the rocket engines in larger and larger oscillations, at a frequency of 0.5&amp;nbsp;Hz. These oscillations were captured on video, and lasted for 142 seconds.&lt;ref name=oberg&gt;{{cite news|last=Oberg|first=James|title=Shaking on Space Station Rattles NASA|url=http://www.nbcnews.com/id/28998876/#story|newspaper=NBC News|date=4 February 2009}}&lt;/ref&gt;
+
+==Resonance in linear systems==
+Resonance manifests itself in many linear and nonlinear systems as oscillations around an equilibrium point. When the system is driven by a sinusoidal external input, a measured output of the system may oscillate in response. The ratio of the amplitude of the output's steady-state oscillations to the input's oscillations is called the gain, and the gain can be a function of the frequency of the sinusoidal external input. Peaks in the gain at certain frequencies correspond to resonances, where the amplitude of the measured output's oscillations are disproportionately large.
+
+Since many linear and nonlinear systems that oscillate are modeled as [[harmonic oscillator]]s near their equilibria, this section begins with a derivation of the resonant frequency for a driven, damped harmonic oscillator. The section then uses an [[RLC circuit]] to illustrate connections between resonance and a system's transfer function, frequency response, poles, and zeroes. Building off the RLC circuit example, the section then generalizes these relationships for higher-order linear systems with multiple inputs and outputs.
+
+===Resonance of a driven, damped harmonic oscillator===
+{{main|Harmonic oscillator#Driven harmonic oscillators}}
+
+Consider a damped mass on a spring driven by a sinusoidal, externally applied force. [[Newton's second law]] takes the form
+
+{{NumBlk|:|&lt;math&gt;m\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = F_0 \sin(\omega t)-kx-c\frac{\mathrm{d}x}{\mathrm{d}t}, &lt;/math&gt;|{{EquationRef|1}}}}
+
+where ''m'' is the mass, ''x'' is the displacement of the mass from the equilibrium point, ''F''&lt;sub&gt;0&lt;/sub&gt; is the driving amplitude, ''ω'' is the driving angular frequency, ''k'' is the spring constant, and ''c'' is the viscous damping coefficient. This can be rewritten in the form
+
+{{NumBlk|:|&lt;math&gt; \frac{\mathrm{d}^2x}{\mathrm{d}t^2} + 2\zeta\omega_0\frac{\mathrm{d}x}{\mathrm{d}t} + \omega_0^2 x = \frac{F_0}{m} \sin(\omega t),&lt;/math&gt;|{{EquationRef|2}}}}
+where
+: &lt;math&gt;\omega_0 = \sqrt{\frac k m}&lt;/math&gt; is called the ''undamped [[angular frequency]] of the oscillator'' or the ''natural frequency'',
+: &lt;math&gt;\zeta = \frac{c}{2\sqrt{mk}}&lt;/math&gt; is called the ''damping ratio''.
+
+Many sources also refer to ''ω''&lt;sub&gt;0&lt;/sub&gt; as the ''resonant frequency''. However, as shown below, when analyzing oscillations of the displacement ''x''(''t''), the resonant frequency is close to but not the same as ''ω''&lt;sub&gt;0&lt;/sub&gt;. In general the resonant frequency is close to but not necessarily the same as the natural frequency.&lt;ref name=&quot;Hardt2004&quot;/&gt; The RLC circuit example in the next section gives examples of different resonant frequencies for the same system.
+
+The general solution of Equation ({{EquationNote|2}})  is the sum of a [[Transient (oscillation)|transient]] solution that depends on initial conditions and a [[steady state]] solution that is independent of initial conditions and depends only on the driving amplitude ''F''&lt;sub&gt;0&lt;/sub&gt;, driving frequency ''ω'', undamped angular frequency ''ω''&lt;sub&gt;0&lt;/sub&gt;, and the damping ratio ''ζ''. The transient solution decays in a relatively short amount of time, so to study resonance it is sufficient to consider the steady state solution.
+
+It is possible to write the steady-state solution for ''x''(''t'') as a function proportional to the driving force with an induced [[phase (waves)|phase]] change ''φ'',
+
+{{NumBlk|:|&lt;math&gt;x(t) = \frac{F_0}{m \sqrt{\left(2\omega\omega_0\zeta\right)^2 + (\omega_0^2 - \omega^2)^2}} \sin(\omega t + \varphi),&lt;/math&gt;|{{EquationRef|3}}}}
+
+where
+:&lt;math&gt; \varphi = \arctan\left(\frac{2\omega \omega_0\zeta}{\omega^2 - \omega_0^2} \right) + n\pi.&lt;/math&gt;
+
+The phase value is usually taken to be between −180° and 0 so it represents a phase lag for both positive and negative values of the arctan argument.
+
+[[File:Mplwp resonance zeta envelope.svg|thumb|300px|Steady-state variation of amplitude with relative frequency &lt;math&gt;\omega/\omega_0&lt;/math&gt; and [[damping]] &lt;math&gt;\zeta&lt;/math&gt; of a driven [[simple harmonic oscillator]]]]
+&lt;!--&lt;ref&gt;{{cite book|last=Ogata|first=Katsuhiko|title=System dynamics|year=2004|publisher=Pearson Education|location=Upper Saddle River, NJ|isbn=9780131247147|edition=4th}}&lt;/ref&gt;&lt;ref&gt;
+{{cite book
+ | title = Optics, 3E
+ | author = [[Ajoy Ghatak]]
+ | edition = 3rd
+ | publisher = Tata McGraw-Hill
+ | year = 2005
+ | isbn = 978-0-07-058583-6
+ | page = 6.10
+ | url = https://books.google.com/books?id=jStDc2LmU5IC&amp;pg=PT97 
+ }}&lt;/ref&gt;
+--&gt;
+
+Resonance occurs when, at certain driving frequencies, the steady-state amplitude of ''x''(''t'') is large compared to its amplitude at other driving frequencies. For the mass on a spring, resonance corresponds physically to the mass's oscillations having large displacements from the spring's equilibrium position at certain driving frequencies.  Looking at the amplitude of ''x''(''t'') as a function of the driving frequency ''ω'', the amplitude is maximal at the driving frequency
+
+&lt;math&gt;\omega_r = \omega_0 \sqrt{1 - 2\zeta^2}.&lt;/math&gt;
+
+''ω''&lt;sub&gt;''r''&lt;/sub&gt; is the '''resonant frequency''' for this system. Again, note that the resonant frequency does not equal the undamped angular frequency ''ω''&lt;sub&gt;0&lt;/sub&gt; of the oscillator. They are proportional, and if the damping ratio goes to zero they are the same, but for non-zero damping they are not the same frequency. As shown in the figure, resonance may also occur at other frequencies near the resonant frequency, including ''ω''&lt;sub&gt;0&lt;/sub&gt;, but the maximum response is at the resonant frequency.
+
+Also note that ''ω''&lt;sub&gt;''r''&lt;/sub&gt; is only real and non-zero if &lt;math&gt;\zeta &lt; 1 / \sqrt{2}&lt;/math&gt;, so this system can only resonate when the harmonic oscillator is significantly underdamped. For systems with a very small damping ratio and a driving frequency near the resonant frequency, the steady state oscillations can become very large.
+
+==== Resonance of a pendulum ====
+For other driven, damped harmonic oscillators whose equations of motion do not look exactly like the mass on a spring example, the resonant frequency remains
+:&lt;math&gt;\omega_r = \omega_0 \sqrt{1 - 2\zeta^2},&lt;/math&gt;
+
+but the definitions of ''ω''&lt;sub&gt;0&lt;/sub&gt; and ''ζ'' change based on the physics of the system. For a pendulum of length ''l'' and small displacement angle ''θ'', Equation ({{EquationNote|1}}) becomes
+:&lt;math&gt; ml\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2} = F_0 \sin(\omega t)-mg\theta-cl\frac{\mathrm{d}\theta}{\mathrm{d}t}&lt;/math&gt;
+
+and therefore
+: &lt;math&gt;\omega_0 = \sqrt{\frac{g}{l}},&lt;/math&gt;
+: &lt;math&gt;\zeta = \frac{c}{2m}\sqrt{\frac{l}{g}}.&lt;/math&gt;
+
+=== Transfer function, frequency response, and resonance for an RLC series circuit ===
+{{see also|RLC Circuit#Series circuit}}
+
+[[File:RLC series circuit v1.svg|thumb|upright|'''Figure 1:''' RLC series circuit
+{{unbulleted list
+ | {{mvar|V}}, the voltage source powering the circuit
+ | {{mvar|I}}, the current admitted through the circuit
+ | {{mvar|R}}, the effective resistance of the combined load, source, and components
+ | {{mvar|L}}, the inductance of the [[inductor]] component
+ | {{mvar|C}}, the capacitance of the [[capacitor]] component
+}}]]
+
+Consider a [[electrical network|circuit]] consisting of a [[resistor]] with resistance ''R'', an [[inductor]] with inductance ''L'', and a [[capacitor]] with capacitance ''C'' connected in series with current ''i''(''t'') and driven by a [[voltage]] source with voltage ''v''&lt;sub&gt;''in''&lt;/sub&gt;(''t''). The voltage drop around the circuit is
+{{NumBlk|:|&lt;math&gt;L \frac{di(t)}{dt} + Ri(t) + V(0)+\frac{1}{C} \int_{0}^t i(\tau)d\tau = v_{in}(t).&lt;/math&gt;|{{EquationRef|4}}}}
+
+Rather than analyzing a candidate solution to this equation like in the mass on a spring example above, this section will analyze the frequency response of this circuit. Taking the [[Laplace transform]] of Equation ({{EquationNote|4}}),
+:&lt;math&gt;sLI(s) + RI(s) + \frac{1}{sC}I(s) = V_{in}(s),&lt;/math&gt;
+
+where ''I''(''s'') and ''V''&lt;sub&gt;''in''&lt;/sub&gt;(''s'') are the Laplace transform of the current and input voltage, respectively, and ''s'' is a [[complex number|complex]] frequency parameter in the Laplace domain. Rearranging terms,
+:&lt;math&gt;I(s) = \frac{s}{s^2L + Rs + \frac{1}{C}} V_{in}(s).&lt;/math&gt;
+
+====Resonance of voltage across the capacitor====
+An RLC circuit in series presents several options for where to measure an output voltage. Suppose the output voltage of interest is the voltage drop across the capacitor. As shown above, in the Laplace domain this voltage is
+:&lt;math&gt;V_{out}(s)=\frac{1}{sC}I(s)&lt;/math&gt;
+
+or
+:&lt;math&gt;V_{out}= \frac{1}{LC(s^2 + \frac{R}{L}s + \frac{1}{LC})} V_{in}(s).&lt;/math&gt;
+
+Define for this circuit a natural frequency and a damping ratio,
+:&lt;math&gt; \omega_0 = \frac{1}{\sqrt{LC}},&lt;/math&gt;
+:&lt;math&gt; \zeta = \frac{R}{2}\sqrt{\frac{C}{L}}.&lt;/math&gt;
+
+The ratio of the output voltage to the input voltage becomes
+:&lt;math&gt;H(s) \triangleq \frac{V_{out}(s)}{V_{in}(s)} = \frac{\omega_0^2}{s^2 + 2\zeta\omega_0s + \omega_0^2}&lt;/math&gt;
+
+''H''(''s'') is the [[transfer function]] between the input voltage and the output voltage. Note that this transfer function has two [[zeros and poles|poles]]–roots of the polynomial in the transfer function's denominator–at
+{{NumBlk|:|&lt;math&gt;s = -\zeta\omega_0 \pm i\omega_0\sqrt{1-\zeta^2}&lt;/math&gt;|{{EquationRef|5}}}}
+
+and no [[zeros and poles|zeros]]–roots of the polynomial in the transfer function's numerator. Moreover, note that for {{Nowrap|''ζ'' ≤ 1}}, the magnitude of these poles is the natural frequency ''ω''&lt;sub&gt;0&lt;/sub&gt; and that for {{Nowrap|''ζ'' &lt; 1/&lt;math&gt;\sqrt{2}&lt;/math&gt;}}, our condition for resonance in the harmonic oscillator example, the poles are closer to the imaginary axis than to the real axis.
+
+Evaluating ''H''(''s'') along the imaginary axis {{Nowrap|''s'' {{=}} ''iω''}}, the transfer function describes the frequency response of this circuit. Equivalently, the frequency response can be analyzed by taking the [[Fourier transform]] of Equation ({{EquationNote|4}}) instead of the Laplace transform.  The transfer function, which is also complex, can be written as a gain and phase,
+:&lt;math&gt; H(i\omega) = G(\omega)e^{i\Phi(\omega)}.&lt;/math&gt;
+
+[[File:RLC Series Circuit Bode Magnitude Plot.svg|thumb|upright=1.35|Bode magnitude plot for the voltage across the elements of an RLC series circuit. Natural frequency {{Nowrap|''ω''&lt;sub&gt;0&lt;/sub&gt; {{=}} 1 rad/s}}, damping ratio {{Nowrap|''ζ'' {{=}} 0.4}}. The capacitor voltage peaks below the circuit's natural frequency, the inductor voltage peaks above the natural frequency, and the resistor voltage peaks at the natural frequency with a peak gain of one. The gain for the voltage across the capacitor and inductor combined in series shows antiresonance, with gain going to zero at the natural frequency.]]
+
+A sinusoidal input voltage at frequency ''ω'' results in an output voltage at the same frequency that has been scaled by ''G''(''ω'') and has a phase shift ''Φ''(''ω''). The gain and phase can be plotted versus frequency on a [[Bode plot]]. For the RLC circuit's capacitor voltage, the gain of the transfer function ''H''(''iω'') is
+{{NumBlk|:|&lt;math&gt; G(\omega) = \frac{\omega_0^2}{\sqrt{\left(2\omega\omega_0\zeta\right)^2 + (\omega_0^2 - \omega^2)^2}}.&lt;/math&gt;|{{EquationRef|6}}}}
+
+Note the similarity between the gain here and the amplitude in Equation ({{EquationNote|3}}). Once again, the gain is maximized at the '''resonant frequency'''
+:&lt;math&gt;\omega_r = \omega_0 \sqrt{1 - 2\zeta^2}.&lt;/math&gt;
+
+Here, the resonance corresponds physically to having a relatively large amplitude for the steady state oscillations of the voltage across the capacitor compared to its amplitude at other driving frequencies.
+
+==== Resonance of voltage across the inductor ====
+The resonant frequency need not always take the form given in the examples above. For the RLC circuit, suppose instead that the output voltage of interest is the voltage across the inductor. As shown above, in the Laplace domain the voltage across the inductor is
+:&lt;math&gt;V_{out}(s) = sLI(s),&lt;/math&gt;
+:&lt;math&gt;V_{out}(s) = \frac{s^2}{s^2 + \frac{R}{L}s + \frac{1}{LC}} V_{in}(s),&lt;/math&gt;
+:&lt;math&gt;V_{out}(s) = \frac{s^2}{s^2 + 2\zeta\omega_0s + \omega_0^2} V_{in}(s),&lt;/math&gt;
+
+using the same definitions for ''ω''&lt;sub&gt;0&lt;/sub&gt; and ''ζ'' as in the previous example. The transfer function between ''V''&lt;sub&gt;''in''&lt;/sub&gt;(''s'') and this new ''V''&lt;sub&gt;''out''&lt;/sub&gt;(''s'') across the inductor is
+:&lt;math&gt;H(s) = \frac{s^2}{s^2 + 2\zeta\omega_0s + \omega_0^2}.&lt;/math&gt;
+
+Note that this transfer function has the same poles as the transfer function in the previous example, but it also has two zeroes in the numerator at {{Nowrap|''s'' {{=}} 0}}. Evaluating ''H''(''s'') along the imaginary axis, its gain becomes
+:&lt;math&gt; G(\omega) = \frac{\omega^2}{\sqrt{\left(2\omega\omega_0\zeta\right)^2 + (\omega_0^2 - \omega^2)^2}}.&lt;/math&gt;
+
+Compared to the gain in Equation ({{EquationNote|6}}) using the capacitor voltage as the output, this gain has a factor of ''ω''&lt;sup&gt;2&lt;/sup&gt; in the numerator and will therefore have a different resonant frequency that maximizes the gain. That frequency is
+:&lt;math&gt;\omega_r = \frac{\omega_0}{\sqrt{1 - 2\zeta^2}},&lt;/math&gt;
+
+So for the same RLC circuit but with the voltage across the inductor as the output, the resonant frequency is now ''larger'' than the natural frequency, though it still tends towards the natural frequency as the damping ratio goes to zero. That the same circuit can have different resonant frequencies for different choices of output is not contradictory. As shown in Equation ({{EquationNote|4}}), the voltage drop across the circuit is divided among the three circuit elements, and each element has different dynamics. The capacitor's voltage grows slowly by integrating the current over time and is therefore more sensitive to lower frequencies, whereas the inductor's voltage grows when the current changes rapidly and is therefore more sensitive to higher frequencies. While the circuit as a whole has a natural frequency where it tends to oscillate, the different dynamics of each circuit element make each element resonate at a slightly different frequency.&lt;ref name=&quot;CheeverSysBehav&quot;&gt;{{cite web|last = Cheever| first = Erik| title = What you should know about system behavior| publisher = Swarthmore College| url = https://www.swarthmore.edu/NatSci/echeeve1/Ref/E72WhaKnow/WhaKnowSys.html| accessdate=April 18, 2020}}&lt;/ref&gt;
+
+==== Resonance of voltage across the resistor ====
+Suppose that the output voltage of interest is the voltage across the resistor. In the Laplace domain the voltage across the resistor is
+:&lt;math&gt;V_{out}(s) = RI(s),&lt;/math&gt;
+:&lt;math&gt;V_{out}(s) = \frac{Rs}{L(s^2 + \frac{R}{L}s + \frac{1}{LC})} V_{in}(s),&lt;/math&gt;
+
+and using the same natural frequency and damping ratio as in the capacitor example the transfer function is
+:&lt;math&gt;H(s) = \frac{2\zeta\omega_0s}{s^2 + 2\zeta\omega_0s+\omega_0^2}.&lt;/math&gt;
+
+Note that this transfer function also has the same poles as the previous RLC circuit examples, but it only has one zero in the numerator at ''s'' = 0. For this transfer function, its gain is
+:&lt;math&gt; G(\omega) = \frac{2\zeta\omega_0\omega}{\sqrt{\left(2\omega\omega_0\zeta\right)^2 + (\omega_0^2 - \omega^2)^2}}.&lt;/math&gt;
+
+The resonant frequency that maximizes this gain is
+:&lt;math&gt;\omega_r = \omega_0,&lt;/math&gt;
+
+and the gain is one at this frequency, so the voltage across the resistor resonates ''at'' the circuit's natural frequency and at this frequency the amplitude of the voltage across the resistor equals the input voltage's amplitude.
+
+==== Antiresonance ====
+{{Main|Antiresonance}}
+
+Some systems exhibit [[antiresonance]] that can be analyzed in the same way as resonance. For antiresonance, the amplitude of the response of the system at certain frequencies is disproportionately ''small'' rather than being disproportionately large. In the RLC circuit example, this phenomenon can be observed by analyzing both the inductor and the capacitor combined.

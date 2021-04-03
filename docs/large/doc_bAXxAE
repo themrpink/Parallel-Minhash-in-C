@@ -1,0 +1,614 @@
+Sometimes an inversion is defined as the pair of values {{nowrap|(''σ''&lt;sub&gt;''i''&lt;/sub&gt;,''σ''&lt;sub&gt;''j''&lt;/sub&gt;)}} itself whose order is reversed; this makes no difference for the ''number'' of inversions, and this pair (reversed) is also an inversion in the above sense for the inverse permutation ''σ''&lt;sup&gt;−1&lt;/sup&gt;. The number of inversions is an important measure for the degree to which the entries of a permutation are out of order; it is the same for ''σ'' and for ''σ''&lt;sup&gt;−1&lt;/sup&gt;. To bring a permutation with ''k'' inversions into order (that is, transform it into the identity permutation), by successively applying (right-multiplication by) [[adjacent transposition]]s, is always possible and requires a sequence of ''k'' such operations. Moreover, any reasonable choice for the adjacent transpositions will work: it suffices to choose at each step a transposition of ''i'' and {{nowrap|''i'' + 1}} where ''i'' is a descent of the permutation as modified so far (so that the transposition will remove this particular descent, although it might create other descents). This is so because applying such a transposition reduces the number of inversions by&amp;nbsp;1; as long as this number is not zero, the permutation is not the identity, so it has at least one descent. [[Bubble sort]] and [[insertion sort]] can be interpreted as particular instances of this procedure to put a sequence into order. Incidentally this procedure proves that any permutation ''σ'' can be written as a product of adjacent transpositions; for this one may simply reverse any sequence of such transpositions that transforms ''σ'' into the identity. In fact, by enumerating all sequences of adjacent transpositions that would transform ''σ'' into the identity, one obtains (after reversal) a ''complete'' list of all expressions of minimal length writing ''σ'' as a product of adjacent transpositions.
+
+The number of permutations of ''n'' with ''k'' inversions is expressed by a Mahonian number,{{sfn|Bóna|2004|pp=43ff}} it is the coefficient of ''X''&lt;sup&gt;''k''&lt;/sup&gt; in the expansion of the product
+:&lt;math&gt;\prod_{m=1}^n\sum_{i=0}^{m-1}X^i = 1 \left(1 + X\right)\left(1 + X + X^2\right) \cdots \left(1 + X + X^2 + \cdots + X^{n-1}\right),&lt;/math&gt;
+
+which is also known (with ''q'' substituted for ''X'') as the [[q-factorial]] &lt;nowiki&gt;[&lt;/nowiki&gt;''n''&lt;nowiki&gt;]&lt;/nowiki&gt;&lt;sub&gt;''q''&lt;/sub&gt;!&amp;nbsp;. The expansion of the product appears in [[Necklace (combinatorics)]].
+
+==Permutations in computing==
+===Numbering permutations===
+One way to represent permutations of ''n'' is by an integer ''N'' with 0&amp;nbsp;≤&amp;nbsp;''N''&amp;nbsp;&amp;lt;&amp;nbsp;''n''!, provided convenient methods are given to convert between the number and the representation of a permutation as an ordered arrangement (sequence). This gives the most compact representation of arbitrary permutations, and in computing is particularly attractive when ''n'' is small enough that ''N'' can be held in a machine word; for 32-bit words this means ''n''&amp;nbsp;≤&amp;nbsp;12, and for 64-bit words this means ''n''&amp;nbsp;≤&amp;nbsp;20. The conversion can be done via the intermediate form of a sequence of numbers ''d''&lt;sub&gt;''n''&lt;/sub&gt;, ''d''&lt;sub&gt;''n''−1&lt;/sub&gt;, ..., ''d''&lt;sub&gt;2&lt;/sub&gt;, ''d''&lt;sub&gt;1&lt;/sub&gt;, where ''d''&lt;sub&gt;''i''&lt;/sub&gt; is a non-negative integer less than ''i'' (one may omit ''d''&lt;sub&gt;1&lt;/sub&gt;, as it is always 0, but its presence makes the subsequent conversion to a permutation easier to describe). The first step then is to simply express ''N'' in the ''[[factorial number system]]'', which is just a particular [[mixed radix]] representation, where for numbers up to ''n''! the bases for successive digits are ''n'', {{nowrap|''n'' − 1}}, ..., 2, 1. The second step interprets this sequence as a [[Lehmer code]] or (almost equivalently) as an inversion table.
+
+{| class=&quot;wikitable&quot; style=&quot;float:right; text-align:center; margin: 1em&quot;
+|+ Rothe diagram for &lt;math&gt;\sigma = (6, 3, 8, 1, 4, 9, 7, 2, 5)&lt;/math&gt;
+|-
+! {{diagonal split header|&lt;sub&gt;''i''&lt;/sub&gt;| &lt;sup&gt;''σ''&lt;sub&gt;''i''&lt;/sub&gt;&lt;/sup&gt;}}
+! style=&quot;width:20pt;&quot;| 1
+! style=&quot;width:20pt;&quot;| 2
+! style=&quot;width:20pt;&quot;| 3
+! style=&quot;width:20pt;&quot;| 4
+! style=&quot;width:20pt;&quot;| 5
+! style=&quot;width:20pt;&quot;| 6
+! style=&quot;width:20pt;&quot;| 7
+! style=&quot;width:20pt;&quot;| 8
+! style=&quot;width:20pt;&quot;| 9
+! Lehmer code
+|-
+! 1
+| × || × || × || × || × || • ||   ||   ||   || ''d''&lt;sub&gt;9&lt;/sub&gt; = 5
+|-
+! 2
+| × || × || • ||   ||   ||   ||   ||   ||   || ''d''&lt;sub&gt;8&lt;/sub&gt; = 2
+|-
+! 3
+| × || × ||   || × || × ||   || × || • ||   || ''d''&lt;sub&gt;7&lt;/sub&gt; = 5
+|-
+! 4
+| • ||   ||   ||   ||   ||   ||   ||   ||   || ''d''&lt;sub&gt;6&lt;/sub&gt; = 0
+|-
+! 5
+|   || × ||   || • ||   ||   ||   ||   ||   || ''d''&lt;sub&gt;5&lt;/sub&gt; = 1
+|-
+! 6
+|   || × ||   ||   || × ||   || × ||   || • || ''d''&lt;sub&gt;4&lt;/sub&gt; = 3
+|-
+! 7
+|   || × ||   ||   || × ||   || • ||   ||   || ''d''&lt;sub&gt;3&lt;/sub&gt; = 2
+|-
+! 8
+|   || • ||   ||   ||   ||   ||   ||   ||   || ''d''&lt;sub&gt;2&lt;/sub&gt; = 0
+|-
+! 9
+|   ||   ||   ||   || • ||   ||   ||   ||   || ''d''&lt;sub&gt;1&lt;/sub&gt; = 0
+|-
+! Inversion table
+| 3 || 6 || 1 || 2 || 4 || 0 || 2 || 0 || 0 ||
+|}
+In the '''Lehmer code''' for a permutation&amp;nbsp;''σ'', the number ''d''&lt;sub&gt;''n''&lt;/sub&gt; represents the choice made for the first term&amp;nbsp;''σ''&lt;sub&gt;1&lt;/sub&gt;, the number ''d''&lt;sub&gt;''n''−1&lt;/sub&gt; represents the choice made for the second term
+''σ''&lt;sub&gt;2&lt;/sub&gt; among the remaining {{nowrap|''n'' − 1}} elements of the set, and so forth. More precisely, each ''d''&lt;sub&gt;''n''+1−''i''&lt;/sub&gt; gives the number of ''remaining'' elements strictly less than the term ''σ''&lt;sub&gt;''i''&lt;/sub&gt;. Since those remaining elements are bound to turn up as some later term ''σ''&lt;sub&gt;''j''&lt;/sub&gt;, the digit ''d''&lt;sub&gt;''n''+1−''i''&lt;/sub&gt; counts the ''inversions'' (''i'',''j'') involving ''i'' as smaller index (the number of values ''j'' for which ''i''&amp;nbsp;&amp;lt;&amp;nbsp;''j'' and ''σ''&lt;sub&gt;''i''&lt;/sub&gt;&amp;nbsp;&amp;gt;&amp;nbsp;''σ''&lt;sub&gt;''j''&lt;/sub&gt;). The '''inversion table''' for&amp;nbsp;''σ'' is quite similar, but here ''d''&lt;sub&gt;''n''+1−''k''&lt;/sub&gt; counts the number of inversions (''i'',''j'') where ''k''&amp;nbsp;=&amp;nbsp;''σ''&lt;sub&gt;''j''&lt;/sub&gt; occurs as the smaller of the two values appearing in inverted order.{{sfn|Knuth|1973|p=12}}  Both encodings can be visualized by an ''n''&amp;nbsp;by&amp;nbsp;''n'' '''Rothe diagram'''{{#tag:ref|[[Heinrich August Rothe|H. A. Rothe]], ''Sammlung combinatorisch-analytischer Abhandlungen'' '''2''' (Leipzig, 1800), 263–305. Cited in {{harvnb|Knuth|1973|p=14}}}} (named after [[Heinrich August Rothe]]) in which dots at (''i'',''σ''&lt;sub&gt;''i''&lt;/sub&gt;) mark the entries of the permutation, and a cross at (''i'',''σ''&lt;sub&gt;''j''&lt;/sub&gt;) marks the inversion (''i'',''j''); by the definition of inversions a cross appears in any square that comes both before the dot (''j'',''σ''&lt;sub&gt;''j''&lt;/sub&gt;) in its column, and before the dot (''i'',''σ''&lt;sub&gt;''i''&lt;/sub&gt;) in its row. The Lehmer code lists the numbers of crosses in successive rows, while the inversion table lists the numbers of crosses in successive columns; it is just the Lehmer code for the inverse permutation, and vice versa.
+
+To effectively convert a Lehmer code ''d''&lt;sub&gt;''n''&lt;/sub&gt;, ''d''&lt;sub&gt;''n''−1&lt;/sub&gt;, ..., ''d''&lt;sub&gt;2&lt;/sub&gt;, ''d''&lt;sub&gt;1&lt;/sub&gt; into a permutation of an ordered set ''S'', one can start with a list of the elements of ''S'' in increasing order, and for ''i'' increasing from 1 to ''n'' set ''σ''&lt;sub&gt;''i''&lt;/sub&gt; to the element in the list that is preceded by ''d''&lt;sub&gt;''n''+1−''i''&lt;/sub&gt; other ones, and remove that element from the list. To convert an inversion table ''d''&lt;sub&gt;''n''&lt;/sub&gt;, ''d''&lt;sub&gt;''n''−1&lt;/sub&gt;, ..., ''d''&lt;sub&gt;2&lt;/sub&gt;, ''d''&lt;sub&gt;1&lt;/sub&gt; into the corresponding permutation, one can traverse the numbers from ''d''&lt;sub&gt;1&lt;/sub&gt; to ''d''&lt;sub&gt;''n''&lt;/sub&gt; while inserting the elements of ''S'' from largest to smallest into an initially empty sequence; at the step using the number ''d'' from the inversion table, the element from ''S'' inserted into the sequence at the point where it is preceded by ''d'' elements already present. Alternatively one could process the numbers from the inversion table and the elements of ''S'' both in the opposite order, starting with a row of ''n'' empty slots, and at each step place the element from ''S'' into the empty slot that is preceded by ''d'' other empty slots.
+
+Converting successive natural numbers to the factorial number system produces those sequences in [[lexicographic order]] (as is the case with any mixed radix number system), and further converting them to permutations preserves the lexicographic ordering, provided the Lehmer code interpretation is used (using inversion tables, one gets a different ordering, where one starts by comparing permutations by the ''place'' of their entries 1 rather than by the value of their first entries). The sum of the numbers in the factorial number system representation gives the number of inversions of the permutation, and the parity of that sum gives the [[signature (permutation)|signature]] of the permutation. Moreover, the positions of the zeroes in the inversion table give the values of left-to-right maxima of the permutation (in the example 6, 8, 9) while the positions of the zeroes in the Lehmer code are the positions of the right-to-left minima (in the example positions the 4, 8, 9 of the values 1, 2, 5); this allows computing the distribution of such extrema among all permutations. A permutation with Lehmer code ''d''&lt;sub&gt;''n''&lt;/sub&gt;, ''d''&lt;sub&gt;''n''−1&lt;/sub&gt;, ..., ''d''&lt;sub&gt;2&lt;/sub&gt;, ''d''&lt;sub&gt;1&lt;/sub&gt; has an ascent {{nowrap|''n'' − ''i''}} if and only if {{nowrap|''d''&lt;sub&gt;''i''&lt;/sub&gt; ≥ ''d''&lt;sub&gt;''i+1''&lt;/sub&gt;}}.
+
+===Algorithms to generate permutations===
+In computing it may be required to generate permutations of a given sequence of values. The methods best adapted to do this depend on whether one wants some randomly chosen permutations, or all permutations, and in the latter case if a specific ordering is required. Another question is whether possible equality among entries in the given sequence is to be taken into account; if so, one should only generate distinct multiset permutations of the sequence.
+
+An obvious way to generate permutations of ''n'' is to generate values for the [[Lehmer code]] (possibly using the [[factorial number system]] representation of integers up to ''n''!), and convert those into the corresponding permutations. However, the latter step, while straightforward, is hard to implement efficiently, because it requires ''n'' operations each of selection from a sequence and deletion from it, at an arbitrary position; of the obvious representations of the sequence as an [[array data structure|array]] or a [[linked list]], both require (for different reasons) about ''n''&lt;sup&gt;2&lt;/sup&gt;/4 operations to perform the conversion. With ''n'' likely to be rather small (especially if generation of all permutations is needed) that is not too much of a problem, but it turns out that both for random and for systematic generation there are simple alternatives that do considerably better. For this reason it does not seem useful, although certainly possible, to employ a special data structure that would allow performing the conversion from Lehmer code to permutation in [[big O notation|''O''(''n'' log ''n'')]] time.
+
+====Random generation of permutations====
+{{Main|Fisher–Yates shuffle}}
+For generating [[random permutation]]s of a given sequence of ''n'' values, it makes no difference whether one applies a randomly selected permutation of ''n'' to the sequence, or chooses a random element from the set of distinct (multiset) permutations of the sequence. This is because, even though in case of repeated values there can be many distinct permutations of ''n'' that result in the same permuted sequence, the number of such permutations is the same for each possible result. Unlike for systematic generation, which becomes unfeasible for large ''n'' due to the growth of the number ''n''!, there is no reason to assume that ''n'' will be small for random generation.
+
+The basic idea to generate a random permutation is to generate at random one of the ''n''! sequences of integers ''d''&lt;sub&gt;1&lt;/sub&gt;,''d''&lt;sub&gt;2&lt;/sub&gt;,...,''d''&lt;sub&gt;''n''&lt;/sub&gt; satisfying {{math|0 ≤ ''d''&lt;sub&gt;''i''&lt;/sub&gt; &amp;lt; ''i''}} (since ''d''&lt;sub&gt;1&lt;/sub&gt; is always zero it may be omitted) and to convert it to a permutation through a [[bijective]] correspondence. For the latter correspondence one could interpret the (reverse) sequence as a Lehmer code, and this gives a generation method first published in 1938 by [[Ronald Fisher]] and [[Frank Yates]].&lt;ref&gt;{{cite book
+|author1=Fisher, R.A. |author2=Yates, F. | title = Statistical tables for biological, agricultural and medical research
+| origyear = 1938
+| edition = 3rd
+| year = 1948
+| pages = 26–27
+| publisher = Oliver &amp; Boyd
+| location = London
+| oclc = 14222135
+}}&lt;/ref&gt;
+While at the time computer implementation was not an issue, this method suffers from the difficulty sketched above to convert from Lehmer code to permutation efficiently. This can be remedied by using a different bijective correspondence: after using ''d''&lt;sub&gt;''i''&lt;/sub&gt; to select an element among ''i'' remaining elements of the sequence (for decreasing values of ''i''), rather than removing the element and compacting the sequence by shifting down further elements one place, one [[swap (computer science)|swaps]] the element with the final remaining element. Thus the elements remaining for selection form a consecutive range at each point in time, even though they may not occur in the same order as they did in the original sequence. The mapping from sequence of integers to permutations is somewhat complicated, but it can be seen to produce each permutation in exactly one way, by an immediate [[induction (mathematics)|induction]]. When the selected element happens to be the final remaining element, the swap operation can be omitted. This does not occur sufficiently often to warrant testing for the condition, but the final element must be included among the candidates of the selection, to guarantee that all permutations can be generated.
+
+The resulting algorithm for generating a random permutation of &lt;code&gt;''a''[0], ''a''[1], ..., ''a''[''n'' − 1]&lt;/code&gt; can be described as follows in [[pseudocode]]:
+
+ '''for''' ''i'' '''from''' ''n'' '''downto''' 2 '''do'''
+     ''d&lt;sub&gt;i&lt;/sub&gt;'' ← random element of { 0, ..., ''i'' − 1 }
+     '''swap''' ''a''[''d&lt;sub&gt;i&lt;/sub&gt;''] and ''a''[''i'' − 1]
+
+This can be combined with the initialization of the array &lt;code&gt;''a''[''i''] = ''i''&lt;/code&gt; as follows
+
+ '''for''' ''i'' '''from''' 0 '''to''' ''n''−1 '''do'''
+     ''d''&lt;sub&gt;''i''+1&lt;/sub&gt; ← random element of { 0, ..., ''i'' }
+     ''a''[''i''] ← ''a''[''d''&lt;sub&gt;''i''+1&lt;/sub&gt;]
+     ''a''[''d''&lt;sub&gt;''i''+1&lt;/sub&gt;] ← ''i''
+
+If ''d''&lt;sub&gt;''i''+1&lt;/sub&gt; = ''i'', the first assignment will copy an uninitialized value, but the second will overwrite it with the correct value ''i''.
+
+However, Fisher-Yates is not the fastest algorithm for generating a permutation, because Fisher-Yates is essentially a sequential algorithm and &quot;divide and conquer&quot; procedures can achieve the same result in parallel.&lt;ref&gt;{{cite news|author1=Bacher, A. |author2=Bodini, O.|author3=Hwang, H.K.|author4=Tsai, T.H. | title = Generating Random Permutations by Coin Tossing: Classical Algorithms, New Analysis, and Modern Implementation.
+| edition = ACM Trans. Algorithms 13(2): 24:1–24:43
+| year = 2017
+| pages = 24–43
+}}&lt;/ref&gt;
+
+====Generation in lexicographic order====
+There are many ways to systematically generate all permutations of a given sequence.&lt;ref name=sedegewick1977&gt;{{cite journal
+|last=Sedgewick|first=R
+|title=Permutation generation methods
+|journal=Computing Surveys|year=1977|volume=9
+|issue=2
+|pages=137–164
+|url=http://www.math.uiowa.edu/~goodman/22m150.dir/2007/Permutation%20Generation%20Methods.pdf
+|doi=10.1145/356689.356692
+|s2cid=12139332
+}}&lt;/ref&gt;
+One classic, simple, and flexible algorithm is based upon finding the next permutation in [[lexicographic ordering]], if it exists. It can handle repeated values, for which case it generates each distinct multiset permutation once. Even for ordinary permutations it is significantly more efficient than generating values for the Lehmer code in lexicographic order (possibly using the [[factorial number system]]) and converting those to permutations. It begins by sorting the sequence in (weakly) [[increasing]] order (which gives its lexicographically minimal permutation), and then repeats advancing to the next permutation as long as one is found. The method goes back to [[Narayana Pandit]]a in 14th century India, and has been rediscovered frequently.{{sfn|Knuth|2005|pp=1–26}}
+
+The following algorithm generates the next permutation lexicographically after a given permutation. It changes the given permutation in-place.
+
+# Find the largest index ''k'' such that {{nowrap|''a''[''k''] &lt; ''a''[''k'' + 1]}}.  If no such index exists, the permutation is the last permutation.
+# Find the largest index ''l'' greater than k such that {{nowrap|''a''[''k''] &lt; ''a''[''l'']}}.
+# Swap the value of ''a''[''k''] with that of ''a''[''l''].
+# Reverse the sequence from ''a''[''k'' + 1] up to and including the final element ''a''[''n''].
+For example, given the sequence [1, 2, 3, 4] (which is in increasing order), and given that the index is [[Zero-based numbering|zero-based]], the steps are as follows:
+# Index ''k'' = 2, because 3 is placed at an index that satisfies condition of being the largest index that is still less than ''a''[''k'' + 1] which is 4.
+# Index ''l'' = 3, because 4 is the only value in the sequence that is greater than 3 in order to satisfy the condition ''a''[''k''] &lt; ''a''[''l''].
+# The values of ''a''[2] and ''a''[3] are swapped to form the new sequence [1,2,4,3].
+# The sequence after ''k''-index ''a''[2] to the final element is reversed. Because only one value lies after this index (the 3), the sequence remains unchanged in this instance. Thus the lexicographic successor of the initial state is permuted: [1,2,4,3].
+Following this algorithm, the next lexicographic permutation will be [1,3,2,4], and the 24th permutation will be [4,3,2,1] at which point ''a''[''k''] &lt; ''a''[''k'' + 1] does not exist, indicating that this is the last permutation.
+
+This method uses about 3 comparisons and 1.5 swaps per permutation, amortized over the whole sequence, not counting the initial sort.&lt;ref&gt;{{cite web|title=std::next_permutation|url=http://en.cppreference.com/w/cpp/algorithm/next_permutation|accessdate=31 March 2018|work=cppreference.com|date=4 December 2017}}&lt;/ref&gt;
+
+====Generation with minimal changes====
+{{main|Steinhaus–Johnson–Trotter algorithm|Heap's algorithm}}
+An alternative to the above algorithm, the [[Steinhaus–Johnson–Trotter algorithm]], generates an ordering on all the permutations of a given sequence with the property that any two consecutive permutations in its output differ by swapping two adjacent values. This ordering on the permutations was known to 17th-century English bell ringers, among whom it was known as &quot;plain changes&quot;. One advantage of this method is that the small amount of change from one permutation to the next allows the method to be implemented in constant time per permutation. The same can also easily generate the subset of even permutations, again in constant time per permutation, by skipping every other output permutation.{{sfn|Knuth|2005|pp=1–26}}
+
+An alternative to Steinhaus–Johnson–Trotter is [[Heap's algorithm]],&lt;ref&gt;{{cite journal|last=Heap|first=B. R.|title=Permutations by Interchanges|journal=The Computer Journal|year=1963|volume=6|issue=3|pages=293–298| url=http://comjnl.oxfordjournals.org/content/6/3/293.full.pdf |doi=10.1093/comjnl/6.3.293}}&lt;/ref&gt; said by [[Robert Sedgewick (computer scientist)|Robert Sedgewick]] in 1977 to be the fastest algorithm of generating permutations in applications.&lt;ref name=sedegewick1977/&gt;
+
+The following figure shows the output of all three aforementioned algorithms for generating all permutations of length &lt;math&gt;n=4&lt;/math&gt;, and of six additional algorithms described in the literature.
+[[File:Permutation generation algorithms.svg|thumb|center|upright=2|Ordering of all permutations of length &lt;math&gt;n=4&lt;/math&gt; generated by different algorithms. The permutations are color-coded, where {{legend-inline|red|1}}, {{legend-inline|yellow|2}}, {{legend-inline|green|3}}, {{legend-inline|blue|4}}.&lt;ref&gt;{{cite web|url=http://combos.org/perm|title=Generate permutations|last1=Mütze|first1=Torsten|last2=Sawada|first2=Joe|last3=Williams|first3=Aaron|website=Combinatorial Object Server|access-date=May 29, 2019}}&lt;/ref&gt;]]
+# Lexicographic ordering;
+# [[Steinhaus–Johnson–Trotter algorithm]];
+# [[Heap's algorithm]];
+# Ehrlich's star-transposition algorithm:{{sfn|Knuth|2005|pp=1–26}} in each step, the first entry of the permutation is exchanged with a later entry;
+# Zaks' prefix reversal algorithm:&lt;ref name=&quot;Zaks_1984&quot;&gt;{{cite journal|last=Zaks|first=S.|title=A new algorithm for generation of permutations|journal=[[BIT Numerical Mathematics]]|year=1984|volume=24|issue=2|pages=196–204|doi=10.1007/BF01937486|s2cid=30234652}}&lt;/ref&gt; in each step, a prefix of the current permutation is reversed to obtain the next permutation;
+# Sawada-Williams' algorithm:&lt;ref&gt;{{cite conference |title=A Hamilton path for the sigma-tau problem |last1=Sawada |first1=Joe |last2=Williams |first2=Aaron |date=2018 |publisher=[[Society for Industrial and Applied Mathematics]] (SIAM) | book-title=Proceedings of the 29th Annual ACM-SIAM Symposium on Discrete Algorithms, SODA 2018 |pages=568–575 |location=New Orleans, Louisiana |doi=10.1137/1.9781611975031.37|doi-access=free }}&lt;/ref&gt; each permutation differs from the previous one either by a cyclic left-shift by one position, or an exchange of the first two entries;
+# Corbett's algorithm:&lt;ref name=&quot;Corbett_1992&quot;&gt;{{cite journal|last=Corbett|first=P. F.|title=Rotator graphs: An efficient topology for point-to-point multiprocessor networks|journal=IEEE Transactions on Parallel and Distributed Systems|year=1992|volume=3|issue=5|pages=622–626|doi=10.1109/71.159045}}&lt;/ref&gt; each permutation differs from the previous one by a cyclic left-shift of some prefix by one position;
+# Single-track ordering:&lt;ref name=&quot;Arndt_2011&quot;&gt;{{cite book |author-last=Arndt |author-first=Jörg|title=Matters Computational. Ideas, Algorithms, Source Code| date=2011| publisher=[[Springer Science+Business Media|Springer]]| doi=10.1007/978-3-642-14764-7|isbn=978-3-642-14763-0}}&lt;/ref&gt; each column is a cyclic shift of the other columns;
+# Single-track Gray code:&lt;ref name=&quot;Arndt_2011&quot;/&gt; each column is a cyclic shift of the other columns, plus any two consecutive permutations differ only in one or two transpositions.
+
+====Meandric permutations====
+[[Meander (mathematics)|Meandric systems]] give rise to [[Meander (mathematics)#Meander|''meandric permutations'']], a special subset of ''alternate permutations''. An alternate permutation of the set {1, 2, ..., 2''n''} is a [[cyclic permutation]] (with no fixed points) such that the digits in the cyclic notation form alternate between odd and even integers. Meandric permutations are useful in the analysis of RNA secondary structure. Not all alternate permutations are meandric. A modification of Heap's algorithm has been used to generate all alternate permutations of order ''n'' (that is, of length 2''n'') without generating all (2''n'')! permutations.&lt;ref&gt;
+{{cite journal
+ | last1=Alexiou | first1=A.
+ | last2=Psiha | first2=M.
+ | last3=Vlamos | first3=P.
+ | title= Combinatorial permutation based algorithm for representation of closed RNA secondary structures
+ | journal=Bioinformation | year=2011 | volume=7 | issue = 2
+ | pages=91–95
+ | pmc=3174042 | doi=10.6026/97320630007091 | pmid=21938211
+}}&lt;/ref&gt;{{unreliable source?|reason=Bioinformation is on Beall's list of questionable journals; it may provide only token peer-review|date=September 2016}} Generation of these alternate permutations is needed before they are analyzed to determine if they are meandric or not.
+
+The algorithm is recursive. The following table exhibits a step in the procedure. In the previous step, all alternate permutations of length 5 have been generated. Three copies of each of these have a &quot;6&quot; added to the right end, and then a different transposition involving this last entry and a previous entry in an even position is applied (including the identity; that is, no transposition).
+
+{| class=&quot;wikitable&quot;
+|-
+! Previous sets
+! Transposition of digits
+! Alternate permutations
+|-
+| rowspan=3 | 1-2-3-4-5-6
+|      || 1-2-3-4-5-6
+|-
+| 4, 6 || 1-2-3-6-5-4
+|-
+| 2, 6 || 1-6-3-4-5-2
+|-
+| rowspan=3 | 1-2-5-4-3-6
+|      || 1-2-5-4-3-6
+|-
+| 4, 6 || 1-2-5-6-3-4
+|-
+| 2, 6 || 1-6-5-4-3-2
+|-
+| rowspan=3 | 1-4-3-2-5-6
+|      || 1-4-3-2-5-6
+|-
+| 2, 6 || 1-4-3-6-5-2
+|-
+| 4, 6 || 1-6-3-2-5-4
+|-
+| rowspan=3 | 1-4-5-2-3-6
+|      || 1-4-5-2-3-6
+|-
+| 2, 6 || 1-4-5-6-3-2
+|-
+| 4, 6 || 1-6-5-2-3-4
+|}
+
+===Applications===
+Permutations are used in the [[interleaver]] component of the  [[error detection and correction]] algorithms, such as [[turbo codes]], for example [[3GPP Long Term Evolution]]  mobile telecommunication standard uses these ideas (see 3GPP technical specification 36.212&lt;ref&gt;[http://www.3gpp.org/ftp/Specs/html-info/36212.htm 3GPP TS 36.212]&lt;/ref&gt;).
+Such applications raise the question of fast generation of permutations satisfying certain desirable properties. One of the methods is based on the [[permutation polynomials]]. Also as a base for optimal hashing in Unique Permutation Hashing.&lt;ref&gt;{{cite journal |first1=Shlomi |last1=Dolev |first2=Limor |last2=Lahiani |first3=Yinnon |last3=Haviv |title=Unique permutation hashing |journal=Theoretical Computer Science |volume=475 |year=2013 |pages=59–65 |doi=10.1016/j.tcs.2012.12.047 |doi-access=free }}&lt;/ref&gt;
+
+==See also==
+{{Portal|Mathematics}}
+{{Div col|colwidth=15em}}
+* [[Alternating permutation]]
+* [[Convolution]]
+* [[Cyclic order]]
+* [[Even and odd permutations]]
+* [[Josephus permutation]]
+* [[Levi-Civita symbol]]
+* [[List of permutation topics]]
+* [[Major index]]
+* [[Permutation category]]
+* [[Permutation group]]
+* [[Permutation pattern]]
+* [[Permutation representation (symmetric group)]]
+* [[Probability]]
+* [[Rencontres numbers]]
+* [[Sorting network]]
+* [[Substitution cipher]]
+* [[Superpattern]]
+* [[Superpermutation]]
+* [[Twelvefold way]]
+* [[Weak order of permutations]]
+{{div col end}}
+
+==Notes==
+&lt;!-- {{notelist|30em}} --&gt;
+{{notelist}}
+
+==References==
+{{Reflist|30em}}
+
+==Bibliography==
+* {{citation|first=Kenneth P.|last=Bogart|title=Introductory Combinatorics|edition=2nd|year=1990|publisher=Harcourt Brace Jovanovich|isbn=978-0-15-541576-8}}
+* {{citation|first=Miklós|last=Bóna|author-link=Miklós Bóna|title=Combinatorics of Permutations|publisher= Chapman Hall-CRC|year=2004|isbn=978-1-58488-434-7}}
+* {{citation|first=Miklos|last=Bona|title=Combinatorics of Permutations|edition=2nd|year=2012|publisher=CRC Press|isbn=978-1-4398-5051-0}}
+* {{citation|first=Richard A.|last=Brualdi|title=Introductory Combinatorics|edition=5th|publisher=Prentice-Hall|year=2010|isbn=978-0-13-602040-0}}
+* {{citation|first=Peter J.|last=Cameron|title=Combinatorics: Topics, Techniques, Algorithms|year=1994|publisher=Cambridge University Press|isbn=978-0-521-45761-3}}
+* {{citation|first=Robert D.|last=Carmichael|title=Introduction to the theory of Groups of Finite Order|year=1956|origyear=1937|publisher=Dover|isbn=978-0-486-60300-1}}
+* {{ citation | last1 = Fraleigh | first1 = John B. | year = 1976 | isbn = 0-201-01984-1 | title = A First Course In Abstract Algebra | edition = 2nd | publisher = [[Addison-Wesley]] | location = Reading }}
+* {{citation|first=Larry J.|last=Gerstein|title=Discrete Mathematics and Algebraic Structures|year=1987|publisher=W.H. Freeman and Co.|isbn=978-0-7167-1804-8|url-access=registration|url=https://archive.org/details/discretemathemat0000gers}}
+* {{citation|first=Marshall, Jr.|last=Hall|author-link=Marshall Hall (mathematician)|title=The Theory of Groups|year=1959|publisher=MacMillan}}
+* {{citation|last=Humphreys|first=J. F.|title=A course in group theory|publisher=Oxford University Press|year=1996|isbn=978-0-19-853459-4|url={{Google books|plainurl=y|id=2p3_ngEACAAJ|page=84|text=conjugate permutations have the same cycle type}}}}
+* {{citation|first=Donald|last=Knuth|series=The Art of Computer Programming|volume=3|title=Sorting and Searching|year=1973}}  This book mentions the Lehmer code (without using that name) as a variant ''C''&lt;sub&gt;1&lt;/sub&gt;,...,''C''&lt;sub&gt;''n''&lt;/sub&gt; of inversion tables in exercise 5.1.1–7 (p.&amp;nbsp;19), together with two other variants.
+* {{citation|first=Donald|last=Knuth|author-link=Donald Knuth|series=[[The Art of Computer Programming]]|volume=4|title=Generating All Tuples and Permutations|publisher=Addison–Wesley|year=2005|isbn=978-0-201-85393-3}} Fascicle&amp;nbsp;2, first printing.
+* {{ citation | first1 = Neal H. | last1 = McCoy | year = 1968 | title = Introduction To Modern Algebra, Revised Edition | publisher = [[Allyn and Bacon]] | location = Boston | lccn = 68015225 }}
+* {{ citation | first1 = Evar D. | last1 = Nering | year = 1970 | title = Linear Algebra and Matrix Theory | edition = 2nd | publisher = [[John Wiley &amp; Sons|Wiley]] | location = New York | lccn = 76091646 }}
+* {{citation|first=Joseph J.|last=Rotman|title=Advanced Modern Algebra|year=2002|publisher=Prentice-Hall|isbn=978-0-13-087868-7}}
+* {{citation|last=Stedman|first=Fabian|authorlink=Fabian Stedman|title=Campanalogia|year=1677|place=London}}  The publisher is given as &quot;W.S.&quot; who may have been William Smith, possibly acting as agent for the [[Ancient Society of College Youths|Society of College Youths]], to which society the &quot;Dedicatory&quot; is addressed.  ''In quotations the original long &quot;S&quot; has been replaced by a modern short &quot;s&quot;.''
+* {{ citation | title = Webster's Seventh New Collegiate Dictionary | location = Springfield | publisher = [[G. &amp; C. Merriam Company]] | date = 1969 | ref = {{harvid|Webster|1969}} }}
+
+==Further reading==
+* {{citation|first=Norman L.|last=Biggs|title=Discrete Mathematics|edition=2nd|year=2002|publisher=Oxford University Press|isbn=978-0-19-850717-8}}
+* {{citation | last1=Foata | first1=Dominique | last2=Schutzenberger | first2=Marcel-Paul | title=Théorie Géométrique des Polynômes Eulériens | publisher=Springer-Verlag | location=Berlin, Heidelberg | series=Lecture Notes in Mathematics | volume=138 | year=1970 | isbn=978-3-540-04927-2 | url=http://irma.math.unistra.fr/~foata/paper/pub14.html}}. The link is to a freely available retyped (LaTeX'ed) and revised version of the text originally published by Springer-Verlag.
+* {{citation|first=Donald|last=Knuth|series=The Art of Computer Programming|volume=3|title=Sorting and Searching|edition=Second|publisher=Addison–Wesley|year=1998|isbn=978-0-201-89685-5|ref=none}}. Section 5.1: Combinatorial Properties of Permutations, pp.&amp;nbsp;11–72.
+* {{cite journal|first1=Robert|last1=Sedgewick|doi=10.1145/356689.356692|journal=ACM Computing Surveys|year=1977|volume=9|issue=2|pages=137–164|title=Permutation generation methods|s2cid=12139332|url=}}
+
+==External links==
+* {{springer|title=Permutation|id=p/p072270}}
+{{wikiversity|Permutation notation}}
+{{Commons category|Permutations}}
+
+[[Category:Factorial and binomial topics| ]]
+[[Category:Permutations| ]]
+[[Category:Arab inventions]]</text>
+      <sha1>o0majodkmqi5ayya46fp32bs27br6y6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>National Security Advisor (United States)</title>
+    <ns>0</ns>
+    <id>44028</id>
+    <revision>
+      <id>991399298</id>
+      <parentid>990862549</parentid>
+      <timestamp>2020-11-29T21:24:04Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 14 templates: del empty params (12×); hyphenate params (12×); del |url-status= (1×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18386" xml:space="preserve">{{short description|White House advisory position}}
+{{Use mdy dates|date=July 2018}}
+{{Infobox official post
+| post = Assistant to the President for National Security Affairs
+| insignia = US-WhiteHouse-Logo.svg
+| insigniasize = 167
+| image = Robert C. O'Brien.jpg
+| incumbent = [[Robert C. O'Brien (attorney)|Robert C. O’Brien]]
+| predecessor = 
+| successor = 
+| incumbentsince = September 18, 2019
+| department = [[Executive Office of the President of the United States|Executive Office of the President]]
+| member_of = [[United States National Security Council|National Security Council]]&lt;br&gt;[[Homeland Security Council]] 
+| reports_to = [[President of the United States]]
+| appointer = [[President of the United States]]
+| constituting_instrument = National Security Presidential Memorandum&lt;ref&gt;{{Cite web|url=https://www.gpo.gov/fdsys/pkg/FR-2017-04-06/pdf/2017-07064.pdf#page=4|title=National Security Presidential Memorandum–4 of April 4, 2017}}&lt;/ref&gt;
+| first = [[Robert Cutler]]
+| formation = 1953
+| deputy = [[Deputy National Security Advisor]] (DNSA) 
+| website = {{url|https://www.whitehouse.gov/nsc|WhiteHouse.gov/NSC}}
+| body = 
+}}
+
+The '''Assistant to the President for National Security Affairs''' ('''APNSA'''), commonly referred to as the '''National Security Advisor''' ('''NSA''')&lt;ref name=&quot;TNSAaS:1&quot;&gt;The National Security Advisor and Staff: p. 1.&lt;/ref&gt;&lt;ref&gt;Abbreviated '''NSA''', or sometimes '''APNSA''' or '''ANSA''' in order to avoid confusion with the abbreviation of the [[National Security Agency]].&lt;/ref&gt; is a senior aide in the [[Executive Office of the President]], based at the [[West Wing]] of the [[White House]]. The National Security Advisor serves as the principal advisor to the [[President of the United States]] on all [[national security]] issues.  The National Security Advisor is appointed by the President and does not require [[Advice and consent|confirmation]] by the [[United States Senate]]. However, an appointment of a three or four-star General to the role requires Senate reconfirmation of military rank.&lt;ref name=&quot;:0&quot;&gt;{{Cite news |url=http://www.cbsnews.com/news/mcmaster-will-need-senate-confirmation-to-serve-as-national-security-adviser/|title=McMaster will need Senate confirmation to serve as national security adviser|access-date=March 12, 2017|language=en|url-status=live |archive-url=https://web.archive.org/web/20170301015417/http://www.cbsnews.com/news/mcmaster-will-need-senate-confirmation-to-serve-as-national-security-adviser/|archive-date=March 1, 2017}}&lt;/ref&gt;
+
+The National Security Advisor participates in meetings of the [[United States National Security Council|National Security Council]] (NSC) and usually chairs meetings of the Principals Committee of the NSC with the [[United States Secretary of State|Secretary of State]] and [[United States Secretary of Defense|Secretary of Defense]] (those meetings not attended by the President). The NSA also sits on the [[Homeland Security Council]]. 
+
+The National Security Advisor is supported by NSC staff who produce classified research and briefings for the National Security Advisor to review and present, either to the National Security Council or directly to the President.
+
+==Role==
+The influence and role of the National Security Advisor varies from administration to administration and depends not only on the qualities of the person appointed to the position, but also on the style and management philosophy of the incumbent president.&lt;ref name=&quot;TNSAaS:17-21&quot;&gt;[[#TNSAaS|The National Security Advisor and Staff]]: pp. 17-21.&lt;/ref&gt; Ideally, the National Security Advisor serves as an honest broker of policy options for the president in the field of national security, rather than as an advocate for his or her own policy agenda.&lt;ref name=&quot;TNSAaS:10-14&quot;&gt;[[#TNSAaS|The National Security Advisor and Staff]]: pp. 10-14.&lt;/ref&gt;
+
+The National Security Advisor is a staff position in the Executive Office of the President and does not have [[Staff and line|line]] or budget authority over either the [[United States Department of State|Department of State]] or the [[United States Department of Defense|Department of Defense]], unlike the Secretary of State and the Secretary of Defense, who are Senate-confirmed officials with statutory authority over their departments.&lt;ref&gt;See {{UnitedStatesCode|22|2651}} for the Secretary of State and {{UnitedStatesCode|10|113}} for the Secretary of Defense.&lt;/ref&gt; The National Security Advisor is able to offer daily advice (due to the proximity) to the president independently of the vested interests of the large bureaucracies and clientele of those departments.&lt;ref name=&quot;TNSAaS:17-21&quot; /&gt;
+
+In times of crisis, the National Security Advisor is likely to operate from the [[White House Situation Room]] or the [[Presidential Emergency Operations Center]] (as on [[September 11 attacks|September 11, 2001]]),&lt;ref name=&quot;clarke18&quot;&gt;{{cite book|last=Clarke|first=Richard A.|author-link=Richard A. Clarke|title=Against All Enemies|publisher=Free Press|year=2004|location=New York|page=[https://archive.org/details/againstallenemie00clar/page/18 18]|isbn=0-7432-6024-4|url-access=registration|url=https://archive.org/details/againstallenemie00clar/page/18}}&lt;/ref&gt; updating the president on the latest events in a crisis situation.
+
+==History==
+[[File:President Bush meets with General Colin Powell, General Scowcroft, Secretary James Baker, Vice President Quayle... - NARA - 186429.tif|thumb|left|President [[George H. W. Bush]] meets in the [[Oval Office]] with his NSC about [[Operation Desert Shield]], 1991]]
+The National Security Council was created at the start of the [[Cold War]] under the [[National Security Act of 1947]] to coordinate defense, foreign affairs, international economic policy, and intelligence; this was part of a large reorganization that saw the creation of the Department of Defense and the [[Central Intelligence Agency]].&lt;ref name=george/&gt;&lt;ref name=schmitz&gt;{{cite book |last=Schmitz|first=David F.|title=Brent Scowcroft: Internationalism and Post-Vietnam War American Foreign Policy|year=2011 |publisher=Rowman &amp; Littlefield|pages=2–3}}&lt;/ref&gt; The Act did not create the position of the National Security Advisor per se, but it did create an executive secretary in charge of the staff. In 1949, the NSC became part of the Executive Office of the President.&lt;ref name=george&gt;{{cite book|last=George|first=Robert Z|title=The National Security Enterprise: Navigating the Labyrinth|year=2011 |publisher=Georgetown University Press|page=32|author2=Harvey Rishikof | author2-link = Harvey Rishikof }}&lt;/ref&gt;
+
+Robert Cutler was the first National Security Advisor in 1953. The system has remained largely unchanged since then, particularly since President John Kennedy, with powerful National Security Advisors and strong staff but a lower importance given to formal NSC meetings. This continuity persists despite the tendency of each new president to replace the advisor and senior NSC staff.&lt;ref name=george/&gt;
+
+President [[Richard Nixon]]'s National Security Advisor, [[Henry Kissinger]], enhanced the importance of the role, controlling the flow of information to the president and meeting with him multiple times per day. Kissinger also holds the distinction of serving as National Security Advisor and Secretary of State at the same time from September 22, 1973, until November 3, 1975.&lt;ref name=george/&gt;&lt;ref name=schmitz/&gt;
+
+==List of National Security Advisors==
+{|class=&quot;wikitable&quot; style=&quot;text-align: center;&quot;
+|+
+! rowspan=&quot;2&quot; |No.
+! rowspan=&quot;2&quot; |Portrait
+! rowspan=&quot;2&quot; |Name
+! colspan=&quot;3&quot; |Term of office&lt;ref name=&quot;White House appendix&quot;&gt;{{cite web |url=http://www.whitehouse.gov/nsc/history.html|title= History of the National Security Council, 1947-1997|accessdate=September 5, 2008|date=August 1997 |work=National Security Council |publisher=White House|archive-url=https://web.archive.org/web/20080306081817/http://www.whitehouse.gov/nsc/history.html |archive-date=March 6, 2008}}&lt;/ref&gt;
+! rowspan=&quot;2&quot; |President(s) served under
+|-
+!Start
+!End
+!Days
+|-
+|1
+|
+|[[Robert Cutler]] (1895–1974)
+|March 23, 1953
+|April 2, 1955
+|740
+| rowspan=&quot;5&quot; |[[Dwight D. Eisenhower]]
+|-
+|2
+|
+|[[Dillon Anderson]] (1906–1974)
+|April 2, 1955
+|September 1, 1956
+|519
+|-
+|bgcolor=#E6E6AA |''Acting''
+|bgcolor=#E6E6AA |[[File:William Harding Jackson.jpg|75px]]
+|bgcolor=#E6E6AA |[[William Harding Jackson]] (1901–1971)&lt;ref&gt;{{cite book|last1=Burke|first1=John P.|title=Honest Broker?: The National Security Advisor and Presidential Decision Making|date=2009|publisher=Texas A&amp;M University Press|isbn=9781603441025|page=[https://books.google.no/books?id=VSJjFMe671oC&amp;pg=PA26 26]|language=en}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=https://history.state.gov/historicaldocuments/frus1955-57v19/persons|title=Foreign Relations of the United States, 1955–1957, National Security Policy, Volume XIX|publisher=Department of State, Office of the Historian|access-date=July 12, 2020}}&lt;/ref&gt;&lt;ref&gt;{{cite book| last=Lay|first=James S.|last2=Johnson|first2=Robert H.|title=Organizational history of the National Security Council during the Truman and Eisenhower administrations|publisher=Central Intelligence Agency|date=1960|location=Washington, DC|pages=40}}&lt;/ref&gt;
+|bgcolor=#E6E6AA |September 1, 1956
+|bgcolor=#E6E6AA |January 7, 1957
+|bgcolor=#E6E6AA |128
+|-
+|3
+|
+|[[Robert Cutler]] (1895–1974)
+|January 7, 1957
+|June 24, 1958
+|533
+|-
+|4
+|[[File:Gordon Gray - Project Gutenberg etext 20587.jpg|75px]]
+|[[Gordon Gray (politician)|Gordon Gray]] (1909–1982)
+|June 24, 1958
+|January 13, 1961
+|934
+|-
+| rowspan=&quot;2&quot; |5
+| rowspan=&quot;2&quot; |[[File:McGeorge Bundy.jpg|75px]]
+| rowspan=&quot;2&quot; |[[McGeorge Bundy]] (1919–1996)
+| rowspan=&quot;2&quot; |January 20, 1961
+| rowspan=&quot;2&quot; |February 28, 1966
+| rowspan=&quot;2&quot; |1865
+|[[John F. Kennedy]]
+|-
+| rowspan=&quot;2&quot; |[[Lyndon B. Johnson]]
+|-
+|6
+|[[File:Walt Rostow 1968.jpg|75px]]
+|[[Walt Whitman Rostow]] (1916–2003)
+|April 1, 1966
+|January 20, 1969
+|1025
+|-
+| rowspan=&quot;2&quot; |7
+| rowspan=&quot;2&quot; |[[File:Henry Kissinger.jpg|75px]]
+| rowspan=&quot;2&quot; |[[Henry Kissinger]] (1923–)
+| rowspan=&quot;2&quot; |January 20, 1969
+| rowspan=&quot;2&quot; |November 3, 1975
+| rowspan=&quot;2&quot; |2478
+|[[Richard Nixon]]
+|-
+| rowspan=&quot;2&quot; |[[Gerald Ford]]
+|-
+|8
+|[[File:National Security Advisor Brent Scowcroft at a meeting following the assassinations in Beirut, 1976 - NARA - 7064964.jpg|75x75px]]
+|[[Brent Scowcroft]] (1925–2020)
+|November 3, 1975&lt;br/&gt;(first appointment)
+|January 20, 1977
+|444
+|-
+|9
+|[[File:Zbigniew Brzezinski, 1977.jpg|75px]]
+|[[Zbigniew Brzezinski]] (1928–2017)
+|January 20, 1977
+|January 20, 1981
+|1461
+|[[Jimmy Carter]]
+|-
+|10
+|[[File:Richard V. Allen 1981.jpg|75px]]
+|[[Richard V. Allen]] (1936–)
+|January 21, 1981
+|January 4, 1982
+|348
+| rowspan=&quot;7&quot; |[[Ronald Reagan]]
+|-
+|bgcolor=#E6E6AA |''Acting''
+|bgcolor=#E6E6AA |[[File:James W. Nance.png|75px]]
+|bgcolor=#E6E6AA |[[James W. Nance]] (1921–1999)&lt;ref&gt;{{Cite news |last=Weisman |first=Steven R. |date=1982-01-02 |title=REAGAN REPLACING SECURITY ADVISER, OFFICIALS REPORT |language=en-US |work=The New York Times |url=https://www.nytimes.com/1982/01/02/us/reagan-replacing-security-adviser-officials-report.html |access-date=2020-11-25 |issn=0362-4331}}&lt;/ref&gt; 
+|bgcolor=#E6E6AA |November 29, 1981
+|bgcolor=#E6E6AA |January 4, 1982
+|bgcolor=#E6E6AA |37
+|-
+|11
+|[[File:William patrick clark.png|75px]]
+|[[William P. Clark, Jr.]] (1931–2013)
+|January 4, 1982
+|October 17, 1983
+|651
+|-
+|12
+|[[File:Robert Mcfarlane IAGS.jpg|75px]]
+|[[Robert McFarlane]] (1937–)
+|October 17, 1983
+|December 4, 1985
+|779
+|-
+|13
+|[[File:Admiral John Poindexter, official Navy photo, 1985.JPEG|75px]]
+|[[John Poindexter]] (1936–)
+|December 4, 1985
+|November 25, 1986
+|356
+|-
+|14
+|[[File:Frank Carlucci official portrait.JPEG|75px]]
+|[[Frank Carlucci]] (1930–2018)
+|December 2, 1986
+|November 23, 1987
+|356
+|-
+|15
+|[[File:ColinPowell.JPEG|75px]]
+|[[Colin Powell]] (1937–)
+|November 23, 1987
+|January 20, 1989
+|424
+|-
+|16
+|[[File:Brent Scowcroft.jpg|75px]]
+|[[Brent Scowcroft]] (1925–2020)
+|January 20, 1989&lt;br/&gt;(second appointment)
+|January 20, 1993
+|1461
+|[[George H. W. Bush]]
+|-
+|17
+|[[File:Anthony Lake 0c175 7733.jpg|75px]]
+|[[Anthony Lake]] (1939–)
+|January 20, 1993
+|March 14, 1997
+|1514
+| rowspan=&quot;2&quot; |[[Bill Clinton]]
+|-
+|18
+|[[File:Official Portrait of United States National Security Advisor Samuel Richard &quot;Sandy&quot; Berger.jpg|75px]]
+|[[Sandy Berger]] (1945–2015)
+|March 14, 1997
+|January 20, 2001
+|1408
+|-
+|19
+|[[File:Condoleezza Rice cropped.jpg|75px]]
+|[[Condoleezza Rice]] (1954–)
+|January 22, 2001&lt;ref name=&quot;TNSAaS:33&quot;&gt;[[#TNSAaS|The National Security Advisor and Staff]]: p. 33.&lt;/ref&gt;
+|January 25, 2005&lt;ref name=&quot;TNSAaS:33&quot; /&gt;
+|1464
+| rowspan=&quot;2&quot; |[[George W. Bush]]
+|-
+|20
+|[[File:Stephen Hadley Natl Security Advisor bio photo.jpg|75px]]
+|[[Stephen Hadley]] (1947–)
+|January 26, 2005&lt;ref name=&quot;TNSAaS:33&quot; /&gt;
+|January 20, 2009
+|1455
+|-
+|21
+|[[File:James L. Jones 2.jpg|75px]]
+|[[James L. Jones]] (1943–)&lt;ref name=&quot;Change.gov_20081201&quot;&gt;{{cite press release
+ |accessdate  = December 1, 2008
+ |url         = http://change.gov/newsroom/entry/key_members_of_obama_biden_national_security_team_announced/
+ |title       = Key members of Obama-Biden national security team announced
+ |date        = December 1, 2008
+ |publisher   = The Office of the President Elect
+ |url-status     = dead
+ |archive-url  = https://web.archive.org/web/20081201182614/http://change.gov/newsroom/entry/key_members_of_obama_biden_national_security_team_announced/
+ |archive-date = December 1, 2008
+}}&lt;/ref&gt;
+|January 20, 2009
+|October 8, 2010
+|626
+| rowspan=&quot;3&quot; |[[Barack Obama]]
+|-
+|22
+|[[File:Thomas Donilon.jpg|75px]]
+|[[Thomas E. Donilon]] (1955–)&lt;ref name=&quot;Appointment&quot;&gt;{{cite web|url=http://www.cnn.com/2010/POLITICS/10/08/obama.jones.replacement|title=Donilon to replace Jones as national security adviser|accessdate=October 8, 2010|date=October 2010|publisher=CNN|url-status=live|archive-url=https://web.archive.org/web/20121108190555/http://www.cnn.com/2010/POLITICS/10/08/obama.jones.replacement/|archive-date=November 8, 2012}}&lt;/ref&gt;
+|October 8, 2010
+|July 1, 2013&lt;ref name=&quot;Susan&quot;&gt;{{cite news |title=National security team shuffle may signal more activist stance at White House |author=Scott Wilson and Colum Lynch |url=https://www.washingtonpost.com/politics/tom-donilon-resigning-as-national-security-adviser-susan-rice-to-replace-him/2013/06/05/b296f36a-cdd3-11e2-8f6b-67f40e176f03_story.html |newspaper=[[Washington Post]] |date=June 5, 2013 |url-status=live |archive-url=https://web.archive.org/web/20171025180729/https://www.washingtonpost.com/politics/tom-donilon-resigning-as-national-security-adviser-susan-rice-to-replace-him/2013/06/05/b296f36a-cdd3-11e2-8f6b-67f40e176f03_story.html |archive-date=October 25, 2017 }}&lt;/ref&gt;
+|997
+|-
+|23
+|[[File:Susan Rice official photo (cropped).jpg|75px]]
+|[[Susan Rice]] (1964–)&lt;ref name=&quot;Susan&quot; /&gt;
+|July 1, 2013&lt;ref name=&quot;Susan&quot; /&gt;
+|January 20, 2017
+|1299
+|-
+|24
+|[[File:Michael T Flynn.jpg|75px]]
+|[[Michael T. Flynn|Michael Flynn]] (1958–)
+|January 20, 2017
+|February 13, 2017
+|24
+| rowspan=&quot;6&quot; |[[Donald Trump]]
+|-
+|bgcolor=#E6E6AA |''Acting''
+|bgcolor=#E6E6AA |[[File:Keith Kellogg 2000.jpg|75px]]
+|bgcolor=#E6E6AA |[[Keith Kellogg]] (1944–)
+|bgcolor=#E6E6AA |February 13, 2017
+|bgcolor=#E6E6AA |February 20, 2017
+|bgcolor=#E6E6AA |7
+|-
+|25
+|[[File:H.R. McMaster ARCIC 2014.jpg|75px]]
+|[[H. R. McMaster]] (1962–)
+|February 20, 2017
+|April 9, 2018
+|{{age in days|2017|2|20|2018|4|8}}
+|-
+|26
+|[[File:John R. Bolton official photo (cropped).jpg|75px]]
+|[[John Bolton]] (1948–)
+|April 9, 2018
+|September 10, 2019
+|{{age in days|2018|4|8|2019|9|10}}
+|-
+|bgcolor=#E6E6AA |''Acting''
+|bgcolor=#E6E6AA |[[File:Reagan Contact Sheet C42578 (cropped).jpg|75px]]
+|bgcolor=#E6E6AA |[[Charles Kupperman]] (1950–)
+|bgcolor=#E6E6AA |September 10, 2019
+|bgcolor=#E6E6AA |September 18, 2019
+|bgcolor=#E6E6AA |{{age in days|2019|9|10|2019|9|18}}
+|-
+|27
+|[[File:Robert C. O'Brien.jpg|75px]]
+|[[Robert C. O'Brien (attorney)|Robert O’Brien]] (1966–)
+|September 18, 2019
+|present
+|{{age in days|2019|9|18}}
+|}
+{{legend|#E6E6AA|Denotes [[acting (law)|acting]]}}
+
+Brent Scowcroft held the job in two non-consecutive administrations: the [[Ford administration]] and the [[Presidency of George H. W. Bush|G.H.W. Bush administration]]. Robert Cutler also held the job twice, both times during the [[Dwight D. Eisenhower|Eisenhower administration]]. Henry Kissinger holds the record for longest term of service (2,478 days). Michael Flynn holds the record for shortest term of service (24 days).
+
+== See also ==
+*[[White House Chief of Staff]]
+*[[Homeland Security Council]]
+*[[Homeland Security Advisor]]
+
+==References==
+{{Cite book
+  |title = 2009-02: The National Security Advisor and Staff
+  |publisher = WhiteHouseTransitionProject.org
+  |url = http://whitehousetransitionproject.org/resources/briefing/WHTP-2009-02-National%20Security%20Advisor.pdf
+  |date = 2009
+  |ref = TNSAaS
+  |access-date = March 1, 2015
+  |archive-url = https://web.archive.org/web/20160303221719/http://whitehousetransitionproject.org/resources/briefing/WHTP-2009-02-National%20Security%20Advisor.pdf
+  |archive-date = March 3, 2016
+  |url-status = dead
+  }}
+
+{{reflist|30em}}
+
+==Further reading==
+*Falk, Stanley L. &quot;The National Security Council under Truman, Eisenhower, and Kennedy.&quot; ''Political Science Quarterly'' 79.3 (1964): 403–434. [https://www.jstor.org/stable/2145907 online]
+* George, Robert Z. and  [[Harvey Rishikof]], eds. ''The National Security Enterprise: Navigating the Labyrinth'' (2nd ed. Georgetown UP, 2017). [https://www.usaidalumni.org/wp-content/uploads/2019/04/Myers_National-Security-Enterprise-1.pdf Excerpt] 
+* Preston, Andrew,  &quot;The Little State Department: McGeorge Bundy and the National Security Council Staff, 1961‐65.&quot; ''Presidential Studies Quarterly'' 31.4 (2001): 635–659. [http://www.corwin.com/sites/default/files/upm-binaries/2960_12psq01.pdf#page=80  Online]
+* Rothkopf, David. ''Running the world: The inside story of the National Security Council and the architects of American power.'' (PublicAffairs, 2009).

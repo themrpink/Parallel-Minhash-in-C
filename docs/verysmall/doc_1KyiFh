@@ -1,0 +1,236 @@
+&lt;syntaxhighlight lang=&quot;jsp&quot;&gt;&lt;p&gt;Counting to three:&lt;/p&gt;
+&lt;% for (int i=1; i&lt;4; i++) { %&gt;
+    &lt;p&gt;This number is &lt;%= i %&gt;.&lt;/p&gt;
+&lt;% } %&gt;
+&lt;p&gt;OK.&lt;/p&gt;
+&lt;/syntaxhighlight&gt;
+The output displayed in the user's web browser would be:
+&lt;pre&gt;
+Counting to three:
+
+This number is 1.
+
+This number is 2.
+
+This number is 3.
+
+OK.
+&lt;/pre&gt;
+
+=== Expression Language ===
+
+Version 2.0 of the JSP specification added support for the Expression Language (EL), used to access data and functions in Java objects. In JSP 2.1, it was folded into the [[Unified Expression Language]], which is also used in [[JavaServer Faces]].&lt;ref&gt;[http://java.sun.com/products/jsp/reference/techart/unifiedEL.html The Unified Expression Language (Sun Developer Network)]&lt;/ref&gt;
+
+An example of EL [[syntax (programming languages)|syntax]]:
+
+The value of &quot;variable&quot; in the object &quot;javabean&quot; is ${javabean.variable}.
+
+=== Additional tags ===
+
+The JSP syntax add additional tags, called JSP actions, to invoke built-in functionality.&lt;ref name=&quot;syntax&quot;/&gt; Additionally, the technology allows for the creation of custom JSP ''tag libraries'' that act as extensions to the standard JSP syntax.&lt;ref&gt;[http://java.sun.com/products/jsp/tutorial/TagLibraries3.html#63159 Tag Libraries Tutorial - What is a Tag Library? (Sun)] {{webarchive |url=https://web.archive.org/web/20120419215245/http://java.sun.com/products/jsp/tutorial/TagLibraries3.html#63159 |date=April 19, 2012 }}&lt;/ref&gt; One such library is the [[JavaServer Pages Standard Tag Library|JSTL]], with support for common tasks such as iteration and conditionals (the equivalent of &quot;for&quot; and &quot;if&quot; statements in Java.)&lt;ref&gt;[http://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html JSTLs documentation (Oracle)] bb&lt;/ref&gt;
+
+== Compiler ==
+
+A '''JavaServer Pages compiler''' is a program that parses JSPs, and transforms them into executable [[Java Servlets]]. A program of this type is usually embedded into the [[application server]] and run automatically the first time a JSP is accessed, but pages may also be precompiled for better performance, or compiled as a part of the build process to test for errors.&lt;ref&gt;[http://publib.boulder.ibm.com/infocenter/wasinfo/v6r0/index.jsp?topic=%2Fcom.ibm.websphere.base.doc%2Finfo%2Faes%2Fae%2Frweb_jspdis.html IBM WebSphere 6.0.2 documentation]&lt;/ref&gt;
+
+Some JSP containers support configuring how often the container checks JSP [[Computer file|file]] [[timestamp]]s to see whether the page has changed. Typically, this timestamp would be set to a short interval (perhaps seconds) during [[software development]], and a longer interval (perhaps minutes, or even never) for a deployed [[Web application]].&lt;ref&gt;[http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.help.eas_5.0.easperf/html/easperf/easperf111.htm Sybase EAServer 5.0 documentation]&lt;/ref&gt;
+
+== Criticism ==
+
+In 2000, Jason Hunter, author of &quot;Java Servlet Programming&quot; described a number of &quot;problems&quot; with JavaServer Pages.&lt;ref&gt;[http://servlets.com/soapbox/problems-jsp.html The Problems with JSP] (January 25, 2000)&lt;/ref&gt;  Nevertheless, he wrote that while JSP may not be the &quot;best solution for the Java Platform&quot; it was the &quot;Java solution that is most like the non-Java solution,&quot;  by which he meant Microsoft's [[Active Server Pages]]. Later, he added a note to his site saying that JSP had improved since 2000, but also cited its competitors, [[Apache Velocity]] and Tea (template language).{{Citation needed|date=October 2018}} Today there are several alternatives and a number of JSP-oriented pages in larger web apps are considered to be technical debt. 
+
+== See also ==
+{{Portal|Computer programming}}
+* [[Interactive web stories]]
+* [[Sitelet]]
+
+=== Servlet containers ===
+* [[Apache Tomcat]]
+* [[Apache TomEE]]
+* [[Jetty (web server)]]
+* [[GlassFish]]
+* [[Oracle iPlanet Web Server]]
+* [[WebSphere Application Server]]
+
+=== Java-based template alternatives ===
+* [[Adobe ColdFusion]]
+* [[Lucee]]
+* [[FreeMarker]]
+* [[JHTML]]
+* [[Thymeleaf]]
+
+==References==
+{{Reflist|30em}}
+
+== Further reading ==
+* {{cite book |last= Bergsten |first= Hans |authorlink=  |title= JavaServer Pages |edition= 3rd |year= 2003 |publisher= [[O'Reilly Media]] |location=  |isbn= 978-0-596-00563-4 |url= https://archive.org/details/javaserverpages000berg |ref=none}}
+* {{cite book |author1 = Brown, Simon |author1link= |author2=Dalton, Sam |author3= Jepp, Daniel
+  | author4= Johnson, Dave |author5= Li, Sing |author6= Raible, Matt  |title= Pro JSP 2 | publisher= [[Apress]] |location= |isbn= 1-59059-513-0 |ref=none}}
+* {{cite book | author = Hanna, Phil | authorlink = | title = JSP 2.0 - The Complete Reference
+  | publisher = [[McGraw-Hill|McGraw-Hill Osborne Media]] | location = | year = 2003| url = | doi = | id = | isbn = 978-0-07-222437-5 |ref=none}}
+* {{cite book |first1 =Kathy |last1 =Sierra |author1link = |author2 =Bates, Bert |author3 =Basham, Bryan |title =Head First Servlets &amp;amp; JSP |publisher =[[O'Reilly Media]] |location = |isbn =978-0-596-00540-5 |url =https://archive.org/details/headfirstservlet00bash |ref=none}}
+
+==External links==
+{{Commons category|Jakarta Server Pages}}
+{{Wikibooks|J2EE Programming/JavaServer Pages}}
+&lt;!-- There is no JSP section in Java EE 6 Official Tutorial, it seems that they pay their complete attention to JSF in Java EE 6 --&gt;
+* {{Official website}}
+* [http://java.sun.com/products/jsp/syntax/2.0/syntaxref20.html JSP v2.0 Syntax Reference]
+&lt;!-- contains brief overview of jsp syntax, comparing &lt;% ... %&gt; (at the left) variant and &quot;pure xml&quot; variant (at the right) in a single table,
+  in flavour of new trends, pure xml syntax and [[Unified Expression Language|EL expressions]] seems to be more preferable then &lt;% ... %&gt; syntax.
+  also bottom table contains brief list of all context variables that are available in [[Unified Expression Language|EL expressions]] ;
+  this pdf is availabe as a link from &quot;&lt;%= expression %&gt;&quot;-section of &quot;JSP Syntax Reference&quot;
+ --&gt;
+* [http://www.java-tips.org/java-ee-tips-100042/48-javaserver-pages.html JavaServer Pages]
+* [http://www.java-forums.org/javaserver-pages-jsp-jstl/ JavaServer Pages (JSP) and JSTL]
+* [http://www.oracle.com/technetwork/java/card12-149784.pdf JavaServer Pages v2.0 Syntax Card] ([https://web.archive.org/web/20041207155029/http://java.sun.com/products/jsp/syntax/2.0/card20.pdf html])
+* [http://download.oracle.com/javaee/5/tutorial/doc/bnagx.html Official tutorial: The Java EE 5 Tutorial, Chapter 5, JavaServer Pages Technology]
+* [https://community.oracle.com/blogs/driscoll/2005/12/10/servlet-history Servlet History]
+* [http://r4r.co.in/java/jsp/basic/tutorial/jsp_basic_tutorials.php?qid=1153 set up the JSP environment] JSP Latest
+* [http://web-mode.org/ web-mode.el, emacs major mode for editing jsp templates]
+
+{{DEFAULTSORT:Javaserver Pages}}
+[[Category:Java enterprise platform]]
+[[Category:Java specification requests]]
+[[Category:Template engines]]</text>
+      <sha1>ise4sb4bb1dnp9mou7wqbr5mljmalm1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Concordia University</title>
+    <ns>0</ns>
+    <id>42914</id>
+    <revision>
+      <id>991691108</id>
+      <parentid>986306539</parentid>
+      <timestamp>2020-12-01T09:55:43Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 73 templates: del empty params (122×); hyphenate params (12×); del |url-status= (17×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="64217" xml:space="preserve">{{about|the university in Montreal, Quebec|other uses|Concordia University (disambiguation)}}
+{{short description|University in Montreal, Quebec, Canada}}
+{{Use mdy dates|date=July 2020}}
+{{Infobox university
+| name = Concordia University
+| native_name = {{native name|fr|Université Concordia}}
+| image = Concordia coa.png
+| image_upright = 0.75
+| latin_name = 
+| motto = 
+| mottoeng = 
+| established = 1974 by the merger of [[Loyola College (Montreal)|Loyola College]] (1896) and [[Sir George Williams University]] (1926).&lt;ref name=&quot;History&quot;&gt;{{cite web|url=https://www.concordia.ca/about/history.html/|title=History|work=Who we are|publisher=Concordia University|accessdate=April 20, 2012}}&lt;/ref&gt;
+| type = [[Public research university]]
+| endowment = [[Canadian dollar|C$]] 242.8&amp;nbsp;million (2018–19)&lt;ref name=AnnualReport&gt;{{cite web|url=https://www.concordia.ca/content/dam/concordia/aar/docs/foundation/2018-19-Concordia-University-Foundation-Annual-Report.pdf |title= Concordia University Foundation Annual Report 2018-2019|publisher= Concordia University Foundation}}&lt;/ref&gt;
+| rector = 
+| chancellor = Jonathan Wener
+| president = Graham Carr&lt;ref name=&quot;President&quot;&gt;{{cite web|url=http://www.concordia.ca/about/administration-governance.html|title=Administration &amp; governance}}&lt;/ref&gt;
+| provost = Anne Whitelaw (interim)&lt;ref name=&quot;President&quot;/&gt;
+| vice_chancellor = 
+| principal = 
+| dean = 
+| head_label = 
+| head = 
+| students = 46,077 (as of 2019–20)&lt;ref name=&quot;Fast facts&quot;/&gt;
+| undergrad = 36,473 (as of 2019–20)&lt;ref name=&quot;Fast facts&quot;/&gt;
+| postgrad = 9,604 (as of 2019–20)&lt;ref name=&quot;Fast facts&quot;/&gt;
+| doctoral = 
+| city = {{nowrap|1455, boulevard De Maisonneuve Ouest}}&lt;br /&gt;[[Montreal]]
+| state = Quebec
+| country = Canada&lt;br /&gt;H3G 1M8
+| coor = 
+| campus = [[Concordia University#Sir George Williams University|Sir George Williams Campus]]: Urban&lt;br /&gt;[[Loyola College (Montreal)|Loyola Campus]]: Suburban, {{convert|40|acre|ha}}
+| free_label = [[Continuing education]]
+| free = 4,812 (as of 2019–20)&lt;ref name=&quot;Fast facts&quot;/&gt;
+| athletics = [[Canadian Interuniversity Sport|CIS]] – [[Quebec Student Sport Federation|RSEQ]]
+| colours = Maroon, gold, black and white&lt;br /&gt;
+| nickname = [[Concordia Stingers|Stingers]]
+| mascot = Buzz
+| language = English,
+French
+| affiliations = [[Association of Universities and Colleges of Canada|AUCC]], [[International Association of Universities|IAU]], [[Canadian Association of Research Libraries|CARL]], [[Canadian Interuniversity Sport|CIS]], [[Quebec Student Sports Federation|QSSF]], [[Canadian University Society for Intercollegiate Debate|CUSID]], [[Canadian Bureau for International Education|CBIE]], [[Canadian University Press|CUP]].
+| website = [https://www.concordia.ca/ Concordia.ca]
+| logo = Concordia University logo.svg
+| logo_size = 160px
+| footnotes = 
+| faculty = 2,419 (as of 2019–20)&lt;ref name=&quot;Fast facts&quot;/&gt;
+| staff = 4,220 (as of 2019–20)&lt;ref name=&quot;Fast facts&quot;/&gt;
+| profess = 
+| colors = 
+}}
+
+'''Concordia University''' ({{lang-fr|link=no|Université Concordia}}); commonly referred to as '''Concordia''' is a [[public university|public]] comprehensive research university located in [[Montreal]], Quebec, Canada.&lt;ref&gt;{{Cite web|title = Concordia University|url = https://www.concordia.ca|website = concordia.ca|access-date = January 25, 2016}}&lt;/ref&gt; Founded in 1974 following the merger of [[Loyola College (Montreal)|Loyola College]] and [[Sir George Williams University]], Concordia is one of the three universities in Quebec where English is the primary language of instruction (the others being [[McGill University|McGill]] and [[Bishop's University|Bishop's]]). As of the 2018–19 academic year, there were 46,829 students enrolled in credit courses at Concordia, making the university among the largest in Canada by enrollment.&lt;ref&gt;{{Cite web|title = About|url = https://www.concordia.ca/about.html|website = concordia.ca|access-date = January 25, 2016}}&lt;/ref&gt; The university has two campuses, set approximately {{convert|7|km|mi|0|abbr=off}} apart: Sir George Williams Campus is the main campus, located in [[Downtown Montreal]] in an area known as [[Quartier Concordia]]; and Loyola Campus in the residential district of [[Notre-Dame-de-Grâce]].&lt;ref name=&quot;tour-our-campuses&quot;&gt;{{cite web|url = https://www.concordia.ca/admissions/campus-tours.html|title = Campus tours|accessdate = February 18, 2016}}&lt;/ref&gt; With four faculties, a school of [[graduate studies]] and numerous colleges, centres and institutes, Concordia offers over 400 undergraduate and 200 graduate programs and courses.&lt;ref&gt;{{Cite web|title=About|url=http://www.concordia.ca/about.html|access-date=February 18, 2016|website=concordia.ca}}&lt;/ref&gt;
+
+The university's [[John Molson School of Business]] consistently ranks among the top 10 Canadian business schools and the top 100 worldwide.&lt;ref&gt;[http://www.economist.com/whichmba/full-time-mba-ranking Full time MBA ranking] ''The Economist''&lt;/ref&gt; Moreover, Concordia was ranked seventh in Canada and 229th among world universities in the International Professional Classification of Higher Education Institutions, a worldwide ranking compiled by the [[École des Mines de Paris]] that uses as its sole criterion the number of graduates occupying the rank of chief executive officer at [[Fortune 500]] companies.&lt;ref&gt;[http://www.mines-paristech.fr/Donnees/data03/334-10.-Classements.pdf L’Ecole des Mines de Paris – MINES ParisTech: Classement international professionnel des établissements d'enseignment supérieure – Enquête 2011]&lt;/ref&gt;&lt;ref name=&quot;Aspen&quot;&gt;{{cite web
+| url = http://www.beyondgreypinstripes.org/rankings/index.cfm
+| title = Beyond Grey Pinstripes&amp;nbsp;— The Global 100
+| publisher = Aspen Institute
+| accessdate = January 16, 2008
+| archive-url = https://web.archive.org/web/20120517012116/http://www.beyondgreypinstripes.org/rankings/index.cfm
+| archive-date = May 17, 2012
+| url-status = dead
+}}&lt;/ref&gt;&lt;ref name=&quot;BGP&quot;&gt;{{cite web|url=http://www.beyondgreypinstripes.org/rankings/school.cfm?cid=78|title=Concordia University|date=2006–2007|publisher=Beyond Grey Pinstripes|accessdate=July 8, 2009}}&lt;/ref&gt;&lt;ref name=&quot;CK2008&quot;&gt;{{cite web|url=http://www.corporateknights.ca/special-reports/68-knight-school-guide/166-knight-schools-2008.html |title=Knight Schools 2008 |publisher=[[Corporate Knights]] |accessdate=July 8, 2009 |url-status=dead |archive-url=https://web.archive.org/web/20080929102444/http://www.corporateknights.ca/special-reports/68-knight-school-guide/166-knight-schools-2008.html |archive-date=September 29, 2008 }}&lt;/ref&gt;&lt;ref name=&quot;CK2009&quot;&gt;{{cite web|url=http://www.corporateknights.ca/special-reports/68-knight-school-guide/419-knight-schools-2009.html |title=Knight Schools 2009 |publisher=[[Corporate Knights]] |accessdate=July 13, 2009 |url-status=dead |archive-url=https://web.archive.org/web/20091005004208/http://www.corporateknights.ca/special-reports/68-knight-school-guide/419-knight-schools-2009.html |archive-date=October 5, 2009 }}&lt;/ref&gt;
+
+Concordia is a [[non-sectarian]] and coeducational institution, with more than 220,000 alumni worldwide.&lt;ref name=&quot;CUAA Meeting&quot;&gt;{{cite web|title=Alumni &amp; friends – alumni network|url=http://www.concordia.ca/alumni-friends/alumni-network.html|accessdate=March 29, 2014|publisher=Concordia University Alumni Association}}&lt;/ref&gt;
+The university is a member of the [[Association of Universities and Colleges of Canada]], [[International Association of Universities]], [[Canadian Association of Research Libraries]], [[Canadian University Society for Intercollegiate Debate]], [[Canadian Bureau for International Education]] and [[Canadian University Press]]. The university's varsity teams, known as the [[Concordia Stingers|Stingers]], compete in the [[Quebec Student Sport Federation]] of [[U Sports]].
+
+==History==
+Although the roots of its founding institutions go back more than 160 years, Concordia University was formed on August 24, 1974, through the merger&lt;ref&gt;{{Cite web|url=https://www.concordia.ca/content/concordia/en/offices/archives/stories/merger.html|title=Merger of Loyola College and Sir George Williams University|publisher=Concordia University|access-date=July 30, 2019}}&lt;/ref&gt; of Loyola College (1896)&lt;ref&gt;{{Cite web|url=https://www.concordia.ca/content/concordia/en/offices/archives/stories/loyola.html|title=Loyola College History|publisher=Concordia University|access-date=July 30, 2019}}&lt;/ref&gt; and Sir George Williams University (1926).&lt;ref&gt;{{cite web|url=https://www.concordia.ca/about/history.html|title=Sir George Williams University History|accessdate=February 13, 2013}}&lt;/ref&gt; On February 16, 2017, Concordia University recognized that it is located on [[Aboriginal title|unceded]] Indigenous lands.&lt;ref&gt;[https://www.concordia.ca/about/indigenous/territorial-acknowledgement.html Territorial acknowledgement] Concordia University&lt;/ref&gt;
+
+===Loyola College===
+{{Main|Loyola College (Montreal)}}
+[[File:Loyola college 1937.jpg|thumb|right|Loyola College in 1937]]
+Loyola College traces its roots to an English-language program at the [[Society of Jesus|Jesuit]] [[Collège Sainte-Marie de Montréal]] (today part of the [[Université du Québec à Montréal]]) at the Sacred Heart Convent. In 1896, Loyola College was established at the corner of [[Bleury Street]] and [[Saint Catherine Street]]. Loyola College was named in honour of [[Ignatius of Loyola]], founder of the [[Society of Jesus]]. On March 10, 1898, the institution was incorporated by the Government of Quebec and became a full-fledged college. The same year, following a fire, the college was relocated, further west on [[Drummond Street, Montreal|Drummond Street]], south of Saint Catherine Street. Although founded as a ''collège classique'' (the forerunners of Quebec's [[College education in Quebec|college system]]), Loyola began granting university degrees through [[Université Laval]] in 1903.
+
+The college moved into the present west-end campus on [[Sherbrooke Street|Sherbrooke Street West]] in [[Notre-Dame-de-Grâce]] in 1916. The School of Sociology opened in 1918. Because Loyola College never became a chartered university, it did not have the ability to grant its own university degrees. In 1920, the institution became affiliated with [[Université de Montréal]], which began granting its degrees instead of Université Laval.
+
+Memorial bronze honour roll plaques in the entrance hall near the administrative offices are dedicated to those from Loyola College who fought in the First World War, Second World War and Korean War.&lt;ref&gt;[http://www.cmp-cpm.forces.gc.ca/dhh-dhp/nic-inm/sm-rm/mdsr-rdr-eng.asp?PID=6619 Memorial bronze honour roll plaques] {{webarchive|url=https://web.archive.org/web/20141021152216/http://www.cmp-cpm.forces.gc.ca/dhh-dhp/nic-inm/sm-rm/mdsr-rdr-eng.asp?PID=6619 |date=October 21, 2014 }}&lt;/ref&gt;
+
+The inter-war period was marked by the shift of education in the institution, the ''collège classique'' education was replaced by [[humanistic education]] ([[Liberal Arts College]]) in 1940, and Loyola became a four-year institution. Theology and philosophy were taught to all students until 1972.
+
+In 1940, the Faculty of Science and the Department of Engineering, which became a faculty in 1964, were created. In addition to providing the same undergraduate programs as other colleges, the institution also offered innovative fields of study at the time, such as [[exercise science]] and [[communication studies]]. Students could enrol in [[academic majors]] starting in 1953 and [[Honours degree|honours programs]] in 1958. Students graduating from Loyola could afterwards pursue [[Graduate school|graduate-level]] education in other universities, with a few earning [[Rhodes Scholarship]]s.
+
+Starting in 1958, Loyola also began offering its first evening courses for students not being able to go to school full-time. New courses were given in [[library science]] and [[faith community nursing]]. Since its creation, Loyola College had welcomed almost exclusively young English-speaking Catholic men as students. It became [[co-ed]] in 1959 and became less homogeneous with the ever-increasing number of foreign students.
+
+Obtaining a university charter was an important issue in the 1960s. Although many wanted Loyola College to become Loyola University, the Quebec government preferred to annex it to Sir George Williams University. Negotiations began in 1968 and ended with the creation of Concordia University on August 24, 1974.
+
+===Sir George Williams University===
+{{main|Sir George Williams University}}
+[[File:Sir george william 1970.jpg|thumb|right|Sir George Williams University's [[Henry F. Hall Building]] in 1970]]
+In 1851, the first [[YMCA]] in North America was established on Ste. Helene Street in Old Montreal.&lt;ref&gt;[http://www.ymcaquebec.org/en/centre/overview/downtown-y-centre/1/ YMCA History] {{webarchive |url=https://web.archive.org/web/20130202051006/http://www.ymcaquebec.org/en/centre/overview/downtown-y-centre/1/ |date=February 2, 2013 }} YMCA International.&lt;/ref&gt; Beginning in 1873, the YMCA offered evening classes to allow working people in the [[English-speaking Quebecer|English-speaking community]] to pursue their education while working during the day. Sixty years later, the Montreal YMCA relocated to its current location on [[Stanley Street (Montreal)|Stanley Street]] in [[Downtown Montreal]]. In 1926, the education program at the YMCA was reorganized as Sir George Williams College, named after [[George Williams (YMCA)|George Williams]], founder of the original YMCA in London, England, upon which the Montreal YMCA was based. In 1934, Sir George Williams College offered the first undergraduate credit course in adult education in Canada.
+
+Sir George Williams College received its university charter from the provincial government in 1948, though it remained the education arm of the Montreal YMCA. Sir George Williams expanded into its first standalone building, the Norris Building, in 1956. In 1959, the college requested that the Quebec legislature amend its university charter, changing its name to Sir George Williams University.&lt;ref&gt;{{Cite web|url=https://www.concordia.ca/content/concordia/en/offices/archives/stories/sgw.html|title=Sir George Williams University History|website=concordia.ca|access-date=July 30, 2019}}&lt;/ref&gt; It established a Centre for Human Relations and Community Studies in 1963. Sir George Williams continued to hold classes in the YMCA building until the construction of the [[Henry F. Hall Building]] in 1966.
+
+The university gained international attention in 1969 when a group of students occupied and destroyed the Hall Building's ninth floor computer lab (see [[Sir George Williams Affair]]).&lt;ref&gt;{{Cite web|url=https://www.concordia.ca/content/concordia/en/offices/archives/stories/computer-centre-incident.html|title=Computer Centre Incident|publisher=Concordia University|access-date=July 30, 2019}}&lt;/ref&gt;
+
+Following several years of discussions and planning, Sir George Williams University merged with Loyola College to create Concordia University in 1974. Concordia provided students with representative student organizations and greater power over administrative decisions at the university.
+
+===Merger===
+In 1968, in the wake of the Parent Commission Report, which recommended the [[secularism|secularization]] of Quebec's educational system, the Quebec government asked Loyola College and Sir George Williams University to consider some form of union. The proposed merger was discussed by the Loyola-Sir George Williams Joint Steering Committee, a committee created to analyze all forms of possible mergers of the two institutions.&lt;ref name=&quot;CUmerger&quot;&gt;{{cite web|url=https://www.concordia.ca/offices/archives/stories/merger.html|title=Merger of Loyola College and Sir George Williams University|publisher=Concordia University|accessdate=July 30, 2019}}&lt;/ref&gt; It was proposed, in 1969, to create a university federation that allowed students to take courses at both campuses without paying additional fees. There was also mention of a [[shuttle bus service]] linking the remote facilities {{convert|7|km|abbr=on}} apart.&lt;ref name=CUmerger /&gt;
+
+Criticized for the difficulties encountered by the cohesion of the various departments and faculties, this option was set aside, but not totally rejected by the Joint Steering Committee. The Joint Committee of Representatives of the Board of Trustees of Loyola College and the Board of Governors of Sir George Williams University was formed in December 1971 and in fall 1972 produced a document outlining the basis of a university with two campuses.&lt;ref name=CUmerger /&gt; While the committee considered a number of possible models, including that of a loose federation, the solution finally adopted was that of an integrated institution, Concordia University, operating under the existing charter of Sir George Williams University. Following several revisions in November 1972, the document became the main plan of the proposed merger. It was accepted by both institutions, which began the process of consolidating their operations.&lt;ref name=CUmerger /&gt;
+
+In early 1973, the two institutions announced the merger would take place that fall. However, legal and administrative procedures delayed the merger for another year.&lt;ref name=CUmerger /&gt; On August 24, 1974, the Government of Quebec recognized the merger, thus creating Concordia University. The name was taken from the motto of the city of Montreal, ''Concordia salus'' (meaning &quot;well-being through harmony&quot;).&lt;ref&gt;{{Cite web|url=https://www.concordia.ca/content/concordia/en/about/history.html|title=Concordia University History|publisher=Concordia University|access-date=July 30, 2019}}&lt;/ref&gt;
+
+{{quote|&quot;When you join together two lively institutions, each with its own philosophies and ways of doing things, each firmly dedicated to freedom of thought and speech, you must expect a measure of friction. We look forward now to a new period of creative friction.&quot;|Concordia Rector and Vice-Chancellor John O'Brien, on the finalization of the merger, August 16, 1974&lt;ref name=CUmerger /&gt;}}
+
+===Post-merger===
+The legal existence of Concordia dates from August 24, 1974. The integration of the various faculties of the two institutions into a coherent whole took several years. The five faculties of the new university were a combination of existing faculties and departments prior to the merger. There was a Faculty of Commerce, Faculty of Science and Faculty of Arts at Sir George Williams University. Additionally, there was a Faculty of Arts and Science at Loyola College. The Faculty of Engineering of both institutions had previously been combined.&lt;ref&gt;{{cite encyclopedia|url=https://www.thecanadianencyclopedia.ca/en/article/concordia-university|title=Concordia University|encyclopedia=[[The Canadian Encyclopedia]]|accessdate=September 7, 2019}}&lt;/ref&gt;
+
+The Faculty of Fine Arts was created in 1976.
+
+The first phase of combination of the Faculties of Arts and Science began in 1977 and ended in 1985.
+
+In the late 1980s, the Georges P. Vanier Library on the Loyola Campus was enlarged, while in 1992, the library on Sir George Williams Campus moved to the new [[J.W. McConnell Building]]. The Norris Building was closed the same year.
+
+On August 24, 1992, [[Valery Fabrikant]], a mechanical engineering professor, [[Concordia University massacre|shot five colleagues]], killing four, on the ninth floor of the Hall Building. Fabrikant was convicted of the murders and sentenced to life imprisonment. The university erected a memorial to the slain professors (four granite tables) in the Hall Building lobby.&lt;ref&gt;{{Cite web|url=https://www.concordia.ca/content/concordia/en/offices/archives/stories/memorial.html|title=Memorial in Hall Building Lobby|website=concordia.ca|access-date=August 5, 2019}}&lt;/ref&gt;
+
+Starting in 1998, the university entered a major phase of expansion to meet its growing student enrolment. In August 2003, Concordia inaugurated the Richard J. Renaud Science Complex on Loyola Campus.
+
+In 2005, the university launched a major urban redevelopment project in the neighbourhood surrounding Sir George Williams Campus known as the [[Quartier Concordia]]. That same year, the Engineering, Computer Science and Visual Arts Integrated Complex opened its doors on [[Saint Catherine Street|Saint Catherine Street West]] between [[Guy Street]] and [[Mackay Street]].
+
+In September 2009, the university marked the opening of the new building for the [[John Molson School of Business]].

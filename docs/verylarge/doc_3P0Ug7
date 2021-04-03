@@ -1,0 +1,296 @@
+====Windows Media Player Mobile====
+Windows Media Player Mobile 10 on [[Windows Mobile]] 6.5 supports [[MP3]], [[Advanced Systems Format|ASF]], [[Windows Media Audio|WMA]] and [[Windows Media Video|WMV]] using WMV or [[MPEG-4]] codecs.&lt;ref&gt;{{cite web|url=http://msdn.microsoft.com/en-us/library/cc907938.aspx |title=Formats supported by Windows Media Player Mobile |work=[[MSDN]] |publisher=[[Microsoft]] |date=April 8, 2010 |accessdate=November 7, 2012}}&lt;/ref&gt;
+
+===Disc burning, ripping, and playback===
+Windows Media Player features integrated [[Compact Disc|Audio CD]]-burning support since version 7 as well as data CD burning support since Windows Media Player 9 Series on [[Windows XP]] and later. Data CDs can have any of the media formats supported by the player. While burning Data CDs, the media can, optionally, be transcoded into WMA format and playlists can be added to the CD as well. Starting with WMP 9 Series, audio CDs can be burnt with volume leveling.
+
+Audio CDs can be ripped as WMA or WMA 10 Pro (WMA 10 Pro in WMP 11 and later) at 48, 64, 96, 128, 160 and 192 [[Kilobit per second|kbit/s]], [[Windows Media Audio 9 Lossless|WMA lossless]] (470 to 940 kbit/s) (9 Series on XP and later), WMA [[variable bitrate]] (from 40 to 75 kbit/s up to 240-355 kbit/s), MP3 at 128, 192, 256 and 320 kbit/s, or uncompressed [[WAV]] (WAV ripping in WMP 11 and later). Since WMP 9 Series, 20 bit high-resolution CDs ([[High Definition Compatible Digital|HDCDs]]) are also supported, if capable audio hardware is present. Audio can be ripped using error correction and ripped audio can be protected with [[Windows Media DRM]]. Ripping to MP3 is supported only in Windows Media Player 8 for [[Windows XP]] and later if a compatible MP3 encoder is installed. Windows Media Player 10 included the Fraunhofer MP3 Professional encoder. Information on CDs such as album name, artist and track listings can optionally be automatically downloaded from the online Windows Media database when the CD is inserted. Version 11 added support for ripping audio CDs to [[WAV]] and [[WMA Pro|WMA 10 Pro]] formats. With their 2015 implementation in Windows 10, Version 12 also added lossless [[FLAC]] and [[Apple Lossless Audio Codec|ALAC]] formats for ripping and playback. For burning, version 11 shows a graphical bar indicating how much space will be used on the disc and introduced ''Disc spanning'' which splits a burn list onto multiple discs in case the content does not fit on one disc.
+
+===Portable device sync===
+Windows Media Player allows the user to connect, share and sync data with portable handheld devices and [[game console]]s since version 7. Media can be optionally transcoded to a format better suited for the target device, automatically, when synchronizing. When deleting playlists from devices, Windows Media Player can automatically remove their contents. Devices can be formatted using Windows Media Player 9 Series and later. Version 10 and later support the [[Media Transfer Protocol]] and Auto Sync. Auto Sync allows users to specify criteria such as recently added music or highest rated songs, by which media will be automatically synchronized with the portable device and other advanced features like setting the clock on the portable device automatically, communicating with the device to retrieve the user's preferences. Windows Media Player 10 also introduced the [[User-Mode Driver Framework|UMDF]]-based ''Windows Portable Devices'' API.
+
+Version 11 has improved synchronization features for loading content onto [[PlaysForSure]]-compatible portable players. WMP 11 supports reverse-synchronization, by which media present on the portable device can be replicated back to the PC. ''Shuffle Sync'' can be used to randomize content synced with the portable device, ''Multi PC Sync'' to synchronize portable device content across multiple PCs and ''Guest Sync'' to synchronize different content from multiple PCs with the portable device. Portable devices appear in the navigation pane of the library where their content can be browsed and searched.
+
+Windows Media Player's 'Sync' function has options that allow it to be set to automatically down-convert (transcode) high bit-rate song files to a lower bit-rate.  This down-conversion function is switched on by default.  This is useful for providing low bit-rate files to those portable devices that need them, and to save space on portable devices with smaller storage capacities.  For high bit-rate capable devices with sufficient storage capabilities, the down conversion process can be omitted.
+
+In versions 11 (2006) and 12 (2009), the Quality settings that the user has selected in the Windows Media Player settings for Sync, for that specific portable device, are used to control the quality (bit-rate) of files that are copied to the portable device.  Leaving the Quality settings to Automatic will often result in 192kbs files being copied to the portable device.  Manual settings can also be made.  192kbs is the highest quality down-conversion bit-rate that can be manually selected when the Sync function's down-conversion function is turned on.  Lower bit-rates can also be selected.
+
+For portable devices that can handle high bit-rate files, the best quality files are obtained by leaving the down-conversion process switched off (unchecked) for that specific device.  In Windows Media Player Version 11, switching off the down-conversion function is done in the Quality tab of the Advanced Options of the Sync settings for the device.  In Windows Media Player Version 12, switching off the down-conversion function is done in the Quality tab of the Properties for the device in the Select Settings for the device in the Sync Options menu.
+
+When set up in such a way, Windows Media Player's 'Sync' function can be used to sync unchanged high bit-rate song files to suitable portable devices (i.e. those capable of using file formats such as WMA Lossless, mp3-360kbs, etc.).  For example, some users have created large song libraries on their PCs containing .wma formatted song files using the high bit-rate WMA Lossless (WMA-LL) protocol, or using other high bit-rate song file formats.  The WMA-LL protocol is selectable in Windows Media Player as an option when ripping songs from CDs.  The resulting bit-rates seen on ripped WMA-LL files are often 3 to 6 times higher than 192kbs, and can typically fall anywhere in the range of 600kbs to 1200kbs, depending on the quality of the source file that was present on the CD in the first place.  The sound quality is much improved over the default rate, although the file size is larger.
+
+At the time that Versions 11 and 12 were released, the capabilities and capacities of portable devices typically required down-conversion of the bit-rates of the files placed on the portable devices. Thus, Sync down-conversion was turned on by default.  This was to ensure playability of the files and to ensure that the file sizes were small enough to efficiently fit a reasonably large selection of songs on the portable device.
+
+In recent years (circa 2012), portable devices became available that could natively play these Windows Media Player produced high bit-rate WMA-LL files (and others), and that have storage capacities suitable for large collections of high bit-rate song files.  This made it much more practicable and desirable to use software programs such as Windows Media Player to synchronize previously PC-bound libraries of high bit-rate songs to these new portable devices.
+
+===Enhanced playback features===
+Windows Media Player features universal brightness, contrast, saturation and hue adjustments and [[pixel aspect ratio]] for supported video formats. It also includes a 10-band graphic equalizer with presets and [[SRS Labs|SRS WOW]] audio post-processing system. Windows Media Player can also have attached audio and video [[Digital Signal Processing|DSP]] plug-ins which process the output audio or video data. ''Video Smoothing'' was introduced in WMP 9 Series ([[Windows XP|Windows&amp;nbsp;XP]] and later only) which upscales frame-rate by interpolating added frames, in effect giving a smoother playback on low-framerate videos. The player supports subtitles and closed-captioning for local media, video on demand streaming or live streaming scenarios. Typically Windows Media captions support the [[SAMI]] file format but can also carry embedded closed caption data.
+
+The player can use video [[hardware overlay|overlays]] or [[DirectShow filter|VMR]] (Video Mixing Renderer) surfaces, if the video card supports them. In [[Windows XP]], it uses VMR7 by default, but can also be made to use the more advanced [[Y'UV|YUV]] mixing mode by enabling the &quot;Use high quality mode&quot; option in Advanced Performance settings. This turns on deinterlacing, scaling and improved color accuracy.&lt;ref&gt;{{Cite web |url=http://download.microsoft.com/download/0/b/8/0b89049d-dc57-4571-aa69-cf592743a241/WMPlayer.doc |title=Windows Media Player manual |work=Download Center |publisher=[[Microsoft]] |format=DOC |date=September 1, 2004 |url-status=dead |archiveurl=https://web.archive.org/web/20050607011331/http://download.microsoft.com/download/0/b/8/0b89049d-dc57-4571-aa69-cf592743a241/WMPlayer.doc |archivedate=June 7, 2005}}&lt;/ref&gt; WMP 9 Series introduced native playback for deinterlacing for TV output. Version 9 introduced DXVA accelerated playback. Version 11 introduced improved support for DirectX accelerated decoding of WMV video ([[DirectX Video Acceleration|DXVA]] decoding). Up to version 11, it supported static lyrics and &quot;Synchronized Lyrics&quot;, by which different lines of lyrics can be time-stamped, so that they display only at those times. Synchronized Lyrics also were accessible through the Advanced Tag Editor which was removed in version 12.
+
+Since Windows Media Player 9 Series, the player supports crossfading, audio dynamic range (Quiet Mode) for WMA Pro and WMA Lossless, and auto volume leveling for certain media which includes volume level/gain information such as MP3 or Windows Media. The player also supports extensive configurable privacy and security settings.
+
+===Shell integration===
+The player has [[Windows Explorer]] shell integration to add files and playlist to the ''Now Playing'' pane and other playlists can be controlled from the Windows Explorer shell itself, via right-click menu. The My Music folder also includes a separate ''My Playlists'' folder where playlists are maintained. When the player is closed and reopened, simply clicking the play button restores the last playlist even if it was not saved. Starting with Windows Media Player 10, the playlist pane is also visible from the Library view. [[AutoPlay]] handlers in Windows expose various Windows Media Player tasks.
+
+[[File:Windows Media Player 11 Mini-player - Song details.png|thumb|left|Windows Media Player 11 running in mini mode in Windows Vista and Windows XP respectively. Notice the difference in the logo.]]
+
+Up to version 11, it featured a taskbar-mounted ''Mini mode'' in which the most common media control buttons are presented as a toolbar on the Windows [[taskbar]]. Flyout windows can display media information, the active visualization or the video being played back. Mini-mode was introduced as a shell player powertoy for Windows Media Player 8 in [[Windows XP]] and integrated later into WMP 9 Series. Mini-mode has been removed in Windows Media Player 12 in favor of controls in the taskbar's interactive thumbnail preview which lacks volume control, a progress bar and information displayed whenever a new song is played.
+
+The user interface has been redesigned in Windows Media Player 12 such that the ''Now Playing'' view plays media in a separate minimalist window with floating playback controls, and also gives access to the current playlist, visualizations, and enhancements.&lt;ref name=&quot;ArsWMP12&quot;/&gt; Enhancements are housed in individual undocked windows. The library view includes the rest of the media management functions. It also can preview songs from the library when users hover over the media file and click the Preview button.&lt;ref name=&quot;ArsWMP12&quot;/&gt; Windows Media Player 12 can play unprotected songs from the [[iTunes]] library. The taskbar-integrated Mini-player has been replaced with controls in the taskbar's interactive thumbnail preview (called the ''Thumbnail Toolbar''),&lt;ref&gt;{{cite web|url=https://msdn.microsoft.com/en-us/magazine/dd942846.aspx#id0420081|title=Introducing The Taskbar APIs |work=[[MSDN Magazine]] |publisher=[[Microsoft]] |first1=Yochay |last1=Kiriaty |first2=Sasha |last2=Goldshtein |date=July 2009 |at=Thumbnail Toolbars}}&lt;/ref&gt; albeit minus the volume control function, track and album information shown whenever a new song is played and the progress bar. The taskbar icon also supports jump lists introduced in [[Windows 7]].
+
+[[File:Windows Media Player 12 live preview.png|thumb|The thumbnail viewer of Windows Media Player 12 in [[Windows 7]] Home Premium]]
+
+===Extensibility===
+The player has had [[Skin (computing)|skinning]] support since Windows Media Player (WMP) 7 and includes a color chooser since the WMP 9 Series. Not all functions are usually exposed in skin mode. Windows Media Player 10 allows setting the video border color. Color chooser has been removed in WMP 12. It supports visualizations and ''Info Center View'' (Info Center View in WMP 9 Series and later) which displays media metadata fetched from the internet. Full screen visualizations are supported in WMP 9 Series and later. It supports Background plug-ins, window plug-ins and ''Now Playing'' plug-ins to control media playback besides DSP and renderer plug-ins. Plug-in support was introduced in WMP 9 Series.
+
+===Online features===
+The player integrates web-browsing support to browse online music stores, shop for music and tune to internet radio stations since version 7. It provides an embeddable [[ActiveX control]] for [[Internet Explorer]] so that developers can play [[Windows Media]] on web pages. Windows Media Player 10 and later feature integration with a large number of online music stores and selecting a music store switches the Info Center view, radio and other online features to use services from that store. Purchased music from a particular store appears in a separate library node under the respective category.
+
+===Media streaming===
+Previously, Microsoft had released [[Windows Media Connect]] for [[Windows XP]] to stream media content with its built-in UPnP media server. With version 11 of Windows Media Player, [[WMPNSS|Media Sharing]] was integrated and allows content (Music, Pictures, Video) to be streamed to and from [[Universal Plug and Play|Universal Plug and Play (UPnP) AV]] enabled devices such as the [[PS3]], [[Xbox 360]], and Roku [[SoundBridge]]. This includes DRM protected [[PlaysForSure]] content. WMP 11 on Windows Vista can also act as a client to connect to remote media libraries using this feature; this is not available on the [[Windows XP]] version.
+
+With version 12, media streaming was further improved. While previous versions streamed media to [[UPnP]] compliant devices (Digital Media Server role) and could play media by fetching it from a network share (Digital Media Player role),&lt;ref name=&quot;WMP12Streaming&quot;&gt;{{cite web |url=http://blogs.msdn.com/b/e7/archive/2009/05/12/media-streaming-with-windows-7.aspx |title=Media Streaming with Windows 7 |publisher=[[Microsoft]] |work=Engineering Windows 7 |first=Steven |last=Sinofsky |date=May 12, 2009}}&lt;/ref&gt; Windows Media Player 12 can access media from the shared media libraries on the network or HomeGroup, stream media to [[DLNA]] 1.5 compliant devices and allows itself (once the remote control option is turned on) to be remotely controlled by Digital Media Controller devices which stream media (Digital Media Renderer role).&lt;ref name=&quot;WMP12Streaming&quot;/&gt; Similarly, the ''Play To'' feature once enabled for remote PCs, by turning on remote control of the player, allows compliant devices and computers to be discovered and controlled remotely from a computer running Windows Media Player 12 (Digital Media Controller role).&lt;ref name=&quot;WMP12Streaming&quot;/&gt; If the devices do not support the streamed format, Windows Media Player 12 transcodes the format on-the-fly. Media from a home network can also be streamed over the internet using an ''Online ID Provider'' service, which handles discovery of the computer's IP address, authorization, security, connectivity and Quality of Service issues.&lt;ref name=&quot;WMP12Streaming&quot;/&gt;
+
+===Skin Mode===
+Windows Media Player also features skins. Currently, Windows Media Player has two default skins: &quot;Corporate&quot;, which was first introduced in version 8, and &quot;Revert&quot;, which first shipped with version 9. In versions 7 and 8, there were many unusual skins such as &quot;Heart&quot;, &quot;Headspace&quot;, &quot;Canvas&quot;, &quot;Goo&quot;, and &quot;Atomic&quot;, which were removed starting with version 9, but are retained if the player is upgraded, although some can still be downloaded from an archive of the Microsoft website.&lt;ref&gt;{{cite web|archiveurl=https://web.archive.org/web/20160609092016/http://windows.microsoft.com/en-us/windows/windows-media-player-skins#t1=all|title=Skins for Windows Media Player|publisher=[[Microsoft]]|work=Windows|archivedate=June 9, 2016|url=http://windows.microsoft.com/en-us/windows/windows-media-player-skins#t1=all|url-status=dead}}&lt;/ref&gt; In versions 7, 8, 9 and 10 there were many usual skins such as &quot;9SeriesDefault&quot;, &quot;Atomic&quot;, &quot;Bluesky&quot;, &quot;Canvas&quot;, &quot;Classic&quot;, &quot;Compact&quot;, &quot;goo&quot;, &quot;Headspace&quot;, &quot;heart&quot;, &quot;iconic&quot;, &quot;Miniplayer&quot;, &quot;Optic&quot;, &quot;Pyrite&quot;,  &quot;QuickSilver&quot;, &quot;Radio&quot;, &quot;Roundlet&quot;, &quot;Rusty&quot;, &quot;splat&quot;, &quot;Toothy&quot;, &quot;Windows Classic&quot;, and &quot;Windows XP&quot;, which were removed starting with version 11.  This Corporate skin is not deletable.
+
+==Security issues==
+[[Microsoft]] [[Windows Media]] Runtime in [[Windows 2000]], [[Windows XP]], [[Windows Vista]] and [[Windows Server]] contained a bug that permitted &quot;remote code execution if a user opened a specially crafted media file&quot;. Such a file would allow the attacker to &quot;then install programs; view, change, or delete data; or create new accounts with full user rights&quot;, if the account on which the file was played had administrator privileges.&lt;ref&gt;{{cite web |url=http://www.microsoft.com/technet/security/bulletin/MS09-047.mspx |title=Microsoft Security Bulletin MS09-047: Critical Vulnerabilities in Windows Media Format Could Allow Remote Code Execution |date=September 8, 2009 |publisher=[[Microsoft]] |work=[[Microsoft TechNet]]}}&lt;/ref&gt; The problem was addressed in a critical update issued on September 8, 2009.&lt;ref&gt;{{cite web | url = http://support.microsoft.com/kb/968816 | title = MS09-047: Description of the security update for Windows Media Format Runtime, Windows Media Services, and Media Foundation: September&amp;nbsp;8, 2009 | date = September 10, 2009 | work=Support | publisher=[[Microsoft]]}}&lt;/ref&gt;
+
+==Other versions==
+Microsoft has also released versions of Windows Media Player for other platforms including [[Windows Mobile]], [[classic Mac OS]], [[Mac OS X]], [[Palm-size PC]], [[Handheld PC]], and [[Solaris (operating system)|Solaris]]. Of these, only the Windows Mobile edition continues to be actively developed and supported by Microsoft. Version 1 of the [[Zune]] software was also based on Windows Media Player; later versions are not.
+
+===Windows Mobile===
+[[File:Windows Media Player 10 Mobile.png|thumb|Windows Media Player 10.3 Mobile on a Windows Mobile Professional device]]
+Windows Media Player for Pocket PC was first announced on January 6, 2000, and has been revised on a schedule roughly similar to that of the Windows version.&lt;ref name=&quot;pocketpcpr&quot;&gt;{{cite web
+|url=http://news.microsoft.com/2000/01/06/microsoft-unveils-windows-media-player-for-palm-size-and-pocket-pcs/
+|title=Microsoft Unveils Windows Media Player for Palm-Size and Pocket PCs
+|date=January 6, 2000
+|accessdate=January 31, 2017
+|work=News Center
+|publisher=[[Microsoft]]
+}}&lt;/ref&gt; Currently known as &quot;Media Player 10 Mobile&quot;, this edition (released in October 2004) closely resembles the capabilities of the Windows version of WMP 10, including playlist capabilities, a media library, album art, WMA Lossless playback, support for DRM-protected media, video playback at 640×480 with stereo sound, and the same [[Energy Blue]] interface aesthetics also seen in [[Windows XP]] Media Center Edition 2005. It also supports synchronization with the desktop version of WMP 10, and additionally supports synchronizing and transcoding of recorded television shows from Media Center.  Media Player 10 Mobile is not available as a download from Microsoft; distribution is done solely through OEM partners, and is typically included on devices based on Windows Mobile.
+
+Windows Mobile 6 includes a copy of Windows Media Player 10 Mobile, but with a similar (but not quite identical) theme as Windows Media Player 11.
+
+===Mac OS X===
+Version 9 was the final version of Windows Media Player to be released for [[Mac OS X]] before development was canceled by Microsoft.  It was developed by the Windows Media team at Microsoft instead of the [[Macintosh Business Unit]] and released in 2003. On release the application lacked many basic features that were found in other media players such as Apple's [[iTunes]] and [[QuickTime]].{{Citation needed|date=January 2008}} It also lacked support for many media formats that version 9 of the Windows counterpart supported on release 10 months earlier.
+
+The Mac version supported only [[Windows Media]] encoded media (up to version 9) enclosed in the [[Advanced Systems Format|ASF]] format, lacking support for all other formats such as [[MP4]], [[Moving Picture Experts Group|MPEG]], and Microsoft's own [[Audio Video Interleave|AVI]] format. On the user interface front, it did not prevent [[screensaver]]s from running during playback, it did not support file drag-and-drop, nor did it support playlists. While Windows Media Player 9 had added support for some files that use the [[Windows Media Video|WMV9]] codec (also known as the WMV3 codec by the [[FourCC]]), in other aspects it was seen as having degraded in features from previous versions.
+
+On January 12, 2006 Microsoft announced it had ceased development of Windows Media Player for Mac. Microsoft now distributes a third-party [[Plug-in (computing)|plugin]] called WMV Player (produced and maintained by [[Flip4Mac]]) which allows some forms of [[Windows Media]] to be played within [[Apple Computer|Apple's]] [[QuickTime]] Player and other QuickTime-aware applications.&lt;ref&gt;{{cite news | url=http://www.microsoft.com/windows/windowsmedia/player/flip4mac.mspx | title=Windows Media Components for QuickTime | publisher=[[Microsoft]] | accessdate=March 30, 2007|url-status=live|archiveurl=https://web.archive.org/web/20060112005045/http://www.microsoft.com/windows/windowsmedia/player/flip4mac.mspx|archivedate=January 12, 2006}}&lt;/ref&gt;
+
+==European Commission case==
+In March 2004, the [[European Commission]] in the [[European Union Microsoft antitrust case]] fined Microsoft €497&amp;nbsp;million and ordered the company to provide a version of Windows without Windows Media Player, claiming Microsoft &quot;broke European Union competition law by leveraging its near monopoly in the market for PC operating systems onto the markets for work group [[Server (computing)|server]] operating systems and for media players&quot;. The company has made available a compliant version of its flagship operating system under the negotiated name &quot;[[Windows XP]] N&quot;, though the product has not been very successful. [[Windows Vista]], [[Windows 7]] and [[Windows 8]] are also available in &quot;N&quot; editions. However, it is possible to either install Windows Media Player (XP/Vista)&lt;ref&gt;Microsoft. [http://www.microsoft.com/windows/windowsmedia/download/AllDownloads.aspx Download Center]. &quot;be used to restore Windows Media Player and related technologies to N and KN editions of Windows Vista.&quot; Retrieved July 26, 2008&lt;/ref&gt; or the Media Restore Pack through [[Windows Update]] (Vista) to add the media player.
+
+==Release history==
+Prior to the release of Windows Media Player in Windows 98 Second Edition, separate programs, [[CD Player (Windows)|CD Player]], Deluxe CD Player, [[DVD Player (Windows)|DVD Player]] and [[Media Player (Microsoft)|Media Player]], were included in old versions of Microsoft Windows for playback of media files.
+
+{| class = &quot;wikitable&quot;
+|+ Windows Media Player versions&lt;ref&gt;{{cite web|title=Get Windows Media Player|url=http://windows.microsoft.com/en-us/windows/downloads/windows-media-player|work=Windows|publisher=[[Microsoft]]|accessdate=November 5, 2011|url-status=dead|archiveurl=https://web.archive.org/web/20100825061104/http://windows.microsoft.com/en-us/windows/downloads/windows-media-player|archivedate=August 25, 2010}}&lt;/ref&gt;
+|-
+!Version !! Original release !! Included with !! Available for
+!
+|-
+! colspan=&quot;6&quot; style=&quot;text-align:center; background:#ddf;&quot; | [[Microsoft Windows]]
+|-
+|'''Windows Media Player 12'''|| October 22, 2009 || [[Windows 7]]&lt;br /&gt;[[Windows 8]]&lt;br /&gt;[[Windows 8.1]]&lt;br /&gt;[[Windows 10]]&lt;br /&gt; [[Windows Server 2008 R2]]&lt;br /&gt;[[Windows Server 2012]]&lt;br /&gt;[[Windows Server 2012 R2]]&lt;br /&gt;[[Windows Server 2016]] || {{N/A}}
+|[[File:Windows Media Player 12 live preview.png|220x220px]]
+|-
+|'''Windows Media Player 11'''|| January 30, 2007 || [[Windows Server 2008]]&lt;br /&gt;[[Windows Vista]] || [[Windows XP]]&lt;br /&gt;[[Windows XP x64 Edition]]
+|
+|-
+|'''Windows Media Player 10'''|| September 2, 2004 || [[Windows Server 2003]] (SP1+)&lt;br /&gt;[[Windows XP x64 Edition]] &lt;br /&gt;[[Windows XP Media Center Edition 2005]] || [[Windows Server 2003]] SP1&lt;br /&gt;[[Windows XP]] SP2&lt;ref name=&quot;10 latest&quot;&gt;{{cite web|title=MS09-037: Description of the security update for Windows Media Player: August 11, 2009|url=http://support.microsoft.com/kb/973540|work=Support|publisher=[[Microsoft]]|accessdate=August 12, 2013|date=May 8, 2012}}&lt;/ref&gt;
+|
+|-
+|'''Windows Media Player 9 Series'''|| January 7, 2003&lt;ref&gt;{{cite web|url=http://news.microsoft.com/2003/01/07/final-release-of-windows-media-9-series-starts-next-wave-of-digital-media/|title=Final Release of Windows Media 9 Series Starts Next Wave of Digital Media|date=January 7, 2013|work=News Center|publisher=[[Microsoft]]}}&lt;/ref&gt; || [[Windows XP]] (SP2+)&lt;br /&gt;[[Windows Server 2003]] (RTM) || [[Windows XP]]&lt;br /&gt;[[Windows ME]]&lt;br /&gt;[[Windows 2000]]&lt;br /&gt;[[Windows 98 SE]]&lt;ref name=&quot;:0&quot;&gt;{{Cite web|url=https://www.petri.com/download_windows_media_player_9|title=Download Windows Media Player 9|last=Petri|first=Daniel|date=2009-01-08|website=Petri|language=en-US|access-date=2019-02-12}}&lt;/ref&gt;
+|
+|-
+|'''Windows Media Player for Windows XP''' (version 8) || October 25, 2001 || [[Windows XP]] (RTM &amp; SP1) || {{N/A}}
+|
+|-
+|'''Windows Media Player 7.1'''|| May 16, 2001 || {{N/A}} || [[Windows ME]]&lt;br /&gt;[[Windows 2000]]&lt;br /&gt;[[Windows 98]]&lt;ref name=&quot;:0&quot; /&gt;&lt;ref&gt;{{Cite web|url=https://www.bumpersoft.com/Video-and-Audio/MP3-and-Audio/Audio-and-CD-Players/Windows-Media-Player-7-1-for-Windows-98-2000-and-Me-711.htm|title=Windows Media Player 7.1 for Windows 98, 2000, and Me 7.1 - BumperSoft|website=www.bumpersoft.com|language=en|access-date=2019-02-12}}&lt;/ref&gt;
+|
+|-
+|'''Windows Media Player 7.0'''|| July 17, 2000&lt;ref&gt;{{cite web|url=https://news.microsoft.com/2000/07/17/microsoft-windows-media-player-7-brings-click-and-play-digital-media-to-millions-around-the-globe/ |title=Microsoft Windows Media Player 7 Brings Click and Play Digital Media To Millions Around the Globe|work=News Center|publisher=[[Microsoft]] |date=July 17, 2000 |accessdate=June 15, 2011}}&lt;/ref&gt; || [[Windows ME]] || [[Windows 2000]]&lt;br /&gt;[[Windows 98]]&lt;br /&gt;[[Windows NT 4.0]]&lt;br /&gt;[[Windows 95]]
+|
+|-
+|'''Windows Media Player 6.4'''{{efn|Windows Media Player 6.4 was shipped side-by-side with later versions of WMP in Windows ME and Windows XP}} || April 29, 1999 || [[Windows 2000]]&lt;br /&gt;[[Windows ME]] (hidden)&lt;br /&gt;[[Windows XP]] (hidden)&lt;br /&gt;[[Internet Explorer 5|Internet Explorer 5.01]]&lt;br /&gt;[[Internet Explorer 5|Internet Explorer 5.5]]&lt;br /&gt;[[Internet Explorer 6|Internet Explorer 6.0]] || [[Windows 98]]&lt;br /&gt;[[Windows NT 4.0]]&lt;br /&gt;[[Windows 95]]
+|
+|-
+|'''Windows Media Player 6.1'''
+|| October 1997 || [[Windows 98]] SE&lt;br /&gt;[[Internet Explorer 5|Internet Explorer 5.0]] || [[Windows 98]] &lt;br/ &gt;[[Windows NT 4.0]]&lt;br/ &gt;[[Windows 95]] 
+|
+|-
+|'''Microsoft Media Player 5.1''' || 2001 || [[Windows XP]] (hidden) || {{N/A}}
+|
+|-
+|'''Media Player 5.0''' || 1999 || [[Windows 2000]] (hidden) || {{N/A}}
+|
+|-
+|'''Media Player 4.9''' || 2000 || [[Windows ME]] (hidden) || {{N/A}}
+|
+|-
+|'''Media Player 4.1''' || 1998 || [[Windows 98]]&lt;br /&gt;[[Windows 98 SE]] (hidden) || {{N/A}}
+|
+|-
+|'''Media Player 4.0''' || 1995 || [[Windows 95]]&lt;br /&gt;[[Windows NT 4.0]]&lt;br /&gt; || {{N/A}}
+|
+|-
+|'''Media Player 3.51''' || 1995 || [[Windows NT 3.51]] || {{N/A}}
+|
+|-
+|'''Media Player 3.5''' || 1994 || [[Windows NT 3.5]] || {{N/A}}
+|
+|-
+|'''Media Player 3.15''' || 1992 || {{N/A}} || [[Windows 3.1]] with [[Video for Windows]]
+|
+|-
+|'''Media Player 3.1''' || 1992 || [[Windows 3.1]]&lt;br /&gt;[[Windows NT 3.1]] || {{N/A}}
+|
+|-
+|'''Media Player 3.0''' || 1991 || {{N/A}} || [[Windows 3.0]] with Multimedia Extension
+|
+|-
+! colspan=&quot;6&quot; style=&quot;text-align:center; background:#ddf;&quot; | [[Windows Mobile]]
+|-
+|'''Windows Media Player 10.3 Mobile'''|| February 12, 2007 (Windows Mobile 6) || [[Windows Mobile 6.1]]&lt;br /&gt;[[Windows Mobile 6]] || [[Windows Mobile 5.0]]
+|[[File:Windows Media Player 10 Mobile.png|267x267px]]
+|-
+|'''Windows Media Player 10.2 Mobile'''|| {{dunno}} || [[Windows Mobile 5.0]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 10.1 Mobile'''|| May 10, 2005 || [[Windows Mobile 5.0]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 10 Mobile'''|| October 12, 2004 || [[Windows Mobile 2003 SE]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 9.0.1'''|| March 24, 2004 || [[Windows Mobile 2003 SE]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 9 Series'''|| June 23, 2003 || [[Windows Mobile 2003]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 8.5'''|| October 11, 2002 || [[Pocket PC 2002]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 8.01'''|| July 2002 || [[Pocket PC 2002]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 8'''|| October 4, 2001 (Pocket PC) || [[Pocket PC 2002]]&lt;br /&gt;[[Smartphone 2002]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 7.1'''|| May 21, 2001 || [[Pocket PC 2000]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 7'''|| December 12, 2000 || [[Pocket PC 2000]] || {{N/A}}
+|
+|-
+|'''Windows Media Player 1.2'''|| September 7, 2000 || Handheld PC 2000 || {{N/A}}
+|
+|-
+|'''Windows Media Player 1.1'''|| {{dunno}} || Palm-size PC CE 2.11 || {{N/A}}
+|
+|-
+|'''Windows Media Player'''|| April 19, 2000 || [[Windows Mobile#Pocket PC 2000|Pocket PC 2000]] || {{N/A}}
+|
+|-
+! colspan=&quot;6&quot; style=&quot;text-align:center; background:#ddf;&quot; | [[classic Mac OS|Mac]]
+|-
+|'''Windows Media Player 9 Series'''|| November 7, 2003 || {{N/A}} || [[Mac OS X]]
+|
+|-
+|'''Windows Media Player 7'''|| July 24, 2001 || [[Mac OS 9]] || [[Mac OS 8|Mac OS 8.x]]
+|
+|-
+|'''Windows Media Player 6.3'''|| July 17, 2000 || [[Mac OS 8]] || [[System 7|Mac OS 7.x]]
+|
+|-
+! colspan=&quot;6&quot; style=&quot;text-align:center; background:#ddf;&quot; | [[Solaris (operating system)|Solaris]]
+|-
+|'''Windows Media Player 6.3'''|| July 17, 2000 || {{N/A}} || [[Solaris (operating system)|Solaris]]
+|
+|}
+
+==See also==
+* [[Comparison of media players]]
+* [[Comparison of video player software]]
+* [[Media Transfer Protocol]]
+* [[Windows Media Encoder]]
+* [[Windows Media Services]]
+*[[Media Player Classic]], a media player that mimics the appearance of Windows Media Player 6.4
+
+==Footnotes==
+{{Notelist}}
+
+==References==
+{{Reflist|30em}}
+
+==Further reading==
+{{Refbegin}}
+* {{cite web|url=http://www.updatexp.com/windowsxpmediaplayer.html|title=A Little Windows Media Player History...|last=Liron|first=Marc|year=2004|work=Windows XP Media Player - The Best There Is?|accessdate=October 7, 2011}}
+* {{cite web|url=http://support.microsoft.com/kb/899113|title=The default codecs that are included with Windows Media Player 9 and with Windows Media Player 10 (Revision 1.1)|date=August 4, 2005|publisher=Microsoft Corporation|work=Microsoft Support Center|accessdate=October 7, 2011}}
+{{Refend}}
+
+==External links==
+{{Commons category}}
+* {{Official website|https://www.microsoft.com/en-us/download/windows-media-player-details.aspx}}
+* {{The Vintage Windows Media Player|https://www.windows-media-player.com}}
+
+{{Windows Components}}
+{{Media player (application software)}}
+
+[[Category:1991 software]]
+[[Category:Macintosh media players]]
+[[Category:MacOS media players]]
+[[Category:Microsoft software]]
+[[Category:Microsoft Windows multimedia technology]]
+[[Category:Pocket PC software]]
+[[Category:Tag editors]]
+[[Category:Windows CD ripping software]]
+[[Category:Windows components|Media Player]]
+[[Category:Windows media players]]
+[[Category:Windows Mobile Standard software]]</text>
+      <sha1>6l3l5p3dqwd8b4lkshg0oyqxi9x2z47</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Petri dish</title>
+    <ns>0</ns>
+    <id>43942</id>
+    <revision>
+      <id>982463335</id>
+      <parentid>982463236</parentid>
+      <timestamp>2020-10-08T09:14:33Z</timestamp>
+      <contributor>
+        <ip>31.54.191.144</ip>
+      </contributor>
+      <comment>/* Contamination detection and mapping */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="15629" xml:space="preserve">{{short description|Shallow dish used to hold cell cultures}}
+[[File:Antonio e Biagio e Cesare Arrigo Petri dish.jpg|alt=|thumb|A glass Petri dish with culture]]
+[[File:Petri dish at the Pacific Northwest National Laboratory.jpg|thumb|Petri dish at the Pacific Northwest National Laboratory]]
+A '''Petri dish''' (alternatively known as a '''Petri plate''' or '''cell-culture dish''') is a shallow transparent lidded dish that biologists use to hold [[growth medium]] in which [[Cell (biology)|cells]] can be [[Microbiological culture|cultured]],&lt;ref name=dubey&gt;R. C. Dubey (2014): ''A Textbook Of Biotechnology For Class-XI'', 4th edition, p. 469. {{isbn|978-8121924177}}&lt;/ref&gt;&lt;ref&gt;{{cite book |title=Mosby's Dental Dictionary |edition=2nd |year=2008 |publisher=Elsevier |url=http://medical-dictionary.thefreedictionary.com/petri+plate |accessdate=2010-02-11}}&lt;/ref&gt; originally, cells of [[bacteria]], [[fungi]] and small [[moss]]es.&lt;ref&gt;{{cite journal|author=Ralf Reski|title=Development, genetics and molecular biology of mosses|journal=Botanica Acta|volume=111|year=1998|pages=1–15|url=https://www.plant-biotech.net/paper/Reski_1998_BotActa-111_1_scan.pdf|doi=10.1111/j.1438-8677.1998.tb00670.x|author-link=Ralf Reski|access-date=2015-07-19|archive-url=https://web.archive.org/web/20150924074016/http://www.plant-biotech.net/paper/Reski_1998_BotActa-111_1_scan.pdf|archive-date=2015-09-24|url-status=dead}}&lt;/ref&gt; The container is named after its inventor, German [[bacteriologist]] [[Julius Richard Petri]].&lt;ref&gt;[http://education.yahoo.com/reference/dictionary/entry/Petri+dish Petri dish] {{Webarchive|url=https://web.archive.org/web/20131022180229/http://education.yahoo.com/reference/dictionary/entry/Petri+dish |date=2013-10-22 }} in the [[American Heritage Dictionary]].&lt;/ref&gt;&lt;ref&gt;{{cite journal |last1=Petri |first1=R.J. |title=Eine kleine Modification des Koch'schen Plattenverfahrens |journal=Centralblatt für Bakteriologie und Parasitenkunde |date=1887 |volume=1 |pages=279–80 |url=https://www.biodiversitylibrary.org/item/210666#page/313/mode/1up |trans-title=A small modification of Koch's plate method |language=German}}&lt;/ref&gt;&lt;ref&gt;{{cite journal |last1=Petri |first1=R.J. |title=Eine kleine Modification des Koch'schen Plattenverfahrens |journal=Centralblatt für Bakteriologie und Parasitenkunde (English Translation, Braus, 2020) |date=1887 |volume=1 |pages=279–80 |url=https://archive.org/details/1887-petri-eine-kleine-modification-des-koch-schen-plattenverfahrens-2020-braus- |trans-title=A small modification of Koch's plate method |language=German}}&lt;/ref&gt; It is the most common type of [[culture plate]]. The Petri dish is one of the most common items in biology laboratories and has entered [[popular culture]]. The term is often written in lower case, especially in non-technical literature.&lt;ref name=&quot;sing2018&quot; /&gt;&lt;ref name=&quot;slone2018&quot; /&gt;  
+
+[[Penicillin]], the first antibiotic, was discovered in 1929 when [[Alexander Fleming]] noticed that [[Mold (fungus)|mold]] that had contaminated a [[bacteria]]l culture in a Petri dish had killed the bacteria all around it.
+
+==Features and variants==
+{{Cite check section|date=March 2020|reason=every citation is a page to purchase one of the dishes. Needs publications stating the relevant statements instead.}}
+Petri dishes are usually [[cylinder (geometry)|cylindrical]], mostly with diameters ranging from 30 to 200 [[millimeter|mm]],&lt;ref name=fisch4909050/&gt;&lt;ref&gt;(2019): &quot;[https://www.auxilab.es/en/laboratory-equipment/petri-dish-200-mm-borosilicate/ Product BRB011: Petri Dish 200 mm, borosilicate]&quot;. Rogo-Sampaic  online catalog. Accessed on 2019-10-25.&lt;/ref&gt; and a height to diameter ratio ranging from 1:10 to 1:4.&lt;ref&gt;(2019): &quot;[https://www.fishersci.com/shop/products/corning-gosselin-100-x-25mm-bio-agricultural-petri-dishes-2/p-4494233 Product BTX9302 Corning 100 x 25mm bio-agricultural Petri dishes]&quot;. Fischer Scientific online catalog. Accessed on 2019-10-25.&lt;/ref&gt; Squarish versions are also available.&lt;ref name=thomas1219C98&gt;(2019): &quot;[https://www.thomassci.com/E-K/Cell-Culture/Dishes/_/Square-Petri-Dish-w/-Grid1?q=Vented%20Petri%20Dish Item 1219C98: Square Petri dish w/ grid]&quot;. Thomas Scientific online catalog. Accessed on 2019-10-25.&lt;/ref&gt;&lt;ref name=fisch11708573&gt;(2019): &quot;[https://www.fishersci.co.uk/shop/products/gosselin-square-petri-dish/11708573 Product 11708573: Gosselin Square Petri Dish]&quot;. Fischer Scientific online catalog. Accessed on 2019-10-25.&lt;/ref&gt;
+
+Petri dishes were traditionally meant to be reusable and made of [[glass]]; often of heat-resistant [[borosilicate glass]] for proper [[Sterilization (microbiology)|sterilization]] at 120–160 [[celsius|°C]].&lt;ref name=fisch4909050&gt;(2019): &quot;[https://www.fishersci.com/shop/products/pyrex-reusable-petri-dishes-complete-6/p-4909050 Product 4909050: PYREX reusable Petri dishes: complete]&quot;. Fischer Scientific online catalog. Accessed on 2019-10-25.&lt;/ref&gt; 
+
+Since the 2010s, [[plastic]] dishes, usually disposable, are also common.&lt;ref name=fischBP94S01&gt;(2019): &quot;[https://www.fishersci.com/shop/products/corning-gosselin-100-x-15mm-polystyrene-petri-dishes/p-5162666 Product BP94S01: Corning 100 x 15mm Polystyrene Petri Dishes]&quot;. Fischer Scientific online catalog. Accessed on 2019-10-25.&lt;/ref&gt;
+
+Petri dishes are often covered with a shallow transparent lid, resembling a slighly wider version of the dish itself.  The lids of glass dishes are usually loose-fitting.&lt;ref name=fisch4909050/&gt;  Plastic dishes may have close-fitting covers that retard drying of the contents.&lt;ref name=fisch09-720-500&gt;(2019): &quot;[https://www.fishersci.com/shop/products/fisherbrand-disposable-petri-dishes-pad-dishes-8/p-3219248 Item 09-720-500: Fisherbrand disposable Petri dishes]&quot;. Fischer Scientific online catalog. Accessed on 2019-10-25.&lt;/ref&gt;   Alternatively, some glass or plastic versions may have small holes around the rim, or ribs on the underside of the cover, to allow for ventilation of the air space over the culture and avoid [[water condensation]] that may be a problem that needs some attention.&lt;ref name=fischSB93102&gt;(2019): &quot;[https://www.fishersci.com/shop/products/gosselin-100x15mm-petri-dish-three-vents-optimized-automation-2/p-8015709 Item SB93102: Corning 100x15mm Petri dish with three vents]&quot;. Fischer Scientific online catalog. Accessed on 2019-10-25.&lt;/ref&gt;  
+
+Some Petri dishes, especially plastic ones, usually feature rings and/or slots on their lids and bases so that they are less prone to sliding off one another when stacked.&lt;ref name=fisch09-720-500/&gt;
+
+Small Petri dishes  may have a protruding base that can be secured on a [[microscope]] stage for direct examination &lt;ref name=fischPD1504700&gt;(2019): &quot;[https://www.fishersci.com/shop/products/emd-millipore-petrislide-containers/PD1504700 Product PD1504700 MilliporeSigma PetriSlide for contamination analysis]&quot;. Fischer Scientific online catalog. Accessed on 2019-10-25.&lt;/ref&gt;
+
+Petri dishes may have grids printed on the bottom to help in measuring the density of cultures.&lt;ref name=hecht41044  &gt;(2019): &quot;[https://www.assistent.eu/en/product/petri-dishes-made-of-glass-with-grid-and-cover/ Item 41044: Petri dishes made of glass with grid and cover]&quot;. Assitent (Karl Hecht) online catalog. Accessed on 2019-10-25&lt;/ref&gt;&lt;ref name=thomas1219C98/&gt;&lt;ref name=fisch11708573/&gt;
+
+A [[multiwell plate]] is a single transparent container with an array of flat-bottomed cavities, each being essentially a small Petri dish.  It makes it possible to inoculate and grow dozens or hundreds of independent cultures of dozens of samples at the same time.  Besides being much cheaper and convenient than separate dishes, the multiwell plate is also more amenable to automated handling and inspection.

@@ -1,0 +1,428 @@
+===Multi-user===
+{{main|MP/M}}
+In 1979, a multi-user compatible derivative of CP/M was released. [[MP/M]] allowed multiple users to connect to a single computer, using multiple [[computer terminal|terminals]] to provide each user with a screen and keyboard.  Later versions ran on 16-bit processors.
+
+==={{anchor|3.0}}CP/M Plus===
+[[File:CP-M Plus System Guide.jpg|thumb|right|CP/M Plus (CP/M 3) System Guide]]
+The last 8-bit version of CP/M was version 3, often called CP/M&amp;nbsp;Plus, released in 1983. It incorporated the bank switching memory management of [[MP/M]] in a single-user single-task operating system compatible with CP/M&amp;nbsp;2.2 applications. CP/M&amp;nbsp;3 could therefore use more than 64&amp;nbsp;KB of memory on an 8080 or Z80 processor. The system could be configured to support date stamping of files. The operating system distribution software also included a relocating assembler and linker.&lt;ref name=&quot;Mann83&quot;/&gt; CP/M&amp;nbsp;3 was available for the last generation of 8-bit computers, notably the [[Amstrad PCW]], the [[Amstrad CPC]], the [[ZX Spectrum +3]], the [[Commodore 128]], [[MSX]] machines and the [[Radio Shack]] [[TRS-80 Model 4]].&lt;ref name=&quot;Radio_Shack_1985&quot;/&gt;
+
+==={{anchor|CP/M-68K|CP/M-8000|Portable CP/M|GEMDOS}}The 16-bit world===
+[[File:PRO CPM-80.jpg|thumb|right|DEC PRO-CP/M-80 floppy disk distribution for the Z80-A co-processor in a DEC Professional 3xx series.]]
+There were versions of CP/M for some [[16-bit]] CPUs as well.
+
+The first version in the 16-bit family was [[CP/M-86]] for the [[Intel 8086]] in November 1981.&lt;ref name=&quot;Digital_Research_1981_News&quot;/&gt; At this point, the original [[8-bit]] CP/M became known by the [[retronym]] '''CP/M-80''' to avoid confusion.&lt;ref name=&quot;Digital_Research_1981_News&quot;/&gt;
+
+CP/M-86 was expected to be the standard operating system of the new [[IBM Personal Computer|IBM PCs]], but DRI and [[IBM]] were unable to negotiate development and licensing terms. IBM turned to Microsoft instead, and Microsoft delivered [[PC&amp;nbsp;DOS]] based on [[86-DOS]]. Although CP/M-86 became an option for the IBM PC after DRI threatened legal action, it never overtook Microsoft's system. Most customers were repelled by the significantly greater price IBM charged for CP/M-86 over PC DOS ({{currency|amount=240|code=USD|linked=yes}} and {{currency|amount=40|code=USD|linked=no}}, respectively).&lt;ref name=&quot;Maher_2017&quot;/&gt;
+
+When [[Digital Equipment Corporation]] (DEC) put out the [[Rainbow 100]] to compete with IBM, it came with CP/M-80 using a Z80 chip, CP/M-86 or MS-DOS using an 8088 microprocessor, or [[CP/M-86/80]] using both. The Z80 and 8088 CPUs ran concurrently.&lt;ref name=&quot;Kildall_1982_8-bit&quot;/&gt;&lt;ref name=&quot;snyder198306&quot;/&gt; A benefit of the Rainbow was that it could continue to run 8-bit CP/M software, preserving a user's possibly sizable investment as they moved into the 16-bit world of MS-DOS.&lt;ref name=&quot;Kildall_1982_8-bit&quot;/&gt; A similar [[multiprocessing|dual-processor]] adaption for the {{ill|CompuPro System 816|sr|Compupro System 816}} was named [[CP/M 8-16]]. The CP/M-86 adaptation for the 8085/8088-based [[Zenith Z-100]] also supported running programs for both of its CPUs.
+
+Soon following CP/M-86, another 16-bit version of CP/M was '''CP/M-68K''' for the [[Motorola 68000]]. The original version of CP/M-68K in 1982 was written in [[Pascal/MT+68k]], but it was ported to C later on. CP/M-68K, already running on the Motorola [[EXORmacs]] systems, was initially to be used in the [[Atari ST]] computer, but Atari decided to go with a newer disk operating system called [[GEMDOS]]. CP/M-68K was also used on the SORD M68 and M68MX computers.&lt;ref name=&quot;M68&quot;/&gt;
+
+In 1982 there was also a port from CP/M-68K to the 16-bit [[Zilog Z8000]] for the [[Olivetti M20]], written in [[C (language)|C]], named '''CP/M-8000'''.&lt;ref name=&quot;Thomas_1981_CPM&quot;/&gt;&lt;ref name=&quot;Olmstead&quot;/&gt;
+
+These 16-bit versions of CP/M required application programs to be re-compiled for the new CPUs or if they were written in [[assembly language]], to be [[assembly language translator|translated]] using tools like Digital Research's [[XLT86]], a program written by Gary Kildall in 1981, which translated .ASM source code for the Intel 8080 processor into .A86 source code for the Intel 8086. Using global data flow analysis on 8080 register usage, the translator would also optimize the output for code size and take care of calling conventions, so that [[CP/M-80]] and [[MP/M-80]] programs could be ported to the [[CP/M-86]] and [[MP/M-86]] platforms automatically. XLT86 itself was written in [[PL/I-80]] and was available for CP/M-80 platforms as well as for [[DEC VMS]] (for [[VAX 11/750]] or [[VAX 11/780|11/780]]).&lt;ref name=&quot;DR_1981_XLT&quot;/&gt;
+
+===MS-DOS takes over===
+Many expected that CP/M would be the standard operating system for 16-bit computers.&lt;ref name=&quot;pournelle198403&quot;/&gt; In 1980 IBM approached Digital Research, at [[Bill Gates]]' suggestion,&lt;ref name=&quot;Isaacson_2014&quot;/&gt; to license a forthcoming version of CP/M for its new product, the [[IBM Personal Computer]]. Upon the failure to obtain a signed [[non-disclosure agreement]], the talks failed, and IBM instead contracted with Microsoft to provide an operating system.&lt;ref name=&quot;Bellis_2010&quot;/&gt; The resulting product, [[MS-DOS]], soon began outselling CP/M.
+
+Many of the basic concepts and mechanisms of early versions of MS-DOS resembled those of CP/M. Internals like file-handling data structures were identical, and both referred to disk drives with a letter (&lt;code&gt;A:&lt;/code&gt;, &lt;code&gt;B:&lt;/code&gt;, etc.). MS-DOS's main innovation was its [[File Allocation Table|FAT]] [[file system]]. This similarity made it easier to port popular CP/M software like [[WordStar]] and [[dBase]]. However, CP/M's concept of separate user areas for files on the same disk was never ported to MS-DOS. Since MS-DOS had access to more memory (as few IBM PCs were sold with less than 64&amp;nbsp;KB of memory, while CP/M could run in 16&amp;nbsp;KB if necessary), more commands were built into the [[command.com|command-line shell]], making MS-DOS somewhat faster and easier to use on floppy-based computers.
+
+Although one of the first peripherals for the IBM PC was a SoftCard-like expansion card that let it run 8-bit CP/M software,&lt;ref name=&quot;magid1982febmar&quot;/&gt; CP/M rapidly lost market share as the microcomputing market moved to the IBM-compatible platform, and it never regained its former popularity. ''[[Byte (magazine)|Byte]]'' magazine, at the time one of the leading industry magazines for microcomputers, essentially ceased covering CP/M products within a few years of the introduction of the IBM PC. For example, in 1983 there were still a few advertisements for S-100 boards and articles on CP/M software, but by 1987 these were no longer found in the magazine. A 1984 article in ''InfoWorld'' stated that efforts to introduce CP/M to the home market had been largely unsuccessful and most CP/M software was too expensive for home users,&lt;ref name=&quot;Mace_1984&quot;/&gt; and in 1986 stated that Kaypro had stopped production of their 8-bit CP/M-based models to concentrate on sales of MS-DOS compatible systems, long after most other vendors had ceased production of new equipment and software for CP/M.&lt;ref name=&quot;Groth_1986&quot;/&gt;
+
+Later versions of CP/M-86 made significant strides in performance and usability and were made compatible with MS-DOS. To reflect this compatibility the name was changed, and CP/M-86 became [[DOS Plus]], which in turn became [[DR-DOS]].
+
+===ZCPR===
+ZCPR&lt;ref name=&quot;ZCPR&quot;/&gt; (the Z80 Command Processor Replacement) was introduced on 2 February 1982 as a drop-in replacement for the standard Digital Research console command processor (CCP) and was initially written by a group of computer hobbyists who called themselves &quot;The CCP Group&quot;. They were Frank Wancho, Keith Petersen (the archivist behind [[Simtel]] at the time), Ron Fowler, Charlie Strom, Bob Mathias, and Richard Conn. Richard was, in fact, the driving force in this group (all of whom maintained contact through email).
+
+ZCPR1 was released on a disk put out by SIG/M (Special Interest Group/Microcomputers), a part of the Amateur Computer Club of [[New Jersey]].
+
+ZCPR2 was released on 14 February 1983. It was released as a set of ten disks from SIG/M. ZCPR2 was upgraded to 2.3, and also was released in 8080 code, permitting the use of ZCPR2 on 8080 and 8085 systems.
+
+ZCPR3&lt;ref name=&quot;ZCPR3&quot;/&gt; was released on 14 July 1984, as a set of nine disks from SIG/M. The code for ZCPR3 could also be compiled (with reduced features) for the 8080 and would run on systems that did not have the requisite [[Z80]] microprocessor.
+
+In January 1987, Richard Conn stopped developing ZCPR, and Echelon asked Jay Sage (who already had a privately enhanced ZCPR 3.1) to continue work on it. Thus, ZCPR 3.3 was developed and released. ZCPR 3.3 no longer supported the 8080 series of microprocessors, and added the most features of any upgrade in the ZCPR line.
+
+Features of ZCPR as of version 3 included:
+* shells
+* aliases
+* I/O redirection
+* flow control
+* named directories
+* search paths
+* custom menus
+* passwords
+* on line help
+
+ZCPR3.3 also included a full complement of utilities with considerably extended capabilities. While enthusiastically supported by the CP/M user base of the time, ZCPR alone was insufficient to slow the demise of CP/M.
+
+==={{anchor|SCP|MICRODOS|Eastern derivatives}}East-bloc CP/M derivatives===
+[[File:Robotron1715SCREEN.gif|thumb|320px|CP/M derivate ''SCP'' running on an [[East Germany|East German]] [[VEB Robotron|robotron]] [[PC 1715]]]]
+[[File:J Elwro 804 Junior.JPG|thumb|320px|CP/J version 2.21 running on an [[Elwro 804 Junior]]]]
+A number of CP/M-80 derivatives&lt;!-- I specifically use the term &quot;derivatives&quot; here as it is at this time not known which systems were just illegally patched binaries, which were based on adapted DRI source codes, and which, if any, were independent functional reimplementations --&gt; existed in the former East-bloc under various names including SCP ({{ill|Single User Control Program|de}}), SCP/M, CP/A,&lt;ref name=&quot;Pohlers_2019_CPA&quot;/&gt; CP/KC, CP/L, CP/KSOB, CP/Z, MICRODOS, BCU880, ZOAZ, OS/M, TOS/M, ZSDOS, M/OS, COS-PSA, DOS-PSA, CSOC, CSOS, CZ-CPM and others&lt;!-- DAC, HC --&gt;.&lt;ref name=&quot;Robotron_2019&quot;/&gt;&lt;ref name=&quot;SCP_2019&quot;/&gt; There were also CP/M-86 derivatives named [[SCP1700]], [[CP/K]] and [[K8918-OS]].&lt;ref name=&quot;SCP_2019&quot;/&gt; They were produced by the East-German [[VEB Robotron]] and others.&lt;ref name=&quot;SCP_2019&quot;/&gt;&lt;ref name=&quot;Robotron_2019&quot;/&gt;&lt;ref name=&quot;Pohlers_2019_CPA&quot;/&gt;
+
+==Legacy==
+A number of behaviors exhibited by [[Microsoft Windows]] are a result of [[backward compatibility]] with MS-DOS, which in turn attempted some backward compatibility with CP/M. The [[drive letter]] and [[8.3 filename]] conventions in MS-DOS (and early Windows versions) were originally adopted from CP/M.&lt;ref name=&quot;Chen_2010_Filenames&quot;/&gt; The [[Wildcard character|wildcard]] matching characters used by Windows (? and *) are based on those of CP/M,&lt;ref name=&quot;Chen_2010_Wildcards&quot;/&gt; as are the reserved filenames used to [[Redirection (computing)|redirect]] output to a [[printer (computing)|printer]] (&quot;PRN:&quot;), and the [[System console|console]] (&quot;CON:&quot;). The drive names A and B were used to designate the two floppy disk drives that CP/M systems typically used; when hard drives appeared they were designated C, which survived into MS-DOS as the &lt;code&gt;C:\&gt;&lt;/code&gt; command prompt.&lt;ref name=&quot;Chen_2010_Reserved&quot;/&gt; The [[Substitute character|control character &lt;tt&gt;^Z&lt;/tt&gt;]] marking the [[End-of-file|end of some text files]] can also be attributed to CP/M.&lt;ref name=&quot;Chen_2004_CTRLZ&quot;/&gt; Various commands in DOS were modelled after CP/M commands, some of them even carried the same name like DIR, REN/RENAME, or TYPE (and ERA/ERASE in DR-DOS).
+
+==={{anchor|Tim Olmstead}}Source code releases===
+In 1997 and 1998 [[Caldera (company)|Caldera]] released some CP/M&amp;nbsp;2.2 binaries and [[source code]] under an [[open source license]], also allowing the redistribution and modification of further collected Digital Research files related to the CP/M and MP/M families through Tim Olmstead's &quot;The Unofficial CP/M Web site&quot; since 1997.&lt;ref name=&quot;Olmstead_1997_1&quot;/&gt;&lt;ref name=&quot;Olmstead_1997_2&quot;/&gt;&lt;ref name=&quot;Caldera_1997_CP/M&quot;/&gt; After Olmstead's death on 12 September 2001,&lt;ref name=&quot;Olmstead_2001_Death&quot;/&gt; the distribution license was refreshed and expanded by [[Lineo]], who had meanwhile become the owner of those Digital Research assets, on 19 October 2001.&lt;ref name=&quot;Sparks_2001_CP/M&quot;/&gt;&lt;ref name=&quot;Chaudry_2001_CP/M&quot;/&gt;&lt;ref name=&quot;Gasperson_2001_Collection&quot;/&gt;&lt;ref name=&quot;Swaine_2004_CP/M&quot;/&gt;
+In October 2014, to mark the 40th anniversary of the first presentation of CP/M, the [[Computer History Museum]] released early [[source code]] versions of CP/M.&lt;ref name=&quot;CHM_2014_CPM&quot;/&gt;
+
+===Hobby and &quot;retro&quot; computing===
+{{As of|2018}}, there are a number of active [[Retrocomputing|vintage, hobby and retro-computer]] people and groups, and some small commercial businesses, still developing and supporting compute platforms that use CP/M (mostly 2.2) as the host operating system.
+
+==See also==
+* [[Amstrad CP/M Plus character set]]
+* [[CPMulator]]
+* [[CP/NET]] and [[CP/NOS]]
+* [[Cromemco DOS]], an operating system independently derived from CP/M
+* [[Eagle Computer]]
+* [[IMDOS]]
+* [[List of machines running CP/M]]
+* [[MP/M]]
+* [[MP/NET]] and [[MP/NOS]]
+* [[Multiuser DOS]]
+* [[Pascal/MT+]]
+* [[SpeedStart CP/M]]
+* [[86-DOS]]
+
+==References==
+{{Reflist|45em|refs=
+&lt;ref name=&quot;Mann83&quot;&gt;{{cite journal |author-last=Mann |author-first=Stephen |title=CP/M Plus, a third, updated version of CP/M |journal=[[InfoWorld]] |date=1983-08-15 |volume=5 |issue=33 |page=49ff |issn=0199-6649}}&lt;/ref&gt;
+&lt;ref name=&quot;CPM.NYT83&quot;&gt;{{cite newspaper |newspaper=[[The New York Times]] |url=https://www.nytimes.com/1983/05/03/science/personal-computers-the-operating-system-in-the-middle.html |title=Personal Computers: The Operating System in the middle |author-first=Erik |author-last=Sandberg-Diment |date=1983-05-03}}&lt;/ref&gt;
+&lt;ref name=&quot;Newton_2000&quot;&gt;{{cite book |author-last=Newton |author-first=Harry |title=Newton's Telecom Dictionary |date=2000 |publisher=[[CMP Books]] |location=New York, NY |isbn=1-57820-053-9 |pages=[https://archive.org/details/isbn_9781578200535/page/228 228] |url-access=registration |url=https://archive.org/details/isbn_9781578200535/page/228 }}&lt;/ref&gt;
+&lt;ref name=&quot;Kildall.NYT&quot;&gt;{{cite newspaper |newspaper=[[The New York Times]] |url=https://www.nytimes.com/1994/07/13/obituaries/gary-kildall-52-crucial-player-in-computer-development-dies.html |title=Gary Kildall, 52, Crucial Player In Computer Development, Dies |author-first=John |author-last=Markoff |date=1994-07-13}}&lt;/ref&gt;
+&lt;ref name=&quot;Compupro816&quot;&gt;{{cite web |url=http://www.old-computers.com/museum/computer.asp?c=651&amp;st=1 |title=OLDCOMPUTERS.COM Compupro 8/16 |url-status=dead |archive-url=https://web.archive.org/web/20160103062455/http://www.old-computers.com/museum/computer.asp?st=1&amp;c=651 |archive-date=2016-01-03 |access-date=2011-07-13}}&lt;/ref&gt;
+&lt;ref name=&quot;InfoWorld May 1981&quot;&gt;{{cite journal |author-last=Cole |author-first=Maggie |title=Gary Kildall and the Digital Research Success Story |journal=[[InfoWorld]] |volume=3 |issue=10 |pages=52–53 |location=Palo Alto, CA |date=1981-05-25 |url=https://books.google.com/books?id=3j4EAAAAMBAJ&amp;pg=PA52 |issn=0199-6649}}&lt;/ref&gt;
+&lt;ref name=&quot;InfoWorld July 1982&quot;&gt;{{cite journal |author-last=Freiberger |author-first=Paul |author-link=Paul Freiberger |title=History of microcomputing, part 3: software genesis |journal=[[InfoWorld]] |volume=4 |issue=26 |page=41 |location=Palo Alto, CA |date=1982-07-05 |url=https://books.google.com/books?id=MjAEAAAAMBAJ&amp;pg=PA41 |issn=0199-6649}}&lt;/ref&gt;
+&lt;ref name=&quot;Commodore_128&quot;&gt;{{cite web |quote=[…] Since CP/M was one of the first operating systems, a large number of hobbyists, hackers, and esoteric programmers purchased CP/M computers and began to write programs for themselves. […] It was offered on the free market in the form of floppy disks distributed at computer &quot;user groups&quot;. […]|title=The Official Book for the Commodore 128 |url=https://archive.org/stream/The_Official_Book_for_the_Commodore_128/The_Official_Book_for_the_Commodore_128_djvu.txt}}&lt;/ref&gt;
+&lt;ref name=&quot;CP/M-Emu&quot;&gt;{{cite web |title=CP/M emulators for DOS |url=http://www.retroarchive.org/cpm/cdrom/ENTERPRS/CPM/TEXT/MAR93.TXT |website=www.retroarchive.org/cpm |publisher=Luis Basto |access-date=2016-07-06 |url-status=live |archive-url=https://web.archive.org/web/20160709085840/http://www.retroarchive.org/cpm/cdrom/ENTERPRS/CPM/TEXT/MAR93.TXT |archive-date=2016-07-09}}&lt;/ref&gt;
+&lt;ref name=&quot;Davis_1985_NEC&quot;&gt;{{cite newspaper |title=The New NEC Microprocessors - 8080, 8086, Or 8088? |author-first=Randy |author-last=Davis |newspaper=[[Micro Cornucopia]] |publisher=[[Micro Cornucopia Inc.]] |issn=0747-587X |number=27 |date=December 1985 – January 1986 |publication-place=Bend, Oregon, USA |location=Greenville, Texas, USA |pages=4–7 |url=http://www.bitsavers.org/pdf/microCornucopia/Micro_Cornucopia_%2327_Dec85.pdf |access-date=2020-02-11 |url-status=live |archive-url=https://web.archive.org/web/20200211154002/https://usermanual.wiki/Document/MicroCornucopia2327Dec85.771194843.pdf |archive-date=2020-02-11}}&lt;/ref&gt;
+&lt;ref name=&quot;DDT1&quot;&gt;{{cite book |title=CP/M 2.2 |chapter=Section 4 - CP/M Dynamic Debugging Tool |chapter-url=http://www.gaby.de/cpm/manuals/archive/cpm22htm/ch4.htm |access-date=2014-08-29 |url-status=live |archive-url=https://web.archive.org/web/20150617174713/http://www.gaby.de/cpm/manuals/archive/cpm22htm/ch4.htm |archive-date=2015-06-17}}&lt;/ref&gt;
+&lt;ref name=&quot;DDT2&quot;&gt;{{cite book |title=CP/M Dynamic Debugging Tool (DDT) - User's Guide |date=1978 |orig-year=1976 |url=http://www.cpm.z80.de/randyfiles/DRI/DDT.pdf |publisher=[[Digital Research]] |access-date=2014-08-29 |url-status=live |archive-url=https://web.archive.org/web/20141028015406/http://www.cpm.z80.de/randyfiles/DRI/DDT.pdf |archive-date=2014-10-28}}&lt;/ref&gt;
+&lt;ref name=&quot;DDT3&quot;&gt;{{cite web |title=DDT Utility |date=2010-06-26 |orig-year=2009-12-09 |author=Shael |url=http://www.shaels.net/index.php/cpm80-22-documents/using-cpm/7-ddt-utility |access-date=2014-08-29 |url-status=live |archive-url=https://web.archive.org/web/20151208100106/http://www.shaels.net/index.php/cpm80-22-documents/using-cpm/7-ddt-utility |archive-date=2015-12-08}}&lt;/ref&gt;
+&lt;ref name=&quot;Kildall_1975_BDOS&quot;&gt;{{citation
+|title=CP/M 1.1 or 1.2 BIOS and BDOS for Lawrence Livermore Laboratories |date=June 1975 |author-first=Gary Arlen |author-last=Kildall |author-link=Gary Arlen Kildall |quote=An excerpt of the BDOS.PLM file header in the PL/M source code of [[CP/M 1.1]] or [[CP/M 1.2]] for [[Lawrence Livermore Laboratories]] (LLL):}}&lt;pre&gt;[…]
+/* C P / M   B A S I C   I / O    S Y S T E M    (B I O S)
+                    COPYRIGHT (C) GARY A. KILDALL
+                             JUNE, 1975                   */
+[…]
+/*  B A S I C   D I S K    O P E R A T I N G   S Y S T E M  (B D O S)
+                    COPYRIGHT (C) GARY A. KILDALL
+                            JUNE, 1975                          */
+[…]&lt;/pre&gt;&lt;!-- some whitespace removed from original citation --&gt;&lt;/ref&gt;
+&lt;ref name=&quot;Kildall_1980_CPM&quot;&gt;{{cite web |title=The History of CP/M, The Evolution Of An Industry: One Person's Viewpoint |author-first=Gary Arlen |author-last=Kildall |author-link=Gary Arlen Kildall |date=January 1980 |work=[[Dr. Dobb's Journal]] |pages=6–7 |volume=5 |issue=1 |number=41 |url=http://www.retrotechnology.com/dri/CPM_history_kildall.txt |access-date=2013-06-03 |quote=[…] The first commercial licensing of CP/M took place in 1975 with contracts between [[Digital Systems (Seattle)|Digital Systems]]&lt;!-- a company by [[John Torode (physicist)|John Torode]] --&gt; and [[Omron of America]] for use in their intelligent terminal, and with [[Lawrence Livermore Laboratories]] where CP/M was used to monitor programs in the [[Octopus (network)|Octopus network]]. Little attention was paid to CP/M for about a year. In my spare time, I worked to improve overall facilities […] By this time, CP/M had been adapted for four different controllers. […] [ In 1976, [[Glenn Ewing]] approached me with a problem: [[IMSAI|Imsai]], Incorporated, for whom Glenn consulted, had shipped a large number of disk subsystems with a promise that an operating system would follow. I was somewhat reluctant to adapt CP/M to yet another controller, and thus the notion of a separated Basic I/O System (BIOS) evolved. In principle, the hardware dependent portions of CP/M were concentrated in the BIOS, thus allowing Glenn, or anyone else, to adapt CP/M to the Imsai equipment. Imsai was subsequently licensed to distribute [[CP/M 1.3|CP/M version 1.3]] which eventually evolved into an operating system called [[IMDOS]]. […] |url-status=live |archive-url=https://web.archive.org/web/20161124221907/http://www.retrotechnology.com/dri/CPM_history_kildall.txt |archive-date=2016-11-24}}&lt;/ref&gt;
+&lt;ref name=&quot;Swaine_1997_Entrepreneurship&quot;&gt;{{cite journal |author-first=Michael |author-last=Swaine |author-link=Michael Swaine (technical author) |date=1997-04-01 |title=Gary Kildall and Collegial Entrepreneurship |journal=[[Dr. Dobb's Journal]] |url=http://www.ddj.com/184410428 |access-date=2006-11-20 |url-status=live
+|archive-url=https://web.archive.org/web/20070124184442/http://www.ddj.com/184410428 |archive-date=2007-01-24}}&lt;/ref&gt;
+&lt;!-- Temporarily commented out until used in the text body above:
+&lt;ref name=&quot;Fischer_2001_Ewing&quot;&gt;{{cite web |title=Gary Kildall's CP/M: Some early CP/M history - 1976-1977 |author-first=A. Joseph &quot;Joe&quot; |author-last=Killian |author-link=Joe Killian |publisher=[[Thomas Fischer (IMSAI)|Thomas &quot;Todd&quot; Fischer]], [[IMSAI]] |date=2001 |url=http://www.imsai.net/history/imsai_history/cp-m_history.htm |access-date=2013-06-03 |quote=[…] When [[IMSAI|we]] failed to produce an operating system in a timely manner, [[Glenn Ewing|Glenn]] started talking with [[Gary Kildall|Gary]] about CPM, which Gary had written for [[Intel]] under contract. It took several months of twisting Gary's arm to get Gary to port it to the 8080. The final success came when Glenn talked Gary into just separating the I/O from the rest of it, with Glenn promising to re-write the I/O module for the [[IMSAI 8080]] (which he did). So CPM on the [[IMSAI]] was a joint effort between Glenn and Gary. […]}}&lt;/ref&gt; --&gt;
+&lt;!-- Temporarily commented out until used in the text body above:
+&lt;ref name=&quot;Fraley_2007_Killian&quot;&gt;{{cite web |title=Oral History of Joseph Killian, Interviewed by: Bob Fraley, Edited by: Dag Spicer, Recorded: January 26, 2007, Mountain View, California, CHM Reference number: X3879.2007 |author-first1=Bob |author-last1=Fraley |author-first2=Dag |author-last2=Spicer |date=2007-01-26 |publisher=Computer History Museum |url=http://archive.computerhistory.org/resources/access/text/2012/10/102658016-05-01-acc.pdf |access-date=2013-06-03 |quote=[[Joe Killian|Killian]]: &quot;[…] [[Intel]] had hired [[Gary Kildall|him]] a few months earlier to write a control program monitor to run on their little demo system for 8008 and now 8080. […] [[Glenn Ewing|Glenn]] knew this and he would be talking with [[Gary Kildall|Gary]], and he started twisting Gary's arm. He said, &quot;Hey Gary, why can't we run this in this IMSAI?&quot; &quot;The I/O's all different, won't run.&quot; But Glenn persists and finally makes a deal with Gary. He says, &quot;Okay Gary, if you split out the I/O, I'll write the BIOS, basic I/O's system,&quot; and Glenn named it then. &quot;We'll split it out separately. I'll write that part, as long as you can make a division in the program there.&quot; And he got Gary to do that and Glenn put those two pieces together and was running Gary's CP/M on an IMSAI. Glenn let us know that, and it wasn't too much later than [[Bill Millard|Bill]] was down there making arrangements with Gary Kildall to license CP/M. […] Now that the BIOS is separated out, anybody could write a BIOS for their machine, if it was 8080-based, and run this, so he started selling that separately under the company [[Digital Research]] that he formed and did quite well.&quot;|}}
+&lt;/ref&gt; --&gt;
+&lt;ref name=&quot;Kildall_1982_8-bit&quot;&gt;{{cite journal |title=Running 8-bit software on dual-processor computers |author-first=Gary Arlen |author-last=Kildall |author-link=Gary Arlen Kildall |journal=[[Electronic Design]] |date=1982-09-16 |page=157 |url=http://archive.computerhistory.org/resources/access/text/2016/12/102762506-05-01-acc.pdf |access-date=2017-08-19 |url-status=live |archive-url=https://web.archive.org/web/20170819183737/http://archive.computerhistory.org/resources/access/text/2016/12/102762506-05-01-acc.pdf |archive-date=2017-08-19}}&lt;/ref&gt;
+&lt;ref name=&quot;Olmstead_1997_1&quot;&gt;{{cite newsgroup |author-first=Tim |author-last=Olmstead &lt;!-- |author-link=Tim Olmstead (CP/M) --&gt; |title=CP/M Web site needs a host |date=1997-08-10 |newsgroup=comp.os.cpm |url=https://z80cpu.eu/files/archive/news/comp.os.cpm/threads/e088021c97ffcb09.html |access-date=2018-09-09 |url-status=dead |archive-url=https://web.archive.org/web/20170901022510/http://z80cpu.eu/files/archive/news/comp.os.cpm/threads/e088021c97ffcb09.html|archive-date=2017-09-01}}&lt;/ref&gt;
+&lt;ref name=&quot;Olmstead_1997_2&quot;&gt;{{cite newsgroup |author-first=Tim |author-last=Olmstead &lt;!-- |author-link=Tim Olmstead (CP/M) --&gt; |title=ANNOUNCE: Caldera CP/M site is now up |date=1997-08-29 |newsgroup=comp.os.cpm |url=https://z80cpu.eu/roche-pages/78-data-articles/projects/75-comp-os-cpm |access-date=2018-09-09 |url-status=dead |archive-url=https://web.archive.org/web/20170901150920/http://z80cpu.eu/roche-pages/78-data-articles/projects/75-comp-os-cpm |archive-date=2017-09-01}} [https://web.archive.org/web/20011006110826/http://cdl.uta.edu/cpm]&lt;/ref&gt;
+&lt;ref name=&quot;Caldera_1997_CP/M&quot;&gt;{{cite web |title=License Agreement |publisher=[[Caldera, Inc.]] |date=1997-08-28 |url=http://www.retroarchive.org/cpm/archive/unofficial/lisence.html |url-status=live |archive-url=https://archive.today/20180908191417/http://www.retroarchive.org/cpm/archive/unofficial/lisence.html |archive-date=2018-09-08 |access-date=2015-07-25}} [ftp://ftp.uni-bayreuth.de/pub/pc/caldera/cpm2.2/README.license.txt] [ftp://ftp.uni-bayreuth.de/pub/pc/caldera/cpm2.2/]&lt;/ref&gt;
+&lt;ref name=&quot;Olmstead_2001_Death&quot;&gt;{{cite web |title=Tim Olmstead |date=2001-09-12 |url=https://z80cpu.eu/files/archive/news/comp.os.cpm/threads/8c448283536de864.html |archive-url=https://web.archive.org/web/20180909035647/https://z80cpu.eu/files/archive/news/comp.os.cpm/threads/8c448283536de864.html |archive-date=2018-09-09}}&lt;/ref&gt;
+&lt;ref name=&quot;Sparks_2001_CP/M&quot;&gt;{{cite web |title=License agreement for the CP/M material presented on this site |author-first=Bryan Wayne |author-last=Sparks |author-link=Bryan Wayne Sparks |editor-first=Gabriele &quot;Gaby&quot; |editor-last=Chaudry |date=2001-10-19 |publisher=[[Lineo, Inc.]] |url=http://www.cpm.z80.de/license.html |access-date=2015-07-25 |url-status=live |archive-url=https://archive.today/20180908185132/http://www.cpm.z80.de/license.html |archive-date=2018-09-08 |quote=[…] Let this email represent a right to use, distribute, modify, enhance and otherwise make available in a nonexclusive manner the CP/M technology as part of the &quot;Unofficial CP/M Web Site&quot; with its maintainers, developers and community. I further state that as Chairman and CEO of [[Lineo, Inc.]] that I have the right to do offer such a license. […] [[Bryan Wayne Sparks|Bryan Sparks]] […]}}&lt;/ref&gt;
+&lt;ref name=&quot;Chaudry_2001_CP/M&quot;&gt;{{cite web |title=The Unofficial CP/M Web Site |editor-first=Gabriele &quot;Gaby&quot; |editor-last=Chaudry |url=http://www.cpm.z80.de/ |url-status=live |archive-url=https://web.archive.org/web/20160203184144/http://www.cpm.z80.de/ |archive-date=2016-02-03}}&lt;/ref&gt;
+&lt;ref name=&quot;Gasperson_2001_Collection&quot;&gt;{{cite web |url=https://www.theregister.co.uk/2001/11/26/cp_m_collection_is_back/ |title=CP/M collection is back online with an Open Source licence - Walk down memory lane |author-first=Tina |author-last=Gasperson |work=[[The Register]] |date=2001-11-26 |url-status=live |archive-url=https://web.archive.org/web/20170901000720/https://www.theregister.co.uk/2001/11/26/cp_m_collection_is_back/ |archive-date=2017-09-01}}&lt;/ref&gt;
+&lt;ref name=&quot;Swaine_2004_CP/M&quot;&gt;{{cite journal |title=CP/M and DRM |author-first=Michael |author-last=Swaine |author-link=Michael Swaine (technical author) |date=2004-06-01 |journal=[[Dr. Dobb's Journal]] |volume=29 |issue=6 |id=&lt;!-- |number= --&gt;#361 |publisher=[[CMP Media LLC]] |pages=71–73 |url=http://www.drdobbs.com/cpm-and-drm/184405699 |access-date=2018-09-09 |url-status=dead |archive-url=https://web.archive.org/web/20180909035748/http://www.drdobbs.com/cpm-and-drm/184405699 |archive-date=2018-09-09}} [https://epdf.pub/dr-dobbs-journal-june.html]&lt;/ref&gt;
+&lt;ref name=&quot;CHM_2014_CPM&quot;&gt;{{cite web |url=http://www.computerhistory.org/atchm/early-digital-research-cpm-source-code/ |title=Early Digital Research CP/M Source Code |author-first=David |author-last=Laws |date=2014-10-01 |publisher=[[Computer History Museum]] |access-date=2015-07-25 |url-status=live |archive-url=https://web.archive.org/web/20150727171811/http://www.computerhistory.org/atchm/early-digital-research-cpm-source-code/ |archive-date=2015-07-27}}&lt;/ref&gt;
+&lt;ref name=&quot;SCP_2019&quot;&gt;{{cite web |title=Betriebssystem SCP |author-first1=Rüdiger |author-last1=Kurth |author-first2=Martin |author-last2=Groß |author-first3=Henry |author-last3=Hunger |date=2019-01-03 |language=de |website=www.robotrontechnik.de |url=http://www.robotrontechnik.de/index.htm?/html/software/scp.htm |access-date=2019-04-27 |url-status=live |archive-url=https://archive.today/20190427210627/http://www.robotrontechnik.de/index.htm?/html/software/scp.htm |archive-date=2019-04-27}}&lt;/ref&gt;
+&lt;ref name=&quot;Robotron_2019&quot;&gt;{{cite web |title=Betriebssysteme |author-first1=Rüdiger |author-last1=Kurth |author-first2=Martin |author-last2=Groß |author-first3=Henry |author-last3=Hunger |date=2019-01-03 |language=de |website=www.robotrontechnik.de |url=http://www.robotrontechnik.de/html/software/os.htm |access-date=2019-04-27 |url-status=live |archive-url=https://archive.today/20190427211056/http://www.robotrontechnik.de/index.htm?/html/software/os.htm |archive-date=2019-04-27}}&lt;/ref&gt;
+&lt;ref name=&quot;CPM22&quot;&gt;{{cite web |url=http://www.tramm.li/i8080/cpm22-m.pdf |title=CP/M Operating System Manual}}&lt;/ref&gt;
+&lt;ref name=&quot;Pohlers_2019_CPA&quot;&gt;{{cite web |title=CP/A |language=de |author-first=Volker |author-last=Pohlers |date=2019-04-30 |work=Homecomputer DDR |url=http://hc-ddr.hucki.net/wiki/doku.php/cpm/cpa |access-date=2020-02-21 |url-status=live |archive-url=https://web.archive.org/web/20200221020056/http://hc-ddr.hucki.net/wiki/doku.php/cpm/cpa |archive-date=2020-02-21 |quote=[…] CP/A ist ein CP/M-2.2-kompatibles Betriebssystem der [[Akademie der Wissenschaften der DDR]], der Hauptentwickler war Hans Willy Dames. […] Vorteile des CP/A gegenüber CP/M 2.2. sind erweiterte Funktionalitäten. […] Herausragend sind […] Urladen des Systems aus einer Datei @OS.COM. Das System musste nicht in speziellen Systemspuren gespeichert werden. […] automatische Erkennung von Diskettenformaten […] eingebauter Systemmonitor […] Das CP/A wurde für Bürocomputer A5120, A5130 und den PC1715 ausgeliefert. […] Das CCP von CP/A ist ziemlich sicher ursprünglich aus einem reassemblierten CP/M-2.2-CCP entstanden; wurde aber konsequent auf Z80-Befehle umgearbeitet und vielfach verändert und erweitert. […] Das CP/A-BDOS wurde im Prinzip komplett und fast 1:1 aus dem DR-BDOS abgekupfert […] Aus den Quelltexten des BIC A5105 geht hervor, dass W. Dames das originale BDOS reassembliert […] hat. […]}}&lt;/ref&gt;
+&lt;ref name=&quot;px4&quot;&gt;{{cite web |url=http://discordia.org.uk/px4/cpm.html |title=CP/M Builtin Commands |work=discordia.org.uk |access-date=2009-01-28 |url-status=live |archive-url=https://web.archive.org/web/20080412044820/http://discordia.org.uk/px4/cpm.html |archive-date=2008-04-12}}&lt;/ref&gt;
+&lt;ref name=&quot;Software_Catalog_1984&quot;&gt;{{cite web |url=https://archive.org/stream/Whole_Earth_Software_Catalog_1984_Point/Whole_Earth_Software_Catalog_1984_Point_djvu.txt |title=Whole Earth Software Catalog |url-status=live |archive-url=https://web.archive.org/web/20150704110357/https://archive.org/stream/Whole_Earth_Software_Catalog_1984_Point/Whole_Earth_Software_Catalog_1984_Point_djvu.txt |archive-date=2015-07-04}}&lt;/ref&gt;
+&lt;ref name=&quot;CPM3_1983_PG&quot;&gt;{{cite book |title=CP/M Plus (CP/M Version 3) Operating System Programmers Guide |edition=2 |date=April 1983 |orig-year=January 1983 |publisher=[[Digital Research]] |url=http://www.cpm.z80.de/manuals/cpm3-pgr.pdf |access-date=2016-11-25 |url-status=live |archive-url=https://web.archive.org/web/20161125024058/http://www.cpm.z80.de/manuals/cpm3-pgr.pdf |archive-date=2016-11-25}}&lt;/ref&gt;
+&lt;ref name=&quot;ct_1&quot;&gt;{{cite journal |title=CP/M 2 lernt dazu. Modulare Systemerweiterungen auch für das 'alte' CP/M |language=de |type=part 1 |author-first1=Eckhard |author-last1=Lieber |author-first2=Thomas |author-last2=von Massenbach |journal=[[c't - magazin für computertechnik]] |publisher=[[Heise Verlag]] |date=1987 |volume=1987 |issue=1 |pages=124–135}}&lt;/ref&gt;
+&lt;ref name=&quot;ct_2&quot;&gt;{{cite journal |title=CP/M 2 lernt dazu. Modulare Systemerweiterungen auch für das 'alte' CP/M |language=de |type=part 2 |author-first1=Eckhard |author-last1=Lieber |author-first2=Thomas |author-last2=von Massenbach |journal=[[c't - magazin für computertechnik]] |publisher=[[Heise Verlag]] |date=1987 |volume=1987 |issue=2 |pages=78–85}}&lt;/ref&gt;
+&lt;ref name=&quot;Huck_2016&quot;&gt;{{cite web |title=RSM für CP/M 2.2 |language=de |date=2016-10-09 |author-first=Alex |author-last=Huck |work=Homecompuer DDR |url=http://hc-ddr.hucki.net/wiki/doku.php/cpm:rsm:ct |access-date=2016-11-25 |url-status=live |archive-url=https://web.archive.org/web/20161125023237/http://hc-ddr.hucki.net/wiki/doku.php/cpm%3Arsm%3Act |archive-date=2016-11-25}}&lt;/ref&gt;
+&lt;ref name=&quot;Shustek_2016&quot;&gt;{{cite web |url=http://www.computerhistory.org/atchm/in-his-own-words-gary-kildall/ |title=In His Own Words: Gary Kildall |author-first=Len |author-last=Shustek |date=2016-08-02 |work=Remarkable People |publisher=[[Computer History Museum]] |url-status=live |archive-url=https://web.archive.org/web/20161217072842/http://www.computerhistory.org/atchm/in-his-own-words-gary-kildall/ |archive-date=2016-12-17}}&lt;/ref&gt;
+&lt;ref name=&quot;Kildall_1993&quot;&gt;{{cite book |orig-year=1993 |date=2016-08-02 |title=Computer Connections: People, Places, and Events in the Evolution of the Personal Computer Industry |author-first=Gary Arlen |author-last=Kildall |author-link=Gary Arlen Kildall |editor-first1=Scott |editor-last1=Kildall |editor-link=Scott Kildall |editor-first2=Kristin |editor-last2=Kildall |publisher=Kildall Family |type=Manuscript, part 1 |url=http://www.computerhistory.org/atchm/computer-history-museum-license-agreement-for-the-kildall-manuscript/ |access-date=2016-11-17 |archive-url=https://web.archive.org/web/20161117231531/http://www.computerhistory.org/atchm/computer-history-museum-license-agreement-for-the-kildall-manuscript/ |archive-date=2016-11-17 |url-status=live}}&lt;/ref&gt;
+&lt;ref name=&quot;johnson&quot;&gt;{{cite web |url=http://www.retrotechnology.com/dri/d_dri_history.html |title=CP/M and Digital Research Inc. (DRI) History |author-last=Johnson |author-first=Herbert R. |date=2009-01-04 |work=www.retrotechnology.com |access-date=2009-01-28 |url-status=live |archive-url=https://web.archive.org/web/20080820013551/http://www.retrotechnology.com/dri/d_dri_history.html |archive-date=2008-08-20}}&lt;/ref&gt;
+&lt;ref name=&quot;Dr. Dobb's Journal Apr 1976&quot;&gt;{{cite journal |author-last=Warren |author-first=Jim |author-link=Jim Warren (computer specialist) |title=First word on a floppy-disk operating system |journal=[[Dr. Dobb's Journal]] |volume=1 |issue=4 |page=5 |location=Menlo Park, CA, USA |date=April 1976}} Subtitle: Command language &amp; facilities similar to DECSYSTEM-10.&lt;/ref&gt;
+&lt;ref name=&quot;Digital Research (Firm)&quot;&gt;{{cite book |title=CP/M |year=1978 |author=Digital Research |author-link=Digital Research |publisher=[[Digital Research]] |location=Pacific Grove, CA, USA |oclc=221485970 }}&lt;/ref&gt;
+&lt;ref name=&quot;wise19820510&quot;&gt;{{cite news |url=https://books.google.com/books?id=bDAEAAAAMBAJ&amp;pg=PA21 |title=Mainframe makers court third-party vendors for micro software |work=[[InfoWorld]] |date=1982-05-10 |access-date=2015-01-25 |author-last=Wise |author-first=Deborah |pages=21–22 |url-status=live |archive-url=https://web.archive.org/web/20150318064450/https://books.google.com/books?id=bDAEAAAAMBAJ&amp;lpg=PA22&amp;pg=PA21 |archive-date=2015-03-18}}&lt;/ref&gt;
+&lt;ref name=&quot;meyer19820614&quot;&gt;{{Cite magazine |author-last=Meyer |author-first=Edwin W. |date=1982-06-14 |title=The Xerox 820, a CP/M-operated system from Xerox |url=https://books.google.com/books?id=YDAEAAAAMBAJ&amp;pg=PA101 |magazine=[[InfoWorld]] |pages=101–104 |access-date=2019-03-30}}&lt;/ref&gt;
+&lt;ref name=&quot;dacruz19840427&quot;&gt;{{cite mailing list |url=ftp://kermit.columbia.edu/kermit/e/mail.84a |title=New release of KERMIT for CP/M-80 |publisher=Kermit Project, Columbia University |mailinglist=Info-Kermit Digest |date=1984-04-27 |access-date=2016-02-23 |author-last=da Cruz |author-first=Frank }}{{Dead link|date=July 2020 |bot=InternetArchiveBot |fix-attempted=yes }}&lt;/ref&gt;
+&lt;ref name=&quot;bunnell19820203&quot;&gt;{{cite news |url=https://books.google.com/books?id=w_OhaFDePS4C&amp;pg=PA16 |title=The Man Behind The Machine? / A PC Exclusive Interview With Software Guru Bill Gates |work=[[PC Magazine]] |date=February 1982 |access-date=2012-02-17 |author-last=Bunnell |author-first=David |page=16 |url-status=live |archive-url=https://web.archive.org/web/20130509162040/http://books.google.com/books?id=w_OhaFDePS4C&amp;lpg=RA2-PA18&amp;pg=PA16 |archive-date=2013-05-09}}&lt;/ref&gt;
+&lt;ref name=&quot;mace19840109_16&quot;&gt;{{cite news |url=https://books.google.com/books?id=ey4EAAAAMBAJ&amp;pg=PA79 |title=IBM PC clone makers shun total compatibility |work=[[InfoWorld]] |date=1984-01-09 |access-date=2015-02-04 |author-last=Mace |author-first=Scott |pages=79–81 |url-status=live |archive-url=https://web.archive.org/web/20150316182214/https://books.google.com/books?id=ey4EAAAAMBAJ&amp;lpg=PA14&amp;ots=qxysACmBMb&amp;pg=PA79 |archive-date=2015-03-16}}&lt;/ref&gt;
+&lt;ref name=&quot;pournelle198306&quot;&gt;{{cite news |url=https://archive.org/stream/byte-magazine-1983-06/1983_06_BYTE_08-06_16-Bit_Designs#page/n411/mode/2up |title=Zenith Z-100, Epson QX-10, Software Licensing, and the Software Piracy Problem |work=[[BYTE]] |date=June 1983 |access-date=2013-10-20 |author-last=Pournelle |author-first=Jerry |author-link=Jerry Pournelle |volume=8 |issue=6 |pages=411 |url-status=live |archive-url=https://web.archive.org/web/20140609081942/http://archive.org/stream/byte-magazine-1983-06/1983_06_BYTE_08-06_16-Bit_Designs#page/n411/mode/2up |archive-date=2014-06-09}}&lt;/ref&gt;
+&lt;ref name=&quot;loguidice20120728&quot;&gt;{{cite web |url=http://www.armchairarcade.com/neo/node/4851 |title=More on Avalon Hill Computer Games on Heath/Zenith platforms |work=Armchair Arcade |date=2012-07-28 |access-date=2015-07-22 |author-last=Loguidice |author-first=Bill |url-status=live |archive-url=https://web.archive.org/web/20150723044908/http://www.armchairarcade.com/neo/node/4851 |archive-date=2015-07-23}}&lt;/ref&gt;
+&lt;ref name=&quot;githubgorilla001&quot;&gt;{{cite web |url=https://github.com/sblendorio/gorilla-cpm |title=Gorillas for CP/M |date=2015-12-01 |access-date=2015-07-22 |author-last=Sblendorio |author-first=Francesco |url-status=live |archive-url=https://web.archive.org/web/20160205052002/https://github.com/sblendorio/gorilla-cpm |archive-date=2016-02-05}}&lt;/ref&gt;
+&lt;ref name=&quot;pournelle198204&quot;&gt;{{cite news |url=https://archive.org/stream/byte-magazine-1982-04/1982_04_BYTE_07-04_Human_Factors_Engineering |title=The Osborne 1, Zeke's New Friends, and Spelling Revisited |work=[[BYTE]] |date=April 1982 |access-date=2013-10-19 |author-last=Pournelle |author-first=Jerry |author-link=Jerry Pournelle |pages=212 |url-status=live |archive-url=https://web.archive.org/web/20131026185358/http://archive.org/stream/byte-magazine-1982-04/1982_04_BYTE_07-04_Human_Factors_Engineering |archive-date=2013-10-26}}&lt;/ref&gt;
+&lt;ref name=&quot;128book&quot;&gt;{{cite book |chapter-url=https://archive.org/details/The_Official_Book_for_the_Commodore_128/page/n109 |title=The Official Book for the Commodore 128 Personal Computer |publisher=[[Howard W. Sams &amp; Co.]] |author-last1=Waite |author-first1=Mitchell |author-link1=Mitchell Waite |author-last2=Lafore |author-first2=Robert W. |author-link2=Robert W. Lafore |author-last3=Volpe |author-first3=Jerry |date=1985 |page=98 |isbn=0-672-22456-9 |chapter=The CP/M Mode}}&lt;/ref&gt;
+&lt;ref name=&quot;hogan19810914state&quot;&gt;{{Cite news |url=https://books.google.com/books?id=Mj0EAAAAMBAJ&amp;pg=PA10 |title=State of Microcomputing / Some Horses Running Neck and Neck |author-last=Hogan |author-first=Thom |date=1981-09-14 |access-date=2019-04-08 |pages=10–12}}&lt;/ref&gt;
+&lt;ref name=&quot;byte198212&quot;&gt;{{cite magazine |url=https://archive.org/stream/byte-magazine-1982-12/1982_12_BYTE_07-12_Game_Plan_1982 |title=Now: A Complete CP/M Pascal for Only $29.95! |magazine=[[BYTE]] |date=December 1982 |access-date=2016-10-01 |pages=11 |type=advertisement |url-status=live |archive-url=https://web.archive.org/web/20160721132531/http://archive.org/stream/byte-magazine-1982-12/1982_12_BYTE_07-12_Game_Plan_1982 |archive-date=2016-07-21}}&lt;/ref&gt;
+&lt;ref name=&quot;byte198312&quot;&gt;{{Cite magazine |date=December 1983 |title=Ellis Computing |url=https://archive.org/stream/byte-magazine-1983-12/1983_12_BYTE_08-12_Easy_Software#page/n69/mode/2up |magazine=[[BYTE]] |type=advertisement |page=69}}&lt;/ref&gt;
+&lt;ref name=&quot;derfler19821018&quot;&gt;{{cite news |url=https://books.google.com/books?id=CjAEAAAAMBAJ&amp;pg=PA59 |title=Kaypro II—a low-priced, 26-pound portable micro |work=[[InfoWorld]] |date=1982-10-18 |access-date=2013-10-22 |author-last=Derfler |author-first=Frank J. |pages=59 |url-status=live |archive-url=https://web.archive.org/web/20140101062305/http://books.google.com/books?id=CjAEAAAAMBAJ&amp;lpg=PA59&amp;pg=PA59 |archive-date=2014-01-01}}&lt;/ref&gt;
+&lt;ref name=&quot;byte198309&quot;&gt;{{cite news |url=https://archive.org/stream/byte-magazine-1983-09/1983_09_BYTE_08-09_Portable_Computers_in_Depth#page/n221/mode/2up |title=The Kaypro II |work=[[BYTE]] |date=September 1983 |access-date=2013-10-20 |author-last1=Fager |author-first1=Roger |author-last2=Bohr |author-first2=John |pages=212 |url-status=live |archive-url=https://web.archive.org/web/20140302195830/http://archive.org/stream/byte-magazine-1983-09/1983_09_BYTE_08-09_Portable_Computers_in_Depth#page/n221/mode/2up |archive-date=2014-03-02}}&lt;/ref&gt;
+&lt;ref name=&quot;Johnson-Laird_1983&quot;&gt;{{cite book |author-last=Johnson-Laird |author-first=Andy |author-link=Andy Johnson-Laird |title=The programmer's CP/M handbook |year=1983 |publisher=Osborne/McGraw-Hill |location=Berkeley, CA |isbn=0-88134-103-7 |chapter=3}}&lt;/ref&gt;
+&lt;ref name=&quot;Ciarcia_1985&quot;&gt;{{cite web |author-last=Ciarcia |author-first=Steve |title=Build the SB-180 |magazine=[[Byte (magazine)|BYTE]] Magazine |date=September 1985 |page=100 |url=http://www.classiccmp.org/dunfield/mmint/bytsep85.pdf |publisher=[[CMP Media]] |access-date=2019-06-18}}&lt;/ref&gt;
+&lt;ref name=&quot;Radio_Shack_1985&quot;&gt;{{cite web |title=Radio Shack Computer Catalog RSC-12 page 28 |url=http://www.radioshackcatalogs.com/html/catalogs_extra/1985_rsc-12/h028.html |website=www.radioshackcomputercatalogs.com |publisher=Tandy/Radio Shack |access-date=2016-07-06 |url-status=live |archive-url=https://web.archive.org/web/20161013055333/http://www.radioshackcatalogs.com/html/catalogs_extra/1985_rsc-12/h028.html |archive-date=2016-10-13}}&lt;/ref&gt;
+&lt;ref name=&quot;Olmstead&quot;&gt;{{cite web |title=Digital Research Source Code |author-first1=Tim |author-last1=Olmstead &lt;!-- |author-link1=Tim Olmstead (CP/M) --&gt; |author-first2=Gabriele &quot;Gaby&quot; |author-last2=Chaudry |url=http://www.cpm.z80.de/source.html |url-status=live |archive-url=https://web.archive.org/web/20160205000740/http://www.cpm.z80.de/source.html |archive-date=2016-02-05}}&lt;/ref&gt;
+&lt;ref name=&quot;snyder198306&quot;&gt;{{cite news |url=https://archive.org/stream/byte-magazine-1983-06/1983_06_BYTE_08-06_16-Bit_Designs#page/n105/mode/2up |title=A DEC on Every Desk? |work=[[BYTE]] |date=June 1983 |access-date=2015-02-05 |author-last=Snyder |author-first=John J. |pages=104–106 |url-status=live |archive-url=https://web.archive.org/web/20150102123537/http://archive.org/stream/byte-magazine-1983-06/1983_06_BYTE_08-06_16-Bit_Designs#page/n105/mode/2up |archive-date=2015-01-02}}&lt;/ref&gt;
+&lt;ref name=&quot;M68&quot;&gt;{{cite web |url=http://www.old-computers.com/museum/computer.asp?st=1&amp;c=218 |title=M 68 / M 68 MX |url-status=dead |archive-url=https://web.archive.org/web/20160306194951/http://www.old-computers.com/museum/computer.asp?c=218&amp;st=1 |archive-date=6 March 2016 |access-date=17 September 2012 }}&lt;/ref&gt;
+&lt;ref name=&quot;DR_1981_XLT&quot;&gt;Digital Research (1981): [http://www.s100computers.com/Software%20Folder/Assembler%20Collection/Digital%20Research%20XLT86%20Manual.pdf ''XLT86 - 8080 to 8086 Assembly Language Translator - User's Guide''] {{webarchive |url=https://web.archive.org/web/20161118230700/http://www.s100computers.com/Software%20Folder/Assembler%20Collection/Digital%20Research%20XLT86%20Manual.pdf |date=2016-11-18}} Digital Research Inc, Pacific Grove&lt;/ref&gt;
+&lt;ref name=&quot;pournelle198403&quot;&gt;{{cite journal |title=New Machines, Networks, and Sundry Software |journal=[[BYTE]] |date=March 1984 |author-last=Pournelle |author-first=Jerry |author-link=Jerry Pournelle |pages=46 |url=https://archive.org/stream/byte-magazine-1984-03/1984_03_BYTE_09-03_Simulation#page/n47/mode/2up |access-date=2013-10-22 |url-status=live |archive-url=https://web.archive.org/web/20150202232111/http://archive.org/stream/byte-magazine-1984-03/1984_03_BYTE_09-03_Simulation#page/n47/mode/2up |archive-date=2015-02-02}}&lt;/ref&gt;
+&lt;ref name=&quot;Isaacson_2014&quot;&gt;{{cite book |author-link=Walter Isaacson |author-first=Walter |author-last=Isaacson |title=The Innovators: How a Group of Inventors, Hackers, Geniuses, and Geeks Created the Digital Revolution |title-link=The Innovators: How a Group of Inventors, Hackers, Geniuses, and Geeks Created the Digital Revolution |date=2014 |publisher=[[Simon &amp; Schuster]] |isbn=978-1-47670869-0 |page=358}}&lt;/ref&gt;
+&lt;ref name=&quot;Bellis_2010&quot;&gt;{{cite web |author-first=Mary |author-last=Bellis |title=Inventors of the Modern Computer Series - The History of the MS-DOS Operating Systems, Microsoft, Tim Paterson, and Gary Kildall |url=http://inventors.about.com/library/weekly/aa033099.htm |access-date=2010-09-09}}&lt;/ref&gt;
+&lt;ref name=&quot;magid1982febmar&quot;&gt;{{cite news |title=Baby Blue |author-last=Magid |author-first=Lawrence J. |pages=49 |author-link=Larry Magid |work=PC |date=February 1982 |url=https://books.google.com/books?id=w_OhaFDePS4C&amp;pg=RA2-PA49 |access-date=2015-01-04 |url-status=live |archive-url=https://web.archive.org/web/20150318054554/https://books.google.com/books?id=w_OhaFDePS4C&amp;lpg=RA2-PA50&amp;ots=cWqvhfFKjb&amp;pg=RA2-PA49 |archive-date=2015-03-18}}&lt;/ref&gt;
+&lt;ref name=&quot;Mace_1984&quot;&gt;{{cite journal |author-first=Scott |author-last=Mace |title=CP/M Eludes Home Market |journal=[[InfoWorld]] |date=1984-06-11 |page=46}}&lt;/ref&gt;
+&lt;ref name=&quot;Groth_1986&quot;&gt;{{cite journal |author-first=Nancy |author-last=Groth |title=Kaypro is retreating on CP/M |journal=[[InfoWorld]] |date=1986-02-10 |page=6}}&lt;/ref&gt;
+&lt;ref name=&quot;Chen_2010_Filenames&quot;&gt;{{cite web |url=http://blogs.msdn.com/b/oldnewthing/archive/2009/06/10/9718865.aspx |title=Why does MS-DOS use 8.3 filenames instead of, say, 11.2 or 16.16? |author-last=Chen |author-first=Raymond |author-link=Raymond Chen (Microsoft) |work=The Old New Thing |access-date=2010-12-17 |url-status=live |archive-url=https://web.archive.org/web/20110922053341/http://blogs.msdn.com/b/oldnewthing/archive/2009/06/10/9718865.aspx |archive-date=2011-09-22}}&lt;/ref&gt;
+&lt;ref name=&quot;Chen_2010_Wildcards&quot;&gt;{{cite web |url=http://blogs.msdn.com/b/oldnewthing/archive/2007/12/17/6785519.aspx |title=How did wildcards work in MS-DOS? |author-last=Chen |author-first=Raymond |author-link=Raymond Chen (Microsoft) |work=The Old New Thing |access-date=2010-12-17 |url-status=live |archive-url=https://web.archive.org/web/20110508010315/http://blogs.msdn.com/b/oldnewthing/archive/2007/12/17/6785519.aspx |archive-date=2011-05-08}}&lt;/ref&gt;
+&lt;ref name=&quot;Chen_2010_Reserved&quot;&gt;{{cite web |url=http://blogs.msdn.com/b/oldnewthing/archive/2003/10/22/55388.aspx |title=What's the deal with those reserved filenames like NUL and CON? |author-last=Chen |author-first=Raymond |author-link=Raymond Chen (Microsoft) |work=The Old New Thing |access-date=2010-12-17 |url-status=live |archive-url=https://web.archive.org/web/20100802040600/http://blogs.msdn.com/b/oldnewthing/archive/2003/10/22/55388.aspx |archive-date=2010-08-02}}&lt;/ref&gt;
+&lt;ref name=&quot;Chen_2004_CTRLZ&quot;&gt;{{cite web |url=http://blogs.msdn.com/b/oldnewthing/archive/2004/03/16/90448.aspx |title=Why do text files end in Ctrl+Z? |author-last=Chen |author-first=Raymond |author-link=Raymond Chen (Microsoft) |work=The Old New Thing |access-date=2010-12-17 |url-status=dead |archive-url=https://web.archive.org/web/20110206100213/http://blogs.msdn.com/b/oldnewthing/archive/2004/03/16/90448.aspx |archive-date=2011-02-06}}&lt;/ref&gt;
+&lt;ref name=&quot;Maher_2017&quot;&gt;{{cite web |author-first=Jimmy |author-last=Maher |title=The complete history of the IBM PC, part two: The DOS empire strikes |page=3 |date=2017-07-31 |url=https://arstechnica.com/gadgets/2017/07/ibm-pc-history-part-2/ |website=[[Ars Technica]] |access-date=2019-09-08}}&lt;/ref&gt;
+&lt;ref name=&quot;Sony-SMC-70&quot;&gt;{{cite web |title=Old-computers.com: The Museum |url=http://www.old-computers.com/museum/computer.asp?c=362 |access-date=2017-10-06 |archive-url=https://web.archive.org/web/20130703032649/http://www.old-computers.com/museum/computer.asp?c=362 |archive-date=3 July 2013 |url-status=dead }}&lt;/ref&gt;
+&lt;ref name=&quot;PL1&quot;&gt;{{cite web |url=http://bitsavers.informatik.uni-stuttgart.de/pdf/digitalResearch/pl1/PL1_Language_Programmers_Guide_Dec82.pdf |title=PL/I Language Programmer's Guide |publisher=[[Digital Research]]}}&lt;/ref&gt;
+&lt;ref name=&quot;ZCPR&quot;&gt;{{cite web |url=http://oldcomputers-ddns.org/public/pub/manuals/zcpr |title=ZCPR - oldcomputers.ddns.org}}&lt;/ref&gt;
+&lt;ref name=&quot;ZCPR3&quot;&gt;{{cite web |url=http://susowa.homeftp.net/index.php/magazines-mainmenu/morrow-owners-review-mainmenu-143/113-the-wonderful-world-of-zcpr3.html |title=The Wonderful World of ZCPR3 |date=1987-11-30 |access-date=18 November 2019 |archive-url=https://web.archive.org/web/20191223043145/http://susowa.homeftp.net/index.php/magazines-mainmenu/morrow-owners-review-mainmenu-143/113-the-wonderful-world-of-zcpr3.html |archive-date=23 December 2019 |url-status=dead }}&lt;/ref&gt;
+&lt;ref name=&quot;Thomas_1981_CPM&quot;&gt;{{cite newspaper |title=Books, Boards and Software for The New 16-Bit Processors |author-first1=Rebecca A. |author-last1=Thomas |author-first2=Jean L. |author-last2=Yates |newspaper=[[InfoWorld]] - The Newspaper for the Microcomputing Community |issn=0199-6649 |publisher=[[Popular Computing, Inc.]] |date=1981-05-11 |volume=3 |issue=9 |page=42–43 |url=https://books.google.com/books?id=Cz4EAAAAMBAJ&amp;pg=PA43 |access-date=2020-01-24 |url-status=live |archive-url= |archive-date= |quote=[…] [[Digital Research]] has also announced plans for a [[Z8000]] version of CP/M. Application software will be moved to the Z8000 when more development software is available. A commercially available [[Assembly language translator#Zilog|translator]] from [[Z80]] to Z8000 is needed. […]}}&lt;/ref&gt;
+&lt;ref name=&quot;Digital_Research_1981_News&quot;&gt;{{cite journal |title=Digital Research Has CP/M-86 for IBM Displaywriter |journal=Digital Research News - for Digital Research Users Everywhere |publisher=[[Digital Research, Inc.]] |location=Pacific Grove, California, USA |date=November 1981 |volume=1 |number=1 |id=Fourth Quarter |pages=2, 5, 7 |url=https://amaus.net/static/S100/software/DRI/Digital%20Research%20News/01x01%201981%20Digital%20Research%20News.pdf |access-date=2020-01-18 |url-status=live |archive-url= |archive-date= }}{{Dead link|date=July 2020 |bot=InternetArchiveBot |fix-attempted=yes }}&lt;/ref&gt;
+}}
+
+==Further reading==
+* {{cite book |author-link=Rodnay Zaks |author-last=Zaks |author-first=Rodnay |date=1980 |title=The CP/M Handbook With MP/M |publisher=[[SYBEX Inc.]] |isbn=0-89588-048-2 |url-access=registration |url=https://archive.org/details/The_CPM_Handbook_with_MPM }}
+* {{cite book |title=ZCPR3 - The Manual |author-first=Richard |author-last=Conn |isbn=0-918432-59-6|year=1985 }}
+* {{cite journal |title=Z-System Corner: Tenth Anniversary of ZCPR |issue=54 |journal=[[The Computer Journal]] |url=http://www.cpmwelt.de/pool/ad5401.htm |url-status=dead |archive-url=https://web.archive.org/web/20101029154106/http://www.cpmwelt.de/pool/ad5401.htm |archive-date=2010-10-29}}
+* {{cite web |title=The origin of CP/M's name |url=http://www.khet.net/gmc/docs/museum/en_cpmName.html |url-status=dead |archive-url=https://web.archive.org/web/20080611201653/http://www.khet.net/gmc/docs/museum/en_cpmName.html |archive-date=2008-06-11}}
+* {{cite web |url=http://www.intel-vintage.info/apps/videos/videos/show/18129431-intel-ipds-100-cp-m |title=Intel iPDS-100 Using CP/M-Video |author-first=Mustafa A. |author-last=Katie |date=2013-08-14}}
+* {{cite web |title=IEEE Milestone in Electrical Engineering and Computing - CP/M - Microcomputer Operating System, 1974 |date=2014-04-25 |publisher=[[Computer History Museum]] |url=http://lazowska.cs.washington.edu/CPM_Program.pdf |access-date=2019-04-03 |url-status=live |archive-url=https://web.archive.org/web/20190403013355/http://lazowska.cs.washington.edu/CPM_Program.pdf |archive-date=2019-04-03}}
+* {{cite web |url=https://www.pbs.org/nerds/ |title=Triumph of the Nerds}} (NB. This PBS series includes the details of IBM's choice of Microsoft DOS over Digital Research's CP/M for the IBM PC)
+* {{cite web |url=http://www.faqs.org/faqs/CPM-faq/ |website=comp.os.cpm |title=CP/M FAQ}} [http://www.digitalresearch.biz/CPM-FAQ.HTM]
+* {{cite web |title=Kathryln Betty Strutynski |newspaper=[[The Monterey Herald]] |series=Obituaries |date=2019-06-19 |url=http://www.legacy.com/obituaries/montereyherald/obituary.aspx?n=kathryn-betty-strutynski&amp;pid=143631450 |access-date=2020-02-25 |url-status=live |archive-url=https://web.archive.org/web/20200207041158/http://www.legacy.com/obituaries/montereyherald/obituary.aspx?n=kathryn-betty-strutynski&amp;pid=143631450 |archive-date=2020-02-07 |quote=[…] At NPS, Kathryn was given system responsibility for the VM operating system […] [[Gary Kildall]] […] developed a deep friendship with Kathryn. The two […] made unauthorized changes to the IBM VM-360 and 370 system code. […] She […] became the fourth employee of Gary's company […] When Gary became hesitant to sell CP/M to IBM, it was Kathryn who was called late one evening at home by Bill Gates of Microsoft Corp. and asked to intercede with Gary. However, the sale was not to be, and the rest, as they say, is history. Kathryn […] continued to write code for new versions of CP/M. She worked on CP/M 2.0 and CP/M +. She made many contributions to CP/M 2.2 (the largest money spinner for DRI) including a background spooler for printing (simple multi-tasking) and system guides. In fact, in one book, Kathryn is called &quot;the mother of CP/M 2.2,&quot; for the hundreds and hundreds of hours she put in with Dave Brown, John Pierce, Bob Silberstein, and others, perfecting Kildall's original design. Kathryn was also the project manager for CP/M-86 and Concurrent CP/M-86. […] &quot;They Made America,&quot; […] paperback version. Kathryn spent many long hours working with Sir Harold Evans updating the chapter of his book relating to the birth of CP/M and her beloved Gary Kildall's contributions to the field of computing. […]}}
+
+==External links==
+{{commons category|CP/M}}
+* [http://www.cpm.z80.de The Unofficial CP/M Web site (founded by Tim Olmstead)] - Includes source code
+* [http://www.gaby.de/ehome.htm Gaby Chaudry's Homepage for CP/M and Computer History] - includes ZCPR materials
+* [http://www.seasip.info/Cpm/index.html CP/M Main Page] - John C. Elliott's technical information site
+* [http://obsolescence.wix.com/obsolescence#!cpm-internals/c247i CP/M Internals] - CP/M internals
+* [https://web.archive.org/web/20080515232659/http://www.digitalresearch.biz/CPM.HTM MaxFrame's Digital Research CP/M page]
+* {{curlie|/Computers/Software/Operating_Systems/CPM/}}
+* ftp://ftp.uni-bayreuth.de/pub/pc/caldera/cpm2.2/
+* [http://www.z80.eu/transfercpm.html How to transfer CP/M floppy disks]
+
+{{Digital Research}}
+{{Disk operating systems}}
+{{Authority control}}
+
+{{DEFAULTSORT:Cp M}}
+[[Category:CP/M| ]]
+[[Category:CP/M variants]]
+[[Category:Microcomputer software]]
+&lt;!-- [[Category:Digital Research]] --&gt;
+[[Category:Disk operating systems]]
+[[Category:Digital Research operating systems]]
+[[Category:Discontinued operating systems]]
+[[Category:Floppy disk-based operating systems]]
+[[Category:Free software operating systems]]
+[[Category:History of computing]]
+[[Category:1974 software]]</text>
+      <sha1>iz4yxmwy4ifl1ipbyhqc0bf9jj0lm2r</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>8-bit computing</title>
+    <ns>0</ns>
+    <id>45148</id>
+    <revision>
+      <id>987211579</id>
+      <parentid>987099370</parentid>
+      <timestamp>2020-11-05T16:54:46Z</timestamp>
+      <contributor>
+        <username>Onel5969</username>
+        <id>10951369</id>
+      </contributor>
+      <comment>Disambiguated: [[signed]] → [[Sign (mathematics)]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6371" xml:space="preserve">{{about|8-bit computer architecture|other uses|8-bit (disambiguation)}}
+{{multiple issues|
+{{refimprove|date=October 2009}}
+{{primary sources|date=August 2012}}
+{{Original research|date=May 2019}}
+}}
+{{N-bit|8|(1 [[Octet (computing)|octet]])}} '8-bit' is also a generation of [[microcomputer]]s in which 8-bit [[microprocessor]]s were the norm.
+
+The term '8-bit' is also applied to the [[character set]]s that could be used on computers with 8-bit bytes, the best known being various forms of [[extended ASCII]], including the [[ISO/IEC 8859]] series of national character sets{{snd}} especially [[ISO/IEC 8859-1|Latin 1]] for English and Western European languages.
+
+The [[IBM System/360]] introduced byte-addressable memory with 8-bit bytes, as opposed to bit-addressable or decimal digit-addressable or word-addressable memory, although its [[general purpose registers]] were 32 bits wide, and addresses were contained in the lower 24 bits of those addresses. Different models of System/360 had different internal data path widths; the [[IBM System/360 Model 30]] (1965) implemented the 32-bit System/360 architecture, but had an 8 bit native path width, and performed 32-bit arithmetic 8 bits at a time.&lt;ref&gt;{{Cite journal|last1=Amdahl|first1=G. M.|last2=Blaauw|first2=G. A.|author2-link=Gerrit Blaauw|last3=Brooks|first3=F. P.|author3-link=Fred Brooks|year=1964|title=Architecture of the IBM System/360|url=https://www.ece.ucdavis.edu/~vojin/CLASSES/EEC272/S2005/Papers/IBM360-Amdahl_april64.pdf|url-status=live|journal=[[IBM Journal of Research and Development]]|volume=8|issue=2|pages=87–101|doi=10.1147/rd.82.0087|archive-url=https://web.archive.org/web/20170810085620/https://www.ece.ucdavis.edu/~vojin/CLASSES/EEC272/S2005/Papers/IBM360-Amdahl_april64.pdf|archive-date=2017-08-10|author1-link=Gene Amdahl}}&lt;/ref&gt;
+
+The first widely adopted 8-bit [[microprocessor]] was the [[Intel 8080]], being used in many hobbyist computers of the late 1970s and early 1980s, often running the [[CP/M]] [[operating system]]; it had 8-bit data words and 16-bit addresses. The [[Zilog Z80]] (compatible with the 8080) and the [[Motorola 6800]] were also used in similar computers. The Z80 and the [[MOS Technology 6502]] 8-bit CPUs were widely used in [[home computer]]s and [[Second generation of video game consoles|second-]] and [[Third generation of video game consoles|third-generation game consoles]] of the 1970s and 1980s. Many 8-bit CPUs or [[microcontroller]]s are the basis of today's ubiquitous [[embedded systems]].
+
+==Details==
+There are 2&lt;sup&gt;8&lt;/sup&gt; (256) different possible values for 8 bits. When unsigned, it has possible values ranging from 0 to 255; when [[Sign (mathematics)|signed]], it has -128 to 127.
+
+Eight-bit CPUs use an [[octet (computing)|8-bit]] [[Bus (computing)|data bus]] and can therefore access 8 bits of data in a single [[Instruction (computer science)|machine instruction]]. The address bus is typically a double octet wide (i.e. [[16-bit]]), due to practical and economical considerations. This implies a direct [[address space]] of only 64&amp;nbsp;[[kilobyte|kB]] on most 8-bit processors.
+
+==Notable 8-bit CPUs==
+The first commercial 8-bit processor was the [[Intel 8008]] (1972) which was originally intended for the [[Datapoint 2200]] [[intelligent terminal]]. Most competitors to [[Intel]] started off with such character oriented 8-bit microprocessors. Modernized variants of these 8-bit machines are still one of the most common types of processor in embedded systems.
+
+Another notable 8-bit CPU is the [[MOS Technology 6502]]; it, and variants of it, were used in a number of personal computers such as the [[Apple I]] and [[Apple II]], the [[Atari 8-bit family]], the [[BBC Micro]], and the [[Commodore PET]] and [[Commodore VIC-20]], and in a number of video game consoles such as the [[Atari 2600]] and the [[Nintendo Entertainment System]].
+
+{|class=&quot;wikitable sortable&quot;
+|+ Early or popular 8-bit processors (incomplete)
+! Manufacturer
+! Processor
+! Year
+! Comment
+|-
+| Intel || [[Intel 8008|8008]] || 1972 || [[Datapoint 2200]] compatible
+|-
+|[[Signetics]]||[[Signetics 2650|2650]] ||1973 ||
+|-
+|Intel || [[Intel 8080|8080]] || 1974 || 8008 source compatible
+|-
+|[[Motorola]]||[[Motorola 6800|6800]] ||1974 ||
+|- 
+|[[Fairchild Semiconductor|Fairchild]]||[[Fairchild F8|F8]] || 1975 ||
+|-
+|[[MOS Technology|MOS]]||[[MOS Technology 6502|6502]] || 1975 || Similar to 6800, but incompatible
+|-
+|[[Microchip Technology|Microchip]]||[[PIC microcontroller|PIC]] ||1975 ||[[Harvard architecture]] microcontroller
+|-
+|Electronic Arrays || [[EA9002]] || 1976 || 8-bit data, 12-bit addressing
+|-
+|[[RCA]]||[[RCA 1802|1802]] ||1976 ||
+|-
+|[[Zilog]]||[[Zilog Z80|Z80]] ||1976 ||8080 binary compatible
+|-
+|Intel || [[Intel 8085|8085]] || 1977 || 8080 binary compatible
+|-
+| Zilog|| [[Zilog Z8|Z8]] ||1978 ||Harvard architecture microcontroller
+|-
+| Motorola|| [[Motorola 6809|6809]] ||1978 ||6800 source compatible
+|-
+|Intel  || [[Intel 8051|8051]]  ||1980 ||  Harvard architecture microcontroller
+|-
+| Motorola|| [[Motorola 68008|68008]] ||1982 ||32-bit registers, 20-bit or 22-bit addressing, three 16-bit ALUs, 8-bit data bus; [[Motorola 68000]] software-compatible, 6809 hardware-compatible
+|-
+|MOS ||[[MOS Technology 6510|6510]] || 1982 || Enhanced 6502 custom-made for use in the [[Commodore 64]]
+|-
+|[[Ricoh]]||[[Ricoh 2A03|2A03]] || 1982 || 6502 clone minus BCD instructions for the [[Nintendo Entertainment System]]
+|-
+| Zilog||[[Zilog Z180|Z180]] ||1985 || Z80 binary compatible
+|-
+|Motorola || [[Freescale 68HC11|68HC11]] ||1985 || 
+|-
+|[[Atmel]]||[[Atmel AVR|AVR]] || 1996 ||
+|-
+|Zilog || [[Zilog eZ80|EZ80]]  ||1999  ||Z80 binary compatible
+|-
+| [[Infineon]] || [[XC800 family|XC800]]  || 2005 ||
+|-
+| [[Freescale Semiconductor|Freescale]]  || [[Freescale 68HC08|68HC08]] || ||
+|-
+|[[Hudson Soft|Hudson]]||[[Hudson Soft HuC6280|HuC6280]] || || 65C02 binary compatible
+|-
+| Motorola||[[Motorola 6800 family|6803]] || ||
+|-
+|[[NEC]]||[[NEC 78K0|78K0]]&lt;ref&gt;{{Cite web|url=http://www.am.necel.com/micro/product/all_8_general.html/|title=NEC 78K0|publisher=[[NEC]]|archive-url=https://web.archive.org/web/20081028210428/http://www.am.necel.com/micro/product/all_8_general.html/|archive-date=2008-10-28|url-status=dead|access-date=2009-02-10}}&lt;/ref&gt;||  ||
+|}
+
+==References==
+{{Reflist}}
+
+{{CPU technologies}}
+
+[[Category:Data unit]]</text>
+      <sha1>5qj9bkwkj3jx615009iu5o804sutzwb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Hex digit</title>
+    <ns>0</ns>
+    <id>45150</id>
+    <redirect title="Hexadecimal" />
+    <revision>
+      <id>15940441</id>
+      <timestamp>2002-03-20T14:45:02Z</timestamp>
+      <contributor>
+        <username>Ed Poor</username>
+        <id>188</id>
+      </contributor>
+      <minor />
+      <comment>redirect hexadecimal</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="25" xml:space="preserve">#REDIRECT [[hexadecimal]]</text>
+      <sha1>5z2muggi84n1ht3i9ozk6uux31ux4dw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Curly brace family</title>
+    <ns>0</ns>
+    <id>45151</id>
+    <redirect title="List of programming languages by type" />
+    <revision>
+      <id>831178777</id>
+      <parentid>481803646</parentid>
+      <timestamp>2018-03-19T05:35:37Z</timestamp>
+      <contributor>
+        <username>The Transhumanist</username>
+        <id>1754504</id>
+      </contributor>
+      <comment>Add template{{R to section}} to categorize redirect using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="93" xml:space="preserve">#REDIRECT [[List of programming languages by type#Curly-bracket languages]]
+
+{{R to section}}</text>
+      <sha1>4lfktepm4beoi69hl7wwsku3nq018g6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Elián González</title>
+    <ns>0</ns>
+    <id>45154</id>
+    <revision>
+      <id>990667374</id>
+      <parentid>990563668</parentid>
+      <timestamp>2020-11-25T20:44:52Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 64 templates: del empty params (4×); hyphenate params (54×); del pos params (1×); del |postscript= (1×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="45663" xml:space="preserve">{{short description|Cuban boy in custody dispute}}
+{{Use mdy dates|date=April 2020}}
+{{family name hatnote|González|Brotons|lang=Spanish}}
+{{Infobox person
+| image = Elian Gonzalez and father reunion.jpg  
+| caption =  Elián González with his father and family members that was taken a few hours after their reunion at Andrews Air Force Base on April 22nd, 2000.
+| birth_place   = [[Cárdenas, Cuba|Cárdenas]], [[Cuba]]&lt;ref name=biography.com&gt;{{cite web|url=https://www.biography.com/people/eli%C3%A1n-gonz%C3%A1lez-9542365|title=Elián González| work=[[Biography (TV program)|Biography]].com |date=February 28, 2019}}&lt;/ref&gt;
+| birth_date = {{birth date and age|1993|12|6}}
+| nationality = Cuban
+| parents = Juan Miguel González Quintana (father)&lt;br /&gt;Elizabeth Brotons Rodríguez (mother, deceased)
+| relatives = Lázaro González (paternal great-uncle)
+| known_for = Child custody and immigration case
+| alma_mater = [[University of Matanzas]]
+}}
+'''Elián González Brotons''' (born December 6, 1993) is a Cuban citizen who became embroiled in a heated international custody and immigration controversy in 2000 involving the governments of Cuba and the United States, his father Juan Miguel González Quintana, his other relatives in Cuba and in Miami, and Miami's Cuban community.
+
+González's mother Elizabeth Brotons Rodríguez drowned in November 1999 while attempting to leave Cuba with González and her boyfriend to get to the United States.&lt;ref&gt;{{cite news|url=http://news.bbc.co.uk/2/hi/americas/717071.stm |title=Elian's relatives at war |work=BBC News|date=April 18, 2000}}&lt;/ref&gt;&lt;ref&gt;{{cite news|url=https://www.nytimes.com/2000/01/14/nyregion/nyc-a-tug-of-war-as-complex-as-war.html |title=NYC; A Tug of War As Complex As War|last= Haberman| first= Clyde |newspaper=The New York Times|date=January 14, 2000}}&lt;/ref&gt; Elián Gonzalez was five years old when found nestled in an inner tube floating at sea three miles from Florida's Fort Lauderdale coast.&lt;ref name=Cova/&gt; Two fishermen found Elián and reluctantly handed him over to the U.S. Coast Guard, as they feared he would be sent back to Cuba under the wet foot, dry foot policy since he had not yet reached land.&lt;ref name=Cova/&gt; The Coast Guard assured them that Elián would be taken &quot;ashore for medical reasons,&quot; deeming him eligible to stay.&lt;ref name=Cova/&gt;{{rp|152}} Elián was immediately taken to a hospital and treated for dehydration and minor cuts on his body.&lt;ref name=Cova/&gt; It was later found that Elián's mother, Elisabet Brotons Rodríguez, and Lázaro Munero García, her common-law husband, had escaped Cárdenas, Cuba, as part of a group with 14 refugees on a {{cvt|17|ft|adj=on}} boat.&lt;ref name=Cova/&gt; However, the others perished in a storm, while a young couple escaped to the shore, and Elián was found.
+
+Once treated, the [[Immigration and Naturalization Service]] (INS) provided Elián with a temporary deferral regarding his inspection, and further released Elián to his great-uncle, Lázaro Gonzalez, who lived with his family in Miami's Little Havana.&lt;ref name=Cova/&gt; These relatives informed the family in Cárdenas to prepare for an [[extreme hardship]] visa waiver. The former were told the next day that &quot;some functionary of the government would be coming to get the boy&quot; as a result of [[Fidel Castro]]'s having met with Juan Miguel, Elián's father.&lt;ref name=Cova/&gt;{{rp|153}} The involvement of the Cuban [[Communist Party of Cuba|Communist]] leader in the case and the subsequent diplomatic note written to the [[United States Department of State|U.S. Department of State]] emphasizing the father's demand for Elián's repatriation attracted international attention.&lt;ref name=Cova/&gt; This is because Elián had become a &quot;symbol to many exiles&quot; reminding them of the solidarity of the Cuban exile community and its privileged status with economic refugee criteria. &lt;ref name=Cova/&gt;{{rp|153}} While Elián escaped both Cuba and death, he soon entered custody battles waged by his father, Miami relatives, and state actors from the U.S. and Cuba.
+
+The international tug of war waged between the Cuban and American actors can be understood through the agendas of Fidel Castro; the Cuban American actor Lazaro Gonzalez representing the Miami relatives and the Miami Cuban expat community; and the U.S. government representative, Attorney General Janet Reno. In the case of Fidel Castro, he sought to showcase his power by first issuing an ultimatum to the U.S. that the boy should be returned to his father within 72 hours.&lt;ref name=Cova/&gt;
+
+On January 10, 2000, a Florida state court had ruled that the Florida family court was able to decide the merit of motion related with temporary custody by Lazaro Gonzalez, stating that Elián should stay with the Miami relatives until a further custody hearing.&lt;ref name=France-Presse&gt;{{cite web |last1=France-Presse |first1=Agence |title=The Elian Gonzalez case: Chronology; Custody Tug of War Over Cuban Boy |url=https://www.nytimes.com/2000/04/14/us/the-elian-gonzalez-case-chronology-custody-tug-of-war-over-cuban-boy.html |website=The New York Times |date=April 14, 2000}}&lt;/ref&gt; However, Reno declared that the federal courts are responsible for deciding this case, and that the Miami relatives must appeal to the federal court.&lt;ref name=France-Presse/&gt; Here, the objective of Reno was to provide the relatives with a chance to provide &quot;any information&quot; they could that would be &quot;relevant in the decision&quot;.&lt;ref name=conference/&gt; She again emphasized that the INS commissioner had declared that the father speaks for the son, and that his wishes were to have his son returned to him.&lt;ref name=conference&gt;{{cite web |title=Reno Press Conference (2000) |url=https://www.c-span.org/video/?c4587358/reno-press-conference |website= c-span.org |language=en-us}}&lt;/ref&gt;
+
+==Early life==
+Elián González was born December 6, 1993, to divorced parents.&lt;ref name= biography.com /&gt;
+===Journey to Florida===
+[[File:Elián González's journey, 2000.jpg|thumb|400px|The journey from [[Cárdenas, Cuba]] to Florida]]
+On November 21, 1999, González, his mother Elizabeth Brotons Rodríguez, and twelve others left Cuba on a small aluminum boat with a faulty engine; González's mother and ten others died in the crossing. González and the other two survivors floated at sea until they were rescued by two fishermen, who handed them over to the [[U.S. Coast Guard]].&lt;ref name=&quot;Sue Plemming&quot;&gt;{{cite web|url=http://www.cubanet.org/CNews/y00/mar00/27e4.htm |title=Cuban boy draws picture of shipwreck drama | first= Sue |last= Plemming |date=March 27, 2000 |publisher=cubanet.org, quoting a Fox News article |access-date=October 6, 2008 |url-status=dead |archive-url= https://web.archive.org/web/20090112215621/http://www.cubanet.org/CNews/y00/mar00/27e4.htm |archive-date= January 12, 2009 }}&lt;/ref&gt;
+
+González's cousin Marisleysis said that the boat's motor broke down and they tried in vain to bail out the water with nylon bags, but a storm doomed their efforts. He told her he tried to help get the water out and his mother's boyfriend placed him in an inner tube for safety. &quot;He said afterwards that he fell asleep and that when he woke up he never saw his mother again&quot;. He said, &quot;I think she drowned too because she didn't know how to swim&quot;.&lt;ref name=&quot;Sue Plemming&quot;/&gt;
+
+Nivaldo Fernández Ferran, one of the three survivors on the boat, said &quot;Elizabeth protected her son to the end&quot;. According to Ferran, they set out on their trip at 4&amp;nbsp;am, dragging inflated rubber floats, or inner tubes, in case they needed them. As they encountered bad weather, the boat's engine failed and the craft began to fill with water. After it went under, the passengers clung to the inner tubes in cold water, with waves reaching heights of three to four meters (10 to 13 feet).&lt;ref&gt;{{cite news |url= http://findarticles.com/p/articles/mi_m1571/is_6_16/ai_59585370/ |title=A Love Supreme |first= Diana |last= Ray |date=February 14, 2000 |publisher= BNET, quoting insightmag.com |access-date=October 6, 2008 }}{{dead link|date=May 2017 |bot=InternetArchiveBot |fix-attempted=yes }}&lt;/ref&gt;
+
+Afterwards, the [[Immigration and Naturalization Service]] (INS) released González to his paternal great-uncle, Lázaro. According to the ''Washington Post'', González's father, Juan Miguel González Quintana, had telephoned Lázaro from Cuba on November 22, 1999, to advise that González and his mother had left Cuba without Juan Miguel's knowledge, and to watch for their arrival.&lt;ref&gt;{{cite news |date=April 6, 2000 |title=The Politics of Elian |newspaper=The Wall Street Journal |url=https://www.wsj.com/articles/SB95497703886404 |access-date=April 14, 2015}}&lt;/ref&gt;

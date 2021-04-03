@@ -1,0 +1,887 @@
+Some [[FPGA]]s are based on flash configuration cells that are used directly as (programmable) switches to connect internal elements together, using the same kind of floating-gate transistor as the flash data storage cells in data storage devices.&lt;ref name=&quot;maxfield&quot; /&gt;
+
+==Industry==
+{{See also|Semiconductor industry}}
+
+One source states that, in 2008, the flash memory industry includes about US$9.1 billion in production and sales. Other sources put the flash memory market at a size of more than US$20 billion in 2006, accounting for more than eight percent of the overall semiconductor market and more than 34 percent of the total semiconductor memory market.&lt;ref&gt;{{cite journal|last=Yinug |first=Christopher Falan |date=July 2007 |title=The Rise of the Flash Memory Market: Its Impact on Firm Behavior and Global Semiconductor Trade Patterns |journal=Journal of International Commerce and Economics |url=http://www.usitc.gov/journal/Final_falan_article1.pdf |accessdate=19 April 2008 |archiveurl=https://web.archive.org/web/20080529180622/http://www.usitc.gov/journal/Final_falan_article1.pdf |archivedate=29 May 2008 |url-status=dead}}&lt;/ref&gt;
+In 2012, the market was estimated at $26.8 billion.&lt;ref name=&quot;it2013-04-18&quot;&gt;[http://www.tgdaily.com/hardware-brief/71015-nand-memory-market-rockets NAND memory market rockets] {{webarchive|url=https://web.archive.org/web/20160208114459/http://www.tgdaily.com/hardware-brief/71015-nand-memory-market-rockets |date=8 February 2016 }}, 17 April 2013, Nermin Hajdarbegovic, ''TG Daily'', retrieved at 18 April 2013&lt;/ref&gt; It can take up to 10 weeks to produce a flash memory chip.&lt;ref&gt;{{Cite web|url=https://appleinsider.com/articles/19/07/01/power-outage-may-have-ruined-15-exabytes-of-wd-and-toshiba-memory|title=Power outage may have ruined 15 exabytes of WD and Toshiba flash storage|website=AppleInsider}}&lt;/ref&gt;
+
+===Manufacturers===
+{{Main|List of flash memory controller manufacturers|List of solid-state drive manufacturers}}
+
+The following are the largest NAND flash memory manufacturers, as of the first quarter of 2019.&lt;ref&gt;{{cite web |title=NAND Flash manufacturers' market share 2019 |url=https://www.statista.com/statistics/275886/market-share-held-by-leading-nand-flash-memory-manufacturers-worldwide/ |website=[[Statista]] |accessdate=3 July 2019}}&lt;/ref&gt;
+
+#[[Samsung Electronics]] {{ndash}} 34.9%
+#[[Kioxia]] {{ndash}} 18.1%
+#[[Western Digital Corporation]] {{ndash}} 14%
+#[[Micron Technology]] {{ndash}} 13.5%
+#[[SK Hynix]] {{ndash}} 10.3%
+#[[Intel]] {{ndash}} 8.7%
+
+===Shipments===
+{{See also|Electronics industry|Transistor count}}
+
+{| class=&quot;wikitable sortable&quot; style=&quot;text-align: center&quot;
+|+ Flash memory shipments ({{estimation}} manufactured units)
+! Year(s)
+! data-sort-type=&quot;number&quot; | Discrete flash [[memory chip]]s
+! data-sort-type=&quot;number&quot; | Flash memory data capacity ([[gigabytes]])
+! data-sort-type=&quot;number&quot; | [[Floating-gate MOSFET]] [[memory cell (computing)|memory cells]] (billions)
+|-
+| 1992
+| 26,000,000&lt;ref name=&quot;Smithsonian&quot;&gt;{{cite web |title=The Flash Memory Market |url=http://smithsonianchips.si.edu/ice/cd/MEMORY97/SEC05.PDF#page=4 |website=Integrated Circuit Engineering Corporation |publisher=[[Smithsonian Institution]] |year=1997 |page=4 |accessdate=16 October 2019}}&lt;/ref&gt;
+| {{formatnum:{{#expr:(256*9+512*5+1024*9+2048*2+4096*1+8192*0.1)*1024/8000000 round 1}}|}}&lt;ref name=&quot;Smithsonian&quot;/&gt;
+| {{formatnum:{{#expr:(256*9+512*5+1024*9+2048*2+4096*1+8192*0.1)*1024/1000000 round 0}}|}}{{efn|name=MLC|[[Single-level cell]] (1-[[bit]] per [[memory cell (computing)|cell]]) up until 2009. [[Multi-level cell]] (up to 4-bit or half-[[byte]] per cell) commercialised in 2009.&lt;ref name=&quot;toshiba2009&quot;/&gt;&lt;ref name=&quot;toshiba-sd-2009&quot;/&gt;}}
+|-
+| 1993
+| 73,000,000&lt;ref name=&quot;Smithsonian&quot;/&gt;
+| {{formatnum:{{#expr:(256*15+512*10+1024*32+2048*9+4096*18+8192*0.2)*1024/8000000 round 0}}|}}&lt;ref name=&quot;Smithsonian&quot;/&gt;
+| {{formatnum:{{#expr:(256*15+512*10+1024*32+2048*9+4096*18+8192*0.2)*1024/1000000 round 0}}|}}{{efn|name=MLC}}
+|-
+| 1994
+| 112,000,000&lt;ref name=&quot;Smithsonian&quot;/&gt;
+| {{formatnum:{{#expr:(256*20+512*12+1024*45+2048*12+4096*18+8192*5+16384*0.1)*1024/8000000 round 0}}|}}&lt;ref name=&quot;Smithsonian&quot;/&gt;
+| {{formatnum:{{#expr:(256*20+512*12+1024*45+2048*12+4096*18+8192*5+16384*0.1)*1024/1000000 round 0}}|}}{{efn|name=MLC}}
+|-
+| 1995
+| 235,000,000&lt;ref name=&quot;Smithsonian&quot;/&gt;
+| {{formatnum:{{#expr:(256*25+512*22+1024*82+2048*12+4096*18+8192*5+16384*3+32768*0.1)*1024/8000000 round 0}}|}}&lt;ref name=&quot;Smithsonian&quot;/&gt;
+| {{formatnum:{{#expr:(256*25+512*22+1024*82+2048*12+4096*18+8192*5+16384*3+32768*0.1)*1024/1000000 round 0}}|}}{{efn|name=MLC}}
+|-
+| 1996
+| 359,000,000&lt;ref name=&quot;Smithsonian&quot;/&gt;
+| {{formatnum:{{#expr:(256*30+512*34+1024*105+2048*55+4096*85+8192*40+16384*9+32768*0.6+65536*0.1)*1024/8000000 round 0}}|}}&lt;ref name=&quot;Smithsonian&quot;/&gt;
+| {{formatnum:{{#expr:(256*30+512*34+1024*105+2048*55+4096*85+8192*40+16384*9+32768*0.6+65536*0.1)*1024/1000000 round 0}}|}}{{efn|name=MLC}}
+|-
+| 1997
+| {{formatnum:{{#expr:(0.2+32+135+150+160)*1000000}}|}}+&lt;ref name=&quot;Cappelletti&quot;&gt;{{cite book |last1=Cappelletti |first1=Paulo |last2=Golla |first2=Carla |last3=Olivo |first3=Piero |last4=Zanoni |first4=Enrico |title=Flash Memories |date=2013 |publisher=[[Springer Science &amp; Business Media]] |isbn=9781461550150 |page=32 |url=https://books.google.com/books?id=cHzrBwAAQBAJ&amp;pg=PA32}}&lt;/ref&gt;
+| {{formatnum:{{#expr:(64*1+16*32+8*135+4*150+1*160)*(1024*1024)/1000000/8 round 0}}|}}+&lt;ref name=&quot;Cappelletti&quot;/&gt;
+| {{formatnum:{{#expr:(64*1+16*32+8*135+4*150+1*160)*(1024*1024)/1000000 round 0}}|}}+{{efn|name=MLC}}
+|-
+| 1998
+| {{formatnum:{{#expr:1800000000/1.44/1.64 round 0}}|}}&lt;ref&gt;{{cite journal |title=Not Flashing Quite As Fast |journal=Electronic Business |date=2000 |volume=26 |issue=7–13 |page=504 |url=https://books.google.com/books?id=e6mzAAAAIAAJ |publisher=[[Cahners Publishing Company]] |quote=Unit shipments increased 64% in 1999 from the prior year, and are forecast to increase 44% to 1.8 billion units in 2000.}}&lt;/ref&gt;
+| {{formatnum:{{#expr:(64*2+16*60+8*185+4*180+1*185)*(1024*1024)/1000000/8 round 0}}|}}+&lt;ref name=&quot;Cappelletti&quot;/&gt;
+| {{formatnum:{{#expr:(64*2+16*60+8*185+4*180+1*185)*(1024*1024)/1000000 round 0}}|}}+{{efn|name=MLC}}
+|-
+| 1999
+| rowspan=&quot;2&quot; | 12,800,000,000&lt;ref&gt;{{cite web |last1=Sze |first1=Simon Min |title=EVOLUTION OF NONVOLATILE SEMICONDUCTOR MEMORY: From Invention to Nanocrystal Memory |url=https://indico.cern.ch/event/422861/attachments/891704/1255315/Sze_26APR05.pdf#page=41 |website=[[CERN]] |publisher=[[National Chiao Tung University]] |page=41 |accessdate=22 October 2019}}&lt;/ref&gt;
+| {{formatnum:{{#expr:(64*13+16*105+8*165+4*200+1*215)*(1024*1024)/1000000/8 round 0}}|}}+&lt;ref name=&quot;Cappelletti&quot;/&gt;
+| {{formatnum:{{#expr:(64*13+16*105+8*165+4*200+1*215)*(1024*1024)/1000000 round 0}}|}}+{{efn|name=MLC}}
+|-
+| 2000{{ndash}}2004
+| rowspan=&quot;8&quot; | {{formatnum:{{#expr:125*(1024*1024*1024)}}|}} (NAND)&lt;ref name=&quot;Forbes&quot;&gt;{{cite web |last1=Handy |first1=Jim |title=How Many Transistors Have Ever Shipped? |url=https://www.forbes.com/sites/jimhandy/2014/05/26/how-many-transistors-have-ever-shipped/ |website=[[Forbes]] |accessdate=21 October 2019 |date=26 May 2014}}&lt;/ref&gt;
+| rowspan=&quot;8&quot; | {{formatnum:{{#expr:125*(1024*1024*1024)*8}}|}} (NAND)&lt;ref name=&quot;Forbes&quot;/&gt;
+|-
+| 2005{{ndash}}2007
+| {{?}}
+|-
+| 2008
+| {{formatnum:{{#expr:1160000000/0.946 round 0}}|}} (mobile NAND)&lt;ref name=&quot;dramexchange&quot;&gt;{{cite news |title=【Market View】Major events in the 2008 DRAM industry; End application demand remains weak, 2009 NAND Flash demand bit growth being revised down to 81% |url=https://www.dramexchange.com/WeeklyResearch/Post/2/1911.html |accessdate=16 October 2019 |work=DRAMeXchange |date=30 December 2008}}&lt;/ref&gt;
+|-
+| 2009
+| {{formatnum:{{#expr:1160000000/0.946 round 0}}|}}+ (mobile NAND)
+|-
+| 2010
+| 7,280,000,000+{{efn|Flash [[memory chip]] shipments in 2010:
+*NOR {{ndash}} 3.64{{nbsp}}billion&lt;ref&gt;{{cite news |title=NOR Flash Memory Finds Growth Opportunities in Tablets and E-Book Readers |url=https://technology.ihs.com/389310/nor-flash-memory-finds-growth-opportunities-in-tablets-and-e-book-readers |accessdate=16 October 2019 |work=IHS Technology |publisher=IHS Markit |date=9 June 2011}}&lt;/ref&gt;
+*NAND {{ndash}} 3.64{{nbsp}}billion+ ({{estimation}})
+}}
+|-
+| 2011
+| 8,700,000,000&lt;ref&gt;{{cite news |title=Samsung to unveil new mass-storage memory cards |url=http://www.koreatimes.co.kr/www/tech/2019/06/693_118515.html |accessdate=16 October 2019 |work=[[The Korea Times]] |date=29 August 2012}}&lt;/ref&gt;
+|-
+| 2012
+| {{formatnum:{{#expr:1700000000/(33/100) round 0}}|}} ([[#Serial flash|serial]])&lt;ref&gt;{{cite news |title=Winbond Top Serial Flash Memory Supplier Worldwide, Ships 1.7 Billion Units in 2012, Ramps 58nm Production |url=https://www.businesswire.com/news/home/20130410005060/en/Winbond-Top-Serial-Flash-Memory-Supplier-Worldwide |accessdate=16 October 2019 |work=[[Business Wire]] |publisher=[[Winbond]] |date=10 April 2013}}&lt;/ref&gt;
+|-
+| 2013
+| {{?}}
+|-
+| 2014
+| {{?}}
+| 59,000,000,000&lt;ref name=&quot;kitguru&quot;&gt;{{cite news |last1=Shilov |first1=Anton |title=Samsung: NAND flash industry will triple output to 253EB by 2020 |url=https://www.kitguru.net/components/hard-drives/anton-shilov/samsung-nand-flash-industry-will-triple-output-to-253eb-by-2020/ |accessdate=16 October 2019 |work=KitGuru |date=1 October 2015}}&lt;/ref&gt;
+| {{formatnum:{{#expr:59000000000*2}}|}}+{{efn|name=MLC}}
+|-
+| 2015
+| {{formatnum:{{#expr:10000000000/1.3 round 0}}|}} (NAND)&lt;ref&gt;{{cite news |title=Flash memory prices rebound as makers introduce larger-capacity chips |url=https://asia.nikkei.com/Business/Flash-memory-prices-rebound-as-makers-introduce-larger-capacity-chips |accessdate=16 October 2019 |work=[[Nikkei Asian Review]] |publisher=[[Nikkei, Inc.]] |date=21 July 2016}}&lt;/ref&gt;
+| 85,000,000,000&lt;ref&gt;{{cite web |last1=Tidwell |first1=William |title=Data 9, Storage 1 - NAND Production Falls Behind in the Age of Hyperscale |url=https://seekingalpha.com/article/4002948-data-9-storage-1-nand-production-falls-behind-age-hyperscale |website=[[Seeking Alpha]] |accessdate=17 October 2019 |date=30 August 2016}}&lt;/ref&gt;
+| {{formatnum:{{#expr:85000000000*2}}|}}+{{efn|name=MLC}}
+|-
+| 2016
+| {{?}}
+| 100,000,000,000&lt;ref&gt;{{cite book |last1=Coughlin |first1=Thomas M. |title=Digital Storage in Consumer Electronics: The Essential Guide |date=2017 |publisher=Springer |isbn=9783319699073 |page=217 |url=https://books.google.com/books?id=K2dCDwAAQBAJ&amp;pg=PA217}}&lt;/ref&gt;
+| {{formatnum:{{#expr:100000000000*2}}|}}+{{efn|name=MLC}}
+|-
+| 2017
+| {{?}}
+| 148,200,000,000{{efn|Flash memory data capacity shipments in 2017:
+*NAND [[non-volatile memory]] (NVM) {{ndash}} 85{{nbsp}}[[exabytes]] ({{estimation}})&lt;ref name=&quot;IDC&quot;&gt;{{cite web |last1=Reinsel |first1=David |last2=Gantz |first2=John |last3=Rydning |first3=John |title=IDC White Paper: The Digitization of the World |url=https://www.seagate.com/files/www-content/our-story/trends/files/idc-seagate-dataage-whitepaper.pdf#page=14 |website=[[Seagate Technology]] |publisher=[[International Data Corporation]] |date=November 2018 |page=14 |accessdate=17 October 2019}}&lt;/ref&gt;
+*[[Solid-state drive]] (SSD) {{ndash}} 63.2{{nbsp}}exabytes&lt;ref&gt;{{cite news |last1=Mellor |first1=Chris |title=Who was the storage dollar daddy in 2017? S. S. D |url=https://www.theregister.co.uk/2018/02/28/crossover_ssd_dollars_exceeded_disk_drive_dollars_in_2017/ |accessdate=17 October 2019 |work=[[The Register]] |date=28 February 2018}}&lt;/ref&gt;
+}}
+| {{formatnum:{{#expr:148200000000*2}}|}}+{{efn|name=MLC}}
+|-
+| 2018
+| {{?}}
+| 231,640,000,000{{efn|Flash memory data capacity shipments in 2018 ({{estimation}})
+*NAND NVM {{ndash}} 140{{nbsp}}exabytes&lt;ref name=&quot;IDC&quot;/&gt;
+*SSD {{ndash}} {{#expr:63.2*1.45}}{{nbsp}}exabytes&lt;ref&gt;{{cite news |title=Combined SSD, HDD Storage Shipped Jumps 21% to 912 Exabytes in 2018 |url=https://www.businesswire.com/news/home/20190307005812/en/TRENDFOCUS-Combined-SSD-HDD-Storage-Shipped-Jumps |accessdate=17 October 2019 |work=[[Business Wire]] |publisher=TRENDFOCUS |date=7 March 2019}}&lt;/ref&gt;
+}}
+| {{formatnum:{{#expr:231640000000*2}}|}}+{{efn|name=MLC}}
+|-
+! 1992{{ndash}}2018
+! 45,358,454,134+ memory chips
+! 758,057,729,630+ gigabytes
+! 2,321,421,837,044{{nbsp}}billion+ cells
+|}
+
+In addition to individual flash memory chips, flash memory is also [[embedded system|embedded]] in [[microcontroller]] (MCU) chips and [[system-on-chip]] (SoC) devices.&lt;ref name=&quot;arm&quot;&gt;{{cite web |last1=Yiu |first1=Joseph |title=Embedded Processors |url=https://community.arm.com/cfs-file/__key/telligent-evolution-components-attachments/01-2142-00-00-00-00-70-29/Embedded-SoC-Design-for-High-Reliability-Systems-1.02.pdf |website=[[Arm Holdings|ARM]] |conference=Embedded World 2015 |date=February 2015 |accessdate=23 October 2019}}&lt;/ref&gt; Flash memory is embedded in [[ARM chips]],&lt;ref name=&quot;arm&quot;/&gt; which have sold 150{{nbsp}}billion units worldwide {{as of|2019|lc=y}},&lt;ref&gt;{{cite news |last1=Smith |first1=Ryan |title=Arm TechCon 2019 Keynote Live Blog (Starts at 10am PT/17:00 UTC) |url=https://www.anandtech.com/show/14959/arm-techcon-2019-keynote-live-blog |accessdate=15 October 2019 |work=[[AnandTech]] |date=8 October 2019}}&lt;/ref&gt; and in [[programmable system-on-chip]] (PSoC) devices, which have sold 1.1{{nbsp}}billion units {{as of|2012|lc=yes}}.&lt;ref name=&quot;cypress&quot;&gt;{{cite web |title=2011 Annual Report |url=http://investors.cypress.com/static-files/62237288-5a22-4903-9ef8-3719d37ea699 |website=[[Cypress Semiconductor]] |year=2012 |accessdate=16 October 2019}}&lt;/ref&gt; This adds up to at least 151.1{{nbsp}}billion MCU and SoC chips with embedded flash memory, in addition to the 45.4{{nbsp}}billion known individual flash chip sales {{as of|2015|lc=y}}, totalling at least 196.5{{nbsp}}billion chips containing flash memory.
+
+==Flash scalability==
+{{See also|List of semiconductor scale examples|Moore's law}}
+
+Due to its relatively simple structure and high demand for higher capacity, NAND&amp;nbsp;flash memory is the most aggressively [[List of semiconductor scale examples|scaled technology]] among [[electronic devices]]. The heavy competition among the top few manufacturers only adds to the aggressiveness in shrinking the [[floating-gate MOSFET]] design rule or process technology node.&lt;ref name=NEA/&gt; While the expected shrink timeline is a factor of two every three years per original version of [[Moore's law]], this has recently been accelerated in the case of NAND&amp;nbsp;flash to a factor of two every two years. &lt;!-- In November 2012, Samsung started production of 19&amp;nbsp;nm NAND chips (marketed them as &quot;10&amp;nbsp;nm class&quot;, explained as something between 10 and 19&amp;nbsp;nm).&lt;ref&gt;{{cite news |url=http://www.anandtech.com/show/7173/samsung-ssd-840-evo-review-120gb-250gb-500gb-750gb-1tb-models-tested |title=Samsung SSD 840 EVO Review: 120GB, 250GB, 500GB, 750GB &amp; 1TB Models Tested |last=Anand |first=Lal Shimpi |date=July 25, 2013 |publisher=AnandTech |accessdate=9 January 2015}} &quot;''Samsung calls its latest NAND process 10nm-class or 1x-nm, which can refer to feature sizes anywhere from 10nm to 19nm but we've also heard it referred to as 19nm TLC.''&quot;&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://objective-analysis.com/uploads/2014-07-01_Objective_Analysis_Alert_-_Samsung_Samples_3D_NAND_SSD.pdf |title=Samsung samples 3D NAND SSD |date=July 2014 |publisher=ObjectiveAnalysis |accessdate=9 January 2015}}: &quot;''..Samsung introduced its 19nm NAND by calling it a “10nm-class” product. Once again, the press misunderstood and broadcast to the world that Samsung was ahead of all of its competitors''&quot;&lt;/ref&gt;&lt;ref&gt;{{cite magazine |url=http://www.pcworld.com/article/2045163/samsungs-840-evo-ssd-family-fast-large-and-in-charge.html |title=Samsung's 840 EVO SSD family: Fast, large, and in charge |date=2013-07-25 |magazine=PCWorld |accessdate=9 January 2015}}: &quot;''the 19nm manufacturing process used to produce the NAND. Samsung for some reason is calling this 10nm-class, or 1x NAND, but they assured us that it's 19nm.''&quot;&lt;/ref&gt;&lt;ref&gt;Clarke, Peter (20 November 2012). [http://www.eetimes.com/design/memory-design/4401791/Samsung-takes-NAND-memory-below-20-nm &quot;Samsung takes NAND memory below 20-nm&quot;] eetimes.com. Retrieved 21 December 2012.&lt;/ref&gt; --&gt;
+{{clear}}
+
+{| class=&quot;wikitable&quot; border=&quot;1&quot;
+|-
+! [[International Technology Roadmap for Semiconductors|ITRS]] or company !! 2010 !! 2011 !! 2012 !! 2013 !! 2014 !! 2015 !! 2016 !! 2017 !! 2018
+|-
+| ITRS Flash Roadmap 2011&lt;ref name=ti-roadmap2013-04&gt;{{cite web|url=http://www.techinsights.com/uploadedFiles/Public_Website/Content_-_Primary/Marketing/2013/Nand_Flash_Roadmap/NAND-Flash-Roadmap.ppt |title=Technology Roadmap for NAND Flash Memory |date=April 2013 |publisher=techinsights |accessdate=9 January 2015 |url-status=dead |archiveurl=https://web.archive.org/web/20150109095122/http://www.techinsights.com/uploadedFiles/Public_Website/Content_-_Primary/Marketing/2013/Nand_Flash_Roadmap/NAND-Flash-Roadmap.ppt |archivedate=9 January 2015 }}&lt;/ref&gt; || [[32&amp;nbsp;nm]] || [[22&amp;nbsp;nm]] || 20&amp;nbsp;nm || 18&amp;nbsp;nm || [[16&amp;nbsp;nm]] || || || ||
+|-
+| Updated ITRS Flash Roadmap&lt;ref name=ti-roadmap2014-04&gt;{{cite web|url=http://www.techinsights.com/uploadedFiles/NAND-Flash-Roadmap-2014.ppt |title=Technology Roadmap for NAND Flash Memory |date=April 2014 |publisher=techinsights |accessdate=9 January 2015 |url-status=dead |archiveurl=https://web.archive.org/web/20150109095119/http://www.techinsights.com/uploadedFiles/NAND-Flash-Roadmap-2014.ppt |archivedate=9 January 2015 }}&lt;/ref&gt; || || || || || 17&amp;nbsp;nm || 15&amp;nbsp;nm || [[14&amp;nbsp;nm]] || ||
+|-
+| [[Samsung]]&lt;ref name=ti-roadmap2013-04/&gt;&lt;ref name=ti-roadmap2014-04/&gt;&lt;ref name=ti-roadmap-2016&gt;{{cite web|title=NAND Flash Memory Roadmap |url=http://www.techinsights.com/techservices/TechInsights-NAND-Flash-Roadmap-2016.pdf |website=TechInsights |date=June 2016 }}&lt;/ref&gt;&lt;br/&gt;(Samsung 3D NAND)&lt;ref name=ti-roadmap2014-04/&gt; || 35–[[20&amp;nbsp;nm]]&lt;ref name=&quot;samsung-history&quot;&gt;{{cite web |title=History |url=https://www.samsung.com/us/aboutsamsung/company/history/ |website=[[Samsung Electronics]] |publisher=[[Samsung]] |accessdate=19 June 2019}}&lt;/ref&gt; || 27&amp;nbsp;nm || 21&amp;nbsp;nm &lt;br&gt; ([[Multi-level cell|MLC]], [[Triple-level cell|TLC]]) || 19–16&amp;nbsp;nm &lt;br&gt; 19–[[10&amp;nbsp;nm]] (MLC, TLC)&lt;ref name=&quot;tomshardware&quot;&gt;{{cite news |title=Samsung Mass Producing 128Gb 3-bit MLC NAND Flash |url=https://www.tomshardware.co.uk/NAND-128Gb-Mass-Production-3-bit-MLC,news-43458.html |accessdate=21 June 2019 |work=[[Tom's Hardware]] |date=11 April 2013}}&lt;/ref&gt; || 19–10&amp;nbsp;nm&lt;br&gt;V-NAND (24L) || 16–10&amp;nbsp;nm&lt;br&gt;V-NAND (32L) || 16–10&amp;nbsp;nm || 12–10&amp;nbsp;nm || 12–10&amp;nbsp;nm
+|-
+| [[Micron Technology|Micron]], [[Intel]]&lt;ref name=ti-roadmap2013-04/&gt;&lt;ref name=ti-roadmap2014-04/&gt;&lt;ref name=ti-roadmap-2016/&gt; || 34–25&amp;nbsp;nm || 25&amp;nbsp;nm || 20&amp;nbsp;nm &lt;br&gt; (MLC + HKMG) || 20&amp;nbsp;nm &lt;br&gt; (TLC) || 16&amp;nbsp;nm || 16&amp;nbsp;nm&lt;br&gt;3D NAND || 16&amp;nbsp;nm&lt;br&gt;3D NAND || 12&amp;nbsp;nm&lt;br&gt;3D NAND || 12&amp;nbsp;nm&lt;br&gt;3D NAND
+|-
+| [[Toshiba]], [[Western Digital|WD]] ([[SanDisk]])&lt;ref name=ti-roadmap2013-04/&gt;&lt;ref name=ti-roadmap2014-04/&gt;&lt;ref name=ti-roadmap-2016/&gt; || 43–32&amp;nbsp;nm &lt;br&gt; 24&amp;nbsp;nm (Toshiba)&lt;ref&gt;{{Cite web|url=http://www.toshiba.co.jp/about/press/2010_08/pr3101.htm?from=RSS_PRESS&amp;uid=20100831-1112e|title=Toshiba : News Release (31 Aug, 2010): Toshiba launches 24nm process NAND flash memory|website=Toshiba.co.jp}}&lt;/ref&gt; || 24&amp;nbsp;nm || 19&amp;nbsp;nm &lt;br&gt; (MLC, TLC) ||  || 15&amp;nbsp;nm || 15&amp;nbsp;nm&lt;br&gt;3D NAND || 15&amp;nbsp;nm&lt;br&gt;3D NAND || 12&amp;nbsp;nm &lt;br&gt; 3D&amp;nbsp;NAND || 12&amp;nbsp;nm &lt;br&gt; 3D&amp;nbsp;NAND
+|-
+| [[SK Hynix]]&lt;ref name=ti-roadmap2013-04/&gt;&lt;ref name=ti-roadmap2014-04/&gt;&lt;ref name=ti-roadmap-2016/&gt; || 46–35&amp;nbsp;nm || 26&amp;nbsp;nm || 20&amp;nbsp;nm (MLC) ||  || 16&amp;nbsp;nm || 16&amp;nbsp;nm || 16&amp;nbsp;nm || 12&amp;nbsp;nm || 12&amp;nbsp;nm
+|}
+
+As the [[MOSFET]] feature size of flash memory cells reaches the 15-16&amp;nbsp;nm minimum limit, further flash density increases will be driven by TLC (3&amp;nbsp;bits/cell) combined with vertical stacking of NAND memory planes. The decrease in endurance and increase in uncorrectable bit error rates that accompany feature size shrinking can be compensated by improved error correction mechanisms.&lt;ref&gt;{{cite news |first=Anand |last=Lal Shimpi |url=http://www.anandtech.com/show/4043/micron-announces-clearnand-25nm-with-ecc |title=Micron's ClearNAND: 25nm + ECC, Combats Increasing Error Rates |publisher=Anandtech |date=2 December 2010 |accessdate=2 December 2010 |url-status=live |archiveurl=https://web.archive.org/web/20101203082325/http://www.anandtech.com/show/4043/micron-announces-clearnand-25nm-with-ecc |archivedate=3 December 2010}}&lt;/ref&gt; Even with these advances, it may be impossible to economically scale flash to smaller and smaller dimensions as the number of electron holding capacity reduces. Many promising new technologies (such as [[Ferroelectric RAM|FeRAM]], [[Magnetoresistive Random Access Memory|MRAM]], [[Programmable metallization cell|PMC]], [[Phase-change memory|PCM]], [[Resistive random-access memory|ReRAM]], and others) are under investigation and development as possible more scalable replacements for flash.&lt;ref name=&quot;future&quot;&gt;{{Cite book |last1=Kim |first1=Kinam |last2=Koh |first2=Gwan-Hyeob |publisher=Proceedings of the 24th International Conference on Microelectronics |place=Serbia and Montenegro |date=16 May 2004 |pages=377–384 |doi=10.1109/ICMEL.2004.1314646 |title=2004 24th International Conference on Microelectronics (IEEE Cat. No.04TH8716) |volume=1 |isbn=978-0-7803-8166-7 |s2cid=40985239 }}&lt;/ref&gt;
+
+===Timeline===
+{{See also|Read-only memory#Timeline|Random-access memory#Timeline|Transistor count#Memory}}
+
+{| class=&quot;wikitable sortable&quot; style=&quot;text-align:center&quot;
+|-
+! Date of introduction
+! Chip name
+! Capacity ([[bit]]s){{clarify|This column is very unclear; what is meant by kb, Mb, Gb, Tb?|date=February 2020}}
+! Flash type
+! [[Multi-level cell|Cell type]]
+! Manufacturer(s)
+! data-sort-type=&quot;number&quot; | [[Semiconductor device fabrication|Process]]
+! data-sort-type=&quot;number&quot; | Area
+! {{Abbr|Ref|Reference(s)}}
+|-
+| 1984
+| {{?}}
+| {{?}}
+| [[#NOR flash|NOR]]
+| [[Single-level cell|SLC]]
+| [[Toshiba]]
+| {{?}}
+| {{?}}
+| &lt;ref name=&quot;auto1&quot;/&gt;
+|-
+| 1985
+| {{?}}
+| 256 [[Kibibit|kb]]
+| NOR
+| SLC
+| Toshiba
+| 2,000 [[Nanometre|nm]]
+| {{?}}
+| &lt;ref name=&quot;stol&quot;&gt;{{cite web|url=http://maltiel-consulting.com/Semiconductor_technology_memory.html|title=Memory|website=STOL (Semiconductor Technology Online)|accessdate=25 June 2019}}&lt;/ref&gt;
+|-
+| 1987
+| {{?}}
+| {{?}}
+| [[#NAND flash|NAND]]
+| SLC
+| Toshiba
+| {{?}}
+| {{?}}
+| &lt;ref name=&quot;:0&quot;/&gt;
+|-
+|rowspan=&quot;2&quot; | 1989
+|rowspan=&quot;2&quot; | {{?}}
+| 1 [[Mebibit|Mb]]
+| NOR
+| SLC
+| [[Seeq Corporation|Seeq]], [[Intel]]
+| {{?}}
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | &lt;ref name=&quot;stol&quot;/&gt;
+|-
+| 4 Mb
+| NAND
+| SLC
+| Toshiba
+| [[1 µm process|1,000 nm]]
+|-
+| 1991
+| {{?}}
+| 16 Mb
+| NOR
+| SLC
+| [[Mitsubishi Electric|Mitsubishi]]
+| [[600 nanometer|600 nm]]
+| {{?}}
+| &lt;ref name=&quot;stol&quot;/&gt;
+|-
+| 1993
+| DD28F032SA
+| 32 Mb
+| NOR
+| SLC
+| [[Intel]]
+| {{?}}
+| 280&amp;nbsp;mm²
+|&lt;ref name=&quot;Intel-Product-Timeline&quot;&gt;{{cite web|url=http://download.intel.com/museum/research/arc_collect/timeline/TimelineDateSort7_05.pdf|title=A chronological list of Intel products. The products are sorted by date.|date=July 2005|work=Intel museum|publisher=Intel Corporation|archiveurl=https://web.archive.org/web/20070809053720/http://download.intel.com/museum/research/arc_collect/timeline/TimelineDateSort7_05.pdf|archivedate=9 August 2007|accessdate=31 July 2007}}&lt;/ref&gt;&lt;ref&gt;{{cite web |title=DD28F032SA Datasheet |url=http://www.datasheetcatalog.com/datasheets_pdf/D/D/2/8/DD28F032SA.shtml |publisher=[[Intel]] |accessdate=27 June 2019}}&lt;/ref&gt;
+|-
+| 1994
+| {{?}}
+| 64 Mb
+| NOR
+| SLC
+| [[NEC]]
+| 400&amp;nbsp;nm
+| {{?}}
+| &lt;ref name=&quot;stol&quot;/&gt;
+|-
+| rowspan=&quot;4&quot; | 1995
+| rowspan=&quot;4&quot; | {{?}}
+| rowspan=&quot;2&quot; | 16 Mb
+|DINOR
+|SLC
+|Mitsubishi, [[Hitachi]]
+|{{?}}
+|{{?}}
+|&lt;ref name=&quot;stol&quot;/&gt;&lt;ref name=&quot;smithsonian-japan&quot;&gt;{{cite web |title=Japanese Company Profiles |url=http://smithsonianchips.si.edu/ice/cd/PROF96/JAPAN.PDF |publisher=[[Smithsonian Institution]] |year=1996 |accessdate=27 June 2019}}&lt;/ref&gt;
+|-
+|NAND
+|SLC
+|Toshiba
+|{{?}}
+|{{?}}
+|&lt;ref&gt;{{cite news |title=Toshiba to Introduce Flash Memory Cards |url=http://www.toshiba.co.jp/about/press/1995_03/pr0201.htm |accessdate=20 June 2019 |publisher=[[Toshiba]] |date=2 March 1995}}&lt;/ref&gt;
+|-
+|32 Mb
+|NAND
+|SLC
+|Hitachi, [[Samsung Electronics|Samsung]], Toshiba
+| rowspan=&quot;2&quot; |{{?}}
+| rowspan=&quot;2&quot; |{{?}}
+|rowspan=&quot;2&quot; | &lt;ref name=&quot;stol&quot;/&gt;
+|-
+|34 Mb
+|[[#Serial flash|Serial]]
+|SLC
+|[[SanDisk]]
+|-
+|rowspan=&quot;3&quot; | 1996
+|rowspan=&quot;3&quot; | {{?}}
+|rowspan=&quot;2&quot; | 64 Mb
+|rowspan=&quot;2&quot; | NAND
+|SLC
+|[[Hitachi]], Mitsubishi
+|rowspan=&quot;2&quot; | 400&amp;nbsp;nm
+|rowspan=&quot;3&quot; | {{?}}
+|rowspan=&quot;3&quot; | &lt;ref name=&quot;stol&quot;/&gt;
+|-
+|[[Quad-level cell|QLC]]
+|NEC
+|-
+|128 Mb
+|NAND
+|SLC
+|Samsung, Hitachi
+|{{?}}
+|-
+|rowspan=&quot;2&quot; | 1997
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | 32 Mb
+|NOR
+|SLC
+|Intel, [[Sharp Corporation|Sharp]]
+|400&amp;nbsp;nm
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | &lt;ref&gt;{{cite web |title=WORLDWIDE IC MANUFACTURERS |url=http://smithsonianchips.si.edu/ice/cd/STATUS98/SEC02.PDF |publisher=[[Smithsonian Institution]] |year=1997 |accessdate=10 July 2019}}&lt;/ref&gt;
+|-
+|NAND
+|SLC
+|AMD, [[Fujitsu]]
+|350&amp;nbsp;nm
+|-
+|rowspan=&quot;2&quot; | 1999
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | 256 Mb
+|rowspan=&quot;2&quot; | NAND
+|SLC
+|Toshiba
+|rowspan=&quot;2&quot; | [[250 nanometer|250 nm]]
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | &lt;ref name=&quot;stol&quot;/&gt;
+|-
+|[[Multi-level cell|MLC]]
+|[[Hitachi]]
+|-
+|rowspan=&quot;3&quot; | 2000
+|rowspan=&quot;3&quot; | {{?}}
+|32 Mb
+|NOR
+|SLC
+|Toshiba
+|250&amp;nbsp;nm
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | &lt;ref name=&quot;stol&quot;/&gt;
+|-
+|64 Mb
+|NOR
+|QLC
+|[[STMicroelectronics]]
+|[[180 nm]]
+|-
+|512 Mb
+|NAND
+|SLC
+|Toshiba
+|{{?}}
+|{{?}}
+|&lt;ref&gt;{{cite news |title=TOSHIBA ANNOUNCES 0.13 MICRON 1Gb MONOLITHIC NAND FEATURING LARGE BLOCK SIZE FOR IMPROVED WRITE/ERASE SPEED PERFORMANCE |url=http://www.toshiba.com/taec/news/press_releases/2002/to-230.jsp |archive-url=https://web.archive.org/web/20060311224004/http://www.toshiba.com/taec/news/press_releases/2002/to-230.jsp |url-status=dead |archive-date=11 March 2006 |accessdate=11 March 2006 |publisher=[[Toshiba]] |date=9 September 2002}}&lt;/ref&gt;
+|-
+|rowspan=&quot;3&quot; | 2001
+|rowspan=&quot;3&quot; | {{?}}
+|512 Mb
+|NAND
+|MLC
+|Hitachi
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | &lt;ref name=&quot;stol&quot;/&gt;
+|-
+|rowspan=&quot;2&quot; |1 [[Gibibit|Gibit]]
+|rowspan=&quot;2&quot; |NAND
+|rowspan=&quot;2&quot; |MLC
+|[[Samsung Electronics|Samsung]]
+|-
+|Toshiba, SanDisk
+|160&amp;nbsp;nm
+|{{?}}
+|&lt;ref&gt;{{cite news |title=TOSHIBA AND SANDISK INTRODUCE A ONE GIGABIT NAND FLASH MEMORY CHIP, DOUBLING CAPACITY OF FUTURE FLASH PRODUCTS |url=http://www.toshiba.co.jp/about/press/2001_11/pr1202.htm |accessdate=20 June 2019 |publisher=[[Toshiba]] |date=12 November 2001}}&lt;/ref&gt;
+|-
+| rowspan=&quot;2&quot; |2002
+| rowspan=&quot;2&quot; |{{?}}
+|512 Mb
+|[[SONOS|NROM]]
+|MLC
+|[[Saifun Semiconductors|Saifun]]
+|170&amp;nbsp;nm
+|{{?}}
+|&lt;ref name=&quot;stol&quot;/&gt;
+|-
+|2 Gb
+|NAND
+|SLC
+|Samsung, Toshiba
+|{{?}}
+|{{?}}
+|&lt;ref name=&quot;samsung2000s&quot;&gt;{{cite web |title=Our Proud Heritage from 2000 to 2009 |url=https://www.samsung.com/semiconductor/about-us/history-03/ |website=[[Samsung Semiconductor]] |publisher=[[Samsung]] |accessdate=25 June 2019}}&lt;/ref&gt;&lt;ref&gt;{{cite news |title=TOSHIBA ANNOUNCES 1 GIGABYTE COMPACTFLASH™CARD |url=http://www.toshiba.com/taec/news/press_releases/2002/to-231.jsp |archive-url=https://web.archive.org/web/20060311212118/http://www.toshiba.com/taec/news/press_releases/2002/to-231.jsp |url-status=dead |archive-date=11 March 2006 |accessdate=11 March 2006 |publisher=[[Toshiba]] |date=9 September 2002}}&lt;/ref&gt;
+|-
+|rowspan=&quot;2&quot; | 2003
+|rowspan=&quot;2&quot; | {{?}}
+|128 Mb
+|NOR
+|MLC
+|Intel
+|rowspan=&quot;2&quot; | [[130 nanometer|130 nm]]
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | &lt;ref name=&quot;stol&quot;/&gt;
+|-
+|1 Gb
+|NAND
+|MLC
+|Hitachi
+|-
+|2004
+|{{?}}
+|8 Gb
+|NAND
+|SLC
+|Samsung
+|60&amp;nbsp;nm
+|{{?}}
+|&lt;ref name=&quot;samsung2000s&quot;/&gt;
+|-
+|2005
+|{{?}}
+|16 Gb
+|NAND
+|SLC
+|Samsung
+|50&amp;nbsp;nm
+|rowspan=&quot;2&quot; | {{?}}
+|rowspan=&quot;2&quot; | &lt;ref name=&quot;samsung-history&quot;/&gt;
+|-
+|2006
+|{{?}}
+|32 Gb
+|NAND
+|SLC
+|Samsung
+|[[40 nm]]
+|-
+|{{sort|2007|April 2007}}
+|THGAM
+|128 Gb
+|[[Three-dimensional integrated circuit|Stacked]] NAND
+|SLC
+|Toshiba
+|56&amp;nbsp;nm
+|252&amp;nbsp;mm²
+|&lt;ref name=&quot;toshiba2007&quot;&gt;{{cite news |title=TOSHIBA COMMERCIALIZES INDUSTRY'S HIGHEST CAPACITY EMBEDDED NAND FLASH MEMORY FOR MOBILE CONSUMER PRODUCTS |url=http://www.toshiba.com/taec/news/press_releases/2007/memy_07_470.jsp |archive-url=https://web.archive.org/web/20101123023805/http://www.toshiba.com/taec/news/press_releases/2007/memy_07_470.jsp |url-status=dead |archive-date=23 November 2010 |accessdate=23 November 2010 |work=[[Toshiba]] |date=17 April 2007}}&lt;/ref&gt;
+|-
+|{{sort|2007|September 2007}}
+|{{?}}
+|128 Gb
+|Stacked NAND
+|SLC
+|[[Hynix]]
+|{{?}}
+|{{?}}
+|&lt;ref name=&quot;hynix2007&quot;&gt;{{cite news |title=Hynix Surprises NAND Chip Industry |url=http://www.koreatimes.co.kr/www/news/biz/2007/09/123_9628.html |accessdate=8 July 2019 |work=[[The Korea Times]]|date=5 September 2007}}&lt;/ref&gt;
+|-
+|2008
+|THGBM
+|256 Gb
+|Stacked NAND
+|SLC
+|Toshiba
+|43&amp;nbsp;nm
+|353&amp;nbsp;mm²
+|&lt;ref name=&quot;toshiba2008&quot;&gt;{{cite news |title=Toshiba Launches the Largest Density Embedded NAND Flash Memory Devices |url=https://www.toshiba.co.jp/about/press/2008_08/pr0701.htm |accessdate=21 June 2019 |publisher=[[Toshiba]] |date=7 August 2008}}&lt;/ref&gt;
+|-
+| rowspan=&quot;2&quot; |2009
+| rowspan=&quot;2&quot; |{{?}}
+|32 Gb
+|NAND
+|[[Triple-level cell|TLC]]
+|Toshiba
+|[[32 nm]]
+|113&amp;nbsp;mm²
+|&lt;ref name=&quot;toshiba2009&quot;&gt;{{cite news |title=Toshiba Makes Major Advances in NAND Flash Memory with 3-bit-per-cell 32nm generation and with 4-bit-per-cell 43nm technology |url=http://www.toshiba.co.jp/about/press/2009_02/pr1102.htm |accessdate=21 June 2019 |work=[[Toshiba]] |date=11 February 2009}}&lt;/ref&gt;
+|-
+|64 Gb
+|NAND
+|QLC
+|Toshiba, SanDisk
+|43&amp;nbsp;nm
+|{{?}}
+|&lt;ref name=&quot;toshiba2009&quot;/&gt;&lt;ref name=&quot;toshiba-sd-2009&quot;&gt;{{cite news |title=SanDisk ships world's first memory cards with 64 gigabit X4 NAND flash |url=https://www.slashgear.com/sandisk-ships-worlds-first-memory-cards-with-64-gigabit-x4-nand-flash-1360217/ |accessdate=20 June 2019 |work=SlashGear |date=13 October 2009}}&lt;/ref&gt;
+|-
+| rowspan=&quot;3&quot; |2010
+| rowspan=&quot;2&quot; |{{?}}
+| rowspan=&quot;2&quot; |64 Gb
+| rowspan=&quot;2&quot; |NAND
+|SLC
+|Hynix
+|[[20 nm]]
+|{{?}}
+|&lt;ref name=&quot;hynix2010s&quot;&gt;{{cite web |title=History: 2010s |url=https://www.skhynix.com/eng/about/history2010.jsp |website=[[SK Hynix]] |accessdate=8 July 2019}}&lt;/ref&gt;
+|-
+|TLC
+|Samsung
+|20&amp;nbsp;nm
+|{{?}}
+|&lt;ref name=&quot;samsung-history&quot;/&gt;
+|-
+|THGBM2
+|1 [[Terabit|Tb]]
+|Stacked NAND
+|QLC
+|Toshiba
+|32&amp;nbsp;nm
+|374&amp;nbsp;mm²
+|&lt;ref name=&quot;toshiba2010&quot;&gt;{{cite news |title=Toshiba Launches Industry's Largest Embedded NAND Flash Memory Modules |url=https://www.toshiba.co.jp/about/press/2010_06/pr1701.htm |accessdate=21 June 2019 |work=[[Toshiba]] |date=17 June 2010}}&lt;/ref&gt;
+|-
+|2011
+|KLMCG8GE4A
+|512 Gb
+|Stacked NAND
+|MLC
+|Samsung
+|{{?}}
+|192&amp;nbsp;mm²
+|&lt;ref&gt;{{cite web |title=Samsung e·MMC Product family |url=http://www.mt-system.ru/sites/default/files/klmxgxge4a-x001mmc4_41_2ynm_based_emmc1_1.pdf |publisher=[[Samsung Electronics]] |date=December 2011 |accessdate=15 July 2019}}&lt;/ref&gt;
+|-
+| rowspan=&quot;2&quot; |2013
+| rowspan=&quot;2&quot; |{{?}}
+|{{?}}
+|NAND
+|SLC
+|[[SK Hynix]]
+|[[16 nm]]
+|{{?}}
+|&lt;ref name=&quot;hynix2010s&quot;/&gt;
+|-
+|128 Gb
+|[[#Vertical NAND|V-NAND]]
+|TLC
+|Samsung
+|[[10 nm]]
+|{{?}}
+|&lt;ref name=&quot;tomshardware&quot;/&gt;
+|-
+|2015
+|{{?}}
+|256 Gb
+|V-NAND
+|TLC
+|Samsung
+|{{?}}
+|{{?}}
+|&lt;ref name=&quot;samsung-history&quot;/&gt;
+|-
+| rowspan=&quot;3&quot; |2017
+| rowspan=&quot;2&quot; |{{?}}
+|512 Gb
+|V-NAND
+|TLC
+|Samsung
+|{{?}}
+|{{?}}
+|&lt;ref name=&quot;anandtech-samsung-2017&quot;&gt;{{cite news |last1=Shilov |first1=Anton |title=Samsung Starts Production of 512 GB UFS NAND Flash Memory: 64-Layer V-NAND, 860 MB/s Reads |url=https://www.anandtech.com/show/12120/samsung-starts-production-of-512-gb-ufs-chips |accessdate=23 June 2019 |work=[[AnandTech]] |date=5 December 2017}}&lt;/ref&gt;
+|-
+|768 Gb
+|V-NAND
+|QLC
+|Toshiba
+|{{?}}
+|{{?}}
+|&lt;ref&gt;{{cite news |title=Toshiba Develops World's First 4-bit Per Cell QLC NAND Flash Memory |url=https://www.techpowerup.com/234729/toshiba-develops-worlds-first-4-bit-per-cell-qlc-nand-flash-memory |accessdate=20 June 2019 |work=TechPowerUp |date=28 June 2017}}&lt;/ref&gt;
+|-
+|KLUFG8R1EM
+|4 Tb
+|Stacked V-NAND
+|TLC
+|Samsung
+|{{?}}
+|150&amp;nbsp;mm²
+|&lt;ref name=&quot;anandtech-samsung-2017&quot;/&gt;
+|-
+| rowspan=&quot;2&quot; |2018
+| rowspan=&quot;2&quot; |{{?}}
+|1 Tb
+|V-NAND
+|QLC
+|Samsung
+|{{?}}
+|{{?}}
+|&lt;ref&gt;{{cite news |last1=Shilov |first1=Anton |title=Samsung Starts Mass Production of QLC V-NAND-Based SSDs |url=https://www.anandtech.com/show/13170/samsung-starts-mass-production-of-qlc-vnandbased-ssds |accessdate=23 June 2019 |work=[[AnandTech]] |date=6 August 2018}}&lt;/ref&gt;
+|-
+|1.33 Tb
+|V-NAND
+|QLC
+|Toshiba
+|{{?}}
+|158&amp;nbsp;mm²
+|&lt;ref&gt;{{cite news |title=Toshiba's flash chips could boost SSD capacity by 500 percent |url=https://www.engadget.com/2018/07/20/toshiba-flash-166-gb-per-chip/ |accessdate=23 June 2019 |work=[[Engadget]] |date=20 July 2018}}&lt;/ref&gt;&lt;ref&gt;{{cite news |last1=McGrath |first1=Dylan |title=Toshiba Claims Highest-Capacity NAND |url=https://www.eetimes.com/document.asp?doc_id=1334344 |accessdate=23 June 2019 |work=[[EE Times]] |date=20 February 2019}}&lt;/ref&gt;
+|-
+| rowspan=&quot;3&quot; |2019
+| rowspan=&quot;2&quot; |{{?}}
+|512 Gb
+|V-NAND
+|QLC
+|Samsung
+|{{?}}
+|{{?}}
+|&lt;ref name=&quot;electronicsweekly-samsung&quot;&gt;{{cite news |last1=Manners |first1=David |title=Samsung makes 1TB flash eUFS module |url=https://www.electronicsweekly.com/news/business/samsung-makes-1tb-flash-module-2019-01/ |accessdate=23 June 2019 |work=[[Electronics Weekly]] |date=30 January 2019}}&lt;/ref&gt;&lt;ref name=&quot;anandtech-samsung-2018&quot;&gt;{{cite news |last1=Tallis |first1=Billy |title=Samsung Shares SSD Roadmap for QLC NAND And 96-layer 3D NAND |url=https://www.anandtech.com/show/13497/samsung-shares-ssd-roadmap-for-qlc-nand-and-96layer-3d-nand |accessdate=27 June 2019 |work=[[AnandTech]] |date=17 October 2018}}&lt;/ref&gt;
+|-
+|1 Tb
+|V-NAND
+|TLC
+|SK Hynix
+|{{?}}
+|{{?}}
+|&lt;ref&gt;{{cite news |last1=Shilov |first1=Anton |title=SK Hynix Starts Production of 128-Layer 4D NAND, 176-Layer Being Developed |url=https://www.anandtech.com/show/14589/sk-hynix-128-layer-4d-nand |accessdate=8 July 2019 |work=[[AnandTech]] |date=26 June 2019}}&lt;/ref&gt;
+|-
+|[[Universal Flash Storage|eUFS]] (1{{nbsp}}TB)
+|8 Tb
+|16 layer Stacked V-NAND&lt;ref&gt;{{Cite web|url=https://www.zdnet.com/article/samsung-produces-1tb-eufs-memory-for-smartphones/|title=Samsung produces 1TB eUFS memory for smartphones|first=Cho|last=Mu-Hyun|website=ZDNet}}&lt;/ref&gt;
+|QLC
+|Samsung
+|{{?}}
+|150&amp;nbsp;mm²
+|&lt;ref name=&quot;electronicsweekly-samsung&quot; /&gt;&lt;ref name=&quot;anandtech-samsung-2018&quot; /&gt;&lt;ref&gt;{{cite news |title=Samsung Breaks Terabyte Threshold for Smartphone Storage with Industry's First 1TB Embedded Universal Flash Storage |url=https://news.samsung.com/global/samsung-breaks-terabyte-threshold-for-smartphone-storage-with-industrys-first-1tb-embedded-universal-flash-storage |accessdate=13 July 2019 |publisher=[[Samsung]] |date=30 January 2019 }}&lt;/ref&gt;
+|}
+
+==See also==
+* [[eMMC]]
+* [[Flash memory controller]]
+* [[List of flash file systems]]
+* [[microSDXC]] (up to 2&amp;nbsp;[[terabyte|TiB]]), and the successor format Secure Digital Ultra Capacity ([[SDUC]]) supporting cards up to 128&amp;nbsp;TiB
+* [[Open NAND Flash Interface Working Group]]
+* [[Read-mostly memory]] (RMM)
+* [[Universal Flash Storage]]
+* [[USB flash drive security]]
+* [[Write amplification]]
+
+==Notes==
+{{Notelist|30em}}
+
+==References==
+{{Reflist}}
+
+==External links==
+* [http://news.thomasnet.com/fullstory/547012 Semiconductor Characterization System has diverse functions]
+* [http://www.eetimes.com/design/memory-design/4211387/Understanding-and-selecting-higher-performance-NAND-architectures?Ecosystem=memory-design Understanding and selecting higher performance NAND architectures]
+* [http://www.slideshare.net/ennael/dwmw2-kr201209 How flash storage works presentation by David Woodhouse from Intel]
+* [http://hypnocube.com/2014/11/flash-endurance-testing/ Flash endurance testing]
+* [http://adreca.net/NAND-Flash-Data-Recovery-Cookbook.pdf NAND Flash Data Recovery Cookbook]
+* [https://openwrt.org/docs/techref/flash.layout#types_of_flash_memory Type of Flash Memory] by [[OpenWrt]]
+
+{{Solid-state drive|state=collapsed}}
+
+[[Category:20th-century inventions]]
+[[Category:Computer memory]]
+[[Category:Japanese inventions]]
+[[Category:Non-volatile memory]]
+[[Category:Solid-state computer storage media]]</text>
+      <sha1>2cr35bqz1jl7foxcsh4gpj551p1ystv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>San Min Chu I</title>
+    <ns>0</ns>
+    <id>50596</id>
+    <redirect title="Three Principles of the People" />
+    <revision>
+      <id>15945289</id>
+      <parentid>1014103</parentid>
+      <timestamp>2003-06-09T01:08:02Z</timestamp>
+      <contributor>
+        <username>Oliver Pereira</username>
+        <id>5333</id>
+      </contributor>
+      <minor />
+      <comment>fixing double redirect</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="44" xml:space="preserve">#REDIRECT [[Three Principles of the People]]</text>
+      <sha1>gbqsp7jzbxz2dlm0t327zrjs8lqgebb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>EEPROM</title>
+    <ns>0</ns>
+    <id>50597</id>
+    <revision>
+      <id>990770177</id>
+      <parentid>990769740</parentid>
+      <timestamp>2020-11-26T11:51:18Z</timestamp>
+      <contributor>
+        <username>Mikhail Ryazanov</username>
+        <id>13263935</id>
+      </contributor>
+      <minor />
+      <comment>/* {{anchor|FLOTOX}}Theoretical basis of FLOTOX structure */ PNG → SVG, punct.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30489" xml:space="preserve">{{Distinguish|EPROM}}
+{{Memory types}}
+{{short description|Computer memory used for small quantities of data}}
+[[File:AT24C02 EEPROM 1480355 6 7 HDR Enhancer.jpg|thumbnail|[[STMicroelectronics|STMicro]] [http://www.st.com/resource/en/datasheet/m24c02-f.pdf M24C02] [[I²C]] serial type EEPROM]]
+[[File:ATMEL048 93C46A SC.jpg|thumbnail|[[Atmel]] [http://ww1.microchip.com/downloads/en/devicedoc/doc0539.pdf AT93C46A] [[Die (integrated circuit)|die]]]]
+[[File:Atmel-avr-atusb162-HD.jpg|thumbnail| [http://ww1.microchip.com/downloads/en/DeviceDoc/7707S.pdf AT90USB162] [[microcontroller|MCU]] integrates 512 Byte EEPROM]]
+[[File:Floating gate transistor-en.svg|thumb|A cross section of legacy [[EPROM|UV-EPROM]]&amp;nbsp;structure&lt;br&gt;Upper insulator: ONO&lt;sup&gt;†&lt;/sup&gt;&lt;br&gt;Lower&amp;nbsp;insulator:&amp;nbsp;[[Quantum tunnelling|tunnel]]&amp;nbsp;[[Silicon dioxide|oxide]]&lt;br&gt;†: [[Silicon dioxide|Oxide]]–[[Silicon nitride|nitride]]–oxide]]
+
+'''EEPROM''' (also '''E&lt;sup&gt;2&lt;/sup&gt;PROM''') stands for '''electrically erasable programmable read-only memory''' and is a type of [[non-volatile memory]] used in computers, integrated in [[microcontrollers]] for [[smart card]]s and [[remote keyless system]]s, and other electronic devices to store relatively small amounts of data but allowing individual bytes to be erased and reprogrammed.
+
+EEPROMs are organized as arrays of [[floating-gate transistor]]s. EEPROMs can be programmed and erased in-circuit, by applying special programming signals. Originally, EEPROMs were limited to single-byte operations, which made them slower, but modern EEPROMs allow multi-byte page operations. An EEPROM has a limited life for erasing and reprogramming, now reaching a million operations in modern EEPROMs. In an EEPROM that is frequently reprogrammed, the life of the EEPROM is an important design consideration.
+
+[[Flash memory]] is a type of EEPROM designed for high speed and high density, at the expense of large erase blocks (typically 512&amp;nbsp;bytes or larger) and limited number of write cycles (often 10,000). There is no clear boundary dividing the two, but the term &quot;EEPROM&quot; is generally used to describe non-volatile memory with small erase blocks (as small as one byte) and a long lifetime (typically 1,000,000 cycles). Many [[microcontrollers]] include both: flash memory for the [[firmware]], and a small EEPROM for parameters and history.
+
+As of 2020, flash memory costs much less than byte-programmable EEPROM and is the dominant memory type wherever a system requires a significant amount of non-volatile [[solid-state storage]]. EEPROMs, however, are still used on applications that only require small amounts of storage, like in [[serial presence detect]].&lt;ref&gt;https://www.micron.com/-/media/client/global/documents/products/technical-note/dram-modules/tn_04_42.pdf?rev=e5a1537ce3214de5b695f17c340fd023&lt;/ref&gt;&lt;ref&gt;https://whatis.techtarget.com/definition/serial-presence-detect-SPD#:~:text=When%20a%20computer%20is%20booted,%2C%20data%20width%2C%20speed%2C%20and&lt;/ref&gt;
+
+==History==
+In the early 1970s, some studies, [[inventions]], and development for electrically re-programmable [[non-volatile memory|non-volatile memories]] were performed by various companies and organizations.
+In 1971, the earliest research report was presented at ''the 3rd Conference on [[Solid-state electronics|Solid State Devices]], [[Tokyo]]'' in Japan by Yasuo Tarui, Yutaka Hayashi, and Kiyoko Nagai at ''[[Electrotechnical Laboratory]]''; a Japanese national research institute.&lt;ref&gt;
+{{cite journal|last1=Tarui|first1=Yasuo|last2=Hayashi|first2=Yutaka|last3=Nagai|first3=Kiyoko|title=Proposal of electrically reprogrammable non-volatile semiconductor memory|journal=Proceedings of the 3rd Conference on Solid State Devices, Tokyo|date=1971-09-01|pages=155{{endash}}162|publisher=The Japan Society of Applied Physics}}
+&lt;/ref&gt;
+They [[Semiconductor device fabrication|fabricated]] an EEPROM device in 1972,&lt;ref&gt;
+{{cite journal|last1=Tarui|first1=Y.|last2=Hayashi|first2=Y.|last3=Nagai|first3=K.|title=Electrically reprogrammable nonvolatile semiconductor memory|journal=IEEE Journal of Solid-State Circuits|date=1972|volume=7|issue=5|pages=369–375|doi=10.1109/JSSC.1972.1052895|issn=0018-9200|df=|bibcode=1972IJSSC...7..369T}}
+&lt;/ref&gt; and continued this study for more than 10 years.&lt;ref&gt;
+{{cite journal|last1=Tarui|first1=Yasuo|last2=Nagai|first2=Kiyoko|last3=Hayashi|first3=Yutaka|title=Nonvolatile Semiconductor Memory|journal=Oyobuturi|date=1974-07-19|volume=43|issue=10|pages=990{{endash}}1002|doi=10.11470/oubutsu1932.43.990|url=https://www.jstage.jst.go.jp/article/oubutsu1932/43/10/43_10_990/_pdf/-char/en.pdf|issn=2188-2290|url-status=live|archiveurl=https://web.archive.org/web/20180312205219/https://www.jstage.jst.go.jp/article/oubutsu1932/43/10/43_10_990/_pdf/-char/en.pdf|archivedate=2018-03-12}}
+&lt;/ref&gt;
+These papers have been repeatedly cited by later papers and patents.&lt;ref name=&quot;Iizuka-1976&quot;&gt;
+{{cite journal|last1=Iizuka|first1=H.|last2=Masuoka|first2=F.|last3=Sato|first3=Tai|last4=Ishikawa|first4=M.|title=Electrically alterable avalanche-injection-type MOS READ-ONLY memory with stacked-gate structure|journal=IEEE Transactions on Electron Devices|date=1976|volume=23|issue=4|pages=379–387|doi=10.1109/T-ED.1976.18415|issn=0018-9383|df=|bibcode=1976ITED...23..379I|s2cid=30491074}}
+&lt;/ref&gt;&lt;ref&gt;
+{{cite journal|last1=Rossler|first1=B.|title=Electrically erasable and reprogrammable read-only memory using the n-channel SIMOS one-transistor cell|journal=IEEE Transactions on Electron Devices|date=1977|volume=24|issue=5|pages=606–610|doi=10.1109/T-ED.1977.18788|issn=0018-9383|df=|bibcode=1977ITED...24..606R|s2cid=33203267}}
+&lt;/ref&gt;
+
+One of their research studies includes ''MONOS'' ([[metal]]-[[oxide]]-[[nitride]]-oxide-[[semiconductor]]) technology,&lt;ref&gt;
+{{cite journal|last1=Suzuki|first1=E.|last2=Hiraishi|first2=H.|last3=Ishii|first3=K.|last4=Hayashi|first4=Y.|title=A low-voltage alterable EEPROM with metal&amp;#8212;oxide-nitride&amp;#8212;oxide&amp;#8212;semiconductor (MONOS) structures|journal=IEEE Transactions on Electron Devices|date=1983|volume=30|issue=2|pages=122–128|doi=10.1109/T-ED.1983.21085|issn=0018-9383|df=|bibcode=1983ITED...30..122S|s2cid=31589165}}&lt;/ref&gt;
+which used [[Renesas Electronics]]' [[flash memory]] integrated in single-chip [[microcontroller]]s.&lt;ref&gt;
+{{cite web|last1=XTECH|first1=NIKKEI|title=Renesas Embeds 40nm Flash Memory on Chip|url=http://tech.nikkeibp.co.jp/dm/english/NEWS_EN/20111215/202636/?ST=print|website=NIKKEI XTECH|url-status=live|archiveurl=https://web.archive.org/web/20180313154053/http://tech.nikkeibp.co.jp/dm/english/NEWS_EN/20111215/202636/?ST=print|archivedate=2018-03-13}}&lt;/ref&gt;&lt;ref&gt;
+{{cite web|title=Renesas Electronics Develops 90 nm One-Transistor MONOS Flash Memory Technology to Accelerate Intelligence in Automotive Control Systems|url=https://www.businesswire.com/news/home/20160203006140/en/Renesas-Electronics-Develops-90-nm-One-Transistor-MONOS|website=Business Wire|language=en|date=2016-01-03|url-status=live|archiveurl=https://web.archive.org/web/20180313155254/https://www.businesswire.com/news/home/20160203006140/en/Renesas-Electronics-Develops-90-nm-One-Transistor-MONOS|archivedate=2018-03-13}}
+&lt;/ref&gt;&lt;ref name=&quot;Renesas 28nm&quot;&gt;
+{{cite journal|last1=Taito|first1=Y.|last2=Kono|first2=T.|last3=Nakano|first3=M.|last4=Saito|first4=T.|last5=Ito|first5=T.|last6=Noguchi|first6=K.|last7=Hidaka|first7=H.|last8=Yamauchi|first8=T.|title=A 28 nm Embedded Split-Gate MONOS (SG-MONOS) Flash Macro for Automotive Achieving 6.4 GB/s Read Throughput by 200 MHz No-Wait Read Operation and 2.0 MB/s Write Throughput at Tj of 170circ$ C|journal=IEEE Journal of Solid-State Circuits|date=2015|volume=51|issue=1|pages=213–221|doi=10.1109/JSSC.2015.2467186|issn=0018-9200|bibcode=2016IJSSC..51..213.|s2cid=23597256}}&lt;/ref&gt;
+
+In 1972, a type of electrically re-programmable non-volatile memory was invented by [[Fujio Masuoka]] at Toshiba, who is also known as the inventor of ''[[flash memory]]''.&lt;ref name=&quot;Masuoka-1972&quot;&gt;
+{{cite journal|last1=Masuoka|first1=Fujio|title=Avalanche injection type mos memory|date=31 August 1972|url=https://patents.google.com/patent/US3868187A/en}}
+&lt;/ref&gt;
+Most of the major semiconductor manufactures, such as
+[[Toshiba]],&lt;ref name=&quot;Masuoka-1972&quot;/&gt;&lt;ref name=&quot;Iizuka-1976&quot;/&gt;
+[[Sanyo]] (later, [[ON Semiconductor]]),&lt;ref&gt;
+{{cite journal|last1=Rai|first1=Yasuki|last2=Sasami|first2=Terutoshi|last3=Hasegawa|first3=Yuzuru|last4=Okazoe|first4=Masaru|title=Electrically reprogrammable nonvolatile floating gate semi-conductor memory device and method of operation|date=1973-05-18|url=https://patents.google.com/patent/US4004159A/en|url-status=live|archiveurl=https://web.archive.org/web/20180503153251/https://patents.google.com/patent/US4004159A/en|archivedate=2018-05-03}}
+&lt;/ref&gt;
+[[IBM]],&lt;ref&gt;
+{{cite web|last1=Abbas|first1=Shakir A.|last2=Barile|first2=Conrad A.|last3=Lane|first3=Ralph D.|last4=Liu.|first4=Peter T|title=US3836992A; Electrically erasable floating gate fet memory cell|url=http://pdfpiw.uspto.gov/.piw?Docid=3836992|website=pdfpiw.uspto.gov|publisher=United States Patent and Trademark Office|date=1973-03-16|url-status=live|archiveurl=https://web.archive.org/web/20180309182950/http://pdfpiw.uspto.gov/.piw?Docid=3836992|archivedate=2018-03-09}}
+&lt;/ref&gt;
+[[Intel]],&lt;ref&gt;
+{{cite journal|last1=Frohman|first1=Bentchkowsky D|title=Electrically alterable floating gate device and method for altering same|date=19 October 1973|url=https://patents.google.com/patent/US3825946A/en}}
+&lt;/ref&gt;&lt;ref&gt;
+{{cite journal|last1=Chou|first1=Sunlin|title=Erasable floating gate device|date=26 February 1973|url=https://patents.google.com/patent/US3919711A/en}}
+&lt;/ref&gt;
+[[NEC]] (later, [[Renesas Electronics]]),&lt;ref name=&quot;NEC-1974&quot;&gt;
+{{cite journal|last1=Ohya|first1=Shuichi|last2=Kikuchi|first2=Masanori|title=Non-volatile semiconductor memory device|date=1974-12-27|url=https://patents.google.com/patent/US4016588A/en}}&lt;/ref&gt;
+[[Philips]] (later, [[NXP Semiconductors]]),&lt;ref&gt;
+{{cite journal|last1=Verwey|first1=J. F.|last2=Kramer|first2=R. P.|title=Atmos&amp;#8212;An electrically reprogrammable read-only memory device|journal=IEEE Transactions on Electron Devices|date=1974|volume=21|issue=10|pages=631–636|doi=10.1109/T-ED.1974.17981|issn=0018-9383|df=|bibcode=1974ITED...21..631V}}
+&lt;/ref&gt;
+[[Siemens]] (later, [[Infineon Technologies]]),&lt;ref&gt;
+{{cite journal|last1=B.|first1=Roessler|last2=R. G.|first2=Mueller|title=Erasable and electrically reprogrammable read-only memory using the N-channel SIMOS one-transistor cell|journal=Siemens Forschungs und Entwicklungsberichte|date=1975|volume=4|issue=6|pages=345–351|bibcode=1975SiFoE...4..345R}}
+&lt;/ref&gt;
+[[Honeywell]] (later, [[Atmel]]),&lt;ref&gt;
+{{cite journal|last1=Jack|first1=S|last2=Huang|first2=T.|title=Semiconductor memory cell|date=8 September 1975|url=https://patents.google.com/patent/US4051464A/en}}
+&lt;/ref&gt;
+[[Texas Instruments]],&lt;ref&gt;
+{{cite journal|last1=Gosney|first1=W. M.|title=DIFMOS&amp;#8212;A floating-gate electrically erasable nonvolatile semiconductor memory technology|journal=IEEE Transactions on Electron Devices|date=1977|volume=24|issue=5|pages=594–599|doi=10.1109/T-ED.1977.18786|issn=0018-9383|df=|bibcode=1977ITED...24..594G|s2cid=45636024}}
+&lt;/ref&gt;
+studied, invented, and manufactured some electrically re-programmable non-volatile devices until 1977.
+
+The theoretical basis of these devices is [[Avalanche breakdown|''Avalanche'']] [[hot-carrier injection]]. But in general, programmable memories, including EPROM, of early 1970s had reliability and endurance problems such as the data retention periods and the number of erase/write cycles.&lt;ref name=&quot;Moskowitz 2016&quot;&gt;
+{{cite book|last1=Moskowitz|first1=Sanford L.|title=Advanced Materials Innovation: Managing Global Technology in the 21st century|date=2016|publisher=John Wiley &amp; Sons|isbn=9781118986097|url=https://books.google.com/books?id=FyT3DAAAQBAJ&amp;q=&quot;reliability%20problems&quot;+EPROM+1970s&amp;pg=PA187|language=en}}
+&lt;/ref&gt;
+
+In 1975, [[NEC]]'s [[semiconductor]] operations unit, later NEC Electronics, currently [[Renesas Electronics]], applied the [[trademark]] name ''EEPROM®'' to Japan Patent Office.&lt;ref&gt;
+{{cite web|title=EEPROM|url=https://www.tmdn.org/tmview/get-detail?st13=JP501975000139811|website=TMview|url-status=live|archiveurl=https://web.archive.org/web/20180310010029/https://www.tmdn.org/tmview/get-detail?st13=JP501975000139811|archivedate=2018-03-10}}
+&lt;/ref&gt;&lt;ref&gt;{{cite web|title=Reg. No.1342184 {{endash}} LIVE {{endash}} REGISTRATION {{endash}} Issued and Active|url=https://www.j-platpat.inpit.go.jp/web/TR/JPT_1342184/1767B48BDBDDD17B2CDA0380D54389D9}}&lt;/ref&gt;
+In 1978, this trademark right is granted and registered as No.1,342,184 in Japan, and still survives as of March 2018.
+
+In February 1977, Eliyahou Harari at [[Hughes Aircraft Company]] invented a new EEPROM technology using [[Field electron emission#Fowler–Nordheim tunneling|''Fowler-Nordheim tunnelling'']] through a thin [[silicon dioxide]] layer between the [[Floating-gate MOSFET|floating-gate]] and the [[wafer (electronics)|wafer]]. 
+Hughes went on to produce this new EEPROM devices.&lt;ref&gt;{{cite web |url=http://archive.computerhistory.org/resources/access/text/2012/03/102745933-05-01-acc.pdf |title= 1027459330501acc.pdf |accessdate=2015-02-05 |url-status=live |archiveurl=http://archive.wikiwix.com/cache/20150207004103/http://archive.computerhistory.org/resources/access/text/2012/03/102745933-05-01-acc.pdf |archivedate=2015-02-07 }}&lt;/ref&gt;
+But this patent&lt;ref&gt;
+{{cite journal|last1=Harari|first1=Eliyahou|title=Electrically erasable non-volatile semiconductor memory|date=22 February 1977|url=https://patents.google.com/patent/US4115914A/en|url-status=live|archiveurl=https://web.archive.org/web/20180503153251/https://patents.google.com/patent/US4115914A/en|archivedate=3 May 2018}}
+&lt;/ref&gt;
+cited NEC's EEPROM® invention.&lt;ref name=&quot;NEC-1974&quot;/&gt;
+
+In May 1977, some important research result was disclosed by [[Fairchild Camera and Instrument|Fairchild]] and [[Siemens]]. They used ''SONOS'' ([[polysilicon]]-[[Silicon oxynitride|oxynitride]]-[[nitride]]-[[oxide]]-[[silicon]]) structure with thickness of silicon dioxide less than 30 [[Ångström|Å]], and ''SIMOS'' (stacked-gate [[Hot-carrier injection|injection]] [[MOSFET|MOS]]) structure, respectively, for using [[Field electron emission#Fowler–Nordheim tunneling|''Fowler-Nordheim tunnelling'']] [[hot-carrier injection]].&lt;ref&gt;
+{{cite journal|last1=Chen|first1=P. C. Y.|title=Threshold-alterable Si-gate MOS devices|journal=IEEE Transactions on Electron Devices|date=May 1977|volume=24|issue=5|pages=584–586|doi=10.1109/T-ED.1977.18783|issn=0018-9383|df=|bibcode=1977ITED...24..584C|s2cid=25586393}}
+&lt;/ref&gt;&lt;ref&gt;
+{{cite journal|last1=Rossler|first1=B.|title=Electrically erasable and reprogrammable read-only memory using the n-channel SIMOS one-transistor cell|journal=IEEE Transactions on Electron Devices|date=May 1977|volume=24|issue=5|pages=606–610|doi=10.1109/T-ED.1977.18788|issn=0018-9383|df=|bibcode=1977ITED...24..606R|s2cid=33203267}}
+&lt;/ref&gt;
+
+Around 1976 to 1978, Intel's team, including George Perlegos, made some inventions to improve this tunneling E&lt;sup&gt;2&lt;/sup&gt;PROM technology.&lt;ref&gt;
+{{cite web|last1=Simko|first1=Richard T.|title=Electrically programmable and electrically erasable MOS memory cell|url=https://patents.google.com/patent/US4119995A/en|date=17 March 1977}}
+&lt;/ref&gt;&lt;ref&gt;
+{{cite web|last1=Frohman-Bentchkowsky|first1=Dov|last2=Mar|first2=Jerry|last3=Perlegos|first3=George|last4=Johnson|first4=William S.|title=Electrically programmable and erasable MOS floating gate memory device employing tunneling and method of fabricating same|url=https://patents.google.com/patent/US4203158A/en|date=15 December 1978}}
+&lt;/ref&gt;
+In 1978, they developed a 16K (2K word × 8) bit Intel ''2816'' device with a thin [[silicon dioxide]] layer, which was less than 200 [[Ångström|Å]].&lt;ref&gt;
+{{cite book|last1=Dummer|first1=G. W. A.|title=Electronic Inventions and Discoveries: Electronics from Its Earliest Beginnings to the Present Day|date=2013|publisher=Elsevier|isbn=9781483145211|url=https://books.google.com/books?id=PbYgBQAAQBAJ&amp;q=Intel+FLOTOX&amp;pg=PA212|language=en}}
+&lt;/ref&gt;
+In 1980. this structure was publicly introduced as ''FLOTOX''; [[Floating-gate MOSFET|floating gate]] [[Tunnel junction|tunnel]] [[oxide]].&lt;ref&gt;
+{{cite journal|last1=Johnson|first1=W.|last2=Perlegos|first2=G.|last3=Renninger|first3=A.|last4=Kuhn|first4=G.|last5=Ranganath|first5=T.|title=A 16Kb electrically erasable nonvolatile memory|journal=1980 IEEE International Solid-State Circuits Conference. Digest of Technical Papers|date=1980|volume=XXIII|pages=152–153|doi=10.1109/ISSCC.1980.1156030|s2cid=44313709|df=}}
+&lt;/ref&gt;
+The ''FLOTOX'' structure improved reliability of erase/write cycles per byte up to 10,000 times.&lt;ref&gt;
+{{cite journal|last1=Euzent|first1=B.|last2=Boruta|first2=N.|last3=Lee|first3=J.|last4=Jenq|first4=C.|title=Reliability Aspects of a Floating Gate E2 PROM|journal=19th International Reliability Physics Symposium|date=1981|pages=11–16|doi=10.1109/IRPS.1981.362965|s2cid=41116025|quote=&lt;br&gt;The Intel 2816 uses the FLOTOX structure, which has been discussed in detail in the literaturel. Basically, it uses an oxide of less than 200A thick between the floating polysilicon gate and the N+ region as shown in Figure 1.}}
+&lt;/ref&gt;
+But this device required additional 20{{endash}}22V V&lt;sub&gt;PP&lt;/sub&gt; bias voltage supply for byte erase, except for 5V read operations.&lt;ref&gt;
+{{cite book|title=2816A-2 PDF Datasheet - Intel Corporation - Datasheets360.com|date=October 1983|publisher=Intel|url=http://www.datasheets360.com/pdf/3161437977278813752}}
+&lt;/ref&gt;{{rp|5{{hyphen}}86}}
+In 1981, Perlegos and 2 other members left Intel to form [[Atmel#Founding and 1980s growth|Seeq Technology]],&lt;ref&gt;
+{{cite web|url=http://www.antiquetech.com/?page_id=900|title=Seeq Technology » AntiqueTech|url-status=live|archiveurl=https://web.archive.org/web/20141002212230/http://www.antiquetech.com/?page_id=900|archivedate=2014-10-02}}&lt;/ref&gt;
+which used on-device [[charge pump]]s to supply the high voltages necessary for programming E&lt;sup&gt;2&lt;/sup&gt;PROMs.
+In 1984, Perlogos left Seeq Technology to found [[Atmel]], then Seeq Technology was acquired by Atmel.&lt;ref&gt;{{Cite journal
+ |last        = Rostky
+ |first       = George
+ |title       = Remembering the PROM knights of Intel
+ |journal     = EE Times
+ |date        = July 2, 2002
+ |url         = http://www.eetimes.com/issue/fp/showArticle.jhtml;?articleID=18307418
+ |accessdate  = 2007-02-08
+ |url-status     = live
+ |archiveurl  = https://web.archive.org/web/20070929104409/http://www.eetimes.com/issue/fp/showArticle.jhtml;?articleID=18307418
+ |archivedate = September 29, 2007
+}}&lt;/ref&gt;&lt;ref&gt;
+{{cite book|title=Atmel AT28C16 datasheet|date=October 1998|edition=0540B|url=http://cva.stanford.edu/classes/cs99s/datasheets/at28c16.pdf|url-status=live|archiveurl=https://web.archive.org/web/20170829005334/http://cva.stanford.edu/classes/cs99s/datasheets/at28c16.pdf|archivedate=2017-08-29}}
+&lt;/ref&gt;
+
+=={{anchor|FLOTOX}}Theoretical basis of FLOTOX structure==
+[[File:Flash-Programming.svg|thumb|[[Electric charge|Charging]] mechanism of today's [[NOR gate|NOR-type]] [[Flash memory|FLASH]] [[Memory cell (computing)|memory cell]]]]
+[[File:Flash erase.svg|thumb|[[Electric discharge|Discharging]] mechanism of today's [[NOR gate|NOR-type]] [[Flash memory|FLASH]] [[Memory cell (computing)|memory cell]]]]
+
+As is described in former section, old EEPROMs are based on [[avalanche breakdown]]-based [[hot-carrier injection]] with high [[breakdown voltage|reverse breakdown voltage]]. But ''FLOTOX'' theoretical basis is [[Field electron emission#Fowler–Nordheim tunneling|Fowler–Nordheim tunneling]] [[hot-carrier injection]] through a thin [[silicon dioxide]] layer between the [[Floating-gate MOSFET|floating gate]] and the wafer. In other words, it uses a [[tunnel junction]].&lt;ref name=&quot;Gutmann-2001&quot;&gt;
+{{cite journal |last1=Gutmann |first1=Peter |title=Data Remanence in Semiconductor Devices |journal=10th USENIX SECURITY SYMPOSIUM |date=2001-08-15 |pages=39–54 |url=http://static.usenix.org/legacy/events/sec01/full_papers/gutmann/gutmann_html/#_Ref513619292 |publisher=IBM T. J. Watson Research Center |url-status=live |archiveurl=https://web.archive.org/web/20161012131700/http://static.usenix.org/legacy/events/sec01/full_papers/gutmann/gutmann_html/#_Ref513619292 |archivedate=2016-10-12}}
+&lt;/ref&gt;
+
+Theoretical basis of the physical phenomenon itself is the same as today's [[flash memory]]. But each FLOTOX structure is in conjunction with another read-control transistor because the floating gate itself is just programming and erasing one data bit.&lt;ref&gt;
+{{cite web |last1=Janwadkar |first1=Sudhanshu |title=Fabrication of Floating Gate MOS (FLOTOX) |url=https://www.slideshare.net/shudhanshu29/fabrication-of-floating-gate-mos-flotox |website=www.slideshare.net |date=2017-10-24}}
+&lt;/ref&gt;
+
+Intel's FLOTOX device structure improved EEPROM reliability, in other words, the endurance of the write and erase cycles, and the data retention period. A material of study for [[single-event upset|single-event effect]] about FLOTOX is available.&lt;ref&gt;
+{{cite web |last1=Koga |first1=R. |last2=Tran |first2=V. |last3=George |first3=J. |last4=Crawford |first4=K. |last5=Crain |first5=S. |last6=Zakrzewski |first6=M. |last7=Yu |first7=P. |title=SEE Sensitivities of Selected Advanced Flash and First-In-First-Out Memories |url=http://www.ti.com/pdfs/hirel/space/V3690SEE.pdf |publisher=The Aerospace Corporation |url-status=live |archiveurl=https://web.archive.org/web/20180314042641/http://www.ti.com/pdfs/hirel/space/V3690SEE.pdf |archivedate=2018-03-14}}
+&lt;/ref&gt;
+
+Today, a detailed academical explanation of FLOTOX device structure can be found in various materials.&lt;ref&gt;
+{{cite book |last1=Fuller |first1=Dr. Lynn |title=CMOS Process Variations EEPROM Fabrication Technology |date=2012-02-22 |publisher=Microelectronic Engineering, Rochester Institute of Technology |url=https://people.rit.edu/lffeee/EEPROM}}
+&lt;/ref&gt;&lt;ref&gt;
+{{cite book |last1=Groeseneken |first1=G. |last2=Maes |first2=H. E. |last3=VanHoudt |first3=J. |last4=Witters |first4=J. S. |title=Basics of Nonvolatile Semiconductor Memory Devices |citeseerx=10.1.1.111.9431}}&lt;/ref&gt;&lt;ref&gt;
+{{cite web |last1=Bergemont |first1=Albert |last2=Chi |first2=Min-Hwa |title=US Patent 5856222: Method of fabricating a high density EEPROM cell |url=https://patents.google.com/patent/US5856222A/en |website=patents.google.com |publisher=National Semiconductor Corp. |date=1997-05-05}}
+&lt;/ref&gt;
+
+==Today's EEPROM structure==
+
+Nowadays, EEPROM is used for embedded [[microcontrollers]] as well as standard EEPROM products. 
+EEPROM still requires a 2-transistor structure per bit to erase a dedicated byte in the memory, while [[flash memory]] has 1 transistor per bit to erase a region of the memory.&lt;ref name=&quot;Skorobogatov 2017&quot;&gt;
+{{cite conference |last=Skorobogatov |first=Sergei |title=How Microprobing Can Attack Encrypted Memory |conference=2017 Euromicro Conference on Digital System Design (DSD) |date=2017 |location=Vienna |pages=244–251 |doi=10.1109/DSD.2017.69 |url=https://www.cl.cam.ac.uk/~sps32/ahsa2017_prob.pdf#page=2 |isbn=978-1-5386-2146-2}}&lt;/ref&gt;{{rp|245, PDF:2}}
+
+==Security protections==
+[[File:Sim Chip.jpg|thumbnail|Inside of a [[Subscriber identity module|SIM card]]]]
+Because EEPROM technology is used for some security gadgets, such as credit card, SIM card, key-less entry, etc., some devices have security protection mechanisms, such as copy-protection.&lt;ref name=&quot;Skorobogatov 2017&quot;/&gt;&lt;ref&gt;
+{{cite web|title=Breaking copy protection in microcontrollers|url=https://www.cl.cam.ac.uk/~sps32/mcu_lock.html|website=www.cl.cam.ac.uk|url-status=live|archiveurl=https://web.archive.org/web/20171022043128/http://www.cl.cam.ac.uk/~sps32/mcu_lock.html|archivedate=2017-10-22}}
+&lt;/ref&gt;
+
+==Electrical interface==
+EEPROM devices use a serial or parallel interface for data input/output.
+
+===Serial bus devices===
+The common serial interfaces are [[Serial Peripheral Interface Bus|SPI]], [[I²C]], [[Microwire]], [[UNI/O]], and [[1-Wire]]. These use from 1 to 4 device pins and allow devices to use packages with 8 pins or less.
+
+A typical EEPROM serial protocol consists of three phases: [[Opcode|OP-Code Phase]], Address Phase and Data Phase. The OP-Code is usually the first 8 bits input to the serial input pin of the EEPROM device (or with most I²C devices, is implicit); followed by 8 to 24 bits of addressing depending on the depth of the device, then the read or write data.
+
+Each EEPROM device typically has its own set of OP-Code instructions mapped to different functions. Common operations on [[Serial Peripheral Interface Bus|SPI]] EEPROM devices are:
+* Write Enable (WRENAL)
+* Write Disable (WRDI)
+* Read Status Register (RDSR)
+* Write Status Register (WRSR)
+* Read Data (READ)
+* Write Data (WRITE)
+
+Other operations supported by some EEPROM devices are:
+* Program
+* Sector Erase
+* Chip Erase commands
+
+===Parallel bus devices===
+Parallel EEPROM devices typically have an 8-bit data bus and an address bus wide enough to cover the complete memory. Most devices have chip select and write protect pins. Some [[microcontroller]]s also have integrated parallel EEPROM.
+
+Operation of a parallel EEPROM is simple and fast when compared to serial EEPROM, but these devices are larger due to the higher pin count (28 pins or more) and have been decreasing in popularity in favor of serial EEPROM or flash.
+
+===Other devices===
+EEPROM memory is used to enable features in other types of products that are not strictly memory products. Products such as [[real-time clock]]s, digital [[potentiometer]]s, digital [[Silicon bandgap temperature sensor|temperature sensor]]s, among others, may have small amounts of EEPROM to store calibration information or other data that needs to be available in the event of power loss.
+It was also used on [[video game cartridge]]s to save game progress and configurations, before the usage of external and internal flash memories.
+
+==Failure modes==
+There are two limitations of stored information; endurance, and data retention.

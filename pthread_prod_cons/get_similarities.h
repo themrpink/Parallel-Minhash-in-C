@@ -10,14 +10,7 @@ struct sign_doc{
     int doc_id;
 };
 
-/*
-    per la coppia di documenti, la shared_signatures indica quante signatures hanno in comune. Se questa coppia esiste, il valore minimo è 1.
-*/
-struct doc_couple{
-    int doc_id;
-    int doc2_id;
-    int shared_signatures;
-};
+
 
 
 /*
@@ -34,10 +27,9 @@ int get_sketches(int i, struct sign_doc *files_sketches, long long unsigned *sig
 
 
 /*
-    merge sort parallelo, per ordinare secondo il doc_id o secondo le signatures.
+    merge sort parallelo, per ordinare secondo le signatures.
 */
-void mergesort_s_doc_id(struct doc_couple*  X, int l, int n);
-void merge_doc_id(struct doc_couple*  X, int l, int m, int r);
+
 void mergesort_s_signatures(struct sign_doc* X, int l, int n);
 void merge_signatures(struct sign_doc* X, int l, int m, int r);
 
@@ -45,40 +37,25 @@ void merge_signatures(struct sign_doc* X, int l, int m, int r);
     merge sort serial, usato dopo la prima chiamata ricorsiva parallela per evitare l'incremento esponenziale dei thread.
 */
 void mergesort_s_signatures_Serial(struct sign_doc* X, int l, int n);
-void mergesort_s_doc_id_Serial(struct doc_couple*  X, int l, int n);
 
 /*
       III fase
-        si espande la lista di coppie {signature, doc_id} in una lista di triple, prendendo ogni signature della lista di coppie
-        e ricavandone le triple: {doc_id, doc_id, numero_di_signatures_condivise}, in cui i doc_id indicano solo documenti distinti.
-        In teoria bisogna scorrere tutta la lista lunga n, per n volte. Ma essendo stata la lista ordinata con il mergesort, per ogni signature è sufficiente scorrere
-        le successive fino a che sono uguali e fermarsi appena si incronta una signature diversa.
+        ordina la lista di coppie docID signatures e cerca le signatures condivise, inserendole in una matrice in cui ogni elemento corrisponde al 
+        numero di signature condivise da una coppia di documenti, ordinati secondo il loro ID.
 */
 int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti);
 
 /*
-        Per ogni coppia di signature uguali che si incontra si crea una tripla con la coppia di doc_id relativi e un 1 che indica che questa coppia di
-        documenti condive 1 signature. Inoltre essendo la lista che stiamo scorrendo ordinata per signature, e scorrendo sempre
-        verso il basso, non vegnono create triple in cui, per una stessa signature, compaiono due volte la stessa coppia di doc_id (in qualsiasi ordine).
+        Per ogni coppia di signature uguali che si incontra incrementa di uno il valore delle signatures condivise della corrispondente coppia di documenti
 */
-int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct doc_couple* couples);
+void create_signatures_matrix(struct sign_doc* files_sketches, int numberOfFiles, int **matrix_signatures_couples);
 
 /*
-    raccoglie le coppie di documenti che hanno almeno una signature in comune in strutture del tipo:
-    doc_id1
-    doc_id2
-    numero di signatures condivise
+    Dalla matrice delle signatures condivise ricava i valori di somiglianza tra i documenti
 */
-int do_clustering(struct doc_couple* couples, int count);
+void print_similarities(int **matrix_signatures_couples, int numberOfFiles, char **files, float *some_results);
 
-/*
-    stampa a schermo le coppie di file che condividono signatures insieme al grado di somiglianza (numero di signatures in comune / numero tot di signatures)
 
-    confronta le signatures di tutti i documenti e salva quali hanno signatures in comune e quante.
-    Restituisce anche una percentuale di somiglianza tra i documenti che hanno almeno una signatures in comune.
-    Dal paper: "In the final phase, we produce the complete clustering. We examine each <ID, ID, count> triplet
-    and decide if the document pair exceeds our threshold for resemblance."
-*/
-void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files);
+
 #endif //MINHASHPROJECT_GET_SIMILARITIES_H
 

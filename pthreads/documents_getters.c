@@ -13,7 +13,7 @@
 #include <pthread.h>
 #include "time_test.h"
 
-#define NUMB_THREADS 4
+#define NUMB_THREADS 8
 
 //gcc -Wall -fopenmp -lpthread -o main main.c documents_getters.c get_similarities.c hash_FNV_1.c  tokenizer.c shingle_extract.c time_test.c
 

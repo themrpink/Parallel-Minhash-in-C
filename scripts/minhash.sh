@@ -3,7 +3,7 @@
 exec 2>&1
 #exec 2>>error.log
 main_path=
-docs_path=("../docs/docs_verysmall" "../docs/docs_small" "../docs/docs_medium" "../docs/docs_large" "../docs/docs_verylarge")
+docs_path=("../docs/verysmall" "../docs/small" "../docs/medium" "../docs/large" "../docs/verylarge")
 
 usage() { 
             echo "Uso:" 
@@ -22,7 +22,7 @@ esegui_in_parallelo() {
     time_file=$1
     main_path=$2
     for dir in "${docs_path[@]}"; do
-        for threads in 1 2 4 8 12 16 32 64; do
+        for threads in 1 2 4 8 16; do
             echo "--> esegue $main_path con $threads thread,  cartella documenti: $dir" 
             echo "cartella documenti: $dir" >> ${time_file}
             echo "..."
@@ -39,13 +39,16 @@ esegui_in_parallelo_OMP() {
     time_file=$1
     main_path=$2
     for dir in "${docs_path[@]}"; do
-        for threads in 1 2 4 8 12 16 32 64; do
+        for threads in 1 2 4 8; do  
             for global_threads in 1 2 4 8; do 
-                echo "--> esegue $main_path con $threads thread, $global_threads nei nested threads del main cartella documenti: $dir" 
-                echo "cartella documenti: $dir" >> ${time_file}
-                echo "..."
-                echo $( ${main_path} "$dir" "$threads" "$global_threads" ) 
-                echo ""
+                temp=$threads*$global_threads
+                if (( $temp <= "16" )); then
+                    echo "--> esegue $main_path con $threads thread, $global_threads nei nested threads del main cartella documenti: $dir" 
+                    echo "cartella documenti: $dir" >> ${time_file}
+                    echo "..."
+                    echo $( ${main_path} "$dir" "$threads" "$global_threads" ) 
+                    echo ""
+                fi
             done;
         done;
     done;
@@ -58,7 +61,8 @@ esegui_in_parallelo_PROD_CONS() {
     time_file=$1
     main_path=$2
     for dir in "${docs_path[@]}"; do
-        for threads in 4 7 10 13 16; do 
+        for threads in 4 7 10 13 16 ; do 
+
             echo "--> esegue $main_path con $threads,   cartella documenti: $dir" 
             echo "cartella documenti: $dir" >> ${time_file}
             echo "..."

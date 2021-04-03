@@ -1,0 +1,543 @@
+==See also==
+* [[BCH code]]
+* [[Cyclic code]]
+* [[Chien search]]
+* [[Berlekamp&amp;ndash;Massey algorithm]]
+* [[Forward error correction]]
+* [[Berlekamp–Welch algorithm]]
+* [[Folded Reed–Solomon code]]
+
+==Notes==
+{{reflist|group=nb}}
+
+==References==
+*{{Citation
+ |last= Gill
+ |first= John
+ |title= EE387 Notes #7, Handout #28
+ |date= n.d.
+ |access-date= April 21, 2010
+ |publisher= Stanford University
+ |url= http://www.stanford.edu/class/ee387/handouts/notes7.pdf
+ |url-status= dead
+ |archive-url= https://web.archive.org/web/20140630172526/http://web.stanford.edu/class/ee387/handouts/notes7.pdf
+ |archive-date= June 30, 2014
+ }}
+*{{Citation
+ |last= Hong
+ |first= Jonathan
+ |last2= Vetterli
+ |first2= Martin
+ |title= Simple Algorithms for BCH Decoding
+ |journal= IEEE Transactions on Communications
+ |date= August 1995
+ |volume= 43
+ |issue= 8
+ |pages= 2324&amp;ndash;2333
+ |url= https://infoscience.epfl.ch/record/33884/files/HongV95.pdf|doi= 10.1109/26.403765}}
+*{{Citation
+ |ref={{harvid|Lin|Costello|1983}}
+ |first1=Shu
+ |last1=Lin
+ |first2=Daniel J.
+ |last2=Costello, Jr.
+ |title=Error Control Coding: Fundamentals and Applications
+ |location=New Jersey, NJ
+ |publisher=Prentice-Hall
+ |year=1983
+ |isbn=978-0-13-283796-5
+}}
+*{{Citation
+ |first= J. L.
+ |last= Massey
+ |author-link= James Massey
+ |title= Shift-register synthesis and BCH decoding
+ |journal= [[IEEE Transactions on Information Theory]]
+ |volume= IT-15
+ |issue= 1
+ |year= 1969
+ |pages= 122–127
+ |doi=  10.1109/tit.1969.1054260
+ |url= http://crypto.stanford.edu/~mironov/cs359/massey.pdf}}
+*{{Citation
+ |last= Peterson
+ |first= Wesley W.
+ |author-link=Wesley Peterson
+ |title= Encoding and Error Correction Procedures for the Bose-Chaudhuri Codes
+ |year= 1960
+ |journal= IRE Transactions on Information Theory
+ |volume=IT-6
+ |issue=4
+ |pages=459–470|doi= 10.1109/TIT.1960.1057586
+ }}
+*{{Citation
+ |last= Reed 
+ |first= Irving S.
+ |author-link= Irving S. Reed
+ |last2= Solomon
+ |first2= Gustave
+ |author-link2= Gustave Solomon
+ |title= Polynomial Codes over Certain Finite Fields
+ |journal= Journal of the Society for Industrial and Applied Mathematics
+ |volume= 8
+ |issue= 2
+ |pages= 300–304
+ |year= 1960
+ |doi=10.1137/0108018}}
+*{{Citation
+ |last= Welch
+ |first= L. R.
+ |title= The Original View of Reed–Solomon Codes
+ |series=Lecture Notes
+ |year= 1997
+ |url= http://csi.usc.edu/PDF/RSoriginal.pdf
+ }}
+
+==Further reading==
+*{{Citation
+ |last= Berlekamp
+ |first= Elwyn R.
+ |author-link= Elwyn Berlekamp
+ |title= Nonbinary BCH decoding
+ |year= 1967
+ |series= International Symposium on Information Theory
+ |place= San Remo, Italy}}
+*{{Citation
+ |last= Berlekamp
+ |first= Elwyn R.
+ |author-link= Elwyn Berlekamp
+ |title= Algebraic Coding Theory
+ |place= Laguna Hills, CA
+ |orig-year= 1968
+ |year= 1984
+ |edition= Revised
+ |publisher= Aegean Park Press
+ |isbn=978-0-89412-063-3}}
+*{{Citation
+ |last= Cipra
+ |first= Barry Arthur
+ |author-link = Barry Arthur Cipra
+ |title=The Ubiquitous Reed–Solomon Codes
+ |journal=SIAM News
+ |volume=26
+ |issue=1
+ |year=1993
+ |url=http://www.eccpage.com/reed_solomon_codes.html}}
+*{{Citation
+ |first= G.
+ |last= Forney, Jr.
+ |author-link=Dave Forney
+ |title= On Decoding BCH Codes
+ |journal= [[IEEE Transactions on Information Theory]]
+ |volume= 11
+ |issue= 4
+ |date= October 1965
+ |pages= 549–557
+ |doi= 10.1109/TIT.1965.1053825}}
+*{{Citation
+ |last= Koetter
+ |first= Ralf
+ |title= Reed–Solomon Codes
+ |series= MIT Lecture Notes 6.451 (Video)
+ |year= 2005
+ |url= http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-451-principles-of-digital-communication-ii-spring-2005/lecture-notes/lecture-10-reed-solomon-codes/
+ |url-status= dead
+ |archive-url= https://web.archive.org/web/20130313033107/http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-451-principles-of-digital-communication-ii-spring-2005/lecture-notes/lecture-10-reed-solomon-codes/
+ |archive-date= 2013-03-13
+ }}
+*{{Citation
+ |first= F. J.
+ |last=MacWilliams
+ |first2= N. J. A.
+ |last2= Sloane
+ |author-link2= N. J. A. Sloane
+ |title= The Theory of Error-Correcting Codes
+ |location= New York, NY
+ |publisher= North-Holland Publishing Company
+ |year= 1977
+ }} 
+*{{Citation
+ |first= Irving S.
+ |last= Reed
+ |author-link= Irving S. Reed
+ |first2= Xuemin
+ |last2= Chen
+ |title= Error-Control Coding for Data Networks
+ |location= Boston, MA
+ |publisher= Kluwer Academic Publishers
+ |year= 1999
+ }}
+
+==External links==
+
+===Information and tutorials===
+* [https://www.cs.cmu.edu/~guyb/realworld/reedsolomon/reed_solomon_codes.html Introduction to Reed–Solomon codes: principles, architecture and implementation] (CMU)
+* [http://www.cs.utk.edu/%7Eplank/plank/papers/SPE-9-97.html A Tutorial on Reed–Solomon Coding for Fault-Tolerance in RAID-like Systems]
+* [http://sidewords.files.wordpress.com/2007/12/thesis.pdf Algebraic soft-decoding of Reed–Solomon codes]
+* [[Wikiversity:Reed–Solomon codes for coders]]
+* [http://www.bbc.co.uk/rd/pubs/whp/whp031.shtml BBC R&amp;D White Paper WHP031]
+*{{Citation
+ |last= Geisel
+ |first= William A.
+ |title= Tutorial on Reed–Solomon Error Correction Coding
+ |date= August 1990
+ |url= https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19900019023_1990019023.pdf
+ |publisher= [[NASA]]
+ |series= Technical Memorandum
+ |id= TM-102162
+ }}
+*{{Citation
+ |last= Gao
+ |first= Shuhong
+ |title= New Algorithm For Decoding Reed-Solomon Codes
+ |date= January 2002
+ |url= http://www.math.clemson.edu/~sgao/papers/RS.pdf
+ |publisher= Clemson
+ }}
+* [http://www.scholarpedia.org/article/Concatenated_codes Concatenated codes] by Dr. [[Dave Forney]] (scholarpedia.org).
+
+===Implementations===
+* [http://www.schifra.com Schifra Open Source C++ Reed–Solomon Codec]
+* [http://rscode.sourceforge.net/ Henry Minsky's RSCode library, Reed–Solomon encoder/decoder]
+* [https://code.google.com/p/rssoft/ Open Source C++ Reed–Solomon Soft Decoding library]
+* [http://dept.ee.wits.ac.za/~versfeld/research_resources/sourcecode/Errors_And_Erasures_Test.zip Matlab implementation of errors and-erasures Reed–Solomon decoding]
+* [https://octave.sourceforge.io/communications/function/rsdec.html Octave implementation in communications package]
+* [https://pypi.python.org/pypi/reedsolo Pure-Python implementation of a Reed–Solomon codec]
+
+{{DEFAULTSORT:Reed-Solomon error correction}}
+[[Category:Error detection and correction]]
+[[Category:Coding theory]]</text>
+      <sha1>8qj5whn8x662pfxj2h5mgvwj3irszjh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Biowar</title>
+    <ns>0</ns>
+    <id>45604</id>
+    <redirect title="Biological warfare" />
+    <revision>
+      <id>44021645</id>
+      <parentid>15940861</parentid>
+      <timestamp>2006-03-16T08:09:25Z</timestamp>
+      <contributor>
+        <username>AdamJacobMuller</username>
+        <id>51208</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="32" xml:space="preserve">#REDIRECT [[biological warfare]]</text>
+      <sha1>niv3basqtzr5wwrqobyn0km0lfto444</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Zorba the Greek (film)</title>
+    <ns>0</ns>
+    <id>45606</id>
+    <revision>
+      <id>990081019</id>
+      <parentid>989935754</parentid>
+      <timestamp>2020-11-22T18:20:05Z</timestamp>
+      <contributor>
+        <ip>2A02:1388:82:E6B2:5C2C:5C2F:AA23:1DF0</ip>
+      </contributor>
+      <comment>Undid revision 989935754 by [[Special:Contributions/2A00:20:A023:E7F5:88A:589F:5B94:AC11|2A00:20:A023:E7F5:88A:589F:5B94:AC11]] ([[User talk:2A00:20:A023:E7F5:88A:589F:5B94:AC11|talk]])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="22576" xml:space="preserve">{{EngvarB|date=June 2016}}
+{{Use dmy dates|date=June 2016}}
+{{Infobox film
+| name           = Zorba the Greek
+| image          = Zorba the Greek poster.jpg
+| image_size     = 
+| alt            = 
+| caption        = Original film poster
+| director       = [[Michael Cacoyannis]]
+| producer       = Michael Cacoyannis
+| screenplay     = Michael Cacoyannis
+| based_on       = {{Based on|''[[Zorba the Greek (novel)|Zorba the Greek]]''|[[Nikos Kazantzakis]]}}
+| starring       = {{Plainlist|
+* [[Anthony Quinn]]
+* [[Alan Bates]]
+* [[Irene Papas]]
+* [[Lila Kedrova]]
+* [[Sotiris Moustakas]]
+* Anna Kyriakou
+}}
+| music          = [[Mikis Theodorakis]]
+| cinematography = [[Walter Lassally]]
+| editing        = Michael Cacoyannis
+| distributor    = [[20th Century Fox|Twentieth Century-Fox Film Corporation]]
+| released       = {{Film date|df=yes|1964|12|14|Greece|1964|12|16|United States|ref2=&lt;ref&gt;{{cite web |url=http://catalog.afi.com/Catalog/moviedetails/22430#3 |title=Zorba the Greek - Details |website=[[AFI Catalog of Feature Films]] |accessdate=August 3, 2018 }}&lt;/ref&gt;}}
+| runtime        = 142 minutes&lt;!--Theatrical runtime: 141:59--&gt;&lt;ref&gt;{{cite web | url=http://bbfc.co.uk/releases/zorba-greek-film | title=''Zorba the Greek'' (X) | work=[[British Board of Film Classification]] | date=12 January 1965 | accessdate=2 December 2016}}&lt;/ref&gt;
+| country        = {{Plainlist|
+* Greece
+* United States
+}}
+| language       = {{Plainlist|
+* English
+* Greek
+}}
+| budget         = $783,000&lt;ref name=&quot;imdb&quot;&gt;[https://www.imdb.com/title/tt0057831/business?ref_=tt_dt_bus Box Office Information for ''Zorba the Greek''.] [[IMDb]]. Retrieved 19 May 2013.&lt;/ref&gt;&lt;ref name=&quot;Silverman p 259&quot;&gt;Silverman p 259&lt;/ref&gt;
+| gross          = $23.5 million
+}}
+'''''Zorba the Greek''''' ({{lang-el|Αλέξης Ζορμπάς}}, ''Alexis Zorbas'') is a 1964 Greek-American [[comedy-drama]] film written, produced, edited, and directed by [[Cyprus|Greek Cypriot]] [[Michael Cacoyannis]] and starring [[Anthony Quinn]] as the titular character. Based on the 1946 novel ''[[Zorba the Greek|The Life And Times Of Alexis Zorba]]'' by [[Nikos Kazantzakis]], the film's cast includes [[Alan Bates]], [[Lila Kedrova]], [[Irene Papas]], and [[Sotiris Moustakas]].
+
+==Plot==
+Basil is a [[Greeks in the United Kingdom|British-Greek]] writer raised in Britain who bears the hallmarks of an uptight, middle-class Englishman. He is waiting at the [[Athens]] port of [[Piraeus]] on mainland Greece to catch a boat to [[Crete]] when he meets a gruff, yet enthusiastic [[Macedonians (Greeks)|Greek-Macedonian]] peasant and musician named Zorba. Basil explains to Zorba that he is traveling to a rural Cretan village where his father owns some land, with the intention of reopening a [[lignite]] mine and perhaps curing his writer's block. Zorba relates his experience with mining and persuades Basil to take him along.
+
+When they arrive at Crete, they take a car to the village where they are greeted enthusiastically by the town's impoverished peasant community. They stay with an old French war widow and courtesan named Madame Hortense in her self-styled &quot;Hotel Ritz&quot;. The audacious Zorba tries to persuade Basil into making a move on the much older Madame Hortense, but when he is understandably reluctant, Zorba seizes the opportunity, and they form a relationship.
+
+Over the next few days, Basil and Zorba attempt to work the old lignite mine, but find it unsafe and shut it down.  Zorba then has an idea to use the forest in the nearby mountains for logging, (his specific plan is left ambiguous, but it seems he thinks the timber can be used to shore up the tunnels). The land is owned by a powerful monastery, so Zorba visits and befriends the monks, getting them drunk. Afterwards, he comes home to Basil and begins to dance in a way that mesmerizes Basil.
+
+Meanwhile, Basil and Zorba get their first introduction to &quot;the Widow&quot;, a young and attractive widowed woman, who is incessantly teased by the townspeople for not remarrying, especially to a young, local boy who is madly in love with her, but whom she has spurned repeatedly. One rainy afternoon, Basil offers her his umbrella, which she reluctantly takes. Zorba suggests that she is attracted to him, but Basil, ever shy, denies this and refuses to pursue the widow.
+
+Basil hands Zorba some money, and sends him off to the large town of [[Chania]], where Zorba is to buy cable and other supplies for the implementation of his grand plan. Zorba says goodbye to Basil and Madame Hortense, who is by now madly in love with him. In Chania, Zorba entertains himself at a cabaret and strikes up a brief romance with a much younger dancer. In a letter to Basil, he details his exploits and indicates that he has found love. Angered by Zorba's apparent irresponsibility and the squandering of his money, Basil untruthfully tells Madame Hortense that Zorba has declared his love to her and intends to marry her upon his return, which makes her ecstatic to the point of tears. Meanwhile, the Widow returns Basil's umbrella by way of Mimithos, the village idiot.
+
+When Zorba eventually returns with supplies and gifts, he is surprised and angered to hear of Basil's lie to Madame Hortense. He also asks Basil about his whereabouts the night before. That night, Basil had gone to the Widow's house, made love to her and spent the night. The brief encounter comes at great cost. A villager catches sight of them, and word spreads, and the young, local boy who is in love with the Widow is taunted mercilessly about it. The next morning, the villagers find his body by the sea, where he has drowned himself out of shame.
+
+The boy's father, Mavrandoni, holds a funeral which the villagers attend. The widow attempts to come inconspicuously, but is blocked from entering the church. She is eventually trapped in the courtyard, then beaten and stoned by the villagers, who hold her responsible for the boy's suicide. Basil, meek and fearful of intervening, tells Mimithos to quickly fetch Zorba. Zorba arrives just as a villager, a friend of the boy, tries to pull a knife and kill the widow. Zorba overpowers the much younger man and disarms him. Thinking that the situation is under control, Zorba asks the Widow to follow him and turns his back. At that moment, the dead boy's father pulls his knife and cuts the widow's throat. She dies at once, as the villagers shuffle away apathetically, whisking the father away. Only Basil, Zorba and Mimithos show any emotion over her murder. Basil proclaims his inability to intervene whereupon Zorba laments the futility of death.
+
+On a rainy day, Basil and Zorba come home and find Madame Hortense waiting. She expresses anger at Zorba for making no progress on the wedding. Zorba conjures up a story that he had ordered a white satin wedding dress, lined with pearls and adorned with real gold. Madame Hortense presents two golden rings she had made and proposes their immediate engagement. Zorba tries to stall, but eventually agrees with gusto, to Basil's surprise.
+
+Some time later, Madame Hortense has contracted pneumonia, and is seen on her deathbed. Zorba stays by her side, along with Basil. Meanwhile, word has spread that &quot;the foreigner&quot; is dying, and since she has no heirs, the State will take her possessions and money. The desperately poor villagers crowd around her hotel, impatiently waiting for her demise so they can steal her belongings. As two old ladies enter her room and gaze expectantly at her, other women try to enter, but Zorba manages to fight them off. At the instant of her death, the women re-enter Madame Hortense's bedroom ''en masse'' to steal her valued possessions. Zorba leaves with a sigh, as the hotel is ransacked and stripped bare by the shrieking and excited villagers. When Zorba returns to Madame Hortense's bedroom, the room is barren apart from her bed (where she lies) and the parrot in her cage. Zorba takes the birdcage with him.
+
+Finally, Zorba's elaborate contraption to transport timber down the hill is complete. A festive ceremony, including lamb on a spit, is held, and all the villagers turn out. After a blessing from the priests, Zorba signals the start by firing a rifle in the air. A log comes hurtling down the zip line at a worrying pace, destroying the log itself and slightly damaging part of the contraption. Zorba remains unconcerned and gives orders for a second log. This one also speeds down and shoots straight into the sea. By now the villagers and priests have grown fearful and head for cover. Zorba remains unfazed and orders a third log, which accelerates downhill with such violence that it dislodges the entire contraption, destroying everything. The villagers flee, leaving Basil and Zorba behind.
+
+Basil and Zorba sit by the shore to eat roasted lamb for lunch. Zorba pretends to tell the future from the lamb shank, saying that he foresees a great journey to a big city. He then asks Basil directly when he plans to leave, and Basil replies that he will leave in a few days. Zorba declares his sadness about Basil's imminent departure to England and tells Basil that he is missing madness. Basil asks Zorba to teach him to dance. Zorba teaches him the [[sirtaki]] and Basil begins to laugh hysterically at the catastrophic outcome. The story ends with both men enthusiastically dancing the sirtaki on the beach.
+
+==Cast==
+* [[Anthony Quinn]] as Alexis Zorba ({{lang|el|Αλέξης Ζορμπάς}}), a fictionalized version of the mine worker [[George Zorbas]] ({{lang|el|Γιώργης Ζορμπάς}} 1867–1942)&lt;ref&gt;{{citation |url=https://books.google.com/books?id=blepPjQL9I0C&amp;pg=PA16 |title=Hollywood under siege |author=Thomas R. Lindlof|date=8 August 2008 |isbn=978-0813173160 }}&lt;/ref&gt;
+* [[Alan Bates]] as Basil
+* [[Irene Papas]] as Widow
+* [[Lila Kedrova]] as Madame Hortense
+* [[Sotiris Moustakas]] as Mimithos
+* [[:el:Άννα Κυριακού|Anna Kyriakou]] as Soul
+* [[:el:Ελένη Ανουσάκη|Eleni Anousaki]] as Lola
+* [[Yorgo Voyagis|George Voyadjis]] as Pavlo
+* Takis Emmanuel as Manolakas
+* [[Giorgos Fountas|George Foundas]] as Mavrandoni
+* [[Pia Lindström]] (deleted scenes) as Peasant girl
+* [[George P. Cosmatos]] as acne-faced boy
+
+==Production==
+[[Simone Signoret]] began filming the role of Madame Hortense; [[Lila Kedrova]] replaced her early in the production.&lt;ref name=&quot;Osborne&quot;&gt;{{cite book |title=65 Years of the Oscar: The Official History of the Academy Awards |last=Osborne |first=Robert |authorlink=Robert Osborne |year=1994 |publisher=Abbeville Press |location=London |isbn=1-55859-715-8 |page=[https://archive.org/details/65yearsofoscarof00osbo/page/180 180] |url=https://archive.org/details/65yearsofoscarof00osbo/page/180 |accessdate= |url-access=registration }}&lt;/ref&gt;
+
+The film was shot on location on the [[List of islands of Greece|Greek island]] of [[Crete]]. Specific locations featured include the city of [[Chania]], the village of [[Kokkino Chorio]] in the [[Apokoronas]] region and Stavros beach in the [[Akrotiri (Crete)|Akrotiri]] [[peninsula]]. The famed scene in which Quinn's character dances the Sirtaki was filmed on the beach of the village of [[Stavros, Chania|Stavros]].
+
+==Reception==
+===Box office===
+The film was a smash hit. Produced on a budget of only $783,000,&lt;ref name=&quot;imdb&quot;/&gt; it grossed $9 million at the U.S. box office,&lt;ref name=&quot;numbers&quot;&gt;[http://www.the-numbers.com/movies/1964/0ZRBA.php Box Office Information for ''Zorba the Greek''.] [[The Numbers (website)|The Numbers]]. Retrieved 19 May 2013.&lt;/ref&gt; earning $4.4 million in U.S. [[Gross rental|theatrical rentals]].&lt;ref&gt;Solomon, Aubrey. ''Twentieth Century Fox: A Corporate and Financial History (The Scarecrow Filmmakers Series)''. Lanham, Maryland: Scarecrow Press, 1989. {{ISBN|978-0-8108-4244-1}}. p. 229. See also &quot;Big Rental Pictures of 1965&quot;, ''[[Variety (magazine)|Variety]]'', 5 January 1966 p. 6&lt;/ref&gt; At the worldwide box office, the film earned $9.4 million in rentals,&lt;ref name=&quot;imdb&quot;/&gt; placing the worldwide gross between $18.8 million to $23.5 million. It was the [[1964 in film|17th highest-grossing film of 1964]].
+
+According to Fox records, the film needed to earn $3,000,000 in rentals to break even and made $9,400,000.&lt;ref&gt;{{cite book|page=[https://archive.org/details/foxthatgotawayt00silv/page/324 324]|title=The Fox that got away : the last days of the Zanuck dynasty at Twentieth Century-Fox|url=https://archive.org/details/foxthatgotawayt00silv|url-access=registration|last=Silverman|first=Stephen M|year=1988|publisher=L. Stuart}}&lt;/ref&gt; By September 1970 it earned the studio an estimated profit of $2,565,000.&lt;ref name=&quot;Silverman p 259&quot;&gt;Silverman p 259&lt;/ref&gt;
+
+===Critical===
+Contemporary reviews were generally positive, with Anthony Quinn and Lila Kedrova receiving numerous accolades for their performances, although a few critics found fault with the screenplay. [[Bosley Crowther]] of ''[[The New York Times]]'' lauded Quinn for a &quot;brilliant performance&quot; and Kedrova for her &quot;brilliantly realized&quot; character, citing the only real weakness of the film as a lack of &quot;significant conflict to prove its dominant character. Zorba is powerful and provocative, but nobody gets in his way.&quot;&lt;ref&gt;{{cite journal |last=Crowther |first=Bosley |authorlink=Bosley Crowther |date=December 18, 1964 |title=Screen: 'Zorba, the Greek' Is at Sutton |journal=[[The New York Times]] |page=25 }}&lt;/ref&gt; Margaret Harford of the ''[[Los Angeles Times]]'' declared that the film would &quot;stand among the year's best motion pictures, an unusual, engrossing effort&quot; with spots both &quot;outrageously funny&quot; and &quot;painfully sad and tragic.&quot;&lt;ref&gt;Harford, Margaret (December 18, 1964). &quot;'Zorba' Fascinating Tragicomedy&quot;. ''[[Los Angeles Times]]''. Part V, p. 17.&lt;/ref&gt;
+
+[[Richard L. Coe]] of ''[[The Washington Post]]'' deemed it &quot;a memorable picture&quot; with a &quot;bravura performance&quot; from Quinn, adding that &quot;Lila Kedrova as the dying Mme Hortense is spectacularly touching.&quot;&lt;ref&gt;{{cite journal |last=Coe |first=Richard L. |authorlink=Richard L. Coe |date=February 11, 1965 |title=Tony Quinn As Life Force |journal=[[The Washington Post]] |page=C10 }}&lt;/ref&gt; ''[[Variety (magazine)|Variety]]'' found the film excessively long and overstuffed, writing that Cacoyannis's screenplay was &quot;packed with incidents of varying moods, so packed, in fact, that some of the more important ones cannot be developed fully.&quot;&lt;ref&gt;{{cite journal |date=December 16, 1964 |title=Film Reviews: Zorba the Greek |journal=[[Variety (magazine)|Variety]] |page=6 }}&lt;/ref&gt; [[Brendan Gill]] of ''[[The New Yorker]]'' wrote that Cacoyannis had directed the film with &quot;enormous verve&quot; but had written a &quot;not very tidy, not very plausible screenplay.&quot; Gill particularly praised Kedrova's performance and thought that she &quot;comes within an ace of stealing the picture from Quinn.&quot;&lt;ref&gt;{{cite journal |last=Gill |first=Brendan |date=December 19, 1964 |title=The Current Cinema |journal=[[The New Yorker]] |page=151 }}&lt;/ref&gt; ''[[The Monthly Film Bulletin]]'' wrote that the film began well, but by the time the characters went to Crete &quot;the pace slows to a crawl, and the narrative line becomes blurred in a series of unrelated incidents of doubtful significance.&quot; The review concluded that for all its length, &quot;the film never gets down to a clear statement of its theme, or comes within measuring distance of its vast pretensions.&quot;&lt;ref&gt;{{cite journal |date=April 1965 |title=Zorba The Greek |journal=[[The Monthly Film Bulletin]] |volume=32 |issue=375 |page=54 }}&lt;/ref&gt;
+
+The film won three [[Academy Awards]].
+{| class=&quot;wikitable&quot; border=&quot;1&quot;
+|-
+! Award.&lt;ref name=&quot;NY Times&quot;&gt;{{cite web |url=http://movies.nytimes.com/movie/56204/Zorba-the-Greek/awards |title=NY Times: Zorba the Greek |accessdate=2008-12-25|work=NY Times}}&lt;/ref&gt; !! Result !! Winner
+|-
+| [[Academy Award for Best Picture|Best Picture]] || {{nom}} || [[Mihalis Kakogiannis]]&lt;br /&gt;&lt;small&gt;Winner was [[Jack L. Warner]] – ''[[My Fair Lady (film)|My Fair Lady]]''&lt;/small&gt;
+|-
+| [[Academy Award for Best Director|Best Director]] || {{nom}} || [[Mihalis Kakogiannis]]&lt;br /&gt;&lt;small&gt;Winner was [[George Cukor]] – ''[[My Fair Lady (film)|My Fair Lady]]''&lt;/small&gt;
+|-
+| [[Academy Award for Best Actor|Best Actor]] || {{nom}} || [[Anthony Quinn]]&lt;br /&gt;&lt;small&gt;Winner was [[Rex Harrison]] – ''[[My Fair Lady (film)|My Fair Lady]]''&lt;/small&gt;
+|-
+| [[Academy Award for Best Adapted Screenplay|Best Screenplay Based on Material from Another Medium]] || {{nom}} || [[Mihalis Kakogiannis]]&lt;br /&gt;&lt;small&gt;Winner was [[Edward Anhalt]] – ''[[Becket (1964 film)|Becket]]''&lt;/small&gt;
+|-
+| [[Academy Award for Best Supporting Actress|Best Supporting Actress]] || {{won}} || [[Lila Kedrova]]
+|-
+| [[Academy Award for Best Production Design|Best Art Direction (Black-and-White)]] || {{won}} || [[Vassilis Photopoulos]]
+|-
+| [[Academy Award for Best Cinematography|Best Cinematography (Black-and-White)]] || {{won}} || [[Walter Lassally]]
+|-
+|}
+
+The film has an 86% rating at [[Rotten Tomatoes]].&lt;ref name=&quot;rotten tomatoes&quot;&gt;{{Citation|title=Zorba the Greek|url=https://www.rottentomatoes.com/m/zorba_the_greek/ |website=[[Rotten Tomatoes]] |accessdate=August 3, 2018 }}&lt;/ref&gt; On both sides of the Atlantic, ''Zorba'' was applauded and Quinn came in for the best reviews. He was lauded as Zorba, along with the other stars, including Greek-born Papas, who worked with Quinn on ''[[The Guns of Navarone (film)|The Guns of Navarone]]''.
+
+Also, the film is recognized by [[American Film Institute]] in these lists:
+* 2006: [[AFI's 100 Years...100 Cheers]] – Nominated&lt;ref&gt;{{cite web|url=http://www.afi.com/Docs/100Years/cheers300.pdf |title=AFI's 100 Years...100 Cheers Nominees |date= |accessdate=2016-08-14}}&lt;/ref&gt;
+
+==Cultural influence==
+{{in popular culture|date=July 2017}}
+* The dance at the end of the film, choreographed by [[Giorgos Provias]], known as &quot;Zorba's dance&quot; is a simplified version of [[Sirtaki]] and has become a popular cliché of Greek dance.
+* Zara Store's owner Amancio Ortega previously named Zara as Zorba after &quot;Zorba the Greek&quot; but later changed it to Zara.{{citation needed|date=July 2017}}
+* ''Zorba the Greek'' was adapted into a 1968 [[Broadway theatre|Broadway]] musical named ''[[Zorba (musical)|Zorba]]''. The play starred [[Herschel Bernardi]]: then, the show was revived in 1983, with [[Anthony Quinn]] and [[Lila Kedrova]] reprising their film roles. It opened to big box office receipts and good reviews, plus 362 performances, more than the original stage production.
+* The film's music by [[Mikis Theodorakis]], especially the main song, &quot;[[Zorbas]]&quot;, is well known in popular culture. For example, the song has been used at [[Yankee Stadium]] for years to incite crowd participation during a potential rally by the home team, iconically played by [[Eddie Layton]].&lt;ref&gt;{{cite web|title=Greek song played by Eddie Layton|url=http://www.myyesnetwork.com/go/thread/view/82290/20841038/Greek_song_played_by_Eddie_Layton|website=My Yes Network|accessdate=31 October 2016}}&lt;/ref&gt;
+* A remake of &quot;Zorbas&quot; by John Murphy and David Hughes was used during the climax shootout-scene in the 1998 Guy Richie film, ''[[Lock Stock and Two Smoking Barrels]]''.&lt;ref name=&quot;lockstock&quot;&gt;[https://www.youtube.com/watch?v=u6-NHK-GzwU https://www.youtube.com/watch?v=u6-NHK-GzwU]&lt;/ref&gt;
+* The film has been referenced in two of actress [[Nia Vardalos]]' films. In ''[[My Big Fat Greek Wedding]]'', the family-owned restaurant her character works at is called ''Dancing Zorba's''; this is also seen in the short-lived 2003 show ''[[My Big Fat Greek Life]]''. In ''[[My Life In Ruins]]'', Vardalos' character Georgia expresses contempt for the film because of the Greek's love of dancing and [[Anthony Quinn]].
+* The British sitcom ''[[Catastrophe (2015 TV series)|Catastrophe]]'' is named after a quote from the film:&amp;nbsp;&quot;I'm a man, so I married. Wife, children, house, everything. [[The full catastrophe]].&quot;&lt;ref&gt;{{Cite news|url=http://www.scpr.org/programs/the-frame/2016/04/12/47920/catastrophe-creators-embrace-raunchy-language-but/|title='Catastrophe' embraces bad language, but nudity's too distracting|last=Radio|first=Southern California Public|date=2016-04-12|work=Southern California Public Radio|access-date=2017-05-15|language=en}}&lt;/ref&gt; The title of [[Jon Kabat-Zinn|Jon Kabat-Zinn's]] influential book on mindfulness ''[[Full Catastrophe Living]]'' is derived from the same quotation.&lt;ref&gt;{{Cite book|last=Kabat-Zinn|first=Jon|url=https://books.google.com/books?id=fIuNDtnb2ZkC|title=Full Catastrophe Living (Revised Edition): Using the Wisdom of Your Body and Mind to Face Stress, Pain, and Illness|date=2013|publisher=Random House Publishing Group|isbn=978-0-345-53972-4|location=|pages=liii|language=en}}&lt;/ref&gt;
+
+==Preservation==
+The Academy Film Archive preserved ''Zorba the Greek'' in 2004.&lt;ref&gt;{{cite web|title=Preserved Projects|url=http://www.oscars.org/academy-film-archive/preserved-projects?title=Zorba+the+greek&amp;filmmaker=&amp;category=All&amp;collection=All|website=Academy Film Archive}}&lt;/ref&gt;
+
+==See also==
+* &quot;[[Zorbas]]&quot;, the theme song of the film by Greek composer [[Mikis Theodorakis]]
+
+==References==
+{{Reflist}}
+
+==External links==
+* {{IMDb title|0057831|Zorba the Greek}}
+* {{AFI film|22430|Zorba the Greek}}
+* {{tcmdb title|96681|Zorba the Greek}}
+* {{Rotten Tomatoes|zorba_the_greek|Zorba the Greek}}
+
+{{Michael Cacoyannis}}
+{{Nikos Kazantzakis}}
+{{Authority control}}
+
+{{DEFAULTSORT:Zorba The Greek (Film)}}
+[[Category:1964 films]]
+[[Category:British films]]
+[[Category:Greek films]]
+[[Category:English-language films]]
+[[Category:Greek-language films]]
+[[Category:1960s comedy-drama films]]
+[[Category:British black-and-white films]]
+[[Category:British comedy-drama films]]
+[[Category:Greek black-and-white films]]
+[[Category:Greek comedy-drama films]]
+[[Category:Adaptations of works by Nikos Kazantzakis]]
+[[Category:Films about writers]]
+[[Category:Films based on Greek novels]]
+[[Category:Films directed by Michael Cacoyannis]]
+[[Category:Films featuring a Best Supporting Actress Academy Award-winning performance]]
+[[Category:Films set in Crete]]&lt;!-- specifically and mainly --&gt;
+[[Category:Films set in Greece]]&lt;!-- more generally for part of the film --&gt;
+[[Category:Films set on beaches]]
+[[Category:Films shot in Greece]]
+[[Category:Films whose art director won the Best Art Direction Academy Award]]
+[[Category:Films whose cinematographer won the Best Cinematography Academy Award]]
+[[Category:1964 in Greece]]
+[[Category:20th Century Fox films]]
+[[Category:Films scored by Mikis Theodorakis]]
+[[Category:1964 comedy films]]
+[[Category:1964 drama films]]</text>
+      <sha1>b4ek2ziz98cppkepkng8is0sqgfeu9i</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Biosecurity protocol</title>
+    <ns>0</ns>
+    <id>45607</id>
+    <revision>
+      <id>833303396</id>
+      <parentid>685069991</parentid>
+      <timestamp>2018-03-30T19:02:17Z</timestamp>
+      <contributor>
+        <username>Rathfelder</username>
+        <id>398607</id>
+      </contributor>
+      <comment>removed [[Category:Government]]; added [[Category:Biosecurity]] using [[WP:HC|HotCat]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1841" xml:space="preserve">{{Unreferenced|date=March 2007}}
+'''[[Biosecurity]] protocol''' refers to several politically controversial attempts to unify global [[biosecurity]] measures and responses, in a similar manner to a [[biosafety protocol]]. Although some propose a &quot;Biosecurity Protocol&quot; to extend the [[Biosafety Protocol]] to organisms considered weapons (already controlled by [[UN arms proliferation treaties]]), others argue this is an inappropriate response to military threats, and argue for a broad [[biodefense]] instead.  
+
+As of 2002, the latter view was prevalent in military and scientific circles, the former in [[Non-governmental organization|NGO]]s, some [[United Nations]] agencies, and [[Green Parties]].  Most cooperation was restricted to attempts to define &quot;[[biosecurity]]&quot; itself.  
+
+A major issue is whether to accept the [[Precautionary Principle]], or by extension, any restrictions on militarily useful research by major powers.  Compromises, e.g. the 2002 US government request to scientists to delete procedural details of experiments on dangerous organisms, are strongly resisted by most American scientists. Extreme positions, e.g. Bill Joy's argument for relinquishment of nanotechnology and artificial intelligence, are considered a legitimate part of the debate, but have yet to achieve any serious political support, even among [[Green Parties]].
+
+Whether these negotiations and compromises will yield a comprehensive '''biosecurity protocol''' is doubtful. It seems that basic political differences drive the debate which are unlikely to easily resolve, and that [[military alliance]]s will influence [[tax, trade, and tariff]] systems and import/export restrictions more than any diplomatic or scientific '''protocol'''.
+
+{{DEFAULTSORT:Biosecurity Protocol}}
+[[Category:Biosecurity]]
+
+
+{{Government-stub}}
+{{Politics-stub}}</text>
+      <sha1>d5hisvnb0tvhk4czleb1llergl4rsah</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Cheetah</title>
+    <ns>0</ns>
+    <id>45609</id>
+    <revision>
+      <id>991583467</id>
+      <parentid>988684544</parentid>
+      <timestamp>2020-11-30T20:35:31Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 198 templates: del empty params (2×); hyphenate params (71×); del |name-list-style= (1×); cvt lang vals (3×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="158620" xml:space="preserve">{{short description|Large feline of the genus Acinonyx}}
+{{about|the animal||Cheetah (disambiguation)}}
+{{pp-semi-protected|small=yes}}
+{{good article}}
+{{use dmy dates|date=May 2020}}
+{{use British English|date=May 2020}}
+
+{{Speciesbox
+| name = Cheetah
+| fossil_range = [[Pleistocene]]–[[Holocene]], {{fossilrange|1.9|0}}
+| status = VU
+| status_system = IUCN3.1
+| status_ref =&lt;ref name=iucn&gt;{{cite iucn |title=''Acinonyx jubatus'' |author1=Durant, S. |author2=Mitchell, N. |author3=Ipavec, A. |author4=Groom, R. |name-list-style=amp |year=2015 |page=e.T219A50649567}}&lt;/ref&gt;
+| status2 = E
+| status2_system = ESA
+| status2_ref = &lt;ref name=ecos&gt;{{cite web |title=Cheetah (''Acinonyx jubatus'') |url=https://ecos.fws.gov/ecp0/profile/speciesProfile?sId=5719 |website=Environmental Conservation Online System (ECOS) |publisher=[[US Fish and Wildlife Service]] |accessdate=24 April 2020}}&lt;/ref&gt;
+| image = TheCheethcat.jpg
+| image_caption = Cheetah in [[Sabi Sand Game Reserve]] (South Africa)
+| image_alt=Cheetah sitting on a mound in Sabi Sand Game Reserve, South Africa
+| taxon = Acinonyx jubatus
+| authority = ([[Johann Christian Daniel von Schreber|Schreber]], 1775)
+| subdivision_ranks = Subspecies
+| subdivision ={{collapsible list
+|[[Southeast African cheetah]] (''A. j. jubatus'') {{small|(Schreber, 1775)}}
+|[[Asiatic cheetah]] (''A. j. venaticus'') {{small|([[Edward Griffith (zoologist)|Griffith]], 1821)}}
+|[[Northeast African cheetah]] (''A. j. soemmeringii'') {{small|([[Leopold Fitzinger|Fitzinger]], 1855)}}
+|[[Northwest African cheetah]] (''A. j. hecki'') {{small|([[:de:Max Hilzheimer|Hilzheimer]], 1913)}}
+}}
+| synonyms_ref =&lt;ref name = mammal/&gt;
+| synonyms = {{collapsible list
+|''Acinonyx venator'' {{small|[[Joshua Brookes|Brookes]], 1828}}
+|''A. guepard'' {{small|Hilzheimer, 1913}}
+|''A. rex'' {{small|[[Reginald Innes Pocock|Pocock]], 1927}}
+|''A. wagneri'' {{small|Hilzheimer, 1913}}
+|''Cynaelurus guttatus'' {{small|[[St. George Jackson Mivart|Mivart]], 1900}}
+|''Cynaelurus jubata'' {{small|Mivart, 1900}}
+|''Cynaelurus lanea'' {{small|[[Theodor von Heuglin|Heuglin]], 1861}}
+|''Cynailurus jubatus'' {{small|[[Johann Georg Wagler|Wagler]], 1830}}
+|''Cynailurus soemmeringii'' {{small|Fitzinger, 1855}}
+|''Cynofelis guttata'' {{small|[[René Lesson|Lesson]], 1842}}
+|''Cynofelis jubata'' {{small|Lesson, 1842}}
+|''Felis fearonii'' {{small|[[Andrew Smith (zoologist)|Smith]], 1834}}
+|''F. fearonis'' {{small|Fitzinger, 1855}}
+|''F. megabalica'' {{small|Heuglin, 1863}}
+|''F. megaballa'' {{small|Heuglin, 1868}}
+|''Guepar jubatus'' {{small|[[Pierre Boitard|Boitard]], 1842}}
+|''Gueparda guttata'' {{small|[[John Edward Gray|Gray]], 1867}}
+|''Guepardus guttata'' {{small|[[Georges Louis Duvernoy|Duvernoy]], 1834}}
+|''Guepardus jubatus'' {{small|Duvernoy, 1834}}
+}}
+| range_map = Acinonyx_jubatus_subspecies_range_IUCN_2015.png
+| range_map_caption = The range of the cheetah as of 2015&lt;ref name=iucn/&gt;
+| range_map_alt=Map showing the distribution of the cheetah in 2015
+}}
+
+The '''cheetah''' (''Acinonyx jubatus'') is a large [[Felidae|cat]] native to Africa and central Iran. It is the [[Fastest animals|fastest]] land animal, capable of running at {{convert|80|to|128|km/h|mph|abbr=on}}, and as such has several adaptations for speed, including a light build, long thin legs and a long tail. Cheetahs typically reach {{convert|67|–|94|cm|in|abbr=on}} at the shoulder, and the head-and-body length is between {{convert|1.1|and|1.5|m|ft|abbr=on}}. Adults typically weigh between {{convert|20|and|65|kg|lb|abbr=on}}. Its head is small, rounded, and has a short [[snout]] and black tear-like facial streaks. The coat is typically tawny to creamy white or pale buff and is mostly covered with evenly spaced, solid black spots. Four subspecies are recognised.
+
+More gregarious than many other cats, the cheetah has three main [[sociality|social group]]s—females and their cubs, male &quot;coalitions&quot; and solitary males. While females lead a nomadic life searching for prey in large [[home range]]s, males are more sedentary and may instead establish much smaller [[Territory (animal)|territories]] in areas with plentiful prey and access to females. The cheetah is active mainly during the day and hunting is its major preoccupation, with peaks during dawn and dusk. It feeds on small- to medium-sized prey, mostly weighing under {{convert|40|kg|lb|abbr=on}}, and prefers medium-sized [[ungulate]]s such as [[impala]], [[springbok]] and [[Thomson's gazelle]]s. The cheetah will typically stalk its prey to within {{convert|60|-|70|m|ft|abbr=on}}, charge towards it, trip it during the chase and bite its throat to suffocate it to death. Breeding occurs throughout the year; after a [[gestation]] of nearly three months a litter of typically three to five cubs is born; cheetah cubs are highly vulnerable to predation by other large carnivores such as [[hyena]]s and [[lion]]s. Weaning happens at around four months, and cubs are independent by around 20 months of age.
+
+The cheetah occurs in a variety of habitats such as [[savanna]]hs in the [[Serengeti]], arid mountain ranges in the [[Sahara]] and hilly desert terrain in Iran. The cheetah is threatened by several factors such as [[habitat loss]], conflict with humans, poaching and high susceptibility to diseases. Earlier ranging throughout most of [[Sub-Saharan Africa]] and extending eastward into the [[Middle East]] up to the [[Indian subcontinent]], the cheetah is now distributed mainly in small, fragmented populations in central Iran and southern, eastern and northwestern Africa. In 2016, the global cheetah population was estimated at around 7,100 individuals in the wild; it is listed as [[Vulnerable species|Vulnerable]] on the [[IUCN Red List]]. In the past, cheetahs used to be [[Taming|tamed]] and trained for hunting ungulates. They have been widely depicted in art, literature, advertising, and animation.
+
+==Etymology==
+The vernacular name &quot;cheetah&quot; is derived from [[Hindustani language|Hindustani]] {{lang-ur|چیتا}} and {{lang-hi|चीता}} ''ćītā''.&lt;ref&gt;{{cite book |last=Platts |first=J. T. |author-link=John Thompson Platts |year=1884 |title=A Dictionary of Urdu, Classical Hindi, and English |location=London |publisher=[[W. H. Allen &amp; Co.]] |chapter= چيتا चीता ćītā |page=470 |chapter-url=https://dsalsrv04.uchicago.edu/cgi-bin/app/platts_query.py?qs=%DA%86%D9%8A%D8%AA%D8%A7&amp;searchhws=yes}}&lt;/ref&gt; This in turn comes from {{lang-sa|चित्रय}} ''kitra-ya'' meaning variegated, adorned or painted.&lt;ref&gt;{{cite book |last=Macdonell |first = A. A. |author-link=Arthur Anthony Macdonell |year=1929 |title=A Practical Sanskrit Dictionary with Transliteration, Accentuation, and Etymological Analysis throughout |location=London |publisher=[[Oxford University Press]] |chapter=चित्रय kitra-ya |page=68 |chapter-url=https://dsalsrv04.uchicago.edu/cgi-bin/app/macdonell_query.py?qs=%E0%A4%9A%E0%A4%BF%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AF&amp;searchhws=yes}}&lt;/ref&gt; In the past, the cheetah was often called &quot;hunting leopard&quot; because they could be tamed and used for coursing.&lt;ref name=marker1&gt;{{cite book |editor1=Marker, L. |editor2=Boast, L. K. |editor3=Schmidt-Kuentzel, A.  |title=Cheetahs: Biology and Conservation |date=2018 |publisher=[[Academic Press]] |location=London |isbn=978-0-12-804088-1 |chapter-url={{Google Books |id=H3rXDgAAQBAJ|pg=3|plainurl=yes}} |chapter=A brief history of cheetah conservation |last1=Marker|first1=L.|last2=Grisham |first2=J. |last3=Brewer |first3=B. |name-list-style=amp |pages=3–16}}&lt;/ref&gt; The [[generic name (biology)|generic name]] ''Acinonyx'' probably derives from the combination of two [[Greek language|Greek]] words: ἁκινητος ''akinitos'' meaning unmoved or motionless, and ὄνυξ (''onyx'') meaning nail or hoof.&lt;ref&gt;{{cite book |last1=Liddell |first1=H. G. | author1-link=Henry Liddell |last2=Scott |first2=R. |author2-link=Robert Scott (philologist) |name-list-style=amp |year=1889 |title=An Intermediate Greek–English Lexicon |location=Oxford |publisher=[[Clarendon Press]] |pages=27, 560 |chapter=ἁκινητος  |chapter-url=https://archive.org/details/intermediategree00lidd/page/n32}}&lt;/ref&gt; A rough translation is &quot;immobile nails&quot;, a reference to the cheetah's limited ability to retract its claws.&lt;ref name=Rosevear1974&gt;{{cite book |title=The Carnivores of West Africa |last=Rosevear |first=D. R.| year=1974 |publisher=[[Natural History Museum, London|Natural History Museum]] |location=London |isbn=978-0-565-00723-2 |pages=492–512 |chapter=Genus ''Acinonyx'' Brookes, 1828 |chapter-url=https://archive.org/stream/carnivoresofwest00rose#page/492/mode/1up}}&lt;/ref&gt; A similar meaning can be obtained by the combination of the Greek prefix ''a–'' (implying a lack of) and κῑνέω (''kīnéō'') meaning to move or set in motion.&lt;ref name=&quot;skinner&quot;&gt;{{cite book |last1=Skinner |first1=J. D. |last2=Chimimba |first2=C. T. |name-list-style=amp |title=The Mammals of the Southern African Subregion |date=2005 |publisher=[[Cambridge University Press]] |location=New York |isbn=978-0521844185 |edition=3rd |chapter=Subfamily Acinonychinae Pocock 1917 |pages=379–384 |chapter-url={{Google Books|plainurl=yes|id=F23lAgAAQBAJ|page=379}}}}&lt;/ref&gt; The [[Specific name (zoology)|specific name]] ''jubatus'' is [[Latin]] for &quot;crested, having a mane&quot;.&lt;ref&gt;{{cite book |last1=Lewis |first1=C. T. |author1-link=Charlton Thomas Lewis |last2=Short |first2=C. |name-list-style=amp |year=1879 |title=A Latin Dictionary |location=Oxford |publisher=Clarendon Press |chapter=jubatus |chapter-url=https://archive.org/details/in.ernet.dli.2015.61236/page/n1033 |page=1014}}&lt;/ref&gt;
+A few old generic names such as ''Cynailurus'' and ''Cynofelis'' allude to the similarities between the cheetah and [[canid]]s.&lt;ref name=marker7&gt;{{cite book |editor1=Marker, L. |editor2=Boast, L. K. |editor3=Schmidt-Kuentzel, A. |title=Cheetahs: Biology and Conservation |date=2018 |publisher=Academic Press |location=London |isbn=978-0-12-804088-1 |chapter-url={{Google Books |id=H3rXDgAAQBAJ|pg=93|plainurl=yes}} |chapter=Cheetah specialization: physiology and morphology |last1=Meachen|first1=J.|last2=Schmidt-Kuntzel |first2=A. |last3=Haefele |first3=H. |last4=Steenkamp|first4=G.|last5=Robinson|first5=J. M.|last6=Randau|first6=M. A.|last7=McGowan|first7=N.|last8=Scantlebury|first8=D. M. |last9=Marks |first9=N. |last10=Maule |first10=A. |last11=Marker|first11=L. |name-list-style=amp |pages=93–106}}&lt;/ref&gt;
+
+==Taxonomy==
+
+[[File:Felisjubatus.jpg|thumb|An illustration of the &quot;woolly cheetah&quot; (''Felis lanea'') from the ''[[Proceedings of the Zoological Society of London]]'' (1877)|alt=Illustration of the woolly cheetah (Felis lanea) published in the Proceedings of the Zoological Society of London in 1877]]
+
+In 1777, [[Johann Christian Daniel von Schreber]] described the cheetah based on a skin from the [[Cape of Good Hope]] and gave it the [[Biological nomenclature|scientific name]] ''Felis jubatus''.&lt;ref&gt;{{cite book |last=Schreber |first=J. C. D. |author-link=Johann Christian Daniel von Schreber |year=1777 |chapter=Der Gepard (The cheetah) |title=Die Säugthiere in Abbildungen nach der Natur mit Beschreibungen |volume=Dritter Theil |trans-title=The Mammals in Illustrations according to Nature with Descriptions |publisher=Wolfgang Walther |location=Erlangen |pages=392–393 |chapter-url=https://digi.ub.uni-heidelberg.de/diglit/schreber1875textbd3/0112/image |language=de}}&lt;/ref&gt; [[Joshua Brookes]] proposed the [[Genus (biology)|generic]] name ''Acinonyx'' in 1828.&lt;ref&gt;{{cite book |last=Brookes |first=J. |author-link=Joshua Brookes |year=1828 |title=A Catalogue of the Anatomical and Zoological Museum of Joshua Brookes |location=London |publisher=[[Richard Taylor (editor)|Richard Taylor]] |page=16 |chapter=Section Carnivora |chapter-url=https://archive.org/details/b22475886/page/16}}&lt;/ref&gt; In 1917, [[Reginald Innes Pocock]] placed the cheetah in a subfamily of its own, Acinonychinae,&lt;ref name=Pocock1917&gt;{{cite journal |last1=Pocock |first1=R. I. |author-link=Reginald Innes Pocock |year=1917 |title=The classification of the existing Felidae |journal=[[Annals and Magazine of Natural History]]|series=Series 8 |volume=XX |issue=119 |pages=329–350 |doi=10.1080/00222931709487018 |url=https://archive.org/stream/annalsmagazineof8201917lond#page/332/mode/2up}}&lt;/ref&gt; given its striking morphological resemblance to the [[greyhound]] as well as significant deviation from typical felid features; the cheetah was classified in [[Felinae]] in later taxonomic revisions.&lt;ref name=caro1994/&gt;
+
+In the 19th and 20th centuries, several cheetah [[Zoological specimen|specimens]] were described; some were proposed as [[subspecies]]. An example is the South African specimen known as the &quot;woolly cheetah&quot;, named for its notably dense fur—this was described as a new species (''Felis lanea'') by [[Philip Sclater]] in 1877,&lt;ref&gt;{{cite journal |last1=Sclater |first1=P. |author-link=Philip Sclater |title=The secretary on additions to the menagerie |journal=[[Proceedings of the Zoological Society of London]] |date=1877 |pages=530–533 |url=https://www.biodiversitylibrary.org/item/90449#page/202/mode/1up}}&lt;/ref&gt; but the classification was mostly disputed.&lt;ref&gt;{{cite book |last1=Lydekker |first1=R. |author-link=Richard Lydekker |title=The Royal Natural History |volume=1 |date=1893 |publisher=[[Frederick Warne &amp; Co.]] |location=London |pages=442–446 |chapter=The hunting leopard |chapter-url=https://archive.org/details/royalnaturalhist01lydeuoft/page/442}}&lt;/ref&gt; There has been considerable confusion in the nomenclature of cheetahs and [[leopard]]s (''Panthera pardus'') as authors often confused the two; some considered &quot;hunting leopards&quot; an independent species, or equal to the leopard.&lt;ref&gt;{{cite book |last1=Baker |first1=E. D. |title=Sport in Bengal: and How, When and Where to Seek it |date=1887 |publisher=Ledger, Smith &amp; Co |location=London |pages=[https://archive.org/details/sportinbengalhow00bakerich/page/205 205]–221 |url=https://archive.org/details/sportinbengalhow00bakerich}}&lt;/ref&gt;&lt;ref&gt;{{cite book |last1=Sterndale |first1=R. A. |title=Natural History of the Mammalia of India and Ceylon |date=1884 |publisher=Thacker, Spink &amp; Co |location=Calcutta |pages= [https://archive.org/details/naturalhistoryof00ster/page/175 175]–178 |url=https://archive.org/details/naturalhistoryof00ster}}&lt;/ref&gt;

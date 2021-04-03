@@ -1,0 +1,418 @@
+A [[web app|web application]] which provides message management, composition, and reception functions may act as a [[Web email|web email client]], and a piece of [[computer hardware]] or software whose primary or most visible role is to work as an email client may also use the term.
+
+==Retrieving messages from a mailbox==
+Like most client programs, an email client is only active when a user runs it. The common arrangement is for an email user (the client) to make an arrangement with a remote [[Mail Transfer Agent]]
+(MTA) server for the receipt and storage of the client's emails. The MTA, using a suitable [[mail delivery agent]] (MDA), adds email messages to a client's storage as they arrive. The remote mail storage is referred to as the user's [[E-mail Mailbox|mailbox]]. The default setting on many Unix systems is for the mail server to store formatted messages in [[mbox]], within the user's [[home directory]]. Of course, users of the system can log-in and run a mail client on the same computer that hosts their mailboxes; in which case, the server is not actually ''remote'', other than in a generic sense.
+
+Emails are stored in the user's mailbox on the remote server until the user's email client requests them to be downloaded to the user's computer, or can otherwise access the user's mailbox on the possibly remote server. The email client can be set up to connect to multiple mailboxes at the same time and to request the download of emails either automatically, such as at pre-set intervals, or the request can be manually initiated by the user.
+
+A user's mailbox can be accessed in two dedicated ways. The [[Post Office Protocol]] (POP) allows the user to download messages one at a time and only deletes them from the server after they have been successfully saved on local storage. It is possible to leave messages on the server to permit another client to access them. However, there is no provision for flagging a specific message as ''seen'', ''answered'', or ''forwarded'', thus POP is not convenient for users who access the same mail from different machines.
+
+Alternatively, the [[Internet Message Access Protocol]] (IMAP) allows users to keep messages on the server, flagging them as appropriate. IMAP provides folders and sub-folders, which can be shared among different users with possibly different access rights. Typically, the ''Sent'', ''Drafts'', and ''Trash'' folders are created by default. IMAP features an [[IMAP IDLE|''idle'' extension]] for real-time updates, providing faster notification than polling, where long-lasting connections are feasible.  See also the [[#Remote messages|remote messages]] section below.
+
+In addition, the mailbox storage can be accessed directly by programs running on the server or via [[Clustered file system##Shared-disk|shared disks]].  Direct access can be more efficient but is less portable as it depends on the mailbox format; it is used by some email clients, including some [[#Webmail|webmail]] applications.
+
+==Message composition==
+Email clients usually contain [[Graphical user interface|user interface]]s to display and edit text. Some applications permit the use of a program-external editor.
+
+The email clients will perform formatting according to RFC 5322 for [[E-mail#Header|headers]] and [[E-mail#Body|body]], and [[MIME]] for non-textual content and attachments. Headers include the destination fields, ''To'', ''Cc'' (short for ''Carbon copy''), and ''Bcc'' (''Blind carbon copy''), and the originator fields ''From'' which is the message's author(s), ''Sender'' in case there are more authors, and ''Reply-To'' in case responses should be addressed to a different mailbox. To better assist the user with destination fields, many clients maintain one or more address books and/or are able to connect to an [[LDAP]] directory server. For originator fields, clients may support different identities.
+
+Client settings require the user's ''real name'' and ''email address'' for each user's identity, and possibly a list of LDAP servers.
+
+==Submitting messages to a server==
+When a user wishes to create and send an email, the email client will handle the task. The email client is usually set up automatically to connect to the user's mail server, which is typically either an [[Mail submission agent|MSA]] or an [[Mail transport agent|MTA]], two variations of the [[SMTP]] protocol. The email client which uses the SMTP protocol creates an authentication extension, which the mail server uses to authenticate the sender. This method eases modularity and nomadic computing. The older method was for the mail server to recognize the client's IP address, e.g. because the client is on the same machine and uses internal address 127.0.0.1, or because the client's IP address is controlled by the same [[Internet service provider]] that provides both Internet access and mail services.
+
+Client settings require the name or IP address of the preferred ''outgoing mail server'', the ''port number'' (25 for MTA, 587 for MSA), and the ''user name'' and ''password'' for the authentication, if any. There is a non-standard port 465 for [[Transport Layer Security|SSL]] encrypted SMTP sessions, that many clients and servers support for backward compatibility.
+
+==Encryption==
+With no encryption, much like for postcards, email activity is plainly visible by any occasional eavesdropper. [[Email encryption]] enables privacy to be safeguarded by encrypting the mail sessions, the body of the message, or both.  Without it, anyone with network access and the right tools can monitor email and obtain login passwords.  Examples of concern include the government [[censorship]] and [[surveillance]] and fellow wireless network users such as at an [[Internet cafe]].
+
+All relevant email protocols have an option to encrypt the whole session, to prevent a user's ''name'' and ''password'' from being [[Packet sniffer|sniffed]]. They are strongly suggested for nomadic users and whenever the [[Internet access provider]] is not trusted.&lt;ref&gt;{{cite ietf 
+ |         rfc = 5068
+ |         bcp = 134
+ |       title = Email Submission Operations: Access and Accountability Requirements
+ |     section = 5
+ | sectionname = Message Submission Authentication/Authorization Technologies
+ | author1     = C. Hutzler
+ |     author2 = D. Crocker
+ |     author3 = P. Resnick
+ |     author4 = E. Allman
+ |     author5 = T. Finch
+ |        date = November 2007
+ |   publisher = [[IETF]]
+ |       quote = This document does not provide recommendations on specific security implementations.  It simply provides a warning that transmitting user credentials in clear text over insecure networks SHOULD be avoided in all scenarios as this could allow attackers to listen for this traffic and steal account data.  In these cases, it is strongly suggested that an appropriate security technology MUST be used.
+ |  accessdate = 24 August 2011
+ }} 
+&lt;/ref&gt; When sending mail, users can only control encryption at the first hop from a client to its configured ''outgoing mail server''. At any further hop, messages may be transmitted with or without encryption, depending solely on the general configuration of the transmitting server and the capabilities of the receiving one.
+
+Encrypted mail sessions deliver messages in their original format, i.e. plain text or encrypted body, on a user's local mailbox and on the destination server's. The latter server is operated by an [[email hosting service]] provider, possibly a different entity than the Internet ''access'' provider currently at hand.
+
+Encrypting an email retrieval session with, e.g., SSL, can protect both parts (authentication, and message transfer) of the session.&lt;ref name=&quot;sill-security&quot;/&gt;&lt;ref&gt;{{cite ietf
+ |   rfc = 7817
+ | title = Updated Transport Layer Security (TLS) Server Identity Check Procedure for Email-Related Protocols
+ }}
+&lt;/ref&gt;
+
+Alternatively, if the user has [[Secure Shell|SSH]] access to their mail server, they can use SSH [[port forwarding]] to create an encrypted tunnel over which to retrieve their emails.&lt;ref&gt;{{cite book |page=[https://archive.org/details/linuxserverhacks00flic/page/146 146] |title=Linux Server Hacks: 100 Industrial-Strength Tips &amp; Tools |isbn=978-0596004613 |first=Rob |last=Flickenger |publisher=[[O'Reilly Media]] |year=2003 |quote=In addition to providing remote shell access and command execution, OpenSSH can forward arbitrary TCP ports to the other end of your connection. This can be very handy for protecting email, web, or any other traffic you need to keep private (at least, all the way to the other end of the tunnel).&lt;br/&gt;''ssh'' accomplishes local forwarding by binding to a local port, performing encryption, sending the encrypted data to the remote end of the ''ssh'' connection, then decrypting it and sending it to the remote host and port you specify. Start an ''ssh'' tunnel with the ''-L'' switch (short for Local):&lt;br/&gt;&lt;code&gt;root@laptop:~# '''ssh -f -N -L110:''mailhost'':110 -l ''user'' ''mailhost'''''&lt;/code&gt;&lt;br/&gt;Naturally, substitute ''user'' with your username, and ''mailhost'' with your mail server's name or IP address. Note that you will have to be root on the laptop for this example since you'll be binding to a privileged port (110, the POP port). You should also disable any locally running POP daemon (look in ''/etc/inetd.conf'') or it will get in the way.&lt;br/&gt;Now to encrypt all of your POP traffic, configure your mail client to connect to localhost port 110. It will happily talk to mailhost as if it were connected directly, except that the entire conversation will be encrypted. |url-access=registration |url=https://archive.org/details/linuxserverhacks00flic/page/146 }}&lt;/ref&gt;
+
+===Encryption of the message body===
+There are two main models for managing cryptographic keys. [[S/MIME]] employs a model based on a trusted [[certificate authority]] (CA) that signs users' public keys. [[OpenPGP]] employs a somewhat more flexible ''[[web of trust]]'' mechanism that allows users to sign one another's public keys. OpenPGP is also more flexible in the format of the messages, in that it still supports plain message encryption and signing as they used to work before [[MIME]] standardization.
+
+In both cases, only the message body is encrypted. Header fields, including originator, recipients, and subject, remain in plain text.
+
+==Webmail==
+{{Main|Webmail}}
+In addition to email clients running on a desktop computer, there are those hosted remotely, either as part of a remote UNIX installation accessible by [[telnet]] (i.e. a [[shell account]]), or hosted on the [[World Wide Web|Web]].  Both of these approaches have several advantages: they share an ability to send and receive email away from the user's normal base using a [[web browser]] or telnet client, thus eliminating the need to install a dedicated email client on the user's device.
+
+Some websites are dedicated to providing email services, and many [[Internet service provider]]s provide webmail services as part of their Internet service package. The main limitations of webmail are that user interactions are subject to the website's operating system and the general inability to download email messages and compose or work on the messages offline, although there are software packages that can integrate parts of the webmail functionality into the OS (e.g. creating messages directly from third party applications via [[MAPI]]).
+
+Like IMAP and MAPI, webmail provides for email messages to remain on the mail server.  See [[#Remote messages|next section]].
+
+=={{anchor|Remote messages}} Remote messages==
+POP3 has an option to leave messages on the server.  By contrast, both IMAP and webmail keep messages on the server as their method of operating, albeit users can make local copies as they like.  Keeping messages on the server has advantages and disadvantages.&lt;ref&gt;{{cite web |url=http://itservices.stanford.edu/service/emailcalendar/email/imap/rightforme |title=Is IMAP Right for Me? |author=&lt;!--Staff writer(s); no by-line.--&gt; |date=4 March 2010 |work=IT Services |publisher=[[Stanford University]] |accessdate=14 April 2013}}&lt;/ref&gt;
+
+===Advantages===
+* Messages can be accessed from various computers or mobile devices at different locations, using different clients.
+* Some kind of backup is usually provided by the server.
+
+===Disadvantages===
+* With limited bandwidth, access to long messages can be lengthy, unless the email client caches a local copy.
+* There may be privacy concerns since messages that stay on the server at all times have more chances to be casually accessed by IT personnel, unless [[end-to-end encryption]] is used.
+
+==Protocols==
+Popular protocols for retrieving mail include [[POP3]] and [[IMAP4]]. Sending mail is usually done using the [[SMTP]] protocol.
+
+Another important standard supported by most email clients is [[MIME]], which is used to send [[binary file]] [[email attachment]]s. Attachments are files that are not part of the email proper but are sent with the email.
+
+Most email clients use a ''User-Agent''&lt;ref&gt;{{cite IETF |title=Netnews Article Format |rfc=5536 |sectionname=User-Agent |section=3.2.13 |date=November 2009 |publisher=[[Internet Engineering Task Force|IETF]] |quote=Some of this information has previously been sent in non-standardized header fields such as X-Newsreader, X-Mailer, X-Posting-Agent, X-Http-User-Agent, and others}}&lt;/ref&gt; [[header (computing)|header field]] to identify the software used to send the message. According to RFC 2076, this is a common but non-standard header field.{{Disputed-inline|User-Agent header field|reason=User-Agent is not mentioned in RFC 2076 and is for news, not mail|date=November 2020}}
+
+RFC 6409, ''Message Submission for Mail'', details the role of the [[Mail submission agent]].
+
+RFC 5068, ''Email Submission Operations: Access and Accountability Requirements'', provides a survey of the concepts of MTA, MSA, MDA, and MUA. It mentions that &quot;'' Access Providers MUST NOT block users from accessing the external Internet using the SUBMISSION port 587''&quot; and that &quot;''MUAs SHOULD use the SUBMISSION port for message submission.''&quot;
+
+===Port numbers===
+Email servers and clients by convention use the [[List of TCP and UDP port numbers|TCP port numbers]] in the following table.  For MSA, IMAP and POP3, the table reports also the labels that a client can use to query the [[SRV record]]s and discover both the host name and the port number of the corresponding service.&lt;ref&gt;{{cite IETF |title=Use of SRV Records for Locating Email Submission/Access Services |rfc=6186 |author=Cyrus Daboo |date=March 2011 |publisher=[[Internet Engineering Task Force|IETF]] |accessdate=17 April 2013}}&lt;/ref&gt;
+{| class=&quot;wikitable&quot;
+|-
+! protocol
+! use
+! plain text or &lt;br&gt;encrypt sessions
+! plain text &lt;br&gt;sessions only
+! encrypt sessions &lt;br&gt;only
+|-
+| [[Post Office Protocol|POP3]]
+| incoming mail
+| style=&quot;text-align: right;&quot; | 110 &lt;br&gt;_pop3._tcp
+|
+| style=&quot;text-align: right;&quot; | 995 &lt;br&gt;_pop3s._tcp
+|-
+| [[Internet Message Access Protocol|IMAP4]]
+| incoming mail
+| style=&quot;text-align: right;&quot; | 143 &lt;br&gt;_imap._tcp
+|
+| style=&quot;text-align: right;&quot; | 993 &lt;br&gt;_imaps._tcp
+|-
+| [[Simple mail transfer protocol|SMTP]]
+| outgoing mail
+| style=&quot;text-align: right;&quot; | 25
+|
+|
+|-
+| [[Mail submission agent|MSA]]
+| outgoing mail
+| style=&quot;text-align: right;&quot; | 587 &lt;br&gt;_submission._tcp
+|
+| style=&quot;text-align: right;&quot; | 465&lt;ref&gt;{{cite IETF |title=Cleartext Considered Obsolete: Use of Transport Layer Security (TLS) for Email Submission and Access |rfc=8314 |author1=Keith Moore |author2=Chris Newman |date=January 2018 |publisher=[[Internet Engineering Task Force|IETF]] |accessdate=12 February 2018}}&lt;/ref&gt; &lt;br&gt;_submissions._tcp
+|-
+| [[HTTP]]
+| webmail
+|
+| style=&quot;text-align: right;&quot; | 80
+| style=&quot;text-align: right;&quot; | 443
+|}
+
+Note that while webmail obeys the earlier HTTP disposition of having separate ports for encrypt and plain text sessions, mail protocols use the [[STARTTLS]] technique, thereby allowing encryption to start on an already established TCP connection. While RFC 2595 used to discourage the use of the previously established ports 995 and 993, RFC 8314 promotes the use of implicit [[Transport Layer Security|TLS]] when available.
+
+===Proprietary client protocols===
+[[Microsoft]] mail systems use the [[proprietary software|proprietary]] [[Messaging Application Programming Interface]] (MAPI) in client applications, such as [[Microsoft Outlook]], to access [[Microsoft Exchange Server|Microsoft Exchange]] electronic mail servers.
+
+==See also==
+{{Wiktionary}}
+* [[Comparison of email clients]]
+* [[Mail submission agent]] (MSA)
+* [[Mailto]]
+* [[Message transfer agent]] (MTA)
+* [[Simple Mail Transfer Protocol]]
+* [[Message delivery agent]] (MDA)
+
+==References==
+{{reflist|30em|refs=
+&lt;ref name=&quot;sill-security&quot;&gt;{{harvnb|Sill|2003|p=353}}: &quot;Like SMTP, POP3 is unencrypted. Unlike SMTP, however, it needs authentication: Users have to identify themselves and prove they're who they claim to be. Unfortunately, the authentication usually consists of presenting a username and a password known only to the user and the POP3 server. Because the POP3 dialogue is unencrypted, an eavesdropper can obtain a user's username and password and reuse them to access the user's mailbox. So, plain POP3 exposes the contents of the mail messages the user retrieves, and it exposes their username and password, which can then be reused by someone else.&lt;br/&gt;Wrapping the POP3 dialogue with transport-layer security such as SSL solves both of these problems. Because SSL-wrapped POP3 sessions are encrypted from beginning to end, no messages, usernames, or passwords are exposed in cleartext.&lt;br/&gt;The optional POP3 command, &lt;code&gt;APOP&lt;/code&gt;, replaces the standard &lt;code&gt;USER/PASS&lt;/code&gt; authentication with a challenge-response authentication mechanism. This solves the problem of the disclosure of reusable passwords, but does nothing to prevent eavesdroppers from reading users' mail messages as they're being retrieved.&quot;&lt;/ref&gt;
+}}
+
+
+==Bibliography==
+{{refbegin}}
+* {{cite book |ref=harv |title=The qmail Handbook |first=Dave |last=Sill |url=https://books.google.com/books?id=yUUnCgAAQBAJ&amp;q=%22uw+imap%22&amp;pg=PA348 |publisher=[[Apress]] |year=2003|isbn=9781430211341 }}
+*{{cite journal
+ |last        = Partridge
+ |first       = Craig
+ |title       = The Technical Development of Internet Email
+ |journal     = IEEE Annals of the History of Computing
+ |volume      = 30
+ |issue       = 2
+ |pages       = 3–29
+ |date        = April–June 2008
+ |url         = http://www.ir.bbn.com/~craig/email.pdf
+ |issn        = 1934-1547
+ |doi         = 10.1109/mahc.2008.32
+ |s2cid = 206442868
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20110512165437/http://www.ir.bbn.com/~craig/email.pdf
+ |archivedate = 2011-05-12
+}}
+{{refend}}
+
+[[Category:Email clients| ]]</text>
+      <sha1>8yuuateo8x3nty67rvx8a1o2262n98w</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Montgomery County</title>
+    <ns>0</ns>
+    <id>43480</id>
+    <revision>
+      <id>923340724</id>
+      <parentid>919706586</parentid>
+      <timestamp>2019-10-27T23:00:45Z</timestamp>
+      <contributor>
+        <ip>208.95.51.53</ip>
+      </contributor>
+      <comment>/* United States */ That's potentially confusing, given the comment at the top</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1447" xml:space="preserve">'''Montgomery County''' may refer to:
+
+==Australia==
+* The former name of [[Montgomery Land District]], Tasmania
+
+==United Kingdom==
+* The historic county of [[Montgomeryshire]], Wales, also called County of Montgomery
+
+==United States==
+All counties below except those with a note beside them (Alabama, Mississippi, Tennessee, and Texas) were named after [[Richard Montgomery]], a hero of the American Revolutionary War
+* [[Montgomery County, Alabama]], named for [[Lemuel P. Montgomery]], a casualty of the Creek War
+* [[Montgomery County, Arkansas]]
+* [[Montgomery County, Georgia]] 
+* [[Montgomery County, Illinois]] 
+* [[Montgomery County, Indiana]]
+* [[Montgomery County, Iowa]]
+* [[Montgomery County, Kansas]] 
+* [[Montgomery County, Kentucky]]
+* [[Montgomery County, Maryland]]
+* [[Montgomery County, Mississippi]], named either for the county in Tennessee and indirectly for John Montgomery or for Richard Montgomery
+* [[Montgomery County, Missouri]] 
+* [[Montgomery County, New York]] 
+* [[Montgomery County, North Carolina]] 
+* [[Montgomery County, Ohio]]
+* [[Montgomery County, Pennsylvania]]
+* [[Montgomery County, Tennessee]], named for [[John Montgomery (pioneer)|John Montgomery]], early settler of Clarksville, the county seat 
+* [[Montgomery County, Texas]], named after the county in Alabama; indirectly named for Lemuel P. Montgomery 
+* [[Montgomery County, Virginia]]
+
+{{geodis}}
+
+[[Category:County name disambiguation pages]]</text>
+      <sha1>a3l52j4h2hi3pu7z05sv1oaf0tvobc5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Pacifist (disambiguation)</title>
+    <ns>0</ns>
+    <id>43481</id>
+    <revision>
+      <id>925266844</id>
+      <parentid>802446744</parentid>
+      <timestamp>2019-11-08T23:12:18Z</timestamp>
+      <contributor>
+        <username>Leschnei</username>
+        <id>27335766</id>
+      </contributor>
+      <comment>moved the [[WP:DABPRIMARY|primary topic]] to the top</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="408" xml:space="preserve">{{wiktionary|pacifist}}
+A '''[[pacifist]]''' is one who opposes war, militarism, or violence.
+
+'''Pacifist''' may also refer to:
+* a member of a [[Pacifist organization]]
+* a member of the [[Pacifist Party]]
+* a believer of a [[List of pacifist faiths|pacifist faith]]
+* [[The Pacifist (film)|''The Pacifist'' (film)]], a 1970 film
+* &quot;[[The Pacifist]]&quot;, a 1956 Arthur C Clarke short story
+
+{{disambiguation}}</text>
+      <sha1>gb6zti15rb3y2x59srko1zz84q0nyj9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Montgomery County, Maryland</title>
+    <ns>0</ns>
+    <id>43482</id>
+    <revision>
+      <id>991078190</id>
+      <parentid>990962512</parentid>
+      <timestamp>2020-11-28T03:54:28Z</timestamp>
+      <contributor>
+        <username>Moreau1</username>
+        <id>5545776</id>
+      </contributor>
+      <comment>c/e; consolidated refs, added ref link (available on Commons)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="147448" xml:space="preserve">{{short description|County in Maryland, US}}
+{{Redirect|MoCo||Moco (disambiguation){{!}}Moco}}
+{{Other uses|Montgomery (disambiguation){{!}}Montgomery}}
+{{Use mdy dates|date=September 2017}}
+{{use American English|date=February 2014}}
+{{Infobox settlement
+| name                     = Montgomery County, Maryland
+| official_name            = County of Montgomery&lt;ref&gt;{{cite web|url=http://library.amlegal.com/nxt/gateway.dll/Maryland/montgom/partiiispecialtaxingarealawsnote/chapter66villageoffriendshipheightsnote?f=templates$fn=document-frameset.htm$q=%5Brank,100%3A%5Bdomain%3A%5Band%3A%5Bstem%3A%5Borderedprox,0%3Acounty%20of%20montgomery%5D%5D%5D%5D%5Bsum%3A%5Bstem%3A%5Borderedprox,0%3Acounty%20of%20montgomery%5D%5D%5D%5D$x=server$3.0#LPHit1|quote=County of Montgomery|title=Chapter 66. 'Village of Friendship Heights.'|work=Montgomery County Charter|access-date=August 3, 2018|archive-url=https://web.archive.org/web/20180804013914/http://library.amlegal.com/nxt/gateway.dll/Maryland/montgom/partiiispecialtaxingarealawsnote/chapter66villageoffriendshipheightsnote?f=templates$fn=document-frameset.htm$q=%5Brank,100%3A%5Bdomain%3A%5Band%3A%5Bstem%3A%5Borderedprox,0%3Acounty%20of%20montgomery%5D%5D%5D%5D%5Bsum%3A%5Bstem%3A%5Borderedprox,0%3Acounty%20of%20montgomery%5D%5D%5D%5D$x=server$3.0#LPHit1|archive-date=August 4, 2018|url-status=live|df=mdy-all}}&lt;/ref&gt;
+| settlement_type          = [[County (United States)|County]]
+| image_skyline            = {{Photomontage
+| photo1a                 = Intersection in Bethesda, Maryland.jpg
+| photo2a                 = Potomac River - Great Falls 25.jpg
+| photo2b                 = 1101 Spring Street - Silver Spring, Maryland.jpg
+| photo3a                 = Rockville Town Center.jpg
+| photo3b                 = Billy Goat B Trail 8.jpg
+| photo4a                 = Darnestown, MD farm panorama.jpg
+| spacing                 = 2
+| position                = center
+| color_border            = white
+| color                   = white
+| size = 270
+| foot_montage            = Clockwise: Downtown [[Bethesda, Maryland|Bethesda]], Spring Street in [[Silver Spring, Maryland|Silver Spring]], Billy Goat B Trail, rural [[Darnestown, Maryland|Darnestown]], [[Rockville, Maryland|Rockville]] town center, Great Falls on the [[Potomac River]].
+}}
+| imagesize                = 
+| nickname                 = &quot;MoCo&quot;
+| image_caption            = 
+| image_flag               = Flag of Montgomery County, Maryland.svg
+| flag_link                = Flag of Montgomery County, Maryland
+| image_seal               = Seal of Montgomery County, Maryland.svg
+| seal_size                = 
+| seal_alt                 = 
+| seal_link                = List of U.S. county and city insignia
+| seal_type                = Seal
+| image_blank_emblem       = Emblem of Montgomery County, Maryland.svg
+| blank_emblem_link        = List of U.S. county and city insignia
+| blank_emblem_size        = 
+| blank_emblem_alt         = 
+| blank_emblem_type        = Emblem
+| image_shield             = Coat of arms of Montgomery County, Maryland.svg
+| shield_size              = 
+| shield_alt               = 
+| shield_link              = List of U.S. county and city insignia
+| image_map                = Map of Maryland highlighting Montgomery County.svg
+| map_caption              = Location in the U.S. state of [[Maryland]]
+|coordinates          = {{coord|39.13638|-77.20424|format=dms|type:adm2nd_region:US-MD|display=inline,title}}
+| coordinates_footnotes    = &lt;ref name=geoNames&gt;{{cite web|url=https://www.geonames.org/4362716/montgomery-county.html|title=Montgomery County|website=GeoNames.org|language=en|access-date=December 5, 2019}}&lt;/ref&gt;
+| established_title        = Founded
+| established_date         = September 6, 1776&lt;ref name=cent&gt;{{cite news|title=Montgomery County Centennial: An Old-Fashioned Maryland Reunion|work=[[The Baltimore Sun]]|date=September 7, 1876|page=1|id={{ProQuest|534282014}}}}&lt;/ref&gt;&lt;ref name=proceedings&gt;{{cite book|title=Proceedings of the Conventions of the providence of Maryland, held at the city of Annapolis, in 1774, 1775, &amp; 1776|url=https://archive.org/details/proceedingsofcon00inmary|author=Maryland. Convention|date=1836|publisher=Baltimore, James Lucas &amp; E. K. Deaver; Annapolis, Jonas Green|location=Baltimore, Md.; Annapolis, Md.|page=[https://archive.org/details/proceedingsofcon00inmary/page/242 242]|language=en-US|hdl=loc.gdc/scd0001.00117695347|lccn=10012042|oclc=3425542|ol=7018977M|quote=Resolved, That after the first day of October next, such part of the said county of Frederick as is contained within the bounds and limits following, to wit : beginning at the east side of the mouth of Rock creek on Potowmac river, and running with the said river to the mouth of Monocacy, then with a straight line to Par's spring, from thence with the lines of the county to the beginning, shall be and is hereby erected into a new county by the name of Montgomery county.}}&lt;/ref&gt;
+| subdivision_type         = Country
+| subdivision_name         = {{Nowrap|{{Flagu|United States|size=23px}}}}
+| subdivision_type1        = [[U.S. state|State]]
+| subdivision_name1        = {{Flag|Maryland|size=23px}}
+| blank_name_sec1          = [[County seat|Seat]] (and largest city)
+| blank_info_sec1          = {{Flagicon image|Flag of Rockville, Maryland.svg|size=23px}} [[Rockville, Maryland|Rockville]]
+| unit_pref                = Imperial
+| area_total_sq_mi         = 507
+| area_land_sq_mi          = 491
+| area_water_sq_mi         = 16
+| area_water_percent       = 3.1
+| population_as_of         = [[2010 United States Census|2010]]
+| population_total         = 971777
+| pop_est_as_of            = 2019
+| population_est           = 1050688
+| population_density_sq_mi = auto
+| population_demonyms      = {{csv|Montgomery Countyan|MoCoite}}
+| timezone1                = [[Eastern Time Zone|Eastern]] [EST]
+| utc_offset1              = −05:00
+| timezone1_DST            = [[Eastern Time Zone|EDT]]
+| utc_offset1_DST          = −04:00
+| postal_code_type         = [[ZIP Code]]s
+| postal_code              = 20812–20918
+| area_code_type           = 
+| area_codes               = {{hlist|[[Area codes 301 and 240|301]]|[[Area codes 301 and 240|240]]}}
+| motto                    = {{lang-fr|Gardez Bien}} {{small|({{Lang-en|Watch Well}})}}
+| website                  = {{URL|https://www.montgomerycountymd.gov/}}
+| named_for                = [[Richard Montgomery]]
+| blank_name_sec2          = Congressional districts
+|blank_info_sec2           = Maryland's {{hlist|[[Maryland's 3rd congressional district|3rd]]|[[Maryland's 6th congressional district|6th]]|[[Maryland's 8th congressional district|8th]]}}&lt;ref&gt;{{cite web|url=https://www.govtrack.us/congress/members/MD#representatives|title=Maryland Senators, Representatives, and Congressional District Maps|website=GovTrack.us|language=en-US|access-date=February 23, 2020}}&lt;/ref&gt;
+| leader_party             = [[Democratic Party (United States)|D]]
+| leader_title             = Executive
+| leader_name              = [[Marc Elrich]]
+}}
+
+'''Montgomery County''' is the most populous [[County (United States)|county]] in the [[U.S. state]] of [[Maryland]], located adjacent to [[Washington, D.C.]] As of the [[2010 United States Census|2010 census]], the county's population was 971,777, increasing by 8.1% to an estimated 1,050,688 in 2019.&lt;ref name=&quot;QF&quot;&gt;{{cite web|title=QuickFacts Montgomery County, Maryland|url=https://www.census.gov/quickfacts/fact/table/montgomerycountymaryland/PST045217|publisher=[[United States Census Bureau]]|access-date=April 7, 2018|archive-url=https://web.archive.org/web/20180226022319/https://www.census.gov/quickfacts/fact/table/montgomerycountymaryland/PST045217|archive-date=February 26, 2018|url-status=live|df=mdy-all}}&lt;/ref&gt; The [[county seat]] and largest municipality is [[Rockville, Maryland|Rockville]], although the [[census-designated place]] of [[Germantown, Maryland|Germantown]] is the most populous city within the county.&lt;ref&gt;{{cite web|author=American FactFinder, United States Census Bureau |url=http://factfinder.census.gov/servlet/GCTTable?_bm=y&amp;-geo_id=04000US24&amp;-_box_head_nbr=GCT-PH1-R&amp;-ds_name=DEC_2000_SF1_U&amp;-_lang=en&amp;-format=ST-7S&amp;-_sse=on |title=Maryland by Place – GCT-PH1-R. Population, Housing Units, Area, and Density (geographies ranked by total population): 2000 |publisher=Factfinder.census.gov |access-date=July 12, 2009 |url-status=dead |archive-url=https://web.archive.org/web/20090226112432/http://factfinder.census.gov/servlet/GCTTable?_bm=y&amp;-geo_id=04000US24&amp;-_box_head_nbr=GCT-PH1-R&amp;-ds_name=DEC_2000_SF1_U&amp;-_lang=en&amp;-format=ST-7S&amp;-_sse=on |archive-date=February 26, 2009 }}&lt;/ref&gt; Montgomery County is included in the [[Washington metropolitan area|Washington–Arlington–Alexandria, DC–VA–MD–WV Metropolitan Statistical Area]], which in turn forms part of the [[Baltimore–Washington metropolitan area|Baltimore–Washington Combined Statistical Area]]. Most of the county's residents live in unincorporated locales, of which the most urban are [[Silver Spring, Maryland|Silver Spring]] and [[Bethesda, Maryland|Bethesda]], although the [[incorporated city|incorporated cities]] of [[Rockville, Maryland|Rockville]] and [[Gaithersburg, Maryland|Gaithersburg]] are also large population centers, as are many smaller but significant places.{{#tag:ref|Although Rockville is the most populous incorporated city in Montgomery County, Germantown, an unincorporated census-designated place, is the most populous locale in the county.|group=N}}
+
+As one of the most [[affluence|affluent]] counties in the United States,&lt;ref&gt;{{cite news|url=https://www.washingtonpost.com/local/seven-of-nations-10-most-affluent-counties-are-in-washington-region/2012/09/19/f580bf30-028b-11e2-8102-ebee9c66e190_story.html|title=Seven of nation's 10 most affluent counties are in Washington region|work=Washington Post|date=September 19, 2012|access-date=April 9, 2013|first1=Carol|last1=Morello|first2=Ted|last2=Mellnick|archive-url=https://web.archive.org/web/20130728054217/http://www.washingtonpost.com/local/seven-of-nations-10-most-affluent-counties-are-in-washington-region/2012/09/19/f580bf30-028b-11e2-8102-ebee9c66e190_story.html|archive-date=July 28, 2013|url-status=live|df=mdy-all}}&lt;/ref&gt; Montgomery County also has the highest percentage (29.2%) of residents over 25 years of age who hold [[post-graduate degree]]s.&lt;ref&gt;{{Cite web|url=https://www.census.gov|title=U.S. Census website|first=U. S. Census|last=Bureau|website=[[United States Census Bureau]]}}&lt;/ref&gt; The county has been ranked as [[highest income counties in the United States|one of the wealthiest in the United States]].&lt;ref&gt;[https://www.forbes.com/2008/01/22/counties-rich-income-forbeslife-cx_mw_0122realestate_slide_9.html?thisSpeed=15000 &quot;Complete List: America's Richest Counties&quot;] {{Webarchive|url=https://web.archive.org/web/20180408142452/https://www.forbes.com/2008/01/22/counties-rich-income-forbeslife-cx_mw_0122realestate_slide_9.html?thisSpeed=15000 |date=April 8, 2018 }}, ''[[Forbes]]'', February 2, 2008&lt;/ref&gt;&lt;ref&gt;[http://quickfacts.census.gov/qfd/states/24/24031.html &quot;Montgomery County QuickFacts&quot;] {{webarchive|url=https://web.archive.org/web/20110606163928/http://quickfacts.census.gov/qfd/states/24/24031.html |date=June 6, 2011 }}, September 9, 2009&lt;/ref&gt; Like other inner-[[suburb]]an Washington, D.C. counties, Montgomery County contains many major U.S. government offices, [[scientific research]] and learning centers, and business campuses, which provide a significant amount of revenue for the county.&lt;ref&gt;[http://www.choosemontgomerymd.com/business-community#.VO9BYPnF8vk] {{Webarchive|url=https://web.archive.org/web/20150226182005/http://www.choosemontgomerymd.com/business-community#.VO9BYPnF8vk |date=February 26, 2015 }}, February 26, 2015&lt;/ref&gt;&lt;ref&gt;[http://www.montgomerycountychamber.com/business-community-resources] {{Webarchive|url=https://web.archive.org/web/20150226181050/http://www.montgomerycountychamber.com/business-community-resources |date=February 26, 2015 }}, Montgomery County Chamber of Commerce, February 26, 2015&lt;/ref&gt;
+
+==Etymology==
+The Maryland state legislature named Montgomery County after [[Richard Montgomery]]; the county was created from lands that had at one point or another been part of Frederick County.&lt;ref&gt;{{Cite web|url=https://ghostsofdc.org/2012/11/07/montgomery-county-history/|title=Why Is It Named Montgomery County?|last=Tom|date=2012-11-07|website=Ghosts of DC|language=en-US|access-date=2019-02-17|archive-url=https://web.archive.org/web/20190131093353/https://ghostsofdc.org/2012/11/07/montgomery-county-history/|archive-date=January 31, 2019|url-status=live|df=mdy-all}}&lt;/ref&gt; On September 6, 1776,&lt;ref name=cent /&gt; [[Thomas S. Wootton|Thomas Sprigg Wootton]] from Rockville, Maryland, introduced legislation, while serving at the Maryland Constitutional Convention, to create lower Frederick County as Montgomery County. The name, Montgomery County, along with the founding of Washington County, Maryland, after George Washington, was the first time in American history that counties and provinces in the thirteen colonies were not named after British referents. The name use of Montgomery and Washington County were seen as further defiance to [[Kingdom of Great Britain|Great Britain]] during the [[American Revolutionary War]]. The county's nickname of &quot;MoCo&quot; is derived from &quot;'''Mo'''ntgomery '''Co'''unty&quot;.&lt;ref&gt;{{cite web|url=https://www.youtube.com/watch?v=OKZDUWpk7jQ|title=Get On Board BRT - Vote Now!|last=Rapid Transit - Montgomery County, MD|via=YouTube}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=https://twitter.com/MoCoCouncilMD/status/798593468499042304|title=@CoUnTy_ExEc talks about his mission to make #MoCo one of the most welcoming places on earth. #CommunityMatterspic.twitter.com/EJuLFi2NAz|first=Montgomery|last=Council|date=November 15, 2016|access-date=November 15, 2016|archive-url=https://web.archive.org/web/20170612095406/https://twitter.com/MoCoCouncilMD/status/798593468499042304|archive-date=June 12, 2017|url-status=live|df=mdy-all}}&lt;/ref&gt;
+
+The county's motto, adopted in 1976, is &quot;Gardez Bien&quot;, a phrase meaning &quot;Watch Well&quot;. The county's motto is also the motto of its namesake's family.&lt;ref&gt;{{cite web|url=http://clanmontgomery.org/symbols.html|archive-url=https://web.archive.org/web/20080905114211/http://clanmontgomery.org/symbols.html|archive-date=September 5, 2008|work=Clan Montgomery Symbols|author=Clan Montgomery Society|publisher=Clan Montgomery Society|title=Montgomery Motto|date=June 14, 2008|access-date=September 5, 2008|quote=&quot;Garde&quot; (pronounced gard-uh) or &quot;Gardez&quot; (pronounced garday) means &quot;watch&quot;, in the sense of &quot;look out&quot; or &quot;on guard&quot;. &quot;Bien&quot; (pronounced bee-ann) means &quot;good&quot; to give the overall meaning of &quot;Watch Well&quot;.}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.montgomeryplanning.org/historic/places_from_the_past/|archive-url=https://web.archive.org/web/20120430094909/http://www.montgomeryplanning.org/historic/places_from_the_past/|archive-date=April 30, 2012|work=Montgomery County Historic Sites|title=Places From the Past|publisher=Montgomery County Planning Department|location=8787 Georgia Avenue, Silver Spring, Maryland, 20910|date=January 26, 2012|access-date=April 30, 2012|quote=Gardez Bien, adopted in 1976 as the county motto, means to guard well or take good care}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.houseofnames.com/montgomery-family-crest|work=House of Names|title=Montgomery Family Crest and Name History|publisher=Swyrich Corporation|author=House of Names|year=2014|access-date=February 9, 2014|archive-url=https://web.archive.org/web/20140221075052/http://www.houseofnames.com/montgomery-family-crest|archive-date=February 21, 2014|url-status=live|df=mdy-all}}&lt;/ref&gt;
+
+==History==
+{{Multiple image
+|alignment=horizontal
+|image1=Map of Montgomery County, Maryland. Compiled in the Bureau of Topographical Engineers from the latest and best... - NARA - 305573.jpg
+|caption1=Map of Montgomery County, Maryland. Compiled in the Bureau of Topographical Engineers from the latest and best authorities, September 1862.
+|image2=Madison house brookeville.jpg
+|caption2=The Madison House in [[Brookeville, Maryland|Brookeville]] was built around 1800 and originally owned by [[Caleb Bentley]]. The house provided refuge for President [[James Madison]], on August 26, 1814, after the British burned Washington, D.C., during the [[War of 1812]].}}
+{{Multiple image
+|alignment=horizontal
+|image1=Summit Avenue, Gaithersburg, Maryland (1900).jpg
+|caption1=[[Gaithersburg, Maryland|Gaithersburg]]'s Summit Avenue in the early 1900s
+|image2=20111110-OC-AMW-0009 - Flickr - USDAgov.jpg
+|caption2=A Montgomery County farm in 1912.
+}}
+{{Multiple image
+|alignment=horizontal
+|image1=Montgomery County Fair, Maryland (1917).jpg
+|caption1=The Montgomery County Fair in 1917
+|image2=North Frederick Avenue, Gaithersburg, Maryland, 1919.jpg
+|caption2=Downtown Gaithersburg in 1919.}}
+{{Multiple image
+|alignment=horizontal
+|image1=Montgomery County Fair in Maryland (June 1949).png
+|image2=Montgomery County Fair, Maryland (June 4, 1949).png
+|footer=The Montgomery County Fair in June 1949}}
+{{Multiple image
+|alignment=horizontal
+|image3=Montgomery County Fair (June 4, 1949).png
+|image4=Montgomery County Fair, Maryland (June 1949).png
+|footer=The Montgomery County Fair in June 1949}}
+{{Multiple image
+|alignment=horizontal
+|image1=
+|caption1=An ambulance driving down Silver Spring's Georgia Avenue in 1950
+|image2=North Frederick Avenue and Brookes Avenue, Gaithersburg, Maryland, February 19, 1956.jpg
+|caption2=Downtown Gaithersburg in February 1956.}}
+{{Multiple image
+|alignment=horizontal
+|image1=Montgomery Mall, Maryland (1973).jpg
+|caption1=Montgomery Mall in 1973
+|image2=Silver Theater, Silver Spring, Maryland (1979).jpg
+|caption2=Silver Spring in 1979}}
+{{Multiple image
+|alignment=horizontal
+|image1=Coat of arms of Montgomery County, Maryland (1975).png
+|caption1=The former coat of arms of Montgomery County, used up until 1976.
+|image2=Flag of Montgomery County, Maryland (1944-1976).png
+|caption2={{FIAV|historical}} The former [[Flag of Montgomery County, Maryland|flag of Montgomery County]], used from May 3, 1944 to October 5, 1976.}}
+[[File:Rockville Railroad Station in 2017.jpg|thumb|upright|The Rockville [[Rockville Railroad Station|Baltimore and Ohio Railroad]] station in 2017. It was built in 1873.]]
+
+===Early history===
+Before European colonization, the land now known as Montgomery County was covered in a vast swath of forest crossed by the creeks and small streams that feed the [[Potomac River|Potomac]] and [[Patuxent River|Patuxent]] rivers. A few small villages of the [[Piscataway Indian Nation|Piscataway]], members of the [[Algonquian peoples|Algonquian]] people, were scattered across the southern portions of the county. North of the [[Great Falls (Potomac River)|Great Falls]] of the Potomac, there were few permanent settlements, and the Piscataway shared hunting camps and foot paths with members of rival peoples like the [[Susquehannock]]s and the [[Seneca Nation|Senecas]].
+
+Captain [[John Smith of Jamestown|John Smith]] of the [[Kingdom of England|English]] settlement at [[History of the Jamestown Settlement (1607–1699)|Jamestown]] was probably the first European to explore the area, during his travels along the Potomac River and throughout the [[Chesapeake Bay|Chesapeake]] region.&lt;ref name=centuries/&gt;{{rp|11-13}}

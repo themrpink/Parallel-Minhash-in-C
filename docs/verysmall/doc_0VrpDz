@@ -1,0 +1,305 @@
+==Prevalence==
+Package managers like [[dpkg]] have existed as early as 1994.&lt;ref&gt;{{cite web |title=dpkg version 0.93.15 source code|url=https://anonscm.debian.org/cgit/dpkg/dpkg.git/plain/scripts/perl-dpkg.pl?id=1b80fb16c22db72457d7a456ffbf1f70a8dfc0a5|access-date=19 December 2018|archive-url=https://web.archive.org/web/20150402141229/https://anonscm.debian.org/cgit/dpkg/dpkg.git/plain/scripts/perl-dpkg.pl?id=1b80fb16c22db72457d7a456ffbf1f70a8dfc0a5|archive-date=2 April 2015|url-status=dead|df=dmy-all}}&lt;/ref&gt;
+
+[[Linux distribution]]s oriented to binary packages rely heavily on package management systems as their primary means of managing and maintaining software. Mobile operating systems such as [[Android (operating system)|Android]] (Linux-based), [[iOS]] ([[Unix-like]]), and [[Windows Phone]] rely almost exclusively on their respective vendors' [[app store]]s and thus use their own dedicated package management systems.
+
+&lt;gallery mode=&quot;packed&quot;&gt;
+File:Apt-get install mediawiki.png|&lt;code&gt;apt-get&lt;/code&gt;, a [[Command-line interface|CLI]] utility installing [[MediaWiki]]
+File:Aptitude 0.4.11.3 de.png|[[Aptitude (software)|Aptitude]] also features a [[text-based user interface|TUI]]
+File:Synaptic Package Manager.png|[[Synaptic (software)|Synaptic]], a GUI for many Linux package managers
+File:Kpackagekit.png|[[Apper]], a [[Qt (software)|Qt]] GUI for [[PackageKit]]
+File:GNOME Software 3.10.png|[[GNOME Software]], a [[GTK+]] GUI for PackageKit
+File:Octopi pacman.png|Octopi, a [[Qt (software)|Qt]] GUI for Pacman package manager
+File:Pamac gui.png|Pamac, a [[GTK+]] GUI for Pacman package manager
+File:Windows Package Manager v0.1.41331 Preview 1115x624.png|&lt;code&gt;winget&lt;/code&gt;, the [[Windows Package Manager]] [[Command-line interface|CLI]] utility for [[Windows 10]]
+&lt;/gallery&gt;
+
+==Comparison with installers==
+A package manager is often called an &quot;install manager&quot;, which can lead to a confusion between package managers and [[installer]]s. The differences include:
+
+{{PMS vs Installer}}
+
+==Comparison with build automation utility==
+Most [[software configuration management]] systems treat building software and deploying software as separate, independent steps.
+A [[build automation]] utility typically takes human-readable [[source code]] files already on a computer, and automates the process of converting them into a binary executable package on the same computer.
+Later a package manager typically running on some other computer downloads those pre-built binary executable packages over the internet and installs them.
+
+However, both kinds of tools have many commonalities:
+*For example, the [[dependency graph]] [[topological sorting]] used in a package manager to handle dependencies between binary components is also used in a build manager to handle the dependency between source components.
+*For example, many [[makefile]]s support not only building executables, but also installing them with &lt;code&gt;make install&lt;/code&gt;.
+*For example, every package manager for a [[:Category:Source-based Linux distributions|source-based distribution]] {{ndash}} [[Portage (software)|Portage]], [[Sorcery (package manager)|Sorcery]], [[Homebrew (package management software)|Homebrew]], etc. {{ndash}} supports converting human-readable source code to binary executables and installing it.
+
+A few tools, such as [[Maak]] and [[A-A-P]], are designed to handle both building and deployment, and can be used as either a build automation utility or as a package manager or both.&lt;ref&gt;Eelco Dolstra, [https://nixos.org/~eelco/pubs/iscsd-scm11-submitted.pdf &quot;Integrating Software Construction and Software Deployment&quot;].&lt;/ref&gt;
+
+==Common package managers and formats==
+
+
+===Universal package manager===
+Also known as [[binary repository manager]], it is a software tool designed to optimize the download and storage of binary files, artifacts and packages used and produced in the [[software development process]].&lt;ref&gt;{{cite web |url= https://adtmag.com/articles/2015/09/08/jfrog-repository.aspx |title= JFrog Releases 'Universal' Artifact Repository |last=Waters |first= John K. |date= 8 September 2015|website=ADT Mag |publisher=Application Development Trends Magazine}}&lt;/ref&gt; These package managers aim to standardize the way enterprises treat all package types. They give users the ability to apply security and compliance metrics across all artifact types. Universal package managers have been referred to as being at the center of a [[DevOps toolchain]].&lt;ref&gt;{{cite web |url= https://www.codeproject.com/Reference/628210/An-Overview-of-the-NuGet-Ecosystem |title=An Overview of the NuGet Ecosystem |last=Decoster |first=Xavier |date= 18 August 2013 |website=CodeProject.com}}&lt;/ref&gt;
+
+===Package formats===
+{{Main article|Package format|File archive}}
+Each package manager relies on the format and metadata of the packages it can manage. That is, package managers need groups of files to be bundled for the specific package manager along with appropriate metadata, such as dependencies. Often, a core set of utilities manages the basic installation from these packages and multiple package managers use these utilities to provide additional functionality.
+
+For example, [[Yellowdog Updater, Modified|yum]] relies on [[RPM Package Manager|rpm]] as a backend. Yum extends the functionality of the backend by adding features such as simple configuration for maintaining a network of systems. As another example, the [[Synaptic Package Manager]] provides a graphical user interface by using the [[Advanced Packaging Tool|Advanced Packaging Tool (apt)]] library, which, in turn, relies on [[dpkg]] for core functionality.
+
+[[Alien (file converter)|Alien]] is a program that converts between different [[Linux package formats]], supporting conversion between [[Linux Standard Base]] (LSB) compliant [[RPM Package Manager|.rpm]] packages, [[deb (file format)|.deb]], Stampede (.slp), [[Solaris (operating system)|Solaris]] (.pkg) and [[Slackware]] ([[.tgz]], [[.txz]], .tbz, .tlz) packages.
+
+In mobile operating systems, [[Google Play]] consumes [[Android application package]] (APK) package format while [[Windows Store]] uses [[APPX]] and [[XAP (file format)|XAP]] formats. (Both Google Play and Windows Store have eponymous package managers.)
+
+===Free and open source software systems===
+By the nature of [[free and open source software]], packages under similar and compatible licenses are available for use on a number of operating systems. These packages can be combined and distributed using configurable and internally complex packaging systems to handle many permutations of software and manage version-specific dependencies and conflicts. Some packaging systems of free and open source software are also themselves released as free and open source software. One typical difference between package management in proprietary operating systems, such as Mac OS X and Windows, and those in free and open source software, such as Linux, is that free and open source software systems permit third-party packages to also be installed and upgraded through the same mechanism, whereas the package managers of Mac OS X and Windows will only upgrade software provided by Apple and Microsoft, respectively (with the exception of some third party drivers in Windows). The ability to continuously upgrade third party software is typically added by adding the [[Uniform Resource Locator|URL]] of the corresponding repository to the package management's configuration file.
+
+===Application-level package managers===
+{{See also|List of software package management systems#Application-level package managers}}
+
+Beside the system-level application managers, there are some add-on package managers for operating systems with limited capabilities and for [[programming language]]s in which developers need the latest [[Library (computing)|libraries]].
+
+In contrast to system-level package managers, application-level package managers focus on a small part of the software system. They typically reside within a directory tree that is not maintained by the system-level package manager, such as {{Mono|c:\cygwin}} or {{Mono|/usr/local/fink}}. However, this might not be the case for the package managers that deal with programming libraries, leading to a possible conflict as both package managers may claim to &quot;own&quot; a file and might break upgrades.
+
+==Impact==
+[[Ian Murdock]] had commented that package management is &quot;the single biggest advancement [[Linux]] has brought to the industry&quot;, that it blurs the boundaries between operating system and applications, and that it makes it &quot;easier to push new innovations [...] into the marketplace and [...] evolve the OS&quot;.&lt;ref&gt;{{cite web |title=How package management changed everything|url=http://ianmurdock.com/2007/07/21/how-package-management-changed-everything/|publisher=ianmurdock.com|accessdate=2008-03-01|url-status=dead|archive-url=https://web.archive.org/web/20090223072201/http://ianmurdock.com/2007/07/21/how-package-management-changed-everything/|archive-date=23 February 2009|df=dmy-all}}&lt;/ref&gt;
+
+==See also==
+*[[AppStream]]
+*[[Flatpak]]
+*[[Installation (computer programs)]]
+*[[InstallShield]]
+*[[List of software package management systems]]
+*[[Package format]]
+*[[Snap (package manager)]]
+*[[Windows Installer]]
+
+==References==
+{{Reflist|30em}}
+
+==External links==
+*[http://distrowatch.com/dwres.php?resource=package-management Package Management Cheatsheet] (Distrowatch)
+*[https://wiki.archlinux.org/index.php/Pacman/Rosetta ArchLinux Rosetta Stone - Command Line Comparison for Package Managers]
+*[https://github.com/Inducido/upkg-package-manager-rosetta-stone upkg universal package manager] a wrapper that provides same syntax for all flavors of Linux
+
+{{Package management systems}}
+{{Software digital distribution platforms}}
+
+[[Category:Package management systems| ]]
+[[Category:Software distribution]]
+[[Category:Types of tools used in software development]]</text>
+      <sha1>42sclr22eap1lhhp1rj2s8du6gehjqh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Internet exchange</title>
+    <ns>0</ns>
+    <id>47018</id>
+    <redirect title="Internet exchange point" />
+    <revision>
+      <id>199015800</id>
+      <parentid>116772072</parentid>
+      <timestamp>2008-03-18T03:55:35Z</timestamp>
+      <contributor>
+        <username>Parsecboy</username>
+        <id>1879095</id>
+      </contributor>
+      <minor />
+      <comment>fix double redirect</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="37" xml:space="preserve">#REDIRECT [[Internet exchange point]]</text>
+      <sha1>4ge067wylj9dlfstf077n8ob2azj012</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>OBL</title>
+    <ns>0</ns>
+    <id>47019</id>
+    <revision>
+      <id>912817364</id>
+      <parentid>901406455</parentid>
+      <timestamp>2019-08-28T02:13:55Z</timestamp>
+      <contributor>
+        <username>Hyperik</username>
+        <id>1458161</id>
+      </contributor>
+      <comment>+</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="620" xml:space="preserve">'''OBL''' may refer to:
+* Obol Basketball League, former name for the [[Swedish Basketball League]]
+* [[Osama bin Laden]] (1957&amp;ndash;2011), founder of the al-Qaeda militant organization
+* [[Zoersel-Oostmalle Airfield]], IATA code
+* [[Oblique case]], a grammatical case
+* Obligate wetland plant, a [[wetland indicator status]]
+
+'''ÖBL''' may refer to:
+* [[Österreichische Basketball Bundesliga]], the top men's professional basketball league in Austria
+* [[Österreichisches Biographisches Lexikon 1815–1950]], a biographical dictionary of individuals who've contributed to the history of Austria
+
+{{disambiguation}}</text>
+      <sha1>e5l9fj6k142pxf8ub5anwiom2bgzwsn</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>ObL</title>
+    <ns>0</ns>
+    <id>47020</id>
+    <redirect title="OBL" />
+    <revision>
+      <id>783876312</id>
+      <parentid>573185281</parentid>
+      <timestamp>2017-06-05T06:04:45Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="82" xml:space="preserve">#REDIRECT [[OBL]]
+
+{{Redirect category shell|1=
+{{R from other capitalisation}}
+}}</text>
+      <sha1>fxak0jnvker15vcjzz0vq789o0upc2d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Gnaeus Pompeius Magnus</title>
+    <ns>0</ns>
+    <id>47021</id>
+    <redirect title="Pompey" />
+    <revision>
+      <id>778027141</id>
+      <parentid>777987420</parentid>
+      <timestamp>2017-04-30T18:46:52Z</timestamp>
+      <contributor>
+        <username>BD2412</username>
+        <id>196446</id>
+      </contributor>
+      <minor />
+      <comment>/* top */spacing fix using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="100" xml:space="preserve">#REDIRECT [[Pompey]]
+
+{{redirect category shell|{{R nick}}{{ralterlang|la|en}}{{R hatnote}}{{R p}}}}</text>
+      <sha1>pfyuf7ovcioap6qnk4gb6w7q6a481ob</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Osama (disambiguation)</title>
+    <ns>0</ns>
+    <id>47022</id>
+    <revision>
+      <id>902649973</id>
+      <parentid>896196341</parentid>
+      <timestamp>2019-06-20T09:22:25Z</timestamp>
+      <contributor>
+        <ip>98.155.177.157</ip>
+      </contributor>
+      <comment>/* People */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="707" xml:space="preserve">{{wiktionary|Osama|osama}}
+'''Osama''' most commonly refers to [[Osama bin Laden]] (1957–2011), the founder of al-Qaeda.
+
+'''Osama''' or '''Usama''' may also refer to:
+
+==People==
+* [[Osama (name)]]
+* [[Usama Mukwaya]]
+* [[Ōsama]]
+
+==Film==
+* [[Osama (film)|''Osama'' (film)]], a 2003 film made in Afghanistan
+* ''[[Being Osama]]'', a 2004 documentary film of five men named Osama
+* ''[[Main Osama]]'', an upcoming Indian film
+* ''[[Ōsama Game]]'', a Japanese 2011 horror film
+
+==Other uses==
+* [[Osama (novel)|''Osama'' (novel)]], a World Fantasy Award-winning novel by Lavie Tidhar
+
+==See also==
+* ''[[Dinner With Osama]]'', collection of short stories by Marilyn Krysl
+* [[Osamu]]
+
+{{disambiguation}}</text>
+      <sha1>0hs1sbb210nufp4ztso68c7chjw8yqg</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>London Internet Exchange</title>
+    <ns>0</ns>
+    <id>47023</id>
+    <revision>
+      <id>989848890</id>
+      <parentid>987814617</parentid>
+      <timestamp>2020-11-21T11:23:41Z</timestamp>
+      <contributor>
+        <username>Mean as custard</username>
+        <id>10962546</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18345" xml:space="preserve">{{EngvarB|date=September 2017}}
+{{Use dmy dates|date=September 2017}}
+{{redir|LINX|other uses|Linx (disambiguation)}}
+{{Multiple issues|
+{{primary sources|date=May 2014}}
+{{more citations needed|date=May 2014}}
+{{tone|date=May 2014}}
+}}
+{{infobox Internet exchange point
+| name         = London Internet Exchange
+| image        =
+| image_width  =
+| full_name    =London Internet Exchange
+| abbreviation = LINX
+| founded      = 1994
+| location     = {{GBR}}, London
+| members      = 863 {{As of|2020|August|lc=1}}
+| ports        = 1,730 {{As of|2020|August|lc=1}}
+| peers        =
+| website      = [https://www.linx.net/ www.linx.net]
+| peak         = [https://portal.linx.net/ 5.52 Tbit/s] {{As of|2020|November|lc=1}}&lt;ref&gt;{{cite web|accessdate=2020-11-09|title=New maximum Internet traffic peak across our network yesterday|url=https://twitter.com/LINX_Network/status/1325739323262693376|website=twitter.com/LINX_Network}}&lt;/ref&gt;
+| peak_in      =
+| peak_out     =
+| daily_in     =
+| daily_out    =
+|Member ASNs=961 {{As of|2020|August|lc=1}}}}{{coord|51.511453|-0.003418|region:GB_type:landmark_scale:2000_source:Google|display=title}}
+
+[[Image:TelehouseDocklands.jpg|thumb|right|300px|[[Telehouse Docklands]], home of the '''London Internet Exchange''' since 1994.]]
+The '''London Internet Exchange (&quot;LINX&quot;)''' is a [[Mutual organization|mutually governed]] [[Internet exchange point]] (IXP) that provides [[peering]] services and public policy representation to over 820 [[Internet service provider]]s (ISPs) and other network operators (over 870 different ASNs). LINX operates IXPs in [[London]], [[Manchester]], [[Edinburgh]], [[Cardiff]] in the UK, and [[Northern Virginia]] in the [[United States|USA]].&lt;ref name=&quot;:0&quot;&gt;{{Cite web|url=https://www.datacenterdynamics.com/news/telehouse-opens-177-million-london-docklands-data-center/|title=Telehouse opens $177 million London Docklands data center|website=www.datacenterdynamics.com|language=en|access-date=2019-03-29}}&lt;/ref&gt;
+
+LINX was founded in 1994 by a group of ISPs and educational networks and is a founder member of [[Euro-IX]], a Europe-wide alliance of Internet Exchanges. It is currently [[List of Internet exchange points by size|one of the largest]] neutral IXPs in Europe in terms of average throughput.&lt;ref name=&quot;:0&quot; /&gt;
+
+LINX is a not-for-profit organisation ([[company limited by guarantee]]). Networks join LINX as members and sign a [[memorandum of understanding]]. Members collectively 'own' the company and all members have a single vote at [[annual general meeting|AGMs]] and EGMs in matters relating to finances, constitution, and what activities LINX may carry out. Members also periodically elect the LINX non-executive board of directors. Members meet at regular LINX meetings to discuss technical, corporate governance, and regulatory matters. LINX has a mandate to not actively compete with its members.
+
+==History==
+Back in November 1994, using a donated piece of equipment no bigger than a video recorder and without any written contracts, five UK-based Internet service providers (ISPs) linked their networks to exchange data and avoid paying high transatlantic bandwidth costs.
+
+LINX effectively began when two ISPs ([[PIPEX]] and UKnet) linked their networks via a 64-kilobit serial link to save the cost and time delay involved in routing data across the Atlantic to US Internet exchanges.&lt;ref name=&quot;:1&quot; /&gt;
+
+When [[Demon Internet]], [[UKERNA]] – the UK academic network – and other ISPs showed interest in establishing similar serial links, Keith Mitchell, then chief technical officer of PIPEX, initiated a meeting with BT to discuss the creation of a London-based Internet exchange.
+
+PIPEX provided the LINX founders with a Cisco Catalyst&amp;nbsp;1200 switch with eight 10-megabit ports. Rack space was leased at a then virtually empty data centre operated by Telehouse International Corporation of Europe Ltd at Coriander Avenue in London's Docklands.
+
+Switching the first data through the Telehouse hub was a momentous event that was accomplished by primarily technical specialists who were unconcerned about the formalities of legal contracts. However, while PIPEX continued to provide administrative and technical oversight, the need for a formal constitution was eventually recognised.
+
+The solution was to form a company limited by guarantee. Lawyers produced a draft memorandum and constitution which was extensively modified by members. The company was formed in 1995 and a board of five non-executive directors was elected, with Keith Mitchell as the initial chairman.
+
+===Not for profit organisation===
+From the beginning, it was agreed that LINX would be a non-profit organisation run for the benefit of members and governed collectively through regular member meetings, a practice which continues to this day.
+
+While PIPEX continued to provide administrative oversight – charged at cost to LINX – member meetings were held every two months (now every three months) to decide strategic direction. Eventually, it was accepted that the purely co-operative system of operation at LINX was becoming overly demanding and in late 1996 Keith Mitchell accepted the role of full-time chairman, working with a personal assistant from offices in Peterborough.
+
+In the summer of 1996 LINX became the first Internet exchange in the world to deploy a 100-megabit switch – a Cisco Catalyst 5000. In January 1999 it pioneered the implementation of a Metropolitan Area Network (MAN) running over gigabit Ethernet connections.
+
+As the Internet grew in popularity, legislators and law enforcement agencies inevitably decided it must be regulated. LINX increasingly found itself taking on non-core activities, such as providing expert advice on behalf of its members (and, therefore, the whole industry) to a wide range of official agencies.
+
+In 1999 LINX appointed its first full-time regulation officer in Roland Perry to advise organisations such as the Home Office Internet Task Force, the National Hi-Tech Crime Unit, the Department of Trade and Industry and relevant departments of the EU Commission. In 2003 Roland was succeeded by Malcolm Hutty when Roland left to form his own advisory group.
+
+LINX also actively and financially supports the [[Internet Watch Foundation]] which, since 1996, has worked to eradicate child abuse images from the UK Internet. Initial funding from LINX was instrumental in enabling the IWF to launch and the decision to create the IWF and define its charter was taken at a LINX member meeting in Heathrow.
+
+===LINX in the twenty-first century===
+'''2000''' – a training manager was appointed to introduce an accredited training programme for Internet engineers and technicians.

@@ -19,7 +19,6 @@ struct doc_couple{
 };
 
 /**
- * III fase
  * si espande la lista di coppie {signature, doc_id} in una lista di triple, prendendo ogni signature della lista di coppie
  * e ricavandone le triple: {doc_id, doc_id, numero_di_signatures_condivise}, in cui i doc_id indicano solo documenti distinti.
  * In teoria bisogna scorrere tutta la lista lunga n, per n volte. Ma essendo stata la lista ordinata con il mergesort, per ogni signature è sufficiente scorrere
@@ -31,7 +30,6 @@ struct doc_couple{
  */
 int find_similarity(int numberOfFiles, char **files, long long unsigned **minhashDocumenti);
 /**
- *  II fase ( la I fase è il calcolo delle signatures):
  *  files_sketches, è un array di coppie {signature, doc_id}. Le coppie sono relative a uno stesso doc_id, ordinate
  *  secondo le signatures. Adesso si copiano questi array in un solo array che conterrà quindi tutte le coppie {signature, doc_id} di tutti i documenti.
  *  A questo punto si fa un nuovo mergesort ordinandoli secondo le signatures.
@@ -65,12 +63,11 @@ int do_clustering(struct doc_couple* couples, int count);
  * Restituisce anche una percentuale di somiglianza tra i documenti che hanno almeno una signatures in comune.
  * Dal paper: "In the final phase, we produce the complete clustering. We examine each <ID, ID, count> triplet
  * and decide if the document pair exceeds our threshold for resemblance."
- * @param minhashDocumenti
  * @param couples
  * @param index
  * @param files
  */
-void check_and_print_similarity(long long unsigned **minhashDocumenti,  struct doc_couple* couples, int index, char **files);
+void check_and_print_similarity(struct doc_couple* couples, int index, char **files);
 /**
  * mergesort
  * @param X

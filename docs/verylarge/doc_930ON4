@@ -1,0 +1,272 @@
+According to [[Telcordia]] GR-49, requirements for telecommunications NIDs vary based on three categories of environmental conditions:&lt;ref name=&quot;Telcordia&quot;/&gt;
+
+# Normal conditions: This refers to a normal environment that is expected in most areas of any service provider. Temperatures are expected to be in the range of {{convert|-20|–|32|°C}}, and humidity is expected to be less than 90% RH. No unusual contamination is expected.
+# Severe climatic conditions: These cover environments more severe than those of a normal environment (i.e., higher humidity, high lightning activity, exposure to salt-laden atmosphere, and exposure to contaminants). Temperatures are expected to be in the range of {{convert|-40|–|43|°C}}, and humidity may exceed 90% RH. Jacks installed in NIDs in such environments are known to become contaminated and develop low insulation resistances and low dielectric breakdown voltages when subjected to high humidity. These problems can cause noisy lines or even service outages.
+# Flooded conditions: These cover areas of a service provider prone to flooding, such as in coastal or flood plain locations. After a flooding incident, temperature is expected to be in the range of {{convert|4.5|–|38|°C|0}}, and humidity may exceed 90% RH. The requirements are not to determine if the NID will function during a flood, but to review the ability of the NID to function after the flood has subsided.
+
+Service providers must decide which condition best suits their application.
+
+== See also ==
+* [[Channel service unit]]
+* [[CSU/DSU]]
+* [[Data service unit]]
+* [[Customer premises equipment]]
+* [[Customer premises wiring]]
+* [[Local exchange carrier]]
+* [[Main distribution frame]]
+* [[Network termination]]
+* [[Point of appearance]]
+* [[User–network interface]]
+
+== Notes ==
+
+{{reflist|refs=
+&lt;ref name=&quot;1037cDEF&quot;&gt;{{cite web | title = network interface device | work = Federal Standard 1037C | publisher = [[National Telecommunications and Information Administration]] | location=United States | url = http://www.its.bldrdoc.gov/fs-1037/dir-024/_3522.htm | url-status=live&lt;!--present in Internet Archive--&gt; | date = 1996-08-23 }}&lt;/ref&gt;
+&lt;ref name=&quot;whatont&quot;&gt;{{cite web | title = What is an Optical Network Terminal (ONT)? | publisher = Verizon Communications, Inc. | url = https://www22.verizon.com/foryourhome/fttprepair/nr/common/SupportDetail.aspx?case=c29587 | archiveurl = https://web.archive.org/web/20121006164612/https://www22.verizon.com/foryourhome/fttprepair/nr/common/SupportDetail.aspx?case=c29587 | archivedate = 2012-10-06 }}&lt;/ref&gt;
+&lt;ref name=&quot;Telcordia&quot;&gt;[http://telecom-info.telcordia.com/site-cgi/ido/docs.cgi?ID=SEARCH&amp;DOCUMENT=GR-49&amp; GR-49-CORE] ''Generic Requirements for Outdoor Telecommunication Network Interface Devices (NIDs)'', Telcordia.&lt;/ref&gt;
+}}
+
+== References ==
+
+{{refbegin}}
+* {{cite web | title = Network Interface Device | publisher = Verizon Communications, Inc. | url = http://www22.verizon.com/wholesale/solutions/solution/NIDs.html | accessdate = 2009-06-03 }}
+* {{cite web | title = Network Interface Device (NID) V9.0 | publisher = Qwest Communications International | url = http://www.qwest.com/wholesale/pcat/nid.html | accessdate = 2009-06-03 }}
+* {{cite web | title = Functional Criteria for the DS1 Interface Connector | publisher = BellSouth | date = June 1993 | url = http://www.aniesoft.com/guides/TR-73569.pdf | accessdate = 2009-06-03 }}
+* {{cite web | title = Testing, Repairing and Installing Home telephone Wiring&amp;nbsp;– Network Interface Device | publisher = Public Service Commission of Wisconsin | url = http://psc.wi.gov/utilityinfo/tele/teleConsumer/nid.htm | accessdate = 2009-06-03 | archive-url = https://web.archive.org/web/20090511224521/http://psc.wi.gov/utilityinfo/tele/teleConsumer/nid.htm | archive-date = 2009-05-11 | url-status = dead }}
+* {{cite web | title = Checking the service at the Optical Network Terminal (ONT) | publisher = Verizon Communications, Inc. | url = https://www.verizon.com/support/residential/internet/fiosinternet/troubleshooting/connection+issues/questionsone/128000.htm | accessdate = 2009-06-03 }}
+{{refend}}
+
+== External links ==
+
+[[Category:Telephony equipment]]
+[[Category:Local loop]]
+[[Category:Fiber to the premises]]</text>
+      <sha1>m62077yvdb7atel8a7yyxzjqgy778e3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Network management</title>
+    <ns>0</ns>
+    <id>41410</id>
+    <revision>
+      <id>991437443</id>
+      <parentid>978540742</parentid>
+      <timestamp>2020-11-30T01:47:48Z</timestamp>
+      <contributor>
+        <username>Ilumeo</username>
+        <id>39360863</id>
+      </contributor>
+      <comment>/* See also */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2620" xml:space="preserve">{{short description|the dicipline of administering and managing computer networks}}
+
+'''Network management''' is the process of [[system administrator|administering]] and managing [[computer network]]s. Services provided by this discipline include fault analysis, performance management, [[Provisioning (telecommunications)|provisioning]] of networks and maintaining [[quality of service]]. Software that enables [[network administrator]]s to perform their functions is called [[network management software]].
+
+==Technologies==
+A small number of accessory methods exist to support network and network device management. Network management allows IT professionals to monitor network components within large network area. Access methods include the [[Simple Network Management Protocol|SNMP]], [[command-line interface]] (CLI), custom XML, [[Common Management Information Protocol|CMIP]], [[Windows Management Instrumentation]] (WMI), [[Transaction Language 1]] (TL1), [[CORBA]], [[NETCONF]], and the [[Java Management Extensions]] (JMX).
+
+Schemas include the [[Structure of Management Information]] (SMI), [[Web-Based Enterprise Management|WBEM]], the [[Common Information Model (computing)|Common Information Model]] ([[CIM Schema]]), and [[MTOSI]] amongst others.&lt;ref&gt;{{cite web|url=http://www.networkmanagementhub.com/what-is-syslog-understanding-the-complexities-of-network-management/|title=What is Syslog? Understanding the Complexities of Network Management|work=networkmanagementhub.com|access-date=2015-11-21|archive-url=https://web.archive.org/web/20160221100811/http://www.networkmanagementhub.com/what-is-syslog-understanding-the-complexities-of-network-management/|archive-date=2016-02-21|url-status=dead}}&lt;/ref&gt;
+
+== See also ==
+{{div col|colwidth=20em}}
+* [[Application service management]]
+* [[Business service management]]
+* [[Comparison of network monitoring systems]]
+* [[FCAPS]]
+* [[In-network management]]
+* [[ITIL]]
+* [[Integrated business planning]]
+* [[Network administrator]]
+* [[Network and service management taxonomy]]
+* [[Network management system]]
+* [[Network monitoring]]
+* [[Network performance management]]
+* [[Network traffic measurement]]
+* [[Out-of-band management]]
+* [[Systems management]]
+* [[Website monitoring]]
+{{div col end}}
+
+== References ==
+{{reflist}}
+
+== External links ==
+* {{dmoz|Computers/Software/Networking/Network_Management/|Network Management}}
+* {{dmoz|Computers/Software/Internet/Network_Management/|Internet Network Management}}
+* [http://www.slac.stanford.edu/xorg/nmtf/nmtf-tools.html Network Monitoring and Management Tools]
+
+[[Category:Network management| ]]</text>
+      <sha1>13kc27nhpe4841hn5vlwlchpbfyw4yf</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Network operating system</title>
+    <ns>0</ns>
+    <id>41411</id>
+    <revision>
+      <id>990041249</id>
+      <parentid>990041155</parentid>
+      <timestamp>2020-11-22T13:18:03Z</timestamp>
+      <contributor>
+        <username>Ghettoblaster</username>
+        <id>6603820</id>
+      </contributor>
+      <minor />
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="7916" xml:space="preserve">{{short description|Computer software for running local area networks}}
+A '''network operating system''' ('''NOS''') is a specialized [[operating system]] for a network device such as a [[Router (computing)|router]], [[network switch|switch]] or [[Firewall (computing)|firewall]].
+
+Historically operating systems with networking capabilities were described as network operating system, because they allowed personal computers (PCs) to participate in [[computer networks]] and [[shared file access|shared file and printer access]] within a [[local area network]] (LAN). This description of operating systems is now largely historical, as common operating systems include a [[network stack]] to support a [[client–server model]].
+
+==History==
+Early microcomputer operating systems such as [[CP/M]], [[MS-DOS]] and [[classic Mac OS]] were designed for one user on one computer.{{citation needed|date=March 2019}} [[Packet switching]] networks were developed to share hardware resources, such as a [[mainframe computer]], a [[Printer (computing)|printer]] or a large and expensive [[hard disk]].&lt;ref name=&quot;Understanding Operating Systems&quot;&gt;{{cite book |title=Understanding Operating Systems |authors= Ann McHoes &amp; Ida M. Flynn|year=2012 |publisher=cengage Learning |isbn=9781133417569 | edition = 6| page=318 }}&lt;/ref&gt; As local area network technology became available, two general approaches to handle sharing of resources on networks arose.{{citation needed|date=March 2019}}
+
+Historically a network operating system was an [[operating system]] for a computer which implemented network capabilities. Operating systems with a [[network stack]] allowed [[personal computers]] to participate in a [[client–server model|client-server architecture]] in which a [[server (computing)|server]] enables multiple clients to share resources, such as [[Printer (computing)|printers]].&lt;ref name=&quot;autogenerated2&quot;&gt;Dean, Tamara (2009). &quot;Network Operating Systems&quot;, ''Network+ Guide to Networks'', 421(483)&lt;/ref&gt;&lt;ref name=&quot;autogenerated3&quot;/&gt;&lt;ref name=&quot;:0&quot;&gt;Davis, Ziff (2011). &quot;network operating system&quot;, ''PCmag.com''Retrieved 5/7/2011.&lt;/ref&gt; Early examples of client-server operating systems that were shipped with fully integrated network capabilities are [[Novell NetWare]] using the [[Internetwork Packet Exchange]] (IPX) network protocol, [[Windows Server 2003]], and [[Banyan VINES]] which used a variant of the [[Xerox Network Systems]] (XNS) protocols.{{citation needed|date=March 2019}}
+
+These limited client/server networks were gradually replaced by [[Peer-to-peer]] networks, which used networking capabilities to share resources and files located on a variety of computers of all sizes. A peer-to-peer network sets all connected computers equal; they all share the same abilities to use resources available on the network.&lt;ref name=&quot;autogenerated3&quot;&gt;Winkelman, Dr. Roy (2009). &quot;Chapter 6: Software&quot;, ''An Educator's Guide to School Networks'', 6.&lt;/ref&gt;  The most popular peer-to-peer networks as of 2020 are [[Ethernet]], [[Wi-Fi]] and the [[Internet protocol suite]].  Software that allowed users to interact with these networks, despite a lack of networking support in the underlying manufacturer's operating system, was sometimes called a network operating system.  Examples of such add-on software include Phil Karn's [[KA9Q]] NOS (adding Internet support to CP/M and MS-DOS), [[PC/TCP Packet Driver]]s (adding Ethernet and Internet support to MS-DOS), and [[LANtastic]] (for MS-DOS, [[Microsoft Windows]] and [[OS/2]]), and [[Windows for Workgroups]] (adding NetBIOS to Windows).  Examples of early operating systems with peer-to-peer networking capabilities built-in include [[MacOS]] (using [[AppleTalk]] and [[LocalTalk]]), and the [[Berkeley Software Distribution]].{{citation needed|date=March 2019}}
+
+Today, [[distributed computing]] and [[groupware]] applications have become the norm. Computer operating systems include a networking stack as a matter of course.&lt;ref name=&quot;Understanding Operating Systems&quot;/&gt; During the 1980s the need to integrate dissimilar computers with network capabilities grew and the number of networked devices grew rapidly. Partly because it allowed for multi-vendor [[interoperability]], and could route packets globally rather than being restricted to a single building, the Internet protocol suite became almost universally adopted in network architectures. Thereafter, computer operating systems and the [[firmware]] of network devices tended to support Internet protocols.&lt;ref&gt;{{cite book |title=Understanding Operating Systems |authors= Ann McHoes &amp; Ida M. Flynn|year=2012 |publisher=cengage Learning |isbn=9781133417569 | edition = 6| page=305 }}&lt;/ref&gt;
+
+==Network device operating systems== 
+Network operating systems can be embedded in a [[Router (computing)|router]] or [[firewall (computing)|hardware firewall]] that operates the functions in the [[network layer]] ([[OSI model|layer 3]]).&lt;ref name=&quot;expert&quot;&gt;Al-Shawakfa, Emad; Evens, Martha (2001). &quot;The Dialoguer: An Interactive Bilingual Interface to a Network Operating System.&quot;, ''Expert Systems'' Vol. 18 Issue 3, p131, 19p, Retrieved 5/7/2011.&lt;/ref&gt; Notable network operating systems include:
+
+===Proprietary network operating systems===
+*[[Cisco IOS]], a family of network operating systems used on most [[Cisco Systems]] [[Router (computing)|routers]] and current Cisco [[network switch]]es. Earlier switches ran the Catalyst Operating System [[CatOS]]
+*[[MikroTik#RouterOS|RouterOS]] by [[MikroTik]].
+*[[ZyNOS]], used in network devices made by [[ZyXEL]].
+
+=== NetBSD, FreeBSD, or Linux based operating systems===
+*[[DD-WRT]], Linux kernel based DD-WRT is Linux-based firmware for wireless routers and access points as well as low-cost networking device platforms such as the [[Linksys]] [[Linksys WRT54G series|WRT54G]]
+*[[Dell Networking Operating System]], DNOS9 is [[NetBSD]] based, while OS10 uses the [[Linux kernel]]
+*[[Arista Networks#Extensible Operating System|Extensible Operating System]] runs on switches from [[Arista Networks|Arista]] and uses an unmodified Linux kernel 
+*[[ExtremeXOS]] (EXOS), used in network devices made by [[Extreme Networks]]
+*[[FTOS]] or Force10 Operating System, is the [[firmware]] family used on [[Force10]] Ethernet switches
+*[[OpenWrt]] used to route [[Internet Protocol|IP packet]]s on [[embedded devices]]
+*[[pfSense]], a fork of [[M0n0wall]], uses [[PF (firewall)|PF]]
+*[[SONiC (operating system)|SONiC]], a Linux-based network operating system developed by [[Microsoft]]
+*[[Cumulus Networks#Products|Cumulus Linux]] distribution, which uses the full TCP/IP stack of Linux
+*[[VyOS]], an open source fork of the Vyatta routing package
+*[[ONOS]], an open source [[Software-defined_networking|SDN]] operating system (hosted by [[The Linux Foundation]]) for communications service providers that is designed for scalability, high performance and high availability.
+*Exaware, a commercial Network Operating System, especially suited for large Carrier networks, feature-rich and scalable
+
+==See also==
+*[[Distributed operating system]]
+*[[FRRouting]]
+*[[Network Computer Operating System]]
+*[[Network functions virtualization]]
+*[[Operating System Projects]]
+*[[Interruptible operating system]]
+*[[SONiC (operating system)]]
+
+==References==
+{{Reflist}}
+
+==External links==
+*[https://www.pcmag.com/encyclopedia_term/0,2542,t=network+operating+system&amp;i=47901,00.asp PCmag's definition of network operating system]
+*[http://fcit.usf.edu/network/chap6/chap6.htm Chapter 6 of Dr. Roy Winkelman's guide to networks]
+*[https://niralnetworks.com/introducing-niralos-open-source-disaggregated-nos-for-dcsg/ The open-source NOS for Disaggregated Cell Site Gateways]
+
+{{Network operating systems}}
+{{Operating system}}
+
+{{DEFAULTSORT:Network Operating System}}
+[[Category:Network operating systems| ]]
+[[Category:Operating systems]]
+[[Category:Internet Protocol based network software]]</text>
+      <sha1>apdijx16mpbp8snlyvezfpbqmj9487g</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Network topology</title>
+    <ns>0</ns>
+    <id>41413</id>
+    <revision>
+      <id>988489993</id>
+      <parentid>988489972</parentid>
+      <timestamp>2020-11-13T14:27:27Z</timestamp>
+      <contributor>
+        <username>ClueBot NG</username>
+        <id>13286072</id>
+      </contributor>
+      <minor />
+      <comment>Reverting possible vandalism by [[Special:Contribs/85.199.228.11|85.199.228.11]] to version by RedPanda25. [[WP:CBFP|Report False Positive?]] Thanks, [[WP:CBNG|ClueBot NG]]. (3821830) (Bot)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="39454" xml:space="preserve">{{short description|Arrangement of the various elements of a computer network; topological structure of a network and may be depicted physically or logically}}
+{{about|the topology of communication networks|the topology of electrical networks|Topology (electrical circuits)|the topology of transport networks|Transport topology}}
+
+{{Network Science}}
+
+'''Network topology''' is the arrangement of the elements ([[Data link|links]], [[Node (networking)|nodes]], etc.) of a communication network.&lt;ref name=&quot;Groth&quot;&gt;{{Cite book
+|last =Groth
+|first = David
+|author2=Toby Skandier
+|title = Network+ Study Guide, Fourth Edition
+|publisher = Sybex, Inc.
+|year =  2005
+|isbn = 0-7821-4406-3
+}}&lt;/ref&gt;&lt;ref name=&quot;atis&quot;&gt;{{Cite web
+|url=http://www.atis.org/glossary/definition.aspx?id=3516|title=mesh topology
+|author=ATIS committee PRQC
+|publisher=[[Alliance for Telecommunications Industry Solutions]]
+|work=ATIS Telecom Glossary 2007
+|accessdate=2008-10-10
+}}&lt;/ref&gt; Network topology can be used to define or describe the arrangement of various types of telecommunication networks, including [[command and control]] radio networks,&lt;ref name=&quot;GrantC2&quot;/&gt; industrial [[Fieldbus|fieldbusses]] and [[computer networks]].
+
+Network topology is the [[topological]]&lt;ref name=&quot;Chiang04&quot;&gt;{{cite journal | last1=Chiang | first1=Mung | last2=Yang | first2=Michael| title=Towards Network X-ities From a Topological Point of View: Evolvability and Scalability | journal=Proc. 42nd Allerton Conference | year=2004 | url= http://www.cs.unm.edu/~karlinjf/papers/allerton.pdf}}&lt;/ref&gt; structure of a network and may be depicted physically or logically. It is an application of [[graph theory]]&lt;ref name=&quot;GrantC2&quot;&gt;{{cite book|title=Network Topology in Command and Control |editor= Grant, T. J. |series= Advances in Information Security, Privacy, and Ethics |publisher= IGI Global |year= 2014 |url= https://books.google.com/books?id=zBOXBQAAQBAJ |pages= xvii, 228, 250 |isbn= 9781466660595 }}&lt;/ref&gt; wherein communicating devices are modeled as nodes and the connections between the devices are modeled as links or lines between the nodes. '''Physical topology''' is the placement of the various components of a network (e.g., device location and cable installation), while ''[[logical topology]]'' illustrates how data flows within a network. Distances between nodes, physical interconnections, [[Bit rate|transmission rates]], or signal types may differ between two different networks, yet their logical topologies may be identical. A network’s physical topology is a particular concern of the [[physical layer]] of the [[OSI model]]. 
+
+Examples of network topologies are found in [[local area network]]s ([[LAN]]), a common computer network installation. Any given node in the LAN has one or more physical links to other devices in the network; graphically mapping these links results in a geometric shape that can be used to describe the physical topology of the network. A wide variety of physical topologies have been used in LANs, including [[ring network|ring]], [[bus network|bus]], [[mesh network|mesh]] and [[star network|star]].  Conversely, mapping the [[Traffic flow (computer networking)|data flow]] between the components determines the logical topology of the network.  In comparison, [[CAN bus|Controller Area Networks]], common in vehicles, are primarily distributed [[control system]] networks of one or more controllers interconnected with sensors and actuators over, invariably, a physical bus topology.
+
+==Topologies==
+[[File:NetworkTopologies.svg|right|thumb|300px|Diagram of different network topologies.]]
+
+Two basic categories of network topologies exist, physical topologies and [[Logical topology|logical topologies]].&lt;ref name=&quot;Inc, S. 2002&quot;&gt;Inc, S., (2002) . Networking Complete. Third Edition. San Francisco: Sybex&lt;/ref&gt;
+
+The [[transmission medium]] layout used to link devices is the physical topology of the network. For conductive or fiber optical mediums, this refers to the layout of [[Structured cabling|cabling]], the locations of nodes, and the links between the nodes and the cabling.&lt;ref name=&quot;Groth&quot;/&gt; The physical topology of a network is determined by the capabilities of the network access devices and media, the level of control or fault tolerance desired, and the cost associated with cabling or telecommunication circuits.
+
+In contrast, logical topology is the way that the signals act on the network media, or the way that the data passes through the network from one device to the next without regard to the physical interconnection of the devices. A network's logical topology is not necessarily the same as its physical topology. For example, the original [[twisted pair Ethernet]] using [[repeater hub]]s was a logical bus topology carried on a physical star topology. [[Token ring]] is a logical ring topology, but is wired as a physical star from the [[media access unit]]. Physically, [[Avionics Full-Duplex Switched Ethernet|AFDX]] can be a cascaded star topology of multiple dual redundant Ethernet switches; however, the AFDX [[Avionics Full-Duplex Switched Ethernet#Virtual links|Virtual links]] are modeled as [[Time-division multiplexing|time-switched]] single-transmitter bus connections, thus following the safety model of a [[ARINC 429|single-transmitter bus topology]] previously used in aircraft. Logical topologies are often closely associated with [[media access control]] methods and protocols. Some networks are able to dynamically change their logical topology through configuration changes to their [[Router (computing)|router]]s and switches.
+
+==Links==
+{{further|data transmission}}
+The transmission media (often referred to in the literature as the ''physical media'') used to link devices to form a computer network include [[electrical cables]] ([[Ethernet]], [[HomePNA]], [[power line communication]], [[G.hn]]), [[optical fiber]] ([[fiber-optic communication]]), and [[radio waves]] ([[wireless networking]]). In the [[OSI model]], these are defined at layers 1 and 2 — the physical layer and the data link layer.
+
+A widely adopted ''family'' of transmission media used in local area network ([[LAN]]) technology is collectively known as [[Ethernet]]. The media and protocol standards that enable communication between networked devices over Ethernet are defined by [[IEEE 802.3]]. Ethernet transmits data over both copper and fiber cables.  Wireless LAN standards (e.g. those defined by [[IEEE 802.11]]) use [[radio waves]], or others use [[IrDA|infrared]] signals as a transmission medium. [[Power line communication]] uses a building's power cabling to transmit data.
+
+===Wired technologies===
+[[File:Fibreoptic.jpg|thumb|upright=0.7|alt=Bundle of glass threads with light emitting from the ends|[[Fiber optic cables]] are used to transmit light from one computer/network node to another]]
+The orders of the following wired technologies are, roughly, from slowest to fastest transmission speed.
+
+*''[[Coaxial cable]]'' is widely used for cable television systems, office buildings, and other work-sites for local area networks. The cables consist of copper or aluminum wire surrounded by an insulating layer (typically a flexible material with a high dielectric constant), which itself is surrounded by a conductive layer. The insulation helps minimize interference and distortion. Transmission speed ranges from 200 million bits per second to more than 500 million bits per second.
+*''[[ITU-T]] [[G.hn]]'' technology uses existing [[home wiring]] ([[Ethernet over coax|coaxial cable]], phone lines and [[Power line communication|power lines]]) to create a high-speed (up to 1 Gigabit/s) local area network.
+* ''[[Signal trace]]s'' on [[printed circuit board]]s are common for board-level serial communication, particularly between certain types integrated circuits, a common example being [[Serial Peripheral Interface Bus|SPI]].
+*''[[Ribbon cable]]'' (untwisted and possibly unshielded) has been a cost-effective media for serial protocols, especially within metallic enclosures or rolled within copper braid or foil, over short distances, or at lower data rates.  Several serial network protocols can be deployed without shielded or twisted pair cabling, that is, with &quot;flat&quot; or &quot;ribbon&quot; cable, or a hybrid flat/twisted ribbon cable, should [[Electromagnetic compatibility|EMC]], length, and [[Bandwidth (computing)|bandwidth]] constraints permit: [[RS-232]],&lt;ref&gt;[https://www.jameco.com/z/GCAR11-R-Cable-Serial-Male-To-Female-25L-4-DB25-M-DB25-28-AWG-300V-Gray_12408.html Cable Serial Male To Female 25L 4' DB25 M-DB25 28 AWG 300V Gray], Part no.: 12408, [[Jameco Electronics]].&lt;/ref&gt; [[RS-422]], [[RS-485]],&lt;ref&gt;AN-1057 [http://www.ti.com/lit/an/snla049b/snla049b.pdf Ten ways to bulletproof RS-485 Interfaces], [[Texas Instruments]], p. 5. &lt;/ref&gt; [[CAN Bus|CAN]],&lt;ref&gt;[[CANopen]],[https://www.phoenixcontact.com/assets/downloads_ed/global/web_dwl_technical_info/CANopen.pdf CANopen DR-303 V1.0 Cabling and Connector Pin Assignment], [[CAN in Automation]], p. 10.&lt;/ref&gt; [[IEEE-488|GPIB]], [[SCSI]],&lt;ref&gt;Advantech Co., Ltd., Cable 50-Pin SCSI Ribbon type # PCL-10152-3E ([[Mouser Electronics]] #923-PCL-10152-3E)&lt;/ref&gt; etc.
+*''[[Twisted pair]] wire'' is the most widely used medium for all telecommunication.&lt;ref&gt;{{Cite book|url=https://books.google.com/books?id=c-PEDwAAQBAJ&amp;q=%22Twisted+pair+wire+is+the+most+widely+used+medium+for+all+telecommunication.%22&amp;pg=PA78|title=Cyber Security|last=Mack|first=Markus|date=2018-10-21|publisher=Scientific e-Resources|isbn=978-1-83947-304-3|language=en}}&lt;/ref&gt; Twisted-pair cabling consist of copper wires that are twisted into pairs. Ordinary telephone wires consist of two insulated copper wires twisted into pairs. Computer network cabling (wired [[Ethernet]] as defined by [[IEEE 802.3]]) consists of 4 pairs of copper cabling that can be utilized for both voice and data transmission. The use of two wires twisted together helps to reduce [[crosstalk (electronics)|crosstalk]] and [[electromagnetic induction]]. The transmission speed ranges from 2 million bits per second to 10 billion bits per second. Twisted pair cabling comes in two forms: unshielded twisted pair (UTP) and shielded twisted-pair (STP). Each form comes in several category ratings, designed for use in various scenarios.
+
+[[File:World map of submarine cables.png|thumb|alt=World map with red and blue lines|2007 map showing submarine optical fiber telecommunication cables around the world.]]
+*An ''[[optical fiber]]'' is a glass fiber. It carries pulses of light that represent data. Some advantages of optical fibers over metal wires are very low transmission loss and immunity from electrical interference. Optical fibers can simultaneously carry multiple wavelengths of light, which greatly increases the rate that data can be sent, and helps enable data rates of up to trillions of bits per second. Optic fibers can be used for long runs of cable carrying very high data rates, and are used for [[undersea cables]] to interconnect continents.
+
+Price is a main factor distinguishing wired- and wireless-technology options in a business. Wireless options command a price premium that can make purchasing wired computers, printers and other devices a financial benefit. Before making the decision to purchase hard-wired technology products, a review of the restrictions and limitations of the selections is necessary. Business and employee needs may override any cost considerations.&lt;ref&gt;[http://smallbusiness.chron.com/disadvantages-wired-technology-17833.html], The Disadvantages of Wired Technology, Laura Acevedo, Demand Media.&lt;/ref&gt;
+
+===Wireless technologies===
+[[File:Wireless network.jpg|thumb|right|alt=Black laptop with router in the background |Personal computers are very often connected to networks using wireless links]]
+{{Main|Wireless network}}
+*''Terrestrial [[microwave]]''&amp;nbsp;– Terrestrial microwave communication uses Earth-based transmitters and receivers resembling satellite dishes. Terrestrial microwaves are in the low gigahertz range, which limits all communications to line-of-sight. Relay stations are spaced approximately {{convert|50|km|mi|abbr=on|sigfig=1}} apart.
+*''[[Communications satellite]]s''&amp;nbsp;– Satellites communicate via microwave radio waves, which are not deflected by the Earth's atmosphere. The satellites are stationed in space, typically in [[geostationary orbit]] {{convert|35786|km|mi|abbr=on}} above the equator. These Earth-orbiting systems are capable of receiving and relaying voice, data, and TV signals.
+*''[[Cellular network|Cellular]] and PCS systems'' use several radio communications technologies. The systems divide the region covered into multiple geographic areas. Each area has a low-power transmitter or radio relay antenna device to relay calls from one area to the next area.
+*''Radio and [[spread spectrum]] technologies''&amp;nbsp;– Wireless local area networks use a high-frequency radio technology similar to digital cellular and a low-frequency radio technology. Wireless LANs use spread spectrum technology to enable communication between multiple devices in a limited area. [[IEEE 802.11]] defines a common flavor of open-standards wireless radio-wave technology known as [[Wi-Fi]].
+*''[[Free-space optical communication]]'' uses visible or invisible light for communications. In most cases, [[line-of-sight propagation]] is used, which limits the physical positioning of communicating devices.
+
+===Exotic technologies===
+There have been various attempts at transporting data over exotic media:
+
+* [[IP over Avian Carriers]] was a humorous April fool's [[Request for Comments]], issued as '''RFC 1149'''. It was implemented in real life in 2001.&lt;ref&gt;{{cite web|url=http://www.blug.linux.no/rfc1149 |title=Bergen Linux User Group's CPIP Implementation |publisher=Blug.linux.no |accessdate=2014-03-01}}&lt;/ref&gt;
+* Extending the Internet to interplanetary dimensions via radio waves, the [[Interplanetary Internet]].&lt;ref&gt;{{citation |url=http://www.ipnsig.org/reports/ISART9-2000.pdf |archiveurl=https://web.archive.org/web/20120113053223/http://www.ipnsig.org/reports/ISART9-2000.pdf |archivedate=2012-01-13 |title=Interplanetary Internet |publisher=Third Annual International Symposium on Advanced Radio Technologies |author=A. Hooke |date=September 2000 |accessdate=2011-11-12}}&lt;/ref&gt;
+
+Both cases have a large [[round-trip delay time]], which gives slow two-way communication, but doesn't prevent sending large amounts of information.
+
+==Nodes==
+{{Main|Node (networking)}}
+
+Network nodes are the points of connection of the transmission medium to transmitters and receivers of the electrical, optical, or radio signals carried in the medium. Nodes may be associated with a computer, but certain types may have only a microcontroller at a node or possibly no programmable device at all. In the simplest of serial arrangements, one [[RS-232]] transmitter can be connected by a pair of wires to one receiver, forming two nodes on one link, or a Point-to-Point topology. Some protocols permit a single node to only either transmit or receive (e.g., [[ARINC 429]]). Other protocols have nodes that can both transmit and receive into a single channel (e.g., [[CANbus|CAN]] can have many transceivers connected to a single bus). While the conventional [[Systems engineering|system]] building blocks of a [[computer network]] include [[network interface controller]]s (NICs), [[repeater]]s, [[Ethernet hub|hubs]], [[Network bridge|bridges]], [[Network switch|switches]], [[Router (computing)|routers]], [[modem]]s, [[Gateway (telecommunications)|gateways]], and [[Firewall (computing)|firewalls]], most address network concerns beyond the physical network topology and may be represented as single nodes on a particular physical network topology.

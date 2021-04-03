@@ -224,7 +224,9 @@ int hash_FNV_1a(char *shingle, long long unsigned *hash){
 
 
 long long unsigned* get_signatures(char **shingles, long long tot_shingles){
-
+    double start;
+    double  end;
+    start=omp_get_wtime();
     long long unsigned hash=0;
     long long unsigned minhash=MAX_LONG_LONG_U;
     long long unsigned *hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
@@ -261,7 +263,8 @@ long long unsigned* get_signatures(char **shingles, long long tot_shingles){
             *(signatures+i+1)=minhash;
         }
 }
-
+    end = omp_get_wtime();
+    exectimes(end-start, GET_SIGNATURES, SET_TIME);
     free(hashed_shingles);
     return signatures;
 }

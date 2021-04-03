@@ -1,0 +1,622 @@
+[[ChaCha20|ChaCha]] is becoming the most widely used stream cipher in software&lt;ref&gt;https://blog.cloudflare.com/do-the-chacha-better-mobile-performance-with-cryptography/&lt;/ref&gt;; others include: 
+[[RC4]],
+[[A5/1]],
+[[A5/2]],
+[[Chameleon (cipher)|Chameleon]], 
+[[FISH (cipher)|FISH]], 
+[[Helix (cipher)|Helix]],
+[[ISAAC (cipher)|ISAAC]], 
+[[MUGI]],
+[[Panama (cipher)|Panama]],
+[[Phelix]], 
+[[Pike (cipher)|Pike]],
+[[Salsa20]],
+[[SEAL (cipher)|SEAL]], 
+[[SOBER]],
+[[SOBER-128]],
+and
+[[WAKE (cipher)|WAKE]].
+
+==Comparison==
+{{Refimprove section|date=July 2014}}
+{| style=&quot;font-size: 85%; text-align: center;&quot; class=&quot;wikitable sortable&quot;
+!rowspan=2|Stream&lt;br&gt;cipher
+!rowspan=2|Creation&lt;br&gt;date
+!rowspan=2 data-sort-type=&quot;numeric&quot; | Speed&lt;br&gt;([[cycles per byte]])
+!colspan=3|(bits)
+!colspan=2|Attack
+|-
+!Effective&lt;br&gt;[[Key (cryptography)|key-]][[Key size|length]]
+!data-sort-type=&quot;numeric&quot; | [[Initialization vector]]
+!data-sort-type=&quot;numeric&quot; | Internal&lt;br&gt;state
+!class=&quot;unsortable&quot;|Best known
+!data-sort-type=&quot;numeric&quot; | Computational&lt;br&gt;complexity
+|-
+|{{rh}}|[[A5/1]]
+|1989
+|{{dunno}}
+|54 or 64 (in [[2G]])
+|22 (in 2G)
+|64
+|Active [[Known-plaintext attack|KPA]] OR&lt;br&gt;[[Known-plaintext attack|KPA]] time–memory tradeoff
+|~&amp;nbsp;2 seconds OR&lt;br&gt;2&lt;sup&gt;39.91&lt;/sup&gt;
+|-
+|{{rh}}|[[A5/2]]
+|1989
+|{{dunno}}
+|54
+|114
+|64?
+|Active
+|4.6 milliseconds
+|-
+|{{rh}}|[[Achterbahn| Achterbahn-128/80]]
+|2006
+|1 (hardware)
+|80/128
+|80/128
+|297/351
+|Brute force for frame lengths ''L''&amp;nbsp;≤&amp;nbsp;2&lt;sup&gt;44&lt;/sup&gt;. [http://www.matpack.de/achterbahn/Goettfert_Gammel_On_the_frame_length_of_Achterbahn-128-80_ITW2007.pdf Correlation attack for ''L''&amp;nbsp;≥&amp;nbsp;2&lt;sup&gt;48&lt;/sup&gt;].
+|2&lt;sup&gt;80&lt;/sup&gt; resp. 2&lt;sup&gt;128&lt;/sup&gt; for ''L''&amp;nbsp;≤&amp;nbsp;2&lt;sup&gt;44&lt;/sup&gt;.
+|-
+|{{rh}}|[[CryptMT]]
+|2005
+|{{dunno}}
+| Variable
+|data-sort-value=&quot;19968&quot; | up to 19968
+| 19968
+| {{N/A}} (2008)
+| {{N/A}} (2008)
+|-
+|{{rh}}|[[FISH (cipher)|FISH]]
+|1993
+|{{dunno}}
+|Variable
+|{{dunno}}
+|{{dunno}}
+|[[Known-plaintext attack]]
+|2&lt;sup&gt;11&lt;/sup&gt;
+|-
+|{{rh}}|[[Grain (cipher)|Grain]]
+|data-sort-value=&quot;2004&quot; | Pre-2004
+|{{dunno}}
+|80
+|64
+|160
+|Key derivation
+|2&lt;sup&gt;43&lt;/sup&gt;
+|-
+|{{rh}}|[[HC-256]]
+|data-sort-value=&quot;2004&quot; | Pre-2004
+|4 [[Pentium 4|(W&lt;sub&gt;P4&lt;/sub&gt;)]]
+|256
+|256
+|65536
+|{{dunno}}
+|{{dunno}}
+|-
+|{{rh}}|[[ISAAC (cipher)|ISAAC]]
+|1996
+|2.375 [[64-bit|(W&lt;sub&gt;64-bit&lt;/sub&gt;)]] –&lt;br&gt;4.6875 [[32-bit|(W&lt;sub&gt;32-bit&lt;/sub&gt;)]]
+|8–8288&lt;br&gt;(usually 40–256)
+|{{N/A}}
+|8288
+|(2006) First-round&lt;br&gt;weak-internal-state-derivation
+|4.67×10&lt;sup&gt;1240&lt;/sup&gt; (2001)
+|-
+|{{rh}}|[[MUGI]]
+|1998–2002
+|{{dunno}}
+|128
+|128
+|1216
+|{{N/A}} (2002)
+|~&amp;nbsp;2&lt;sup&gt;82&lt;/sup&gt;
+|-
+|{{rh}}|[[PANAMA]]
+|1998
+|2
+|256
+|128?
+|1216?
+|Hash collisions (2001)
+|2&lt;sup&gt;82&lt;/sup&gt;
+|-
+|{{rh}}|[[Phelix]]
+|data-sort-value=&quot;2004&quot; | Pre-2004
+|data-sort-value=&quot;8&quot; | up to 8 [[X86 architecture|(W&lt;sub&gt;x86&lt;/sub&gt;)]]
+|256 + a 128-bit [[cryptographic nonce|nonce]]
+|128?
+|{{dunno}}
+|Differential (2006)
+|2&lt;sup&gt;37&lt;/sup&gt;
+|-
+|{{rh}}|[[Pike (cipher)|Pike]]
+|1994
+|{{dunno}}
+|Variable
+|{{dunno}}
+|{{dunno}}
+|{{N/A}} (2004)
+|{{N/A}} (2004)
+|-
+|{{rh}}|[[Py (cipher)|Py]]
+|data-sort-value=&quot;2004&quot; | Pre-2004
+|2.6
+|8–2048?&lt;br&gt;(usually 40–256?)
+|64
+|8320
+|[[Cryptanalysis|Cryptanalytic]] theory (2006)
+|2&lt;sup&gt;75&lt;/sup&gt;
+|-
+|{{rh}}|[[Rabbit (cipher)|Rabbit]]
+|2003-Feb
+|3.7[[Pentium III|(W&lt;sub&gt;P3&lt;/sub&gt;)]] – 9.7[[ARM7TDMI|(W&lt;sub&gt;ARM7&lt;/sub&gt;)]]
+|128
+|64
+|512
+|{{N/A}} (2006)
+|{{N/A}} (2006)
+|-
+|{{rh}}|[[RC4]]
+|1987
+|7 [[Intel P5 (microarchitecture)|W&lt;sub&gt;P5&lt;/sub&gt;]]&lt;ref&gt;{{cite journal |author=P. Prasithsangaree and P. Krishnamurthy |year=2003 |title=Analysis of Energy Consumption of RC4 and AES Algorithms in Wireless LANs |url=http://www.sis.pitt.edu/~is3966/group5_paper2.pdf |url-status=dead |archive-url=https://web.archive.org/web/20131203082918/http://www.sis.pitt.edu/~is3966/group5_paper2.pdf |archive-date=2013-12-03 }}&lt;/ref&gt;
+|8–2048&lt;br&gt;(usually 40–256)
+|RC4 does not take an IV. If one desires an IV, it must be mixed into the key somehow.
+|2064
+|[[Adi Shamir|Shamir]] initial-bytes [[Weak key#List of algorithms with weak keys|key-derivation]] OR [[Known-plaintext attack|KPA]]
+|2&lt;sup&gt;13&lt;/sup&gt; OR 2&lt;sup&gt;33&lt;/sup&gt;
+|-
+|{{rh}}|[[Salsa20]]
+|data-sort-value=&quot;2004&quot; | Pre-2004
+|4.24 [[PowerPC G4|(W&lt;sub&gt;G4&lt;/sub&gt;)]] –&lt;br&gt;11.84 [[Pentium 4#Willamette|(W&lt;sub&gt;P4&lt;/sub&gt;)]]
+|256
+|data-sort-value=&quot;128&quot; | a 64-bit nonce + a 64-bit stream position
+|512
+|Probabilistic neutral bits method
+|2&lt;sup&gt;251&lt;/sup&gt; for 8 rounds (2007)
+|-
+|{{rh}}|[[Scream (cipher)|Scream]]
+|2002
+|4–5 [[software|(W&lt;sub&gt;soft&lt;/sub&gt;)]]
+|128 + a 128-bit nonce
+|32?
+|64-bit round function
+|{{dunno}}
+|{{dunno}}
+|-
+|{{rh}}|[[SEAL (cipher)|SEAL]]
+|1997
+|{{dunno}}
+|{{dunno}}
+|32?
+|{{dunno}}
+|{{dunno}}
+|{{dunno}}
+|-
+|{{rh}}|[[SNOW]]
+|data-sort-value=&quot;2003&quot; | Pre-2003
+|{{dunno}}
+|128 or 256
+|32
+|{{dunno}}
+|{{dunno}}
+|{{dunno}}
+|-
+|{{rh}}|[[SOBER-128]]
+|2003
+|{{dunno}}
+|up to 128
+|{{dunno}}
+|{{dunno}}
+|Message forge
+|2&lt;sup&gt;−6&lt;/sup&gt;
+|-
+|{{rh}}|[[SOSEMANUK]]
+|data-sort-value=&quot;2004&quot; | Pre-2004
+|{{dunno}}
+|128
+|128
+|{{dunno}}
+|{{dunno}}
+|{{dunno}}
+|-
+|{{rh}}|[[Trivium (cipher)|Trivium]]
+|data-sort-value=&quot;2004&quot; | Pre-2004
+|4 [[X86 architecture|(W&lt;sub&gt;x86&lt;/sub&gt;)]] –&lt;br/&gt;8 [[Logic gate|(W&lt;sub&gt;LG&lt;/sub&gt;)]]
+|80
+|80
+|288
+|[[Brute force attack]] (2006)
+|2&lt;sup&gt;135&lt;/sup&gt;
+|-
+|{{rh}}|[[Turing (cipher)|Turing]]
+|2000–2003
+|5.5 [[X86 architecture|(W&lt;sub&gt;x86&lt;/sub&gt;)]]
+|{{dunno}}
+|160
+|{{dunno}}
+|{{dunno}}
+|{{dunno}}
+|-
+|{{rh}}|[[VEST]]
+|2005
+|42 [[Application-specific integrated circuit|(W&lt;sub&gt;ASIC&lt;/sub&gt;)]] –&lt;br&gt;64 [[Field-programmable gate array|(W&lt;sub&gt;FPGA&lt;/sub&gt;)]]
+|data-sort-value=&quot;80&quot; – 256|Variable&lt;br&gt;(usually 80–256)
+|data-sort-value=&quot;80&quot; – 256|Variable&lt;br&gt;(usually 80–256)
+|256–800
+|{{N/A}} (2006)
+|{{N/A}} (2006)
+|-
+|{{rh}}|[[WAKE (cipher)|WAKE]]
+|1993
+|{{dunno}}
+|{{dunno}}
+|{{dunno}}
+|8192
+|[[Chosen-plaintext attack|CPA]] &amp; [[Chosen-ciphertext attack|CCA]]
+|Vulnerable
+|-
+!rowspan=2|Stream&lt;br&gt;cipher
+!rowspan=2|Creation&lt;br&gt;date
+!rowspan=2|Speed&lt;br&gt;([[cycles per byte]])
+!colspan=3|(bits)
+!colspan=2|Attack
+|-
+!Effective&lt;br&gt;[[Key (cryptography)|key-]][[Key size|length]]
+![[Initialization vector]]
+!Internal&lt;br&gt;state
+!Best known
+!Computational&lt;br&gt;complexity
+|}
+
+==Trivia==
+* United States [[National Security Agency]] documents sometimes use the term '''combiner-type algorithms''', referring to algorithms that use some function to combine a [[pseudorandom number generator]] (PRNG) with a [[plaintext]] stream.
+
+==See also==
+* [[eSTREAM]]
+* [[Linear-feedback shift register]] (LFSR)
+* [[Nonlinear-feedback shift register]] (NLFSR)
+
+==Notes==
+{{reflist}}
+
+==References==
+* Matt J. B. Robshaw, Stream Ciphers Technical Report TR-701, version 2.0, RSA Laboratories, 1995 [ftp://ftp.rsasecurity.com/pub/pdfs/tr701.pdf (PDF)].
+* {{Cite conference|last1=Beth|first1=Thomas|last2=Piper|first2=Fred|date=1985|title=The Stop and Go Generator|url=https://link.springer.com/content/pdf/10.1007/3-540-39757-4_9.pdf|conference=EUROCRYPT '84|pages=88–92|doi=10.1007/3-540-39757-4_9}}
+* Christof Paar, Jan Pelzl, [https://archive.is/20121208212741/http://wiki.crypto.rub.de/Buch/movies.php &quot;Stream Ciphers&quot;], Chapter 2 of &quot;Understanding Cryptography, A Textbook for Students and Practitioners&quot;. (companion web site contains online cryptography course that covers stream ciphers and LFSR), Springer, 2009.
+
+==External links==
+* [ftp://ftp.rsasecurity.com/pub/pdfs/tr701.pdf RSA technical report on stream cipher operation.]
+* [http://www.cosic.esat.kuleuven.be/publications/thesis-167.pdf Cryptanalysis and Design of Stream Ciphers (thesis by Hongjun Wu).]
+* [https://web.archive.org/web/20110706225443/http://biblion.epfl.ch/EPFL/theses/2008/4040/EPFL_TH4040.pdf Analysis of Lightweight Stream Ciphers (thesis by S. Fischer).]
+
+{{Cryptography navbox | stream}}
+
+{{DEFAULTSORT:Stream Cipher}}
+[[Category:Stream ciphers| ]]
+[[Category:Cryptographic primitives]]</text>
+      <sha1>gdfcomb4xagpc8jw2lz5f5v1vmjhr0d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Robert Andrews Millikan</title>
+    <ns>0</ns>
+    <id>49008</id>
+    <revision>
+      <id>987010294</id>
+      <parentid>987009486</parentid>
+      <timestamp>2020-11-04T08:58:50Z</timestamp>
+      <contributor>
+        <username>JJMC89 bot III</username>
+        <id>35936988</id>
+      </contributor>
+      <minor />
+      <comment>Removing [[:Category:Recipients of awards from the United States National Academy of Sciences]] per [[Wikipedia:Categories for discussion/Log/2020 October 22#Category:Recipients of awards from the United States National Academy of Sciences]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="35902" xml:space="preserve">{{short description|American physicist}}
+{{distinguish|Robert Mulliken}}
+{{Infobox officeholder
+| name              = Robert A. Millikan
+| image             = Robert Andrews Millikan 1920s.jpg
+| image_size        = 
+| order        = 1st
+| title        = President of the [[California Institute of Technology]]
+| term_start   = 1920
+| term_end     = 1946
+| predecessor  = 
+| successor    = [[Lee Alvin DuBridge]]
+| birth_name        = Robert Andrews Millikan
+| birth_date        = {{birth date|mf=yes|1868|3|22}}
+| birth_place       = [[Morrison, Illinois]], U.S.
+| nationality       = American
+| death_date        = {{death date and age|mf=yes|1953|12|19|1868|3|22}}
+| death_place       = [[San Marino, California]], U.S.
+
+| module            = 
+{{Infobox scientist | embed=yes
+| field             = [[Physics]]
+| workplaces        =
+{{Plainlist |
+* [[University of Chicago]]
+* [[California Institute of Technology]]
+}}
+| alma_mater        =
+{{Plainlist |
+* [[Oberlin College]]
+* [[Columbia University]]
+}}
+| thesis_title      = On the polarization of light emitted from the surfaces of incandescent solids and liquids.
+| thesis_url        = http://clio.columbia.edu/catalog/1883118
+| thesis_year       = 1895
+| doctoral_advisor  =
+{{Plainlist |
+* [[Ogden Rood|Ogden Nicholas Rood]]
+}}
+| academic_advisors = [[Mihajlo Pupin]]&lt;br&gt;[[Albert A. Michelson]]&lt;br&gt;[[Walther Nernst]]
+| doctoral_students =
+{{Plainlist |
+* [[Carl David Anderson]]
+* [[Chung-Yao Chao]]
+* [[Robley D. Evans (physicist)|Robley D. Evans]]
+* [[Harvey Fletcher]]
+* [[Charles Christian Lauritsen|C. C. Lauritsen]]
+* [[Leonard Benedict Loeb]]
+* [[William Hayward Pickering|William Pickering]]
+* [[Ralph A. Sawyer]]
+* [[Wayne B. Hales]]
+}}
+| known_for         =
+{{Plainlist |
+* [[Oil drop experiment]] measuring the charge of the [[electron]]
+* [[Photoelectric effect]]
+* [[Cosmic ray]] physics
+}}
+| prizes            =
+{{Plainlist |
+* [[Comstock Prize in Physics|Comstock Prize]] {{small|(1913)}}&lt;ref name=Comstock&gt;
+{{cite web
+ |title       = Comstock Prize in Physics
+ |url         = http://www.nasonline.org/site/PageServer?pagename=AWARDS_comstock
+ |publisher   = National Academy of Sciences
+ |accessdate  = February 13, 2011
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20101229195326/http://www.nasonline.org/site/PageServer?pagename=AWARDS_comstock
+ |archivedate = December 29, 2010
+}}
+&lt;/ref&gt;
+* [[IEEE Edison Medal]] {{small|(1922)}}
+* [[Nobel Prize in Physics]] {{small|(1923)}}
+* [[Hughes Medal]] {{small|(1923)}}
+* [[Faraday Lectureship Prize]] {{small|(1924)}}
+* [[Matteucci Medal]] &lt;small&gt;(1925)&lt;/small&gt;
+* [[ASME Medal]] {{small|(1926)}}
+* [[Franklin Medal]] {{small|(1937)}}
+* [[Oersted Medal]] {{small|(1940)}}
+* [[Medal for Merit]] {{small|(1949)}}&lt;ref name=Merit&gt;
+{{cite news
+ |date       = March 22, 1949
+ |title      = Millikan, son, aide get medals of merit
+ |url        = https://www.nytimes.com/1949/03/22/archives/millikan-son-aide-get-medals-of-merit.html
+ |newspaper  = New York Times
+ |accessdate = August 30, 2018
+}}
+&lt;/ref&gt;
+}}
+| spouse            = Greta ({{née}} Blanchard)
+| children          = 
+{{Plainlist |
+* [[Clark Blanchard Millikan|Clark Blanchard]]
+* [[Glenn Allan Millikan|Glenn Allan]]
+* [[Max Millikan|Max Franklin]]
+}}                    
+| module            = {{Infobox military person|embed=yes
+| allegiance        = {{flag|United States|1912}}
+| branch            = [[United States Army]]&lt;ref name=Bates&gt;
+{{cite book |last1         = Bates
+ |first1        = Charles C.
+ |last2         = Fuller
+ |first2        = John F.
+ |title         = America's Weather Warriors, 1814–1985
+ |publisher     = Texas A&amp;M University Press
+ |date          = July 1, 1986
+ |pages         = [https://archive.org/details/americasweatherw00bate/page/17 17–20]
+ |chapter       = Chapter 2: The Rebirth of Military Meteorology
+ |isbn          = 978-0890962404
+ |name-list-style = amp
+ |chapter-url   = https://archive.org/details/americasweatherw00bate
+ |url           = https://archive.org/details/americasweatherw00bate/page/17
+}}
+&lt;/ref&gt;
+| serviceyears      = 1917–1918
+| rank              = [[Lieutenant Colonel (United States)|Lieutenant Colonel]]
+| unit               = [[Aviation Section, U.S. Signal Corps]]
+| commands=
+}}
+| signature         = Robert Andrews Milliken signature.svg
+}}
+}}
+
+'''Robert Andrews Millikan''' (March 22, 1868 – December 19, 1953) was an American experimental [[physics|physicist]] honored with the [[Nobel Prize for Physics]] in 1923 for the measurement of the [[Elementary charge|elementary electric charge]] and for his work on the [[photoelectric effect]].
+
+Millikan graduated from [[Oberlin College]] in 1891 and obtained his doctorate at [[Columbia University]] in 1895. In 1896 he became an assistant at the [[University of Chicago]], where he became a full professor in 1910. In 1909 Millikan began a series of experiments to determine the [[electric charge]] carried by a single electron. He began by measuring the course of charged [[water]] droplets in an [[electric field]]. The results suggested that the charge on the droplets is a multiple of the elementary electric charge, but the experiment was not accurate enough to be convincing. He obtained more precise results in 1910 with his famous [[Oil drop experiment|oil-drop experiment]] in which he replaced water (which tended to evaporate too quickly) with [[oil]].
+
+In 1914 Millikan took up with similar skill the experimental verification of the equation introduced by [[Albert Einstein]] in 1905 to describe the photoelectric effect. He used this same research to obtain an accurate value of [[Planck’s constant]]. In 1921 Millikan left the University of Chicago to become director of the Norman Bridge Laboratory of Physics at the [[California Institute of Technology]] (Caltech) in [[Pasadena, California|Pasadena]], [[California]]. There he undertook a major study of the radiation that the physicist [[Victor Hess]] had detected coming from outer space. Millikan proved that this radiation is indeed of [[Outer space|extraterrestrial]] origin, and he named it &quot;[[cosmic rays]].&quot; As chairman of the Executive Council of Caltech (the school's governing body at the time) from 1921 until his retirement in 1945, Millikan helped to turn the school into one of the leading research institutions in the United States.&lt;ref&gt;{{cite web |title=ARCHIVES :: FAST FACTS ABOUT CALTECH HISTORY |url=http://archives.caltech.edu/about/fastfacts.html |website=archives.caltech.edu}}&lt;/ref&gt;&lt;ref&gt;{{cite web |title=Robert A. Millikan - Biographical |url=https://www.nobelprize.org/nobel_prizes/physics/laureates/1923/millikan-bio.html |website=www.nobelprize.org}}&lt;/ref&gt; He also served on the board of trustees for Science Service, now known as [[Society for Science &amp; the Public]], from 1921 to 1953.
+
+==Biography==
+
+===Education===
+[[File:Robert-millikan2.jpg|left|thumb|Portrait of Robert Millikan in 1891]]
+Robert Andrews Millikan was born on March 22, 1868, in [[Morrison, Illinois]].&lt;ref&gt;{{cite web|last=Millikan|first=Robert|title=Nobel Prize in Physics 1923|url=https://www.nobelprize.org/nobel_prizes/physics/laureates/1923/millikan-bio.html|publisher=nobel.org|accessdate=September 20, 2012}}&lt;/ref&gt; He went to high school in [[Maquoketa, Iowa]] and received a [[bachelor's degree]] in the [[classics]] from [[Oberlin College]] in 1891 and his [[Doctor of Philosophy|doctorate]] in [[physics]] from [[Columbia University]] in 1895&lt;ref name=&quot;thesis-millikan-1895&quot;&gt;{{cite thesis |url=https://search.proquest.com/docview/301691116/ |title=On The Polarization Of Light Emitted From The Surfaces Of Incandescent Solids And Liquids |date=1895 |publisher=[[Columbia University]] |type=Ph.D. |last=Millikan |first=Robert Andrews |via=[[ProQuest]] |url-access=subscription |oclc=10542040}}&lt;/ref&gt; – he was the first to earn a Ph.D. from that department.&lt;ref&gt;{{cite web |url=http://www.ieeeghn.org/wiki/index.php/Robert_A._Millikan |title=Robert A. Millikan |work=IEEE Global History Network |publisher=IEEE |accessdate=July 25, 2011}}&lt;/ref&gt;
+
+&lt;blockquote&gt;At the close of my sophomore year [...] my Greek professor [...] asked me to teach the course in elementary physics in the preparatory department during the next year. To my reply that I did not know any physics at all, his answer was, &quot;Anyone who can do well in my Greek can teach physics.&quot; &quot;All right,&quot; said I, &quot;you will have to take the consequences, but I will try and see what I can do with it.&quot; I at once purchased an Avery's ''Elements of Physics'', and spent the greater part of my summer vacation of 1889 at home – trying to master the subject. [...] I doubt if I have ever taught better in my life than in my first course in physics in 1889. I was so intensely interested in keeping my knowledge ahead of that of the class that they may have caught some of my own interest and enthusiasm.&lt;ref&gt;{{cite book
+|title=The autobiography of Robert A. Millikan
+|last=Millikan|first=Robert Andrews
+|page=14
+|publisher=Prentice-Hall
+|date=1980 |origyear=reprint of original 1950 edition
+}}&lt;/ref&gt;&lt;/blockquote&gt;
+
+Millikan's enthusiasm for education continued throughout his career, and he was the coauthor of a popular and influential series of introductory textbooks,&lt;ref&gt;The books, coauthored with [[Henry Gale (astrophysicist)|Henry Gordon Gale]], were ''A First Course in Physics'' (1906), ''Practical Physics'' (1920), ''Elements of Physics'' (1927), and ''New Elementary Physics'' (1936).&lt;/ref&gt; which were ahead of their time in many ways. Compared to other books of the time, they treated the subject more in the way in which it was thought about by physicists. They also included many homework problems that asked conceptual questions, rather than simply requiring the student to plug numbers into a formula.
+
+===Charge of the electron===
+{{Main|Oil drop experiment}}
+[[File:Millikan’s oil-drop apparatus 1.jpg|thumb|left|Millikan's original oil-drop apparatus, circa 1909–1910]]
+[[File:Robert A. Millikan 1924.png|thumb|left|Millikan receives a check for over $40,000 for winning the Nobel Prize]]
+
+Starting in 1908, while a [[professor]] at the [[University of Chicago]], Millikan worked on an [[oil drop experiment|oil-drop experiment]] in which he measured the charge on a single [[electron]]. [[J. J. Thomson]] had already discovered the charge-to-mass ratio of the electron. However, the actual charge and mass values were unknown. Therefore, if one of these two values were to be discovered, the other could easily be calculated. Millikan and his then graduate student [[Harvey Fletcher]] used the oil-drop experiment to measure the charge of the electron (as well as the electron mass, and [[Avogadro's number]], since their relation to the electron charge was known).
+
+Professor Millikan took sole credit, in return for Harvey Fletcher claiming full authorship on a related result for his dissertation.&lt;ref&gt;{{cite journal|title=In defense of Robert Andrews Millikan|url=http://www.its.caltech.edu/~dg/MillikanII.pdf|author=David Goodstein|journal=American Scientist|volume=89|issue=1|date=January 2001|pages=54–60|bibcode=2001AmSci..89...54G|doi=10.1511/2001.1.54}}&lt;/ref&gt; Millikan went on to win the 1923 [[Nobel Prize for Physics]], in part for this work, and Fletcher kept the agreement a secret until his death.&lt;ref&gt;{{cite journal | title = My Work with Millikan on the Oil-drop Experiment | author = Harvey Fletcher | journal = Physics Today |date=June 1982 | pages = 43–47 | doi = 10.1063/1.2915126 | volume=35| issue = 6 |bibcode = 1982PhT....35f..43F }}&lt;/ref&gt; After a publication on his first results in 1910,&lt;ref name=&quot;Mil-1910&quot;&gt;{{cite journal | last1 = Millikan | first1 = R.A. | year = 1910 | title = A new modification of the cloud method of determining the elementary electrical charge and the most probable value of that charge | doi=10.1080/14786440208636795| url =http://authors.library.caltech.edu/9600/ | journal = Phil. Mag. | volume = 19 |series=6 | issue = 110| page = 209 }}&lt;/ref&gt;  contradictory observations by [[Felix Ehrenhaft]] started a controversy between the two physicists.&lt;ref name=&quot;Ehren&quot;&gt;{{cite journal | last1 = Ehrenhaft | first1 = F | year = 1910 | title = Über die Kleinsten Messbaren Elektrizitätsmengen | url = | journal = Phys. Z. | volume = 10 | issue = | page = 308 }}&lt;/ref&gt; After improving his setup, Millikan published his seminal study in 1913.&lt;ref name=&quot;Mil-1913&quot;&gt;{{cite journal | last1 = Millikan | first1 = R.A. | year = 1913 | title = On the Elementary Electric charge and the Avogadro Constant | url = https://books.google.com/books?id=sp8RAAAAYAAJ&amp;pg=PA109 | journal = Physical Review |series =II | volume = 2 | issue = 2| pages = 109–143 | doi=10.1103/physrev.2.109|bibcode = 1913PhRv....2..109M | doi-access = free }}&lt;/ref&gt;
+
+The [[elementary charge]] is one of the fundamental [[physical constants]], and accurate knowledge of its value is of great importance. His experiment measured the force on tiny charged droplets of oil suspended against gravity between two metal electrodes. Knowing the electric field, the charge on the droplet could be determined. Repeating the experiment for many droplets, Millikan showed that the results could be explained as [[integer]] multiples of a common value (1.592 × 10&lt;sup&gt;−19&lt;/sup&gt; [[coulomb]]), which is the charge of a single electron. That this is somewhat lower than the [[elementary charge|modern value]] of 1.602 176 53(14) x 10&lt;sup&gt;−19&lt;/sup&gt; [[coulomb]] is probably due to Millikan's use of an inaccurate value for the [[viscosity]] of [[Earth's atmosphere|air]].&lt;ref&gt;[http://www.lhup.edu/~DSIMANEK/cargocul.htm Feynman, Richard, &quot;Cargo Cult Science&quot;] (adapted from 1974 [https://www.caltech.edu/ California Institute of Technology] commencement address), ''[http://www.lhup.edu/~DSIMANEK/home.htm Donald Simanek's Pages]'', [http://www.lhup.edu/ Lock Haven University], rev. August 2008.&lt;/ref&gt;&lt;ref name=&quot;FeynmanLeighton1997&quot;&gt;{{cite book|last1=Feynman|first1=Richard Phillips|last2=Leighton|first2=Ralph|last3=Hutchings|first3=Edward|title=&quot;Surely you're joking, Mr. Feynman!&quot;: adventures of a curious character|url=https://books.google.com/books?id=7papZR4oVssC&amp;pg=PA342|accessdate=10 July 2010|date=1997-04-01|publisher=W. W. Norton &amp; Company|location=New York|isbn=978-0-393-31604-9|page=342}}&lt;/ref&gt;
+
+Although at the time of Millikan's oil-drop experiments it was becoming clear that there exist such things as subatomic particles, not everyone was convinced. Experimenting with [[cathode ray]]s in 1897, J. J. Thomson had discovered negatively charged 'corpuscles', as he called them, with a [[charge-to-mass ratio]] 1840 times that of a hydrogen ion. Similar results had been found by [[George FitzGerald]] and [[Walter Kaufmann (physicist)|Walter Kaufmann]]. Most of what was then known about electricity and magnetism, however, could be explained on the basis that charge is a continuous variable; in much the same way that many of the properties of light can be explained by treating it as a continuous wave rather than as a stream of photons.
+
+The beauty of the oil-drop experiment is that as well as allowing quite accurate determination of the fundamental unit of charge, Millikan's apparatus also provided a 'hands on' demonstration that charge is actually quantized. The General Electric Company's [[Charles Steinmetz]], who had previously thought that charge is a continuous variable, became convinced otherwise after working with Millikan's apparatus.
+
+====Data selection controversy====
+There is some controversy over selectivity in Millikan's use of results from his second experiment measuring the electron charge.  This issue has been discussed by [[Allan Franklin]],&lt;ref&gt;{{cite journal
+ |last=Franklin |first=A.
+ |title=Millikan's Oil-Drop Experiments
+ |journal=[[The Chemical Educator]]
+ |volume=2 |issue=1 |date=1997 |pages=1–14
+ |doi=10.1007/s00897970102a
+|s2cid=97609199
+ }}&lt;/ref&gt; a former high-energy experimentalist and current philosopher of science at the [[University of Colorado at Boulder|University of Colorado]].  Franklin contends that Millikan's exclusions of data do not affect the final value of the charge obtained, but that Millikan's substantial &quot;cosmetic surgery&quot; reduced the statistical error.  This enabled Millikan to give the charge of the electron to better than one half of one percent; in fact, if Millikan had included all of the data he discarded, the error would have been less than 2%.  While this would still have resulted in Millikan's having measured the charge of ''e&lt;sup&gt;−&lt;/sup&gt;'' better than anyone else at the time, the slightly larger uncertainty might have allowed more disagreement with his results within the physics community, which Millikan likely tried to avoid. [[David Goodstein]] argues that Millikan's statement, that all drops observed over a sixty-day period were used in the paper, was clarified in a subsequent sentence which specified all &quot;drops upon which complete series of observations were made&quot;. Goodstein attests that this is indeed the case and notes that five pages of tables separate the two sentences.&lt;ref&gt;{{cite web
+ |url         = http://calteches.library.caltech.edu/4014/1/Millikan.pdf
+ |title       = In defense of Robert Andrews Millikan
+ |first       = David
+ |last        = Goodstein
+ |date        = 2000
+ |work        = Engineering and Science
+ |publisher   = California Institute of Technology
+ |location    = Pasadena, California
+ |archiveurl  = https://web.archive.org/web/20100625194742/http://eands.caltech.edu/articles/Millikan%20Feature.pdf
+ |archivedate = 2010-06-25
+ |accessdate  = 30 August 2018
+ |url-status     = dead
+}}&lt;/ref&gt;
+
+===Photoelectric effect===
+[[File:Millikan and Einstein 1932.png|thumb|upright|Robert Millikan and Albert Einstein at the California Institute of Technology in 1932]]
+When [[Albert Einstein|Einstein]] published his seminal 1905 paper on the particle theory of light, Millikan was convinced that it had to be wrong, because of the vast body of evidence that had already shown that light was a [[wave]]. He undertook a decade-long experimental program to test Einstein's theory, which required building what he described as &quot;a machine shop ''in vacuo''&quot; in order to prepare the very clean metal surface of the photo electrode. His results published in 1914 confirmed Einstein's predictions in every detail,&lt;ref name=&quot;Ref_Millikan&quot;&gt;
+{{cite journal
+ |last1=Millikan |first1=R.
+ |year=1914
+ |title=A Direct Determination of &quot;''h''.&quot;
+ |journal=Physical Review
+ |volume=4 |issue=1 |pages=73–75
+ |bibcode=1914PhRv....4R..73M
+ |doi=10.1103/PhysRev.4.73.2
+}}&lt;/ref&gt; but Millikan was not convinced of Einstein's interpretation, and as late as 1916 he wrote, &quot;Einstein's photoelectric equation... cannot in my judgment be looked upon at present as resting upon any sort of a satisfactory theoretical foundation,&quot; even though &quot;it actually represents very accurately the behavior&quot; of the photoelectric effect. In his 1950 autobiography, however, he simply declared that his work &quot;scarcely permits of any other interpretation than that which Einstein had originally suggested, namely that of the semi-corpuscular or photon theory of light itself&quot;.&lt;ref&gt;[https://books.google.com/books?id=GfmR0mHxeZkC&amp;pg=PA96&amp;lpg=PA96&amp;dq Anton Z. Capri, &quot;Quips, quotes, and quanta: an anecdotal history of physics&quot;] (World Scientific 2007) p.96&lt;/ref&gt;
+
+Since Millikan's work formed some of the basis for modern particle physics, it is ironic that he was rather conservative in his opinions about 20th century developments in physics, as in the case of the photon theory. Another example is that his textbook, as late as the 1927 version, unambiguously states the existence of the ether, and mentions Einstein's theory of relativity only in a noncommittal note at the end of the caption under Einstein's portrait, stating as the last in a list of accomplishments that he was &quot;author of the special theory of relativity in 1905 and of the general theory of relativity in 1914, both of which have had great success in explaining otherwise unexplained phenomena and in predicting new ones.&quot;
+
+Millikan is also credited with measuring the value of [[Planck constant|Planck's constant]] by using photoelectric emission graphs of various metals.&lt;ref&gt;
+{{cite journal
+ |last1=Millikan |first1=R.
+ |year=1916
+ |title=A Direct Photoelectric Determination of Planck's &quot;''h''&quot;
+ |url=http://www.fisica.net/quantica/millikan_a_direct_photoelectric_determination_of_plancks_h.pdf
+ |journal=[[Physical Review]]
+ |volume=7 |issue=3 |pages=355–388
+ |bibcode=1916PhRv....7..355M
+ |doi=10.1103/PhysRev.7.355
+}}&lt;/ref&gt;
+
+===Later life===
+[[File:Millikan.jpg|thumb|upright|Robert A. Millikan around 1923]]
+In 1917, solar astronomer [[George Ellery Hale]] convinced Millikan to begin spending several months each year at the [[Throop College of Technology]], a small academic institution in [[Pasadena, California]], that Hale wished to transform into a major center for scientific research and education. A few years later Throop College became the [[California Institute of Technology]] (Caltech), and Millikan left the [[University of Chicago]] in order to become Caltech's &quot;chairman of the executive council&quot; (effectively its president).  Millikan would serve in that position from 1921 to 1945.  At Caltech most of his scientific research focused on the study of &quot;[[cosmic rays]]&quot; (a term which he coined). In the 1930s he entered into a debate with [[Arthur Compton]] over whether cosmic rays were composed of high-energy photons (Millikan's view) or charged particles (Compton's view).  Millikan thought his cosmic ray photons were the &quot;birth cries&quot; of new atoms continually being created to counteract [[entropy]] and prevent the [[heat death of the universe]].  Compton would eventually be proven right by the observation that cosmic rays are deflected by the Earth's [[magnetism|magnetic field]] (and so must be charged particles).
+
+Robert Millikan was Vice Chairman of the [[United States National Research Council|National Research Council]] during [[World War I]]. During that time, he helped to develop [[anti-submarine]] and meteorological devices. He received the Chinese [[Order of Jade]]{{When|date=October 2018}}. After the War, Millikan contributed to the works of the [[League of Nations]]' [[International Committee on Intellectual Cooperation|Committee on Intellectual Cooperation]] (from 1922, in replacement to [[George Ellery Hale|George E. Hale]], to 1931), with other prominent researchers ([[Marie Curie]], [[Albert Einstein]], [[Hendrik Lorentz]], etc.).&lt;ref&gt;{{cite thesis |last=Grandjean |first=Martin |date=2018 |title=Les réseaux de la coopération intellectuelle. La Société des Nations comme actrice des échanges scientifiques et culturels dans l'entre-deux-guerres |trans-title=The Networks of Intellectual Cooperation. The League of Nations as an Actor of the Scientific and Cultural Exchanges in the Inter-War Period |url=https://tel.archives-ouvertes.fr/tel-01853903 |language=fr |location=Lausanne |publisher=Université de Lausanne|type=phdthesis }}&lt;/ref&gt; In his private life, Millikan was an enthusiastic [[tennis]] player. He was married and had three sons, the eldest of whom, [[Clark B. Millikan]], became a prominent [[aerodynamics|aerodynamic]] engineer. Another son, [[Glenn Allan Millikan|Glenn]], also a physicist, married the daughter (Clare) of [[George Mallory|George Leigh Mallory]] of &quot;Because it's there&quot; [[Mount Everest]] fame. Glenn was killed in a climbing accident in [[Cumberland Mountains]] in 1947.&lt;ref&gt;{{cite journal|author=Severinghaus, John W.|author2=Astrup, Poul B.|year=1986|title=History of blood gas analysis. VI. Oximetry|journal= Journal of Clinical Monitoring and Computing|volume =2|issue= 4|pages=270–288 (278)|doi=10.1007/BF02851177|pmid=3537215|s2cid=1752415}}&lt;/ref&gt;
+
+A religious man and the son of a minister, in his later life Millikan argued strongly for a complementary relationship between [[Relationship between religion and science|Christian faith and science]].&lt;ref name=&quot;Millikan 1929&quot;&gt;&quot;Millikan, Robert Andrew&quot;, [[Who's Who in America]] v. 15, 1928–1929, p. 1486&lt;/ref&gt;&lt;ref&gt;[http://www.adherents.com/people/pm/Robert_Millikan.html The Religious Affiliation of Physicist Robert Andrews Millikan]. adherents.com&lt;/ref&gt;&lt;ref&gt;[https://www.nobelprize.org/nobel_prizes/physics/laureates/1923/millikan-bio.html Nobel biography]. nobelprize.org.&lt;/ref&gt;&lt;ref&gt;[http://www.time.com/time/magazine/article/0,9171,715687,00.html &quot;Medicine: Science Serves God,&quot;] ''Time,'' June 4, 1923. Accessed 19 January 2013.&lt;/ref&gt; He dealt with this in his [[Terry Lectures]] at [[Yale]] in 1926–27, published as ''Evolution in Science and Religion''.&lt;ref&gt;''Evolution in Science and Religion'' (1927), 1973 edition: Kennikat Press, {{ISBN|0-8046-1702-3}}&lt;/ref&gt; He was a Christian theist and proponent of [[theistic evolution]].&lt;ref&gt;Long, Edward Le Roy. (1952). ''Religious Beliefs of American Scientists''. Westminster Press. pp. 45-48&lt;/ref&gt; A more controversial belief of his was [[eugenics]]. He was one of the initial trustees of the [[Human Betterment Foundation]] and praised [[San Marino, California]] for being &quot;the westernmost outpost of Nordic civilization&amp;nbsp;... [with] a population which is twice as Anglo-Saxon as that existing in New York, Chicago, or any of the great cities of this country.&quot;&lt;ref&gt;[https://www.washingtonpost.com/wp-srv/WPcap/2000-03/16/076r-031600-idx.html &quot;Judgment At Pasadena&quot;], [[Washington Post]], March 16, 2000, p. C1. Retrieved on March 30, 2007.&lt;/ref&gt;
+[[File:Robert A. Millikan sketch 1931.png|thumb|upright|1931 sketch of California Institute of Technology President Robert A. Millikan]]
+
+===Westinghouse time capsule===
+
+In 1938, he wrote a short passage to be placed in the [[Westinghouse Time Capsules]].&lt;ref&gt;[https://archive.org/details/timecapsulecups00westrich ''The Time Capsule'']. Westinghouse Electric &amp; Manufacturing Company. September 23, 1938. p.&amp;nbsp;46.&lt;/ref&gt;
+
+&lt;blockquote&gt;At this moment, August 22, 1938, the principles of representative ballot government, such as are represented by the governments of the Anglo-Saxon, French, and Scandinavian countries, are in deadly conflict with the principles of despotism, which up to two centuries ago had controlled the destiny of man throughout practically the whole of recorded history. If the rational, scientific,
+progressive principles win out in this struggle there is a possibility of a warless, golden age ahead for mankind. If the reactionary principles of despotism triumph now and in the future, the future history of mankind will repeat the sad story of war and oppression as in the past.&lt;/blockquote&gt;
+
+===Death and legacy===
+[[File:Robert A. Millikan 1954.png|thumb|upright|Robert A. Millikan circa 1953]]
+[[File:MillikanBuilding2010.jpg|thumb|upright|The Millikan Library at Caltech]]
+
+Millikan died of a [[heart attack]] at his home in San Marino, California in 1953 at age 85, and was interred in the &quot;Court of Honor&quot; at [[Forest Lawn Memorial Park (Glendale)|Forest Lawn Memorial Park Cemetery]] in [[Glendale, California]].
+
+Millikan Middle School (formerly Millikan Junior High School) in the suburban Los Angeles neighborhood of Sherman Oaks is named in his honor, as is Robert A. Millikan High School in Long Beach, California.  The Millikan Library, the tallest building on the [[Caltech]] campus is also named after him. A science building at [[Pomona College]], Millikan Laboratory, was named after him, but was renamed in 2020 due to his association with eugenics.&lt;ref name=&quot;Pomona TSL&quot;&gt;{{cite news |last1=Ding |first1=Jaimie |last2=Elqutami |first2=Yasmin |last3=Engineer |first3=Anushe |title=Pomona to rename Millikan Laboratory, citing Robert A. Millikan's eugenics promotion |url=https://tsl.news/pomona-to-rename-millikan-laboratory-citing-eugenics-promotion/ |accessdate=7 October 2020 |work=[[The Student Life]] |date=6 October 2020}}&lt;/ref&gt; Additionally, a major street through the [[Tektronix]] campus in [[Portland, Oregon]], is named after him, with the [[Millikan Way (MAX station)]], a station on [[Portland, Oregon]]'s [[MAX Blue Line]] named after the street.  One of four suites at the Athenaeum Hotel on the Caltech campus is named after him; Room #50, The Millikan Suite.
+
+On January 26, 1982, he was honored by the [[United States Postal Service]] with a 37¢ [[Great Americans series]] (1980–2000) [[postage stamp]].
+
+== Personal life ==
+[[File:Greta Ervin Millikan 1923.png|alt=Black-and-white headshot of a woman wearing a hat draped with lace|left|thumb|upright|Greta Millikan in 1923]]
+In 1902 he married Greta Ervin Blanchard (1876-1955). They had three sons: [[Clark Blanchard Millikan|Clark Blanchard]], [[Glenn Allan Millikan|Glenn Allan]], and [[Max Millikan|Max Franklin]].
+
+==Famous statements==
+&quot;If Kevin Harding's equation and Aston's curve are even roughly correct, as I'm sure they are, for Dr. Cameron and I have computed with their aid the maximum energy evolved in radioactive change and found it to check well with observation, then this supposition of an energy evolution through the disintegration of the common elements is from the one point of view a childish Utopian dream, and from the other a foolish bugaboo.&quot;&lt;ref&gt;Millikan, Robert Andrews, ''Science and the New Civilization'' [1st Ed.], Charles Scribner's and Sons, 1930, p. 95&lt;/ref&gt;
+
+&quot;No more earnest seekers after truth, no intellectuals of more penetrating vision can be found anywhere at any time than these, and yet every one of them has been a devout and professed follower of religion.&quot;&lt;ref&gt;Millikan, Robert A., “A Scientist Confesses His Faith”-Christian Century&lt;/ref&gt;
+
+==Bibliography==
+
+* Goodstein, D., &quot;''[http://calteches.library.caltech.edu/4014/1/Millikan.pdf  In defense of Robert Andrews Millikan]''&quot;, ''Engineering and Science'', 2000. No 4, pp30–38 (pdf).
+* Millikan, R A (1950). ''The Autobiography of Robert Millikan''
+* Millikan, Robert Andrews (1917). ''The Electron: Its Isolation and Measurements and the Determination of Some of its Properties''. The University of Chicago Press.
+* Nobel Lectures, &quot;''[http://www.nobel.se/physics/laureates/1923/millikan-bio.html Robert A. Millikan] – Nobel Biography''&quot;. Elsevier Publishing Company, Amsterdam.
+* Segerstråle, U (1995) Good to the last drop? Millikan stories as &quot;canned&quot; pedagogy, ''Science and Engineering Ethics'' vol 1, pp197–214
+* Robert Andrews Millikan &quot;''[https://web.archive.org/web/20040910214815/http://bodya.htmlplanet.com/rob/8kapitel6.html Robert A. Millikan] – Nobel Biography''&quot;.
+* ''[http://physics.nist.gov/cgi-bin/cuu/Value?e|search_for=electron+charge The NIST Reference on Constants, Units, and Uncertainty]''
+* {{cite journal | last1 = Kevles | first1 = Daniel A | year = 1979 | title = Robert A. Millikan | url = | journal = Scientific American | volume = 240 | issue = 1| pages = 142–151 | doi=10.1038/scientificamerican0179-142| bibcode = 1979SciAm.240a.142K}}
+* {{cite journal | last1 = Kargon | first1 = Robert H | year = 1977 | title = The Conservative Mode: Robert A. Millikan and the Twentieth-Century Revolution in Physics | url = | journal = Isis | volume = 68 | issue = 4| pages = 509–526 | jstor = 230006 | doi = 10.1086/351871 | s2cid = 170329412 }}
+* Kargon, Robert H (1982). ''The rise of Robert Millikan: portrait of a life in American science''. Ithaca: Cornell University Press.
+
+==See also==
+
+{{Commons category|Robert Andrews Millikan}}
+{{wikiquote}}
+*[[Nobel Prize controversies]]
+:Robert Millikan is widely believed to have been denied the 1920 prize for physics owing to Felix Ehrenhaft's claims to have measured charges smaller than Millikan's elementary charge. Ehrenhaft's claims were ultimately dismissed and Millikan was awarded the prize in 1923.
+* [https://books.google.com/books?id=ficDAAAAMBAJ&amp;pg=PA22&amp;dq=quantum+mechanics&amp;lr=&amp;as_pt=MAGAZINES&amp;ei=2D-WS5i1DomCywTDzc3fDg&amp;hl=tr&amp;cd=60#v=onepage&amp;q=quantum%20mechanics&amp;f=false Millikan's passage] announcing emerging branch of [[physics]] under the designation of [[Quantum mechanics|quantum theory]], published in [[Popular Science]] January 1927.
+
+== References ==
+=== Citations ===
+{{Reflist}}
+
+=== Sources ===
+{{refbegin}}
+* Waller, John, &quot;Einstein's Luck: The Truth Behind Some of the Greatest Scientific Discoveries&quot;. Oxford University Press, 2003. {{ISBN|0-19-860719-9}}.
+* Physics paper [https://history.aip.org/history/exhibits/gap/Millikan/Millikan.html#millikan1 ''On the Elementary Electrical Charge and the Avogadro Constant (extract)''] Robert Andrews Millikan at ''www.aip.org/history'', 2003
+* {{Gutenberg author |id = Robert_Millikan |name = Robert Millikan }}
+{{refend}}
+
+== External links ==
+* {{Nobelprize}} including the Nobel Lecture, May 23, 1924 ''The Electron and the Light-Quant from the Experimental Point of View''
+* [https://wayback.archive-it.org/all/20080626083137/http://www.desmoinesregister.com/apps/pbcs.dll/article?AID=/99999999/FAMOUSIOWANS/41217015 &quot;Famous Iowans,&quot; by Tom Longdon]
+* {{webarchive |url = https://web.archive.org/web/20060516004819/http://chem.ch.huji.ac.il/~eugeniik/history/millikan.html |date=May 16, 2006 |title=Illustrated Millikan biography }}. Retrieved on March 30, 2007.
+* [http://harvardsquarelibrary.org/unitarians/millikan.html Robert Millikan: Scientist]. Part of a series on Notable American Unitarians.
+* [http://osulibrary.oregonstate.edu/specialcollections/coll/pauling/bond/people/millikan.html Key Participants: Robert Millikan] – ''Linus Pauling and the Nature of the Chemical Bond: A Documentary History''
+* {{Biographical Memoirs|millikan-robert}}
+* {{Internet Archive author |sname = Robert Andrews Millikan |birth = 1868 |death = 1953 }}
+* {{Librivox author |id = 4564 }}
+* {{Find a Grave|2089|Robert Andrews Millikan}}
+* [http://wright-brothers.org/History_Wing/Wright_Story/Long_Twilight/Long_Twilight_Intro_images/Guggenheim_Fund_Board.JPG  Robert Millikan] standing on right during historic gathering of the Guggenheim Board Fund for Aeronautics 1928. Orville Wright seated second from right, Charles Lindbergh standing third from right
+
+{{-}}
+{{s-start}}
+{{s-aca}}
+{{s-bef |before = [[James Scherer]] |as = President of the Throop College of Technology }}
+{{s-ttl |title = President of the [[California Institute of Technology]] |years = 1921 – 1946 }}
+{{s-aft |after = [[Lee DuBridge]] }}
+{{s-end}}
+
+{{ASME Medal |state = collapsed }}
+{{IEEE Edison Medal Laureates 1909-1925}}
+{{Nobel Prize in Physics Laureates 1901-1925}}
+{{1923 Nobel Prize winners}}
+{{Presidents of the American Physical Society}}
+{{Caltech presidents}}
+
+{{Authority control}}

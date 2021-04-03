@@ -1,0 +1,432 @@
+ You told me you are &lt;get name=&quot;user-age&quot;/&gt; years old.
+
+which will substitute the user's age (if known) into the sentence.
+
+Template elements include basic text formatting, conditional response (if-then/else), and random responses.
+
+Templates may also redirect to other patterns, using an element called '''{{text|srai}}''' (Symbolic Reduction in Artificial Intelligence). This can be used to implement synonymy, as in this example (where [[CDATA]] is used to avoid the need for [[XML#Escaping|XML escaping]]):
+&lt;syntaxhighlight lang=&quot;xml&quot;&gt;
+&lt;category&gt;
+  &lt;pattern&gt;WHAT IS YOUR NAME&lt;/pattern&gt;
+  &lt;template&gt;&lt;![CDATA[My name is &lt;bot name=&quot;name&quot;/&gt;.]]&gt;&lt;/template&gt;
+&lt;/category&gt;
+&lt;category&gt;
+  &lt;pattern&gt;WHAT ARE YOU CALLED&lt;/pattern&gt;
+  &lt;template&gt;
+    &lt;srai&gt;what is your name&lt;/srai&gt;
+  &lt;/template&gt;
+&lt;/category&gt;
+&lt;/syntaxhighlight&gt;
+
+The first category simply answers an input &quot;what is your name&quot; with a statement of the bot's name. The second category, however, says that the input &quot;what are you called&quot; should be redirected to the category that matches the input &quot;what is your name&quot;—in other words, it is saying that the two phrases are equivalent.
+
+Templates can contain other types of content, which may be processed by whatever user interface the bot is talking through. So, for example, a template may use HTML tags for formatting, which can be ignored by clients that don't support HTML.
+
+==References==
+{{reflist}}
+
+{{DEFAULTSORT:Aiml}}
+[[Category:Free artificial intelligence applications]]</text>
+      <sha1>ppp8qvxf8h3lx8yt8yxkor1u85ctyo7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Heidelberg</title>
+    <ns>0</ns>
+    <id>46743</id>
+    <revision>
+      <id>990617806</id>
+      <parentid>986458061</parentid>
+      <timestamp>2020-11-25T14:52:38Z</timestamp>
+      <contributor>
+        <ip>92.76.107.160</ip>
+      </contributor>
+      <comment>/* Notable inhabitants */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="78193" xml:space="preserve">{{about|the German city|the university|Heidelberg University|other uses}}
+{{Infobox German location
+|type = Stadt
+|image_photo = Heidelberg_corr.jpg 
+|imagesize = &lt;!-- Photo size. Default is 300px --&gt;
+|image_caption = Heidelberg, with [[Heidelberg Castle]]&lt;br /&gt; on the hill and the [[Old Bridge (Heidelberg)|Old Bridge]] over the river [[Neckar]]
+|image_coa = Wappen Heidelberg.svg 
+| image_flag = Flag of Heidelberg.svg
+|coordinates = {{coord|49|25|N|08|43|E|format=dms|display=inline,title}}
+|Karte =
+|image_plan =
+|state = Baden-Württemberg
+|region = Karlsruhe
+|district = [[Urban districts of Germany|Urban district]]
+|elevation = 114
+|area = 108.83
+|population = 159914
+|Stand = 2008-12-31
+|postal_code = 69115–69126
+|Gemeindeschlüssel = 08 2 21 000
+|area_code = 06221
+|licence = HD
+|LOCODE =
+|Adresse = Marktplatz 10&lt;br/&gt; 69117 Heidelberg
+|website = [https://www.heidelberg.de/ heidelberg.de]
+|mayor = Eckart Würzner
+|Bürgermeistertitel= Oberbürgermeister
+|party = Parteilos
+}}
+
+'''Heidelberg''' ({{IPAc-en|ˈ|h|aɪ|d|əl|b|ɜːr|ɡ}} {{respell|HY|dəl|burg}}, {{IPA-de|ˈhaɪdl̩bɛʁk|lang|Heidelberg.ogg}}) is a [[college town|university town]] in the [[States of Germany|German state]] of [[Baden-Württemberg]], situated on the river [[Neckar]] in south-west [[Germany]]. In the 2016 census, its population was 159,914, of which roughly a quarter consisted of students.&lt;ref&gt;{{Cite web|url=https://www.uni-heidelberg.de/universitaet/statistik/studierende.html|title=Daten und Fakten – Studierende und Wissenschaftlicher Nachwuchs – Universität Heidelberg|last=Albers|first=Jürgen|website=www.uni-heidelberg.de|access-date=2018-04-15}}&lt;/ref&gt;
+
+Located about {{convert|78|km|0|abbr=on}} south of [[Frankfurt]], Heidelberg is the fifth-largest city in Baden-Württemberg. Heidelberg is part of the densely populated [[Rhine-Neckar|Rhine-Neckar Metropolitan Region]].
+
+[[Heidelberg University]], founded in 1386, is Germany's oldest and one of Europe's most reputable universities.&lt;ref&gt;Its latest overall ranking positions range from 5th to 18th in Europe; the peer review scores, reflecting academic esteem, are usually higher. It was never ranked outside Europe's top 20 by any major university ranking. See [[Ruprecht Karl University of Heidelberg#Academic profile|rankings]].&lt;/ref&gt; Heidelberg is a [[Science|scientific hub]] in Germany and home to several internationally renowned [[#Research|research facilities]] adjacent to its university, including the [[European Molecular Biology Laboratory]] and four [[Max Planck Society|Max Planck Institutes]].&lt;ref&gt;{{Cite web|url=https://www.uni-heidelberg.de/institutions/non_university.html|title=Non-University Research Institutions – Heidelberg University|last=Stiefel|first=Catherine|website=www.uni-heidelberg.de|access-date=2017-01-11}}&lt;/ref&gt; The city has also been a hub for the arts, especially literature, throughout the centuries, and it was designated a &quot;[[City of Literature]]&quot; by the [[UNESCO]] [[Creative Cities Network]].
+
+Heidelberg was a seat of government of the former [[Electorate of the Palatinate]] and is a popular [[tourism|tourist destination]] due to its [[Romanticism|romantic]] cityscape, including [[Heidelberg Castle]], the [[#Philosophers' Walk|Philosophers' Walk]], and the [[Baroque]] old town.
+
+==Geography==
+[[File:Heidelberg Stadtteile 2012.svg|thumb|right|The districts of Heidelberg]]
+Heidelberg is in the [[Rhine Rift Valley]], on the left bank of the lower part of the Neckar in a steep valley in the [[Odenwald]]. It is bordered by the [[Königstuhl (Odenwald)|Königsstuhl]] (568&amp;nbsp;m) and the [[Gaisberg (Heidelberg)|Gaisberg]] (375&amp;nbsp;m) mountains. The Neckar here flows in an east–west direction. On the right bank of the river, the [[Heiligenberg (Heidelberg)|Heiligenberg]] mountain rises to a height of 445 meters. The Neckar flows into the [[Rhine]] approximately 22 kilometres north-west in [[Mannheim]]. Villages incorporated during the 20th century stretch from the Neckar Valley along the Bergstraße, a road running along the [[Odenwald]] hills.
+
+Heidelberg is on [[European walking route E1]] ([[Sweden]]-[[Umbria]]).
+[[File:Heidelberg from the Königstuhl.jpg|thumb|Heidelberg seen from [[Königstuhl (Odenwald)|Königstuhl]]]]
+
+===Flora and fauna===
+Since Heidelberg is among the warmest regions of Germany, plants atypical of the [[Central Europe|central-European]] climate flourish there, including [[almond]] and [[Common fig|fig trees]]; there is also an [[olive tree]] in ''Gaisbergstraße''. Alongside the ''Philosophenweg'' (Philosophers' Walk) on the opposite side of the Old Town, [[winegrowing]] was restarted in 2000.&lt;ref&gt;{{cite web|url=http://www.hilfe-hd.de/rohrbach/wein.htm |title=Heidelberg-Rohrbach: Wein, Reben und Winzer |publisher=Hilfe-hd.de |date= |accessdate=2012-11-08}}&lt;/ref&gt;
+
+There is a wild population of African [[rose-ringed parakeet]]s,&lt;ref&gt;Stefanie Wegener: ''Verbreitung und Arealnutzung der Halsbandsittiche (Psittacula krameri) in Heidelberg'', published by: Ornithologische Gesellschaft Baden-Württemberg e.&amp;nbsp;V., [http://www.ogbw.de/doc/Abstract_WegenerSittiche.pdf Ornithol. Jh. Bad.-Württ. 23: 39–55 (2007)] {{webarchive|url=https://web.archive.org/web/20110719070417/http://www.ogbw.de/doc/Abstract_WegenerSittiche.pdf |date=July 19, 2011 }}&lt;/ref&gt; and a wild population of [[Siberia]]n [[swan goose|swan geese]], which can be seen mainly on the islands in the [[Neckar]] near the district of Bergheim.
+
+===Administrative structures===
+[[File:Altstadt Heidelberg.jpg|thumb|left|The Old Town]]
+
+Heidelberg is a [[Unitary authority#Germany|unitary authority]] within the [[Karlsruhe (region)|Regierungsbezirk Karlsruhe]]. The [[Rhein-Neckar-Kreis]] rural district surrounds it and has its seat in the town, although the town is not a part of the district. Heidelberg is a part of the Rhine-Neckar Metropolitan Region, often referred to as the [[Rhein-Neckar-Triangle|Rhein-Neckar Triangle]].
+
+This region consists of the southern part of the [[States of Germany|State]] of [[Hessen]], the southern part of the State of [[Rhineland-Palatinate]] (''Vorderpfalz''), the administrative districts of [[Mannheim]] and Heidelberg, and the southern municipalities of the [[Rhein-Neckar-Kreis]]. The Rhein-Neckar Triangle became a European [[metropolitan area]] in 2005.
+
+Heidelberg consists of 15 districts distributed in six sectors of the town. In the central area are Altstadt (the Old Town), [[Heidelberg-Bergheim|Bergheim]] and Weststadt; in the north, Neuenheim and Handschuhsheim; in the east, [[Heidelberg-Ziegelhausen|Ziegelhausen]] and Schlierbach; in the south, [[Heidelberg-Südstadt|Südstadt]], Rohrbach, Emmertsgrund, and Boxberg; in the southwest, [[Heidelberg-Kirchheim|Kirchheim]]; in the west, Pfaffengrund, Wieblingen, and a new district, named ''Bahnstadt'', is built on land in Weststadt and Wieblingen. The new district will have approximately 5,000–6,000 residents and employment for 7,000. Further new residential space for 10,000-15,000 residents was made available in Patrick Henry Village following the departure of the US Armed Forces.&lt;ref&gt;{{Cite web|url=https://www.heidelberg.de/Konversion,Lde/Startseite+Konversion.html|title=Konversion Heidelberg - Startseite Konversion|website=www.heidelberg.de}}&lt;/ref&gt;
+
+===Neighbouring communes===
+The following towns and [[commune]]s border the city of Heidelberg, beginning in the west and in a clockwise direction: [[Edingen-Neckarhausen]], [[Dossenheim]], [[Schriesheim]], [[Wilhelmsfeld]], [[Schönau (Odenwald)|Schönau]], [[Neckargemünd]], [[Bammental]], [[Gaiberg]], [[Leimen (Baden)|Leimen]], [[Sandhausen]], [[Oftersheim]], [[Plankstadt]], [[Eppelheim]] (all part of the [[Rhein-Neckar-Kreis]]) and [[Mannheim]].
+
+===Climate===
+Heidelberg has an [[oceanic climate]] ([[Köppen climate classification]] ''Cfb''), defined by the protected valley between the Pfälzerwald and the Odenwald. Year-round, the mild temperatures are determined by maritime air masses coming from the west. In contrast to the nearby [[Upper Rhine Plain]], Heidelberg's position in the valley leads to more frequent easterly winds than average. The hillsides of the Odenwald favour clouding and precipitation. The warmest month is July, the coldest is January. Temperatures often rise beyond {{convert|30|°C|0}} in [[midsummer]]. According to the [[Deutscher Wetterdienst|German Meteorological Service]], Heidelberg was the warmest place in Germany in 2009.&lt;ref&gt;Mechthild Henneke: ''Wetterextreme in Deutschland 2009''. In: ''[[Südkurier]]'', 28. April 2010&lt;/ref&gt;&lt;ref&gt;''Kreisbeschreibung Bd. 1'', S. 54ff&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=http://www.klimadiagramme.de/Deutschland/heidelberg2.html|title=Das Klima in Heidelberg|website=www.klimadiagramme.de}}&lt;/ref&gt;
+
+{{Weather box
+|location = Heidelberg (Mannheim 2010-2020)
+|metric first = Yes
+|single line = Yes
+|Jan high C = 5.1
+|Feb high C = 6.6
+|Mar high C = 12.6
+|Apr high C = 17.7
+|May high C = 20.7
+|Jun high C = 25.1
+|Jul high C = 27.3
+|Aug high C = 26.5
+|Sep high C = 21.9
+|Oct high C = 16.0
+|Nov high C = 9.5
+|Dec high C = 6.3
+|year high C = 16.3
+|Jan mean C = 2.7
+|Feb mean C = 3.2
+|Mar mean C = 7.4
+|Apr mean C = 11.6
+|May mean C = 15.0
+|Jun mean C = 19.3
+|Jul mean C = 21.3
+|Aug mean C = 20.6
+|Sep mean C = 16.4
+|Oct mean C = 11.6
+|Nov mean C = 6.7
+|Dec mean C = 4.0
+|year mean C = 11.7
+|Jan low C = 0.4
+|Feb low C = -0.3
+|Mar low C = 2.2
+|Apr low C = 5.5
+|May low C = 9.4
+|Jun low C = 13.4
+|Jul low C = 15.3
+|Aug low C = 14.6
+|Sep low C = 10.9
+|Oct low C = 7.2
+|Nov low C = 3.9
+|Dec low C = 1.8
+|year low C = 7.0
+| precipitation colour    = green
+|Jan precipitation inch = 2.2
+|Feb precipitation inch = 2.1
+|Mar precipitation inch = 2.1
+|Apr precipitation inch = 2.4
+|May precipitation inch = 3.1
+|Jun precipitation inch = 3.4
+|Jul precipitation inch = 2.8
+|Aug precipitation inch = 2.6
+|Sep precipitation inch = 2.1
+|Oct precipitation inch = 2.3
+|Nov precipitation inch = 2.6
+|Dec precipitation inch = 2.6
+|year precipitation inch = 30.3
+| snow colour    = 
+| Jan snow cm  = 4.0
+| Feb snow cm  = 1.6
+| Mar snow cm  = 1.2
+| Apr snow cm  = 0
+| May snow cm  = 0
+| Jun snow cm  = 0
+| Jul snow cm  = 0
+| Aug snow cm  = 0
+| Sep snow cm  = 0
+| Oct snow cm  = 1.0
+| Nov snow cm  = 2.0
+| Dec snow cm  = 5.6
+| year snow cm = 2.6
+|Jan sun = 41
+|Feb sun = 80
+|Mar sun = 150
+|Apr sun = 192
+|May sun = 204
+|Jun sun = 227
+|Jul sun = 242
+|Aug sun = 213
+|Sep sun = 178
+|Oct sun = 115
+|Nov sun = 52
+|Dec sun = 38
+|year sun = 1732
+|source 1 = ''weather-online''&lt;ref&gt;{{cite web
+|url=https://www.weatheronline.co.uk/weather/maps/city?FMM=1&amp;FYY=2010&amp;LMM=12&amp;LYY=2019&amp;WMO=10729&amp;CONT=euro&amp;REGION=0001&amp;LAND=DL&amp;ART=TMX&amp;R=0&amp;NOREGION=1&amp;LEVEL=162&amp;LANG=en&amp;MOD=tab |title=Heidelberg historic weather averages |accessdate= January 5, 2020 |publisher=weather-online}}&lt;/ref&gt;
+}}
+
+==History==
+[[File:Heidelberg nachts.jpg|thumb|Heidelberg on the Neckar at night]]
+[[File:Heidelberg Hauptstraße 207.jpg|thumb|Karlsplatz and Neckar with Old Bridge]]
+
+===Early history===
+Between 600,000 and 200,000 years ago{{Citation needed|date=April 2010}}, &quot;[[Homo heidelbergensis|Heidelberg Man]]&quot; died at nearby [[Mauer (Baden)|Mauer]]. His jaw bone was discovered in 1907. Scientific dating determined his remains as the earliest evidence of human life in Europe. In the 5th century BC, a [[Celts|Celtic]] fortress of refuge and place of worship were built on the ''Heiligenberg'', or &quot;Holy Mountain&quot;. Both places can still be identified. In 40 AD, a fort was built and occupied by the 24th Roman cohort and the 2nd [[Cyrenaican]] cohort (CCG XXIIII and CCH II CYR). The early Byzantine/late Roman Emperor Valentinian I, in 369 AD, built new and maintained older ''[[castra]]'' (permanent camps) and a signal tower on the bank of the [[Neckar]]. They built a wooden bridge based on stone pillars across it. The camp protected the first civilian settlements that developed. The Romans remained until 260 AD, when the camp was conquered by [[Germanic people|Germanic tribes]]. The local administrative center in Roman times was the nearby city of [[Ladenburg|Lopodunum]].
+
+===Middle Ages===
+[[File:Carl Blechen 003.jpg|thumb|[[Heidelberg Castle]], here shown in a painting by [[Carl Blechen]], was destroyed by the French during the war of succession of the [[Electorate of the Palatinate]]]][[File:Heidelberg - panoramio (39).jpg|thumb|View of castle from the Corn Market]] 
+Modern Heidelberg can trace its beginnings to the fifth century. The village ''Bergheim'' (&quot;Mountain Home&quot;) is first mentioned for that period in documents dated to 769 AD. ''Bergheim'' now lies in the middle of modern Heidelberg. The people gradually converted to Christianity. In 863 AD, the [[monastery]] of [[St. Michael]] was founded on the [[Heiligenberg (Heidelberg)|Heiligenberg]] inside the double rampart of the Celtic fortress. Around 1130, the Neuburg Monastery was founded in the Neckar valley. At the same time, the bishopric of [[Worms, Germany|Worms]] extended its influence into the valley, founding [[Schönau Abbey]] in 1142. Modern Heidelberg can trace its roots to this 12th-century monastery. The first reference to Heidelberg can be found in a document in [[Schönau Abbey]] dated to 1196. This is considered to be the town's founding date. In 1155, Heidelberg castle and its neighboring settlement were taken over by the house of [[Hohenstaufen]]. [[Conrad of Hohenstaufen]] became [[Count Palatine of the Rhine]] ({{lang-de|link=no|Pfalzgraf bei Rhein}}). In 1195, the [[Electorate of the Palatinate]] passed to the [[House of Welf]] through marriage.In 1214, [[Louis I, Duke of Bavaria|Ludwig I, Duke of Bavaria]] acquired the Palatinate, as a consequence of which the castle came under his control. By 1303, another castle had been constructed for defense. In 1356, the Counts Palatine were granted far-reaching rights in the [[Golden Bull of 1356|Golden Bull]], in addition to becoming [[Prince-elector|Electors]]. In 1386, [[Heidelberg University]] was founded by [[Rupert I, Elector Palatine]].
+
+===Modern history===
+Heidelberg University played a leading part in the era of humanism and the Reformation, and the conflict between Lutheranism and Calvinism, in the 15th and 16th centuries. Heidelberg's library, founded in 1421, is the oldest existing public library in Germany. In April 1518, a few months after proclaiming his ''[[Ninety-five Theses]]'', [[Martin Luther]] was received in Heidelberg, to defend them. In 1537, the castle located higher up the mountain was destroyed by a gunpowder explosion. The duke's palace was built at the site of the lower castle. [[File:Belagerung Heidelbergs C-L 205.jpg|thumb|The siege of Heidelberg 1622]]
+[[Elector Frederick III]], sovereign of the [[Electoral Palatinate]] from 1559 to 1576, commissioned the composition of a new Catechism for his territory. While the catechism's introduction credits the &quot;entire theological faculty here&quot; (at the [[University of Heidelberg]]) and &quot;all the superintendents and prominent servants of the church&quot; for the composition of the catechism, Zacharius Ursinus is commonly regarded as the catechism's principal author. [[Caspar Olevianus]] (1536–1587) was formerly asserted as a co-author of the document, though this theory has been largely discarded by modern scholarship. [[Johann Sylvan]], [[Adam Neuser]], Johannes Willing, [[Thomas Erastus]], Michael Diller, Johannes Brunner, Tilemann Mumius, Petrus Macheropoeus, Johannes Eisenmenger, [[Immanuel Tremellius]] and [[Pierre Boquin]] are all likely to have contributed to the Catechism in some way. Frederick himself wrote the preface to the Catechism and closely oversaw its composition and publication. Frederick, who was officially Lutheran but had strong Reformed leanings, wanted to even out the religious situation of his highly Lutheran territory within the primarily Catholic [[Holy Roman Empire]]. The [[Council of Trent]] had just concluded with its conclusions and decrees against the Protestant faiths, and the [[Peace of Augsburg]] had only granted toleration for [[Lutheranism]] within the empire where the ruler was Lutheran. One of the aims of the catechism was to counteract the teachings of the [[Roman Catholic Church]] as well as Anabaptists and &quot;strict&quot; [[Gnesio-Lutherans]] like [[Tilemann Heshusius]] and [[Matthias Flacius]], who were resisting Frederick's Reformed influences, particularly on the matter of Eucharist ([[the Lord's Supper]]). The Catechism-based each of its statements on biblical proof-texts, and Frederick himself would defend it as biblical, not reformed, at the 1566 Diet of Augsburg when he was called to answer to charges of violating the Peace of Augsburg. This was the [[Heidelberg Catechism]], officially called the ″Catechism, or Christian Instruction, according to the Usages of the Churches and Schools of the Electoral Palatinate.″
+[[File:2002-04-02 Hauptstraße, Heidelberg IMG 0404.jpg|thumb|Main street Heidelberg]]
+[[File:Heidelberg Old Bridge.jpg|thumb|[[Old Bridge (Heidelberg)|Old Bridge Gate]]]]
+
+In November 1619, the royal crown of Bohemia was offered to the Elector, [[Frederick V, Elector Palatine|Frederick V]]. (He was married to [[Elizabeth of Bohemia|Elizabeth]], eldest daughter of [[James VI and I]] of Scotland and England, respectively.) Frederick became known as the &quot;Winter King&quot;, as he reigned for only one winter before the Imperial [[House of Habsburg]] regained the crown by force. His overthrow in 1621 marked the beginning of the [[Thirty Years' War]]. In 1622, after a [[Siege of Heidelberg (1622)|siege of two months]], the armies of the [[Catholic League (German)|Catholic League]], commanded by [[Johann Tserclaes, Count of Tilly]], captured the town. Tilly gave the famous ''[[Bibliotheca Palatina]]'' from the [[Church of the Holy Spirit, Heidelberg|Church of the Holy Spirit]] to the Pope as a present. The Catholic Bavarian branch of the House of Wittelsbach gained control over the Palatinate and the title of Prince-Elector.
+[[File:Hotelritter.jpg|thumb|left|Hotel zum Ritter St. Georg]]
+[[File:Alte Bruecke Heidelberg von Konrad Linck 1788.jpg|thumb|left|Old Bridge, Konrad Linck, 1788]]
+
+In late 1634, after the Swedish army had conquered Heidelberg, imperialist forces attempted to take back the city. They quickly took the city, but were unable to take the castle. As they prepared to blow up its fortifications with gunpowder the French army arrived, 30,000 men strong, led by [[Urbain de Maillé-Brézé]], who had fought in many battles and participated in the [[Siege of La Rochelle]] (1627–1628), and [[Jacques-Nompar de Caumont, duc de La Force]]. They ended the siege and drove off the Catholic forces.&lt;ref&gt;Helfferich, Tryntje, The Thirty Years War: A Documentary History (Cambridge, 2009), pp. 289–90.&lt;/ref&gt;
+
+In 1648, at the end of the war, Frederick V's son [[Charles I Louis, Elector Palatine]], was able to recover his titles and lands. To strengthen his dynasty, Charles I Louis arranged the marriage of his daughter [[Elizabeth Charlotte, Princess Palatine|Liselotte]] to [[Philip I, Duke of Orléans]], brother of [[Louis XIV of France|Louis XIV]], king of France. In 1685, after the death of Charles Louis' son, Elector [[Charles II, Elector Palatine|Charles II]], Louis XIV laid claim to his sister-in-law's inheritance. The Germans rejected the claim, in part because of religious differences between local Protestants and the French Catholics, as the [[Protestant Reformation]] had divided the peoples of Europe. The [[War of the Grand Alliance]] ensued. In 1689, French troops took the town and castle, bringing nearly total destruction to the area in 1693. As a result of the destruction due to repeated French invasions related to the [[War of the Palatinate Succession]] coupled with severe winters, thousands of Protestant German Palatines emigrated from the lower Palatinate in the early 18th century. They fled to other European cities and especially to London (where the refugees were called &quot;the poor Palatines&quot;). In sympathy for the Protestants, in 1709–1710, [[Anne, Queen of Great Britain|Queen Anne's]] government arranged transport for nearly 6,000 Palatines to New York. Others were transported to [[Pennsylvania]], and to [[South Carolina]]. They worked their passage and later settled in the English colonies there.
+
+In 1720, after assigning a major church for exclusively Catholic use, religious conflicts with the mostly Protestant inhabitants of Heidelberg caused the Roman Catholic Prince-Elector [[Karl III Philip, Elector Palatine|Charles III Philip]] to transfer his residence to nearby [[Mannheim]]. The court remained there until the Elector [[Charles Theodore, Elector of Bavaria|Charles Theodore]] became [[Rulers of Bavaria|Elector of Bavaria]] in 1777 and established his court in [[Munich]]. In 1742 Elector Charles Theodore began rebuilding the Palace. In 1764, a lightning bolt destroyed other palace buildings during reconstruction, causing the work to be discontinued.
+
+===1803 to 1933===
+Heidelberg fell to the [[Grand Duchy of Baden]] in 1803. [[Charles Frederick, Grand Duke of Baden]], re-founded the university, named &quot;Ruperto-Carola&quot; after its two founders. Notable scholars soon earned it a reputation as a &quot;royal residence of the intellect&quot;. In the 18th century, the town was rebuilt in the Baroque style on the old medieval layout.
+
+In 1810 the [[French revolution]] refugee Count Charles Graimberg began to preserve the palace [[ruins]] and establish a historical collection. In 1815, the Emperor of [[Austria]], the Emperor of [[Russia]] and the King of [[Prussia]] formed the &quot;[[Holy Alliance]]&quot; in Heidelberg. In 1848, the German National Assembly was held there. In 1849, during the Palatinate-Baden rebellion of the [[Revolutions of 1848 in the German states|1848 Revolutions]], Heidelberg was the headquarters of a revolutionary army. It was defeated by a Prussian army near Waghaeusel. The city was occupied by Prussian troops until 1850. Between 1920 and 1933, Heidelberg University became a center of notable physicians Czerny, Erb, and Krehl; and humanists Rohde, Weber, and Gandolf.
+
+===Nazism and the World War II-period===
+During the Nazi period (1933–1945), Heidelberg was a stronghold of the [[NSDAP]]/Nazi party, (the National Socialist German Workers' Party) the strongest party in the elections before 1933 (the NSDAP obtained 30% at the communal elections of 1930&lt;ref&gt;{{harvnb|Cser|2007|pp=209–10}})&lt;/ref&gt;). The NSDAP received 45.9% of the votes in the [[German federal election, March 1933|German federal election of March 1933]] (the national average was 43.9%).&lt;ref&gt;{{harvnb|Cser|2007|p=229}})&lt;/ref&gt; Non-[[Aryan race|Aryan]] university staff were discriminated against. By 1939, one-third of the university's teaching staff had been forced out for racial and political reasons. The non-Aryan professors were ejected in 1933, within one month of Hitler's rise to power. The lists of those to be deported were prepared beforehand.{{vague|date=October 2010}}{{Citation needed|date=October 2010}}
+
+In 1934 and 1935 the ''Reichsarbeitsdienst'' (State Labor Service) and Heidelberg University students built the huge [[Heidelberg Thingstätte|''Thingstätte'' amphitheatre]] on the ''Heiligenberg'' north of the town, for [[Nazi Party]] and [[SS]] events. A few months later, the inauguration of the huge Ehrenfriedhof memorial cemetery completed the second and last NSDAP project in Heidelberg. This cemetery is on the southern side of the old part of town, a little south of the [[Königstuhl (Odenwald)|Königstuhl]] hilltop, and faces west towards France. During World War II and after, [[Wehrmacht]] soldiers were buried there.
+[[File:Heidelberger Synagogenplatz 2.JPG|thumb|Memorial stone marking the site of the synagogue in the Lauerstrasse]]
+During the ''[[Kristallnacht]]'' on November 9, 1938, Nazis burned down synagogues at two locations in the city. The next day, they started the systematic deportation of Jews, sending 150 to [[Dachau concentration camp]]. On October 22, 1940, during the &quot;Wagner Buerckel event&quot;, the Nazis deported 6000 local Jews, including 281 from Heidelberg, to [[Camp Gurs]] concentration camp in France. Within a few months, as many as 1000 of them (201 from Heidelberg) died of hunger and disease.&lt;ref&gt;{{harvnb|Cser|2007|pp=246–8}}&lt;/ref&gt; Among the deportees from Heidelberg, the poet [[Alfred Mombert]] (1872–1942) left the [[nazi concentration camp|concentration camp]] in April 1941 thanks to the Swiss poet Hans Reinhart but died shortly thereafter due to illness he contracted while held prisoner.&lt;ref&gt;{{cite web|url=https://www.blb-karlsruhe.de/sammlungen/alte-drucke-und-rara/bestand/nachlassbibliotheken/#c599|title=Alfred Mombert|work=Badische Landesbibliothek|language=German|archivedate=September 19, 2018|url-status=dead|df=mdy-all|access-date=September 19, 2018|archive-url=https://web.archive.org/web/20180919171757/https://www.blb-karlsruhe.de/sammlungen/alte-drucke-und-rara/bestand/nachlassbibliotheken/#c599}}&lt;/ref&gt; From 1942, the deportees who had survived internment in Gurs were deported to Eastern Europe, where most of them were murdered.
+
+On March 29, 1945, German troops left the city after destroying three arches of the old bridge, Heidelberg's treasured river crossing. They also destroyed the more modern bridge downstream. The U.S. Army ([[63rd Infantry Division (United States)|63rd Infantry]], 7th Army) entered the town on March 30, 1945. The civilian population surrendered without resistance.&lt;ref&gt;{{Cite book |title=Kleine Heidelberger Stadtgeschichte |last=Fink |first=Oliver |year=2005 |isbn=978-3-7917-1971-9 |postscript=&lt;!--None--&gt;}}&lt;/ref&gt;
+
+Heidelberg, unlike many other cities in Germany, was not targeted by Allied bombing raids during the war. A popular belief is that Heidelberg escaped bombing in World War II because the U.S. Army wanted to use the city as a garrison after the war, but, as Heidelberg was neither an industrial center nor a transport hub, it did not present a tactical or strategic target. Other notable university towns, such as [[Tübingen]] and [[Göttingen]], were spared bombing as well. Allied air raids focused extensively on the nearby industrial cities of [[Mannheim]] and [[Ludwigshafen]].
+
+The U.S. Army may have chosen Heidelberg as a garrison base because of its excellent infrastructure, including the Heidelberg-Mannheim [[Autobahn]] (motorway), which connected to the Mannheim-Darmstadt-Frankfurt Autobahn, and the U.S. Army installations in [[Mannheim]] and [[Frankfurt]]. The intact rail infrastructure was more important in the late 1940s and early 1950s when most heavy loads were still carried by train, not by truck. Heidelberg had the untouched Wehrmacht barracks, the &quot;Grossdeutschland Kaserne&quot; which the US Army occupied soon after, renaming it the [[Campbell Barracks]].
+
+===History after 1945===
+In 1945 the university was reopened relatively quickly on the initiative of a small group of professors, among whom were the anti-Nazi economist [[Alfred Weber]] and the philosopher [[Karl Jaspers]].&lt;ref&gt;{{harvnb|Remy|2002|page=240}}&lt;/ref&gt; The surgeon Karl Heinrich Bauer was nominated rector.
+
+On December 9, 1945, US Army General [[George S. Patton]] had a car accident in the adjacent city of [[Mannheim]] and died in the Heidelberg US Army hospital on December 21, 1945. The funeral ceremony was held at the Heidelberg-Weststadt ''Christuskirche'' (Christ Church), and he was buried in the 3rd Army cemetery in [[Luxembourg]].&lt;ref&gt;[[George S. Patton#Accident and death]]&lt;/ref&gt;
+
+During the post-war [[military occupation]], the [[U.S. Army]] used the ''[[Heidelberg Thingstätte|Thingstätte]]'' for cultural and religious events. Civilian use started in the early to mid-1980s for occasional concerts and other cultural events. Today, the celebrations on ''Hexennacht'' (&quot;Witches' Night&quot;), also called [[Walpurgis Night]]), the night of April 30, are a regular &quot;underground&quot; fixture at the ''Thingstätte''. Thousands of mostly young people congregate there to drum, to breathe fire, and to juggle. The event has gained fame throughout the region, as well as a certain notoriety due to the amount of litter left behind.
+
+==Population==
+[[File:Heidelberg population.svg|thumb|Population growth]]
+The population of the city of Heidelberg exceeded 100,000 for the first time in 1946. It is a city with an international population, including one of the largest American communities outside North America, but this is not analysed in the Heidelberg population statistics. At the end of December 2011, the city had 149,633 inhabitants with an official primary residence in Heidelberg (not including the soldiers and employees of the U.S. Army and their dependents, a total of about 20,000 people), a historic high.&lt;ref&gt;{{cite web|url=http://www.statistik.baden-wuerttemberg.de/SRDB/Tabelle.asp?01035050GE221000 |publisher=Statistical office of the state of Baden-Württemberg |title=Population of city of Heidelberg |accessdate=25 July 2012 |language=German |url-status=dead |archiveurl=https://web.archive.org/web/20081207050411/http://www.statistik.baden-wuerttemberg.de/SRDB/Tabelle.asp?01035050GE221000 |archivedate=December 7, 2008 |df=mdy-all }}&lt;/ref&gt;
+
+The following table shows the number of inhabitants within the boundaries of the city at the time. To 1833 they are mostly estimates, then census results or official updates of the statistical offices of the time or the city administration. The data refer from 1843 to the &quot;local population&quot;, from 1925 to the resident population and since 1987 the &quot;population at the site of their main dwelling.&quot; Prior to 1843 the population was determined by non-uniform collection procedures.
+
+{| style=&quot;clear:both&quot;
+|-
+| valign=&quot;top&quot; |
+{| class=&quot;wikitable&quot;
+|-
+! style=&quot;background:#efefef;&quot; |Year
+! style=&quot;background:#efefef;&quot; |Population
+|-
+| 1439 || style=&quot;text-align:right;&quot;| 5,200
+|-
+| 1588 || style=&quot;text-align:right;&quot;| 6,300
+|-
+| 1717 || style=&quot;text-align:right;&quot;| 4,800
+|-
+| 1784 || style=&quot;text-align:right;&quot;| 10,754
+|-
+| 1810 || style=&quot;text-align:right;&quot;| 10,312
+|-
+| 1812 || style=&quot;text-align:right;&quot;| 9,826
+|-
+| 1830 || style=&quot;text-align:right;&quot;| 13,345
+|-
+| 3 December 1852 ¹ || style=&quot;text-align:right;&quot;| 14,564
+|-
+| 3 December 1858 ¹ || style=&quot;text-align:right;&quot;| 15,600
+|-
+| 3 December 1861 ¹ || style=&quot;text-align:right;&quot;| 16,300
+|-
+| 3 December 1864 ¹ || style=&quot;text-align:right;&quot;| 17,666
+|-
+| 3 December 1867 ¹ || style=&quot;text-align:right;&quot;| 18,300
+|-
+| 1 December 1871 ¹ || style=&quot;text-align:right;&quot;| 19,983
+|-
+| 1 December 1875 ¹ || style=&quot;text-align:right;&quot;| 22,334
+|}
+| valign=&quot;top&quot; |
+{| class=&quot;wikitable&quot;
+|-
+! style=&quot;background:#efefef;&quot; |Year
+! style=&quot;background:#efefef;&quot; |Population
+|-
+| 1 December 1880 ¹ || style=&quot;text-align:right;&quot;| 24,417
+|-
+| 1 December 1885 ¹ || style=&quot;text-align:right;&quot;| 26,900
+|-
+| 1 December 1890 ¹ || style=&quot;text-align:right;&quot;| 31,739
+|-
+| 2 December 1895 ¹ || style=&quot;text-align:right;&quot;| 35,190
+|-
+| 1 December 1900 ¹ || style=&quot;text-align:right;&quot;| 40,121
+|-
+| 11 December 1905 ¹ || style=&quot;text-align:right;&quot;| 49,527
+|-
+| 1 December 1910 ¹ || style=&quot;text-align:right;&quot;| 56,016
+|-
+| 1 December 1916 ¹ || style=&quot;text-align:right;&quot;| 47,554
+|-
+| 5 December 1917 ¹ || style=&quot;text-align:right;&quot;| 47,483
+|-
+| 8 October 1919 ¹ || style=&quot;text-align:right;&quot;| 60,831
+|-
+| 16 June 1925 ¹ || style=&quot;text-align:right;&quot;| 73,034
+|-
+| 16 June 1933 ¹ || style=&quot;text-align:right;&quot;| 84,641
+|-
+| 17 May 1939 ¹ || style=&quot;text-align:right;&quot;| 86,467
+|-
+| 31 December 1945 || style=&quot;text-align:right;&quot;| 95,811
+|}
+| valign=&quot;top&quot; |
+{| class=&quot;wikitable&quot;
+|-
+! style=&quot;background:#efefef;&quot; |Year
+! style=&quot;background:#efefef;&quot; |Population
+|-
+| 29 October 1946 ¹ || style=&quot;text-align:right;&quot;| 111,488
+|-
+| 13 September 1950 ¹ || style=&quot;text-align:right;&quot;| 116,488
+|-
+| 25 September 1956 ¹ || style=&quot;text-align:right;&quot;| 121,910
+|-
+| 6 June 1961 ¹ || style=&quot;text-align:right;&quot;| 125,264
+|-
+| 31 December 1965 || style=&quot;text-align:right;&quot;| 125,507
+|-
+| 27 May 1970 ¹ || style=&quot;text-align:right;&quot;| 129,656
+|-
+| 31 December 1975 || style=&quot;text-align:right;&quot;| 129,368
+|-
+| 31 December 1980 || style=&quot;text-align:right;&quot;| 133,227
+|-
+| 31 December 1985 || style=&quot;text-align:right;&quot;| 134,724
+|-
+| 25 May 1987 ¹ || style=&quot;text-align:right;&quot;| 127,768
+|-
+| 31 December 1990 || style=&quot;text-align:right;&quot;| 136,796
+|-
+| 31 December 1995 || style=&quot;text-align:right;&quot;| 138,781
+|-
+| 31 December 2000 || style=&quot;text-align:right;&quot;| 140,259
+|-
+| 31 December 2005 || style=&quot;text-align:right;&quot;| 142,933 &lt;!-- Quelle: Statistisches Landesamt B-W. --&gt;
+|}
+| valign=&quot;top&quot; |
+{| class=&quot;wikitable&quot;
+|-
+! style=&quot;background:#efefef;&quot; | Year
+! style=&quot;background:#efefef;&quot; |Population
+|-
+| 31 December 2010 || style=&quot;text-align:right;&quot;| 147,312
+|-
+| 31 December 2011 || style=&quot;text-align:right;&quot;| 149,633 &lt;!-- Quelle: Statistisches Landesamt B-W. --&gt;
+|-
+| 31 December 2012 || align=&quot;right&quot; | 150,335 &lt;!-- Quelle: Statistisches Landesamt B-W. --&gt;
+|-
+| 31 December 2014 || align=&quot;right&quot; | 154,715 &lt;!-- Quelle: Statistisches Landesamt B-W. --&gt;
+|}
+|}
+¹ Census results
+
+With a [[fertility rate]] of 1.1 children per woman in the ''Stadtkreis'' (county), Heidelberg had the lowest fertility rate in Baden-Württemberg in 2008.
+
+==Politics==
+{| class=&quot;wikitable&quot; style=&quot;float: right;&quot;
+|- style=&quot;background:#cde;&quot;
+| Election || colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| 2004 || colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| 2009 || colspan=&quot;2&quot; align=&quot;center&quot; | 2014&lt;ref&gt;{{cite web|title=Ergebnis Gemeinderatswahl 2014 |url=http://ww2.heidelberg.de/wahl/wahlen2014/html/gr2014.html |publisher=Stadt Heidelberg |accessdate=23 June 2014}}&lt;/ref&gt; || colspan=&quot;2&quot; align=&quot;center&quot; | 2019
+|- style=&quot;background:#def;&quot;
+| Party || Votes || Seats || Votes || Seats || Votes || Seats || Votes || Seats
+|- style=&quot;background:#def;&quot;
+| [[Alliance '90/The Greens|Greens]] || – || – || 15.1% || 6 || 19.67% || 10 || 31.9% || 16
+|- style=&quot;background:#def;&quot;
+| [[Christian Democratic Union (Germany)|CDU]] || |25.9% || 11 || 20.1% || 9 || 20.81% || 10 || 15.0% || 7
+|- style=&quot;background:#def;&quot;
+| [[Social Democratic Party of Germany|SPD]] || 21.6% || 9 || 16.8% || 7 || 17.26% || 8 || 13.9% || 7
+|- style=&quot;background:#def;&quot;
+| Heidelberger || 10.6% || 4 || 8.6% || 3 || 8.10% || 4 || 7.0% || 3
+|- bgcolor=&quot;#ddeeff&quot;
+| [[The Left (Germany)|The Left]] || – || – || – || – || 4.08% || 2 || 5.9% || 3
+|- style=&quot;background:#def;&quot;
+| [[Free Democratic Party (Germany)|FDP]] || 6.8% || 3 || 9.1% || 4 || 4.36% || 2 || 5.7% || 3
+|- bgcolor=&quot;#ddeeff&quot;
+| [[Alternative for Germany|AfD]] || – || – || – || – || 3.84% || 2 || 5.0% || 2
+|- style=&quot;background:#def;&quot;
+| Green Alternative List || 21.4% || 9 || 10.2% || 4 || 4.37% || 2 || 4.7% || 2
+|- style=&quot;background:#def;&quot;
+| Bunte Linke || 3.1% || 1 || 5.4% || 2 || 3.75% || 2 || 3.9% || 2
+|- bgcolor=&quot;#ddeeff&quot;
+| [[Die PARTEI]] || – || – || – || – || – || – || 2.7% || 1
+|- bgcolor=&quot;#ddeeff&quot;
+| HiB || – || – || – || – || – || – || 2.6% || 1
+|- style=&quot;background:#def;&quot;
+| FWV || 4.5% || 2 || 5.8% || 2 || 3.34% || 2 || 1.7% || 1
+|- style=&quot;background:#def;&quot;
+| generation.hd || 3.2% || 1 || 5.8% || 2 || 5.05% || 2 || – || –
+|- style=&quot;background:#def;&quot;
+| HD P. u. E. || – || – || 3.1% || 1 || 2.72% || 1 || – || –
+|- bgcolor=&quot;#ddeeff&quot;
+| [[Pirate Party Germany|Pirates]] || – || – || – || – || 2.64% || 1 || – || –
+|- style=&quot;background:#def;&quot;
+| Others || 2.8% || 0 || 0% || 0 || 0% || 0 || – || –
+|- style=&quot;background:#cde;&quot;
+| Turnout || colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| 50.5% || colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| 48.8% || colspan=&quot;2&quot; align=&quot;center&quot; | 51.29% || colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| 64.9%
+|}
+Since 2006, the ''Oberbürgermeister'' (lord mayor) of Heidelberg has been the independent Eckart Würzner. From 1990 to 2006, the mayor was Beate Weber (SPD).
+
+The council consists of 48 volunteer members with the mayor as chairman. The council is directly elected for a term of five years. The task of the council is to decide all the affairs of the city, with the mayor presiding. The council controls the city administration and oversees the enforcement of its decisions.
+
+Heidelberg has always been a stronghold of the Greens. For the municipal elections in 2009, they split into the Green Alternative List and Alliance 90/The Greens and each ran their own lists. Together they gained 10 seats to become the strongest force for the first time.
+
+In September 2011, two members of the GAL Group joined the Alliance 90/The Greens, so that together with the members of generation.HD, they formed the largest group in the council.
+
+==Cityscape==
+===The old town===
+[[File:2002-04-02 Heidelberger Rathaus IMG 0388.jpg|thumb|right|The marketplace, with Town Hall on the right]][[File:Heidelberg - aus dem Schloss 1.jpg|thumb|right|Heidelberg's old city centre from the castle above]][[File:Deutschland Heidelberg Schloss.JPG|thumb|Heidelberg Castle with the Old Bridge in foreground, 2010]]

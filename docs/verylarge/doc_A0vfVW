@@ -1,0 +1,188 @@
+Some authors (e.g., [[Walter Rudin]]) require the topology on {{mvar|X}} to be [[T1 space|T&lt;sub&gt;1&lt;/sub&gt;]]; it then follows that the space is [[Hausdorff space|Hausdorff]], and even [[Tychonoff space|Tychonoff]]. 
+A topological vector space is said to be '''separated''' if it is Hausdorff; importantly, &quot;separated&quot; does not mean [[Separable space|separable]]. 
+The topological and linear algebraic structures can be tied together even more closely with additional assumptions, the most common of which are listed [[topological vector space#Types|below]].
+
+;Category and morphisms
+
+The [[category (category theory)|category]] of topological vector spaces over a given topological field {{math|𝕂}} is commonly denoted '''TVS'''&lt;sub&gt;{{math|𝕂}}&lt;/sub&gt; or '''TVect'''&lt;sub&gt;{{math|𝕂}}&lt;/sub&gt;. 
+The [[object (category theory)|objects]] are the topological vector spaces over {{math|𝕂}} and the [[morphism]]s are the [[continuous linear map|continuous {{math|𝕂}}-linear map]]s from one object to another.
+
+{{anchor|TVS-homomorphism|TVS homomorphism}}
+A '''TVS homomorphism''' or '''[[topological homomorphism]]'''{{sfn | Köthe | 1969 | p=91}}{{sfn | Schaefer|Wolff| 1999 | pp=74–78}} is a [[continuous map|continuous]] [[linear map]] {{math|''u'' : ''X'' → ''Y''}} between topological vector spaces (TVSs) such that the induced map {{math|''u'' : ''X'' → Im ''u''}} is an [[open mapping]] when {{math|Im ''u''}}, which is the range or image of {{math|''u''}}, is given the [[subspace topology]] induced by ''Y''.
+
+{{anchor|TVS-embedding|TVS embedding}}
+A '''TVS embedding''' or a '''topological [[monomorphism]]''' is an [[Injective map|injective]] topological homomorphism. Equivalently, a TVS-embedding is a linear map that is also a [[topological embedding]].{{sfn | Köthe | 1969 | p=91}} 
+
+{{anchor|TVS-isomorphism|TVS isomorphism}}
+A '''TVS isomorphism''' or an '''isomorphism in the category of TVSs''' is a bijective [[Linear map|linear]] [[homeomorphism]]. Equivalently, it is a [[Surjective map|surjective]] TVS embedding{{sfn | Köthe | 1969 | p=91}}
+
+Many properties of TVSs that are studied, such as [[Locally convex topological vector space|local convexity]], [[Metrizable TVS|metrizability]], [[Complete topological vector space|completeness]], and [[Normable space|normability]], are invariant under TVS isomorphisms. 
+
+;A necessary condition for a vector topology
+
+A collection {{math|𝒩}} of subsets of a vector space is called '''additive'''{{sfn | Wilansky | 2013 | pp=40-47}} if for every {{math|''N'' ∈ 𝒩}}, there exists some {{math|''U'' ∈ 𝒩}} such that {{math|''U'' + ''U'' ⊆ ''N''}}.
+
+{{Math theorem|name=Characterization of continuity of addition at {{math|0}}{{sfn | Wilansky | 2013 | pp=40-47}}|note=|math_statement=
+If {{math|(''X'', +)}} is a [[Group (mathematics)|group]] (as all vector spaces are), {{math|τ}} is a topology on {{mvar|X}}, and {{math|''X'' × ''X''}} is endowed with the [[product topology]], then the addition map {{math|''X'' × ''X'' → ''X''}} (i.e. the map {{math|(''x'', ''y'') ↦ ''x'' + ''y''}}) is continuous at the origin of {{math|''X'' × ''X''}} if and only if the set of [[Neighborhood (topology)|neighborhood]]s of the origin in {{math|(''X'', τ)}} is additive. This statement remains true if the word &quot;neighborhood&quot; is replaced by &quot;open neighborhood.&quot;
+}}
+
+All of the above conditions are consequently a necessity for a topology to form a vector topology. 
+
+=== Defining topologies using neighborhoods of the origin ===
+
+Since every vector topology is translation invariant (i.e. for all {{math|''x''&lt;sub&gt;0&lt;/sub&gt; ∈ ''X''}}, the map {{math|''X'' → ''X''}} defined by {{math|''x'' ↦ ''x''&lt;sub&gt;0&lt;/sub&gt; + ''x''}} is a [[homeomorphism]]), to define a vector topology it suffices to define a [[neighborhood basis]] (or subbasis) for it at the origin. 
+
+{{Math theorem|name=Theorem{{sfn | Narici | Beckenstein | 2011 | pp=67-113}}|note=Neighborhood filter of the origin|math_statement=
+Suppose that {{mvar|X}} is a real or complex vector space. 
+If {{math|ℬ}} is a [[empty set|non-empty]] additive collection of [[Balanced set|balanced]] and [[Absorbing set|absorbing]] subsets of {{mvar|X}} then {{math|ℬ}} is a [[neighborhood base]] at {{math|0}} for a vector topology on {{mvar|X}}. 
+That is, the assumptions are that {{math|ℬ}} is a [[filter base]] that satisfies the following conditions: 
+&lt;ol&gt;
+&lt;li&gt;Every {{math|''B'' ∈ ℬ}} is [[Balanced set|balanced]] and [[Absorbing set|absorbing]],&lt;/li&gt;
+&lt;li&gt;{{math|ℬ}} is additive: For every {{math|''B'' ∈ ℬ}} there exists a {{math|''U'' ∈ ℬ}} such that {{math|''U'' + ''U'' ⊆ ''B''}},&lt;/li&gt;
+&lt;/ol&gt;
+ 
+If {{math|ℬ}} satisfies the above two conditions but is &lt;em&gt;not&lt;/em&gt; a filter base then it will form a neighborhood &lt;em&gt;sub&lt;/em&gt;basis at {{math|0}} (rather than a neighborhood basis) for a vector topology on {{mvar|X}}.
+}}
+
+In general, the set of all balanced and absorbing subsets of a vector space does not satisfy the conditions of this theorem and does not form a neighborhood basis at the origin for any vector topology.{{sfn | Wilansky | 2013 | pp=40-47}}
+
+{{anchor|String|Strings}}
+=== Defining topologies using strings ===
+
+Let {{mvar|X}} be a vector space and let {{math|1=''U''&lt;sub&gt;•&lt;/sub&gt; = (''U''&lt;sub&gt;''i''&lt;/sub&gt;){{su|p=∞|b=''i''=1}}}} be a sequence of subsets of {{mvar|X}}. Each set in the sequence {{math|''U''&lt;sub&gt;•&lt;/sub&gt;}} is called a '''knot''' of {{math|''U''&lt;sub&gt;•&lt;/sub&gt;}} and for every index {{mvar|i}}, {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt;}} is called the '''{{mvar|i}}&lt;sup&gt;th&lt;/sup&gt; knot''' of {{math|''U''&lt;sub&gt;•&lt;/sub&gt;}}. The set{{math|''U''&lt;sub&gt;1&lt;/sub&gt;}} is called the '''beginning''' of {{math|''U''&lt;sub&gt;•&lt;/sub&gt;}}.  
+The sequence {{math|''U''&lt;sub&gt;•&lt;/sub&gt;}} is/is a:{{sfn | Adasch | Ernst | Keim | 1978 | pp=5-9}}{{sfn | Schechter | 1996 | pp=721-751}}{{sfn | Narici | Beckenstein | 2011 | pp=371-423}}
+
+&lt;ul&gt;
+&lt;li&gt;'''Summative''' if {{nowrap|{{math|''U''&lt;sub&gt;''i''+1&lt;/sub&gt; + ''U''&lt;sub&gt;''i''+1&lt;/sub&gt; &amp;thinsp;⊆&amp;thinsp; ''U''&lt;sub&gt;''i''&lt;/sub&gt;}}}} for every index {{mvar|i}}.&lt;/li&gt;
+&lt;li&gt;'''[[Balanced set|Balanced]]''' (resp. '''[[Absorbing set|absorbing]]''', '''closed''',&lt;ref group=note&gt;The topological properties of course also require that {{mvar|X}} be a TVS.&lt;/ref&gt; '''convex''', '''open''', '''[[Symmetric set|symmetric]]''', '''[[Barrelled space|barrelled]]''', '''[[Absolutely convex set|absolutely convex/disked]]''', etc.) if this is true of every {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt;}}.&lt;/li&gt;
+&lt;li&gt;'''String''' if {{math|''U''&lt;sub&gt;•&lt;/sub&gt;}} is summative, absorbing, and balanced.&lt;/li&gt;
+&lt;li&gt;'''Topological string''' or a '''neighborhood string''' in a TVS {{mvar|X}} if {{math|''U''&lt;sub&gt;•&lt;/sub&gt;}} is a string and each of its knows is a neighborhood of the origin in {{mvar|X}}. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-------- START: REMOVED DEFINTION --------------
+'''Definition''' ('''Ultrabarrel'''/'''suprabarrel'''): A subset of a TVS {{mvar|X}} is called an '''ultrabarrel''' (resp. '''suprabarrel''') if it is the beginning of some closed string (resp. of some string) in {{mvar|X}}. 
+----------- END:  REMOVED DEFINTION ---------------&gt;
+
+If {{mvar|U}} is an [[Absorbing set|absorbing]] [[Absolutely convex set|disk]] in a vector space {{mvar|X}} then the sequence defined by {{math|1=''U''&lt;sub&gt;''i''&lt;/sub&gt; := 2&lt;sup&gt;1 − ''i''&lt;/sup&gt; ''U''}} forms a string beginning with {{mvar|1=''U''&lt;sub&gt;1&lt;/sub&gt; = ''U''&lt;/sub&gt;}}. This is called the '''natural string of {{mvar|U}}'''{{sfn | Adasch | Ernst | Keim | 1978 | pp=5-9}} 
+Moreover, if a vector space {{mvar|X}} has countable dimension then every string contains an [[Absolutely convex set|absolutely convex]] string.
+
+Summative sequences of sets have the particularly nice property that they define non-negative continuous real-valued [[subadditive]] functions. 
+These functions can then be used to prove many of the basic properties of topological vector spaces. 
+
+{{Math theorem|name=Theorem|note=ℝ-valued function induced by a string|math_statement=
+Let {{math|1=''U''&lt;sub&gt;•&lt;/sub&gt; = (''U''&lt;sub&gt;''i''&lt;/sub&gt;){{su|p=∞|b=''i''=0}}}} be a collection of subsets of a vector space such that {{math|0 ∈ ''U''&lt;sub&gt;''i''&lt;/sub&gt;}} and {{math|''U''&lt;sub&gt;''i''+1&lt;/sub&gt; + ''U''&lt;sub&gt;''i''+1&lt;/sub&gt; ⊆ ''U''&lt;sub&gt;''i''&lt;/sub&gt;}} for all {{math|''i'' ≥ 0}}. 
+For all {{math|''u'' ∈ ''U''&lt;sub&gt;0&lt;/sub&gt;}}, let 
+:{{math|1=𝕊(''u'') := { ''n''&lt;sub&gt;•&lt;/sub&gt; = (''n''&lt;sub&gt;1&lt;/sub&gt;, ⋅⋅⋅, ''n''&lt;sub&gt;''k''&lt;/sub&gt;) : ''k'' ≥ 1, ''n''&lt;sub&gt;''i''&lt;/sub&gt; ≥ 0 for all ''i'', and ''u'' ∈ ''U''&lt;sub&gt;''n''&lt;sub&gt;1&lt;/sub&gt;&lt;/sub&gt; + ⋅⋅⋅ + ''U''&lt;sub&gt;''n''&lt;sub&gt;''k''&lt;/sub&gt;&lt;/sub&gt; &amp;thinsp;}}}. 
+Define {{math|''f'' : ''X'' → [0, 1]}} by {{math|1=''f'' (''x'') = 1}} if {{math|''x'' ∉ ''U''&lt;sub&gt;0&lt;/sub&gt;}} and otherwise let 
+:{{math|1=''f'' (''x'') := inf { 2&lt;sup&gt;−''n''&lt;sub&gt;1&lt;/sub&gt;&lt;/sup&gt; + ⋅⋅⋅ + 2&lt;sup&gt;−''n''&lt;sub&gt;''k''&lt;/sub&gt;&lt;/sup&gt; : ''n''&lt;sub&gt;•&lt;/sub&gt; = (''n''&lt;sub&gt;1&lt;/sub&gt;, ⋅⋅⋅, ''n''&lt;sub&gt;''k''&lt;/sub&gt;) ∈ 𝕊(''x'') &amp;thinsp;}}}. 
+Then {{mvar|f}} is subadditive (i.e. {{math|1=''f'' (''x'' + ''y'') ≤ ''f'' (''x'') + ''f'' (''y'')}} for all {{math|''x'', ''y'' ∈ ''X''}}) and {{math|1=''f'' = 0}} on {{math|{{underset|''i'' ≥ 0|{{big|∩}}}} ''U''&lt;sub&gt;''i''&lt;/sub&gt;}}, so in particular {{math|1=''f'' (0) = 0}}. 
+If all {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt;}} are [[symmetric set]]s then {{math|1=''f'' (−''x'') = ''f'' (''x'')}} and if all {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt;}} are balanced then {{math|''f''(''sx'') ≤ &amp;thinsp;''f''(''x'')}} for all scalars {{mvar|s}} such that {{math|1={{mabs|''s''}} ≤ 1}} and all {{math|''x'' ∈ ''X''}}. 
+If {{mvar|X}} is a topological vector space and if all {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt;}} are neighborhoods of the origin then {{mvar|f}} is continuous, where if in addition {{mvar|X}} is Hausdorff and {{math|1=''U''&lt;sub&gt;•&lt;/sub&gt;}} forms a basis of balanced neighborhoods of the origin in {{mvar|X}} then {{math|1=''d''(''x'', ''y'') := ''f''(''x'' − ''y'')}} is a metric defining the vector topology on {{mvar|X}}. 
+&lt;!--- This theorem is true more generally for commutative additive [[topological group]]s. ---&gt;
+}}
+
+{{collapse top|title=Proof|left=true}}
+
+Assume that {{math|1=''n''&lt;sub&gt;•&lt;/sub&gt; = (''n''&lt;sub&gt;1&lt;/sub&gt;, ⋅⋅⋅, ''n''&lt;sub&gt;''k''&lt;/sub&gt;)}} always denotes a finite sequence of non-negative integers and use the notation:
+:{{math|1={{big|∑}} 2&lt;sup&gt;- ''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sup&gt; {{space|1}}:={{space|1}} 2&lt;sup&gt;−''n''&lt;sub&gt;1&lt;/sub&gt;&lt;/sup&gt; + ⋅⋅⋅ + 2&lt;sup&gt;−''n''&lt;sub&gt;''k''&lt;/sub&gt;&lt;/sup&gt;}} {{space|3}}and{{space|3}} {{math|1={{big|∑}} ''U''&lt;sub&gt;''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sub&gt; {{space|1}}:={{space|1}} ''U''&lt;sub&gt;''n''&lt;sub&gt;1&lt;/sub&gt;&lt;/sub&gt; + ⋅⋅⋅ + ''U''&lt;sub&gt;''n''&lt;sub&gt;''k''&lt;/sub&gt;&lt;/sub&gt;}}.
+Observe that for any integers {{math|''n'' ≥ 0}} and {{math|''d'' &gt; 2}}, 
+:{{math|1=''U''&lt;sub&gt;''n''&lt;/sub&gt; {{space|1}}⊇{{space|1}} ''U''&lt;sub&gt;''n''+1&lt;/sub&gt; + ''U''&lt;sub&gt;''n''+1&lt;/sub&gt; {{space|1}}⊇{{space|1}} ''U''&lt;sub&gt;''n''+1&lt;/sub&gt; + ''U''&lt;sub&gt;''n''+2&lt;/sub&gt; + ''U''&lt;sub&gt;''n''+2&lt;/sub&gt; {{space|1}}⊇{{space|1}} ''U''&lt;sub&gt;''n''+1&lt;/sub&gt; + ''U''&lt;sub&gt;''n''+2&lt;/sub&gt; + {{space|1}}⋅⋅⋅{{space|1}} + ''U''&lt;sub&gt;''n''+''d''&lt;/sub&gt; + ''U''&lt;sub&gt;''n''+''d''+1&lt;/sub&gt; + ''U''&lt;sub&gt;''n''+''d''+1&lt;/sub&gt;}}.
+From this it follows that if {{math|1=''n''&lt;sub&gt;•&lt;/sub&gt; = (''n''&lt;sub&gt;1&lt;/sub&gt;, ⋅⋅⋅, ''n''&lt;sub&gt;''k''&lt;/sub&gt;)}} consists of distinct positive integers then {{math|1={{big|∑}} ''U''&lt;sub&gt;''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sub&gt; ⊆ ''U''&lt;sub&gt;-1 + min (''n''&lt;sub&gt;•&lt;/sub&gt;)&lt;/sub&gt;}}. 
+
+It will now be shown by induction on {{mvar|k}} that if {{math|1=''n''&lt;sub&gt;•&lt;/sub&gt; = (''n''&lt;sub&gt;1&lt;/sub&gt;, ⋅⋅⋅, ''n''&lt;sub&gt;''k''&lt;/sub&gt;)}} consists of non-negative integers such that {{math|1={{big|∑}} 2&lt;sup&gt;- ''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sup&gt; ≤ 2&lt;sup&gt;- ''M''&lt;/sup&gt;}} for some integer {{math|''M'' ≥ 0}} then {{math|1={{big|∑}} ''U''&lt;sub&gt;''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sub&gt; ⊆ ''U''&lt;sub&gt;''M''&lt;/sub&gt;}}. 
+This is clearly true for {{math|1=''k'' = 1}} and {{math|1=''k'' = 2}} so assume that {{math|''k'' &gt; 2}}, which implies that all {{math|1=''n''&lt;sub&gt;''i''&lt;/sub&gt;}} are positive. 
+If all {{math|1=''n''&lt;sub&gt;''i''&lt;/sub&gt;}} are distinct then we're done, otherwise pick distinct indices {{math|''i'' &lt; ''j''}} such that {{math|1=''n''&lt;sub&gt;''i''&lt;/sub&gt; = ''n''&lt;sub&gt;''j''&lt;/sub&gt;}} and construct {{math|1=''m''&lt;sub&gt;•&lt;/sub&gt; = (''m''&lt;sub&gt;1&lt;/sub&gt;, ⋅⋅⋅, ''m''&lt;sub&gt;''k''-1&lt;/sub&gt;)}} from {{math|''n''&lt;sub&gt;•&lt;/sub&gt;}} by replacing {{math|''n''&lt;sub&gt;''i''&lt;/sub&gt;}} with {{math|''n''&lt;sub&gt;''i''&lt;/sub&gt; - 1}} and deleting the {{math|''j''&lt;sup&gt;th&lt;/sup&gt;}} element of {{math|''n''&lt;sub&gt;•&lt;/sub&gt;}}  (all other elements of {{math|''n''&lt;sub&gt;•&lt;/sub&gt;}} are transferred to {{math|''m''&lt;sub&gt;•&lt;/sub&gt;}} unchanged). 
+Observe that {{math|1={{big|∑}} 2&lt;sup&gt;- ''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sup&gt; = {{big|∑}} 2&lt;sup&gt;- ''m''&lt;sub&gt;•&lt;/sub&gt;&lt;/sup&gt;}} and {{math|1={{big|∑}} ''U''&lt;sub&gt;''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sub&gt; ⊆ {{big|∑}} ''U''&lt;sub&gt;''m''&lt;sub&gt;•&lt;/sub&gt;&lt;/sub&gt;}} (since {{math|''U''&lt;sub&gt;''n''&lt;sub&gt;''i''&lt;/sub&gt;&lt;/sub&gt; + ''U''&lt;sub&gt;''n''&lt;sub&gt;''j''&lt;/sub&gt;&lt;/sub&gt; ⊆ ''U''&lt;sub&gt;''n''&lt;sub&gt;''i''&lt;/sub&gt; − 1&lt;/sub&gt;}}) so by appealing to the inductive hypothesis, it follows that that {{math|1={{big|∑}} ''U''&lt;sub&gt;''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sub&gt; ⊆ {{big|∑}} ''U''&lt;sub&gt;''m''&lt;sub&gt;•&lt;/sub&gt;&lt;/sub&gt; ⊆ ''U''&lt;sub&gt;''M''&lt;/sub&gt;}}, as desired. 
+
+It is clear that {{math|1=''f'' (0) = 0}} and that {{math|0 ≤ ''f'' ≤ 1}} so to prove that {{mvar|f}} is subadditive, it suffices to prove that {{math|1=''f'' (''x'' + ''y'') ≤ ''f'' (''x'') + ''f'' (''y'')}} when {{math|''x'', ''y'' ∈ ''X''}} are such that {{math|''f'' (''x'') + ''f'' (''y'') &lt; 1}}, which implies that {{math|''x'', ''y'' ∈ ''U''&lt;sub&gt;0&lt;/sub&gt;}}. 
+This is an exercise. 
+If all {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt;}} are symmetric then {{math|''x'' ∈ {{big|∑}} ''U''&lt;sub&gt;''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sub&gt;}} if and only if {{math|−''x'' ∈ {{big|∑}} ''U''&lt;sub&gt;''n''&lt;sub&gt;•&lt;/sub&gt;&lt;/sub&gt;}} from which it follows that {{math|1=''f''(−''x'') ≤ ''f''(''x'')}} and {{math|1=''f''(−''x'') ≥ ''f''(''x'')}}. 
+If all {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt;}} are balanced then the inequality {{math|''f'' (''sx'') ≤ ''f''(''x'')}} for all unit scalars {{mvar|s}} is proved similarly. 
+Since {{mvar|f}} is a nonnegative subadditive function satisfying {{math|1=''f'' (0) = 0}}, {{mvar|f}} is uniformly continuous on {{mvar|X}} if and only if {{mvar|f}} is continuous at {{math|0}}. 
+If all {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt;}} are neighborhoods of the origin then for any real {{math|''r'' &gt; 0}}, pick an integer {{math|''M'' &gt; 1}} such that {{math|2&lt;sup&gt;- ''M''&lt;/sup&gt; &lt; ''r''}} so that {{math|''x'' ∈ ''U''&lt;sub&gt;''M''&lt;/sub&gt;}} implies {{math|1=''f''(''x'') ≤ 2&lt;sup&gt;-''M''&lt;/sup&gt; &lt; ''r''}}. 
+If all {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt;}} form basis of balanced neighborhoods of the origin then one may show that for any {{math|''n'' &gt; 0}}, there exists some {{math|0 &lt; ''r'' ≤ 2&lt;sup&gt;−''n''&lt;/sup&gt;}} such that {{math|1=''f''(''x'') &lt; ''r''}} implies {{math|''x'' ∈ ''U''&lt;sub&gt;''n''&lt;/sub&gt;}}. ∎
+{{collapse bottom}}
+
+If {{math|1=''U''&lt;sub&gt;•&lt;/sub&gt; = (''U''&lt;sub&gt;''i''&lt;/sub&gt;)&lt;sub&gt;''i'' ∈ ℕ&lt;/sub&gt;}} and {{math|1=''V''&lt;sub&gt;•&lt;/sub&gt; = (''V''&lt;sub&gt;''i''&lt;/sub&gt;)&lt;sub&gt;''i'' ∈ ℕ&lt;/sub&gt;}} are two collections of subsets of a vector space {{mvar|X}} and if {{mvar|s}} is a scalar, then by definition:{{sfn | Adasch | Ernst | Keim | 1978 | pp=5-9}}
+
+&lt;ul&gt;
+&lt;li&gt;{{math|''V''&lt;sub&gt;•&lt;/sub&gt;}} '''contains''' {{math|''U''&lt;sub&gt;•&lt;/sub&gt;}}:{{space|1}} {{math|''U''&lt;sub&gt;•&lt;/sub&gt; &amp;thinsp;⊆&amp;thinsp; ''V''&lt;sub&gt;•&lt;/sub&gt;}} if and only if {{math|''U''&lt;sub&gt;''i''&lt;/sub&gt; &amp;thinsp;⊆&amp;thinsp; ''V''&lt;sub&gt;''i''&lt;/sub&gt;}} for every index {{mvar|i}}.&lt;/li&gt;
+&lt;li&gt;'''Set of knots''':{{space|1}} {{math|1=Knots (''U''&lt;sub&gt;•&lt;/sub&gt;) &amp;thinsp;:=&amp;thinsp; { ''U''&lt;sub&gt;''i''&lt;/sub&gt; &amp;thinsp;:&amp;thinsp; ''i'' ∈ ℕ } }}.&lt;/li&gt;
+&lt;li&gt;'''Kernel''':{{space|1}} {{math|1=ker ''U''&lt;sub&gt;•&lt;/sub&gt; &amp;thinsp;:=&amp;thinsp; {{underset|''i'' ∈ ℕ|{{big|∩}}}} ''U''&lt;sub&gt;''i''&lt;/sub&gt;}}.&lt;/li&gt;
+&lt;li&gt;'''Scalar multiple''':{{space|1}} {{math|1=''s'' ''U''&lt;sub&gt;•&lt;/sub&gt; &amp;thinsp;:=&amp;thinsp; (''s'' ''U''&lt;sub&gt;''i''&lt;/sub&gt;)&lt;sub&gt;''i'' ∈ ℕ&lt;/sub&gt;}}.&lt;/li&gt;
+&lt;li&gt;'''Sum''':{{space|1}} {{math|1=''U''&lt;sub&gt;•&lt;/sub&gt; + ''V''&lt;sub&gt;•&lt;/sub&gt; &amp;thinsp;:=&amp;thinsp; (''U''&lt;sub&gt;''i''&lt;/sub&gt; + ''V''&lt;sub&gt;''i''&lt;/sub&gt;)&lt;sub&gt;''i'' ∈ ℕ&lt;/sub&gt;}}.&lt;/li&gt;
+&lt;li&gt;'''Intersection''':{{space|1}} {{math|1=''U''&lt;sub&gt;•&lt;/sub&gt; ∩ ''V''&lt;sub&gt;•&lt;/sub&gt; &amp;thinsp;:=&amp;thinsp; (''U''&lt;sub&gt;''i''&lt;/sub&gt; ∩ ''V''&lt;sub&gt;''i''&lt;/sub&gt;)&lt;sub&gt;''i'' ∈ ℕ&lt;/sub&gt;}}.&lt;/li&gt;
+&lt;/ul&gt;
+
+If {{math|𝕊}} is a collection sequences of subsets of {{mvar|X}}, then {{math|𝕊}} is said to be '''directed''' ('''downwards''') '''under inclusion''' or simply '''directed''' if {{math|𝕊}} is not empty and for all {{nowrap|{{math|''U''&lt;sub&gt;•&lt;/sub&gt;, ''V''&lt;sub&gt;•&lt;/sub&gt; ∈ 𝕊}}}} there exists some {{math|''W''&lt;sub&gt;•&lt;/sub&gt; ∈ 𝕊}} such that {{nowrap|{{math|''W''&lt;sub&gt;•&lt;/sub&gt; ⊆ ''U''&lt;sub&gt;•&lt;/sub&gt;}}}} and {{nowrap|{{math|''W''&lt;sub&gt;•&lt;/sub&gt; ⊆ ''V''&lt;sub&gt;•&lt;/sub&gt;}}}} (said differently, if and only if {{math|𝕊}} is a [[Filter (mathematics)|prefilter]] with respect to the containment {{math|⊆}} defined above). 
+
+'''Notation''': Let {{math|1=Knots (𝕊) &amp;thinsp;:=&amp;thinsp; {{underset|''U''&lt;sub&gt;•&lt;/sub&gt; ∈ 𝕊|{{big|∪}}}} Knots (''U''&lt;sub&gt;•&lt;/sub&gt;)}} be the set of all knots of all strings in {{math|𝕊}}.
+
+Defining vector topologies using collections of strings is particularly useful for defining classes of TVSs that are not necessarily locally convex. 
+
+{{Math theorem|name=Theorem{{sfn | Adasch | Ernst | Keim | 1978 | pp=5-9}}|note=Topology induced by strings|math_statement=If {{math|(''X'', 𝜏)}} is a topological vector space then there exists a set {{math|𝕊}}&lt;ref group=proof&gt;This condition is satisfied if {{math|𝕊}} denotes the set of all topological strings in {{math|(''X'', 𝜏)}}.&lt;/ref&gt; of neighborhood strings in {{mvar|X}} that is directed downward and such that the set of all knots of all strings in {{math|𝕊}} is a [[neighborhood basis]] at the origin for {{nowrap|{{math|(''X'', 𝜏)}}}}. Such a collection of strings is said to be &lt;em&gt;{{math|𝜏}} '''fundamental'''&lt;/em&gt;. 
+
+Conversely, if {{mvar|X}} is a vector space and if {{math|𝕊}} is a collection of strings in {{mvar|X}} that is directed downward, then the set {{math|Knots (𝕊)}} of all knots of all strings in {{math|𝕊}} forms a [[neighborhood basis]] at the origin for a vector topology on {{mvar|X}}. In this case, this topology is denoted by {{math|𝜏&lt;sub&gt;𝕊&lt;/sub&gt;}} and it is called the '''topology generated by {{math|𝕊}}'''.
+}}
+
+If {{math|𝕊}} is the set of all topological strings in a TVS {{math|(''X'', 𝜏)}} then {{math|1=𝜏&lt;sub&gt;𝕊&lt;/sub&gt; = 𝜏}}.{{sfn | Adasch | Ernst | Keim| 1978 | pp=5-9}} 
+
+A Hausdorff TVS is [[Metrizable topological vector space|metrizable]] if and only if its topology can be induced by a single topological string.{{sfn | Adasch | Ernst | Keim | 1978 | pp=10-15}}
+
+== Topological structure ==
+
+A vector space is an [[abelian group]] with respect to the operation of addition, and in a topological vector space the inverse operation is always continuous (since it is the same as multiplication by &amp;minus;1). 
+Hence, every topological vector space is an abelian [[topological group]]. 
+Every TVS is [[completely regular]] but a TVS need not be [[Normal space|normal]].{{sfn | Wilansky | 2013 | p=53}}
+
+Let {{mvar|X}} be a topological vector space. Given a [[Subspace topology|subspace]] {{math|''M'' ⊂ ''X''}}, the quotient space {{math|''X''/''M''}} with the usual [[quotient space (topology)|quotient topology]] is a Hausdorff topological vector space if and only if ''M'' is closed.&lt;ref group=note&gt;In particular, {{mvar|X}} is Hausdorff if and only if the set {0} is closed (i.e., {{mvar|X}} is a [[T1 space|T&lt;sub&gt;1&lt;/sub&gt; space]]).&lt;/ref&gt; 
+This permits the following construction: given a topological vector space {{mvar|X}} (that is probably not Hausdorff), form the quotient space {{math|''X'' / ''M''}} where ''M'' is the closure of {0}. 
+{{math|''X'' / ''M''}} is then a Hausdorff topological vector space that can be studied instead of {{mvar|X}}.
+
+=== Invariance of vector topologies ===
+
+One of the most used properties of vector topologies is that every vector topology is '''translation invariant''':
+:for all {{math|''x''&lt;sub&gt;0&lt;/sub&gt; ∈ ''X''}}, the map {{math|''X'' → ''X''}} defined by {{math|''x'' ↦ ''x''&lt;sub&gt;0&lt;/sub&gt; + ''x''}} is a [[homeomorphism]], but if {{math|''x''&lt;sub&gt;0&lt;/sub&gt; ≠ 0}} then it is not linear and so not a TVS-isomorphism. 
+Scalar multiplication by a non-zero scalar is a TVS-isomorphism. This means that if {{math|1=''s'' ≠ 0}} then the linear map {{math|''X'' → ''X''}} defined by {{math|''x'' ↦ ''s'' ''x''}} is a homeomorphism. 
+Using {{math|1=''s'' = −1}} produces the negation map {{math|''X'' → ''X''}} defined by {{math|''x'' ↦ −''x''}}, which is consequently a linear homeomorphism and thus a TVS-isomorphism. 
+
+If {{math|''x'' ∈ ''X''}} and any subset {{math|''S'' ⊆ ''X''}}, then &amp;thinsp;{{math|1=cl(''x'' + ''S'') = ''x'' + cl(''S'')}}{{sfn | Narici | Beckenstein | 2011 | pp=67-113}} and moreover, if {{math|0 ∈ ''S''}} then {{math|''x'' + ''S''}} is a [[Neighborhood (topology)|neighborhood]] (resp. open neighborhood, closed neighborhood) of {{mvar|x}} in {{mvar|X}} if and only if the same is true of {{mvar|S}} at the origin. 
+
+=== Local notions ===
+
+A subset {{mvar|E}} of a vector space {{mvar|X}} is said to be
+&lt;ul&gt;
+&lt;li&gt;'''[[Absorbing set|absorbing]]''' (in {{mvar|X}}): if for every {{math|''x'' ∈ ''X''}}, there exists a real {{math|''r'' &gt; 0}} such that {{math|''c'' ''x'' ∈ ''E''}} for any scalar {{mvar|c}} satisfying {{math|{{mabs|c}} ≤ ''r''}}.&lt;/li&gt;
+&lt;li&gt;'''[[Balanced set|balanced]]''' or '''circled''': if {{math|''tE'' ⊆ ''E''}} for every scalar {{math|{{mabs|''t''}} ≤ 1}}.&lt;/li&gt;
+&lt;li&gt;'''[[Convex set|convex]]''': if {{math|''tE'' + (1−''t'')''E'' ⊆ ''E''}} for every real {{math|0 ≤ ''t'' ≤ 1}}.&lt;/li&gt;
+&lt;li&gt;a '''[[Absolutely convex set|disk]]''' or '''[[Absolutely convex set|absolutely convex]]''': if  {{mvar|E}} is convex and balanced.&lt;/li&gt;
+&lt;li&gt;'''[[Symmetric set|symmetric]]''': if {{math|−''E'' ⊆ ''E''}}, or equivalently, if {{math|1=−''E'' = ''E''}}.&lt;/li&gt;
+&lt;/ul&gt;
+
+Every neighborhood of 0 is an [[absorbing set]] and contains an open [[Balanced set|balanced]] neighborhood of {{math|0}}{{sfn | Narici | Beckenstein | 2011 | pp=67-113}} so every topological vector space has a local base of [[absorbing set|absorbing]] and [[balanced set]]s. 
+The origin even has a neighborhood basis consisting of closed balanced neighborhoods of 0; if the space is [[locally convex]] then it also has a neighborhood basis consisting of closed convex balanced neighborhoods of 0.
+
+;Bounded subsets
+
+A subset {{mvar|E}} of a topological vector space {{mvar|X}} is '''[[Bounded set (topological vector space)|bounded]]'''{{sfn|Rudin|1991|p=8}} if for every neighborhood {{math|''V'' of&amp;nbsp;0}}, then {{math|''E'' ⊆ ''tV''}} when {{mvar|t}} is sufficiently large.
+
+The definition of boundedness can be weakened a bit; {{mvar|E}} is bounded if and only if every countable subset of it is bounded. A set is bounded if and only if each of its subsequences is a bounded set.{{sfn | Narici | Beckenstein | 2011 | pp=155-176}}
+Also, {{mvar|E}} is bounded if and only if for every balanced neighborhood {{mvar|V}} of 0, there exists {{mvar|t}} such that {{math|''E'' ⊆ ''tV''}}. 
+Moreover, when {{mvar|X}} is locally convex, the boundedness can be characterized by [[seminorm]]s: the subset {{mvar|E}} is bounded if and only if every continuous seminorm {{mvar|p}} is bounded on {{mvar|E}}.
+
+Every [[totally bounded]] set is bounded.{{sfn | Narici | Beckenstein | 2011 | pp=155-176}} 
+If {{mvar|M}} is a vector subspace of a TVS {{mvar|X}}, then a subset of {{mvar|M}} is bounded in {{mvar|M}} if and only if it is bounded in {{mvar|X}}.{{sfn | Narici | Beckenstein | 2011 | pp=155-176}}
+
+=== Metrizability ===
+
+{{Math theorem|name=[[Birkhoff–Kakutani theorem]]|math_statement=
+If {{math|(''X'', τ)}} is a topological vector space then the following three conditions are equivalent:{{sfn|Köthe|1983|loc=section 15.11 }}&lt;ref group=note&gt;In fact, this is true for topological group, since the proof doesn't use the scalar multiplications.&lt;/ref&gt;
+&lt;ol&gt;
+&lt;li&gt;The origin {{math|{ 0 } }} is closed in {{mvar|X}}, and there is a [[countable]] [[neighborhood basis|basis of neighborhoods]] for 0 in {{mvar|X}}.&lt;/li&gt;
+&lt;li&gt;{{math|(''X'', τ)}} is [[Metrizable space|metrizable]] (as a topological space).&lt;/li&gt;
+&lt;li&gt;There is a [[translation-invariant metric]] on {{mvar|X}} that induces on {{mvar|X}} the topology {{math|τ}}, which is the given topology on {{mvar|X}}.&lt;/li&gt;
+&lt;li&gt;{{math|(''X'', τ)}} is a [[metrizable topological vector space]].&lt;ref group=note&gt;Also called a '''metric linear space''', which means that it's a real or complex vector space together with a translation-invariant metric for which addition and scalar multiplication are continuous.&lt;/ref&gt;&lt;/li&gt;
+&lt;/ol&gt;
+By the Birkhoff–Kakutani theorem, it follows that there is an [[equivalence of metrics|equivalent metric]] that is translation-invariant.
+}}
+
+A TVS is [[Metrizable TVS|pseudometrizable]] if and only if it has a countable neighborhood basis at the origin, or equivalent, if and only if its topology is generated by an [[Metrizable TVS|''F''-seminorm]]. A TVS is metrizable if and only if it is Hausdorff and pseudometrizable.

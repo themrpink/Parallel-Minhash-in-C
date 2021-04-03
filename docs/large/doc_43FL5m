@@ -1,0 +1,413 @@
+===IANA time zone database===
+The [[tz&amp;nbsp;database]] maps a name to the named location's historical and predicted clock shifts. This database is used by many computer software systems, including most [[Unix-like]] operating systems, [[Java (Sun)|Java]], and the [[Oracle RDBMS]];&lt;ref&gt;{{cite web |author1=Paul Eggert |author2=Arthur David Olson |url=http://www.twinsun.com/tz/tz-link.htm |title=Sources for time zone and daylight saving time data |date=June 30, 2008 |url-status=dead |archive-url=https://web.archive.org/web/20120623013511/http://www.twinsun.com/tz/tz-link.htm |archive-date=June 23, 2012 }}&lt;/ref&gt; [[Hewlett-Packard|HP]]'s &quot;tztab&quot; database is similar but incompatible.&lt;ref&gt;{{cite book |publisher=Hewlett–Packard Co |title=HP-UX Reference: HP-UX 11i Version 3 |chapter-url=http://h20000.www2.hp.com/bc/docs/support/SupportManual/c02271674/c02271674.pdf |chapter=tztab(4) |year=2010 |url-status=dead |archive-url=https://web.archive.org/web/20130921054222/http://h20000.www2.hp.com/bc/docs/support/SupportManual/c02271674/c02271674.pdf |archive-date=September 21, 2013 }}&lt;/ref&gt; When temporal authorities change DST rules, zoneinfo updates are installed as part of ordinary system maintenance. In Unix-like systems the TZ [[environment variable]] specifies the [[List of tz zones by name|location name]], as in &lt;code&gt;TZ=':America/New_York'&lt;/code&gt;. In many of those systems there is also a system-wide setting that is applied if the TZ environment variable is not set: this setting is controlled by the contents of the {{kbd|/etc/localtime}} file, which is usually a [[symbolic link]] or [[hard link]] to one of the zoneinfo files. Internal time is stored in time-zone-independent [[Unix time]]; the TZ is used by each of potentially many simultaneous users and processes to independently localize time display.
+
+Older or stripped-down systems may support only the TZ values required by [[POSIX]], which specify at most one start and end rule explicitly in the value. For example, &lt;code&gt;TZ='EST5EDT,M3.2.0/02:00,M11.1.0/02:00'&lt;/code&gt; specifies time for the eastern United States starting in 2007. Such a TZ value must be changed whenever DST rules change, and the new value applies to all years, mishandling some older timestamps.&lt;ref&gt;{{cite book |url=http://www.unix.org/version3/ |publisher=The Open Group |title=IEEE Std 1003.1–2004 |year=2004 |chapter-url=http://www.opengroup.org/susv3/basedefs/xbd_chap08.html#tag_08_03 |chapter=Other environment variables }}&lt;/ref&gt;
+
+==Permanent daylight saving time==
+{{see also|Permanent time observation in the United States|Decree time|Summer time in Europe#Future|label2=Decree time in Russia}}
+[[File:Willett memorial.JPG|thumb|upright|alt=A standing stone in a grassy field surrounded by trees. The stone contains a vertical sundial centered on 1 o'clock, and is inscribed &quot;HORAS NON NUMERO NISI ÆSTIVAS&quot; and &quot;SUMMER TIME ACT 1925&quot;|The [[William Willett]] Memorial Sundial in [[Petts Wood]], south London, is always on DST.]]
+A move to permanent daylight saving time (staying on summer hours all year with no time shifts) is sometimes advocated and is currently implemented in some jurisdictions such as [[Argentina]], [[Belarus]],&lt;ref name=Guardian&gt;{{cite news|last=Parfitt|first=Tom|title=Think of the cows: clocks go forward for the last time in Russia|url=https://www.theguardian.com/world/2011/mar/25/clocks-go-forward-last-time-russia?|access-date=January 5, 2012|newspaper=The Guardian|date=March 25, 2011}}&lt;/ref&gt; [[Time in Saskatchewan|Saskatchewan]], [[Yukon]], [[Iceland]], [[Kyrgyzstan]], [[Magallanes Region|Magallanes and Chilean Antarctica Region]], [[Malaysia]], [[Morocco]],&lt;ref name=&quot;sgg.gov 2018&quot; /&gt; [[Namibia]], [[Singapore]], [[Turkey]], [[Turkmenistan]] and [[Uzbekistan]]. Advocates cite the same advantages as normal DST without the problems associated with the twice yearly time shifts. However, many remain unconvinced of the benefits, citing the same problems and the relatively late sunrises, particularly in winter, that year-round DST entails.&lt;ref name=&quot;Handwerk&quot;/&gt;
+
+[[Russia]] switched to permanent DST from 2011 to 2014, but the move proved unpopular because of the late [[sunrise]]s in [[winter]], so in 2014, Russia switched permanently back to standard time.&lt;ref name=Russia&gt;{{cite news|title=Russia set to turn back the clocks with daylight-saving time shift|url=https://www.theguardian.com/world/2014/jul/01/russia-state-duma-daylight-saving-time-summer|access-date=October 25, 2014 |work=The Guardian |location=London |date=July 1, 2014}}&lt;/ref&gt; The United Kingdom and Ireland also experimented with year-round summer time between 1968 and 1971, and put clocks forward by an extra hour during World War II.&lt;ref&gt;{{cite news|last1=Hollingshead|first1=Iain|url=https://www.theguardian.com/commentisfree/2006/jun/24/comment.mainsection2 |work=The Guardian |location=London |date=June 2006|title=Whatever happened to Double Summer Time?}}&lt;/ref&gt;
+
+In the United States, the [[Florida Legislature|Florida]], [[Washington State Legislature|Washington]], [[California State Legislature|California]], and [[Oregon Legislative Assembly|Oregon]] legislatures have all passed bills to enact permanent DST, but the bills require Congressional approval in order to take effect. Maine, Massachusetts, New Hampshire, and Rhode Island have also introduced proposals or commissions to that effect.&lt;ref&gt;{{cite web|url=https://www.wptv.com/news/national/daylight-saving-time-florida-lawmakers-want-2019-to-be-the-last-time-anyone-has-to-spring-forward|title= Florida lawmakers want 2019 to be the last time anyone has to spring forward|publisher=WPTV|access-date=April 21, 2019}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://www.desertsun.com/story/news/politics/2019/03/06/california-daylight-savings-time-clock-change-legislation-could-end-dst/3056634002/|title=Will daylight saving time bill set the sun on clock changes in California?|website=Desert Sun |language=en|access-date=March 13, 2019}}&lt;/ref&gt;&lt;ref&gt;{{cite news|title=Year-Round Daylight Saving Time? |url=https://www.nytimes.com/2018/03/08/us/daylight-saving-time-florida.html |date=March 8, 2018 |work=The New York Times |access-date=November 2, 2018}}&lt;/ref&gt;&lt;ref&gt;{{cite web | url = https://www.seattletimes.com/seattle-news/permanent-daylight-saving-time-passes-washington-state-house-90-6-heads-to-inslees-desk/ | title = Permanent daylight saving time passes Washington state House 90–6, heads to Inslee's desk | first = Christine | last = Clarridge | date = April 23, 2019 | access-date = April 24, 2019 | work = [[The Seattle Times]] }}&lt;/ref&gt;&lt;ref&gt;{{cite news |last1=Butler |first1=Grant |title=When does daylight saving time end? It's time for that annual 'fall back' ritual |url=https://www.oregonlive.com/trending/2019/10/when-does-daylight-savings-time-end-its-time-for-that-annual-fall-back-ritual.html |access-date=November 3, 2019 |work=The Oregonian |date=October 29, 2019}}&lt;/ref&gt; Although 26 states have considered making DST permanent, unless Congress changes federal law, states cannot implement permanent DST—states can only opt out of DST, not standard time.&lt;ref&gt;{{cite news |url=https://www.usatoday.com/story/news/nation/2018/11/01/daylight-saving-time-ends-sunday-get-ready-fall-back/1846836002/|title=Fall back! Daylight saving time ends Sunday |work=USA Today |date=November 1, 2018 |access-date=November 2, 2018}}&lt;/ref&gt;
+
+In September 2018, the European Commission proposed to end seasonal clock changes as of 2019.&lt;ref&gt;{{cite web |title=Press corner |url=https://ec.europa.eu/commission/presscorner/detail/en/MEMO_18_5641 |website=European Commission - European Commission |access-date=23 October 2020 |language=en |date=12 September 2018}}&lt;/ref&gt; Member states would have the option of observing either daylight saving time all year round or standard time all year round. In March 2019, the European Parliament approved the commission's proposal, while deferring implementation from 2019 until 2021.&lt;ref&gt;{{cite news|url=https://www.theguardian.com/world/2019/mar/26/european-parliament-votes-to-scrap-daylight-saving-time-from-2021|title=European parliament votes to scrap daylight saving time from 2021 |date=March 26, 2019 |access-date=July 9, 2019 |newspaper=The Guardian |location=London | edition = US}}&lt;/ref&gt; {{As of|2020|October}}, the decision has not been confirmed by the Council of the European Union.&lt;ref&gt;{{cite web |title=Seasonal clock change in the EU |url=https://ec.europa.eu/transport/themes/summertime_en |website=Mobility and Transport - European Commission |access-date=23 October 2020 |language=en |date=22 September 2016}}&lt;/ref&gt; The council has asked the commission to produce a detailed impact assessment, but the Commission considers that the onus is on the Member States to find a common position in Council.&lt;ref&gt;{{cite news |last1=Posaner |first1=Joshua |last2=Cokelaere |first2=Hanne |title=Stopping the clock on seasonal time changes? Not anytime soon |url=https://www.politico.eu/article/eu-blame-game-over-failure-to-end-clock-change/ |work=Politico |date=24 October 2020}}&lt;/ref&gt; As a result, progress on the issue is effectively blocked.&lt;ref&gt;{{cite news |last1=Lawson |first1=Patrick |title=The plan to abolish the time change is &quot;completely blocked&quot; at European level, says specialist in European issues |url=https://www.geads.co.uk/2020/10/25/the-plan-to-remove-the-time-change-is-completely-blocked-at-european-level-says-specialist-in-european-issues/ |work=Geads News |date=18 November 2020}}&lt;/ref&gt;
+
+Experts in circadian rhythms and sleep caution against permanent daylight saving time, recommending year-round standard time as the preferred option for public health and safety.&lt;ref name=&quot;The Globe and Mail&quot;/&gt;&lt;ref name=&quot;The Sacramento Bee&quot;/&gt;&lt;ref name=&quot;U Calgary News&quot;/&gt;&lt;ref name=&quot;CBC News&quot;/&gt;
+
+===Perceived problems with permanent DST===
+Since daylight saving time creates the illusion of the sun rising and setting one hour later on the clock, but does not add any additional daylight, the already later sunrise times under standard time are pushed an hour later on the clock with daylight saving time. Late sunrise times can become unpopular in the winter months which essentially forces workers and schoolchildren to begin the day in darkness. In 1974 following the enactment of the Emergency Daylight Saving Time Act in the [[United States]], there were complaints of children going to school in the dark and working people commuting and starting their work day in pitch darkness during the winter months. The complaints led to the repeal of the act in October 1974 when standard time was restored until February 23, 1975. In 1976, the United States returned to the schedule set under the Uniform Time Act of 1966. In 1971, year-round daylight time in the [[United Kingdom]] was abandoned after a 3-year experiment because of complaints about winter sunrise times. The same complaints also led to [[Russia]] abandoning DST and instituting standard time year round in 2014.&lt;ref name=Russia/&gt;
+
+==By country and region==
+{{Main|Daylight saving time by country}}
+
+*[[Daylight saving time in Africa|Africa]]
+*[[Daylight saving time in Asia|Asia]]
+*[[Summer Time in Europe|Europe]]
+*[[Daylight saving time in the Americas|North and South America]]
+*[[Daylight saving time in Oceania|Oceania]]
+
+==See also==
+
+* [[Winter time (clock lag)]]
+
+==References==
+{{reflist}}
+
+===Sources===
+{{refbegin}}
+* {{cite book |author=Michael Downing |title=Spring Forward: The Annual Madness of Daylight Saving Time |publisher=Shoemaker &amp; Hoard |year=2005 |isbn=978-1-59376-053-3 |ref={{harvid|''Spring Forward''|2005}} |url=https://archive.org/details/springforwardann00down }}
+* {{cite book |author=David Prerau |title=Seize the Daylight: The Curious and Contentious Story of Daylight Saving Time |publisher=Thunder's Mouth Press |year=2005 |isbn=978-1-56025-655-7 |ref={{harvid|''Seize the Daylight''|2005}}|url=https://archive.org/details/seizedaylightcur0000prer }} The British version, focusing on the UK, is {{cite book |title=Saving the Daylight: Why We Put the Clocks Forward |publisher=Granta Books |isbn=978-1-86207-796-6 |author=&lt;!--David Prerau--&gt; |year=&lt;!--2005--&gt; |ref={{harvid|''Saving the Daylight''|2005}}}}
+{{refend}}
+
+==Further reading==
+{{refbegin}}
+* {{cite book |author=Ian R. Bartky |title= One Time Fits All: The Campaigns for Global Uniformity |publisher= Stanford University Press |year=2007 |isbn=978-0-8047-5642-6}}
+{{refend}}
+
+==External links==
+{{Spoken Wikipedia|Daylight saving time.ogg|date=2008-05-20}}
+{{Commons category|Daylight saving time}}
+* [https://crsreports.congress.gov/product/pdf/R/R45208/3 Daylight Saving Time] [[Congressional Research Service]]
+* [https://www.nist.gov/pml/div688/dst.cfm Information about the Current Daylight Saving Time (DST) Rules], [[National Institute of Standards and Technology|U.S. National Institute of Standards and Technology]]
+* [http://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-LT.1-2015-PDF-E.pdf &quot;Legal Time 2015&quot;], [[ITU-T|Telecommunications Standardization Bureau of the ITU]]
+* [https://web.archive.org/web/20120623013511/http://www.twinsun.com/tz/tz-link.htm Sources for time zone and daylight saving time data]
+
+{{Time measurement and standards}}
+{{UTC time offsets}}
+{{Daylight Saving Time}}
+{{Authority control}}
+
+[[Category:Daylight saving time| ]]</text>
+      <sha1>07mkh0pj5fpi80vgzr7nyrl63wjvpq5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>AYBABTU</title>
+    <ns>0</ns>
+    <id>47549</id>
+    <redirect title="All your base are belong to us" />
+    <revision>
+      <id>783876523</id>
+      <parentid>593485605</parentid>
+      <timestamp>2017-06-05T06:06:45Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="96" xml:space="preserve">#REDIRECT [[All your base are belong to us]]
+
+{{Redirect category shell|1=
+{{R from acronym}}
+}}</text>
+      <sha1>gf65iqtcgmohp9sjhfmhgo4dwewov6e</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Move 'zig'</title>
+    <ns>0</ns>
+    <id>47551</id>
+    <redirect title="All your base are belong to us" />
+    <revision>
+      <id>15942633</id>
+      <parentid>45946</parentid>
+      <timestamp>2002-04-05T20:06:40Z</timestamp>
+      <contributor>
+        <username>Bryan Derksen</username>
+        <id>66</id>
+      </contributor>
+      <minor />
+      <comment>*</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="44" xml:space="preserve">#REDIRECT [[All your base are belong to us]]</text>
+      <sha1>my353m2kp9vuq991bb020qsl5mnqr1m</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Let's roll</title>
+    <ns>0</ns>
+    <id>47552</id>
+    <revision>
+      <id>987279168</id>
+      <parentid>977952716</parentid>
+      <timestamp>2020-11-06T00:55:11Z</timestamp>
+      <contributor>
+        <username>JJMC89 bot III</username>
+        <id>35936988</id>
+      </contributor>
+      <minor />
+      <comment>Merging [[:Category:Words and phrases introduced in the 1900s]] to [[:Category:1900s neologisms]] per [[Wikipedia:Categories for discussion/Log/2020 October 4#&lt;span class=&quot;anchor&quot; id=&quot;Category:Words and phrases introduced in the 12th century&quot;&gt;&lt;/span&gt;Neologisms, words and phases introduced in time periods]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="11081" xml:space="preserve">{{other uses}}
+{{More citations needed|date=September 2009}}
+&quot;'''Let's roll'''&quot; is a [[colloquialism]] that has been used extensively as a command to move and start an activity, attack, mission or project.
+
+==Origins==
+{{original research|section|date=September 2019}}
+The [[American west]] was ''won'' by the wagon and in number the [[wagon train]]. At the lead the shout &quot;Wagons roll!&quot; from the head of the train would set the wagons rolling at the start of the day or at any time during. A less formal terminology would soon develop from the historic precedent. The phrase, &quot;let's roll&quot; has been used as early as 1908 in the cadence song now called &quot;[[The Army Goes Rolling Along]]&quot;, which likely extended into [[tank]] usage. 
+&quot;[[The Roads Must Roll]]&quot;, a science fiction story written in 1940 by [[Robert A. Heinlein]], mentions a re-worded version of &quot;The Roll of the Caissons&quot; called &quot;Road Songs of the Transport Cadets&quot;. The protagonist of the 1937 [[supernatural]] [[comedy]], ''[[Topper (film)|Topper]]'', played by Cary Grant, uses the phrase &quot;Let's roll&quot; to his wife, played by Constance Bennett, to indicate they should immediately exit their friend's stuffy office and find a drink. The pair are lighthearted, youthful, irresponsible, and impossibly glamorous types, and the line delivery has a decisive insouciance about it. The protagonist of [[Ernest Hemingway]]'s 1950 novel ''[[Across the River and into the Trees]]'', Colonel Dick Cantwell, based on [[World War II]] commander Charles &quot;Buck&quot; Lanham, uses the phrase to his driver. He knows he is facing imminent [[death]], but tries to maintain decency, grace, and a sense of humor.  In the 1998 Season 3 episode of [[Xena: Warrior Princess]] titled &quot;King Con&quot;, Xena uses the phrase &quot;Let's roll&quot; after practicing rolls with a set of dice as part of a plan to bankrupt a casino owner in revenge for an attack on Joxer.  The verb &quot;roll&quot; has been used in both the [[film]] and [[recording industry]] to signal the beginning of a film or [[audio recording]].
+
+==September 11 attacks==
+On September 11, 2001, [[Todd Beamer]], a passenger on the [[aircraft hijacking|hijacked]] [[United Airlines Flight 93]], tried to place a call through an air phone, but was routed to a customer service representative instead, who passed him on to supervisor Lisa Jefferson. Beamer reported that one passenger had been killed and that a flight attendant had told him that both the pilot and co-pilot had been forced from the cockpit and may have been injured. He was also on the phone when the plane made a quick and violent turn. Later, he told the operator that some of the other passengers were planning to attack the hijackers and regain control of the aircraft, after they learned about what happened at the [[World Trade Center (1973-2001)|World Trade Center]] and [[The Pentagon]]. According to Jefferson, Beamer's last audible words were “Are you ready? Okay. Let's roll.”&lt;ref&gt;{{cite news |url=http://www.post-gazette.com/headlines/20010916phonecallnat3p3.asp |title=The phone line from Flight 93 was still open when a GTE operator heard Todd Beamer say: 'Are you guys ready? Let's roll' |work=Pittsburgh Post-Gazette |date=September 16, 2001 | first1=Jim | last1=McKinnon}}&lt;/ref&gt;
+
+In a November 8 address from the [[World Congress Center]] in [[Atlanta, Georgia]], [[President of the United States|President]] [[George W. Bush]] invoked Beamer's words: “Some of our greatest moments have been acts of courage for which no one could have been prepared. But we have our marching orders. My fellow Americans, let's roll!”&lt;ref name=AmNatBiography&gt;Evensen, Bruce J. (2000). [http://www.anb.org/articles/20/20-01916-print.html &quot;Beamer, Todd Morgan&quot;]. ''[[American National Biography]]''. Retrieved May 14, 2014.&lt;/ref&gt; He used them again in the [[2002 State of the Union address]]: “For too long our culture has said, ‘If it feels good, do it.’ Now America is embracing a new ethic and a new creed: ‘Let's roll.’”&lt;ref name=&quot;BushSpeeches&quot;&gt;{{cite web|last1=Bush|first1=George W.|title=Selected Speeches of President George W. Bush 2001 – 2008|url=https://georgewbush-whitehouse.archives.gov/infocus/bushrecord/documents/Selected_Speeches_George_W_Bush.pdf|website=The [[White House]] of [[George W. Bush]]|publisher=National Archives and Records Administration|accessdate=9 September 2016}}&lt;/ref&gt;
+
+==Cultural impact==
+===Music===
+*Several musicians and bands have written songs entitled or including the phrase &quot;Let's Roll&quot;, with the songs typically referring to Flight 93 or Todd Beamer. The first song with the name, [[Neil Young]]'s &quot;Let's Roll&quot;, was released as a single in November 2001, and was later included in his album ''[[Are You Passionate?]]''. The following year, three diverse groups released songs: hard rock group [[L.A. Guns]] included &quot;OK, Let's Roll&quot; in their album ''[[Waking the Dead (album)|Waking the Dead]]'', country music duo [[The Bellamy Brothers]]'s song &quot;Let's Roll, America&quot; was on ''Redneck Girls Forever'', and Christian rock group [[dc Talk]] recorded and released a single entitled &quot;Let's Roll&quot; despite being on hiatus.
+*Three other 9/11-related songs by the name &quot;Let's Roll&quot; have been released in the following years. Montreal rock band [[The Stills]]'s song was included on their debut album ''[[Logic Will Break Your Heart]]'' in 2003. [[Jonny L]]'s song included a [[sampling (music)|sample]] of President [[George W. Bush]]'s 2002 [[State of the Union address]] which included the phrase. In 2004, [[Ray Stevens]] offered up the self-penned &quot;Let's Roll&quot; and referenced Todd Beamer in the lyrics. Stevens' recording appeared on his 2004 ''[[Thank You! (Ray Stevens album)|Thank You!]]'' CD. The recording later appeared on his 2005 ''[[Box Set]]'' project and on his 2010 ''[[We the People]]'' project.
+*[[Melissa Etheridge]]'s 2004 song &quot;Tuesday Morning&quot;, written in honor of Flight 93 passenger [[Mark Bingham]], concluded with the phrase, &quot;Let's roll&quot;.
+*In 2011, American rapper [[Yelawolf]] released a song called &quot;Let's Roll&quot;, which talks about Southern patriotism.
+
+===Government===
+*The phrase became especially known and popular after being used by President [[George W. Bush]] in a speech to [[AmeriCorps]] volunteers and during his 2002 [[State of the Union address]]. Even though the phrase was in common use long before September 11, many soon tried to lay claim to it as a [[trademark]]. The [[Todd M. Beamer Foundation]] was eventually granted a trademark for uses of the phrase relating to &quot;pre-recorded compact discs, audio tapes, digital audio tapes, and phonograph records featuring music.&quot;
+*In early 2002, [[United States Air Force]] [[Air Force Chief of Staff|Chief of Staff]] Gen. John P. Jumper ordered that one airplane in each USAF squadron and all USAF demonstration planes would bear an image of an eagle on an American flag with the words &quot;Let's Roll&quot; and &quot;Spirit of 9-11&quot;, to remain until the first anniversary of the attack. It was also used by Lisa Beamer, widow of Todd, in a 2003 book titled ''Let's Roll: Ordinary People, Extraordinary Courage''.&lt;ref&gt;{{ISBN|0-8423-7418-3}}&lt;/ref&gt;
+
+===Sports===
+*In the 2002 college football season, the [[2002 Florida State Seminoles football team|Florida State Seminoles]] used &quot;Let's Roll&quot; as their official team slogan. After an initial uproar against the team by people who considered its usage in bad taste,&lt;ref&gt;{{cite news|last=Vecsey|first=George|url=https://www.nytimes.com/2002/08/20/sports/sports-of-the-times-let-s-roll-demeans-real-heroes.html|title=Sports of The Times; 'Let's Roll' Demeans Real Heroes|newspaper=[[The New York Times]]|date=August 20, 2002|accessdate=February 11, 2017}}&lt;/ref&gt; the Todd M. Beamer Foundation officially licensed the trademark to the team.&lt;ref&gt;{{cite web|last=Chan|first=Sue|url=http://www.cbsnews.com/news/the-marketing-of-lets-roll/|title=The Marketing Of 'Let's Roll'|publisher=[[CBS News]]|date=September 11, 2002|accessdate=February 11, 2017}}&lt;/ref&gt;
+*[[NASCAR]] driver [[Bobby Labonte]] drove a 9/11 tribute car with the words &quot;Let's Roll&quot; on the hood of his stock car in the [[2002 MBNA All-American Heroes 400]] at [[Dover International Speedway]].&lt;ref&gt;{{cite web|url=http://www.mrn.com/Race-Series/NASCAR-Sprint-Cup/News/Articles/2002/11/Collectors-Corner-Top-Special-Paint-Schemes-Of-2002.aspx|title=Collectors Corner: Top Special Paint Schemes Of 2002|work=[[Motor Racing Network]]|date=November 28, 2002|accessdate=September 11, 2016}}&lt;/ref&gt;
+*[[Detroit Red Wings]] goaltender [[Jimmy Howard]] has the inscription &quot;Lets Roll&quot; on the back of his goalie helmet in reference to Flight 93.&lt;ref&gt;{{cite web|last1=Roose|first1=Bill|title=Let's Roll Howard's mask pays tribute to 9/11 tragedy|url=http://redwings.nhl.com/club/news.htm?id=561851|website=redwings.nhl.com|publisher=Detroit Red Wings.|accessdate=December 6, 2015}}&lt;/ref&gt;
+
+===Media===
+*The phrase was also used in an episode of [[HBO]]'s ''[[Curb Your Enthusiasm]]'' (&quot;The Survivor&quot;, season 4, episode 9). The show's main character, [[Larry David]], says the phrase inadvertently to his [[rabbi]] once he and his wife are ready to go out and renew their vows, who then becomes offended because of a relative of his died on September 11, 2001 (&quot;You knew my brother-in-law died on September 11th, how dare you say something like that?!&quot;). Larry takes issue with this, as his rabbi's relative was hit by a bike messenger (&quot;Well, with all due respect, wasn't that just a coincidence?&quot;), in an incident completely unrelated to the 9/11 terrorist attacks.
+*The phrase was used in the film: ''[[Let's Roll – The Story of Flight 93]]'', which is a dramatised reconstruction of Flight 93.
+*The phrase appears on the morale patch on the helmet of the protagonist character John Kozak in the game ''[[Ghost Recon: Future Soldier]]''.&lt;ref&gt;{{cite web|url=https://www.reddit.com/r/GhostRecon/comments/8emsal/lets_roll_morale_patch/|title=Let's roll morale patch|work=[[Reddit]]|date=April 24, 2018|accessdate=May 20, 2018}}&lt;/ref&gt;
+*The phrase appears in the video game [[Counter-Strike: Global Offensive]] when a match is found, right before you starting fighting.
+
+===Political===
+*&quot;Let's Roll!&quot; was the 2004 campaign slogan of the [[Marijuana Party of Canada]].&lt;ref&gt;{{cite web|url=http://www.cbc.ca/news/canada/marijuana-party-gets-campaign-rolling-with-seed-money-1.499127|title=Marijuana Party gets campaign rolling with seed money|work=[[CBC News]]|date=June 1, 2004|accessdate=February 11, 2017}}&lt;/ref&gt; The New Zealand band [[Fly My Pretties]] released a song about marijuana titled &quot;Let's Roll&quot; the same year.
+
+==References==
+{{Reflist}}
+
+==External links==
+*[https://www.youtube.com/watch?v=HGDGkC-_EPE Neil Young, ''Let's Roll''] (video) via [[YouTube]]
+*[https://www.youtube.com/watch?v=iklm3sSds00 Neil Young], [[Booker T &amp; the MGs]] ''Let's Roll'' (video) via [[YouTube]]
+
+{{DEFAULTSORT:Let's Roll}}
+[[Category:September 11 attacks]]
+[[Category:English phrases]]
+[[Category:Political catchphrases]]
+[[Category:United Airlines Flight 93]]
+[[Category:Catchphrases]]
+[[Category:1900s neologisms]]</text>
+      <sha1>az566nnjib38suoy9wjf0hbyugqcy0w</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Move zig</title>
+    <ns>0</ns>
+    <id>47553</id>
+    <redirect title="All your base are belong to us" />
+    <revision>
+      <id>24436255</id>
+      <parentid>24434869</parentid>
+      <timestamp>2005-09-30T23:00:37Z</timestamp>
+      <contributor>
+        <username>Francs2000</username>
+        <id>22841</id>
+      </contributor>
+      <comment>rv to redirect</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="44" xml:space="preserve">#REDIRECT [[All your base are belong to us]]</text>
+      <sha1>my353m2kp9vuq991bb020qsl5mnqr1m</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Move Zig</title>
+    <ns>0</ns>
+    <id>47555</id>
+    <redirect title="All your base are belong to us" />
+    <revision>
+      <id>15942637</id>
+      <parentid>45945</parentid>
+      <timestamp>2002-04-05T20:06:32Z</timestamp>
+      <contributor>
+        <username>Bryan Derksen</username>
+        <id>66</id>
+      </contributor>
+      <minor />
+      <comment>*</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="44" xml:space="preserve">#REDIRECT [[All your base are belong to us]]</text>
+      <sha1>my353m2kp9vuq991bb020qsl5mnqr1m</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Summertime</title>
+    <ns>0</ns>
+    <id>47556</id>
+    <revision>
+      <id>991584389</id>
+      <parentid>955366882</parentid>
+      <timestamp>2020-11-30T20:40:55Z</timestamp>
+      <contributor>
+        <username>Yeehaw45</username>
+        <id>36922266</id>
+      </contributor>
+      <comment>/* Songs */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4410" xml:space="preserve">{{wiktionary|summer-time|summer time|summertime|summertimes}}
+'''Summertime''' may refer to:
+{{TOC right}}
+==Seasons and time of day==
+* [[Summer]], one of the temperate seasons
+* [[Daylight saving time]] or summer time, advancing the clock one hour during the summer
+** [[British Summer Time]]
+** [[Central European Summer Time]]
+
+==Arts, entertainment, and media==
+===Films ===
+* [[Summertime (1955 film)|''Summertime'' (1955 film)]], a British/American film starring Katharine Hepburn
+* [[Summertime (2001 film)|''Summertime'' (2001 film)]], a South Korean film starring Choi Cheol-ho
+* ''Summer Times'', a 2009 Taiwanese film starring [[Bryant Chang]] and Shara Lin
+* [[Summertime (2015 film)|''Summertime'' (2015 film)]], a French drama
+* [[Summertime (2016 film)|''Summertime'' (2016 film)]], directed by Gabriele Muccino
+* ''Summertime'' (2018 film), directed by [[Edward Burns]]
+* ''[[Summer Hours]]'' (''L'Heure d'été''), a French film starring Juliette Binoche
+
+===Literature===
+* [[Summertime (novel)|''Summertime'' (novel)]], 2009, by J. M. Coetzee
+* ''Summertime'', a 1937 play by [[Ugo Betti]]
+* ''Summertime'', a 2000 play by [[Charles L. Mee]]
+
+===Music===
+====Albums====
+* [[Summertime (MFSB album)|''Summertime'' (MFSB album)]], 1976
+* [[Summertime (Paul Desmond album)|''Summertime'' (Paul Desmond album)]], 1969
+* ''[[Summertime!]]'', an EP by The Drums, 2005
+* ''Summertime'', by [[Herb Alpert]], 1971
+* ''Summertime'', by [[Joe Locke]] and Geoffrey Keezer, 2005
+* ''Summertime'', an EP by [[The Subways]]
+
+====Songs====
+* &quot;Summer Time&quot;, by Pretty Things from the reissue of ''[[Parachute (Pretty Things album)|Parachute]]''
+* &quot;Summer Time&quot;, by [[James Barker Band]]
+* [[Summertime (George Gershwin song)|&quot;Summertime&quot; (George Gershwin song)]], from the opera ''Porgy and Bess''
+* [[Summertime (Beyoncé song)|&quot;Summertime&quot; (Beyoncé song)]]
+* [[Summertime (Bon Jovi song)|&quot;Summertime&quot; (Bon Jovi song)]]
+* [[Summertime (Brian Melo song)|&quot;Summertime&quot; (Brian Melo song)]]
+* [[Summertime (DJ Jazzy Jeff &amp; The Fresh Prince song)|&quot;Summertime&quot; (DJ Jazzy Jeff &amp; The Fresh Prince song)]]
+* [[Summertime (Kenny Chesney song)|&quot;Summertime&quot; (Kenny Chesney song)]]
+* [[Summertime (The Maybes? song)|&quot;Summertime&quot; (The Maybes? song)]]
+* [[Summertime (New Kids on the Block song)|&quot;Summertime&quot; (New Kids on the Block song)]]
+* [[Summertime (Selah Sue song)|&quot;Summertime&quot; (Selah Sue song)]]
+* [[Summertime (The Sundays song)|&quot;Summertime&quot; (The Sundays song)]]
+* [[Summertime (Wiley song)|&quot;Summertime&quot; (Wiley song)]]
+* &quot;Summertime&quot;, a My Chemical Romance song on ''[[Danger Days: The True Lives of the Fabulous Killjoys]]''
+* &quot;Summertime&quot;, by Another Level from ''[[Nexus (Another Level album)|Nexus]]''
+* &quot;Summertime&quot;, by Barenaked Ladies from ''[[All in Good Time (Barenaked Ladies album)|All in Good Time]]''
+* &quot;Summertime&quot;, by Bridgit Mendler from the soundtrack for the film ''[[Arrietty]]''
+* &quot;Summertime&quot;, by [[The Buckinghams]]
+* &quot;Summertime&quot;, by The Click Five from ''[[Modern Minds and Pastimes]]''
+* &quot;Summertime&quot;, by Cody Simpson, B-side of the single &quot;[[iYiYi]]&quot;
+* &quot;Summertime&quot;, by Kreayshawn from ''[[Somethin' 'Bout Kreay]]''
+* &quot;Summertime&quot;, by Michelle Branch from ''[[Everything Comes and Goes]]''
+* &quot;Summertime&quot;, by [[List of Mos Def songs#S|Mos Def]]
+* &quot;Summertime&quot;, by [[Sam Adams (musician)|Sam Adams]]
+* &quot;Summertime&quot;, by Stromae from ''[[Cheese (album)|Cheese]]''
+* &quot;Summertime&quot;, by Vince Staples from ''[[Summertime '06]]''
+* &quot;Summertime&quot;, by Diana Ross from ''[[Red Hot Rhythm &amp; Blues]]''
+* &quot;Summertime, Summertime&quot;, a song by [[The Jamies]]
+* &quot;Summertime Summertime&quot;, a song by [[Corina (singer)|Corina]]
+* &quot;[[Summertime Blues]]&quot;, by Eddie Cochran
+* &quot;[[Doin' Time]]&quot;, by Sublime, a loose cover version of the George Gershwin song, and frequently referred to as &quot;Summertime&quot;, 1997
+* &quot;[[Sommartider]]&quot; (&quot;Summertimes&quot;), a song by Per Gessle
+
+===Television===
+* [[Summertime (TV programme)|''Summertime'' (TV programme)]], a short drama from 1995
+* [[Summertime (TV series)|''Summertime'' (TV series)]], an Italian drama web television series distributed by Netflix in 2020
+* ''[[Summertime '57/'58]]'', a Canadian variety television series
+* ''Summertime'', a 1934 cartoon by Ub Iwerks, featured in a 1986 episode of ''[[Pee-wee's Playhouse#Golden Age cartoons|Pee-wee's Playhouse]]''
+
+==See also==
+* [[Summer (disambiguation)]]
+* [[In the Summertime (disambiguation)]]
+
+{{disambiguation}}</text>
+      <sha1>h0wf38qo38umusoeqloe1qfypg7kf5x</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Viral memes</title>
+    <ns>0</ns>
+    <id>47558</id>
+    <redirect title="Meme" />
+    <revision>
+      <id>15942640</id>
+      <parentid>134965</parentid>
+      <timestamp>2002-08-02T06:56:43Z</timestamp>
+      <contributor>
+        <ip>213.253.39.82</ip>
+      </contributor>
+      <comment>#REDIRECT [[Meme]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18" xml:space="preserve">#REDIRECT [[Meme]]</text>
+      <sha1>8ix27bpkixqes4b7a1ioormyf12wu05</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Rio De Janeiro</title>
+    <ns>0</ns>
+    <id>47562</id>
+    <redirect title="Rio de Janeiro" />
+    <revision>
+      <id>783876472</id>
+      <parentid>177467339</parentid>
+      <timestamp>2017-06-05T06:06:15Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="93" xml:space="preserve">#REDIRECT [[Rio de Janeiro]]
+
+{{Redirect category shell|1=
+{{R from other capitalisation}}
+}}</text>
+      <sha1>4fkr42vcyl3qbrt2ve9a76ary8jnggc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Idiom</title>
+    <ns>0</ns>
+    <id>47563</id>
+    <revision>
+      <id>991685615</id>
+      <parentid>991600594</parentid>
+      <timestamp>2020-12-01T09:07:19Z</timestamp>
+      <contributor>
+        <username>Mathglot</username>
+        <id>2544398</id>
+      </contributor>
+      <comment>Undid [[WP:AGF|good faith]] revision 991600594 by [[Special:Contributions/70.187.192.128|70.187.192.128]] ([[User talk:70.187.192.128|talk]]) See [[WP:V]], [[WP:RS]], and [[WP:LEADFOLLOWSBODY]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="21497" xml:space="preserve">{{short description|Combination of words that has a figurative meaning}}
+{{about||the structural nature particular to a language|Idiom (language structure)|other uses}}
+{{English grammar}}
+An '''idiom''' is a [[phrase]] or expression that typically presents a [[figurative language|figurative]], non-literal [[meaning (linguistic)|meaning]] attached to the phrase; but some phrases become figurative idioms while retaining the literal meaning of the phrase. Categorized as [[formulaic speech|formulaic language]], an idiom's figurative meaning is different from the [[Literal and figurative language|literal]] meaning.&lt;ref&gt;The Oxford companion to the English language (1992:495f.)&lt;/ref&gt; Idioms occur frequently in all languages; in [[English language|English]] alone there are an estimated twenty-five thousand idiomatic expressions.&lt;ref&gt;Jackendoff (1997).&lt;/ref&gt;
+
+==Derivations==
+Many idiomatic expressions were meant literally in their original use, but sometimes, the attribution of the literal meaning changed and the phrase itself grew away from its original roots—typically leading to a [[folk etymology]]. For instance, the literal ''spill the beans'' (meaning to reveal a secret) apparently originated from an ancient method of voting, wherein a voter deposited a bean into one of several cups, indicating  the candidate they favored. If jars were spilled before the counting of votes was complete, one might see which jar had more beans and thereby could claim which candidate might be the winner. Over time, the 'bean jar' voting method fell out of favor but the idiom persisted and became figurative.
+
+Other idioms are deliberately figurative. For example, ''[[break a leg]]'' is an [[irony|ironic]] expression to wish a person good luck just prior to their giving a performance or presentation. It may have arisen from the superstition that one ought not utter the words &quot;good luck&quot; to an actor because it was believed that doing so caused the opposite result.&lt;ref&gt;{{cite web |url=http://www.phrases.org.uk/meanings/break-a-leg.html |title=Break a leg |author=Gary Martin |publisher=The Phrase Finder}}&lt;/ref&gt;
+
+==Compositionality==
+[[File:Donato Barcaglia, Liebe macht blind, Ausschnitt.jpg|thumb|''Love is blind'']]
+
+In [[linguistics]], idioms are usually presumed to be [[figures of speech]] contradicting the [[principle of compositionality]]. That compositionality is the key notion for the analysis of idioms is emphasized in most accounts of idioms.&lt;ref&gt;Radford (2004:187f.)&lt;/ref&gt;&lt;ref&gt;Portner (2005:33f).&lt;/ref&gt; This principle states that the meaning of a whole should be constructed from the meanings of the parts that make up the whole. In other words, one should be in a position to understand the whole if one understands the meanings of each of the parts that make up the whole. The following example is widely employed to illustrate the point:
+
+{{quote|Fred '''kicked the bucket'''.}}
+
+Understood compositionally, Fred has literally kicked an actual, physical bucket. The much more likely idiomatic reading, however, is non-compositional: Fred is understood to have died. Arriving at the idiomatic reading from the literal reading is unlikely for most speakers. What this means is that the idiomatic reading is, rather, stored as a single [[lexical item]] that is now largely independent of the literal reading.
+
+In [[phraseology]], idioms are defined as a sub-type of [[Phraseme#Non-compositional phrasemes: Idioms|phraseme]], the meaning of which is not the regular sum of the meanings of its component parts.&lt;ref&gt;Mel’čuk (1995:167–232).&lt;/ref&gt; John Saeed defines an idiom as [[collocation|collocated]] words that became affixed to each other until metamorphosing into a [[Fossilization (linguistics)|fossilised term]].&lt;ref&gt;For Saeed's definition, see Saeed (2003:60).&lt;/ref&gt; This collocation of words redefines each component word in the [[word-group]] and becomes an ''idiomatic expression''. Idioms usually do not translate well; in some cases, when an idiom is translated directly word-for-word into another language, either its meaning is changed or it is meaningless.
+
+When two or three words are often used together in a particular sequence, the words are said to be irreversible binomials, or [[Siamese twins (linguistics)|Siamese twins]]. Usage will prevent the words from being displaced or rearranged. For example, a person may be left &quot;high and dry&quot; but never &quot;dry and high&quot;. This idiom in turn means that the person is left in their former condition rather than being assisted so that their condition improves. Not all Siamese twins are idioms, however. &quot;Chips and dip&quot; is an irreversible binomial, but it refers to literal food items, not idiomatic ones.
+
+== Mobility ==
+Idioms possess varying degrees of mobility. Whereas some idioms are used only in a routine form, others can undergo syntactic modifications such as passivization, raising constructions, and [[clefting]], demonstrating separable constituencies within the idiom.&lt;ref name=&quot;:0&quot;&gt;{{Cite journal|last=Horn|first=George|year=2003|title=Idioms, Metaphors, and Syntactic Mobility|journal=Journal of Linguistics|volume=39|pages=245–273|doi=10.1017/s0022226703002020}}&lt;/ref&gt; ''Mobile idioms'', allowing such movement, maintain their idiomatic meaning where ''fixed idioms'' do not:
+;Mobile: ''I spilled the beans on our project.'' → ''The beans were spilled on our project.''
+;Fixed: ''The old man kicked the bucket.'' → ''The bucket was kicked'' (by the old man).
+Many fixed idioms lack ''semantic composition'', meaning that the idiom contains the semantic role of a verb, but not of any object. This is true of ''kick the bucket'', which means ''die''. By contrast, the semantically composite idiom ''spill the beans'', meaning ''reveal a secret'', contains both a semantic verb and object, ''reveal'' and ''secret''. Semantically composite idioms have a syntactic similarity between their surface and semantic forms.&lt;ref name=&quot;:0&quot; /&gt;
+
+The types of movement allowed for certain idiom also relate to the degree to which the literal reading of the idiom has a connection to its idiomatic meaning. This is referred to as ''motivation'' or ''transparency''. While most idioms that do not display semantic composition generally do not allow non-adjectival modification, those that are also motivated allow lexical substitution.&lt;ref&gt;{{Cite journal|last=Keizer|first=Evelien|year=2016|title=Idiomatic expressions in Functional Discourse Grammar|journal=Linguistics|volume=54|pages=981–1016|doi=10.1515/ling-2016-0022}}&lt;/ref&gt; For example, ''oil the wheels'' and ''grease the wheels'' allow variation for nouns that elicit a similar literal meaning.&lt;ref&gt;{{Cite journal|last=Mostafa|first=Massrura|year=2010|title=Variation in V+the+N idioms|journal=English Today|volume=26|pages=37–43|doi=10.1017/s0266078410000325}}&lt;/ref&gt; These types of changes can occur only when speakers can easily recognize a connection between what the idiom is meant to express and its literal meaning, thus an idiom like ''kick the bucket'' cannot occur as ''kick the pot''.
+
+From the perspective of [[dependency grammar]], idioms are represented as a [[catena (linguistics)|catena]] which cannot be interrupted by non-idiomatic content. Although syntactic modifications introduce disruptions to the idiomatic structure, this continuity is only required for idioms as lexical entries.&lt;ref&gt;{{Cite journal|last=O'Grady|first=William|year=1998|title=The Syntax of Idioms|journal=Natural Language and Linguistic Theory|volume=16|pages=279–312|doi=10.1023/a:1005932710202}}&lt;/ref&gt;
+
+Certain idioms, allowing unrestricted syntactic modification, can be said to be metaphors. Expressions such as ''jump on the bandwagon'', ''pull strings'', and ''draw the line'' all represent their meaning independently in their verbs and objects, making them compositional. In the idiom ''jump on the bandwagon'', ''jump on'' involves joining something and a 'bandwagon' can refer to a collective cause, regardless of context.&lt;ref name=&quot;:0&quot; /&gt;

@@ -1,0 +1,583 @@
+==External links==
+* [http://www.cisco.com/en/US/tech/tk1077/technologies_tech_note09186a00801149b3.shtml Waveform Coding Techniques] – details of implementation
+* [http://focus.ti.com/lit/an/spra163a/spra163a.pdf A-Law and mu-Law Companding Implementations Using the TMS320C54x] ([[PDF]])
+* [http://focus.ti.com/lit/an/spra634/spra634.pdf TMS320C6000 μ-Law and A-Law Companding with Software or the McBSP] ([[PDF]])
+* [https://web.archive.org/web/20110719132013/http://hazelware.luggle.com/tutorials/mulawcompression.html A-law and μ-law realisation (in C)]
+
+{{Compression Methods}}
+{{Compression formats}}
+
+{{DEFAULTSORT:Mu-Law Algorithm}}
+[[Category:Audio codecs]]
+[[Category:ITU-T recommendations]]</text>
+      <sha1>bus0o53jprto3dgnwxehs38d4cbdt06</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Multicast address</title>
+    <ns>0</ns>
+    <id>41383</id>
+    <revision>
+      <id>986703490</id>
+      <parentid>986270155</parentid>
+      <timestamp>2020-11-02T14:12:44Z</timestamp>
+      <contributor>
+        <username>Kvng</username>
+        <id>910180</id>
+      </contributor>
+      <comment>Reverted [[WP:AGF|good faith]] edits by [[Special:Contributions/46.239.14.7|46.239.14.7]] ([[User talk:46.239.14.7|talk]]): Apparently you've never read an IEEE 802 standard</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="21089" xml:space="preserve">{{Short description|logical identifier to address a specific group of devices in multicast}}
+
+A '''multicast address''' is a logical identifier for a group of [[Host (network)|host]]s in a [[computer network]] that are available to process [[datagram]]s or frames intended to be [[multicast]] for a designated [[network service]]. Multicast addressing can be used in the [[link layer]] (layer 2 in the [[OSI model]]), such as [[Ethernet]] multicast, and at the [[internet layer]] (layer 3 for OSI) for [[Internet Protocol]] Version 4 (IPv4) or Version 6 (IPv6) multicast.
+
+==IPv4==&lt;!--[[IPv4 multicast address]] redirects here--&gt;
+[[IPv4]] multicast addresses are defined by the [[most-significant bit]] pattern of ''1110''. This originates from the [[classful network]] design of the early Internet when this group of addresses was designated as ''Class D''. The [[CIDR notation]] for this group is {{IPaddr|224.0.0.0|4}}. The group includes the addresses from {{IPaddr|224.0.0.0}} to {{IPaddr|239.255.255.255}}. Address assignments from within this range are specified in RFC 5771, an [[Internet Engineering Task Force]] (IETF) ''Best Current Practice'' document (BCP 51).
+
+The address range is divided into blocks each assigned a specific purpose or behavior.
+
+{| class=&quot;wikitable&quot;
+|-
+!IP multicast address range
+!Description
+!Routable
+|-
+|224.0.0.0 to 224.0.0.255
+|Local subnetwork&lt;ref name=&quot;Cisco Multicast&quot;&gt;{{citation |url=https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3750x_3560x/software/release/15-2_2_e/multicast/configuration_guide/b_mc_1522e_3750x_3560x_cg/b_mc_3750x_3560x_chapter_011.html |title=IP Multicast Routing Configuration Guide |publisher=[[Cisco]] |access-date=2017-05-27 |page=17-19}}&lt;/ref&gt;
+|{{No}}
+|-
+|224.0.1.0 to 224.0.1.255
+|Internetwork control
+|{{Yes}}
+|-
+|224.0.2.0 to 224.0.255.255
+|AD-HOC block 1&lt;ref&gt;[https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-3 AD-HOC Block 1]&lt;/ref&gt;
+|{{Yes}}
+|-
+|224.3.0.0 to 224.4.255.255
+|AD-HOC block 2&lt;ref&gt;[https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-6 AD-HOC Block 2]&lt;/ref&gt;
+|{{Yes}}
+|-
+|232.0.0.0 to 232.255.255.255
+|Source-specific multicast&lt;ref name=&quot;Cisco Multicast&quot;/&gt;
+|{{Yes}}
+|-
+|233.0.0.0 to 233.251.255.255
+|GLOP addressing&lt;ref name=fall2011tcp&gt;{{cite book |title=TCP/IP Illustrated |author=Fall, K.R. and Stevens, W.R. |volume=1 |isbn=9780321336316 |url=https://books.google.com/books?id=X-l9NX3iemAC |date=2011 |publisher=Addison-Wesley |page=55}}&lt;/ref&gt;
+|{{Yes}}
+|-
+|233.252.0.0 to 233.255.255.255
+|AD-HOC block 3&lt;ref&gt;[https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-11 AD-HOC Block 3]&lt;/ref&gt;
+|{{Yes}}
+|-
+|234.0.0.0 to 234.255.255.255{{cn|date=June 2020}}
+|Unicast-prefix-based
+|{{Yes}}
+|-
+|239.0.0.0 to 239.255.255.255
+|Administratively scoped&lt;ref name=&quot;Cisco Multicast&quot;/&gt;
+|{{Yes}}
+|}
+
+;Local subnetwork
+:Addresses in the range of {{IPaddr|224.0.0.0}} to {{IPaddr|224.0.0.255}} are individually assigned by IANA and designated for multicasting on the local [[subnetwork]] only. For example, the [[Routing Information Protocol]] (RIPv2) uses {{IPaddr|224.0.0.9}}, [[Open Shortest Path First]] (OSPF) uses {{IPaddr|224.0.0.5}} and {{IPaddr|224.0.0.6}}, and [[Multicast DNS]] uses {{IPaddr|224.0.0.251}}. Routers must not forward these messages outside the subnet from which they originate.
+
+;Internetwork control block
+:Addresses in the range {{IPaddr|224.0.1.0}} to {{IPaddr|224.0.1.255}} are individually assigned by IANA and designated as the ''internetwork control block''. This block of addresses is used for traffic that must be routed through the public Internet, such as for applications of the [[Network Time Protocol]] using {{IPaddr|224.0.1.1}}.
+
+;AD-HOC block &lt;!-- Note:  The hyphenated spelling is in the RFC.  --&gt;
+:Addresses in three separate blocks are not individually assigned by IANA. These addresses are globally routed and are used for applications that don't fit either of the previously described purposes.&lt;ref&gt;RFC 5771 Section 6.&lt;/ref&gt;
+
+;Source-specific multicast
+:The {{IPaddr|232.0.0.0|8}} (IPv4) and {{IPaddr|FF3x::|32}} (IPv6) blocks are reserved for use by [[source-specific multicast]].
+
+;GLOP
+:The {{IPaddr|233.0.0.0|8}} range was originally assigned by {{IETF RFC|2770}} as an experimental, public statically-assigned multicast address space for publishers and Internet service providers that wished to source content on the Internet. The allocation method is termed GLOP addressing and provides implementers a block of 255 addresses that is determined by their 16-bit [[autonomous system number]] (ASN) allocation. In a nutshell, the middle two [[octet (computing)|octet]]s of this block are formed from assigned ASNs, giving any operator assigned an ASN 256 globally unique multicast group addresses.&lt;ref&gt;{{cite web |url=http://www.multicasttech.com/faq/ |archiveurl=https://web.archive.org/web/20110516204230/http://www.multicasttech.com/faq/ |title=Frequently Asked Questions (FAQ) File for Multicasting |publisher=Multicast Tech |archivedate=2011-05-16}}&lt;/ref&gt; The method is not applicable to the newer 32-bit ASNs. {{IETF RFC|3180}}, superseding {{IETF RFC|2770}}, envisioned the use of the range for many-to-many multicast applications. Unfortunately, with only 256 multicast addresses available to each autonomous system, GLOP is not adequate for large-scale broadcasters.{{citation needed|date=January 2019}}
+
+;Unicast-prefix-based
+:The {{IPaddr|234.0.0.0|8}} range is assigned by {{IETF RFC|6034}} as a range of global IPv4 multicast address space provided to each organization that has {{IPaddr||24}} or larger globally routed unicast address space allocated; one multicast address is reserved per {{IPaddr||24}} of unicast space. A resulting advantage over GLOP is that the unicast-prefix mechanism resembles the unicast-prefix capabilities of IPv6 as defined in {{IETF RFC|3306}}.
+
+;Administratively scoped
+:The {{IPaddr|239.0.0.0|8}} range is assigned by RFC 2365 for private use within an organization.  Per the RFC, packets destined to administratively scoped IPv4 multicast addresses do not cross administratively defined organizational boundaries, and administratively scoped IPv4 multicast addresses are locally assigned and do not have to be globally unique.  The RFC also discusses structuring the {{IPaddr|239.0.0.0|8}} range to be loosely similar to the scoped IPv6 multicast address range described in {{IETF RFC|1884}}.
+
+===Notable IPv4 multicast addresses===
+The following table is a list of notable well-known IPv4 addresses that are reserved for [[IP multicast]]ing and that are registered with the [[Internet Assigned Numbers Authority]] (IANA).&lt;ref&gt;{{cite web |url=https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml |title=IANA IP multicast addresses assignments |publisher=[[Internet Assigned Numbers Authority]]}}&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot;
+|-
+!IP multicast address
+!Description
+!Routable
+|-
+|224.0.0.0
+|Base address (reserved)
+|{{No}}
+|-
+|224.0.0.1
+|The ''All Hosts'' multicast group addresses all hosts on the same network segment.
+|{{No}}
+|-
+|224.0.0.2
+|The ''All Routers'' multicast group addresses all routers on the same network segment.
+|{{No}}
+|-
+|224.0.0.4
+|This address is used in the [[Distance Vector Multicast Routing Protocol]] (DVMRP) to address multicast routers.
+|{{No}}
+|-
+|224.0.0.5
+|The [[Open Shortest Path First]] (OSPF) ''All OSPF Routers'' address is used to send Hello packets to all OSPF routers on a network segment.
+|{{No}}
+|-
+|224.0.0.6
+|The OSPF ''All Designated Routers'' &quot;&quot;(DR)&quot;&quot; address is used to send OSPF routing information to designated routers on a network segment.
+|{{No}}
+|-
+|224.0.0.9
+|The [[Routing Information Protocol]] (RIP) version 2 group address is used to send routing information to all RIP2-aware routers on a network segment.
+|{{No}}
+|-
+|224.0.0.10
+|The [[Enhanced Interior Gateway Routing Protocol]] (EIGRP) group address is used to send routing information to all EIGRP routers on a network segment.
+|{{No}}
+|-
+|224.0.0.13
+|[[Protocol Independent Multicast]] (PIM) Version 2
+|{{No}}
+|-
+|224.0.0.18
+|[[Virtual Router Redundancy Protocol]] (VRRP)
+|{{No}}
+|-
+|224.0.0.19–21
+|[[IS-IS]] over IP
+|{{No}}
+|-
+|224.0.0.22
+|[[Internet Group Management Protocol]] (IGMP) version 3&lt;ref&gt;RFC 3376 Section 4.2.14&lt;/ref&gt;
+|{{No}}
+|-
+|224.0.0.102
+|[[Hot Standby Router Protocol]] version 2 (HSRPv2) / [[Gateway Load Balancing Protocol]] (GLBP)
+|{{No}}
+|-
+|224.0.0.107
+| [[Precision Time Protocol]] (PTP) version 2 peer delay measurement messaging
+|{{No}}
+|-
+|224.0.0.251
+|[[Multicast DNS]] (mDNS) address
+|{{No}}
+|-
+|224.0.0.252
+|[[Link-local Multicast Name Resolution]] (LLMNR) address
+|{{No}}
+|-
+|224.0.0.253
+|[[Teredo tunneling]] client discovery address&lt;ref&gt;RFC 4380 item 2.17&lt;/ref&gt;
+|{{No}}
+|-
+|224.0.1.1
+|[[Network Time Protocol]] clients listen on this address for protocol messages when operating in multicast mode.
+|{{Yes}}
+|-
+|224.0.1.22
+|[[Service Location Protocol]] version 1 general
+|{{Yes}}
+|-
+|224.0.1.35
+|[[Service Location Protocol]] version 1 directory agent
+|{{Yes}}
+|-
+|224.0.1.39
+|The Cisco multicast router ''AUTO-RP-ANNOUNCE'' address is used by RP mapping agents to listen for candidate announcements.
+|{{Yes}}
+|-
+|224.0.1.40
+|The Cisco multicast router ''AUTO-RP-DISCOVERY'' address is the destination address for messages from the RP mapping agent to discover candidates.
+|{{Yes}}
+|-
+|224.0.1.41
+|[[H.323 Gatekeeper]] discovery address
+|{{Yes}}
+|-
+|224.0.1.129–132
+|[[Precision Time Protocol]] (PTP) version 1 messages (Sync, Announce, etc.) except peer delay measurement
+|{{Yes}}
+|-
+|224.0.1.129
+|[[Precision Time Protocol]] (PTP) version 2 messages (Sync, Announce, etc.) except peer delay measurement
+|{{Yes}}
+|-
+|239.255.255.250
+|[[Simple Service Discovery Protocol]] address
+|{{Yes}}
+|-
+|239.255.255.253
+|[[Service Location Protocol]] version 2 address
+|{{Yes}}
+|}
+
+==IPv6==
+Multicast addresses in [[IPv6]] use the prefix {{IPaddr|ff00::|8}}. IPv6 multicast addresses can be structured using the old format (RFC 2373) or the new format (RFC 3306, updated by RFC 7371).
+{| class=&quot;wikitable&quot; style=&quot;width: 750px&quot;
+|+ General multicast address format (old)
+|-
+!style=&quot;width: 0%&quot;|Bits
+|style=&quot;text-align: center; width: 6.2%;&quot;| 8
+|style=&quot;text-align: center; width: 3.1%;&quot;| 4
+|style=&quot;text-align: center; width: 3.1%;&quot;| 4
+|style=&quot;text-align: center; width: 87.5%;&quot;| 112
+|-
+!style=&quot;width: 0%&quot;|Field
+|style=&quot;text-align: center;&quot;| ''prefix''
+|style=&quot;text-align: center;&quot;| ''flags''
+|style=&quot;text-align: center;&quot;| ''scope''
+|style=&quot;text-align: center;&quot;| ''group ID''
+|}
+{| class=&quot;wikitable&quot; style=&quot;width: 750px&quot;
+|+ General multicast address format (new)
+|-
+!style=&quot;width: 0%&quot;|Bits
+|style=&quot;text-align: center; width: 6.2%;&quot;| 8
+|style=&quot;text-align: center; width: 3.1%;&quot;| 4
+|style=&quot;text-align: center; width: 3.1%;&quot;| 4
+|style=&quot;text-align: center; width: 3.1%;&quot;| 4
+|style=&quot;text-align: center; width: 3.1%;&quot;| 4
+|style=&quot;text-align: center; width: 6.2%;&quot;| 8
+|style=&quot;text-align: center; width: 49.6%;&quot;| 64
+|style=&quot;text-align: center; width: 24.8%;&quot;| 32
+|-
+!style=&quot;width: 0%&quot;|Field
+|style=&quot;text-align: center;&quot;| ''prefix''
+|style=&quot;text-align: center;&quot;| ''ff1''
+|style=&quot;text-align: center;&quot;| ''scope''
+|style=&quot;text-align: center;&quot;| ''ff2''
+|style=&quot;text-align: center;&quot;| ''reserved''
+|style=&quot;text-align: center;&quot;| ''plen''
+|style=&quot;text-align: center;&quot;| ''network prefix''
+|style=&quot;text-align: center;&quot;| ''group ID''
+|}
+The ''prefix'' holds the value {{IPaddr|ff}} for all multicast addresses.
+
+Currently, 3 of the 4 flag bits in the ''flags'' field (''ff1'') are defined;&lt;ref name=rfc4291&gt;Hinden, R.; [[Steve Deering|Deering, S.]] (February 2006) ''[http://tools.ietf.org/html/rfc4291 IP Version 6 Addressing Architecture]'', [[Internet Engineering Task Force|IETF]], RFC{{nbsp}}4291.&lt;/ref&gt; the most-significant flag bit is reserved for future use. The other three flags are known as ''R'', ''P'' and ''T''.
+
+{| class=&quot;wikitable&quot;
+|+Multicast address flags&lt;ref name=&quot;IPv6Essentials&quot;&gt;{{cite book |title=IPv6 Essentials |author=Silvia Hagen |publisher=O'Reilly |edition=Second |date=May 2006 |isbn=978-0-596-10058-2 |url-access=registration |url=https://archive.org/details/ipv6essentials00hage }}&lt;/ref&gt;
+|-
+!Bit&lt;ref group=note&gt;The recommended style for Request for Comments (RFC) documents is &quot;MSB 0&quot; [[bit numbering]].&lt;/ref&gt;
+!Flag
+!0
+!1
+|-
+|0 (MSB)
+|Reserved
+|(Reserved)
+|(Reserved)
+|-
+|1
+|R (Rendezvous)&lt;ref&gt;RFC 3956&lt;/ref&gt;
+|Rendezvous point not embedded
+|Rendezvous point embedded
+|-
+|2
+|P (Prefix)&lt;ref&gt;RFC 3306&lt;/ref&gt;
+|Without prefix information
+|Address based on network prefix
+|-
+|3 (LSB)
+|T (Transient)&lt;ref&gt;RFC 4291&lt;/ref&gt;
+|Well-known multicast address
+|Dynamically assigned multicast address
+|}
+
+Similar to a [[unicast]] address, the ''prefix'' of an IPv6 multicast address specifies its scope, however, the set of possible scopes for a multicast address is different. The 4-bit ''sc'' (or scope) field (bits 12 to 15) is used to indicate where the address is valid and unique.
+
+{| class=&quot;wikitable&quot;
+|+Multicast address scope
+!IPv6 address&lt;ref group=note&gt;''x'' is a place holder indicating that the value of the ''flags'' field is unimportant in the current discussion.&lt;/ref&gt;
+!IPv4 equivalent&lt;ref&gt;RFC 2365 section 8.&lt;/ref&gt;
+!Scope
+!Purpose
+|-
+|&lt;tt&gt;ff00::/16, ff0f::/16&lt;/tt&gt;
+|
+|Reserved
+|-
+|&lt;tt&gt;ffx1::/16&lt;/tt&gt;
+|&lt;tt&gt;127.0.0.0/8&lt;/tt&gt;
+|Interface-local
+|Packets with this destination address may not be sent over any network link, but must remain within the current node; this is the multicast equivalent of the unicast [[loopback address]].
+|-
+|&lt;tt&gt;ffx2::/16&lt;/tt&gt;
+|&lt;tt&gt;224.0.0.0/24&lt;/tt&gt;
+|Link-local
+|Packets with this destination address may not be routed anywhere.
+|-
+|&lt;tt&gt;ffx3::/16&lt;/tt&gt;
+|&lt;tt&gt;239.255.0.0/16&lt;/tt&gt;
+|IPv4 local scope
+|-
+|&lt;tt&gt;ffx4::/16&lt;/tt&gt;
+|
+|Admin-local
+|The smallest scope that must be administratively configured.
+|-
+|&lt;tt&gt;ffx5::/16&lt;/tt&gt;
+|
+|Site-local
+|Restricted to the local physical network.
+|-
+|&lt;tt&gt;ffx8::/16&lt;/tt&gt;
+|&lt;tt&gt;239.192.0.0/14&lt;/tt&gt;
+|Organization-local
+|Restricted to networks used by the organization administering the local network. (For example, these addresses might be used over [[VPN]]s; when packets for this group are routed over the public internet (where these addresses are not valid), they would have to be encapsulated in some other protocol.)
+|-
+|&lt;tt&gt;ffxe::/16&lt;/tt&gt;
+|&lt;tt&gt;224.0.1.0-238.255.255.255&lt;/tt&gt;
+|Global scope
+|Eligible to be routed over the public internet.
+|}
+
+The service is identified in the ''group ID'' field. For example, if {{IPaddr|ff02::101}} refers to all [[Network Time Protocol]] (NTP) servers on the local network segment, then {{IPaddr|ff08::101}} refers to all NTP servers in an organization's networks. The ''group ID'' field may be [[IPv6 address#Multicast address format|further divided]] for special multicast address types.
+
+===Notable IPv6 multicast addresses===
+The following table is a list notable IPv6 multicast addresses that are registered with IANA.&lt;ref&gt;{{cite web |url=https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml |title=IPv6 Multicast Address Space Registry |publisher=[[Internet Assigned Numbers Authority]]}}&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot;
+|
+! Address
+! Description
+|-
+| &lt;tt&gt;ff02::1&lt;/tt&gt;
+| All nodes on the local network segment
+|-
+| &lt;tt&gt;ff02::2&lt;/tt&gt;
+| All routers on the local network segment
+|-
+| &lt;tt&gt;ff02::5&lt;/tt&gt;
+| OSPFv3 All SPF routers
+|-
+| &lt;tt&gt;ff02::6&lt;/tt&gt;
+| OSPFv3 All DR routers
+|-
+| &lt;tt&gt;ff02::8&lt;/tt&gt;
+| IS-IS for IPv6 routers
+|-
+| &lt;tt&gt;ff02::9&lt;/tt&gt;
+| [[Routing Information Protocol|RIP]] routers
+|-
+| &lt;tt&gt;ff02::a&lt;/tt&gt;
+| [[EIGRP]] routers
+|-
+| &lt;tt&gt;ff02::d&lt;/tt&gt;
+| [[Protocol Independent Multicast|PIM]] routers
+|-
+| &lt;tt&gt;ff02::16&lt;/tt&gt;
+| [[Multicast Listener Discovery|MLDv2]] reports (defined in RFC 3810)
+|-
+| &lt;tt&gt;ff02::1:2&lt;/tt&gt;
+| All [[DHCPv6]] servers and relay agents on the local network segment (defined in RFC 3315)
+|-
+| &lt;tt&gt;ff02::1:3&lt;/tt&gt;
+| All [[Link-local Multicast Name Resolution|LLMNR]] hosts on the local network segment (defined in RFC 4795)
+|-
+| &lt;tt&gt;ff05::1:3&lt;/tt&gt;
+| All DHCP servers on the local network site (defined in RFC 3315)
+|-
+| &lt;tt&gt;ff0x::c&lt;/tt&gt;
+| [[Simple Service Discovery Protocol#Protocol transport and addressing|Simple Service Discovery Protocol]]
+|-
+| &lt;tt&gt;ff0x::fb&lt;/tt&gt;
+| [[Zero configuration networking#Service discovery|Multicast DNS]]
+|-
+| &lt;tt&gt;ff0x::101&lt;/tt&gt;
+| [[Network Time Protocol]]
+|-
+| &lt;tt&gt;ff0x::108&lt;/tt&gt;
+| [[Network Information Service]]
+|-
+| &lt;tt&gt;ff0x::181&lt;/tt&gt;
+| [[Precision Time Protocol]] (PTP) version 2 messages (Sync, Announce, etc.) except peer delay measurement
+|-
+| &lt;tt&gt;ff02::6b&lt;/tt&gt;
+| [[Precision Time Protocol]] (PTP) version 2 peer delay measurement messages
+|-
+| &lt;tt&gt;ff0x::114&lt;/tt&gt;
+| Used for experiments
+|}
+
+==Ethernet==
+Ethernet frames with a value of 1 in the least-significant bit of the first octet&lt;ref group=note&gt;On Ethernet, the least-significant bit of an octet is the first to be transmitted. A multicast is indicated by the first transmitted bit of the destination address being 1.&lt;/ref&gt; of the destination [[MAC address]] are treated as multicast frames and are flooded to all points on the network. While frames with ones in all bits of the destination address ({{macaddr|FF-FF-FF-FF-FF-FF}}) are sometimes referred to as [[Broadcasting (computing)|broadcasts]], Ethernet generally does not distinguish between multicast and broadcast frames. Modern Ethernet controllers filter received packets to reduce CPU load, by looking up the hash of a multicast destination address in a table, initialized by software, which controls whether a multicast packet is dropped or fully received.
+
+The IEEE has allocated the address block {{macaddr|01-80-C2-00-00-00}} to {{macaddr|01-80-C2-FF-FF-FF}} for group addresses for use by standard protocols. Of these, the MAC group addresses in the range of {{macaddr|01-80-C2-00-00-00}} to {{macaddr|01-80-C2-00-00-0F}} are not forwarded by [[802.1D]]-conformant [[MAC bridge]]s.&lt;ref&gt;{{cite web |author=IEEE |url=http://standards.ieee.org/develop/regauth/tut/macgrp.pdf |title=Standard Group MAC Address: A Tutorial Guide |publisher=IEEE Standards Association |pages=2-3}}&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot; &lt;!--note xx-xx-xx-xx-xx-xx is preferred IEEE notation for MAC addresses. See [[MAC_address#Notational_conventions]]. Please use this format in this section.--&gt;
+|-
+|+Some well known [[Ethernet]] multicast addresses&lt;ref&gt;{{cite web |author=Patton, Michael A. [http://www.cavebear.com/archive/cavebear/Ethernet/acks.html et. al.] |url=http://www.cavebear.com/archive/cavebear/Ethernet/multicast.html |title=Multicast (including Broadcast) Addresses|work=cavebear.com |publisher=[[Karl Auerbach]]}}&lt;/ref&gt;
+!Ethernet multicast address
+![[Ethertype]]
+!Usage
+|-
+|{{macaddr|01-00-0C-CC-CC-CC}}
+|
+|[[Cisco Discovery Protocol]] (CDP), [[VLAN Trunking Protocol]] (VTP), [[Unidirectional_Link_Detection]] (UDLD)
+|-
+|{{macaddr|01-00-0C-CC-CC-CD}}
+|
+|Cisco Shared Spanning Tree Protocol Address{{cn|date=April 2020}}
+|-
+|{{macaddr|01-80-C2-00-00-00}}
+|
+|[[Spanning Tree Protocol]] (for bridges) [[IEEE 802.1D]]
+|-
+|{{macaddr|01-80-C2-00-00-00}}, {{macaddr|01-80-C2-00-00-03}} or {{macaddr|01-80-C2-00-00-0E}}
+|0x88CC
+|[[Link Layer Discovery Protocol]]
+|-
+|{{macaddr|01-80-C2-00-00-08}}
+|0x0802
+|Spanning Tree Protocol (for provider bridges) [[IEEE 802.1ad]]
+|-
+|{{macaddr|01-80-C2-00-00-01}}
+|0x8808
+|[[Ethernet flow control]] (pause frame) [[IEEE 802.3x]]
+|-
+|{{macaddr|01-80-C2-00-00-02}}
+|0x8809
+|&quot;Slow protocols&quot; including [[Operations, administration and management|Ethernet OAM Protocol]] ([[IEEE 802.3ah]]) and [[Link Aggregation Control Protocol]] (LACP)
+|-
+|{{macaddr|01-80-C2-00-00-21}}
+|0x88f5
+|[[GARP VLAN Registration Protocol]] (also known as [[IEEE 802.1q]] GVRP)
+|-
+|{{macaddr|01-80-C2-00-00-30}} through {{macaddr|01-80-C2-00-00-3F}}
+|0x8902
+|Ethernet CFM Protocol [[IEEE 802.1ag]] 
+|-
+|{{macaddr|01-00-5E-00-00-00}} through {{macaddr|01-00-5E-7F-FF-FF}}
+|0x0800
+|IPv4 Multicast (RFC 1112), insert the low 23 bits of the multicast IPv4 address into the Ethernet address&lt;ref&gt;RFC 7042 2.1.1.&lt;/ref&gt;
+|-
+|{{macaddr|33-33-00-00-00-00}} through {{macaddr|33-33-FF-FF-FF-FF}}
+|0x86DD
+|IPv6 Multicast (RFC 2464), insert the low 32 Bits of the multicast IPv6 Address into the Ethernet Address &lt;ref&gt;RFC 7042 2.3.1.&lt;/ref&gt;
+|-
+|{{macaddr|01-0C-CD-01-00-00}} through {{macaddr|01-0C-CD-01-01-FF}}
+|0x88B8
+|[[IEC 61850]]-8-1 GOOSE Type 1/1A
+|-
+|{{macaddr|01-0C-CD-02-00-00}} through {{macaddr|01-0C-CD-02-01-FF}}
+|0x88B9
+|GSSE (IEC 61850 8-1)
+|-
+|{{macaddr|01-0C-CD-04-00-00}} through {{macaddr|01-0C-CD-04-01-FF}}
+|0x88BA
+|Multicast sampled values (IEC 61850 8-1)
+|-
+|{{macaddr|01-1B-19-00-00-00}} or {{macaddr|01-80-C2-00-00-0E}}
+|0x88F7
+|[[Precision Time Protocol]] (PTP) version 2 over Ethernet (native layer-2)
+|}
+
+==802.11==
+[[802.11]] wireless networks use the same MAC addresses for multicast as Ethernet.
+
+==See also==
+*[[Broadcast address]]
+*[[Reserved IP addresses]]
+
+==Notes==
+{{reflist|group=note}}
+
+==References==
+{{reflist}}
+
+{{DEFAULTSORT:Multicast Address}}
+[[Category:Network addressing]]</text>
+      <sha1>1tunkezmymudlrzhujl9ld58a3nzs69</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Multilevel precedence and preemption</title>
+    <ns>0</ns>
+    <id>41384</id>
+    <redirect title="Autovon" />
+    <revision>
+      <id>574770706</id>
+      <parentid>574764252</parentid>
+      <timestamp>2013-09-27T18:09:20Z</timestamp>
+      <contributor>
+        <username>RussBot</username>
+        <id>279219</id>
+      </contributor>
+      <minor />
+      <comment>Robot: Fixing double redirect to [[Autovon]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="21" xml:space="preserve">#REDIRECT [[Autovon]]</text>
+      <sha1>qlz1wrs6xmmcu6awvweq8obqm1dzgir</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Multipath propagation</title>
+    <ns>0</ns>
+    <id>41385</id>
+    <revision>
+      <id>989105196</id>
+      <parentid>983800773</parentid>
+      <timestamp>2020-11-17T02:10:16Z</timestamp>
+      <contributor>
+        <ip>2401:4900:4CC2:1AC7:7CC8:ACFF:FEB0:9A36</ip>
+      </contributor>
+      <comment>/* Interference */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10537" xml:space="preserve">{{About|the electromagnetic propagation phenomenon|usage in computing|Multipath (disambiguation)}}
+{{nofootnotes|date=November 2009}}
+In [[radio communication]], '''multipath''' is the [[radio propagation|propagation]] phenomenon that results in [[radio]] [[signalling (telecommunications)|signals]] reaching the receiving [[antenna (electronics)|antenna]] by two or more paths. Causes of multipath include [[atmospheric ducting]], [[ionospheric reflection]] and [[refraction]], and [[reflection (physics)|reflection]] from water bodies and terrestrial objects such as mountains and buildings.
+
+Multipath propagation causes multipath interference, including constructive and destructive [[Interference (wave propagation)|interference]], and [[phase (waves)|phase shifting]] of the signal; destructive interference causes [[fading]].  This may cause a radio signal to become too weak in certain areas to be received adequately, so multipath propagation can be detrimental in radio communication systems.  Where the magnitudes of the signals arriving by the various paths have a distribution known as the [[Rayleigh distribution]], this is known as [[Rayleigh fading]]. Where one component (often, but not necessarily, a [[line of sight (telecommunications)|line of sight]] component) dominates, a [[Rice distribution|Rician distribution]] provides a more accurate model, and this is known as [[Rician fading]]. Where two components dominate, the behavior is best modeled with the [[Two-wave with diffuse power fading|two-wave with diffuse power (TWDP)]] distribution.
+
+==Interference==
+{{main|Wave interference}}
+
+[[File:Phase shift.svg|thumb|Coherent waves that travel along two different paths will arrive with [[phase shift]], hence interfering with each other.]]
+Multipath interference is a phenomenon in the physics of [[wave]]s whereby a wave from a source travels to a detector via two or more paths and the two (or more) components of the wave interfere constructively or destructively. Multipath interference is a common cause of &quot;[[Ghosting (television)|ghosting]]&quot; in analog television broadcasts and of [[fading]] of [[radio wave]]s.
+
+[[Image:IdealTVpathnoghost.png|thumb|right|250px|A diagram of the ideal situation for TV signals moving through space: The signal leaves the [[transmitter]] (TX) and travels through one path to the receiver (the TV set, which is labeled RX)]]
+[[Image:MultipathTVghost.png|thumb|right|250px|In this illustration, an object (in this case an aircraft) pollutes the system by adding a second path. The signal arrives at RX(receiver) by means 
+of two different paths which have different lengths. The main path is the direct path, while the second is due to a reflection from the plane.]]
+
+The condition necessary is that the components of the wave remain [[Coherence (physics)|coherent]] throughout the whole extent of their travel.
+
+The interference will arise owing to the two (or more) components of the wave having, in general, travelled a different length (as measured by [[optical path length]] – geometric length and [[refraction]] (differing optical speed)), and thus arriving at the detector out of [[phase (waves)|phase]] with each other.
+
+The signal due to indirect paths interferes with the required signal in amplitude as well as phase which is called multipath fading.
+
+==Examples==
+
+In [[fax|facsimile]] and (analog) [[television]] [[transmission (telecommunications)|transmission]], multipath causes [[jitter]] and [[ghosting (television)|ghosting]], seen as a faded duplicate image to the right of the main image. Ghosts occur when transmissions bounce off a mountain or other large object, while also arriving at the antenna by a shorter, direct route, with the receiver picking up two signals separated by a delay.
+
+[[File:Multipath propagation diagram en.svg|thumb|Radar multipath echoes from an actual target cause ghosts to appear.]]
+
+In [[radar]] processing, multipath causes ghost targets to appear, deceiving the radar [[receiver (radio)|receiver]]. These ghosts are particularly bothersome since they move and behave like the normal targets (which they echo), and so the receiver has difficulty in isolating the correct target echo. These problems can be minimized by incorporating a ground map of the radar's surroundings and eliminating all echoes which appear to originate below the ground or above a certain height (altitude).
+
+In digital radio communications (such as [[GSM]]) multipath can cause errors and affect the quality of communications. The errors are due to [[intersymbol interference]] (ISI). [[Equalization (communications)|Equalizers]] are often used to correct the ISI. Alternatively, techniques such as [[orthogonal frequency division modulation]] and [[rake receiver]]s may be used.
+
+[[File:Gps-multipath-efect.png|thumb|left|GPS error due to multipath]]
+In a [[Global Positioning System receiver]], Multipath Effect can cause a stationary receiver's output to indicate as if it were randomly jumping about or creeping. When the unit is moving the jumping or creeping may be hidden, but it still degrades the displayed accuracy of location and speed.
+
+==In wired media==
+Multipath propagation is similar in [[power line communication]] and in telephone [[local loop]]s. In either case, [[Impedance matching|impedance mismatch]] causes [[signal reflection]]. 
+
+High-speed power line communication systems usually employ multi-carrier modulations (such as [[OFDM]] or [[Wavelet]] OFDM) to avoid the [[intersymbol interference]] that multipath propagation would cause. The [[ITU-T]] [[G.hn]] standard provides a way to create a high-speed (up to 1 Gigabit/s) [[local area network]] using existing home wiring ([[power line communication|power lines]], phone lines, and [[ethernet over coax|coaxial cables]]). G.hn uses OFDM with a [[cyclic prefix]] to avoid ISI. Because multipath propagation behaves differently in each kind of wire, G.hn uses different OFDM parameters (OFDM symbol duration, Guard Interval duration) for each media.
+
+[[DSL modem]]s also use [[Orthogonal frequency-division multiplexing]] to communicate with their [[DSLAM]] despite multipath. In this case the reflections may be caused by mixed [[wire gauge]]s, but those from [[bridge tap]]s are usually more intense and complex. Where OFDM training is unsatisfactory, bridge taps may be removed.
+
+==Mathematical modeling==
+[[File:Multipath impulse response.png|thumb|right|320px|Mathematical model of the multipath impulse response.]]
+The mathematical model of the multipath can be presented using the method of the [[impulse response]] used for studying [[linear system]]s.
+
+Suppose you want to transmit a signal, ideal [[Dirac delta function|Dirac pulse]] of [[electromagnetism|electromagnetic]] power at time 0, i.e.

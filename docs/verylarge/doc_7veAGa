@@ -1,0 +1,314 @@
+==References==
+{{Reflist}}
+*{{FS1037C MS188}}
+
+==External links==
+*[http://www.microscopy.fsu.edu/primer/anatomy/numaperture.html &quot;Microscope Objectives: Numerical Aperture and Resolution&quot;] by Mortimer Abramowitz and Michael W. Davidson, ''Molecular Expressions: Optical Microscopy Primer'' (website), [[Florida State University]], April 22, 2004.
+*[http://www.microscopyu.com/articles/formulas/formulasna.html &quot;Basic Concepts and Formulas in Microscopy: Numerical Aperture&quot;] by Michael W. Davidson, ''[[Nikon]] MicroscopyU'' (website).
+*[http://www.rp-photonics.com/numerical_aperture.html &quot;Numerical aperture&quot;], ''Encyclopedia of Laser Physics and Technology'' (website).
+*[http://www.gonda.ucla.edu/bri_core/na.htm &quot;Numerical Aperture and Resolution&quot;], ''[[UCLA]] Brain Research Institute Microscopy Core Facilities'' (website), 2007.
+
+[[Category:Optics]]
+[[Category:Fiber optics]]
+[[Category:Microscopy]]</text>
+      <sha1>1lhcx95uklaxcu4vkstbe0lh3xa4wkc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Nyquist interval</title>
+    <ns>0</ns>
+    <id>41434</id>
+    <redirect title="Nyquist rate" />
+    <revision>
+      <id>61150284</id>
+      <parentid>33290572</parentid>
+      <timestamp>2006-06-29T05:52:28Z</timestamp>
+      <contributor>
+        <username>Dicklyon</username>
+        <id>869314</id>
+      </contributor>
+      <comment>redirect to Nyquist rate instead, where HS Black coined the term Nyquist interval</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="26" xml:space="preserve">#REDIRECT [[Nyquist rate]]</text>
+      <sha1>lsyfsnq7sbbgubkpvg5lo97xr1u5oo7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Nyquist rate</title>
+    <ns>0</ns>
+    <id>41435</id>
+    <revision>
+      <id>982324192</id>
+      <parentid>981778928</parentid>
+      <timestamp>2020-10-07T13:10:09Z</timestamp>
+      <contributor>
+        <username>Bob K</username>
+        <id>586364</id>
+      </contributor>
+      <comment>remove superfluous citation</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="8302" xml:space="preserve">{{Use American English|date = March 2019}}
+{{Short description|Important parameter in signal processing and sampling}}
+{{distinguish|Nyquist frequency}}
+[[File:Nyquist frequency &amp; rate.svg|thumb|Fig 1: Typical example of Nyquist frequency and rate. They are rarely equal, because that would require over-sampling by a factor of 2 (i.e. 4 times the bandwidth).]]
+In [[signal processing]], the '''Nyquist rate''', named after [[Harry Nyquist]], specifies a sampling rate.  In units of samples per second&lt;ref name=Oppenheim/&gt; its value is twice the highest frequency ([[Bandwidth (signal processing)|bandwidth]]) in [[Hertz|Hz]] of a function or signal to be sampled.  With an equal or higher sampling rate, the resulting [[discrete-time]] sequence is said to be free of the distortion known as [[aliasing]].   Conversely, for a given sample rate, the corresponding [[Nyquist frequency]] in Hz is the largest bandwidth that can be sampled without aliasing, and its value is one-half the sample-rate.  Note that the ''Nyquist rate'' is a property of a [[continuous-time signal]], whereas ''Nyquist frequency'' is a property of a discrete-time system. 
+
+The term ''Nyquist rate'' is also used in a different context with units of symbols per second, which is actually the field in which Harry Nyquist was working.  In that context it is an upper bound for the [[symbol rate]] across a bandwidth-limited [[baseband]] channel such as a [[electrical telegraph|telegraph line]]&lt;ref name=Freeman/&gt; or [[passband]] channel such as a limited radio frequency band or a [[frequency division multiplex]] channel. 
+
+==Relative to sampling==
+[[Image:Bandlimited.svg|thumb|Fig 2: Fourier transform of a bandlimited function (amplitude vs frequency)|right|240px]]
+When a continuous function, &lt;math&gt;x(t),&lt;/math&gt; is sampled at a constant rate, &lt;math&gt;f_s&lt;/math&gt; ''samples/second'', there is always an unlimited number of other continuous functions that fit the same set of samples.  But only one of them is [[Bandlimiting|bandlimited]] to &lt;math&gt;\tfrac{1}{2}f_s&lt;/math&gt; ''cycles/second'' ([[hertz]]),{{efn-ua
+|The factor of &lt;math&gt;\tfrac{1}{2}&lt;/math&gt; has the units ''cycles/sample'' (see [[Sampling (signal processing)#Theory|Sampling]] and [[Sampling theorem]]).
+}} which means that its [[Fourier transform]], &lt;math&gt;X(f),&lt;/math&gt; is &lt;math&gt;0&lt;/math&gt; for all &lt;math&gt;|f| \ge \tfrac{1}{2}f_s.&lt;/math&gt;&amp;nbsp; The mathematical algorithms that are typically used to recreate a continuous function from samples create arbitrarily good approximations to this theoretical, but infinitely long, function.  It follows that if the original function, &lt;math&gt;x(t),&lt;/math&gt; is bandlimited to &lt;math&gt;\tfrac{1}{2}f_s,&lt;/math&gt; which is called the ''Nyquist criterion'', then it is the one unique function the interpolation algorithms are approximating.  In terms of a function's own [[bandwidth (signal processing)|bandwidth]] &lt;math&gt;(B),&lt;/math&gt; as depicted here, the '''Nyquist criterion''' is often stated as &lt;math&gt;f_s &gt; 2B.&lt;/math&gt;&amp;nbsp; And &lt;math&gt;2B&lt;/math&gt; is called the '''Nyquist rate''' for functions with bandwidth &lt;math&gt;B.&lt;/math&gt;  When the Nyquist criterion is not met &lt;math&gt;(B &gt; \tfrac{1}{2}f_s),&lt;/math&gt; a condition called [[aliasing]] occurs, which results in some inevitable differences between &lt;math&gt;x(t)&lt;/math&gt; and a reconstructed function that has less bandwidth.  In most cases, the differences are viewed as distortion.
+
+[[File:Bandpass sampling depiction.svg|thumb|right|300px|Fig 3: The top 2 graphs depict Fourier transforms of 2 different functions that produce the same results when sampled at a particular rate.  The baseband function is sampled faster than its Nyquist rate, and the bandpass function is undersampled, effectively converting it to baseband.  The lower graphs indicate how identical spectral results are created by the aliases of the sampling process.]]
+
+===Intentional aliasing===
+{{main|Undersampling}}
+Figure 3 depicts a type of function called [[Baseband|baseband or lowpass]], because its positive-frequency range of significant energy is [0,&amp;nbsp;''B'').  When instead, the frequency range is (''A'',&amp;nbsp;''A''+''B''), for some ''A''&amp;nbsp;&gt;&amp;nbsp;''B'', it is called [[bandpass]], and a common desire (for various reasons) is to convert it to baseband.  One way to do that is frequency-mixing ([[heterodyne]]) the bandpass function down to the frequency range (0,&amp;nbsp;''B'').  One of the possible reasons is to reduce the Nyquist rate for more efficient storage.  And it turns out that one can directly achieve the same result by sampling the bandpass function at a sub-Nyquist sample-rate that is the smallest integer-sub-multiple of frequency ''A'' that meets the &lt;u&gt;baseband&lt;/u&gt; Nyquist criterion:&amp;nbsp; f&lt;sub&gt;s&lt;/sub&gt;&amp;nbsp;&gt;&amp;nbsp;2''B''.  For a more general discussion, see [[Undersampling|bandpass sampling]].
+
+==Relative to signaling==
+
+Long before [[Harry Nyquist]] had his name associated with sampling, the term ''Nyquist rate'' was used differently, with a meaning closer to what Nyquist actually studied.  Quoting [[Harold Stephen Black|Harold S. Black's]] 1953 book ''Modulation Theory,'' in the section '''''Nyquist Interval''''' of the opening chapter ''Historical Background:''
+
+:&quot;If the essential frequency range is limited to ''B'' cycles per second, 2''B'' was given by Nyquist as the maximum number of code elements per second that could be unambiguously resolved, assuming the peak interference is less half a quantum step.  This rate is generally referred to as '''signaling at the Nyquist rate''' and 1/(2''B'') has been termed a ''Nyquist interval''.&quot; (bold added for emphasis; italics from the original)
+
+According to the [[Oxford English Dictionary|OED]], Black's statement regarding 2''B'' may be the origin of the term ''Nyquist rate''.&lt;ref name=Black/&gt;
+
+Nyquist's famous 1928 paper was a study on how many pulses (code elements) could be transmitted per second, and recovered, through a channel of limited bandwidth.&lt;ref name=Nyquist/&gt;
+''Signaling at the Nyquist rate'' meant putting as many code pulses through a telegraph channel as its bandwidth would allow.  Shannon used Nyquist's approach when he proved the [[sampling theorem]] in 1948, but Nyquist did not work on sampling per se.
+
+Black's later chapter on &quot;The Sampling Principle&quot; does give Nyquist some of the credit for some relevant math:
+
+:&quot;Nyquist (1928) pointed out that, if the function is substantially limited to the time interval ''T'', 2''BT'' values are sufficient to specify the function, basing his conclusions on a Fourier series representation of the function over the time interval ''T''.&quot;
+
+==See also==
+*[[Nyquist frequency]]
+*[[Nyquist ISI criterion]]
+*[[Nyquist–Shannon sampling theorem]]
+*[[Sampling (signal processing)]]
+
+== Notes ==
+{{notelist-ua|1}}
+
+== References ==
+{{reflist|1|refs=
+&lt;ref name=Oppenheim&gt;
+{{Cite book |ref=Oppenheim |last=Oppenheim |first=Alan V. |authorlink=Alan V. Oppenheim |last2=Schafer |first2=Ronald W. |author2-link=Ronald W. Schafer |last3=Buck |first3=John R. |title=Discrete-time signal processing |year=1999 |publisher=Prentice Hall |location=Upper Saddle River, N.J. |isbn=0-13-754920-2 |edition=2nd |page=140 |url-access=registration |url=https://archive.org/details/discretetimesign00alan |quote=T is the sampling period, and its reciprocal, f&lt;sub&gt;s&lt;/sub&gt;=1/T, is the sampling frequency, in samples per second.
+}}&amp;nbsp; url=https://d1.amobbs.com/bbs_upload782111/files_24/ourdev_523225.pdf
+&lt;/ref&gt;
+
+&lt;ref name=Freeman&gt;
+{{cite book | title = Telecommunication System Engineering | author = Roger L. Freeman | publisher = John Wiley &amp; Sons | year = 2004 | ISBN = 0-471-45133-9 | url = https://books.google.com/books?id=Ga7PYE7E8kQC&amp;pg=PA399&amp;dq=nyquist-rate+define+bandwidth+symbols| pages = 399
+}}&lt;/ref&gt;
+
+&lt;ref name=Black&gt;
+[[Harold Stephen Black|Black, H. S.]], ''Modulation Theory'', v. 65, 1953, cited in [[OED]]
+&lt;/ref&gt;
+
+&lt;ref name=Nyquist&gt;
+Nyquist, Harry. &quot;Certain topics in telegraph transmission theory&quot;, Trans. AIEE, vol. 47, pp.&amp;nbsp;617–644, Apr. 1928 [https://web.archive.org/web/20060706192816/http://www.loe.ee.upatras.gr/Comes/Notes/Nyquist.pdf Reprint as classic paper in: ''Proc. IEEE, Vol. 90, No. 2, Feb 2002''].
+&lt;/ref&gt;
+
+}}
+{{DSP}}
+
+[[Category:Digital signal processing]]
+[[Category:Telecommunication theory]]
+[[Category:Rates]]
+
+[[de:Nyquist-Frequenz]]</text>
+      <sha1>howvg52w2zb4qvzuw6dsa5r4tczg67d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Nyquist's theorem</title>
+    <ns>0</ns>
+    <id>41436</id>
+    <redirect title="Nyquist–Shannon sampling theorem" />
+    <revision>
+      <id>24435178</id>
+      <parentid>15936930</parentid>
+      <timestamp>2005-09-30T22:44:40Z</timestamp>
+      <contributor>
+        <username>Psychonaut</username>
+        <id>28478</id>
+      </contributor>
+      <minor />
+      <comment>fixed punctuation</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="48" xml:space="preserve">#REDIRECT [[Nyquist–Shannon sampling theorem]]</text>
+      <sha1>ljsh4jl5savahvwkfnf43wt4nhznesd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Off-axis optical system</title>
+    <ns>0</ns>
+    <id>41437</id>
+    <revision>
+      <id>940082836</id>
+      <parentid>864632404</parentid>
+      <timestamp>2020-02-10T12:40:54Z</timestamp>
+      <contributor>
+        <username>Vpab15</username>
+        <id>26557985</id>
+      </contributor>
+      <comment>Remove &quot;note&quot;</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2188" xml:space="preserve">An '''off-axis optical system''' is an [[optics|optical]] system in which the [[optical axis]] of the [[aperture]] is not coincident with the mechanical center of the aperture. The principal applications of off-axis optical systems are to avoid obstruction of the primary aperture by secondary optical elements, instrument packages, or sensors, and to provide ready access to instrument packages or sensors at the focus. The engineering tradeoff of an off-axis optical system is an increase in image aberrations.
+
+There are various theoretical models for aberration in off-axis optical systems.&lt;ref&gt;{{Cite journal|last=Bazhanov|first=Y. V.|last2=Vlahko|first2=V. B.|date=2012-09-17|title=Design of an off-axis optical reflecting system|url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie/8444/84446E/Design-of-an-off-axis-optical-reflecting-system/10.1117/12.926162.short?SSO=1|volume=8444|doi=10.1117/12.926162.short}}&lt;/ref&gt; This involves various techniques including different types of equations for [[Ray tracing (physics)|ray-tracing]], and a goal can be optimizing the design.&lt;ref&gt;{{Cite journal|last=Bazhanov|first=Y. V.|last2=Vlahko|first2=V. B.|date=2012-09-17|title=Design of an off-axis optical reflecting system|url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie/8444/84446E/Design-of-an-off-axis-optical-reflecting-system/10.1117/12.926162.short?SSO=1|volume=8444|doi=10.1117/12.926162.short}}&lt;/ref&gt;
+
+An example of an off-axis optical system is a three mirror design as optics for a [[Hyperspectral imaging|hyperspectral imager]].&lt;ref&gt;{{Cite journal|last=Kim|first=Youngsoo|last2=Hong|first2=Jinsuk|last3=Choi|first3=Byeongin|last4=Kim|first4=Yeonsoo|date=2018-05-08|title=Three mirror off-axis optical system with an obscuration hole as a fore optics of the hyperspectral imager|url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10644/106441B/Three-mirror-off-axis-optical-system-with-an-obscuration-hole/10.1117/12.2284765.short|volume=10644|doi=10.1117/12.2284765.short}}&lt;/ref&gt;
+
+==See also==
+*[[Off-axis reflecting telescope]]
+
+==References==
+{{FS1037C}}
+{{Reflist}}
+[[Category:Geometrical optics]]
+
+
+{{optics-stub}}</text>
+      <sha1>hcrnrn1savvu9y2741uzt34imhs2ba9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>On- and off-hook</title>
+    <ns>0</ns>
+    <id>41438</id>
+    <revision>
+      <id>971508562</id>
+      <parentid>971003400</parentid>
+      <timestamp>2020-08-06T15:40:56Z</timestamp>
+      <contributor>
+        <username>Jim.henderson</username>
+        <id>2255048</id>
+      </contributor>
+      <comment>/* References */ The merger expanded it enough</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4277" xml:space="preserve">In [[telephony]], '''on-hook''' and '''off-hook''' are two states of a communication circuit. On subscriber telephones the states are produced by placing the handset onto or off the hookswitch. Placing the circuit into the off-hook state is also called ''seizing the line''. ''Off-hook'' originally referred to the condition that prevailed when telephones had a separate earpiece (''receiver''), which hung from its [[switchhook]] until the user initiated a telephone call by removing it. When off hook the weight of the receiver no longer depresses the spring-loaded switchhook, thereby connecting the instrument to the [[telephone line]].
+
+==Off-hook==
+[[File:Trimphone, Off Hook.JPG|thumb|  Off hook telephone. ]]
+The term '''off-hook''' has the following meanings:
+* The condition that exists when a [[telephone]] or other [[User (telecommunications)|user]] instrument is in use, i.e., during [[Dialling (telephony)|dialing]] or communicating.
+* A general description of one of two possible [[Signalling (telecommunication)|signaling]] states at an interface between telecommunications systems,&lt;ref&gt;{{cite web
+ | url = https://archive.org/stream/bitsavers_westernEleEngineeringandOperationsintheBellSystem2_49741719/Engineering_and_Operations_in_the_Bell_System_2ed_1984
+ | title = Engineering and Operations in the Bell System, 2nd Ed
+ | last = Rey
+ | first = R. F.
+ | date = 1984
+ | publisher = Bell Telephone Laboratories
+ | access-date = 19 March 2017
+ | page = 267}}&lt;/ref&gt; such as tone or no tone and [[Ground (electricity)|ground]] [[electrical connection|connection]] versus battery connection. Note that if off-hook pertains to one state, [[on-hook]] pertains to the other.
+* The active state (i.e., a closed loop ([[short circuit]] between the wires) of a [[subscriber line]] or [[Private branch exchange|PBX]] user loop)
+* An operating state of a communications link in which [[transmission (telecommunications)|data transmission]] is enabled either for (a) voice or data communications or (b) [[telecommunications network|network]] [[Signalling (telecommunication)|signaling]].&lt;ref&gt;[[Federal Standard 1037C]]&lt;/ref&gt;&lt;ref&gt;[[MIL-STD-188]]&lt;/ref&gt;
+
+On an ordinary two-wire telephone line, off-hook status is communicated to the [[telephone exchange]] by a resistance short across the pair. When an off-hook condition persists without dialing, for example because the handset has fallen off or the cable has been flooded, it is treated as a ''permanent loop'' or [[permanent signal]].
+
+The act of ''going off-hook'' is also referred to as ''seizing'' the line or channel.
+
+==On-hook==
+[[File:Original Trimphone, On Hook.JPG|thumb| On hook telephone handset]]
+The term '''on-hook''' has the following meanings:  
+* The condition that exists when a [[telephone]] or other [[User (telecommunications)|user]] instrument is not in use, i.e., when idle waiting for a call. Note: on-hook originally referred to the storage of an idle telephone receiver, i.e., separate [[earpiece]], on a switchhook. The weight of the receiver depresses the spring-loaded [[Telephone hook|switchhook]] thereby disconnecting the idle instrument (except its bell) from the [[telephone line]].
+* One of two possible [[Signalling (telecommunication)|signaling]] states, such as [[SF tone|tone]] or no tone, or [[Ground (electricity)|ground]] [[electrical connection|connection]] versus battery connection. Note: if on-hook pertains to one state, [[off-hook]] pertains to the other. 
+* The idle state, i.e., an open loop of a [[subscriber line]] or [[Private branch exchange|PBX]] user loop. 
+* An operating state of a [[telecommunication circuit]] in which [[transmission (telecommunications)|transmission]] is disabled and a high [[Electrical impedance|impedance]], or &quot;open [[Electronic circuit|circuit]]&quot;, is presented to the link by the [[end instrument]](s). Note: during the on-hook condition, the link is responsive to [[ringing signal]]s.
+
+The act of ''going on-hook'' is also referred to as ''releasing the line'' or ''channel'', and may initiate the process of [[clearing (telecommunications)|clearing]].
+
+== See also == 
+* [[Disconnect supervision]]
+* [[Hook flash]]
+* [[Line signaling]]
+* [[Off-hook tone]]
+
+== References ==
+{{FS1037C MS188}}
+{{reflist}}
+
+[[Category:Telephony signals]]</text>
+      <sha1>mg9bzmtz0bum08ifd3ldal5fd54qhcz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Office classification</title>
+    <ns>0</ns>
+    <id>41439</id>
+    <redirect title="Public switched telephone network" />
+    <revision>
+      <id>139669777</id>
+      <parentid>137977198</parentid>
+      <timestamp>2007-06-21T14:04:04Z</timestamp>
+      <contributor>
+        <ip>68.39.174.238</ip>
+      </contributor>
+      <comment>What lameness</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="47" xml:space="preserve">#REDIRECT [[Public switched telephone network]]</text>
+      <sha1>4059uyafkji4juahnhbop9nhz4jcv9x</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Online and offline</title>
+    <ns>0</ns>
+    <id>41440</id>
+    <revision>
+      <id>990716300</id>
+      <parentid>990716222</parentid>
+      <timestamp>2020-11-26T02:59:46Z</timestamp>
+      <contributor>
+        <username>XLinkBot</username>
+        <id>6163802</id>
+      </contributor>
+      <comment>BOT--Reverting link addition(s) by [[:en:Special:Contributions/ÙØ­ÙØ¯ Ø§ÙØ±Ø§Ù|ÙØ­ÙØ¯ Ø§ÙØ±Ø§Ù]] to revision 990218243 (cryptocoinlatest.blogspot.com/2020/11/how-to-online-trading.html [\bblog(?:cu|fa|harbor|mybrain|post|savy|spot|townhall)?\.(com|in)\b])</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="15050" xml:space="preserve">{{short description|Terms for being connected to, or disconnected from, the internet}}
+{{Use dmy dates|date=May 2019}}
+{{redirect-multi|2|Online|Offline}}
+
+In computer technology and [[telecommunications]], '''online''' indicates a state of connectivity''',''' and '''offline''' indicates a disconnected state. In modern terminology this usually refers to an [[Internet connection]], but (especially when expressed &quot;on line&quot; or &quot;on the line&quot;) could refer to any piece of equipment or functional unit that is connected to a larger system.  Being online means that the equipment or subsystem is connected, or that it is ready for use.&lt;ref&gt;[[Federal Standard 1037C]] [https://www.its.bldrdoc.gov/fs-1037/fs-1037c.htm]&lt;/ref&gt;
+
+&quot;Online&quot; has come to describe activities performed on and data available on the Internet,&lt;ref name=ox&gt;{{cite web|title=online|url=http://www.oxforddictionaries.com/definition/english/online|website=Dictionary of British and World English|publisher=Oxford University Press|accessdate=31 January 2015}}&lt;/ref&gt; for example: &quot;[[online identity]]&quot;, &quot;[[online predator]]&quot;, &quot;[[online gambling]]&quot;, &quot;[[online shopping]]&quot;, &quot;[[online banking]]&quot;, and &quot;[[E-learning|online learning]]&quot;. Similar meaning is also given by the prefixes &quot;cyber&quot; and &quot;e&quot;, as in the words &quot;[[cyberspace]]&quot;, &quot;[[cybercrime]]&quot;, &quot;[[email]]&quot;, and &quot;[[ecommerce]]&quot;.&lt;ref name=thesau&gt;{{cite web|title=Synonyms of online in English|url=http://www.oxforddictionaries.com/definition/american_english-thesaurus/online|website=Oxford Dictionary|publisher=Oxford University Press|accessdate=31 January 2015}}&lt;/ref&gt;  In contrast, &quot;offline&quot; can refer to either computing activities performed while disconnected from the Internet, or alternatives to Internet activities (such as shopping in [[brick-and-mortar]] stores). The term &quot;offline&quot; is sometimes used interchangeably with the acronym &quot;IRL&quot;, meaning &quot;in real life&quot;.&lt;ref&gt;{{cite web|url=https://www.denofgeek.com/uk/go/52766|title=19 things we miss about the early days of the web|website=Den of Geek}}&lt;/ref&gt;
+
+==Antecedents==
+During the 19th century, the term &quot;on line&quot; was commonly used in both the railroad and telegraph industries. For railroads, a signal box would send messages down the line (track), via a telegraph line (cable), indicating the track's status: &quot;Train on line&quot; or &quot;Line clear&quot;.&lt;ref&gt;{{cite book |url=https://archive.org/details/greatbritainrai00tradgoog |quote=train on line. |title=Great Britain Railways: Accidents. Court of Inquiry Reports |publisher= |author=Great Britain Board of Trade |year=1874 |page=[https://archive.org/details/greatbritainrai00tradgoog/page/n174 33] |accessdate=8 April 2015}}&lt;/ref&gt; Telegraph linemen would refer to sending current through a line as &quot;direct on line&quot; or &quot;battery on line&quot;;&lt;ref&gt;{{cite book |url=https://books.google.com/books?id=A4A3AQAAMAAJ&amp;q=%22on+line%22+telegraph&amp;pg=PA172 |title=Journal of the Society of Telegraph Engineers: Including Original Communications on Telegraphy and Electrical Science, Volume 8 |publisher= |author=Society of Telegraph Engineers |year=1879 |page=172 |accessdate=8 April 2015}}&lt;/ref&gt; or they may refer to a problem with the circuit as being &quot;on line&quot;, as opposed to the power source or end-point equipment.&lt;ref&gt;{{cite book |url=https://books.google.com/books?id=yxgAAAAAQAAJ&amp;q=%22on+line%22+telegraph+battery&amp;pg=PA47 |title=The practical telegraphist and guide to the telegraph service |publisher= |author=William Lynd |year=1885 |page=47 |accessdate=8 April 2015}}&lt;/ref&gt;
+
+==Examples==
+
+===Offline e-mail===
+One example of a common use of these concepts with email is a [[mail user agent]] (MUA) that can be instructed to be in either online or offline states.  One such MUA is [[Microsoft Outlook]]. When online it will attempt to connect to mail servers (to check for new mail at regular intervals, for example), and when offline it will not attempt to make any such connection. The online or offline state of the MUA does not necessarily reflect the connection status between the computer on which it is running and the internet. That is, the computer itself may be online—connected to Internet via a [[cable modem]] or other means—while Outlook is kept offline by the user, so that it makes no attempt to send or to receive messages. Similarly, a computer may be configured to employ a [[dial-up Internet access|dial-up connection]] on demand (as when an application such as Outlook attempts to make connection to a server), but the user may not wish for Outlook to trigger that call whenever it is configured to check for mail.&lt;ref name=&quot;Mann&quot;&gt;{{cite book|pages=[https://archive.org/details/howtodoeverythin00mann/page/76 76&amp;ndash;77]|title=How to Do Everything with Microsoft Office Outlook 2003|author=Bill Mann|publisher=McGraw-Hill Professional|year=2003|isbn=0-07-223070-3|url=https://archive.org/details/howtodoeverythin00mann/page/76}}&lt;/ref&gt;
+
+===Offline media playing===
+Another example of the use of these concepts is [[digital audio]] technology. A tape recorder, [[digital audio editor]], or other device that is online is one whose clock is under the control of the clock of a synchronization master device. When the sync master commences playback, the online device automatically synchronizes itself to the master and commences playing from the same point in the recording. A device that is offline uses no external clock reference and relies upon its own internal clock. When many devices are connected to a sync master it is often convenient, if one wants to hear just the output of one single device, to take it offline because, if the device is played back online, all synchronized devices have to locate the playback point and wait for each other device to be in synchronization.&lt;ref&gt;{{cite book|title=Audiopro Home Recording Course: A Comprehensive Multimedia Audio Recording Text|author=Bill Gibson|pages=155|year=1998|publisher=Hal Leonard|isbn=0-87288-715-4}}&lt;/ref&gt; (For related discussion, see [[MIDI timecode]], [[word sync]], and recording system synchronization.)
+
+===Offline browsing===
+{{main|Offline browsing|}}
+A third example of a common use of these concepts is a [[web browser]] that can be instructed to be in either online or offline states. The browser attempts to fetch pages from servers while only in the online state. In the offline state, users can perform '''offline browsing''', where pages can be browsed using local copies of those pages that have previously been downloaded while in the online state. This can be useful when the computer is offline and connection to the Internet is impossible or undesirable. The pages are downloaded either implicitly into the web browser's own [[browser cache|cache]] as a result of prior online browsing by the user or explicitly by a browser configured to keep local copies of certain web pages, which are updated when the browser is in the online state, either by checking that the local copies are up-to-date at regular intervals or by checking that the local copies are up-to-date whenever the browser is switched to the online  One such web browser capable of being explicitly configured to download pages for offline browsing is [[Internet Explorer]]. When pages are added to the Favourites list, they can be marked to be &quot;available for offline browsing&quot;. Internet Explorer will download to local copies both the marked page and, optionally, all of the pages that it links to. In Internet Explorer version 6, the level of direct and indirect links, the maximum amount of local disc space allowed to be consumed, and the schedule on which local copies are checked to see whether they are up-to-date, are configurable for each individual Favourites entry.&lt;ref&gt;{{cite book|title=Good Web Guide|author=Arabella Dymoke|year=2004|publisher=The Good Web Guide Ltd|isbn=1-903282-46-2|pages=17|chapter=an a to z of internet terms}}&lt;/ref&gt;&lt;ref&gt;{{cite book|title=The Complete Idiot's Guide to Wireless Computing and Networking|author=Paul Heltzel|chapter=Wireless Road Tricks|year=2002|publisher=Alpha Books|isbn=0-02-864287-2|pages=205}}&lt;/ref&gt;&lt;ref&gt;{{cite book|title=The Internet Companion: The Easy Australian Guide|author1=Glen Waller  |author2=Vanessa Waller |name-list-style=amp |year=2000|publisher=UNSW Press|isbn=0-86840-499-3|pages=110&amp;ndash;112}}&lt;/ref&gt;&lt;ref&gt;{{cite book|title=Configuring and Troubleshooting Windows XP Professional|author=Brian Barber|year=2001|publisher=Syngress Publishing|isbn=1-928994-80-6|pages=[https://archive.org/details/isbn_9781928994800/page/285 285&amp;ndash;389]|chapter=Configuring Internet Technologies|url=https://archive.org/details/isbn_9781928994800/page/285}}&lt;/ref&gt;
+
+For communities that lack adequate Internet connectivity—such as developing countries, rural areas, and prisons—offline information stores such as WiderNet's [[eGranary]] Digital Library (a collection of approximately thirty million educational resources from more than two thousand web sites and hundreds of CD-ROMs) provide offline access to information.&lt;ref&gt;{{Cite web|url=https://er.educause.edu/articles/2012/10/the-egranary-digital-library|title=The eGranary Digital Library|website=er.educause.edu|language=en|access-date=2020-01-08}}&lt;/ref&gt;  More recently, the Internet Archive announced an offline server project intended to provide access to material on inexpensive servers that can be updated using USB sticks and SD cards.&lt;ref&gt;{{Cite web|url=https://archive.org/about/offline-archive/|title=Internet Archive: Offline Archive|website=archive.org|access-date=2020-01-08}}&lt;/ref&gt;
+
+===Offline storage===
+Likewise, [[offline storage]] is [[computer data storage]] that is not &quot;available for immediate use on demand by the system without human intervention.&quot; Additionally, an otherwise online system that is powered down may be considered offline.
+
+===Offline messages===
+With the growing communication tools and media, the words offline and online are used very frequently. If a person is active over a messaging tool and is able to accept the messages it is termed as online message and if the person is not available and the message is left to view when the person is back, it is termed as offline message. In the same context, the person's availability is termed as online and non-availability is termed as offline.
+
+==Generalisations==
+Online and offline distinctions have been generalised from computing and telecommunication into the field of human interpersonal relationships. The distinction between what is considered online and what is considered offline has become a subject of study in the field of [[sociology]].&lt;ref name=Slater&gt;{{cite book|chapter=Social Relationships and Identity On-line and Off-line|title=Handbook of New Media: Social Shaping and Consequences of ICTs|editor1=Leah |editor2=Sonia |editor3=Lievrouw |editor4=Livingstone|author=Don Slater|pages=533&amp;ndash;543|year=2002|publisher=Sage Publications Inc|isbn=0-7619-6510-6}}&lt;/ref&gt;
+
+The distinction between online and offline is conventionally seen as the distinction between [[computer-mediated communication]] and [[Face-to-face (philosophy)|face-to-face]] communication (e.g., [[face time]]), respectively. Online is virtuality or [[cyberspace]], and offline is reality (i.e., [[Real life (reality)|real life or &quot;meatspace&quot;]]). Slater states that this distinction is &quot;obviously far too simple&quot;.&lt;ref name=Slater /&gt; To support his argument that the distinctions in relationships are more complex than a simple dichotomy of online versus offline, he observes that some people draw no distinction between an online relationship, such as indulging in [[cybersex]], and an offline relationship, such as being [[pen pal]]s.  He argues that even the [[telephone]] can be regarded as an online experience in some circumstances, and that the blurring of the distinctions between the uses of various technologies (such as [[personal digital assistant|PDA]] versus mobile phone, [[internet television]] versus internet, and telephone versus [[Voice over Internet Protocol]]) has made it &quot;impossible to use the term ''online'' meaningfully in the sense that was employed by the first generation of Internet research&quot;.&lt;ref name=Slater /&gt;
+
+Slater asserts that there are legal and regulatory pressures to reduce the distinction between online and offline, with a &quot;general tendency to assimilate online to offline and erase the distinction,&quot; stressing, however, that this does not mean that online relationships are being reduced to ''pre-existing'' offline relationships. He conjectures that greater legal status may be assigned to online relationships (pointing out that contractual relationships, such as business transactions, online are already seen as just as &quot;real&quot; as their offline counterparts), although he states it to be hard to imagine courts awarding [[palimony]] to people who have had a purely online sexual relationship. He also conjectures that an online/offline distinction may be seen by people as &quot;rather quaint and not quite comprehensible&quot; within 10 years.&lt;ref name=Slater /&gt;
+
+This distinction between ''online'' and ''offline'' is sometimes inverted, with online concepts being used to define and to explain offline activities, rather than (as per the conventions of the [[desktop metaphor]] with its desktops, trash cans, folders, and so forth) the other way around. Several cartoons appearing in ''[[The New Yorker]]'' have satirized this. One includes [[Saint Peter]] asking for a username and a password before admitting a man into Heaven. Another illustrates &quot;the off-line store&quot; where &quot;All items are actual size!&quot;, shoppers may &quot;Take it home as soon as you pay for it!&quot;, and &quot;Merchandise may be handled prior to purchase!&quot;&lt;ref&gt;{{cite book|chapter=Introduction|title=Evolve: Succeeding in the digital culture of tomorrow|author=Rosabeth Moss Kanter|year=2001|publisher=Harvard Business School|isbn=1-57851-439-8|url=https://archive.org/details/evolvesucceeding00kant}}&lt;/ref&gt;&lt;ref&gt;{{Cite web |url=http://executiveeducation.wharton.upenn.edu/ebuzz/0508/images/cartoon2.jpg |title=The &quot;off-line store&quot; cartoon from ''The New Yorker'' |access-date=6 September 2007 |archive-url=https://web.archive.org/web/20160410015927/http://executiveeducation.wharton.upenn.edu/ebuzz/0508/images/cartoon2.jpg |archive-date=10 April 2016 |url-status=dead }}&lt;/ref&gt;

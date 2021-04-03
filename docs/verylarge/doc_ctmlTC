@@ -1,0 +1,443 @@
+[[Category:Lists of members by band|Yardbirds, The]]
+[[Category:The Yardbirds members|*]]</text>
+      <sha1>4pf77wfxfsvbdp9c9ylbmdfgvx4cyby</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Iran-Iraq war</title>
+    <ns>0</ns>
+    <id>47980</id>
+    <redirect title="Iran–Iraq War" />
+    <revision>
+      <id>783876591</id>
+      <parentid>230152618</parentid>
+      <timestamp>2017-06-05T06:07:30Z</timestamp>
+      <contributor>
+        <username>Tom.Reding</username>
+        <id>9784415</id>
+      </contributor>
+      <minor />
+      <comment>+{{Redirect category shell}} using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="94" xml:space="preserve">#REDIRECT [[Iran–Iraq War]]
+
+{{Redirect category shell|1=
+{{R from other capitalisation}}
+}}</text>
+      <sha1>bcixa77te0wi61qtku814tli0yt1q41</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Ganges river</title>
+    <ns>0</ns>
+    <id>47983</id>
+    <redirect title="Ganges" />
+    <revision>
+      <id>337720086</id>
+      <parentid>337590190</parentid>
+      <timestamp>2010-01-14T02:07:16Z</timestamp>
+      <contributor>
+        <username>Xqbot</username>
+        <id>8066546</id>
+      </contributor>
+      <minor />
+      <comment>Robot: Fixing double redirect to [[Ganges]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="20" xml:space="preserve">#REDIRECT [[Ganges]]</text>
+      <sha1>72z5lkqwv6p09ptohuuwcwhncg21go3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Address Resolution Protocol</title>
+    <ns>0</ns>
+    <id>47986</id>
+    <revision>
+      <id>987862773</id>
+      <parentid>987862662</parentid>
+      <timestamp>2020-11-09T18:06:57Z</timestamp>
+      <contributor>
+        <username>Materialscientist</username>
+        <id>7852030</id>
+      </contributor>
+      <minor />
+      <comment>Reverted edits by [[Special:Contributions/27.109.113.97|27.109.113.97]] ([[User talk:27.109.113.97|talk]]) ([[WP:HG|HG]]) (3.4.10)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="21157" xml:space="preserve">{{short description|Telecommunications protocol used for resolution of network layer addresses}}
+{{IPstack}}
+
+The '''Address Resolution Protocol''' ('''ARP''') is a [[communication protocol]] used for discovering the [[link layer]] address, such as a [[MAC address]], associated with a given [[internet layer]] address, typically an [[IPv4 address]]. This mapping is a critical function in the [[Internet protocol suite]]. ARP was defined in 1982 by {{IETF RFC|826}},&lt;ref&gt;{{cite web
+|url       = http://tools.ietf.org/html/rfc826
+|author    = David C. Plummer
+|title     = RFC 826, An Ethernet Address Resolution Protocol -- or -- Converting Network Protocol Addresses to 48.bit Ethernet Address for Transmission on Ethernet Hardware
+|publisher = Internet Engineering Task Force, Network Working Group
+|date      = November 1982
+}}&lt;/ref&gt; which is [[Internet Standard]] STD 37.
+
+ARP has been implemented with many combinations of network and data link layer technologies, such as [[IPv4]], [[Chaosnet]], [[DECnet]] and Xerox [[PARC Universal Packet]] (PUP) using [[IEEE 802]] standards, [[FDDI]], [[X.25]], [[Frame Relay]] and [[Asynchronous Transfer Mode]] (ATM).
+
+In [[IPv6|Internet Protocol Version 6]] (IPv6) networks, the functionality of ARP is provided by the [[Neighbor Discovery Protocol]] (NDP).
+
+==Operating scope==
+The Address Resolution Protocol is a [[request-response]] protocol whose messages are encapsulated by a link layer protocol. It is communicated within the boundaries of a single network, never routed across internetworking nodes. This property places ARP into the [[link layer]] of the [[Internet protocol suite]].&lt;ref&gt;{{cite web | url = http://tools.ietf.org/html/rfc1122 | author = Braden, R. | title = RFC 1122 - Requirements for Internet Hosts -- Communication Layers | publisher = Internet Engineering Task Force | date = October 1989}}&lt;/ref&gt;
+
+==Packet structure==
+The Address Resolution Protocol uses a simple message format containing one address resolution request or response. The size of the ARP message depends on the link layer and network layer address sizes. The message [[Header (computing)|header]] specifies the types of network in use at each layer as well as the size of addresses of each. The message header is completed with the operation code for request (1) and reply (2). The payload of the packet consists of four addresses, the hardware and protocol address of the sender and receiver hosts.
+
+The principal packet structure of ARP packets is shown in the following table which illustrates the case of IPv4 networks running on Ethernet. In this scenario, the packet has 48-bit fields for the sender hardware address (SHA) and target hardware address (THA), and 32-bit fields for the corresponding sender and target protocol addresses (SPA and TPA). The ARP packet size in this case is 28 bytes.
+
+{| class=&quot;wikitable&quot; style=&quot;float:right; text-align: center; width: 30em;&quot; border=1
+|+ Internet Protocol (IPv4) over Ethernet ARP packet
+|-
+! colspan=&quot;1&quot;|Octet offset
+! colspan=&quot;8&quot; width=&quot;50%&quot;|0
+! colspan=&quot;8&quot; width=&quot;50%&quot;|1
+|-
+! 0
+| colspan=&quot;16&quot;| Hardware type (HTYPE)
+|-
+! 2
+| colspan=&quot;16&quot;| Protocol type (PTYPE)
+|-
+! 4
+| colspan=&quot;8&quot;| Hardware address length (HLEN)
+| colspan=&quot;8&quot;| Protocol address length (PLEN)
+|-
+! 6
+| colspan=&quot;16&quot;| Operation (OPER)
+|-
+! 8
+| colspan=&quot;16&quot; style=&quot;background:#f0fff0&quot;| Sender hardware address (SHA) (first 2 bytes)
+|-
+! 10
+| colspan=&quot;16&quot; style=&quot;background:#f0fff0&quot;| (next 2 bytes)
+|-
+! 12
+| colspan=&quot;16&quot; style=&quot;background:#f0fff0&quot;| (last 2 bytes)
+|-
+! 14
+| colspan=&quot;16&quot; style=&quot;background:#d0ffd0&quot;| Sender protocol address (SPA) (first 2 bytes)
+|-
+! 16
+| colspan=&quot;16&quot; style=&quot;background:#d0ffd0&quot;| (last 2 bytes)
+|-
+! 18
+| colspan=&quot;16&quot; style=&quot;background:#f0f0ff&quot;| Target hardware address (THA) (first 2 bytes)
+|-
+! 20
+| colspan=&quot;16&quot; style=&quot;background:#f0f0ff&quot;| (next 2 bytes)
+|-
+! 22
+| colspan=&quot;16&quot; style=&quot;background:#f0f0ff&quot;| (last 2 bytes)
+|-
+! 24
+| colspan=&quot;16&quot; style=&quot;background:#d0d0ff&quot;| Target protocol address (TPA) (first 2 bytes)
+|-
+! 26
+| colspan=&quot;16&quot; style=&quot;background:#d0d0ff&quot;| (last 2 bytes)
+|}
+
+; Hardware type (HTYPE): This field specifies the network link protocol type. Example: Ethernet is 1.
+; Protocol type (PTYPE): This field specifies the internetwork protocol for which the ARP request is intended. For IPv4, this has the value 0x0800. The permitted PTYPE values share a numbering space with those for [[EtherType]].&lt;ref&gt;[//www.iana.org/assignments/arp-parameters/arp-parameters.xhtml IANA ARP - &quot;Protocol Type&quot;]&lt;/ref&gt;&lt;ref&gt;[https://www.iana.org/assignments/ethernet-numbers/ethernet-numbers.xhtml IANA - Ethertype values]&lt;/ref&gt;&lt;ref&gt;{{IETF RFC|5342}}&lt;/ref&gt;
+; Hardware length (HLEN): Length (in [[octet (computing)|octet]]s) of a hardware address. Ethernet address length is 6.
+; Protocol length (PLEN): Length (in octets) of internetwork addresses. The internetwork protocol is specified in PTYPE. Example: IPv4 address length is 4.
+; Operation : Specifies the operation that the sender is performing: 1 for request, 2 for reply.
+; Sender hardware address (SHA): Media address of the sender. In an ARP request this field is used to indicate the address of the host sending the request. In an ARP reply this field is used to indicate the address of the host that the request was looking for.
+; Sender protocol address (SPA): Internetwork address of the sender.
+; Target hardware address (THA): Media address of the intended receiver. In an ARP request this field is ignored. In an ARP reply this field is used to indicate the address of the host that originated the ARP request.
+; Target protocol address (TPA): Internetwork address of the intended receiver.
+
+ARP protocol parameter values have been standardized and are maintained by the [[Internet Assigned Numbers Authority]] (IANA).&lt;ref&gt;{{Cite web|url=https://www.iana.org/assignments/arp-parameters/arp-parameters.xhtml|title=Address Resolution Protocol (ARP) Parameters|website=www.iana.org|access-date=2018-10-16}}&lt;/ref&gt;
+
+The [[EtherType]] for ARP is 0x0806. This appears in the Ethernet frame header when the payload is an ARP packet and is not to be confused with PTYPE, which appears within this encapsulated ARP packet.
+
+==Example==
+Two computers in an office (Computer 1 and Computer 2) are connected to each other in a [[local area network]] by [[Ethernet]] cables and [[network switches]], with no intervening [[Gateway (telecommunications)|gateways]] or [[Router (computing)|routers]]. Computer 1 has a packet to send to Computer 2. Through [[DNS]], it determines that Computer 2 has the IP address 192.168.0.55.
+
+To send the message, it also requires Computer 2's [[MAC address]]. First, Computer 1 uses a cached ARP table to look up 192.168.0.55 for any existing records of Computer 2's MAC address (00:eb:24:b2:05:ac). If the MAC address is found, it sends an Ethernet [[frame (networking)|frame]] with destination address 00:eb:24:b2:05:ac, containing the IP packet onto the link. If the cache did not produce a result for 192.168.0.55, Computer 1 has to send a broadcast ARP request message (destination FF:FF:FF:FF:FF:FF MAC address), which is accepted by all computers on the local network, requesting an answer for 192.168.0.55.
+
+Computer 2 responds with an ARP response message containing its MAC and IP addresses. As part of fielding the request, Computer 2 may insert an entry for Computer 1 into its ARP table for future use.
+
+Computer 1 receives and caches the response information in its ARP table and can now send the packet.&lt;ref&gt;Chappell, Laura A. and Tittel, Ed. ''Guide to TCP/IP, Third Edition''. Thomson Course Technology, 2007, pp. 115-116.&lt;/ref&gt;
+
+==ARP probe==
+An '''ARP probe''' is an ARP request constructed with an all-zero SPA. Before beginning to use an IPv4 address (whether received from manual configuration, DHCP, or some other means), a host implementing this specification must test to see if the address is already in use, by broadcasting ARP probe packets.&lt;ref&gt;{{cite IETF |rfc=5227 | author = Cheshire, S. | title = IPv4 Address Conflict Detection | publisher = Internet Engineering Task Force | date = July 2008}}&lt;/ref&gt;
+
+==ARP announcements==
+ARP may also be used as a simple announcement protocol. This is useful for updating other hosts' mappings of a hardware address when the sender's IP address or MAC address changes. Such an announcement, also called a '''gratuitous ARP''' message, is usually broadcast as an ''ARP request'' containing the SPA in the target field (TPA=SPA), with THA set to zero. An alternative way is to broadcast an ''ARP reply'' with the sender's SHA and SPA duplicated in the target fields (TPA=SPA, THA=SHA).
+
+The ''ARP request'' and ''ARP reply'' announcements are both standards-based methods,&lt;ref&gt;{{cite web
+        | url = https://tools.ietf.org/html/rfc5944#section-4.6
+        | author = Perkins, C. 
+        | title = RFC 5944 - IP Mobility Support for IPv4, Revised
+        | publisher = Internet Engineering Task Force
+        | date = November 2010
+        | quote=A gratuitous ARP MAY use either an ARP Request or an ARP Reply packet. [...] any node receiving any ARP packet (Request or Reply) MUST update its local ARP cache with the Sender Protocol and Hardware Addresses in the ARP packet [...]
+}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+        | url = https://tools.ietf.org/html/rfc2002#section-4.6
+        | author = Perkins, C. 
+        | title = RFC 2002 - IP Mobility Support
+        | publisher = Internet Engineering Task Force
+        | date = October 1996
+}}&lt;/ref&gt; but the ''ARP request'' method is preferred.&lt;ref&gt;{{cite web | url = https://tools.ietf.org/html/rfc5227#section-3 | author = Cheshire, S. | title = RFC 5227 - IPv4 Address Conflict Detection | publisher = Internet Engineering Task Force | date = July 2008 | quote=Why Are ARP Announcements Performed Using ARP Request Packets and Not ARP Reply Packets?}}&lt;/ref&gt; Some devices may be configured for the use of either of these two types of announcements.&lt;ref&gt;{{cite web
+ | url = http://support.citrix.com/article/CTX112701
+ | title = FAQ: The Firewall Does not Update the Address Resolution Protocol Table
+ | publisher = [[Citrix]]
+ | date = 2015-01-16
+ | quote =  [...] garpReply enabled [...] generates ARP packets that [...] are of OPCODE type REPLY, rather than REQUEST.
+}}&lt;/ref&gt;
+
+An ARP announcement is not intended to solicit a reply; instead, it updates any cached entries in the ARP tables of other hosts that receive the packet. The operation code in the announcement may be either request or reply; the ARP standard specifies that the opcode is only processed after the ARP table has been updated from the address fields.&lt;ref&gt;[http://www1.ietf.org/mail-archive/web/dhcwg/current/msg03797.html Gratuitous ARP in DHCP vs. IPv4 ACD Draft] {{webarchive |url=https://web.archive.org/web/20071012093401/http://www1.ietf.org/mail-archive/web/dhcwg/current/msg03797.html |date=October 12, 2007 }}&lt;/ref&gt;&lt;ref&gt;[http://tools.ietf.org/html/rfc2002#section-4.6 RFC 2002 Section 4.6]&lt;/ref&gt;&lt;ref&gt;[http://tools.ietf.org/html/rfc2131#section-4.4.1 RFC 2131 DHCP – Last lines of Section 4.4.1]&lt;/ref&gt;
+
+Many operating systems issue an ARP announcement during startup. This helps to resolve problems which would otherwise occur if, for example, a [[Network interface controller|network card]] was recently changed (changing the IP-address-to-MAC-address mapping) and other hosts still have the old mapping in their ARP caches.
+
+ARP announcements are also used by some network interfaces to provide load balancing for incoming traffic. In a [[NIC teaming|team]] of network cards, it is used to announce a different MAC address within the team that should receive incoming packets.
+
+ARP announcements can be used in the [[Zeroconf]] protocol to allow automatic assignment of a [[link-local address|link-local IP addresses]] to an interface where no other IP address configuration is available. The announcements are used to ensure an address chosen by a host is not in use by other hosts on the network link.&lt;ref&gt;{{IETF RFC|3927}}&lt;/ref&gt;
+
+==ARP mediation==
+'''ARP mediation''' refers to the process of resolving Layer-2 addresses through a [[virtual private wire service]] (VPWS) when different resolution protocols are used on the connected circuits, e.g., [[Ethernet]] on one end and [[Frame Relay]] on the other.  In [[IPv4]], each [[Provider Edge]] (PE) device discovers the IP address of the locally attached [[Customer Edge]] (CE) device and distributes that IP address to the corresponding remote PE device.  Then each PE device responds to local ARP requests using the IP address of the remote CE device and the hardware address of the local PE device.  In [[IPv6]], each PE device discovers the IP address of both local and remote CE devices and then intercepts local [[Neighbor Discovery Protocol|Neighbor Discovery]] (ND) and [[Inverse Neighbor Discovery]] (IND) packets and forwards them to the remote PE device.&lt;ref&gt;{{cite IETF | rfc = 6575 | author = Shah, H. | title = Address Resolution Protocol (ARP) Mediation for IP Interworking of Layer 2 VPNs | publisher = Internet Engineering Task Force | date = June 2012 | display-authors = etal}}&lt;/ref&gt;
+
+=={{anchor|INARP}}Inverse ARP and Reverse ARP==
+'''Inverse Address Resolution Protocol''' ('''Inverse ARP''' or '''InARP''') is used to obtain [[network layer]] addresses (for example, [[IP address]]es) of other nodes from [[data link layer]] (Layer 2) addresses. Since ARP translates layer-3 addresses to layer-2 addresses, InARP may be described as its inverse. In addition, InARP is implemented as a protocol extension to ARP: it uses the same packet format as ARP, but different operation codes.
+
+InARP is primarily used in [[Frame Relay]] ([[DLCI]]) and ATM networks, in which layer-2 addresses of [[virtual circuit]]s are sometimes obtained from layer-2 signaling, and the corresponding layer-3 addresses must be available before those virtual circuits can be used.&lt;ref&gt;{{cite web | url = http://tools.ietf.org/html/rfc2390 | author = T. Bradley | title = RFC 2390 - Inverse Address Resolution Protocol | publisher = Internet Engineering Task Force | date = September 1998|display-authors=etal}}&lt;/ref&gt;
+
+The [[Reverse Address Resolution Protocol]] (Reverse ARP or RARP), like InARP, translates layer-2 addresses to layer-3 addresses. However, in InARP the requesting station queries the layer-3 address of another node, whereas RARP is used to obtain the layer-3 address of the requesting station itself for address configuration purposes. RARP is obsolete; it was replaced by [[BOOTP]], which was later superseded by the [[Dynamic Host Configuration Protocol]] (DHCP).&lt;ref&gt;{{cite IETF |last1=Finlayson |last2=Mann |last3=Mogul |last4=Theimer |title=A Reverse Address Resolution Protocol |rfc=903 |publisher=Internet Engineering Task Force |date=June 1984}}&lt;/ref&gt;
+
+==ARP spoofing and proxy ARP==
+{{main|ARP spoofing|Proxy ARP}}
+[[Image:ARP Spoofing.svg|right|thumb|200px|A successful [[ARP spoofing]] attack allows an attacker to perform a [[man-in-the-middle attack]].]]
+Because ARP does not provide methods for authenticating ARP replies on a network, ARP replies can come from systems other than the one with the required Layer 2 address.  An ARP ''proxy'' is a system that answers the ARP request on behalf of another system for which it will forward traffic, normally as a part of the network's design, such as for a dialup internet service. By contrast, in ARP ''spoofing'' the answering system, or ''spoofer'', replies to a request for another system's address with the aim of intercepting data bound for that system. A malicious user may use ARP spoofing to perform a [[man-in-the-middle]] or [[denial-of-service]] attack on other users on the network. Various software exists to both detect and perform ARP spoofing attacks, though ARP itself does not provide any methods of protection from such attacks.&lt;ref name=&quot;grc&quot;&gt;{{cite web | url = http://www.grc.com/nat/arp.htm | author = Steve Gibson | title = ARP Cache Poisoning | publisher = [[Gibson Research Corporation|GRC]] | date = 2005-12-11}}&lt;/ref&gt;
+
+==Alternatives to ARP==
+IPv6 uses the [[Neighbor Discovery Protocol]] and its extensions such as [[Secure Neighbor Discovery]], rather than ARP.
+
+Computers can maintain lists of known addresses, rather than using an active protocol. In this model, each computer maintains a database of the mapping of [[Layer 3]] addresses (e.g., [[IP addresses]]) to [[Layer 2]] addresses (e.g., [[Ethernet]] [[MAC addresses]]). This data maintained primarily by interpreting ARP packets from the local network link. Thus, it is often called the ''ARP cache''. Since at least the 1980s,&lt;ref&gt;{{cite web
+| url = http://www.freebsd.org/cgi/man.cgi?query=arp&amp;apropos=0&amp;sektion=0&amp;manpath=2.10+BSD&amp;arch=default&amp;format=html
+| author = University of California, Berkeley
+| title = BSD manual page for arp(8C) command
+| accessdate= 2011-09-28}}&lt;/ref&gt; networked computers have a utility called ''arp'' for interrogating or manipulating this database.&lt;ref&gt;{{cite web
+ |url=http://manpages.ubuntu.com/manpages/lucid/man8/arp.8.html 
+ |author=Canonical 
+ |title=Ubuntu manual page for arp(8) command 
+ |accessdate=2011-09-28 
+ |url-status=dead 
+ |archiveurl=https://web.archive.org/web/20120316213518/http://manpages.ubuntu.com/manpages/lucid/man8/arp.8.html 
+ |archivedate=2012-03-16 
+}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+| url = https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man8/arp.8.html
+| author = Apple Computer
+| title = Mac OS X manual page for arp(8) command
+| accessdate= 2011-09-28}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+| url = https://technet.microsoft.com/en-us/library/cc786759%28WS.10%29.aspx
+| author = Microsoft
+| title = Windows help for arp command
+| accessdate= 2011-09-28}}&lt;/ref&gt;
+
+Historically, other methods were used to maintain the mapping between addresses, such as static configuration files,&lt;ref&gt;{{cite web
+| url = http://www.freebsd.org/cgi/man.cgi?query=ethers&amp;sektion=5&amp;apropos=0&amp;manpath=SunOS+4.1.3
+| author = Sun Microsystems
+| title = SunOS manual page for ethers(5) file
+| accessdate= 2011-09-28}}&lt;/ref&gt; or centrally maintained lists.&lt;!--[[User:Kvng/RTH]]--&gt;
+
+==ARP stuffing==
+Embedded systems such as networked cameras&lt;ref&gt;{{cite web
+| url = http://www.axis.com/files/manuals/ig_p13Series_38731_en_1006.pdf
+| author = Axis Communication
+| title = Axis P13 Network Camera Series Installation Guide
+| accessdate= 2011-09-28}}&lt;/ref&gt; and networked power distribution devices,&lt;ref&gt;
+{{cite web
+| url = http://www.apcmedia.com/salestools/ASTE-6Z6K56_R0_EN.pdf
+| author = American Power Corporation
+| title = Switched Rack Power Distribution Unit Installation and Quick Start Manual
+| accessdate = 2011-09-28
+| archive-url = https://web.archive.org/web/20111125012617/http://www.apcmedia.com/salestools/ASTE-6Z6K56_R0_EN.pdf
+| archive-date = 2011-11-25
+| url-status = dead
+}}
+&lt;/ref&gt; which lack a user interface, can use so-called ''ARP stuffing'' to make an initial network connection, although this is a misnomer, as ARP is not involved.
+
+This is a solution to an issue in network management of consumer devices, specifically the allocation of IP addresses of ethernet devices where:
+# the user doesn't have the ability to control [[DHCP]] or similar address allocation protocols
+# the device doesn't have a user interface to configure it with
+# the user's computer can't communicate with it because it has no suitable IP address.
+
+The solution adopted is as follows:
+* The user's computer has an IP address ''stuffed'' manually into its address table (normally with the ''arp'' command with the MAC address taken from a label on the device)
+* The computer sends special packets to the device, typically a [[Ping (networking utility)|ping]] packet with a non-default size.
+* The device then adopts this IP address
+* The user then communicates with it by [[telnet]] or [[http|web]] protocols to complete the configuration.
+
+Such devices typically have a method to disable this process once the device is operating normally, as it is vulnerable to attack.
+
+==Standards documents==
+* {{IETF RFC|826}} - Ethernet Address Resolution Protocol, Internet Standard STD 37.
+* {{IETF RFC|903}} - Reverse Address Resolution Protocol, Internet Standard STD 38.
+* {{IETF RFC|2390}} - Inverse Address Resolution Protocol, draft standard
+* {{IETF RFC|5227}} - IPv4 Address Conflict Detection, proposed standard
+
+==See also==
+* [[ARP spoofing]]
+* [[Arping]]
+* [[Arptables]]
+* [[Arpwatch]]
+* [[Bonjour Sleep Proxy]]
+* [[Cisco HDLC]]
+* [[Neighbor Discovery Protocol]]
+* [[Proxy ARP]]
+
+==References==
+{{Reflist}}
+{{refbegin}}
+* {{FOLDOC}}
+{{refend}}
+
+==External links==
+{{Wikiversity | Address Resolution Protocol}}
+* [http://www.eventhelix.com/RealtimeMantra/Networking/Arp.pdf ARP Sequence Diagram (pdf)]
+* [http://wiki.wireshark.org/Gratuitous_ARP Gratuitous ARP]
+* [https://web.archive.org/web/20090903074149/http://sid.rstack.org/arp-sk/ ARP-SK ARP traffic generation tools]
+* [http://wiki.wireshark.org/SampleCaptures#head-2fb4a82886c1d8c722134b44461e22e5f7f54b32 Sample Capture file from WireSharkWiki]
+
+{{Windows commands}}
+
+[[Category:Address Resolution Protocol| ]]
+[[Category:Internet Standards]]</text>
+      <sha1>t4126x1itm2vl3kcpwq8fj603za30b8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>ARP</title>
+    <ns>0</ns>
+    <id>47987</id>
+    <redirect title="Arp" />
+    <revision>
+      <id>859102392</id>
+      <parentid>783876595</parentid>
+      <timestamp>2018-09-11T18:43:23Z</timestamp>
+      <contributor>
+        <username>Nick Number</username>
+        <id>1526960</id>
+      </contributor>
+      <comment>added R tags</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="120" xml:space="preserve">#REDIRECT [[Arp]]
+
+{{Redirect category shell|1=
+{{R from ambiguous title}}
+{{R from capitalization}}
+{{R from merge}}
+}}</text>
+      <sha1>gb9pv61fofb4gybhs3iyptw28p7lraw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Godavari River</title>
+    <ns>0</ns>
+    <id>47988</id>
+    <revision>
+      <id>988281893</id>
+      <parentid>985293166</parentid>
+      <timestamp>2020-11-12T06:07:54Z</timestamp>
+      <contributor>
+        <username>Mohdbilalsiddiqui1995</username>
+        <id>36514160</id>
+      </contributor>
+      <comment>/* Course */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="59030" xml:space="preserve">{{About|the river in India|other uses|Godavari (disambiguation)}}
+{{Use dmy dates|date=August 2019}}
+{{Use Indian English|date=August 2019}}
+{{short description|River in India}}
+{{Infobox river
+| name               =Godavari
+| name_native        = 
+| name_native_lang   = 
+| name_other         =Godari
+| name_etymology     = 
+&lt;!---------------------- IMAGE &amp; MAP --&gt;
+| image              = Dummugudem Barrage on Godavari Khammam District.jpg
+| image_size         = 300
+| image_caption      = [[Dummugudem Lift Irrigation Scheme|Dummugudem weir]] across the Godavari in [[Bhadradri Kothagudem district]]
+| map                = Godavari.png
+| map_size           = 300 px
+| map_caption        = Path of the Godavari through the [[South India]]n Peninsula [http://u.osmfr.org/m/374056/]
+| pushpin_map        = 
+| pushpin_map_size   = 
+| pushpin_map_caption= 
+&lt;!---------------------- LOCATION --&gt;
+| subdivision_type1  = Country
+| subdivision_name1  = [[India]]
+| subdivision_type2  = State
+| subdivision_name2  = [[Maharashtra]], [[Odisha]], [[Chhattisgarh]], [[Telangana]], [[Andhra Pradesh]]
+| subdivision_type3  = Region
+| subdivision_name3  = [[West India]] and [[South India]]
+| subdivision_type4  = 
+| subdivision_name4  = 
+| subdivision_type5  = 
+| subdivision_name5  = 
+&lt;!---------------------- PHYSICAL CHARACTERISTICS --&gt;
+| length             = {{convert|1465|km|mi|abbr=on}} 
+| width_min          = 
+| width_avg          = 
+| width_max          = 
+| depth_min          = 
+| depth_avg          = 
+| depth_max          = 
+| discharge1_location= 
+| discharge1_min     = 
+| discharge1_avg     = {{convert|3505|m3/s|cuft/s|abbr=on}}
+| discharge1_max     = 
+| discharge2_location= [[Polavaram]] (1901–1979)&lt;ref&gt;{{cite web|title=Sage River Database |url=http://www.sage.wisc.edu/riverdata/scripts/station_table.php?qual=32&amp;filenum=865 |accessdate=2011-06-16 |url-status=dead |archiveurl=https://web.archive.org/web/20100621153903/http://www.sage.wisc.edu/riverdata/scripts/station_table.php?qual=32&amp;filenum=865 |archivedate=21 June 2010 }}&lt;/ref&gt;
+| discharge2_min     = {{convert|7|m3/s|cuft/s|abbr=on}}
+| discharge2_avg     = {{convert|3061.18|m3/s|cuft/s|abbr=on}}
+| discharge2_max     = {{convert|34606|m3/s|cuft/s|abbr=on}}
+&lt;!---------------------- BASIN FEATURES --&gt;
+| source1            = 
+| source1_location   = [[Brahmagiri (hill), Maharashtra|Brahmagiri Mountain]], [[Tryambakeshwar]], [[Nashik]], [[Maharashtra]], [[India]]
+| source1_coordinates= {{coord|19|55|48|N|73|31|39|E|display=inline}}
+| source1_elevation  = {{convert|920|m|abbr=on}}
+| mouth              = [[Bay of Bengal]]
+| mouth_location     = [[Antarvedi]], [[East Godavari district|East Godavari]], [[Andhra Pradesh]], [[India]]
+| mouth_coordinates  = {{coord|17|0|N|81|48|E|display=inline,title}}&lt;ref&gt;{{GEOnet2|32FA87A287373774E0440003BA962ED3|Godāvari River}}&lt;/ref&gt;
+| mouth_elevation   ))(09&amp;%5*'68())&amp;%6$))= {{convert|0|m|abbr=on}}
+| progression        = 
+| river_system       = 
+| basin_size         = {{convert|312812|km2|abbr=on}}
+| tributaries_left   = [[Banganga River (Maharashtra)|Banganga]], [[Kadva River|Kadva]], [[Shivana River|Shivana]], [[Purna River (tributary of Godavari)|Purna]], [[Kadam river|Kadam]], [[Pranahita River|Pranahita]], [[Indravati River|Indravati]], [[Taliperu River|Taliperu]], [[Sabari River|Sabari]], [[Dharna River|Dharna]]
+| tributaries_right  = [[Nasardi River|Nasardi]], [[Pravara River|Pravara]], [[Sindphana River|Sindphana]], [[Manjira River|Manjira]], [[Manair River|Manair]], [[Kinnerasani River|Kinnerasani]]
+| custom_label       = 
+| custom_data        = 
+| extra              = 
+}}
+
+The '''Godavari''' is [[India]]'s second longest river after the [[Ganges river|Ganga]]. Its source is in [[Trimbakeshwar Range|Triambakeshwar]], [[Maharashtra]].&lt;ref&gt;[http://www.kgbo-cwc.ap.nic.in/About%20Basins/Godavari.pdf &quot;Godavari river basin map&quot;]&lt;/ref&gt; It flows east for {{convert|1465|km|mi}}, draining the states of Maharashtra (48.6%), [[Telangana]] (18.8%), [[Andhra Pradesh]] (4.5%), [[Chhattisgarh]] (10.9%) and [[Odisha]] (5.7%). The river ultimately empties into the [[Bay of Bengal]] through an extensive network of tributaries.&lt;ref&gt;{{cite web |url=http://www.cwc.nic.in/main/webpages/hba.pdf |title=Integrated Hydrological DataBook (Non-Classified River Basins) |publisher=Central Water Commission |accessdate=2015-10-13 |page=9 |archive-url=https://web.archive.org/web/20160304192920/http://www.cwc.nic.in/main/webpages/hba.pdf |archive-date=2016-03-04 |url-status=dead }}&lt;/ref&gt; Measuring up to {{convert|3,12,812|km2|sqmi|abbr=on}}, it forms one of the largest [[river basin]]s in the [[Indian subcontinent]], with only the Ganga and [[Indus]] rivers having a larger drainage basin.&lt;ref&gt;{{Cite web | url=http://india-wris.nrsc.gov.in/wrpinfo/index.php?title=Basins | title=Basins - | access-date=12 October 2015 | archive-url=https://web.archive.org/web/20150923002429/http://www.india-wris.nrsc.gov.in/wrpinfo/index.php?title=Basins | archive-date=23 September 2015 | url-status=dead }}&lt;/ref&gt; In terms of length, catchment area and discharge, the Godavari is the largest in peninsular India, and had been dubbed as the '''Dakshin Ganga''' ([[Ganges]] of the South).&lt;ref&gt;{{cite web |url=http://www.importantindia.com/10222/dakshina-ganga/ |title=Dakshina Ganga (Ganga of South India) – River Godavari |publisher=Important India |accessdate=2015-10-21 |date=2014-01-20 |archive-url=https://web.archive.org/web/20160118171303/http://www.importantindia.com/10222/dakshina-ganga/ |archive-date=18 January 2016 |url-status=dead }}&lt;/ref&gt;
+
+The river has been revered in Hindu scriptures for many millennia and continues to harbour and nourish a rich cultural heritage. In the past few decades, the river has been barricaded by a number of [[Barrage (dam)|barrages]] and [[dams]], keeping a head of water (depth) which lowers evaporation. Its broad [[river delta]] houses 729 persons/km&lt;sup&gt;2&lt;/sup&gt; – nearly twice the Indian average population density and has substantial risk of flooding, which in lower parts would be exacerbated if the global sea level were to rise.&lt;ref&gt;{{cite web | url=http://www.igbp.net/download/18.62dc35801456272b46d4b/1398850074082/NL82-Deltas_infographic.pdf | title=Deltas at Risk | publisher=International Geosphere-Biosphere Programme | accessdate=21 May 2019 }}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://www.indiaenvironmentportal.org.in/files/file/Shrinking_and_sinking_delta_major_role_of_Dams_May_2014.pdf |last=South Asia Network on Dams Rivers and People |title=Shrinking and Sinking Deltas: Major role of Dams in delta subsidence and effective sea level rise |year=2014 |accessdate=15 January 2016}}&lt;/ref&gt;
+
+==Course==
+[[Image:Godavari- river basin.gif|thumb|upright=1.75|Godavari river basin.]]
+[[File:Godavari satellite view.jpg|thumb|Godavari River delta extending into the [[Bay of Bengal]] (upper river in image).]]
+[[File:Bhadrachalam during 2005 floods.jpg|thumb|[[Bhadrachalam]] Temple during 2005 floods&lt;ref&gt;{{cite web|url=http://reliefweb.int/report/india/india-andhra-pradesh-flood-2005-situation-report-21sep-2005|title=India: Andhra Pradesh Flood 2005 situation report, 21Sep 2005|date=29 May 2014|accessdate=15 January 2016}}&lt;/ref&gt;]]
+
+The Godavari originates in the [[Western Ghats]] of central India near [[Nashik]] in [[Maharashtra]], {{convert|80|km|mi|abbr=on}} from the [[Arabian Sea]]. It flows for {{convert|1465|km|mi|abbr=on}}, first eastwards across the [[Deccan Plateau]] then turns southeast, entering the [[West Godavari district]] and [[East Godavari district]] of Andhra Pradesh, until it splits into two distributaries that widen into a large [[river delta]]  at [[Sir Arthur Cotton Barrage]] in [[Rajamahendravaram]] and flow into the Bay of Bengal.&lt;ref&gt;{{cite web |url=http://india-wris.nrsc.gov.in/Publications/BasinReports/Godavari%20Basin.pdf |title=Godavari basin status report, March 2014 |accessdate=15 November 2015 |archive-url=https://web.archive.org/web/20151117020801/http://india-wris.nrsc.gov.in/Publications/BasinReports/Godavari%20Basin.pdf |archive-date=17 November 2015 |url-status=dead }}&lt;/ref&gt;
+
+The Godavari River has a coverage area of {{convert|312812|km2|abbr=on}}, which is nearly one-tenth of the area of India and is greater than the areas of [[England]] and [[Ireland]] put together. The river basin is considered to be divided into 3 sections: 
+* Upper (source to confluence with [[Manjira River|Manjira]]), 
+* Middle (between confluence of [[Manjira River|Manjira]] and [[Pranhita]]) and 
+* Lower ([[Pranhita]] confluence to mouth).
+
+These put together account for 24.2% of the total basin area.&lt;ref&gt;{{cite web |url=http://ces.iisc.ernet.in/biodiversity/documents/rivers.htm |title=Rivers of Western Ghats |accessdate=2006-12-09 |archive-url=https://web.archive.org/web/20110719194103/http://ces.iisc.ernet.in/biodiversity/documents/rivers.htm |archive-date=2011-07-19 |url-status=dead }}&lt;/ref&gt; The rivers annual average water inflows are nearly 110 billion cubic metres.&lt;ref&gt;{{cite web |url=http://www.iwmi.cgiar.org/Publications/IWMI_Research_Reports/PDF/pub083/RR83.pdf |title=Spatial variation in water supply and demand across river basins of India |publisher=IWMI Research Report 83 |accessdate=23 June 2015}}&lt;/ref&gt; Nearly 50% of the water availability is being harnessed. The water allocation from the river among the riparian states are governed by the [[Godavari Water Disputes Tribunal]]. The river has highest flood flows in India and experienced recorded flood of 3.6 million [[Cubic foot#Cubic foot per second|cusecs]] in the year 1986 and annual flood of 1.0 million cusecs is normal.&lt;ref&gt;{{cite news |url=http://www.thehindu.com/todays-paper/tp-features/tp-editorialfeatures/when-bhadrachalam-was-under-a-sheet-of-water/article2710249.ece |title= When Bhadrachalam was under a sheet of water |accessdate=26 May 2014|newspaper= The Hindu |date= 2011-12-12 }}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://www.compositerunoff.sr.unh.edu/html/Polygons/P2856900.html |title= Water flow data at Polavaram|accessdate=26 May 2014}}&lt;/ref&gt;
+
+===Within Maharashtra===
+In [[Maharashtra]] state where it takes origin, the river has an extensive course, the upper basin (origin to its confluence with [[Manjira River|Manjira]]) of which lies entirely within the state, cumulatively draining an area as large as {{convert|1,52,199|km2|sqmi|abbr=on}} – about half the area of [[Maharashtra]].&lt;ref&gt;{{cite web |url=http://www.nih.ernet.in/rbis/basin%20maps/godavari_about.htm |title=Archived copy |accessdate=2015-10-19 |url-status=dead |archiveurl=https://web.archive.org/web/20150421200558/http://nih.ernet.in/rbis/basin%20maps/godavari_about.htm |archivedate=2015-04-21 }}&lt;/ref&gt; Within [[Nashik District]] the river assumes a north-easterly course till it flows into the [[Gangapur Dam|Gangapur Reservoir]] created by a dam of the same name. The reservoir along with the [[Kashypi Dam]] provides [[potable water]] to Nashik, one of the largest cities located on its banks. The river as it emerges through the dam, some {{convert|8|km|mi|abbr=on}} upstream from Nashik, flows on a rocky bed undulated by a series of chasms and rocky ledges, resulting in the formation of two significant waterfalls – the Gangapur and the Someshwar waterfalls. The latter, located at Someshwar is more popularly known as the Dudhsagar Waterfall.&lt;ref&gt;{{cite web |url=http://www.nashikdirectory.com/dudhsagar-waterfalls.html |title=Dudhsagar Waterfalls, Nashik |publisher=Nashik Directory |accessdate=2015-10-18 |archive-url=https://web.archive.org/web/20160304073553/http://www.nashikdirectory.com/dudhsagar-waterfalls.html |archive-date=4 March 2016 |url-status=dead }}&lt;/ref&gt; 
+
+About {{convert|0.5|km|mi|abbr=on}} south of Nashik, the river bends sharply to the east, washing the base of a high cliff formerly the site of a Mughal fort, but which is now being eroded away by the action of floods. About {{convert|25|km|mi|abbr=on}} below Nashik is the confluence of the Godavari and one of its tributaries, the [[Darna River|Darna]]. The stream occupies, for nine months in the year, a small space in a wide and gravelly bed, the greyish banks being {{convert|4|to|6|m|ft|abbr=on}} high, topped with a deep layer of black soil. A few kilometres after its meeting with the Darna, the Godavari swerves to the north-east, before the [[Banganga River (Maharashtra)|Banganga]], from the north-west, meets it on the left. The course of the main stream then tends more decidedly south. At Nandur-Madhmeshwar, the [[Kadva River|Kadva]], a second large affluent, brings considerable increase to the waters of the Godavari. The river begins its southeasterly course characteristic of rivers of the [[Deccan Plateau]]. The river exits the [[Niphad]] Taluka of [[Nashik]] and enters the [[Kopargaon taluka]], [[Ahmednagar district|Ahmednagar District]]. Within Ahmednagar District the river quickly completes its short course, flowing alongside the town of [[Kopargaon]] and reaching Puntamba. Beyond this the river serves as a natural boundary between the following districts : 
+* [[Ahmednagar district|Ahmednagar]] and [[Aurangabad District, Maharashtra|Aurangabad]]: Along the boundary here, it receives its first major tributary the [[Pravara River]], draining the former district. The confluence is located at Pravarasangam. By virtue of a sub-tributary of Pravara – Mandohol, which originates in Pune District – the basin impinges the [[Pune District]]. The river at Paithan has been impounded by the [[Jayakwadi Dam]] forming the NathSagar Reservoir. [[Kalsubai]] located in Godavari basin, is the highest peak in Maharashtra.
+* [[Beed District|Beed]] and [[Jalna District|Jalna]]
+* Beed and [[Parbhani District|Parbhani]]: Located along here is its merger with [[Sindphana River|Sindphana]], an important tributary&lt;ref&gt;{{cite web |url=https://cultural.maharashtra.gov.in/english/gazetteer/Beed/gen_geography.html |title=Beed district|publisher=Government of Maharashtra |accessdate=15 January 2016}}&lt;/ref&gt; which drains a considerably large area within Beed. The sub-tributary river [[Bindusara River|Bindusara]] forms a landmark at [[Beed]].

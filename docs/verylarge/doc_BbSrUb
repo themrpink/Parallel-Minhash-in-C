@@ -1,0 +1,355 @@
+Colors =
+  id:Vocals   value:red    legend:Lead_vocals,_guitars
+  id:Guitars  value:green  legend:Guitars,_vocals
+  id:Bass     value:blue   legend:Bass_guitar,_vocals
+  id:Drums    value:orange legend:Drums,_backing_vocals
+  id:Lines    value:black  legend:Studio_albums
+
+LineData =
+  at:05/10/1993 color:black layer:back
+  at:06/14/1994 color:black layer:back
+  at:08/22/1995 color:black layer:back
+  at:06/30/1998 color:black layer:back
+  at:08/01/2000 color:black layer:back
+  at:08/19/2003 color:black layer:back
+  at:06/02/2009 color:black layer:back
+  at:10/27/2014 color:black layer:back
+  at:06/09/2017 color:black layer:back
+
+BarData =
+  bar:Armstrong text:&quot;Tim Armstrong&quot;
+  bar:Frederiksen text:&quot;Lars Frederiksen&quot;
+  bar:Freeman text:&quot;Matt Freeman&quot;
+  bar:Reed text:&quot;Brett Reed&quot;
+  bar:Steineckert text:&quot;Branden Steineckert&quot;
+
+PlotData=
+  width:11
+  bar:Armstrong from:01/01/1991 till:end color:Vocals
+  bar:Frederiksen from:06/01/1993 till:end color:Guitars
+  bar:Freeman from:01/01/1991 till:end color:Bass 
+  bar:Reed from:01/01/1991 till:11/03/2006 color:Drums
+  bar:Steineckert from:11/03/2006 till:end color:Drums
+}}
+
+==Discography==
+{{main|Rancid discography}}
+&lt;!-- Studio albums only. Do not add &quot;B Sides and C Sides&quot;, which technically includes studio recorded material but is a compilation album. --&gt;
+*''[[Rancid (1993 album)|Rancid]]'' (1993)
+*''[[Let's Go (Rancid album)|Let's Go]]'' (1994)
+*''[[...And Out Come the Wolves]]'' (1995)
+*''[[Life Won't Wait]]'' (1998)
+*''[[Rancid (2000 album)|Rancid]]'' (also known as &quot;Rancid 2000&quot; or &quot;Rancid 5&quot;) (2000)
+*''[[Indestructible (Rancid album)|Indestructible]]'' (2003)
+*''[[Let the Dominoes Fall]]'' (2009)
+*''...[[Honor Is All We Know]]'' (2014)
+*''[[Trouble Maker (album)|Trouble Maker]]'' (2017)
+
+==References==
+{{Reflist}}
+
+==External links==
+*{{Official}}
+* [http://larrylivermore.com/?p=323 Larry Livermore's account of the Operation Ivy/Rancid years]
+
+{{Rancid|state=expanded}}
+{{Authority control}}
+
+{{DEFAULTSORT:Rancid}}
+[[Category:Rancid (band)| ]]
+[[Category:Punk rock groups from California]]
+[[Category:Skate punk groups]]
+[[Category:Epitaph Records artists]]
+[[Category:Hellcat Records artists]]
+[[Category:Pop punk groups from California]]
+[[Category:Musical groups established in 1991]]
+[[Category:1991 establishments in California]]
+[[Category:Fat Wreck Chords artists]]
+[[Category:Musical groups from Berkeley, California]]</text>
+      <sha1>hwxq91nev6hcshjrk2d7gi2j4j45543</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>GNU Octave</title>
+    <ns>0</ns>
+    <id>48707</id>
+    <revision>
+      <id>991589640</id>
+      <parentid>990785242</parentid>
+      <timestamp>2020-11-30T21:11:58Z</timestamp>
+      <contributor>
+        <ip>177.41.240.251</ip>
+      </contributor>
+      <comment>/* Development history */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="31907" xml:space="preserve">{{Other uses|Octave (disambiguation)}}
+{{Infobox software
+| name = GNU Octave
+| logo = [[File:Gnu-octave-logo.svg|100px]]
+| screenshot = GNUOctave430.png
+| caption = GNU Octave 4.3.0+ running on [[Linux]]
+| developer = John W. Eaton and many others&lt;ref&gt;{{cite web|title=contributors.in|author=Rik|url=http://hg.savannah.gnu.org/hgweb/octave/file/tip/doc/interpreter/contributors.in|accessdate=14 June 2015|date=10 June 2015}}&lt;/ref&gt;
+| released = {{Start date and age|1988}}
+| latest release version = {{wikidata|property|reference|P348}}
+| latest release date    = {{start date and age|{{wikidata|qualifier|P348|P577}}}}
+| latest preview version = 6.0.90a
+| latest preview date = {{Start date and age|2020|08|28|df=yes}}&lt;ref&gt;{{Cite web|title=Index of /gnu/octave|url=https://alpha.gnu.org/gnu/octave/|access-date=2020-09-14|website=alpha.gnu.org}}&lt;/ref&gt;&lt;!-- https://wiki.octave.org/6.1_Release_Checklist --&gt;
+| programming language = [[C (programming language)|C]], [[C++]], [[Fortran]]&lt;ref name=&quot;octave_building&quot;&gt;{{cite web|title=Building - Octave|url=https://wiki.octave.org/Building|website=wiki.octave.org|publisher=GNU|accessdate=1 May 2018|language=en}}&lt;/ref&gt;
+| operating system = [[Windows]], [[macOS]], [[Linux]], [[Berkeley Software Distribution|BSD]]
+| platform = &lt;!--List them all--&gt;
+| language count = 19
+| language footnote = {{Citation needed|date=January 2016}}
+| genre = [[List of numerical analysis software|Scientific computing]]
+| license = [[GNU General Public License|GNU GPLv3]]
+| website = {{URL|https://gnu.org/software/octave/}}
+}}
+'''GNU Octave''' is software featuring a [[high-level programming language]], primarily intended for [[numerical analysis|numerical computations]]. Octave helps in solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible with [[MATLAB]]. It may also be used as a [[Batch processing|batch-oriented]] language.
+Since it is part of the [[GNU Project]], it is [[free software]] under the terms of the [[GNU General Public License]].
+
+Other [[free software|free]] alternatives to MATLAB include [[Scilab]] and [[FreeMat]].&lt;ref name=&quot;Trappenberg2010&quot;&gt;{{cite book|last=Trappenberg|first=Thomas|title=Fundamentals of Computational Neuroscience|year=2010|publisher=Oxford University Press|isbn=978-0-19-956841-3|page=361}}&lt;/ref&gt;&lt;ref name=&quot;MuhammadZalizniak2011&quot;&gt;{{cite book|last1=Muhammad|first1=A|last2=Zalizniak|first2=V|title=Practical Scientific Computing|url=https://archive.org/details/practicalscienti00muha|url-access=limited|year=2011|publisher=[[Woodhead Publishing]]|isbn=978-0-85709-226-7|page=[https://archive.org/details/practicalscienti00muha/page/n11 3]}}&lt;/ref&gt;&lt;ref name=&quot;MegreyMoksness2008&quot;&gt;{{cite book|last1=Megrey|first1=Bernard A.|last2=Moksness|first2=Erlend|title=Computers in Fisheries Research|url=https://archive.org/details/computersfisheri00megr|url-access=limited|year=2008|publisher=Springer Science &amp; Business Media|isbn=978-1-4020-8636-6|page=[https://archive.org/details/computersfisheri00megr/page/n351 345]}}&lt;/ref&gt;&lt;ref name=&quot;Kapuno2008&quot;&gt;{{cite book|last=Kapuno|first=Raul Raymond|title=Programming for Chemical Engineers Using C, C++, and MATLAB|year=2008|publisher=Jones &amp; Bartlett Publishers|isbn=978-1-934015-09-4|page=365}}&lt;/ref&gt; Octave is more compatible with MATLAB than Scilab is&lt;ref name=&quot;Trappenberg2010&quot;/&gt;&lt;ref name=&quot;Herman2013&quot;&gt;{{cite book|last=Herman|first=Russell L.|title=A Course in Mathematical Methods for Physicists|year=2013|publisher=CRC Press|isbn=978-1-4665-8467-9|page=42}}&lt;/ref&gt;&lt;ref name=&quot;WouwerSaucez2014&quot;&gt;{{cite book|last1=Wouwer|first1=Alain Vande|last2=Saucez|first2=Philippe|last3=Vilas|first3=Carlos|title=Simulation of ODE/PDE Models with MATLAB, Octave and Scilab: Scientific and Engineering Applications|year=2014|publisher=Springer|isbn=978-3-319-06790-2|pages=114–115}}&lt;/ref&gt; and FreeMat has not been updated since June 2013.&lt;ref&gt;{{cite web |title=FreeMat |url=http://freemat.sourceforge.net/#download |website=freemat.sourceforge.net |accessdate=22 February 2020}}&lt;/ref&gt;
+
+==History==
+The project was conceived around 1988.&lt;ref name=&quot;Octave_about&quot;&gt;{{cite web|title=About GNU Octave|url=https://www.gnu.org/software/octave/about.html|website=www.gnu.org|publisher=GNU|accessdate=1 May 2018}}&lt;/ref&gt; At first it was intended to be a companion to a chemical reactor design course. Real development was started by John W. Eaton in 1992. The first alpha release dates back to 4 January 1993 and on 17 February 1994 version 1.0 was released. Version 4.0.0 was released on 29 May 2015.
+
+The program is named after [[Octave Levenspiel]], a former professor of the principal author. Levenspiel was known for his ability to perform quick [[back-of-the-envelope calculation]]s.&lt;ref name=&quot;about&quot;&gt;{{cite web
+| last = Eaton
+| first = John W
+| title = About Octave
+| url = https://www.gnu.org/software/octave/about.html
+| accessdate = 2009-06-28 }}&lt;/ref&gt;
+
+== Development history ==
+{| class=&quot;wikitable&quot;
+|-
+! Time !! Action
+|-
+|align=&quot;right&quot;| 1988/1989 || 1st discussions (Book and Software)
+|-
+|align=&quot;right&quot;| February 1992 || Begin of Development 
+|-
+|align=&quot;right&quot;| January 1993 || News in Web (Version 0.60)
+|-
+|align=&quot;right&quot;| February 1994 || 1st Publication (Version 1.0.0 to 1.1.1)&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-1.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| December 1996 || 2nd Publication (Version 2.0.x) with Windows Port ([[Cygwin]])&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-2.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| March 1998 || Version 2.1
+|-
+|align=&quot;right&quot;| November 2004 || Version 2.9 (DEV Version of 3.0)&lt;ref&gt;https://www.gnu.org/software/octave/news/2012/12/31/news-archive.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| December 2007 || Publication of Version 3.0 (Milestone)&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-3.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| June 2009 || Publication of Version 3.2 (Milestone)&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-3.2.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| 8 February 2011 || Version 3.4.0 (Milestone)&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-3.4.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| 22 February 2012 || Publication of Octave 3.6.1 (Milestone)&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-3.6.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2013/02/21/octave-3.6.4-released.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| 31 December 2013 || Publication of Octave 3.8.0 (experimental GUI)&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-3.8.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2013/12/31/octave-3.8.0-released.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2014/03/04/octave-3.8.1-released.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| 29 May 2015 || Version 4.0.0 (stable GUI and new Syntax for [[object oriented programming|OOP]])&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-4.0.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2015/05/29/octave-4.0.0-released.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2016/03/23/octave-4.0.1-released.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2016/07/02/octave-4.0.3-released.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| 14 November 2016 || Version 4.2.0 (gnuplot 4.4+)&lt;ref&gt;https://www.gnu.org/software/octave/news/2016/11/14/octave-4.2.0-released.html | text=Release Notes Version 4.2.0}}&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-4.2.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2017/02/24/octave-4.2.1-released.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2018/03/13/octave-4.2.2-released.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| 30 April 2018 || Version 4.4.0 (new Goal for GUI QT Toolkit, the FLTK toolkit is not deprecated and there is no schedule for its removal - while no longer prioritized)&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-4.4.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2018/04/30/octave-4.4.0-released.html&lt;/ref&gt;&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2018/08/09/octave-4.4.1-released.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| 1 March 2019 || Publication of Octave 5.1.0 (QT5 preferred)&lt;ref&gt;https://www.gnu.org/software/octave/NEWS-5.1.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| 31 January 2020 || Publication of Octave 5.2.0 (QT5 preferred)&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2020/01/31/octave-5.2.0-released.html&lt;/ref&gt;
+|-
+|align=&quot;right&quot;| 26 November 2020 || Publication of Octave 6.1.0 (QT5 preferred)&lt;ref&gt;https://www.gnu.org/software/octave/news/release/2020/11/26/octave-6.1.0-released.html&lt;/ref&gt;
+|}
+
+==Developments==
+In addition to use on desktops for personal scientific computing, Octave is used in academia and industry. For example, Octave was used on a massive [[Parallel computing|parallel]] computer at [[Pittsburgh Supercomputing Center]] to find vulnerabilities related to guessing social security numbers.&lt;ref&gt;{{cite web
+|url=http://www.hpcwire.com/industry/government/Social-Security-Number-Vulnerability-Findings-Relied-on-Supercomputing-50292227.html
+|title=Social Security Number Vulnerability Findings Relied on Supercomputing
+|date=8 July 2009
+|archive-url=https://web.archive.org/web/20120229220547/http://www.hpcwire.com/hpcwire/2009-07-08/social_security_number_vulnerability_findings_relied_on_supercomputing.html
+|archive-date=29 February 2012
+}}&lt;/ref&gt;
+
+Dramatic acceleration with [[OpenCL]] or [[CUDA]] is also possible with use of GPUs.&lt;ref&gt;https://devblogs.nvidia.com/parallelforall/drop-in-acceleration-gnu-octave/&lt;/ref&gt;
+
+==Technical details==
+* Octave is written in [[C++]] using the [[C++ standard library]].
+* Octave uses an [[Interpreter (computing)|interpreter]] to execute the Octave scripting language.
+* Octave is extensible using dynamically loadable modules.
+* Octave interpreter has an [[OpenGL]]-based graphics engine to create plots, graphs and charts and to save or print them. Alternatively, [[gnuplot]] can be used for the same purpose.
+* Octave includes a [[Graphical User Interface]] (GUI) in addition to the traditional [[Command Line Interface]] (CLI); see [[#User interfaces]] for details.
+
+==Octave, the language==
+The Octave language is an interpreted programming language. It is a [[structured programming]] language (similar to [[C (programming language)|C]]) and supports many common [[C standard library]] functions, and also certain [[POSIX|UNIX]] system calls and functions.&lt;ref&gt;{{cite web
+| url        = http://www.network-theory.co.uk/docs/octave3/octave_269.html
+| title        = GNU Octave - Controlling subprocesses
+| accessdate        = 2009-01-28
+| date        = 14 November 2008
+| archive-url        = https://web.archive.org/web/20090107005339/http://www.network-theory.co.uk/docs/octave3/octave_269.html
+| archive-date        = 7 January 2009
+| url-status        = dead
+}}&lt;/ref&gt; However, it does not support passing arguments by reference.&lt;ref&gt;{{cite web
+| url        = http://www.delorie.com/gnu/docs/octave/octave_105.html
+| title      = GNU Octave
+| accessdate = 2009-01-28
+}}&lt;/ref&gt;
+
+Octave programs consist of a list of function calls or a [[Script (computer programming)|script]]. The syntax is [[Array programming|matrix]]-based and provides various functions for matrix operations. It supports various [[data structure]]s and allows [[object-oriented programming]].&lt;!--Candidate for expansion--&gt;&lt;ref&gt;{{cite web
+| url        = https://www.gnu.org/software/octave/NEWS-3.2.html
+| title      = Summary of important user-visible changes for version 3.2
+| accessdate = 2012-01-05
+}}&lt;/ref&gt;
+
+Its syntax is very similar to MATLAB, and careful programming of a script will allow it to run on both Octave and MATLAB.&lt;ref&gt;{{cite web
+| url        = http://www.octave.org/wiki/index.php?title=FAQ#Porting_programs_from_Matlab_to_Octave
+| title      = FAQ: MATLAB compatibility
+| accessdate = 2009-04-04
+}}&lt;/ref&gt;
+
+Because Octave is made available under the [[GNU General Public License]], it may be freely changed, copied and used.&lt;ref name=&quot;about&quot; /&gt; The program runs on [[Microsoft Windows]] and most [[Unix]] and [[Unix-like]] [[operating system]]s, including [[Linux]] and [[macOS]].&lt;ref&gt;{{cite web
+| url        = http://www.octave.org/wiki/index.php?title=FAQ#On_what_platforms_does_Octave_run.3F
+| title      = FAQ: Getting Octave
+| accessdate = 2009-04-04
+}}&lt;/ref&gt;&lt;ref&gt;https://octave.org/doc/interpreter/&lt;/ref&gt;
+
+==Notable features==
+
+===Command and variable name completion===
+Typing a TAB character on the command line causes Octave to attempt to complete variable, function, and file names (similar to [[Bash (Unix shell)|Bash]]'s [[tab completion]]). Octave uses the text before the cursor as the initial portion of the name to complete.&lt;ref&gt;{{cite web|url=https://www.gnu.org/software/octave/doc/interpreter/Commands-For-Completion.html#Commands-For-Completion|title=Letting Readline Type For You|work=GNU Octave Reference Manual|last=Eaton|first=John W.}}&lt;/ref&gt;
+
+===Command history===
+When running interactively, Octave saves the commands typed in an internal buffer so that they can be recalled and edited.
+
+===Data structures===
+Octave includes a limited amount of support for organizing data in structures. In this example, we see a structure &quot;x&quot; with elements &quot;a&quot;, &quot;b&quot;, and &quot;c&quot;, (an integer, an array, and a string, respectively):
+&lt;syntaxhighlight lang=&quot;octave&quot;&gt;
+octave:1&gt; x.a = 1; x.b = [1, 2; 3, 4]; x.c = &quot;string&quot;;
+octave:2&gt; x.a
+ans =  1
+octave:3&gt; x.b
+ans =
+
+   1   2
+   3   4
+
+octave:4&gt; x.c
+ans = string
+octave:5&gt; x
+x =
+{
+  a =  1
+  b =
+
+     1   2
+     3   4
+
+  c = string
+}
+&lt;/syntaxhighlight&gt;
+
+===Short-circuit boolean operators===
+Octave's '&lt;code&gt;&amp;&amp;&lt;/code&gt;' and '&lt;code&gt;||&lt;/code&gt;' logical [[Operator (programming)|operators]] are evaluated in a [[Short-circuit evaluation|short-circuit]] fashion (like the corresponding operators in the [[C (programming language)|C]] language), in contrast to the element-by-element operators '&lt;code&gt;&amp;&lt;/code&gt;' and '&lt;code&gt;|&lt;/code&gt;'.
+
+===Increment and decrement operators===
+{{Main|Increment and decrement operators}}
+Octave includes the C-like [[increment and decrement operators]] '&lt;code&gt;++&lt;/code&gt;' and '&lt;code&gt;--&lt;/code&gt;' in both their prefix and postfix forms.
+Octave also does [[augmented assignment]], e.g.  '&lt;code&gt;x += 5&lt;/code&gt;'.
+
+===Unwind-protect===
+Octave supports a limited form of [[exception handling]] modelled after the [http://www.lispworks.com/documentation/HyperSpec/Body/s_unwind.htm '&lt;code&gt;unwind_protect&lt;/code&gt;'] of [[Lisp (programming language)|Lisp]]. The general form of an unwind_protect block looks like this:
+&lt;syntaxhighlight lang=&quot;octave&quot;&gt;
+unwind_protect
+   body
+unwind_protect_cleanup
+   cleanup
+end_unwind_protect
+&lt;/syntaxhighlight&gt;
+
+As a general rule, GNU Octave recognizes as termination of a given '&lt;code&gt;''block''&lt;/code&gt;' either the keyword '&lt;code&gt;end&lt;/code&gt;' (which is compatible with the MATLAB language) or a more specific keyword '&lt;code&gt;end_''block''&lt;/code&gt;'. As a consequence, an '&lt;code&gt;unwind_protect&lt;/code&gt;' block can be terminated either with the keyword '&lt;code&gt;end_unwind_protect&lt;/code&gt;' as in the example, or with the more portable keyword '&lt;code&gt;end&lt;/code&gt;'.
+
+The ''cleanup'' part of the block is always executed. In case an exception is raised by the ''body'' part, ''cleanup'' is executed immediately before propagating the exception outside the block '&lt;code&gt;unwind_protect&lt;/code&gt;'.
+
+GNU Octave also supports another form of exception handling (compatible with the MATLAB language):
+&lt;syntaxhighlight lang=&quot;matlab&quot;&gt;
+try
+   body
+catch
+   exception_handling
+end
+&lt;/syntaxhighlight&gt;
+
+This latter form differs from an '&lt;code&gt;unwind_protect&lt;/code&gt;' block in two ways. First, ''exception_handling'' is only executed when an exception is raised by ''body''. Second, after the execution of ''exception_handling'' the exception is not propagated outside the block (unless a '&lt;code&gt;rethrow( lasterror )&lt;/code&gt;' statement is explicitly inserted within the ''exception_handling'' code).
+
+===Variable-length argument lists===
+Octave has a mechanism for handling functions that take an unspecified number of arguments without explicit upper limit. To specify a list of zero or more arguments, use the special argument &lt;code&gt;varargin&lt;/code&gt; as the last (or only) argument in the list.
+
+&lt;syntaxhighlight lang=&quot;octave&quot;&gt;
+function s = plus (varargin)
+   if (nargin==0)
+      s = 0;
+   else
+      s = varargin{1} + plus (varargin{2:nargin});
+   end
+end
+&lt;/syntaxhighlight&gt;
+
+===Variable-length return lists===
+A function can be set up to return any number of values by using the special return value &lt;code&gt;varargout&lt;/code&gt;. For example:
+
+&lt;syntaxhighlight lang=&quot;octave&quot;&gt;
+function varargout = multiassign (data)
+   for k=1:nargout
+      varargout{k} = data(:,k);
+   end
+end
+&lt;/syntaxhighlight&gt;
+
+===C++ integration===
+It is also possible to execute Octave code directly in a C++ program. For example, here is a code snippet for calling &lt;code&gt;rand([10,1])&lt;/code&gt;:
+&lt;syntaxhighlight lang=&quot;cpp&quot;&gt;
+#include &lt;octave/oct.h&gt;
+...
+ColumnVector NumRands(2);
+NumRands(0) = 10;
+NumRands(1) = 1;
+octave_value_list f_arg, f_ret;
+f_arg(0) = octave_value(NumRands);
+f_ret = feval(&quot;rand&quot;, f_arg, 1);
+Matrix unis(f_ret(0).matrix_value());
+&lt;/syntaxhighlight&gt;
+
+C and C++ code can be integrated into GNU Octave by creating oct files, or using the MATLAB compatible [[MEX file]]s.
+
+=={{anchor|MATLAB}} MATLAB compatibility==
+Octave has been built with MATLAB compatibility in mind, and shares many features with MATLAB:
+
+# Matrices as fundamental data type.
+# Built-in support for complex numbers.
+# Powerful built-in math functions and extensive function libraries.
+# Extensibility in the form of user-defined functions.
+
+Octave treats incompatibility with MATLAB as a [[Bug (software)|bug]]; therefore, it could be considered a [[software clone]], which does not infringe [[software copyright]] as per ''[[Lotus v. Borland]]'' court case.
+
+MATLAB scripts from the [[MathWorks]]' FileExchange repository in principle are compatible with Octave. However, while they are often provided and uploaded by users under an Octave [[License compatibility|compatible]] and proper [[open-source license|open source]] [[BSD license]], the fileexchange's [[EULA|Terms of use]] prohibit any usage beside MathWorks' [[proprietary software|proprietary]] MATLAB.&lt;ref&gt;[http://wiki.octave.org/FAQ#Why_can.27t_I_use_code_from_File_Exchange_in_Octave.3F_It.27s_released_under_a_BSD_license.21 Why can't I use code from File Exchange in Octave? It's released under a BSD license!] on octave.org&lt;/ref&gt;&lt;ref&gt;[http://www.mathworks.com/matlabcentral/termsofuse.html#content terms of use] on mathworks.com ''&quot;Content that you submit must not directly compete with products offered by MathWorks. Content submitted to File Exchange may only be used with MathWorks products.&quot;''&lt;/ref&gt;&lt;ref&gt;[https://www.mathworks.com/matlabcentral/FX_transition_faq.html File Exchange Licensing Transition FAQ] on mathworks.com&lt;/ref&gt;
+
+===Syntax compatibility===
+There are a few purposeful, albeit minor, [http://octave.org/wiki/index.php?title=FAQ#Porting_programs_from_Matlab_to_Octave syntax additions]:
+
+# [[Comment (computer programming)|Comment]] lines can be prefixed with the # character as well as the % character;
+# Various [[C (programming language)|C-based]] operators [[Increment operator|++]], [[Decrement operator|--]], [[Augmented assignment|+=]], *=, /= are supported;
+# Elements can be referenced without creating a new variable by cascaded indexing, e.g. [1:10](3);
+# [[String (computer science)|String]]s can be defined with the double-quote &quot; character as well as the single-quote ' character;
+# When the variable type is [[Single-precision floating-point format|single]] (a single-precision floating-point number), Octave calculates the &quot;[[mean]]&quot; in the single-domain (MATLAB in [[Double-precision floating-point format|double-domain]]) which is faster but gives less accurate results;
+# Blocks can also be terminated with more specific [[Control structure]] keywords, i.e., endif, endfor, endwhile, etc.;
+# Functions can be defined within scripts and at the Octave prompt;
+# Presence of a do-until loop (similar to [[Do while loop|do-while]] in C).
+
+===Function compatibility===
+Many, but not all, of the numerous MATLAB functions are available in GNU Octave, some of them accessible through packages in [https://octave.sourceforge.io Octave Forge]. The functions available as part of either core Octave or Forge packages are listed [https://octave.sourceforge.io/list_functions.php?q=&amp;sort=alphabetic online].
+
+A list of unavailable functions is included in the Octave function  [http://hg.savannah.gnu.org/hgweb/octave/file/d63878346099/scripts/help/__unimplemented__.m#l530 __unimplemented.m__]. Unimplemented functions are also listed under many Octave Forge packages in the [https://wiki.octave.org/Category:Octave_Forge Octave Wiki].
+
+When an unimplemented function is called the following error message is shown:
+&lt;syntaxhighlight lang=&quot;octave&quot;&gt;
+  octave:1&gt; guide
+  warning: the 'guide' function is not yet implemented in Octave

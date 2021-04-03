@@ -1,0 +1,284 @@
+===Amplification===
+Microsatellites can be amplified for identification by the [[polymerase chain reaction]] (PCR) process, using the unique sequences of flanking regions as [[Primer (molecular biology)|primers]].  DNA is repeatedly denatured at a high temperature to separate the double strand, then cooled to allow [[Annealing (biology)|annealing]] of primers and the extension of nucleotide sequences through the microsatellite.  This process results in production of enough DNA to be visible on [[Agarose gel electrophoresis|agarose]] or [[acrylamide|polyacrylamide]] gels; only small amounts of DNA are needed for amplification because in this way thermocycling creates an exponential increase in the replicated segment.&lt;ref name=&quot;Griffiths&quot;&gt;{{cite book |authors=Griffiths, A.J.F., Miller, J.F., Suzuki, D.T., Lewontin, R.C. &amp; Gelbart, W.M. |year=1996 |title=Introduction to Genetic Analysis, 5th Edition. W.H. Freeman, New York}}&lt;/ref&gt; With the abundance of PCR technology, primers that flank microsatellite loci are simple and quick to use, but the development of correctly functioning primers is often a tedious and costly process.[[File:PAGE AgStain Microsat.jpg|thumb|right|A number of DNA samples from specimens of ''[[Littorina plena]]'' amplified using polymerase chain reaction with primers targeting a variable simple sequence repeat (SSR, a.k.a. microsatellite) locus. Samples were run on a 5% polyacrylamide gel and visualized using silver staining.]]
+
+===Design of microsatellite primers===
+If searching for microsatellite markers in specific regions of a genome, for example within a particular [[intron]], primers can be designed manually. This involves searching the genomic DNA sequence for microsatellite repeats, which can be done by eye or by using automated tools such as [http://www.repeatmasker.org/ repeat masker]. Once the potentially useful microsatellites are determined, the flanking sequences can be used to design [[oligonucleotide]] primers which will amplify the specific microsatellite repeat in a PCR reaction.
+
+Random microsatellite primers can be developed by [[cloning]] random segments of DNA from the focal species. These random segments are inserted into a [[plasmid]] or [[bacteriophage]] [[Cloning vector|vector]], which is in turn implanted into ''[[Escherichia coli]]'' bacteria. Colonies are then developed, and screened with fluorescently–labelled [[oligonucleotide]] sequences that will hybridize to a microsatellite repeat, if present on the DNA segment. If positive clones can be obtained from this procedure, the DNA is sequenced and PCR primers are chosen from sequences flanking such regions to determine a specific [[locus (genetics)|locus]]. This process involves significant trial and error on the part of researchers, as microsatellite repeat sequences must be predicted and primers that are randomly isolated may not display significant polymorphism.&lt;ref name=&quot;Jarne 1996&quot; /&gt;&lt;ref name=&quot;Queller&quot;&gt;{{cite journal | vauthors = Queller DC, Strassmann JE, Hughes CR | title = Microsatellites and kinship | journal = Trends in Ecology &amp; Evolution | volume = 8 | issue = 8 | pages = 285–8 | date = August 1993 | pmid = 21236170 | doi = 10.1016/0169-5347(93)90256-O }}&lt;/ref&gt; Microsatellite loci are widely distributed throughout the genome and can be isolated from semi-degraded DNA of older specimens, as all that is needed is a suitable substrate for amplification through PCR.
+
+More recent techniques involve using [[oligonucleotide]] sequences consisting of repeats complementary to repeats in the microsatellite to &quot;enrich&quot; the DNA extracted ([[Microsatellite enrichment]]). The oligonucleotide probe hybridizes with the repeat in the microsatellite, and the probe/microsatellite complex is then pulled out of solution. The enriched DNA is then cloned as normal, but the proportion of successes will now be much higher, drastically reducing the time required to develop the regions for use. However, which probes to use can be a trial and error process in itself.&lt;ref name=&quot;Kaukinen&quot;&gt;{{cite journal |authors=Kaukinen KH, Supernault KJ, and Miller KM |year=2004 |title=Enrichment of tetranucleotide microsatellite loci from invertebrate species |journal=Journal of Shellfish Research |volume=23 |issue=2 |page=621}}&lt;/ref&gt;
+
+===ISSR-PCR===
+'''ISSR''' (for '''inter-simple sequence repeat''') is a general term for a genome region between microsatellite loci. The complementary sequences to two neighboring microsatellites are used as PCR primers&lt;!-- Theor. Appl. Genet. 89, 998–1006. --&gt;; the variable region between them gets amplified. The limited length of amplification cycles during PCR prevents excessive replication of overly long contiguous DNA sequences, so the result will be a mix of a variety of amplified DNA strands which are generally short but vary much in length.
+
+Sequences amplified by ISSR-PCR can be used for DNA fingerprinting. Since an ISSR may be a conserved or nonconserved region, this technique is not useful for distinguishing individuals, but rather for [[phylogeography]] analyses&lt;!-- Biota 3, 109–118. --&gt; or maybe delimiting [[species]]&lt;!-- Molecular Phylogenetics and Evolution 37 (2005) 389–401 --&gt;; sequence diversity is lower than in SSR-PCR, but still higher than in actual gene sequences. In addition, microsatellite sequencing and ISSR sequencing are mutually assisting, as one produces primers for the other.
+
+===Limitations===
+Repetitive DNA is not easily analysed by [[DNA sequencing|next generation DNA sequencing]] methods, which struggle with homopolymeric tracts. Therefore, microsatellites are normally analysed by conventional PCR amplification and amplicon size determination. The use of PCR means that microsatellite length analysis is prone to PCR limitations like any other PCR-amplified DNA locus. A particular concern is the occurrence of ‘[[null allele]]s’:
+*Occasionally, within a sample of individuals such as in paternity testing casework, a mutation in the DNA flanking the microsatellite can prevent the PCR primer from binding and producing an amplicon (creating a &quot;null allele&quot; in a gel assay), thus only one allele is amplified (from the non-mutated sister chromosome), and the individual may then falsely appear to be homozygous. This can cause confusion in paternity casework. It may then be necessary to amplify the microsatellite using a different set of primers.&lt;ref name=&quot;Jarne 1996&quot;/&gt;&lt;ref name=&quot;Dakin&quot;&gt;{{cite journal | vauthors = Dakin EE, Avise JC | title = Microsatellite null alleles in parentage analysis | journal = Heredity | volume = 93 | issue = 5 | pages = 504–9 | date = November 2004 | pmid = 15292911 | doi = 10.1038/sj.hdy.6800545 | doi-access = free }}&lt;/ref&gt; Null alleles are caused especially by mutations at the 3’ section, where extension commences.
+*In species or population analysis, for example in conservation work, PCR primers which amplify microsatellites in one individual or species can work in other species. However, the risk of applying PCR primers across different species is that null alleles become likely, whenever sequence divergence is too great for the primers to bind. The species may then artificially appear to have a reduced diversity. Null alleles in this case can sometimes be indicated by an excessive frequency of homozygotes causing deviations from Hardy-Weinberg equilibrium expectations.
+
+== See also ==
+*[[Genetic marker]]
+*[[Junk DNA]]
+*[[Long interspersed nucleotide elements]]
+*[[Microsatellite instability]]
+*[[Mobile element]]
+*[[Satellite DNA]]
+*[[Short interspersed element|Short interspersed repetitive element]]
+*[[Simple sequence length polymorphism]] (SSLP)—a search tool
+*[[Snpstr]]
+*[[Transposon]]
+
+== References ==
+{{Reflist|32em}}
+
+== Further reading ==
+{{refbegin|32em}}
+* {{cite journal | vauthors = Caporale LH | title = Natural selection and the emergence of a mutation phenotype: an update of the evolutionary synthesis considering mechanisms that affect genome variation | journal = Annual Review of Microbiology | volume = 57 | issue =  | pages = 467–85 | year = 2003 | pmid = 14527288 | doi = 10.1146/annurev.micro.57.030502.090855 | url = https://zenodo.org/record/896811 }}
+* {{cite journal  |vauthors=Kashi Y, etal |year=1997 |title=Simple sequence repeats as a source of quantitative genetic variation  | journal=Trends Genet. |volume=13 |issue=2 |pages=74–78 |doi=10.1016/S0168-9525(97)01008-1|pmid=9055609 }}
+* {{cite journal | vauthors = Kinoshita Y, Saze H, Kinoshita T, Miura A, Soppe WJ, Koornneef M, Kakutani T | title = Control of FWA gene silencing in Arabidopsis thaliana by SINE-related direct repeats | journal = The Plant Journal | volume = 49 | issue = 1 | pages = 38–45 | date = January 2007 | pmid = 17144899 | doi = 10.1111/j.1365-313X.2006.02936.x | hdl = 11858/00-001M-0000-0012-38D2-5 | url = http://edoc.mpg.de/get.epl?fid=61177&amp;did=293463&amp;ver=0 | hdl-access = free }}
+* {{cite journal | vauthors = Li YC, Korol AB, Fahima T, Beiles A, Nevo E | title = Microsatellites: genomic distribution, putative functions and mutational mechanisms: a review | journal = Molecular Ecology | volume = 11 | issue = 12 | pages = 2453–65 | date = December 2002 | pmid = 12453231 | doi = 10.1046/j.1365-294X.2002.01643.x | doi-access = free }}
+* {{cite journal | vauthors = Li YC, Korol AB, Fahima T, Nevo E | title = Microsatellites within genes: structure, function, and evolution | journal = Molecular Biology and Evolution | volume = 21 | issue = 6 | pages = 991–1007 | date = June 2004 | pmid = 14963101 | doi = 10.1093/molbev/msh073 | doi-access = free }}
+* {{cite journal | vauthors = Mattick JS | title = Challenging the dogma: the hidden layer of non-protein-coding RNAs in complex organisms | journal = BioEssays | volume = 25 | issue = 10 | pages = 930–9 | date = October 2003 | pmid = 14505360 | doi = 10.1002/bies.10332 | citeseerx = 10.1.1.476.7561 }}
+* {{cite journal | vauthors = Meagher TR, Vassiliadis C | title = Phenotypic impacts of repetitive DNA in flowering plants | journal = The New Phytologist | volume = 168 | issue = 1 | pages = 71–80 | date = October 2005 | pmid = 16159322 | doi = 10.1111/j.1469-8137.2005.01527.x }}
+* {{cite journal | vauthors = Müller KJ, Romano N, Gerstner O, Garcia-Maroto F, Pozzi C, Salamini F, Rohde W | title = The barley Hooded mutation caused by a duplication in a homeobox gene intron | journal = Nature | volume = 374 | issue = 6524 | pages = 727–30 | date = April 1995 | pmid = 7715728 | doi = 10.1038/374727a0 | bibcode = 1995Natur.374..727M }}
+* {{cite journal | vauthors = Pumpernik D, Oblak B, Borstnik B | title = Replication slippage versus point mutation rates in short tandem repeats of the human genome | journal = Molecular Genetics and Genomics | volume = 279 | issue = 1 | pages = 53–61 | date = January 2008 | pmid = 17926066 | doi = 10.1007/s00438-007-0294-1 }}
+* {{cite journal |authors=Streelman J. T., Kocher T. D. |year=2002 |title=Microsatellite variation associated with prolactin expression and growth of salt-challenged ''Tilapia''  | journal=Physiol. Genomics |volume=9 |issue= 1|pages=1–4|doi=10.1152/physiolgenomics.00105.2001 |pmid=11948285 |url=https://semanticscholar.org/paper/f8e3169b64fb3ef3be07cf479496de2e5369c3ba }}
+* {{cite journal | vauthors = Vinces MD, Legendre M, Caldara M, Hagihara M, Verstrepen KJ | title = Unstable tandem repeats in promoters confer transcriptional evolvability | journal = Science | volume = 324 | issue = 5931 | pages = 1213–6 | date = May 2009 | pmid = 19478187 | pmc = 3132887 | doi = 10.1126/science.1170097 | bibcode = 2009Sci...324.1213V }}
+{{refend}}
+
+== External links ==
+* About microsatellites:
+** [http://www.bio.davidson.edu/COURSES/genomics/method/microsatellite.html Microsatellite DNA Methodology]
+** [https://archive.is/20121215171925/http://discovery.vbi.vt.edu/MicrosatDB/ MicrosatDB]
+** [https://archive.is/20121215131830/http://discovery.vbi.vt.edu/eremorph/ Eremorph]—web-based resource for prediction and study of gene variations
+* Search tools:
+** [http://www.dna-algo.co.za/downloads.htm FireMuSat2+]
+** [http://www.cdfd.org.in/imex IMEx]
+** [http://ssr.nwisrl.ars.usda.gov/ Imperfect SSR Finder]—find perfect or imperfect SSRs in [[FASTA format|FASTA]] sequences. 
+** [https://web.archive.org/web/20060404015058/http://bioinf.dms.med.uniroma1.it/JSTRING/ JSTRING—Java Search for Tandem Repeats In Genomes]
+** [https://web.archive.org/web/20060709203109/http://www.biophp.org/minitools/microsatellite_repeats_finder/demo.php Microsatellite repeats finder]
+** [http://pgrc.ipk-gatersleben.de/misa/misa.html MISA—MIcroSAtellite identification tool]
+** [http://alggen.lsi.upc.edu/recerca/search/mrepatt/ MREPATT]
+** [http://bioinfo.lifl.fr/mreps Mreps]
+** [http://www.rub.de/spezzoo/cm/cm_phobos.htm Phobos]—a tandem repeat search tool for perfect and imperfect repeats—the maximum pattern size depends only on computational power
+** [http://www.bioinformatics.org/poly/ Poly]
+** [http://www.kofler.or.at/bioinformatics/SciRoKo/index.html SciRoKo]
+** [https://web.archive.org/web/20101020172857/http://www.csufresno.edu/ssrfinder/ SSR Finder]
+** [http://atgc.lirmm.fr/star STAR]
+** [http://tandem.bu.edu/trf/trf.html Tandem Repeats Finder]
+** [https://web.archive.org/web/20060712070732/http://strand.imb.ac.ru/swan/index.html TandemSWAN]
+** [http://www.sci.brooklyn.cuny.edu/~sokol/tandem TRED]
+** [http://finder.sourceforge.net/ TROLL]
+** [http://kbrin.a-bldg.louisville.edu/cgi-bin/Zv8/getRepeats.cgi?LinkageGroup=ALL&amp;SeqBeg=47697593&amp;SeqEnd=49399415&amp;RptLen=ALL/ Zebrafish Repeats]
+
+{{Repeated sequence}}
+
+[[Category:Genetics]]
+[[Category:Forensic genetics]]
+[[Category:Repetitive DNA sequences]]</text>
+      <sha1>gd5nelt7huibr8je1xbjr3xnaqwwz2m</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Albion, New York</title>
+    <ns>0</ns>
+    <id>44260</id>
+    <revision>
+      <id>912880770</id>
+      <parentid>833759343</parentid>
+      <timestamp>2019-08-28T13:32:12Z</timestamp>
+      <contributor>
+        <username>Narky Blert</username>
+        <id>22041646</id>
+      </contributor>
+      <comment>Distinguish hatnote moved to SA</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="292" xml:space="preserve">'''Albion''' may refer to the following places in the U.S. state of New York:
+
+* [[Albion (town), Orleans County, New York]]
+* [[Albion (village), New York]], most of which is in the town above
+* [[Albion, Oswego County, New York]], a town
+
+==See also==
+* [[New Albion, New York]]
+
+{{geodis}}</text>
+      <sha1>4t0hn7i1xts5cvo09fxpamo61tn6csj</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Pribilof Islands</title>
+    <ns>0</ns>
+    <id>44261</id>
+    <revision>
+      <id>973366709</id>
+      <parentid>973365673</parentid>
+      <timestamp>2020-08-16T20:45:25Z</timestamp>
+      <contributor>
+        <username>Jan olieslagers</username>
+        <id>8086180</id>
+      </contributor>
+      <minor />
+      <comment>/* Fur trade */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="8561" xml:space="preserve">{{redirect|Pribilof|the ship|MV Pribilof|people with the surname sometimes spelled &quot;Pribilof&quot;|Pribylov}}
+{{Use mdy dates|date=January 2015}}
+{{more citations needed|date=April 2007}}
+{{Location map
+ |Alaska
+ |label=
+ |lat_deg=56
+ |lat_min=50
+ |lat_sec=
+ |lat_dir=N
+ |lon_deg=170
+ |lon_min=00
+ |lon_sec=
+ |lon_dir=W
+ |position=right
+ |width=250
+ |float=right
+ |caption=Location in Alaska
+}}
+[[Image:PribilofIslands.jpg|thumb|Map of the Pribilof Islands]]
+The '''Pribilof Islands''' (formerly the '''Northern Fur Seal Islands'''; {{lang-ru|Острова Прибылова}}) are a group of four [[volcanic island]]s off the coast of mainland [[Alaska]], in the [[Bering Sea]], about {{convert|200|mi|km}} north of [[Unalaska, Alaska|Unalaska]] and 200 miles (320&amp;nbsp;km) southwest of [[Cape Newenham]]. The [[Siberia]]n coast is roughly {{convert|500|mi|km}} northwest. About {{convert|77|sqmi}} in total area, they are mostly rocky and are covered with [[tundra]], with a population of 572 as of the [[United States Census, 2010|2010 census]].
+
+==Principal islands==
+The principal islands are [[Saint Paul Island (Alaska)|Saint Paul]] and [[St. George Island (Alaska)|Saint George]]. The former was named for the [[Feast of Saints Peter and Paul]], on the day of which the island was discovered; the latter was probably named for the ship sailed by the islands' discoverer, [[Gavriil Pribylov]].&lt;ref name=&quot;eb1911&quot;&gt;{{Cite EB1911|wstitle=Pribilof Islands}}&lt;/ref&gt; The [[Otter Island, Alaska|Otter]] and [[Walrus Island, Pribilof Islands|Walrus]] islets are near St. Paul. The total land area of all the islands is {{convert|75.072|sqmi|km2|abbr=on}}. The islands are part of the Bering Sea unit of the [[Alaska Maritime National Wildlife Refuge]].&lt;ref&gt;[http://alaskamaritime.fws.gov/units/BeringMAIN.htm Bering Sea Unit, AMNWR] {{webarchive|url=https://web.archive.org/web/20080827203849/http://alaskamaritime.fws.gov/units/BeringMAIN.htm |date=August 27, 2008 }} U.S. Fish and Wildlife&lt;/ref&gt;
+
+==Fur trade==
+While oral traditions of the [[Aleut people]] maintain the islands were sparingly visited, &quot;no ethnohistoric or archaeological evidence points to the use or occupation of the Pribilof Islands... by any native people before the Russian period in Alaska.&quot;&lt;ref name=Veltre&gt;Veltre, Douglas W. and Allen P. McCartney. ''Russian Exploitation of Aleuts and Fur Seals: The Archaeology of Eighteenth and Early Nineteenth-Century Settlements in the Pribilof Islands, Alaska.'' Historical Archaeology 36, No. 3 (2002), pp. 8–17.&lt;/ref&gt; The seasonal migrations of the [[Northern fur seal]] became known by the Russians in the 1780s. Swimming north through the [[Aleutian Islands]], the seals returned in the autumn with newly born pups. The unknown northern breeding grounds became a focus of Russian trappers. An employee of the [[Pavel Lebedev-Lastochkin|Lebedev-Lastochkin Company]], [[Gavriil Pribylov]], sailed in 1786 to discover the location, after disobeying orders to retrieve company property in the [[Kurile Islands]].&lt;ref name=LLC&gt;Solojova, Katerina and Aleksandra Vovnyanko. ''The Rise and Decline of the Lebedev-Lastochkin Company: Russian Colonization of South Central Alaska, 1787–1798.'' The Pacific Northwest Quarterly 90, No. 4 (1999), pp. 191–205.&lt;/ref&gt; The rookeries Pribylov visited held upwards of four million seals, for which they became famous.&lt;ref name=Veltre/&gt; The islands became site to the LLC's first [[artel]] in what later became [[Russian America]].&lt;ref name=LLC/&gt;
+
+With the creation of the [[Russian-American Company]], a monopoly, Russian operations continued on the islands. Under the [[Alaska Purchase]] sovereignty was passed to the United States in 1867. From 1870 to 1890, the U.S. government leased them to the [[Alaska Commercial Company]]. From 1890 through 1910, the [[North American Commercial Company]] held the monopoly on seal-hunting there, but the industry shrank considerably owing to seal-hunting on the open sea.
+
+The [[North Pacific Fur Seal Convention of 1911]] was signed by the United Kingdom, Japan, Russia, and the United States to restrict hunting in the area. Under the [[Fur Seal Act]]&lt;ref&gt;Fur Seal Act of 1966 (16 U.S.C. 1151–1187, P.L. 89-702, November 2, 1966, 80 Stat. 1091)&lt;/ref&gt; of 1966, hunting of the seals was forbidden in the Pribilofs, with the exception of subsistence hunting by native [[Aleut]]s.
+
+[[Ambrose Bierce]] suggested renaming the islands 'locus sigilli' (&quot;Place of the seal&quot;) in his ''[[The Devil's Dictionary]]''.
+
+A [[post office]] was established for the Pribilofs in 1948 at St. Paul, with Mrs. Ruth Anderson as [[Postmaster|postmistress]].&lt;ref name=posmist&gt;{{cite news |url=https://news.google.com/newspapers?id=7VopAAAAIBAJ&amp;sjid=c-UDAAAAIBAJ&amp;pg=5584%2C4864435 |work=Spokesman-Review |location=(Spokane, Washington) |agency=Associated Press |title=Pribilofs get a postmistress |date=November 14, 1948 |page=2}}&lt;/ref&gt;
+
+==Seal Island Historic District==
+{{main|Seal Island Historic District}}
+Naturalist and paleontologist [[Roy Chapman Andrews]] visited the islands in 1913 aboard the [[schooner]] ''[[Adventuress (schooner)|Adventuress]]'' on her [[maiden voyage]] with John Borden and crew. His films of fur seals led to efforts to protect the animals. The buildings on St. George and St. Paul Islands related to the hunting of the [[northern fur seal]] make up the [[National Historic Landmark District|national historic district]].
+
+==Today==
+Residents are concentrated in the towns of [[St. Paul, Alaska|St. Paul]] and [[St. George, Alaska|St. George]], each on the island of the same name. Many of the residents of the islands are related.  St. Paul and St. George each have small airports; air service is provided from the Alaskan mainland.
+
+St. Paul has a population of 479 (2010 census), with its economy heavily dependent on the annual taking of the [[snow crab]] and on subsistence and commercial [[halibut]] harvests. Support services to commercial fleets plying the waters of the Bering Sea also contribute to the economy. The balance of economic activity on the island relates to working for the [[United States Government]]. The [[United States Coast Guard|U.S. Coast Guard]] maintains a base on St. Paul, but no longer maintains a [[LORAN-C]] master station, as LORAN technology has been replaced by [[satellite navigation]]. The [[National Weather Service]] has a station on the island, and the [[National Oceanic and Atmospheric Administration]] maintains a presence.
+
+St. George has a population of 102. Its economy is similar to that of St. Paul.
+
+The Pribilof Islands are a [[birdwatching]] attraction, home to many species that do not fly in [[North America]] beyond Alaska.{{clarify|date=April 2013}} More than 240 species have been identified, and an estimated two million [[seabird]]s nest there annually. St. Paul is particularly popular, having a high cliff wall, known as Ridge Wall, above the Bering Sea.
+
+==See also==
+
+*[[Harrison Gray Otis (publisher)|Harrison Gray Otis]], chief government agent in 1879
+
+==References==
+{{reflist}}
+
+==External links==
+{{Commons category|Pribilof Islands}}
+*[http://www.amiq.org/ The AMIQ Institute] – a research project documenting the Pribilof Islands and their inhabitants
+*[http://www.fws.gov/laws/lawsdigest/FURSEAL.HTML FURSEAL.HTML] – summary of the Fur Seal Act at U.S. Fish &amp; Wildlife Service web site. Retrieved on April 16, 2008.
+*[https://web.archive.org/web/20080511231033/http://www.access.gpo.gov/uscode/title16/chapter24_.html 16 U.S.C. CHAPTER 24—CONSERVATION AND PROTECTION OF NORTH PACIFIC FUR SEALS] – text of the U.S. Code on the U.S. Government Printing Office web site. Retrieved on April 16, 2008.
+*[http://www.afsc.noaa.gov/history/facilities/pribilofs.htm Alaska Fisheries Science Center Historical Corner: The Pribilof Islands] Retrieved on July 23, 2014.
+* [https://archives-manuscripts.dartmouth.edu/repositories/2/resources/3005 Pribilof Islands Seal Trade Collection] at Dartmouth College Library
+
+{{coord|56|50|N|170|00|W|region:US-AK_type:isle_source:dewiki_scale:1000000|display=title}}
+
+{{Islands in the Bering Sea}}
+{{National Register of Historic Places}}
+
+{{authority control}}
+
+[[Category:Pribilof Islands| ]]
+[[Category:Islands of the Aleutian Islands]]
+[[Category:Islands of the Bering Sea]]
+[[Category:Islands of Aleutians West Census Area, Alaska]]
+[[Category:Alaska Maritime National Wildlife Refuge]]
+[[Category:Protected areas of Aleutians West Census Area, Alaska]]
+[[Category:Islands of Alaska]]
+[[Category:Islands of Unorganized Borough, Alaska]]</text>
+      <sha1>4748ye3hgaumjc6aoq23y10rn9kv8ly</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Metafont</title>
+    <ns>0</ns>
+    <id>44263</id>
+    <revision>
+      <id>966891701</id>
+      <parentid>966874905</parentid>
+      <timestamp>2020-07-09T20:40:00Z</timestamp>
+      <contributor>
+        <username>Oneiros</username>
+        <id>61383</id>
+      </contributor>
+      <minor />
+      <comment>Undid revision 966874905 by [[Special:Contributions/176.30.99.190|176.30.99.190]] ([[User talk:176.30.99.190|talk]]): Not yet</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="24288" xml:space="preserve">{{short description|Description language used to define rastertype  fonts}}
+{{infobox software
+| logo                   = METAFONT logo.svg
+| logo size              = 220px
+| developer              = [[Donald Knuth]]
+| latest_release_version = 2.7182818
+| latest_release_date    = {{start date and age|df=yes|2014|1}}
+| operating_system       = [[Cross-platform]]
+| genre                  = [[Computer language]]
+| license                = [[Permissive free software license|Permissive]]
+}}
+'''Metafont''' is a [[page description language|description language]] used to define raster fonts. It is also the name of the [[interpreter (computer software)|interpreter]] that executes Metafont code, generating the bitmap fonts that can be embedded into e.g. [[PostScript]]. Metafont was devised by [[Donald Knuth]] as a companion to his [[TeX]] typesetting system.
+
+One of the characteristics of Metafont is that the points defining the shapes of the [[glyph]]s—for example top of a [[Stem (typography)|stem]], or intersection of a stem and crossbar—are defined with geometrical equations; the intent that the three stems of an ‘m’ are equally spaced horizontally might be expressed as &lt;math&gt; x_2-x_1 = x_3-x_2 &lt;/math&gt; if points 1, 2, and 3 are at the bottom ends of the three stems, whereas the intent that they all end on the same vertical position would be &lt;math&gt; y_1 = y_2 = y_3 &lt;/math&gt;.  Another characteristic is that Metafont is a [[Macro (computer science)|macro]] language, where operations such as &quot;draw a lower case top of stem serif at point 4&quot; might appear as one macro instruction (with the point as argument) in the program for a letter.  For describing shapes, Metafont has a rich set of [[Bézier cubic|path]] construction operations that mostly relieves the user of having to calculate control points.  Finally, many families of Metafont fonts are set up so that the main source file for a font only defines a small number of design parameters ([[x-height]], em width, slant, vertical stroke width, etc.), then calling a separate source file common for a whole range of fonts to actually draw the individual glyphs; this is the [[meta]] aspect of the system.
+
+==Modes of operation==
+[[File:The METAFONT Tutorial v. 0.33.pdf|thumb|''The METAFONT Tutorial'', v. 0.33]]
+Metafont is most often run as a helper to output device (printer, screen) drivers; in those cases, its job is to generate bitmaps for a font for a specific combination of output device (called a ''mode'' in Metafont) and [[Dots per inch|resolution]] (visible in the name of the output file, see below). These bitmaps are typically stored for later reuse, so that Metafont does not have to be run every time a document is displayed, but on the other hand TeX distributions with a Metafont component have typically not included any prebuilt bitmap fonts, since they would be rather large in comparison to the sources from which they could be generated. Since Metafont fonts were traditionally the TeX default from which other font formats were exceptions, an incomplete installation of a non-Metafont font can sometimes result in Metafont being called and emitting a confusing &quot;''somefont''.mf not found&quot; error message.
+
+Equally important, but not as common, is running Metafont to generate a font metric (TFM) file; a TFM file is only generated if the ''fontmaking'' variable is positive. Traditionally TeX distributions have often come with all TFM files pregenerated (since they are pretty small), but someone installing a Metafont font from sources will have to generate its TFM file before TeX can use it.
+
+A third way of operating Metafont is ''proof mode'': if the ''proofing'' variable is positive then the bitmap font file also contains additional information provided via &lt;code&gt;special&lt;/code&gt; commands, in particular the positions and names of points the font designer considered important for the design. If using the separate &lt;code&gt;gftodvi&lt;/code&gt; utility to generate enlarged images of the font glyphs, this  information from specials is included; point positions are not limited to pixel resolution.
+
+Metafont can also be run interactively, and has commands for displaying on the screen the images it produces. Knuth has said that he uses Metafont as a kind of desk calculator for solving complicated equations, though he now uses MetaPost for mathematical illustrations.
+&lt;!-- could say something here about alternatives – e.g. vector versions such as pdftex uses --&gt;
+
+Metafont can render any kind of graphical output, not just glyphs. However, [[MetaPost]] and [[Asymptote (vector graphics language)|Asymptote]] are preferred for mathematical illustrations. Metafont is most commonly invoked without a direct request from the user. [[DVI file format|DVI files]] can only contain references to typefaces, rather than the sets of raster or vector glyphs that other formats like PostScript allow. Consequently, the glyphs in the typefaces need to be accessed whenever a request is made to view, print or convert a DVI file.
+
+===Output files===
+Metafont outputs several kinds of files: for a file called NAME.mf, it can output:
+
+* NAME.NNNNgf – File with raster output at resolution NNNN (2602 by default). 
+* NAME.tfm – File with [[TeX font metric]] information, which is the information TeX needs. Usually metafont has to be told to generate this file.
+* NAME.log – Log file output from processing
+
+After running Metafont, typically one uses the gftopk program to convert the NNNNgf files to pk (packed) format (.NNNNpk). The pk format was primarily introduced to reduce file size (to about half), but expected to also speed up processing since less data would have to be [[input/output]]. The GF and PK formats both employ [[run-length encoding]] of bitmaps, but make different binary encodings of the run-lengths. The PK format also does some preprocessing of the bitmaps (bounding box, eliding repeated rows) and encodes all rows of a character as one long bit-sequence.&lt;ref&gt;{{cite journal |last1=Rokicki |first1=Tomas |title=Packed (PK) Font File Format |journal=TUGboat |date=1985 |volume=6 |issue=3 |pages=115–120 |url=https://www.tug.org/TUGboat/tb06-3/tb13pk.pdf |accessdate=2019-08-09}}&lt;/ref&gt;
+
+In the ''TeX Directory Structure'' standard, filenames are limited to 8+3 characters, so GF and PK files would only have extensions &lt;code&gt;.gf&lt;/code&gt; and &lt;code&gt;.pk&lt;/code&gt;. Files for different resolutions are kept apart by placing them in separate directories, named &lt;code&gt;dpi&lt;/code&gt;NNNN, e.g. &lt;code&gt;dpi300/cmr10.pk&lt;/code&gt;.
+
+==Language==
+The Metafont language is an [[interpreter (computing)|interpreted]] language for programs that are ''essentially [[declarative programming|declarative]] rather than [[imperative programming|imperative]]''.&lt;ref name=&quot;METAFONTbook&quot;&gt;{{cite book |last1=Knuth |first1=Donald |title=The METAFONTbook |date=1986 |publisher=Addison Wesley |isbn=0-201-13445-4}}&lt;/ref&gt;
+
+===Variables and equations===
+Variables in Metafont can be of eight different types:
+* Numeric: [[fixed-point arithmetic|fixed-point]] signed numbers with an [[machine epsilon|epsilon]] of &lt;math&gt;2^{-16}&lt;/math&gt;, capped to be less than 4096 ([[Q (number format)|Q12.16]]). This is the default for variables not declared to be of another type.
+* Pair: a pair of numerics, used primarily for representing points in the plane.
+* Path: as in [[PostScript]]/[[PDF]]/[[Scalable Vector Graphics|SVG]], a [[parametric curve]] in the plane whose coordinate functions are [[piecewise]] cubic polynomials. As in those other systems, path segments are encoded as [[Bézier curve]]s in terms of knots and control points.
+* Transform: an [[affine transformation]] of the plane, equivalent to a &quot;(transformation) matrix&quot; in PostScript/PDF.
+* Pen: a convex polygon, representing the shape of a &quot;pen&quot; used for drawing.
+* Picture: a [[raster graphics|raster image]] with a signed integer value for each pixel.
+* [[Boolean data type|Boolean]]
+* String (of 8-bit characters)
+[[Metapost]] adds color (a triple of numerics) as a ninth type and has a completely different (non-raster) model for pictures; the latter is the main point of divergence between the two programs. Metafont vardef macros also live in the same namespace as variables and may in some ways be regarded as a ninth type of variable, although macros do not exist as [[first-class citizen|first-class]] values in Metafont.
+
+Unusually, the names of variables are not simple tokens, but sequences of symbolic tokens and numeric indices; the variable name &lt;code&gt;x2r&lt;/code&gt; is thus not one [[alphanumeric]] token, but a sequence of the three tokens &lt;code&gt;x&lt;/code&gt; (symbolic), &lt;code&gt;2&lt;/code&gt; (numeric), and &lt;code&gt;r&lt;/code&gt; (symbolic). [[Record (computer science)|Record]] and [[Array data type|array]] types may be simulated through collections of variables that share a common name prefix, an idiom supported by the type declaration system giving all variables whose names which differ only in numeric indices the same type (as expected for arrays) while keeping variables whole name differ in some symbolic token separate (as expected for records).
+
+A very distinctive feature of Metafont is the use of [[equation]]s to define variables. A numeric variable (or component of a pair or transformation variable) may be in the three states ''known'' (set), ''unknown independent'' (not set), and ''unknown dependent'' (not set, but given by a [[Linear function (calculus)|linear expression]] of one or several independents). When Metafont executes an equation statement, it turns one of the independents involved into a dependent and eliminates it from the expressions for all other dependents; when no independents remain in the expression for a dependent variable, that variable becomes known. Solving [[system of linear equations|''linear'' equation systems]] thus is a built-in feature of the Metafont language, and the recommended method of assigning most variables (especially those whose values have geometric significance) is to state equations determining their values. Equation systems frequently mix numeric (scalar) equations with pair (vector) equations.
+
+An exception to the above is the class of ''internal quantity'' variables. These have names consisting of just one symbolic token, are always numeric, and are always known. They have a more direct internal representation than ordinary variables, making it convenient for primitive operations in Metafont (or extentions thereof) to use them implicitly.

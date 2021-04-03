@@ -1,0 +1,454 @@
+This method crucially requires that the transformation from ''U'',''V'' to ''Y'',''Z'' be [[bijective]].  The above transformation meets this because ''Z'' can be mapped directly back to ''V'', and for a given ''V'' the quotient ''U''/''V'' is [[monotonic]].  This is similarly the case for the sum ''U''&amp;nbsp;+&amp;nbsp;''V'', difference ''U''&amp;nbsp;−&amp;nbsp;''V'' and product ''UV''.
+
+Exactly the same method can be used to compute the distribution of other functions of multiple independent random variables.
+
+===Example: Quotient of two standard normals===
+Given two [[standard normal distribution|standard normal]] variables ''U'' and ''V'', the quotient can be computed as follows.  First, the variables have the following density functions:
+
+:&lt;math&gt;p(u) = \frac{1}{\sqrt{2\pi}} e^{-\frac{u^2}{2}}&lt;/math&gt;
+:&lt;math&gt;p(v) = \frac{1}{\sqrt{2\pi}} e^{-\frac{v^2}{2}}&lt;/math&gt;
+
+We transform as described above:
+
+:&lt;math&gt;Y=U/V&lt;/math&gt;
+:&lt;math&gt;Z=V&lt;/math&gt;
+
+This leads to:
+
+:&lt;math&gt;\begin{align}
+p(y) &amp;= \int_{-\infty}^\infty p_U(yz)\,p_V(z)\, |z| \, dz \\[5pt]
+&amp;= \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2} y^2 z^2} \frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2} z^2} |z| \, dz \\[5pt]
+&amp;= \int_{-\infty}^\infty \frac{1}{2\pi} e^{-\frac{1}{2}(y^2+1)z^2} |z| \, dz \\[5pt]
+&amp;= 2\int_0^\infty \frac{1}{2\pi} e^{-\frac{1}{2}(y^2+1)z^2} z \, dz \\[5pt]
+&amp;= \int_0^\infty \frac{1}{\pi} e^{-(y^2+1)u} \, du &amp;&amp; u=\tfrac{1}{2}z^2\\[5pt]
+&amp;= \left. -\frac{1}{\pi(y^2+1)} e^{-(y^2+1)u}\right]_{u=0}^\infty \\[5pt]
+&amp;= \frac{1}{\pi(y^2+1)}
+\end{align}&lt;/math&gt;
+
+This is the density of a standard [[Cauchy distribution]].
+
+==See also==
+* [[Density estimation]]
+* [[Kernel density estimation]]
+* [[Likelihood function]]
+* [[List of probability distributions]]
+* [[Probability mass function]]
+* [[Secondary measure]]
+* Uses as ''position probability density'':
+** [[Atomic orbital]]
+** [[Home range]]
+
+==References==
+{{reflist}}
+
+==Further reading==
+* {{cite book
+ | authorlink = Patrick Billingsley
+ | first = Patrick |last=Billingsley
+ | title = Probability and Measure
+ | publisher = John Wiley and Sons
+ | location = New York, Toronto, London
+ | year = 1979
+ | isbn = 0-471-00710-2}}
+* {{cite book |first=George |last=Casella |authorlink=George Casella |first2=Roger L. |last2=Berger |authorlink2=Roger Lee Berger |title=Statistical Inference |edition=Second |location= |publisher=Thomson Learning |year=2002 |isbn=0-534-24312-6 |pages=34–37 }}
+* {{cite book
+ | first = David |last=Stirzaker
+ | year = 2003
+ | title = Elementary Probability
+ | isbn = 0-521-42028-8
+ | url-access = registration
+ | url = https://archive.org/details/elementaryprobab0000stir
+ }} Chapters 7 to 9 are about continuous variables.
+
+==External links==
+* {{Springer
+ |title=Density of a probability distribution
+ |id=D/d031110
+ |first=N.G. |last=Ushakov
+}}
+* {{MathWorld|ProbabilityDensityFunction}}
+
+{{Theory of probability distributions}}
+
+{{DEFAULTSORT:Probability Density Function}}
+[[Category:Functions related to probability distributions]]
+[[Category:Concepts in physics]]</text>
+      <sha1>s4fu6n99npjb1hfuunki5f7kidh6u11</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Rave</title>
+    <ns>0</ns>
+    <id>43488</id>
+    <revision>
+      <id>991383703</id>
+      <parentid>989699690</parentid>
+      <timestamp>2020-11-29T19:41:59Z</timestamp>
+      <contributor>
+        <username>Ceoil</username>
+        <id>735741</id>
+      </contributor>
+      <comment>/* Notable venues */ add, ref</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="86625" xml:space="preserve">{{Other uses}}
+{{short description|Dance party}}
+{{EngvarB|date=August 2020}}
+{{Use dmy dates|date=August 2020}}
+{{Infobox
+|name        
+|bodystyle    
+|title        =  Rave
+|titlestyle   =
+|image        = [[File:Sven Vath playing at Amnesia.JPG|200px]]
+|imagestyle   =
+|caption      = DJ [[Sven Väth]] mixes tracks for a crowd of dancers at Amnesia, an Ibiza nightclub, in 2013.
+|captionstyle =
+|headerstyle  = background:lightgrey;
+|labelstyle   = background:lightgrey;
+|datastyle    =
+|header1 = General Information
+|label2  = Location
+|data2   = Worldwide
+|label3  = Types of street rave dance
+|data3   = {{hlist|[[Hakken]]|[[Para Para]]|[[Rebolation]]|[[Melbourne Shuffle]]}}
+|label4  =Events
+|data4 = {{hlist|Music festival|||[[list of electronic dance music festivals|electronic dance music festival]]|[[list of technoparades|technoparades]]|[[acid house party]]|[[doof]]|Orchestra|[[trance festival]]|[[Nature]]|House Party|[[Trap Music]]|[[teknival]]|[[algorave]]|[[free festival]]|[[free party]]|[[circuit party]]|[[concert tour]]}}
+|label5  = Topics
+|data5   = {{hlist|[[Electronic dance music]]|[[Nightclub]]|[[Smiley]]|Disc jockey|[[VJing]]||[[Light beam]]||[[Loudspeaker]]|[[Sound system (DJ)|Sound system]]|[[Club drug]]s|[[MDMA]]|[[2C-B]]}}
+|label6  = Origin
+|data6   = {{hlist|[[Acid house]]|[[Industrial dance]]|[[Techno]]|[[Breakbeat]]|[[Hardcore (electronic dance music genre)|Hardcore]]}} 
+|label7  = History
+|data7   = {{hlist|[[Madchester]] &lt;small&gt;(1990s)&lt;/small&gt;}} 
+}}
+
+A '''rave''' (from the [[verb]]: ''[[wikt:rave#English|to rave]]'') is an organised [[dance party]] at a warehouse, forest, cave or other private property or public space, typically featuring performances by [[Disc jockeys|DJ]]s, playing a seamless flow of [[electronic dance music]]. The word also means excellent, great, or brilliant, and can be used to describe any genre of music and entertainment. DJs at rave events play electronic dance music on vinyl, CDs and digital audio from a wide range of genres, including [[techno]],&lt;ref name=&quot;Guardian&quot;&gt;https://www.theguardian.com/music/2012/aug/02/how-rave-music-conquered-america&lt;/ref&gt; [[hardcore (electronic dance music genre)|hardcore]], [[house music|house]],&lt;ref name=&quot;Guardian&quot;/&gt;&lt;ref&gt;http://www.dummymag.com/lists/the-10-best-and-bass-tracks-according-to-goldie&lt;/ref&gt; [[dubstep]],&lt;ref name=&quot;Guardian&quot;/&gt; and [[alternative dance]]. Occasionally [[Live music|live]] musicians have been known to perform at raves, in addition to other types of performance artists such as [[go-go dancers]] and [[Fire performance|fire dancers]]. The music is amplified with a large, powerful [[sound reinforcement system]], typically with large [[subwoofer]]s to produce a deep bass sound. The music is often accompanied by [[Laser lighting display|laser light shows]], [[Image projector|projected coloured images]], [[visual effects]] and [[fog machines]].
+
+While some raves may be small parties held at nightclubs or private homes, some raves have grown to immense size, such as the large festivals and events featuring multiple DJs and dance areas (e.g., the [[Castlemorton Common Festival]] in 1992). Some [[list of electronic music festivals|electronic dance music festivals]] have features of raves, but on a larger, often commercial scale. Raves may last for a long time, with some events continuing for twenty-four hours, and lasting all through the night. [[Law enforcement]] raids and anti-rave laws have presented a challenge to the rave scene in many countries.&lt;ref name=&quot;coen&quot;&gt;{{cite book |title=Continuum Encyclopedia of Popular Music of the World: Performance and production. Volume II |last=Shepherd |first=John |year=2003 |publisher=A&amp;C Black |isbn=978-0826463210 |pages=334–335 |url=https://books.google.com/?id=0tz5YpijuksC |accessdate=10 September 2016}}&lt;/ref&gt; This is due to the association of illegal drugs such as [[MDMA]]&lt;ref name=&quot;drugabuse&quot;&gt;{{Cite web | url=https://www.drugabuse.gov/drugs-abuse/club-drugs | title=Club Drugs}}&lt;/ref&gt;&lt;ref name=&quot;nih&quot;&gt;{{Cite journal |pmc = 4458153|year = 2015|last1 = Palamar|first1 = J. J.|title = Illicit Drug Use among Rave Attendees in a Nationally Representative Sample of US High School Seniors|journal = Drug and Alcohol Dependence|volume = 152|pages = 24–31|last2 = Griffin-Tomas|first2 = M.|last3 = Ompad|first3 = D. C.|pmid = 26005041|doi = 10.1016/j.drugalcdep.2015.05.002}}&lt;/ref&gt; (often referred to as a &quot;[[club drug]]&quot; or &quot;party drug&quot; along with [[3,4-Methylenedioxyamphetamine|MDA]]&lt;ref&gt;{{Cite web | url=http://www.thejournal.ie/scott-weiland-drugs-death-2511702-Dec2015/ | title=Cocaine, ethanol and party drug MDA found in Scott Weiland's body}}&lt;/ref&gt;), [[amphetamine]], [[LSD]],&lt;ref name=&quot;drugabuse&quot;/&gt;&lt;ref name=&quot;nih&quot;/&gt; [[gamma-Hydroxybutyric acid|GHB]],&lt;ref name=&quot;drugabuse&quot;/&gt;&lt;ref name=&quot;nih&quot;/&gt; [[ketamine]],&lt;ref name=&quot;drugabuse&quot;/&gt;&lt;ref name=&quot;nih&quot;/&gt;&lt;ref&gt;{{Cite web | url=https://qz.com/681175/ketamine-better-known-as-the-rave-drug-special-k-could-be-our-next-anti-depressant/ | title=Ketamine, better known as the rave drug Special-K, could be our next anti-depressant}}&lt;/ref&gt; [[methamphetamine]],&lt;ref name=&quot;drugabuse&quot;/&gt;&lt;ref name=&quot;nih&quot;/&gt; [[cocaine]],&lt;ref name=&quot;nih&quot;/&gt; and [[cannabis]].&lt;ref&gt;{{Cite web | url=http://www.ministryofcannabisblog.com/2018/02/06/marijuana-in-the-rave-culture-of-the-90s/ | title=Marijuana in the Rave Culture of the 90's| date=6 February 2018}}&lt;/ref&gt; In addition to drugs, raves often make use of non-authorized, secret venues, such as [[squat parties]] at unoccupied homes,&lt;ref&gt;{{Cite web | url=http://www.propertyguardianprotection.com/blog/rave-squat-party-revival | title=Rave &amp; Squat Party Revival| date=1 October 2017}}&lt;/ref&gt; unused warehouses,&lt;ref&gt;{{Cite news | url=https://www.theguardian.com/music/2014/apr/16/illegal-raves-return-with-social-media-messages | title=Illegal raves: Social media messages bring in a new generation of partygoers| newspaper=The Guardian| date=1 April 2014| last1=Rosca| first1=Matei}}&lt;/ref&gt; or aircraft hangars.&lt;ref&gt;{{Cite web | url=https://www.bbc.co.uk/bbcthree/article/66df895b-af1c-416f-b32a-bb3576dbcb82 | title=Illegal raves: How the underground scene has never really gone away| date=9 May 2018}}&lt;/ref&gt;&lt;ref&gt;{{Cite web | url=https://www.independent.co.uk/arts-entertainment/the-ravers-return-how-underground-parties-are-making-a-comeback-a7036131.html | title=The ravers' return: How underground parties are making a comeback| date=1 May 2016}}&lt;/ref&gt; These concerns are often attributed to a type of [[moral panic]] surrounding rave culture.
+{{TOC limit|3}}
+
+==History==
+
+===Origin of 'rave' (1950s–1970s)===
+In the late 1950s in London, England the term &quot;rave&quot; was used to describe the &quot;wild [[bohemian]] parties&quot; of the [[Soho]] [[beatnik]] set.&lt;ref name=&quot;outofsight&quot;&gt;{{cite web
+| url = http://hehe.org.free.fr/hehe/texte/rave/#hist
+| title = OUT OF SIGHT, OUT OF MIND: An Analysis of Rave culture
+| accessdate =25 October 2007 | author=Helen Evans
+| quote = The term rave first came into use in late 50s Britain as a name for the wild bohemian parties of the time.}}&lt;/ref&gt; Jazz musician [[Mick Mulligan]], known for indulging in such excesses, had the nickname &quot;king of the ravers&quot;.&lt;ref&gt;{{Cite news|url=https://www.theguardian.com/news/2007/jan/04/guardianobituaries.artsobituaries1|title=Obituary: Mick Mulligan|last=Fordham|first=John|date=4 January 2007|work=The Guardian|access-date=27 November 2017|language=en-GB|issn=0261-3077}}&lt;/ref&gt; In 1958, [[Buddy Holly]] recorded the hit &quot;Rave On&quot;, citing the madness and frenzy of a feeling and the desire for it never to end.&lt;ref&gt;{{cite web|url=http://www.visualthesaurus.com/cm/wordroutes/1687/|title=Buddy Holly, Wordsmith|author=Thinkmap, Inc.|work=visualthesaurus.com}}&lt;/ref&gt; The word &quot;rave&quot; was later used in the burgeoning [[Mod (subculture)|mod]] youth culture of the early 1960s as the way to describe any wild party in general.  People who were gregarious party animals were described as &quot;ravers&quot;. Pop musicians such as [[Steve Marriott]] of [[Small Faces]] and [[Keith Moon]] of [[The Who]] were self-described &quot;ravers&quot;.{{Citation needed|date=November 2017}}
+[[File:Mur Ultim Atom&amp;Biobanas.jpg|thumb|240px|A huge bank of speakers and [[subwoofer]]s from a rave [[sound reinforcement system]]]]
+
+Presaging the word's subsequent 1980s association with [[electronic music]], the word &quot;rave&quot; was a common term used regarding the music of mid-1960s [[garage rock]] and [[psychedelia]] bands (most notably [[The Yardbirds]], who released an album in the United States called ''[[Having a Rave Up]]''). Along with being an alternative term for partying at such garage events in general, the &quot;rave-up&quot; referred to a specific crescendo moment near the end of a song where the music was played faster, more heavily and with intense soloing or elements of controlled feedback. It was later part of the title of an [[electronic music]] performance event held on 28 January 1967 at London's [[Roundhouse (venue)|Roundhouse]] titled the &quot;Million Volt Light and Sound Rave&quot;. The event featured the only known public airing of an experimental sound collage created for the occasion by [[Paul McCartney]] of [[The Beatles]] – the legendary &quot;[[Carnival of Light]]&quot; recording.&lt;ref&gt;{{cite web
+| url = http://www.delia-derbyshire.org/unitdeltaplus.php
+| title = Unit Delta Plus
+| accessdate =25 October 2007
+| publisher=Delia Derbyshire
+| quote = Perhaps the most famous event that Unit Delta Plus participated in was the 1967 ''Million Volt Light and Sound Rave'' at London's Roundhouse, organised by designers Binder, Edwards and Vaughan (who had previously been hired by Paul McCartney to decorate a piano). The event took place over two nights (28 January and 4 February 1967) and included a performance of tape music by Unit Delta Plus, as well as a playback of the legendary ''Carnival of Light'', a fourteen-minute sound collage assembled by McCartney around the time of the Beatles' ''Penny Lane'' sessions.}}&lt;/ref&gt;
+
+With the rapid change of British pop culture from the mod era of 1963–1966 to the [[hippie]] era of 1967 and beyond, the term fell out of popular usage. The [[Northern soul]] movement is cited by many as being a significant step towards the creation of contemporary club culture and of the [[Notable Club DJs|superstar DJ]] culture of the 2000s.&lt;ref&gt;[[Bill Brewster (DJ)|Bill Brewster]] and Frank Broughton. ''Last Night a DJ Saved My Life'', Chapter 4, &quot;Northern Soul: The First Rave Culture&quot;, page 85&lt;/ref&gt; As in contemporary club culture, Northern soul DJs built up a following based on satisfying the crowd's desires for music that they could not hear anywhere else. Many argue that Northern soul was instrumental in creating a network of clubs, DJs, record collectors and dealers in the UK, and was the first music scene to provide the British charts with records that sold entirely on the strength of club play.&lt;ref&gt;{{cite web|url=http://www.uppers.org/showArticle.asp?article=383 |title=From &quot;The in Crowd&quot; to the &quot;Happy People&quot; &amp;#124; Uppers Culture Lifestyle |publisher=Uppers.org |accessdate=3 June 2015 |url-status=dead |archiveurl=https://web.archive.org/web/20151019073257/http://www.uppers.org/showArticle.asp?article=383 |archivedate=19 October 2015}}&lt;/ref&gt; A technique employed by northern soul DJs in common with their later counterparts was the sequencing of records to create euphoric highs and lows for the crowd. DJ, Laurence 'Larry' Proxton being known for this method. DJ personalities and their followers involved in the original Northern soul movement went on to become important figures in the [[House music|house]] and [[dance music]] scenes.&lt;ref&gt;[[Bill Brewster (DJ)|Bill Brewster]] and Frank Broughton. ''Last Night a DJ Saved My Life'', Chapter 4, &quot;From Northern Soul to Nu-NRG&quot;, page 113&lt;/ref&gt; During the 1970s and early 1980s until its resurrection, the term was not in vogue, one notable exception being in the lyrics of the song &quot;[[Drive-In Saturday]]&quot; by [[David Bowie]] (from his 1973 album ''[[Aladdin Sane]]'') which includes the line, &quot;It's a crash course for the ravers.&quot; Its use during that era would have been perceived as a quaint or ironic use of bygone slang: part of the dated 1960s lexicon along with words such as &quot;groovy&quot;.
+
+The perception of the word &quot;rave&quot; changed again in the late 1980s when the term was revived and adopted by a new youth culture, possibly inspired by the use of the term in Jamaica.&lt;ref name=&quot;outofsight&quot;/&gt;
+
+===Birth of acid house (1980s)===
+[[File:Rave - Juiz de Fora - MG.jpg|thumb|left|180px|Rave – Juiz de Fora – MG, featuring bright psychedelic theming common at many raves]]
+
+In the mid to late 1980s, a wave of psychedelic and other [[electronic dance music]], most notably [[acid house]] music, emerged from [[acid house music party|acid house music parties]] in the mid-to-late 1980s in the Chicago area in the United States.&lt;ref&gt;{{cite magazine | url = http://music.hyperreal.org/library/history_of_house.html |title = The History of House |accessdate = 13 August 2013 | author = Phil Cheeseman-fu |magazine = [[DJ Magazine]]}}&lt;/ref&gt; After Chicago acid house artists began experiencing overseas success, acid house quickly spread and caught on in the United Kingdom&lt;ref&gt;{{cite web|url= http://www.fantazia.org.uk/Scene/themusic.htm |title=Acid House Music – The Timeline (The History of House – &quot;Garage, Techno, Jungle. It's all House&quot;) |publisher=Fantazia.org|accessdate= 13 August 2013}}&lt;/ref&gt;&lt;ref&gt;''Altered State – The Story of Ecstasy Culture and Acid House'', Matthew Collin (contributions by John Godfrey), Serpent's Tail, 1997 ({{ISBN|1852423773}})&lt;/ref&gt; within clubs, warehouses and free-parties, first in [[Manchester]] in the mid-1980s and then later in London. In the late 1980s, the word &quot;rave&quot; was adopted to describe the [[subculture]] that grew out of the acid house movement.&lt;ref name=&quot;Simon Parkin&quot;&gt;{{cite web|url= http://hyperreal.org/raves/database/visuale/ve1.htm |title=Visual Energy|author=Simon Parkin|date=May 1999}}&lt;/ref&gt; Activities were related to the party atmosphere of [[Ibiza]], a Mediterranean island in Spain, frequented by British, Italian, Greek, Irish and German youth on vacation, who would hold raves and dance parties.&lt;ref name=&quot;pop&quot;&gt;{{cite web|title = Rave Parties |first= Michael S.|last= Scott|website= Center for Problem Oriented Policing|date =  2002|url = http://www.popcenter.org/problems/rave_parties/ }}&lt;/ref&gt;
+
+===Growth of the scene (1990s–present)===
+[[File:MTAC Prime Rave dance.ogv|thumb|right|200px|Dancing at a rave in 2007]]
+{{see also|List of electronic dance music festivals|Doof}}
+By the 1990s, genres such as [[Acid house|acid]], [[breakbeat hardcore]], [[hardcore (electronic dance music)|hardcore]], [[happy hardcore]], [[gabber]], [[post-industrial music|post-industrial]] and [[electronica]] were all being featured at raves, both large and small. There were mainstream events which attracted thousands of people (up to 25,000{{Citation needed|date=December 2007}}&lt;!-- Previously cited with a ref named &quot;Energy Flash&quot; if anyone knows what happened to that. --&gt; instead of the 4,000 that came to earlier warehouse parties). Acid house music parties were first re-branded &quot;rave parties&quot; in the media, during the summer of 1989 by [[Genesis P-Orridge]] (Neil Andrew Megson) during a television interview; however, the ambience of the rave was not fully formed until the early 1990s. In 1990, raves were held &quot;underground&quot; in several cities, such as [[Berlin]], Milan and [[Patras]], in basements, warehouses and forests.&lt;ref name=&quot;Generation Ecstasy&quot;&gt;Timeline and numbers {{cite book
+| last = Reynolds | first = Simon | year = 1998
+| title = Generation Ecstasy: into the world of Techno and Rave culture
+| publisher=Picador | isbn = 978-0-330-35056-3 }}&lt;/ref&gt;
+
+British politicians responded with hostility to the emerging rave party trend. Politicians spoke out against raves and began to [[fine (penalty)|fine]] promoters who held unauthorised parties. Police crackdowns on these often unauthorised parties drove the rave scene into the countryside. The word &quot;rave&quot; somehow caught on in the UK to describe common semi-spontaneous weekend parties occurring at various locations linked by the brand new [[M25 motorway|M25 London orbital]] motorway that ringed London and the [[Home Counties]]. (It was this that gave the band [[Orbital (band)|Orbital]] their name.) These ranged from former warehouses and industrial sites in London, to fields and country clubs in the countryside.
+
+==Characteristics==
+
+===Rave music===
+[[File:Roland TB-303 Panel.jpg|thumb|The [[Roland TB-303]] is a synthesizer featured in [[acid house]] music.]]
+[[File:Tr909.jpg|thumb|The [[Roland TR-909|TR-909]] is a [[drum machine]] used in [[techno]], [[house music|house]] and many other genres.]]
+[[File:Volxvergnuegen Party Munich 6.jpg|thumb|Rave music is usually presented in a [[DJ set]], using a [[DJ mixer|mixer]] and [[turntable]]s or [[CDJ]]s.]]
+Rave music may either refer to the late 1980s/early 1990s genres of [[House music|house]], [[new beat]], [[breakbeat]], [[acid house]], [[techno]] and [[hardcore (electronic dance music genre)|hardcore techno]], which were the first genres of music to be played at rave parties, or to any other genre of [[electronic dance music]] (EDM) that may be played at a rave. The genre &quot;rave&quot;, also known as '''hardcore''' by early ravers, first appeared amongst the UK &quot;acid&quot; movement during the late 1980s at warehouse parties and other [[underground culture|underground]] venues, as well as on [[Pirate radio in the United Kingdom|UK pirate radio stations]].&lt;ref&gt;[http://www.allmusic.com/subgenre/rave-ma0000004480 AllMusic]&lt;/ref&gt; The genre would develop into [[breakbeat hardcore|oldschool hardcore]], which lead onto newer forms of rave music such as [[drum and bass]] and [[2-step garage|2-step]], as well as other [[Hardcore (electronic dance music genre)|hardcore techno]] genres, such as [[gabber]], [[hardstyle]] and [[happy hardcore]]. Rave music is usually presented in a [[DJ mix]] set, although live performances are not uncommon.
+
+Styles of music include:
+*[[House music]]: House music, especially [[acid house]], is the first genre of music to be played at the earliest raves, during the [[Second Summer of Love]]. House is a genre of [[electronic dance music]] that originated out of the 1980s African-American and Latino [[disco]] scene in Chicago.&lt;ref&gt;[https://www.britannica.com/art/house-music &quot;House Music&quot;, Encyclopædia Britannica]&lt;/ref&gt; House music uses a constant [[bass drum]] on every beat, electronic [[drum machine]] hi-hats and synth [[bassline]]s. There are many subgenres of house music (found below). Since house was originally [[club music]], there are many forms of it, some more appropriate to be played at raves than others. In the UK, subgenres such as [[UK funky]], [[speed garage]] and [[dubstep]] emerged from [[garage house]]. Many &quot;pop house&quot; club music producers branded themselves as &quot;house music&quot;, however, so in rave culture it is often disputed whether pop house should be considered as a subgenre of house. &quot;Rave house&quot; is a subgenre label of house music that originated from the styles of house that were typically played in the rave scene of the 1993–1999 period. It is a term used by the general population who do not follow the [[House music|house]] or [[Trance music|trance]] scene specifically, but identify certain house records as &quot;rave music&quot;. It is a loose term that generally identifies [[progressive house]], [[hard house]] or trance house styles (often instrumental with no words) that one would imagine being played at a large rave.
+*[[Trance music]]: Trance music in its most popular and modern form is an offshoot of house music that originated from the [[acid house]] movement and rave scene in the late 1980s. The history of trance music is complicated to refer to, as multiple generations of listeners and musicians have influenced the genre. The term &quot;trance&quot; was (and still to this day by many) used interchangeably with &quot;[[progressive house]]&quot; in the early rave years (1990–1994).
+*[[Breakbeat]]: Breakbeat music (or breaks for short) refers to any form of rave music with breakbeats, this may range from [[breakbeat hardcore]] and [[nu skool breaks]] to [[drum and bass]], some genres such as [[hardstep]] and [[breakcore]] cross over into the [[hardcore techno]] sound. Fusions of house and trance also exist but the drum 'n' bass still remains the most popular form of breakbeat played at rave parties.
+*[[Electro music]]: Electro and [[techno]] are two genres which largely featured [[psychedelic music|psychedelic sounds]] and are largely considered the earliest forms of electronic dance music genres to use the term &quot;rave music&quot; in respect to its modern terminological use. Techno sometimes crosses boundaries with [[house music]], hence the genres [[trance music|trance]] and [[acid techno]]. [[Miami bass]] and [[crunk]] is sometimes included as &quot;electro&quot;.
+*[[Hardcore techno]]: Any [[hard dance]] genre that was influenced by the rave genre, usually these genres have a distorted kick drum, and a 4/4 rhythm. [[Happy hardcore]] blended the Dutch hardcore sound with [[Eurodance]] and [[bubblegum pop]], the genre (also known as &quot;[[happycore]]&quot; for short) featured pitched-up vocals and a less distorted 4/4 beat. [[Trancecore]] also exists and is a less vocal fusion of happy hardcore with [[trance music]], however [[hardstyle]] is a more pure form of the trance/hardcore genre since it retains the hardcore sound.
+*[[Industrial dance]]: Industrial is a [[Gothic rock|goth]]/rock/[[Punk rock|punk]] related genre. While the genre is not usually considered rave music in itself, it is often fused with rave music genres. Industrial is the origin of many sounds found in rave music; it is one of the first genres that took the sounds that are now popular in rave music such as &quot;acid&quot; as its musical backdrop. Industrial music fans are usually considered [[rivethead]]s and do not tend to call themselves ravers.
+*[[Free tekno]]: This style of electronic music started in the early 1990s and was mostly played in illegal parties hosted by Sound System, such as Spiral Tribe, Desert Storm, Hekate, Heretik, in warehouse, dismissed buildings, or even illegal open air festivals, called Teknivals. It takes inspiration from various other genres, and mainly focuses on quick beats, 170/200 bpm, acid bassline, mentals sounds, and often samples taken from movies, popular songs or many other different media sources.
+
+[[Downtempo]] and less dance oriented styles which are sometimes called [[chill-out music]], that might be heard in a rave &quot;chill-out&quot; room or at a rave that plays slower electronic music includes:
+* [[Ambient music|Ambient]], [[Minimalist music|minimalist]] &amp; [[computer music]] – [[Brian Eno]], [[Mike Oldfield]], [[Harold Budd]], [[ATB]], [[The Orb]], [[Biosphere (musician)|Biosphere]]
+* [[Dubstep]] &amp; [[breakstep]] – [[Magnetic Man]], [[Eskmo (producer)|Eskmo]], Icicle, Loefah, Phaeleh &amp; [[Burial (musician)|Burial]]
+* [[Electro (music)|Electro]], [[Glitch (music)|glitch]], [[Detroit techno|techno]], [[experimental hip hop]] &amp; [[industrial hip hop]] – [[Flying Lotus]], [[Juan Atkins]], [[MARRS]], Dopplereffekt, [[Egyptian Lover]], [[Afrika Bambaataa]], [[Techno Animal]], [[Coldcut]], [[The Glitch Mob]] &amp; [[Kraftwerk]]
+* [[Intelligent dance music|IDM]] – [[Aphex Twin]], [[Autechre]] &amp; [[Boards of Canada]]
+* [[UK garage]] &amp; [[Grime (music)|grime]] – [[Todd Edwards]], [[So Solid Crew]], [[Roll Deep]], [[Dizzee Rascal]], [[Wiley (rapper)|Wiley]], [[Plastician]], [[Mis-Teeq]]
+
+===Location===
+
+[[File:OZORA Festival.jpg|thumb|right|300px|Rave in Hungary in 2010, showing the fantastical thematic elements at such events]]
+Raves have historically referred to grassroots organised, anti-establishment and unlicensed all‐night dance parties.&lt;ref&gt;{{Cite journal|last=Anderson|first=Tammy L.|last2= Kavanaugh |first2=Philip R.|year=2007|title=A 'Rave' Review: Conceptual Interests and Analytical Shifts in Research on Rave Culture|journal=Sociology Compass|language=en|volume=1 |issue=2 |pages= 499–519|doi=10.1111/j.1751-9020.2007.00034.x|issn=1751-9020}}&lt;/ref&gt; Prior to the commercialisation of the rave scene, when large legal venues became the norm for these events, the location of the rave was kept secret until the night of the event, usually being communicated through [[answering machine]] messages,&lt;ref&gt;{{Cite news|url=https://www.bbc.com/news/uk-england-hereford-worcester-39960232|title=The rave that changed the law|last=Chester |first=Jerry|date=2 May 2017|work=BBC News|access-date=27 November 2017|language=en-GB}}&lt;/ref&gt; mobile messaging, secret flyers, and websites. This level of secrecy, necessary for avoiding any interference by the police, also on account of the illicit drug use, enabled the ravers to use locations they could stay in for ten hours at a time.  It promoted the sense of deviance and removal from social control.&lt;ref&gt;{{cite journal|first=Tammy L.|last= Anderson|title = Understanding the Alteration and Decline of a Music Scene: Observations from Rave Culture |journal =Sociological Forum|volume=24 |number=2 |year =2009|pages= 309–311|doi= 10.1111/j.1573-7861.2009.01101.x|jstor=40210403}}&lt;/ref&gt; In the 2000s, this level of secrecy still exists in the underground rave scene.  However &quot;after-hours&quot; clubs, as well as large outdoor events, create a similar type of alternate atmosphere, but focus much more on vibrant visual effects, such as props and décor. In more recent years,{{When|date=November 2017}} large commercial events are held at the same locations year after year with similar reoccurring themes every year. Events like [[Electric Daisy Carnival]] and [[Tomorrowland (festival)|Tomorrowland]] are typically held at the same venue that holds mass numbers of people.
+
+Some raves make use of [[paganism|pagan]] symbolism.  Modern raving venues attempt to immerse the raver in a fantasy-like world.  Indigenous imagery and spirituality can be characteristic in the Raving ethos.  In both the New Moon and Gateway collectives, &quot;pagan altars are set up, sacred images from primitive cultures decorate the walls, and rituals of cleansing are performed over the turntables and the dance floor&quot;&lt;ref&gt;{{cite journal | last1 = Hutson | first1 = Scott R. | year = 2000 | title = The Rave: Spiritual Healing in Modern Western Subcultures | journal = Anthropological Quarterly | volume = 73 | issue = 1| pages = 40–41 | jstor=3317473}}&lt;/ref&gt; This type of spatial strategy is an integral part of the raving experience because it sets the initial &quot;vibe&quot; in which the ravers will immerse themselves.  This said &quot;vibe&quot; is a concept in the raver ethos that represents the allure and receptiveness of an environment's portrayed and or innate energy.  The landscape is an integral feature in the composition of rave, much like it is in pagan rituals.  For example, The Numic Ghost Dancers rituals were held on specific geographical sites, considered to hold powerful natural flows of energy.  These sites were later represented in the rhythmic dances, to achieve a greater level of connectivity.&lt;ref&gt;{{cite journal | last1 = Carroll | first1 = Alex K. | last2 = Zedeno | first2 = M. Nieves | last3 = Stoffle | first3 = Richard W. | year = 2004 | title = Landscape of the Ghost Dance: A Cartography of Numic Ritual | journal = Journal of Archaeological Method and Theory | volume = 11 | issue = 2| pages = 141–143 | jstor=20164812 | doi=10.1023/b:jarm.0000038064.42041.aa}}&lt;/ref&gt;
+
+====Notable venues====
+{{See also|Category:Electronic dance music venues}}
+
+The following is an incomplete list of venues associated with the rave subculture:
+{{columns-list|colwidth=260px|rules=yes|
+;Asia
+*[[AgeHa]], Japan
+*[[Zouk (club)|Zouk]], Singapore and Kuala Lumpur
+*[[Submerge (nightclub)|Submerge]], India
+*[[Womb (nightclub)|Womb]], Japan
+
+=====Europe=====
+;Belgium
+*[[Boccaccio (nightclub)|Boccaccio]]
+*[[Café d'Anvers (Club)|Café d'Anvers]]
+*[[Kompass Klub]]
+;Croatia
+*[[Papaya Club]]
+*[[Boogaloo Club]]
+;England
+*[[Angels (nightclub)|Angels]] (1992–96)
+*[[London Astoria|Astoria]]
+*[[Bagleys]] (later Canvas) (1991–2007)
+*[[Cream (nightclub)|Cream]] (1992–2015) 
+*[[Epping Forest Country Club]]
+*[[Fabric (club)|Fabric]] (1999–present)
+*[[Camden Palace]] (1982–2004)
+*[[Gatecrasher One]] (1996–2007)
+*[[Godskitchen]] (1996)
+*[[Heaven (nightclub)|Heaven]] (1979–present)
+*[[Home (nightclub chain)|Home]] (1998–2001)
+*[[Koko (venue)|Koko]] (2004–present)
+*[[Konspiracy]] (1989–90)
+*[[The Four Aces Club#Labrynth|Labrynth]] (1990–1998)
+*[[Lakota (club)|Lakota]] (1990–present)
+*[[Ministry of Sound]] (1991–present)
+*[[Mint Club]] (1998–2019)
+*[[Matter (venue)|Matter]]
+*[[Megatripolis]] (1993–96)
+*[[Popscene (club)|Popscene]]
+*[[Quadrant Park]] (1988–91)
+*[[Renaissance (club)|Renaissance]] (1992)
+*[[Sanctuary Music Arena]] (1991–2004)
+*[[Sankeys]] (1994–present)
+*[[Shelley's Laserdome]] (1989–1995)
+*[[Shoom]] (1987-1990)&lt;ref name=&quot;mm&quot;&gt;Matos, Michaelangelo. &quot;[https://www.rollingstone.com/music/music-features/shoom-an-oral-history-of-the-london-club-that-kicked-off-rave-culture-195865/ Shoom: An Oral History of the London Club That Kicked Off Rave Culture]&quot;. ''[[Rolling Stone]]'', 12 December 2017. Retrieved 29 November 2020.&lt;/ref&gt;
+*[[Sterns Nightclub]] (1991–1998)
+*[[Brixton Academy|The Academy]] (1990–2006)
+*[[The Eclipse (venue)|The Eclipse]] (later Edge) (1990–1994)
+*[[The End (club)|The End]] (1995–2009)
+*[[The Fridge (nightclub)|The Fridge]] (1981–2010)
+*[[The Haçienda]] (1982–1997)
+*[[The Zap]] (1984–2005)
+*[[Thunderdome (Manchester Nightclub)|Thunderdome]] (1989–90)
+*[[Trade (nightclub)|Trade]] (1990–2008)
+*[[Turnmills]] (1990–2008)
+*[[Vague (club)]] (1993–1996)
+;France
+*[[Le Palace]]
+*[[Le Queen]]
+;Germany
+*[[Berghain]] (2004–present)
+*[[Bunker (Berlin)|Bunker]] (1992–1996)
+*[[Dorian Gray (club)|Dorian Gray]] (1978–2000)
+*[[E-Werk (Berlin)|E-Werk]] (1993–1997)
+*[[KitKatClub]] (1994–present)
+*[[KW – Das Heizkraftwerk]] (1996–2003)
+*[[Natraj Temple]] (1996–2008)
+*[[:de:Omen (Frankfurt am Main)|Omen]] (1988–1998)
+*[[:de:Palazzo (Bingen)|Palazzo]] (1989–2003)
+*[[:de:Stammheim (Diskothek)|Stammheim]] (1994–2002)
+*[[Tresor (club)|Tresor]] (1991–present)
+*[[:de:U60311|U60311]] (1998–2012)
+*[[Ufo (Club, Berlin)|Ufo]] (1988–1990)
+*[[Ultraschall]] (1994–2003)
+;Georgia
+*[[Bassiani]] (2014–present)
+*[[KHIDI]]
+*[[Mtkvarze]] (2012–present)
+;Ireland
+*[[Sir Henry's]]
+*[[The Twisted Pepper]]
+*[[District 8 (nightclub)|District 8]]
+;Italy
+*[[Livello 57]]
+*[[Fintech]]
+*[[CaCuBo]]
+*[[72 ore]]
+;Netherlands, The
+*[[:nl:IT (club)|iT]] (1989–2004)
+*[[:nl:RoXY|RoXY]] (1987–1999)
+*[[:nl:Parkzicht|Parkzicht]] (1990–1997)
+;Romania
+*[[Bamboo Club]]
+;Russia
+*[[Quadro Club (Ekaterinodar Krasnodar nightclub)|Quadro]] (1995–2004)
+;Scotland
+*[[The Arches (Glasgow)|The Arches]] (1991–2015)
+*[[Hangar 13]] (1993–95)&lt;ref&gt;{{cite web|last1=Arlidge|first1=John|title=The day the music died, Hanger 13, Scotland's top rave venue, has been closed after three Ecstasy-related deaths.|url=https://www.independent.co.uk/arts-entertainment/the-day-the-music-died-1617980.html|website=independent.co.uk/|publisher=The Independent Newspaper UK|accessdate=5 October 2015|date=1995-05-02}}&lt;/ref&gt;
+*[[Sub Club]] (1987–present)
+;Serbia
+*Tunnel
+;Slovakia
+*[[Subclub]]
+;Spain
+*[[Amnesia (nightclub)|Amnesia]] (1976–present)
+*[[Cream (nightclub)#Cream Ibiza|Cream Ibiza]]
+*[[DC10 (nightclub)|DC10]]
+*[[Pacha Group]] (1967–present)
+*[[Privilege Ibiza]] (1978–present)
+*[[Sankeys]]
+*[[Space (Ibiza nightclub)|Space Ibiza]] (1986–2016)
+;Sweden
+*[[Docklands (Stockholm nightclub)|Docklands]] (1995–2002)
+
+=====Middle East=====
+;Egypt
+*[[Space Sharm]]
+;Israel
+*[[Haoman 17]]
+;Lebanon
+*[[B 018]]
+
+=====North America=====
+;Canada
+*[[Stereo nightclub]]
+*[[The Guvernment]] (1996–2015)
+;Mexico
+*[[Magic Circus]]
+;United States
+*[[Beacham Theatre|Aahz / Beacham Theater (1988–94)]]
+*[[Catacombs Nightclub Philadelphia]]
+*[[Club Glow]]
+*[[Club Space]]
+*[[Club Zanzibar]] (1979–1993)
+*[[Masterdome]]
+*[[Paradise Garage]] (1977–1987)
+*[[Studio 54]] (1977–1986)
+*[[The Saint (club)|The Saint]] (1980–1988)
+*[[Shulertown (Fayetteville, AR)]] (1994–2000)
+*[[Tunnel (New York nightclub)|Tunnel]] (1986–2001)
+*[[U Street Music Hall]]
+*[[Warehouse (nightclub)|Warehouse]] (1977–1987)
+
+=====Oceania=====
+;Australia
+*[[Club Filter Melbourne]]
+*[[Home (nightclub chain)]]
+*[[Mansion nightclub]]
+;New Zealand
+*[[The Palladium Niteclub]]
+}}
+
+===Dancing===
+{{See also|Street dance}}
+[[File:T-Step.gif|thumb|right|T-step of the [[Melbourne Shuffle]]]]
+A sense of participation in a group event is among the chief appeals of rave music and dancing to pulsating beats is its immediate outlet.&lt;ref&gt;{{cite book | title=Joining In: An investigation in participatory music | author=Everit, Anthony | quote=A rave or a rock concert is not simply a presentation which audiences attend, but a communal event (like a secular church service) in which everyone has an active part. | url=http://www.gulbenkian.org.uk/pdffiles/Joining-in-text-no-photos.pdf | url-status=dead | archiveurl=https://web.archive.org/web/20130731195611/http://www.gulbenkian.org.uk/pdffiles/Joining-in-text-no-photos.pdf | archivedate=31 July 2013}}&lt;/ref&gt;&lt;ref&gt;{{cite book | title=Music as Social Life: The Politics of Participation. | publisher=Chicago: University of Chicago Press | author=Turino, Thomas}}&lt;/ref&gt; Raving in itself is a syllabus-free dance, whereby the movements are [[freestyle dance|not predefined and the dance is performed randomly]], dancers take immediate inspiration from the music, their mood and watching other people dancing. Thus, the electronic, rave and club dances refer to the [[street dance]] styles that evolved alongside electronic music culture. Such dances are street dances since they evolved alongside the underground rave and club movements, without the intervention of [[dance studios]]. These dances were originated in some 'scenes' around the world, becoming known only to ravers or clubgoers who attempt to these locations. They were originated at some point that certain moves had begun to be performed to several people at those places, creating a completely freestyle, yet still highly complex set of moves, adaptable to every dancer change and dance whatever they want based on these moves. Many rave dancing techniques suggest using your body as an extension of the music, to loosen up, and let the music flow through the body to create a unique form of movement.{{citation needed|date=August 2018}}
+
+A common feature shared by all these dances, along with being originated at clubs, raves and music festivals around the world and in different years, is that when YouTube and other social media started to become popular (around 2006), these dances began to be popularised by videos of raves performing them, recording and uploading their videos.{{Citation needed|date=November 2017}} Therefore, they began to be practised outside their places of origin, creating different 'scenes' in several countries. Furthermore, some of these dances began to evolve, and these dance 'scenes' are not totally related to the club/rave scenes they were originated. Also, the way of teaching and learning them have changed. In the past, if someone wanted to learn one of these dances, the person had to go to a club/rave, watch people dancing and try to copy them. Now,{{When|date=November 2017}} with social media, these dances are mostly taught on video tutorials and the culture spreads and grows inside those social media, like Flogger on [[Fotolog]], Rebolation, Sensualize and Free Step on [[Orkut]] and Cutting Shapes on [[Instagram]].&lt;ref&gt;{{Cite web|url=https://scholarspace.manoa.hawaii.edu/bitstream/10125/100325/1/Heller_David_r.pdf|title=I-Rave: digiphrenia's transformation of a culture|first=David|last=Heller|publisher=[[University of Hawai'i at Mãnoa]]|accessdate=6 November 2016}}&lt;/ref&gt;
+
+Due to the lack of studies dedicated to those dances, combined with poor and inaccurate information of them available on the Internet, it is hard to find reliable information.
+{| class=&quot;wikitable sortable&quot; style=&quot;text-align:left;font-size:90%;&quot;
+|+ List of electronic/rave/club dances  
+! Name
+! City/country of&lt;br /&gt;origin
+! style=&quot;width:20px;&quot; | Year (or closest estimate) of origin
+! [[Tempo|BPM]] range and preferable music styles 
+|-
+| Brisbane Stomp   ||  [[Brisbane]], Australia  || 2000–2003 || 140 180 to | 130–180 | [[Hardcore (electronic dance music genre)|Hardcore]], [[Happy hardcore]], [[UK hardcore]], [[Hard House]]
+|-
+| [[Melbourne Shuffle]]  
+|[[Melbourne]], Australia|| 1988–1992 || 120 160 to | 120–160 | [[Hardstyle]], [[Hard trance]], [[Hard House]], [[Hard dance]], [[:de:Hands up|Hands Up]], [[Trance music|Trance]], [[Techno]], [[Electro house|Electro-House]], [[Progressive house]]
+|-
+|Muzza
+|[[Melbourne]] and Sydney
+|2005
+|&lt;nowiki&gt;120–180 | &lt;/nowiki&gt;[[Hardstyle]], [[Trance music|Trance]], [[Psychedelic trance|Psy Trance]], [[Happy hardcore]], [[UK hardcore]]
+|-
+|[[Liquid and digits|Liquid]]|| rowspan=&quot;3&quot; |New York City    || rowspan=&quot;2&quot; | 1991–1992 || rowspan=&quot;2&quot; | 100–160 | [[Trance music|Trance]], [[Hard trance]], [[Acid trance]], [[Progressive house]]
+|-
+|[[Glowsticking]]
+|-
+|[[Gloving]]|| 1992–1993 || 100 150 to | 110–150 | [[Trance music|Trance]], [[Progressive house]], [[Dubstep]], [[Glitch hop]], [[Trap music (EDM)|Trap]], [[Hardstyle]]
+|-
+|Nordictrack (Candywalk)
+|United States of America
+|1992–1993
+|&lt;nowiki&gt;100–160 | &lt;/nowiki&gt;[[Trance music|Trance]], [[Hard trance]], [[Acid trance]], [[Techno]]
+|-
+|Drum 'N Bass Step (X-Outing)  || [[Hungary]]   ||2008  || 120 to 180 | 130–160 | [[Drum and bass|Drum 'N Bass]] and its variations 
+|-
+|Flogger   ||  [[Argentina]]    || 2008   ||120 to 150 | 120–140 | [[Electro house|Electro-House]], [[Progressive house]], [[Dirty House|Dutch House]]
+|-
+|Industrial (Cybergoth) Dance
+|[[Ruhr]] region, Germany
+|2006
+|&lt;nowiki&gt;120–160 | &lt;/nowiki&gt;[[Aggrotech]], [[Synthpop]], [[Electro-industrial]]
+|-
+|Cutting Shapes
+|London, England
+|2012
+|&lt;nowiki&gt;120–145 | &lt;/nowiki&gt;[[Deep house]], [[Tech house]], [[Techno]], [[Big room house]], [[Progressive house]]
+|-
+| [[Tecktonik]] (Danse électro)  || Paris, France   || 2005   ||120 to 150 | 120–140 | [[Complextro]], [[Electro house|Electro-House]], [[Progressive house]]
+|-
+|[[Hakken]]   ||  [[Rotterdam]], Netherlands    || 1992   || 150 to 230 | 150–230 | [[Gabber house|Gabberhouse]], [[Hardcore (electronic dance music genre)|Hardcore]], [[Hardstyle]]
+|-
+| [[Jumpstyle]]  ||  [[Belgium]]    ||  2005  || 130 to 170 | 140–170 | [[Jumpstyle|Jump]], [[Hardstyle]], [[Hardcore (electronic dance music genre)|Hardcore]]
+|-
+|Rebolation
+|Brazil
+|2006
+|&lt;nowiki&gt;120–140 | &lt;/nowiki&gt;[[Psychedelic trance|Psy Trance]], [[Progressive house]], [[Electro house|Electro-House]]
+|-
+|Sensualize
+| rowspan=&quot;2&quot; |[[São Paulo]], Brazil
+|2009
+|&lt;nowiki&gt;120–140 | &lt;/nowiki&gt;[[Electro house|Electro-House]], [[Progressive house]], [[Dutch house]]
+|-
+|Free Step
+|2010
+|&lt;nowiki&gt;120–150 | &lt;/nowiki&gt;[[Complextro]], [[Electro house|Electro-House]], [[Progressive house]]
+
+&lt;!-- 
+|   ||    ||    ||  || ||
+|-
+--&gt;|}
+
+===Attire===
+{{See also|Rivethead|Phat pants|Fluffy (footwear)}}
+{{expand section|date=July 2013}}
+[[Image:Atomik Reaktion.jpg|thumb|left|200px|[[Cybergoth]] neon fashion under a [[nightclub]] [[black light]]. While some ravers have natural dreadlocks, cybergoths often create artificial neon dreadlocks in various colours.
+ ([[San Francisco]], 2008)]]
+[[File:Ravers.jpg|thumb|200px|[[Phat pants]] worn by ravers in Australia (2009)]]
+[[File:2008-03-13 Rave glowsticking 2.jpg|thumb|right|250px|Glowsticking in 2008.]]
+[[File:Candy_To_Trade.jpg|thumb|left|250px|A collection of handmade bracelets known as &quot;kandi&quot;]]
+
+Since the late 1980s, rave fashion has undergone constant evolution with each new generation of ravers. Many of the rave fashion trends have appeared internationally, but there were also individual developments from region to region and from scene to scene.&lt;ref name=&quot;redbull_rave_fashion&quot;&gt;{{cite magazine |last=Bouteba |first=Miriam |url=https://www.redbull.com/ie-en/guide-to-european-rave-fashion |title=A guide to 25 years of European rave fashion |publisher=[[Red Bull]] | date=13 November 2017 |access-date=5 February 2020}}&lt;/ref&gt;
+
+At early rave parties, often costume-like clothes and garments with signal color look such as protective suits, [[High-visibility clothing|safety vests]], [[dust mask|dust]] and [[gas mask]]s were worn and combined with accessories such as vacuum cleaners, homemade glasses, [[pacifier]]s and [[whistle]]s. Clothing with slogans such as &quot;Peace, Love, Unity&quot; and smiley-face T-shirts first appeared with the acid house movement of the 1980s. Further popular themes of the early rave scene were plastic aesthetics, various fetish styles, [[DIY]], 1970s, second-hand optics, retro sportswear (such as [[Adidas]] tracksuits), sex (showing much skin and nudity, e.g. wearing transparent or crop tops), war (e.g. in the form of combat boots or camouflage trousers), and science fiction.&lt;ref name=&quot;rave_and_clubwear&quot;&gt;{{cite magazine |last=Sack |first=Adriano |url=https://032c.com/rave-before-streetwear-there-was-clubwear |title=RAVE: Before Streetwear There Was Clubwear |publisher=[[032c]] | date=21 February 2019 |access-date=5 February 2020}}&lt;/ref&gt;
+
+Common fashion styles of the 1990s include tight-fitting nylon shirts, tight nylon quilted vests, [[bell-bottoms]], neoprene jackets, studded belts, [[platform shoe]]s, jackets, scarves and bags made of [[flokati]] fur, [[Fluffy (footwear)|fluffy boots]] and [[phat pants]], often in bright and neon colours. Also gaudy coloured hair, dreadlocks, tattoos and piercings came into fashion with ravers. Widespread accessories were wristbands and collars, rings and [[glow stick]]s, as well as record bags made of truck tarpaulins.&lt;ref name=&quot;spiegel_special&quot;&gt;{{cite magazine |url=http://www.spiegel.de/spiegel/spiegelspecial/d-7441075.html |title=Jung ist die Nacht: CLUB-TIPS |trans-title=Young is the night: club tips |magazine=[[Der Spiegel|Spiegel Special]] | date= 1 August 1998 |pages=6 |quote=[http://magazin.spiegel.de/EpubDelivery/spiegel/pdf/7441075 (PDF version)] | access-date=20 June 2019}}&lt;/ref&gt; In the early 1990s the first commercial rave fashion trends developed from this, which were quickly taken up by the fashion industry and marketed under the term ''clubwear''.&lt;ref name=&quot;rave_and_clubwear&quot;/&gt; Different dress codes also evolved in the various sub-scenes of the rave culture. For example, the typical [[gabber]] or [[psytrance]] raver dressed significantly different from &quot;normal&quot; ravers, but common basic features remained recognisable.
+
+Since the 2000s, the clothing style of the rave culture remains heterogeneous, as do its followers. Particularly in North America, rave fashion continues to be characterised by colourful clothing and accessories, most notably the &quot;kandi&quot; jewellery that fluoresces under ultraviolet light. They contain words or phrases that are unique to the raver and that they can choose to trade with each other using &quot;PLUR&quot; (Peace, Love, Unity, Respect). This style of attire was again taken up by the fashion industry and marketed as &quot;rave fashion&quot; or &quot;festival fashion&quot;, now includling all kinds of accessories to create unique looks depending on event.&lt;ref&gt;{{cite web|url=http://www.laweekly.com/music/the-evolution-of-rave-fashion-4391090|title=The Evolution of Rave Fashion|author=Mary Grace Cerni|work=L.A. Weekly|date=3 January 2014}}&lt;/ref&gt; In contrast to this and starting at Berlin techno clubs like [[Berghain]] in the 2000s, a strictly black style, partly borrowed from the [[dark culture|dark scene]], has established itself within parts of the techno scene.&lt;ref name=&quot;black_fashion&quot;&gt;{{cite magazine |url=http://readthetrieb.com/index.php/2016/09/07/berliner-techno-szene-black-is-a-happy-color/|title=Berliner Techno Szene: Black is a happy Color! |trans-title=Berlin's techno scene: black is a happy color! |publisher=RTT magazine | date=7 September 2016 | access-date=4 February 2020}}&lt;/ref&gt; Certain rave events such as [[Sensation (event)|Sensation]] also have a strict minimalistic dress policy, either all white or black attire.
+
+===Light shows===
+{{See also|Gloving|Glowsticking|Holographic show|Laser show}}
+[[File:Yaga gathering.jpg|thumb|right|250px|Laser lighting show at a [[trance festival]].]]
+[[File:Aphex Twin ilosaarirock 2011.jpg|thumb|left|200px|The [[Laser lighting display|light show]] for the electronic musician [[Aphex Twin]] in 2011.]]
+Some ravers participate in one of four light-oriented dances, called ''glowsticking'', ''glowstringing'', ''gloving'', and ''lightshows''. Of the four types of light-orientated dances, gloving in particular has evolved beyond and outside of the rave culture. Other types of light-related dancing include [[LED]] lights, flash-lights and blinking strobe lights. LEDs come in various colours with different settings.
+[[Gloving]] has evolved into a separate dance form that has grown exponentially in the last couple of years.{{When|date=November 2017}}  Since then the culture has extended to all ages, ranging from kids in their early teens to college students and more. The traditional Rav'n lights are limited now, but many stores have developed newer, brighter, and more advanced version of lights with a plethora of colours and modes—modes include solid, stribbon, strobe, dops, hyper flash, and other variations.
+
+===Drug use===
+{{See also|Club drug|Party pills}}
+[[File:Bzptablet.jpg|left|thumb|This impure tablet sold as MDMA in the U.S. contained no MDMA, but instead [[Benzylpiperazine|BZP]], [[caffeine]] and [[methamphetamine]].]]
+[[File:Ecstasy monogram.jpg|thumb|right|200px|A selection of [[MDMA]] tablets, better known as &quot;ecstasy&quot;.]]
+[[File:HOpoppers.jpg|thumb|right|250px|A selection of poppers, a volatile drug inhaled for the &quot;rush&quot; it can provide.]]
+Among the various elements of 1970s disco subculture that ravers drew on, in addition to basing their scene around dance music mixed by DJs, ravers also inherited the positive attitude towards using [[club drug]]s to &quot;enhanc[e]...the sensory experience&quot; of dancing to loud music.&lt;ref&gt;{{cite journal|url=http://www.aafp.org/afp/2004/0601/p2619.html|title=Club Drugs: MDMA, Gamma-Hydroxybutyrate (GHB), Rohypnol, and Ketamine|first=Paul M.|last=Gahlinger|date=1 June 2004|journal=American Family Physician|volume=69|issue=11|pages=2619–26|pmid=15202696}}&lt;/ref&gt;&lt;ref name=&quot;mufe&quot;&gt;{{cite book |title=Music Festivals and the Politics of Participation |last=Robinson |first=Roxy |year=2016 |publisher=Routledge |isbn=978-1317091998 |page=33 |url= https://books.google.com/?id=dIQWDAAAQBAJ |accessdate=10 September 2016}}&lt;/ref&gt; Ecstasy is a result of when various factors harmonise the ego with the other elements such as place and music and you enter in a &quot;one state&quot; where we cannot distinguish what is material or not, where things enter into syntony and constitute a unique moment, precisely the kind sought in mediation.&lt;ref name=Coutinho&gt;{{Cite journal | url=http://socialsciences.scielo.org/scielo.php?pid=S0100-85872006000200004&amp;script=sci_arttext&amp;tlng=en | title=From religious ecstasy to ecstasy pills: A symbolic and performative analysis of electronic music festivals| journal=Religião &amp; Sociedade| volume=2| issue=SE| last1=Coutinho| first1=Tiago}}&lt;/ref&gt;

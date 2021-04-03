@@ -124,7 +124,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
     pthread_mutex_destroy(&lock_create_triplets);
     //endregion
     exectimes(getElapsedTime(&begin, &end), CREATE_TRIPLETS, SET_TIME);
-    free(files_sketches);
+  //  free(files_sketches);
     //region merge sort doc id
     args_mergesort_docid args_merge_sort[N_THREADS];
     for (int i = 0; i < N_THREADS; ++i) {
@@ -210,14 +210,14 @@ void* mergesort_signatures(void* args){
 void merge_signatures(struct sign_doc* X, int index_inizio, int valore_medio, int index_fine) {
 
     struct sign_doc temp[valore_medio - index_inizio + 1], temp2[index_fine - valore_medio];
-    //copy first part to temporary array
+    //copia la prima parte in un array temporaneo
     for(int i=0; i<(valore_medio - index_inizio + 1); i++)
         temp[i]=X[index_inizio + i];
-    //copy second part to temporary array
+    //copia la seconda parte in un array temporaneo
     for(int i=0; i<(index_fine - valore_medio); i++)
         temp2[i]=X[valore_medio + 1 + i];
     int i=0, j=0, k=index_inizio;
-    //combine the arrays on the basis of order
+    //combina i due array
     while(i<(valore_medio - index_inizio + 1) && j < (index_fine - valore_medio))
     {
         if(temp[i].signature<temp2[j].signature)
@@ -225,7 +225,7 @@ void merge_signatures(struct sign_doc* X, int index_inizio, int valore_medio, in
         else
             X[k++]=temp2[j++];
     }
-    //to combine the remainder of the two arrays
+    //combina il resto dei due array
     while(i<(valore_medio - index_inizio + 1))
         X[k++]=temp[i++];
     while(j<(index_fine - valore_medio))
@@ -248,14 +248,14 @@ void* mergesort_doc_id(void* args){
 
 void merge_doc_id(struct doc_couple* X, int index_inizio, int valore_medio, int index_fine) {
     struct doc_couple temp[valore_medio - index_inizio + 1], temp2[index_fine - valore_medio];
-    //copy first part to temporary array
+    //copia la prima parte in un array temporaneo
     for(int i=0; i<(valore_medio - index_inizio + 1); i++)
         temp[i]=X[index_inizio + i];
-    //copy second part to temporary array
+    //copia la seconda parte in un array temporaneo
     for(int i=0; i<(index_fine - valore_medio); i++)
         temp2[i]=X[valore_medio + 1 + i];
     int i=0, j=0, k=index_inizio;
-    //combine the arrays on the basis of order
+    //combina i due array
     while(i<(valore_medio - index_inizio + 1) && j < (index_fine - valore_medio))
     {
         if(temp[i].doc_id<temp2[j].doc_id)
@@ -263,7 +263,7 @@ void merge_doc_id(struct doc_couple* X, int index_inizio, int valore_medio, int 
         else
             X[k++]=temp2[j++];
     }
-    //to combine the remainder of the two arrays
+    //combina il resto dei due array
     while(i<(valore_medio - index_inizio + 1))
         X[k++]=temp[i++];
     while(j<(index_fine - valore_medio))

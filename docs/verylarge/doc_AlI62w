@@ -1,0 +1,256 @@
+== Examples ==
+
+=== Dihedral group ===
+The [[dihedral group]] {{math|D{{sub|2''n''}}}} with {{math|2''n''}} elements is isomorphic to a semidirect product of the [[cyclic group]]s {{math|C{{sub|''n''}}}} and {{math|C{{sub|2}}}}.&lt;ref name=&quot;mac-lane&quot;&gt;{{cite book |last1=Mac Lane |first1=Saunders |authorlink1=Saunders Mac Lane |last2=Birkhoff |first2=Garrett |authorlink2=Garrett Birkhoff |title=Algebra |edition=3rd |year=1999 |publisher=American Mathematical Society |isbn=0-8218-1646-2 |pages=414–415}}&lt;/ref&gt; Here, the non-identity element of {{math|C{{sub|2}}}} acts on {{math|C{{sub|''n''}}}} by inverting elements; this is an automorphism since {{math|C{{sub|''n''}}}} is [[abelian group|abelian]]. The [[group presentation|presentation]] for this group is:
+:&lt;math&gt;\langle a,\;b \mid a^2 = e,\; b^n = e,\; aba^{-1} = b^{-1}\rangle.&lt;/math&gt;
+
+==== Cyclic groups ====
+More generally, a semidirect product of any two cyclic groups {{math|C{{sub|''m''}}}} with generator {{math|''a''}} and {{math|C{{sub|''n''}}}} with generator {{math|''b''}} is given by one extra relation, {{math|''aba''{{sup|−1}} {{=}} ''b{{sup|k}}''}}, with {{math|''k''}} and {{math|''n''}} [[coprime]]; that is, the presentation:&lt;ref name=&quot;mac-lane&quot; /&gt;
+:&lt;math&gt;\langle a,\;b \mid a^m = e,\;b^n = e,\;aba^{-1} = b^k\rangle.&lt;/math&gt;
+
+If {{math|''r''}} and {{math|''m''}} are coprime, {{math|''a{{sup|r}}''}} is a generator of {{math|C{{sub|''m''}}}} and {{math|''a{{sup|r}}ba{{sup|−r}}'' {{=}} ''b{{sup|k{{sup|r}}}}''}}, hence the presentation:
+:&lt;math&gt;\langle a,\;b \mid a^m = e,\;b^n = e,\;aba^{-1} = b^{k^{r}}\rangle&lt;/math&gt;
+
+gives a group isomorphic to the previous one.
+
+=== Fundamental group of the Klein bottle ===
+The [[fundamental group]] of the [[Klein bottle]] can be presented in the form
+:&lt;math&gt;\langle a,\;b \mid aba^{-1} = b^{-1}\rangle.&lt;/math&gt;
+
+and is therefore a semidirect product of the group of integers, {{math|ℤ}}, with {{math|ℤ}}. The corresponding homomorphism {{math|''φ'': ℤ → Aut(ℤ)}} is given by {{math|''φ''(''h'')(''n'') {{=}} (−1){{sup|''h''}}''n''}}.
+
+=== Upper triangular matrices ===
+The group &lt;math&gt;\mathbb{T}_n&lt;/math&gt; of upper [[Triangular matrix|triangular matrices]]{{Clarify|date=October 2020|reason=What are the entries of the matrices: real, complex, in any field? Define the group T_n precisely.}} with non-zero [[determinant]], that is with non-zero entries on the [[Main diagonal|diagonal]], has a decomposition into the semidirect product
+&lt;math&gt;\mathbb{T}_n \cong \mathbb{U}_n \rtimes \mathbb{D}_n&lt;/math&gt;&lt;ref&gt;{{Cite book|last=Milne|first=|url=https://www.jmilne.org/math/CourseNotes/iAG200.pdf|title=Algebraic Groups|publisher=|year=|isbn=|location=|pages=45, semi-direct products}}&lt;/ref&gt; where
+&lt;math&gt;\mathbb{U}_n&lt;/math&gt; is the subgroup of matrices with only &lt;math&gt;1&lt;/math&gt;'s on the diagonal, which is called the upper [[Triangular matrix|unitriangular matrix]] group, and &lt;math&gt;\mathbb{D}_n&lt;/math&gt; is the subgroup of [[Diagonal matrix|diagonal matrices]].&lt;br /&gt;
+The group action of &lt;math&gt;\mathbb{D}_n&lt;/math&gt; on &lt;math&gt;\mathbb{U}_n&lt;/math&gt; is induced by matrix multiplication. If we set
+
+&lt;math&gt;A = \begin{bmatrix}
+x_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; x_2 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; x_n
+\end{bmatrix}&lt;/math&gt;
+and &lt;math&gt;B = \begin{bmatrix}
+1 &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1n} \\
+0 &amp; 1 &amp; a_{23} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1
+\end{bmatrix}&lt;/math&gt;
+
+then their [[Matrix multiplication|matrix product]] is
+:&lt;math&gt;AB = 
+\begin{bmatrix}
+x_1 &amp; x_1a_{12} &amp; x_1a_{13} &amp; \cdots &amp; x_1a_{1n} \\
+0 &amp; x_2 &amp; x_2a_{23} &amp; \cdots &amp; x_2a_{2n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; x_n
+\end{bmatrix}.&lt;/math&gt;
+This gives the induced group action &lt;math&gt;m:\mathbb{D}_n\times \mathbb{U}_n \to \mathbb{U}_n&lt;/math&gt;{{Clarify|date=October 2020|reason=Define the function m. The value only is not enough. How is the value obtained from arguments?}}
+:&lt;math&gt;m(A,B) = \begin{bmatrix}
+1 &amp; x_1a_{12} &amp; x_1a_{13} &amp; \cdots &amp; x_1a_{1n} \\
+0 &amp; 1 &amp; x_2a_{23} &amp; \cdots &amp; x_2a_{2n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1
+\end{bmatrix}.&lt;/math&gt;
+A matrix in &lt;math&gt;\mathbb{T}_n&lt;/math&gt; can be represented by matrices in &lt;math&gt;\mathbb{U}_n&lt;/math&gt; and &lt;math&gt;\mathbb{D}_n&lt;/math&gt;. Hence &lt;math&gt;\mathbb{T}_n \cong \mathbb{U}_n \rtimes \mathbb{D}_n&lt;/math&gt;.
+
+=== Group of isometries on the plane ===
+The [[Euclidean group]] of all rigid motions ([[isometry|isometries]]) of the plane (maps {{math|''f'': ℝ{{sup|2}} → ℝ{{sup|2}}}} such that the Euclidean distance between {{math|''x''}} and {{math|''y''}} equals the distance between {{math|''f''(''x'')}} and {{math|''f''(''y'')}} for all {{math|''x''}} and {{math|''y''}} in {{math|ℝ{{sup|2}}}}) is isomorphic to a semidirect product of the abelian group {{math|ℝ{{sup|2}}}} (which describes translations) and the group {{math|O(2)}} of [[orthogonal matrix|orthogonal]] {{math|2 × 2}} matrices (which describes rotations and reflections that keep the origin fixed). Applying a translation and then a rotation or reflection has the same effect as applying the rotation or reflection first and then a translation by the rotated or reflected translation vector (i.e. applying the [[Conjugation of isometries in Euclidean space|conjugate]] of the original translation). This shows that the group of translations is a normal subgroup of the Euclidean group, that the Euclidean group is a semidirect product of the translation group and {{math|O(2)}}, and that the corresponding homomorphism {{math|''φ'': O(2) → Aut(ℝ{{sup|2}})}} is given by [[matrix multiplication]]: {{math|''φ''(''h'')(''n'') {{=}} ''hn''}}.
+
+=== Orthogonal group O(n) ===
+The [[orthogonal group]] {{math|O(''n'')}} of all orthogonal real {{math|''n'' × ''n''}} matrices (intuitively the set of all rotations and reflections of {{math|''n''}}-dimensional space that keep the origin fixed) is isomorphic to a semidirect product of the group {{math|SO(''n'')}} (consisting of all orthogonal matrices with [[determinant]] {{math|1}}, intuitively the rotations of {{math|''n''}}-dimensional space) and {{math|C{{sub|2}}}}. If we represent {{math|C{{sub|2}}}} as the multiplicative group of matrices {{math|{''I'', ''R''}{{null}}}}, where {{math|''R''}} is a reflection of {{math|''n''}}-dimensional space that keeps the origin fixed (i.e., an orthogonal matrix with determinant {{math|–1}} representing an [[involution (mathematics)|involution]]), then {{math|''φ'': C{{sub|2}} → Aut(SO(''n''))}} is given by {{math|''φ''(''H'')(''N'') {{=}} ''HNH''{{sup|−1}}}} for all ''H'' in {{math|C{{sub|2}}}} and {{math|''N''}} in {{math|SO(''n'')}}. In the non-trivial case ({{math|''H''}} is not the identity) this means that {{math|''φ''(''H'')}} is conjugation of operations by the reflection (in 3-dimensional space a rotation axis and the direction of rotation are replaced by their &quot;mirror image&quot;).
+
+=== Semi-linear transformations ===
+The group of [[semilinear transformation]]s on a vector space {{math|''V''}} over a field {{math|𝕂}}, often denoted {{math|ΓL(''V'')}}, is isomorphic to a semidirect product of the [[linear group]] {{math|GL(''V'')}} (a [[normal subgroup]] of {{math|ΓL(''V'')}}), and the [[automorphism group]] of {{math|𝕂}}.
+
+=== Crystallographic groups ===
+In crystallography, the space group of a crystal splits as the semidirect product of the point group and the translation group if and only if the space group is [[wikt: symmorphic|symmorphic]]. Non-symmorphic space groups have point groups that are not even contained as subset of the space group, which is responsible for much of the complication in their analysis.&lt;ref&gt;{{cite web|last1=Thompson|first1=Nick|title=Irreducible Brillouin Zones and Band Structures|url=https://bandgap.io/blog/brillouin_zones/|website=bandgap.io|accessdate=13 December 2017}}&lt;/ref&gt;
+
+== Non-examples ==
+There are many groups which cannot be expressed as a semi-direct product of groups yet contains a non-trivial normal subgroup. Of course, every [[simple group]] cannot be expressed as a semi-direct product, but there are a few common counterexamples as well. Note that although not every group &lt;math&gt;G&lt;/math&gt; can be expressed as a split extension of &lt;math&gt;H&lt;/math&gt; by &lt;math&gt;A&lt;/math&gt;, it turns out that such a group can be embedded into the [[wreath product]] &lt;math&gt;A\wr H&lt;/math&gt; by the [[universal embedding theorem]].
+
+=== Z&lt;sub&gt;4&lt;/sub&gt; ===
+The cyclic group &lt;math&gt;\mathbb{Z}_4&lt;/math&gt; is not a simple group since it has a subgroup of order 2, namely &lt;math&gt;\{0,2\} \cong \mathbb{Z}_2&lt;/math&gt; is a subgroup and their quotient is &lt;math&gt;\mathbb{Z}_2&lt;/math&gt;, so there's an extension&lt;blockquote&gt;&lt;math&gt;0 \to \mathbb{Z}_2 \to \mathbb{Z}_4 \to \mathbb{Z}_2 \to 0&lt;/math&gt;&lt;/blockquote&gt;If the extension was [[Split extension|split]], then the group &lt;math&gt;G&lt;/math&gt; in&lt;blockquote&gt;&lt;math&gt;0 \to \mathbb{Z}_2 \to G \to \mathbb{Z}_2 \to 0&lt;/math&gt;&lt;/blockquote&gt;would be isomorphic to &lt;math&gt;\mathbb{Z}_2\times\mathbb{Z}_2&lt;/math&gt;.
+
+=== Q&lt;sub&gt;8&lt;/sub&gt; ===
+The group of the eight [[Quaternion group|quaternions]] &lt;math&gt;\{\pm 1,\pm i,\pm j,\pm k\}&lt;/math&gt; where &lt;math&gt;ijk = -1&lt;/math&gt; and &lt;math&gt;i^2 = j^2 = k^2 = -1&lt;/math&gt;, is another example of a group&lt;ref&gt;{{Cite web|title=abstract algebra - Can every non-simple group $G$ be written as a semidirect product?|url=https://math.stackexchange.com/questions/1504422/can-every-non-simple-group-g-be-written-as-a-semidirect-product|access-date=2020-10-29|website=Mathematics Stack Exchange}}&lt;/ref&gt; which has non-trivial subgroups yet is still not split. For example, the subgroup generated by &lt;math&gt;i&lt;/math&gt; is isomorphic to &lt;math&gt;\mathbb{Z}_4&lt;/math&gt; and is normal. It also has a subgroup of order &lt;math&gt;2&lt;/math&gt; generated by &lt;math&gt;-1&lt;/math&gt;. This would mean &lt;math&gt;Q_8&lt;/math&gt; would have to be a split extension in&lt;blockquote&gt;&lt;math&gt;0 \to \mathbb{Z}_4 \to Q_8 \to \mathbb{Z}_2 \to 0&lt;/math&gt; &lt;/blockquote&gt;which cannot happen. This can be shown by computing the first group cohomology group of &lt;math&gt;\mathbb{Z}_2&lt;/math&gt; with coefficients in &lt;math&gt;\mathbb{Z}_4&lt;/math&gt;, so &lt;math&gt;H^1(\mathbb{Z}_2,\mathbb{Z}_4) \cong \mathbb{Z}/2&lt;/math&gt; and noting the two groups in these extensions are &lt;math&gt;\mathbb{Z}_2\times\mathbb{Z}_4&lt;/math&gt; and the dihedral group &lt;math&gt;D_8&lt;/math&gt;. But, as neither of these groups are isomorphic with &lt;math&gt;Q_8&lt;/math&gt;, the quaternion group is not split. This non-existence of isomorphisms can be checked by noting the trivial extension is abelian while &lt;math&gt;Q_8&lt;/math&gt; is non-abelian, and noting the only normal subgroups are &lt;math&gt;\mathbb{Z}_2&lt;/math&gt; and &lt;math&gt;\mathbb{Z}_4&lt;/math&gt;, but &lt;math&gt;Q_8&lt;/math&gt; has three subgroups isomorphic to &lt;math&gt;\mathbb{Z}_4&lt;/math&gt;.
+
+== Properties ==
+If {{math|''G''}} is the semidirect product of the normal subgroup {{math|''N''}} and the subgroup {{math|''H''}}, and both {{math|''N''}} and {{math|''H''}} are finite, then the [[order of a group|order]] of {{math|''G''}} equals the product of the orders of {{math|''N''}} and {{math|''H''}}. This follows from the fact that {{math|''G''}} is of the same order as the outer semidirect product of {{math|''N''}} and {{math|''H''}}, whose underlying set is the [[Cartesian product]] {{math|''N'' × ''H''}}.
+
+=== Relation to direct products ===
+Suppose {{math|''G''}} is a semidirect product of the normal subgroup {{math|''N''}} and the subgroup {{math|''H''}}. If {{math|''H''}} is also normal in {{math|''G''}}, or equivalently, if there exists a homomorphism {{math|''G'' → ''N''}} that is the identity on {{math|''N''}} with kernel {{math|''H''}}, then {{math|''G''}} is the [[direct product of groups|direct product]] of {{math|''N''}} and {{math|''H''}}.
+
+The direct product of two groups {{math|''N''}} and {{math|''H''}} can be thought of as the semidirect product of {{math|''N''}} and {{math|''H''}} with respect to {{math|''φ''(''h'') {{=}} id{{sub|''N''}}}} for all {{math|''h''}} in {{math|''H''}}.
+
+Note that in a direct product, the order of the factors is not important, since {{math|''N'' × ''H''}} is isomorphic to {{math|''H'' × ''N''}}. This is not the case for semidirect products, as the two factors play different roles.
+
+Furthermore, the result of a (proper) semidirect product by means of a non-trivial homomorphism is never an [[abelian group]], even if the factor groups are abelian.
+
+=== Non-uniqueness of semidirect products (and further examples) ===
+As opposed to the case with the [[direct product of groups|direct product]], a semidirect product of two groups is not, in general, unique; if {{math|''G''}} and {{math|''G′''}} are two groups that both contain isomorphic copies of {{math|''N''}} as a normal subgroup and {{math|''H''}} as a subgroup, and both are a semidirect product of {{math|''N''}} and {{math|''H''}}, then it does ''not'' follow that {{math|''G''}} and {{math|''G′''}} are [[group isomorphism|isomorphic]] because the semidirect product also depends on the choice of an action of {{math|''H''}} on {{math|''N''}}.
+
+For example, there are four non-isomorphic groups of order 16 that are semidirect products of {{math|C{{sub|8}}}} and {{math|C{{sub|2}}}}; in this case, {{math|C{{sub|8}}}} is necessarily a normal subgroup because it has index 2. One of these four semidirect products is the direct product, while the other three are non-abelian groups:
+* the dihedral group of order 16
+* the [[quasidihedral group]] of order 16
+* the [[Iwasawa group]] of order 16
+
+If a given group is a semidirect product, then there is no guarantee that this decomposition is unique. For example, there is a group of order 24 (the only one containing six elements of order 4 and six elements of order 6) that can be expressed as semidirect product in the following ways: {{math|(D{{sub|8}} ⋉ C{{sub|3}}) ≅ (C{{sub|2}} ⋉ [[Dicyclic group|Q{{sub|12}}]]) ≅ (C{{sub|2}} ⋉ D{{sub|12}}) ≅ (D{{sub|6}} ⋉ [[Klein four-group|V]])}}.&lt;ref name=&quot;Rose2009&quot;&gt;{{cite book|author=H.E. Rose|title=A Course on Finite Groups|year=2009|publisher=Springer Science &amp; Business Media|isbn=978-1-84882-889-6|page=183}} Note that Rose uses the opposite notation convention than the one adopted on this page (p. 152).&lt;/ref&gt;
+
+=== Existence ===
+{{main|Schur–Zassenhaus theorem}}
+In general, there is no known characterization (i.e., a necessary and sufficient condition) for the existence of semidirect products in groups. However, some sufficient conditions are known, which guarantee existence in certain cases. For finite groups, the [[Schur–Zassenhaus theorem]] guarantees existence of a semidirect product when the [[order (group theory)|order]] of the normal subgroup is [[coprime]] to the order of the [[quotient group]].
+
+For example, the Schur–Zassenhaus theorem implies the existence of a semi-direct product among groups of order 6; there are two such products, one of which is a direct product, and the other a dihedral group. In contrast, the Schur–Zassenhaus theorem does not say anything about groups of order 4 or groups of order 8 for instance.
+
+== Generalizations ==
+
+Within group theory, the construction of semidirect products can be pushed much further. The [[Zappa–Szep product]] of groups is a generalization that, in its internal version, does not assume that either subgroup is normal. 
+
+There is also a construction in [[ring theory]], the [[crossed product|crossed product of rings]].  This is constructed in the natural way from the [[group ring]] for a semidirect product of groups.  The ring-theoretic approach can be further generalized to the [[Lie algebra extension#By semidirect sum|semidirect sum of Lie algebras]].  
+
+For geometry, there is also a crossed product for [[Group action (mathematics)|group actions]] on a [[topological space]]; unfortunately, it is in general non-commutative even if the group is abelian.  In this context, the semidirect product is the ''space of orbits'' of the group action.  The latter approach has been championed by [[Alain Connes]] as a substitute for approaches by conventional topological techniques; c.f. [[noncommutative geometry]].  
+
+There are also far-reaching generalisations in [[category theory]]. They show how to construct ''[[fibred category|fibred categories]]'' from ''[[indexed category|indexed categories]]''. This is an abstract form of the outer semidirect product construction.
+
+=== Groupoids ===
+
+Another generalization is for groupoids. This occurs in topology because if a group {{math|''G''}} acts on a space {{math|''X''}} it also acts on the [[fundamental groupoid]] {{math|''π''{{sub|1}}(''X'')}} of the space.  The semidirect product {{math|''π''{{sub|1}}(''X'') ⋊ ''G''}} is then relevant to finding the fundamental groupoid of the [[orbit space]] {{math|''X/G''}}. For full  details see Chapter 11 of the book referenced below, and also some details in semidirect product&lt;ref&gt;[http://ncatlab.org/nlab/show/semidirect+product Ncatlab.org]&lt;/ref&gt; in [[nLab|ncatlab]].
+
+=== Abelian categories ===
+Non-trivial semidirect products do ''not'' arise in [[abelian categories]], such as the [[category of modules]]. In this case, the [[splitting lemma]] shows that every semidirect product is a direct product. Thus the existence of semidirect products reflects a failure of the category to be abelian.
+
+== Notation ==
+
+Usually the semidirect product of a group {{math|''H''}} acting on a group {{math|''N''}} (in most cases by conjugation as subgroups of a common group) is denoted by {{math|''N'' ⋊ ''H''}} or {{math|''H'' ⋉ ''N''}}. However, some sources{{which|date=November 2020}} may use this symbol with the opposite meaning. In case the action {{math|''φ'': ''H'' → Aut(''N'')}} should be made explicit, one also writes {{math|''N'' ⋊{{sub|''φ''}} ''H''}}. One way of thinking about the {{math|''N'' ⋊ ''H''}} symbol is as a combination of the symbol for normal subgroup ({{math|◁}}) and the symbol for the product ({{math|×}}). [[Barry Simon]], in his book on group representation theory,&lt;ref name=&quot;Simon1996&quot;&gt;{{cite book|author=B. Simon|title=Representations of Finite and Compact Groups|location=Providence, RI|publisher=American Mathematical Society|page=6|isbn=0-8218-0453-7|date=1996}}&lt;/ref&gt; employs the unusual notation &lt;math&gt;N\circledS_{\varphi}H&lt;/math&gt; for the semidirect product.
+
+[[Unicode]] lists four variants:&lt;ref&gt;See [https://www.unicode.org/charts/#symbols unicode.org]&lt;/ref&gt;
+
+:{| class=&quot;wikitable&quot;
+!   !! Value  !! MathML !! Unicode description
+|-
+| ⋉ || U+22C9 || ltimes || LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
+|-
+| ⋊ || U+22CA || rtimes || RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
+|-
+| ⋋ || U+22CB || lthree || LEFT SEMIDIRECT PRODUCT
+|-
+| ⋌ || U+22CC || rthree || RIGHT SEMIDIRECT PRODUCT
+|}
+
+Here the Unicode description of the rtimes symbol says &quot;right normal factor&quot;, in contrast to its usual meaning in mathematical practice.
+
+In [[LaTeX]], the commands \rtimes and \ltimes produce the corresponding characters.
+
+== See also ==
+*[[Affine Lie algebra]]
+*[[Grothendieck construction]], a categorical construction that generalizes the semidirect product
+*[[Holomorph (mathematics)|Holomorph]]
+*[[Lie algebra extension#By semidirect sum|Lie algebra semidirect sum]]
+*[[Subdirect product]]
+*[[Wreath product]]
+*[[Zappa–Szép product]]
+
+==Notes==
+{{reflist}}
+
+==References==
+{{refimprove|date=June 2009}}
+* R. Brown, Topology and groupoids, Booksurge 2006. {{isbn|1-4196-2722-8}}
+
+[[Category:Group theory]]</text>
+      <sha1>g3c4c6agvc09bxiu2wsw15dwqmdn5hr</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Worcester County</title>
+    <ns>0</ns>
+    <id>48248</id>
+    <revision>
+      <id>933254891</id>
+      <parentid>842736741</parentid>
+      <timestamp>2019-12-30T21:09:11Z</timestamp>
+      <contributor>
+        <username>Bot1058</username>
+        <id>20585603</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Bot1058|Task 6]]: remove disambiguation page from [[Category:Monitored short pages]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="218" xml:space="preserve">'''Worcester County''' is the name of two counties in the United States of America:
+*[[Worcester County, Massachusetts]]
+*[[Worcester County, Maryland]]
+
+== See also ==
+*[[Worcestershire]], England
+
+{{Geodis|uscounty}}</text>
+      <sha1>a3cgu54mkkafwm21bkm7m0pi2sx0947</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Himalaya Mountains</title>
+    <ns>0</ns>
+    <id>48251</id>
+    <redirect title="Himalayas" />
+    <revision>
+      <id>73137040</id>
+      <parentid>38305610</parentid>
+      <timestamp>2006-09-01T01:08:03Z</timestamp>
+      <contributor>
+        <username>John K</username>
+        <id>10512</id>
+      </contributor>
+      <comment>Redirecting to [[Himalayas]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="23" xml:space="preserve">#REDIRECT [[Himalayas]]</text>
+      <sha1>cw6w3qujagqdgpie943nof7ds14w1vc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Random function</title>
+    <ns>0</ns>
+    <id>48252</id>
+    <redirect title="Stochastic process" />
+    <revision>
+      <id>768842851</id>
+      <parentid>758309135</parentid>
+      <timestamp>2017-03-06T03:03:26Z</timestamp>
+      <contributor>
+        <username>Train2104</username>
+        <id>10341578</id>
+      </contributor>
+      <comment>Removing content from under redirect using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="32" xml:space="preserve">#REDIRECT [[Stochastic process]]</text>
+      <sha1>gaz3k5arcq5hdipz4yc1pymdnydt0ez</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Fractal art</title>
+    <ns>0</ns>
+    <id>48253</id>
+    <revision>
+      <id>988131909</id>
+      <parentid>959283174</parentid>
+      <timestamp>2020-11-11T08:06:51Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: isbn. Add: s2cid, doi. Correct ISBN10 to ISBN13. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by Abductive | All pages linked from cached copy of User:Abductive/sandbox | via #UCB_webform_linked 347/988</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="17432" xml:space="preserve">[[File:Hindu Temple Design.jpg|thumb|[[Hindu temple architecture|Hindu temples]] feature self-similar, fractal-like structures, where parts resemble the whole.&lt;ref&gt;{{cite journal|last1=Trivedi|first1=K.|title=Hindu Temples: Models of a Fractal Universe|journal=The Visual Computer|date=1989|volume=5|issue=4|pages=243–258|doi=10.1007/BF02153753|s2cid=29185088}}&lt;/ref&gt;]]
+
+[[File:Selimiye Mosque, Dome.jpg|thumb|[[Islamic geometric patterns]] are reminiscent of fractal art, as on the main dome of [[Selimiye Mosque (Edirne)|Selimiye Mosque]] in [[Edirne]], Turkey, with [[self-similar]] patterns.]]
+[[Image:Julian fractal.jpg|thumb|upright|A piece generated in [[Apophysis (software)|Apophysis]]]]
+[[File:NonIntegerMultibrot - Breaking of Space.jpg|thumb|right|A detail from a non-integer [[Multibrot set]]]]
+
+'''Fractal art''' is a form of [[algorithmic art]] created by calculating [[fractal]] objects and representing the calculation results as still images, animations, and [[Algorithmic composition|media]]. Fractal art developed from the mid-1980s onwards.&lt;ref name=&quot;fgad&quot;&gt;{{cite book |title=Fractal geometry in architecture and design |last=Bovill |first=Carl |year=1996 |publisher=Birkhauser |location=Boston |isbn=0-8176-3795-8 |page=153 |url=https://books.google.com/books?id=w5ptaiGsac4C |accessdate=28 October 2011}}&lt;/ref&gt; It is a genre of [[computer art]] and [[digital art]] which are part of [[new media art]]. The [[mathematical beauty]] of fractals lies at the intersection of [[generative art]] and [[computer art]].  They combine to produce a type of [[abstract art]].
+
+Fractal art (especially in the western world) is rarely drawn or painted by hand. It is usually created indirectly with the assistance of [[fractal-generating software]], iterating through three phases: setting parameters of appropriate fractal software; executing the possibly lengthy calculation; and evaluating the product. In some cases, other [[graphics software|graphics programs]] are used to further modify the images produced. This is called post-processing. Non-fractal imagery may also be integrated into the artwork.&lt;ref name=&quot;mra&quot;&gt;{{cite web |url=http://www.casperjournal.com/article_bbe58a64-0b86-5e64-8fc5-459eafbe67fb.html |title=Meet Reginald Atkins, mathematical artist |author=Elysia Conner |date=February 25, 2009 |publisher=CasperJournal.com |accessdate=October 28, 2011 |archive-url=https://web.archive.org/web/20120420043959/http://www.casperjournal.com/article_bbe58a64-0b86-5e64-8fc5-459eafbe67fb.html |archive-date=April 20, 2012 |url-status=dead }}&lt;/ref&gt; The [[Julia set]] and [[Mandelbrot set]]s can be considered as [[icon]]s of fractal art.&lt;ref name=&quot;hema&quot;&gt;{{cite book |title=The heart of mathematics: an invitation to effective thinking |last=Burger |first=Edward B. |author2=Michael P. Starbird |year=2005 |publisher=Springer |isbn=1-931914-41-9 |page=475 |url=https://books.google.com/books?id=M-qK8anbZmwC |accessdate=30 October 2011}}&lt;/ref&gt;

@@ -1,0 +1,266 @@
+SWIFT has at various times attracted controversy for enabling the US government to monitor and in some cases interfere with intra-European transactions. (See: [[#U.S. government involvement|U.S. government involvement]])
+
+== History ==
+SWIFT was founded in [[Brussels]] on 3 May, 1973 under the leadership of its inaugural CEO, [[Carl Reuterskiöld]] (1973–1989), and was supported by 239 banks in fifteen countries.&lt;ref name=&quot;ScottZachariadis2013&quot;&gt;{{cite book|author1=Susan V. Scott|author2=Markos Zachariadis|title=The Society for Worldwide Interbank Financial Telecommunication (SWIFT): Cooperative governance for network innovation, standards, and community|url=https://books.google.com/books?id=eTnjAQAAQBAJ&amp;pg=PA16|date=30 October 2013|publisher=Routledge|isbn=978-1-317-90953-8|pages=16–}}&lt;/ref&gt; It started to establish [[Society for Worldwide Interbank Financial Telecommunication#Standards|common standards]] for financial transactions and a shared data processing system and worldwide communications network designed by [[Logica]] and developed by the [[Burroughs Corporation]].&lt;ref&gt;{{cite web | url=http://www.logica.com/we-are-logica/about-logica/history-and-key-milestones/| title=Logica history}}&lt;/ref&gt; Fundamental [[Policies and Procedures|operating procedures]], rules for [[legal liability|liability]], etc., were established in 1975 and the first message was sent in 1977. SWIFT's first United States operating center was inaugurated by Governor [[John N. Dalton]] of Virginia in 1979.&lt;ref name=swiftobituary&gt;{{cite web |title=Carl Reuterskiöld |archive-date=2012-01-24|archive-url=https://web.archive.org/web/20120124174712/http://www.swift.com/about_swift/press_room/swift_news_archive/home_page_stories_archive_2006/61159/carl_reuterski_ld.page|url=http://www.swift.com/about_swift/press_room/swift_news_archive/home_page_stories_archive_2006/61159/carl_reuterski_ld.page?|publisher=SWIFT|accessdate=7 September 2012|date=March 2006}}&lt;/ref&gt;
+
+== Standards ==
+SWIFT has become the industry standard for [[syntax]] in financial messages. Messages formatted to SWIFT standards can be read by, and processed by, many well-known financial processing systems, whether or not the message traveled over the SWIFT network. SWIFT cooperates with international organizations for defining standards for message format and content. SWIFT is also ''[[Registration authority]]'' (RA) for the following [[International Organization for Standardization|ISO]] standards:
+&lt;ref&gt;{{cite web
+ | url=http://www.iso.org/iso/standards_development/maintenance_agencies.htm 
+ | title=ISO Maintenance agencies and registration authorities]
+}}&lt;/ref&gt;
+* [[ISO 9362]]: 1994 Banking{{snd}}Banking telecommunication messages{{snd}}Bank identifier codes
+* [[ISO 10383]]: 2003 Securities and related financial instruments{{snd}}Codes for exchanges and market identification (MIC)
+* [[ISO 13616]]: 2003 [[IBAN]] Registry
+* [[ISO 15022]]: 1999 Securities{{snd}}Scheme for messages (Data Field Dictionary) (replaces ISO 7775)
+* [[ISO 20022]]-1: 2004 and ISO 20022-2:2007 Financial services{{snd}}Universal Financial Industry message scheme
+In [[Request for Comments|RFC]] 3615 ''urn:swift:'' was defined as [[Uniform Resource Name]]s (URNs) for SWIFT FIN.&lt;ref&gt;{{cite web | url=http://www.faqs.org/rfcs/rfc3615.html  | title=RFC 3615 – A Uniform Resource Name (URN) Namespace for SWIFT Fin}}&lt;/ref&gt;
+
+== Operations centers ==
+The SWIFT secure messaging network is run from three [[data center]]s, one in the United States, one in the [[Netherlands]] and one in [[Switzerland]]. These centers share information in [[Real-time computing|near real-time]]. In case of a failure in one of the data centers, another is able to handle the traffic of the complete network. SWIFT uses [[submarine communications cable]]s to transmit its data.&lt;ref name=&quot;harvard&quot;&gt;{{cite web |title=Cyberspace in Deep Water: Protecting Undersea Communication Cables By Creating an International Public-Private Partnership |date=23 March 2010 |first=Michael |last=Sechrist |url=https://www.belfercenter.org/sites/default/files/legacy/files/PAE_final_draft_-_043010.pdf |publisher=[[Belfer Center for Science and International Affairs]] |quote=For example, the Society for Worldwide Interbank Financial Telecommunication (SWIFT), which describes itself as “the global provider of secure financial messaging services,” uses undersea fiber-optic communications cables to transmit financial data between 208 countries}}&lt;/ref&gt;
+
+SWIFT opened its third data center in [[Switzerland]] in 2009.&lt;ref&gt;{{cite news|title=SWIFT: SIBOS issues|url=http://www.swift.com/sibos2008/sibos_2008_learn_discuss_debate/sibos_issues/Sibos_Issues_20080916.pdf|publisher=[[SWIFT]]|date=16 September 2008|url-status=dead|archiveurl=https://web.archive.org/web/20151107043453/http://www.swift.com/sibos2008/sibos_2008_learn_discuss_debate/sibos_issues/Sibos_Issues_20080916.pdf|archivedate=7 November 2015}} p.12&lt;/ref&gt; In the same year SWIFT introduced new distributed architecture with two messaging zones: European and Trans-Atlantic, so data from European SWIFT members are no longer mirrored to the U.S. data center.&lt;ref&gt;{{cite news|title=Distributed architecture |url=http://www.swift.com/products_services/industry_initiatives/distributed_architecture |publisher=[[SWIFT]]|date=6 June 2008}}&lt;/ref&gt; European zone messages are stored in the Netherlands and in a part of the Switzerland operating center; Trans-Atlantic zone messages are stored in the United States and in a part of the Switzerland operating center that is segregated from the European zone messages. Countries outside of Europe were by default allocated to the Trans-Atlantic zone but could choose to have their messages stored in the European zone.
+
+== SWIFTNet network==
+SWIFT moved to its current IP network infrastructure, known as SWIFTNet, from 2001 to 2005,&lt;ref&gt;{{cite news|title=SWIFT History |url=http://www.swift.com/about_swift/company_information/swift_history.page?lang=en|publisher=[[SWIFT]]}}&lt;/ref&gt; providing a total replacement of the previous [[X.25]] infrastructure. The process involved the development of new protocols that facilitate efficient messaging, using existing and new message standards. The adopted technology chosen to develop the protocols was [[XML]], where it now provides a wrapper around all messages legacy or contemporary. The communication protocols can be broken down into:
+
+{{col-begin}}
+{{col-3}}
+'''InterAct'''
+*SWIFTNet InterAct Realtime
+*SWIFTNet InterAct Store and Forward
+{{col-3}}
+'''FileAct'''
+* SWIFTNet FileAct Realtime
+* SWIFTNet FileAct Store and Forward
+{{col-3}}
+'''Browse'''
+* SWIFTNet Browse
+{{col-end}}
+
+=== Architecture ===
+SWIFT provides a centralized store-and-forward mechanism, with some transaction management. For bank A to send a message to bank B with a copy or authorization with institution C, it formats the message according to standard and securely sends it to SWIFT. SWIFT guarantees its secure and reliable delivery to B after the appropriate action by C. SWIFT guarantees are based primarily on high redundancy of hardware, software, and people.
+
+=== SWIFTNet Phase 2 ===
+During 2007 and 2008, the entire SWIFT network migrated its infrastructure to a new protocol called SWIFTNet Phase 2. The main difference between Phase 2 and the former arrangement is that Phase 2 requires banks connecting to the network to use a [[Relationship Management Application]] (RMA) instead of the former [[bilateral key exchange]] (BKE) system. According to SWIFT's public information database on the subject, RMA software should eventually prove more secure and easier to keep up-to-date; however, converting to the RMA system meant that thousands of banks around the world had to update their international payments systems to comply with the new standards. RMA completely replaced BKE on 1 January 2009.
+
+== Products and interfaces ==
+SWIFT means several things in the financial world: 
+# a [[Secure transmission|secure network]] for transmitting messages between financial institutions;
+# a set of syntax standards for financial messages (for transmission over SWIFTNet or any other network)
+# a set of connection software and services allowing financial institutions to transmit messages over SWIFT network.
+
+Under 3 above, SWIFT provides [[turnkey|turn-key]] solutions for members, consisting of [[Client (computing)|linkage clients]] to facilitate connectivity to the SWIFT network and [[Graphical user interface|CBTs or &quot;computer based terminals&quot;]] which members use to manage the delivery and receipt of their messages. Some of the more well-known interfaces and CBTs provided to their members are:
+
+* SWIFTNet Link (SNL) software which is installed on the SWIFT customer's site and opens a connection to SWIFTNet. Other applications can only communicate with SWIFTNet through the SNL.
+* Alliance Gateway (SAG) software with interfaces (e.g., RAHA = Remote Access Host Adapter), allowing other software products to use the SNL to connect to SWIFTNet
+* Alliance WebStation (SAB) desktop interface for SWIFT Alliance Gateway with several usage options:
+:# administrative access to the SAG
+:# direct connection SWIFTNet by the SAG, to administrate SWIFT Certificates
+:# so-called Browse connection to SWIFTNet (also by SAG) to use additional services, for example Target2
+* Alliance Access (SAA) and Alliance Messaging Hub (AMH) are the main messaging software applications by SWIFT, which allow message creation for [[ISO 15022|FIN messages]], routing and monitoring for FIN and [[ISO 20022|MX messages]]. The main interfaces are FTA (files transfer automated, not FTP) and MQSA, a [[WebSphere MQ]] interface.
+* The Alliance Workstation (SAW) is the desktop software for administration, monitoring and FIN message creation. Since Alliance Access is not yet capable of creating MX messages, Alliance Messenger (SAM) has to be used for this purpose.
+* Alliance Web Platform (SWP) as new thin-client desktop interface provided as an alternative to existing Alliance WebStation, Alliance Workstation (soon){{when|date=April 2018}} and Alliance Messenger.
+* Alliance Integrator built on [[Oracle Corporation|Oracle]]'s [[Java Caps]] which enables customer's back office applications to connect to Alliance Access or Alliance Entry.
+* Alliance Lite2 is a secure and reliable, cloud-based way to connect to the SWIFT network which is a light version of Alliance Access specifically targeting customers with low volume of traffic.
+
+; Services 
+There are four key areas that SWIFT services fall under in the financial marketplace: [[Security (finance)|Securities]], [[Treasury]] &amp; [[Derivative (finance)|Derivatives]], [[Trade Services]] and [[Payments &amp; Cash Management]].
+
+{{col-begin}}
+{{col-4}}
+'''Securities'''
+* SWIFTNet FIX (obsolete)
+* SWIFTNet Data Distribution
+* SWIFTNet Funds
+* SWIFTNet Accord for Securities (''end of life October 2017'')&lt;ref name=&quot;swift.com&quot;&gt;{{cite web|url=https://www.swift.com/our-solutions/a-to-z/accord|title=Accord|date=26 November 2015}}&lt;/ref&gt;
+{{col-4}}
+'''Treasury &amp; Derivatives'''
+* SWIFTNet Accord for Treasury (''end of life October 2017'')&lt;ref name=&quot;swift.com&quot;/&gt;
+* SWIFTNet Affirmations
+* SWIFTNet CLS Third Party Service
+{{col-4}}
+'''Cash Management'''
+* SWIFTNet Bulk Payments
+* SWIFTNet Cash Reporting
+* SWIFTNet Exceptions and Investigations
+{{col-4}}
+'''Trade Services'''
+* SWIFTNet [[Trade Services Utility]]
+{{col-end}}
+
+=== SWIFTREF ===
+Swift Ref, the global payment reference data utility, is SWIFT's unique reference data service. Swift Ref sources data direct from data originators, including central banks, code issuers and banks making it easy for issuers and originators to maintain data regularly and thoroughly. SWIFTRef constantly validates and cross-checks data across the different data sets.&lt;ref&gt;{{cite web | url=http://www.surecomp.com/value-added.html | title=SWIFTREF }}&lt;/ref&gt;
+
+=== SWIFTNet Mail ===
+SWIFT offers a secure person-to-person messaging service, SWIFTNet Mail, which went live on 16 May 2007.&lt;ref&gt;{{cite web |url=http://www.swift.com/about_swift/press_room/press_releases/press_releases_archive/mail_simple_secure_and_reliable_email.page |title=SWIFTNet Mail now available}}&lt;/ref&gt; SWIFT clients can configure their existing email infrastructure to pass email messages through the highly secure and reliable SWIFTNet network instead of the open Internet. SWIFTNet Mail is intended for the secure transfer of sensitive business documents, such as invoices, contracts and signatories, and is designed to replace existing telex and courier services, as well as the transmission of security-sensitive data over the open Internet. Seven financial institutions, including [[HSBC]], [[First National Bank (South Africa)|FirstRand Bank]], [[Clearstream]], [[DnB NOR]], [[Nedbank]], and [[Standard Bank]] of South Africa, as well as SWIFT piloted the service.&lt;ref&gt;{{cite web  | url=http://www.swift.com/index.cfm?item_id=61132 |title=SWIFTNet Mail pilot phase underway |url-status=dead  |archiveurl=https://web.archive.org/web/20081201094800/http://www.swift.com/index.cfm?item_id=61132 |archivedate=1 December 2008   }}&lt;/ref&gt;
+
+== U.S. government involvement ==
+
+=== Terrorist Finance Tracking Program ===
+{{Main|Terrorist Finance Tracking Program}}
+
+A series of articles published on 23 June 2006 in ''[[The New York Times]]'', ''[[The Wall Street Journal]]'', and the ''[[Los Angeles Times]]'' revealed a program, named the [[Terrorist Finance Tracking Program]], which the [[US Treasury Department]], [[CIA|Central Intelligence Agency (CIA)]], and other [[United States government]]al agencies initiated after the [[11 September attacks]] to gain access to the SWIFT transaction database.&lt;ref&gt;{{cite news|title=Belgian PM: Data Transfer Broke Rules |url=https://www.washingtonpost.com/wp-dyn/content/article/2006/09/28/AR2006092800585.html |work=The Washington Post|date=28 September 2005 |first=Constant |last=Brand |access-date=23 May 2010}}&lt;/ref&gt;
+
+After the publication of these articles, SWIFT quickly came under pressure for compromising the [[data privacy]] of its customers by allowing governments to gain access to sensitive personal information.  In September 2006, the Belgian government declared that these SWIFT dealings with American governmental authorities were a breach of Belgian and [[European Union law|European]] [[privacy law]]s.
+
+In response, and to satisfy members' concerns about privacy, SWIFT began a process of improving its architecture by implementing a distributed architecture with a two-zone model for storing messages (see [[#Operations centers|Operations centers]]).
+
+Concurrently, the [[European Union]] negotiated an agreement with the [[Federal government of the United States|United States government]] to permit the transfer of intra-EU SWIFT transaction information to the United States under certain circumstances.  Because of concerns about its potential contents, the [[European Parliament]] adopted a position statement in September 2009, demanding to see the full text of the agreement and asking that it be fully compliant with EU privacy legislation, with oversight mechanisms emplaced to ensure that all data requests were handled appropriately.&lt;ref&gt;{{cite news |title=European Parliament resolution of 17 September 2009 on the SWIFT Agreement |url=http://www.europarl.europa.eu/sides/getDoc.do?type=TA&amp;reference=P7-TA-2009-0016&amp;language=EN&amp;ring=B7-2009-0038 |publisher=[[European Parliament]] |date=17 September 2009}}&lt;/ref&gt; An interim agreement was signed without European Parliamentary approval by the [[European Council]] on 30 November 2009,&lt;ref&gt;{{cite news |title=European Parliament to vote on interim agreement at February session |url=http://www.europarl.europa.eu/news/expert/infopress_page/019-67614-018-01-04-902-20100119IPR67613-18-01-2010-2010-false/default_en.htm |publisher=[[European Parliament]] |date=21 January 2010}}&lt;/ref&gt; the day before the [[Treaty of Lisbon|Lisbon Treaty]]—which would have prohibited such an agreement from being signed under the terms of the [[Codecision procedure]]—formally came into effect.  While the interim agreement was scheduled to come into effect on 1 January 2010, the text of the agreement was classified as &quot;EU Restricted&quot; until translations could be provided in all EU languages and published on 25 January 2010.
+
+On 11 February 2010, the European Parliament decided to reject the interim agreement between the EU and the US by 378 to 196 votes.&lt;ref&gt;{{cite news |url=http://www.europeanvoice.com/article/2010/02/parliament-rejects-bank-transfer-data-deal/67144.aspx |newspaper=European Voice |title=Parliament rejects bank transfer data deal |date=11 February 2010 |first=Constant |last=Brand }}&lt;/ref&gt;&lt;ref&gt;{{cite news |url=http://news.bbc.co.uk/2/hi/europe/8510471.stm |title=Euro MPs block bank data deal with US |work=[[BBC News]] |date=11 February 2010 }}&lt;/ref&gt; One week earlier, the parliament's civil liberties committee had already rejected the deal, citing legal reservations.&lt;ref&gt;{{cite news |url=http://www.dw.com/en/european-parliament-rejects-swift-deal-for-sharing-bank-data-with-us/a-5239595 |newspaper=[[Deutsche Welle|DW]] |title=European parliament rejects SWIFT deal for sharing bank data with US |agency=Reuters |date=11 February 2010 }}&lt;/ref&gt;
+
+In March 2011, it was reported that two mechanisms of data protection had failed: [[EUROPOL]] released a report complaining that the USA's requests for information had been too vague (making it impossible to make judgments on validity)&lt;ref name=&quot;2011spiegel&quot;&gt;{{cite news |title=Brussels Eyes a Halt to SWIFT Data Agreement |url=http://www.spiegel.de/international/europe/0,1518,751262,00.html |newspaper=Der Spiegel |date=16 March 2011 |first1=Christoph |last1=Schult}}&lt;/ref&gt; and that the guaranteed right for European citizens to know whether their information had been accessed by USA authorities had not been put into practice.&lt;ref name=&quot;2011spiegel&quot;/&gt;
+
+=== Sanctions against Iran ===
+In January 2012, the advocacy group [[United Against Nuclear Iran]] (UANI) implemented a campaign calling on SWIFT to end all relations with Iran's banking system, including the [[Central Bank of Iran]].  UANI asserted that Iran's membership in SWIFT violated U.S. and EU financial sanctions against Iran as well as SWIFT's own corporate rules.&lt;ref&gt;{{cite news |title=Iran Praises Nuclear Talks with Team from U.N. |first=Rick |last=Gladstone |url=https://www.nytimes.com/2012/02/01/world/middleeast/iran-calls-un-nuclear-teams-visit-constructive.html |newspaper=The New York Times |date=31 January 2012 |accessdate=4 February 2012}}&lt;/ref&gt;
+
+Consequently, in February 2012, the [[United States Senate Committee on Banking, Housing, and Urban Affairs|U.S. Senate Banking Committee]] unanimously approved sanctions against SWIFT aimed at pressuring the Belgian financial telecommunications network to terminate its ties with blacklisted Iranian banks. Expelling Iranian banks from SWIFT would potentially deny Iran access to billions of dollars in revenue and spending using SWIFT but not from using [[Informal value transfer system|IVTS]]. [[Mark Wallace]], president of UANI, praised the Senate Banking Committee.&lt;ref name=&quot;nyt&quot;&gt;{{cite news |title=Senate Panel Approves Potentially Toughest Penalty Yet Against Iran's Wallet |first=Rick |last=Gladstone |url=https://www.nytimes.com/2012/02/03/world/middleeast/tough-iran-penalty-clears-senate-banking-panel.html |newspaper=The New York Times |date=3 February 2012 |accessdate=4 February 2012}}&lt;/ref&gt;
+
+Initially SWIFT denied it was acting illegally,&lt;ref name=&quot;nyt&quot;/&gt; but now says &quot;it is working with U.S. and European governments to address their concerns that its financial services are being used by Iran to avoid sanctions and conduct illicit business.&quot;&lt;ref&gt;{{cite news |title=Banking Hub Adds to Pressure on Iran |first=Jay |last=Solomon |author2=&amp; Adam Entous |url=https://www.wsj.com/articles/SB10001424052970203889904577201330206741436 |newspaper=The Wall Street Journal |date=4 February 2012 |accessdate=4 February 2012}}&lt;/ref&gt; Targeted banks would be—amongst others—[[Saderat Bank of Iran]], [[Bank Mellat]], [[Post Bank of Iran]] and [[Sepah Bank]].&lt;ref&gt;{{cite news |title=Banking's SWIFT says ready to block Iran transactions |url=https://www.reuters.com/article/2012/02/17/iran-sanctions-swift-idUSL5E8DH31020120217 |agency=Reuters |date=17 February 2012 |accessdate=17 February 2012}}&lt;/ref&gt; On 17 March 2012, following agreement two days earlier between all 27 member states of the [[Council of the European Union]] and the Council's subsequent ruling, SWIFT disconnected all Iranian banks from its international network that had been identified as institutions in breach of current EU sanctions and warned that even more Iranian financial institutions could be disconnected from the network.
+
+In February 2016, most Iranian banks reconnected to the network following lift of sanctions on [[Joint Comprehensive Plan of Action]].&lt;ref&gt;{{cite news |url=https://www.reuters.com/article/us-iran-banks-swift-idUSKCN0VQ1FD |first=Andrew | last=Torchia |agency=Reuters |title=Iranian banks reconnected to SWIFT network after four-year hiatus |date=17 February 2016 |access-date=21 April 2016}}&lt;/ref&gt;
+
+=== U.S. control over transactions within the EU ===
+On 26 February 2012 the Danish newspaper ''[[Berlingske]]'' reported that US authorities have sufficient control over SWIFT to seize money being transferred between two European Union (EU) countries (Denmark and Germany), since they succeeded in seizing around US$26,000 that was being transferred from a Danish businessman to a German bank. The transaction was automatically routed through the US, possibly because of the USD currency used in the transaction, which is how the United States was able to seize the funds. The money was a payment for a batch of [[Cuban cigars]] previously imported to Germany by a German supplier. As justification for the seizure, the [[U.S. Treasury]] stated that the Danish businessman had violated the [[United States embargo against Cuba]].&lt;ref&gt;{{cite news |title=Dansk politimand fanget i amerikansk terrornet|first1=Simon |last1=Bendtsen |first2=Peter Suppli |last2= Benson|url= http://www.b.dk/nationalt/dansk-politimand-fanget-i-amerikansk-terrornet |newspaper=[[Berlingske Tidende]] |date=26 February 2012 |accessdate=26 February 2012 |trans-title= Danish policeman caught in American terror net |language=da}}&lt;/ref&gt;&lt;ref&gt;{{cite news |url= http://cphpost.dk/news14/international-news14/us-snubs-out-legal-cigar-transaction.html |title= US snubs out legal cigar transaction |work=[[The Copenhagen Post]] |date=27 February 2012 |accessdate= 12 April 2016}}&lt;/ref&gt;
+
+=== Monitoring by the NSA ===
+''[[Der Spiegel]]'' reported in September 2013 that the [[National Security Agency]] (NSA) widely monitors banking transactions via SWIFT, as well as credit card transactions.&lt;ref name=speigel&gt;{{cite web |title='Follow the Money': NSA Spies on International Payments|url=http://www.spiegel.de/international/world/spiegel-exclusive-nsa-spies-on-international-bank-transactions-a-922276.html |work=Der Spiegel |accessdate=18 September 2013 |date=15 September 2013}}&lt;/ref&gt; The NSA intercepted and retained data from the SWIFT network used by thousands of banks to securely send transaction information. SWIFT was named as a &quot;target&quot;, according to documents leaked by [[Edward Snowden]]. The documents revealed that the NSA spied on SWIFT using a variety of methods, including reading &quot;SWIFT printer traffic from numerous banks&quot;.&lt;ref name=speigel/&gt; In April 2017, a group known as the [[Shadow Brokers]] released files allegedly from the NSA which indicate that the agency monitored financial transactions made through SWIFT.&lt;ref&gt;{{cite news |last=Baldwin |first=Clare |url=https://www.reuters.com/article/us-usa-cyber-swift-idUSKBN17G1HC |title=Hackers release files indicating NSA monitored global bank transfers |date=15 April 2017 |agency=Reuters |accessdate=15 April 2017}}&lt;/ref&gt;&lt;ref&gt;{{cite web |last=Lawler |first=Richard |url=https://www.engadget.com/2017/04/14/shadow-brokers-release-also-suggest-nsa-spied-on-bank-transactio/ |title=Shadow Brokers release also suggests NSA spied on bank transactions |work=Engadget |accessdate=15 April 2017}}&lt;/ref&gt;
+
+==Use in sanctions==
+As mentioned above SWIFT had disconnected all Iranian banks from its international network as a [[sanctions against Iran|sanction against Iran]]. However, as of 2016 Iranian banks which are no longer on international sanctions lists were reconnected to SWIFT.&lt;ref&gt;{{cite web|url=https://www.reuters.com/article/us-iran-banks-swift/iranian-banks-reconnected-to-swift-network-after-four-year-hiatus-idUSKCN0VQ1FD|title=Iranian banks reconnected to SWIFT network after four-year hiatus|agency=Reuters}}&lt;/ref&gt; Even though this enables movement of money from and to these Iranian banks, foreign banks remain wary of doing business with the country. Due to primary sanctions, transactions of U.S. banks with Iran or transactions in U.S. dollars with Iran both remained prohibited.
+
+Similarly, in August 2014 the UK planned to press the EU to block Russian use of SWIFT as a sanction due to [[Russian military intervention in Ukraine (2014–present)|Russian military intervention in Ukraine]].&lt;ref&gt;{{cite news |title= U.K. Wants EU to Block Russia From SWIFT Banking Network |first=Robert |last=Hutton |author2= Ian Wishart|url= https://www.bloomberg.com/news/2014-08-29/u-k-wants-eu-to-block-russia-from-swift-banking-network.html|newspaper=[[Bloomberg News]] |date=29 August 2014 |accessdate=31 August 2014}}&lt;/ref&gt; However, SWIFT refused to do so.&lt;ref&gt;{{cite press release|url=http://www.swift.com/about_swift/shownews?param_dcr=news.data/en/swift_com/2014/PR_swift_sanctions_statement.xml|title=SWIFT Sanctions Statement|work=swift.com}}&lt;/ref&gt; [[SPFS]], a Russia-based SWIFT equivalent, was created by the [[Central Bank of Russia]] as a backup measure.&lt;ref&gt;{{cite news |last1=Turak |first1=Natasha |title=Russia's central bank governor touts Moscow alternative to SWIFT transfer system as protection from US sanctions |url=https://www.cnbc.com/2018/05/23/russias-central-bank-governor-touts-moscow-alternative-to-swift-transfer-system-as-protection-from-us-sanctions.html |accessdate=4 October 2018 |publisher=CNBC |date=23 May 2018}}&lt;/ref&gt;
+
+In 2014, SWIFT rejected calls from pro-Palestinian activists to revoke [[Banking in Israel|Israeli banks]]' access to its network.&lt;ref&gt;[http://www.haaretz.com/business/.premium-1.619514 International banking giant refuses to cut off Israel, despite boycott calls]. ''[[Haaretz]]''. 7 October 2014.&lt;/ref&gt;
+
+==Competitors==
+
+Alternatives to the SWIFT system include:
+
+#[[Ripple (payment protocol)|Ripple]] – sponsored by crypto firm [[Ripple Labs]] –  although SWIFT argued that the scalability issues of blockchain solutions remained unsolved, confining them to bilateral and intra-bank applications.&lt;ref name=&quot;:0&quot; /&gt;
+#[[INSTEX]] – sponsored by the EU
+#[[Cross-Border Inter-Bank Payments System|CIPS]] – sponsored by China
+#[[SPFS]] – sponsored by Russia
+
+==Security==
+{{see also|2016 Bangladesh Bank heist}}
+In 2016 an $81&amp;nbsp;million theft from the [[Bangladesh]] central bank via its account at the New York [[Federal Reserve Bank of New York|Federal Reserve Bank]] was traced to [[Hacker (computer security)|hacker]] penetration of SWIFT's [[#Products and interfaces|Alliance Access]] software, according to a New York ''Times'' report. It was not the first such attempt, the society acknowledged, and the security of the transfer system was undergoing new examination accordingly.&lt;ref&gt;Corkery, Michael, [https://www.nytimes.com/2016/05/01/business/dealbook/hackers-81-million-sneak-attack-on-world-banking.html &quot;Hackers’ $81 Million Sneak Attack on World Banking&quot;], ''The New York Times'', 30 April 2016. Retrieved 1 May 2016.&lt;/ref&gt; Soon after the reports of the theft from the Bangladesh central bank, a second, apparently related, attack was reported to have occurred on a commercial bank in Vietnam.&lt;ref name=&quot;Second Attack Reported NYT&quot;&gt;{{cite news | url=https://www.nytimes.com/2016/05/13/business/dealbook/swift-global-bank-network-attack.html | title=Once Again, Thieves Enter Swift Financial Network and Steal | work=The New York Times | date=12 May 2016 | accessdate=13 May 2016 | author=Corkery, Michael}}&lt;/ref&gt;&lt;ref name=&quot;ReutersSpecialReport&quot;&gt;{{cite news|last1=Bergin|first1=Tom|last2=Layne|first2=Nathan|title=Special Report: Cyber thieves exploit banks' faith in SWIFT transfer network|url=https://www.reuters.com/article/us-cyber-heist-swift-specialreport-idUSKCN0YB0DD|accessdate=24 May 2016|agency=Reuters|date=20 May 2016}}&lt;/ref&gt;
+
+Both attacks involved [[malware]] written to both issue unauthorized SWIFT messages and to conceal that the messages had been sent. After the malware sent the SWIFT messages that stole the funds, it deleted the database record of the transfers then took further steps to prevent confirmation messages from revealing the theft. In the Bangladeshi case, the confirmation messages would have appeared on a paper report; the malware altered the paper reports when they were sent to the printer. In the second case, the bank used a PDF report; the malware altered the PDF viewer to hide the transfers.&lt;ref name=&quot;Second Attack Reported NYT&quot; /&gt;
+
+In May 2016, [[Banco del Austro]] (BDA) in Ecuador sued [[Wells Fargo]] after Wells Fargo honored $12&amp;nbsp;million in fund transfer requests that had been placed by thieves.&lt;ref name=&quot;ReutersSpecialReport&quot; /&gt; In this case, the thieves sent SWIFT messages that resembled recently canceled transfer requests from BDA, with slightly altered amounts; the reports do not detail how the thieves gained access to send the SWIFT messages. BDA asserts that Wells Fargo should have detected the suspicious SWIFT messages, which were placed outside of normal BDA working hours and were of an unusual size. Wells Fargo claims that BDA is responsible for the loss, as the thieves gained access to the legitimate SWIFT credentials of a BDA employee and sent fully authenticated SWIFT messages.&lt;ref name=&quot;ReutersSpecialReport&quot; /&gt;
+
+In the first half of 2016, an anonymous Ukrainian bank and others—even &quot;dozens&quot; that are not being made public—were variously reported to have been &quot;compromised&quot; through the SWIFT network and to have lost money.&lt;ref&gt;{{cite web | url =http://www.scmagazineuk.com/swift-robbers-swoop-on-ukrainian-bank/article/506140/ | title =SWIFT robbers swoop on Ukrainian bank | last =Metzger | first =Max | date =28 June 2016 | access-date =29 June 2016 |publisher=[[SC Magazine]] UK}}&lt;/ref&gt; The episode was investigated by [[ISACA]] (formerly known as the Information Systems Audit and Control Association).
+
+== See also ==
+{{Portal|Banks}}
+&lt;!-- Please respect alphabetical order --&gt;
+* [[ABA routing transit number]]
+* [[Bilateral key exchange]] and the new [[Relationship Management Application (RMA)]]
+* [[Cross-Border Inter-Bank Payments System]]
+* [[Electronic money]]
+* [[International sanctions]]
+* [[Internationalization of the renminbi]]
+* [[ISO 9362]], the SWIFT/BIC code standard
+* [[ISO 15022]]
+* [[ISO 20022]]
+* [[Organisation for Economic Co-operation and Development]] (OECD)
+* [[Sibos (conference)|Sibos]] conference
+* [[SPFS]]
+* [[Terrorist Finance Tracking Program]]
+* [[TIPANET]]
+* [[Value transfer system]]
+
+== Further reading ==
+
+* Farrell, Henry and Abraham Newman. 2019. ''[https://press.princeton.edu/books/hardcover/9780691183640/of-privacy-and-power Of Privacy and Power: The Transatlantic Struggle over Freedom and Security]''. Princeton University Press.
+
+== References ==
+{{reflist}}
+
+== External links ==
+* {{Official website|https://www.swift.com/}}
+
+{{coord|50|44|04|N|4|28|43|E|type:landmark_source:kolossus-frwiki|display=title}}
+
+{{Bank codes and identification}}
+{{Major financial technology companies}}
+{{Authority control}}
+
+{{DEFAULTSORT:Society For Worldwide Interbank Financial Telecommunication}}
+[[Category:Society for Worldwide Interbank Financial Telecommunication| ]]
+[[Category:Financial services companies established in 1973]]
+[[Category:1973 establishments in Belgium]]
+[[Category:Market data]]
+[[Category:Financial metadata]]
+[[Category:Financial markets software]]
+[[Category:Payment systems| ]]
+[[Category:La Hulpe]]
+[[Category:Network architecture]]</text>
+      <sha1>govbwjgb30cps0a6zlxseqh4lllngqp</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Leyden</title>
+    <ns>0</ns>
+    <id>48119</id>
+    <redirect title="Leiden" />
+    <revision>
+      <id>109125238</id>
+      <parentid>91626876</parentid>
+      <timestamp>2007-02-18T19:28:42Z</timestamp>
+      <contributor>
+        <username>Eugene van der Pijll</username>
+        <id>22016</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[Leiden]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="20" xml:space="preserve">#REDIRECT [[Leiden]]</text>
+      <sha1>h0n0v6j402q8wjqiocrczi9c200psj9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Tube amplifier</title>
+    <ns>0</ns>
+    <id>48122</id>
+    <redirect title="Valve amplifier" />
+    <revision>
+      <id>374450085</id>
+      <parentid>15943166</parentid>
+      <timestamp>2010-07-20T06:31:55Z</timestamp>
+      <contributor>
+        <username>SMcCandlish</username>
+        <id>378390</id>
+      </contributor>
+      <comment>typo</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="29" xml:space="preserve">#REDIRECT [[Valve amplifier]]</text>
+      <sha1>ki2pq1qwyrns3nt369itpiduhekb06y</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Roman naming conventions</title>
+    <ns>0</ns>
+    <id>48125</id>
+    <revision>
+      <id>990311684</id>
+      <parentid>989613229</parentid>
+      <timestamp>2020-11-24T00:16:09Z</timestamp>
+      <contributor>
+        <username>Avilich</username>
+        <id>36246437</id>
+      </contributor>
+      <minor />
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="64758" xml:space="preserve">{{short description|Roman naming conventions}}
+Over the course of some fourteen centuries, the [[Ancient Rome|Romans]] and other peoples of Italy employed a system of nomenclature that differed from that used by other cultures of Europe and the [[Mediterranean Sea]], consisting of a combination of [[given name|personal]] and [[surname|family name]]s. Although conventionally referred to as the ''tria nomina'', the combination of [[praenomen]], [[Nomen (Roman name)|nomen]], and [[cognomen]] that have come to be regarded as the basic elements of the Roman name in fact represent a continuous process of development, from at least the seventh century BC to the end of the seventh century AD. The names that developed as part of this system became a defining characteristic of Roman civilization, and although the system itself vanished during the [[Early Middle Ages]], the names themselves exerted a profound influence on the development of European naming practices, and many continue to survive in [[modern languages]].
+
+==Overview==
+The distinguishing feature of Roman nomenclature was the use of both [[given name|personal names]] and regular [[surnames]]. Throughout Europe and the Mediterranean, other ancient civilizations distinguished individuals through the use of single personal names, usually [[wikt:dithematic|dithematic]] in nature. Consisting of two distinct elements, or &quot;themes&quot;, these names allowed for hundreds or even thousands of possible combinations. But a markedly different system of nomenclature arose in Italy, where the personal name was joined by a hereditary surname. Over time, this [[wikt:binomial|binomial]] system expanded to include additional names and designations.&lt;ref name=&quot;OCD:Names&quot;&gt;''[[Oxford Classical Dictionary]]'', 2nd Ed. (1970), &quot;Names, Personal.&quot;&lt;/ref&gt;&lt;ref name=&quot;Salway&quot;&gt;[[Benet Salway]], &quot;What's in a Name?  A Survey of Roman Onomastic Practice from c. 700 B.C. to A.D. 700&quot;, in ''[[Journal of Roman Studies]]'', vol. 84, pp. 124–145 (1994).&lt;/ref&gt;
+
+[[File:Etruskischer Meister 001.jpg|thumb|An [[Etruscan civilization|Etruscan]] musician, fresco from the [[Tomb of the Triclinium]], near [[Tarquinia|Tarquinii]], c. 470 BC]]
+The most important of these names was the ''nomen gentilicium'', or simply ''nomen'', a hereditary surname that identified a person as a member of a distinct [[gens]]. This was preceded by the [[praenomen]], or &quot;forename&quot;, a personal name that served to distinguish between the different members of a family.  For example, a Roman named ''Publius Lemonius'' might have sons named ''Publius'', ''Lucius'', and ''Gaius Lemonius''.  Here, ''Lemonius'' is the nomen, identifying each person in the family as a member of the gens Lemonia; ''Publius'', ''Lucius'', and ''Gaius'' are praenomina used to distinguish between them.&lt;ref name=&quot;OCD:Names&quot;/&gt;

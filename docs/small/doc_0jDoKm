@@ -1,0 +1,319 @@
+=== Features that were never added ===
+When DNIX development at ISC effectively ceased in 1997, a number of planned OS features were left on the table:
+
+* [[Shared object]]s - There were two dynamically-loaded libraries in existence, an encryptor for DNET and the GUI's imaging library, but the facility was never generalized.  ISC's machines were characterized by a general lack of [[virtual address]] space, so extensive use of memory-mapped entities would not have been possible.
+* [[Lightweight process]]es - The [[Kernel (computer science)|kernel]] itself already had multiple threads that shared a single MMU context, extending this to user processes should have been straightforward.  The [[API]] implications would have been the most difficult part of this.
+* [[Access Control List]]s - Trivial to implement using an ACL handler mounted over the stock filesystem.
+* Multiple swap partitions - DNIX already used free space on the selected volume for swapping, it would have been easy to give it a list of volumes to try in turn, potentially with associated space limits to keep it from consuming all free space on a volume before moving on to the next one.
+* Remote kernel debugging via [[gdb]] - All the pieces were there to do it either through the customary serial port or over Ethernet using the kernel's embedded X.25 link software, but they were never assembled.
+* [[68030]] support - ISC's prototypes were never completed.  Two processor piggyback plug-in cards were built, but were never used as more than faster 68020's.  They were not reliable, nor were they as fast as they could have been due to having to fit into a 68020 socket.  The fast context switching ISC MMU would be left disabled (and left out altogether in proposed production units), and the embedded one of the 68030 was to have been used instead, using a derivative of the DS90-20's MMU code.  While the ISC MMU was very efficient and supported instant switching among 32 resident processes, it was very limited in addressability.  The 68030 MMU would have allowed for much more than 8 MB of virtual space in a process, which was the limit of the ISC MMU.  Though this MMU would be slower, the overall faster speed of the 68030 should have more than made up for it, so that a 68030 machine was expected to be in all ways faster, and support much larger processes.
+
+==See also==
+*[[Timeline of operating systems]]
+*[[Cromemco Cromix]]
+
+==References==
+{{reflist}}
+
+{{Real-time operating systems}}
+{{Unix-like}}
+
+[[Category:UNIX System V]]
+[[Category:Real-time operating systems]]</text>
+      <sha1>4aa8o0qw6v4m0i81jyp7ki11w1uqhni</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Quikscript</title>
+    <ns>0</ns>
+    <id>51173</id>
+    <revision>
+      <id>973120638</id>
+      <parentid>962927796</parentid>
+      <timestamp>2020-08-15T13:44:37Z</timestamp>
+      <contributor>
+        <username>Hairy Dude</username>
+        <id>274535</id>
+      </contributor>
+      <comment>/* Origins and history */put punctuation before tags</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3664" xml:space="preserve">{{short description|Alternative English-language alphabet}}
+{{about|the alphabet|the programming language|QUIKSCRIPT}}
+
+{{infobox writing system
+|name      = Quikscript
+|type      = Alphabet
+|creator   = [[Kingsley Read]]
+|sample    =
+|imagesize =
+}}
+
+[[Image:Quickscript.png|right|thumb|The front page of the Quikscript manual. The Quikscript text reads, &quot;This is the way to do it.&quot;]]
+'''Quikscript''' (also known as the '''Read Alphabet''' and '''Second Shaw'''{{cn|date=June 2020}}) is an [[alphabet]] (and [[phonemic orthography]]) specifically designed for the [[English language]]. Quikscript replaces traditional English orthography, which uses the [[Latin alphabet]], with completely new letters. It is phonemically regular, compact, and designed to be comfortably and quickly written. There are also Quikscript alphabets adapted for other languages, using the same letters for sounds which do not exist in English{{Citation needed|date=January 2020}}.
+
+==Origins and history==
+{{See also|Shavian alphabet}}
+[[George Bernard Shaw]], the writer, critic and playwright, was a highly vocal critic of English spelling because it lacked a coherent system for representing the phonemes of English accurately. As a result, for years he wrote his literary works using [[Pitman shorthand]].  However, he found its limitations frustrating as well and realized that it was not a suitable replacement for the Latin alphabet, being difficult to use to produce printed material and impossible to type.  A shorthand is, by definition, more specialized than an alphabet, which represents the standard written form of a language. Shaw desired and advocated a phonetic reworking of written English, and this called for a new alphabet.&lt;ref&gt;{{Cite book|url=https://archive.org/details/in.ernet.dli.2015.54583/page/n9/mode/2up|title=The Miraculous Birth of Language|last=Wilson|first=Richard Albert|publisher=JM Dent and Sons Ltd.|year=1941|isbn=|location=London, England|pages=ix-xxxvii}}&lt;/ref&gt;
+
+To that end, Shaw placed in his will provisions instructing his executor to organize a world-wide competition to design an improved English alphabet. A British designer, [[Ronald Kingsley Read]], who had corresponded extensively with Shaw for several years regarding just such an alphabet, was selected along with three other finalists as the winners of the competition.&lt;ref&gt;{{Cite book|url=https://archive.org/details/AndroclesAndTheLion_ShawAlphabetEdition|title=The Shaw Alphabet Edition of Androcles and the Lion|last=Shaw|first=Bernard|publisher=Penguin Books Ltd.|year=1962|isbn=|location=Harmondsworth, Middlesex, England|pages=9-11}}&lt;/ref&gt; Read was chosen to design the final form of the alphabet. The &quot;Shaw Alphabet&quot;, or &quot;[[Shavian]]&quot;, as it is now generally known, was the result.
+
+To provide field testing of the new alphabet, Read organized a lengthy public testing phase of Shavian by some 500 users from around the world who spoke different dialects of English. Once he had analyzed the results of those tests, Read decided to revise Shavian to incorporate a number of changes to improve the alphabet and make it both easier and faster to write.  He called the revised alphabet &quot;Quikscript&quot;. In 1966 he published the Quikscript manual which set out the alphabet's rationale, and briefly discussed different possible methods of alphabet reform.{{cn|date=June 2020}} The heart of the manual provided comprehensive instructions regarding the use of the alphabet along with reading samples.
+
+==References==
+{{Reflist}}
+
+
+[[Category:English spelling reform]]
+[[Category:Phonetic alphabets]]
+[[Category:Alphabets]]
+[[Category:Auxiliary and educational artificial scripts]]</text>
+      <sha1>011lomkuswi9znkn88pn1u2ldwe4xbq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Uncle Tom</title>
+    <ns>0</ns>
+    <id>51174</id>
+    <revision>
+      <id>981357867</id>
+      <parentid>981357772</parentid>
+      <timestamp>2020-10-01T20:39:47Z</timestamp>
+      <contributor>
+        <username>JasonAQuest</username>
+        <id>5865511</id>
+      </contributor>
+      <comment>ditto</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="19684" xml:space="preserve">{{other uses}}
+{{short description|Title character of Uncle Tom's Cabin}}
+{{Infobox character
+| series             = [[Uncle Tom's Cabin]]
+| image              = ElizaEngraving cropped.jpg
+| caption            = Detail of an illustration from the first book edition of ''Uncle Tom's Cabin'', depicting Uncle Tom as young and muscular
+| first              = ''[[Uncle Tom's Cabin]]''
+| creator            = [[Harriet Beecher Stowe]]
+| gender             = Male
+| religion           = [[Christians|Christian]]
+| nationality        = [[American people|American]]
+}}
+{{Slavery}}
+'''Uncle Tom''' is the [[title character]] of [[Harriet Beecher Stowe]]'s 1852 novel, ''[[Uncle Tom's Cabin]]''.&lt;ref name=&quot;merriam-webster.com&quot;&gt;{{MerriamWebsterDictionary|Uncle Tom}}&lt;/ref&gt; The character was seen by many readers as a ground-breaking [[Humanism|humanistic]] portrayal of a slave, one who uses [[nonresistance]] and gives his life to protect others who have escaped from slavery. However, the character also came to be seen, especially based on his portrayal in pro-slavery dramatizations, as inappropriately subservient to white slaveholders. This led to the use of ''Uncle Tom'' – sometimes shortened to just ''a Tom''&lt;ref&gt;{{Cite web|last=Capehart|first=Jonathan|last2=|first2=|last3=|date=|title=Stop calling Clarence Thomas an ‘Uncle Tom’|url=https://www.washingtonpost.com/blogs/post-partisan/wp/2014/05/02/stop-calling-clarence-thomas-an-uncle-tom/|url-status=live|archive-url=|archive-date=|access-date=2020-08-25|website=Washington Post|language=en}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|last=Press|first=Stanford University|title=Start reading Uncle Tom {{!}} Adena Spingarn, Foreword by Henry Louis Gates, Jr.|url=https://www.sup.org/books/extra/?id=27353&amp;i=Introduction.html|access-date=2020-08-25|website=www.sup.org|language=en}}&lt;/ref&gt; – as a derogatory [[epithet]] for an exceedingly subservient person or [[House negro|house negro]], particularly one aware of their own lower-class racial status.
+
+==Original characterization and critical evaluations==
+At the time of the novel's initial publication in 1851, Uncle Tom was a rejection of the existing stereotypes of [[minstrel show]]s; Stowe's [[Melodrama|melodramatic]] story humanized the suffering of slavery for white audiences by portraying Tom as a Jesus-like figure who is ultimately martyred, beaten to death by a cruel master because he refuses to betray the whereabouts of two women who had escaped from slavery.&lt;ref name=&quot;williams&quot; /&gt;&lt;ref name=&quot;parfait&quot;&gt;{{cite book |last=Parfait |first=Claire |year=2007 |title=The publishing history of Uncle Tom's cabin, 1852–2002 |publisher=Ashgate Publishing, Ltd. |isbn=978-0-7546-5514-5 |pages=1–2, 6 |url=https://books.google.com/books?id=J-IaLbTxpVYC&amp;pg=PA1&amp;dq=Uncle+Tom&amp;ei=T5zmSYC9GoOIzQTwnJTBCA |accessdate=2009-04-16}}&lt;/ref&gt; Stowe reversed the gender conventions of slave narratives by juxtaposing Uncle Tom's passivity against the daring of three [[African American]] women who escape from slavery.&lt;ref name=&quot;williams&quot; /&gt;
+
+The novel was both influential and commercially successful, published as a serial from 1851 to 1852 and as a book from 1852 onward.&lt;ref name=&quot;williams&quot; /&gt;&lt;ref name=&quot;parfait&quot; /&gt; An estimated 500,000 copies had sold worldwide by 1853, including unauthorized reprints.&lt;ref name=&quot;meer&quot;&gt;{{cite book |last=Meer |first=Sarah |year=2005 |title=Uncle Tom mania: slavery, minstrelsy, and transatlantic culture in the 1850s |publisher=University of Georgia Press |isbn=978-0-8203-2737-2 |pages=1–4, 9, 14–15 |url=https://books.google.com/books?id=rKu7Tp8_-6wC&amp;printsec=frontcover&amp;dq=Uncle+Tom |accessdate=2009-04-16}}&lt;/ref&gt; Senator [[Charles Sumner]] credited ''Uncle Tom's Cabin'' for the election of [[Abraham Lincoln]], an opinion that is later echoed in the apocryphal story of Lincoln greeting Stowe with the quip &quot;So you're the little woman who wrote the book that made this great war!&quot; (see [[American Civil War]]).&lt;ref name=&quot;williams&quot; /&gt;&lt;ref&gt;{{Cite journal |last=R. |first=Vollaro, Daniel |date=2009-01-01 |title=Lincoln, Stowe, and the 'Little Woman/Great War' Story: The Making, and Breaking, of a Great American Anecdote |url=https://quod.lib.umich.edu/j/jala/2629860.0030.104/--lincoln-stowe-and-the-little-womangreat-war-story-the-making?rgn=main;view=fulltext |journal=Journal of the Abraham Lincoln Association |language=en |volume=30|issue=1|issn=1945-7987}}&lt;/ref&gt; [[Frederick Douglass]] praised the novel as &quot;a flash to light a million camp fires in front of the embattled hosts of slavery&quot;.&lt;ref name=&quot;williams&quot; /&gt; Despite Douglass's enthusiasm, an anonymous 1852 reviewer for [[William Lloyd Garrison]]'s publication ''[[The Liberator (newspaper)|The Liberator]]'' suspected a racial double standard in the idealization of Uncle Tom:
+
+&lt;blockquote&gt;Uncle Tom's character is sketched with great power and rare religious perception. It triumphantly exemplifies the nature, tendency, and results of Christian non-resistance. We are curious to know whether Mrs. Stowe is a believer in the duty of non-resistance for the White man, under all possible outrage and peril, as for the Black man ... [For whites in parallel circumstances, it is often said] Talk not of overcoming evil with good—it is madness! Talk not of peacefully submitting to chains and stripes—it is base servility! Talk not of servants being obedient to their masters—let the blood of tyrants flow! How is this to be explained or reconciled? Is there one law of submission and non-resistance for the Black man, and another of rebellion and conflict for the white man? When it is the whites who are trodden in the dust, does Christ justify them in taking up arms to vindicate their rights? And when it is the blacks who are thus treated, does Christ require them to be patient, harmless, long-suffering, and forgiving? Are there two Christs?&lt;ref name=&quot;liberator&quot;&gt;{{cite book |author=&lt;!--anonymous--&gt; |year=2004 |origyear=1852 |title=Untitled review, republished in A Routledge literary sourcebook on Harriet Beecher Stowe's Uncle Tom's cabin by Debra J. Rosenthal |publisher=&lt;!--William Lloyd Garrison (original publisher)--&gt;Routledge |isbn=978-0-415-23473-3 |page=35 |url=https://books.google.com/books?id=eptkDlB3J4kC&amp;pg=PA1&amp;dq=Uncle+Tom |accessdate=2009-04-17}}&lt;/ref&gt;&lt;/blockquote&gt;
+
+[[James Weldon Johnson]], a prominent figure of the [[Harlem Renaissance]], expresses an  antipathetic opinion in his autobiography:
+
+&lt;blockquote&gt;For my part, I was never an admirer of Uncle Tom, nor of his type of goodness; but I believe that there were lots of old Negroes as foolishly good as he.&lt;/blockquote&gt;
+
+In 1949, American writer [[James Baldwin (writer)|James Baldwin]] rejected the [[emasculation]] of the title character &quot;robbed of his humanity and divested of his sex&quot; as the price of spiritual salvation for a dark-skinned man in a fiction whose African-American characters, in Baldwin's view, were invariably two-dimensional stereotypes.&lt;ref name=&quot;williams&quot; /&gt;&lt;ref name=&quot;baldwin&quot;&gt;{{cite book |last=Baldwin |first=James |date=2006 |origyear=1949 |title=Everybody's Protest Novel (partial republication) |publisher=Harvard University Press |isbn=978-0-674-02352-9 |pages=118–121 |url=https://books.google.com/books?id=1loJe4UmHPAC&amp;pg=PA118&amp;dq=James+Baldwin+Uncle+Tom |accessdate=2009-04-17}}&lt;/ref&gt; To Baldwin, Stowe was closer to a pamphleteer than a novelist and her artistic vision was fatally marred by polemics and racism that manifested especially in her handling of the title character.&lt;ref name=&quot;baldwin&quot; /&gt; Stowe had stated that her sons had wept when she first read them the scene of Uncle Tom's death, but after Baldwin's essay it ceased being respectable to accept the melodrama of the Uncle Tom story.&lt;ref name=&quot;williams&quot; /&gt; Uncle Tom became what critic Linda Williams describes as &quot;an epithet of servility&quot; and the novel's reputation plummeted until feminist critics led by [[Jane Tompkins]] reassessed the tale's female characters.&lt;ref name=&quot;williams&quot; /&gt;
+
+According to Debra J. Rosenthal, in an introduction to a collection of critical appraisals for the ''Routledge Literary Sourcebook on Harriet Beecher Stowe's Uncle Tom's Cabin'', overall reactions have been mixed with some critics praising the novel for affirming the humanity of the African American characters and for the risks Stowe assumed in taking a very public stand against slavery before abolitionism had become a socially acceptable cause, and others criticizing the very limited terms upon which those characters' humanity was affirmed and the artistic shortcomings of political melodrama.&lt;ref name=&quot;rosenthal&quot;&gt;{{cite book |last=Rosenthal |first=Debra J. |year=2004 |title=A Routledge literary sourcebook on Harriet Beecher Stowe's Uncle Tom's cabin |publisher=Routledge |isbn=978-0-415-23473-3 |pages=30–31 |url=https://books.google.com/books?id=eptkDlB3J4kC&amp;pg=PA1&amp;dq=Uncle+Tom |accessdate=2009-04-17}}&lt;/ref&gt;
+
+==Inspiration==
+[[File:Uncle Tom and Eva, Staffordshire, England, 1855-1860, glazed and painted ceramic - Concord Museum - Concord, MA - DSC05597.JPG|thumb|''Uncle Tom and Eva'', [[Staffordshire figure]], England, 1855–1860, glazed and painted [[earthenware]]]]
+A specific impetus for the novel was the [[Fugitive Slave Act of 1850]], which imposed heavy fines upon law enforcement personnel in Northern states if they refused to assist the return of people who escaped from slavery.&lt;ref name=&quot;parfait&quot; /&gt;&lt;ref name=&quot;law&quot;&gt;{{cite web |title=The Fugitive Slave Act |publisher=U.S. Constitution Online |url=http://www.usconstitution.net/fslave.html |accessdate=2008-10-03}}&lt;/ref&gt; The new law also stripped African Americans of the right to request a jury trial or to testify on their own behalf, even if they were legally free, whenever a single claimant presented an [[affidavit]] of ownership.&lt;ref name=&quot;law&quot; /&gt; The same law authorized a $1000 fine and six months imprisonment for anyone who knowingly harbored or assisted a fugitive slave.&lt;ref name=&quot;law&quot; /&gt; These terms infuriated Stowe, so the novel was written, read, and debated as a political [[Abolitionism in the United States|abolitionist]] tract.&lt;ref name=&quot;parfait&quot; /&gt;
+
+Stowe drew inspiration for the Uncle Tom character from several sources. The best-known of these was [[Josiah Henson]], an ex-slave whose autobiography, ''[[The Life of Josiah Henson, Formerly a Slave, Now an Inhabitant of Canada, as Narrated by Himself]]'', was originally published in 1849 and later republished in two extensively revised editions after the publication of ''Uncle Tom's Cabin''.&lt;ref name=&quot;winks&quot;&gt;{{cite book |last=Winks |first=Robin W. |year=2003 |title=Autobiography of Josiah Henson: An Inspiration for Harriet Beecher Stowe's Uncle Tom (introduction) |publisher=Courier Dover Publications |isbn=978-0-486-42863-5 |pages=v–vi, x–xi, xviii–xix |url=https://books.google.com/books?id=bCYuNTzua2cC&amp;printsec=frontcover&amp;dq=Uncle+Tom&amp;ei=T5zmSYC9GoOIzQTwnJTBCA |accessdate=2009-04-16}}&lt;/ref&gt; Henson was enslaved at birth in 1789.&lt;ref name=&quot;winks&quot; /&gt; He became a Christian at age eighteen and began preaching.&lt;ref name=&quot;winks&quot; /&gt; Henson attempted to purchase his freedom for $450, but after selling his personal assets to raise $350 and signing a promissory note for the remainder Henson's owner raised the price to $1000; Henson was unable to prove that the original agreement had been for a lesser amount.&lt;ref name=&quot;winks&quot; /&gt; Shortly afterward Henson was ordered on a trip south to [[New Orleans]]. When he learned that he was to be sold there, he obtained a weapon. He contemplated murdering his white companions with the weapon, but decided against violence because his Christian morals forbade it.&lt;ref name=&quot;winks&quot; /&gt; A sudden illness in one of his companions forced their return to [[Kentucky]], and shortly afterward Henson escaped north with his family, settling in Canada where he became a civic leader.&lt;ref name=&quot;winks&quot; /&gt;
+
+Stowe read the first edition of Henson's narrative and later confirmed that she had incorporated elements from it into ''Uncle Tom's Cabin''.&lt;ref name=&quot;winks&quot; /&gt; Kentucky and New Orleans figure in both Henson's narrative and the novel's settings, and some other story elements are similar.&lt;ref name=&quot;winks&quot; /&gt;
+
+In the public imagination, however, Henson became synonymous with Uncle Tom.&lt;ref name=&quot;winks&quot; /&gt; After Stowe's death her son and grandson claimed she and Henson had met before ''Uncle Tom's Cabin'' was written, but the chronology does not hold up to scrutiny and she probably drew material only from his published autobiography.&lt;ref name=&quot;winks&quot; /&gt;
+
+==Epithet==
+In short terms, Uncle Tom is labeled to persons, similar to ''snitch'' or ''betrayer'', whose motive is driven by acceptance that doing slavery was just how the (antebellum) Southern society worked, whether the acceptance is spontaneous or coerced.
+
+The term &quot;Uncle Tom&quot; is used as a derogatory [[epithet]] for an excessively subservient person, particularly when that person perceives their own lower-class status based on race. It is similarly used to negatively describe a person who betrays their own group by participating in its oppression, whether or not they do so willingly.&lt;ref name=&quot;merriam-webster.com&quot; /&gt;&lt;ref name=&quot;Uncle Tom&quot;&gt;[http://wordnetweb.princeton.edu/perl/webwn?o2=&amp;o0=1&amp;o7=&amp;o5=&amp;o1=1&amp;o6=&amp;o4=&amp;o3=&amp;s=uncle+tom&amp;i=0&amp;h=00#c &quot;Uncle Tom&quot;]. Wordnet.princeton.edu. Retrieved April 24, 2009.&lt;/ref&gt;  The term has also, with more intended neutrality, been applied in psychology in the form &quot;[[Uncle Tom syndrome]]&quot;, a term for the use of subservience, appeasement and passivity to cope with intimidation and threats.
+
+The popular negative connotations of &quot;Uncle Tom&quot; have largely been attributed to the numerous derivative works inspired by ''Uncle Tom's Cabin'' in the decade after its release, rather than the original novel itself, whose title character is a more positive figure.&lt;ref name=&quot;williams&quot;&gt;{{cite book |last=Williams |first=Linda |year=2002 |title=Playing the Race Card: Melodramas of Black and White from Uncle Tom to O.J. Simpson |publisher=Princeton University Press |isbn=978-0-691-10283-2 |pages=7, 30–31, 47–62 |url=https://books.google.com/books?id=VplfOW4Gch4C&amp;printsec=frontcover&amp;dq=Uncle+Tom&amp;ei=T5zmSYC9GoOIzQTwnJTBCA |accessdate=2009-04-16}}&lt;/ref&gt; These works lampooned and distorted the portrayal of Uncle Tom with politically loaded overtones.&lt;ref name=&quot;meer&quot; /&gt;
+
+===History===
+[[File:Legree.png|thumb|250px|Uncle Tom, from an 1885 [[magic lantern]] series.]]
+American copyright law before 1856 did not give novel authors any control over derivative stage adaptations, so Stowe neither approved the adaptations nor profited from them.&lt;ref name=&quot;morgan&quot;&gt;{{cite book |last=Morgan |first=Jo-Ann |year=2007 |title=Uncle Tom's cabin as visual culture |publisher=University of Missouri Press |isbn=978-0-8262-1715-8 |pages=[https://archive.org/details/uncletomscabinas00morg/page/1 1]–5, 11–12, 17–19 |url=https://archive.org/details/uncletomscabinas00morg |url-access=registration |quote=James Baldwin Uncle Tom. |accessdate=2009-04-17}}&lt;/ref&gt; [[Minstrel show]] retellings in particular, usually performed by white men in [[blackface]], tended to be derisive and [[pro-slavery]], transforming Uncle Tom from Christian martyr to a [[fool (stock character)|fool]] or an [[apologist]] for slavery.&lt;ref name=&quot;meer&quot; /&gt;
+
+Adapted theatrical performances of the novel, called [[Tom Shows]], remained in continual production in the United States for at least 80 years.&lt;ref name=&quot;morgan&quot; /&gt; These representations had a lasting cultural impact and influenced the pejorative nature of the term ''Uncle Tom'' in later popular use.&lt;ref name=&quot;meer&quot; /&gt;
+
+Although not all minstrel depictions of Uncle Tom were negative, the dominant version developed into a stock character very different from Stowe's hero.&lt;ref name=&quot;meer&quot; /&gt;&lt;ref name=&quot;richardson&quot;&gt;{{cite book |last=Richardson |first=Riché |year=2007 |title=Black masculinity and the U.S. South: from Uncle Tom to gangsta |publisher=University of Georgia Press |isbn=978-0-8203-2890-4 |page=3 |url=https://books.google.com/books?id=IlcS25xYsC4C&amp;printsec=frontcover&amp;dq=Uncle+Tom&amp;ei=T5zmSYC9GoOIzQTwnJTBCA |accessdate=2009-04-16}}&lt;/ref&gt; Stowe's Uncle Tom was a muscular and virile man who refused to obey when ordered to beat other slaves; the stock character of minstrel shows became a shuffling [[asexuality|asexual]] individual with a receding hairline and graying hair.&lt;ref name=&quot;richardson&quot; /&gt;  To Jo-Ann Morgan, author of ''Uncle Tom's Cabin as Visual Culture'', these shifting representations undermined the subversive layers of Stowe's original characterization by redefining Uncle Tom until he fit within prevailing racist norms.&lt;ref name=&quot;morgan&quot; /&gt; Particularly after the Civil War, as the political thrust of the novel which had arguably helped to precipitate that war became obsolete to actual political discourse, popular depictions of the title character recast him within the apologetics of the [[Lost Cause of the Confederacy]].&lt;ref name=&quot;morgan&quot; /&gt; The virile father of the abolitionist serial and first book edition degenerated into a decrepit old man, and with that transformation the character lost the capacity for resistance that had originally given meaning to his choices.&lt;ref name=&quot;morgan&quot; /&gt;&lt;ref name=&quot;richardson&quot; /&gt; Stowe never meant Uncle Tom to be a derided name, but the term as a pejorative has developed based on how later versions of the character, stripped of his strength, were depicted on stage.&lt;ref name=NPR&gt;{{cite news |last=Keyes |first=Allison |date=2002-11-29 |title=NPR: A New Look at 'Uncle Tom's Cabin' |work=[[The Tavis Smiley Show]] |publisher=[[National Public Radio|NPR]] |url=https://www.npr.org/templates/story/story.php?storyId=860450 |accessdate=2008-01-09}}&lt;/ref&gt;
+
+Claire Parfait, author of ''The Publishing History of Uncle Tom's Cabin, 1852–2002'', opines that &quot;the many alterations in retellings of the Uncle Tom story demonstrate an impulse to correct the retellers' perceptions of its flaws&quot; and &quot;the capacity of the novel to irritate and rankle, even a century and a half after its first publication&quot;.&lt;ref name=&quot;parfait&quot; /&gt;
+
+==See also==
+* [[Acting white]]
+* [[List of In Living Color sketches#B|The Brothers Brothers]]
+* [[House Negro]]
+* [[Jump Jim Crow]]
+* [[List of ethnic slurs]]
+* [[Race traitor]]
+* [[Respectability politics]]
+* [[Shoneen]]
+* [[Stepin Fetchit]]
+* [[Sycophant]]
+
+==References==
+{{reflist}}
+
+==Further reading==
+*{{cite book |editor-last=Osofsky |editor-first=Gilbert |year=1969 |title=Puttin' On Ole Massa: The Slave Narratives of Henry Bibb, William Wells Brown, and Solomon Northup |publisher=[[Harper &amp; Row]] |isbn=978-0-06-131432-2}}
+*{{cite video |people=Mohammad Ali |title=Thrilla in Manilla |medium=Documentary |publisher=HBO |location=USA |date=2009}}
+
+==External links==
+{{Wiktionary|Uncle Tom}}
+*[http://www.ferris.edu/news/jimcrow/tom/ An article on the Uncle Tom caricature]
+*[http://www.coverart.com/2011/11/every-girls-september-1931-the-real-uncle-tom/ An article from EveryGirls 1931 by Olive Burns Kirby]
+
+{{Uncle Tom's Cabin}}
+{{Slave narrative}}
+{{Ethnic slurs}}
+{{African American caricatures and stereotypes}}
+
+[[Category:African-American culture]]
+[[Category:American culture]]
+[[Category:American slang]]
+[[Category:Uncle Tom's Cabin]]
+[[Category:Anti-African and anti-black slurs]]
+[[Category:Characters in American novels of the 19th century]]
+[[Category:Literary characters introduced in 1852]]
+[[Category:Fictional slaves]]
+[[Category:Pejorative terms for people]]
+[[Category:Stereotypes of African Americans]]
+[[Category:Black people in literature]]
+[[Category:Male characters in literature]]
+[[Category:Fictional African-American people]]</text>
+      <sha1>n2oklfgsgh8xa3325h1ccw52y826tiv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Garrett Park, Maryland</title>
+    <ns>0</ns>
+    <id>51175</id>
+    <revision>
+      <id>974974643</id>
+      <parentid>974037279</parentid>
+      <timestamp>2020-08-26T01:16:26Z</timestamp>
+      <contributor>
+        <username>InternetArchiveBot</username>
+        <id>27015025</id>
+      </contributor>
+      <comment>Rescuing 1 sources and tagging 0 as dead.) #IABot (v2.0.5</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18079" xml:space="preserve">{{Infobox settlement
+|official_name            = Garrett Park, Maryland
+|settlement_type          = [[Town]]
+|nickname                 = 
+|motto                    = 
+
+&lt;!-- Images --&gt;
+|image_skyline            = 2007 01 23 - 547 in Garrett Park 12.JPG
+|imagesize                = 
+|image_caption            = Aerial view of Garrett Park, Maryland, in January 2007.
+|image_flag               = 
+|image_seal               = 
+
+&lt;!-- Maps --&gt;
+|image_map = Montgomery_County_Maryland_Incorporated_and_Unincorporated_areas_Garrett_Park_Highlighted.svg
+|mapsize                  = 
+|map_caption              = 
+|image_map1               = 
+|mapsize1                 = 
+|map_caption1             = 
+
+&lt;!-- Location --&gt;
+| subdivision_type        = [[List of sovereign states|Country]]
+| subdivision_type1       = [[U.S. state|State]]
+| subdivision_type2       = [[List of counties in Maryland|County]]
+| subdivision_name        = {{Flagu|United States}}
+| subdivision_name1       = {{flag|Maryland}}
+| subdivision_name2       = {{Flagicon image|Flag_of_Montgomery_County,_Maryland.svg}} [[Montgomery County, Maryland|Montgomery]]
+|government_footnotes     = 
+|government_type          = 
+|leader_title             = 
+|leader_name              = 
+|leader_title1            = 
+|leader_name1             = 
+|established_title        = [[Municipal corporation|Incorporated]]
+|established_date         = 1898&lt;ref&gt;{{cite web|title=Garrett Park|url=http://msa.maryland.gov/msa/mdmanual/37mun/garrettpark/html/g.html|website=Maryland Manual|accessdate=27 June 2017}}&lt;/ref&gt;
+
+&lt;!-- Area --&gt;
+|unit_pref                = Imperial
+|area_footnotes           = &lt;ref name=&quot;CenPopGazetteer2019&quot;&gt;{{cite web|title=2019 U.S. Gazetteer Files|url=https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2019_Gazetteer/2019_gaz_place_24.txt|publisher=United States Census Bureau|accessdate=July 25, 2020}}&lt;/ref&gt;
+|area_magnitude           = 
+|area_total_km2           = 0.65
+|area_land_km2            = 0.65
+|area_water_km2           = 0.00
+|area_total_sq_mi         = 0.25
+|area_land_sq_mi          = 0.25
+|area_water_sq_mi         = 0.00
+
+&lt;!-- Population --&gt;
+|population_as_of         = [[2010 United States Census|2010]]
+|population_est           = 1049
+|pop_est_as_of            = 2019
+|population_footnotes     = &lt;ref name =&quot;wwwcensusgov&quot;/&gt;
+|population_total         = 992
+|population_density_km2   = 1613.12
+|population_density_sq_mi = 4179.28
+
+&lt;!-- General information --&gt;
+|timezone                 = [[Eastern Time Zone|Eastern (EST)]]
+|utc_offset               = -5
+|timezone_DST             = EDT
+|utc_offset_DST           = -4
+|elevation_footnotes      = 
+|elevation_m              = 87
+|elevation_ft             = 285
+|coordinates              = {{coord|39|2|7|N|77|5|33|W|region:US-MD|display=inline}}
+|postal_code_type         = [[ZIP code]]
+|postal_code              = 20896
+|area_code                = [[Area code 301|301]] [[Area code 240|240]]
+|blank_name               = [[Federal Information Processing Standard|FIPS code]]
+|blank_info               = 24-31525
+|blank1_name              = [[Geographic Names Information System|GNIS]] feature ID
+|blank1_info              = 0584560
+|website                  = {{URL|http://www.garrettparkmd.gov/}}
+|footnotes                = 
+|pop_est_footnotes = &lt;ref name=&quot;USCensusEst2019CenPopScriptOnlyDirtyFixDoNotUse&quot;/&gt;
+}}
+
+'''Garrett Park''' is a [[town]] in [[Montgomery County, Maryland|Montgomery County]], [[Maryland]]. It was named after a former president of the [[Baltimore and Ohio Railroad]], Robert W. Garrett. The population was 992 at the [[2010 United States Census|2010 census]]. Garrett Park is home to Garrett Park Elementary School, located just outside the town proper.
+
+== History ==
+[[File:Garrett Park B&amp;O station.jpg|thumb|left|200px|Former general store and private residence, now used as a restaurant adjacent to the old railroad station]]
+Garrett Park was an early planned community, originally promoted by businessman Henry W. Copp, who purchased the land in 1886. Copp wanted to build a suburban development reminiscent of an English village, and even went so far as to name the streets after locations in the novels of the English author [[Sir Walter Scott|Walter Scott]], such as [[Kenilworth (novel)|Kenilworth]] and Strathmore. Copp worked in conjunction with the [[Baltimore and Ohio Railroad]], which in 1893 built a train station.&lt;ref&gt;[http://www.garrettpark-md.gov/c/286/history Garrett Park in 1898] {{webarchive|url=https://web.archive.org/web/20090523010419/http://www.garrettpark-md.gov/c/286/history |date=2009-05-23 }}, Town of Garrett Park&lt;/ref&gt; Builders were given reduced rates to transport workers and materials to the town site, and new residents were given free trips to move in. The town lies along the former B&amp;O railway corridor (now used by [[CSX]], [[Amtrak]], [[MARC Brunswick Line|MARC]]). It was named for [[John Work Garrett]], who had led the B&amp;O for nearly three decades, including the American Civil War. Copp limited commercial development in the community, and even today there is only one store in the town.
+
+Garrett Park incorporated as a town in 1898, at which time it had thirty buildings and approximately 100 residents.&lt;ref&gt;https://www.garrettparkmd.gov/about-our-town/history&lt;/ref&gt; However, rail suburbs did not catch on, and the community stagnated as automobiles replaced commuter trains and streetcars. In the 1920s, another company built approximately 50 more houses, now including garages.&lt;ref name=&quot;Offutt&quot;&gt;{{cite book   | last = Offutt | first = William |author2=Sween, Jane | title = Montgomery County: Centuries of Change | publisher = American Historical Press | year = 1999 | pages = 166–167}}&lt;/ref&gt; Much of the town is included in the [[Garrett Park Historic District]], listed on the [[National Register of Historic Places]] in 1975.&lt;ref name=&quot;nris&quot;&gt;{{NRISref|2008a}}&lt;/ref&gt;  Garrett Park Elementary School, designed in 1928 by prominent local architect [[Howard Wright Cutler]], has been designated as an historic site by the Maryland Historical Trust.&lt;ref&gt;[https://web.archive.org/web/20141222012828/http://mdihp.net/dsp_county.cfm?search=county&amp;id=17899&amp;viewer=true&amp;updated=Y&amp;criteria1=G&amp;criteria2=MO Inventory of Historical Places], Maryland Historical Trust&lt;/ref&gt;
+In May 1982 the townspeople of Garrett Park voted 245 to 46 to ban the production, transportation, storage, processing, disposal, or use of nuclear weapons within the town.  This made Garrett Park the first nuclear-weapons free zone in the United States.&lt;ref&gt;{{Cite book| publisher = Temple University Press| isbn = 978-0-87722-903-2| last = Schmidt| first = David| title = Citizen Lawmakers| date = 1991-06-29 |page = 145}}&lt;/ref&gt;
+
+==Geography==
+[[Image:Garrettpark2.jpg|thumb|left|200px|Garrett Park [[MARC train|MARC]] commuter rail station.]]
+Garrett Park is located at 39°2' North, 77°6' West. It is just west of [[Kensington, Maryland|Kensington]], due north of [[Bethesda, Maryland|Bethesda]], northwest of [[Silver Spring, Maryland|Silver Spring]], and southeast of [[Rockville, Maryland|Rockville]]. It is approximately halfway between Rockville and Silver Spring.  [[Rock Creek Park]] is located along the town's southeast borders.
+
+Its land area is {{convert|0.2|sqmi|km2}}.  According to the [[United States Census Bureau]], the town has a total area of {{convert|0.26|sqmi|sqkm|2}}, all of it land.&lt;ref name=&quot;Gazetteer files&quot;&gt;{{cite web|title=US Gazetteer files 2010 |url=https://www.census.gov/geo/www/gazetteer/files/Gaz_places_national.txt |publisher=[[United States Census Bureau]] |access-date=2013-01-25 |url-status=dead |archive-url=https://web.archive.org/web/20120702145235/http://www.census.gov/geo/www/gazetteer/files/Gaz_places_national.txt |archive-date=2012-07-02 |df= }}&lt;/ref&gt;
+
+Garrett Park is primarily a residential town, with a post office, and a few small businesses.  The only road open to automotive traffic into or out of Garrett Park is [[Maryland State Highway 547]] (Strathmore Avenue). The town is served by the [[MARC Train]] Brunswick Line. The town is unusual in that residents pick up their mail at the post office in person, rather than having home delivery.
+
+==Demographics==
+{{US Census population
+|1900= 175
+|1910= 185
+|1920= 159
+|1930= 295
+|1940= 406
+|1950= 524
+|1960= 965
+|1970= 1276
+|1980= 1178
+|1990= 884
+|2000= 917
+|2010= 992
+|estyear=2019
+|estimate=1049
+|estref=&lt;ref name=&quot;USCensusEst2019CenPopScriptOnlyDirtyFixDoNotUse&quot;&gt;{{cite web|url=https://www.census.gov/programs-surveys/popest/data/tables.2019.html|date=May 24, 2020|title=Population and Housing Unit Estimates|publisher=United States Census Bureau|accessdate=May 27, 2020}}&lt;/ref&gt;
+|footnote=U.S. Decennial Census&lt;ref name=&quot;DecennialCensus&quot;&gt;{{cite web|url=https://www.census.gov/programs-surveys/decennial-census.html|title=Census of Population and Housing|publisher=Census.gov|access-date=June 4, 2015|df=}}&lt;/ref&gt;{{cbignore}}
+}}

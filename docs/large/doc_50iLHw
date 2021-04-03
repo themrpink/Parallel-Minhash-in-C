@@ -1,0 +1,242 @@
+For example, if an object's position on a line is given by
+
+: &lt;math&gt;x(t) = -16t^2 + 16t + 32 , \,\!&lt;/math&gt;
+
+then the object's velocity is
+
+: &lt;math&gt;\dot x(t) = x'(t) = -32t + 16, \,\!&lt;/math&gt;
+
+and the object's acceleration is
+
+: &lt;math&gt;\ddot x(t) = x''(t) = -32, \,\!&lt;/math&gt;
+
+which is constant.
+
+=== Differential equations ===
+{{Main|Differential equation}}
+
+A differential equation is a relation between a collection of functions and their derivatives. An [[ordinary differential equation]] is a differential equation that relates functions of one variable to their derivatives with respect to that variable. A [[partial differential equation]] is a differential equation that relates functions of more than one variable to their [[partial derivative]]s. Differential equations arise naturally in the physical sciences, in mathematical modelling, and within mathematics itself. For example, [[Newton's second law]], which describes the relationship between acceleration and force, can be stated as the ordinary differential equation
+:&lt;math&gt;F(t) = m\frac{d^2x}{dt^2}.&lt;/math&gt;
+The [[heat equation]] in one space variable, which describes how heat diffuses through a straight rod, is the partial differential equation
+:&lt;math&gt;\frac{\partial u}{\partial t} = \alpha\frac{\partial^2 u}{\partial x^2}.&lt;/math&gt;
+Here {{math|''u''(''x'',''t'')}} is the temperature of the rod at position {{math|''x''}} and time {{math|''t''}} and {{math|''α''}} is a constant that depends on how fast heat diffuses through the rod.
+
+=== Mean value theorem ===
+{{Main|Mean value theorem}}
+
+[[File:Mvt2.svg|thumb|The mean value theorem: For each differentiable function &lt;math&gt;f:[a,b]\to\R&lt;/math&gt; with &lt;math&gt;a&lt;b&lt;/math&gt; there is a &lt;math&gt;c\in(a,b)&lt;/math&gt; with &lt;math&gt;f'(c) = \tfrac{f(b) - f(a)}{b - a}&lt;/math&gt;.]]
+The mean value theorem gives a relationship between values of the derivative and values of the original function. If {{math|''f''(''x'')}} is a real-valued function and {{math|''a''}} and {{math|''b''}} are numbers with {{math|''a'' &lt; ''b''}}, then the mean value theorem says that under mild hypotheses, the slope between the two points {{math|(''a'', ''f''(''a''))}} and {{math|(''b'', ''f''(''b''))}} is equal to the slope of the tangent line to {{math|''f''}} at some point {{math|''c''}} between {{math|''a''}} and {{math|''b''}}. In other words,
+:&lt;math&gt;f'(c) = \frac{f(b) - f(a)}{b - a}.&lt;/math&gt;
+In practice, what the mean value theorem does is control a function in terms of its derivative. For instance, suppose that {{math|''f''}} has derivative equal to zero at each point. This means that its tangent line is horizontal at every point, so the function should also be horizontal. The mean value theorem proves that this must be true: The slope between any two points on the graph of {{math|''f''}} must equal the slope of one of the tangent lines of {{math|''f''}}. All of those slopes are zero, so any line from one point on the graph to another point will also have slope zero. But that says that the function does not move up or down, so it must be a horizontal line. More complicated conditions on the derivative lead to less precise but still highly useful information about the original function.
+
+=== Taylor polynomials and Taylor series ===
+{{Main|Taylor polynomial|Taylor series}}
+
+The derivative gives the best possible linear approximation of a function at a given point, but this can be very different from the original function. One way of improving the approximation is to take a quadratic approximation. That is to say, the linearization of a real-valued function {{math|''f''(''x'')}} at the point {{math|''x''&lt;sub&gt;0&lt;/sub&gt;}} is a linear [[polynomial]] {{math|''a'' + ''b''(''x'' − ''x''&lt;sub&gt;0&lt;/sub&gt;)}}, and it may be possible to get a better approximation by considering a quadratic polynomial {{math|''a'' + ''b''(''x'' − ''x''&lt;sub&gt;0&lt;/sub&gt;) + ''c''(''x'' − ''x''&lt;sub&gt;0&lt;/sub&gt;)&lt;sup&gt;2&lt;/sup&gt;}}. Still better might be a cubic polynomial {{math|''a'' + ''b''(''x'' − ''x''&lt;sub&gt;0&lt;/sub&gt;) + ''c''(''x'' − ''x''&lt;sub&gt;0&lt;/sub&gt;)&lt;sup&gt;2&lt;/sup&gt; + ''d''(''x'' − ''x''&lt;sub&gt;0&lt;/sub&gt;)&lt;sup&gt;3&lt;/sup&gt;}}, and this idea can be extended to arbitrarily high degree polynomials. For each one of these polynomials, there should be a best possible choice of coefficients {{math|''a''}}, {{math|''b''}}, {{math|''c''}}, and {{math|''d''}} that makes the approximation as good as possible.
+
+In the [[Neighbourhood (mathematics)|neighbourhood]] of {{math|''x''&lt;sub&gt;0&lt;/sub&gt;}}, for {{math|''a''}} the best possible choice is always {{math|''f''(''x''&lt;sub&gt;0&lt;/sub&gt;)}}, and for {{math|''b''}} the best possible choice is always {{math|''f&lt;nowiki&gt;'&lt;/nowiki&gt;''(''x''&lt;sub&gt;0&lt;/sub&gt;)}}. For {{math|''c''}}, {{math|''d''}}, and higher-degree coefficients, these coefficients are determined by higher derivatives of {{math|''f''}}. {{math|''c''}} should always be {{math|{{sfrac|''f&lt;nowiki&gt;''&lt;/nowiki&gt;''(''x''&lt;sub&gt;0&lt;/sub&gt;)|2}}}}, and {{math|''d''}} should always be {{math|{{sfrac|''f&lt;nowiki&gt;'''&lt;/nowiki&gt;''(''x''&lt;sub&gt;0&lt;/sub&gt;)|3!}}}}. Using these coefficients gives the '''Taylor polynomial''' of {{math|''f''}}. The Taylor polynomial of degree {{math|''d''}} is the polynomial of degree {{math|''d''}} which best approximates {{math|''f''}}, and its coefficients can be found by a generalization of the above formulas. [[Taylor's theorem]] gives a precise bound on how good the approximation is. If {{math|''f''}} is a polynomial of degree less than or equal to {{math|''d''}}, then the Taylor polynomial of degree {{math|''d''}} equals {{math|''f''}}.
+
+The limit of the Taylor polynomials is an infinite series called the '''Taylor series'''. The Taylor series is frequently a very good approximation to the original function. Functions which are equal to their Taylor series are called [[analytic function]]s. It is impossible for functions with discontinuities or sharp corners to be analytic; moreover, there exist [[smooth function]]s which are also not analytic.
+
+=== Implicit function theorem ===
+{{Main|Implicit function theorem}}
+
+Some natural geometric shapes, such as [[circle]]s, cannot be drawn as the [[graph of a function]]. For instance, if {{math|''f''(''x'', ''y'') {{=}} ''x''&lt;sup&gt;2&lt;/sup&gt; + ''y''&lt;sup&gt;2&lt;/sup&gt; − 1}}, then the circle is the set of all pairs {{math|(''x'', ''y'')}} such that {{math|''f''(''x'', ''y'') {{=}} 0}}. This set is called the zero set of {{math|''f''}}, and is not the same as the graph of {{math|''f''}}, which is a [[paraboloid]]. The implicit function theorem converts relations such as {{math|''f''(''x'', ''y'') {{=}} 0}} into functions. It states that if {{math|''f''}} is [[continuously differentiable]], then around most points, the zero set of {{math|''f''}} looks like graphs of functions pasted together. The points where this is not true are determined by a condition on the derivative of {{math|''f''}}. The circle, for instance, can be pasted together from the graphs of the two functions {{math|± {{sqrt|1 - ''x''&lt;sup&gt;2&lt;/sup&gt;}}}}. In a neighborhood of every point on the circle except {{nobreak|(−1, 0)}} and {{nobreak|(1, 0)}}, one of these two functions has a graph that looks like the circle. (These two functions also happen to meet {{nobreak|(−1, 0)}} and {{nobreak|(1, 0)}}, but this is not guaranteed by the implicit function theorem.)
+
+The implicit function theorem is closely related to the [[inverse function theorem]], which states when a function looks like graphs of [[invertible function]]s pasted together.
+
+== See also ==
+* [[Differential (mathematics)|Differential (calculus)]]
+* [[Differential geometry]]
+* [[Numerical differentiation]]
+* [[Techniques for differentiation]]
+* [[List of calculus topics]]
+
+==Notes==
+{{reflist|group=Note}}
+
+== References ==
+{{sisterlinks|Differential calculus}}
+{{Reflist}}
+
+*{{cite book | author=J. Edwards | title=Differential Calculus
+| publisher= MacMillan and Co.| location=London | year=1892
+|url=https://archive.org/details/in.ernet.dli.2015.109607| page=[https://archive.org/details/in.ernet.dli.2015.109607/page/n512 1] }}
+
+{{Authority control}}
+
+[[Category:Differential calculus| ]]</text>
+      <sha1>felzkl95bnnyg5gqzgw0z2csguy9w4k</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Integral calculus</title>
+    <ns>0</ns>
+    <id>50417</id>
+    <redirect title="Integral" />
+    <revision>
+      <id>844968549</id>
+      <parentid>844968359</parentid>
+      <timestamp>2018-06-08T12:28:57Z</timestamp>
+      <contributor>
+        <username>Neo-Jay</username>
+        <id>561624</id>
+      </contributor>
+      <comment>restored redirecting [[Integral]]. added [[Template:Wikidata redirect]] (added to [[Wikidata:Q150008]] ([[de:Integralrechnung]], [[fr:Calcul intégral]], et al.))</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="119" xml:space="preserve">#REDIRECT [[Integral]]
+
+{{Redirect category shell|1=
+ {{R from full name}}
+ {{Wikidata redirect}}
+}} __STATICREDIRECT__</text>
+      <sha1>gbix8uff618vuwdh3a1qxg6bxg1xdz5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Form of government</title>
+    <ns>0</ns>
+    <id>50419</id>
+    <redirect title="Government" />
+    <revision>
+      <id>802755292</id>
+      <parentid>734505685</parentid>
+      <timestamp>2017-09-28T07:53:16Z</timestamp>
+      <contributor>
+        <username>AvicBot</username>
+        <id>11952314</id>
+      </contributor>
+      <minor />
+      <comment>Bot: Fixing double redirect to [[Government]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="24" xml:space="preserve">#REDIRECT [[Government]]</text>
+      <sha1>1o5fh3w8mb9w6nyewt12micdoasvcj8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Billie Holiday</title>
+    <ns>0</ns>
+    <id>50420</id>
+    <revision>
+      <id>990713919</id>
+      <parentid>990278558</parentid>
+      <timestamp>2020-11-26T02:41:24Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 69 templates: del empty params (3×); hyphenate params (51×); del |ref=harv (4×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="84288" xml:space="preserve">{{short description|American jazz singer and songwriter}}
+{{about|the singer|her self-titled 1954 album|Billie Holiday (album)|the 1959 album originally titled ''Billie Holiday''|Last Recording}}
+{{More citations needed|date=July 2020}}
+{{Use mdy dates|date=April 2020}}
+{{Infobox musical artist &lt;!-- See Wikipedia:WikiProject Musicians --&gt;
+| name             = Billie Holiday
+| image            = Billie Holiday, Downbeat, New York, N.Y., ca. Feb. 1947 (William P. Gottlieb 04251).jpg
+| caption          = Holiday at the [[List of jazz venues in the United States#New York|Downbeat Jazz Club]] &lt;br&gt;in New York City, 1947
+| background       = solo_singer
+| birth_name       = Eleanora Fagan
+| also known as    = Lady Day
+First Lady of Blues
+| birth_date       = {{Birth date|1915|4|7}}
+| birth_place      = [[Philadelphia]], [[Pennsylvania]], U.S.
+| origin           = [[Baltimore]], [[Maryland]], U.S.
+| death_date       = {{Death date and age|1959|7|17|1915|4|7}}
+| death_place      = [[New York City]], U.S.
+| instruments       = Vocals
+| genre            = {{flatlist|
+*[[Jazz]]
+*[[Swing music|swing]]
+&lt;!--Aim for generality and preferably use two to four genres: [[Template:Infobox_musical_artist/doc#genre]]--&gt;
+}}
+| occupation       = Singer Actress
+| years_active     = 1933–1959
+| label            = {{flatlist|
+*[[Brunswick Records|Brunswick]]
+*[[Vocalion Records|Vocalion]]
+*[[Okeh Records|Okeh]]
+*[[Bluebird Records|Bluebird]]
+*[[Commodore Records|Commodore]]
+*[[Capitol Records|Capitol]]
+*[[Decca Records|Decca]]
+*[[Aladdin Records|Aladdin]]
+*[[Verve Records|Verve]]
+*[[Columbia Records|Columbia]]
+*[[MGM Records|MGM]]}}
+| associated_acts  = {{flatlist|
+*[[Ella Fitzgerald]]
+*[[Jimmy Rowles]]
+*[[Lena Horne]]
+*[[Carmen McRae]]
+*[[Louis Armstrong]]
+*[[Mal Waldron]]
+*[[Teddy Wilson]]
+*[[Count Basie]]
+*[[Artie Shaw]]
+*[[Lester Young]]
+*[[Tony Scott (musician)|Tony Scott]]}}
+| website          = {{Official URL}}
+}}
+
+'''Eleanora Fagan''' (April 7, 1915 – July 17, 1959), professionally known as '''Billie Holiday''', was an American [[jazz]] and [[swing music]] singer with a career spanning 26 years. Nicknamed &quot;'''Lady Day'''&quot; by her friend and music partner [[Lester Young]], Holiday had an innovative influence on jazz music and [[pop music|pop]] singing. Her vocal style, strongly inspired by jazz instrumentalists, pioneered a new way of manipulating [[Phrase (music)|phrasing]] and [[tempo]]. She was known for her vocal delivery and improvisational skills.&lt;ref&gt;{{cite journal |title=Review of Lady Day: The Many Faces of Billie Holiday |jstor=931303 |journal=Popular Music |date=January 1, 1993 |pages=201–202 |volume=12 |issue=2 |first=Berndt |last=Ostendorf |doi=10.1017/s0261143000005602}}&lt;/ref&gt;
+
+After a turbulent childhood, Holiday began singing in nightclubs in [[Harlem]], where she was heard by producer [[John Hammond (record producer)|John Hammond]], who commended her voice. She signed a recording contract with [[Brunswick Records|Brunswick]] in 1935. Collaborations with [[Teddy Wilson]] yielded the hit &quot;[[What a Little Moonlight Can Do]]&quot;, which became a jazz standard. Throughout the 1930s and 1940s, Holiday had mainstream success on labels such as [[Columbia Records|Columbia]] and [[Decca Records|Decca]]. By the late 1940s, however, she was beset with legal troubles and drug abuse. After a short prison sentence, she performed at a sold-out concert at [[Carnegie Hall]], but her reputation deteriorated because of her drug and alcohol problems.
+
+She was a successful concert performer throughout the 1950s with two further sold-out shows at Carnegie Hall. Because of personal struggles and an altered voice, her final recordings were met with mixed reaction but were mild commercial successes. Her final album, ''[[Lady in Satin]]'', was released in 1958. Holiday died of [[cirrhosis]] on July 17, 1959. She won four [[Grammy Award]]s, all of them posthumously, for Best Historical Album. She was inducted into the [[Grammy Hall of Fame]] in 1973. ''[[Lady Sings the Blues (film)|Lady Sings the Blues]]'', a film about her life, starring [[Diana Ross]], was released in 1972. She is the primary character in the play (later made into a film) ''[[Lady Day at Emerson's Bar and Grill]]''; the role was originated by Reenie Upchurch in 1986 and was played by [[Audra McDonald]] on [[Broadway theatre|Broadway]] and in the film. In 2017, Holiday was inducted into the [[Rhythm and Blues Music Hall of Fame|National Rhythm &amp; Blues Hall of Fame]].
+
+==Life and career==
+
+===1915–29: Childhood===
+Eleanora Fagan{{sfn|Clarke|2000|p=9}}&lt;ref name=&quot;bioP1&quot;&gt;{{cite web |last=Howard |first=Patrick |title=About Billie Holiday: Biography |url=http://www.billieholiday.com/about/biography.htm |access-date=March 13, 2013 |url-status=dead |archive-url=https://web.archive.org/web/20121226184535/http://www.billieholiday.com/about/biography.htm |archive-date=December 26, 2012 }}&lt;/ref&gt; was born on April 7, 1915,&lt;ref&gt;{{cite web |title=Billie Holiday Biography |work=Biography.com |url=http://www.biography.com/articles/Billie-Holiday-9341902 |url-status=dead |archive-url=https://web.archive.org/web/20090712074554/http://www.biography.com/articles/Billie-Holiday-9341902 |archive-date=July 12, 2009 }}&lt;/ref&gt; in [[Philadelphia]], the daughter of an unwed teenage couple Sarah Julia &quot;Sadie&quot; Fagan and [[Clarence Holiday]]. Sarah moved to Philadelphia at age 19,&lt;ref&gt;{{cite book |last=O'Meally |first=Robert |year=1991 |title=Lady Day: The Many Faces of Billie Holiday |location=New York |publisher=Da Capo Press |isbn=9780306809590 |oclc=45009756}}&lt;/ref&gt; after she was evicted from her parents' home in the [[Sandtown-Winchester, Baltimore|Sandtown-Winchester]] neighborhood of [[Baltimore]], Maryland, for becoming pregnant. With no support from her parents, she made arrangements with her older, married half-sister, Eva Miller, for Eleanora to stay with her in Baltimore. Not long after Eleanora was born, Clarence abandoned his family to pursue a career as a jazz banjo player and guitarist.&lt;ref&gt;Dufour, American National Biography Online&lt;/ref&gt; Some historians have disputed Holiday's paternity, as a copy of her birth certificate in the Baltimore archives lists her father as &quot;Frank DeViese.&quot; Other historians consider this an anomaly, probably inserted by a hospital or government worker.{{sfn|Clarke|2000|p=xiii}} DeViese lived in Philadelphia, and Sadie Harris may have known him through her work. Sadie Harris, then known as Sadie Fagan, married Philip Gough, but the marriage ended in two years.
+
+[[File:Billie Holiday 1917.jpg|thumb|upright|Holiday, aged 2, in 1917]]
+Eleanora grew up in Baltimore and had a very difficult childhood.  Her mother often took what were then known as &quot;transportation jobs,&quot; serving on passenger railroads.&lt;ref&gt;Nicholson, pp. 21–22.&lt;/ref&gt; Holiday was raised largely by Eva Miller's mother-in-law, Martha Miller, and suffered from her mother's absences and being in others' care for her first decade of life.&lt;ref&gt;Nicholson, pp. 18–23.&lt;/ref&gt; Holiday's autobiography, ''[[Lady Sings the Blues (book)|Lady Sings the Blues]]'', published in 1956, is sketchy on details of her early life, but much was confirmed by Stuart Nicholson in his 1995 biography of the singer.  She frequently skipped school, and her [[truancy]] resulted in her being brought before the juvenile court on January 5, 1925, when she was nine years old. She was sent to the House of the Good Shepherd, a Catholic [[reform school]], where she was baptized on March 19, 1925. After nine months in care, she was &quot;paroled&quot; on October 3, 1925, to her mother. Sadie had opened a restaurant, the East Side Grill, and mother and daughter worked long hours there. She dropped out of school at age 11.&lt;ref&gt;Nicholson, pp. 22–24.&lt;/ref&gt;
+
+On December 24, 1926, Sadie came home to discover a neighbor, Wilbur Rich, attempting to rape Eleanora. She successfully fought back, and Rich was arrested. Officials placed Eleanora in the House of the Good Shepherd under [[protective custody]] as a state witness in the rape case.&lt;ref&gt;Nicholson, p. 25.&lt;/ref&gt; Holiday was released in February 1927, when she was nearly 12. She found a job running errands in a [[brothel]],&lt;ref&gt;Nicholson, p. 27.&lt;/ref&gt; and she scrubbed [[Culture of Baltimore#Marble steps|marble steps]] and kitchen and bathroom floors of neighborhood homes.&lt;ref&gt;{{cite book |title=The Painted Screens of Baltimore: an Urban Folk Art Revealed |last=Eff |first=Elaine |publisher=The University Press of Mississippi |year=2013 |isbn=978-1617038914 |page=63}}&lt;/ref&gt; Around this time, she first heard the records of [[Louis Armstrong]] and [[Bessie Smith]]. In particular, Holiday cited &quot;[[West End Blues]]&quot; as an intriguing influence, pointing specifically to the [[scat singing|scat]] section duet with the clarinet as her favorite part.&lt;ref&gt;{{Cite book|last=Brothers|first=Thomas|title=Louis Armstrong: Master of Modernism|publisher=W.W. Norton &amp; Company|year=2014|isbn=978-0-393-06582-4|location=New York, NY|pages=298}}&lt;/ref&gt; By the end of 1928, Holiday's mother moved to Harlem, New York, again leaving Eleanora with Martha Miller.&lt;ref&gt;Nicholson, p. 31.&lt;/ref&gt;
+
+By early 1929, Holiday had joined her mother in Harlem. Their landlady was a sharply-dressed woman named Florence Williams, who ran a brothel at 151 West 140th Street. Holiday's mother became a sex worker, and within a matter of days of arriving in New York, Holiday, not yet 14, became a victim of [[sexual trafficking]] at $5 per client.&lt;ref name=&quot;Nicholson, p. 32&quot;&gt;Nicholson, p. 32.&lt;/ref&gt; The house was raided on May 2, 1929, and Holiday and her mother were sent to prison. After spending time in a [[workhouse]], her mother was released in July, and Holiday was released in October.
+
+===1929–35: Early career===
+As a young teenager, Holiday started singing in nightclubs in Harlem. She took her professional pseudonym from [[Billie Dove]], an actress she admired, and Clarence Holiday, her probable father.&lt;ref&gt;Holiday, [https://books.google.com/books?id=UVaNDQAAQBAJ&amp;pg=PA13&amp;dq=%22i+don%27t+think+i+missed+a+single+picture+billie+dove+ever+made%22 p. 13].&lt;/ref&gt; At the outset of her career, she spelled her last name &quot;Halliday&quot;, her father's birth surname, but eventually changed it to &quot;Holiday&quot;, his performing name. The young singer teamed up with a neighbor, [[tenor saxophone]] player Kenneth Hollan. They were a team from 1929 to 1931, performing at clubs such as the Grey Dawn, [[Pod's and Jerry's]] on [[133rd Street (Manhattan)|133rd Street]], and the Brooklyn Elks' Club.&lt;ref&gt;Nicholson, pp. 35–37.&lt;/ref&gt;&lt;ref&gt;{{cite book |last=Vail |first=Ken |title=Lady Day's Diary |publisher=Sanctuary Publishing |year=1997 |location=London |page=[https://archive.org/details/ladydaysdiarylif00vail/page/32 32] |isbn=1-86074-131-2 |url=https://archive.org/details/ladydaysdiarylif00vail/page/32 }}&lt;/ref&gt; [[Benny Goodman]] recalled hearing Holiday in 1931 at the Bright Spot. As her reputation grew, she played in many clubs, including the Mexico's and the [[The Harlem Alhambra|Alhambra]] Bar and Grill, where she met Charles Linton, a vocalist who later worked with [[Chick Webb]]. It was also during this period that she connected with her father, who was playing in [[Fletcher Henderson]]'s band.&lt;ref&gt;Nicholson, pp. 35–39.&lt;/ref&gt;
+
+Late in 1932, 17-year-old Holiday replaced the singer [[Monette Moore]] at Covan's, a club on West 132nd Street. Producer John Hammond, who loved Moore's singing and had come to hear her, first heard Holiday there in early 1933.&lt;ref&gt;Nicholson, p. 39.&lt;/ref&gt; Hammond arranged for Holiday to make her recording debut at age 18, in November 1933, with Benny Goodman. She recorded two songs: &quot;Your Mother's Son-in-Law&quot; and &quot;Riffin' the Scotch&quot;, the latter being her first hit. &quot;Son-in-Law&quot; sold 300 copies, and &quot;Riffin' the Scotch&quot;, released on November 11, sold 5,000 copies. Hammond was impressed by Holiday's singing style and said of her, &quot;Her singing almost changed my music tastes and my musical life, because she was the first girl singer I'd come across who actually sang like an improvising jazz genius.&quot; Hammond compared Holiday favorably to Armstrong and said she had a good sense of lyric content at her young age.{{sfn|Gourse|2000|p=73}}
+
+In 1935, Holiday had a small role as a woman abused by her lover in [[Duke Ellington]]'s [[musical short]] film ''[[Symphony in Black|Symphony in Black: A Rhapsody of Negro Life]]''. She sang &quot;Saddest Tale&quot; in her scene.&lt;ref&gt;Nicholson, p. 56.&lt;/ref&gt;
+
+===1935–38: Recordings with Teddy Wilson===
+In 1935, Holiday was signed to Brunswick by John Hammond to record pop tunes with pianist [[Teddy Wilson]] in the swing style for the growing [[jukebox]] trade. They were allowed to [[Musical improvisation|improvise]] the material. Holiday's improvisation of melody to fit the emotion was revolutionary. Their first collaboration included &quot;[[What a Little Moonlight Can Do]]&quot; and &quot;[[Miss Brown to You]]&quot;. &quot;What a Little Moonlight Can Do&quot; has been deemed her &quot;claim to fame&quot;.&lt;ref&gt;{{cite web |title=Billie Holiday: Biography &amp; History |url=http://www.allmusic.com/artist/billie-holiday-mn0000079016/biography |publisher=AllMusic.com |access-date=February 24, 2016}}&lt;/ref&gt; Brunswick did not favor the recording session because producers wanted Holiday to sound more like [[Cleo Brown]]. However, after &quot;What a Little Moonlight Can Do&quot; was successful, the company began considering Holiday an artist in her own right.&lt;ref&gt;Nicholson, p. 65.&lt;/ref&gt; She began recording under her own name a year later for [[Vocalion Records|Vocalion]] in sessions produced by Hammond and [[Bernie Hanighen]].&lt;ref&gt;[http://www.billieholidaysongs.com/the_composers.htm Billie Holiday Discography: The Composers] {{webarchive |url=https://web.archive.org/web/20110310062032/http://www.billieholidaysongs.com/the_composers.htm |date=March 10, 2011 }}. Billieholidaysongs.com. Retrieved on November 13, 2010.&lt;/ref&gt; Hammond said the Wilson-Holiday records from 1935 to 1938 were a great asset to Brunswick. According to Hammond, Brunswick was broke and unable to record many jazz tunes. Wilson, Holiday, Young, and other musicians came into the studio without written arrangements, reducing the recording cost. Brunswick paid Holiday a flat fee rather than [[royalties]], which saved the company money. &quot;[[I Cried for You]]&quot; sold 15,000 copies, which Hammond called &quot;a giant hit for Brunswick.... Most records that made money sold around three to four thousand.&quot;{{sfn|Gourse|2000|pp=73–74}}
+
+Another frequent accompanist was tenor saxophonist [[Lester Young]], who had been a boarder at her mother's house in 1934 and with whom Holiday had a rapport. Young said, &quot;I think you can hear that on some of the old records, you know. Some time I'd sit down and listen to 'em myself, and it sound like two of the same voices&amp;nbsp;... or the same mind, or something like that.&quot;&lt;ref&gt;[http://jazznbossa.ning.com/group/billieholiday Network Offline] {{webarchive |url=https://web.archive.org/web/20100521234649/http://jazznbossa.ning.com/group/billieholiday |date=May 21, 2010}}. Jazznbossa.ning.com. Retrieved on November 13, 2010.&lt;/ref&gt; Young nicknamed her &quot;Lady Day&quot;, and she called him &quot;Prez&quot;. 
+
+===1937–38: Working for Count Basie and Artie Shaw===
+In late 1937, Holiday had a brief stint as a big-band vocalist with [[Count Basie]].&lt;ref&gt;[http://www.soulwalking.co.uk/billie%20holiday.html Billie Holiday Page] {{webarchive |url=https://web.archive.org/web/20100823042136/http://www.soulwalking.co.uk/billie%20holiday.html |date=August 23, 2010}}, Soulwalking.co.uk. Retrieved November 13, 2010.&lt;/ref&gt; The traveling conditions of the band were often poor; they performed many one-nighters in clubs, moving from city to city with little stability. Holiday chose the songs she sang and had a hand in the arrangements, choosing to portray her developing persona of a woman unlucky in love. Her tunes included &quot;I Must Have That Man&quot;, &quot;Travelin' All Alone&quot;, &quot;[[I Can't Get Started]]&quot;, and &quot;[[Summertime (George Gershwin song)|Summertime]]&quot;, a hit for Holiday in 1936, originating in [[George Gershwin]]'s ''[[Porgy and Bess]]'' the year before. Basie became used to Holiday's heavy involvement in the band. He said, &quot;When she rehearsed with the band, it was really just a matter of getting her tunes like she wanted them, because she knew how she wanted to sound and you couldn't tell her what to do.&quot;&lt;ref&gt;Nicholson, pp. 93–94.&lt;/ref&gt; Some of the songs Holiday performed with Basie were recorded. &quot;I Can't Get Started&quot;, &quot;[[They Can't Take That Away from Me]]&quot;, and &quot;Swing It Brother Swing&quot; are all commercially available.&lt;ref&gt;{{cite web |url=http://www.billieholidaysongs.com/live_songs.htm#1937 |title=Billie Holiday Live Songs |publisher=Billieholidaysongs.com |access-date=April 7, 2012 |url-status=dead |archive-url=https://web.archive.org/web/20100423114132/http://www.billieholidaysongs.com/live_songs.htm#1937 |archive-date=April 23, 2010 }}&lt;/ref&gt; Holiday was unable to record in the studio with Basie, but she included many of his musicians in her recording sessions with Teddy Wilson.
+
+Holiday found herself in direct competition with the popular singer [[Ella Fitzgerald]]. The two later became friends.{{sfn|Gourse|2000|p=40}} Fitzgerald was the vocalist for the [[Chick Webb]] Band, which was in competition with the Basie band. On January 16, 1938, the same day that [[Benny Goodman]] performed [[The Famous 1938 Carnegie Hall Jazz Concert|his legendary Carnegie Hall jazz concert]], the Basie and Webb bands had a battle at the [[Savoy Ballroom]]. Webb and Fitzgerald were declared winners by ''[[Metronome (magazine)|Metronome]]'' magazine, while ''[[DownBeat]]'' magazine pronounced Holiday and Basie the winners. Fitzgerald won a straw poll of the audience by a three-to-one margin.
+
+By February 1938, Holiday was no longer singing for Basie. Various reasons have been given for her firing. [[Jimmy Rushing]], Basie's male vocalist, called her unprofessional. According to [[All Music Guide]], Holiday was fired for being &quot;temperamental and unreliable&quot;. She complained of low pay and poor working conditions and may have refused to sing the songs requested of her or change her style.&lt;ref&gt;Nicholson, pp. 96–97.&lt;/ref&gt; Holiday was hired by [[Artie Shaw]] a month after being fired from the Count Basie Band. This association placed her among the first black women to work with a white orchestra, an unusual arrangement at that time. This was also the first time a black female singer employed full-time toured the [[Racial segregation in the United States|segregated]] U.S. South with a white bandleader. In situations where there was a lot of racial tension, Shaw was known to stick up for his vocalist. In her autobiography, Holiday describes an incident in which she was not permitted to sit on the bandstand with other vocalists because she was black. Shaw said to her, &quot;I want you on the band stand like [[Helen Forrest]], [[Tony Pastor (bandleader)|Tony Pastor]] and everyone else.&quot;&lt;ref&gt;Holiday, p. 80.&lt;/ref&gt; When touring the South, Holiday would sometimes be heckled by members of the audience. In [[Louisville, Kentucky]], a man called her a &quot;nigger wench&quot; and requested she sing another song. Holiday lost her temper and had to be escorted off the stage.{{sfn|Gourse|2000|pp=103–104}}
+
+By March 1938, Shaw and Holiday had been broadcast on New York City's powerful radio station WABC (the original WABC, now [[WCBS (AM)|WCBS]]). Because of their success, they were given an extra time slot to broadcast in April, which increased their exposure. The ''[[New York Amsterdam News]]'' reviewed the broadcasts and reported an improvement in Holiday's performance. ''Metronome'' reported that the addition of Holiday to Shaw's band put it in the &quot;top brackets&quot;. Holiday could not sing as often during Shaw's shows as she could in Basie's; the repertoire was more instrumental, with fewer vocals. Shaw was also pressured to hire a white singer, Nita Bradley, with whom Holiday did not get along but had to share a bandstand. In May 1938, Shaw won band battles against [[Tommy Dorsey]] and [[Red Norvo]], with the audience favoring Holiday. Although Shaw admired Holiday's singing in his band, saying she had a &quot;remarkable ear&quot; and a &quot;remarkable sense of time&quot;, her tenure with the band was nearing an end.&lt;ref&gt;Nicholson, pp. 100–107.&lt;/ref&gt; In November 1938, Holiday was asked to use the service elevator at the [[Hotel Lincoln (New York City)|Lincoln Hotel]], instead of the passenger elevator, because white patrons of the hotels complained. This may have been the last straw for her. She left the band shortly after. Holiday spoke about the incident weeks later, saying, &quot;I was never allowed to visit the bar or the dining room as did other members of the band ... [and] I was made to leave and enter through the kitchen.&quot; There are no surviving live recordings of Holiday with Shaw's band. Because she was under contract to a different record label and possibly because of her race, Holiday was able to make only one record with Shaw, &quot;Any Old Time&quot;. However, Shaw played clarinet on four songs she recorded in New York on July 10, 1936: &quot;Did I Remember?&quot;, &quot;No Regrets&quot;, &quot;Summertime&quot; and &quot;[[Billie's Blues]]&quot;.
+
+By the late 1930s, Holiday had toured with Count Basie and Artie Shaw, scored a string of radio and retail hits with Teddy Wilson, and became an established artist in the recording industry. Her songs &quot;[[What a Little Moonlight Can Do]]&quot; and &quot;[[Easy Living (song)|Easy Living]]&quot; were imitated by singers across America and were quickly becoming [[jazz standard]]s.&lt;ref&gt;Nicholson, p. 70.&lt;/ref&gt; In September 1938, Holiday's single &quot;[[I'm Gonna Lock My Heart (And Throw Away the Key)|I'm Gonna Lock My Heart]]&quot; ranked sixth as the most-played song that month. Her record label, [[Vocalion]], listed the single as its fourth-best seller for the same month, and it peaked at number 2 on the pop charts, according to Joel Whitburn's ''Pop Memories: 1890–1954''.&lt;ref&gt;Nicholson, p. 102.&lt;/ref&gt;
+
+===1939: &quot;Strange Fruit&quot; and Commodore Records===
+Holiday was recording for [[Columbia Records|Columbia]] in the late 1930s when she was introduced to &quot;[[Strange Fruit]]&quot;, a song based on a poem about [[lynching]] written by [[Abel Meeropol]], a Jewish schoolteacher from the Bronx. Meeropol used the pseudonym &quot;Lewis Allan&quot; for the poem, which was set to music and performed at teachers' union meetings.&lt;ref&gt;Margolick, David (2000). ''Strange Fruit: Billie Holiday, Café Society, and an Early Cry for Civil Rights''. Philadelphia: Running Press. pp. 25–27.&lt;/ref&gt; It was eventually heard by Barney Josephson, the proprietor of [[Café Society]], an integrated nightclub in [[Greenwich Village]], who introduced it to Holiday. She performed it at the club in 1939,&lt;ref&gt;Margolick, ''Strange Fruit'', pp. 40–46.&lt;/ref&gt; with some trepidation, fearing possible retaliation. She later said that the imagery of the song reminded her of her father's death and that this played a role in her resistance to performing it.
+
+For her performance of &quot;Strange Fruit&quot; at the Café Society, she had waiters silence the crowd when the song began. During the song's long introduction, the lights dimmed and all movement had to cease. As Holiday began singing, only a small spotlight illuminated her face. On the final note, all lights went out, and when they came back on, Holiday was gone.&lt;ref name=&quot;Nicholson, p. 113&quot;&gt;Nicholson, p. 113.&lt;/ref&gt; Holiday said her father, Clarence Holiday, was denied medical treatment for a fatal lung disorder because of racial prejudice, and that singing &quot;Strange Fruit&quot; reminded her of the incident. &quot;It reminds me of how Pop died, but I have to keep singing it, not only because people ask for it, but because twenty years after Pop died the things that killed him are still happening in the South&quot;, she wrote in her autobiography.&lt;ref name=&quot;ReferenceA&quot;&gt;''Lady Sings the Blues'', p. 95.&lt;/ref&gt; When Holiday's producers at Columbia found the subject matter too sensitive, [[Milt Gabler]] agreed to record it for his [[Commodore Records]] label on April 20, 1939. &quot;Strange Fruit&quot; remained in her repertoire for 20 years. She recorded it again for [[Verve Records|Verve]]. The Commodore release did not get any airplay, but the controversial song sold well, though Gabler attributed that mostly to the record's other side, &quot;[[Fine and Mellow]]&quot;, which was a [[jukebox]] hit.{{sfn|Clarke|2000|p=169}} &quot;The version I recorded for Commodore&quot;, Holiday said of &quot;Strange Fruit&quot;, &quot;became my biggest-selling record.&quot;&lt;ref&gt;Holiday, Billie (2006). ''[https://books.google.com/books?id=NkAwnKrmmZcC Lady Sings the Blues]''. 50th Anniversary Edition. New York: Harlem Moon. Originally published by Doubleday, New York, 1956. p. 95.&lt;/ref&gt; &quot;Strange Fruit&quot; was the equivalent of a top-twenty hit in the 1930s.
+
+Holiday's popularity increased after &quot;Strange Fruit&quot;. She received a mention in [[Time (magazine)|''Time'']] magazine.&lt;ref&gt;Nicholson, p. 115.&lt;/ref&gt; &quot;I open Café Society as an unknown,&quot; Holiday said. &quot;I left two years later as a star. I needed the prestige and publicity all right, but you can't pay rent with it.&quot; She soon demanded a raise from her manager, [[Joe Glaser]].&lt;ref&gt;''Lady Sings the Blues'', pp. 104–105.&lt;/ref&gt; Holiday returned to Commodore in 1944, recording songs she made with Teddy Wilson in the 1930s, including &quot;[[I Cover the Waterfront (song)|I Cover the Waterfront]]&quot;, &quot;[[I'll Get By (As Long as I Have You)|I'll Get By]]&quot;, and &quot;[[He's Funny That Way]]&quot;. She also recorded new songs that were popular at the time, including, &quot;[[My Old Flame]]&quot;, &quot;How Am I to Know?&quot;, &quot;I'm Yours&quot;, and &quot;[[I'll Be Seeing You (song)|I'll Be Seeing You]]&quot;, a number one hit for [[Bing Crosby]]. She also recorded her version of &quot;[[Embraceable You]]&quot;, which was inducted into the [[Grammy Hall of Fame]] in 2005.
+
+===1940–47: Commercial success===
+[[File:(Portrait of Billie Holiday and Mister, Downbeat, New York, N.Y., ca. Feb. 1947) (LOC) (5020400274).jpg|thumb|&quot;Portrait of Billie Holiday and Mister, Downbeat, New York, N.Y., ca. Feb. 1947&quot;]]
+Holiday's mother Sadie, nicknamed &quot;The Duchess&quot;, opened a restaurant called Mom Holiday's. She used money from her daughter while playing dice with members of the Count Basie band, with whom she toured in the late 1930s. &quot;It kept Mom busy and happy and stopped her from worrying and watching over me,&quot; Holiday said. Fagan began borrowing large amounts from Holiday to support the restaurant. Holiday obliged but soon fell on hard times herself. &quot;I needed some money one night and I knew Mom was sure to have some&quot;, she said. &quot;So I walked in the restaurant like a stockholder and asked. Mom turned me down flat. She wouldn't give me a cent.&quot; The two argued, and Holiday shouted angrily, &quot;God bless the child that's got his own,&quot; and stormed out. With [[Arthur Herzog Jr.|Arthur Herzog, Jr.]], a pianist, she wrote a song based on the lyric, &quot;[[God Bless the Child (Billie Holiday song)|God Bless the Child]]&quot;, and added music.&lt;ref&gt;''Lady Sings the Blues'', pp. 100–101.&lt;/ref&gt; &quot;God Bless the Child&quot; became Holiday's most popular and most covered record. It reached number 25 on the charts in 1941 and was third in ''[[Billboard (magazine)|Billboard]]'''s songs of the year, selling over a million records.&lt;ref name=&quot;tsort.info&quot;&gt;[http://tsort.info/music/m8ravs.htm Song artist 250 – Billie Holiday]. Tsort.info. Retrieved November 13, 2010.&lt;/ref&gt;&lt;ref name=&quot;jazzstandards.com&quot;&gt;[http://www.jazzstandards.com/history/history-4.htm Jazz History: The Standards (1940s)]. Jazzstandards.com. Retrieved November 13, 2010.&lt;/ref&gt; In 1976, the song was added to the [[Grammy Hall of Fame]].&lt;ref&gt;[http://www.grammy.org/recording-academy/awards/hall-of-fame Grammy Hall of Fame] {{webarchive |url=https://web.archive.org/web/20150707235113/http://www.grammy.org/recording-academy/awards/hall-of-fame |date=July 7, 2015}}. Grammy.com (February 8, 2009). Retrieved on November 13, 2010.&lt;/ref&gt; Herzog claimed Holiday contributed only a few lines to the lyrics. He said she came up with the line &quot;God bless the child&quot; from a dinner conversation the two had had.&lt;ref&gt;Johnson, David (March 4, 2006), [http://indianapublicmedia.org/nightlights/ghosts-of-yesterday-billie-holiday-and-the-two-irenes-a-jazz-mystery/#program-article &quot;Ghosts of Yesterday: Billie Holiday and the Two Irenes&quot;], Indiana Public Media.&lt;/ref&gt;
+
+On June 24, 1942, Holiday recorded &quot;[[Trav'lin' Light (song)|Trav'lin Light]]&quot; with [[Paul Whiteman]] for a new label, [[Capitol Records]]. Because she was under contract to Columbia, she used the pseudonym &quot;Lady Day&quot;.&lt;ref&gt;Nicholson, p. 130.&lt;/ref&gt; The song reached number 23 on the pop charts and number one on the [[Hot R&amp;B/Hip-Hop Songs|R&amp;B charts]], then called the Harlem Hit Parade.&lt;ref&gt;[http://www.emusic.com/lists/showlist.html?lid=702162 Harlem Hit Parade – The eMusic Dozen]. Emusic.com. Retrieved on November 13, 2010.&lt;/ref&gt; In September 1943, ''Life'' magazine wrote, &quot;She has the most distinct style of any popular vocalist and is imitated by other vocalists.&quot;&lt;ref&gt;Nicholson, p. 133.&lt;/ref&gt;
+
+[[Milt Gabler]], in addition to owning Commodore Records, became an [[Artists and repertoire|A&amp;R]] man for [[Decca Records]]. He signed Holiday to Decca on August 7, 1944, when she was 29.&lt;ref name=&quot;billieholidaysongs.com&quot;&gt;[http://www.billieholidaysongs.com/all_songs.htm#1944 Billie Holiday Studio Songs] {{webarchive |url=https://web.archive.org/web/20100528124535/http://www.billieholidaysongs.com/all_songs.htm#1944 |date=May 28, 2010 }}. Billieholidaysongs.com. Retrieved on November 13, 2010.&lt;/ref&gt; Her first Decca recording was &quot;[[Lover Man (Oh, Where Can You Be?)|Lover Man]]&quot; (number 16 Pop, number 5 R&amp;B), one of her biggest hits. The success and distribution of the song made Holiday a staple in the pop community, leading to solo concerts, rare for jazz singers in the late 1940s. Gabler said, &quot;I made Billie a real pop singer. That was right in her. Billie loved those songs.&quot;&lt;ref&gt;Nicholson, p. 150.&lt;/ref&gt; Jimmy Davis and [[Ram Ramirez|Roger &quot;Ram&quot; Ramirez]], the song's writers, had tried to interest Holiday in the song.&lt;ref&gt;Nicholson, p. 122.&lt;/ref&gt; In 1943, a flamboyant male [[Torch song|torch singer]], Willie Dukes, began singing &quot;Lover Man&quot; on [[52nd Street (Manhattan)|52nd Street]].&lt;ref name=&quot;Shaw1971&quot;&gt;{{cite book|author=Shaw, Arnold|title=52nd Street, the Street of Jazz|url=https://books.google.com/books?id=8DDMwc0LJNgC&amp;pg=PA290|year=1971|publisher=Da Capo Press|isbn=978-0-306-80068-9|page=290}}&lt;/ref&gt; Because of his success, Holiday added it to her shows. The record's flip side was &quot;[[No More (1944 song)|No More]]&quot;, one of her favorites.&lt;ref name=&quot;billieholidaysongs.com&quot; /&gt; Holiday asked Gabler for [[String section|strings]] on the recording. Such arrangements were associated with [[Frank Sinatra]] and Ella Fitzgerald. &quot;I went on my knees to him,&quot; Holiday said. &quot;I didn't want to do it with the ordinary six pieces. I begged Milt and told him I had to have strings behind me.&quot;&lt;ref name=&quot;jazz&quot;&gt;{{cite web|url=http://www.jazzstandards.com/compositions-0/loverman.htm |title=Lover Man (Oh, Where Can You Be?) (1942) |publisher=Jazzstandards.com |date=October 4, 1944 |access-date=May 7, 2015}}&lt;/ref&gt; On October 4, 1944, Holiday entered the studio to record &quot;Lover Man&quot;, saw the string ensemble and walked out. The musical director, [[Salvador Camarata|Toots Camarata]], said Holiday was overwhelmed with joy.&lt;ref name=&quot;jazz&quot; /&gt; She may also have wanted strings to avoid comparisons between her commercially successful early work with Teddy Wilson and everything produced afterwards. Her 1930s recordings with Wilson used a small jazz combo; recordings for Decca often involved strings.&lt;ref name=&quot;jazz&quot; /&gt; A month later, in November, Holiday returned to Decca to record &quot;[[That Ole Devil Called Love]]&quot;, &quot;Big Stuff&quot;, and &quot;[[Don't Explain (song)|Don't Explain]]&quot;. She wrote &quot;Don't Explain&quot; after she caught her husband, Jimmy Monroe, with lipstick on his collar.&lt;ref&gt;Alagna, Magdalena (2003). ''Billie Holiday''. Rosen Publishing Group. p. 61. {{ISBN|0-8239-3640-6}}.&lt;/ref&gt;
+
+Holiday did not make any more records until August 1945, when she recorded &quot;Don't Explain&quot; for a second time, changing the lyrics &quot;I know you raise Cain&quot; to &quot;Just say you'll remain&quot; and changing &quot;You mixed with some dame&quot; to &quot;What is there to gain?&quot; Other songs recorded were &quot;Big Stuff&quot;, &quot;[[What Is This Thing Called Love?]]&quot;, and &quot;You Better Go Now&quot;. Ella Fitzgerald named &quot;You Better Go Now&quot; her favorite recording of Holiday's.&lt;ref&gt;[http://www.billieholidaysongs.com/all_songs.htm#1945 Billie Holiday Studio Songs] {{webarchive |url=https://web.archive.org/web/20100528124535/http://www.billieholidaysongs.com/all_songs.htm#1945 |date=May 28, 2010 }}. Billieholidaysongs.com. Retrieved on November 13, 2010.&lt;/ref&gt; &quot;Big Stuff&quot; and &quot;Don't Explain&quot; were recorded again but with additional strings and a [[viola]]. In 1946, Holiday recorded &quot;[[Good Morning Heartache]]&quot;. Although the song failed to chart, she sang it in live performances; three live recordings are known.&lt;ref&gt;[http://www.billieholidaysongs.com/live_songs.htm Billie Holiday Live Songs] {{webarchive |url=https://web.archive.org/web/20100423114132/http://www.billieholidaysongs.com/live_songs.htm |date=April 23, 2010 }}. Billieholidaysongs.com. Retrieved on November 13, 2010.&lt;/ref&gt;

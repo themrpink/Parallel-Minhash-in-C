@@ -1,0 +1,425 @@
+==Micro-planner implementation==
+
+A subset called Micro-Planner was implemented by [[Gerald Jay Sussman|Gerry Sussman]], [[Eugene Charniak]] and [[Terry Winograd]] [Sussman, Charniak, and Winograd 1971] and was used in Winograd's natural-language understanding program [[SHRDLU]], Eugene Charniak's story understanding work, Thorne McCarty's work on legal reasoning, and some other projects.  This generated a great deal of excitement in the field of AI.  It also generated controversy because it proposed an alternative to the logic approach that had been one of the mainstay paradigms for AI.
+
+At [[SRI International]], Jeff Rulifson, Jan Derksen, and [[Richard Waldinger]] developed [[QA4]] which built on the constructs in Planner and introduced a context mechanism to provide modularity for expressions in the database. Earl Sacerdoti and Rene Reboh developed QLISP, an extension of QA4 embedded in [[INTERLISP]], providing Planner-like reasoning embedded in a procedural language and developed in its rich programming environment. QLISP was used by [[Richard Waldinger]] and Karl Levitt for program verification, by Earl Sacerdoti for planning and execution monitoring, by [[Jean-Claude Latombe]] for computer-aided design, by Richard Fikes for deductive retrieval, and by Steven Coles for an early expert system that guided use of an econometric model.
+
+Computers were expensive. They had only a single slow processor and their memories were very small by comparison with today. So Planner adopted some efficiency expedients including the following:
+
+*Backtracking [Golomb and Baumert 1965] was adopted to economize on the use of time and storage by working on and storing only one possibility at a time in exploring alternatives.
+*A unique name assumption was adopted to save space and time by assuming that different names referred to different objects.  For example, names like Peking (previous PRC capital name) and Beijing (current PRC capital transliteration) were assumed to refer to different objects.
+*A [[closed-world assumption]] could be implemented by conditionally testing whether an attempt to prove a goal exhaustively failed.  Later this capability was given the misleading name &quot;[[negation as failure]]&quot; because for a goal &lt;tt&gt;G&lt;/tt&gt; it was possible to say:  &quot;if attempting to achieve &lt;tt&gt;G&lt;/tt&gt; exhaustively fails then assert &lt;tt&gt;(Not G)&lt;/tt&gt;.&quot;
+
+==The genesis of Prolog==
+[[Gerry Sussman]], [[Eugene Charniak]], [[Seymour Papert]] and [[Terry Winograd]] visited the University of [[Edinburgh]] in 1971, spreading the news about Micro-Planner and [[SHRDLU]] and casting doubt on the resolution uniform proof procedure approach that had been the mainstay of the Edinburgh Logicists. At the University of Edinburgh, Bruce Anderson implemented a subset of Micro-Planner called PICO-PLANNER (Anderson 1972) and Julian Davies (1973) implemented essentially all of Planner.
+
+According to Donald MacKenzie, [[Patrick J. Hayes|Pat Hayes]] recalled the impact of a visit from Papert to Edinburgh, which had become the &quot;heart of [[artificial intelligence]]'s Logicland,&quot; according to Papert's MIT colleague, Carl Hewitt. Papert eloquently voiced his critique of the resolution approach dominant at Edinburgh &quot;…and at least one person upped sticks and left because of Papert.&quot; [MacKenzie 2001 p 82.]
+ 
+The above developments generated tension among the Logicists at Edinburgh.  These tensions were exacerbated when the UK Science Research Council commissioned Sir James Lighthill to write a report on the AI research situation in the UK.  The [[Lighthill report|resulting report]] &lt;nowiki&gt;[&lt;/nowiki&gt;[[James Lighthill|Lighthill]] 1973; [[John McCarthy (computer scientist)|McCarthy]] 1973] was highly critical although [[SHRDLU]] was favorably mentioned.
+
+[[Pat Hayes]] visited Stanford where he learned about Planner. When he returned to Edinburgh, he tried to influence his friend Bob Kowalski to take Planner into account in their joint work on automated theorem proving. &quot;Resolution theorem-proving was demoted from a hot topic to a relic of the misguided past.  [[Bob Kowalski]] doggedly stuck to his faith in the potential of resolution theorem proving. He carefully studied Planner.” according to Bruynooghe, Pereira, Siekmann, and van Emden [2004]. Kowalski [1988] states &quot;I can recall trying to convince Hewitt that Planner was similar to [[SL-resolution]].&quot; But Planner was invented for the purposes of the procedural embedding of knowledge and was a rejection of the resolution uniform proof procedure paradigm. Colmerauer and Roussel recalled their reaction to learning about Planner in the following way:
+
+&quot;While attending an IJCAI convention in September ‘71 with Jean Trudel, we met [[Bob Kowalski|Robert Kowalski]] again and heard a lecture by Terry Winograd on natural language processing. The fact that he did not use a unified formalism left us puzzled. It was at this time that we learned of the existence of Carl Hewitt’s programming language, Planner [Hewitt, 1969]. The lack of formalization of this language, our ignorance of Lisp and, above all, the fact that we were absolutely devoted to logic meant that this work had little influence on our later research.&quot; &lt;nowiki&gt;[&lt;/nowiki&gt;[[Alain Colmerauer|Colmerauer]] and Roussel 1996]
+
+In the fall of 1972, [[Philippe Roussel]] implemented a language called [[Prolog]] (an abbreviation for '''PRO'''grammation en '''LOG'''ique – French for &quot;programming in logic&quot;). Prolog programs are generically of the following form (which is a special case of the backward-chaining in Planner):
+:&lt;tt&gt;''When goal'' Q, ''goal'' P&lt;sub&gt;1&lt;/sub&gt; ''and'' ... ''and goal'' P&lt;sub&gt;n&lt;/sub&gt;&lt;/tt&gt;
+ 
+Prolog duplicated the following aspects of Micro-Planner:
+*Pattern directed invocation of procedures from goals (''i.e.'' [[backward chaining]])
+*An indexed data base of pattern-directed procedures and ground sentences.
+*Giving up on the completeness paradigm that had characterized previous work on theorem proving and replacing it with the programming language procedural embedding of knowledge paradigm.
+ 
+Prolog also duplicated the following capabilities of Micro-Planner which were pragmatically useful for the computers of the era because they saved space and time:
+*Backtracking control structure
+*Unique Name Assumption by which different names are assumed to refer to distinct entities, ''e.g.'', Peking and Beijing are assumed to be different.
+*Reification of Failure. The way that Planner established that something was provable was to successfully attempt it as a goal and the way that it establish that something was unprovable was to attempt it as a goal and explicitly fail.  Of course the other possibility is that the attempt to prove the goal runs forever and never returns any value.  Planner also had a &lt;tt&gt;(not expression)&lt;/tt&gt;  construct which succeeded if &lt;tt&gt;expression&lt;/tt&gt; failed, which gave rise to the “[[Negation as failure|Negation as Failure]]” terminology in Planner.
+
+Use of the Unique Name Assumption and Negation as Failure became more questionable when attention turned to Open Systems [Hewitt and de Jong 1983, Hewitt 1985, Hewitt and Inman 1991].
+
+The following capabilities of Micro-Planner were omitted from Prolog:
+*Pattern-directed invocation of procedural plans from assertions (''i.e''., [[forward chaining]])
+*Logical negation, ''e.g.'', &lt;tt&gt;(not (human Socrates))&lt;/tt&gt;.
+
+Prolog did not include negation in part because it raises implementation issues. Consider for example if negation were included in the following Prolog program:
+
+:&lt;tt&gt;''not''  Q.&lt;/tt&gt;
+:&lt;tt&gt;Q  :-  P.&lt;/tt&gt;
+
+The above program would be unable to prove &lt;tt&gt;''not'' P&lt;/tt&gt; even though it follows by the rules of mathematical logic. This is an illustration of the fact that Prolog (like Planner) is intended to be a programming language and so does not (by itself) prove many of the [[logical consequence]]s that follow from a declarative reading of its programs.
+ 
+The work on Prolog was valuable in that it was much simpler than Planner. However, as the need arose for greater expressive power in the language, Prolog began to include many of the capabilities of Planner that were left out of the original version of Prolog.
+
+== See also ==
+* [[Logic programming]]
+* [[Prolog]]
+
+==References==
+{{reflist}}
+
+=== Bibliography===
+{{refbegin|30em}}
+*Bruce Anderson. Documentation for LIB PICO-PLANNER School of Artificial Intelligence, Edinburgh University.  1972
+*Bruce Baumgart. Micro-Planner Alternate Reference Manual Stanford AI Lab Operating Note No. 67, April 1972.
+* {{Citation | first = Steven | last = Coles | title = The Application of Artificial Intelligence to Heuristic Modeling | work = 2nd US-Japan Computer Conference | year = 1975}}.
+* {{Citation | first = Richard | last = Fikes | title = Deductive Retrieval Mechanisms for State Description Models | publisher = IJCAI | year = 1975}}.
+* {{Citation | last = Fitch | first  = Frederic | title = Symbolic Logic: an Introduction | publisher = Ronald Press | place = New York | year = 1952}}.
+* {{Citation | first = Cordell | last = Green | title = Application of Theorem Proving to Problem Solving | journal = IJCAI | year = 1969}}.
+*{{cite journal | first = Carl | last = Hewitt | title = PLANNER: A Language for Proving Theorems in Robots | citeseerx = 10.1.1.80.756 |journal = IJCAI | year = 1969}}
+* {{Citation | first = Carl | last = Hewitt | title = Procedural Embedding of Knowledge In Planner | journal = IJCAI | year = 1971}}.
+*Carl Hewitt. &quot;The Challenge of Open Systems&quot; Byte Magazine. April 1985
+*Carl Hewitt and Jeff Inman.  &quot;DAI Betwixt and Between:  From ‘Intelligent Agents’ to Open Systems Science&quot; IEEE Transactions on Systems, Man, and Cybernetics.  Nov/Dec 1991.
+*Carl Hewitt and Gul Agha.  &quot;Guarded Horn clause languages: are they deductive and Logical?&quot; International Conference on Fifth Generation Computer Systems, Ohmsha 1988. Tokyo.  Also in ''Artificial Intelligence at MIT'', Vol. 2. MIT Press 1991.
+* {{Citation | first = Carl | last = Hewitt | url = https://vvvvw.aaai.org/Papers/Symposia/Spring/2006/SS-06-08/SS06-08-003.pdf | title = The repeated demise of logic programming and why it will be reincarnated – What Went Wrong and Why: Lessons from AI Research and Applications | series = Technical Report | number = SS-06-08 | publisher = AAAI Press | date = March 2006 | url-status = dead | archiveurl = https://web.archive.org/web/20171210124010/https://vvvvw.aaai.org/Papers/Symposia/Spring/2006/SS-06-08/SS06-08-003.pdf | archivedate = 2017-12-10 }}.
+*William Kornfeld and Carl Hewitt. [http://hdl.handle.net/1721.1/5693 The Scientific Community Metaphor]  MIT AI Memo 641.  January 1981.
+*Bill Kornfeld and Carl Hewitt.  &quot;The Scientific Community Metaphor&quot; IEEE Transactions on Systems, Man, and Cybernetics.  January 1981.
+*Bill Kornfeld. &quot;The Use of Parallelism to Implement a Heuristic Search&quot; IJCAI 1981.
+*Bill Kornfeld.  &quot;Parallelism in Problem Solving&quot; MIT EECS Doctoral Dissertation. August 1981.
+*Bill Kornfeld. &quot;Combinatorially Implosive Algorithms&quot; CACM.  1982
+*Robert Kowalski. [https://web.archive.org/web/20110607140400/http://www.doc.ic.ac.uk/~rak/papers/limitations%20of%20logic.pdf &quot;The Limitations of Logic&quot;]  Proceedings of the 1986 ACM fourteenth annual conference on Computer science.
+*Robert Kowalski. [http://www.doc.ic.ac.uk/~rak/papers/the%20early%20years.pdf &quot;The Early Years of Logic Programming&quot;]  CACM January 1988.
+* {{Citation | first = Jean-Claude | last = Latombe | chapter = Artificial Intelligence in Computer-Aided Design | title = CAD Systems | publisher = North-Holland | year = 1976}}.
+* {{Citation | first1 = John | last1 = McCarthy | first2 = Paul | last2 = Abrahams | first3 = Daniel | last3 = Edwards | first4 = Timothy | last4 = Hart | first5 = Michael | last5 =  Levin | title = Lisp 1.5 Programmer's Manual | publisher = MIT Computation Center and Research Laboratory of Electronics | year = 1962}}.
+* {{Citation | first = John Alan | last = Robinson | title = A Machine-Oriented Logic Based on the Resolution Principle | journal = Communications of the ACM | year = 1965 | doi = 10.1145/321250.321253 }}.
+*Gerry Sussman and Terry Winograd. [http://hdl.handle.net/1721.1/5833 Micro-planner Reference Manual] AI Memo No, 203, MIT Project MAC, July 1970.
+*Terry Winograd. [http://hdl.handle.net/1721.1/7095 Procedures as a Representation for Data in a Computer Program for Understanding Natural Language]  MIT AI TR-235.  January 1971.
+*Gerry Sussman, Terry Winograd and Eugene Charniak. [http://hdl.handle.net/1721.1/6184 Micro-Planner Reference Manual (Update)] AI Memo 203A, MIT AI Lab, December 1971.
+*Carl Hewitt. [http://hdl.handle.net/1721.1/6916 Description and Theoretical Analysis (Using Schemata) of Planner, A Language for Proving Theorems and Manipulating Models in a Robot] AI Memo No. 251, MIT Project MAC, April 1972.
+*Eugene Charniak.  [http://hdl.handle.net/1721.1/6892 Toward a Model of Children's Story Comprehension]  MIT AI TR-266.  December 1972.
+*Julian Davies. Popler 1.6 Reference Manual University of Edinburgh, TPU  Report No. 1, May 1973.
+*Jeff Rulifson, Jan Derksen, and  Richard Waldinger. &quot;QA4, A Procedural Calculus for Intuitive Reasoning&quot; SRI AI Center Technical Note 73, November 1973.
+*Scott Fahlman. &quot;A Planning System for Robot Construction Tasks&quot; MIT AI TR-283. June 1973
+*James Lighthill. &quot;Artificial Intelligence: A General Survey Artificial Intelligence: a paper symposium.&quot; UK Science Research Council. 1973.
+*John McCarthy. &quot;Review of ‘Artificial Intelligence: A General Survey Artificial Intelligence: a paper symposium.&quot; UK Science Research Council. 1973.
+*Robert Kowalski [http://www.doc.ic.ac.uk/~rak/papers/IFIP%2074.pdf &quot;Predicate Logic as Programming Language&quot;] Memo 70, Department of Artificial Intelligence, Edinburgh University.  1973
+*Pat Hayes. Computation and Deduction Mathematical Foundations of Computer Science: Proceedings of Symposium and Summer School, Štrbské Pleso, High Tatras, Czechoslovakia, September 3–8, 1973.
+*Carl Hewitt, Peter Bishop and Richard Steiger. &quot;A Universal Modular Actor Formalism for Artificial Intelligence&quot;  IJCAI 1973.
+*L. Thorne McCarty. &quot;Reflections on TAXMAN: An Experiment on Artificial Intelligence and Legal Reasoning&quot; Harvard Law Review. Vol. 90, No. 5, March 1977
+*Drew McDermott and Gerry Sussman. [http://hdl.handle.net/1721.1/6204 The Conniver Reference Manual]  MIT AI Memo 259A.  January 1974.
+*Earl Sacerdoti, et al., &quot;QLISP A Language for the Interactive Development of Complex Systems&quot;  AFIPS. 1976
+* {{Citation | first = Earl | last = Sacerdoti | title = A Structure for Plans and Behavior | publisher = Elsevier North-Holland | year = 1977}}.
+* {{Citation | first1 = Richard | last1 = Waldinger | first2 = Karl | last2 = Levitt | title = Reasoning About Programs Artificial Intelligence | year = 1974}}.
+{{refend}}
+
+==External links==
+*{{webarchive |url=https://web.archive.org/web/20030727192519/http://www.lim.univ-mrs.fr/~colmer/ArchivesPublications/HistoireProlog/19november92.pdf |date=July 27, 2003 |title=Alain Colmerauer's and Philippe Roussel's 1992 account of the birth of Prolog }}
+
+[[Category:History of artificial intelligence]]
+[[Category:Automated planning and scheduling]]
+[[Category:Logic programming languages]]
+[[Category:Robot programming languages]]
+[[Category:Theorem proving software systems]]
+[[Category:Programming languages created in 1969]]</text>
+      <sha1>pdic7ejzbv4y85jvm4wqcbmbubxa3v2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Solaris (operating system)</title>
+    <ns>0</ns>
+    <id>46145</id>
+    <revision>
+      <id>983160275</id>
+      <parentid>983159338</parentid>
+      <timestamp>2020-10-12T16:16:13Z</timestamp>
+      <contributor>
+        <username>Tedickey</username>
+        <id>1942604</id>
+      </contributor>
+      <comment>revert - already linked and discussed in this topic</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="70956" xml:space="preserve">{{short description|Unix operating system originally developed by Sun Microsystems}}
+{{Use mdy dates|date=July 2015}}
+{{Infobox OS
+| name = Solaris
+| logo = Aktualne logo Oracle Solaris OS OSos.png
+| screenshot = 
+| caption = Screenshot of [[GNOME Shell]] on Solaris 11.4
+| developer = [[Sun Microsystems]] ([[Sun acquisition by Oracle|acquired]] by [[Oracle Corporation]] in 2009)
+| family = [[Unix]]
+| released = {{Start date and age|1992|06}}
+| ui = [[GNOME]]&lt;ref&gt;{{cite web|url=http://docs.oracle.com/cd/E23824_01/html/E24456/desktop-123.html|title=Oracle Solaris 11 Desktop Feature Summary}}&lt;/ref&gt;
+| license = Various
+| website = {{URL|https://www.oracle.com/solaris}}
+| source_model = Mixed
+| working_state = Current
+| latest_release_version = 11.4&lt;ref&gt;{{cite web   | title = Oracle Solaris 11.4 Released for General Availability | url = https://blogs.oracle.com/solaris/oracle-solaris-114-released-for-general-availability   | date =  August 28, 2018  | accessdate =  August 28, 2018}}&lt;/ref&gt;
+| latest_release_date = {{Start date and age|2018|08|28}}
+| marketing_target = [[Server (computing)|Server]], [[workstation]]
+| programmed_in = [[C (programming language)|C]], [[C++]]
+| kernel_type = [[Monolithic kernel|Monolithic]] with [[loadable kernel module|dynamically loadable modules]]
+| supported_platforms = Current: [[SPARC]], [[x86-64]]&lt;br&gt;
+Former: [[IA-32]], [[PowerPC]]
+}}
+
+'''Solaris''' is a [[proprietary software|proprietary]] [[Unix]] [[operating system]] originally developed by [[Sun Microsystems]]. It superseded the company's earlier [[SunOS]] in 1993. In 2010, after the [[Sun acquisition by Oracle]], it was renamed '''Oracle Solaris'''.&lt;ref&gt;{{cite web
+ |url         = https://www.oracle.com/sun/index.html
+ |title       = Oracle and Sun Microsystems
+}}&lt;/ref&gt;
+
+Solaris is known for its [[scalability]], especially on [[SPARC]] systems, and for originating many innovative features such as [[DTrace]], [[ZFS]] and Time Slider.&lt;ref&gt;{{cite news
+  | url = https://www.wsj.com/articles/SB115755300770755096
+  | title = Innovation Awards: The Winners Are...
+  | accessdate = July 5, 2008
+  | author = Michael Totty
+  | date = September 11, 2006
+  | work = [[Wall Street Journal]]
+  | quote = The DTrace trouble-shooting software from Sun was chosen as the Gold winner in The Wall Street Journal's 2006 Technology Innovation Awards contest}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+ |url         = http://www.infoworld.com/slideshow/2008/01/150-2008_technology-2.html
+ |title       = 2008 Technology of the Year Awards: Storage – Best File System
+ |accessdate  = July 5, 2008
+ |date        = January 2008
+ |work        = [[InfoWorld]]
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20080703030515/http://www.infoworld.com/slideshow/2008/01/150-2008_technology-2.html
+ |archivedate = July 3, 2008
+ |df          = mdy-all
+}}&lt;/ref&gt; 
+Solaris supports SPARC and [[x86-64]] [[workstation]]s and [[computer server|servers]] from Oracle and other vendors. Solaris was registered as compliant with [[UNIX 03]] until 29 April 2019.&lt;ref&gt;{{cite web|url=https://web.archive.org/web/20191022053203/https://www.opengroup.org/openbrand/certificates/1196p.pdf|title=Open Brand Certificate, Unix 03, Oracle Solaris 11 FCS and later}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=https://web.archive.org/web/20200111125333/http://www.opengroup.org/openbrand/register/|title=The Open Brand Register of Certified Products, Wayback machine, January 11, 2020|publisher=[[The Open Group]]}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.opengroup.org/openbrand/register/|title=The Open Brand Register of Certified Products|publisher=[[The Open Group]]}}&lt;/ref&gt;
+
+Historically, Solaris was developed as [[proprietary software]]. In June 2005, Sun Microsystems released most of the [[codebase]] under the [[CDDL]] license, and founded the [[OpenSolaris]] [[Open-source software|open-source]] project.&lt;ref&gt;{{cite web
+  | author = Michael Singer
+  | date = January 25, 2005
+  | title = Sun Cracks Open Solaris
+  | url = http://www.internetnews.com/dev-news/article.php/3463621
+  | publisher = InternetNews.com
+  | accessdate = April 12, 2010
+}}&lt;/ref&gt; With OpenSolaris, Sun wanted to build a developer and user community around the software. After the acquisition of Sun Microsystems in January 2010, Oracle decided to discontinue the OpenSolaris distribution and the development model.&lt;ref&gt;{{cite web
+  | date = August 13, 2010
+  | author = Steven Stallion / Oracle
+  | title = Update on SXCE
+  | url = http://sstallion.blogspot.com/2010/08/opensolaris-is-dead.html
+  | publisher = Iconoclastic Tendencies
+}}&lt;/ref&gt;&lt;ref name=&quot;mail.opensolaris.org&quot;&gt;{{cite mailing list|url=http://mail.opensolaris.org/pipermail/opensolaris-discuss/2010-August/059310.html|title=OpenSolaris cancelled, to be replaced with Solaris 11 Express|mailinglist=osol-discuss|archiveurl=https://web.archive.org/web/20100816225601/http://mail.opensolaris.org/pipermail/opensolaris-discuss/2010-August/059310.html |author=Alasdair Lumsden|archivedate=August 16, 2010|accessdate=November 24, 2014}}&lt;/ref&gt; In August 2010, Oracle discontinued providing public updates to the source code of the Solaris kernel, effectively turning Solaris 11 back into a [[closed source]] [[Proprietary software|proprietary]] operating system.&lt;ref&gt;[https://arstechnica.com/information-technology/2010/08/solaris-still-sorta-open-but-opensolaris-distro-is-dead/ Solaris still sorta open, but OpenSolaris distro is dead] on [[Ars Technica]] by Ryan Paul (Aug 16, 2010)&lt;/ref&gt; Following that, OpenSolaris was forked as [[illumos]] and is alive through several [[Illumos#Current illumos distributions|illumos distributions]].
+
+In 2011, the Solaris 11 kernel [[source code]] [[Source code leak|leaked]] to [[BitTorrent]].&lt;ref&gt;[https://www.phoronix.com/scan.php?page=news_item&amp;px=MTAzMDE Oracle Solaris 11 Kernel Source-Code Leaked] on [[Phoronix]] by [[Michael Larabel]] (on 19 December 2011)&lt;/ref&gt;&lt;ref&gt;[https://arstechnica.com/business/2011/12/disgruntled-employee-oracle-doesnt-seem-to-care-about-solaris-11-code-leak/ Disgruntled employee? Oracle doesn’t seem to care about Solaris 11 code leak] on [[Ars Technica]] by Sean Gallagher (Dec 21, 2011)&lt;/ref&gt;   Through the [[Oracle Technology Network]] (OTN), industry partners can gain access to the in-development Solaris source code.&lt;ref name=&quot;mail.opensolaris.org&quot; /&gt; Solaris is developed under a [[Proprietary software|proprietary]] development model, and only the source for open-source components of Solaris 11 is available for download from Oracle.&lt;ref&gt;{{cite web 
+  | url = http://www.oracle.com/technetwork/opensource/index.html 
+  | title = Source Code for Open Source Software Components 
+  | accessdate = March 4, 2013 
+  | work = Oracle Corporation website | publisher = Oracle Corporation 
+}}&lt;/ref&gt;
+
+==History==
+&lt;!-- Line breaks make citations easier to maintain, and there's no benefit to removing them; please discuss on talk before &quot;cleaning up white space&quot; --&gt;
+
+In 1987, [[AT&amp;T Corporation]] and Sun announced that they were collaborating on a project to merge the most popular Unix variants on the market at that time: [[Berkeley Software Distribution]], [[UNIX System V]], and [[Xenix]]. This became Unix [[System V Release 4]] (SVR4).&lt;ref name=&quot;Salus&quot;&gt;{{cite book
+  |title=A Quarter Century of Unix
+  |last=Salus
+  |first=Peter
+  |publisher=Addison-Wesley
+  |year=1994
+  |isbn=0-201-54777-5
+  |pages=199–200
+}}&lt;/ref&gt;
+
+On September 4, 1991, Sun announced that it would replace its existing BSD-derived Unix, [[SunOS|SunOS 4]], with one based on SVR4. This was identified internally as ''SunOS 5'', but a new marketing name was introduced at the same time: ''Solaris 2''.&lt;ref&gt;{{cite press release
+  | title = SunSoft introduces first shrink-wrapped distributed computing solution: Solaris
+  | publisher = Sun Microsystems, Inc.
+  | date = September 4, 1991
+  | url = http://www.sun.com/aboutsun/media/presskits/25years/pr.html#solaris
+  | accessdate = August 7, 2007
+}}&lt;/ref&gt; The justification for this new overbrand was that it encompassed not only SunOS, but also the [[OpenWindows]] [[graphical user interface]] and [[Open Network Computing]] (ONC) functionality.
+
+Although SunOS 4.1.''x'' micro releases were [[retronym|retroactively named]] ''Solaris 1'' by Sun, the Solaris name is used almost exclusively to refer only to the releases based on SVR4-derived SunOS 5.0 and later.&lt;ref&gt;{{cite web
+  | url = http://kb.iu.edu/data/agjq.html
+  | title = What are SunOS and Solaris?
+  | accessdate = November 10, 2014
+  | date = May 20, 2013
+  | work = Knowledge Base
+  | publisher = Indiana University Technology Services
+}}&lt;/ref&gt;
+
+For releases based on SunOS 5, the SunOS minor version is included in the Solaris release number. For example, Solaris 2.4 incorporates SunOS 5.4. After Solaris 2.6, the ''2.'' was dropped from the release name, so Solaris 7 incorporates SunOS 5.7, and the latest release SunOS 5.11 forms the core of Solaris 11.4.
+
+Although SunSoft stated in its initial Solaris 2 press release their intent to eventually support both SPARC and x86 systems, the first two Solaris 2 releases, 2.0 and 2.1, were SPARC-only.  An x86 version of Solaris 2.1 was released in June 1993, about 6 months after the SPARC version, as a [[Desktop computer|desktop]] and uniprocessor workgroup server operating system. It included the [[Wabi (software)|Wabi]] emulator to support Windows applications.&lt;ref&gt;{{cite news |first1=Noel-Marie |last1=Taylor |first2=Mark |last2=Wallace |title=Solaris 2.1: The Rise of a New Sun? |newspaper=PC Magazine |date=June 15, 1993 |pages=243–244 |url=https://books.google.com/books?id=jMKfH6i9OcYC&amp;pg=PA244}}&lt;/ref&gt; At the time, Sun also offered the [[Interactive Unix]] system that it had acquired from [[Interactive Systems Corporation]].&lt;ref&gt;{{cite news |first=Steven J. |last=Vaughan-Nichols |title=Interactive Unix |newspaper=PC Magazine |date=June 15, 1993 |page=240 |url=https://books.google.com/books?id=jMKfH6i9OcYC&amp;pg=PA240}}&lt;/ref&gt; In 1994, Sun released Solaris 2.4, supporting both SPARC and x86 systems from a unified source code base.
+
+On September 2, 2017, [[Simon Phipps (programmer)|Simon Phipps]], a former Sun Microsystems employee not hired by Oracle in the acquisition, reported on [[Twitter]] that Oracle had laid off the Solaris core development staff, which many interpreted as sign that Oracle no longer intended to support future development of the platform.&lt;ref&gt;{{Cite web |url=https://www.itwire.com/open-sauce/79738-bye,-bye-solaris,-it-was-a-nice-ride-while-it-lasted.html|title=Bye, bye Solaris, it was a nice ride while it lasted|last=Varghese|first=Sam|website=ITWire|language=en-gb|access-date=2017-09-04}}&lt;/ref&gt; While Oracle did have a large layoff of Solaris development engineering staff, development continues today of which Solaris 11.4 was released in 2018.&lt;ref&gt;{{Cite news|url=https://blogs.oracle.com/solaris/continuous-delivery,-really|title=Continuous Delivery, Really?|last=Lynn|first=Scott|access-date=2018-01-23}}&lt;/ref&gt;&lt;ref&gt;{{Cite news|url=https://blogs.oracle.com/solaris/2017-in-review-and-looking-ahead-to-2018|title=2017 in Review and Looking ahead to 2018|last=Lynn|first=Scott|access-date=2018-01-23}}&lt;/ref&gt;
+
+==Supported architectures==
+Solaris uses a common [[Source code|code base]] for the platforms it supports: [[SPARC]] and i86pc (which includes both [[x86]] and [[x86-64]]).&lt;ref&gt;{{cite web 
+  | url = http://sun.com/bigadmin/hcl 
+  | title = Solaris OS: Hardware Compatibility Lists 
+  | accessdate = December 12, 2006 
+  | work = BigAdmin System Administration Portal 
+  | publisher = Sun Microsystems, Inc. 
+}}&lt;/ref&gt;
+
+Solaris has a reputation for being well-suited to [[symmetric multiprocessing]], supporting a large number of [[central processing unit|CPUs]].&lt;ref&gt;{{cite news
+  | first = Ashlee
+  | last = Vance
+  | authorlink = Ashlee Vance
+  | title = Sun rethinks Solaris on Intel
+  | url = http://www.infoworld.com/articles/hn/xml/02/04/19/020419hnsecretsix.html
+  | work = Infoworld
+  | publisher = [[International Data Group|IDG]]
+  | date = April 19, 2002
+  | accessdate = December 11, 2006
+  | quote = Neither Microsoft Windows nor Linux can match Solaris in this type of high-end architecture, said Tony Iams, an analyst at Port Chester, N.Y., research company D.H. Brown and Associates. &quot;Solaris has earned its reputation over a long period of time,&quot; Iams said. &quot;They have been working on high-end scalability features for 10 years, and that's the only way you can get solid results.&quot;
+  |archiveurl = https://web.archive.org/web/20071012153147/http://infoworld.com/articles/hn/xml/02/04/19/020419hnsecretsix.html &lt;!-- Bot retrieved archive --&gt;
+  |archivedate = October 12, 2007}}&lt;/ref&gt; It has historically been tightly integrated with Sun's SPARC hardware (including support for [[64-bit]] [[SPARC]] applications since Solaris 7), with which it is marketed as a combined package. This has led to more reliable systems, but at a cost premium compared to [[commodity]] PC hardware. However, it has supported x86 systems since Solaris 2.1 and 64-bit x86 applications since Solaris 10, allowing Sun to capitalize on the availability of commodity 64-bit CPUs based on the [[x86-64]] architecture. Sun has heavily marketed Solaris for use with both its own &quot;x64&quot; [[workstation]]s and [[server (computing)|servers]] based on [[AMD]] [[Opteron]] and [[Intel]] [[Xeon]] processors, as well as x86 systems manufactured by companies such as [[Dell]], [[Hewlett-Packard]], and [[IBM]]. As of 2009, the following vendors support Solaris for their x86 server systems:
+* Dell – will &quot;test, certify, and optimize Solaris and OpenSolaris on its rack and blade servers and offer them as one of several choices in the overall Dell software menu&quot;&lt;ref&gt;{{cite web
+  | title = Dell to Offer Sun's Solaris, OpenSolaris in Servers
+  | publisher = [[eWeek]]
+  | date = November 14, 2007
+  | url = http://www.eweek.com/article2/0%2C1895%2C2216876%2C00.asp
+  | accessdate = November 14, 2007
+}}&lt;/ref&gt;
+* Intel&lt;ref&gt;{{cite press release
+  | title = Intel Carrier Grade Platforms Certified for Sun Solaris
+  | publisher = Intel Corp.
+  | date = July 16, 2007
+  | url = http://www.intel.com/pressroom/archive/releases/20070716corp_b.htm
+  | accessdate = August 16, 2007
+}}&lt;/ref&gt;
+* Hewlett Packard Enterprise&lt;ref&gt;{{cite press release
+  | title = Oracle Solaris Certification and Support
+  | publisher = Hewlett Packard Enterprise
+  | url = http://h17007.www1.hpe.com/us/en/enterprise/servers/supportmatrix/solaris.aspx
+  | accessdate = February 3, 2019
+  | date = 2019
+}}&lt;/ref&gt; – distributes and provides software technical support for Solaris on BL, DL, and SL platforms
+* Fujitsu Siemens&lt;ref&gt;{{cite press release
+  | title = Sun Microsystems and Fujitsu Siemens Computers Power PRIMERGY Servers with Solaris Operating System
+  | publisher = Sun Microsystems
+  | url = http://www.sun.com/aboutsun/pr/2008-06/sunflash.20080610.2.xml
+  | accessdate = June 10, 2008
+}}&lt;/ref&gt;
+As of July 2010, Dell and HP certify and resell Oracle Solaris, Oracle Enterprise Linux and Oracle VM on their respective x86 platforms,&lt;ref&gt;{{cite web
+ |url          = http://www.dailyfinance.com/rtn/pr/dell-and-hp-to-certify-and-resell-all-three-oracle-operating-systems-oracle-solaris-oracle-enterprise-linux-and-oracle-vm-on-their-x86-server-computers/rfid352819358/?channel=pf
+ |title        = Dell and HP to Certify and Resell All Three Oracle Operating Systems – Oracle Solaris, Oracle Enterprise Linux and Oracle VM – on Their x86 Server Computers
+ |publisher    = DailyFinance
+ |accessdate   = July 29, 2010
+ |archive-url  = https://web.archive.org/web/20111006211423/http://www.dailyfinance.com/rtn/pr/dell-and-hp-to-certify-and-resell-all-three-oracle-operating-systems-oracle-solaris-oracle-enterprise-linux-and-oracle-vm-on-their-x86-server-computers/rfid352819358/?channel=pf
+ |archive-date = October 6, 2011
+ |url-status     = dead
+ |df           = mdy-all
+}}&lt;/ref&gt;
+and IBM stopped direct support for Solaris on x64 kit.{{Citation needed|date=May 2013}}
+
+===Other platforms===
+Solaris 2.5.1 included support for the [[PowerPC]] platform ([[PowerPC Reference Platform]]), but the port was canceled before the Solaris 2.6 release.&lt;ref name=&quot;ppc-kickstart&quot; /&gt; In January 2006, a community of developers at [[Blastwave]] began work on a PowerPC port which they named ''Polaris''.&lt;ref&gt;{{cite web
+ |url         = http://www.itjungle.com/tfh/tfh011606-story02.html
+ |title       = OpenSolaris Community Creates Kernel for Power Chips
+ |publisher   = ITJungle
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20120405144010/http://www.itjungle.com/tfh/tfh011606-story02.html
+ |archivedate = April 5, 2012
+ |df          = mdy-all
+}}&lt;/ref&gt; In October 2006, an [[OpenSolaris]] community project based on the [[Blastwave]] efforts and Sun Labs' ''Project Pulsar'',&lt;ref&gt;{{cite web
+ |url         = http://research.sun.com/spotlight/2006/2006-06-14-SolarisPPC.html
+ |title       = Embedded Solaris on PowerPC
+ |publisher   = Sun Research
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20060627042251/http://research.sun.com/spotlight/2006/2006-06-14-SolarisPPC.html
+ |archivedate = June 27, 2006
+ |df          = mdy-all
+}}&lt;/ref&gt; which re-integrated the relevant parts from Solaris 2.5.1 into OpenSolaris,&lt;ref name=&quot;ppc-kickstart&quot;&gt;{{cite web
+ |url         = http://opensolaris.org/os/project/ppc-dev/kickstart/
+ |title       = Kickstarting OpenSolaris on PowerPC
+ |publisher   = OpenSolaris Project
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20120229133259/http://hub.opensolaris.org/bin/view/Project+ppc-dev/kickstart
+ |archivedate = February 29, 2012
+ |df          = mdy-all
+}}&lt;/ref&gt; announced its first official source code release.&lt;ref&gt;{{cite web
+ |url         = http://www.opensolaris.org/os/community/power_pc/
+ |title       = PowerPC at OpenSolaris
+ |accessdate  = October 4, 2007
+ |publisher   = OpenSolaris Project
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20120229133135/http://hub.opensolaris.org/bin/view/Community+Group+power_pc/WebHome
+ |archivedate = February 29, 2012
+ |df          = mdy-all
+}}&lt;/ref&gt;
+
+A port of Solaris to the Intel [[Itanium]] architecture was announced in 1997 but never brought to market.&lt;ref&gt;{{cite press release
+  | publisher = Intel Corporation, Sun Microsystems, Inc.
+  | date = December 16, 1997
+  | url = http://www.sun.com/smi/Press/sunflash/1997-12/sunflash.971216.3.xml
+  | title = Sun to deliver enterprise-class solaris for intel's merced processor
+  | accessdate = September 10, 2006
+}}&lt;/ref&gt;
+
+On November 28, 2007, [[IBM]], Sun, and Sine Nomine Associates demonstrated a preview of [[OpenSolaris for System z]] running on an [[IBM System z]] [[mainframe computer|mainframe]] under [[z/VM]],&lt;ref&gt;{{cite press release
+ |url         = https://www-03.ibm.com/press/us/en/pressrelease/22718.wss
+ |title       = OpenSolaris Runs on IBM Mainframe
+ |publisher   = IBM
+ |accessdate  = January 21, 2018
+ |date        = November 30, 2007
+}}&lt;/ref&gt; called ''Sirius'' (in analogy to the Polaris project, and also due to the primary developer's Australian nationality: [[HMS Sirius (1786)|HMS ''Sirius'']] of 1786 was a ship of the [[First Fleet]] to [[Australia]]). On October 17, 2008, a prototype release of Sirius was made available&lt;ref&gt;{{cite web
+ |url         = http://opensolaris.org/os/project/systemz/
+ |title       = OpenSolaris Project: Systemz
+ |publisher   = OpenSolaris Project
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20090825162814/http://opensolaris.org/os/project/systemz/
+ |archivedate = August 25, 2009
+ |df          = mdy-all
+}}&lt;/ref&gt; and on November 19 the same year, IBM authorized the use of Sirius on System z [[Integrated Facility for Linux]] (IFL) processors.&lt;ref&gt;{{cite web
+ | url = https://www.theregister.co.uk/2008/11/24/ibm_authorizes_mainframe_opensolaris/
+ | title = IBM authorizes OpenSolaris on mainframes
+ | date = November 24, 2008
+ | accessdate = November 24, 2008
+ | work = [[The Register]]
+}}&lt;/ref&gt;
+
+Solaris also supports the [[Linux]] platform [[application binary interface]] (ABI), allowing Solaris to run native Linux [[object file|binaries]] on x86 systems. This feature is called ''Solaris Containers for Linux Applications'' (SCLA), based on the [[branded zones]] functionality introduced in Solaris 10 8/07.&lt;ref&gt;{{cite web
+ |url         = http://www.opensolaris.org/os/community/brandz/brandz_lae_faq/
+ |title       = BrandZ/SCLA FAQ
+ |accessdate  = September 10, 2006
+ |publisher   = OpenSolaris Project
+ |url-status     = dead
+ |archiveurl  = https://archive.today/20061004053007/http://www.opensolaris.org/os/community/brandz/brandz_lae_faq/
+ |archivedate = October 4, 2006
+ |df          = mdy-all
+}}&lt;/ref&gt;
+
+=={{Anchor|SUNFREEWARE}}Installation and usage options==
+&lt;!-- See also User:Colinp386/sunfreeware --&gt;
+Solaris can be installed from various pre-packaged software groups, ranging from a minimalistic ''Reduced Network Support'' to a complete ''Entire Plus [[original equipment manufacturer|OEM]]''. Installation of Solaris is not necessary for an individual to use the system. Additional software, like Apache, MySQL, etc. can be installed as well in a packaged form from ''sunfreeware''&lt;ref&gt;{{cite web|url=http://sunfreeware.com|title=Sunfreeware Package List|publisher=Sunfreeware|accessdate=November 24, 2014}}&lt;/ref&gt; and [[OpenCSW]].&lt;ref&gt;{{cite web|url=http://www.opencsw.org/packages|title=OpenCSW Package List|publisher=[[OpenCSW]]|accessdate=November 24, 2014}}&lt;/ref&gt; Solaris can be installed from physical media or a network for use on a desktop or server, or be used without installing on a desktop or server.{{citation needed|date=December 2013}}
+
+==Desktop environments==
+[[Image:openwindows.jpg|thumb|250px|[[olvwm]] with [[OpenWindows]] on Solaris]]
+Early releases of Solaris used [[OpenWindows]] as the standard desktop environment. In Solaris 2.0 to 2.2, OpenWindows supported both [[NeWS]] and [[X Window System|X]] applications, and provided [[backward compatibility]] for [[SunView]] applications from Sun's older desktop environment. NeWS allowed applications to be built in an [[object-oriented]] way using [[PostScript]], a common printing language released in 1982. The [[X Window System]] originated from [[MIT]]'s [[Project Athena]] in 1984 and allowed for the display of an application to be disconnected from the machine where the application was running, separated by a network connection. Sun's original bundled SunView application suite was ported to X.
+
+Sun later dropped support for legacy SunView applications and NeWS with OpenWindows 3.3, which shipped with Solaris 2.3, and switched to [[X11R5]] with [[Display Postscript]] support. The graphical look and feel remained based upon [[OPEN LOOK]]. OpenWindows 3.6.2 was the last release under Solaris 8. The OPEN LOOK Window Manager ([[olwm]]) with other OPEN LOOK specific applications were dropped in Solaris 9, but support libraries were still bundled, providing long term binary backwards compatibility with existing applications. The OPEN LOOK Virtual Window Manager (olvwm) can still be downloaded for Solaris from sunfreeware and works on releases as recent as Solaris 10.
+
+[[Image:CDE running on Solaris 10.png|thumb|250px|The [[Common Desktop Environment]] (CDE) was [[open-source license|open sourced]] in August 2012. This is a screenshot of CDE running on Solaris 10.]]
+
+Sun and other Unix vendors created an industry alliance to standardize Unix desktops. As a member of the [[Common Open Software Environment]] (COSE) initiative, Sun helped co-develop the [[Common Desktop Environment]] (CDE). This was an initiative to create a standard Unix desktop environment. Each vendor contributed different components: [[Hewlett-Packard]] contributed the [[X window manager|window manager]], [[IBM]] provided the [[file manager]], and Sun provided the [[e-mail]] and calendar facilities as well as drag-and-drop support ([[ToolTalk]]). This new desktop environment was based upon the [[Motif (software)|Motif]] look and feel and the old OPEN LOOK desktop environment was considered legacy. CDE unified Unix desktops across multiple [[Open system (computing)|open system]] vendors. CDE was available as an unbundled add-on for Solaris 2.4 and 2.5, and was included in Solaris 2.6 through 10.
+
+[[Image:Java Desktop running on Solaris 10.png|thumb|250px|This is a screenshot of the [[Java Desktop System]] (JDS) running on Solaris 10.]]
+
+In 2001, Sun issued a preview release of the open-source desktop environment [[GNOME]] 1.4, based on the [[GTK+]] toolkit, for Solaris 8.&lt;ref name=&quot;gnome1.4&quot;&gt;{{cite web
+  | url = http://mail.gnome.org/archives/gnome-announce-list/2001-May/msg00046.html
+  | title = Sun Announces GNOME 1.4 for Solaris
+  | last = Mannina
+  | first = Scott
+  | date = May 23, 2001
+  | accessdate = February 9, 2009
+}}&lt;/ref&gt; Solaris 9 8/03 introduced GNOME 2.0 as an alternative to CDE. Solaris 10 includes Sun's [[Java Desktop System]] (JDS), which is based on GNOME and comes with a large set of applications, including [[StarOffice]], Sun's [[office suite]]. Sun describes JDS as a &quot;major component&quot; of Solaris 10.&lt;ref&gt;{{cite web
+  | url = http://www.sun.com/software/javadesktopsystem/
+  | title = Sun Java Desktop System
+  | publisher = Sun Microsystems Inc
+  | date = May 22, 2006
+  | accessdate = March 10, 2007
+}}&lt;/ref&gt; The Java Desktop System is not included in Solaris 11 which instead ships with a stock version of GNOME.&lt;ref&gt;{{cite web|url=http://docs.oracle.com/cd/E23824_01/html/E24456/desktop-123.html|title=Oracle Solaris 11 Desktop Feature Summary - Transitioning From Oracle Solaris 10 to Oracle Solaris 11|date=March 1, 2011|publisher=[[Oracle Corporation]]|accessdate=November 24, 2014}}&lt;/ref&gt; Likewise, CDE applications are no longer included in Solaris 11, but many libraries remain for binary backwards compatibility.
+
+The open source desktop environments [[KDE]] and [[Xfce]], along with numerous other [[window managers]], also compile and run on recent versions of Solaris.
+
+Sun was investing in a new desktop environment called [[Project Looking Glass]] since 2003. The project has been inactive since late 2006.&lt;ref&gt;{{cite web
+ |url         = https://lg3d-core.dev.java.net/
+ |title       = Project Looking Glass Homepage
+ |accessdate  = January 6, 2010
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20070712044749/https://lg3d-core.dev.java.net/
+ |archivedate = July 12, 2007
+ |df          = mdy-all
+}}&lt;/ref&gt;
+
+==License==
+
+===Traditional operating system license (1982 to 2004)===
+For versions up to 2005 (Solaris 9), Solaris was licensed under a license that permitted a customer to buy licenses in bulk, and install the software on any machine up to a maximum number.  The key license grant was:
+
+{{quote|License to Use. Customer is granted a non-exclusive and non-transferable license (&quot;License&quot;) for the use of the accompanying binary software in machine-readable form, together with accompanying documentation (&quot;Software&quot;), by the number of users and the class of computer hardware for which the corresponding fee has been paid.}}
+
+In addition, the license provided a &quot;License to Develop&quot; granting rights to create derivative works, restricted copying to only a single archival copy, disclaimer of warranties, and the like.  The license varied only little through 2004.

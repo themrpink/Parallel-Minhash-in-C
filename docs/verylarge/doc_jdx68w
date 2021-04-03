@@ -1,0 +1,401 @@
+== Loop connectedness ==
+The loop connectedness of a CFG is defined with respect to a given [[depth-first search]] tree (DFST) of the CFG. This DFST should be rooted at the start node and cover every node of the CFG.
+
+Edges in the CFG which run from a node to one of its DFST ancestors (including itself) are called back edges.
+
+The loop connectedness is the largest number of back edges found in any cycle-free path of the CFG. In a reducible CFG, the loop connectedness is independent of the DFST chosen.&lt;ref name=&quot;:0&quot;&gt;{{Cite journal|last=Kam|first=John B.|last2=Ullman|first2=Jeffrey D.|date=1976-01-01|title=Global Data Flow Analysis and Iterative Algorithms|journal=Journal of the ACM|volume=23|issue=1|pages=158–171|doi=10.1145/321921.321938|issn=0004-5411}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://www.cs.umb.edu/~offner/files/flow_graph.pdf|title=Notes on Graph Algorithms Used in Optimizing Compilers|last=Offner|first=Carl|access-date=13 April 2018}}&lt;/ref&gt;
+
+Loop connectedness has been used to reason about the time complexity of [[data-flow analysis]].&lt;ref name=&quot;:0&quot; /&gt;
+
+== Inter-procedural Control Flow Graph ==
+
+While Control Flow Graphs represent the control flow of a single procedure, Inter-procedural Control Flow Graphs represent the control flow of whole programs.&lt;ref&gt;{{Cite web|url=http://web.cs.iastate.edu/~weile/cs513x/4.ControlFlowAnalysis.pdf|title=Control Flow Analysis|date=2016}}&lt;/ref&gt;
+
+
+==See also==
+* [[Abstract syntax tree]]
+* [[Flowchart]]
+* [[Control-flow diagram]]
+* [[Control-flow analysis]]
+* [[Data-flow analysis]]
+* [[Interval (graph theory)]]
+* [[Program dependence graph]]
+* [[Cyclomatic complexity]]
+* [[Static single assignment]]
+* [[Compiler construction]]
+* [[Intermediate representation]]
+
+== References ==
+{{Reflist}}
+
+==External links==
+{{Commonscat}}
+*[https://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15745-s02/public/doc/cfg.html The Machine-SUIF Control Flow Graph Library]
+*[https://gcc.gnu.org/onlinedocs/gccint/Control-Flow.html GNU Compiler Collection Internals]
+*Paper &quot;[http://www.ucw.cz/~hubicka/papers/proj/node6.html#SECTION02420000000000000000 Infrastructure for Profile Driven Optimizations in GCC Compiler]&quot; by [[Zdeněk Dvořák]] ''et al.''
+
+;Examples
+*[http://compilers.cs.ucla.edu/avrora/cfg.html Avrora – Control-Flow Graph Tool]
+
+[[Category:Compiler construction]]
+[[Category:Control-flow analysis|*]]
+[[Category:Application-specific graphs]]
+[[Category:Modeling languages]]</text>
+      <sha1>1xz6m4ecggp8vhf48j6ffiz25n5fhsq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Daniel Chodowiecki</title>
+    <ns>0</ns>
+    <id>43655</id>
+    <revision>
+      <id>985292685</id>
+      <parentid>983997611</parentid>
+      <timestamp>2020-10-25T03:40:43Z</timestamp>
+      <contributor>
+        <username>FrescoBot</username>
+        <id>9021902</id>
+      </contributor>
+      <minor />
+      <comment>Bot: [[User:FrescoBot/Links|link syntax]] and minor changes</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="8047" xml:space="preserve">[[File:Adolf Friedrich Erdmann von Menzel 018.jpg|thumb|Portrait of Daniel Chodowiecki, painted posthumously by [[Adolph von Menzel]] in 1859]]
+'''Daniel Niklaus Chodowiecki''' (16 October 1726 – 7 February 1801) was a [[Germany|German]]&lt;ref&gt;[https://encyklopedia.pwn.pl/haslo/Chodowiecki-Daniel;3885657.html Chodowiecki Daniel - Encyklopedia PWN]&lt;/ref&gt; painter and [[printmaker]] with Huguenot and Polish ancestry, who is most famous as an [[Etching|etcher]]. He spent most of his life in [[Berlin]], and became the director of the [[Berlin Academy of Art]].
+
+==Family==
+He was born in the city of [[Danzig]] (Gdańsk) in [[Poland]], and in a letter “in typical Berlin humor”{{Citation needed|date=November 2007}} wrote, “that he moved to Berlin, Germany, which shows for sure, that he is a 'genuine Pole'.”{{Citation needed|date=November 2007}} He kept close to the [[Huguenot]] scene, due to his ancestry. 
+
+His grandfather Bartholomāus Chodowiecki had lived in the 16th century in [[Greater Poland]]. Gottfried Chodowiecki, Daniel's father, was a tradesman in Danzig and his mother, Henriette Ayrer born in [[Switzerland]], was a Huguenot. Daniel's grandfather Christian had been a tradesman in the city as well. When his father died, both Daniel (aged 16) and his younger brother Gottfried Chodowiecki went to live with their uncle in Berlin, who offered to educate them, and where Daniel received an artistic training with the painter Haid in [[Augsburg]]. His brother also became a painter.
+
+{{anchor|Jeannette Papin}}
+He had three daughters, [[Jeannette Papin|Jeannette]] (b. 1761, married the French-reformed preacher Jacques Papin), [[Suzanne Chodowiecka|Suzanne]] (1763&amp;ndash;1819) and Henriette (1770&amp;ndash;1880). Jeannette's daughter Marianne Chodowiecka Papin (married Gretschel, 1794&amp;ndash;1870) and her son Heinrich Papin (1786&amp;ndash;1839) also became artists.&lt;ref&gt;{{cite web|url=http://www.the-athenaeum.org/people/detail.php?ID=8227|title=Jeannette Papin (German, 1761 – 1835) – The Athenaeum|website=www.the-athenaeum.org|accessdate=3 August 2017}}&lt;/ref&gt;
+
+==Art==
+[[File:Chodowiecki Minuet in the park.jpg|thumb|300px|''Minuet in the park'', 1760s ([[National Museum, Warsaw|National Museum]] in [[Warsaw]])]]
+[[File:Chodowiecki Raubdruck 1781.jpg|thumb|300px|Cartoon [[etching]] by Chodowiecki, 1781, on the [[Partition of Poland]]]]
+Soon Daniel was able to earn a living by painting. He was admitted to the Berlin Academy in 1764 and became vice-director under [[Bernhard Rode]] in 1788. He had found his true calling and became the most famous German graphic artist of his time. His works includes several thousand [[etching]]s, usually rather small, and many drawings and paintings. His book illustrations embrace almost all the great classics. His prints represent in great detail the life of the bourgeoisie during the ''Zopfstil'' period, a time between [[Rococo]] and [[Classicism]]. In 1797 Chodowiecki was appointed director of the Academy of Arts in Berlin, where he died on 7 February 1801. The bulk of his work was in illustrating scientific books by [[Johann Bernhard Basedow|Basedow]], [[Georges-Louis Leclerc, Comte de Buffon|Buffon]], [[Lavater]], [[Johann Heinrich Pestalozzi|Pestalozzi]] and others. He also painted many portraits of Polish gentry and was interested in Huguenot and Polish history as well, making some paintings on the topic. 
+He was in tune with the developing spirit of the age, and many works reflect the cult of [[sensibility]], and then the revolutionary and German [[nationalism|nationalist]] feelings of the end of the centu 
+
+In [[printmaking]], he is credited with the invention of the deliberate ''remarque'', a small sketch on a plate, lying outside the main image.  These were originally little sketches or doodles by artists, not really meant to be seen, but Chodowiecki turned them into &quot;bonus items&quot; for collectors.
+
+Chodowiecki, though speaking only French and German&lt;ref&gt;Hartmut Boockmann, Ostpreussen und Westpreussen, Siedler 2002, {{ISBN|3-88680-212-4}}&lt;/ref&gt; (due to his offices in the Huguenot French community in Berlin he often spoke French), many times also declared his Polish allegiance and had his son Isaac Heinrich, born in Berlin, painted as a very young child with a Polish outfit and haircut. After [[Partitions of Poland]] Chodowiecki wrote to Gräfin Solms-Laubach: &quot;From father's side I'm Polish, a descendant of a brave nation which will soon vanish&quot;.&lt;ref name=&quot;auto&quot;&gt;Charlotte Steinbrücker: Listy D. Chodowieckiego. Berlin, 1921.&lt;/ref&gt; In a letter to [[Józef Łęcki]], the Polish astronomer, he wrote: ''&quot;I consider it an honour to be a genuine Pole, even though I am now living in Germany&quot;''.&lt;ref name=&quot;auto&quot;/&gt; Because of his mother's and his wife's Huguenot descent he was very close to the Huguenots of Berlin. Nearly all his life and career was spent in Germany, writing in German and living in Berlin from the age of almost 17.
+{{Css Image Crop|Image = DAN-24-Danzig-1MIL Mark (1923).jpg|bSize = 235|cWidth = 235|cHeight = 129|oTop = 2|oLeft = 0|Location = right|Description= Chodowiecki depicted on a 1 million [[German Papiermark#German Papiermark of Danzig|papiermark]] note (1923)}}
+One of his most popular books is &quot;Journey from Berlin to Danzig&quot; ({{lang-de|&quot;Die Reise von Berlin nach Danzig&quot;}}, 1773) with many illustrations. He purchased a horse rather than going by stage coach. This was his first return after 30 years absence and he went specifically to see his elderly mother and sisters in Danzig again. He made only one more trip to Danzig afterwards, to his mother's funeral. He describes and illustrates towns and people in Pomerania and Prussia on the way.
+
+Chodowiecki is buried at the ''Französischer Friedhof'' cemetery in Berlin.
+
+A short animation entitled &quot;Chodowiecki&quot;, based on Chodowiecki's life and work, was produced in 2020 by Polish director [[Jakub Paczek]]. All the scenes in the film were composed of animated Chodowiecki's graphics, which were digitized, processed and animated for this sole purpose. The film was made available for free at [http://www.Chodowiecki.com www.Chodowiecki.com].&lt;ref&gt;{{cite web|title=&quot;Chodowiecki&quot; - pomysłowa opowieść krakowskiego reżysera o wybitnym malarzu i rysowniku|url=https://krakow.naszemiasto.pl/chodowiecki-pomyslowa-opowiesc-krakowskiego-rezysera-o/ar/c13-7933809|author=Paweł Gzyl|agency=Kraków Nasze Miasto|date=2020-10-07|accessdate=2020-10-16|language=pl-PL}}&lt;/ref&gt;
+
+==References==
+&lt;references/&gt;
+*Wolfgang Plat, ''Die Reise nach Danzig, Mit Daniel Chodowiecki durch Pommern''
+
+==External links==
+{{commons|Daniel Chodowiecki}}
+*[http://www.chodowiecki.com/en.php A 2020 film on Daniel Chodowiecki.]
+*[https://web.archive.org/web/20110604121145/http://collectionsonline.lacma.org/mwebcgi/mweb.exe?request=browse;dept=prints;method=artist;searchtype=1;term=Chodowiecki,%20Daniel%20Nikolaus 541 images of works at the LA County Museum of Art]
+*[http://www.malarze.com/artysta.php?id=55 Gallery of works by Chodowiecki at www.malarze.com]
+*[http://www.malarze.com/artysta.php?id=286 Gallery of works by Chodowiecki's brother - Gottfried at www.malarze.com]
+*[http://www.bildindex.de/rx/apsisa.dll/registerinhalt?sid=&amp;cnt=&amp;rid=2&amp;aid=*&amp;query=+xdbpics%3Aalle%20+r1a_name%3A'C*'%20%20+r1a_name%3A%22chodowiecki,%20daniel%20nikolaus%22&amp;no=1&amp;count=50&amp;sort=no&amp;rid=2 Works at www.bildindex.de]
+*{{Cite EB1911|wstitle=Chodowiecki, Daniel Nicolas}}
+
+{{s-start}}
+{{s-bef|before=[[Bernhard Rode]]}}
+{{s-ttl|title=Director&lt;br&gt;[[Berlin Academy of Art]]|years=1797–1801}}
+{{s-aft|after=}}
+{{s-end}}
+
+{{Authority control}}
+{{DEFAULTSORT:Chodowiecki, Daniel}}
+[[Category:1726 births]]
+[[Category:1801 deaths]]
+[[Category:Artists from Gdańsk]]
+[[Category:Polish Calvinist and Reformed Christians]]
+[[Category:18th-century Polish painters]]
+[[Category:Polish male painters]]
+[[Category:18th-century German painters]]
+[[Category:German male painters]]
+[[Category:People from Royal Prussia]]
+[[Category:German printmakers]]
+[[Category:Prussian Academy of Arts faculty]]</text>
+      <sha1>533tre53xa9iyu23cr8naov4l696yg9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Jimmy Sturr</title>
+    <ns>0</ns>
+    <id>43659</id>
+    <revision>
+      <id>988124190</id>
+      <parentid>988124051</parentid>
+      <timestamp>2020-11-11T06:32:44Z</timestamp>
+      <contributor>
+        <username>1980fast</username>
+        <id>12136076</id>
+      </contributor>
+      <minor />
+      <comment>/* Radio show */ Phrasing</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="7393" xml:space="preserve">{{short description|American musician}}
+{{Infobox musical artist
+| name                = Jimmy Sturr
+| image                 = Jimmy Sturr.jpg
+| alt             =
+| caption            = Sturr in 2009
+| image_size            = 
+| background          = non_vocal_instrumentalist
+| birth_name          = James William Sturr Jr.
+| alias               = 
+| birth_date          = {{Birth date and age|1941|9|25|mf=yes}}
+| birth_place         = [[Warwick, New York]], United States
+| death_date          = 
+| death_place         = 
+| origin              = 
+| instrument          = [[Trumpet]], [[clarinet]], [[saxophone]]
+| genre               = {{flatlist|*[[Polka]]
+*[[rock music|rock]]
+*[[country music|country]]}}
+| occupation          = Instrumentalist, bandleader
+| years_active        = &lt;!-- YYYY–YYYY --&gt;
+| label            = [[Rounder Records|Rounder]], [[Vanguard Records|Vanguard]], [[Starr Records|Starr]] 
+| associated_acts     = 
+| website                 = {{URL|www.jimmysturr.com}}
+}}
+
+'''James W. Sturr Jr.''' is an American [[polka]] musician, [[trumpeter]], [[clarinetist]], [[saxophonist]] and leader of '''Jimmy Sturr &amp; His Orchestra'''. His recordings have won 18 out of the 24 [[Grammy Award]]s given for [[Grammy Award for Best Polka Album|Best Polka Album]]. Sturr's orchestra is on the Top Ten List of the All-Time Grammy Awards, and has acquired more Grammy nominations than anyone in the history of musical polka awards.&lt;ref name=&quot;nyt060205&quot;&gt;{{cite news |first=Ben |last=Sisario |work=[[The New York Times]] |title=The Polka King Rolls Out the Barrel for the 19th Time  |url=https://www.nytimes.com/2006/02/05/arts/music/05sisario.html?pagewanted=all  |date=February 5, 2006 |accessdate=October 18, 2010}}&lt;/ref&gt;
+
+==Touring history==
+Sturr and his orchestra have performed at [[Carnegie Hall]],&lt;ref&gt;https://www.carnegiehall.org/PerformanceHistorySearch/#!search=jimmy%20sturr&lt;/ref&gt; [[Lincoln Center]] in New York City and the [[Palace of Culture]] in [[Warsaw]], Poland.&lt;ref&gt;http://fultonhistory.com/highlighter/viewer/?file=http%3A%2F%2Ffultonhistory.com%2FNewpapers%2520Disk2%2FAuburn%2520NY%2520Citizen%2520Advertiser%2FAuburn%2520NY%2520Citizen%2520Advertiser%25201985.pdf%2FNewspaper%2520Auburn%2520NY%2520Citizen%2520Advertiser%25201985%2520-%25204564.PDF&amp;highlightsFile=http%3A%2F%2Ffultonhistory.com%2Fhighlighter%2Fhits%2F7d820ff77de8cd87885f5f4af0c858a5#page=1&lt;/ref&gt;  When touring, the band rides in Jimmy's 45-foot customized tour bus, previously owned by [[Billy Ray Cyrus]].&lt;ref name=&quot;nyt060205&quot;/&gt;
+
+==Radio show==
+Sturr hosts a syndicated radio show on stations including [[WTBQ]]&lt;ref&gt;[http://www.wtbq.com WTBQ]&lt;/ref&gt; in his hometown of [[Florida, Orange County, New York|Florida, New York]], the station he once owned. He also has a weekly radio show on the Rural Radio channel on SirusXM.&lt;ref&gt;{{Cite news|url=http://www.siriusxm.com/servlet/Satellite?c=SXM_Channel_C&amp;childpagename=SXM/SXM_Channel_C/ChannelProgramList&amp;cid=1376495633207&amp;pagename=SXM/Wrapper|title=Weekly Schedule - Rural Radio|work=SiriusXM|access-date=2017-04-08|language=en}}&lt;/ref&gt;
+
+==Discography==
+* ''All American Polka Festival''
+* ''The Best of Jimmy Sturr and His Orchestra''
+* ''Come on and Dance:Live''  (2014)
+* ''[[Come Share the Wine]]'' (2008 Grammy)
+* ''Double Magic''
+* ''First Class Polkas''
+* ''Forget Me Never''
+* ''[[Gone Polka]]'' (2002 Grammy)  with [[Willie Nelson]] and [[Brenda Lee]]
+* ''Grammy Gold''
+* ''Greatest Hits of Polka''
+* ''[[I Love to Polka]]'' (1996 Grammy)
+* ''A Jimmy Sturr Christmas''
+* ''[[Let the Whole World Sing]]'' (2009 Grammy)
+* ''[[Let's Polka 'Round]]'' with [[Charlie Daniels]], [[Bela Fleck]] and [[Boots Randolph]] (2004 Grammy)
+* ''[[Life's a Polka]]''
+* ''[[Live at Gilley's!]]'' (1992 Grammy)
+* ''[[Living on Polka Time]]'' (1998 Grammy) with [[Bill Anderson (singer)|Bill Anderson]] and [[Flaco Jiménez]]
+* ''Most Requested Hits''
+* ''Not Just Another Polka''
+* ''[[Polka! All Night Long]]'' (1997 Grammy) with [[Willie Nelson]]
+* ''Polka Christmas''
+* ''&quot;Polka Christmas&quot; in My Home Town''
+* ''Polka Cola'' with [[Bill Anderson (singer)|Bill Anderson]]
+* ''Polka Fever''  (1978)
+* ''[[Polka in Paradise]]'' with [[Bobby Vinton]] (2007 Grammy)
+* ''Polka is My Life''
+* ''Polka Party''
+* ''Polkapalooza''
+* ''Primetime Polkas''
+* ''Pure Country''
+* ''Pure Polka''
+* ''Rock N Polka''
+* ''Saturday Night Polka''
+* ''[[Shake, Rattle and Polka!]]'' (2006 Grammy)
+* ''Sturr It Up''
+* ''Sturr Struck''
+* ''[[Top of the World (Jimmy Sturr album)|Top of the World]]'' with [[Arlo Guthrie]] and [[Rhonda Vincent]] (2003 Grammy)
+* ''[[Touched by a Polka]]'' with [[Mel Tillis]] (2001 Grammy)
+* ''Tribute to the Legends of Polka Music''
+* ''[[When It's Polka Time at Your House]]'' (1991 Grammy)
+
+==Band members==
+
+'''Main Band Members'''
+
+*Jimmy Sturr - Leader, Vocals, Clarinet, Saxophone, Drums, and Trumpet
+*Rick Henly - Trumpet
+*Bill Ash - Trumpet
+*Kenny Harbus - Trumpet &amp; Vocals
+*Jim Perry - Clarinet, Alto Saxophone, and Tenor Saxophone
+*Nick DeVito - Clarinet &amp; Alto Saxophone
+*Johnny Karas - Tenor Saxophone &amp; Vocals
+*Ron Oswanski - Piano &amp; Accordion
+*Frank Urbanovitch - Violin &amp; Vocals
+*Rich Pavasaris - Bass Guitar
+*Rich Berends - Drums
+
+'''Other Band Members/Reoccurring Members'''
+
+*Tom Conklin - Bus Driver
+*Jim Dixon - Bus Driver
+*Gus Kosior - Manager &amp; Bus Driver
+*Barbara James - Assistant Manager
+*Al Piatkowski - Accordion
+*Nick Koryluk - Accordion
+*Joe Mariany - Clarinet and Saxophone
+*Ray Barno - Clarinet, Alto Saxophone, and Baritone Saxophone
+*Chris Caffery - Guitar
+
+'''Past Band Members'''
+*Hank Golis - Trumpet
+*Kevin Krauth - Trumpet &amp; Vocals
+*Al Noble - Trumpet
+*Ben Poole - Trumpet
+*Eric Parks - Trumpet
+*Dana Sylvander - Trombone
+*Dennis Coyman - Drums
+*Bill Langan - Bass Guitar
+*Mike Ralff - Bass Guitar
+*Dave Kowalski - Guitar
+*Eddie Burton - Guitar
+*Lou Pallo - Guitar
+*Kevin Chase - Guitar
+*Walt Cunningham - Strings &amp; Banjo
+*Ed Goldberg - Piano &amp; Bass
+*Jeff Hoffman - Piano
+*Jeff Miller - Piano
+*Keith Slattery - Piano
+*Lenny Filipowski - Piano
+*Dennis Polisky - Clarinet &amp; Alto Saxophone
+*Greg Dolecki - Clarinet &amp; Alto Saxophone
+*Joe Magnuszewski - Clarinet &amp; Alto Saxophone
+*Peter Kargul - Violin
+*Ryan Joseph - Violin
+*Steve Wnuk - Violin
+*Gene Bartkiewicz - Accordion
+*Wally Czerniawski - Accordion
+*Steve Swiader - Accordion
+*Gennarose - Vocals
+*Lance Wing - Vocals
+*Lindsey Webster - Vocals
+*John Doolan - Equipment Manager
+*Bryan Doolan - Roadie
+*Thomas 'Tom' Karas - Accordion/keyboard (1983-1989)&lt;ref&gt;http://www.ipapolkas.com/blog/otw-portfolio/thomas-karas-deceased-category-inducted-2004/&lt;/ref&gt;
+
+==References==
+{{Reflist}}
+
+==External links==
+*[http://www.jimmysturr.com Official website]
+*[http://www.letspolka.com/2006/11/interview-with-jimmy-sturr Interview with Jimmy Sturr]
+*{{worldcat id|id=lccn-no96-33106}}
+
+{{clear}}
+
+{{Authority control}}
+
+{{DEFAULTSORT:Sturr, Jimmy}}
+[[Category:Polka musicians]]
+[[Category:Grammy Award winners]]
+[[Category:Singers from New York (state)]]
+[[Category:1941 births]]
+[[Category:Living people]]
+[[Category:American saxophonists]]
+[[Category:American male saxophonists]]
+[[Category:American clarinetists]]
+[[Category:American male singers]]
+[[Category:New York (state) Democrats]]
+[[Category:People from Warwick, New York]]
+[[Category:21st-century saxophonists]]
+[[Category:21st-century clarinetists]]
+[[Category:21st-century American male musicians]]</text>
+      <sha1>shvx50ql1exn0mwq57l7t1goknrobgg</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Cadenza</title>
+    <ns>0</ns>
+    <id>43661</id>
+    <revision>
+      <id>991646144</id>
+      <parentid>985759532</parentid>
+      <timestamp>2020-12-01T03:14:44Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 11 templates: del empty params (1×); hyphenate params (4×); del |ref=harv (1×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="20123" xml:space="preserve">{{other uses}}
+[[File:Beethoven - Concerto in C minor, cadenza.png|thumb|Cadenza indication from Beethoven's [[Piano Concerto No. 3 (Beethoven)|Piano Concerto No. 3]]: fermata over rest indicates beginning, fermata over the trill indicates close.&lt;ref name=&quot;Grove&quot;&gt;Sir [[George Grove]] (1904). ''[[Grove's Dictionary of Music and Musicians]]'', Vol. 1, p. 442. [[John Alexander Fuller-Maitland]], ed. Macmillan Company.&lt;/ref&gt; [[File:Beethoven - Concerto in C minor, cadenza.mid|thumb]]]]
+[[File:Mozart - Piano Concert in Bb major K. 595, first movement, cadenza.png|thumb|upright=1.8|Cadenza indication from the first movement of Mozart's [[Piano Concerto No. 27 (Mozart)|Piano Concerto in B{{music|b}} major]], K. 595.&lt;ref name=Randel&gt;{{cite book|last=Randel|first=Don Michael|author-link=Don Michael Randel|year=2003|title=Harvard Dictionary of Music|isbn=978-0-674-01163-2|page=[https://archive.org/details/harvarddictionar0004unse/page/132 132]|title-link=Harvard Dictionary of Music}}&lt;/ref&gt; The [[Cadential six-four|I{{su|p=6|b=4}}]]–[[dominant (music)|V]]–[[tonic (music)|I]] [[chord progression|progression]] at the cadenza is typical of the Classical concerto.{{sfn|Randel|2003}}[[File:Mozart - Piano Concert in Bb major K. 595, first movement, cadenza.mid|thumb]]]]
+[[File:Cadenza ad libitum - Hungarian Rhapsody No. 2 (Franz Liszt).gif|thumb|upright=1.5|''Cadenza [[ad libitum]]'' in Franz Liszt's [[Hungarian Rhapsody No. 2]]]]
+[[File:Mozart - 6 Variations on an aria from I Filosofi Immaginarii K. 398 (416e), first movement, cadenza written out.png|thumb|upright=1.8|Written-out cadenza from Mozart's K. 398 (end of variation 6) demonstrates the often unmetered quality of cadenzas&lt;ref&gt;Kinderman, William (2006). ''Mozart's Piano Music'', Ex. 4.2. Oxford University Press. {{ISBN|9780199880164}}.&lt;/ref&gt; [[File:Mozart - 6 Variations on an aria from I Filosofi Immaginarii K. 398 (416e), first movement, cadenza written out.mid|thumb]]]]
+[[File:Mozart - Violin Concerto K. 271a, III - cadenza.png|thumb|upright=1.8|Cadenza in Mozart's Violin Concerto K. 271a, III.&lt;ref&gt;Kostka, Stefan and Payne, Dorothy (1995). ''Tonal Harmony'', p. 143. {{ISBN|0073000566}}.&lt;/ref&gt; [[File:Mozart - Violin Concerto K. 271a, III - cadenza.mid|thumb|left|160px|Pause]] [[File:Mozart - Violin Concerto K. 271a, III - cadenza written out.mid|thumb|right|160px|Written out]]]]
+
+In [[music]], a '''cadenza''' (from {{lang-it|cadenza|link=no}} {{IPA-it|kaˈdɛntsa|}}, meaning [[cadence]]; plural, ''cadenze'' {{IPA-it|kaˈdɛntse|}}) is, generically, an [[improvisation|improvised]] or written-out [[ornament (music)|ornamental]] [[passage (music)|passage]] played or sung by a [[solo (music)|soloist]] or soloists, usually in a &quot;free&quot; [[rhythm]]ic style, and often allowing [[virtuoso|virtuosic]] display. During this time the [[accompaniment]] will rest, or sustain a note or chord. Thus an improvised cadenza is indicated in written notation by a [[fermata]] in all parts. A cadenza will usually occur over the final or penultimate note in a piece, the lead-in ({{lang-de|Eingang|link=no}})&lt;ref&gt;{{cite book|last=Keefe|first=Simon P.|author-link=Simon P. Keefe|title=The Cambridge Companion to Mozart|publisher=Cambridge University Press|year=2003|page=265|isbn=9781139826648}}&lt;/ref&gt; or over the final or penultimate note in an important subsection of a piece. It can also be found before a final [[coda (music)|coda]] or [[ritornello]].{{sfn|Randel|2003}}
+
+==In concerti==
+The term ''cadenza'' often refers to a portion of a [[concerto]] in which the [[orchestra]] stops playing, leaving the soloist to play alone in [[free time (music)|free time]] (without a strict, regular pulse) and can be written or improvised, depending on what the composer specifies. Sometimes, the cadenza will include small parts for other instruments besides the soloist; an example is in [[Sergei Rachmaninoff]]'s [[Piano Concerto No. 3 (Rachmaninoff)|Piano Concerto No. 3]], where a solo flute, clarinet and horn are used over rippling arpeggios in the piano. The cadenza normally occurs near the end of the first movement, though it can be at any point in a [[concerto]]. An example is [[Pyotr Ilyich Tchaikovsky|Tchaikovsky]]'s [[Piano Concerto No. 1 (Tchaikovsky)|First Piano Concerto]], where in the first five minutes a cadenza is used.  The cadenza is usually the most elaborate and virtuosic part that the solo instrument plays during the whole piece. At the end of the cadenza, the orchestra re-enters, and generally finishes off the movement on their own, or, less often, with the solo instrument.
+
+==As a vocal flourish==
+The cadenza was originally, and remains, a vocal flourish improvised by a performer to elaborate a [[cadence (music)|cadence]] in an [[aria]]. It was later used in instrumental music, and soon became a standard part of the concerto. Cadenzas for voice and wind instruments were to be performed in one breath, and they should not use distant [[key (music)|keys]].&lt;ref&gt;{{cite book|last=Agricola|first=Johann Friedrich|author-link=Johann Friedrich Agricola|title=Introduction to the Art of Singing|translator=[[Julianne Baird|Julianne C. Baird]]|publisher=Cambridge University Press|year=1995|page=211|isbn=9780521454285}}&lt;/ref&gt; Originally, it was improvised in this context as well, but during the 19th century, [[composer]]s began to write cadenzas out in full.&lt;ref&gt;{{Cite book|title=The Oxford Companion to Music|last=Latham|first=Alison|publisher=Oxford University Press|year=2002|isbn=9780198662129|location=New York|pages=[https://archive.org/details/isbn_9780198662129/page/194 194]|url-access=registration|url=https://archive.org/details/isbn_9780198662129/page/194}}&lt;/ref&gt; Third parties also wrote cadenzas for works in which it was intended by the composer to be improvised, so the soloist could have a well formed solo that they could practice in advance. Some of these have become so widely played and sung that they are effectively part of the standard repertoire, as is the case with [[Joseph Joachim]]'s cadenza for [[Johannes Brahms]]' [[Violin Concerto (Brahms)|Violin Concerto]], [[Ludwig van Beethoven|Beethoven]]'s set of cadenzas for [[Wolfgang Amadeus Mozart|Mozart]]'s [[Piano Concerto No. 20 (Mozart)|Piano Concerto no. 20]], and [[Estelle Liebling]]'s edition of cadenzas for operas such as [[Gaetano Donizetti|Donizetti's]]'s ''[[La fille du régiment]]'' and ''[[Lucia di Lammermoor]]''.
+
+==In jazz==
+Perhaps the most notable deviations from this tendency towards written (or absent) cadenzas are to be found in [[jazz]], most often at the end of a [[ballad (music)|ballad]], though cadenzas in this genre are usually brief. Saxophonist [[John Coltrane]], however, usually improvised an extended cadenza when performing &quot;I Want To Talk About You&quot;, in which he showcased his predilections for scalar improvisation and [[multiphonic]]s. The recorded examples of &quot;I Want To Talk About You&quot; (''[[Live at Birdland (John Coltrane album)|Live at Birdland]]'' and ''[[Afro Blue Impressions]]'') are approximately 8 minutes in length, with Coltrane's unaccompanied cadenza taking up approximately 3 minutes. More sardonically, jazz critic [[Martin Williams (writer)|Martin Williams]] once described Coltrane's improvisations on &quot;Africa/Brass&quot; as &quot;essentially extended cadenzas to pieces that never get played.&quot;&lt;ref&gt;{{cite web |url=http://www.reitzes.com/coltrane1.html |title=A Love Supreme: God Breathes Through John Coltrane |author=Reitzes, David |year=1998 |accessdate=1 May 2010}}&lt;/ref&gt;  Equally noteworthy is saxophonist [[Sonny Rollins]]' shorter improvised cadenza at the close of &quot;Three Little Words&quot; (''[[Sonny Rollins on Impulse!]]'').
+
+Cadenzas are also found in instrumental solos with piano or other accompaniment, where they are placed near the beginning or near the end or sometimes in both places (e.g. &quot;The Maid of the Mist,&quot; cornet solo by [[Herbert L. Clarke]], or a more modern example: the end of &quot;Think of Me&quot;, where Christine Daaé sings a short but involved cadenza, in [[Andrew Lloyd Webber]]'s ''[[The Phantom of the Opera (1986 musical)|The Phantom of the Opera]]'').
+
+==Notable examples==
+
+{{Refimprove section|date = October 2012}}
+
+*Concertos are not the only pieces that feature cadenzas; ''Scena di Canta Gitano'', the fourth movement of [[Nikolai Rimsky-Korsakov]]'s ''[[Capriccio Espagnol]]'', contains cadenzas for [[French horn|horns]] and [[trumpet]]s, [[violin]], [[Western concert flute|flute]], [[clarinet]], and [[harp]] in its beginning section.
+*[[Johann Strauss II]] unusually wrote a cadenza-like solo for cello and flute for the final section of his ''[[Kaiser-Walzer|Emperor Waltz]]'', before a round of trumpets and then the whole orchestra bring the piece to its end.&lt;ref&gt;{{cite book|last=Jacob|first=Heinrich Eduard|author-link=Heinrich Eduard Jacob|title=Johann Strauss – A Century of Light Music|publisher=Hutchinson|page=294|date=1940}}&lt;/ref&gt;
+*The second movement of [[Johann Sebastian Bach|Bach]]'s [[Brandenburg Concertos#No. 3 in G major, BWV 1048|third Brandenburg Concerto]] consists of just two chords; it is generally taken to indicate a cadenza to be improvised around that [[cadence (music)|cadence]].
+*The first movement of Bach's [[Brandenburg Concerto No. 5|fifth Brandenburg Concerto]] features an extensive written cadenza for harpsichord.
+*The coloratura arias of [[bel canto]] composers [[Gaetano Donizetti]], [[Vincenzo Bellini]], and [[Gioachino Rossini]].
+*Mozart wrote the cadenzas for violin and viola duet in the first and second movements of the [[Sinfonia Concertante for Violin, Viola and Orchestra (Mozart)|''Sinfonia Concertante for Violin, Viola, and Orchestra'', K. 364]].
+*Mozart wrote a cadenza into the third and final movement of [[Piano Sonata No. 13 (Mozart)|Piano Sonata in B-flat major, K. 333]], which was an unusual (but not unique) choice at that time because the movement is otherwise in [[Sonata rondo form|sonata-rondo form]].
+*[[Ludwig van Beethoven|Beethoven]]'s [[Piano Concerto No. 5 (Beethoven)|&quot;Emperor&quot; Concerto]] contains a notated cadenza.&lt;ref name=&quot;Grove&quot;/&gt; It begins with a cadenza that is partly accompanied by the orchestra. Later in the first movement, the composer specifies that the soloist should play the music that is written out in the score, and not add a cadenza on one's own.
+* Beethoven famously included a cadenza-like solo for [[oboe]] in the [[recapitulation (music)|recapitulation]] section of the first movement of his [[Symphony No. 5 (Beethoven)|Symphony No. 5]].
+*[[Tchaikovsky]]'s [[Piano Concerto No. 1 (Tchaikovsky)|first piano concerto]] is notable not only for having a cadenza within the first few minutes of the first movement, but also for having a ''second'' – substantially longer – cadenza in a more conventional place, near the end of the movement.
+*[[Sergei Rachmaninoff|Rachmaninoff]]'s [[Piano Concerto No. 3 (Rachmaninoff)|Piano Concerto No. 3]], in which the first movement features a long and incredibly difficult [[toccata]]-like cadenza with an even longer alternative or [[ossia]] cadenza written in a heavier chordal style. Both cadenzas lead to an identical section with arpeggios in the piano and a solo flute accompanying, before the cadenza ends quietly.
+*[[Fritz Kreisler]]'s cadenzas for the first and third movements of [[Beethoven]]'s [[Violin Concerto (Beethoven)|Violin Concerto]].
+* [[Aaron Copland]] uses a cadenza in his [[Clarinet Concerto (Copland)|Clarinet Concerto]] to connect the two movements.
+*[[Karlheinz Stockhausen]] composed five ensemble cadenzas in his wind quintet ''[[Zeitmaße]]'' (1955–56),&lt;ref&gt;Jerome Kohl, ''Karlheinz Stockhausen: Zeitmaße'', Landmarks in Music Since 1950, edited by Wyndham Thomas (Abingdon, Oxon; London; New York: Routledge, 2017): 89–121. {{ISBN|978-0-7546-5334-9}}.&lt;/ref&gt; cadenzas for piccolo trumpet and piccolo in ''[[Samstag aus Licht#Scene 3: Luzifers Tanz|Luzifers Tanz]]'' (1983), and a cadenza for cor anglais in his trio ''[[Klang (Stockhausen)#Seventh Hour: Balance|Balance]]'' (2007)
+* [[Karol Szymanowski]]'s two violin concertos both feature cadenzas written by the violinist who was intended to play them, [[Paweł Kochański]].
+* In the third movement of [[Edward Elgar|Elgar]]'s [[Violin Concerto (Elgar)|Violin Concerto]], there is an unexpected cadenza in which the orchestra supports the solo with a pizzicato tremolando effect (&quot;cadenza accompagnato&quot;).
+* [[Franz Liszt]]'s [[Hungarian Rhapsody No. 2]] for piano contains the instruction ''cadenza [[ad libitum]]'' before the final coda, meaning it is at the pianist's discretion that such a cadenza is added.&lt;ref name=&quot;Grove&quot;/&gt; Whilst most performers prefer to decline the invitation, some pianists such as [[Alfred Cortot]], [[Sergei Rachmaninoff]] and [[Marc-André Hamelin]] have produced notable cadenzas for the work.
+* Pianists [[Chick Corea]] and [[Makoto Ozone]] incorporated jazz cadenzas into an otherwise traditional performance in Japan of the [[Piano Concerto No. 10 (Mozart)|Mozart Double Piano Concerto]].
+* [[Rimsky-Korsakov]]'s [[Scheherazade (Rimsky-Korsakov)|Scheherazade]] features numerous cadenzas for violin.
+* Mozart wrote a cadenza in his own [[Horn Concerto No. 3 (Mozart)|Horn Concerto No. 3]], towards the end of the first of three movements.
+* [[Sergei Prokofiev]]'s [[Piano Concerto No. 2 (Prokofiev)|second piano concerto]] contains a taxing five-minute cadenza that closes out the [[Piano Concerto No. 2 (Prokofiev)#Andantino-Allegretto|first movement]].
+* In [[Dmitri Shostakovich]]'s [[Cello Concerto No. 1 (Shostakovich)|first cello concerto]] the third movement on its own is a cadenza connecting the second and fourth movements.
+* [[Carlos Chávez]]'s [[Violin Concerto (Chávez)|Violin Concerto]] has a seven-minute unaccompanied cadenza as the third of its five main sections, despite the fact that the soloist plays almost without a break throughout the rest of the 35-minute-long composition
+
+===Composed cadenzas===
+Composers who have written cadenzas for other performers in works not their own include:
+
+*[[Carl Baermann]]'s cadenza for the second movement of [[Mozart]]'s [[Clarinet Concerto (Mozart)|Clarinet Concerto]].
+* [[Ludwig van Beethoven]] wrote cadenzas for Mozart's [[Piano Concerto No. 20 (Mozart)|Piano Concerto No. 20 in D minor]]&lt;ref name=&quot;Grove&quot;/&gt; first and third movements.
+*[[Joseph Joachim]] wrote the cadenza for [[Johannes Brahms|Brahms]]'s [[Violin Concerto (Brahms)|Violin Concerto]].&lt;ref name=&quot;Grove&quot;/&gt;
+* [[Benjamin Britten]] wrote a cadenza for [[Haydn]]'s [[Cello Concerto No. 1 (Haydn)|Cello Concerto No. 1 in C]] for [[Mstislav Rostropovich]].
+* David Johnstone wrote ''A Manual of Cadenzas and Cadences for Cello'', pub. Creighton's Collection (2007).&lt;ref&gt;&quot;[http://www.creightonscollection.co.uk/index.html?Pages/scores/DJ/JM30BK.htm~mainFrame Manual of Cadenzas &amp; Cadences]&quot;, ''Creighton's Collection''.&lt;/ref&gt;
+* [[Wilhelm Kempff]] wrote cadenzas for Beethoven's first four piano concertos.
+* [[Clara Schumann]] wrote a cadenza for Beethoven's [[Piano Concerto No. 3 (Beethoven)|Piano Concerto No. 3]].
+* [[Karlheinz Stockhausen]] composed cadenzas for two Mozart concerti for wind instruments (flute and clarinet), for [[Kathinka Pasveer]] and [[Suzanne Stephens]], respectively, and one cadenza each for the trumpet concertos by [[Trumpet Concerto (Leopold Mozart)|Leopold Mozart]] and [[Trumpet Concerto (Haydn)|Joseph Haydn]], for his son [[Markus Stockhausen|Markus]].
+* [[Richard Strauss]] wrote a vocal cadenza in 1919 for soprano [[Elisabeth Schumann]] to sing in Mozart's solo motet [[Exsultate, jubilate]]. This cadenza was sung by [[Kathleen Battle]] in her recording.&lt;ref&gt;{{cite web|last=Puritz|first=Gerd|title=Schumann and Strauss|url=http://www.elisabethschumann.org/biography/esandrichardstrauss.htm|work=Elisabeth Schumann, A Biography|publisher=Grant &amp; Cutler Ltd, London|accessdate=5 September 2012}}&lt;/ref&gt;
+* [[Friedrich Wührer]] composed and published cadenzas for Mozart's piano concerti in [[Piano Concerto No. 21 (Mozart)|C major]], K. 467; [[Piano Concerto No. 24 (Mozart)|C minor]], K. 491; and [[Piano Concerto No. 26 (Mozart)|D major]], K. 537.&lt;ref&gt;&quot;[http://www.di-arezzo.co.uk/scores-of-Friedrich+Wuhrer.html Scores of Friedrich Wuhrer] {{Webarchive|url=https://web.archive.org/web/20090115151655/http://www.di-arezzo.co.uk/scores-of-Friedrich+Wuhrer.html# |date=2009-01-15 }}&quot;, ''Di-Arezzo.co.uk''.&lt;/ref&gt;
+* [[Sergei Rachmaninoff]] wrote a cadenza for Liszt's Hungarian Rhapsody No. 2 and was recorded playing the piece with this cadenza in 1919.&lt;ref&gt;{{Cite AV media|url=https://www.youtube.com/watch?v=srWOlCnY0K0 |title=Rachmaninoff plays Liszt Hungarian Rhapsody No. 2 |publisher=YouTube |date=2007-07-27 |accessdate=2014-02-28}}&lt;/ref&gt;
+* [[Alfred Schnittke]] wrote two cadenzas for Beethoven's [[Violin Concerto (Beethoven)|Violin Concerto]], of which the first includes musical quotations from violin concertos of [[Violin Concerto (Berg)|Berg]], [[Violin Concerto (Brahms)|Brahms]], Bartók (Concertos [[Violin Concerto No. 1 (Bartók)|No. 1]] and [[Violin Concerto No. 2 (Bartók)|No. 2]]), Shostakovich ([[Violin Concerto No. 1 (Shostakovich)|Concerto No. 1]]), as well as from Beethoven's [[Symphony No. 7 (Beethoven)|7th Symphony]].&lt;ref&gt;{{cite web |url=http://media.proquest.com/media/pq/classic/doc/2844418011/fmt/ai/rep/NPDF?_s=MJ5ktUo1o1yo3Q7siUj1hLDQV%2FM%3D |title=An American Encounter with Polystylism: Schnittke's Cadenzas to Beethoven (Master's thesis)|author=Rapaport, Aaron |year=2012 |publisher=University of North Carolina at Chapel Hill |accessdate=19 July 2012}}&lt;/ref&gt;
+* [[Fritz Kreisler]] composed a half polyphonic cadenza for [[Violin Concerto (Beethoven)|Beethoven's Violin Concerto]].&lt;ref&gt;&quot;http://classicalsheetmusicgratis.org/wp-content/uploads/KREISLER-Cadenzas-to-Beethoven-duplex-fold-out.pdf.&lt;/ref&gt;
+* [[John Williams]] composed a 6-minute segment consisting of a cadenza, a series of variations, and a few more elaborations to go over the opening credits of the 1971 film ''[[Fiddler on the Roof (film)|Fiddler on the Roof]]'', performed by violinist [[Isaac Stern]].&lt;ref&gt;{{cite web |url=https://www.youtube.com/watch?v=h745la-Lo1I|title=Itzhak Perlman Fiddler on the Roof John Williams Los Angeles Philharmonic, Gustavo Dudamel, 30 09 14 (video)|date=23 January 2017|accessdate=29 November 2017|publisher=YouTube}}&lt;/ref&gt;
+* [[Alma Deutscher]] composed a cadenza for Mozart's [[Piano Concerto No. 8 (Mozart)|8th Piano Concerto]] when she was ten.&lt;ref&gt;&quot;https://www.youtube.com/watch?v=bxUI4DeoWGg&quot;&lt;/ref&gt;
+*[[David Popper]] composed a set of cadenzas for 5 different concertos ([[Joseph Haydn|Haydn's]] [[Cello Concerto No. 2 (Haydn)|Concerto No. 2 in D major, Op. 101]]; [[Camille Saint-Saëns|Saint Saëns']] [[Cello Concerto No. 1 (Saint-Saëns)|Cello Concerto No. 1 in A minor, Op. 33]]; [[Cello Concerto (Schumann)|Schumann's Cello Concerto in A minor, Op. 129]]; [[Robert Volkmann|Volkmann's]] Cello Concerto in A minor, Op. 33; and [[Bernhard Molique|Molique's]] Cello Concerto in D major, Op. 45).
+*[[Émile Sauret]] wrote a cadenza for Paganini's [[Violin Concerto No. 1 (Paganini)|Violin Concerto No. 1]], Op. 6.
+
+==References==
+{{Reflist}}
+
+==Further reading==
+* [[Eva Badura-Skoda|Badura-Skoda, Eva]], et al. &quot;Cadenza&quot;. ''[http://www.grovemusic.com Grove Music Online]'' ed. L. Macy (subscription required). Accessed 2007-04-06.
+* [[Colin Lawson|Lawson, Colin]] (1999). ''The Historical Performance of Music: An Introduction'', p.&amp;nbsp;75–76. {{ISBN|9780521627382}}.

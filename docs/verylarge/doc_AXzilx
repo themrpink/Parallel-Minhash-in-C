@@ -1,0 +1,203 @@
+== Hardware ==
+=== History ===
+Many historical and extant processors use a big-endian memory representation, either exclusively or as a design option. Big-endian memory representation is commonly referred to as network order, as used in the [[Internet protocol suite]]. Other processor types use little-endian memory representation; others use yet another scheme called &quot;[[Endianness#Middle|middle-endian]]&quot;, &quot;mixed-endian&quot; or &quot;[[PDP-11]]-endian&quot;.
+
+The [[IBM System/360]] uses big-endian byte order, as do its successors [[System/370]], [[ESA/390]], and [[z/Architecture]]. The [[PDP-10]] also uses big-endian addressing for byte-oriented instructions. The [[IBM Series/1]] minicomputer also use big-endian byte order.
+
+Dealing with data of different endianness is sometimes termed the ''NUXI problem''.&lt;ref&gt;{{cite web
+ |title = NUXI problem
+ |work = The [[Jargon File]]
+ |url = http://catb.org/jargon/html/N/NUXI-problem.html
+ |access-date = 2008-12-20
+}}&lt;/ref&gt; This terminology alludes to the byte order conflicts encountered while [[Porting|adapting]] [[UNIX]], which ran on the mixed-endian PDP-11, to a big-endian IBM Series/1 computer. Unix was one of the first systems to allow the same code to be compiled for platforms with different internal representations. One of the first programs converted was supposed to print out {{code|Unix}}, but on the Series/1 it printed {{code|nUxi}} instead.&lt;ref&gt;{{cite journal |last1=Jalics|first1=Paul J. |last2=Heines|first2=Thomas S. |title = Transporting a portable operating system: UNIX to an IBM minicomputer |journal=Communications of the ACM|date=1 December 1983|volume=26|issue=12|pages=1066–1072|doi=10.1145/358476.358504|s2cid=15558835 }}&lt;/ref&gt;
+
+The [[Datapoint 2200]] uses simple bit-serial logic with little-endian to facilitate [[carry propagation]]. When Intel developed the [[Intel 8008|8008]] microprocessor for Datapoint, they used little-endian for compatibility. However, as Intel was unable to deliver the 8008 in time, Datapoint used a [[medium scale integration]] equivalent, but the little-endianness was retained in most Intel designs, including the [[MCS-48]] and the [[Intel 8086|8086]] and its [[x86]] successors.&lt;ref&gt;{{cite web|last=House|first=David|title=Oral History Panel on the Development and Promotion of the Intel 8008 Microprocessor |url = http://archive.computerhistory.org/resources/text/Oral_History/Intel_8008/Intel_8008_1.oral_history.2006.102657982.pdf#page=5 |publisher=[[Computer History Museum]] |access-date=23 April 2014 |author2=Faggin, Federico |author3=Feeney, Hal |author4=Gelbach, Ed |author5=Hoff, Ted |author6=Mazor, Stan |author7= Smith, Hank |page =b5 |date=2006-09-21 |quote = Mazor: And lastly, the original design for Datapoint ... what they wanted was a [bit] serial machine. And if you think about a serial machine, you have to process all the addresses and data one-bit at a time, and the rational way to do that is: low-bit to high-bit because that’s the way that carry would propagate. So it means that [in] the jump instruction itself, the way the 14-bit address would be put in a serial machine is bit-backwards, as you look at it, because that’s the way you’d want to process it. Well, we were gonna built a byte-parallel machine, not bit-serial and our compromise (in the spirit of the customer and just for him), we put the bytes in backwards. We put the low-byte [first] and then the high-byte. This has since been dubbed “Little Endian” format and it’s sort of contrary to what you’d think would be natural. Well, we did it for Datapoint. As you’ll see, they never did use the [8008] chip and so it was in some sense “a mistake”, but that [Little Endian format] has lived on to the 8080 and 8086 and [is] one of the marks of this family.}}&lt;/ref&gt;&lt;ref name=&quot;Lunde2009&quot;&gt;{{cite book |first = Ken |last = Lunde |title = CJKV Information Processing |url = https://books.google.com/books?id=SA92uQqTB-AC&amp;pg=PA29 |access-date=21 May 2013 |date = 13 January 2009 |publisher = O'Reilly Media, Inc. |isbn = 978-0-596-51447-1 |page = 29 }}&lt;/ref&gt; The [[DEC Alpha]], [[Atmel AVR]], [[VAX]], the [[MOS Technology 6502]] family (including [[Western Design Center]] [[65802]] and [[65C816]]), the Zilog [[Z80]] (including [[Z180]] and [[eZ80]]), the [[Altera]] [[Nios II]], and many other processors and processor families are also little-endian.
+
+The Motorola [[Motorola 6800|6800]] / 6801, the [[6809]] and the [[Motorola 68000 series|68000 series]] of processors used the big-endian format.
+
+The Intel [[8051]], contrary to other Intel processors, expects 16-bit addresses for LJMP and LCALL in big-endian format; however, xCALL instructions store the return address onto the stack in little-endian format.&lt;ref&gt;{{cite web|url=http://www.keil.com/support/man/docs/c51/c51_xe.htm|title=Cx51 User's Guide: E. Byte Ordering|website=keil.com}}&lt;/ref&gt;
+
+[[SPARC]] historically used big-endian until version 9, which is [[#Bi-endianness|bi-endian]]; similarly early IBM POWER processors were big-endian, but the [[PowerPC]] and [[Power ISA]] descendants are now bi-endian. The [[ARM architecture]] was little-endian before version 3 when it became bi-endian.
+
+=== Current architectures ===
+The Intel [[x86]] and AMD64 / [[x86-64]] series of processors use the little-endian format. Other instruction set architectures that follow this convention, allowing only little-endian mode, include [[Nios II]], [[Andes Technology]] NDS32, and [[Qualcomm Hexagon]].
+
+Some instruction set architectures allow running software of either endianness on a bi-endian architecture. This includes ARM [[AArch64]], [[C-Sky]], [[Power ISA]], and [[RISC-V]].
+
+Solely big-endian architectures include the IBM [[z/Architecture]], [[Freescale ColdFire]] (which is [[Motorola 68000 series]]-based), Atmel [[AVR32]], and [[OpenRISC]]. The [[IBM AIX]] and [[Oracle Solaris]] operating systems on bi-endian [[Power ISA]] and [[SPARC]] run in big-endian mode; some distributions of [[Linux]] on Power have moved to little-endian mode.
+
+{{anchor|Bi-endian hardware}}
+
+=== Bi-endianness ===&lt;!-- bi, not big --&gt;
+Some architectures (including [[ARM architecture|ARM]] versions 3 and above, [[PowerPC]], [[DEC Alpha|Alpha]], [[SPARC]] V9, [[MIPS architecture|MIPS]], [[PA-RISC]], [[SuperH|SuperH SH-4]] and [[IA-64]]) feature a setting which allows for switchable endianness in data fetches and stores, instruction fetches, or both. This feature can improve performance or simplify the logic of networking devices and software. The word ''bi-endian'', when said of hardware, denotes the capability of the machine to compute or pass data in either endian format.
+
+Many of these architectures can be switched via software to default to a specific endian format (usually done when the computer starts up); however, on some systems the default endianness is selected by hardware on the motherboard and cannot be changed via software (e.g. the Alpha, which runs only in big-endian mode on the [[Cray T3E]]).
+
+Note that the term &quot;bi-endian&quot; refers primarily to how a processor treats ''data'' accesses. ''Instruction'' accesses (fetches of instruction words) on a given processor may still assume a fixed endianness, even if ''data'' accesses are fully bi-endian, though this is not always the case, such as on Intel's [[IA-64]]-based Itanium CPU, which allows both.
+
+Note, too, that some nominally bi-endian CPUs require motherboard help to fully switch endianness. For instance, the 32-bit desktop-oriented [[PowerPC]] processors in little-endian mode act as little-endian from the point of view of the executing programs, but they require the motherboard to perform a 64-bit swap across all 8 byte lanes to ensure that the little-endian view of things will apply to [[Input/Output|I/O]] devices. In the absence of this unusual motherboard hardware, device driver software must write to different addresses to undo the incomplete transformation and also must perform a normal byte swap.
+
+Some CPUs, such as many PowerPC processors intended for embedded use and almost all SPARC processors, allow per-page choice of endianness.
+
+SPARC processors since the late 1990s (&quot;SPARC v9&quot; compliant processors) allow data endianness to be chosen with each individual instruction that loads from or stores to memory.
+
+The [[ARM architecture]] supports two big-endian modes, called '''BE-8''' and '''BE-32'''.&lt;ref&gt;{{cite web|title=Differences between BE-32 and BE-8 buses|url=http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0290g/ch06s05s01.html}}&lt;/ref&gt; CPUs up to ARMv5 only support BE-32 or '''Word-Invariant''' mode. Here any naturally aligned 32-bit access works like in little-endian mode, but access to a byte or 16-bit word is redirected to the corresponding address and unaligned access is not allowed. ARMv6 introduces BE-8 or '''Byte-Invariant''' mode, where access to a single byte works as in little-endian mode, but accessing a 16-bit, 32-bit or (starting with ARMv8) 64-bit word results in a byte swap of the data. This simplifies unaligned memory access as well as memory mapped access to registers other than 32 bit.
+
+Many processors have instructions to convert a word in a register to the opposite endianness, that is, they swap the order of the bytes in a 16-, 32- or 64-bit word. All the individual bits are not reversed though.
+
+Recent Intel x86 and x86-64 architecture CPUs have a MOVBE instruction ([[Intel Core]] since generation 4, after [[Intel Atom|Atom]]),&lt;ref&gt;{{cite web |title = How to detect New Instruction support in the 4th generation Intel® Core™ processor family |url = https://software.intel.com/sites/default/files/article/405250/how-to-detect-new-instruction-support-in-the-4th-generation-intel-core-processor-family.pdf |access-date = 2 May 2017 }}&lt;/ref&gt; which fetches a big-endian format word from memory or writes a word into memory in big-endian format. These processors are otherwise thoroughly little-endian. They also already had a range of swap instructions to reverse the byte order of the contents of registers, such as when words have already been fetched from memory locations where they were in the 'wrong' endianness.
+
+===Floating point===
+{{anchor|Floating-point and endianness}}&lt;!-- This section is transcluded on the [[Double-precision floating point]] article --&gt;
+
+Although the ubiquitous x86 processors of today use little-endian storage for all types of data (integer, floating point), there are a number of hardware architectures where [[floating-point]] numbers are represented in big-endian form while integers are represented in little-endian form.&lt;ref&gt;{{citation |title=Floating-Point Formats |author-first=John J. G. |author-last=Savard |date=2018 |orig-year=2005 |work=quadibloc |url=http://www.quadibloc.com/comp/cp0201.htm |access-date=2018-07-16 |url-status=live |archive-url=https://web.archive.org/web/20180703001709/http://www.quadibloc.com/comp/cp0201.htm |archive-date=2018-07-03}}&lt;/ref&gt; There are [[ARM architecture|ARM]] processors that have half little-endian, half big-endian floating-point representation for double-precision numbers: both 32-bit words are stored in little-endian like integer registers, but the most significant one first. Because there have been many floating-point formats with no &quot;[[Computer network|network]]&quot; standard representation for them, the [[External Data Representation|XDR]] standard uses big-endian IEEE 754 as its representation. It may therefore appear strange that the widespread [[IEEE 754]] floating-point standard does not specify endianness.&lt;ref&gt;{{cite web |title = pack – convert a list into a binary representation |url = http://www.perl.com/doc/manual/html/pod/perlfunc/pack.html }}&lt;/ref&gt; Theoretically, this means that even standard IEEE floating-point data written by one machine might not be readable by another. However, on modern standard computers (i.e., implementing IEEE 754), one may in practice safely assume that the endianness is the same for floating-point numbers as for integers, making the conversion straightforward regardless of data type. (Small [[embedded system]]s using special floating-point formats may be another matter however.)
+
+===Variable length data===
+Most instructions considered so far contain the size (lengths) of its [[operand]]s within the [[operation code]]. Frequently available operand lengths are 1, 2, 4, 8, or 16 bytes.
+But there are also architectures where the length of an operand may be held in a separate field of the instruction or with the operand itself, e.&amp;nbsp;g. by means of a [[Word mark (computer hardware)|word mark]]. Such an approach allows operand lengths up to 256 bytes or even full memory size.
+The data types of such operands are [[String (computer science)|character strings]] or [[Binary coded decimal|BCD]].
+
+Machines being able to manipulate such data with one instruction (e.&amp;nbsp;g. compare, add) are e.&amp;nbsp;g. [[IBM 1401]], [[IBM 1410|1410]], [[IBM 1620|1620]], [[IBM System/370|System/3x0]], [[ESA/390]], and [[z/Architecture]], all of them of type big-endian.
+
+=== Optimization ===
+The little-endian system has the property that the same value can be read from memory at different lengths without using different addresses (even when [[byte alignment|alignment]] restrictions are imposed). For example, a 32-bit memory location with content {{code|4A 00 00 00|class=nowrap}} can be read at the same address as either [[8-bit]] (value = 4A), [[16-bit]] (004A), [[24-bit]] (00004A), or [[32-bit]] (0000004A), all of which retain the same numeric value. Although this little-endian property is rarely used directly by high-level programmers, it is often employed by code optimizers as well as by [[assembly language]] programmers.
+
+In more concrete terms, such optimizations are the equivalent of the following [[C (programming language)|C code]] returning true on most little-endian systems:
+
+&lt;syntaxhighlight lang=&quot;C&quot;&gt;
+union {
+  uint8_t u8; uint16_t u16; uint32_t u32; uint64_t u64;
+} u = { .u64 = 0x4A };
+puts(u.u8 == u.u16 &amp;&amp; u.u8 == u.u32 &amp;&amp; u.u8 == u.u64 ? &quot;true&quot; : &quot;false&quot;);
+&lt;/syntaxhighlight&gt;
+
+While not allowed by C++, such [[type punning]] code is allowed as &quot;implementation-defined&quot; by the C11 standard&lt;ref&gt;{{cite web |title = C11 standard |url = https://www.iso.org/standard/57853.html |publisher = ISO |access-date=15 August 2018 |at = Section 6.5.2.3 &quot;Structure and Union members&quot;, §3 and footnote 95 |quote = 95) If the member used to read the contents of a union object is not the same as the member last used to store a value in the object, the appropriate part of the object representation of the value is reinterpreted as an object representation in the new type as described in 6.2.6 (a process sometimes called “type punning”).}}&lt;/ref&gt; and commonly used&lt;ref&gt;{{cite web |title=3.10 Options That Control Optimization: -fstrict-aliasing |url=https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html#Type-punning |website=GNU Compiler Collection (GCC) |publisher=Free Software Foundation |accessdate=15 August 2018}}&lt;/ref&gt; in code interacting with hardware.&lt;ref&gt;{{cite mailing list |first=Linus |last=Torvalds |title=[GIT PULL] Device properties framework update for v4.18-rc1 |url=https://lkml.org/lkml/2018/6/5/769 |mailing-list=Linux Kernel|accessdate=15 August 2018 | date=5 Jun 2018 |quote=The fact is, using a union to do type punning is the traditional AND STANDARD way to do type punning in gcc. In fact, it is the *documented* way to do it for gcc, when you are a f*cking moron and use &quot;-fstrict-aliasing&quot; ...}}&lt;/ref&gt;
+
+On the other hand, in some situations it may be useful to obtain an approximation of a multi-byte or multi-word value by reading only its most significant portion instead of the complete representation; a big-endian processor may read such an approximation using the same base-address that would be used for the full value.
+
+Optimizations of this kind are not portable across systems of different endianness.
+
+===Calculation order===
+Some operations in [[positional number system]]s have a natural or preferred order in which the elementary steps are to be executed.
+This order may affect their performance on small-scale byte-addressable processors and [[microcontroller]]s.
+
+However, high-performance processors usually fetch typical multi-byte operands from memory in the same amount of time they would have fetched a single byte, so the complexity of the hardware is not affected by the byte ordering.
+
+====Operations starting at the least significant digit====
+As learnt in school, addition, subtraction, and multiplication start at the least significant digit position and [[Adder (electronics)|propagate the carry]] to the subsequent more significant position.
+Addressing multi-digit data at its first (= smallest address) byte is the predominant addressing scheme.
+When this first byte contains the least significant digit – which is equivalent to ''little''-endianness, then the implementation of these operations is marginally simpler.{{NoteTag|This observation has lead to Intel's construction of LSB-first machines, which fueled an intensive debate, which in turn stimulated Danny Cohen's article about a certain holy war — thereby introducing the term «endianness» into computer science.}}
+
+====Operations starting at the most significant digit====
+Comparison and division start at the most significant digit and propagate a possible carry to the subsequent less significant digits. For fixed-length numerical values (typically of length 1,2,4,8,16), the implementation of these operations is marginally simpler on big-endian machines.
+
+====Operands of varying length====
+In the programming language [[C (programming language)|C]] the [[Lexicographical order|lexicographical]] comparison of [[String (computer science)|character strings]] has to be done by [[Comparison of programming languages (string functions)#Compare (integer result)|subroutines]], which is frequently offered and implemented as a subroutine (e.&amp;nbsp;g. [[strcmp]]).
+
+Many big-endian processors contain hardware instructions for lexicographically comparing varying length character strings (e.&amp;nbsp;g. the IBM System/360 and its successors).
+
+====Operations without impact====
+The normal data transport by an [[Assignment (computer science)|assignment]] statement is in principle independent of the endianness of the processor.
+
+==={{anchor|Middle|Mixed|Medium}}Middle-endian===
+Numerous other orderings, generically called ''middle-endian'' or ''mixed-endian'', are possible. One such example outside of computer science is the standard American date formatting of month/day/year.
+
+===PDP-endian===
+The [[PDP-11]] is in principle a 16-bit little-endian system. The instructions to convert between floating-point and integer values in the optional floating-point processor of the PDP-11/45, PDP-11/70, and in some later processors, stored 32-bit &quot;double precision integer long&quot; values with the 16-bit halves swapped from the expected little-endian order.  The [[UNIX]] [[C (programming language)|C]] compiler used the same format for 32-bit long integers. This ordering is known as ''PDP-endian''.&lt;ref&gt;{{cite book|url=http://bitsavers.org/pdf/dec/pdp11/handbooks/PDP1145_Handbook_1973.pdf|title=PDP-11/45 Processor Handbook|page=165|year=1973|publisher=[[Digital Equipment Corporation]]}}&lt;/ref&gt;
+
+A way to interpret this endianness is that it stores a 32-bit integer as two 16-bit words in big-endian, but the words themselves are little-endian (E.g. &quot;jag cog sin&quot; would be &quot;gaj goc nis&quot;):
+
+{| cellpadding=&quot;4&quot; style=&quot;border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;&quot;
+|+Storage of a 32-bit integer, {{mono|0x0A0B0C0D}}, on a PDP-11
+|-
+| colspan=&quot;6&quot; |''increasing addresses''&amp;nbsp;&amp;nbsp;→
+|-
+|style=&quot;border: 1px solid; border-left: hidden;&quot; | {{mono|...}}
+|style=&quot;border: 1px solid;&quot; | {{mono|0B&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|0A&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|0D&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|0C&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid; border-right: hidden;&quot; | {{mono|...}}
+|-
+|style=&quot;border: 1px solid; border-left: hidden;&quot; | {{mono|...}}
+|style=&quot;border: 1px solid;&quot; colspan=&quot;2&quot; | {{mono|0A0B&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; colspan=&quot;2&quot; | {{mono|0C0D&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid; border-right: hidden;&quot; | {{mono|...}}
+|}
+
+The 16-bit values here refer to their numerical values, not their actual layout.
+
+===Honeywell Series 16===
+The Honeywell Series 16 16-bit computers, including the [[Honeywell 316]], are the opposite of the PDP-11 in storing 32-bit words in C. It stores each 16-bit word in big-endian order,{{cn|date=July 2020}} but joins them together in little-endian manner:{{cn|date=July 2020}}
+
+{| cellpadding=&quot;4&quot; style=&quot;border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;&quot;
+|+storage of a 32-bit integer, {{mono|0x0A0B0C0D}}, on a Honeywell 316
+|-
+| colspan=&quot;6&quot; |''increasing addresses''&amp;nbsp;&amp;nbsp;→
+|-
+|style=&quot;border: 1px solid; border-left: hidden;&quot; | {{mono|...}}
+|style=&quot;border: 1px solid;&quot; | {{mono|0C&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|0D&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|0A&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|0B&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid; border-right: hidden;&quot; | {{mono|...}}
+|-
+|style=&quot;border: 1px solid; border-left: hidden;&quot; | {{mono|...}}
+|style=&quot;border: 1px solid;&quot; colspan=&quot;2&quot; | {{mono|0C0D&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; colspan=&quot;2&quot; | {{mono|0A0B&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid; border-right: hidden;&quot; | {{mono|...}}
+|}
+
+===Intel IA-32 segment descriptors===
+[[Segment descriptors]] of [[IA-32]] and compatible processors keep a 32-bit base address of the segment stored in little-endian order, but in four nonconsecutive bytes, at relative positions 2, 3, 4 and 7 of the descriptor start.
+
+==Byte addressing==
+{{Main|Byte addressing}}
+Little-endian representation of integers has the significance increasing from left to right, if it is written e.&amp;nbsp;g. in a [[Core dump|storage dump]]. In other words, it appears backwards when visualized, an oddity for programmers.
+
+This behavior is mainly a concern for programmers utilizing [[FourCC]] or similar techniques that involve packing characters into an integer, so that it becomes a sequences of specific characters in memory. Let's define the notation {{code|'John'}} as simply the result of writing the characters in hexadecimal [[ASCII]] and appending {{code|0x}} to the front, and analogously for shorter sequences (a [[C syntax#Character constants|C multicharacter literal]], in Unix/MacOS style):
+
+    '  J  o  h  n  '
+ hex  4A 6F 68 6E
+ ----------------
+    -&gt; 0x4A6F686E
+
+On big-endian machines, the value appears left-to-right, coinciding with the correct string order for reading the result:
+{| cellpadding=&quot;4&quot; style=&quot;border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;&quot;
+|-
+| colspan=&quot;6&quot; |''increasing addresses''&amp;nbsp;&amp;nbsp;→
+|-
+|style=&quot;border: 1px solid; border-left: hidden;&quot; | {{mono|...}}
+|style=&quot;border: 1px solid;&quot; | {{mono|4A&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|6F&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|68&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|6E&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid; border-right: hidden;&quot; | {{mono|...}}
+|-
+|style=&quot;border: 1px solid; border-left: hidden;&quot; | {{mono|...}}
+|style=&quot;border: 1px solid;&quot; | {{mono|'J'}}
+|style=&quot;border: 1px solid;&quot; | {{mono|'o'}}
+|style=&quot;border: 1px solid;&quot; | {{mono|'h'}}
+|style=&quot;border: 1px solid;&quot; | {{mono|'n'}}
+|style=&quot;border: 1px solid; border-right: hidden;&quot; | {{mono|...}}
+|}
+
+But on a little-endian machine, one would see:
+{| cellpadding=&quot;4&quot; style=&quot;border-collapse: collapse; margin: 0.4em 0.4em; text-align: center;&quot;
+|-
+| colspan=&quot;6&quot; |''increasing addresses''&amp;nbsp;&amp;nbsp;→
+|-
+|style=&quot;border: 1px solid; border-left: hidden;&quot; | {{mono|...}}
+|style=&quot;border: 1px solid;&quot; | {{mono|6E&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|68&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|6F&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid;&quot; | {{mono|4A&lt;sub&gt;h&lt;/sub&gt;}}
+|style=&quot;border: 1px solid; border-right: hidden;&quot; | {{mono|...}}
+|-
+|style=&quot;border: 1px solid; border-left: hidden;&quot; | {{mono|...}}
+|style=&quot;border: 1px solid;&quot; | {{mono|'n'}}
+|style=&quot;border: 1px solid;&quot; | {{mono|'h'}}
+|style=&quot;border: 1px solid;&quot; | {{mono|'o'}}
+|style=&quot;border: 1px solid;&quot; | {{mono|'J'}}
+|style=&quot;border: 1px solid; border-right: hidden;&quot; | {{mono|...}}
+|}

@@ -1,0 +1,277 @@
+The [[Philosophy of science|philosopher of science]] [[Karl Popper]] noted briefly in his famous 1934 book ''[[The Logic of Scientific Discovery]]'' that “non-reproducible single occurrences are of no significance to science”.&lt;ref&gt;This citation is from the 1959 translation to English, [[Karl Popper]], ''[[The Logic of Scientific Discovery]]'', Routledge, London, 1992, p. 66.&lt;/ref&gt; The [[Statistics|statistician]] [[Ronald Fisher]] wrote in his 1935 book ''[[The Design of Experiments]]'', which set the foundations for the modern scientific practice of [[hypothesis testing]] and [[statistical significance]], that “we may say that a phenomenon is experimentally demonstrable when we know how to conduct an experiment which will rarely fail to give us statistically significant results”.&lt;ref&gt;[[Ronald Fisher]], ''[[The Design of Experiments]]'', (1971) [1935](9th ed.), Macmillan, p. 14.&lt;/ref&gt; Such assertions express a common [[dogma]] in modern science that reproducibility is a necessary condition (although not necessarily [[Necessity and sufficiency|sufficient]]) for establishing a scientific fact, and in practice for establishing scientific authority in any field of knowledge. However, as noted above by Shapin and Schaffer, this dogma is not well-formulated quantitatively, such as statistical significance for instance, and therefore it is not explicitly established how many times must a fact be replicated to be considered reproducible.
+
+==Replicability, repeatability==
+Two major steps are naturally distinguished in connection with reproducibility of experimental or observational studies:
+When new data is obtained in the attempt to achieve it, the term ''replicability'' is often used, and the new study is a ''replication'' or ''replicate'' of the original one. Obtaining the same results when analyzing the data set of the original study again with the same procedures, many authors use the term ''reproducibility'' in a narrow, technical sense coming from its use in computational research.
+''Repeatability'' is related to the ''repetition'' of the experiment within the same study by the same researchers.
+Reproducibility in the original, wide sense is only acknowledged if a replication performed by an ''independent researcher team'' is successful.
+
+Unfortunately, the terms reproducibility and replicability appear in the literature also with reversed meaning.
+&lt;ref&gt;{{cite web|title=Terminologies for Reproducible Research|last1=Barba|first1=Lorena A.|url=https://arxiv.org/pdf/1802.03311.pdf|access-date=2020-10-15}}&lt;/ref&gt;
+&lt;ref&gt;{{cite web|title=Replicability vs. reproducibility — or is it the other way round?|last1=Liberman|first1=Mark|url=https://languagelog.ldc.upenn.edu/nll/?p=21956|access-date=2020-10-15}}&lt;/ref&gt;
+
+==Measures of reproducibility and repeatability==
+In chemistry, the terms reproducibility and repeatability are used with a specific quantitative meaning:
+In inter-laboratory experiments, a concentration or other quantity of a chemical substance is measured repeatedly in different laboratories to assess the variability of the measurements. Then, the standard deviation of the difference between two values obtained within the same laboratory is called repeatability. The standard deviation for the difference between two measurement from different laboratories is called ''reproducibility''.&lt;ref name=&quot;ASTM E177&quot;&gt;{{cite web|url=https://www.astm.org/Standards/E177.htm |title=Standard Practice for Use of the Terms Precision and Bias in ASTM Test Methods |year=2014 |author=Subcommittee E11.20 on Test Method Evaluation and Quality Control |publisher=ASTM International |id=ASTM E177}}{{Paywall}}&lt;/ref&gt;
+These measures are related to the more general concept of [[variance component]]s in [[metrology]].
+
+==Reproducible research==
+
+===Reproducible research method===
+The term ''reproducible research'' refers to the idea that scientific results should be documented in such a way that their deduction is fully transparent. This requires a detailed description of the methods used to obtain the data&lt;ref&gt;{{Cite journal|last=King|first=Gary|date=1995|title=Replication, Replication|journal=PS: Political Science and Politics|volume=28|issue=3|pages=444–452|doi=10.2307/420301|jstor=420301|issn=1049-0965|url=http://nrs.harvard.edu/urn-3:HUL.InstRepos:4266312}}&lt;/ref&gt;&lt;ref&gt;{{cite journal|last1=Kühne |first1=Martin |last2=Liehr |first2=Andreas W. |year=2009 |title=Improving the Traditional Information Management in Natural Sciences |doi=10.2481/dsj.8.18 |journal=Data Science Journal |volume=8 |issue=1 |pages=18–27 |url=https://datascience.codata.org/jms/article/download/dsj.8.18/198 |doi-access=free}}&lt;/ref&gt;
+and making the full dataset and the code to calculate the results easily accessible.&lt;ref&gt;{{cite journal|last1=Fomel |first1=Sergey |authorlink2=Jon Claerbout |last2=Claerbout |first2=Jon |year=2009 |title=Guest Editors' Introduction: Reproducible Research |journal=Computing in Science and Engineering |volume=11 |issue=1 |pages=5–7 |doi=10.1109/MCSE.2009.14 |bibcode=2009CSE....11a...5F}}&lt;/ref&gt;&lt;ref name=&quot;buckheit1995&quot; /&gt;&lt;ref&gt;{{cite journal|title=The Yale Law School Round Table on Data and Core Sharing: &quot;Reproducible Research&quot; |journal=Computing in Science and Engineering |volume=12 |issue=5 |pages=8–12 |doi=10.1109/MCSE.2010.113 |year=2010 |doi-access=free}}&lt;/ref&gt;&lt;ref&gt;{{cite journal|last1=Marwick |first1=Ben |year=2016 |title=Computational reproducibility in archaeological research: Basic principles and a case study of their implementation |journal=Journal of Archaeological Method and Theory |volume=24 |issue=2 |pages=424–450 |doi=10.1007/s10816-015-9272-9 |s2cid=43958561 |url=https://ro.uow.edu.au/smhpapers/4034}}&lt;/ref&gt;&lt;ref&gt;{{cite journal|last1=Goodman|first1=Steven N.|last2=Fanelli|first2=Daniele|last3=Ioannidis|first3=John P. A.|title=What does research reproducibility mean?|journal=Science Translational Medicine|date=1 June 2016|volume=8|issue=341|pages=341ps12|doi=10.1126/scitranslmed.aaf5027|pmid=27252173|doi-access=free}}&lt;/ref&gt; 
+&lt;ref&gt;{{Cite journal|last1=Harris J.K|last2=Johnson K.J|last3=Combs T.B|last4=Carothers B.J|last5=Luke D.A|last6=Wang X|date=2019|title=Three Changes Public Health Scientists Can Make to Help Build a Culture of Reproducible Research|journal=Public Health Rep. Public Health Reports|volume=134|issue=2|pages=109–111|issn=0033-3549|oclc=7991854250|doi=10.1177/0033354918821076|pmid=30657732|pmc=6410469}}&lt;/ref&gt;
+This is the essential part of [[open science]].
+
+To make any research project computationally reproducible, general practice involves all data and files being clearly separated, labelled, and documented. All operations should be fully documented and automated as much as practicable, avoiding manual intervention where feasible. The workflow should be designed as a sequence of smaller steps that are combined so that the intermediate outputs from one step directly feed as inputs into the next step. Version control should be used as it lets the history of the project be easily reviewed and allows for the documenting and tracking of changes in a transparent manner.
+
+A basic workflow for reproducible research involves data acquisition, data processing and data analysis. Data acquisition primarily consists of obtaining primary data from a primary source such as surveys, field observations, experimental research, or obtaining data from an existing source. Data processing involves the processing and review of the raw data collected in the first stage, and includes data entry, data manipulation and filtering and may done using software. The data should be digitized and prepared for data analysis. Data may be analysed with the use of software to interpret or visualise statistics or data to produce the desired results of the research such as quantitative results including figures and tables. The use of software and automation enhances the reproducibility of research methods.
+&lt;ref&gt;{{cite book |last1=Kitzes |first1=Justin |last2=Turek |first2=Daniel |last3=Deniz |first3=Fatma |title=The practice of reproducible research case studies and lessons from the data-intensive sciences |date=2018 |publisher=University of California Press |location=Oakland, California |isbn=9780520294745 |pages=19 - 30 |url=http://www.jstor.org/stable/10.1525/j.ctv1wxsc7}}&lt;/ref&gt;
+
+There are systems that facilitate such documentation, like the [[R (programming language)|R]] [[Markdown]] language&lt;ref&gt;{{cite journal|last1=Marwick|first1=Ben|last2=Boettiger|first2=Carl|last3=Mullen|first3=Lincoln|title=Packaging data analytical work reproducibly using R (and friends)|journal=The American Statistician|volume=72|date=29 September 2017|pages=80–88|doi=10.1080/00031305.2017.1375986|s2cid=125412832|url=http://ro.uow.edu.au/cgi/viewcontent.cgi?article=6445&amp;context=smhpapers}}&lt;/ref&gt; 
+or the [[Jupyter]] notebook.&lt;ref&gt;{{cite book|chapter=Jupyter Notebooks-a publishing format for reproducible computational workflows |chapterurl=https://eprints.soton.ac.uk/403913/1/STAL9781614996491-0087.pdf |title=Positioning and Power in Academic Publishing: Players, Agents and Agendas |editor-last1=Loizides |editor-first1=F |editor-last2=Schmidt |editor-first2=B |publisher=IOS Press |last1=Kluyver |first1=Thomas |last2=Ragan-Kelley |first2=Benjamin |last3=Perez |first3=Fernando |last4=Granger |first4=Brian |last5=Bussonnier
+|first5=Matthias |last6=Frederic |first6=Jonathan |last7=Kelley
+|first7=Kyle |last8=Hamrick |first8=Jessica |last9=Grout |first9=Jason |last10=Corlay |first10=Sylvain |booktitle=Proceedings of the 20th International Conference on Electronic Publishing |pages=87–90 |year=2016}}&lt;/ref&gt;
+The [[Open Science Framework]] provides a platform and useful tools to support reproducible research.
+
+===Reproducible research in practice===
+Psychology has seen a renewal of internal concerns about irreproducible results (see the entry on [[replicability crisis]] for empirical results on success rates of replications). Researchers showed in a 2006 study that, of 141 authors of a publication from the American Psychology Association (APA) empirical articles, 103 (73%) did not respond with their data over a six-month period.&lt;ref&gt;{{Cite journal|last1=Wicherts |first1=J. M. |last2=Borsboom |first2=D. |last3=Kats |first3=J. |last4=Molenaar |first4=D. |title=The poor availability of psychological research data for reanalysis |doi=10.1037/0003-066X.61.7.726 |journal=American Psychologist |volume=61 |issue=7 |pages=726–728 |year=2006 |pmid=17032082}}&lt;/ref&gt; In a follow up study published in 2015, it was found that 246 out of 394 contacted authors of papers in APA journals did not share their data upon request (62%).&lt;ref&gt;{{Cite journal|last1=Vanpaemel |first1=W. |last2=Vermorgen |first2=M. |last3=Deriemaecker |first3=L. |last4=Storms |first4=G. |title=Are we wasting a good crisis? The availability of psychological research data after the storm |doi=10.1525/collabra.13 |journal=Collabra |volume=1 |issue=1 |pages=1–5 |year=2015 |doi-access=free}}&lt;/ref&gt; In a 2012 paper, it was suggested that researchers should publish data along with their works, and a dataset was released alongside as a demonstration.&lt;ref&gt;{{Cite journal|last1=Wicherts |first1=J. M. |last2=Bakker |first2=M. |doi=10.1016/j.intell.2012.01.004 |title=Publish (your data) or (let the data) perish! Why not publish your data too? |journal=Intelligence |volume=40 |issue=2 |pages=73–76 |year=2012}}&lt;/ref&gt; In 2017, an article published in ''[[Scientific Data (journal)|Scientific Data]]'' suggested that this may not be sufficient and that the whole analysis context should be disclosed.&lt;ref&gt;{{cite journal|last1=Pasquier|first1=Thomas|last2=Lau|first2=Matthew K.|last3=Trisovic|first3=Ana|last4=Boose|first4=Emery R.|last5=Couturier|first5=Ben|last6=Crosas|first6=Mercè|last7=Ellison|first7=Aaron M.|last8=Gibson|first8=Valerie|last9=Jones|first9=Chris R.|last10=Seltzer|first10=Margo|title=If these data could talk|journal=Scientific Data|date=5 September 2017|volume=4|pages=170114|doi=10.1038/sdata.2017.114|pmid=28872630|pmc=5584398|bibcode=2017NatSD...470114P}}&lt;/ref&gt; 
+
+In economics, concerns have been raised in relation to the credibility and reliability of published research. In other sciences, reproducibility is regarded as fundamental and is often a prerequisite to research being published, however in economic sciences it is not seen as a priority of the greatest importance. Most peer-reviewed economic journals do not take any substantive measures to ensure that published results are reproducible, however, the top economics journals have been moving to adopt mandatory data and code archives.&lt;ref&gt;{{cite journal |last1=McCullough |first1=Bruce |title=Open Access Economics Journals and the Market for Reproducible Economic Research |journal=Economic analysis and policy |date=March 2009 |volume=39 |issue=1 |pages=117 - 126 |doi=10.1016/S0313-5926(09)50047-1}}&lt;/ref&gt; There is low or no incentives for researchers to share their data, and authors would have to bear the costs of compiling data into reusable forms. Economic research is often not reproducible as only a portion of journals have adequate disclosure policies for datasets and program code, and even if they do, authors frequently do not comply with them or they are not enforced by the publisher. A Study of 599 articles published in 37 peer-reviewed journals revealed that while some journals have achieved significant compliance rates, significant portion have only partially complied, or not complied at all. On an article level, the average compliance rate was 47.5%; and on a journal level, the average compliance rate was 38%, ranging from 13% to 99%. &lt;ref&gt;{{cite journal |last1=Vlaeminck |first1=Sven |last2=Podkrajac |first2=Felix |title=Journals in Economic Sciences: Paying Lip Service to Reproducible Research? |journal=IASSIST quarterly |date=2017-12-10 |volume=41 |issue=1-4 |page=16 |doi=10.29173/iq6 |url=https://iassistquarterly.com/index.php/iassist/article/view/6/905}}&lt;/ref&gt;
+
+A 2018 study published in the journal ''[[PLOS ONE]]'' found that 14.4% of a sample of public health researchers had shared their data or code or both.&lt;ref&gt;{{Cite journal|date=2018|title=Use of reproducible research practices in public health: A survey of public health analysts.|journal=PLOS ONE|volume=13|issue=9|pages=e0202447|issn=1932-6203|oclc=7891624396|bibcode=2018PLoSO..1302447H|last1=Harris|first1=Jenine K.|last2=Johnson|first2=Kimberly J.|last3=Carothers|first3=Bobbi J.|last4=Combs|first4=Todd B.|last5=Luke|first5=Douglas A.|last6=Wang|first6=Xiaoyan|doi=10.1371/journal.pone.0202447|pmid=30208041|pmc=6135378}}&lt;/ref&gt; 
+
+There have been initiatives to improve reporting and hence reproducibility in the medical literature for many years, beginning with the [[Consolidated Standards of Reporting Trials|CONSORT]] initiative, which is now part of a wider initiative, the [[EQUATOR Network]]. 
+This group has recently turned its attention to how better reporting might reduce waste in research,&lt;ref&gt;{{Cite web|title=Research Waste/EQUATOR Conference {{!}} Research Waste |url=http://researchwaste.net/research-wasteequator-conference/ |website=researchwaste.net |url-status=dead |archive-url=https://web.archive.org/web/20161029015313/http://researchwaste.net:80/research-wasteequator-conference/ |archive-date=29 October 2016}}&lt;/ref&gt; especially biomedical research.
+
+Reproducible research is key to new discoveries in [[pharmacology]]. A Phase I discovery will be followed by Phase II reproductions as a drug develops towards commercial production. In recent decades Phase II success has fallen from 28% to 18%. A 2011 study found that 65% of medical studies were inconsistent when re-tested, and only 6% were completely reproducible.&lt;ref&gt;{{Cite journal|last1=Prinz |first1=F. |last2=Schlange |first2=T. |last3=Asadullah |first3=K. |doi=10.1038/nrd3439-c1 |title=Believe it or not: How much can we rely on published data on potential drug targets? |journal=Nature Reviews Drug Discovery |volume=10 |issue=9 |page=712 |year=2011 |pmid=21892149 |doi-access=free}}&lt;/ref&gt;
+
+==Noteworthy irreproducible results==
+[[Hideyo Noguchi]] became famous for correctly identifying the bacterial agent of [[syphilis]], but also claimed that he could culture this agent in his laboratory. Nobody else has been able to produce this latter result.&lt;ref name=&quot;Tan Furubayashi 2014 pp. 550–551&quot;&gt;{{cite journal|last1=Tan |first1=SY |last2=Furubayashi |first2=J |title=Hideyo Noguchi (1876-1928): Distinguished bacteriologist |journal=Singapore Medical Journal |volume=55 |issue=10 |year=2014 |issn=0037-5675 |pmid=25631898 |pmc=4293967 |doi=10.11622/smedj.2014140 |pages=550–551}}&lt;/ref&gt;
+
+In March 1989, [[University of Utah]] chemists Stanley Pons and Martin Fleischmann reported the production of excess heat that could only be explained by a nuclear process (&quot;[[cold fusion]]&quot;). The report was astounding given the simplicity of the equipment: it was essentially an [[electrolysis]] cell containing [[heavy water]] and a [[palladium]] [[cathode]] which rapidly absorbed the [[deuterium]] produced during electrolysis. The news media reported on the experiments widely, and it was a front-page item on many newspapers around the world (see [[science by press conference]]). Over the next several months others tried to replicate the experiment, but were unsuccessful.&lt;ref&gt;{{cite journal|title=Physicists Debunk Claim Of a New Kind of Fusion|newspaper=New York Times|last=Browne|first=Malcolm|url=http://partners.nytimes.com/library/national/science/050399sci-cold-fusion.html|date=3 May 1989|accessdate=3 February 2017}}&lt;/ref&gt;
+
+[[Nikola Tesla]] claimed as early as 1899 to have used a high frequency current to light gas-filled lamps from over {{convert|25|mi|km}} away [[Wireless energy transfer|without using wires]]. In 1904 he built [[Wardenclyffe Tower]] on [[Shoreham, New York|Long Island]] to demonstrate means to send and receive power without connecting wires. The facility was never fully operational and was not completed due to economic problems, so no attempt to reproduce his first result was ever carried out.&lt;ref&gt;Cheney, Margaret (1999), ''Tesla, Master of Lightning'', New York: Barnes &amp; Noble Books,  {{ISBN|0-7607-1005-8}}, pp. 107.; &quot;Unable to overcome his financial burdens, he was forced to close the laboratory in 1905.&quot;&lt;/ref&gt;
+
+Other examples which contrary evidence has refuted the original claim:
+* [[Stimulus-triggered acquisition of pluripotency]], revealed to be the result of fraud
+* [[GFAJ-1]], a bacterium that could purportedly incorporate [[arsenic biochemistry|arsenic]] into its DNA in place of phosphorus
+* [[MMR vaccine controversy]] – a study in ''[[The Lancet]]'' claiming the MMR vaccine caused autism was revealed to be fraudulent
+* [[Schön scandal]] – semiconductor &quot;breakthroughs&quot; revealed to be fraudulent
+* [[Power posing]] – a [[social psychology]] phenomenon that went viral after being the subject of a very popular [[TED talk]], but was unable to be replicated in dozens of studies&lt;ref name=&quot;NYT_2017_Cuddy&quot;&gt;{{cite news |url=https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html |title=When the Revolution Came for Amy Cuddy |first=Susan |last=Dominus |date=October 18, 2017 |work=New York Times Magazine}}&lt;/ref&gt;
+
+==See also==
+{{col-begin}}
+{{col-break}}
+* [[Metascience]]
+* [[Accuracy]]
+* [[ANOVA gauge R&amp;R]]
+* [[Contingency (philosophy)|Contingency]]
+* [[Corroboration]]
+* [[Reproducible builds]]
+* [[Falsifiability]]
+* [[Hypothesis]]
+{{col-break}}
+* [[Measurement uncertainty]]
+* [[Pathological science]]
+* [[Pseudoscience]]
+* [[Replication crisis]]
+* ''[[ReScience C]]'' (journal)
+* [[Retraction#Notable retractions]]
+* [[Tautology (logic)|Tautology]]
+* [[Testability]]
+{{col-end}}
+
+==References==
+{{Reflist|refs=
+
+&lt;ref name=&quot;buckheit1995&quot;&gt;{{Cite report | author=Buckheit, Jonathan B. | author2=Donoho, David L. | author2-link=David Donoho | date=May 1995 | title=WaveLab and Reproducible Research | url=https://statistics.stanford.edu/sites/default/files/EFS%20NSF%20474.pdf | publisher=[[Stanford University]], Department of Statistics | location=California, United States | accessdate=5 January 2015 |id=Technical Report No. 474 }}&lt;/ref&gt;
+
+}}
+
+* Turner, William (1903), ''History of Philosophy'', Ginn and Company, Boston, MA,  [http://www2.nd.edu/Departments//Maritain/etext/hop.htm Etext]. See especially:  [http://www2.nd.edu/Departments//Maritain/etext/hop11.htm &quot;Aristotle&quot;].
+* [http://goldbook.iupac.org/R05305.html Definition], by [[International Union of Pure and Applied Chemistry]]
+
+==Further reading==
+* {{cite web|title = Scientists on Science: Reproducibility|date = October 2006|url = https://arstechnica.com/science/2006/10/5744/|author = Timmer, John|work = [[Ars Technica]]}}
+* {{cite web|title = Is redoing scientific research the best way to find truth? During replication attempts, too many studies fail to pass muster |date = January 2015 |url = https://www.sciencenews.org/article/redoing-scientific-research-best-way-find-truth |author = Saey, Tina Hesman |work = [[Science News]]}}  &quot;Science is not irrevocably broken, [epidemiologist John Ioannidis] asserts. It just needs some improvements. &quot;Despite the fact that I’ve published papers with pretty depressive titles, I’m actually an optimist,” Ioannidis says. “I find no other investment of a society that is better placed than science.”&quot;
+
+==External links==
+{{Wiktionary}}
+*[https://cTuning.org/ae Reproducible papers with artifacts]
+*[https://www.nist.gov/pml/nist-technical-note-1297 Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results]
+*[https://goldbook.iupac.org/terms/view/R05305 Definition of reproducibility in the IUPAC Gold Book]
+*[https://www.reproducibleresearch.net ReproducibleResearch.net]
+*[https://cTuning.org cTuning.org - reproducible research and experimentation in computer engineering]
+*[https://osf.io/9f6gx/ Transparency and Openness Promotion (TOP) Guidelines]
+*[https://www.cos.io/our-services/top-guidelines Center for Open Science TOP Guidelines]
+
+{{Medical research studies}}
+
+[[Category:Measurement]]
+[[Category:Philosophy of science]]
+[[Category:Psychometrics]]
+[[Category:Scientific method]]
+[[Category:Tests]]
+[[Category:Validity (statistics)]]
+[[Category:Discovery and invention controversies]]
+[[Category:Metascience]]</text>
+      <sha1>9c4t4i2g34lrdldx8wg9nzeiv67jxzt</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Chess clock</title>
+    <ns>0</ns>
+    <id>47653</id>
+    <revision>
+      <id>990951625</id>
+      <parentid>983578080</parentid>
+      <timestamp>2020-11-27T13:11:10Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 5 templates: del empty params (12×); hyphenate params (2×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="12725" xml:space="preserve">{{short description|Two adjacent clocks with stop/start buttons}}
+{{for|the instrument or person who keeps track of the time during a sporting event|Timekeeper}}
+[[File:Schachuhr mechanisch.jpg|thumb|A chess clock]]
+A '''chess clock''' consists of two adjacent [[clock]]s with buttons to stop one clock while starting the other, so that the two clocks never run simultaneously.&lt;ref&gt;{{Cite web|url=http://www.chesscorner.com/tutorial/chess_clock/chess_clock.htm|title=The Chess Clock|website=www.chesscorner.com|access-date=2020-01-06}}&lt;/ref&gt; Chess clocks are used in chess and other two-player [[game]]s where the players move in turn. The purpose is to keep track of the total time each player takes for their own moves, and ensure that neither player overly delays the game.
+
+Chess clocks were first used extensively in tournament [[chess]], and are often called '''game clocks'''.  The first time that game clocks were used in a chess tournament was in the [[London 1883 chess tournament|London 1883 tournament]].&lt;ref&gt;{{cite book |title=Goldene Schachzeiten: Erinnerungen |last=Vidmar |first=Milan |author-link=Milan Vidmar |year=1960 |publisher=W. de Gruyter |isbn=978-3-11-002095-3|pages=10}}&lt;/ref&gt;  Their use has since spread to tournament [[Scrabble]], [[shogi]], [[Go (board game)|go]], and nearly every competitive two-player [[board game]], as well as other types of games. 
+In a tournament, the arbiter typically places all clocks in the same orientation, so that they can easily assess games that need attention at later stages.
+
+The simplest [[time control]] is &quot;sudden death&quot;, in which players must make a predetermined number of moves in a certain amount of time or forfeit the game immediately.
+A particularly popular variant is [[blitz chess]], in which each player is given a short time, such as five minutes, on the clock in which to play the entire game.
+
+The players may take more or less time over any individual move. The opening moves in chess are often played quickly due to their familiarity, which leaves the players more time to consider more complex and unfamiliar positions later. It is not unusual in slow chess games for a player to leave the table, but the clock of the absent player continues to run if it is their turn, or starts to run if their opponent makes a move.
+
+== Analog game clocks ==
+[[File:Garde Schachuhr 1.jpg|thumb|A typical analog chess clock]]
+
+[[Analog clock]]s are equipped with a &quot;flag&quot; that falls to indicate the exact moment the player's time has expired. Analog clocks use mechanical buttons. Pressing the button on one player's side physically stops the movement of that player's clock and releases the hold on the opponent's.
+
+The drawbacks of the mechanical clocks include accuracy and matching of the two clocks, and matching of the indicators (flags) of time expiration. Additional time cannot easily be added for more complex time controls, especially those that call for an increment or delay on every move, such as some forms of [[byoyomi]]. However, a malfunctioning analog clock is a less serious event than a malfunctioning digital clock.&lt;ref&gt;{{cite web |url=http://main.uschess.org/content/view/7328/28/ |title= FAQ (Starting Out) - Learn About Chess |access-date=2008-01-19 |date=1999-11-30 |publisher=United States Chess Federation}}&lt;/ref&gt;
+
+==Early development of digital game clocks==
+[[File:DGT 2010 digital chess clock.ajb.jpg|alt=A brown chess clock with blue buttons along the bottom. A digital display shows the time remaining for each side|thumb|Digital chess clock]]
+In 1973, to address the issues with analog clocks, '''Bruce Cheney''', a [[Cornell University]] Electrical Engineering student and chess player, created the first digital chess clock as a project for an undergraduate EE course.&lt;ref&gt;&quot;Early Bird&quot;, ''[[Chess Life]]'', April 1992.&lt;/ref&gt; Typical of most inventions, it was crude compared to the products on the market many years later and was limited by the technology that existed at the time. For example, the display was done with red LEDs. LEDs require significant power, and as a result, the clock had to be plugged into a wall outlet. The high cost of LEDs at the time meant that only one set of digits could be displayed, that of the player whose turn it was to move. This meant that each player's time had to be multiplexed to the display when their time was running. In 1973, [[Large-Scale Integration#SSI, MSI and LSI|LSI]] chips were not readily or cheaply available, so all the multiplexing and logic were done using chips that consisted of four two-input [[Transistor–transistor logic|TTL NAND gates]], which resulted in excessive power consumption. Being plugged into the wall is obviously a major drawback, but had one advantage: the timebase for the clock was driven off of a rectified version of 60 cycle AC current. Each player had a separate counter, and, in a parallel to the original mechanical architecture, one player's counter was disabled while the other's was running. The clock only had one mode: time ran forward. It could be reset, but not set. It did not count the number of moves. But it successfully addressed the original goals of the project (accurate and matched timing).
+
+The first commercially available digital chess clock was patented in 1975 by '''Joseph Meshi''' and '''Jeffrey R. Ponsor'''. They named it the Micromate-80.&lt;ref&gt;{{cite patent |country=US |number=4062180 |status=patent |title=Electronic chess clock |gdate= 1977-12-13 |fdate= 1975-07-31 |invent1= Meshi, Joseph |invent2= Ponsor, Jeffrey R.}}; filed July 1975.&lt;/ref&gt; There was only one made&lt;ref&gt;{{Cite web|title=Chess clock - Rules and strategy of chess games|url=http://gambiter.com/chess/chess_clock.html|access-date=2020-10-15|website=gambiter.com}}&lt;/ref&gt; and this was tested by chess players in multiple tournaments. Three years later a much-improved Micromate-180 was produced alongside Meshi's MBA Thesis, &quot;Demand Analysis for a New Product (The Digital Chess Clock)&quot;, at [[San Diego State University]], while Meshi and Ponsor continued to develop digital gaming.&lt;ref&gt;{{cite patent |country=US |number=4247925 |status=patent |title=Game microcomputer |gdate= 1981-01-27 |fdate= 1978-07-13 |invent1= Meshi, Joseph |invent2= Ponsor, Jeffrey R.}}; filed January 1978.&lt;/ref&gt;
+
+==Fischer clock and related designs {{anchor|Fischer clock}}==
+[[Image:Olimpiada Bled Slovenija deska.jpg|thumb|Digital chess clock connected to a board that automatically senses when moves have been made]]
+Digital clocks and Internet gaming have spurred a wave of experimentation with more varied and complex time controls than the traditional standards. [[Time control]] is commonly used in modern chess in many different [[Time control#Methodology|methodologies]]. One particularly notable development, which has gained quite wide acceptance in chess, was proposed by former world champion [[Bobby Fischer]], who in 1988 filed for US patent 4,884,255 (awarded in 1989) for a new type of digital chess clock.&lt;ref&gt;{{cite patent |country=US |number=4884255|status=patent |title=Digital chess clock |gdate= November 28, 1989|pridate=August 5, 1988|fdate= August 5, 1988|invent1= Fisher, Robert J.}}, filed August 5, 1988.&lt;/ref&gt; Fischer's digital clock gave each player a fixed period of time at the start of the game and then added a small amount after each move. Joseph Meshi called this &quot;Accumulation&quot; as it was a main feature of his patented Micromate-180 (US Patent 4,247,925 1978). This became the linchpin of Fischer's clock patented ten years later. In this way, the players would never be desperately short of time. This timing method is occasionally called &quot;accumulation&quot; but it is usually called &quot;increment&quot;, &quot;bonus&quot;, or &quot;Fischer&quot;.
+
+The increment time control was first used in the privately organised [[Fischer–Spassky (1992 match)|1992 Fischer–Spassky match]], and quickly became popular in the wider chess world, and was used in the [[FIDE World Chess Championship 1998]].&lt;ref&gt;[http://theweekinchess.com/html/twic161.html The Week in Chess 161], [[The Week in Chess]], 8-Dec-1997&lt;/ref&gt; Nowadays most top level tournaments and tournaments outside the United States use Fischer's system. An increasing number of lower level tournaments in the US are also starting to use Fischer's system. Other aspects of Fischer's patent, such as a synthesized voice announcing how much time the players have, thus eliminating the need for them to keep looking at the clock, have not been adopted.
+
+On March 10, 1994, a patent application was filed by inventors Frank A. Camaratta Jr. of Huntsville, Alabama, and William Goichberg of Salisbury Mills, New York, for a game timer especially suitable for playing the game of chess, which employed a (simple) &quot;delay&quot; feature. The game timer provides, among other features, a user-definable delay between the time the activation button is pressed and the time that the activated clock actually begins to count down. United States Patent 5,420,830 was issued on May 10, 1995, and subsequently assigned to the United States Chess Federation by the inventors. As with the Fischer clock, the benefit of the delay clock is to reduce the likelihood that a player with positional and/or material superiority will lose a match solely because of the expiration of time on that player's time clock. Delay is still widely used in the U.S., although increment is becoming more popular there.
+
+==Timing methods==
+{{main|Time control}}
+'''Increment''' (also known as bonus and Fischer since former World Chess Champion [[Bobby Fischer]] patented this timing method)—a specified amount of time is added to the players main time each move, unless the player's main time ran out before they completed their move. For example, if the time control is G/90;inc30 (ninety minutes of main time per player with a thirty-second increment each move), each player gets an additional thirty seconds added to their main time for each move, unless the player's main time ran out first. Under [[FIDE]] and US Chess rules, the increment is applied to the first move as well. For example, for G/3;inc2 each player starts with three minutes and two seconds on the first move. Not all digital clocks automatically give the increment for move one and thus for those that don't, the increment time has to be added manually to the main time so each player gets the increment for move one.
+
+'''Bronstein delay''' (named after Grandmaster [[David Bronstein]] who invented this timing method)—this timing method adds time but unlike increment not always the maximum amount of time is added. If a player expends more than the specified delay, then the entire delay is added to the player's clock but if a player moves faster than the delay, only the exact amount of time expended by the player is added. For example, if the delay is ten seconds and a player uses ten or more seconds for a move, ten seconds is added after they complete their move. If the player uses five seconds for a move, five seconds is added after they complete their move. This ensures that the main time left on the clock can never increase even if a player makes fast moves. As with increment, the delay time is applied to the first move under FIDE and US Chess rules.
+
+'''Simple delay''' (also known as US delay)—with this timing method, the clock waits for the delay period each move before the player's main time starts countdown down. For example, if the delay is ten seconds, the clock waits for ten seconds each move before the main time starts counting down.
+
+Bronstein delay and Simple delay are mathematically equivalent. The advantage of Bronstein delay is that a player can always quickly see exactly how much time they have for their next move without having to mentally add the main and delay time. The advantage of Simple delay is that a player can always tell whether the time that is counting down is the delay time or the main time. Simple delay is the form of delay most often used in the US, while Bronstein delay is the form of delay most often used in most other countries.
+
+==See also==
+* [[Chess equipment]]
+
+==References==
+{{Reflist}}
+
+==Further reading==
+* {{cite journal
+ | author = Keith Ammann
+ |date=April 2012
+ | title = Winding Down: This year's rule changes may begin the last chapter in the history of the analog clock
+ | journal = Chess Life 
+ }}
+
+==External links==
+{{Commons category|Chess clocks}}
+{{Wiktionary}}
+*{{US patent|4884255}} for Fischer's clock
+* [http://ChessBullet.com/ Online Chess Clock / Chess Timer Example, used for Fast Chess]
+* [http://chessclock.org/ Online chess clock that implements Fischer and Bronstein timing methods]
+
+{{chess}}
+
+[[Category:Chess equipment]]
+[[Category:Timers]]
+[[Category:Gaming]]</text>
+      <sha1>l51oovwdet9thff2gqaobqm7xnnzuo3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Satellite communications</title>
+    <ns>0</ns>
+    <id>47655</id>
+    <redirect title="Communications satellite" />
+    <revision>
+      <id>946326651</id>
+      <parentid>491192195</parentid>
+      <timestamp>2020-03-19T13:54:41Z</timestamp>
+      <contributor>
+        <username>Paine Ellsworth</username>
+        <id>9092818</id>
+      </contributor>
+      <comment>add [[WP:RCAT|rcat]]s</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="148" xml:space="preserve">#Redirect [[Communications satellite]]
+
+{{Rcat shell|
+{{R from modification}}
+{{R related}}
+{{R printworthy}}
+}}
+[[Category:Satellite broadcasting]]</text>
+      <sha1>brxqb763ddcpyv9hurp9nn3u27vf3eu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Kamov</title>
+    <ns>0</ns>
+    <id>47656</id>
+    <revision>
+      <id>988694190</id>
+      <parentid>988693875</parentid>
+      <timestamp>2020-11-14T18:38:53Z</timestamp>
+      <contributor>
+        <ip>2A02:A314:813F:1000:0:0:0:1</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3029" xml:space="preserve">{{Infobox company
+|name = Kamov
+|logo = Kamov.png
+|type = [[joint stock company]]
+|slogan =
+|foundation = {{Start date and age|1940}}
+|founder = [[Nikolai Il'yich Kamov]]
+|location =  [[Lyubertsy]], [[Russia]]
+|num_employees =
+|industry = [[aerospace]] 
+|products = [[helicopter]]s
+| revenue           = {{wikidata revenue|revenue|USD}}{{wikidata revenue|revenue|ref}}
+| revenue_year      = {{wikidata revenue|revenue|year}}
+| operating_income  = {{wikidata revenue|operating_income|USD}}{{wikidata revenue|operating_income|ref}}
+| income_year       = {{wikidata revenue|operating_income|year}}
+| net_income        = {{wikidata revenue|net_income|USD}}{{wikidata revenue|net_income|ref}}
+| net_income_year   = {{wikidata revenue|net_income|year}}
+| assets            = {{wikidata revenue|assets|USD}}{{wikidata revenue|assets|ref}}
+| assets_year       = {{wikidata revenue|assets|year}}
+| equity            = {{wikidata revenue|equity|USD}}{{wikidata revenue|equity|ref}}
+| equity_year       = {{wikidata revenue|equity|year}}
+|parent = [[Russian Helicopters]]
+|homepage = https://www.rhc.aero/structure/nhc
+}}
+'''JSC Kamov''' ({{lang-ru|Камов}}) is a [[Russia]]n [[rotorcraft]] [[Aerospace manufacturer|manufacturing company]] based in [[Lyubertsy]], Russia.
+
+The Kamov Design Bureau ([[OKB|design office]] prefix Ka) has more recently specialised in compact [[helicopter]]s with [[coaxial rotors]], suitable for naval service and high-speed operations.

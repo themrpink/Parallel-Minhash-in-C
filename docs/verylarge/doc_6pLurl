@@ -1,0 +1,794 @@
+===Open source (2005 until March 2010)===
+From 2005–10, Sun began to release the source code for development builds of Solaris under the [[Common Development and Distribution License]] (CDDL) via the [[OpenSolaris]] project.  This code was based on the work being done for the post-Solaris 10 release (code-named &quot;Nevada&quot;; eventually released as Oracle Solaris 11).  As the project progressed, it grew to encompass most of the necessary code to compile an entire release, with a few exceptions.&lt;ref&gt;{{cite web
+  | url = http://hub.opensolaris.org/bin/view/Main/general_faq#HWhatsourcecodedoestheOpenSolarisprojectinclude
+  |archive-url = https://web.archive.org/web/20120102124622/http://hub.opensolaris.org/bin/view/Main/general_faq#HWhatsourcecodedoestheOpenSolarisprojectinclude3F
+  |archive-date = 2012-01-02
+  | title = What source code does the OpenSolaris project include?
+  | accessdate = May 13, 2010
+  | work = OpenSolaris FAQ
+  | publisher = OpenSolaris Project
+}}&lt;/ref&gt;
+
+===Post-Oracle closed source (March 2010 to present)===
+When Sun was acquired by [[Oracle Corporation|Oracle]] in 2010, the OpenSolaris project was discontinued after the board became unhappy with Oracle's stance on the project.&lt;ref&gt;{{cite web
+  | url = http://techie-buzz.com/foss/oracle-has-killed-opensolaris.html
+  | title = Oracle Has Killed OpenSolaris
+  | publisher = Techie Buzz
+  | date = August 14, 2010
+  | accessdate = July 17, 2013
+}}&lt;/ref&gt; In March 2010, the previously freely available Solaris 10 was placed under a restrictive license that limited the use, modification and redistribution of the operating system.&lt;ref&gt;{{cite web
+  | last = Paul
+  | first = Ryan
+  | date = March 30, 2010
+  | url = https://arstechnica.com/information-technology/2010/03/solaris-10-no-longer-free-as-in-beer-now-a-90-day-trial
+  | title = Solaris 10 no longer free as in beer, now a 90-day trial
+  | website = Ars Technica
+  | accessdate = July 17, 2013
+}}&lt;/ref&gt; The license allowed the user to download the operating system free of charge, through the [[Oracle Technology Network]], and use it for a 90-day trial period. After that trial period had expired the user would then have to purchase a support contract from Oracle to continue using the operating system.
+
+With the release of Solaris 11 in 2011, the license terms changed again. The new license allows Solaris 10 and Solaris 11 to be downloaded free of charge from the Oracle Technology Network and used without a support contract indefinitely; however, the license only expressly permits the user to use Solaris as a development platform and expressly forbids commercial and &quot;production&quot; use.&lt;ref&gt;{{cite web
+  | url = http://www.oracle.com/technetwork/licenses/solaris-cluster-express-license-167852.html
+  | title = Oracle Technology Network Developer License Terms for Oracle Solaris, Oracle Solaris Cluster and Oracle Solaris Express
+  | publisher = Oracle Corporation
+  | date = July 13, 2011
+  | accessdate = July 17, 2013
+}}&lt;/ref&gt; Educational use is permitted in some circumstances. From the OTN license:
+
+{{quote|If You are an educational institution vested with the power to confer official high school, associate, bachelor, master and/or doctorate degrees, or local equivalent, (&quot;Degree(s)&quot;), You may also use the Programs as part of Your educational curriculum for students enrolled in Your Degree program(s) solely as required for the conferral of such Degree (collectively &quot;Educational Use&quot;).}}
+
+When Solaris is used without a support contract it can be upgraded to each new &quot;point release&quot;; however, a support contract is required for access to patches and updates that are released monthly.&lt;ref&gt;{{cite web
+  | url = http://www.oracle.com/technetwork/articles/servers-storage-admin/howto-update-11dot1-ips-1866781.html
+  | title = How to Update to Oracle Solaris 11.1 Using the Image Packaging System
+  | publisher = Oracle Corporation
+  | date = November 30, 2012
+  | accessdate = July 17, 2013
+}}&lt;/ref&gt;
+
+==Version history==
+[[File:Solaris OS logo.svg|thumb|200px|Solaris logo introduced with Solaris 10 and used until Oracle's acquisition of Sun]]
+Notable features of Solaris include [[DTrace]], [[Doors (computing)|Doors]], [[Service Management Facility]], [[Solaris Containers]], [[Solaris Multiplexed I/O]], [[Solaris Volume Manager]], [[ZFS]], and [[Solaris Trusted Extensions]].
+
+Updates to Solaris versions are periodically issued. In the past, these were named after the month and year of their release, such as &quot;Solaris 10 1/13&quot;; as of Solaris 11, sequential update numbers are appended to the release name with a period, such as &quot;Oracle Solaris 11.4&quot;.
+
+In ascending order, the following versions of Solaris have been released:
+
+{{Version|t|show=111100}}
+
+{| class=&quot;wikitable&quot;
+|-
+! rowspan=2 | Solaris version
+! rowspan=2 | SunOS version
+! colspan=2 | Release date
+! rowspan=&quot;2&quot; | End of support&lt;ref&gt;{{cite web
+  | url = http://www.oracle.com/us/support/lifetime-support/index.html
+  | title = Lifetime Support Policies, see Oracle and Sun System Software and Operating Systems (PDF)
+  | publisher = Oracle Corporation
+  | accessdate = April 18, 2013
+}}&lt;/ref&gt;
+! rowspan=2 | License form
+! rowspan=2 | Major new features
+|-
+! SPARC
+! x86
+|-
+| {{version|o| 1.x}}
+| 4.1.x
+| align=center | 1991–1994
+| align=center | –
+| align=center | September 2003
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| SunOS 4 rebranded as Solaris 1 for marketing purposes. See [[SunOS]] article for more information.
+|-
+| {{version|o| 2.0}}
+| 5.0
+| align=center | June 1992
+| align=center | –
+| align=center | January 1999
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| Preliminary release (primarily available to developers only), '''support for only the sun4c architecture'''. First appearance of [[NIS+]].&lt;ref&gt;{{cite web
+ |url         = http://www.sunmanagers.org/archives/1992/1133.html
+ |title       = SUMMARY: Solaris 2.0 vs 2.1
+ |accessdate  = September 10, 2006
+ |author      = Demetrios Stellas
+ |date        = September 3, 1992
+ |publisher   = Sun Managers mailing list
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20061004080321/http://www.sunmanagers.org/archives/1992/1133.html
+ |archivedate = October 4, 2006
+ |df          = mdy-all
+}}&lt;/ref&gt;
+|-
+| {{version|o| 2.1}}
+| 5.1
+| align=center | December 1992
+| align=center | May 1993
+| align=center | April 1999
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| '''Support for sun4 and sun4m architectures added'''; '''first Solaris x86 release'''. '''First Solaris 2 release to support''' [[symmetric multiprocessing|SMP]].
+|-
+| {{version|o| 2.2}}
+| 5.2
+| align=center | May 1993
+| align=center | –
+| align=center | May 1999
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| SPARC-only release. '''First to support sun4d architecture'''. First to support [[Thread (computer science)|multithreading]] libraries ([[Unix International|UI]] threads API in libthread).&lt;ref&gt;{{cite web
+  | url = http://home.mit.bme.hu/~meszaros/edu/oprendszerek/segedlet/unix/2_folyamatok_es_utemezes/solaris_multithread.pdf
+  | title = Multithreading in the Solaris Operating Environment
+  | accessdate = August 19, 2012
+  | date = May 17, 2002
+  | publisher = Sun Microsystems
+  | format = PDF
+}}&lt;/ref&gt;
+|-
+| {{version|o| 2.3}}
+| 5.3
+| align=center | November 1993
+| align=center | –
+| align=center | June 2002
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| SPARC-only release. [[OpenWindows]] 3.3 switches from [[NeWS]] to [[Display PostScript]] and drops [[SunView]] support. Support added for autofs and [[CacheFS]] filesystems.
+|-
+| {{version|o| 2.4}}
+| 5.4
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| November 1994
+| align=center | September 2003
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| First unified SPARC/x86 release. Includes [[Motif (software)|OSF/Motif]] runtime support.
+|-
+| {{version|o| 2.5}}
+| 5.5
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| November 1995
+| align=center | December 2003
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| '''First to support UltraSPARC''' and include CDE, [[Network File System (protocol)|NFSv3]] and NFS/TCP. Dropped [[sun4]] ([[VMEbus]]) support. POSIX.1c-1995 [[pthreads]] added. [[Doors (computing)|Doors]] added but undocumented.&lt;ref&gt;{{cite web
+ |url         = http://www.ocf.berkeley.edu/solaris/versions/solaris/2.5.html
+ |title       = Solaris 2.5
+ |work        = OCF Solaris History
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20051118141731/http://www.ocf.berkeley.edu/solaris/versions/solaris/2.5.html
+ |archivedate = November 18, 2005
+ |df          = mdy-all
+}}&lt;/ref&gt;
+|-
+| {{version|o| 2.5.1}}
+| 5.5.1
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| May 1996
+| align=center | September 2005
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| '''The only Solaris release that supports PowerPC''';&lt;ref&gt;There was a later PPC port with help from Sun, based on OpenSolaris that was withdrawn because the related hardware could not be produced in a [[RoHS]] compliant variant&lt;/ref&gt; '''Ultra Enterprise support added'''; user and group IDs (uid_t, gid_t) expanded to 32 bits,&lt;ref&gt;{{cite web
+ |url         = http://www.ocf.berkeley.edu/solaris/versions/solaris/2.5.1.html
+ |title       = Solaris 2.5.1
+ |work        = OCF Solaris History
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20050912194850/http://www.ocf.berkeley.edu/solaris/versions/solaris/2.5.1.html
+ |archivedate = September 12, 2005
+ |df          = mdy-all
+}}&lt;/ref&gt; also included processor sets&lt;ref&gt;{{cite web
+  | url = http://developers.sun.com/solaris/articles/solaris_processor.html
+  | title = Solaris Processor Sets Made Easy
+  | author = Matthias Laux
+  | publisher = Sun Microsystems Inc
+  | date = June 2001
+  | accessdate = March 10, 2007
+}}&lt;/ref&gt; and early resource management technologies.
+|-
+| {{version|o| 2.6}}
+| 5.6
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| July 1997
+| align=center | July 2006
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| Includes [[Kerberos (protocol)|Kerberos]] 5, [[Pluggable Authentication Modules|PAM]], [[TrueType]] fonts, WebNFS, [[large file support]], enhanced [[procfs]]. '''SPARCserver 600MP series support dropped'''.&lt;ref&gt;{{cite web
+ |url         = http://www.ocf.berkeley.edu/solaris/versions/solaris/2.6.html
+ |title       = Solaris 2.6
+ |work        = OCF Solaris History
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20051113144231/http://www.ocf.berkeley.edu/solaris/versions/solaris/2.6.html
+ |archivedate = November 13, 2005
+ |df          = mdy-all
+}}&lt;/ref&gt;
+|-
+| {{version|o| 7}}
+| 5.7
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| November 1998
+| align=center | August 2008
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| '''The first 64-bit UltraSPARC release'''. Added native support for file system meta-data logging ([[Unix File System|UFS]] logging). '''Dropped [[Micro Channel Architecture|MCA]] support on x86 platform'''. Sun dropped the prefix &quot;2.&quot; in the Solaris version number, leaving &quot;Solaris 7.&quot; Last update was Solaris 7 11/99.&lt;ref&gt;{{cite web
+ |url         = http://www.ocf.berkeley.edu/solaris/versions/solaris/2.7.html
+ |title       = Solaris 7
+ |work        = OCF Solaris History
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20050907220232/http://www.ocf.berkeley.edu/solaris/versions/solaris/2.7.html
+ |archivedate = September 7, 2005
+ |df          = mdy-all
+}}&lt;/ref&gt;
+|-
+| {{version|o| 8}}
+| 5.8
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| February 2000
+| align=center | March 2012
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| Includes [[Solaris Multiplexed I/O|Multipath I/O]], [[Solaris Volume Manager|Solstice DiskSuite]],&lt;ref&gt;{{cite web|url=http://www.sun.com/software/solaris/8/ds/ds-sol8oe/index.xml|title=Solaris 8 Operating Environment Data Sheet|publisher=Sun Microsystems|archiveurl=https://web.archive.org/web/20090803063632/http://www.sun.com/software/solaris/8/ds/ds-sol8oe/index.xml |archivedate=August 3, 2009|accessdate=November 24, 2014}}&lt;/ref&gt; [[IP network multipathing|IPMP]], first support for [[IPv6]] and [[IPsec]] (manual keying only), mdb [[Modular Debugger]]. Introduced [[Role-Based Access Control]] (RBAC); '''sun4c support removed'''. Last update is Solaris 8 2/04.&lt;ref&gt;{{cite web
+  | url = http://www.ocf.berkeley.edu/solaris/versions/solaris/8.html
+  | title = Solaris 8
+  | accessdate = September 10, 2006
+  | work = SunOS &amp; Solaris Version History (OCF Solaris History)
+  | publisher = UC Berkeley Open Computing Facility
+  | archiveurl = https://web.archive.org/web/20060907000356/http://www.ocf.berkeley.edu/solaris/versions/solaris/8.html &lt;!-- Bot retrieved archive --&gt; 
+  | archivedate = September 7, 2006
+}}&lt;/ref&gt;
+|-
+| {{version|o| 9}}
+| 5.9
+| align=center | May 28, 2002
+| align=center | January 10, 2003
+| align=center | October 2014
+| align=center | [[Solaris (operating system)#Traditional operating system license (1982 to 2004)|Traditional license]]
+| iPlanet Directory Server, Resource Manager, [[Extended file attributes#Solaris|extended file attributes]], [[Internet key exchange|IKE]] IPsec keying, and Linux compatibility added; OpenWindows dropped, '''sun4d support removed'''. Most current update is Solaris 9 9/05 HW.&lt;ref&gt;{{cite web|title=Solairis Operating System - Releases|url=http://www.oracle.com/technetwork/server-storage/solaris/overview/releases-jsp-140987.html|publisher=Oracle|accessdate=February 4, 2015}}&lt;/ref&gt;
+|-
+| {{version|co| 10}}
+| 5.10
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| {{Start date and age|2005|01|31}}
+| align=center | January 2024
+| before Oracle acquisition in March 2010, open source under CDDL&lt;br/&gt;&lt;br/&gt;after March 2010, [[Solaris (operating system)#Post-Oracle closed source (March 2010 to present)|Post-Oracle closed source]]
+| '''Includes x86-64 (AMD64/Intel 64) support''', [[DTrace]] (Dynamic Tracing), [[Solaris Containers]], [[Service Management Facility]] (SMF) which replaces [[init]].d scripts, [[Network File System (protocol)|NFSv4]]. [[Least privilege]] security model. '''Support for sun4m and UltraSPARC I processors removed'''. '''Support for EISA-based PCs removed'''. Adds [[Java Desktop System]] (based on [[GNOME]]) as default desktop.&lt;ref&gt;{{cite web
+  | url = http://docs.sun.com/app/docs/doc/817-0547
+  | title = Solaris 10 What's New
+  | publisher = Sun Microsystems
+}}&lt;/ref&gt;
+* Solaris 10 1/06 (known internally as &quot;U1&quot;) added the [[GRand Unified Bootloader|GRUB]] bootloader for x86 systems, [[iSCSI]] Initiator support and [[fcinfo]] command-line tool.
+* Solaris 10 6/06 (&quot;U2&quot;) added the [[ZFS]] filesystem.
+* Solaris 10 11/06 (&quot;U3&quot;) added [[Solaris Trusted Extensions]] and '''[[Logical Domains]] (sun4v)'''.
+* Solaris 10 8/07 (&quot;U4&quot;) added [[Samba (software)|Samba]] Active Directory support,&lt;ref&gt;{{cite web
+ |url         = http://blogs.sun.com/timthomas/entry/samba_and_swat_in_solaris
+ |title       = SAMBA and SWAT in Solaris 10 Update 4 (Solaris 10 8/07)
+ |work        = As Good A Place As Any: Tim Thomas' Blog
+ |accessdate  = December 1, 2007
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20080312212825/http://blogs.sun.com/timthomas/entry/samba_and_swat_in_solaris
+ |archivedate = March 12, 2008
+ |df          = mdy-all
+}}&lt;/ref&gt; IP Instances (part of the [[OpenSolaris Network Virtualization and Resource Control]] project), [[iSCSI]] Target support and Solaris Containers for [[Linux]] Applications (based on [[branded zones]]), enhanced version of the [[Resource Capping Daemon]] (rcapd).
+* Solaris 10 5/08 (&quot;U5&quot;) added CPU capping for Solaris Containers, performance improvements, [[SpeedStep]] support for Intel processors and [[PowerNow!]] support for AMD processors.&lt;ref&gt;{{cite web
+ |url         = http://blogs.sun.com/mhaywood/entry/introducing_speedstep_on_solaris
+ |title       = Introducing Enhanced Intel SpeedStep to Solaris
+ |accessdate  = May 6, 2008
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20080501125300/http://blogs.sun.com/mhaywood/entry/introducing_speedstep_on_solaris
+ |archivedate = May 1, 2008
+ |df          = mdy-all
+}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+ |url        = http://blogs.sun.com/mhaywood/entry/powernow_for_solaris
+ |archive-url = https://archive.today/20121026115238/http://blogs.sun.com/mhaywood/entry/powernow_for_solaris
+ |url-status = dead
+ |archive-date = October 26, 2012
+ |title      = AMD PowerNow! for Solaris
+ |publisher  = Sun Microsystems
+ |accessdate = May 6, 2008
+}}&lt;/ref&gt;
+* Solaris 10 10/08 (&quot;U6&quot;) added boot from ZFS and can use ZFS as its root file system. Solaris 10 10/08 also includes virtualization enhancements including the ability for a Solaris Container to automatically update its environment when moved from one system to another, Logical Domains support for dynamically reconfigurable disk and network I/O, and paravirtualization support when Solaris 10 is used as a guest OS in Xen-based environments such as [[Sun xVM]] Server.&lt;ref&gt;{{cite web
+  | url = http://www.sun.com/software/solaris/faqs_general.jsp
+  | title = General FAQs for Solaris 10
+  | publisher = Sun Microsystems
+  | accessdate = October 23, 2008
+}}&lt;/ref&gt;
+* Solaris 10 5/09 (&quot;U7&quot;) added performance and power management support for Intel [[Nehalem (microarchitecture)|Nehalem]] processors, container cloning using ZFS cloned file systems, and performance enhancements for ZFS on [[solid-state drive]]s.
+* Solaris 10 10/09 (&quot;U8&quot;) added user and group level ZFS quotas, ZFS cache devices and nss_ldap shadowAccount Support, improvements to patching performance.&lt;ref&gt;{{cite web
+  | url = http://docs.sun.com/app/docs/doc/821-0382
+  | title = Solaris 10 10/09 What's New
+  | publisher = Sun Microsystems
+  | accessdate = October 9, 2009
+}}&lt;/ref&gt;
+* Solaris 10 9/10 (&quot;U9&quot;) added physical to zone migration, ZFS triple parity RAID-Z and Oracle Solaris Auto Registration.&lt;ref&gt;{{cite web
+  | url = http://download.oracle.com/docs/cd/E18752_01/html/821-1840/index.html
+  | title = Oracle Solaris 10 9/10 What's New
+  | publisher = Oracle Corporation
+  | accessdate = September 8, 2010
+}}&lt;/ref&gt;
+* Solaris 10 8/11 (&quot;U10&quot;) added ZFS speedups and new features, Oracle Database optimization, faster reboot on SPARC system.&lt;ref&gt;{{cite web
+  | url = http://docs.oracle.com/cd/E23823_01/html/821-2730/index.html
+  | title = Oracle Solaris 10 8/11 What's New
+  | publisher = Oracle Corporation
+  | accessdate = August 12, 2011
+}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+  | url = https://blogs.oracle.com/solaris/entry/oracle_solaris_10_8_11
+  | title = Oracle Solaris 10 8/11 Released
+  | publisher = Oracle Corporation
+  | accessdate = September 28, 2012
+}}&lt;/ref&gt;
+* Solaris 10 1/13 (&quot;U11&quot;) see release notes.&lt;ref&gt;{{cite web
+  | url = http://docs.oracle.com/cd/E26505_01/html/E27003/index.html
+  | title = Oracle Solaris 10 1/13 What's New
+  | accessdate = February 10, 2013
+}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+  | url = https://blogs.oracle.com/solaris/entry/introducing_oracle_solaris_10_1
+  | title = Introducing Oracle Solaris 10 1/13
+  | publisher = Oracle Corporation
+  | accessdate = February 10, 2013
+}}&lt;/ref&gt;
+|-
+| {{version|o|11 Express 2010.11}}
+| 5.11
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| {{Start date and age|2010|11|15}}
+| align=center | November 2011
+| align=center | [[Solaris (operating system)#Post-Oracle closed source (March 2010 to present)|Post-Oracle closed source]]
+| Adds new packaging system (IPS – Image Packaging System) and associated tools, ZFS (only) for boot, 1&amp;nbsp;GB RAM min., x86, Solaris 10 Containers, network virtualization and QoS, virtual consoles, ZFS encryption and deduplication, fast reboot,&lt;ref&gt;{{cite web
+ |url         = http://dlc.sun.com/osol/docs/content/SYSADV1/ghsbc.html
+ |title       = x86: Introducing Fast Reboot
+ |accessdate  = August 20, 2011
+ |author      = Sun Microsystems
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20110816095353/http://dlc.sun.com/osol/docs/content/SYSADV1/ghsbc.html
+ |archivedate = August 16, 2011
+ |df          = mdy-all
+}}&lt;/ref&gt; updated [[GNOME]]. Removed [[Xsun]], CDE,&lt;ref&gt;{{cite web
+  | url = https://docs.oracle.com/cd/E23824_01/pdf/E24456.pdf
+  | title = Transitioning From Oracle® Solaris 10 to Oracle Solaris 11
+  | accessdate = August 19, 2012
+  | publisher = Oracle Corporation
+  | date = March 2012
+}}&lt;/ref&gt; and the &lt;code&gt;/usr/ucb&lt;/code&gt; BSD-compatible commands{{citation needed|date=October 2015}}
+|-
+| {{version|o|11}}
+| 5.11
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| {{Start date and age|2011|11|09}}
+| {{dunno}}
+| align=center | [[Solaris (operating system)#Post-Oracle closed source (March 2010 to present)|Post-Oracle closed source]]
+| New features and enhancements (compared to Solaris 10) in software packaging, network virtualization, server virtualization, storage, security and hardware support:
+* Packaging: Image Packaging System, network and local package repositories; Automated Installer to automated provisioning, including Zones; Distro Constructor to create [[ISO 9660]] filesystem images;
+* Network: network virtualization (vNICs, vSwitches, vRouters) and [[Quality of Service|QoS]], Exclusive–IP default for Zones, the &lt;tt&gt;dladm&lt;/tt&gt; utility to manage data links, the &lt;tt&gt;ipadm&lt;/tt&gt; utility to manage [[Internet Protocol|IP]] configuration (including [[IP network multipathing|IPMP]]), [[ProFTPD]] and enhancements;
+* Zones: Immutable (read–only) Zones, NFS servers in zones, delegated administration, P2V pre–flight check, the &lt;tt&gt;zonestat&lt;/tt&gt; utility coupled with the &lt;tt&gt;libzonestat&lt;/tt&gt; dynamically linked library;
+* Security: &lt;tt&gt;root&lt;/tt&gt; as a role, &lt;tt&gt;netcat&lt;/tt&gt; and enhancements;
+* Storage: ZFS shadow migration, ZFS backup/restore with NDMP, recursive ZFS send;
+* Hardware support: SPARC T4, critical threads, SDP enabled and optimized, including support for Zones, SR-IOV, Intel AVX;
+* '''UEFI Boot support''' (Solaris 11.1 onwards on x86)
+* '''UltraSPARC II, III, IV series support removed'''; [[IA-32]] '''architecture support removed'''.&lt;ref&gt;{{cite web
+  | url = http://docs.oracle.com/cd/E23824_01/
+  | title = Oracle Solaris 11 Information Library, 11/11 Release
+  | date = July 1, 2012
+  | accessdate = August 19, 2012
+  | publisher = Oracle Corporation
+}}&lt;/ref&gt;
+|-
+| {{version|o|11.1}}
+| 5.11
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| {{Start date and age|2012|10|03}}
+| {{dunno}}
+| align=center | [[Solaris (operating system)#Post-Oracle closed source (March 2010 to present)|Post-Oracle closed source]]
+| New features and enhancements:&lt;ref&gt;{{cite web
+  | url = http://www.oracle.com/technetwork/server-storage/solaris11/overview/solaris11-1-1845817.html
+  | title = Announcing Oracle Solaris 11.1
+  | date = April 18, 2013
+  | accessdate = April 18, 2013
+  | publisher = Oracle Corporation
+}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+  | url = http://blogs.oracle.com/solaris/entry/announcing_oracle_solaris_11_1
+  | title = Announcing Oracle Solaris 11.1 – solaris blog
+  | date = April 18, 2013
+  | accessdate = April 18, 2013
+  | publisher = Oracle Corporation
+}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+  | url = http://blogs.oracle.com/solaris/entry/oracle_solaris_11_1_blog
+  | title = Oracle Solaris 11.1 Blog Post Roundup 
+  | date = April 18, 2013
+  | accessdate = April 18, 2013
+  | publisher = Oracle Corporation
+}}&lt;/ref&gt;
+* Installer enhancements
+* [[Service Management Facility]] configuration improvements
+* Zone improvements
+* [[Address space layout randomization]]
+* Per-file authorization to edit administrative files using pfedit command&lt;ref&gt;{{cite web|url=http://www.oracle.com/technetwork/server-storage/solaris11/documentation/solaris11-1-whatsnew-1732377.pdf|title=Oracle Solaris 11.1 — What's New|date=March 21, 2013|publisher=Oracle}}&lt;/ref&gt;
+|-
+| {{version|o|11.2}}
+| 5.11
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| {{Start date and age|2014|04|29}}
+| {{dunno}}
+| align=center | [[Solaris (operating system)#Post-Oracle closed source (March 2010 to present)|Post-Oracle closed source]]
+| New features and enhancements:&lt;ref&gt;{{cite press release
+  | url = http://www.oracle.com/us/corporate/pressrelease/solaris-11-2-042914
+  | title = Oracle Introduces Oracle Solaris 11.2—Engineered for Cloud
+  | date = April 29, 2014
+  | publisher = Oracle Corporation
+}}&lt;/ref&gt;
+* Integrated hypervisor
+* Kernel Zones
+* Full [[OpenStack]] distribution
+* Automation of software patches and updates, and other packaging improvements&lt;ref&gt;{{cite web
+  | url = http://timsfoster.wordpress.com/2014/04/30/ips-changes-in-solaris-11-2/
+  | title = IPS changes in Solaris 11.2
+  | first1 = Tim
+  | last1 = Foster
+  | date = April 30, 2014
+}}&lt;/ref&gt;
+* [[Software-defined networking]]
+|-
+| {{version|co|11.3}}
+| 5.11
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| {{Start date and age|2015|10|26}}
+| align=center | January 2024
+| align=center | [[Solaris (operating system)#Post-Oracle closed source (March 2010 to present)|Post-Oracle closed source]]
+| New features and enhancements:&lt;ref&gt;{{cite press release
+  | url = https://docs.oracle.com/cd/E53394_01/html/E54847/index.html
+  | title = What's New in Oracle® Solaris 11.3
+  | date = October 2015
+  | publisher = Oracle Corporation
+}}&lt;/ref&gt;
+* [[Live migration]] of Solaris Kernel Zones
+* InfiniBand support for Kernel Zones
+* Virtual Clocks for Solaris Zones
+* [[ZFS]] [[LZ4 (compression algorithm)|LZ4]]
+* SMB 2.1
+* Private VLAN 
+* VNICs on IPoIB
+* Periodic and Scheduled Services
+* Tailored Compliance Reporting 
+* OpenBSD 5.5 Packet Filter
+* Deferred Dump
+* Integration with OpenStack Juno
+|-
+| {{version|c|11.4}}
+| 5.11
+| colspan=&quot;2&quot; style=&quot;text-align:center;&quot;| {{Start date and age|2018|08|28}}
+| align=center | November 2034
+| align=center | [[Solaris (operating system)#Post-Oracle closed source (March 2010 to present)|Post-Oracle closed source]]
+| New features and enhancements:&lt;ref&gt;{{cite press release
+  | url = https://docs.oracle.com/cd/E37838_01/html/E60974/index.html
+  | title = What's New in Oracle® Solaris 11.4
+  | date = August 2018
+  | publisher = Oracle Corporation
+}}&lt;/ref&gt;
+* '''CPUs with OSA2011 required(SPARC T4, SPARC64 X, or better)'''&lt;ref&gt;{{Cite web|url=https://support.oracle.com/knowledge/Sun%20Microsystems/2382427_1.html |title=Oracle Solaris 11.3 Support (Doc ID 2382427.1)| date=2020-03-09}}&lt;/ref&gt;
+
+* [[ZFS]] Top-Level Device Removal. &lt;code&gt;zpool remove&lt;/code&gt;
+*Solaris Web Dashboard and Analytics (sstore)
+*Native Zones: Live Zone Reconfiguration for Datasets
+*[[GNOME Shell]] instead of the [[GNOME 2]] desktop&lt;ref name=&quot;g3-in-solaris-11.4&quot;&gt;{{Cite web|last=Coopersmith|first=Alan|date=|title=Using GNOME 3 in Oracle Solaris 11.4|url=https://blogs.oracle.com/solaris/using-gnome-3-in-oracle-solaris-114|url-status=live|archive-url=|archive-date=|access-date=|website=|publisher=[[Oracle Solaris Blog]]}}&lt;/ref&gt;
+|}
+
+{{Timeline Solaris}} &lt;!-- To edit go to: https://en.wikipedia.org/wiki/Template:Timeline_Solaris --&gt;
+
+A more comprehensive summary of some Solaris versions is also available.&lt;ref&gt;{{cite web
+  | url = http://www.ocf.berkeley.edu/solaris/versions
+  | title = SunOS &amp; Solaris Version History
+  | accessdate = September 10, 2006
+  | publisher = UC Berkeley Open Computing Facility
+  | archiveurl = https://web.archive.org/web/20060708215337/http://www.ocf.berkeley.edu/solaris/versions &lt;!-- Bot retrieved archive --&gt; 
+  | archivedate = July 8, 2006
+}}&lt;/ref&gt; Solaris releases are also described in the Solaris 2 FAQ.&lt;ref&gt;{{cite web
+ |url         = http://www.science.uva.nl/pub/solaris/solaris2/Q1.5.html
+ |title       = What machines does Solaris 2.x run on?
+ |accessdate  = September 10, 2006
+ |author      = Casper Dik
+ |date        = April 26, 2005
+ |work        = Solaris 2 FAQ
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20060901012636/http://www.science.uva.nl/pub/solaris/solaris2/Q1.5.html
+ |archivedate = September 1, 2006
+ |df          = mdy-all
+}}&lt;/ref&gt;
+
+==Development release==
+The underlying Solaris codebase has been under continuous development since work began in the late 1980s on what was eventually released as Solaris 2.0. Each version such as Solaris 10 is based on a snapshot of this development codebase, taken near the time of its release, which is then maintained as a derived project. Updates to that project are built and delivered several times a year until the next official release comes out.
+
+The Solaris version under development by Sun since the release of Solaris 10 in 2005, was [[codename]]d ''Nevada'', and is derived from what is now the [[OpenSolaris]] codebase.
+
+In 2003, an addition to the Solaris development process was initiated. Under the program name ''Software Express for Solaris'' (or just ''Solaris Express''), a binary release based on the current development basis was made available for download on a monthly basis, allowing anyone to try out new features and test the quality and stability of the OS as it progressed to the release of the next official Solaris version.&lt;ref&gt;{{cite press release
+  | url = http://www.sun.com/smi/Press/sunflash/2003-09/sunflash.20030916.5.xml
+  | date = September 16, 2003
+  | title = 10 New Network Services Components Featured in Sun's Java Enterprise System; New Software Express Program Accelerates Customer Access to Future Technologies
+  | accessdate = August 16, 2008
+  | publisher = Sun Microsystems
+}}&lt;/ref&gt; A later change to this program introduced a quarterly release model with support available, renamed ''Solaris Express Developer Edition'' (SXDE).
+
+In 2007, Sun announced ''Project Indiana'' with several goals, including providing an open source binary distribution of the OpenSolaris project, replacing SXDE.&lt;ref&gt;{{cite web
+  |url = http://sun.com/featured-articles/2007-0731/feature/
+  |title = Project Indiana
+  |accessdate = December 1, 2007
+  |author = Robert Baty
+  |date = July 31, 2007
+  |publisher = Sun Microsystems
+}}&lt;/ref&gt; The first release of this distribution was ''OpenSolaris 2008.05''.
+
+&lt;span id=&quot;SXCE&quot;&gt;
+The ''Solaris Express Community Edition'' (SXCE)&lt;/span&gt; was intended specifically for OpenSolaris developers.&lt;ref&gt;{{cite web
+ |url         = http://opensolaris.org/os/downloads/on/
+ |title       = Operating System/Networking (ON) Download Center
+ |accessdate  = December 12, 2006
+ |work        = OpenSolaris web site
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20061210234421/http://opensolaris.org/os/downloads/on/
+ |archivedate = December 10, 2006
+ |df          = mdy-all
+}}&lt;/ref&gt; It was updated every two weeks until it was discontinued in January 2010, with a recommendation that users migrate to the OpenSolaris distribution.&lt;ref&gt;{{cite web
+ |url         = http://mail.opensolaris.org/pipermail/opensolaris-announce/2010-January/001356.html
+ |title       = Update on SXCE
+ |accessdate  = March 21, 2010
+ |author      = Derek Cicero
+ |date        = January 6, 2010
+ |publisher   = Sun Microsystems
+ |url-status     = dead
+ |archiveurl  = https://web.archive.org/web/20100312151007/http://mail.opensolaris.org/pipermail/opensolaris-announce/2010-January/001356.html
+ |archivedate = March 12, 2010
+ |df          = mdy-all
+}}&lt;/ref&gt; Although the download license seen when downloading the image files indicates its use is limited to personal, educational and evaluation purposes, the license acceptance form displayed when the user actually installs from these images lists additional uses including commercial and production environments.
+
+SXCE releases terminated with build 130 and OpenSolaris releases terminated with build 134 a few weeks later. The next release of OpenSolaris based on build 134 was due in March 2010, but it was never fully released, though the packages were made available on the package repository. Instead, Oracle renamed the binary distribution Solaris 11 Express, changed the license terms and released build 151a as 2010.11 in November 2010.
+
+==Open source derivatives==
+===Current===
+{{See also|OpenSolaris#Derivatives|illumos#Current distributions|Comparison of OpenSolaris distributions}}
+* [[illumos]] – A fully open source fork of the project, started in 2010 by a community of Sun OpenSolaris engineers and [[Nexenta OS]]. Note that OpenSolaris was not 100% open source: Some drivers and some libraries were property of other companies that Sun (now Oracle) licensed and was not able to release.
+* [[OpenIndiana]] – A project under the illumos umbrella aiming &quot;''...&amp;nbsp;to become the de facto OpenSolaris distribution installed on production servers where security and bug fixes are required free of charge.''&quot;&lt;ref name=&quot;OIWikiFAQ&quot;&gt;{{Citation
+ | title       = Frequently Asked Questions
+ | url       = http://wiki.openindiana.org:8080/display/oi/Frequently+Asked+Questions
+ | publisher       = [[OpenIndiana]]
+ | accessdate       = 2012-12-29
+ | archive-url       = https://web.archive.org/web/20110209094047/http://wiki.openindiana.org:8080/display/oi/Frequently+Asked+Questions
+ | archive-date       = February 9, 2011
+ | url-status       = dead
+ }}&lt;/ref&gt;
+* SchilliX&lt;ref&gt;{{Citation
+ | title       = Preliminary Release
+ | url         = http://schillix.sourceforge.net/
+ | publisher   = Jörg Schilling
+ | date        = 2017-01-17
+ | accessdate  = 2017-09-09
+}}&lt;/ref&gt; – The first LiveCD released after OpenSolaris code was opened to public.
+* napp-it&lt;ref&gt;{{Citation
+ | title       = napp-it ZFS server appliance
+ | url         = http://www.napp-it.org/index_en.html
+ | publisher   = 
+ | date        = 
+ | accessdate  = 2012-12-29
+}}&lt;/ref&gt; – A webmanaged ZFS storage appliance based on Solaris and the free forks like OmniOS with a Free and Pro edition.
+* [[NexentaStor]] – Optimized for storage workloads, based on Nexenta OS.
+* [[Dyson (operating system)|Dyson]] – illumos kernel with [[GNU]] userland and packages from [[Debian]]. Strives to become an official Debian port.
+* [[SmartOS]] – Virtualization centered derivative from [[Joyent]].
+
+===Discontinued===
+* [[OpenSolaris]] – A project initiated by [[Sun Microsystems]], discontinued after the acquisition by Oracle.
+* [[Nexenta OS]] (discontinued October 31, 2012) – First distribution based on [[Ubuntu (operating system)|Ubuntu]] userland with Solaris-derived kernel.&lt;ref&gt;{{Citation
+ | title       = DownloadMirrors - Nexenta Project Wiki
+ | url         = http://www.nexenta.org/os/DownloadMirrors
+ | publisher   = 
+ | date        = 
+ | archiveurl  = https://web.archive.org/web/20100405120551/http://www.nexenta.org/os/DownloadMirrors
+ | archivedate = 2010-04-05
+}}&lt;/ref&gt;
+* StormOS (discontinued September 14, 2012&lt;ref&gt;{{Citation
+ | title       = StormOS is dead. Long live osdyson
+ | url         = http://www.stormos.org/node/2378
+ | publisher   = stormos.org
+ | date        = 2012-09-14
+ | archiveurl  = https://web.archive.org/web/20131010001228/http://www.stormos.org/node/2378
+ | archivedate = 2013-10-10
+}}&lt;/ref&gt;) – A lightweight desktop OS based on [[Nexenta OS]] and [[Xfce]].
+* MartUX&lt;ref&gt;{{Citation
+ | title       = Preliminary Release
+ | url         = http://openindiana.org/pipermail/openindiana-discuss/2012-September/009792.html
+ | publisher   = Martin Bochnig
+ | date        = 2012-09-27
+ | accessdate  = 2014-02-13
+}}&lt;/ref&gt;&lt;ref&gt;{{Citation
+ | title       = MartUX
+ | url         = https://archiveos.org/MartUX/
+ | date        = 2016-06-14
+ | author      = pavroo
+ | accessdate  = 2018-02-02}}&lt;/ref&gt; – The first [[SPARC]] distribution of OpenSolaris, with an [[alpha software|alpha]] prototype released by Martin Bochnig in April 2006. It was distributed as a [[Live CD]] but is later available only on DVD as it has had the [[Blastwave]] community software added.&lt;ref&gt;{{cite web |url=http://www.blastwave.org/  |date=September 20, 2006 |title=Blastwave Open Source Sun Software |archive-url=https://web.archive.org/web/20060920105147/http://www.blastwave.org/ |archive-date=September 20, 2006}}&lt;/ref&gt; Its goal was to become a desktop operating system. The first SPARC release was a small Live CD, released as '''marTux_0.2''' Live CD&lt;ref&gt;{{Citation
+ | title       = Preliminary SPARC 4u Release
+ | url         = http://www.martux.org/
+ | website     = marTux
+ | archive-url = https://web.archive.org/web/20060920091101/http://www.martux.org/
+ | archivedate=2006-09-20| url-status    = dead
+ | publisher   = Martin Bochnig
+ | date        = 2006-09-13
+ | accessdate  = 2014-02-13
+}}&lt;/ref&gt; in summer of 2006, the first straight OpenSolaris distribution for SPARC (not to be confused with GNOME metacity theme). It was later re-branded as '''MartUX''' and the next releases included full SPARC installers in addition to the Live media. Much later, MartUX was re-branded as '''OpenSXCE''' when it moved to the first OpenSolaris release to support both SPARC and Intel architectures after Sun was acquired by Oracle.&lt;ref&gt;[http://netmgt.blogspot.com/2013/03/tab-update-opensxce-march-3013.html OpenSXCE 2013.01]&lt;/ref&gt;
+* MilaX – A small Live CD/Live USB&lt;ref&gt;{{Citation
+ |title        = MilaX
+ |url          = http://www.milax.org/
+ |publisher    = Alexander R. Eremin
+ |accessdate   = 2012-12-29
+ |archive-url  = https://web.archive.org/web/20180622065618/http://milax.org/
+ |archive-date = June 22, 2018
+ |url-status     = dead
+ |df           = mdy-all
+}}&lt;/ref&gt;&lt;ref&gt;{{Citation
+ | title       = MilaX
+ | url         = https://archiveos.org/milax/
+ | date        = 2015-08-11
+ | author      = pavroo 
+ | accessdate  = 2018-02-02}}&lt;/ref&gt; with minimal set of packages to fit a 90&amp;nbsp;MB image.
+* EON ZFS Storage&lt;ref&gt;{{Citation
+ | title       = EON ZFS Storage
+ | url         = http://sites.google.com/site/eonstorage/
+ | publisher   = 
+ | date        = 
+ | accessdate  = 2012-12-29
+}}&lt;/ref&gt; – A [[network-attached storage|NAS]] implementation targeted at embedded systems.
+* Jaris OS – Live DVD and also installable.&lt;ref&gt;{{Citation|title=Project Jaris |url=http://jaris.jp/index2.html |url-status=dead |archiveurl=https://web.archive.org/web/20110722111050/http://jaris.jp/ |archivedate=July 22, 2011 }}&lt;/ref&gt; Pronounced according to the IPA{{how|date=September 2020}} but in English as Yah-Rees. This distribution has been heavily modified to fully support a version of Wine called Madoris that can install and run Windows programs at native speed. Jaris stands for &quot;Japanese Solaris&quot;. Madoris is a combination of the Japanese word for Windows &quot;mado&quot; and Solaris.
+* OpenSXCE – An OpenSolaris distribution release for both [[IA-32|32-bit]] and [[x86-64|64-bit]] x86 platforms and [[SPARC]] microprocessors, initially produced from OpenSolaris source code repository, ported to the illumos source code repository to form OpenIndiana's first&lt;ref&gt;[http://openindiana.org/pipermail/openindiana-discuss/2012-September/009792.html 151a0] (and soon to be last)&lt;/ref&gt; SPARC distribution.&lt;ref&gt;{{Citation
+ | url         = https://archiveos.org/opensxce/
+ | title       = OpenSXCE
+ | date        = January 8, 2016
+ | author      = pavroo 
+ | accessdate  = 2018-02-02}}&lt;/ref&gt; Notably, the first OpenSolaris distribution with illumos source for SPARC based upon OpenIndiana, OpenSXCE finally moved to a new source code repository, based upon DilOS.
+
+== Reception ==
+*Robert Lipschutz and Gregg Harrington from PCMag reviewed Solaris 9 in 2002:&lt;ref&gt;[https://www.pcmag.com/article2/0,2817,10432,00.asp Solaris 9 Operating Environment (final beta) reviewed by PC Magazine]&lt;/ref&gt;
+{{cquote|All in all, Sun has stayed the course with Solaris 9. While its more user-friendly management is welcome, that probably won't be enough to win over converts. What may is the platform's reliability, flexibility, and power.}}
+*Robert Lipschutz also reviewed Solaris 10:&lt;ref&gt;[https://www.pcmag.com/article2/0,2817,1781190,00.asp Solaris 10 Review &amp; Rating | PCMag.com]&lt;/ref&gt;
+{{cquote|Be that as it may, since the Solaris 10 download is free, it behooves any IT manager to load it on an extra server and at least give it a try.}}
+*Tom Henderson reviewed Solaris 10 for Network World:&lt;ref&gt;[https://www.networkworld.com/article/2318756/software/solaris-10-heads-for-linux-territory.html Solaris 10 heads for Linux territory | NetworkWorld]&lt;/ref&gt;
+{{cquote|Solaris 10 provides a flexible background for securely dividing system resources, providing performance guarantees and tracking usage for these containers. Creating basic containers and populating them with user applications and resources is simple. But some cases may require quite a bit of fine-tuning.}}
+*Robert Escue for OSNews:&lt;ref&gt;[http://www.osnews.com/story/9865 Review of Solaris 10], '''OSNews'''&lt;/ref&gt;
+{{cquote|I think that Sun has put some really nice touches on Solaris 10 that make it a better operating system for both administrators and users. The security enhancements are a long time coming, but are worth the wait. Is Solaris 10 perfect, in a word no it is not. But for most uses, including a desktop OS I think Solaris 10 is a huge improvement over previous releases.}}
+*Thomas Greene for The Register:&lt;ref&gt;[https://www.theregister.co.uk/2005/08/16/solaris_x86_not_too_shabby/ Sun's Linux killer shows promise • The Register]&lt;/ref&gt;
+{{cquote|We've had fun with Solaris 10. It's got virtues that we definitely admire. What it needs to compete with Linux will be easier to bring about than what it's already got. It could become a Linux killer, or at least a serious competitor on Linux's turf. The only question is whether Sun has the will to see it through.}}
+
+==See also==
+* [[IBM AIX]]
+* [[HP-UX]]
+* [[illumos]]
+* [[Trusted Solaris]]
+* [[Oracle VM Server for SPARC]]
+
+==References==
+{{Reflist|30em}}
+
+==External links==
+* {{Official website}}
+* [https://docs.oracle.com/en/operating-systems/solaris.html Solaris Documentation]
+* {{webarchive |url=https://web.archive.org/web/20180525101430/http://www.oracle.com/us/products/servers-storage/servers/sparc/oracle-sparc/sparc-roadmap-slide-2076743.pdf |title= Oracle SPARC and Solaris Public Roadmap}}
+* [http://www.oracle.com/us/support/library/lifetime-support-hardware-301321.pdf Lifetime Support Policy: Oracle and Sun System Software and Operating Systems]
+* {{curlie|Computers/Software/Operating_Systems/Unix/Solaris|Solaris}}
+* [http://www.sunhelp.org SunHELP] – Sun/Solaris News, References, and Information
+* [http://www.softpanorama.org/Articles/solaris_vs_linux.shtml Nikolai Bezroukov. Solaris vs. Linux: Ecosystem-based Approach and Framework for the Comparison in Large Enterprise Environments] – Large Softpanorama article comparing Solaris 10 and Linux 2.6
+* {{webarchive |url=https://web.archive.org/web/20130126085820/http://everythingsolaris.org/ |title=Everything Solaris}} – Solaris information site by [[Michael Holve]]
+
+{{Unix-like}}
+{{Oracle}}
+{{Solaris}}
+{{Operating system}}
+{{Sun Microsystems}}
+{{GNOME}}
+
+&lt;!-- a subcategory of operating systems --&gt;
+
+{{DEFAULTSORT:Solaris (Operating System)}}
+[[Category:1993 software]]
+[[Category:Formerly free software]]
+[[Category:OpenSolaris]]
+[[Category:Oracle Corporation]]
+[[Category:Oracle software]]
+[[Category:Proprietary operating systems]]
+[[Category:Sun Microsystems software]]
+[[Category:UNIX System V]]
+[[Category:X86 operating systems]]</text>
+      <sha1>8liitw8gsok9ad3lgl82vvm4swflvrf</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Navigation satellite</title>
+    <ns>0</ns>
+    <id>46146</id>
+    <redirect title="Satellite navigation" />
+    <revision>
+      <id>966708815</id>
+      <parentid>965702747</parentid>
+      <timestamp>2020-07-08T18:19:48Z</timestamp>
+      <contributor>
+        <username>Gjs238</username>
+        <id>486612</id>
+      </contributor>
+      <comment>removed [[Category:Navigation satellites]] using [[WP:HC|HotCat]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="34" xml:space="preserve">#REDIRECT [[Satellite navigation]]</text>
+      <sha1>lidhwdzxsyglc8nopo1pds0xqcndj1b</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Intelligence service</title>
+    <ns>0</ns>
+    <id>46148</id>
+    <redirect title="Intelligence agency" />
+    <revision>
+      <id>19794369</id>
+      <parentid>15941368</parentid>
+      <timestamp>2005-07-28T17:00:26Z</timestamp>
+      <contributor>
+        <username>Jnc</username>
+        <id>18024</id>
+      </contributor>
+      <comment>Better target</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="33" xml:space="preserve">#REDIRECT [[Intelligence agency]]</text>
+      <sha1>962d99tn3wzupj8jiogelh3u0uacslj</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>GLONASS</title>
+    <ns>0</ns>
+    <id>46149</id>
+    <revision>
+      <id>989052783</id>
+      <parentid>988443254</parentid>
+      <timestamp>2020-11-16T19:58:27Z</timestamp>
+      <contributor>
+        <username>Artoria2e5</username>
+        <id>18040497</id>
+      </contributor>
+      <comment>/* Accuracy */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="85961" xml:space="preserve">{{short description|Russian satellite navigation system}}
+{{Use British English|date=June 2020}}
+{{Use dmy dates|date=April 2020}}
+{{Infobox navigation satellite system
+|name               = GLONASS
+|image              = Glonass logo.png|frameless
+|image_caption      = GLONASS logo
+|image_size         = 
+
+|country            = {{flag|Soviet Union}}
+|type               = Military, civilian
+|status             = Operational
+
+|operator           = [[Roscosmos]]&lt;br&gt;({{flag|Russia}})
+|coverage           = Global
+|precision          = 2.8–7.38 metres
+|satellites_nominal = 26
+|satellites_current = 24
+
+|first_launch       = 12 October 1982
+|last_launch        = 25 October 2020
+|launch_total       = 
+|regime             = 3x [[Medium Earth orbit|MEO]]
+|orbit_height       = 19,130 km
+}}
+
+[[File:CeBit 2011 - Glosnass-K Satellite Model 11.jpg|thumb|290px|right|A model of a [[GLONASS-K]] satellite displayed at CeBit 2011]]
+
+'''GLONASS''' ({{lang-ru|ГЛОНАСС}}, {{IPA-ru|ɡɫɐˈnas|IPA}}; {{lang|ru|Глобальная навигационная спутниковая система|Globalnaya navigatsionnaya sputnikovaya sistema}}, {{small|[[Romanization of Russian|transliteration]]:}} {{transl|ru|Globalnaya navigatsionnaya sputnikovaya sistema}}), or &quot;'''Global Navigation Satellite System'''&quot;, is a space-based [[satellite navigation]] system operating as part of a [[radionavigation-satellite service]]. It provides an alternative to [[Global Positioning System|GPS]] and is the second navigational system in operation with global coverage and of comparable precision.
+
+Manufacturers of [[GPS navigation device]]s say that adding GLONASS made more satellites available to them, meaning positions can be fixed more quickly and accurately, especially in built-up areas where buildings may obscure the view to some GPS satellites.&lt;ref&gt;{{cite journal|pmc=3355462|pmid=22666079|doi=10.3390/s120405134|volume=12|issue=4|title=Benefits of combined GPS/GLONASS with low-cost MEMS IMUs for vehicular urban navigation|year=2012|journal=Sensors|pages=5134–5158|last1=Angrisano|first1=A.|last2=Petovello|first2=M.|last3=Pugliano|first3=G.}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.oxts.com/glonass-significantly-benefits-gps/|title=GLONASS significantly benefits GPS|date=15 September 2010}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://developer.sonymobile.com/2012/01/19/glonass-support-in-our-latest-xperia-phones/ |title=Developer Tools - Sony Developer World|website=sonymobile.com}}&lt;/ref&gt; GLONASS supplementation of GPS systems also improves positioning in high latitudes (north or south).&lt;ref&gt;{{cite web|title=GPS, GLONASS, and More|url=http://www2.unb.ca/gge/Resources/gpsworld.june10.pdf|publisher=University of New Brunswick|quote=Figure 2 shows the PDOP improvement in percentage when comparing the GPS-only to the GPS-plus-GLONASS PDOP values. At high latitudes, that is, above 55°, the improvement is at the 30% level.}}&lt;/ref&gt;
+
+Development of GLONASS began in the Soviet Union in 1976. Beginning on 12 October 1982, numerous rocket launches added satellites to the system, until the completion of the [[Satellite constellation |constellation]] in 1995. After a decline in capacity during the late 1990s, in 2001, the restoration of the system was made a government priority and funding increased substantially. GLONASS is the most expensive program of the [[Roscosmos]], consuming a third of its budget in 2010.
+
+By 2010, GLONASS had achieved full coverage of [[Geography of Russia|Russia's territory]] and in October 2011 the full orbital constellation of 24 satellites was restored, enabling full global coverage. The GLONASS satellites' designs have undergone several upgrades, with the 2020 latest version, [[GLONASS-K2]], scheduled to enter service in 2022.&lt;ref&gt;{{cite web|url=http://sworld.com.au/steven/space/russia-man.txt |title=Russian launch manifest|first=Steven|last=Pietrobon|date=18 June 2018|access-date=2 August 2018}}&lt;/ref&gt; An announcement predicts the deployment of a group of communications and navigational satellites by 2040. The task also includes the delivery to the Moon of a series of spacecraft for orbital research and the establishment of a lunar communications and positioning system.{{Citation needed|date=November 2020}}
+
+== System description ==
+{{Comparison satellite navigation orbits}}
+
+GLONASS is a global navigation satellite system, providing real time position and velocity determination for military and civilian users. The satellites are located in middle circular orbit at {{cvt|19100|km}} altitude with a 64.8° inclination and a period of 11 hours and 15 minutes.&lt;ref name=&quot;ato_glonass&quot;/&gt;&lt;ref name=&quot;federal_targeted_program_2002&quot;&gt;{{cite web|url=http://www.dtic.mil/cgi-bin/GetTRDoc?Location=U2&amp;doc=GetTRDoc.pdf&amp;AD=ADA484380|title=The Global Navigation System GLONASS: Development and Usage in the 21st Century|publisher=34th Annual Precise Time and Time Interval (PTTI) Meeting|year=2002}}&lt;/ref&gt; GLONASS's orbit makes it especially suited for usage in high latitudes (north or south), where getting a [[GPS]] signal can be problematic.&lt;ref name=&quot;harvey_military&quot;/&gt;&lt;ref name=&quot;moskvitch&quot;/&gt; The constellation operates in three orbital planes, with eight evenly spaced satellites on each.&lt;ref name=&quot;federal_targeted_program_2002&quot;/&gt; A fully operational constellation with global coverage consists of 24 satellites, while 18 satellites are necessary for covering the territory of Russia. To get a position fix the receiver must be in the range of at least four satellites.&lt;ref name=&quot;ato_glonass&quot;/&gt;
+
+=== Signal ===
+{{anchor|Signals}}
+
+==== FDMA ====
+[[File:Glonass-receiver.jpg|thumb|290px|One of first sample Russian military rugged, combined GLONASS/GPS receiver, 2003]]
+[[File:GLONASS GPS Personal Radio Beacon.jpg|thumb|290px|A combined GLONASS/GPS Personal Radio Beacon]]
+
+GLONASS satellites transmit two types of signal: open standard-precision signal L1OF/L2OF, and [[obfuscated]] high-precision signal L1SF/L2SF.
+
+The signals use similar [[Direct-sequence spread spectrum|DSSS]] encoding and [[Phase-shift keying|binary phase-shift keying]] (BPSK) modulation as in GPS signals. All GLONASS satellites transmit the same code as their standard-precision signal; however each transmits on a different frequency using a 15-channel [[frequency division multiple access]] (FDMA) technique spanning either side from 1602.0 [[Hertz|MHz]], known as the L1 band. The center frequency is 1602 MHz + ''n'' × 0.5625 MHz, where ''n'' is a satellite's frequency channel number (''n''=−6,...,0,...,6, previously ''n''=0,...,13). Signals are transmitted in a 38° cone, using right-hand [[circular polarization]], at an [[Effective radiated power|EIRP]] between 25 and 27 [[Decibel watt|dBW]] (316 to 500 watts). Note that the 24-satellite constellation is accommodated with only 15 channels by using identical frequency channels to support [[Antipodal point|antipodal]] (opposite side of planet in orbit) satellite pairs, as these satellites are never both in view of an Earth-based user at the same time.
+
+The L2 band signals use the same FDMA as the L1 band signals, but transmit straddling 1246 MHz with the center frequency 1246 MHz + ''n'' × 0.4375 MHz, where ''n'' spans the same range as for L1.&lt;ref name=&quot;glonass_xmtr&quot;&gt;GLONASS transmitter specs&lt;/ref&gt; In the original GLONASS design, only obfuscated high-precision signal was broadcast in the L2 band, but starting with GLONASS-M, an additional civil reference signal L2OF is broadcast with an identical standard-precision code to the L1OF signal.
+
+The open standard-precision signal is generated with [[XOR gate|modulo-2 addition]] (XOR) of 511 kbit/s pseudo-random ranging code, 50 bit/s navigation message, and an auxiliary 100 Hz [[Meander (mathematics) |meander]] sequence ([[Manchester code]]), all generated using a single time/frequency oscillator. The pseudo-random code is generated with a 9-stage shift register operating with a period of 1 [[Millisecond |milliseconds]].
+
+The navigational message is modulated at 50 bits per second. The superframe of the open signal is 7500 bits long and consists of 5 frames of 30 seconds, taking 150 seconds (2.5 minutes) to transmit the continuous message. Each frame is 1500 bits long and consists of 15 strings of 100 bits (2 seconds for each string), with 85 bits (1.7 seconds) for data and check-sum bits, and 15 bits (0.3 seconds) for time mark. Strings 1-4 provide immediate data for the transmitting satellite, and are repeated every frame; the data include [[ephemeris]], clock and frequency offsets, and satellite status. Strings 5-15 provide non-immediate data (i.e. [[almanac]]) for each satellite in the constellation, with frames I-IV each describing five satellites, and frame V describing remaining four satellites.
+
+The ephemerides are updated every 30 minutes using data from the Ground Control segment; they use [[ECEF|Earth Centred Earth Fixed]] (ECEF) Cartesian coordinates in position and velocity, and include lunisolar acceleration parameters. The almanac uses modified [[orbital elements]] (Keplerian elements) and is updated daily.
+
+The more accurate high-precision signal is available for authorized users, such as the Russian military, yet unlike the United States P(Y) code, which is modulated by an encrypting W code, the GLONASS restricted-use codes are broadcast in the clear using only ''[[security through obscurity]]''. The details of the high-precision signal have not been disclosed. The modulation (and therefore the tracking strategy) of the data bits on the L2SF code has recently changed from unmodulated to 250 bit/s burst at random intervals. The L1SF code is modulated by the navigation data at 50 bit/s without a Manchester meander code.
+
+The high-precision signal is broadcast in phase quadrature with the standard-precision signal, effectively sharing the same carrier wave, but with a ten-times-higher bandwidth than the open signal. The message format of the high-precision signal remains unpublished, although attempts at reverse-engineering indicate that the superframe is composed of 72 frames, each containing 5 strings of 100 bits and taking 10 seconds to transmit, with total length of 36 000 bits or 720 seconds (12 minutes) for the whole navigational message. The additional data are seemingly allocated to critical [[Lunisolar calendar|Lunisolar]] acceleration parameters and clock correction terms.
+
+===== Accuracy =====
+At peak efficiency, the standard-precision signal offers horizontal positioning accuracy within 5–10 metres, vertical positioning within {{cvt|15|m}}, a velocity vector measuring within {{cvt|100|mm/s}}, and timing within 200 [[Nanosecond|nanoseconds]], all based on measurements from four first-generation satellites simultaneously;&lt;ref name=&quot;miller_2000&quot;&gt;&quot;A Review of GLONASS&quot; Miller, 2000&lt;/ref&gt; newer satellites such as GLONASS-M improve on this.
+
+GLONASS uses a coordinate [[Geodetic datum|datum]] named &quot;[[PZ-90]]&quot; (Earth Parameters 1990 – Parametry Zemli 1990), in which the precise location of the [[North Pole]] is given as an average of its position from 1990 to 1995. This is in contrast to the GPS's coordinate datum, [[World Geodetic System|WGS 84]], which uses the location of the North Pole in 1984. As of 17 September 2007, the PZ-90 datum has been updated to version PZ-90.02 which differ from WGS 84 by less than {{cvt|400|mm}} in any given direction. Since 31 December 2013, version PZ-90.11 is being broadcast, which is aligned to the [[International Terrestrial Reference System and Frame]] at epoch 2011.0 at the centimetre level.&lt;ref name=icg8&gt;[http://www.oosa.unvienna.org/pdf/icg/2013/icg-8/wgD/D3_3_2.pdf National Reference Systems of the Russian Federation used in GLONASS.] V. Vdovin and M. Vinogradova (TSNIImash), 8th ICG meeting, Dubai, November 2013&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://www.glonass-iac.ru/en/content/news/?ELEMENT_ID=721|title=The transition to using the terrestrial geocentric coordinate system &quot;Parametry Zemli 1990&quot; (PZ-90.11) in operating the GLObal NAvigation Satellite System (GLONASS) has been implemented|website=glonass-iac.ru |access-date=2 September 2015}}&lt;/ref&gt;

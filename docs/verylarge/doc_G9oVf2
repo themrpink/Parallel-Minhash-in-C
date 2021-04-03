@@ -1,0 +1,222 @@
+For instructions where the individual operations are simple, such as &quot;push&quot; and &quot;add&quot;, the [[Computational overhead|overhead]] involved in deciding what to execute is larger than the cost of actually executing it, so such interpreters are often much slower than machine code. However, for more complex (&quot;compound&quot;) instructions, the overhead percentage is proportionally less significant.
+
+Counter-intuitively, token-threaded code can sometimes run faster than the equivalent machine code --
+when the machine code is too large to fit in cache, but the higher [[code density]] of threaded code, especially token-threaded code, allows it to fit entirely in high-speed cache.
+&lt;ref name=&quot;heller&quot;/&gt;
+
+===Huffman threading===
+Huffman threaded code consists of lists of tokens stored as [[Huffman code]]s. A Huffman code is a variable-length string of bits that identifies a unique token. A Huffman-threaded interpreter locates subroutines using an index table or a tree of pointers that can be navigated by the Huffman code. Huffman-threaded code is one of the most compact representations known for a computer program. The index and codes are chosen by measuring the frequency of calls to each subroutine in the code. Frequent calls are given the shortest codes. Operations with approximately equal frequencies are given codes with nearly equal bit-lengths. Most Huffman-threaded systems have been implemented as direct-threaded Forth systems, and used to pack large amounts of slow-running code into small, cheap [[microcontroller]]s. Most published&lt;ref name=huffman&gt;{{cite book |last1=Latendresse |first1=Mario |last2=Feeley |first2=Marc |title=Generation of Fast Interpreters for Huffman-Compressed Bytecode |citeseerx=10.1.1.156.2546 |publisher=Elsevier}}&lt;/ref&gt; uses have been in smart cards, toys, calculators, and watches. The bit-oriented tokenized code used in [[PBASIC]] can be seen as a kind of Huffman-threaded code.
+
+==={{anchor|String threading}}Lesser-used threading===
+An example is string threading, in which operations are identified by strings, usually looked up by a hash table. This was used in Charles H. Moore's earliest Forth implementations and in the [[University of Illinois at Urbana–Champaign|University of Illinois]]'s experimental hardware-interpreted computer language. It is also used in [[Bashforth]].
+
+===RPL===
+
+[[Hewlett-Packard|HP]]'s [[RPL (programming language)|RPL]], first introduced in the [[HP-18C]] calculator in 1986, is a type of proprietary hybrid direct-threaded and indirect-threaded threaded-interpreted language that, unlike others TILs, allows embedding of RPL &quot;objects&quot; into the &quot;runstream&quot; ie. The stream of addresses through which the interpreter pointer advances. An RPL &quot;object&quot; can be thought of as a special data type whose in-memory structure contains an address to an &quot;object prolog&quot; at the start of the object, and then data or executable code follows. The object prolog determines how the object's body should be executed or processed. Using the &quot;RPL inner loop&quot;&lt;ref name=&quot;RPL1&quot;&gt;Busby, Jonathan. [https://www.hpmuseum.org/forum/thread-11358.html &quot;The RPL inner loop explained&quot;], [http://www.hpmuseum.org/ &quot;The Museum of HP Calculators&quot;],							7 September 2018, Retrieved on 27 December 2019&lt;/ref&gt;, which was invented and published ( and patented &lt;ref&gt;{{cite web | last = Wickes | first = William C. | title = Data processing system and method for the direct and indirect execution of uniformly structured object types | website = uspto.gov | date = May 30, 1986 | url = http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=8&amp;p=1&amp;f=G&amp;l=50&amp;d=PTXT&amp;S1=((%22Hewlett+Packard%22.ASNM.)+AND+Wickes.INNM.)&amp;OS=AN/%22Hewlett+Packard%22+and+IN/Wickes&amp;RS=(AN/%22Hewlett+Packard%22+AND+IN/Wickes) | access-date = December 27, 2019 }}&lt;/ref&gt;  ) by William C. Wickes in 1986 and published in &quot;Programming Environments&quot;, Institute for Applied Forth Research, Inc., 1988, execution follows like so :
+
+# Dereference the IP ( instruction pointer ) and store it into O ( current object pointer )
+# Increment IP by the length of one address pointer
+# Dereference O and store its address in O_1 ( This is the second level of indirection )
+# Transfer control to next pointer or embedded object by setting the PC ( program counter) to O_1 plus one address pointer
+# Go back to step 1
+
+This can represented more precisely by :
+
+&lt;pre&gt;
+    O  = [I]
+    I  = I + Δ
+    PC = [O] + Δ
+&lt;/pre&gt;
+
+Where above, O is the current object pointer, I is the interpreter pointer, Δ is the length of one address word and the &quot;[]&quot; operator stands for &quot;dereference&quot;.
+
+When control is transferred to an object pointer or an embedded object, execution continues as follows :
+
+&lt;pre&gt;
+PROLOG -&gt; PROLOG ( The prolog address at the start of the prolog code points to itself )
+    IF O + Δ =/= PC
+    THEN GOTO INDIRECT ( Test for direct execution )
+        O = I - Δ ( Correct O to point to start of embedded object )
+        I = I + α ( Correct I to point after embedded object where α is the length of the object )
+    INDIRECT ( rest of prolog )
+&lt;/pre&gt;
+
+On HP's [[HP Saturn|Saturn]] microprocessors that use RPL, there is a third level of indirection made possible by an architectural / programming trick which allows faster execution.&lt;ref name=&quot;RPL1&quot;/&gt;
+
+==Branches==
+In all interpreters, a branch simply changes the thread pointer (&lt;code&gt;ip&lt;/code&gt; above). A conditional branch, to jump if the top-of-stack value is zero, might be encoded as follows. Note that &lt;code&gt;&amp;thread[123]&lt;/code&gt; is the location to which to jump, not the address of a handler. So, it must be skipped (&lt;code&gt;ip++&lt;/code&gt;) regardless of whether the branch is taken.
+
+&lt;syntaxhighlight lang=&quot;c&quot;&gt;
+thread:
+  ...
+  &amp;brz
+  &amp;thread[123]
+  ...
+brz:
+  tmp = ip++
+  if (*sp++ == 0)
+    ip = tmp
+  jump *ip++
+&lt;/syntaxhighlight&gt;
+
+==Common amenities==
+Separating the data and return stacks in a machine eliminates a great deal of stack management code, substantially reducing the size of the threaded code. The dual-stack principle originated three times independently: for [[Burroughs large systems]], [[Forth (programming language)|Forth]], and [[PostScript]].  It is used in some [[Java virtual machine]]s.
+
+Three [[processor register|registers]] are often present in a threaded virtual machine. Another one exists for passing data between [[subroutine]]s ('words'). These are:
+* ip or i ([[instruction pointer]]) of the virtual machine (not to be confused with the [[program counter]] of the underlying hardware implementing the VM)
+* w (work pointer)
+* rp or r (return [[stack (data structure)|stack]] pointer)
+* sp or s ([[parameter]] stack pointer for passing parameters between words)
+
+Often, threaded [[virtual machine]]s, such as implementations of Forth, have a simple virtual machine at heart, consisting of three ''primitives''. Those are:
+# ''nest'', also called ''docol''
+# ''unnest'', or ''semi_s'' (;s)
+# ''next''
+
+In an indirect-threaded virtual machine, the one given here, the operations are:
+&lt;syntaxhighlight lang=&quot;c&quot;&gt;
+ next:
+   *ip++ -&gt; w
+   jump **w++
+ nest:
+   ip -&gt; *rp++
+   w -&gt; ip
+   next
+ unnest:
+   *--rp -&gt; ip
+   next
+&lt;/syntaxhighlight&gt;
+This is perhaps{{citation needed|date=July 2016}} the simplest and fastest interpreter or virtual machine.
+
+==See also==
+{{Portal|Computer programming}}
+* [[Continuation-passing style]], which replaces the global variable &lt;code&gt;ip&lt;/code&gt; with a function parameter
+* [[Just-in-time compilation]]
+* [[Return-oriented programming]]—is rediscovery of threaded code in order to exploit remote vulnerable systems.
+* [[Tail recursion]]
+
+==Notes==
+{{reflist|group=lower-alpha}}
+
+==References==
+{{reflist}}
+
+== External links ==
+*Anton Ertl's explanatory page [http://www.complang.tuwien.ac.at/forth/threaded-code.html What is Threaded Code?] describes different threading techniques and provides further references.
+*[http://cm.bell-labs.com/cm/cs/who/dmr/chist.html The Development of the C Language] by [[Dennis Ritchie|Dennis M. Ritchie]] describes B (a precursor of C) as implemented using &quot;threaded code&quot;.
+*[http://thinking-forth.sourceforge.net/ Thinking Forth Project] includes the seminal (but out of print) book Thinking Forth by [http://home.earthlink.net/~lbrodie/ Leo Brodie] published in 1984.
+*[http://www.forth.com/starting-forth/ Starting FORTH] online version of the book Starting FORTH by [http://home.earthlink.net/~lbrodie/ Leo Brodie] published in 1981.
+*Brad Rodriguez's [http://www.bradrodriguez.com/papers/moving1.htm Moving FORTH: Part 1: Design Decisions in the Forth Kernel] covers threading techniques in depth.
+* [[History of general purpose CPUs]]
+* [https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html GCC extensions. Labels as Values]
+* {{cite web |title=What is RPL? |author-first=Joseph K. |author-last=Horn |url=http://www.hpcalc.org/hp48/docs/programming/rpl3.txt |access-date=2017-09-17 |url-status=live |archive-url=https://web.archive.org/web/20170917221524/http://www.hpcalc.org/hp48/docs/programming/rpl3.txt |archive-date=2017-09-17}} (NB. Brief overview on the threaded languages, System and User RPL, used on the HP calculators like the [[HP 48]].)
+
+[[Category:Compilers]]
+[[Category:Programming language implementation]]
+[[Category:Stack-based virtual machines| ]]</text>
+      <sha1>5lrmnlu8r6w67gyb5mwt8lw5rsyc6t1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Texas Instruments</title>
+    <ns>0</ns>
+    <id>47768</id>
+    <revision>
+      <id>991510300</id>
+      <parentid>989265679</parentid>
+      <timestamp>2020-11-30T13:09:46Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 65 templates: del empty params (9×); hyphenate params (78×); del |url-status= (1×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="63941" xml:space="preserve">{{short description|American semiconductor designer and manufacturer}}{{Use mdy dates|date=April 2012}} 
+{{Infobox company
+| name             = Texas Instruments Incorporated
+| logo             = Texas Instruments Logo.svg
+| image            = TI signboard Dallas.png
+| image_caption    = Sign at TI's Dallas headquarters
+| type             = [[Public company|Public]]
+| traded_as        = {{ubl|{{NASDAQ|TXN}}|[[NASDAQ-100]] component|[[S&amp;P 100]] component|[[S&amp;P 500]] component}}
+| founders         = [[Cecil H. Green]]&lt;br /&gt;[[J. Erik Jonsson]]&lt;br /&gt;[[Eugene McDermott]]&lt;br /&gt;[[Patrick E. Haggerty]] 
+| predecessor      = [[Geophysical Service Incorporated|Geophysical Service]]
+| foundation       = {{start date and age|1930}} (as [[Geophysical Service Incorporated]])&lt;ref&gt;{{cite web |title=Investor FAQs |publisher=Texas Instruments |url=http://www.ti.com/corp/docs/investor/faqs.shtml#c1 |accessdate=January 29, 2007 |url-status=dead |archive-url=https://web.archive.org/web/20070127045109/http://www.ti.com/corp/docs/investor/faqs.shtml#c1 |archive-date=January 27, 2007 |df=mdy-all }}&lt;/ref&gt;&lt;br /&gt;{{start date|1951}} (as Texas Instruments)
+| location_city    = [[Dallas]], Texas, U.S.
+| key_people       = [[Rich Templeton]]&lt;br /&gt;{{small|(Chairman, President, CEO)}}&lt;ref&gt;{{cite web |title=Rich Templeton to reassume President and CEO roles in addition to his current role as Chairman; Brian Crutcher resigned as CEO |url=https://www.prnewswire.com/news-releases/rich-templeton-to-reassume-president-and-ceo-roles-in-addition-to-his-current-role-as-chairman-brian-crutcher-resigned-as-ceo-300682515.html |website=PR Newswire |accessdate=17 July 2018}}&lt;/ref&gt;&lt;br /&gt;Ahmad Bahai {{small|([[Chief technology officer|CTO]])}}&lt;ref&gt;{{cite web |last1=Bahai |first1=Ahmed |title=Innovation in Power Electronics |url=http://www.semiconwest.org/sites/semiconwest.org/files/data15/docs/2_Ahmad%20Bahai_TI.pdf |website=SEMICON West |publisher=Texas Instruments |year=2015 |accessdate=23 October 2019}}&lt;/ref&gt;
+| industry         = [[Semiconductor]]s 
+| products         = [[Analog electronics]]&lt;br /&gt;[[Calculator]]s&lt;br /&gt;[[Digital signal processor]]s&lt;br /&gt;[[Digital Light Processing|Digital light processors]]&lt;br /&gt;[[Integrated circuit]]s&lt;br /&gt;[[Embedded processor]]s
+| revenue          = {{Decrease}} {{USD|14.38 billion|link=yes}} (2019)&lt;ref name='xbrlus_1'&gt;{{cite web |title=TI reports Q4 2019 and 2019 financial results and shareholder returns |url=https://investor.ti.com/static-files/d221f512-49ba-4217-b3c8-888fbecd5259 |accessdate=22 January 2020}}&lt;/ref&gt;
+| operating_income = {{Decrease}} {{USD|5.72 billion}} (2019)&lt;ref name='xbrlus_1'/&gt; 
+| net_income       = {{Decrease}} {{USD|5.02 billion}} (2019)&lt;ref name='xbrlus_1'/&gt;
+| assets           = {{Increase}} {{USD|18.02 billion}} (2019)&lt;ref name='xbrlus_1'/&gt; 
+| equity           = {{Decrease}} {{USD|8.91 billion}} (2019)&lt;ref name='xbrlus_1'/&gt; 
+| num_employees    = 29,888 (2019)&lt;ref name='xbrlus_2'&gt;{{cite web |title=Texas Instruments - Annual Report |url=http://www.ti.com/corp/docs/investor_relations/annual_reports.html |accessdate=10 July 2019}}&lt;/ref&gt;
+| website          = {{URL|ti.com}}
+| footnotes        =
+}}
+
+'''Texas Instruments Incorporated''' ('''TI''') is an [[America]]n technology company headquartered in [[Dallas]], [[Texas]], that designs and manufactures [[semiconductor]]s and various [[integrated circuit]]s, which it sells to electronics designers and [[manufacturer]]s globally.&lt;ref&gt;&quot;[http://www.ti.com/corp/docs/company/address.shtml TI Mailing Address] {{webarchive|url=https://web.archive.org/web/20090219003542/http://www.ti.com/corp/docs/company/address.shtml |date=February 19, 2009}}.&quot; Texas Instruments. Retrieved on June 12, 2009.&lt;/ref&gt;  It is one of the top 10 semiconductor companies worldwide based on [[sales]] volume.&lt;ref&gt;{{cite web |url=http://www.statista.com/statistics/283359/top-20-semiconductor-companies/ |title=Top semiconductor companies sales 2012-2015 {{!}} Statistic |website=Statista |access-date=2016-07-08 |url-status=live |archive-url=https://web.archive.org/web/20160705154920/http://www.statista.com/statistics/283359/top-20-semiconductor-companies/ |archive-date=July 5, 2016 |df=mdy-all}}&lt;/ref&gt; The company's focus is on developing [[analog chip]]s and [[embedded processor]]s, which account for more than 80% of its revenue.&lt;ref name=&quot;ReferenceA&quot;&gt;{{cite web |url=http://www.ti.com/corp/docs/company/technology_innovation.html|title=About TI – Technology and innovation – TI.com |website=www.ti.com |access-date=2016-07-08 |url-status=live |archive-url=https://web.archive.org/web/20160712074240/http://www.ti.com/corp/docs/company/technology_innovation.html |archive-date=July 12, 2016 |df=mdy-all}}&lt;/ref&gt; TI also produces TI [[Digital Light Processing|digital light processing]] technology and education technology&lt;ref name=&quot;ReferenceA&quot;/&gt; products including [[calculator]]s, [[microcontroller]]s and [[multi-core processor]]s. The company holds 45,000 patents worldwide as of 2016.&lt;ref&gt;{{cite web |url=http://www.ti.com/corp/docs/company/factsheet.shtml |title=TI Fact sheet {{!}} Who we are {{!}} Company {{!}} About TI |website=www.ti.com |access-date=2016-08-01 |url-status=live |archive-url=https://web.archive.org/web/20160719151815/http://www.ti.com/corp/docs/company/factsheet.shtml |archive-date=July 19, 2016 |df=mdy-all}}&lt;/ref&gt;
+
+Texas Instruments emerged in 1951 after a reorganization of [[Geophysical Service Incorporated]], a company founded in 1930 that manufactured equipment for use in the seismic industry, as well as defense electronics.&lt;ref&gt;{{cite web |url=http://www.ti.com/corp/docs/company/history/lowbandwidthtimeline.shtml |title=Texas Instruments - Low Bandwidth Timeline - Key TI Events |website=www.ti.com |access-date=2016-07-08 |url-status=live |archive-url=https://web.archive.org/web/20160629104411/http://www.ti.com/corp/docs/company/history/lowbandwidthtimeline.shtml |archive-date=June 29, 2016 |df=mdy-all}}&lt;/ref&gt; TI produced the world's first commercial [[silicon transistor]] in 1954,&lt;ref&gt;{{cite web |url=http://www.pbs.org/transistor/science/events/silicont1.html |title=The First Silicon Transistor |author=ScienCentral |website=www.pbs.org |url-status=live |archive-url=https://web.archive.org/web/20171102124640/http://www.pbs.org/transistor/science/events/silicont1.html |archive-date=November 2, 2017 |df=mdy-all}}&lt;/ref&gt; and the same year designed and manufactured the first [[transistor radio]]. [[Jack Kilby]] invented the [[integrated circuit]] in 1958 while working at TI's Central Research Labs. TI also invented the hand-held [[calculator]] in 1967, and introduced the first single-chip microcontroller  in 1970, which combined all the elements of computing onto one piece of silicon.&lt;ref name=&quot;:0&quot;&gt;{{cite web |url=http://www.ti.com/corp/docs/company/history.html |title=About TI – History – TI.com |website=www.ti.com |access-date=2016-07-08 |url-status=live |archive-url=https://web.archive.org/web/20160710173533/http://www.ti.com/corp/docs/company/history.html |archive-date=July 10, 2016 |df=mdy-all}}&lt;/ref&gt;
+
+In 1987, TI invented the digital light processing device (also known as the DLP chip), which serves as the foundation for the company's award-winning DLP technology and DLP Cinema.&lt;ref name=&quot;:0&quot; /&gt; TI released the popular [[TI-81]] calculator in 1990, which made it a leader in the graphing calculator industry. Its defense business was sold to [[Raytheon]] in 1997; this allowed TI to strengthen its focus on digital solutions.&lt;ref&gt;{{cite web |url=http://www.ti.com/corp/docs/investor/compinfo/PRarchive/c97004.shtml |title=TI IR - CI - AD - Raytheon Purchases Defense Systems and Electronics Business |website=www.ti.com |access-date=2016-07-08 |url-status=live |archive-url=https://web.archive.org/web/20160815161346/http://www.ti.com/corp/docs/investor/compinfo/PRarchive/c97004.shtml |archive-date=August 15, 2016 |df=mdy-all}}&lt;/ref&gt; After the acquisition of [[National Semiconductor]] in 2011, the company had a combined portfolio of 45,000 analog products and customer design tools.&lt;ref&gt;{{cite web |url=https://techcrunch.com/2011/09/23/texas-instruments-closes-6-5b-acquisition-of-national-semiconductor/ |title=Texas Instruments Closes $6.5B Acquisition Of National Semiconductor |accessdate=September 23, 2011 |url-status=live |archive-url=https://web.archive.org/web/20110924044937/http://techcrunch.com/2011/09/23/texas-instruments-closes-6-5b-acquisition-of-national-semiconductor/ |archive-date=September 24, 2011 |df=mdy-all }}&lt;/ref&gt; In the stock market, Texas Instruments is often regarded as an indicator for the semiconductor and electronics industry as a whole, since the company's products are used in almost all electronic products.&lt;ref&gt;https://www.bnnbloomberg.ca/texas-instruments-forecast-stokes-optimism-for-a-chip-revival-1.1248234&lt;/ref&gt;&lt;ref&gt;https://www.marketwatch.com/story/its-not-just-texas-instruments-morgan-stanley-warns-2019-10-23&lt;/ref&gt;
+
+==History==
+[[File:North Campus Gate1.jpg|thumb|Entrance to Texas Instruments North Campus facility in Dallas, Texas]]
+
+Texas Instruments was founded by [[Cecil H. Green]], [[J. Erik Jonsson]], [[Eugene McDermott]], and [[Patrick E. Haggerty]] in 1951.  McDermott was one of the original founders of [[Geophysical Service Incorporated|Geophysical Service]] Inc. (GSI) in 1930. McDermott, Green, and Jonsson were GSI employees who purchased the company in 1941. In November, 1945, Patrick Haggerty was hired as general manager of the Laboratory and Manufacturing (L&amp;M) division, which focused on electronic equipment.&lt;ref&gt;{{cite web|url=http://www.ti.com/corp/docs/company/history/lowbandwidthtimeline.shtml|title=About TI – History|website=www.ti.com|url-status=live|archive-url=https://web.archive.org/web/20160629104411/http://www.ti.com/corp/docs/company/history/lowbandwidthtimeline.shtml|archive-date=June 29, 2016|df=mdy-all}}&lt;/ref&gt; By 1951, the L&amp;M division, with its defense contracts, was growing faster than GSI's geophysical division. The company was reorganized and initially renamed General Instruments Inc. Because a firm named [[General Instrument]] already existed, the company was renamed Texas Instruments that same year. From 1956 to 1961, [[Fred Agnich]] of Dallas, later a [[Republican Party (United States)|Republican]] member of the [[Texas House of Representatives]], was the Texas Instruments president. Geophysical Service, Inc. became a subsidiary of Texas Instruments. Early in 1988, most of GSI was sold to the [[Halliburton]] Company.
+
+{{quotation|Texas Instruments exists to create, make, and market useful products and services to satisfy the needs of its customers throughout the world.&lt;ref name=&quot;Innovation&quot;&gt;{{cite journal |title=The Corporation and Innovation |last=Haggerty |first=Patrick |journal=Strategic Management Journal |volume=2 |issue=2 |pages=97–118 |year=1981 |doi=10.1002/smj.4250020202 }}&lt;/ref&gt;|Patrick Haggerty|Texas Instruments Statement of Purpose}}
+
+===Geophysical Service Incorporated===
+In 1930, [[J. Clarence Karcher]] and Eugene McDermott founded Geophysical Service, an early provider of [[reflection seismology|seismic exploration]] services to the petroleum industry. In 1939, the company reorganized as Coronado Corp,&lt;ref&gt;[http://www.ti.com/corp/docs/company/history/lowbandwidthtimeline.shtml Coronado Corp.]&lt;/ref&gt; an oil company with Geophysical Service Inc (GSI), now as a subsidiary. On December 6, 1941, McDermott along with three other GSI employees, J. Erik Jonsson, Cecil H. Green, and H. B. Peacock purchased GSI. During World War II, GSI expanded their services to include [[electronics]] for the [[United States Army|U.S. Army]], [[United States Army Signal Corps|Army Signal Corps]], and [[United States Navy|U.S. Navy]]. In 1951, the company changed its name to Texas Instruments, spun off to build seismographs for oil explorations&lt;ref name=&quot;TIcalcsMedium&quot;&gt;{{cite web |url=https://gen.medium.com/big-calculator-how-texas-instruments-monopolized-math-class-67ee165045dc |title=Big Calculator: How Texas Instruments Monopolized Math Class |access-date=September 26, 2019 }}&lt;/ref&gt; and with GSI becoming a wholly owned subsidiary of the new company.
+
+An early success story for TI-GSI came in 1965 when GSI was able (under a [[security clearance|Top Secret]] government contract) to monitor the [[Soviet Union]]'s underground [[nuclear weapon]]s [[nuclear testing|testing]] under the ocean in [[Vela Uniform]], a subset of [[Project Vela]], to verify compliance of the [[Partial Nuclear Test Ban Treaty]].&lt;ref&gt;{{cite web |url=http://www.ti.com/corp/docs/company/history/timeline/gps/1960/docs/65-gsi-ti.htm |title=GSI/TI part of Vela Uniform project to detect underground nuclear explosions |publisher=Texas Instruments |access-date=September 23, 2016 |url-status=live |archive-url=https://web.archive.org/web/20160303214827/http://www.ti.com/corp/docs/company/history/timeline/gps/1960/docs/65-gsi-ti.htm |archive-date=March 3, 2016|df=mdy-all}}&lt;/ref&gt;
+
+Texas Instruments also continued to manufacture equipment for use in the seismic industry, and GSI continued to provide seismic services.  After selling (and repurchasing) GSI, TI finally sold the company to [[Halliburton]] in 1988, after which sale GSI ceased to exist as a separate entity.
+
+===Semiconductors===
+In early 1952, Texas Instruments purchased a patent license to produce germanium transistors from [[Western Electric]], the manufacturing arm of AT&amp;T, for $25,000, beginning production by the end of the year.{{Citation needed|date=March 2018}}
+
+On January 1, 1953, Haggerty brought [[Gordon Teal]] to the company as a research director. Gordon brought with him his expertise in growing semiconductor crystals. Teal's first assignment was to organize what became TI's Central Research Laboratories, which Teal based on his prior experience at Bell Labs.{{Citation needed|date=March 2018}}
+
+Among his new hires was [[Willis Adcock]], who joined TI early in 1953. Adcock, who like Teal was a [[physical chemist]], began leading a small research group focused on the task of fabricating grown-junction, [[silicon]], single-crystal, small-signal transistors.&lt;ref name=&quot;transistor&quot;&gt;{{Cite magazine |first=Michael |last=Riordan |date=30 April 2004 |title=The Lost History of the Transistor |url=https://spectrum.ieee.org/tech-history/silicon-revolution/the-lost-history-of-the-transistor |magazine=[[IEEE Spectrum]] |pages=48–49}}&lt;/ref&gt; Adcock later became the first TI Principal Fellow.&lt;ref name=&quot;Tribute&quot;&gt;[http://www.ti.com/corp/docs/company/history/timeline/key/1990/images/65012-1.pdf &quot;A Tribute to Erik Jonsson&quot;] {{webarchive|url=https://web.archive.org/web/20061109193529/http://www.ti.com/corp/docs/company/history/timeline/key/1990/images/65012-1.pdf |date=November 9, 2006 }} (PDF). p. 4. Retrieved on April 19, 2012.&lt;/ref&gt;
+
+====First silicon transistor and integrated circuits====
+[[File:KL TI SN5451 Logic IC.jpg|thumb|100px|right|Transistorized &quot;[[transistor-transistor logic|logic]]&quot; chip, an integrated circuit produced by TI]]
+
+In January 1954, [[Morris Tanenbaum]] at [[Bell Labs]] created the first workable silicon transistor.&lt;ref name=&quot;transistor&quot;/&gt; This work was reported in the spring of 1954, at the IRE off-the-record conference on solid-state devices, and was later published in the ''Journal of Applied Physics''. Working independently in April 1954, Gordon Teal at TI created the first commercial silicon transistor and tested it on April 14, 1954. On May 10, 1954, at the Institute of Radio Engineers National Conference on Airborne Electronics in Dayton, Ohio, Teal presented a paper: &quot;Some Recent Developments in Silicon and Germanium Materials and Devices&quot;.&lt;ref&gt;[http://www.spectrum.ieee.org/may04/3992 &quot;Some Recent Developments in Silicon and Germanium Materials and Devices&quot;] {{webarchive|url=https://web.archive.org/web/20080409173015/http://www.spectrum.ieee.org/may04/3992 |date=April 9, 2008 }}. ''[[IEEE Spectrum]]''. Retrieved on April 19, 2012.&lt;/ref&gt;
+
+In 1954, Texas Instruments designed and manufactured the first [[transistor radio]]. The [[Regency TR-1]] used germanium transistors, as silicon transistors were much more expensive at the time. This was an effort by Haggerty to increase market demand for transistors.
+
+[[Jack Kilby]], an employee at TI's Central Research Labs, invented the [[integrated circuit]] in 1958.&lt;ref&gt;http://www.ti.com/corp/docs/company/factsheet.shtml&lt;/ref&gt; Kilby recorded his initial ideas concerning the integrated circuit in July 1958, and successfully demonstrated the world's first working integrated circuit on September 12, 1958.&lt;ref&gt;[http://www.ti.com/corp/docs/kilbyctr/jackbuilt.shtml &quot;The Chip that Jack Built&quot;] {{webarchive|url=https://web.archive.org/web/20150501073820/http://www.ti.com/corp/docs/kilbyctr/jackbuilt.shtml |date=May 1, 2015 }} (c. 2008; HTML), Texas Instruments, accessed May 29, 2008.&lt;/ref&gt; Six months later, [[Robert Noyce]] of [[Fairchild Semiconductor]] (who went on to co-found [[Intel]]) independently developed the integrated circuit with integrated interconnect, and is also considered an inventor of the integrated circuit.&lt;ref&gt;[http://www.ieeeghn.org/wiki/index.php/Robert_Noyce ''Robert Noyce''] {{Webarchive|url=https://web.archive.org/web/20081220111313/http://www.ieeeghn.org/wiki/index.php/Robert_Noyce |date=December 20, 2008 }}, (n.d.), (online), IEEE Global History Network, accessed July 8, 2008.&lt;/ref&gt; In 1969, Kilby was awarded the National Medal of Science, and in 1982 he was inducted into the National Inventor's Hall of Fame.&lt;ref&gt;{{Cite web|url=http://www.ti.com/corp/docs/company/history/lowbandwidthtimeline.shtml|title=Texas Instruments - Low Bandwidth Timeline - Key TI Events|website=www.ti.com|access-date=2016-07-25|url-status=live|archive-url=https://web.archive.org/web/20160803143130/http://www.ti.com/corp/docs/company/history/lowbandwidthtimeline.shtml|archive-date=August 3, 2016|df=mdy-all}}&lt;/ref&gt; Kilby also won the 2000 Nobel Prize in Physics for his part of the invention of the integrated circuit.&lt;ref&gt;Nobel Web AB, (October 10, 2000),[http://nobelprize.org/nobel_prizes/physics/laureates/2000/press.html ''The Nobel Prize in Physics 2000''] {{webarchive|url=https://web.archive.org/web/20101215065210/http://nobelprize.org/nobel_prizes/physics/laureates/2000/press.html |date=December 15, 2010 }},
+Retrieved on May 29, 2008&lt;/ref&gt; Noyce's chip, made at Fairchild, was made of silicon, while Kilby's chip was made of [[germanium]].  In 2008, TI named its new development laboratory &quot;Kilby Labs&quot; after Jack Kilby.&lt;ref&gt;Kilby Labs Announcement [http://focus.ti.com/pr/docs/preldetail.tsp?sectionId=594&amp;prelId=c08055 focus.ti.com] {{webarchive|url=https://web.archive.org/web/20080917225342/http://focus.ti.com/pr/docs/preldetail.tsp?sectionId=594&amp;prelId=c08055 |date=September 17, 2008 }}&lt;/ref&gt;
+
+In 2011, Intel, Samsung, LG, ST-Ericsson, Huawei's HiSilicon Technologies subsidiary, Via Telecom, and three other undisclosed chipmakers licensed the C2C link specification developed by Arteris Inc. and Texas Instruments.&lt;ref&gt;Rick Merritt, EE Times. &quot;[http://eetimes.com/electronics-news/4218180/Ten-mobile-vendors-license-chip-interconnect Ten mobile vendors license chip interconnect] {{webarchive|url=https://web.archive.org/web/20110930202508/http://eetimes.com/electronics-news/4218180/Ten-mobile-vendors-license-chip-interconnect |date=September 30, 2011 }}.&quot; July 26, 2011. Retrieved July 27, 2011.&lt;/ref&gt;
+
+====Standard TTL====
+[[File:74series logic ic.jpg|thumb|right|150px|Texas Instruments and other brands of [[7400 series]] TTL and CMOS logic]]
+[[File:TI SpeakSpell.jpg|thumb|right|150px|Texas Instruments Speak &amp; Spell using a [[TMC0280]] speech synthesizer]]
+[[File:Texas Instruments TI-30 electronic calculator.JPG|thumb|150px|right|[[TI-30]] electronic calculator, 1976]]
+
+The [[7400 series]] of [[transistor-transistor logic]]  chips, developed by Texas Instruments in the 1960s, popularized the use of integrated circuits in computer logic. The military-grade version of this was the 5400 series.&lt;ref&gt;{{Cite web|url=http://www.computerhistory.org/atchm/the-rise-of-ttl-how-fairchild-won-a-battle-but-lost-the-war/|title=The Rise of TTL: How Fairchild Won a Battle But Lost the War {{!}} Computer History Museum|website=www.computerhistory.org|access-date=2016-07-26|url-status=live|archive-url=https://web.archive.org/web/20160721164146/http://www.computerhistory.org/atchm/the-rise-of-ttl-how-fairchild-won-a-battle-but-lost-the-war/|archive-date=July 21, 2016|df=mdy-all}}&lt;/ref&gt;
+
+====Microprocessor====
+Texas Instruments invented the hand-held [[calculator]] (a prototype called &quot;[[Cal Tech (calculator)|Cal Tech]]&quot;) in 1967 and the single-chip [[microcomputer]] in 1971,  was assigned the first patent on a single-chip [[microprocessor]] (invented by Gary Boone) on September 4, 1973.&lt;ref&gt;[http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=3,757,306.PN.&amp;OS=PN/3,757,306&amp;RS=PN/3,757,306 &quot;U.S. Patent 3,757,306, Computing Systems CPU] {{webarchive|url=https://web.archive.org/web/20170111161200/http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=3%2C757%2C306.PN.&amp;OS=PN%2F3%2C757%2C306&amp;RS=PN%2F3%2C757%2C306 |date=January 11, 2017 }}, Awarded September 4, 1973&lt;/ref&gt; This was disputed by Gilbert Hyatt, formerly of the Micro Computer Company, in August 1990, when he was awarded a patent superseding TI's. This was overturned on June 19, 1996, in favor of TI&lt;ref&gt;[https://query.nytimes.com/gst/fullpage.html?res=9E02E2D61439F933A15755C0A960958260&amp;sec=&amp;spon=&amp;pagewanted=all &quot;For Texas Instruments, Some Bragging Rights&quot;] New York Times, June 20, 1996&lt;/ref&gt; (note: [[Intel]] is usually given credit with Texas Instruments for the almost-simultaneous invention of the microprocessor).
+
+====First speech synthesis chip====
+In 1978, Texas Instruments introduced the first single-chip [[linear predictive coding]] [[speech synthesizer]].&lt;ref&gt;{{cite web | url = http://www.datamath.org/Speech_IC.htm | work = Datamath Calculator Museum | title = Texas Instruments Speech – Integrated Circuits | accessdate = September 7, 2008 | url-status = live | archive-url = https://web.archive.org/web/20080510152744/http://www.datamath.org/Speech_IC.htm | archive-date = May 10, 2008 | df = mdy-all }}&lt;/ref&gt; In 1976, TI began a feasibility study of memory-intensive applications for bubble memory then being developed. They soon focused on speech applications. This resulted in the development the TMC0280 one-chip linear predictive coding  speech synthesizer, which was the first time a single silicon chip had electronically replicated the human voice.&lt;ref name=&quot;TITimeLine&quot;&gt;[http://www.ti.com/corp/docs/company/history/interactivetimeline.shtml TI web site history page] {{webarchive|url=https://web.archive.org/web/20070609012716/http://www.ti.com/corp/docs/company/history/interactivetimeline.shtml |date=June 9, 2007 }},(c. 2008), (HTML), Texas Instruments, accessed September 6, 2008.&lt;/ref&gt;&lt;ref&gt;[http://americanhistory.si.edu/archives/speechsynthesis/ss_ti.htm “Smithsonian Speech Synthesis History Project”] {{webarchive|url=https://web.archive.org/web/20081121151619/http://americanhistory.si.edu/archives/speechsynthesis/ss_ti.htm |date=November 21, 2008 }}, accessed September 7, 2008&lt;/ref&gt; This was used in several TI commercial products beginning with [[Speak &amp; Spell (toy)|Speak &amp; Spell]], which was introduced at the Summer Consumer Electronics Show in June 1978. In 2001, TI left the speech synthesis business, selling it to Sensory Inc. of Santa Clara, California.&lt;ref name=&quot;TI will exit dedicated speech-synthesis chips, transfer products to Sensory&quot;&gt;{{cite web |url=http://www.eetimes.com/electronics-news/4102385/TI-will-exit-dedicated-speech-synthesis-chips-transfer-products-to-Sensory |title=TI will exit dedicated speech-synthesis chips, transfer products to Sensory |accessdate=2016-02-06 |url-status=dead |archive-url=https://web.archive.org/web/20120528014257/http://www.eetimes.com/electronics-news/4102385/TI-will-exit-dedicated-speech-synthesis-chips-transfer-products-to-Sensory |archive-date=May 28, 2012 |df=mdy-all |date=June 14, 2001 |publisher=EE Times }}&lt;/ref&gt;
+
+===Consumer electronics and computers===
+In May 1954, Texas Instruments designed and built a prototype of the world's first [[transistor radio]], and, through a partnership with Industrial Development Engineering Associates  of Indianapolis, Indiana, the 100% solid-state radio was sold to the public beginning in October of that year.&lt;ref&gt;{{Cite web|url=http://www.ti.com/corp/docs/company/history/timeline/semicon/1950/docs/54regency.htm|title=Texas Instruments - 1954 Regency Radio debuts|website=www.ti.com|access-date=2016-07-26|url-status=live|archive-url=https://web.archive.org/web/20160815135423/http://www.ti.com/corp/docs/company/history/timeline/semicon/1950/docs/54regency.htm|archive-date=August 15, 2016|df=mdy-all}}&lt;/ref&gt;
+
+In the 1960s, company president Pat Haggerty had a team that included Jack Kilby to work on a handheld calculator project. Kilby and two other colleagues created the Cal-Tech, a three-pound battery-powered calculator that could do basic math and fit six-digit numbers on its display. This 4.25 x 6.15 x 1.75 inch calculator's processor would originate the vast majority of Texas Instruments’ revenue.&lt;ref name=&quot;TIcalcsMedium&quot; /&gt;
+
+In 1973, the handheld calculator SR-10 (named after [[slide rule]]) and in 1974 the handheld scientific calculator [[TI SR-50|SR-50]] were issued by TI. Both had red LED-segments numeric displays. The optical design of the SR-50 is somewhat similar to the [[HP-35]] edited by Hewlett Packard before in early 1972, but buttons for the operations &quot;+&quot;, &quot;–&quot;, ... are in the right of the number block and the decimal point lies between two neighboring digits.
+
+TI continued to be active in the consumer electronics market through the 1970s and 1980s. Early on, this also included two digital clock models - one for desk and the other a bedside alarm. From this sprang what became the Time Products Division, which made LED watches. Though these LED watches enjoyed early commercial success due to excellent quality, it was short-lived due to poor battery life. LEDs were replaced with LCD watches for a short time, but these could not compete because of styling issues, excessive makes and models, and price points. The watches were manufactured in Dallas and then Lubbock, Texas. Several spin-offs of the Speak &amp; Spell, such as the [[Speak &amp; Read]] and [[Speak &amp; Math]], were introduced soon thereafter.&lt;ref&gt;{{Cite web|url=http://www.ti.com/corp/docs/company/history/timeline/eps/1970/docs/78-speak-spell_introduced.htm|title=Texas Instruments - 1978 Speak &amp; Spell introduced|website=www.ti.com|access-date=2016-07-26|url-status=live|archive-url=https://web.archive.org/web/20160714182055/http://www.ti.com/corp/docs/company/history/timeline/eps/1970/docs/78-speak-spell_introduced.htm|archive-date=July 14, 2016|df=mdy-all}}&lt;/ref&gt;
+
+In 1979, TI entered the [[home computer]] market with the [[Texas Instruments TI-99/4A|TI-99/4]], a competitor to such entries as the [[Apple II]], [[Tandy Corporation|Tandy]]/[[RadioShack|Radio Shack]] [[TRS-80]], and the later [[Atari]] [[Atari 8-bit family|400]]/[[Atari 8-bit family|800]] series and [[Commodore International|Commodore]] [[VIC-20]]. It discontinued the [[Texas Instruments TI-99/4A|TI-99/4A]] (1981), the sequel to the 99/4, in late 1983 amid an intense [[North American video game crash of 1983#A Savage Price War|price war]] waged primarily against Commodore. At the 1983 Winter CES, TI showed models 99/2 and the [[Texas Instruments Compact Computer 40|Compact Computer 40 (CC-40)]], the latter aimed at professional users.  The [[Texas Instruments Professional Computer and Professional Portable Computer|TI Professional]] (1983) ultimately joined the ranks of the many unsuccessful [[DOS]] and [[x86]]-based—but [[PC compatible#Compatibility issues|non-compatible]]&lt;ref name=&quot;Inc.1984&quot;&gt;{{cite journal|title=Sizing up the Professional|journal = PC Magazine: The Independent Guide to IBM-Standard Personal Computing|url=https://books.google.com/books?id=ZhoP0KRkQe4C&amp;pg=PA242|date=6 March 1984|publisher=PC Magazine|pages=242–245|issn=0888-8507}}&lt;/ref&gt;—competitors to the [[IBM PC]] (the founders of [[Compaq]], an early leader in PC compatibles, all came from TI). The company for years successfully made and sold PC-compatible laptops before withdrawing from the market and selling its product line to [[Acer Inc.|Acer]] in 1998.&lt;ref&gt;{{Cite web|url=http://www.ti.com/corp/docs/investor/compinfo/PRarchive/acer.shtml|title=TI IR - CI - AD - Acer Acquires Texas Instruments Mobile Computing Assets|website=www.ti.com|access-date=2016-07-26|url-status=live|archive-url=https://web.archive.org/web/20160323184954/http://www.ti.com/corp/docs/investor/compinfo/PRarchive/acer.shtml|archive-date=March 23, 2016|df=mdy-all}}&lt;/ref&gt;

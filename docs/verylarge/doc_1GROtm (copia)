@@ -1,0 +1,225 @@
+More strongly: a topological vector space is said to be '''[[normable]]''' if its topology can be induced by a norm. 
+A topological vector space is normable if and only if it is Hausdorff and has a convex bounded neighborhood of {{math|0}}.&lt;ref name=&quot;springer&quot;&gt;http://eom.springer.de/T/t093180.htm&lt;/ref&gt;
+
+Let {{math|𝕂}} be a non-[[discrete space|discrete]] [[locally compact]] topological field, for example the real or complex numbers. 
+A [[Hausdorff space|Hausdorff]] topological vector space over {{math|𝕂}} is locally compact if and only if it is [[finite-dimensional]], that is, isomorphic to {{math|{{math|𝕂&lt;sup&gt;''n''&lt;/sup&gt;}}}} for some natural number {{mvar|n}}.
+
+=== Completeness and uniform structure ===
+{{Main|Complete topological vector space}}
+
+The '''[[Complete topological vector space|canonical uniformity]]'''{{sfn | Schaefer | Wolff | 1999 | pp=12-19}} on a TVS {{math|(''X'', τ)}} is the unique translation-invariant [[Uniform space|uniformity]] that induces the topology {{math|τ}} on {{mvar|X}}. 
+
+Every TVS is assumed to be endowed with this canonical uniformity, which makes all TVSs into [[uniform space]]s. 
+This allows one to {{huh|date=September 2020}} about related notions such as [[Complete topological vector space|completeness]], [[uniform convergence]], Cauchy nets, and [[uniform continuity]]. etc., which are always assumed to be with respect to this uniformity (unless indicated other). 
+This implies that every Hausdorff topological vector space is [[Tychonoff space|Tychonoff]].{{sfn | Schaefer | Wolff | 1999 | p=16}}
+A subset of a TVS is [[Compact space|compact]] if and only if it is complete and [[totally bounded]] (for TVSs, a set being totally bounded is equivalent to it being [[precompact]]). But if the TVS is not Hausdorff then there exist compact subsets that are not closed. However, the closure of a compact subset of a non-Hausdorff TVS is again compact (so compact subsets are [[relatively compact]]). 
+
+With respect to this uniformity, a [[Net (mathematics)|net]] (or sequence) {{math|1=''x''&lt;sub&gt;•&lt;/sub&gt; = (''x''&lt;sub&gt;''i''&lt;/sub&gt;)&lt;sub&gt;''i'' ∈ ''I''&lt;/sub&gt;}} is '''Cauchy''' if and only if for every neighborhood {{mvar|V}} of {{math|0}}, there exists some index {{mvar|i}} such that {{math|''x''&lt;sub&gt;''m''&lt;/sub&gt; − ''x''&lt;sub&gt;''n''&lt;/sub&gt; ∈ ''V''}} whenever {{math|''j'' ≥ ''i''}} and {{math|''k'' ≥ ''i''}}. 
+
+Every Cauchy sequence is bounded, although Cauchy nets and Cauchy filters may not be bounded. 
+A topological vector space where every Cauchy sequence converges is called '''[[sequentially complete]]'''; in general, it may not be complete (in the sense that all Cauchy filters converge). 
+
+The vector space operation of addition is uniformly continuous and an [[Open and closed map|open map]]. Scalar multiplication is [[Cauchy continuous]] but in general, it is almost never uniformly continuous. 
+Because of this, every topological vector space can be completed and is thus a [[Dense set|dense]] [[linear subspace]] of a [[complete topological vector space]]. 
+
+&lt;ul&gt;
+&lt;li&gt;Every TVS has a [[Complete topological vector space|completion]] and every Hausdorff TVS has a Hausdorff completion.{{sfn | Narici | Beckenstein | 2011 | pp=67-113}} Every TVS (even those that are Hausdorff and/or complete) have infinitely many non-isomorphic non-Hausdorff completions.&lt;/li&gt;
+&lt;li&gt;A compact subset of a TVS (not necessarily Hausdorff) is complete.{{sfn | Narici | Beckenstein | 2011 | pp=115-154}} A complete subset of a Hausdorff TVS is closed.{{sfn | Narici | Beckenstein | 2011 | pp=115-154}}&lt;/li&gt;
+&lt;li&gt;If {{mvar|C}} is a complete subset of a TVS then any subset of {{mvar|C}} that is closed in {{mvar|C}} is complete.{{sfn | Narici | Beckenstein | 2011 | pp=115-154}}&lt;/li&gt;
+&lt;li&gt;A Cauchy sequence in a Hausdorff TVS {{mvar|X}} is not necessarily [[relatively compact]] (i.e. its closure in {{mvar|X}} is not necessarily compact).&lt;/li&gt;
+&lt;li&gt;If a Cauchy filter in a TVS has an [[Filters in topology|accumulation point]] {{mvar|x}} then it converges to {{mvar|x}}.&lt;/li&gt;
+&lt;li&gt;If a series {{math|{{big|∑}}{{su|p=∞|b=''i''=1}} ''x''&lt;sub&gt;''i''&lt;/sub&gt;}} converges&lt;ref group=note&gt;A series {{math|{{big|∑}}{{su|p=∞|b=''i''=1}} ''x''&lt;sub&gt;''i''&lt;/sub&gt;}} is said to '''converge''' in a TVS {{mvar|X}} if the sequence of partial sums converges.&lt;/ref&gt; in a TVS {{mvar|X}} then {{math|''x''&lt;sub&gt;''i''&lt;/sub&gt; → 0}} in {{mvar|X}}.{{sfn | Swartz | 1992 | pp=27-29}}&lt;/li&gt;
+&lt;/ul&gt;
+
+== Examples ==
+
+=== Finest and coarsest vector topology ===
+
+Let {{mvar|X}} be a real or complex vector space. 
+
+;Trivial topology
+
+The '''[[trivial topology]]''' or '''indiscrete topology''' {{math|{ ''X'', ∅ } }} is always a TVS topology on any vector space {{mvar|X}} and it is the coarsest TVS topology possible.  An important consequence of this is that the intersection of any collection of TVS topologies on {{mvar|X}} always contains a TVS topology.  Any vector space (including those that are infinite dimensional) endowed with the trivial topology is a compact (and thus [[locally compact]]) [[Complete topological vector space|complete]] [[Metrizable topological vector space|pseudometrizable]] [[Seminormed space|seminormable]] [[Locally convex topological vector space|locally convex]] topological vector space. It is [[Hausdorff space|Hausdorff]] if and only if {{math|1=dim ''X'' = 0}}. 
+
+;Finest vector topology
+
+There exists a TVS topology {{math|τ&lt;sub&gt;f&lt;/sub&gt;}} on {{mvar|X}} that is finer than every other TVS-topology on {{mvar|X}} (that is, any TVS-topology on {{mvar|X}} is necessarily a subset of {{math|𝜏&lt;sub&gt;f&lt;/sub&gt;}}).&lt;ref&gt;{{Cite web|date=2016-04-22|title=A quick application of the closed graph theorem|url=https://terrytao.wordpress.com/2016/04/22/a-quick-application-of-the-closed-graph-theorem/|access-date=2020-10-07|website=What's new|language=en}}&lt;/ref&gt;{{sfn|Narici|Beckenstein|2011|p=111}}  Every linear map from {{math|(''X'', τ&lt;sub&gt;f&lt;/sub&gt;)}} into another TVS is necessarily continuous.  If {{mvar|X}} has an uncountable [[Hamel basis]] then {{math|𝜏&lt;sub&gt;f&lt;/sub&gt;}} is &lt;em&gt;not&lt;/em&gt; [[Locally convex topological vector space|locally convex]] and &lt;em&gt;not&lt;/em&gt; [[Metrizable topological vector space|metrizable]].{{sfn | Narici | Beckenstein | 2011 | p=111}}
+
+=== Product vector spaces ===
+
+A [[Cartesian product]] of a family of topological vector spaces, when endowed with the [[product topology]], is a topological vector space.  For instance, the set {{mvar|X}} of all functions {{math|''f'' : ℝ → ℝ}}: this set {{mvar|X}} can be identified with the product space {{math|ℝ&lt;sup&gt;ℝ&lt;/sup&gt;}} and carries a natural [[product topology]].  With this topology, {{mvar|X}} becomes a topological vector space, endowed with a topology called the &lt;em&gt;topology of [[pointwise convergence]]&lt;/em&gt;.  The reason for this name is the following: if {{math|(''f''&lt;sub&gt;''n''&lt;/sub&gt;)}} is a sequence of elements in {{mvar|X}}, then {{math|''f''&lt;sub&gt;''n''&lt;/sub&gt;}} has [[limit of a sequence|limit]] {{math|''f'' ∈ ''X''}} if and only if {{math|''f''&lt;sub&gt;''n''&lt;/sub&gt;(''x'')}} has limit {{math|''f''(''x'')}} for every real number {{mvar|x}}.  This space is complete, but not normable: indeed, every neighborhood of the origin in the product topology contains lines; that is, sets {{math|𝕂 ''f''}} for {{math|''f'' ≠ 0}}.
+
+=== Finite-dimensional spaces ===
+
+Let {{math|𝔽}} denote {{math|ℝ}} or {{math|ℂ}} and endow {{math|𝔽}} with its usual Hausdorff normed [[Euclidean topology]].  Let {{mvar|X}} be a vector space over {{math|𝔽}} of finite dimension {{math|1=''n'' = dim ''X''}} and so that {{mvar|X}} is vector space isomorphic to {{math|𝔽&lt;sup&gt;''n''&lt;/sup&gt;}}.  {{mvar|X}} has a unique &lt;em&gt;[[Hausdorff space|Hausdorff]]&lt;/em&gt; vector topology that is TVS-isomorphic to {{math|𝔽&lt;sup&gt;''n''&lt;/sup&gt;}}, which has the usual Euclidean (or product) topology, but it has a unique vector topology if and only if {{math|1=dim ''X'' = 0}}.  
+This Hausdorff vector topology is also the finest vector topology on {{mvar|X}}. 
+
+&lt;ul&gt;
+&lt;li&gt;If {{math|1=dim ''X'' = 0}} then {{math|1=''X'' = { 0 } }} has one vector topology: the trivial topology.
+* The trivial topology on a vector space is Hausdorff if and only if the vector space has dimension {{math|0}}. 
+&lt;/li&gt;
+&lt;li&gt;
+If {{math|1=dim ''X'' = 1}} then {{mvar|X}} has two vector topologies: the usual [[Euclidean topology]] and the trivial topology.
+* Since the field {{math|𝔽}} is itself a 1-dimensional topological vector space over {{math|𝔽}} and since it plays an important role in the definition of topological vector spaces, this dichotomy plays an important role in the definition of an [[absorbing set]] and has consequences that reverberate throughout [[functional analysis]]. 
+{{collapse top|title=Proof outline|left=true}} 
+The proof of this dichotomy is straightforward so only an outline with the important observations is given. As usual, {{math|𝔽}} is assumed have the (normed) Euclidean topology. Let {{mvar|X}} be a 1-dimensional vector space over {{math|𝔽}}. Observe that if {{math|''B'' ⊆ 𝔽}} is a ball centered at 0 and if {{math|''S'' ⊆  ''X''}} is a subset containing an &quot;unbounded sequence&quot; then {{math|1=''B'' ⋅ ''S'' = ''X''}}, where an &quot;unbounded sequence&quot; means a sequence of the form {{math|(''s''&lt;sub&gt;''i''&lt;/sub&gt; ''x''){{su|p=∞|b=''i''=1}}}} where {{math|0 ≠ ''x'' ∈ ''X''}} and {{math|(''s''&lt;sub&gt;''i''&lt;/sub&gt;){{su|p=∞|b=''i''=1}} ⊆ 𝔽}} is unbounded in normed space {{math|𝔽}}. Any vector topology on {{mvar|X}} will be translation invariant and invariant under non-zero scalar multiplication, and for every {{math|0 ≠ ''x'' ∈ ''X''}}, the map {{math|''M''&lt;sub&gt;''x''&lt;/sub&gt; : 𝔽 → ''X''}} given by {{math|1=''M''&lt;sub&gt;''x''&lt;/sub&gt; (''s'') := ''s'' ''x''}} is a continuous linear bijection. In particular, for any such {{mvar|x}}, {{math|1=''X'' = 𝔽 ''x''}} so every subset of {{mvar|X}} can be written as {{math|1=''F'' ''x'' = ''M''&lt;sub&gt;''x''&lt;/sub&gt;(''F'')}} for some unique subset {{math|''F'' ⊆ 𝔽}}. And if this vector topology on {{mvar|X}} has a neighborhood of 0 that is properly contained in {{mvar|X}}, then the continuity of scalar multiplication {{math|𝔽 × ''X'' → ''X''}} at the origin forces the existence of an open neighborhood of the origin in {{mvar|X}} that ''doesn't'' contain any &quot;unbounded sequence&quot;. From this, one deduces that if {{mvar|X}} doesn't carry the trivial topology and if {{math|0 ≠ ''x'' ∈ ''X''}}, then for any ball {{math|''B'' ⊆ 𝔽}} center at 0 in {{math|𝔽}}, {{math|1=''M''&lt;sub&gt;''x''&lt;/sub&gt; (''B'') = ''B'' ''x''}} contains an open neighborhood of the origin in {{mvar|X}} so that {{math|''M''&lt;sub&gt;''x''&lt;/sub&gt;}} is thus a linear homeomorphism. ∎
+{{collapse bottom}} 
+&lt;/li&gt;
+&lt;li&gt;
+If {{math|1=dim ''X'' = ''n'' ≥ 2}} then {{mvar|X}} has &lt;em&gt;infinitely many&lt;/em&gt; distinct vector topologies: 
+* Some of these topologies are now descirbed: Every linear functional {{mvar|f}} on {{mvar|X}}, which is vector space isomorphic to {{math|𝔽&lt;sup&gt;''n''&lt;/sup&gt;}}, induces a [[seminorm]] {{math|{{mabs|''f''}} : ''X'' → ℝ}} defined by {{math|1={{mabs|''f''}}(''x'') = {{mabs|''f'' (''x'')}}}} where {{math|1=ker ''f'' = ker {{mabs|''f''}}}}. Every seminorm induces a ([[Metrizable TVS|pseudometrizable]] [[locally convex]]) vector topology on {{mvar|X}} and seminorms with distinct kernels induce distinct topologies so that in particular, seminorms on {{mvar|X}} that are induced by linear functionals with distinct kernel will induces distinct vector topologies on {{mvar|X}}.
+* However, while there are infinitely many vector topologies on {{mvar|X}} when {{math|dim ''X'' ≥ 2}}, there are, &lt;em&gt;up to TVS-isomorphism&lt;/em&gt; only {{math|1 + dim ''X''}} vector topologies on {{mvar|X}}.  For instance, if {{math|1=''n'' := dim ''X'' = 2}} then the vector topologies on {{mvar|X}} consist of the trivial topology, the Hausdorff Euclidean topology, and then the infinitely many remaining non-trivial non-Euclidean vector topologies on {{mvar|X}} are all TVS-isomorphic to one another. 
+&lt;/li&gt;
+&lt;/ul&gt;
+
+=== Non-vector topologies ===
+;Discrete and cofinite topologies
+
+If {{mvar|X}} is a non-trivial vector space (i.e. of non-zero dimension) then the [[discrete topology]] on {{mvar|X}} (which is always [[Metrizable space|metrizable]]) is &lt;em&gt;not&lt;/em&gt; a TVS topology because despite making addition and negation continuous (which makes it into a [[topological group]] under addition), it fails to make scalar multiplication continuous.  The [[cofinite topology]] on {{mvar|X}} (where a subset is open if and only if its complement is finite) is also &lt;em&gt;not&lt;/em&gt; a TVS topology on {{mvar|X}}.
+
+== Linear maps ==
+
+A linear operator between two topological vector spaces which is continuous at one point is continuous on the whole domain. 
+Moreover, a linear operator {{mvar|f}} is continuous if {{math|''f''(''X'')}} is bounded (as defined below) for some neighborhood {{mvar|X}} of 0.
+
+A [[hyperplane]] on a topological vector space {{mvar|X}} is either dense or closed. 
+A [[linear functional]] {{mvar|f}} on a topological vector space {{mvar|X}} has either dense or closed kernel. 
+Moreover, {{mvar|f}} is continuous if and only if its [[Kernel (algebra)|kernel]] is [[closed set|closed]].
+
+== Types ==
+
+Depending on the application additional constraints are usually enforced on the topological structure of the space. 
+In fact, several principal results in functional analysis fail to hold in general for topological vector spaces: the [[closed graph theorem]], the [[Open mapping theorem (functional analysis)|open mapping theorem]], and the fact that the dual space of the space separates points in the space.
+
+Below are some common topological vector spaces, roughly ordered by their ''niceness''.
+
+* [[F-space]]s are [[complete space|complete]] topological vector spaces with a translation-invariant metric.  These include [[Lp space|{{math|L&lt;sup&gt;''p''&lt;/sup&gt;}} spaces]] for all {{math|p &amp;gt; 0}}.  
+* [[Locally convex topological vector space]]s: here each point has a [[local base]] consisting of [[convex set]]s. By a technique known as [[Minkowski functional]]s it can be shown that a space is locally convex if and only if its topology can be defined by a family of seminorms. Local convexity is the minimum requirement for &quot;geometrical&quot; arguments like the [[Hahn–Banach theorem]]. The {{math|L&lt;sup&gt;''p''&lt;/sup&gt;}} spaces are locally convex (in fact, Banach spaces) for all {{math|''p'' ≥ 1}}, but not for {{math|0 &lt; ''p'' &lt; 1}}.
+* [[Barrelled space]]s: locally convex spaces where the [[Banach–Steinhaus theorem]] holds.
+* [[Bornological space]]: a locally convex space where the [[continuous linear operator]]s to any locally convex space are exactly the [[bounded linear operator]]s. 
+* [[Stereotype space]]: a locally convex space satisfying a variant of [[reflexive space|reflexivity condition]], where the dual space is endowed with the topology of uniform convergence on [[totally bounded space|totally bounded sets]].
+* [[Montel space]]: a barrelled space where every [[closed set|closed]] and [[Bounded set (topological vector space)|bounded set]] is [[compact set|compact]]
+* [[Fréchet space]]s: these are complete locally convex spaces where the topology comes from a translation-invariant metric, or equivalently: from a countable family of seminorms. Many interesting spaces of functions fall into this class. A locally convex F-space is a Fréchet space.
+* [[LF-space]]s are [[limit (category theory)|limits]] of [[Fréchet space]]s. [[ILH space]]s are [[inverse limit]]s of Hilbert spaces.
+* [[Nuclear space]]s: these are locally convex spaces with the property that every bounded map from the nuclear space to an arbitrary Banach space is a [[nuclear operator]].
+* [[Normed space]]s and [[seminormed space]]s: locally convex spaces where the topology can be described by a single [[norm (mathematics)|norm]] or [[seminorm (mathematics)|seminorm]]. In normed spaces a linear operator is continuous if and only if it is bounded.
+* [[Banach space]]s: Complete [[normed vector space]]s. Most of functional analysis is formulated for Banach spaces.
+* [[Reflexive space|Reflexive Banach space]]s: Banach spaces naturally isomorphic to their double dual (see below), which ensures that some geometrical arguments can be carried out. An important example which is &lt;em&gt;not&lt;/em&gt; reflexive is [[Lp space|{{math|L&lt;sup&gt;1&lt;/sup&gt;}}]], whose dual is {{math|L&lt;sup&gt;∞&lt;/sup&gt;}} but is strictly contained in the dual of {{math|L&lt;sup&gt;∞&lt;/sup&gt;}}.
+* [[Hilbert space]]s: these have an [[inner product]]; even though these spaces may be infinite-dimensional, most geometrical reasoning familiar from finite dimensions can be carried out in them. These include {{math|L&lt;sup&gt;2&lt;/sup&gt;}} spaces.
+* [[Euclidean space]]s: {{math|ℝ&lt;sup&gt;''n''&lt;/sup&gt;}} or {{math|ℂ&lt;sup&gt;''n''&lt;/sup&gt;}} with the topology induced by the standard inner product. As pointed out in the preceding section, for a given finite {{mvar|n}}, there is only one {{mvar|n}}-dimensional topological vector space, up to isomorphism. It follows from this that any finite-dimensional subspace of a TVS is closed. A characterization of finite dimensionality is that a Hausdorff TVS is locally compact if and only if it is finite-dimensional (therefore isomorphic to some Euclidean space).
+
+== Dual space ==
+
+Every topological vector space has a [[continuous dual space]]&amp;mdash;the set ''X*'' of all continuous linear functionals, i.e. [[continuous linear map]]s from the space into the base field {{math|𝕂}}. 
+A topology on the dual can be defined to be the coarsest topology such that the dual pairing each point evaluation {{math|''X*'' → 𝕂}} is continuous. 
+This turns the dual into a locally convex topological vector space. 
+This topology is called the [[weak topology|weak-* topology]]. 
+This may not be the only natural topology on the dual space; for instance, the dual of a normed space has a natural norm defined on it. 
+However, it is very important in applications because of its compactness properties (see [[Banach–Alaoglu theorem]]).
+Caution: Whenever {{mvar|X}} is a not-normable locally convex space, then the pairing map {{math|''X*'' × ''X'' → 𝕂}} is never continuous, no matter which vector space topology one chooses on  ''V*''.
+
+== Properties ==
+{{See also|Locally convex topological vector space#Properties}}
+
+For any {{math|''S'' ⊆ ''X''}} of a TVS {{mvar|X}}, the [[Convex set|'''convex''']] (resp. '''[[Balanced set|balanced]], [[Absolutely convex set|disked]], closed convex, closed balanced, closed disked''') '''hull''' of {{math|S}} is the smallest subset of {{mvar|X}} that has this property and contains {{mvar|S}}. 
+
+The closure (resp. interior, [[convex hull]], balanced hull, disked hull) of a set {{mvar|S}} is sometimes denoted by {{math|cl ''S''}} (resp. {{math|Int ''S''}}, {{math|co ''S''}}, {{math|bal ''S''}}, {{math|cobal ''S''}}). 
+
+=== Neighborhoods and open sets ===
+
+;Properties of neighborhoods and open sets
+
+&lt;ul&gt;
+&lt;li&gt;The open convex subsets of a TVS {{mvar|X}} (not necessarily Hausdorff or locally convex) are exactly those that are of the form {{math|1=''z'' + { ''x'' ∈ ''X'' : ''p''(''x'') &lt; 1 } = { ''x'' ∈ ''X'' : ''p''(''x'' − ''z'') &lt; 1 } }} for some {{math|''z'' ∈ ''X''}} and some positive continuous [[sublinear functional]] {{mvar|p}} on {{mvar|X}}.{{sfn | Narici | Beckenstein | 2011 | pp=177-220}}&lt;/li&gt;
+&lt;li&gt;If {{math|''S'' ⊆ ''X''}} and {{mvar|U}} is an open subset of {{mvar|X}} then {{math|''S'' + ''U''}} is an open set in {{mvar|X}}.{{sfn | Narici | Beckenstein | 2011 | pp=67-113}}&lt;/li&gt;
+&lt;li&gt;If {{math|''S'' ⊆ ''X''}} has non-empty interior then {{math|''S'' − ''S''}} is a neighborhood of 0.{{sfn | Narici | Beckenstein | 2011 | pp=67-113}}&lt;/li&gt;
+&lt;li&gt;If {{mvar|K}} is an [[Absorbing set|absorbing]] [[Absolutely convex set|disk]] in a TVS {{mvar|X}} and if {{math|1=''p'' := ''p''&lt;sub&gt;''K''&lt;/sub&gt;}} is the [[Minkowski functional]] of {{mvar|K}} then{{sfn | Narici | Beckenstein | 2011 | p=119-120}} 
+:{{math|Int ''K'' {{space|1}} ⊆ {{space|1}} { ''x'' ∈ ''X'' : ''p''(''x'') &lt; 1 } {{space|1}} ⊆ {{space|1}} ''K'' {{space|1}} ⊆ {{space|1}} { ''x'' ∈ ''X'' : ''p''(''x'') ≤ 1 } {{space|1}} ⊆ {{space|1}} cl ''K''}}
+* It was &lt;em&gt;not&lt;/em&gt; assumed that {{mvar|K}} had any topological properties nor that {{math|''p''}} was continuous (which happens if and only if {{mvar|K}} is a neighborhood of 0).&lt;/li&gt;
+&lt;li&gt;Every TVS is [[connected space|connected]]{{sfn | Narici | Beckenstein | 2011 | pp=67-113}} and [[Locally connected space|locally connected]].{{sfn | Schaefer | Wolff | 1999 | p=35}} Any connected open subset of a TVS is [[arcwise connected]].&lt;/li&gt;
+&lt;li&gt;Let {{math|𝜏}} and {{math|𝜐}} be two vector topologies on {{mvar|X}}. Then {{math|𝜏 ⊆ 𝜐}} if and only if whenever a net {{math|1=''x''&lt;sub&gt;•&lt;/sub&gt; = (''x''&lt;sub&gt;''i''&lt;/sub&gt;)&lt;sub&gt;''i'' ∈ ''I''&lt;/sub&gt;}} in {{mvar|X}} converges 0 in {{math|(''X'', 𝜐)}} then {{math|''x''&lt;sub&gt;•&lt;/sub&gt; → 0}} in {{math|(''X'', 𝜏)}}.{{sfn | Wilansky | 2013 | p=43}}&lt;/li&gt;
+&lt;li&gt;Let {{mvar|𝒩}} be a neighborhood basis of the origin in {{mvar|X}}, let {{math|''S'' ⊆ ''X''}}, and let {{math|''x'' ∈ ''X''}}. Then {{math|''x'' ∈ cl ''S''}} if and only if there exists a net {{math|1=''s''&lt;sub&gt;•&lt;/sub&gt; = (''s''&lt;sub&gt;''N''&lt;/sub&gt;)&lt;sub&gt;''N'' ∈ 𝒩&lt;/sub&gt;}} in {{mvar|S}} (indexed by {{math|𝒩}}) such that {{math|1=''s''&lt;sub&gt;•&lt;/sub&gt; → ''x''}} in {{mvar|X}}.{{sfn | Wilansky | 2013 | p=42}}&lt;ref group=note&gt;This shows, in particular, that it will often suffice to consider nets indexed by a neighborhood basis of the origin rather than nets on arbitrary directed sets.&lt;/ref&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+;Interior
+
+&lt;ul&gt;
+&lt;li&gt;If {{mvar|S}} has non-empty interior then {{math|1=Int ''S'' = Int(cl ''S'')}} and {{math|1=cl ''S'' = cl(Int ''S'')}}.
+&lt;/li&gt;
+&lt;li&gt;If {{math|''R'', ''S'' ⊆ ''X''}} and {{mvar|S}} has non-empty interior then {{math|Int(''R'') + Int(''S'') ⊆ ''R'' + Int(''S'') ⊆ Int(''R''+''S'')}}.
+&lt;/li&gt;
+&lt;li&gt;If {{mvar|S}} is a [[Absolutely convex set|disk]] in {{mvar|X}} that has non-empty interior then 0 belongs to the interior of {{mvar|S}}.{{sfn | Narici | Beckenstein | 2011 | p=108}}
+* However, a closed [[Balanced set|balanced]] subset of {{mvar|X}} with non-empty interior may fail to contain 0 in its interior.{{sfn | Narici | Beckenstein | 2011 | p=108}}
+&lt;/li&gt;
+&lt;li&gt;If {{mvar|S}} is a [[Balanced set|balanced]] subset of {{mvar|X}} with non-empty interior then {{math|{ 0 } ∪ Int ''S''}} is balanced; in particular, if the interior of a balanced set contains the origin then {{math|Int ''S''}} is balanced.{{sfn | Narici | Beckenstein | 2011 | pp=67-113}}&lt;ref group=note&gt;If the interior of a balanced set is non-empty but does not contain the origin (such sets exists even in {{math|ℝ&lt;sup&gt;2&lt;/sup&gt;}} and {{math|ℂ&lt;sup&gt;2&lt;/sup&gt;}}) then the interior of this set can not be a balanced set.&lt;/ref&gt;
+&lt;/li&gt;
+&lt;li&gt;If {{mvar|x}} belongs to the interior of a convex set {{math|''S'' ⊆ ''X''}} and {{math|''y'' ∈ cl&lt;sub&gt;''X''&lt;/sub&gt; ''S''}}, then the half-open line segment {{math|1=[''x'', ''y'') := {''tx'' + (1 − ''t'')''y'' : 0 &lt; ''t'' ≤ 1} ⊆ Int ''S''}}.{{sfn | Schaefer|Wolff| 1999 | p=38}} If {{mvar|N}} is a [[Balanced set|balanced]] neighborhood of {{math|0}} in {{mvar|X}} then by considering intersections of the form {{math|''N'' ∩ ℝ ''x''}} (which are convex [[Symmetric set|symmetric]] neighborhoods of {{math|0}} in the real TVS {{math|ℝ ''x''}}) it follows that:
+* {{math|1=Int ''N'' &amp;thinsp;=&amp;thinsp; [0, 1) Int ''N'' &amp;thinsp;=&amp;thinsp; [0, 1) ''N'' &amp;thinsp;=&amp;thinsp; (−1, 1) ''N'' &amp;thinsp;=&amp;thinsp; ''B''&lt;sub&gt;1&lt;/sub&gt; ''N''}}, where {{math|1=''B''&lt;sub&gt;1&lt;/sub&gt; := { ''a'' ∈ 𝕂 : {{mabs|''a''}} &lt; 1&amp;thinsp;}}}.
+* if {{math|''x'' ∈ Int ''N''}} and {{math|1=''r'' := sup { ''r'' &gt; 0 : [0, ''r'') ''x'' ⊆ Int ''N''} }} then {{math|''r'' &gt; 1}}, {{math|[0, ''r'') ''x'' ⊆ Int ''N''}}, and if {{math|''r'' ≠ ∞}} then {{math|''r'' ''x'' ∈ cl ''N'' ∖ Int ''N''}}.
+&lt;/li&gt;
+&lt;li&gt;If {{mvar|C}} is convex and {{math|0 &lt; ''t'' ≤ 1}}, then {{math|''t'' Int ''C'' + (1 − ''t'') cl ''C'' ⊆ Int ''C''}}.{{sfn | Jarchow | 1981 | pp=101-104}}
+&lt;/li&gt;
+&lt;/ul&gt;
+
+=== Non-Hausdorff spaces and the closure of the origin ===
+
+&lt;ul&gt;
+&lt;li&gt;{{mvar|X}} is Hausdorff if and only if {{math|{ 0 } }} is closed in {{mvar|X}}.&lt;/li&gt;
+&lt;li&gt;{{math|1=cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } = {{underset|''N'' ∈ 𝒩(0)|{{big|∩}}}} ''N''}} so every neighborhood of the origin contains the closure of {{math|{ 0 }}}.
+&lt;li&gt;{{math|1=cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} is a vector subspace of {{mvar|X}} and its subspace topology is the [[trivial topology]] (which makes {{math|1=cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} compact).&lt;/li&gt;
+&lt;li&gt;Every subset of {{math|cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} is compact and thus complete (see footnote for a proof).&lt;ref group=proof&gt;Since {{math|cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} has the trivial topology, so does each of its subsets, which makes them all compact. It is known that a subset of any uniform space is compact if and only if it is complete and totally bounded.&lt;/ref&gt; In particular, if {{mvar|X}} is not Hausdorff then there exist compact complete subsets that are not closed.{{sfn | Narici | Beckenstein | 2011 | pp=47-66}}&lt;/li&gt;
+&lt;li&gt;{{math|''S'' + cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } &amp;thinsp;⊆&amp;thinsp; cl&lt;sub&gt;''X''&lt;/sub&gt; ''S''}} for every subset {{math|''S'' ⊆ ''X''}}.&lt;ref group=proof&gt;If {{math|''s'' ∈ ''S''}} then {{math|1=''s'' + cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } = cl&lt;sub&gt;''X''&lt;/sub&gt; (''s'' + { 0 }) = cl&lt;sub&gt;''X''&lt;/sub&gt; { ''s'' } ⊆ cl&lt;sub&gt;''X''&lt;/sub&gt; ''S''}}. Since {{math|''S'' ⊆ ''S'' + cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } ⊆ cl&lt;sub&gt;''X''&lt;/sub&gt; ''S''}}, if {{mvar|S}} is closed then equality holds. Clearly, the complement of any set {{mvar|S}} satisfying the equality {{math|1=''S'' + cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } = ''S''}} must also satisfy this equality.&lt;/ref&gt;
+* So if {{math|''S'' ⊆ ''X''}} is open or closed in {{mvar|X}} then {{math|1=''S'' + cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } &amp;thinsp;=&amp;thinsp; ''S''}} (so {{mvar|S}} is a [[Tube lemma|&quot;tube&quot;]] with vertical side {{math|cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 &amp;thinsp;}}}).
+* The [[quotient map]] {{math|1=''q'' : ''X'' → ''X'' / cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} is a [[Open and closed maps|closed map]] onto a Hausdorff TVS.{{sfn | Narici | Beckenstein | 2011 | pp=107-112}}&lt;/li&gt;
+&lt;li&gt;
+&lt;li&gt;A subset {{mvar|S}} of a TVS {{mvar|X}} is [[Totally bounded space|totally bounded]] if and only if {{math|''S'' + cl { 0 } }} is totally bounded,{{sfn | Schaefer | Wolff | 1999 | pp=12-35}} if and only if {{math|cl&lt;sub&gt;''X''&lt;/sub&gt; ''S''}} is totally bounded,{{sfn | Schaefer | Wolff | 1999 | p=25}}{{sfn | Jarchow | 1981 | pp=56-73}} if and only if its image under the canonical quotient map {{math|''X'' → ''X'' / cl&lt;sub&gt;''X''&lt;/sub&gt; ({ 0 })}} is totally bounded.{{sfn | Schaefer | Wolff | 1999 | pp=12-35}}&lt;/li&gt;
+&lt;li&gt;If {{math|''S'' ⊆ ''X''}} is compact, then {{math|1=cl&lt;sub&gt;''X''&lt;/sub&gt; ''S'' &amp;thinsp;=&amp;thinsp;''S'' + cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} and this set is compact. Thus the closure of a compact set is compact&lt;ref group=note&gt;In general topology, the closure of a compact subset of a non-Hausdorff space may fail to be compact (e.g. the [[particular point topology]] on an infinite set). This result shows that this does not happen in non-Hausdorff TVSs. {{math|''S'' + cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} is compact because it is the image of the compact set {{math|''S'' × cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} under the continuous addition map {{math|⋅ + ⋅ &amp;thinsp;:&amp;thinsp; ''X'' × ''X'' → ''X''}}. Recall also that the sum of a compact set (i.e. {{mvar|S}}) and a closed set is closed so {{math|''S'' + cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} is closed in {{mvar|X}}.&lt;/ref&gt; (i.e. all compact sets are [[relatively compact]]).{{sfn | Narici | Beckenstein | 2011 | p=156}}&lt;/li&gt;
+&lt;li&gt;A vector subspace of a TVS is bounded if and only if it is contained in the closure of {{math|{ 0 &amp;thinsp;}}}.{{sfn | Narici | Beckenstein | 2011 | pp=155-176}}&lt;/li&gt;
+&lt;li&gt;If {{mvar|M}} is a vector subspace of a TVS {{mvar|X}} then {{math|''X'' / ''M''}} is Hausdorff if and only if {{mvar|M}} is closed in {{mvar|X}}.&lt;/li&gt;
+&lt;li&gt;Every vector subspace of {{mvar|X}} that is an algebraic complement of {{math|cl { 0 } }} is a [[Complemented subspace|topological complement]] of {{math|cl { 0 &amp;thinsp;}}}. Thus if {{mvar|H}} is an algebraic complement of {{math|cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} in {{mvar|X}} then the addition map {{math|''H'' × cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } → ''X''}}, defined by {{math|(''h'', ''n'') ↦ ''h'' + ''n''}} is a TVS-isomorphism, where {{mvar|H}} is Hausdorff and {{math|cl { 0 } }} has the [[indiscrete topology]].{{sfn | Wilansky | 2013 | p=63}} Moreover, if {{mvar|C}} is a Hausdorff [[Complete topological vector space|completion]] of {{mvar|H}} then {{math|''C'' × cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }} is a completion of {{math|1=''X'' ≅ ''H'' × cl&lt;sub&gt;''X''&lt;/sub&gt; { 0 } }}.{{sfn | Schaefer | Wolff | 1999 | pp=12-35}}&lt;/li&gt;
+&lt;/ul&gt;
+
+=== Closed and compact sets ===
+
+;Compact and totally bounded sets
+
+&lt;ul&gt;
+&lt;li&gt;A subset of a TVS is compact if and only if it is complete and [[Totally bounded space|totally bounded]].{{sfn | Narici | Beckenstein | 2011 | pp=47-66}}
+* Thus, in a complete TVS, a closed and totally bounded subset is compact.{{sfn | Narici | Beckenstein | 2011 | pp=47-66}}&lt;/li&gt;
+&lt;li&gt;A subset {{mvar|S}} of a TVS {{mvar|X}} is [[Totally bounded space|totally bounded]] if and only if {{math|cl&lt;sub&gt;''X''&lt;/sub&gt; ''S''}} is totally bounded,{{sfn | Schaefer | Wolff | 1999 | p=25}}{{sfn | Jarchow | 1981 | pp=56-73}} if and only if its image under the canonical quotient map {{math|''X'' → ''X'' / cl&lt;sub&gt;''X''&lt;/sub&gt; ({ 0 })}} is totally bounded.{{sfn | Schaefer | Wolff | 1999 | pp=12-35}}&lt;/li&gt;
+&lt;li&gt;Every relatively compact set is totally bounded.{{sfn | Narici | Beckenstein | 2011 | pp=47-66}} The closure of a totally bounded set is totally bounded.{{sfn | Narici | Beckenstein | 2011 | pp=47-66}}&lt;/li&gt;
+&lt;li&gt;The image of a totally bounded set under a uniformly continuous map (e.g. a continuous linear map) is totally bounded.{{sfn | Narici | Beckenstein | 2011 | pp=47-66}}&lt;/li&gt;
+&lt;li&gt;If {{mvar|K}} is a compact subset of a TVS {{mvar|X}} and {{mvar|U}} is an open subset of {{mvar|X}} containing {{mvar|K}}, then there exists a neighborhood {{mvar|N}} of 0 such that {{math|''K'' + ''N'' ⊆ ''U''}}.{{sfn | Narici | Beckenstein | 2011 | pp=19-45}}&lt;/li&gt;
+&lt;li&gt;If {{mvar|S}} is a subset of a TVS {{mvar|X}} such that every sequence in {{mvar|S}} has a cluster point in {{mvar|S}} then {{mvar|S}} is totally bounded.{{sfn | Schaefer | Wolff | 1999 | pp=12-35}}&lt;/li&gt;
+&lt;/ul&gt;
+
+;Closure and closed set
+
+&lt;ul&gt;
+&lt;li&gt;If {{math|''S'' ⊆ ''X''}} and {{mvar|a}} is a scalar then {{math|1=''a''cl(''S'') ⊆ cl(''aS'')}}; if {{mvar|X}} is Hausdorff, {{math|''a'' ≠ 0}}, or {{math|1=''S'' = ∅}} then equality holds: {{math|1=cl(''aS'') = ''a''cl(''S'')}}.
+* In particular, every non-zero scalar multiple of a closed set is closed.&lt;/li&gt;
+&lt;li&gt;If {{math|''S'' ⊆ ''X''}} and {{math|''S'' + ''S'' ⊆ 2 cl ''S''}} then {{math|cl ''S''}} is convex.{{sfn | Wilansky | 2013 | pp=43-44}}&lt;/li&gt;
+&lt;li&gt;If {{math|''R'', ''S'' ⊆ ''X''}} then {{math|cl(''R'') + cl(''S'') ⊆ cl(''R''+''S'')}} and {{math|1=cl[cl(''R'') + cl(''S'')] = cl(''R''+''S'')}}.{{sfn | Narici | Beckenstein | 2011 | pp=67-113}} Thus if {{math|''R'' + ''S''}} is closed then so is {{math|cl(''R'') + cl(''S'')}}.{{sfn | Wilansky | 2013 | pp=43-44}}&lt;/li&gt;
+&lt;li&gt;If {{math|''S'' ⊆ ''X''}} and if {{mvar|R}} is a set of scalars such that neither {{math|cl ''S''}} nor {{math|cl ''R''}} contain zero then {{math|1=(cl ''R'') (cl ''S'') = cl(''RS'')}}.{{sfn | Wilansky | 2013 | pp=43-44}}&lt;/li&gt;
+&lt;li&gt;The closure of a vector subspace of a TVS is a vector subspace.&lt;/li&gt;
+&lt;li&gt;If {{math|''S'' ⊆ ''X''}} then {{math|1=cl ''S'' = {{underset|''N'' ∈ 𝒩|{{big|∩}}}} (''S'' + ''N'')}} where {{math|𝒩}} is any neighborhood basis at the origin for {{mvar|X}}.{{sfn | Narici | Beckenstein | 2011 | pp=80}}
+* However, {{math|1=cl ''S'' &amp;nbsp;⊇&amp;nbsp; {{big|∩}} { ''U'' : ''S'' ⊆ ''U'', ''U'' open in ''X'' } }} and it's possible for this containment to be proper{{sfn | Narici | Beckenstein | 2011 | pp=108-109}} (e.g. if {{math|1=''X'' = ℝ}} and {{mvar|S}} is the rational numbers).
+* It follows that {{math|cl ''U'' ⊆ ''U'' + ''U''}} for every neighborhood {{mvar|U}} of the origin in {{mvar|X}}.{{sfn | Jarchow | 1981 | pp=30-32}}&lt;/li&gt;
+&lt;li&gt;If {{mvar|X}} is a real TVS and {{math|''S'' ⊆ ''X''}}, then {{math|{{underset|''r'' &gt; 1|{{big|∩}}}} ''rS'' ⊆ cl ''S''}} (observe that the left hand side is independent of the topology on {{mvar|X}}); if {{mvar|S}} is a convex neighborhood of the origin then equality holds.&lt;/li&gt;
+&lt;li&gt;The sum of a compact set and a closed set is closed. However, the sum of two closed subsets may fail to be closed{{sfn | Narici | Beckenstein | 2011 | pp=67-113}} (see this footnote&lt;ref group=note&gt;In the {{math|ℝ&lt;sup&gt;2&lt;/sup&gt;}}, the sum of the {{mvar|y}}-axis and the graph of {{math|1=''y'' = {{sfrac|1|''x''}}}}, which is the complement of the {{mvar|y}}-axis, is open in {{math|ℝ&lt;sup&gt;2&lt;/sup&gt;}}. In {{math|ℝ}}, the sum of {{math|ℤ}} and {{math|{{sqrt|2}}ℤ}} is a countable dense subset of {{math|ℝ}} so not closed in {{math|ℝ}}.&lt;/ref&gt; for examples).&lt;/li&gt;
+&lt;li&gt;If {{mvar|M}} is a vector subspace of {{mvar|X}} and {{mvar|N}} is a closed neighborhood of 0 in {{mvar|X}} such that {{math|''U'' ∩ ''N''}} is closed in {{mvar|X}} then {{mvar|M}} is closed in {{mvar|X}}.{{sfn | Narici | Beckenstein | 2011 | pp=19-45}}&lt;/li&gt;
+&lt;li&gt;Every finite dimensional vector subspace of a Hausdorff TVS is closed. The sum of a closed vector subspace and a finite-dimensional vector subspace is closed.{{sfn | Narici | Beckenstein | 2011 | pp=67-113}}&lt;/li&gt;
+&lt;/ul&gt;
+
+;Closed hulls
+
+&lt;ul&gt;
+&lt;li&gt;In a locally convex space, convex hulls of bounded sets are bounded. This is not true for TVSs in general.{{sfn | Narici | Beckenstein | 2011 | pp=155-176}}&lt;/li&gt;
+&lt;li&gt;The closed convex hull of a set is equal to the closure of the convex hull of that set (i.e. to {{math|cl(co(''S''))}}).{{sfn | Narici | Beckenstein | 2011 | pp=67-113}}&lt;/li&gt;
+&lt;li&gt;The closed balanced hull of a set is equal to the closure of the balanced hull of that set (i.e. to {{math|cl(bal(''S''))}}).{{sfn | Narici | Beckenstein | 2011 | pp=67-113}}&lt;/li&gt;
+&lt;li&gt;The closed [[Absolutely convex set|disked]] hull of a set is equal to the closure of the disked hull of that set (i.e. to {{math|cl(cobal(''S''))}}).{{sfn | Narici | Beckenstein | 2011 | pp=67-113}}&lt;/li&gt;
+&lt;li&gt;If {{math|''R'', ''S'' ⊆ ''X''}} and the closed convex hull of one of the sets {{mvar|S}} or {{mvar|R}} is compact then {{math|1=cl(co(''R'')) + cl(co(''S'')) = cl(co(''R''+''S''))}}.{{sfn | Narici | Beckenstein | 2011 | pp=67-113}}&lt;/li&gt;
+&lt;li&gt;If {{math|''R'', ''S'' ⊆ ''X''}} each have a closed convex hull that is compact (''i.e.'' {{math|cl(co(''R''))}} and {{math|cl(co(''S''))}} are compact) then {{math|1=cl(co(''R'' ∪ ''S'')) &amp;thinsp;=&amp;thinsp; co[cl(co(''R'')) ∪ cl(co(''S''))]}}.&lt;/li&gt;
+&lt;/ul&gt;
+
+;Hulls and compactness

@@ -1,0 +1,221 @@
+Strictly speaking, the term &quot;calibration&quot; means just the act of comparison and does not include any subsequent adjustment.
+
+The calibration standard is normally traceable to a national / international standard held by a national metrology body.
+
+==BIPM Definition==
+The formal definition of calibration by the [[International Bureau of Weights and Measures]] (BIPM) is the following: &quot;Operation that, under specified conditions, in a first step, establishes a relation between the quantity values with measurement uncertainties provided by measurement standards and corresponding indications with associated measurement uncertainties (of the calibrated instrument or secondary standard) and, in a second step, uses this information to establish a relation for obtaining a measurement result from an indication.&quot;&lt;ref name=metrology_terms&gt;''[http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf JCGM 200:2008 International vocabulary of metrology]'' — Basic and general concepts and associated terms (VIM)&lt;/ref&gt;
+ 
+This definition states that the calibration process is purely a comparison, but introduces the concept of [[measurement uncertainty]] in relating the accuracies of the device under test and the standard.
+
+==Modern calibration processes==
+The increasing need for known accuracy and uncertainty and the need to have consistent and comparable standards internationally has led to the establishment of national laboratories. In many countries a National Metrology Institute (NMI) will exist which will maintain primary standards of measurement (the main [[International System of Units|SI units]] plus a number of derived units) which will be used to provide [[traceability]] to customer's instruments by calibration.
+
+The NMI supports the metrological infrastructure in that country (and often others) by establishing an unbroken chain, from the top level of standards to an instrument used for measurement.  Examples of National Metrology Institutes are [[National Physical Laboratory, UK|NPL]] in the [[UK]], [[NIST]] in the [[United States]], [[Physikalisch-Technische Bundesanstalt|PTB]] in [[Germany]] and many others.  Since the Mutual Recognition Agreement was signed it is now straightforward to take traceability from any participating NMI and it is no longer necessary for a company to obtain traceability for measurements from the NMI of the country in which it is situated, such as the [[National Physical Laboratory (United Kingdom)|National Physical Laboratory]] in the UK.
+
+===Quality===
+To improve the quality of the calibration and have the results accepted by outside organizations it is desirable for the calibration and subsequent measurements to be &quot;traceable&quot; to the internationally defined measurement units.  Establishing [[traceability]] is accomplished by a formal comparison to a [[Standard (metrology)|standard]] which is directly or indirectly related to national standards (such as [[NIST]] in the USA), international standards, or [[certified reference materials]]. This may be done by national standards laboratories operated by the government or by private firms offering metrology services.
+
+[[Quality management system]]s call for an effective [[metrology]] system which includes formal, periodic, and documented calibration of all measuring instruments.  [[ISO 9000]]&lt;ref name=&quot;iso9001&quot;&gt;ISO 9001: &quot;Quality management systems — Requirements&quot; (2008), section 7.6.&lt;/ref&gt; and [[ISO 17025]]&lt;ref name=&quot;iso17025&quot;&gt;ISO 17025: &quot;General requirements for the competence of testing and calibration laboratories&quot; (2005), section 5.&lt;/ref&gt; standards require that these traceable actions are to a high level and set out how they can be quantified.
+
+To communicate the quality of a calibration the calibration value is  often accompanied by a traceable uncertainty statement to a stated confidence level.  This is evaluated through careful uncertainty analysis.
+Some times a DFS (Departure From Spec) is required to operate machinery in a degraded state. Whenever this does happen, it must be in writing and authorized by a manager with the technical assistance of a calibration technician.
+
+Measuring devices and instruments are categorized according to the physical quantities they are designed to measure. These vary internationally, e.g., [[National Institute of Standards and Technology|NIST]] 150-2G in the U.S.&lt;ref&gt;{{Cite journal|url = https://www.nist.gov/nvlap/upload/hb150-2g-1.pdf|title = Calibration Laboratories: Technical Guide for Mechanical Measurements|last = Faison|first = C. Douglas|date = March 2004|journal = NIST Handbook 150-2G|access-date = 14 June 2015|last2 = Brickenkamp|first2 = Carroll S.|publisher = [[NIST]]}}&lt;/ref&gt; and [[National Accreditation Board for Testing and Calibration Laboratories|NABL]]-141 in India.&lt;ref&gt;{{Cite web|url = http://www.fcriindia.com/national-training-2/metrology-pressure-thermal-electrotechnical-measurement-calibration/|title = Metrology, Pressure, Thermal &amp; Eletrotechnical Measurement and Calibration|access-date = 14 June 2015|publisher = Fluid Control Research Institute (FCRI), Ministry of Heavy Industries &amp; Public Enterprises, Govt. of India|archive-url = https://web.archive.org/web/20150614205726/http://www.fcriindia.com/national-training-2/metrology-pressure-thermal-electrotechnical-measurement-calibration/|archive-date = 14 June 2015}}&lt;/ref&gt; Together, these standards cover instruments that measure various physical quantities such as [[electromagnetic radiation]] ([[RF probe]]s), [[sound]] ([[sound level meter]] or [[noise dosimeter]]), time and frequency ([[intervalometer]]), [[ionizing radiation]] ([[Geiger counter]]), light ([[light meter]]), mechanical quantities ([[limit switch]], [[pressure gauge]], [[pressure switch]]), and, thermodynamic or thermal properties ([[thermometer]], [[temperature control]]ler). The standard instrument for each test device varies accordingly, e.g., a dead weight tester for pressure gauge calibration and a dry block temperature tester for temperature gauge calibration.
+
+==Instrument calibration prompts==
+Calibration may be required for the following reasons:
+* a new instrument
+* after an instrument has been repaired or modified
+* moving from one location to other location
+* when a specified time period has elapsed
+* when a specified usage (operating hours) has elapsed
+* before and/or after a critical measurement
+* after an event, for example
+** after an instrument has been exposed to a shock, [[vibration]], or physical damage, which might potentially have compromised the integrity of its calibration
+** sudden changes in weather
+* whenever observations appear questionable or instrument indications do not match the output of surrogate instruments
+* as specified by a requirement, e.g., customer specification, instrument manufacturer recommendation.
+
+In general use, calibration is often regarded as including the process of '''adjusting''' the output or indication on a measurement instrument to agree with value of the applied standard, within a specified accuracy. For example, a [[thermometer]] could be calibrated so the error of indication or the correction is determined, and adjusted (e.g. via [[Operational definition#Temperature|calibration]] constants) so that it shows the true temperature in [[Celsius]] at specific points on the scale. This is the perception of the instrument's end-user. However, very few instruments can be adjusted to exactly match the standards they are compared to. For the vast majority of calibrations, the calibration process is actually the comparison of an unknown to a known and recording the results.
+
+==Basic calibration process==
+
+===Purpose and scope===
+The calibration process begins with the design of the measuring instrument that needs to be calibrated. The design has to be able to &quot;hold a calibration&quot; through its calibration interval. In other words, the design has to be capable of measurements that are &quot;within [[engineering tolerance]]&quot; when used within the stated environmental conditions over some reasonable period of time.&lt;ref name=&quot;HaiderAsif2011&quot;&gt;{{cite book|last1=Haider|first1=Syed Imtiaz|last2=Asif|first2=Syed Erfan|title=Quality Control Training Manual: Comprehensive Training Guide for API, Finished Pharmaceutical and Biotechnologies Laboratories|url=https://books.google.com/?id=-djll_c9Z9MC&amp;pg=PA49|date=16 February 2011|publisher=CRC Press|isbn=978-1-4398-4994-1|page=49}}&lt;/ref&gt; Having a design with these characteristics increases the likelihood of the actual measuring instruments performing as expected.
+Basically, the purpose of calibration is for maintaining the quality of measurement as well as to ensure the proper working of particular instrument.
+
+===Frequency===
+The exact mechanism for assigning tolerance values varies by country and as per the industry type. The measuring of equipment is manufacturer generally assigns the measurement tolerance, suggests a calibration interval (CI) and specifies the environmental range of use and storage. The using organization generally assigns the actual calibration interval, which is dependent on this specific measuring equipment's likely usage level. The assignment of calibration intervals can be a formal process based on the results of previous calibrations. The standards themselves are not clear on recommended CI values:&lt;ref&gt;{{cite book|last1=Bare|first1=Allen|title=Simplified Calibration Interval Analysis|date=2006|publisher=NCSL International Workshop and Symposium, under contract with the Office of Scientific and Technical Information, U.S. Department of Energy|location=Aiken, SC|pages=1–2|url=http://sti.srs.gov/fulltext/2006/ms2006099.pdf|access-date=28 November 2014}}&lt;/ref&gt;
+:''[[ISO/IEC 17025|ISO 17025]]''&lt;ref name=&quot;iso17025&quot; /&gt;
+::&quot;A calibration certificate (or calibration label) shall not contain any recommendation on the calibration interval except where this has been agreed with the customer. This requirement may be superseded by legal regulations.”
+:''ANSI/NCSL Z540''&lt;ref&gt;{{cite web|title=ANSI/NCSL Z540.3-2006 (R2013)|url=http://www.ncsli.org/I/i/p/z3/c/a/p/NCSL_International_Z540.3_Standard.aspx?hkey=7de83171-16ff-416c-9182-94c8447fb300|publisher=The National Conference of Standards Laboratories (NCSL) International|access-date=28 November 2014|archive-url=https://web.archive.org/web/20141120230954/http://www.ncsli.org/I/i/p/z3/c/a/p/NCSL_International_Z540.3_Standard.aspx?hkey=7de83171-16ff-416c-9182-94c8447fb300#|archive-date=2014-11-20|url-status=dead}}&lt;/ref&gt;
+::&quot;...shall be calibrated or verified at periodic intervals established and maintained to assure acceptable reliability...&quot;
+:''[[ISO 9000#Contents of ISO 9001|ISO-9001]]''&lt;ref name=&quot;iso9001&quot; /&gt;
+::&quot;Where necessary to ensure valid results, measuring equipment shall...be calibrated or verified at specified intervals, or prior to use...”
+:''MIL-STD-45662A''&lt;ref&gt;{{cite web|title=Calibration Systems Requirements (Military Standard)|url=http://www.medivactech.com/revA.pdf|publisher=U.S. Department of Defense|access-date=28 November 2014|location=Washington, DC|date=1 August 1998|archive-url=https://web.archive.org/web/20051030004254/http://medivactech.com/revA.pdf#|archive-date=2005-10-30|url-status=dead}}&lt;/ref&gt;
+::&quot;... shall be calibrated at periodic intervals established and maintained to assure acceptable accuracy and reliability...Intervals shall be shortened or may be lengthened, by the contractor, when the results of previous calibrations indicate that such action is appropriate to maintain acceptable reliability.&quot;
+
+===Standards required and accuracy===
+The next step is defining the calibration process. The selection of a standard or standards is the most visible part of the calibration process. Ideally, the standard has less than 1/4 of the measurement uncertainty of the device being calibrated. When this goal is met, the accumulated measurement uncertainty of all of the standards involved is considered to be insignificant when the final measurement is also made with the 4:1 ratio.&lt;ref name=&quot;JablonskiBrezina2011&quot;&gt;{{Citation
+| editor1-last = Jabłoński | editor1-first = Ryszard
+| editor2-last = Březina | editor2-first = Tomaš
+| series = Mechatronics: Recent Technological and Scientific Advances
+| last1 = Ligowski | first1 = M.
+| last2 = Jabłoński | first2 = Ryszard
+| last3 = Tabe | first3 = M.
+| title = Procedure for Calibrating Kelvin Probe Force Microscope
+| page = 227
+| year = 2011
+| isbn = 978-3-642-23244-2
+| doi = 10.1007/978-3-642-23244-2
+| lccn = 2011935381
+}}&lt;/ref&gt; This ratio was probably first formalized in Handbook 52 that accompanied MIL-STD-45662A, an early US Department of Defense metrology program specification. It was 10:1 from its inception in the 1950s until the 1970s, when advancing technology made 10:1 impossible for most electronic measurements.&lt;ref&gt;{{cite book|title=Military Handbook: Evaluation of Contractor's Calibration System|url=http://www.barringer1.com/mil_files/MIL-HDBK-52.pdf|publisher=U.S. Department of Defense|page=7|access-date=28 November 2014|date=17 August 1984}}&lt;/ref&gt;
+
+Maintaining a 4:1 accuracy ratio with modern equipment is difficult. The test equipment being calibrated can be just as accurate as the working standard.&lt;ref name=&quot;JablonskiBrezina2011&quot; /&gt; If the accuracy ratio is less than 4:1, then the calibration tolerance can be reduced to compensate. When 1:1 is reached, only an exact match between the standard and the device being calibrated is a completely correct calibration. Another common method for dealing with this capability mismatch is to reduce the accuracy of the device being calibrated.
+
+For example, a gauge with 3% manufacturer-stated accuracy can be changed to 4% so that a 1% accuracy standard can be used at 4:1.  If the gauge is used in an application requiring 16% accuracy, having the gauge accuracy reduced to 4% will not affect the accuracy of the final measurements. This is called a limited calibration. But if the final measurement requires 10% accuracy, then the 3% gauge never can be better than 3.3:1. Then perhaps adjusting the calibration tolerance for the gauge would be a better solution. If the calibration is performed at 100 units, the 1% standard would actually be anywhere between 99 and 101 units. The acceptable values of calibrations where the test equipment is at the 4:1 ratio would be 96 to 104 units, inclusive. Changing the acceptable range to 97 to 103 units would remove the potential contribution of all of the standards and preserve a 3.3:1 ratio. Continuing, a further change to the acceptable range to 98 to 102 restores more than a 4:1 final ratio.
+
+This is a simplified example. The mathematics of the example can be challenged. It is important that whatever thinking guided this process in an actual calibration be recorded and accessible. Informality contributes to [[tolerance stacks]] and other difficult to diagnose post calibration problems.
+
+Also in the example above, ideally the calibration value of 100 units would be the best point in the gauge's range to perform a single-point calibration. It may be the manufacturer's recommendation or it may be the way similar devices are already being calibrated. Multiple point calibrations are also used. Depending on the device, a zero unit state, the absence of the phenomenon being measured, may also be a calibration point.  Or zero may be resettable by the user-there are several variations possible. Again, the points to use during calibration should be recorded.
+
+There may be specific connection techniques between the standard and the device being calibrated that may influence the calibration. For example, in electronic calibrations involving analog phenomena, the impedance of the cable connections can directly influence the result.
+
+===Manual and automatic calibrations===
+Calibration methods for modern devices can be manual or automatic.
+[[Image:US Navy 040830-N-4565G-002 Fireman Joshua Morgan, of Waco, Texas, calibrates an Engineering pressure gage.jpg|thumb|Manual calibration - US serviceman calibrating a pressure gauge. The device under test is on his left and the test standard on his right.]]
+
+As an example, a manual process may be used for calibration of a pressure gauge. The procedure requires multiple steps,&lt;ref&gt;{{cite book|title=Procedure for calibrating pressure gauges (USBR 1040)|publisher=U.S. Department of the Interior, Bureau of Reclamation|pages=70–73|url=http://www.usbr.gov/pmts/geotech/rock/EMpart_2/USBR1040.pdf|access-date=28 November 2014}}&lt;/ref&gt;{{cn|date=October 2018}} to connect the gauge under test to a reference master gauge and an adjustable pressure source, to apply fluid pressure to both reference and test gauges at definite points over the span of the gauge, and to compare the readings of the two. The gauge under test may be adjusted to ensure its zero point and response to pressure comply as closely as possible to the intended accuracy. Each step of the process requires manual record keeping. 
+
+[[Image:US Navy 040829-N-7884F-006 Machinist Mate 2nd Class Frank Cundiff completes calibration testing on pressure gauges using the 3666C auto pressure calibrator.jpg|thumb|Automatic calibration - A U.S. serviceman using a 3666C auto pressure calibrator]]
+An automatic pressure calibrator &lt;ref&gt;{{cite web|title=KNC Model 3666 Automatic Pressure Calibration System|url=http://www.kingnutronics.com/Model%203666%20Automatic%20Pressure%20Calibration%20System.pdf|publisher=King Nutronics Corporation|access-date=28 November 2014|archive-url=https://web.archive.org/web/20141204112439/http://www.kingnutronics.com/Model%203666%20Automatic%20Pressure%20Calibration%20System.pdf#|archive-date=2014-12-04|url-status=dead}}&lt;/ref&gt; is a device that combines an electronic control unit, a pressure intensifier used to compress a gas such as [[Nitrogen]], a [[pressure transducer]] used to detect desired levels in a [[hydraulic accumulator]], and accessories such as [[Trap (plumbing)|liquid traps]] and gauge [[Piping and plumbing fittings|fittings]]. An automatic system may also include data collection facilities to automate the gathering of data for record keeping.
+
+===Process description and documentation===
+All of the information above is collected in a calibration procedure, which is a specific [[test method]]. These procedures capture all of the steps needed to perform a successful calibration. The manufacturer may provide one or the organization may prepare one that also captures all of the organization's other requirements. There are clearinghouses for calibration procedures such as the Government-Industry Data Exchange Program (GIDEP) in the United States.
+
+This exact process is repeated for each of the standards used until transfer standards, [[certified reference materials]] and/or natural physical constants, the measurement standards with the least uncertainty in the laboratory, are reached. This establishes the [[traceability]] of the calibration.
+
+See [[Metrology]] for other factors that are considered during calibration process development.
+
+After all of this, individual instruments of the specific type discussed above can finally be calibrated. The process generally begins with a basic damage check. Some organizations such as nuclear power plants collect &quot;as-found&quot; calibration data before any [[Planned maintenance|routine maintenance]] is performed. After routine maintenance and deficiencies detected during calibration are addressed, an &quot;as-left&quot; calibration is performed.
+
+More commonly, a calibration technician is entrusted with the entire process and signs the calibration certificate, which documents the completion of a successful calibration.
+The basic process outlined above is a difficult and expensive challenge. The cost for ordinary equipment support is generally about 10% of the original purchase price on a yearly basis, as a commonly accepted [[rule-of-thumb]]. Exotic devices such as [[scanning electron microscope]]s, [[gas chromatograph]] systems and [[laser]] [[interferometer]] devices can be even more costly to maintain.
+
+The 'single measurement' device used in the basic calibration process description above does exist. But, depending on the organization, the majority of the devices that need calibration can have several ranges and many functionalities in a single instrument. A good example is a common modern [[oscilloscope]]. There easily could be 200,000 combinations of settings to completely calibrate and limitations on how much of an all-inclusive calibration can be automated.
+
+[[Image:F18NARack.JPG|thumb|An instrument rack with tamper-indicating seals]]
+
+To prevent unauthorized access to an instrument tamper-proof seals are usually applied after calibration. The picture of the oscilloscope rack shows these, and prove that the instrument has not been removed since it was last calibrated as they will possible unauthorized to the adjusting elements of the instrument. There also are labels showing the date of the last calibration and when the calibration interval dictates when the next one is needed. Some organizations also assign unique identification to each instrument to standardize the record keeping and keep track of accessories that are integral to a specific calibration condition.
+
+When the instruments being calibrated are integrated with computers, the integrated computer programs and any calibration corrections are also under control.
+
+==Historical development==
+{{Main article|History of measurement}}
+
+===Origins===
+The words &quot;calibrate&quot; and &quot;calibration&quot; entered the [[English language]] as recently as the [[American Civil War]],&lt;ref&gt;{{cite web|url=http://dictionary.reference.com/browse/calibrate|title=the definition of calibrate|website=Dictionary.com|access-date=18 March 2018}}&lt;/ref&gt; in descriptions of [[artillery]], thought to be derived from a measurement of the calibre of a gun.
+
+Some of the [[History of measurement#Earliest known systems|earliest known systems of measurement]] and calibration seem to have been created between the ancient civilizations of [[Ancient Egypt|Egypt]], [[Mesopotamia]] and the [[Indus Valley Civilization|Indus Valley]], with excavations revealing the use of angular gradations for construction.&lt;ref name=&quot;Baber1996&quot;&gt;{{cite book |last=Baber |first=Zaheer |date=1996 |title=The Science of Empire: Scientific Knowledge, Civilization, and Colonial Rule in India |publisher=SUNY Press |isbn=978-0-7914-2919-8 |pages=23–24 |url=https://books.google.com/?id=ucDBJSxaCPYC&amp;pg=PA14}}&lt;/ref&gt; The term &quot;calibration&quot; was likely first associated with the precise division of linear distance and angles using a [[dividing engine]] and the measurement of gravitational [[mass]] using a [[weighing scale]]. These two forms of measurement alone and their direct derivatives supported nearly all commerce and technology development from the earliest civilizations until about AD 1800.&lt;ref name=&quot;FranceschiniGaletto2011&quot;&gt;{{cite book |last1=Franceschini |first1=Fiorenzo |last2=Galetto |first2=Maurizio |last3=Maisano |first3=Domenico |last4=Mastrogiacomo |first4=Luca |last5=Pralio |first5=Barbara |date=6 June 2011 |title=Distributed Large-Scale Dimensional Metrology: New Insights |isbn=978-0-85729-543-9 |publisher=Springer Science &amp; Business Media |pages=117–118 |url=https://books.google.com/?id=bIwbFtXyMcMC&amp;pg=PA117}}&lt;/ref&gt;
+
+===Calibration of weights and distances ({{circa|lk=no|1100 CE}})===
+{{see also|Weights and Measures Act}}
+
+[[Image:Avery postal scale.JPG|thumb|upright|right|An example of a [[weighing scale]] with a ½ ounce calibration error at zero. This is a &quot;zeroing error&quot; which is inherently indicated, and can normally be adjusted by the user, but may be due to the string and rubber band in this case]]
+Early measurement devices were ''direct'', i.e. they had the same units as the quantity being measured. Examples include length using a yardstick and mass using a weighing scale. At the beginning of the twelfth century, during the reign of Henry I (1100-1135), it was decreed that a yard be &quot;the distance from the tip of the King's nose to the end of his outstretched thumb.&quot;&lt;ref name=&quot;Ackroyd2012&quot;&gt;{{cite book|last=Ackroyd|first=Peter|title=Foundation: The History of England from Its Earliest Beginnings to the Tudors|url=https://books.google.com/?id=Z2XHs80O0OEC&amp;pg=PT133|date=16 October 2012|publisher=St. Martin's Press|isbn=978-1-250-01367-5|pages=133–134}}&lt;/ref&gt; However, it wasn't until the reign of Richard I (1197) that we find documented evidence.&lt;ref name=&quot;BlandTawney1919&quot;&gt;{{cite book|last1=Bland|first1=Alfred Edward|last2=Tawney|first2=Richard Henry|title=English Economic History: Select Documents|url=https://archive.org/details/ajc0024.0001.001.umich.edu|year=1919|publisher=Macmillan Company|pages=[https://archive.org/details/ajc0024.0001.001.umich.edu/page/154 154]–155}}&lt;/ref&gt;
+:''Assize of Measures''
+:&quot;Throughout the realm there shall be the same yard of the same size and it should be of iron.&quot;
+
+Other standardization attempts followed, such as the [[Magna Carta]] (1225) for liquid measures, until the [[Mètre des Archives]] from France and the establishment of the [[Metric system]].
+
+===The early calibration of pressure instruments===
+[[Image:Utube.PNG|thumb|left|upright|100px|Direct reading design of a U-tube manometer]]One of the earliest pressure measurement devices was the [[Evangelista Torricelli#Barometer|Mercury barometer, credited to Torricelli]] (1643),&lt;ref name=tilford1992pressure&gt;{{cite journal|last1=Tilford|first1=Charles R|title=Pressure and vacuum measurements|journal=Physical Methods of Chemistry|date=1992|pages=106–173|url=http://www.glb.nist.gov/calibrations/upload/pmc-2.pdf|access-date=28 November 2014|archive-url=https://web.archive.org/web/20141205044516/http://www.glb.nist.gov/calibrations/upload/pmc-2.pdf#|archive-date=2014-12-05|url-status=dead}}&lt;/ref&gt; which read atmospheric pressure using [[Mercury (element)|Mercury]]. Soon after, water-filled [[manometer]]s were designed. All these would have linear calibrations using gravimetric principles, where the difference in levels was proportional to pressure. The normal units of measure would be the convenient inches of mercury or water.
+
+In the direct reading hydrostatic manometer design on the right,  applied pressure P&lt;sub&gt;a&lt;/sub&gt; pushes the liquid down the right side of the manometer U-tube, while a length scale next to the tube measures the difference of levels. The resulting height difference &quot;H&quot; is a direct measurement of the pressure or vacuum with respect to [[atmospheric pressure]]. In the absence of differential pressure both levels would be equal, and this would be used as the zero point. 
+  
+The [[Industrial Revolution]] saw the adoption of &quot;indirect&quot; pressure measuring devices, which were more practical than the manometer.&lt;ref name=&quot;FridmanSabak2011&quot;&gt;{{cite book |last1=Fridman |first1=A. E. |last2=Sabak |first2=Andrew |last3=Makinen |first3=Paul |date=23 November 2011 |title=The Quality of Measurements: A Metrological Reference |publisher=Springer Science &amp; Business Media |isbn=978-1-4614-1478-0 |pages=10–11 |url=https://books.google.com/?id=kyX-1VzPokQC&amp;pg=PA111}}&lt;/ref&gt;
+An example is in high pressure (up to 50 psi) steam engines, where mercury was used to reduce the scale length to about 60 inches, but such a manometer was expensive and prone to damage.&lt;ref name=cusco1998guide&gt;{{cite book|last1=Cuscó|first1=Laurence|title=Guide to the Measurement of Pressure and Vacuum|date=1998|publisher=The Institute of Measurement and Control|location=London|isbn=0-904457-29-X|page=5}}&lt;/ref&gt; This stimulated the development of indirect reading instruments, of which the [[Bourdon tube]] invented by [[Eugène Bourdon]] is a notable example. 
+{{multiple image
+| footer    = Indirect reading design showing a Bourdon tube from the front (left) and the rear (right).
+| width     = 100
+| image1    = WPGaugeFace.jpg
+| alt1      = Indirect reading design showing a Bourdon tube from the front
+| image2    = WPPressGaugeMech.jpg
+| alt2      = Indirect reading design showing a Bourdon tube from the rear
+}}
+
+In the front and back views of a Bourdon gauge on the right, applied pressure at the bottom fitting reduces the curl on the flattened pipe proportionally to pressure. This moves the free end of the tube which is linked to the pointer. The instrument would be calibrated against a manometer, which would be the calibration standard. For measurement of indirect quantities of pressure per unit area, the calibration uncertainty would be dependent on the density of the manometer fluid, and the means of measuring the height difference. From this other units such as pounds per square inch could be inferred and marked on the scale.
+
+&lt;p style=&quot;clear:both;&quot;&gt;
+==See also==
+{{div col|colwidth=22em}}
+*[[Calibration curve]]
+*[[Calibrated geometry]]
+*[[Calibration (statistics)]]
+*[[Color calibration]] – used to calibrate a [[computer monitor]] or display.
+*[[Deadweight tester]]
+*[[EURAMET]] Association of European NMIs
+*[[Measurement Microphone Calibration]]
+*[[Measurement uncertainty]]
+*[[Musical tuning]] – tuning, in music, means calibrating musical instruments into playing the right pitch.
+*[[Precision measurement equipment laboratory]]
+*[[Scale test car]] – a device used to calibrate [[Truck scale|weighing scales]] that weigh [[railroad car]]s.
+*[[Systems of measurement]]
+{{div col end}}
+
+==References==
+Crouch, Stanley &amp; Skoog, Douglas A. (2007). Principles of Instrumental Analysis. Pacific Grove: Brooks Cole. {{ISBN|0-495-01201-7}}.
+{{reflist}}
+IS:ISO:ISI:17025:2005
+
+==External links==
+* [https://web.archive.org/web/20130223061547/http://mastercalibrators.asn.au/ Master Calibrators Association - Industry Experts on Electrical Calibration, Adjustment and Metrology]
+* [https://www.iso.org/standard/39883.html General requirements for the competence of testing and calibration laboratories (ISO/IEC 17025:2005)]
+
+[[Category:Accuracy and precision]]
+[[Category:Standards]]
+[[Category:Measurement]]
+[[Category:Metrology]]</text>
+      <sha1>orj1pib9r0xcnfqh2hsfdnjw19v9umm</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Carbon cycle</title>
+    <ns>0</ns>
+    <id>47503</id>
+    <revision>
+      <id>991299276</id>
+      <parentid>990791591</parentid>
+      <timestamp>2020-11-29T09:54:10Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 107 templates: del empty params (13×); hyphenate params (15×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="92439" xml:space="preserve">{{About||the thermonuclear reaction involving carbon that powers some stars|CNO cycle|organic chemical ring-shaped structures|Cyclic compounds}}
+{{short description|Biogeochemical cycle by which carbon is exchanged among the biosphere, pedosphere, geosphere, hydrosphere, and atmosphere}}
+{{use dmy dates|date=November 2015}}
+[[File:Carbon cycle.jpg|thumb|right|upright=2| [[#Fast and slow cycles|Fast carbon cycle]] showing the movement of carbon between land, atmosphere, and oceans of carbon between land, atmosphere, and ocean in billions of tons (gigatons) per year. Yellow numbers are natural fluxes, red are human contributions, white are stored carbon. The effects of the [[#Fast and slow cycles|slow carbon cycle]], such as volcanic and tectonic activity are not included.&lt;ref name=&quot;nasacc&quot;&gt;{{cite web|last1=Riebeek|first1=Holli|title=The Carbon Cycle|url=http://earthobservatory.nasa.gov/Features/CarbonCycle/?src=eoa-features|website=Earth Observatory|publisher=NASA|access-date=5 April 2018|date=16 June 2011|archive-url=https://web.archive.org/web/20160305010126/http://earthobservatory.nasa.gov/Features/CarbonCycle/?src=eoa-features|archive-date=5 March 2016|url-status=live|df=dmy-all}}&lt;/ref&gt;]]
+{{Carbon cycle|By regions}}
+
+The '''carbon cycle''' is the [[biogeochemical cycle]] by which [[carbon]] is exchanged among the [[biosphere]], [[pedosphere]], [[geosphere]], [[hydrosphere]], and [[Earth's atmosphere|atmosphere of the Earth]]. Carbon is the main component of biological compounds as well as a major component of many minerals such as limestone. Along with the [[nitrogen cycle]] and the [[water cycle]], the carbon cycle comprises a sequence of events that are key to make Earth capable of sustaining life. It describes the movement of carbon as it is recycled and reused throughout the biosphere, as well as long-term processes of [[carbon sequestration]] to and release from [[carbon sink]]s.
+
+Humans have disturbed the biological carbon cycle for many centuries by modifying land use, and moreover with the recent industrial-scale [[mining]] of fossil carbon ([[coal]], [[petroleum]] and [[natural gas|gas]] extraction, and [[cement]] manufacture) from the geosphere.&lt;ref name=&quot;nasacc&quot; /&gt;&lt;ref name=&quot;gcb19&quot;/&gt; [[Carbon dioxide]] in the atmosphere had increased nearly 50% over pre-industrial levels in 2020, [[radiative forcing|forcing]] greater [[global warming|atmospheric and Earth surface heating]] by the Sun.&lt;ref name=Prentice_etal_2001/&gt;&lt;ref name=&quot;noaagi&quot;&gt;{{Cite web |url=https://www.esrl.noaa.gov/gmd/aggi/ |title=The NOAA Annual Greenhouse Gas Index (AGGI) - An Introduction |publisher=[[NOAA]] Global Monitoring Laboratory/Earth System Research Laboratories |access-date=2020-10-30 }}&lt;/ref&gt; The increased carbon dioxide has also increased the [[Ocean acidification|acidity of the ocean surface]] by about 30% due to dissolved carbon dioxide, [[carbonic acid]] and other compounds, and is fundamentally altering [[marine chemistry]].&lt;ref&gt;{{Cite web |url=https://oceanservice.noaa.gov/facts/acidification.html |title=What is Ocean Acidification? |publisher=National Ocean Service, [[National Oceanic and Atmospheric Administration]] |access-date=2020-10-30}}&lt;/ref&gt;&lt;ref name=&quot;scor-int&quot;&gt;{{cite web|url=http://www.scor-int.org/OBO2009/A&amp;O_Report.pdf|title=Report of the Ocean Acidification and Oxygen Working Group, SCOR Biological Observatories Workshop|publisher=International Council for Science's Scientific Committee on Ocean Research (SCOR) |website=scor-int.org/ |date=2009-09-30}}&lt;/ref&gt;  The majority of fossil carbon has been extracted over just the past half century, and rates continue to rise rapidly, contributing to human-caused [[climate change]].&lt;ref&gt;{{Cite journal |author=Heede, R. |title=Tracing anthropogenic carbon dioxide and methane emissions to fossil fuel and cement producers, 1854–2010 |journal=Climatic Change |volume=122 |pages=229–241 |year=2014 |issue=1–2 |doi=10.1007/s10584-013-0986-y|bibcode=2014ClCh..122..229H |doi-access=free }}&lt;/ref&gt;&lt;ref&gt;{{Cite journal |url=https://ourworldindata.org/emissions-by-fuel |title=CO₂ and Greenhouse Gas Emissions: CO₂ Emissions by Fuel |author=Hannah Ritchie and Max Roser |journal=Our World in Data |publisher=Published online at OurWorldInData.org. |year=2020 |access-date=2020-10-30}}&lt;/ref&gt;  The largest consequences to the carbon cycle, and to the biosphere which critically enables human civilization, are still set to unfold due to the vast yet limited [[Climate inertia|inertia]] of the [[Earth system science|Earth system]].&lt;ref name=&quot;nasacc&quot; /&gt;&lt;ref name=&quot;Rockstrom09&quot;&gt;{{cite journal |last1=Rockström |first1=Johan |display-authors=etal |title=Planetary Boundaries: Exploring the Safe Operating Space for Humanity |journal=Ecology and Society |date=2009 |volume=14 |issue=2 |doi=10.5751/ES-03180-140232 |doi-access=free}}&lt;/ref&gt;&lt;ref&gt;{{Cite journal |title = Planetary boundaries: Guiding human development on a changing planet |journal = Science |volume = 347 |issue = 6223 |pages = 1259855 |year= 2015 |last1 = Steffen |first1 = W. |display-authors=etal |doi = 10.1126/science.1259855 |pmid = 25592418 |doi-access = free}}&lt;/ref&gt; Restoring balance to this natural system is an international priority, described in the both the [[Paris Agreement|Paris Climate Agreement]] and [[Sustainable Development Goal 13]].
+
+==Main components==
+The carbon cycle was first described by [[Antoine Lavoisier]] and [[Joseph Priestley]], and popularised by [[Humphry Davy]].&lt;ref name=&quot;AOW&quot;&gt;Holmes, Richard (2008). &quot;The Age Of Wonder&quot;, Pantheon Books. {{ISBN|978-0-375-42222-5}}.&lt;/ref&gt;  The global carbon cycle is now usually divided into the following major reservoirs of carbon interconnected by pathways of exchange:&lt;ref&gt;{{cite book|last1=Archer|first1=David|title=The global carbon cycle|date=2010|publisher=Princeton University Press|location=Princeton|isbn=9781400837076}}&lt;/ref&gt;{{rp|5–6}}
+* The [[atmosphere]]
+* The terrestrial [[biosphere]]
+* The [[World Ocean|ocean]], including [[total inorganic carbon|dissolved inorganic carbon]] and living and non-living marine biota
+* The [[sediment]]s, including [[fossil fuel]]s, freshwater systems, and non-living organic material.
+* The Earth's interior ([[mantle (geology)|mantle]] and [[crust (geology)|crust]]). These carbon stores interact with the other components through geological processes.
+
+The carbon exchanges between reservoirs occur as the result of various chemical, physical, geological, and biological processes. The ocean contains the largest active pool of carbon near the surface of the Earth.&lt;ref name=GlobalCarbonCycle/&gt;
+The natural flows of carbon between the atmosphere, ocean, terrestrial ecosystems, and sediments are fairly balanced so that carbon levels would be roughly stable without human influence.&lt;ref name=Prentice_etal_2001&gt;{{cite book |last=Prentice |first=I.C. |hdl=10067/381670151162165141 |chapter=The carbon cycle and atmospheric carbon dioxide |title=Climate change 2001: the scientific basis: contribution of Working Group I to the Third Assessment Report of the Intergouvernmental Panel on Climate Change |editor1-last=Houghton |editor1-first=J.T. |year=2001 }}&lt;/ref&gt;&lt;ref name=U&gt;{{cite web|title=An Introduction to the Global Carbon Cycle|publisher=University of New Hampshire|url=http://globecarboncycle.unh.edu/CarbonCycleBackground.pdf|year=2009|access-date=6 February 2016|archive-url=https://web.archive.org/web/20161008110835/http://globecarboncycle.unh.edu/CarbonCycleBackground.pdf|archive-date=8 October 2016|url-status=live|df=dmy-all}}&lt;/ref&gt;
+
+===Atmosphere===
+{{Main|Atmospheric carbon cycle}}
+[[File:Carbon dioxide emissions global carbon cycle.jpg|thumb|upright 1.2|The ocean and land have continued to absorb about half of all carbon dioxide emissions into the atmosphere, even as anthropogenic emissions have risen dramatically in recent decades. It remains unclear if carbon absorption will continue at this rate.&lt;ref&gt;{{cite news |last1=Lynch |first1=Patrick |title=GMS: Carbon and Climate Briefing - 12 November 2015 |url=https://svs.gsfc.nasa.gov/12044 |access-date=7 November 2018 |agency=Goddard Media Studios |publisher=National Aeronautics and Space Administration |date=12 November 2015 }}&lt;/ref&gt;]]

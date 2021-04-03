@@ -1,0 +1,752 @@
+[[Category:1980s interactive fiction]]
+[[Category:1983 video games]]
+[[Category:Adventure games]]
+[[Category:Amiga games]]
+[[Category:Amstrad CPC games]]
+[[Category:Apple II games]]
+[[Category:Atari 8-bit family games]]
+[[Category:Atari ST games]]
+[[Category:Commodore 64 games]]
+[[Category:Cryonics in fiction]]
+[[Category:Infocom games]]
+[[Category:Classic Mac OS games]]
+[[Category:Video games about robots]]
+[[Category:Science fiction video games]]
+[[Category:Texas Instruments TI-99/4A games]]
+[[Category:Video games developed in the United States]]</text>
+      <sha1>42votvv97fypda8fdwct9ugxfnjfejz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Universal Disk Format</title>
+    <ns>0</ns>
+    <id>49627</id>
+    <revision>
+      <id>990076508</id>
+      <parentid>990076272</parentid>
+      <timestamp>2020-11-22T17:47:20Z</timestamp>
+      <contributor>
+        <ip>2001:999:42:C53:1953:B3B3:6425:AE4B</ip>
+      </contributor>
+      <comment>/* Compatibility */ section parameter for update template</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="35794" xml:space="preserve">{{short description|Vendor-neutral file system, used in practice for DVDs and other optical discs}}
+{{Use dmy dates|date=September 2019}}
+{{Infobox filesystem
+| name                    = UDF
+| full_name               = Universal Disk Format
+| developer               = [[International Organization for Standardization|ISO]]/[[Ecma International|ECMA]]/[[Optical Storage Technology Association|OSTA]]
+| introduction_os         = 
+| introduction_date       = {{Start date and age|1995}}
+| partition_id            = Not assigned but suggested:&lt;ref&gt;{{cite web|url=https://serverfault.com/a/829172|title=Serverfault answer for: What is the partition id / filesystem type for UDF?}}&lt;/ref&gt;&lt;br /&gt;{{mono|[[Partition type#PID 07h|0x07]]}} ([[Master boot record|MBR]])&lt;br /&gt;{{mono|[[Basic Data Partition|EBD0A0A2-B9E5-4433-87C0-68B6B72699C7]]}} ([[GUID Partition Table|GPT]])
+| file_struct             = 
+| bad_blocks_struct       = 
+| max_filename_size       = 255 bytes (path 1023 bytes&lt;ref name=&quot;note-43&quot;&gt;This restriction might be lifted in newer versions.&lt;/ref&gt;)
+| max_files_no            = 
+| max_volume_size         = 2 [[Tebibyte|TiB]] (with 512 byte sectors), 8 TiB (with 2 KiB sectors, like most optical discs), 16 TiB (with 4 KiB sectors)&lt;ref&gt;2&lt;sup&gt;32&lt;/sup&gt; × ''block size''&lt;/ref&gt;&lt;ref&gt;{{cite web |url=https://sites.google.com/site/udfintro/ |title=Wenguang's Introduction to Universal Disk Format (UDF) |at=Section 5.1 Highlight of the UDF Format |author= |date=1 February 2009 |website=Google Sites |accessdate=16 July 2014 }}&lt;/ref&gt;
+| max_file_size           = 16 [[Exbibyte|EiB]]
+| filename_character_set  = Any 16bit [[Unicode]] [[Code point]] excluding [[Byte order mark|U+FEFF]] and [[U+FFFE]]
+| dates_recorded          = creation, archive, modification (mtime), attribute modification (ctime), access (atime)&lt;!--double check--&gt;
+| date_range              = 1 January 1 – 31 December 9999
+| date_resolution         =[[Microsecond]] 
+| forks_streams           = Yes
+| attributes              = Various
+| file_system_permissions = POSIX
+| compression             = No
+| directory_struct        = 
+| encryption              = 
+| OS                      = Various
+}}
+
+'''Universal Disk Format''' ('''UDF''') is a [[profile (engineering)|profile]] of the specification known as '''ISO/IEC 13346''' and '''ECMA-167'''&lt;ref name=ecma167&gt;[http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-167.pdf ECMA-167 - Volume and File Structure for Write-Once and Rewritable Media using Non-Sequential Recording for Information Interchange]&lt;/ref&gt; and is an [[open format|open]] vendor-neutral [[file system]] for [[computer data storage]] for a broad range of media. In practice, it has been most widely used for [[DVD]]s and newer [[optical disc]] formats, supplanting [[ISO 9660]]. Due to its design, it is very well suited to incremental updates on both recordable and (re)writable [[Optical disc|optical media]]. UDF was developed and maintained by the [[Optical Storage Technology Association]] (OSTA).
+
+== Usage ==
+Normally, [[optical disc authoring software|authoring software]] will master a UDF file system in a batch process and write it to optical media in a single pass. But when [[packet writing]] to rewritable media, such as [[CD-RW]], UDF allows files to be created, deleted and changed on-disc just as a general-purpose [[filesystem]] would on removable media like [[floppy disk]]s and [[USB flash drive|flash drive]]s. This is also possible on write-once media, such as [[CD-R]], but in that case the space occupied by the deleted files cannot be reclaimed (and instead becomes inaccessible).
+
+Multi-session mastering is also possible in UDF, though some implementations may be unable to read disks with multiple sessions.&lt;ref&gt;Multi-session mastering has always been part of the UDF specification. See [UDF 2.01/6.10.1], though earlier documents were not very clear that the anchor offsets are specified to be from the last session.&lt;/ref&gt;
+
+== History ==
+{{Optical disc authoring}}
+
+The [[Optical Storage Technology Association]] standardized the UDF file system to form a common file system for all optical media: both for [[file system permissions|read-only]] media and for re-writable optical media. When first standardized, the UDF file system aimed to replace [[ISO 9660]], allowing support for both read-only and writable media. After the release of the first version of UDF, the [[DVD Consortium]] adopted it as the official file system for [[DVD-Video]] and [[DVD-Audio]].&lt;ref name=&quot;OSTA - UDF Specifications&quot;&gt;
+[http://www.osta.org/specs OSTA - UDF Specifications]&lt;/ref&gt;
+
+UDF shares the basic [[ISO 9660#Volume descriptor|volume descriptor]] format with ISO 9660. A &quot;UDF Bridge&quot; format is defined since 1.50 so that a disc can also contain a ISO 9660 file system making references to files on the UDF part.&lt;ref&gt;{{cite web |title=ECMA Technical Report TR/71: DVD Read-Only Disk File System Specifications |url=https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-071.PDF |date=February 1998}}&lt;/ref&gt;
+
+=== Revisions ===
+
+Multiple revisions of UDF have been released:&lt;ref name=&quot;OSTA - UDF Specifications&quot;/&gt;&lt;ref&gt;[https://sites.google.com/site/udfintro/ Wenguang's Introduction to Universal Disk Format (UDF)]&lt;/ref&gt;
+* Revision 1.00&lt;ref name=&quot;history&quot;&gt;Mentioned only in history of Revision 1.02&lt;/ref&gt; (24 October 1995). Original Release.
+* Revision 1.01&lt;ref name=&quot;history&quot; /&gt; (3 November 1995). Added DVD Appendix and made a few minor changes.
+* Revision 1.02&lt;ref&gt;[http://www.osta.org/specs/pdf/udf102.pdf OSTA Universal Disk Format Specification Revision 1.02]&lt;/ref&gt; (30 August 1996). This format is used by [[DVD-Video]] discs.
+* Revision 1.50&lt;ref&gt;[http://www.osta.org/specs/pdf/udf150.pdf OSTA Universal Disk Format Specification Revision 1.50]&lt;/ref&gt; (4 February 1997). Added support for (virtual) rewritability on CD-R/DVD-R media by introducing the VAT structure. Added sparing tables for defect management on rewritable media such as CD-RW, and DVD-RW and DVD+RW. Add UDF bridge.
+* Revision 2.00&lt;ref&gt;[http://www.osta.org/specs/pdf/udf200.pdf OSTA Universal Disk Format Specification Revision 2.00]&lt;/ref&gt; (3 April 1998). Added support for Stream Files and real-time files (for [[DVD recording]]) and simplified directory management. VAT support was extended.
+* Revision 2.01&lt;ref&gt;[http://www.osta.org/specs/pdf/udf201.pdf OSTA Universal Disk Format Specification Revision 2.01]&lt;/ref&gt; (15 March 2000) is mainly a bugfix release to UDF 2.00. Many of the UDF standard's ambiguities were resolved in version 2.01.
+* Revision 2.50&lt;ref&gt;[http://www.osta.org/specs/pdf/udf250.pdf OSTA Universal Disk Format Specification Revision 2.50]&lt;/ref&gt; (30 April 2003). Added the Metadata Partition facilitating metadata clustering, easier crash recovery and optional duplication of file system information: All metadata like nodes and directory contents are written on a separate partition which can optionally be mirrored. This format is used by some versions of [[Blu-ray Disc|Blu-rays]] and most [[HD-DVD]] discs.
+* Revision 2.60&lt;ref name=udf260p&gt;[http://www.osta.org/specs/pdf/udf260.pdf OSTA Universal Disk Format Specification Revision 2.60]&lt;/ref&gt; (1 March 2005). Added Pseudo OverWrite method for drives supporting pseudo overwrite capability on sequentially recordable media. Has read-only compatibility with UDF 2.50 implementations.{{rp|10}} (Some [[Blu-ray]]s use this format.)
+
+UDF Revisions are internally encoded as [[binary-coded decimal]]s; Revision 2.60, for example, is represented as &lt;tt&gt;0x0260&lt;/tt&gt;&lt;ref name=udf260p/&gt;{{rp|23}}. In addition to declaring its own revision, compatibility for each volume is defined by the minimum read and minimum write revisions, each signalling the requirements for these operations to be possible for every structure on this image. A &quot;maximum write&quot; revision additionally records the highest UDF support level of all the implementations that has written to this image.&lt;ref name=udf260p/&gt;{{rp|34}} For example, a UDF 2.01 volume that does not use Stream Files (introduced in UDF 2.00) but uses VAT (UDF 1.50) created by a UDF 2.60-capable implementation may have the revision declared as &lt;tt&gt;0x0201&lt;/tt&gt;, the minimum read revision set to &lt;tt&gt;0x0150&lt;/tt&gt;, the minimum write to &lt;tt&gt;0x0150&lt;/tt&gt;, and the maximum write to &lt;tt&gt;0x0260&lt;/tt&gt;.
+
+== Specifications ==
+The UDF standard defines three [[file system]] variations, called &quot;builds&quot;. These are:
+* ''Plain'' (Random Read/Write Access). This is the original format supported in all UDF revisions
+* ''Virtual Allocation Table a.k.a. VAT'' (Incremental Writing). Used specifically for writing to write-once media
+* ''Spared'' (Limited Random Write Access). Used specifically for writing to rewritable media
+
+=== Plain build ===
+Introduced in the first version of the standard, this format can be used on any type of disk that allows random read/write access, such as [[hard disk]]s, [[DVD+RW]] and [[DVD-RAM]] media.  Metadata (up to v2.50) and file data is addressed more or less directly.  In writing to such a disk in this format, any physical block on the disk may be chosen for allocation of new or updated files.
+
+Since this is the ''basic'' format, practically any operating system or file system driver claiming support for UDF should be able to read this format.
+
+=== VAT build ===
+Write-once media such as [[DVD-R]] and [[CD-R]] have limitations when being written to, in that each physical block can only be written to once, and the writing must happen incrementally. Thus the ''plain'' build of UDF can only be written to CD-Rs by pre-mastering the data and then writing all data in one piece to the media, similar to the way an [[ISO 9660]] file system gets written to CD media.
+
+To enable a CD-R to be used virtually like a hard disk, whereby the user can add and modify files on a CD-R at will (so-called &quot;drive letter access&quot; on Windows), OSTA added the ''VAT'' build to the UDF standard in its revision 1.5. The VAT is an additional structure on the disc that allows [[packet writing]]; that is, remapping physical blocks when files or other data on the disc are modified or deleted. For write-once media, the entire disc is virtualized, making the write-once nature transparent for the user; the disc can be treated the same way one would treat a rewritable disc.
+
+The write-once nature of CD-R or DVD-R media means that when a file is deleted on the disc, the file's data still remains on the disc. It does not appear in the directory any more, but it still occupies the original space where it was stored. Eventually, after using this scheme for some time, the disc will be full, as free space cannot be recovered by deleting files. Special tools can be used to access the previous state of the disc (the state before the delete occurred), making recovery possible.
+
+Not all drives fully implement version 1.5 or higher of the UDF, and some may therefore be unable to handle VAT builds.
+
+=== Spared (RW) build ===
+Rewriteable media such as [[DVD-RW]] and [[CD-RW]] have fewer limitations than DVD-R and CD-R media. Sectors can be rewritten at random (though in packets at a time). These media can be erased entirely at any time, making the disc blank again, ready for writing a new UDF or other file system (e.g., ISO 9660 or [[CD-DA|CD Audio]]) to it. However, sectors of ''-RW'' media may &quot;wear out&quot; after a while, meaning that their data becomes unreliable, through having been rewritten too often (typically after a few hundred rewrites, with CD-RW).
+
+The plain and VAT builds of the UDF format can be used on rewriteable media, with some limitations. If the plain build is used on a -RW media, file-system level modification of the data must not be allowed, as this would quickly wear out often-used sectors on the disc (such as those for directory and block allocation data), which would then go unnoticed and lead to data loss. To allow modification of files on the disc, rewriteable discs can be used like -R media using the ''VAT'' build. This ensures that all blocks get written only once (successively), ensuring that there are no blocks that get rewritten more often than others. This way, a RW disc can be erased and reused many times before it should become unreliable. However, it will eventually become unreliable with no easy way of detecting it. When using the ''VAT'' build, CD-RW/DVD-RW media effectively appears as CD-R or DVD+/-R media to the computer. However, the media may be erased again at any time.
+
+The ''spared'' build was added in revision 1.5 to address the particularities of rewriteable media. This build adds an extra ''Sparing Table'' in order to manage the defects that will eventually occur on parts of the disc that have been rewritten too many times. This table keeps track of worn-out sectors and remaps them to working ones. UDF defect management does not apply to systems that already implement another form of defect management, such as [[Mount Rainier (packet writing)|Mount Rainier]] (MRW) for optical discs, or a disk controller for a hard drive.
+
+The tools and drives that do not fully support revision 1.5 of UDF will ignore the sparing table, which would lead them to read the outdated worn-out sectors, leading to retrieval of corrupted data.
+
+The so-called UDF ''overhead'' that is spread over the entire disc reserves a portion of the data storage space, limiting the useable capacity of [[CD-RW]] with e.g. 650 MB of original capacity to around 500 MB.&lt;ref name=PC-Thompson&gt;[https://books.google.de/books?id=kG8LcWfruOAC&amp;lpg=PT242&amp;pg=PT242 ''&quot;PC Hardware in a Nutshell: A Desktop Quick Reference&quot;'' by Robert Bruce Thompson, Barbara Fritchman Thompson (2003) −– Chapter 11 (starting page 340): CD writers]&lt;/ref&gt;
+
+== Character set ==
+
+The UDF specifications&lt;ref name=&quot;OSTA - UDF Specifications&quot;/&gt; allow only one Character Set ''OSTA CS0'', which can store any [[Unicode]] [[Code point]] excluding U+FEFF and U+FFFE. Additional character sets defined in ECMA-167 are not used.&lt;ref name=ecma167/&gt;{{rp|at=7.2}}
+
+Since Errata DCN-5157, the range of code points was expanded to all code points from Unicode 4.0 (or any newer or older version), which includes [[Plane (Unicode)#Supplementary Multilingual Plane|Plane]] 1-16 characters such as [[Emoji]]. DCN-5157 also recommends [[Unicode equivalence#Normalization|normalizing]] the strings to Normalization Form C.&lt;ref name=dcn-5157&gt;{{cite web|title=UDF 2.60 approved errata|url=http://www.osta.org/specs/pdf/udf260_errata.pdf|accessdate=22 April 2018}}&lt;/ref&gt;
+
+The OSTA CS0 character set stores a 16-bit Unicode string &quot;compressed&quot; into 8-bit or 16-bit units, preceded by a single-byte &quot;compID&quot; tag to indicate the compression type. The 8-bit storage is functionally equivalent to [[ISO-8859-1]], and the 16-bit storage is [[UTF-16]] in big endian. The reference algorithm neither checks for forbidden code points nor interprets [[Universal Character Set characters#Surrogates|surrogate pairs]], so like [[NTFS]] the string may be malformed.&lt;ref name=&quot;OSTA - UDF Specifications&quot;/&gt;{{rp|at=2.1.2, 6.4}} (No specific form of storage is specified by DCN-5157, but UTF-16BE is the only well-known method for storing all of Unicode while being mostly backward compatible with [[UCS-2]].)&lt;ref name=dcn-5157/&gt;
+
+== Compatibility ==
+Many [[DVD player]]s do not support any UDF revision other than version 1.02. Discs created with a newer revision may still work in these players if the ISO 9660 bridge format is used. Even if an [[operating system]] claims to be able to read UDF 1.50, it still may only support the ''plain'' build and not necessarily either the ''VAT'' or ''Spared'' UDF builds.
+
+[[macOS|Mac OS X]] 10.4.5 claims to support Revision 1.50 (see ''man mount_udf''), yet it can only mount disks of the ''plain'' build properly and provides no virtualization support at all. It cannot mount UDF disks with VAT, as seen with the Sony Mavica issue.&lt;ref&gt;{{cite web |url=http://support.apple.com/kb/TA26938?viewlocale=en_US |title=Sony Mavica UDF Compatibility Issue |date=19 February 2012 |website=Apple |accessdate=16 July 2014 |url-status=dead |archiveurl=https://web.archive.org/web/20120426172237/http://support.apple.com/kb/TA26938?viewlocale=en_US |archivedate=April 26, 2012}}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://freecode.com/projects/udfmediareader |title=Mac OS X UDF Compatibility Issues |author=&lt;!--Staff writer(s); no by-line.--&gt; |date=11 July 2012 |website=Free(code) |accessdate=16 July 2014}}&lt;/ref&gt; Releases before 10.4.11 mount disks with Sparing Table but does not read its files correctly. Version 10.4.11 fixes this problem.&lt;ref&gt;{{cite web |url=https://www.apple.com/downloads/macosx/apple/macosx_updates/macosx10411comboupdateintel.html |title=Intel Update |date=14 November 2007 |website=Apple |accessdate=16 July 2014 |url-status=dead |archiveurl=https://web.archive.org/web/20100328145428/http://www.apple.com/downloads/macosx/apple/macosx_updates/macosx10411comboupdateintel.html |archivedate=March 28, 2010}}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=https://www.apple.com/downloads/macosx/apple/macosx_updates/macosx10411comboupdateppc.html |title=PowerPC Update |date=14 November 2007 |website=Apple |accessdate=16 July 2014 |url-status=dead |archiveurl=https://web.archive.org/web/20100531005641/http://www.apple.com/downloads/macosx/apple/macosx_updates/macosx10411comboupdateppc.html |archivedate=May 31, 2010}}&lt;/ref&gt;
+
+Similarly, [[Windows XP]] Service Pack 2 (SP2) cannot read DVD-RW discs that use the UDF 2.00 sparing tables as a defect management system.&lt;ref&gt;{{cite web |url=http://support.microsoft.com/kb/321640/en-us |title=Microsoft Windows UDF Read Troubleshooting |publisher=microsoft.com}}&lt;/ref&gt; This problem occurs if the UDF defect management system creates a sparing table that spans more than one sector on the DVD-RW disc. Windows XP SP2 can recognize that a DVD is using UDF, but Windows Explorer displays the contents of a DVD as an empty folder. A hotfix is available for this&lt;ref&gt;{{cite web |url=http://support.microsoft.com/kb/899527 |title=Windows XP UDF hotfix |publisher=microsoft.com}}&lt;/ref&gt; and is included in Service Pack 3.&lt;ref&gt;{{cite web |url=http://support.microsoft.com/kb/321640/en-us |title=MS Windows and UDF optical discs}}&lt;/ref&gt;
+
+Due to the default UDF versions and options, a UDF partition formatted by Windows cannot be written under macOS. On the other hand, a partition formatted by macOS cannot be directly written by Windows, due to the requirement of a [[Master boot record|MBR]] partition table. In addition, Linux only supports writing to UDF 2.01. A script for Linux and macOS called {{code|format-udf}} handles these incompatibilities by using UDF 2.01 and adding a fake MBR;&lt;ref&gt;{{cite web |title=JElchison/format-udf: Bash script to format a block device (hard drive or Flash drive) in UDF. |url=https://github.com/JElchison/format-udf |website=GitHub |date=27 June 2020 |quote=The output is a drive that can be used for reading/writing across multiple operating system families: Windows, macOS, and Linux. This script should be capable of running in macOS or in Linux.}}&lt;/ref&gt; for Windows the best solution is using the command-line tool {{code|format /FS:UDF /R:2.01}}.
+
+{{update|section|date=November 2020|reason=For many operating systems, the information is a decade old and may or may not reflect the current situation accurately}}
+{| class=&quot;wikitable sortable&quot;
+|+ Table of operating systems
+| colspan=10 | 
+* Unless otherwise noted, read and write support means that only the plain UDF build is supported, but not the VAT and spared build.
+* Support for &quot;read&quot; means that a UDF formatted disk can be mounted by the system. It enables the user to read files from the UDF volume using the same interface that is used to access files on other disks connected to the computer.
+* Support for &quot;write&quot; means that, in addition to reading files from a mounted UDF volume, data such as files can be modified, added, or deleted.
+|-
+!
+! colspan=&quot;5&quot; | UDF revision (read + write)
+! colspan=&quot;2&quot; | Non-plain
+!
+|-
+! Operating system
+! 1.02
+! 1.50
+! 2.0x
+! 2.50
+! 2.60
+! VAT
+! Sparing Tables
+! Note
+|-
+| [[AIX (operating system)|AIX]] 5.2, 5.3, 6.1
+|
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+|
+|
+| 1.5 is default&lt;ref&gt;{{cite web |url=http://publib.boulder.ibm.com/infocenter/aix/v6r1/index.jsp |title=Welcome to the AIX 6.1 Information Center |publisher=IBM |accessdate=25 September 2010}}&lt;/ref&gt;
+|-
+| [[AmigaOS]] 4.0
+| {{yes}}
+| {{yes}}
+|
+|
+|
+|
+|
+|
+|-
+| [[BeOS]]/[[magnussoft ZETA]]/[[Haiku (operating system)|Haiku]]
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+|
+|
+|
+|-
+| [[OS/2]] (including [[eComStation]] and [[ArcaOS]])
+|
+|
+| {{yes}}
+|
+|
+|
+|
+| Additional fee drivers on OS/2.
+|-
+| [[FreeBSD]] 5.0 and new
+| {{partial|read only}}
+| {{partial|read only}}&lt;ref&gt;{{cite web |title=FreeBSD 5.0-RELEASE Release Notes |url=https://www.freebsd.org/releases/5.0R/relnotes-i386.html#AEN1150}}&lt;/ref&gt;
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{yes}}
+|
+|-
+| [[Linux kernel]] 2.2
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+|
+|-
+| [[Linux kernel]] 2.4
+| {{yes}}
+| {{yes}}
+| {{yes}}&lt;ref name=&quot;linux24&quot;&gt;Linux version 2.3.17 - 2.4.5 supports only UDF revision up to 2.00, Linux version 2.4.6 and newer supports also UDF revision 2.01&lt;/ref&gt;
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{yes}}
+|
+|-
+| [[Linux kernel]] 2.6.0 - 2.6.25
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{yes}}
+| Kernel versions prior to 2.6.10 supported fewer media types.
+|-
+| [[Linux kernel]] 2.6.26 and newer
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{partial|read only}}&lt;ref name=&quot;linuxsrc&quot;&gt;{{cite web
+    | title = Linux 3.13: fs/udf/udf_sb.h
+    | url = https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/fs/udf/udf_sb.h?id=v3.13#n11
+    | date = 2013-09-24
+    | accessdate = 2014-01-29}}&lt;/ref&gt;
+| {{partial|read only}}&lt;ref name=udf260p/&gt;{{rp|10}}
+| {{yes}}
+| {{yes}}
+| Permission-related mounting options added in 2.6.30.&lt;ref&gt;{{cite web
+    | title = Linux 2.6.30 Changelog
+    | url = http://kernelnewbies.org/Linux_2_6_30
+    | date = 2009-06-12
+    | accessdate = 2015-09-13}}&lt;/ref&gt; Auto-detection of UDF file system on hard disk is supported since version 2.6.30. Auto-detection of UDF file system on disk images was fixed in 4.11.
+|-
+| [[Mac OS 8#Mac OS 8.1|Mac OS 8.1]] - [[Mac OS 8#Mac OS 8.5|8.5]]
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| Some earlier versions of Mac OS, such as [[System 7|7.5, 7.6]], and 8.0 are also supported via third-party utilities, along with additional UDF version support for 8.1 and 8.5.&lt;ref name=&quot;MacOSExtraUDF&quot;&gt;Read and (depending on which utility is used) write support for UDF versions 1.02, 1.50, 2.00, and 2.01 (support for 1.50 is not natively present in 8.1 or 8.5, and 2.00 onwards was not supported by the classic Mac OS at all) on optical disks available with third party utilities such as [[Adaptec]]'s UDF Volume Access or Software Architects' DVD-RAM Tune-Up utilities.&lt;/ref&gt;
+|-
+| [[Mac OS 8#Mac OS 8.6|Mac OS 8.6]], [[Mac OS 9]]
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| Additional UDF version support via third-party utilities.&lt;ref name=&quot;MacOSExtraUDF&quot;/&gt;
+|-
+| [[Mac OS X]] 10.0 - 10.3
+| {{yes}}
+| {{yes}}&lt;ref name=&quot;macmount103&quot;&gt;{{cite web |title=mount_udf manpage for Mac OS X 10.3 |url=http://www.manpagez.com/man/8/mount_udf/osx-10.3.php |quote=UDF 1.50 is supported. UDF 2.0 and later is not.}}&lt;/ref&gt;
+| {{no}}&lt;ref name=&quot;macmount103&quot; /&gt;
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+|
+|-
+| [[Mac OS X]] 10.4
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}&lt;ref&gt;Support via third party utility [[Roxio Toast|Toast]] 9+ [http://www.roxio.com/enu/products/toast9/plugin/overview.html HD Plugin]&lt;/ref&gt;&lt;ref name=&quot;macrec&quot; /&gt;
+| {{no}}&lt;ref&gt;Support via third party utility Toast 9+&lt;/ref&gt;
+| {{no}}
+| {{yes}}&lt;ref&gt;Since version 10.4.11&lt;/ref&gt;
+| Can create UDF 1.50 (plain build) volumes using the &lt;code&gt;drutil&lt;/code&gt; utility.
+|-
+| Mac OS X 10.5 and newer
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}&lt;ref name=&quot;macmount105&quot;&gt;{{cite web |title=mount_udf manpage for Mac OS X 10.5 |url=http://www.manpagez.com/man/8/mount_udf/osx-10.5.php |quote=Reading of all UDF revisions (1.02 - 2.60) on both block device (e.g. hard drives and USB drives) and most optical media is supported. Writing to block devices, DVD-RW and DVD+RW is supported with the following exceptions: (1) Cannot write Finder Info, Resource Fork, or other extended attributes in UDF volumes of revision 1.02 and 1.50; (2) Cannot write to mirrored metadata partition.}}&lt;/ref&gt;&lt;ref name=&quot;macrec&quot;&gt;{{cite web |title=Disc Recording Release Notes for OS X v10.5 |url=https://developer.apple.com/library/content/releasenotes/MusicAudio/RN-DiscRecording/index.html |quote=This release note describes changes to the Disc Recording frameworks from OS X version 10.4. The Disc Recording content creation engine now supports writing UDF 2.0 discs in addition to UDF 1.02 and 1.5.}}&lt;/ref&gt;
+| {{partial|read only}}&lt;ref name=&quot;macmount105&quot; /&gt;&lt;ref name=&quot;mactech&quot;&gt;{{cite web |title=Mac Technology Overview - Kernel and Device Drivers Layer |url=https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemTechnology/SystemTechnology.html |quote=OS X supports reading UDF revisions 1.02 through 2.60 on both block devices and most optical media, and it supports writing to block devices and to DVD-RW and DVD+RW media using UDF 2.00 through 2.50 (except for mirrored metadata partitions in 2.50).}}&lt;/ref&gt;
+| {{yes}}
+| {{yes}}
+| To create, use &lt;code&gt;newfs_udf&lt;/code&gt; utility.
+|-
+| [[NetBSD]] 4.0
+| {{partial|read only}}&lt;ref&gt;{{cite web |url=https://www.netbsd.org/releases/formal-4/NetBSD-4.0.html |title=Announcing NetBSD 4.0 |quote=Added UDF support for optical media and block devices, see mount_udf(8). Read-only for now.}}&lt;/ref&gt;
+| {{partial|read only}}
+| {{partial|read only}}
+| {{partial|read only}}
+| {{partial|read only}}
+| {{yes}}
+| {{yes}}
+| Reading multi-session VAT, spared and metapartition variants&lt;br&gt; from all CD, DVD and BD variants as well as HDD and Flash media.
+|-
+| [[NetBSD]] 5.0
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| Write support for all builds and media including multi-session VAT.&lt;ref&gt;{{cite web |url=http://www.netbsd.org/releases/formal-5/NetBSD-5.0.html |title=NetBsd 5 release notes |publisher=NetBSD}}&lt;/ref&gt; Create new with &lt;code&gt;newfs_udf&lt;/code&gt;.&lt;br&gt;Limited writing on 2.50/2.60 (due to needing pre-allocated, fixed sized metadata partition).&lt;ref&gt;{{cite web |url=http://netbsd.gw.com/cgi-bin/man-cgi?mount_udf+8+NetBSD-5.0 |title=NetBSD System Manager's Manual |accessdate=25 September 2010}}&lt;/ref&gt;
+|-
+| [[NetWare]] 5.1
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+| NetWare 6
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+| [[OpenBSD]] 3.8 - 3.9
+| {{partial|read only}}&lt;ref&gt;{{cite web |url=https://www.openbsd.org/38.html|title=OpenBSD 3.8}}&lt;/ref&gt;
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+|
+|-
+| [[OpenBSD]] 4.0 - 4.6
+| {{partial|read only}}
+| {{partial|read only}}&lt;ref name=&quot;openbsd40&quot;&gt;{{cite web |url=https://www.openbsd.org/40.html |title=OpenBSD 4.0}}&lt;/ref&gt;
+| {{no}}
+| {{no}}
+| {{no}}
+| {{yes}}&lt;ref name=&quot;openbsd40&quot; /&gt;
+| {{no}}
+|
+|- 
+| [[OpenBSD]] 4.7
+| {{partial|read only}}
+| {{partial|read only}}
+| {{partial|read only}}
+| {{partial|read only}}&lt;ref name=&quot;openbsd47&quot;&gt;{{cite web |url=http://www.openbsd.org/47.html |title=The OpenBSD 4.7 Release |author= |date= |publisher=OpenBSD |accessdate=25 September 2010}}
+&lt;/ref&gt;
+| {{partial|read only}}&lt;ref name=&quot;openbsd47&quot;/&gt;
+| {{yes}}
+| {{yes}}
+|
+|- 
+| [[Solaris (operating system)|Solaris]] 7 11/99+
+| {{yes}}
+| {{yes}}
+|
+|
+|
+|
+|
+|
+|-
+| Solaris 8/9/10
+| {{yes}}
+| {{yes}}
+|
+|
+|
+|
+|
+|
+|-
+| [[DOS]], [[FreeDOS]], [[Windows 3.11]], [[Windows 95]], [[Windows 95#Editions|Windows 95 OSR2+]] and other DOS based OS
+| {{no}}&lt;ref name=&quot;msfscc&quot;&gt;{{cite web |url=https://msdn.microsoft.com/en-us/library/cc232128.aspx |title=[MS-FSCC]: File System Control Codes: 6 Appendix B: Product Behavior}} Windows UDF File System Support table&lt;/ref&gt;
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| No native support. Filesystems that have an [[ISO9660]] backward compatibility structure can be read.
+|-
+| [[Windows 98]], [[Windows Me]]
+| {{partial|read only and only for CD/DVD optical disks}}&lt;ref&gt;{{cite book|author=Microsoft Corporation|title=Microsoft Windows 98 Resource Kit|date=January 1998|publisher=Microsoft Press|isbn=978-1-57231-644-7|page=[https://archive.org/details/isbn_9781572316447/page/442 442]|chapter=Chapter 10 - Disks and File Systems|url=https://archive.org/details/isbn_9781572316447/page/442|accessdate=9 September 2017|quote=Windows 98 has a new read-only Universal Disk Format (UDF) system, which supports reading media formatted according to UDF specification 1.02.}}&lt;/ref&gt;&lt;ref&gt;{{cite book|author=Microsoft Corporation|title=Microsoft Windows 98 Resource Kit|date=January 1998|publisher=Microsoft Press|isbn=978-1-57231-644-7|page=[https://archive.org/details/isbn_9781572316447/page/1316 1316]|chapter=Chapter 28 - Windows 98 Architecture|url=https://archive.org/details/isbn_9781572316447/page/1316|accessdate=9 September 2017|quote=The 32-bit, protected-mode UDF file system in Windows 98 is implemented according to Revision 1.02 of Universal Disk Format Specification by Optical Storage Technology Association (OSTA). It provides read-only access to UDF-formatted media, such as DVD discs. The UDF file system uses VCACHE and is dynamic, requiring no configuration or static allocation on the part of the user.}}&lt;/ref&gt;&lt;ref name=&quot;nt5dll&quot;&gt;{{cite web |url=https://www.microsoft.com/msj/1197/nt5dll.aspx|title=A Programmer's Perspective on New System DLL Features in Windows NT 5.0, Part I |author=Matt Pietrek|date=November 1997|publisher=Microsoft Systems Journal |accessdate=9 September 2017 |quote=Windows NT 5.0 also adds UDF (Universal Disk Format). ... The UDF implementations shipping in both Windows 98 (UDF 1.02) and Windows NT 5.0 (UDF 1.50) are read-only.|author-link=Matt Pietrek }}&lt;/ref&gt;&lt;ref name=&quot;msfscc&quot; /&gt;
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| Additional read/write support via third party utilities&lt;ref name=&quot;win3rd&quot;&gt;Read and write support for other UDF versions on optical disks available with third party utilities such as [[Drive Letter Access|DLA]], [[InCD]] or Toshiba/Panasonic/Matsushita UDF 2.5 driver. Read and write support for removable disks and hard disks available with third party utilities such as SAI's WriteUDF!.&lt;/ref&gt;
+|-
+| [[Windows 2000]]
+| {{partial|read only}}&lt;ref name=&quot;nt5dll&quot; /&gt;&lt;ref name=&quot;inside2000&quot;&gt;{{cite book|last1=Russinovich|first1=M. E.|last2=Solomon|first2=D. A.|title=Inside Microsoft Windows 2000|chapter-url=https://archive.org/details/insidemicrosoftw0000solo|chapter-url-access=registration|edition=Third|year=2000|publisher=Microsoft Press|location=Redmond, Washington|isbn=978-0-7356-1021-7|chapter=Chapter 12 - File Systems|quote=The Windows 2000 UDF file system implementation is ISO 13346-compliant and supports UDF versions 1.02 and 1.5. ... the Windows 2000 UDF driver (Udfs.sys) provides read-only support.}}&lt;/ref&gt;&lt;ref name=&quot;winint4&quot;&gt;{{cite book|last1=Russinovich|first1=M. E.|last2=Solomon|first2=D. A.|title=Microsoft Windows Internals, Fourth Edition: Microsoft Windows Server 2003, Windows XP, and Windows 2000|url=https://books.google.com/books?id=I2vjPx-6qK0C|edition=Fourth|year=2005|publisher=Microsoft Press|location=Redmond, Washington|isbn=0-7356-1917-4|page=691|chapter=Chapter 12 - File Systems|quote=The UDF driver supports UDF versions 1.02, version 1.5 on Windows 2000, and versions 2.0 and 2.01 on Windows XP and Windows Server 2003. ... the Windows UDF driver (Udfs.sys) provides read-only support. Windows does not implement support for other UDF features, including named streams, access control lists, or extended attributes.}}&lt;/ref&gt;&lt;ref name=&quot;locfswin&quot;&gt;{{cite report|author=WinHEC 2004 Version|date=May 5, 2004|url=http://www.microsoft.com/whdc/device/storage/LocFileSys.mspx|sectionurl=http://download.microsoft.com/download/5/b/5/5b5bec17-ea71-4653-9539-204a672f11cf/locfilesys.doc|title=Local File Systems for Windows|publisher=Microsoft Corporation|pages=6–8|chapter=2.3 About the UDF File System|format=doc}}&lt;/ref&gt;&lt;ref name=&quot;msfscc&quot; /&gt;
+| {{partial|read only}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| Additional read/write support via third party utilities&lt;ref name=&quot;win3rd&quot; /&gt;
+|-
+| [[Windows XP]]/[[Windows Server 2003|Server 2003]]
+| {{partial|read only}}&lt;ref name=&quot;winint4&quot; /&gt;&lt;ref name=&quot;locfswin&quot; /&gt;&lt;ref name=&quot;msfscc&quot; /&gt;
+| {{partial|read only}}
+| {{partial|read only}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{yes}}&lt;ref&gt;Service Pack 3 required&lt;/ref&gt;
+| Additional read/write support via third party utilities&lt;ref name=&quot;win3rd&quot; /&gt;
+|-
+| [[Windows Vista]]
+| {{yes}}&lt;ref name=&quot;winint5&quot;&gt;{{cite book|last1=Russinovich|first1=M. E.|last2=Solomon|first2=D. A.|last3=Ionescu|first3=A.|title=Windows Internals, 5th Edition: Windows Vista and Windows Server 2008|edition=5th|year=2009|publisher=Microsoft Press|location=Redmond, Washington|isbn=978-0-7356-3796-2
+|page=981|chapter=Chapter 12 - File Systems|url=https://books.google.com/books?id=VgjAQjsc6g8C|quote=The UDF driver supports UDF versions up to 2.60. The Windows UDF driver (Udfs.sys) provides read-write support ... when using UDF 2.50 and read-only support when using UDF 2.60. However, Windows does not implement support for certain UDF features such as named streams and access control lists.}}&lt;/ref&gt;&lt;ref name=&quot;winint6&quot;&gt;{{cite book |last1=Russinovich |first1=M. E.|last2=Solomon |first2=D. A. |last3=Ionescu 
+|first3=A. |title=Windows Internals, Part 2, 6th Edition: Windows 7 and Windows Server 2008 R2|edition=6th |year=2012 |publisher=Microsoft Press |location=Redmond, Washington |isbn=978-0-7356-6587-3
+|page=393 |chapter=Chapter 12 - File Systems |url=https://books.google.com/books?id=_Y2WiG6WfGkC|quote=The UDF driver supports UDF versions up to 2.60. The Windows UDF driver (Udfs.sys) provides read-write support ... when using UDF 2.50 and read-only support when using UDF 2.60. However, Windows does not implement support for certain UDF features such as named streams and access control lists.}}&lt;/ref&gt;&lt;ref name=&quot;locfswin&quot; /&gt;&lt;ref name=&quot;msfscc&quot; /&gt;
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{partial|read only}}&lt;ref name=&quot;winint5&quot; /&gt;&lt;ref name=&quot;winint6&quot; /&gt;&lt;ref name=&quot;locfswin&quot; /&gt;&lt;ref name=&quot;msfscc&quot; /&gt;
+| {{yes}}
+| {{yes}}
+| Referred to by Microsoft as [[Live File System]]. Requires fake MBR partition on non-optical devices.
+|-
+| [[Windows 7]], [[Windows 8]], [[Windows 10]]
+| {{yes}}&lt;ref name=&quot;msfscc&quot; /&gt;
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| 
+|-
+! Operating system
+! 1.02
+! 1.50
+! 2.0x
+! 2.50
+! 2.60
+! VAT
+! Sparing Tables
+! Note
+|-
+!
+! colspan=&quot;5&quot; | UDF revision (read + write)
+! colspan=&quot;2&quot; | Non-plain
+!
+|}
+
+== See also ==
+
+* [[Comparison of file systems]]
+* [[DVD authoring]]
+* [[ISO/IEC 13490]]
+
+== References ==
+
+{{reflist|30em}}
+
+== Further reading ==
+
+* ISO/IEC 13346 standard, also known as [http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-167.pdf ECMA-167].
+
+== External links ==
+* [http://www.osta.org/ OSTA home page]
+* [https://sites.google.com/site/udfintro/ Wenguang Wang's UDF Introduction]
+* [http://sourceforge.net/projects/linux-udf/ Linux UDF support]
+* [http://support.microsoft.com/kb/321640/en-us Microsoft Windows UDF Read Troubleshooting]
+* [http://www.osta.org/specs/pdf/udf260.pdf UDF Revision 2.60] March 1, 2005
+* [http://publib.boulder.ibm.com/infocenter/systems/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/cdromudfs.htm AIX - CD-ROM file system and UDFS]
+{{Filesystem}}
+{{Ecma International Standards}}
+{{List of International Electrotechnical Commission standards}}
+
+[[Category:Disk file systems]]
+[[Category:ISO standards]]
+[[Category:IEC standards]]
+[[Category:Ecma standards]]
+[[Category:Windows components]]</text>
+      <sha1>ieql38dkp6uyfwa4helzluafm61loq9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Text adventure game</title>
+    <ns>0</ns>
+    <id>49628</id>
+    <redirect title="Interactive fiction" />
+    <revision>
+      <id>15944469</id>
+      <timestamp>2002-04-19T01:59:59Z</timestamp>
+      <contributor>
+        <username>Bryan Derksen</username>
+        <id>66</id>
+      </contributor>
+      <minor />
+      <comment>*</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="33" xml:space="preserve">#REDIRECT [[Interactive fiction]]</text>
+      <sha1>j69o8wmlz1u1ymnj0ns2c0wtu1s41xn</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Universal Postal Union.</title>
+    <ns>0</ns>
+    <id>49629</id>
+    <redirect title="Universal Postal Union" />
+    <revision>
+      <id>15944470</id>
+      <parentid>55403</parentid>
+      <timestamp>2002-04-19T09:54:20Z</timestamp>
+      <contributor>
+        <username>Brion VIBBER</username>
+        <id>51</id>
+      </contributor>
+      <minor />
+      <comment>redirect =&amp;gt; title without a period at the end</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="36" xml:space="preserve">#REDIRECT [[Universal Postal Union]]</text>
+      <sha1>82pn5t90wqtpo4mcn2lguaj7zipn4k0</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>2039</title>
+    <ns>0</ns>
+    <id>49630</id>
+    <redirect title="3rd millennium" />
+    <revision>
+      <id>987058328</id>
+      <parentid>986405894</parentid>
+      <timestamp>2020-11-04T17:17:52Z</timestamp>
+      <contributor>
+        <username>EmausBot</username>
+        <id>11292982</id>
+      </contributor>
+      <minor />
+      <comment>Bot: Fixing double redirect to [[3rd millennium]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="51" xml:space="preserve">#REDIRECT [[3rd millennium#2030s]] {{R from merge}}</text>
+      <sha1>ezch0tlyxlvvxmfms30le3knjww81b9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Turner's syndrome</title>
+    <ns>0</ns>
+    <id>49631</id>
+    <redirect title="Turner syndrome" />
+    <revision>
+      <id>15944472</id>
+      <timestamp>2002-04-19T02:43:41Z</timestamp>
+      <contributor>
+        <username>Magnus Manske</username>
+        <id>4</id>
+      </contributor>
+      <minor />
+      <comment>#REDIRECT [[Turner syndrome]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="29" xml:space="preserve">#REDIRECT [[Turner syndrome]]</text>
+      <sha1>iriwiczcn6nc6g2jn7g8yejx2e5rlfb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Catmab</title>
+    <ns>0</ns>
+    <id>49634</id>
+    <redirect title="Abzyme" />
+    <revision>
+      <id>15944474</id>
+      <timestamp>2002-04-19T02:57:42Z</timestamp>
+      <contributor>
+        <username>Magnus Manske</username>
+        <id>4</id>
+      </contributor>
+      <minor />
+      <comment>#REDIRECT [[abzyme]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="20" xml:space="preserve">#REDIRECT [[abzyme]]</text>
+      <sha1>ctkmlzbid4avmj443vgayoqhp4l1y4i</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>SEX (computing)</title>
+    <ns>0</ns>
+    <id>49635</id>
+    <revision>
+      <id>908679103</id>
+      <parentid>895609572</parentid>
+      <timestamp>2019-07-31T08:18:53Z</timestamp>
+      <contributor>
+        <username>Raffzahn</username>
+        <id>4116894</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2434" xml:space="preserve">In computing, the '''SEX''' [[assembly language]] [[mnemonic]] has often been used for the &quot;&lt;code&gt;Sign EXtend&lt;/code&gt;&quot; machine [[instruction set|instruction]] found in the [[Motorola 6809]]. A computer's or CPU's &quot;sex&quot; can also mean the [[endianness]] of the [[computer architecture]] used.&lt;ref&gt;For hardware, the [[Jargon File]] also reports the less common expression ''byte sex'' [http://catb.org/jargon/html/B/byte-sex.html]. It is unclear whether this terminology is also used when more than two orderings are possible. Similarly, the manual for the ORCA/M [[Assembly language#Assembler|assembler]] refers to a field indicating the order of the bytes in a number field as &lt;code&gt;NUMSEX&lt;/code&gt;, and the [[Mac OS X]] operating system refers to &quot;byte sex&quot; in its compiler tools [http://web.mit.edu/darwin/src/modules/cctools/libstuff/arch.c].&lt;/ref&gt; [[x86]] computers do not have the same &quot;byte sex&quot; as [[HC11]] computers, for example.&lt;ref&gt;The [http://catb.org/jargon/html/B/bytesexual.html Jargon] [http://catb.org/jargon/html/B/byte-sex.html file]&lt;/ref&gt; Functions are sometimes needed for computers of different endianness to communicate with each other over the internet, as protocols often use [[big endian]] [[byte]] coding by default.&lt;ref&gt;[http://beej.us/guide/bgnet/output/html/singlepage/bgnet.html#htonsman htons(), htonl(), ntohs(), ntohl()]&lt;/ref&gt;&lt;ref&gt;The [http://catb.org/jargon/html/N/NUXI-problem.html NUXI] problem&lt;/ref&gt;
+
+On the [[RCA 1802]] series of microprocessors, the SEX, for &quot;&lt;code&gt;SEt X&lt;/code&gt;,&quot; instruction is used to designate which of the machine's sixteen 16-bit registers is to be the X (index) register.
+
+==SEX in software: rarely used jargon==
+The [[Three-letter acronym|TLA]] '''SEX''' has humorously been said to stand for '''''S'''oftware '''EX'''change'', meaning copying of software. As [[file sharing]] has sometimes spread [[computer virus]]es, it has been stated that “illicit SEX can transmit viral diseases to your computer.” The involvement of [[FTP]] servers' /pub directories in this process has led to the name being explained as a contraction of 'pubic'.&lt;ref&gt;{{citation
+|last=Raymond
+|first=Eric
+|authorlink=Eric S. Raymond
+|title=The Jargon File: pubic directory
+|url=http://catb.org/jargon/html/P/pubic-directory.html
+|accessdate=2009-03-28
+}}&lt;/ref&gt;
+
+== References ==
+&lt;references/&gt;
+
+
+{{JargonFile}}
+
+{{DEFAULTSORT:Sex (Computing)}}
+[[Category:Machine code]]
+[[Category:Computer jargon]]</text>
+      <sha1>5m82538pl8hre0rkopn5qgylffb4usw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>List of castles in England</title>
+    <ns>0</ns>
+    <id>49636</id>
+    <revision>
+      <id>987030975</id>
+      <parentid>985420272</parentid>
+      <timestamp>2020-11-04T13:03:57Z</timestamp>
+      <contributor>
+        <username>Wire723</username>
+        <id>7957594</id>
+      </contributor>
+      <minor />
+      <comment>Date formats</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="250838" xml:space="preserve">{{short description|Wikimedia list article}}
+{{Use British English|date=November 2020}}
+{{Use dmy dates|date=November 2020}}
+{{details|topic=English castles|Castles in Great Britain and Ireland}}
+[[File:Windsor Castle at Sunset - Nov 2006.jpg|thumb|[[Windsor Castle]], Berkshire]]
+
+This '''list of [[castle]]s in [[England]]''' is not a list of every building and site that has &quot;castle&quot; as part of its name, nor does it list only buildings that conform to a strict definition of a castle as a [[medieval]] fortified residence.&lt;ref&gt;Brown (1962), p.16.&lt;/ref&gt; It is not a list of every castle ever built in England, many of which have vanished without trace, but is primarily a list of buildings and remains that have survived.  In almost every case the buildings that survive are either ruined, or have been altered over the centuries. For several reasons, whether a given site is that of a medieval castle has not been taken to be a sufficient criterion for determining whether or not that site should be included in the list.
+
+Castles that have vanished or whose remains are barely visible are not listed, except for some important or well-known buildings and sites. [[Fortification]]s from before the medieval period are not listed, nor are architectural [[Folly|follies]]. In other respects it is difficult to identify clear and consistent boundaries between two sets of buildings, comprising those that indisputably belong in a list of castles and those that do not. The criteria adopted for inclusion in the list include such factors as: how much survives from the medieval period; how strongly fortified the building was; how castle-like the surviving building is; whether the building has been given the title of &quot;castle&quot;; how certain it is that a medieval castle stood on the site, or that the surviving remains are those of a medieval castle; how well-known or interesting the building is; and whether including or excluding a building helps make the list, in some measure, more consistent.
+
+In order to establish a list that is as far as possible comprehensive as well as consistent, it is necessary to establish its boundaries. Before the list itself, a discussion of its scope includes lengthy lists of buildings excluded from the main lists for various reasons. The ''Castellarium Anglicanum'', an authoritative index of castles in England and Wales published in 1983, lists over 1,500 castle sites in England.&lt;ref name=&quot;King&quot;&gt;King (1983).&lt;/ref&gt; Many of these castles have vanished or left almost no trace. The present list includes more than 800 medieval castles of which there are visible remains, with over 300 having substantial surviving stone or brick remains.
+
+__NOTOC__
+{| id=&quot;toc&quot; class=&quot;toc collapsible&quot;
+!{{MediaWiki:Toc}}
+|-
+|{{flatlist|
+*[[#History|History]]
+*[[#Scope and exclusions|Scope&amp;nbsp;and&amp;nbsp;exclusions]]
+*[[#Key|Key]]
+}}{{flatlist|
+*[[#Bedfordshire|Bedfordshire]]
+*[[#Berkshire|Berkshire]]
+*[[#Bristol|Bristol]]
+*[[#Buckinghamshire|Buckinghamshire]]
+*[[#Cambridgeshire|Cambridgeshire]]
+*[[#Cheshire|Cheshire]]
+*[[#County_Durham|County&amp;nbsp;Durham]]
+*[[#Cornwall|Cornwall]]
+*[[#Cumbria|Cumbria]]
+*[[#Derbyshire|Derbyshire]]
+*[[#Devon|Devon]]
+*[[#Dorset|Dorset]]
+*[[#East_Riding_of_Yorkshire|East&amp;nbsp;Riding&amp;nbsp;of&amp;nbsp;Yorkshire]]
+*[[#East_Sussex|East&amp;nbsp;Sussex]]
+*[[#Essex|Essex]]
+*[[#Gloucestershire|Gloucestershire]]
+*[[#Greater_London|Greater&amp;nbsp;London]]
+*[[#Greater_Manchester|Greater&amp;nbsp;Manchester]]
+*[[#Hampshire|Hampshire]]
+*[[#Herefordshire|Herefordshire]]
+*[[#Hertfordshire|Hertfordshire]]
+*[[#Isle_of_Wight|Isle&amp;nbsp;of&amp;nbsp;Wight]]
+*[[#Isles_of_Scilly|Isles&amp;nbsp;of&amp;nbsp;Scilly]]
+*[[#Kent|Kent]]
+*[[#Lancashire|Lancashire]]
+*[[#Leicestershire|Leicestershire]]
+*[[#Lincolnshire|Lincolnshire]]
+*[[#Merseyside|Merseyside]]
+*[[#Norfolk|Norfolk]]
+*[[#Northamptonshire|Northamptonshire]]
+*[[#Northumberland|Northumberland]]
+*[[#North_Yorkshire|North&amp;nbsp;Yorkshire]]
+*[[#Nottinghamshire|Nottinghamshire]]
+*[[#Oxfordshire|Oxfordshire]]
+*[[#Rutland|Rutland]]
+*[[#Shropshire|Shropshire]]
+*[[#Somerset|Somerset]]
+*[[#South_Yorkshire|South&amp;nbsp;Yorkshire]]
+*[[#Staffordshire|Staffordshire]]
+*[[#Suffolk|Suffolk]]
+*[[#Surrey|Surrey]]
+*[[#Tyne_and_Wear|Tyne&amp;nbsp;and&amp;nbsp;Wear]]
+*[[#Warwickshire|Warwickshire]]
+*[[#West_Midlands|West&amp;nbsp;Midlands]]
+*[[#West_Sussex|West&amp;nbsp;Sussex]]
+*[[#West_Yorkshire|West&amp;nbsp;Yorkshire]]
+*[[#Wiltshire|Wiltshire]]
+*[[#Worcestershire|Worcestershire]]
+}}{{flatlist|
+*[[#See_also|See&amp;nbsp;also]]
+*[[#References|References]]
+*[[#Bibliography|Bibliography]]
+*[[#External_links|External&amp;nbsp;links]]
+}}
+|}
+
+==History==
+[[File:Tower of London, April 2006.jpg|thumb|The Tower of London]] 
+A castle is a type of fortified structure, developed in Europe during the [[Middle Ages]]. The first castles appeared in [[France]] in the 10th century,&lt;ref&gt;Brown (1962), p.24.&lt;/ref&gt; and in England during the 11th century. A few castles are known to have been built in England before the [[Normans]] invaded in 1066;&lt;ref&gt;Brown (1962), p.43.&lt;/ref&gt; a great many were built in the years following, the principal mechanism by means of which the Normans were able to consolidate their control over the country.&lt;ref&gt;Brown (1962), p.50.&lt;/ref&gt; Whilst a few important castles, such as the [[White Tower (Tower of London)|White Tower]] in the [[Tower of London]], were built of stone, most early castles were [[motte-and-bailey]] castles of earthwork and timber, which could be constructed quickly. Some were later rebuilt in stone,&lt;ref&gt;Brown (1962), p.84&lt;/ref&gt; but there are a great many castle sites in England where all that is visible today are traces of earthworks.&lt;ref&gt;Higham &amp; Barker (1992), pp.194–198.&lt;/ref&gt;
+
+Castles continued to be built in England for several hundred years, reaching a peak of military sophistication in the late 13th century.&lt;ref&gt;Brown (1962), p.95.&lt;/ref&gt; The two principal elements in their construction were the great tower or [[keep]], such as the White Tower, and the fortified enclosure, such as is provided by the outer wall of the Tower of London. During the 14th century, largely as a result of the decline of [[Feudalism in England|feudalism]],&lt;ref&gt;Brown (1962), p.221.&lt;/ref&gt; the construction of strong castles began to decline, in favour of more lightly fortified structures often described as [[fortified manor house]]s.&lt;ref&gt;Brown (1962), p.129.&lt;/ref&gt; In the far north of England, where conditions remained unsettled, fortified buildings continued to be built as late as the 16th century, not only by the rich and powerful but by any with adequate means, as defence not against great armies, but against the notorious [[Border Reivers]]. Many took the form of the [[Peel tower|pele tower]], a smaller, more modest version of the castle keep,&lt;ref&gt;Brown (1962), p.131.&lt;/ref&gt; and many of these still survive, often incorporated in later buildings.

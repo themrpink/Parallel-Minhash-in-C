@@ -1,0 +1,304 @@
+The engineering of human–machine interfaces is enhanced by considering [[ergonomics]] ([[human factors]]). The corresponding disciplines are [[human factors engineering]] (HFE) and [[usability engineering]] (UE), which is part of [[systems engineering]].
+
+Tools used for incorporating human factors in the interface design are developed based on knowledge of [[computer science]], such as [[computer graphics]], [[operating systems]], [[programming language]]s. Nowadays, we use the expression [[graphical user interface]] for human–machine interface on computers, as nearly all of them are now using graphics.{{citation needed|date=May 2020}}
+
+[[Multimodal interface]]s allow users to interact using more than one [[Modality (human–computer interaction)|modality]] of user input.&lt;ref&gt;{{Cite book|doi = 10.1145/142621.142641|chapter = The role of natural language in a multimodal interface|title = Proceedings of the 5th annual ACM symposium on User interface software and technology - UIST '92|year = 1992|last1 = Cohen|first1 = Philip R.|pages = 143–149|isbn = 0897915496|s2cid = 9010570}}&lt;/ref&gt;
+
+==Terminology==
+[[File:Linux kernel INPUT OUPUT evdev gem USB framebuffer.svg|thumb|300px|A human–machine interface usually involves [[peripheral|peripheral hardware]] for the INPUT and for the OUTPUT. Often, there is an additional component implemented in software, like e.g. a [[graphical user interface]].]]
+
+There is a difference between a user interface and an operator interface or a human–machine interface (HMI).
+
+* The term &quot;user interface&quot; is often used in the context of (personal) computer systems and [[electronics|electronic devices]].
+** Where a network of equipment or computers are interlinked through an MES (Manufacturing Execution System)-or Host to display information.
+** A human-machine interface (HMI) is typically local to one machine or piece of equipment, and is the interface method between the human and the equipment/machine. An operator interface is the interface method by which multiple pieces of equipment that are linked by a host control system are accessed or controlled.{{Clarify|date=January 2010}}
+** The system may expose several user interfaces to serve different kinds of users. For example, a [[digital library|computerized library database]] might provide two user interfaces, one for library patrons (limited set of functions, optimized for ease of use) and the other for library personnel (wide set of functions, optimized for efficiency).{{Clarify|date=January 2010}}
+* The user interface of a [[Machine|mechanical]] system, a vehicle or an [[Industry (manufacturing)|industrial]] installation is sometimes referred to as the human–machine interface (HMI).&lt;ref&gt;{{cite journal|author1=Griffin, Ben|author2=Baston, Laurel|title=Interfaces|page=5|url=http://peace.saumag.edu/faculty/kardas/Courses/CS/Interfaces2007_files/Interfaces2007.ppt|accessdate=7 June 2014|format=Presentation|quote=The user interface of a mechanical system, a vehicle or an industrial installation is sometimes referred to as the human-machine interface (HMI).|url-status=live|archiveurl=https://web.archive.org/web/20140714160915/http://peace.saumag.edu/faculty/kardas/Courses/CS/Interfaces2007_files/Interfaces2007.ppt|archivedate=14 July 2014}}&lt;/ref&gt; HMI is a modification of the original term MMI (man-machine interface).&lt;ref name=&quot;Nigeria&quot;&gt;{{cite journal|title=User Interface Design and Ergonomics|journal=Course Cit 811|page=19|url=http://www.nou.edu.ng/NOUN_OCL/pdf/SST/CIT%20811.pdf|accessdate=7 June 2014|publisher=SCHOOL OF SCIENCE AND TECHNOLOGY|location=NATIONAL OPEN UNIVERSITY OF NIGERIA|quote=In practice, the abbreviation MMI is still frequently used although some may claim that MMI stands for something different now.|url-status=live|archiveurl=https://web.archive.org/web/20140714234100/http://www.nou.edu.ng/NOUN_OCL/pdf/SST/CIT%20811.pdf|archivedate=14 July 2014}}&lt;/ref&gt; In practice, the abbreviation MMI is still frequently used&lt;ref name=&quot;Nigeria&quot;/&gt; although some may claim that MMI stands for something different now.{{Citation needed|date=March 2019}} Another abbreviation is HCI, but is more commonly used for [[human–computer interaction]].&lt;ref name=&quot;Nigeria&quot;/&gt; Other terms used are operator interface console (OIC) and operator interface terminal (OIT).&lt;ref&gt;{{cite book|title=Recent advances in business administration|date=2010|publisher=Wseas|location=[S.l.]|isbn=978-960-474-161-8|page=190|chapter=Introduction Section|quote=Other terms used are operator interface console (OIC) and operator interface terminal (OIT)}}&lt;/ref&gt; However it is abbreviated, the terms refer to the 'layer' that separates a human that is operating a machine from the machine itself.&lt;ref name=&quot;Nigeria&quot;/&gt; Without a clean and usable interface, humans would not be able to interact with information systems.
+
+In [[science fiction]], HMI is sometimes used to refer to what is better described as a [[direct neural interface]]. However, this latter usage is seeing increasing application in the real-life use of (medical) [[prostheses]]—the artificial extension that replaces a missing body part (e.g., [[cochlear implants]]).&lt;ref&gt;{{cite journal|last1=Cipriani|first1=Christian|last2=Segil|first2=Jacob|last3=Birdwell|first3=Jay|last4=Weir|first4=Richard|title=Dexterous control of a prosthetic hand using fine-wire intramuscular electrodes in targeted extrinsic muscles|journal=IEEE Transactions on Neural Systems and Rehabilitation Engineering|volume=22|issue=4|pages=828–36|doi=10.1109/TNSRE.2014.2301234|issn=1534-4320|quote=Neural co-activations are present that in turn generate significant EMG levels and hence unintended movements in the case of the present human machine interface (HMI).|year=2014|pmc=4501393|pmid=24760929}}&lt;/ref&gt;&lt;ref&gt;{{cite journal|last1=Citi|first1=Luca|title=Development of a neural interface for the control of a robotic hand|date=2009|page=5|url=https://7c4745ab-a-cdf32725-s-sites.googlegroups.com/a/neurostat.mit.edu/lciti/publications_files/LCitiPhD.pdf?attachauth=ANoY7cpwRib4-7KUnST5NrulgpbLiT3r10hOeyap9QXEgv64E1VioXR7n1pQYsNBNMZggwnI2V4KbZLgxVeKLcOgxz4XfJFAkqvddyQUnGqn4Mm5iLq9vDR02cHmYi6ULrK8IxWK150SirIt9acjMFcDon0dbnRwgYicc-2GeKZZCqtflZc4ZhEBORg8AzWE31XDAgoFFAfNtUxTcNR8IcJlsM7NYCGxY4M3Vn8WY6bsO1MEuyYIjmU%3D&amp;attredirects=0&lt;!--|chapter=Chapter 2--&gt;|accessdate=7 June 2014|publisher=IMT Institute for Advanced Studies Lucca|location=Scuola Superiore Sant'Anna, Pisa, Italy}}&lt;/ref&gt;
+
+In some circumstances, computers might observe the user and react according to their actions without specific commands. A means of [[positional tracking|tracking parts of the body]] is required, and sensors noting the position of the head, [[eye tracking|direction of gaze]] and so on have been used experimentally. This is particularly relevant to [[Immersive digital environment|immersive interfaces]].&lt;ref&gt;{{cite journal|last1=Jordan|first1=Joel|title=Gaze Direction Analysis for the Investigation of Presence in Immersive Virtual Environments|page=5|url=http://www0.cs.ucl.ac.uk/staff/j.jordan/thesis-jj-2011.pdf|accessdate=7 June 2014|publisher=Department of Computer Science|location=University of London|format=Thesis submitted for the degree of Doctor of Philosophy|quote=The aim of this thesis is to investigate the idea that the direction of gaze may be used as a device to detect a sense-of-presence in Immersive Virtual Environments (IVE) in some contexts.|url-status=live|archiveurl=https://web.archive.org/web/20140714235740/http://www0.cs.ucl.ac.uk/staff/j.jordan/thesis-jj-2011.pdf|archivedate=14 July 2014}}&lt;/ref&gt;&lt;ref&gt;{{cite web|author1=Ravi|title=Introduction of HMI|url=http://ravi-softwares.blogspot.com/2009/08/introduction-of-hmi.html|accessdate=7 June 2014|date=August 2009|quote=In some circumstance computers might observe the user, and react according to their actions without specific commands. A means of tracking parts of the body is required, and sensors noting the position of the head, direction of gaze and so on have been used experimentally. This is particularly relevant to immersive interfaces.|url-status=live|archiveurl=https://web.archive.org/web/20140714233957/http://ravi-softwares.blogspot.com/2009/08/introduction-of-hmi.html|archivedate=14 July 2014}}&lt;/ref&gt;
+
+==History==
+The history of user interfaces can be divided into the following phases according to the dominant type of user interface:
+
+===1945–1968: Batch interface===
+[[File:LCM - IBM 029 Card Punch 01.jpg|thumb|alt=IBM 029 card punch|IBM 029]]
+
+In the batch era, computing power was extremely scarce and expensive. User interfaces were rudimentary. Users had to accommodate computers rather than the other way around; user interfaces were considered overhead, and software was designed to keep the processor at maximum utilization with as little overhead as possible.
+
+The input side of the user interfaces for batch machines was mainly [[punched card]]s or equivalent media like [[paper tape]]. The output side added [[line printer]]s to these media. With the limited exception of the system [[System console|operator's console]], human beings did not interact with batch machines in real time at all.
+
+Submitting a job to a batch machine involved, first, preparing a deck of punched cards describing a program and a dataset. Punching the program cards wasn't done on the computer itself, but on [[keypunch]]es, specialized typewriter-like machines that were notoriously bulky, unforgiving, and prone to mechanical failure. The software interface was similarly unforgiving, with very strict syntaxes meant to be parsed by the smallest possible compilers and interpreters.
+
+[[File:Card puncher - NARA - 513295.jpg|left|thumb|Holes are punched in the card according to a prearranged code transferring the facts from the census questionnaire into [[statistics]]]]
+Once the cards were punched, one would drop them in a job queue and wait. Eventually, operators would feed the deck to the computer, perhaps mounting [[Magnetic tape data storage|magnetic tapes]] to supply another dataset or helper software. The job would generate a printout, containing final results or an abort notice with an attached error log. Successful runs might also write a result on magnetic tape or generate some data cards to be used in a later computation.
+
+The [[turnaround time]] for a single job often spanned entire days. If one were very lucky, it might be hours; there was no real-time response. But there were worse fates than the card queue; some computers required an even more tedious and error-prone process of toggling in programs in binary code using console switches. The very earliest machines had to be partly rewired to incorporate program logic into themselves, using devices known as [[plugboard]]s.
+
+Early batch systems gave the currently running job the entire computer; program decks and tapes had to include what we would now think of as [[operating system]] code to talk to I/O devices and do whatever other housekeeping was needed. Midway through the batch period, after 1957, various groups began to experiment with so-called “[[Compile and go system|load-and-go]]” systems. These used a [[Resident monitor|monitor program]] which was always resident on the computer. Programs could call the monitor for services. Another function of the monitor was to do better error checking on submitted jobs, catching errors earlier and more intelligently and generating more useful feedback to the users. Thus, monitors represented the first step towards both operating systems and explicitly designed user interfaces.
+
+===1969–present: Command-line user interface===
+{{main|Command-line interface}}
+[[File:ASR-33 at CHM.agr.jpg|thumb|alt=Teletype Model 33|Teletype Model 33 ASR]]
+
+'''Command-line interfaces''' (CLIs) evolved from batch monitors connected to the system console. Their interaction model was a series of request-response transactions, with requests expressed as textual commands in a specialized vocabulary. Latency was far lower than for batch systems, dropping from days or hours to seconds. Accordingly, command-line systems allowed the user to change his or her mind about later stages of the transaction in response to real-time or near-real-time feedback on earlier results. Software could be exploratory and interactive in ways not possible before. But these interfaces still placed a relatively heavy [[mnemonic]] load on the user, requiring a serious investment of effort and learning time to master.&lt;ref name=&quot;anaheimguide&quot;&gt;{{cite web|title=HMI Guide|url=http://www.anaheimautomation.com/manuals/forms/hmi-guide.php#sthash.2McqS5xo.dpbs|url-status=live|archiveurl=https://web.archive.org/web/20140620001341/http://www.anaheimautomation.com/manuals/forms/hmi-guide.php#sthash.2McqS5xo.dpbs|archivedate=2014-06-20}}&lt;/ref&gt;
+
+The earliest command-line systems combined [[teleprinter]]s with computers, adapting a mature technology that had proven effective for mediating the transfer of information over wires between human beings. Teleprinters had originally been invented as devices for automatic telegraph transmission and reception; they had a history going back to 1902 and had already become well-established in newsrooms and elsewhere by 1920. In reusing them, economy was certainly a consideration, but psychology and the [[Principle of least astonishment|Rule of Least Surprise]] mattered as well; teleprinters provided a point of interface with the system that was familiar to many engineers and users.
+
+[[File:DEC VT100 terminal.jpg|left|thumb|alt=The VT100, introduced in 197″8, was the most popular VDT of all time. Most terminal emulators still default to VT100 mode.|DEC VT100 terminal]]
+
+The widespread adoption of video-display terminals (VDTs) in the mid-1970s ushered in the second phase of command-line systems. These cut latency further, because characters could be thrown on the phosphor dots of a screen more quickly than a printer head or carriage can move. They helped quell conservative resistance to interactive programming by cutting ink and paper consumables out of the cost picture, and were to the first TV generation of the late 1950s and 60s even more iconic and comfortable than teleprinters had been to the computer pioneers of the 1940s.
+
+Just as importantly, the existence of an accessible screen — a two-dimensional display of text that could be rapidly and reversibly modified — made it economical for software designers to deploy interfaces that could be described as visual rather than textual. The pioneering applications of this kind were computer games and text editors; close descendants of some of the earliest specimens, such as [[Rogue (video game)|rogue]](6), and [[vi]](1), are still a live part of [[Unix]] tradition.
+
+===1985: SAA User Interface or Text-Based User Interface===
+In 1985, with the beginning of [[Microsoft Windows]] and other [[graphical user interface]]s, IBM created what is called the [[IBM Systems Application Architecture|Systems Application Architecture]] (SAA) standard which include the [[IBM Common User Access|Common User Access]] (CUA) derivative. CUA successfully created what we know and use today in Windows, and most of the more recent [[DOS]] or Windows Console Applications will use that standard as well.
+
+This defined that a pulldown menu system should be at the top of the screen, status bar at the bottom, shortcut keys should stay the same for all common functionality (F2 to Open for example would work in all applications that followed the SAA standard). This greatly helped the speed at which users could learn an application so it caught on quick and became an industry standard.&lt;ref&gt;{{cite web|last1=Richard|first1=Stéphane|title=Text User Interface Development Series Part One - T.U.I. Basics|url=http://www.petesqbsite.com/sections/express/issue21/tuiseriespart1.htm|accessdate=13 June 2014|url-status=live|archiveurl=https://web.archive.org/web/20141116034613/http://www.petesqbsite.com/sections/express/issue21/tuiseriespart1.htm|archivedate=16 November 2014}}&lt;/ref&gt;
+
+===1968–present: Graphical User Interface===
+[[File:AMX desk box.jpg|thumb|AMX Desk made a basic [[WIMP (computing)|WIMP]] GUI]]
+[[File:1989 - Linotype Wysiwyg 2000.jpg|thumb|Linotype WYSIWYG 2000, 1989]]
+
+* 1968 – [[Douglas Engelbart]] demonstrated [[NLS (computer system)|NLS]], a system which uses a [[Computer mouse|mouse]], [[Pointer (user interface)|pointers]], [[hypertext]], and multiple [[Window (computing)|windows]].&lt;ref name=&quot;harding&quot;&gt;{{cite journal|last1=McCown|first1=Frank|title=History of the Graphical User Interface (GUI)|url=https://www.harding.edu/fmccown/gui/history-gui.pptx|publisher=Harding University|url-status=live|archiveurl=https://web.archive.org/web/20141108121810/http://www.harding.edu/fmccown/gui/history-gui.pptx|archivedate=2014-11-08}}&lt;/ref&gt;
+* 1970 – Researchers at [[PARC (company)|Xerox Palo Alto Research Center]] (many from [[SRI International|SRI]]) develop [[WIMP (computing)|WIMP]] paradigm (Windows, Icons, Menus, Pointers)&lt;ref name=&quot;harding&quot;/&gt;
+* 1973 – [[Xerox Alto]]: commercial failure due to expense, poor user interface, and lack of programs&lt;ref name=&quot;harding&quot;/&gt;
+* 1979 – [[Steve Jobs]] and other [[Apple Inc.|Apple]] engineers visit Xerox PARC. Though [[Pirates of Silicon Valley]] dramatizes the events, Apple had already been working on developing a GUI, such as the Macintosh and Lisa projects, before the visit&lt;ref&gt;{{Cite web|url=https://web.stanford.edu/dept/SUL/sites/mac/parc.html|title=The Xerox PARC Visit|website=web.stanford.edu|access-date=2019-02-08}}&lt;/ref&gt;&lt;ref&gt;{{Cite web|url=https://apple-history.com/gui|title=apple-history.com / Graphical User Interface (GUI)|website=apple-history.com|access-date=2019-02-08}}&lt;/ref&gt;. 
+* 1981 – [[Xerox Star]]: focus on [[WYSIWYG]]. Commercial failure (25K sold) due to cost ($16K each), performance (minutes to save a file, couple of hours to recover from crash), and poor marketing
+* 1982 – [[Rob Pike]] and others at [[Bell Labs]] designed [[Blit (computer terminal)|Blit]], which was released in 1984 by AT&amp;T and [[Teletype]] as DMD 5620 terminal.
+* 1984 – Apple [[Macintosh]] popularizes the [[GUI]]. [[Super Bowl commercials#Macintosh: .221984.22|Super Bowl commercial]] shown twice, was the most expensive commercial ever made at that time
+* 1984 – [[MIT]]'s [[X Window System]]: hardware-independent platform and networking protocol for developing GUIs on UNIX-like systems
+* 1985 – [[Windows 1.0]] – provided GUI interface to MS-DOS. No overlapping windows (tiled instead).
+* 1985 – Microsoft and IBM start work on OS/2 meant to eventually replace MS-DOS and Windows
+* 1986 – Apple threatens to sue [[Digital Research]] because their GUI desktop looked too much like Apple's Mac.
+* 1987 – [[Windows 2.0]] – Overlapping and resizable windows, keyboard and mouse enhancements
+* 1987 – Macintosh II: first full-color Mac
+* 1988 – [[OS/2]] 1.10 Standard Edition (SE) has GUI written by Microsoft, looks a lot like Windows 2
+
+== Interface design ==
+{{main|User interface design}}
+Primary methods used in the interface design include prototyping and simulation.
+
+Typical human–machine interface design consists of the following stages: interaction specification, interface software specification and prototyping:
+
+* Common practices for interaction specification include [[user-centered design]], [[persona]], activity-oriented design, scenario-based design, and resiliency design.
+* Common practices for interface software specification include [[use cases]] and constrain enforcement by [[interaction protocol]]s (intended to avoid use errors).
+* Common practices for prototyping are based on libraries of interface elements (controls, decoration, etc.).
+
+===Principles of quality===
+All great interfaces share eight qualities or characteristics:{{According to whom|date=March 2020}}
+
+# Clarity: The interface avoids ambiguity by making everything clear through language, flow, hierarchy and metaphors for visual elements.
+# [[Concision]]:&lt;ref name=&quot;artofunix&quot;&gt;{{cite book|last1=Raymond|first1=Eric Steven|title=The Art of Unix Programming|date=2003|publisher=Thyrsus Enterprises|chapter-url=http://homepage.cs.uri.edu/~thenry/resources/unix_art/ch11s03.html|accessdate=13 June 2014|chapter=11|url-status=live|archiveurl=https://web.archive.org/web/20141020023039/http://homepage.cs.uri.edu/~thenry/resources/unix_art/ch11s03.html|archivedate=20 October 2014}}&lt;/ref&gt; It's easy to make the interface clear by over-clarifying and labeling everything, but this leads to interface bloat, where there is just too much stuff on the screen at the same time. If too many things are on the screen, finding what you're looking for is difficult, and so the interface becomes tedious to use. The real challenge in making a great interface is to make it concise and clear at the same time.
+# Familiarity:&lt;ref&gt;{{cite journal|author1=C. A. D'H Gough|author2=R. Green|author3=M. Billinghurst|title=Accounting for User Familiarity in User Interfaces|url=https://www.researchgate.net/publication/220998465|accessdate=13 June 2014|format=PDF}}&lt;/ref&gt; Even if someone uses an interface for the first time, certain elements can still be familiar. Real-life metaphors can be used to communicate meaning.
+# [[Responsiveness]]:&lt;ref&gt;{{cite book|last1=Sweet|first1=David|title=KDE 2.0 Development|date=October 2001|publisher=Sams Publishing|chapter-url=http://openbooks.sourceforge.net/books/kde20devel/ch09.html|accessdate=13 June 2014|ref=99-067972|chapter=9 - Constructing A Responsive User Interface|url-status=live|archiveurl=https://web.archive.org/web/20130923224705/http://openbooks.sourceforge.net/books/kde20devel/ch09.html|archivedate=23 September 2013}}&lt;/ref&gt; A good interface should not feel sluggish. This means that the interface should provide good feedback to the user about what's happening and whether the user's input is being successfully processed. 
+# Consistency:&lt;ref&gt;{{cite journal|author1=John W. Satzinger|author2=Lorne Olfman|title=User interface consistency across end-user applications: the effects on mental models|journal=Journal of Management Information Systems|date=March 1998|volume=14|issue=4|pages=167–193|url=http://dl.acm.org/citation.cfm?id=1189510|series=Managing virtual workplaces and teleworking with information technology|location=Armonk, NY|doi=10.1080/07421222.1998.11518190}}&lt;/ref&gt; Keeping your interface consistent across your application is important because it allows users to recognize usage patterns.
+# [[Aesthetics]]: While you don't need to make an interface attractive for it to do its job, making something look good will make the time your users spend using your application more enjoyable; and happier users can only be a good thing. 
+# [[Efficiency]]: Time is money, and a great interface should make the user more productive through shortcuts and good design.
+# [[Forgiveness]]: A good interface should not punish users for their mistakes but should instead provide the means to remedy them.
+
+=== Principle of least astonishment ===
+The [[principle of least astonishment]] (POLA) is a general principle in the design of all kinds of interfaces. It is based on the idea that human beings can only pay full attention to one thing at one time,&lt;ref name=Raskin&gt;{{cite book|last1=Raskin|first1=Jef|title=The human interface : new directions for designing interactive systems|date=2000|publisher=Addison Wesley|location=Reading, Mass. [u.a.]|isbn=0-201-37937-6|edition=1. printing.|url-access=registration|url=https://archive.org/details/humaneinterfacen00rask}}&lt;/ref&gt; leading to the conclusion that novelty should be minimized.
+
+=== Principle of habit formation ===
+
+If an interface is used persistently, the user will unavoidably develop [[habit]]s for using the interface. The designer's role can thus be characterized as ensuring the user forms good habits. If the designer is experienced with other interfaces, they will similarly develop habits, and often make unconscious assumptions regarding how the user will interact with the interface.&lt;ref name=Raskin/&gt;&lt;ref&gt;{{cite news|last1=Udell|first1=John|title=Interfaces are habit-forming|url=http://www.infoworld.com/article/2681144/application-development/interfaces-are-habit-forming.amp.html|accessdate=3 April 2017|work=Infoworld|date=9 May 2003|language=en|url-status=live|archiveurl=https://web.archive.org/web/20170404131503/http://www.infoworld.com/article/2681144/application-development/interfaces-are-habit-forming.amp.html|archivedate=4 April 2017}}&lt;/ref&gt;
+
+=== A model of design criteria: User Experience Honeycomb ===
+[[File:UX Honeycomb.png|alt=User interface / user experience guide|thumb|User Experience Design Honeycomb&lt;ref name=&quot;:0&quot;&gt;{{Cite web|url=https://oryzo.com/user-interface-design/|title=User Interface &amp; User Experience Design {{!}} Oryzo {{!}} Small Business UI/UX|website=Oryzo|language=en-US|access-date=2019-11-19}}&lt;/ref&gt; designed by [[Peter Morville]]&lt;ref name=&quot;:1&quot;&gt;{{Cite web|url=https://medium.com/@danewesolko/peter-morvilles-user-experience-honeycomb-904c383b6886|title=Peter Morville's User Experience Honeycomb|last=Wesolko|first=Dane|date=2016-10-27|website=Medium|language=en|access-date=2019-11-19}}&lt;/ref&gt;|230x230px]]
+Peter Morville of [[Google]] designed the User Experience Honeycomb framework in 2004 when leading operations in user interface design. The framework was created to guide user interface design. It would act as a guideline for many web development students for a decade.&lt;ref name=&quot;:1&quot; /&gt;
+
+# Usable: Is the design of the system easy and simple to use? The application should feel familiar, and it should be easy to use.&lt;ref name=&quot;:1&quot; /&gt;&lt;ref name=&quot;:0&quot; /&gt;
+# Useful: Does the application fulfill a need? A business’s product or service needs to be useful.&lt;ref name=&quot;:0&quot; /&gt;
+# Desirable: Is the design of the application sleek and to the point? The aesthetics of the system should be attractive, and easy to translate.&lt;ref name=&quot;:0&quot; /&gt;
+# Findable: Are users able to quickly find the information they're looking for? Information needs to be findable and simple to navigate. A user should never have to hunt for your product or information.&lt;ref name=&quot;:0&quot; /&gt;
+# [[Accessibility|Accessible]]: Does the application support enlarged text without breaking the framework? An application should be accessible to those with disabilities.&lt;ref name=&quot;:0&quot; /&gt;
+# Credible: Does the application exhibit trustworthy security and company details? An application should be transparent, secure, and honest.&lt;ref name=&quot;:0&quot; /&gt;
+# Valuable: Does the end-user think it's valuable? If all 6 criteria are met, the end-user will find value and trust in the application.&lt;ref name=&quot;:0&quot; /&gt;
+
+==Types==
+[[File:Hp150 touchscreen 20081129.jpg|thumb|alt=Touchscreen of the HP Series 100 HP-150|HP Series 100 HP-150 Touchscreen]]
+
+# ''[[Attentive user interface]]s'' manage the user [[attention]] deciding when to interrupt the user, the kind of warnings, and the level of detail of the messages presented to the user.
+# ''Batch interfaces'' are non-interactive user interfaces, where the user specifies all the details of the ''batch job'' in advance to [[batch processing]], and receives the output when all the processing is done. The computer does not prompt for further input after the processing has started.
+# ''[[Command line interface]]s'' (CLIs) prompt the user to provide input by typing a [[command (computing)|command string]] with the computer keyboard and respond by outputting text to the computer monitor. Used by programmers and system administrators, in engineering and scientific environments, and by technically advanced personal computer users.
+# ''[[Conversational interfaces]]'' enable users to command the computer with plain text English (e.g., via text messages, or chatbots) or voice commands, instead of graphic elements. These interfaces often emulate human-to-human conversations.&lt;ref name=&quot;cbc&quot;&gt;{{cite web|last1=Errett|first1=Joshua|title=As app fatigue sets in, Toronto engineers move on to chatbots|url=http://www.cbc.ca/news/canada/toronto/toronto-chatbots-1.3581791|website=CBC|publisher=CBC/Radio-Canada|accessdate=July 4, 2016|url-status=live|archiveurl=https://web.archive.org/web/20160622075925/http://www.cbc.ca/news/canada/toronto/toronto-chatbots-1.3581791|archivedate=June 22, 2016}}&lt;/ref&gt;
+# ''Conversational interface agents'' attempt to personify the computer interface in the form of an animated person, robot, or other character (such as Microsoft's Clippy the paperclip), and present interactions in a conversational form.
+# ''[[Crossing-based interface]]s'' are graphical user interfaces in which the primary task consists in crossing boundaries instead of pointing.
+# ''[[Direct manipulation interface]]'' is the name of a general class of user interfaces that allow users to manipulate objects presented to them, using actions that correspond at least loosely to the physical world.
+# ''[[Gesture recognition|Gesture interface]]s'' are graphical user interfaces which accept input in a form of hand [[gesture]]s, or [[mouse gesture]]s sketched with a computer mouse or a [[Stylus (computing)|stylus]].
+# ''[[Graphical user interface]]s'' (GUI) accept input via devices such as a computer keyboard and mouse and provide articulated [[graphical]] output on the [[computer monitor]]. There are at least two different principles widely used in GUI design: [[Object-oriented user interface]]s (OOUIs) and [[Application software|application]]-oriented interfaces.&lt;ref&gt;{{cite web |first=Gordana |last=Lamb |url=http://msdn.microsoft.com/en-us/library/aa227601(v=vs.60).aspx |title=Improve Your UI Design Process with Object-Oriented Techniques&quot; |archiveurl=https://web.archive.org/web/20130814153652/http://msdn.microsoft.com/en-us/library/aa227601(v=vs.60).aspx |archivedate=2013-08-14 |website=Visual Basic Developer magazine |date=2001 |quote=Table 1. Differences between the traditional application-oriented and object-oriented approaches to UI design.}}&lt;/ref&gt;
+# ''Hardware interfaces'' are the physical, spatial interfaces found on products in the real world from toasters, to car dashboards, to airplane cockpits. They are generally a mixture of knobs, buttons, sliders, switches, and touchscreens.
+# ''{{visible anchor|Holographic user interfaces}}'' provide input to electronic or electro-mechanical devices by passing a finger through reproduced holographic images of what would otherwise be tactile controls of those devices, floating freely in the air, detected by a wave source and without tactile interaction.
+# ''[[Intelligent user interfaces]]'' are human-machine interfaces that aim to improve the efficiency, effectiveness, and naturalness of human-machine interaction by representing, reasoning, and acting on models of the user, domain, task, discourse, and media (e.g., graphics, natural language, gesture).
+# ''[[Motion capture|Motion tracking]] interfaces'' monitor the user's body motions and translate them into commands, currently being developed by Apple.&lt;ref&gt;[http://www.appleinsider.com/articles/09/06/18/apple_exploring_motion_tracking_mac_os_x_user_interface.html appleinsider.com] {{webarchive|url=https://web.archive.org/web/20090619212919/http://www.appleinsider.com/articles/09/06/18/apple_exploring_motion_tracking_mac_os_x_user_interface.html |date=2009-06-19 }}&lt;/ref&gt;
+# ''Multi-screen interfaces'', employ multiple displays to provide a more flexible interaction. This is often employed in computer game interaction in both the commercial arcades and more recently the handheld markets.
+# ''[[Natural language user interface|Natural-language interfaces]]'' are used for search engines and on webpages. User types in a question and waits for a response.
+# ''Non-command user interfaces'', which observe the user to infer their needs and intentions, without requiring that they formulate explicit commands.&lt;ref name=&quot;noncommand&quot;&gt;{{cite journal |author = Jakob Nielsen |title = Noncommand User Interfaces |journal = Communications of the ACM |publisher = ACM Press |volume = 36 |issue = 4 |pages = 83–99 |date = April 1993 |url = http://www.useit.com/papers/noncommand.html |doi = 10.1145/255950.153582 |s2cid = 7684922 |url-status = live |archiveurl = https://web.archive.org/web/20061110102842/http://www.useit.com/papers/noncommand.html |archivedate = 2006-11-10 |author-link = Jakob Nielsen (usability consultant) }}&lt;/ref&gt;
+# ''[[Object-oriented user interface]]s (OOUI)'' are based on [[object-oriented programming]] metaphors, allowing users to [[direct manipulation|manipulate]] simulated objects and their properties.
+# ''Permission-driven user interfaces'' show or conceal menu options or functions depending on the user's level of permissions. The system is intended to improve the user experience by removing items that are unavailable to the user. A user who sees functions that are unavailable for use may become frustrated. It also provides an enhancement to security by hiding functional items from unauthorized persons. 
+# ''Reflexive user interfaces'' where the users control and redefine the entire system via the user interface alone, for instance to change its [[command verb]]s. Typically, this is only possible with very rich graphic user interfaces.
+# ''Search interface'' is how the search box of a site is displayed, as well as the visual representation of the search results. 
+# ''[[Tangible user interface]]s'', which place a greater emphasis on touch and physical environment or its element.
+# ''[[Task-focused interface]]s'' are user interfaces which address the [[information overload]] problem of the [[desktop metaphor]] by making tasks, not files, the primary unit of interaction.
+# ''[[Text-based user interface]]s'' (TUIs) are user interfaces which interact via text. TUIs include [[command-line interface]]s and text-based [[WIMP (computing)|WIMP]] environments.
+# ''[[Touchscreen]]s'' are displays that accept input by touch of fingers or a [[stylus]]. Used in a growing amount of [[mobile device]]s and many types of [[point of sale]], industrial processes and machines, self-service machines, etc.
+# ''[[Touch user interface]]'' are graphical user interfaces using a [[touchpad]] or touchscreen display as a combined input and output device. They supplement or replace other forms of output with [[Haptic communication|haptic]] feedback methods. Used in computerized [[simulator#Physical and interactive simulation|simulators]], etc.
+# ''[[Voice user interface]]s'', which accept input and provide output by generating voice prompts. The user input is made by pressing keys or buttons, or responding verbally to the interface.
+# ''[[Web application|Web-based user interfaces]]'' or ''web user interfaces'' (WUI) that accept input and provide output by generating [[web page]]s viewed by the user using a [[web browser]] program. Newer implementations utilize [[PHP]], [[Java (programming language)|Java]], [[JavaScript]], [[Ajax (programming)|AJAX]], [[Apache Flex]], [[.NET Framework]], or similar technologies to provide real-time control in a separate program, eliminating the need to refresh a traditional HTML-based web browser. Administrative web interfaces for web-servers, servers and networked computers are often called [[web hosting control panel|control panels]].
+# ''Zero-input interfaces'' get inputs from a set of sensors instead of querying the user with input dialogs.&lt;ref&gt;Sharon, Taly, Henry Lieberman, and Ted Selker. &quot;[https://www.researchgate.net/profile/Ted_Selker/publication/221607708_A_zero-input_interface_for_leveraging_group_experience_in_Web_browsing/links/0912f50876bda91a5b000000/A-zero-input-interface-for-leveraging-group-experience-in-Web-browsing.pdf A zero-input interface for leveraging group experience in web browsing] {{webarchive|url=https://web.archive.org/web/20170908113001/https://www.researchgate.net/profile/Ted_Selker/publication/221607708_A_zero-input_interface_for_leveraging_group_experience_in_Web_browsing/links/0912f50876bda91a5b000000/A-zero-input-interface-for-leveraging-group-experience-in-Web-browsing.pdf |date=2017-09-08 }}.&quot; Proceedings of the 8th international conference on Intelligent user interfaces. ACM, 2003.&lt;/ref&gt;
+# ''[[Zooming user interface]]s'' are graphical user interfaces in which information objects are represented at different levels of scale and detail, and where the user can change the scale of the viewed area in order to show more detail.
+
+==Gallery==
+&lt;gallery&gt;
+File:P8-führerstand2.jpg|Historic HMI in the driver's cabin of a [[Deutsche Bahn|German]] [[steam locomotive]]
+File:Ice3 leitstand.jpg|Modern HMI in the driver's cabin of a [[Deutsche Bahn|German]] [[Intercity-Express]] High-Speed Train
+File:Wireless toilet control panel w. open lid.jpg|The HMI of a toilette (in Japan)
+File:Google Glass detail.jpg|[[Voice user interface]] of a [[wearable computer]] (''here: [[Google Glass]]'')
+File:Engineer at audio console at Danish Broadcasting Corporation.png|HMI for audio mixing
+File:Mesa de vídeo 1.JPG|HMI for [[video production]]
+File:00-bma-automation-operator-panel-with-pushbuttons.JPG|HMI of a machine for the sugar industry with pushbuttons
+File:CNC panel Sinumerik.jpg|HMI for a [[Computer numerical control]] (CNC)
+File:CNC panel.jpg|slightly newer HMI for a CNC-machine
+File:Not-Aus Betätiger.jpg|emergency switch/panic switch
+File:Teletype_DMD_5620.jpg|DMD 5620 Terminal
+&lt;/gallery&gt;
+
+==See also==
+{{Div col}}
+* [[Adaptive user interfaces]]
+* [[Brain-computer interface]]
+* [[Computer user satisfaction]]
+* [[Direct voice input]]
+* [[Distinguishable interfaces]]
+* [[Ergonomics]] and [[human factors]] – the study of designing objects to be better adapted to the shape of the human body
+* [[Flat design]]
+* [[Framebuffer]]
+* [[History of the GUI]]
+* [[Icon design]]
+* [[Information architecture]] – organizing, naming, and labelling information structures
+* [[Information visualization]] – the use of sensory representations of abstract data to reinforce cognition
+* [[Interaction design]]
+* [[Interaction technique]]
+* [[Interface (computer science)]]
+* [[Kinetic user interface]]
+* [[Knowledge visualization]] – the use of visual representations to transfer knowledge
+* [[Natural user interface]]s
+* [[Ncurses]], a semigraphical user interface.
+* [[Organic user interface]]
+* [[Post-WIMP]]
+* [[Tangible user interface]]
+* [[Unified Code for Units of Measure]]
+* [[Usability#External links|Usability links]]
+* [[User assistance]]
+* [[User experience]]
+* [[User experience design]]
+* [[User interface design]]
+* [[Useware]]
+* [[Virtual artifact]]
+* [[Virtual user interface]]
+{{div col end}}
+
+==References==
+{{Reflist|30em}}
+
+==External links==
+{{Wiktionary}}
+{{Commons category|User interfaces}}
+* [https://web.archive.org/web/20141106081105/http://www.interaction-design.org/references/conferences HCI and Interaction Design Conferences] covers a wide area of user interface publications
+* [http://www.catb.org/~esr/writings/taouu/html/ch02.html Chapter 2. History: A brief History of user interfaces]
+
+{{User interfaces}}
+{{Operating system}}
+{{Computer science}}
+
+{{DEFAULTSORT:User Interface}}
+[[Category:User interfaces| ]]
+[[Category:User interface techniques]]
+[[Category:Virtual reality]]
+[[Category:Human communication]]
+[[Category:Human–machine interaction]]</text>
+      <sha1>amlcx3p8yvt53crwmvbgubxwc8cu9bd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>The Annotated Alice</title>
+    <ns>0</ns>
+    <id>45250</id>
+    <revision>
+      <id>977668605</id>
+      <parentid>953988442</parentid>
+      <timestamp>2020-09-10T07:03:36Z</timestamp>
+      <contributor>
+        <username>JJMC89 bot III</username>
+        <id>35936988</id>
+      </contributor>
+      <minor />
+      <comment>Moving [[:Category:Alice in Wonderland]] to [[:Category:Alice's Adventures in Wonderland]] per [[Wikipedia:Categories for discussion/Speedy]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4587" xml:space="preserve">{{italic title}}
+{{refimprove|date=August 2014}}
+{{Infobox book
+| italic title      = &lt;!--(see above)--&gt;
+| name              = The Annotated Alice
+| image             = 
+| image_size        = 
+| border            = 
+| alt               = 
+| caption           = 
+| author            = [[Martin Gardner]]
+| audio_read_by     = 
+| title_orig        = 
+| orig_lang_code    = 
+| title_working     = 
+| translator        = 
+| illustrator       = [[John Tenniel]]
+| cover_artist      = 
+| country           = 
+| language          = 
+| series            = 
+| release_number    = 
+| subject           = 
+| genre             = [[Annotated edition]]
+| set_in            = 
+| publisher         =  [[Crown Publishing Group|Clarkson N. Potter]]
+| publisher2        =  
+| pub_date          = 1960
+| english_pub_date  = 
+| published         = 
+| media_type        = 
+| pages             = 
+| awards            = 
+| isbn              = 
+| isbn_note         = 
+| oclc              = 
+| dewey             = 
+| congress          = 
+| preceded_by       = 
+| followed_by       = 
+| native_wikisource = 
+| wikisource        = 
+| notes             = 
+| exclude_cover     = 
+| website           = 
+}}
+'''''The Annotated Alice''''' is a 1960 book by [[Martin Gardner]] incorporating the text of [[Lewis Carroll]]'s major tales, ''[[Alice's Adventures in Wonderland]]'' (1865) and ''[[Through the Looking-Glass]]'' (1871), as well as the original illustrations by [[John Tenniel]]. It has extensive annotations explaining the contemporary references (including the [[Victorian era|Victorian]] poems that Carroll parodies), mathematical concepts, [[word play]], and Victorian traditions (such as the parlor game [[snap-dragon (game)|snap-dragon]]s) featured in the two books.
+
+==History==
+The original book was first published in 1960.&lt;ref&gt;''The Annotated Alice: Alice's Adventures in Wonderland &amp; Through the Looking Glass by Lewis Carroll, Illustrated by John Tenniel'' by Martin Gardner (1960), New York, Bramhall House {{ISBN|0-517-02962-6}}&lt;/ref&gt; It has been reprinted several times and translated into French, Italian, Japanese, Portuguese, Russian, Spanish, German and Hebrew.
+
+In 1990, a sequel, ''More Annotated Alice'', was published. This sequel does not contain the original side notes, and Tenniel's illustrations are replaced by those of [[Peter Newell]]. It also contains the &quot;suppressed&quot; chapter &quot;The Wasp in a Wig&quot;, which Carroll omitted from the text of ''Through the Looking-Glass'' on Tenniel's recommendation.
+
+In 1999, ''The Definitive Edition'' was published. It combines the notes from both works and features Tenniel's illustrations in improved quality.
+
+Gardner also compiled a companion volume, ''[[The Annotated Snark]]'', dedicated to Carroll's classic nonsense poem ''[[The Hunting of the Snark]]''.
+
+In 2015, ''The Annotated Alice: 150th Anniversary Deluxe Edition'' was published, combining the previous works of Gardner and expanded by [[Mark Burstein (editor)|Mark Burstein]], president emeritus of the Lewis Carroll Society of North America. It includes features such as more than 100 new or updated annotations, over 100 new illustrations by Salvador Dalí, Beatrix Potter, Ralph Steadman, and 42 other artists and illustrators (in addition to original art by Sir John Tenniel), and a filmography of every Alice-related film by Carroll scholar David Schaefer.&lt;ref name=&quot;W.W. Norton &amp; Company, Inc.&quot;&gt;{{cite web|url=http://books.wwnorton.com/books/detail.aspx?ID=4294981517|title=The Annotated Alice|publisher=}}&lt;/ref&gt;
+
+==Editions==
+* ''The Annotated Alice: Alice's Adventures in Wonderland &amp; Through the Looking Glass by Lewis Carroll, Illustrated by John Tenniel'' by Martin Gardner (1960), New York, Bramhall House {{ISBN|0-517-02962-6}}
+* ''More Annotated Alice'' by Martin Gardner (1990) {{ISBN|0-394-58571-2}}
+* ''The Annotated Alice: The Definitive Edition'' by Martin Gardner (1998/1999) {{ISBN|0-393-04847-0}}
+* ''The Annotated Alice: 150th Anniversary Deluxe Edition'' by Martin Gardner and Mark Burstein (2015) {{ISBN|978-0-393-24543-1}}

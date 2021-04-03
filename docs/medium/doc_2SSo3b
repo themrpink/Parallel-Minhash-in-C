@@ -1,0 +1,213 @@
+===Clifford scalar product===
+:{{see also |Exterior algebra#Clifford product}}
+When the characteristic is not 2, the quadratic form ''Q'' on ''V'' can be extended to a quadratic form on all of {{nowrap|Cl(''V'', ''Q'')}} (which we also denoted by ''Q''). A basis-independent definition of one such extension is
+:&lt;math&gt;Q(x) = \left\langle x^\mathrm{t} x\right\rangle_0&lt;/math&gt;
+where ⟨''a''⟩{{sub|0}} denotes the scalar part of ''a'' (the degree 0 part in the '''Z'''-grading). One can show that
+:&lt;math&gt;Q(v_1v_2 \cdots v_k) = Q(v_1)Q(v_2) \cdots Q(v_k)&lt;/math&gt;
+where the ''v&lt;sub&gt;i&lt;/sub&gt;'' are elements of ''V'' – this identity is ''not'' true for arbitrary elements of {{nowrap|Cl(''V'', ''Q'')}}.
+
+The associated symmetric bilinear form on {{nowrap|Cl(''V'', ''Q'')}} is given by
+:&lt;math&gt;\langle x, y\rangle = \left\langle x^\mathrm{t} y\right\rangle_0.&lt;/math&gt;
+One can check that this reduces to the original bilinear form when restricted to ''V''. The bilinear form on all of {{nowrap|Cl(''V'', ''Q'')}} is [[nondegenerate form|nondegenerate]] if and only if it is nondegenerate on ''V''.
+
+The operator of left (respectively right) Clifford multiplication by the transpose ''a''{{i sup|t}} of an element ''a'' is the [[adjoint of an operator|adjoint]] of left (respectively right) Clifford multiplication by ''a'' with respect to this inner product. That is,
+:&lt;math&gt;\langle ax, y\rangle = \left\langle x, a^\mathrm{t} y\right\rangle,&lt;/math&gt;
+and
+:&lt;math&gt;\langle xa, y\rangle = \left\langle x, y a^\mathrm{t}\right\rangle.&lt;/math&gt;
+
+==Structure of Clifford algebras==
+In this section we assume that characteristic is not 2, the vector space ''V'' is finite-dimensional and that the associated symmetric bilinear form of ''Q'' is non-singular. A [[central simple algebra]] over ''K'' is a matrix algebra over a (finite-dimensional) division algebra with center ''K''. For example, the central simple algebras over the reals are matrix algebras over either the reals or the quaternions.
+
+*If ''V'' has even dimension then {{nowrap|Cl(''V'', ''Q'')}} is a central simple algebra over ''K''.
+*If ''V'' has even dimension then {{nowrap|Cl{{sup|[0]}}(''V'', ''Q'')}} is a central simple algebra over a quadratic extension of ''K'' or a sum of two isomorphic central simple algebras over ''K''.
+*If ''V'' has odd dimension then {{nowrap|Cl(''V'', ''Q'')}} is a central simple algebra over a quadratic extension of ''K'' or a sum of two isomorphic central simple algebras over ''K''.
+*If ''V'' has odd dimension then {{nowrap|Cl{{sup|[0]}}(''V'', ''Q'')}} is a central simple algebra over ''K''.
+
+The structure of Clifford algebras can be worked out explicitly using the following result. Suppose that ''U'' has even dimension and a non-singular bilinear form with [[discriminant]] ''d'', and suppose that ''V'' is another vector space with a quadratic form. The Clifford algebra of {{nowrap|''U'' + ''V''}} is isomorphic to the tensor product of the Clifford algebras of ''U'' and (−1)&lt;sup&gt;dim(''U'')/2&lt;/sup&gt;''dV'', which is the space ''V'' with its quadratic form multiplied by (−1)&lt;sup&gt;dim(''U'')/2&lt;/sup&gt;''d''. Over the reals, this implies in particular that
+:&lt;math&gt; \operatorname{Cl}_{p+2,q}(\mathbf{R}) = \mathrm{M}_2(\mathbf{R})\otimes \operatorname{Cl}_{q,p}(\mathbf{R}) &lt;/math&gt;
+:&lt;math&gt; \operatorname{Cl}_{p+1,q+1}(\mathbf{R}) = \mathrm{M}_2(\mathbf{R})\otimes \operatorname{Cl}_{p,q}(\mathbf{R}) &lt;/math&gt;
+:&lt;math&gt; \operatorname{Cl}_{p,q+2}(\mathbf{R}) = \mathbf{H}\otimes \operatorname{Cl}_{q,p}(\mathbf{R}). &lt;/math&gt;
+These formulas can be used to find the structure of all real Clifford algebras and all complex Clifford algebras;  see the [[classification of Clifford algebras]].
+
+Notably, the [[Morita equivalence]] class of a Clifford algebra (its representation theory: the equivalence class of the category of modules over it) depends only on the signature {{nowrap|1=(''p'' − ''q'') mod 8}}. This is an algebraic form of [[Bott periodicity]].
+
+==Lipschitz group==
+The class of Lipschitz groups ({{aka}}{{sfn|Vaz|da Rocha|2016|loc=p. 126}} Clifford groups or Clifford–Lipschitz groups) was discovered by [[Rudolf Lipschitz]].{{sfn|Lounesto|2001|loc=§17.2}}
+
+In this section we assume that ''V'' is finite-dimensional and the quadratic form ''Q'' is [[nondegenerate form|nondegenerate]].
+
+An action on the elements of a Clifford algebra by its [[group of units]] may be defined in terms of a twisted conjugation: twisted conjugation by ''x'' maps {{nowrap|''y'' ↦ ''α''(''x'') ''y'' ''x''&lt;sup&gt;−1&lt;/sup&gt;}}, where ''α'' is the ''main involution'' defined [[#Grading|above]].
+
+The Lipschitz group Γ is defined to be the set of invertible elements ''x'' that ''stabilize the set of vectors'' under this action,&lt;ref&gt;{{citation |year=2009 |last=Perwass |first=Christian |title=Geometric Algebra with Applications in Engineering |publisher=Springer Science &amp; Business Media |bibcode=2009gaae.book.....P |isbn=978-3-540-89068-3 }}, §3.3.1&lt;/ref&gt; meaning that for all  ''v'' in ''V'' we have:
+:&lt;math&gt;\alpha(x) v x^{-1}\in V .&lt;/math&gt;
+
+This formula also defines an action of the Lipschitz group on the vector space ''V'' that preserves the quadratic form ''Q'', and so gives a homomorphism from the Lipschitz group to the orthogonal group.  The Lipschitz group contains all elements ''r'' of ''V'' for which ''Q''(''r'') is invertible in ''K'', and these act on ''V'' by the corresponding reflections that take ''v'' to {{nowrap|''v'' − (⟨''r'', ''v''⟩ + ⟨''v'', ''r''⟩)''r''/''Q''(''r'')}}.  (In characteristic 2 these are called orthogonal transvections rather than reflections.)
+
+If ''V'' is a finite-dimensional real vector space with a [[degenerate form|non-degenerate]] quadratic form then the Lipschitz group maps onto the orthogonal group of ''V'' with respect to the form (by the [[Cartan–Dieudonné theorem]]) and the kernel consists of the nonzero elements of the field ''K''. This leads to exact sequences
+:&lt;math&gt; 1 \rightarrow K^* \rightarrow \Gamma \rightarrow \mbox{O}_V(K) \rightarrow 1,\,&lt;/math&gt;
+:&lt;math&gt; 1 \rightarrow K^* \rightarrow \Gamma^0 \rightarrow \mbox{SO}_V(K) \rightarrow 1.\,&lt;/math&gt;
+
+Over other fields or with indefinite forms, the map is not in general onto, and the failure is captured by the spinor norm.
+
+===Spinor norm===
+{{details|Spinor norm#Galois cohomology and orthogonal groups}}
+
+In arbitrary characteristic, the [[Orthogonal group#The spinor norm|spinor norm]] ''Q'' is defined on the Lipschitz group by
+:&lt;math&gt;Q(x) = x^\mathrm{t}x.&lt;/math&gt;&lt;!-- Note that (−1)^D(x) is the same as \alpha(x), so this expression is the same as \alpha(x)^t x (−1)^D(x). --&gt;
+It is a homomorphism from the Lipschitz group to the group ''K''&lt;sup&gt;×&lt;/sup&gt; of non-zero elements of ''K''. It coincides with the quadratic form ''Q'' of ''V'' when ''V'' is identified with a subspace of the Clifford algebra. Several authors define the spinor norm slightly differently, so that it differs from the one here by a factor of −1, 2, or −2 on Γ&lt;sup&gt;1&lt;/sup&gt;. The difference is not very important in characteristic other than 2.
+
+The nonzero elements of ''K'' have spinor norm in the group (''K''&lt;sup&gt;×&lt;/sup&gt;)&lt;sup&gt;2&lt;/sup&gt; of squares of nonzero elements of the field ''K''. So when ''V'' is finite-dimensional and non-singular we get an induced map from the orthogonal group of ''V'' to the group ''K''&lt;sup&gt;×&lt;/sup&gt;/(''K''&lt;sup&gt;×&lt;/sup&gt;)&lt;sup&gt;2&lt;/sup&gt;, also called the spinor norm. The spinor norm of the reflection about ''r''&lt;sup&gt;⊥&lt;/sup&gt;, for any vector ''r'', has image ''Q''(''r'') in ''K''&lt;sup&gt;×&lt;/sup&gt;/(''K''&lt;sup&gt;×&lt;/sup&gt;)&lt;sup&gt;2&lt;/sup&gt;, and this property uniquely defines it on the orthogonal group. This gives exact sequences:
+
+:&lt;math&gt;\begin{align}
+  1 \to \{\pm 1\} \to \mbox{Pin}_V(K)  &amp;\to \mbox{O}_V(K)  \to K^\times/\left(K^\times\right)^2, \\
+  1 \to \{\pm 1\} \to \mbox{Spin}_V(K) &amp;\to \mbox{SO}_V(K) \to K^\times/\left(K^\times\right)^2.
+\end{align}&lt;/math&gt;
+
+Note that in characteristic 2 the group {±1} has just one element.
+
+From the point of view of [[Galois cohomology]] of [[algebraic group]]s, the spinor norm is a [[connecting homomorphism]] on cohomology. Writing μ&lt;sub&gt;2&lt;/sub&gt; for the [[Group scheme of roots of unity|algebraic group of square roots of 1]] (over a field of characteristic not 2 it is roughly the same as a two-element group with trivial Galois action), the short exact sequence
+:&lt;math&gt; 1 \to \mu_2 \rightarrow \mbox{Pin}_V \rightarrow \mbox{O}_V \rightarrow 1&lt;/math&gt;
+yields a long exact sequence on cohomology, which begins
+:&lt;math&gt; 1 \to H^0(\mu_2; K) \to H^0(\mbox{Pin}_V; K) \to H^0(\mbox{O}_V; K) \to H^1(\mu_2; K).&lt;/math&gt;
+
+The 0th Galois cohomology group of an algebraic group with coefficients in ''K'' is just the group of ''K''-valued points: {{nowrap|1=''H''&lt;sup&gt;0&lt;/sup&gt;(''G''; ''K'') = ''G''(''K'')}}, and {{nowrap|''H''&lt;sup&gt;1&lt;/sup&gt;(μ&lt;sub&gt;2&lt;/sub&gt;; ''K'') ≅ ''K''&lt;sup&gt;×&lt;/sup&gt;/(''K''&lt;sup&gt;×&lt;/sup&gt;)&lt;sup&gt;2&lt;/sup&gt;}}, which recovers the previous sequence
+:&lt;math&gt; 1 \to \{\pm 1\} \to \mbox{Pin}_V(K) \to \mbox{O}_V(K)  \to K^\times/\left(K^\times\right)^2,&lt;/math&gt;
+where the spinor norm is the connecting homomorphism {{nowrap|''H''&lt;sup&gt;0&lt;/sup&gt;(O&lt;sub&gt;''V''&lt;/sub&gt;; ''K'') → ''H''&lt;sup&gt;1&lt;/sup&gt;(μ&lt;sub&gt;2&lt;/sub&gt;; ''K'')}}.
+
+==Spin and Pin groups==
+{{details|Spin group|Pin group|Spinor}}
+
+In this section we assume that ''V'' is finite-dimensional and its bilinear form is non-singular. (If ''K'' has characteristic 2 this implies that the dimension of ''V'' is even.)
+
+The [[Pin group]] Pin&lt;sub&gt;''V''&lt;/sub&gt;(''K'') is the subgroup of the Lipschitz group Γ of elements of spinor norm 1, and similarly the [[Spin group]] Spin&lt;sub&gt;''V''&lt;/sub&gt;(''K'') is the subgroup of elements of [[Orthogonal group#The Dickson invariant|Dickson invariant]] 0 in Pin&lt;sub&gt;''V''&lt;/sub&gt;(''K''). When the characteristic is not 2, these are the elements of determinant 1. The Spin group usually has index 2 in the Pin group.
+
+Recall from the previous section that there is a homomorphism from the Clifford group onto the orthogonal group. We define the [[special orthogonal group]] to be the image of Γ&lt;sup&gt;0&lt;/sup&gt;. If ''K'' does not have characteristic 2 this is just the group of elements of the orthogonal group of determinant 1. If ''K'' does have characteristic 2, then all elements of the orthogonal group have determinant 1, and the special orthogonal group is the set of elements of Dickson invariant 0.
+
+There is a homomorphism from the Pin group to the orthogonal group. The image consists of the elements of spinor norm {{nowrap|1 ∈ ''K''&lt;sup&gt;×&lt;/sup&gt;/(''K''&lt;sup&gt;×&lt;/sup&gt;)&lt;sup&gt;2&lt;/sup&gt;}}. The kernel consists of the elements +1 and −1, and has order 2 unless ''K'' has characteristic 2. Similarly there is a homomorphism from the Spin group to the special orthogonal group of ''V''.
+
+In the common case when ''V'' is a positive or negative definite space over the reals, the spin group maps onto the special orthogonal group, and is simply connected when ''V'' has dimension at least 3. Further the kernel of this homomorphism consists of 1 and −1. So in this case the spin group, Spin(''n''), is a double cover of SO(''n''). Please note, however, that the simple connectedness of the spin group is not true in general: if ''V'' is '''R'''&lt;sup&gt;''p'',''q''&lt;/sup&gt; for ''p'' and ''q'' both at least 2 then the spin group is not simply connected. In this case the algebraic group Spin&lt;sub&gt;''p'',''q''&lt;/sub&gt; is simply connected as an algebraic group, even though its group of real valued points Spin&lt;sub&gt;''p'',''q''&lt;/sub&gt;('''R''') is not simply connected. This is a rather subtle point, which completely confused the authors of at least one standard book about spin groups.{{which|date=July 2019}}
+
+==Spinors==&lt;!-- This section is linked from [[Spinor]] --&gt;
+Clifford algebras Cl{{sub|''p'',''q''}}('''C'''), with {{nowrap|1=''p'' + ''q'' = 2''n''}} even, are matrix algebras which have a complex representation of dimension 2&lt;sup&gt;''n''&lt;/sup&gt;. By restricting to the group Pin&lt;sub&gt;''p'',''q''&lt;/sub&gt;('''R''') we get a complex representation of the Pin group of the same dimension, called the [[spin representation]]. If we restrict this to the spin group Spin&lt;sub&gt;''p'',''q''&lt;/sub&gt;('''R''') then it splits as the sum of two ''half spin representations'' (or ''Weyl representations'') of dimension 2&lt;sup&gt;''n''−1&lt;/sup&gt;.
+
+If {{nowrap|1=''p'' + ''q'' = 2''n'' + 1}} is odd then the Clifford algebra Cl{{sub|''p'',''q''}}('''C''') is a sum of two matrix algebras, each of which has a representation of dimension 2&lt;sup&gt;''n''&lt;/sup&gt;, and these are also both representations of the Pin group Pin&lt;sub&gt;''p'',''q''&lt;/sub&gt;('''R'''). On restriction to the spin group Spin&lt;sub&gt;''p'',''q''&lt;/sub&gt;('''R''') these become isomorphic, so the spin group has a complex spinor representation of dimension 2&lt;sup&gt;''n''&lt;/sup&gt;.
+
+More generally, spinor groups and pin groups over any field have similar representations whose exact structure depends on the [[classification of Clifford algebras|structure of the corresponding Clifford algebras]]: whenever a Clifford algebra has a factor that is a matrix algebra over some division algebra, we get a corresponding representation of the pin and spin groups over that division algebra.
+For examples over the reals see the article on [[spinor]]s.
+
+===Real spinors===
+{{details|spinor}}
+To describe the real spin representations, one must know how the spin group sits inside its Clifford algebra. The [[Pin group]], Pin&lt;sub&gt;''p'',''q''&lt;/sub&gt; is the set of invertible elements in Cl{{sub|''p'',''q''}} that can be written as a product of unit vectors:
+:&lt;math&gt;{\mbox{Pin}}_{p,q}=\{v_1v_2 \cdots v_r \mid \forall i\, \|v_i\| = \pm 1\}.&lt;/math&gt;
+Comparing with the above concrete realizations of the Clifford algebras, the Pin group corresponds to the products of arbitrarily many reflections: it is a cover of the full orthogonal group {{nowrap|O(''p'', ''q'')}}.  The [[Spin group]] consists of those elements of Pin&lt;sub&gt;''p'', ''q''&lt;/sub&gt; which are products of an even number of unit vectors.  Thus by the [[Cartan-Dieudonné theorem]] Spin is a cover of the group of proper rotations {{nowrap|SO(''p'', ''q'')}}.
+
+Let {{nowrap|''α'' : Cl → Cl}} be the automorphism which is given by the mapping {{nowrap|''v'' ↦ −''v''}} acting on pure vectors.  Then in particular, Spin&lt;sub&gt;''p'',''q''&lt;/sub&gt; is the subgroup of Pin&lt;sub&gt;''p'',''q''&lt;/sub&gt; whose elements are fixed by ''α''.  Let
+:&lt;math&gt;\operatorname{Cl}_{p,q}^{[0]} = \{ x\in \operatorname{Cl}_{p,q} \mid \alpha(x) = x\}.&lt;/math&gt;
+(These are precisely the elements of even degree in Cl{{sub|''p'',''q''}}.)  Then the spin group lies within Cl{{su|lh=1em|p=[0]|b=''p'',''q''}}.
+
+The irreducible representations of Cl{{sub|''p'',''q''}} restrict to give representations of the pin group.  Conversely, since the pin group is generated by unit vectors, all of its irreducible representation are induced in this manner.  Thus the two representations coincide.  For the same reasons, the irreducible representations of the spin coincide with the irreducible representations of Cl{{su|lh=1em|p=[0]|b=''p'',''q''}}.
+
+To classify the pin representations, one need only appeal to the [[classification of Clifford algebras]].  To find the spin representations (which are representations of the even subalgebra), one can first make use of either of the isomorphisms (see above)
+:&lt;math&gt;\operatorname{Cl}^{[0]}_{p,q} \approx \operatorname{Cl}_{p,q-1}, \text{ for } q &gt; 0&lt;/math&gt;
+:&lt;math&gt;\operatorname{Cl}^{[0]}_{p,q} \approx \operatorname{Cl}_{q,p-1}, \text{ for } p &gt; 0&lt;/math&gt;
+and realize a spin representation in signature {{nowrap|(''p'', ''q'')}} as a pin representation in either signature {{nowrap|(''p'', ''q'' − 1)}} or {{nowrap|(''q'', ''p'' − 1)}}.
+
+==Applications==
+===Differential geometry===
+One of the principal applications of the exterior algebra is in [[differential geometry]] where it is used to define the [[fiber bundle|bundle]] of [[differential form]]s on a [[smooth manifold]]. In the case of a ([[pseudo-Riemannian manifold|pseudo]]-)[[Riemannian manifold]], the [[tangent space]]s come equipped with a natural quadratic form induced by the [[metric tensor|metric]]. Thus, one can define a [[Clifford bundle]] in analogy with the [[exterior bundle]]. This has a number of important applications in [[Riemannian geometry]]. Perhaps more importantly is the link to a [[spin manifold]], its associated [[spinor bundle]] and spin&lt;sup&gt;c&lt;/sup&gt; manifolds.
+
+===Physics===
+Clifford algebras have numerous important applications in physics. Physicists usually consider a Clifford algebra to be an algebra with a basis generated by the matrices {{nowrap|''γ''&lt;sub&gt;0&lt;/sub&gt;, …, ''γ''&lt;sub&gt;3&lt;/sub&gt;}} called [[Dirac matrices]] which have the property that
+
+:&lt;math&gt;\gamma_i\gamma_j + \gamma_j\gamma_i = 2\eta_{ij}\,&lt;/math&gt;
+
+where {{nowrap|''η''}} is the matrix of a quadratic form of signature {{nowrap|(1, 3)}} (or {{nowrap|(3, 1)}} corresponding to the two equivalent choices of metric signature). These are exactly the defining relations for the Clifford algebra {{nowrap|Cl{{su|b=1,3}}('''R''')}}, whose [[complexification]] is {{nowrap|Cl{{su|b=1,3}}('''R''')&lt;sub&gt;'''C'''&lt;/sub&gt;}} which, by the [[classification of Clifford algebras]], is isomorphic to the algebra of {{nowrap|4 × 4}} complex matrices {{nowrap|Cl{{sub|4}}('''C''') ≈ M&lt;sub&gt;4&lt;/sub&gt;('''C''')}}. However, it is best to retain the notation {{nowrap|Cl{{su|b=1,3}}('''R''')&lt;sub&gt;'''C'''&lt;/sub&gt;}}, since any transformation that takes the bilinear form to the canonical form is ''not'' a Lorentz transformation of the underlying spacetime.
+
+The Clifford algebra of spacetime used in physics thus has more structure than {{nowrap|Cl&lt;sub&gt;4&lt;/sub&gt;('''C''')}}. It has in addition a set of preferred transformations – Lorentz transformations. Whether complexification is necessary to begin with depends in part on conventions used and in part on how much one wants to incorporate straightforwardly, but complexification is most often necessary in quantum mechanics where the spin representation of the Lie algebra {{nowrap|'''so'''(1, 3)}} sitting inside the Clifford algebra conventionally requires a complex Clifford algebra. For reference, the spin Lie algebra is given by
+
+:&lt;math&gt;\begin{align}
+  \sigma^{\mu\nu}
+    &amp;= -\frac{i}{4}\left[\gamma^\mu,\, \gamma^\nu\right], \\
+  \left[\sigma^{\mu\nu},\, \sigma^{\rho\tau}\right]
+    &amp;= i\left(\eta^{\tau\mu}\sigma^{\rho\nu} + \eta^{\nu\tau}\sigma^{\mu\rho} - \eta^{\rho\mu}\sigma^{\tau\nu} - \eta^{\nu\rho}\sigma^{\mu\tau}\right).
+\end{align}&lt;/math&gt;
+
+This is in the {{nowrap|(3, 1)}} convention, hence fits in {{nowrap|Cl{{su|b=3,1}}('''R''')&lt;sub&gt;'''C'''&lt;/sub&gt;}}.&lt;ref&gt;{{harvnb|Weinberg|2002}}&lt;/ref&gt;
+
+The Dirac matrices were first written down by [[Paul Dirac]] when he was trying to write a relativistic first-order wave equation for the [[electron]], and give an explicit isomorphism from the Clifford algebra to the algebra of complex matrices. The result was used to define the [[Dirac equation]] and introduce the [[Dirac operator]]. The entire Clifford algebra shows up in [[quantum field theory]] in the form of [[Dirac field bilinear]]s.
+
+The use of Clifford algebras to describe quantum theory has been advanced among others by [[Mario Schönberg]],&lt;ref&gt;See the references to Schönberg's papers of 1956 and 1957 as described in section &quot;The Grassmann–Schönberg algebra &lt;math&gt;G_n&lt;/math&gt;&quot; of:A. O. Bolivar,
+Classical limit of fermions in phase space, J. Math. Phys. 42, 4020 (2001) {{DOI|10.1063/1.1386411}}&lt;/ref&gt; by [[David Hestenes]] in terms of [[geometric calculus]], by [[David Bohm]] and [[Basil Hiley]] and co-workers in form of a [[Basil Hiley#Hierarchy of Clifford algebras|hierarchy of Clifford algebras]], and by Elio Conte et al.&lt;ref&gt;{{cite arXiv |last=Conte |first=Elio |eprint=0711.2260 |class=quant-ph |title=A Quantum-Like Interpretation and Solution of Einstein, Podolsky, and Rosen Paradox in Quantum Mechanics |date= 14 Nov 2007 }}&lt;/ref&gt;&lt;ref&gt;Elio Conte: On some considerations of mathematical physics: May we identify Clifford algebra as a common algebraic structure for classical diffusion and Schrödinger equations? Adv. Studies Theor. Phys., vol. 6, no. 26 (2012), pp. 1289–1307&lt;/ref&gt;
+
+===Computer vision===
+Clifford algebras have been applied in the problem of action recognition and classification in [[computer vision]]. Rodriguez et al.&lt;ref name=Rodriguez2008&gt;{{cite conference
+ | author = Rodriguez, Mikel
+ |author2=Shah, M
+ | year = 2008
+ | title = Action MACH: A Spatio-Temporal Maximum Average Correlation Height Filter for Action Classification
+ | booktitle = Computer Vision and Pattern Recognition (CVPR)
+}}&lt;/ref&gt; propose a Clifford embedding to generalize traditional MACH filters to video (3D spatiotemporal volume), and vector-valued data such as [[optical flow]]. Vector-valued data is analyzed using the [[Clifford analysis#The Fourier transform|Clifford Fourier Transform]]. Based on these vectors action filters are synthesized in the Clifford Fourier domain and recognition of actions is performed using Clifford correlation. The authors demonstrate the effectiveness of the Clifford embedding by recognizing actions typically performed in classic feature films and sports broadcast television.
+
+==Generalizations==
+* While this article focuses on a Clifford algebra of a vector space over a field, the definition extends without change to a [[Module (mathematics)|module]] over any unital, associative, commutative ring.&lt;ref name=oziewicz-sitarczyk /&gt;
+* Clifford algebras may be generalized to a form of degree higher than quadratic over a vector space.&lt;ref&gt;
+{{cite journal
+ |title = On the Clifford Algebra of a Binary Cubic Form
+ |author = Darrell E. Haile
+ |journal = American Journal of Mathematics
+ |volume = 106
+ |date = Dec 1984
+ |issue = 6
+ |pages = 1269–1280
+ |publisher = The Johns Hopkins University Press
+ |doi = 10.2307/2374394
+|jstor = 2374394
+ }}&lt;/ref&gt;
+
+==Conferences and Journals==
+There is a vibrant and interdisciplinary community around Clifford and Geometric Algebras with a wide range of applications. The main conferences in this subject include the [http://www.smartchair.org/hp/ICCA2020/ International Conference on Clifford Algebras and their Applications in Mathematical Physics (ICCA)] and [http://agacse2021.fme.vutbr.cz/main.php Applications of Geometric Algebra in Computer Science and Engineering (AGACSE)] series. A main publication outlet is the Springer journal [[Advances in Applied Clifford Algebras]].
+
+==See also==
+{{Portal|Mathematics}}
+{{Div col}}
+*[[Algebra of physical space]], APS
+*[[Cayley–Dickson construction]]
+*[[Classification of Clifford algebras]]
+*[[Clifford analysis]]
+*[[Clifford module]]
+*[[Complex spin structure]]
+*[[Dirac operator]]
+*[[Exterior algebra]]
+*[[Fierz identity]]
+*[[Gamma matrices]]
+*[[Generalized Clifford algebra]]
+*[[Geometric algebra]]
+*[[Higher-dimensional gamma matrices]]
+*[[Hypercomplex number]]
+*[[Octonion]]
+*[[Paravector]]
+*[[Quaternion]]
+*[[Spin group]]
+*[[Spin structure]]
+*[[Spinor]]
+*[[Spinor bundle]]
+ {{Div col end}}
+
+==Notes==
+{{Reflist|30em}}
+
+==References==
+* {{citation | last1=Bourbaki | first1=Nicolas | author1-link=Nicolas Bourbaki | year=1988 | title=Algebra | publisher=[[Springer-Verlag]] | isbn=978-3-540-19373-9 }}, section IX.9.
+* Carnahan, S. ''Borcherds Seminar Notes, Uncut.'' Week 5, &quot;Spinors and Clifford Algebras&quot;.
+* {{citation | last=Garling | first=D. J. H. | zbl=1235.15025 | title=Clifford algebras. An introduction | series=London Mathematical Society Student Texts | volume=78  | publisher=[[Cambridge University Press]] | year=2011 | isbn=978-1-107-09638-7 }}
+* {{citation | last=Jagannathan | first=R. | arxiv=1005.4300 | title=On generalized Clifford algebras and their physical applications | year=2010 | bibcode=2010arXiv1005.4300J }}
+* {{citation | last=Lam | first=Tsit-Yuen | title=Introduction to Quadratic Forms over Fields | volume=67 | series=[[Graduate Studies in Mathematics]] | authorlink=Tsit Yuen Lam | publisher=[[American Mathematical Society]] | year=2005 | isbn=0-8218-1095-2 | zbl=1068.11023 | mr = 2104929 }}
+* {{citation | last1=Lawson | first1=H. Blaine | last2=Michelsohn | first2=Marie-Louise|author2-link=Marie-Louise Michelsohn | title=Spin Geometry | publisher=[[Princeton University Press]] | isbn=978-0-691-08542-5 | year=1989}}. An advanced textbook on Clifford algebras and their applications to differential geometry.
+* {{citation | last=Lounesto | first=Pertti | title=Clifford algebras and spinors | publisher=[[Cambridge University Press]] | isbn=978-0-521-00551-7 | year=2001}}
+* {{citation | last=Porteous | first=Ian R. | authorlink=Ian R. Porteous | title=Clifford algebras and the classical groups | publisher=[[Cambridge University Press]] | isbn=978-0-521-55177-9 | year=1995}}
+* {{citation | last=Sylvester | first=J. J. |year=1882 |title=A word on Nonions |series=Johns Hopkins University Circulars |volume=I |pages=241–2 |hdl=1774.2/32845}}; ibid '''II''' (1883) 46; ibid '''III''' (1884) 7–9. Summarized in ''The Collected Mathematics Papers of James Joseph Sylvester'' (Cambridge University Press, 1909) v '''III'''. [http://quod.lib.umich.edu/u/umhistmath/aas8085.0003.001/664?rgn=full+text;view=pdf;q1=nonions online] and [http://quod.lib.umich.edu/u/umhistmath/AAS8085.0004.001/165?cite1=Sylvester;cite1restrict=author;rgn=full+text;view=pdf further].
+* {{citation | last1=Vaz | first1=J. | last2=da Rocha | first2=R. | year=2016 | title=An Introduction to Clifford Algebras and Spinors | publisher=[[Oxford University Press]] | isbn=978-0-19-878292-6 }}
+* {{citation | last=Weinberg | first=S. | year=2002 | title=The Quantum Theory of Fields | volume=1 | isbn=0-521-55001-7 | authorlink=Steven Weinberg | publisher=[[Cambridge University Press]] | url-access=registration | url=https://archive.org/details/quantumtheoryoff00stev }}
+
+==Further reading==
+* {{citation | last=Knus | first=Max-Albert | title=Quadratic and Hermitian forms over rings | series=Grundlehren der Mathematischen Wissenschaften | volume=294 | publisher=[[Springer-Verlag]] | year=1991 | isbn=3-540-52117-8 | zbl=0756.11008 | doi=10.1007/978-3-642-75401-2 | mr=1096299}}

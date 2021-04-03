@@ -1,0 +1,320 @@
+If the mass of interest has a low sensitivity and is just below a much larger peak, the low mass tail from this larger peak can intrude onto the mass of interest.  A Retardation Filter might be used to reduce this tail.  This sits near the collector, and applies a voltage equal but opposite to the accelerating voltage; any ions that have lost energy while flying around the instrument will be decelerated to rest by the filter.
+
+===Collision reaction cell and iCRC===
+{{Main|collision reaction cell}}
+The collision/reaction cell is used to remove interfering ions through ion/neutral reactions.&lt;ref name=Yip2007&gt;{{Cite journal | last1 = Yip | first1 =  Y. | year = 2007 | title = Applications of collision/reaction-cell technology in isotope dilution mass spectrometry | journal = TrAC Trends in Analytical Chemistry | volume = 26 | issue = 7 | page = 727 | doi = 10.1016/j.trac.2007.03.007 | last2 = Sham | first2 = W }}&lt;/ref&gt; Collision/reaction cells are known under several names. The dynamic reaction cell is located before the [[quadrupole]] in the ICP-MS device.&lt;ref&gt;{{cite journal | title = A dynamic reaction cell for ICP-MS. Part 1: The rf-field energy contribution in thermodynamics of ion-molecule reactions |author1=V. Baranov |author2=S. Tanner | journal = [[J. Anal. At. Spectrom.]] | year = 1999 | volume = 14 | issue = 8 | pages = 1133–1142 | doi = 10.1039/a809889a}}&lt;/ref&gt;&lt;ref&gt;{{cite journal | title = A dynamic reaction cell for ICP-MS. Part 2: Reduction of interferences produced within the cell |author1=S. Tanner |author2=V. Baranov | journal = [[J. Am. Soc. Mass Spectrom.]] | year = 1999 | volume = 10 | issue = 11 | pages = 1083–1094 | doi = 10.1016/S1044-0305(99)00081-1|s2cid=93608392 }}&lt;/ref&gt;&lt;ref name=&quot;Thomas 2001&quot;&gt;{{cite news |last=Thomas |first=Robert |url=http://matematicas.udea.edu.co/~carlopez/beginer_guide_icpms.pdf |title=A Beginner's Guide to ICP-MS |work=Spectroscopy |publisher=Advanstar Communications |date=2001 |accessdate=2014-05-09 }}&lt;/ref&gt;&lt;ref&gt;{{cite journal | title = Reaction cells and collision cells for ICP-MS: a tutorial review |author1=S. Tanner |author2=V. Baranov |author3=D. Bandura | journal = [[Spectrochimica Acta B]] | volume = 57 | year = 2002 | issue = 9 | pages = 1361–1452 | doi = 10.1016/S0584-8547(02)00069-1|bibcode = 2002AcSpe..57.1361T }}&lt;/ref&gt; The chamber has a quadrupole and can be filled with reaction (or collision) gases ([[ammonia]], [[methane]], [[oxygen]] or [[hydrogen]]), with one gas type at a time or a mixture of two of them, which reacts with the introduced sample, eliminating some of the interference.
+
+The integrated Collisional Reaction Cell (iCRC) used by Analytik Jena ICP-MS is a mini-collision cell installed in front of the parabolic ion mirror optics that removes interfering ions by injecting a collisional gas (He), or a reactive gas (H&lt;sub&gt;2&lt;/sub&gt;), or a mixture of the two, directly into the plasma as it flows through the skimmer cone and/or the sampler cone.&lt;ref name=&quot;ReferenceA&quot;&gt;I. Kalinitchenko, Patent WO 2004/012223 A1&lt;/ref&gt;&lt;ref name='Wang'&gt;{{cite web|url=http://www.varianinc.com/image/vimage/docs/products/spectr/icpms/articles/adv_note_1.pdf|archiveurl=https://web.archive.org/web/20081123060832/http://www.varianinc.com/image/vimage/docs/products/spectr/icpms/articles/adv_note_1.pdf |archivedate=2008-11-23 |title=Principles and performance of the Collision Reaction Interface for the |accessdate=2009-01-20 |last=Wang |first=XueDong |author2=Iouri Kalinitchenko |publisher=Varian }}&lt;/ref&gt; The iCRC removed interfering ions using a collisional kinetic energy discrimination (KED) phenomenon&lt;ref&gt;{{cite journal |last1=Bhavya |first1=Sri |last2=Fatima |first2=Amina |last3=Swethasri |first3=R |last4=Sumakanth |first4=M |title=High Performance Liquid Chromatography-Inductively coupled plasma Mass Spectrometry |journal=Asian Journal of Research in Chemistry |date=2019 |volume=12 |issue=4 |pages=225–230 |doi=10.5958/0974-4150.2019.00043.9 |issn=0974-4150}}&lt;/ref&gt; and chemical reactions with interfering ions similarly to traditionally used larger collision cells.
+
+==Routine maintenance==
+As with any piece of instrumentation or equipment, there are many aspects of maintenance that need to be encompassed by daily, weekly and annual procedures.  The frequency of maintenance is typically determined by the sample volume and cumulative run time that the instrument is subjected to.
+
+One of the first things that should be carried out before the calibration of the ICP-MS is a sensitivity check and optimization.  This ensures that the operator is aware of any possible issues with the instrument and if so, may address them before beginning a calibration.  Typical indicators of sensitivity are Rhodium levels, Cerium/Oxide ratios and DI water blanks.
+
+One of the most frequent forms of [[Planned maintenance|routine maintenance]] is replacing sample and waste tubing on the peristaltic pump, as these tubes can get worn fairly quickly resulting in holes and clogs in the sample line, resulting in skewed results.  Other parts that will need regular cleaning and/or replacing are sample tips, nebulizer tips, sample cones, skimmer cones, injector tubes, torches and lenses.  It may also be necessary to change the oil in the interface roughing pump as well as the vacuum backing pump, depending on the workload put on the instrument.
+
+==Sample preparation==
+For most clinical methods using ICP-MS, there is a relatively simple and quick sample prep process.  The main component to the sample is an internal standard, which also serves as the diluent.  This internal standard consists primarily of [[deionized water]], with nitric or hydrochloric acid, and Indium and/or Gallium.  Depending on the sample type, usually 5 mL of the internal standard is added to a test tube along with 10–500 microliters of sample. This mixture is then vortexed for several seconds or until mixed well and then loaded onto the autosampler tray.
+For other applications that may involve very viscous samples or samples that have particulate matter, a process known as sample digestion may have to be carried out, before it can be pipetted and analyzed.  This adds an extra first step to the above process, and therefore makes the sample prep more lengthy.
+
+==References==
+{{Reflist}}
+
+==External links==
+{{Commons category|ICP-MS}}
+
+{{Mass spectrometry}}
+{{Branches of chemistry}}
+{{DEFAULTSORT:Inductively Coupled Plasma Mass Spectrometry}}
+[[Category:Scientific techniques]]
+[[Category:Mass spectrometry]]
+[[Category:Laboratory equipment]]
+[[Category:Analytical chemistry]]</text>
+      <sha1>f8118iga5c0ilwmnbu0mv62gpzhul2m</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>1654 BC</title>
+    <ns>0</ns>
+    <id>49505</id>
+    <redirect title="1650s BC" />
+    <revision>
+      <id>964641554</id>
+      <parentid>15944365</parentid>
+      <timestamp>2020-06-26T18:14:53Z</timestamp>
+      <contributor>
+        <username>1234qwer1234qwer4</username>
+        <id>20836525</id>
+      </contributor>
+      <minor />
+      <comment>/* top */R to decade</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="69" xml:space="preserve">#REDIRECT [[1650s BC]]
+
+{{Redirect category shell|
+{{R to decade}}
+}}</text>
+      <sha1>lpkn0beuhyqc47mdyjauu80jg9wi03y</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Wikipedia:Wiki Supreme Court</title>
+    <ns>4</ns>
+    <id>49507</id>
+    <revision>
+      <id>269052972</id>
+      <parentid>269052582</parentid>
+      <timestamp>2009-02-07T02:49:06Z</timestamp>
+      <contributor>
+        <username>Graham87</username>
+        <id>194203</id>
+      </contributor>
+      <minor />
+      <comment>moved [[WikiSupremeCourt]] to [[Wikipedia:Wiki Supreme Court]] over redirect: revert</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="37" xml:space="preserve">{{softredirect|m:Wiki Supreme Court}}</text>
+      <sha1>iqyna4haguram50oas5dv4s0ysezjwm</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Die Walküre</title>
+    <ns>0</ns>
+    <id>49508</id>
+    <revision>
+      <id>990753795</id>
+      <parentid>989594510</parentid>
+      <timestamp>2020-11-26T09:03:44Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Alter: url, title. URLs might have been internationalized/anonymized. Add: location, s2cid. Removed parameters. Some additions/deletions were actually parameter name changes. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by AManWithNoPlan | All pages linked from cached copy of User:AManWithNoPlan/sandbox2 | via #UCB_webform_linked 1943/3704</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="47702" xml:space="preserve">{{Redirect|The Valkyrie||Valkyrie (disambiguation)}}
+{{Infobox opera 
+| name              = Die Walküre
+| genre             = [[Music drama]]
+| composer          = [[Richard Wagner]]
+| image             =  File:Victor Angerer - Josef Hoffmann's (04-14) Hunding-Saal.jpg
+| image_upright     =
+| alt               = 
+| caption           = Josef Hoffman's stage design for Act 1, Bayreuth 1876 
+| translated_name   = ''The Valkyrie''
+| other_name        = 
+| librettist        = Richard Wagner
+| language          = German
+| based_on          = &lt;!-- {{Based on|work|author}} --&gt;
+| premiere_date     = {{Start date|1870|06|26|df=y}}
+| premiere_location = [[National Theatre Munich|Königliches Hof- und National-Theater]] in Munich
+}}
+'''{{lang|de|Die Walküre}}''' ('''''The Valkyrie'''''), [[Wagner-Werk-Verzeichnis|WWV 86B]], is the second of the four [[music drama]]s that constitute [[Richard Wagner]]'s ''[[Der Ring des Nibelungen]],'' (English: ''The Ring of the Nibelung''). It was performed, as a single opera,  at the [[National Theatre Munich]] on 26 June 1870, and received its first performance as part of the ''Ring'' cycle at the [[Bayreuth Festspielhaus]]  on 14 August 1876.
+
+As the ''Ring'' cycle was conceived by Wagner in reverse order of performance, ''Die Walküre'' was the penultimate of the four texts to be written, although Wagner composed the music in performance-sequence. The text was completed by July 1852, and the music by March 1856. 
+Wagner largely followed the principles related to the form of musical drama which he had set out in his 1851 essay ''[[Opera and Drama]]''  under which the music would interpret the text emotionally, reflecting the feelings and moods behind the work, using a system of recurring leitmotifs to represent people, ideas and situations rather than the conventional operatic units of arias, ensembles, and choruses.  Wagner showed flexibility in the application of these principles here,  particularly in Act 3 when the Valkyries engage in frequent ensemble singing.
+
+As with ''Das Rheingold'', Wagner wished to defer any performance of the new work until it could be shown in the context of the completed cycle, but the  1870 Munich premiere was arranged at the insistence of his patron, King [[Ludwig II of Bavaria]].  More than the other ''Ring'' dramas, ''Die Walküre'' has achieved some popularity as a stand-alone work, and continues to be performed independently from its role in the tetralogy.
+
+The story of ''Die Walküre'' is based on the [[Norse mythology]] told in the ''[[Völsunga saga|Volsunga Saga]]'' and the ''[[Poetic Edda]]''. In this version the Volsung twins [[Signy|Sieglinde]] and [[Sigmund|Siegmund]], separated in childhood, meet and fall in love. This union angers the gods who demand that Siegmund must die. Sieglinde and the couple's unborn child are saved by the defiant actions of [[Odin|Wotan]]'s daughter, the title character, Valkyrie [[Brunhild|Brünnhilde]], who as a result faces the gods' retribution.
+
+==Background and context==
+{{Further|Der Ring des Nibelungen}}
+{{Quote box|width=300px|bgcolor=#E0E6F8|align= left|quote=  '''Structure of the ''Ring'' cycle'''&lt;br /&gt;
+#''[[Das Rheingold]]''
+#''[[Die Walküre]]''
+#''[[Siegfried (opera)|Siegfried]]''
+#''[[Götterdämmerung]]'' |salign = left|source= }} 
+[[Richard Wagner|Wagner]] began work on what became his ''Ring'' project in October 1848 when he prepared a prose outline for ''Siegfried's Death'', based on the legendary hero of [[Germanic mythology|Germanic myth]].{{sfn|Gutman|1971|p=175}} During the following months he developed the outline into a full &quot;poem&quot; or libretto.{{sfn|Holman|2001|p=33}}
+
+After his flight to Switzerland in May 1849, Wagner continued to expand his project, having decided that a single work would not suffice for his purposes. He would therefore create a series of music dramas, each telling a stage of the story, basing the narrative on a combination of myth and imagination; ''Siegfried's Death'' would provide the culmination. In 1851 he outlined his purposes in his essay &quot;A Communication to My Friends&quot;: &quot;I propose to produce my myth in three complete dramas, preceded by a lengthy Prelude (Vorspiel)&quot;.{{sfn|Wagner, tr. Ellis 1895|p=63}} Each of these dramas would, he said, constitute an independent whole, but would not be performed separately. &quot;At a specially-appointed Festival, I propose, some future time, to produce those three Dramas with their Prelude, in the course of three days and a fore-evening&quot;.{{sfn|Wagner, tr. Ellis 1895|p=63}}
+
+In accordance with this  scheme Wagner preceded ''Siegfried's Death'' (later ''[[Götterdämmerung]]'' (''The Twilight of the Gods'') with the story of Siegfried's youth, ''Young Siegfried'', later renamed ''[[Siegfried (opera)|Siegfried]]''. This was in turn preceded by ''Die Walküre'' (''The Valkyrie''), dealing with Siegfried's origins, the whole [[tetralogy]] being fronted by a prologue, ''[[Das Rheingold]]''.{{sfn|Jacobs|1980|p=63}} Because Wagner prepared his texts in reverse chronological sequence, ''Die Walküre'' was the third of the dramas to be conceived and written, but appears second in the tetralogy.{{sfn|Holman|2001|p=27}}
+
+==Roles==
+{| class=&quot;wikitable&quot;
+!Role
+!Description{{sfn|Holman|2001|pp=179–187, 206–220}}
+![[Voice type]]{{sfn|Holman|2001|pp=57–58}}
+!Munich premiere cast 26 June 1870&lt;ref name= Perfhist&gt;{{cite web|title= Die Walküre: Performance History |url= http://opera.stanford.edu/Wagner/Walkure/history.html|work= opera.stanford.edu|publisher= Opera Glass|accessdate= 15 August 2018}}&lt;/ref&gt;&lt;br /&gt; (Conductor: [[Franz Wüllner]]){{sfn|Osborne|1992|p=200}}
+!Cast at premiere of complete cycle 14 August 1876&lt;ref name= Perfhist/&gt;&lt;br /&gt;(Conductor: [[Hans Richter (conductor)|Hans Richter]]){{sfn|Osborne|1992|p=201}}
+|-
+! colspan=&quot;5&quot;| Humans
+|-
+|[[Sigmund|Siegmund]]
+|[[Völsung]] son of Wotan, twin brother of Sieglinde
+|[[tenor]]
+|[[Heinrich Vogl]]
+|[[Albert Niemann (tenor)|Albert Niemann]]
+|-
+|[[Signy#In ''Völsunga saga''|Sieglinde]]
+|[[Völsung]] daughter of Wotan, twin sister of Siegmund
+|[[soprano]]
+|[[Therese Vogl]]
+|[[Josephine Schefsky]]
+|-
+|Hunding
+|Of the Neiding race; husband of Sieglinde
+|[[bass (voice type)|bass]]
+|[[Kaspar Bausewein]]
+|Josef Niering
+|-
+! colspan=&quot;5&quot;| Gods
+|-
+|[[Odin|Wotan]] 
+|God of battle, and of contracts, ruler of the gods
+|[[bass-baritone]]
+|[[August Kindermann]]
+|[[Franz Betz]]
+|-
+|[[Frigg|Fricka]] 
+|Goddess of family values; wife to Wotan  
+|[[mezzo-soprano]]
+|[[Anna Kaufmann]]
+|[[Friederike Grün]]
+|-
+! colspan=&quot;5&quot;| Valkyries
+|-
+|[[Brunhild|Brünnhilde]]
+|Daughter of Wotan via Erda.  
+|soprano
+|[[Sophie Stehle]]
+|[[Amalie Materna]]
+|-
+|Gerhilde
+|Daughter of Wotan 
+|soprano
+|Karoline Lenoff
+|[[Marie Haupt]]
+|-
+|Ortlinde
+|Daughter of Wotan 
+|soprano
+|[[Henriette Müller-Marion]]
+|[[Marie Lehmann (soprano)|Marie Lehmann]]
+|-
+|Waltraute
+|Daughter of Wotan 
+|mezzo-soprano
+|Hemauer
+|[[Luise Jaide]]
+|-
+|Schwertleite
+|Daughter of Wotan 
+|[[contralto]]
+|[[Emma Seehofer]]
+|[[Johanna Jachmann-Wagner]]
+|-
+|Helmwige
+|Daughter of Wotan 
+|soprano
+|[[Anna Deinet|Anna Possart-Deinet]]
+|[[Lilli Lehmann]]
+|-
+|Siegrune
+|Daughter of Wotan
+|mezzo-soprano
+|Anna Eichheim
+|Antonie Amann
+|-
+|Grimgerde
+|Daughter of Wotan 
+|mezzo-soprano
+|[[Wilhelmine Ritter]]
+|Hedwig Reicher-Kindermann
+|-
+|Roßweiße
+|Daughter of Wotan 
+|mezzo-soprano
+|Juliane Tyroler
+|[[Minna Lammert]]
+|}
+
+==Synopsis==
+===Prior history===
+During the lengthy time that has passed since the gods entered Valhalla at the end of ''Das Rheingold'', Fafner has used the [[Tarnhelm]] to assume the form of a dragon, and guards the gold and the ring in the depths of the forest. [[Odin|Wotan]] has visited [[Jörð|Erda]] seeking wisdom, and by her has fathered a daughter, Brünnhilde; he has fathered eight other daughters, possibly also by Erda. These, with Brünnhilde, are the [[Valkyries]], whose task is to recover heroes fallen in battle and bring them to Valhalla, where they will protect the fortress from [[Alberich]]'s assault should the dwarf recover the ring. Wotan has also wandered the earth, and with a woman of the [[Völsung]] race has fathered the twins Siegmund and Sieglinde, who have grown up separately and unaware of each other. From the Völsungs Wotan hopes for a hero who, unencumbered by the gods' treaties, will obtain the ring from Fafner.
+
+===Act 1===
+[[File:Barthold Schweback in Valkyrian at Kungliga Operan 1914 - SMV - GS033.tif|thumb|upright|Siegmund with the sword &quot;Nothung&quot;  the [[Royal Swedish Opera]], 1914]]
+As a large storm rages, Siegmund finds shelter from his enemies in a large dwelling built around a massive ash-tree. Unarmed and wounded, he collapses with exhaustion. Sieglinde enters; she tells Siegmund that she is the wife of Hunding, and that he may rest here until Hunding's return. As they talk, they look at each other with growing interest and emotion. Siegmund gets ready to leave, telling Sieglinde that misfortune follows him, and he does not want to bring it on her; she replies that misfortune dwells with her already.
+
+Hunding returns and questions Siegmund's presence. Calling himself Wehwalt (&quot;woeful&quot;), Siegmund explains that he grew up in the forest with his parents and twin sister. One day he found their home burned down, his mother killed and his sister gone. Recently he fought with the relatives of a girl being forced into marriage. His weapons were destroyed, the bride was killed, and he was forced to flee. Hunding reveals that he is one of Siegmund's pursuers; Siegmund may stay, he says, but they must fight in the morning. Before leaving, Sieglinde gives a meaningful glance to a particular spot on the tree in which, the firelight reveals, a sword is buried to the hilt.
+
+Sieglinde returns, having drugged Hunding's drink. She reveals that she was forced into the marriage and that during their wedding feast, an old man appeared and plunged a sword into the trunk of the ash tree which neither Hunding nor any of his companions have been able to remove. She is longing for the hero who will draw the sword and save her. When Siegmund expresses his love for her, she reciprocates, and when he speaks the name of his father, [[Völsung|Wälse]], she recognises him as Siegmund, and realises that the sword was left for him. Siegmund then draws the sword from the tree. She reveals herself as Sieglinde, his twin sister. Siegmund names the sword &quot;[[Nothung]]&quot; and declares that it will be her protection.  The two sing of their passionate love for each other, as the act ends.
+
+===Act 2===
+[[File:Schott's 1899 Walkure title.jpg|thumb|Brünnhilde on the mountainside; title page from the 1899 [[Schott Music|Schott]]'s vocal score|upright=0.7]]
+On a high mountain ridge, Wotan instructs Brünnhilde, his [[Valkyrie]] daughter, to protect Siegmund in his forthcoming battle with Hunding. [[Frijjō|Fricka]] arrives, and in her role as goddess of family values demands that Siegmund and Sieglinde be punished for their adultery and incest. She scorns Wotan's argument that he requires Siegmund as a &quot;free hero&quot;, who can further his plans to recover the ring from Fafner, uninhibited by Wotan's contracts. She retorts that Siegmund is not free but is Wotan's pawn, whose every move the god seeks to direct. Defeated by Fricka's argument, Wotan reluctantly agrees that he will not protect Siegmund. After Fricka leaves, the troubled Wotan gives  Brünnhilde the full story, and with great sorrow rescinds his earlier instruction; he orders her to give the victory to Hunding and then departs.
+
+Siegmund and Sieglinde now enter, and Sieglinde faints, consumed with guilt and exhaustion. Brünnhilde tells Siegmund of his impending death; he refuses to follow Brünnhilde to Valhalla when she tells him Sieglinde cannot accompany him. Siegmund still believes that his father's sword will assure him of victory over Hunding, but Brünnhilde tells him it has lost its power. Siegmund threatens to kill both Sieglinde and himself. Much moved, Brünnhilde decides to defy her father and grant victory to Siegmund.
+
+Hunding's call is heard; he arrives and attacks Siegmund. Under Brünnhilde's power, Siegmund begins to overpower Hunding, but Wotan appears and shatters Siegmund's sword with his spear.  Hunding then stabs him to death. Brünnhilde gathers up the fragments of the sword and flees on horseback with Sieglinde. Contemptuously, Wotan strikes Hunding dead, and swearing that Brünnhilde will be punished for her defiance, sets out in pursuit of her.
+
+===Act 3===
+[[File:Rhinegold and the Valkyries p 138.jpg|thumb|Brünnhilde pleads with her sisters to rescue Sieglinde: ([[Arthur Rackham]], 1910) |upright=0.7]]
+The  Valkyries congregate on the mountain-top, each carrying a dead hero and chattering excitedly. Brünnhilde arrives with Sieglinde, and begs her sisters for help, but they dare not defy Wotan. Sieglinde tells Brünnhilde that without Siegmund she no longer wishes to live. Brünnhilde tells Sieglinde that she is pregnant by Siegmund, and urges her to remain alive for her child's sake, and to name the child [[Sigurd|Siegfried]]. Brünnhilde gives the fragments of the sword Nothung to Sieglinde, who thanks her for her loyalty and comfort, and resolves to save the child. As she departs, Wotan is heard approaching with great wrath.
+
+When Wotan arrives, the Valkyries vainly try to hide Brünnhilde. He faces her and declares her punishment: she is to be stripped of her Valkyrie status and become a mortal woman, to be held in defenceless sleep on the mountain, prey to any man who finds her. The other Valkyries protest, but when Wotan threatens them with the same, they flee.  In a long discourse with Wotan, Brünnhilde explains that she decided to protect Siegmund knowing that this was Wotan's true desire.  Wotan consents to her request that he surround her resting place with a circle of fire that will protect her from all but the bravest of heroes. He bids her a loving farewell and lays her sleeping form down on a rock. He then invokes [[Loki|Loge]], the demigod of fire, and creates a circle of perpetual fire around her. Before slowly departing, Wotan pronounces that anyone who fears his spear shall never pass through the fire.
+
+== Writing history ==
+===Text, sources, characters===
+{{Main|Der Ring des Nibelungen: Composition of the poem}}
+Wagner's original title for the work was ''Siegfried und Sieglind: der Walküre Bestrafung'' (&quot;Siegfried and Sieglinde: The Valkyrie Punished&quot;), but he quickly simplified this to ''Die Walküre''.{{sfn|Millington|2006|pp=106–107}} Prose sketches for the first two acts were prepared in November 1851, and for the third act early in the following year. These sketches were expanded to a more detailed prose plan in May 1852, and the full libretto was written in June 1852. It was privately printed, with the other ''Ring'' libretti, in February 1853.{{sfn|Millington|2006|p=107}}
+[[File:Brynhild och Gudrun by Anders Zorn.jpg|thumb|upright= 0.8|Brünnhilde in the ''Eddas'' – &quot;superhuman strength&quot;]]
+Wagner constructed his ''Die Walküre'' libretto from a range of ancient Norse and Germanic sources, principally the [[Völsunga saga]],  the [[Poetic Edda]], the [[Prose Edda]],  the [[Nibelungenlied]] and other fragments of [[Teutons|Teutonic]] literature.{{sfn|Scruton|2017|p=27}} From this plethora of material he selected particular elements and transformed them, to create his own narrative through the compression of events, the rearrangement of chronology and the fusion of characters. For example, in the Völsunga saga Siegmund is not Wotan's son, although he arranges the latter's conception by a Völsung woman.  Sigurd (Siegfried) is not the child of Siegmund's incestuous marriage to his sister, but of a later wife who preserves the sword fragments.{{sfn|Cooke|1979|p=114}} Likewise, in the sagas Sieglinde is a somewhat different character, Signy; she is Siegmund's twin sister, but the son she bears him is not Siegfried, and the manner of her death is quite different from that depicted by Wagner.{{sfn|Holman|2001|p=210}}  Hunding is a conflation of several characters in the sagas, notably Siggeir who is wedded to Signy, and the villainous King Hunding who is Siegmund's mortal enemy in the Poetic Edda.{{sfn|Holman|2001|pp=212–213}}
+
+Wotan (Odin) appears in the northern sagas as the god of all life as well as of battles, although he is by no means omnipotent.{{sfn|Holman|2001|pp=179–180}}  Fricka (Frigg) has most of the hallmarks of her counterpart in the Poetic and Prose Eddas, as wife of Wotan and goddess of family values.{{sfn|Holman|2001|pp=184–185}} [[Brünnhilde]] is a less central figure in the sagas than she is in the ''Ring'' cycle.{{sfn|Holman|2001|pp=214–215}}  In an early [[Heroic lay|lay]], she is sought as a wife by Gunther, who seeks the help of Siegfried in overcoming her superhuman strength.{{sfn|Cooke|1979|p=92}} Certain aspects of her ''Ring'' character appear in the Eddas and the Nibelungenlied, such as  her encirclement by Wotan in a ring of fire, and her rescue by a hero without fear.{{sfn|Holman|2001|p=215}}
+
+The Valkyries have a basis in historical fact, within the primitive Teutonic war-cult.  According to Cooke, originally they were &quot;grisly old women who officiated at the sacrificial rites when prisoners were put to death.&quot;{{sfn|Cooke|1979|p=317}}  They became entwined in legend: in the Poetic Edda they emerge as supernatural warrior maidens carrying out Odin's orders as to who should die.{{sfn|Cooke|1979|p=317}} In the Poetic Edda the Valkyries are given names: Skuld, Skogul, Gunn, Hild, Gondul and Geirskogul. Some of these names differ in other sources.{{sfn|Cooke|1979|p=318}} The names that Wagner gave to his Valkyries were his own invention, apart from Siegrune.{{sfn|Holman|2001|p=220}}
+
+Wagner effected a number of changes between his original draft and the final text. For example, in the first sketch, Wotan appeared in person in Act 1 to drive the sword into the tree. Siegmund withdrew the sword much earlier in the act, and in Act 2 Hunding was not slain by Wotan, but left alive to follow Wotan's instruction: &quot;Get hence, slave! Bow before Fricka.&quot;{{sfn|Newman|1949|pp=466–467}}
+
+===Composition===
+{{Main|Der Ring des Nibelungen: Composition of the music}}
+
+Apart from some rough sketches, including an early version of what became Siegmund's &quot;Spring Song&quot; in Act 1 of ''Die Walküre'', Wagner composed the ''Ring'' music in its proper sequence.{{sfn|Knapp|1977|pp=272–273}}{{sfn|Millington|2006|p=107}}  Having completed the music for ''Das Rheingold'' in May 1854, he began composing ''Die Walküre'' in June, and  finished the full orchestral score nearly two years later, in March 1856.{{sfn|Holman|2001|p=34}} This extended period is explained by several concurrent events and distractions, including Wagner's burgeoning friendship with [[Mathilde Wesendonck]], and a lengthy concert tour in London at the invitation of the [[Royal Philharmonic Society]], when he conducted a full season amid some controversy, although his own ''[[Tannhäuser]]'' overture was well received.{{sfn|Jacobs|1980|p=69}}
+
+The system of [[leitmotif]]s, integral to the ''Opera and Drama'' principles, is used to the full in ''Die Walküre''; Holman numbers 36 such motifs that are introduced in the work.{{sfn|Holman|2001|p=108}}  The well-known &quot;Valkyrie&quot; motif,  used to introduce Brünnhilde in Act 2, forms the basis of the famous [[Ride of the Valkyries]] that opens Act 3.{{sfn|Holman|2001|p=135}} Wagner wrote the concert version of the Ride in 1862, for performance in concerts at Vienna and Leipzig.{{sfn|Jacobs|1980|pp=209–210}}
+
+==Performances==
+===Premiere, Munich, 26 June 1870===
+[[File:Residenz1860.jpg|thumb|Munich Hofoper (right), photographed in 1860]]
+As with ''Das Rheingold'', many years elapsed between the completion of the ''Die Walküre'' score and its first performance. Seeing little chance of the ''Ring'' project coming to any immediate fruition, and in need of money, in August 1857 Wagner abandoned work on it and concentrated instead on ''[[Tristan und Isolde]]'' and ''[[Die Meistersinger von Nürnberg]]'', and on a revised version of [[Tannhäuser]].{{sfn|Holman|2001|pp=30, 34}}{{refn|Wagner returned briefly to the ''Ring'' music in late 1862, when he prepared an orchestral version of the &quot;Ride of the Valkyries&quot;.{{sfn|Jacobs|1980|pp=209–210}} |group= n}}   However, [[Ludwig II of Bavaria|King Ludwig of Bavaria]], to whom Wagner had sold the copyrights to the ''Ring'' works, was insistent that the two completed ''Ring'' operas be staged,{{sfn|Voss|2013|p=unpaginated}} and over Wagner's bitter protests arranged for them to be performed at the [[Bavarian State Opera|Munich Hofoper]], ''Das Rheingold'' on 22 September 1869 and ''Die Walküre'' on 26 June 1870.{{sfn|Osborne|1992|pp=180, 202}} The core of Wagner's objection to a Munich performance was his relationship with the married [[Cosima Wagner|Cosima von Bülow]], with whom he was cohabiting in Switzerland; he could not return to Munich without provoking scandal, and therefore could not directly control the performances.{{sfn|Gutman|1971|p=428}}{{sfn|Osborne|1992|p=182}}{{refn|Wagner and Cosima were not married until 25 August 1870.{{sfn|Holman|2001|p=35}} |group= n}}
+
+As the date for the ''Die Walküre'' premiere approached, Wagner grew more distressed and sullen; a letter from the critic Franz Müller reporting that everything was going well did nothing to console him. Cosima wrote in her diary that his distress &quot;pierces my heart like a dagger, and I ask myself whether this disgraceful act will really go unavenged?&quot;.{{sfn|Skelton|1994|p=65}} The premiere was attended by leading figures from the musical world, including [[Franz Liszt|Liszt]], [[Johannes Brahms|Brahms]], [[Camille Saint-Saëns]], and the violinist [[Joseph Joachim]].{{sfn|Gutman|1971|p=435}} The reception from audience and critics was much more positive than had been the case a year earlier with ''Rheingold'', although  Osborne quotes one dissenting voice, from the critic of the ''Süddeutsche Presse''. Having described the first act as &quot;for the most part, drearily long-winded&quot;, this critic thought that the second act dragged and came to life only occasionally. He went on: &quot;The third act begins so deafeningly that total stupor would be ensured even if the rest were less long-winded ... The overall effect of the music is not agreeable...&quot;.{{sfn|Osborne|1992|pp=202–203}} Cosima kept all communications from Munich away from Wagner, and tore up the more critical newspaper reviews.{{sfn|Skelton|1994|p=65}}
+
+After a second performance, ''Die Walküre'' was  performed at the Hofoper three further times, alternating with ''Das Rheingold'' in a ''Ring'' semi-cycle.{{sfn|Holman|2001|p=38}} King Ludwig, who was absent from the premiere, attended one of the later performances.{{sfn|Skelton|1994|p=65}} The Munich festival had taken place amid a mounting war fever, as relations between France and the German states rapidly deteriorated; the [[Franco-Prussian War]] broke out on 19 July.{{sfn|Gutman|1971|p=436}}
+
+===Bayreuth premiere, 14 August 1876===
+In May 1872, Wagner laid the foundation stone for the [[Bayreuth Festspielhaus|Festspielhaus]] in [[Bayreuth]], Northern Bavaria.{{sfn|Gutman|1971|p=459}}  He had originally envisaged holding the first [[Bayreuth Festival]] there in 1873, but delays in the building work, and in completing the ''Ring'' music, led to multiple postponements.{{sfn|Spotts|1994|pp=41–42, 52–55}} Finally, the festival was scheduled for August 1876; ''Die Walküre'' would be performed on 14 August, the second day of the festival.&lt;ref name= Wagopera&gt;{{cite web|title= Der Ring des Nibelungen: Bayreuth 1876|url= http://www.wagneroperas.com/index1876ring.html|publisher= Wagner Operas|accessdate= 29 August 2018}}&lt;/ref&gt; 
+[[File:Die Walküre 1870 Act1 NGO4p1091.jpg|left|thumb|Act 1 at the Bayreuth premiere, August 1876: Sieglinde and Siegmund]]
+Wagner was involved in every stage of the preparations; according to [[Ernest Newman]]'s biography he was &quot;a far better conductor than any of his conductors, a far better actor than any of his actors, a far better singer than any of his singers in everything but tone&quot;.{{sfn|Newman|1947|p=471}} [[Heinrich Porges]], a contemporary chronicler, describes Wagner demonstrating to [[Amalie Materna]], as Brünnhilde, how to sing the scene in which she tells Sieglinde of the impending birth of Siegfried: &quot;He sang [the final words] with truly thrilling force&quot;.{{sfn|Spotts|1994|p=64}} The singer [[Lilli Lehmann]] (Helmwige), in her 1913 memoirs, remembered Wagner acting the role of Sieglinde in rehearsals: &quot;Never yet has a Sieglinde known how to approach him, even approximately&quot;.{{sfn|Lehmann|1914|p=216}}
+
+The ''Die Walküre'' performance on 14 August was free from the mechanical problems that had affected ''Das Rheingold'' the day before,{{sfn|Skelton|1994|p=265}} and was generally well received by the distinguished audience that included the [[William I, German Emperor|Kaiser Wilhelm I]], [[Pedro II of Brazil|Emperor Pedro II of Brazil]],  representatives from various European royal houses and many of  Europe's leading composers.{{sfn|Spotts|1994|pp=66–67}} Wagner, however, was far from pleased. He was unnerved by an incident involving the kaiser, when the 79-year-old Wilhelm stumbled and almost fell over a doorstep,{{sfn|Skelton|1994|p=265}} and was very critical of two of his main singers, Niemann and Betz, whom he deemed &quot;theatre parasites&quot; and said he would never employ again –  a view he later revised.{{sfn|Spotts|1994|p=70}} Among the scenes that he felt had not come off  were those on the mountain-top: &quot;I'll change that some day when I produce ''Walküre'' in heaven, at the right hand of God, and the old gent and I are watching it together&quot;.{{sfn|Spotts|1994|p=70}}
+
+Three ''Ring'' cycles were performed in the first Bayreuth Festival. The stage designs used in ''Die Walküre'', and the other operas, were based on sketches by Josef Hoffman which were converted to stage sets by the Brückner brothers from the [[Landestheater Coburg|Coburg State Opera]]. These designs, and Carl Döpler's costumes,  influenced  productions well into the 20th century.&lt;ref name= Wagopera/&gt;{{sfn|Spotts|1994|p=58}}
+
+===Revivals===
+After the 1876 festival, ''Die Walküre'' was not seen again at Bayreuth for 20 years, until Cosima revived the ''Ring'' cycle for the 1896 festival.{{sfn|Spotts|1994|p=116}} It was quickly taken up by other opera houses: Vienna and New York in 1877, Rotterdam in 1878 and London in 1882.&lt;ref name= Perfhist/&gt; The New York performance, on 2 April 1877, was conducted by [[Adolf Neuendorff]] as part of a Wagner festival organised by the [[Academy of Music (New York City)|Academy of Music]];{{sfn|Griffel|2018|p=398}} it preceded the [[Metropolitan Opera]]  premiere by nearly eight years.&lt;ref name= Metoper&gt;{{cite web|title= Metropolitan Opera Premiere: Die Walküre|url= http://opera.stanford.edu/Wagner/Walkure/history.html|publisher= Metropolitan Opera|accessdate= 1 September 2018}}&lt;/ref&gt;
+
+The London performance, at [[Her Majesty's Theatre]] on 6 May 1882,{{sfn|Millington|1992|p=290}} was the first ''Ring'' cycle to be performed anywhere, after the 1876 Bayreuth premiere.&lt;ref name= Perfhist/&gt; It was conducted by Anton Seidl, who had been an assistant to Wagner at Bayreuth,{{sfn|Spotts|1994|p=98}} and had Albert Neimann in his Bayreuth role as Siegmund.{{sfn|Griffel|2018|p=398}} ''The Musical Times'', in a long review, mixed approval with criticism: its reviewer noted a number of empty seats in the auditorium, thought the stage sets compared unfavourably with those at Bayreuth, and deemed the orchestra &quot;inefficient&quot;. However, the critic praised individual performances, and judged that the music and the drama had held the attention of an audience whose enthusiasm far exceeded that showed to ''Das Rheingold'' the previous day.&lt;ref&gt;{{cite journal|title= &quot;The Nibelung's Ring&quot; at Her Majesty's Theatre |journal= The Musical Times|date= 1 June 1882|volume= 23|issue= 472|page= 322|doi= 10.2307/3359110|jstor= 3359110}}&lt;/ref&gt;  The correspondent for ''[[The Era (newspaper)|The Era]]'' newspaper was distressed by the incestuous nature of the story, which it described as &quot;brutal and degrading&quot;, despite the quality of the music: &quot;A composer must have lost all sense of decency and all respect for the dignity of human nature who could thus employ his genius and skill&quot;.{{sfn|Osborne|1992|pp=216–217}}
+
+The New York Met performance, on 30 January 1885, was part of a Wagner festival conducted by [[Leopold Damrosch]] – no other ''Ring'' operas were staged. [[Amalie Materna]], Bayreuth's original Brünnhilde, reprised the part here. The stage designer, Wilhelm Hock, recreated the original Bayreuth designs. The performance was received with great enthusiasm by the audience, who demanded numerous curtain calls.&lt;ref name= Metoper/&gt; Damrosch fell ill just before the festival ended, and died on 15 February 1885.&lt;ref&gt;{{cite web|title=  Leopold Damrosch|url= https://nyphil.org/about-us/artists/leopold-damrosch|publisher= New York Philharmonic|accessdate= 1 September 2018}}&lt;/ref&gt;
+
+During the 1880s and 1890s, ''Die Walküre'' was shown in many European cities, sometimes as part of a ''Ring'' cycle but often as an independent work: Brussels, Venice,  Strasbourg and Budapest in 1883, Prague in 1885, St Petersburg in 1889, Copenhagen in 1891 and Stockholm in 1895. By then it was travelling worldwide: to Mexico in 1891, Argentina in 1899, Australia in 1907, South Africa in 1912 and Brazil in 1913.&lt;ref name= Perfhist/&gt; These productions often followed the Bayreuth line of staying close to the staging and costumes that Wagner had approved for the original festival, although there were some deviations, such as Adolphe Appia's productions  which replaced  pictorialism with stylised sets using colours and lights.{{sfn|Millington|2006|p=163}}
+
+At Bayreuth, no significant changes in presentation occurred until after the [[Second World War]], when [[Wieland Wagner]] revealed his &quot;New Bayreuth&quot; style of largely bare stages and unadorned costumes. Although traditional productions continued outside Bayreuth, many performances followed the new trend.{{sfn|Millington|2006|pp=148–149}} From the 1970s onwards there was increasing innovation; the Leipzig ''Die Walküre'' began the trend of placing the opening scene of Act 2 within Valhalla rather than on a mountain-top;{{sfn|Millington|2006|p=166}} [[Harry Kupfer]] at Bayreuth in 1988 set the whole cycle in a post-nuclear dystopia;{{sfn|Millington|2006|p=166}} Jürgen Flimm's Bayreuth 2000 production had Wotan as a corrupt businessman, sitting in an office surrounded by 21st-century paraphernalia, including a paper-shredder used to cover his tracks.{{sfn|Millington|2006|p=168}} A few prominent productions adhered to traditional staging, including [[Otto Schenk]]'s  at the New York Met in 1989, which was described by the ''New York Times'' as &quot;charmingly old fashioned&quot;, and as &quot;a relief to many beleagured Wagnerites&quot;.&lt;ref name= Tommasini&gt;{{cite newspaper|first= Tommasini|last= Anthony |title= Traditional 'Ring' Begins Its Finale |url= https://www.nytimes.com/2009/03/27/arts/music/27rhei.html|newspaper= The New York Times|date= 26 March 2009}} {{subscription}}&lt;/ref&gt;
+
+According to Charles Osborne, ''Die Walküre'' is sufficiently self-contained to be quite frequently staged on its own.{{sfn|Osborne|1992|p=216}} The 2018 Bayreuth Festival broke new ground when for the first time it scheduled ''Die Walküre'' as a stand-alone, outside the context of the ''Ring'' cycle.&lt;ref&gt;{{cite web|title= Bayreuth Festival 2018: The latest Wagner celebration begins|url= https://www.dw.com/en/bayreuth-festival-2018-the-latest-wagner-celebration-begins/a-44815554|publisher= Deutsche Welle|accessdate= 1 September 2018}}&lt;/ref&gt;
+
+==Music==
+Osborne writes that, like ''Das Rheingold'', ''Die Walküre'' is primarily a work for solo voices, but with better integration of the vocal parts into the overall musical structure.{{sfn|Osborne|1992|p=216}} As with its predecessor, Wagner composed ''Die Walküre'' under the principles he had defined in his book-length 1851 essay ''[[Opera and Drama]]'', eschewing the traditional operatic norms of chorus, arias and vocal &quot;numbers&quot;.{{sfn|Jacobs|1980|p=61}} There is, however, some division of opinion as the extent that these principles were fully observed.  The critic [[Barry Millington]] opines that of all Wagner's works, ''Die Walküre'' is the fullest embodiment of the ''Opera and Drama'' precepts, achieving a complete synthesis of music and poetry. This, he says, is achieved without any notable sacrifice in musical expression&quot;.{{sfn|Millington|2006|p=114}} In his analytical essay ''The Perfect Wagnerite'', [[Bernard Shaw]] praises the synthesis of music and drama: &quot;There is not ... a note in it that has any other point than the single direct point of giving musical expression to the drama&quot;.{{sfn|Shaw|2008}} Gutman's view, however, is that this only applies to the first two acts; the &quot;apogee&quot; of this style, he says, is found in the later opera ''Tristan and Isolde''.{{sfn|Gutman|1971|p=244}} [[Roger Scruton]] refers to deviations in ''Die Walküre'' such as the  &quot;Spring Song&quot; (''Winterstürme''), in which Siegmund holds up the action to declare his love for Sieglinde in what is to all intents and purposes an aria,{{sfn|Scruton|2017|p=76}} while Osborne notes the &quot;impressive ensembles&quot; in Act 3, as the Valkyries sing together.{{sfn|Osborne|1992|p=216}}
+
+===Act 1===
+The act opens in the key of D minor, which frames the music until Siegmund's death in Act 2.{{sfn|Bailey|1977|p=54}} The short prelude depicts a storm; a stamping rhythm in the basses rises to a climax in which &quot;Donner's Call&quot; from ''Das Rheingold'' is heard.{{sfn|Newman|1949|p=521}}{{sfn|Scruton|2017|p=73}} As the scene proceeds, several new motifs are introduced; that representing Siegmund, derived from the &quot;Spear&quot; motif from ''Das Rheingold''; that for Sieglinde, a gentle melody on strings, which Holman says &quot;conveys at once Sieglinde's inner beauty and misfortune&quot;;{{sfn|Holman|2001|p=129}} and the motif which Newman names &quot;The Dawning of Love&quot;, which will recur in the final love duet of the act. {{sfn|Newman|1949|p=523}} These three motifs, and their developed variants, are prominent throughout the act. Among other motifs, the aggressive brass staccato that identifies Hunding is a particularly striking phrase, &quot;as dark and dour as the man himself&quot;.{{sfn|Newman|1949|p=525}}
+
+Wagner uses other ''Rheingold'' motifs to deliver key information. Thus, the parentage of Siegmund and Sieglinde is revealed to the audience as Wotan, when the Valhalla music plays softly on trombones.{{sfn|Herbert|2002|p=682}}  The same theme references Wotan again, when Sieglinde recounts the visit of the old man at her wedding.{{sfn|Scruton|2017|pp=75–76}} A repeated falling octave in G♭, extracted from the &quot;Sword&quot; motif, illustrates Siegmund's desperate desire for the sword, and recurs at the end of the act, together with the full &quot;Sword&quot; motif  in triumphant brass, as he draws the sword from the tree.{{sfn|Newman|1949|p=537}}
+
+===Act 2===
+The second act opens exuberantly, with a short prelude that prefigures the celebrated Valkyrie motif that in the following act will form the basis of the  &quot;Ride of the Valkyries&quot; in Act 3. This motif was first sketched in 1851, for intended use in ''Siegfried's Tot'', before the full plan of the ''Ring'' cycle was developed.{{sfn|Newman|1949|p=558}} The first scene of the act introduces Brünnhilde's energetic &quot;Hojotoho!&quot;, as she answers Wotan's summons, expressing what Holman describes as her &quot;manly enthusiasm&quot; for her role as warrior maiden.{{sfn|Holman|2001|p=135}}{{sfn|Newman|1949|pp=540–541}} The Wotan-Fricka dialogue that follows is illustrated by motifs that express Fricka's sour disillusion with her marriage, and Wotan's bitterness and frustration  as he is unable to answer his wife's forceful arguments.{{sfn|Newman|1949|pp=542–545}}

@@ -1,0 +1,299 @@
+== Terminology ==
+In the seven-layer [[OSI model]] of [[computer networking]], ''packet'' strictly refers to a [[protocol data unit]] at layer 3, the [[network layer]].{{Citation needed|date=July 2020}} A data unit at layer 2, the [[data link layer]], is a ''[[Frame (networking)|frame]]''. In layer 4, the [[transport layer]], the data units are ''segments'' and ''datagrams''. Thus, in the example of TCP/IP communication over [[Ethernet]], a [[TCP segment]] is carried in one or more [[IP packet (disambiguation)|IP packets]],&lt;!--intentional link to disambig, could be either IPv4 or IPv6 packet--&gt; which are each carried in one or more [[Ethernet frame]]s.
+
+== Architecture ==
+The basis of the packet concept is the postal letter: the header is like the envelope, the payload is the entire content inside the envelope, and the footer would be your signature at the bottom.&lt;ref&gt;{{citation |url=http://www.tcpipguide.com/free/t_UnderstandingTheOSIReferenceModelAnAnalogy.htm |title=Understanding The OSI Reference Model: An Analogy |work=The TCP/IP Guide |accessdate=2014-08-09 |url-status=live |archiveurl=https://web.archive.org/web/20140809215056/http://www.tcpipguide.com/free/t_UnderstandingTheOSIReferenceModelAnAnalogy.htm |archivedate=2014-08-09 }}&lt;/ref&gt;
+
+[[Network design]] can achieve two major results by using packets: ''error detection'' and ''multiple host addressing''.{{cn|date=June 2018}}
+
+== Framing ==
+Different [[communications protocol]]s use different conventions for distinguishing between the elements of a packet and for formatting the user data. For example, in [[Point-to-Point Protocol]], the packet is formatted in 8-bit bytes, and special characters are used to delimit the different elements. Other protocols, like [[Ethernet]], establish the start of the header and data elements by their location relative to the start of the packet. Some protocols format the information at a [[bit]] level instead of a [[byte]] level.
+
+== Contents ==
+A packet may contain any of the following components:
+
+;Addresses
+:The routing of network packets requires two [[network address]]es, the source address of the sending host, and the destination address of the receiving host.
+
+;Error detection and correction
+:[[Error detection and correction]] is performed at various layers in the protocol stack. Network packets may contain a [[checksum]], [[parity bit]]s or [[cyclic redundancy check]]s to detect errors that occur during transmission.
+
+:At the transmitter, the calculation is performed before the packet is sent. When received at the destination, the checksum is recalculated, and compared with the one in the packet. If discrepancies are found, the packet may be corrected or discarded. Any [[packet loss]] due to these discards is dealt with by the network protocol.
+
+:In some cases modifications of the network packet may be necessary while routing, in which cases checksums are recalculated.
+
+;Hop limit
+:Under fault conditions, packets can end up traversing a [[Cycle (graph theory)|closed circuit]]. If nothing was done, eventually the number of packets circulating would build up until the network was congested to the point of failure. [[Time to live]] is a field that is decreased by one each time a packet goes through a [[network hop]]. If the field reaches zero, routing has failed, and the packet is discarded.
+
+:Ethernet packets have no time-to-live field and so are subject to [[broadcast radiation]] in the presence of a [[switching loop]].
+
+;Length
+:There may be a field to identify the overall packet length. However, in some types of networks, the length is implied by the duration of the transmission.
+
+;Priority
+:Some networks implement [[quality of service]] which can prioritize some types of packets above others. This field indicates which packet queue should be used; a high priority queue is emptied more quickly than lower priority queues at points in the network where congestion is occurring.
+
+;Payload
+:In general, the payload is the data that is carried on behalf of an application. It is usually of variable length, up to a maximum that is set by the network protocol and sometimes the equipment on the route. When necessary, some networks can break a larger packet into smaller packets.
+
+== Examples ==
+
+=== Internet protocol ===
+[[IP packet (disambiguation)|IP packets]] are composed of a header and payload. The header consists of fixed and optional fields. The payload appears immediately after the header. An IP packet has no trailer. However, an IP packet is often carried as the payload inside an Ethernet frame, which has its own header and trailer.
+
+Per the [[end-to-end principle]], IP networks do not provide guarantees of delivery, non-duplication, or in-order delivery of packets. However, it is common practice to layer a [[Reliability (computer networking)|reliable]] [[transport protocol]] such as [[Transmission Control Protocol]] on top of the packet service to provide such protection.
+
+=== NASA Deep Space Network ===
+The Consultative Committee for Space Data Systems ([[CCSDS]]) packet telemetry standard defines the protocol used for the transmission of spacecraft instrument data over the deep-space channel. Under this standard, an image or other data sent from a spacecraft instrument is transmitted using one or more packets.
+
+=== MPEG packetized stream ===
+[[Packetized elementary stream]] (PES) is a specification associated with the [[MPEG-2]] standard that allows an [[elementary stream]] to be divided into packets. The elementary stream is packetized by encapsulating sequential data bytes from the elementary stream between PES packet headers.
+
+A typical method of transmitting elementary stream data from a video or audio encoder is to first create PES packets from the elementary stream data and then to encapsulate these PES packets inside an [[MPEG transport stream]] (TS) packets or an [[MPEG program stream]] (PS). The TS packets can then be transmitted using broadcasting techniques, such as those used in an [[ATSC tuner|ATSC]] and [[Digital Video Broadcasting|DVB]].
+
+=== NICAM ===
+In order to provide [[Monaural|mono]] &quot;compatibility&quot;, the [[NICAM]] signal is transmitted on a [[subcarrier]] alongside the sound carrier. This means that the [[Frequency modulation|FM]] or [[Amplitude modulation|AM]] regular mono sound carrier is left alone for reception by monaural receivers. The NICAM packet (except for the header) is scrambled with a nine-bit pseudo-random bit-generator before transmission. Making the NICAM bitstream look more like [[white noise]] is important because this reduces signal patterning on adjacent TV channels.
+
+== See also ==
+{{Div col|colwidth=25em}}
+*[[Anti-replay]]
+*[[Donald Davies]]
+*[[DHCP server]]
+*[[Fast packet switching]]
+*[[Louis Pouzin]]
+*[[Mangled packet]]
+*[[Packet analyzer]]
+*[[Packet generation model]]
+*[[Statistical multiplexing]]
+*[[Tail drop]]
+{{div col end}}
+
+== References ==
+{{Reflist}}
+
+{{DEFAULTSORT:Packet (Information Technology)}}
+[[Category:Units of information]]
+[[Category:Packets (information technology)| ]]</text>
+      <sha1>3qspcwyzuyi0oz4vfiv4k06f6a1bzm1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>292</title>
+    <ns>0</ns>
+    <id>43735</id>
+    <revision>
+      <id>990876548</id>
+      <parentid>900216085</parentid>
+      <timestamp>2020-11-27T01:00:33Z</timestamp>
+      <contributor>
+        <username>Aciram</username>
+        <id>3048957</id>
+      </contributor>
+      <comment>/* Births */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1682" xml:space="preserve">{{Use mdy dates|date=February 2011}}
+{{Year dab|292|the pain medication|Co-codaprin}}
+{{Refimprove|date=April 2019}}
+{{Year nav|292}}
+{{M1 year in topic}}
+__NOTOC__
+Year '''292''' ('''[[Roman numerals|CCXCII]]''') was a [[leap year starting on Friday]] (link will display the full calendar) of the [[Julian calendar]]. At the time, it was known as the '''Year of the Consulship of Hannibalianus and Asclepiodotus''' (or, less frequently, '''year 1045 ''[[Ab urbe condita]]'''''). The denomination 292 for this year has been used since the early medieval period, when the [[Anno Domini]] [[calendar era]] became the prevalent method in Europe for naming years.
+
+== Events ==
+&lt;onlyinclude&gt;
+=== By place ===
+==== Roman Empire ====
+* [[Achilleus (emperor)|Achilleus]], Roman general, is proclaimed emperor in [[Alexandria]]. For two years he rules over [[Egypt (Roman province)|Egypt]], but in the end the [[rebellion]] is crushed by Emperor [[Diocletian]].  
+
+==== America ====
+* The oldest known [[Maya civilization|Mayan]] [[stele]] is erected at the capital [[Tikal]] ([[Guatemala]]).
+
+==== Korea ====
+* [[Bongsang of Goguryeo|Bongsang]] becomes ruler of the Korean kingdom of [[Goguryeo]].&lt;ref&gt;{{cite web |title=List of Rulers of Korea |url=https://www.metmuseum.org/toah/hd/koru/hd_koru.htm |website=www.metmuseum.org |accessdate=18 April 2019}}&lt;/ref&gt;
+
+== Births ==
+* [[Pachomius]], founder of Christian [[cenobite]] monasticism (d. [[348]])
+* [[Zhu Jingjian]], Chinese Buddhist nun (d. [[361]])
+
+== Deaths ==
+* [[Empress Yang Zhi|Yang Zhi]], empress of the [[Jin Dynasty (265–420)|Jin Dynasty]] (b. [[259]])
+
+== References ==
+{{Reflist}}
+
+{{DEFAULTSORT:292}}
+[[Category:292| ]]</text>
+      <sha1>cpf2w7bc238ww0xqx757a48vgfggoz8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>293</title>
+    <ns>0</ns>
+    <id>43736</id>
+    <revision>
+      <id>948222611</id>
+      <parentid>946624338</parentid>
+      <timestamp>2020-03-30T20:32:39Z</timestamp>
+      <contributor>
+        <username>Histrydude</username>
+        <id>1568174</id>
+      </contributor>
+      <minor />
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3677" xml:space="preserve">{{Use mdy dates|date=February 2011}}
+{{Year dab|293|the pain medication|Co-codaprin}}
+{{refimprove|date=November 2017}}
+{{Year nav|293}}
+{{M1 year in topic}}
+[[File:Venice – The Tetrarchs 03.jpg|thumb|The four [[Tetrarchy|Tetrarchs]], [[Venice]]]]
+[[File:Tetrarchy map3.jpg|thumb|Map of the [[Roman Empire]] under the [[Tetrarchy|Tetrarchy (293)]]]]
+__NOTOC__
+Year '''293''' ('''[[Roman numerals|CCXCIII]]''') was a [[common year starting on Sunday]] (link will display the full calendar) of the [[Julian calendar]]. At the time, it was known as the '''Year of the Consulship of Valerius and Valerius''' (or, less frequently, '''year 1046 ''[[Ab urbe condita]]'''''). The denomination 293 for this year has been used since the early medieval period, when the [[Anno Domini]] [[calendar era]] became the prevalent method in Europe for naming years.
+
+== Events ==
+&lt;onlyinclude&gt;
+=== By place ===
+==== Roman Empire ====
+* [[March 1]] – Emperors [[Diocletian]] and [[Maximian]] appoint [[Constantius Chlorus]] and [[Galerius]] as [[Caesar (title)|Caesars]]. This is considered the beginning of the [[Tetrarchy]], known as the ''Quattuor Principes Mundi'' (&quot;Four Rulers of the World&quot;).
+* The four Tetrarchs establish their capitals close to the [[Roman Empire|Roman frontier]]:
+** [[Nicomedia]] (northwestern [[Asia Minor]]) becomes the capital of Diocletian
+** [[Mediolanum]] ([[Milan]], near the [[Alps]]) becomes the capital of Maximian
+** [[History of Trier|Augusta Treverorum]] ([[Trier]], in [[Germany]]) becomes the capital of Constantius Chlorus
+** [[Sirmium]] ([[Serbia]], on the [[Danube]] border) becomes the capital of Galerius
+* [[Diocletian's Palace]] is built at a small [[bay]] on the [[Dalmatia]]n coast, four miles from [[Salona]], today's [[Split, Croatia|Split]], [[Croatia]].
+* Constantius Chlorus retakes some of the [[Gaul|Gallic]] territories and conquers the crucial port of [[Boulogne-sur-Mer#History|Bononia]] (modern [[Boulogne-sur-Mer|Boulogne]]).
+* [[Carausius]], Roman [[usurper]], is murdered by his finance minister [[Allectus]], who proclaims himself &quot;emperor&quot; of [[Roman Britain|Britain]].
+* Constantius Chlorus defeats the [[Franks]] on the [[Rhine]] frontier in [[Batavi (Germanic tribe)|Batavia]] ([[Netherlands]]).
+
+==== Armenia ====
+* King [[Tiridates III of Armenia]], (with Rome as [[suzerainty]]), invades [[Assyria]].&lt;ref&gt;{{cite book| author = Spencer C. Tucker| title = A Global Chronology of Conflict: From the Ancient World to the Modern Middle East: From the Ancient World to the Modern Middle East| url = https://books.google.com/books?id=h5_tSnygvbIC&amp;pg=PA153| date = 2009-12-23| publisher = ABC-CLIO| isbn = 978-1-85109-672-5| page = 153 }}&lt;/ref&gt;
+==== Persia ====
+* King [[Bahram II]] of the [[Sassanid Empire|Persian Empire]] dies after a 17-year reign; his son [[Bahram III]] ascends to the throne. After four months, he is murdered by viceroy [[Narseh]], with support of the nobility.
+* Narseh becomes king of [[Iran|Persia]], and engages [[Ancient Rome|Rome]] in eight years of constant warfare.
+==== China ====
+* [[Tuoba Fu]] succeeds his uncle [[Tuoba Chuo]], as chieftain of the Chinese [[Tuoba]] Clan.
+
+=== By topic ===
+==== Religion ====
+* Probus succeeds Rufinus, as [[Ecumenical Patriarch of Constantinople|Patriarch of Constantinople]].
+&lt;/onlyinclude&gt;
+
+== Births ==
+{{empty section|date=November 2017}}
+
+== Deaths ==
+* [[Bahram II]], king of [[Sassanid Empire|Persia]]
+* [[Bahram III]], king of Persia
+* [[Carausius]], Roman [[usurper]] of northern [[Gaul]] and [[Roman Britain|Britain]]
+* [[Tuoba Chuo]], chieftain of the Chinese [[Tuoba]] tribe
+
+== References ==
+{{Reflist}}
+
+{{DEFAULTSORT:293}}
+[[Category:293| ]]</text>
+      <sha1>1to18jbj2slu9d9z1fzutctg92528sq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>290</title>
+    <ns>0</ns>
+    <id>43737</id>
+    <revision>
+      <id>987806171</id>
+      <parentid>987788588</parentid>
+      <timestamp>2020-11-09T10:11:19Z</timestamp>
+      <contributor>
+        <username>KylieTastic</username>
+        <id>2790592</id>
+      </contributor>
+      <minor />
+      <comment>Reverted 1 edit by [[Special:Contributions/2600:1702:2780:3220:609A:8C0E:B5D5:F208|2600:1702:2780:3220:609A:8C0E:B5D5:F208]] ([[User talk:2600:1702:2780:3220:609A:8C0E:B5D5:F208|talk]]) to last revision by Citation bot</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2396" xml:space="preserve">{{Use mdy dates|date=February 2011}}
+{{Year dab|290}}
+{{Refimprove|date=February 2020}}
+{{Year nav|290}}
+{{M1 year in topic}}
+[[File:Litus Saxonicum.png|thumb|[[Saxon Shore|Litus Saxonicum]] (England)]]
+__NOTOC__
+Year '''290''' ('''[[Roman numerals|CCXC]]''') was a [[common year starting on Wednesday]] (link will display the full calendar) of the [[Julian calendar]]. At the time, it was known as the '''Year of the Consulship of Valerius and Valerius''' (or, less frequently, '''year 1043 ''[[Ab urbe condita]]'''''). The denomination 290 for this year has been used since the early medieval period, when the [[Anno Domini]] [[calendar era]] became the prevalent method in Europe for naming years.
+
+== Events ==
+&lt;onlyinclude&gt;
+
+=== By place ===
+
+==== Roman Empire ====
+* Emperors [[Diocletian]] and [[Maximian]] meet in [[Milan]], on the 5-year anniversary of their rule, to discuss politics and war. [[Ancient Rome|Rome]] becomes a ceremonial capital.
+* [[Carausius]], who has established himself as king of [[Britannic Empire|Britain]], is also reluctantly acknowledged by Diocletian and Maximian as third emperor. During his reign, he defeats  [[Franks|Frankish]] and [[Saxon]] raids on the [[Coastline of the United Kingdom|English coast]].
+* Carausius begins to build a series of [[fortification]]s on the [[Saxon Shore]], in south-east England.
+
+==== China ====
+* [[May 16]] &amp;ndash; Emperor [[Emperor Wu of Jin|Jin Wudi]], founder of the [[Jin Dynasty (265-420)|Western Jin Dynasty]], dies after a 25-year reign. He reunifies north and south, but gives away many [[Duchy|dukedoms]] to his kinsmen. Crown Prince [[Emperor Hui of Jin|Jin Huidi]] succeeds his father, and has to deal with conflicts among the [[Aristocracy (class)|aristocratic]] families in [[China]].
+&lt;/onlyinclude&gt;
+
+== Births ==
+* [[Pappus of Alexandria]], Greek [[Greek mathematics|mathematician]] (d. c. [[350]])&lt;ref&gt;{{cite book |last1=Giaquinta |first1=Mariano |last2=Modica |first2=Giuseppe |title=Mathematical Analysis: Functions of One Variable |date=2012 |publisher=Springer Science &amp; Business Media |isbn=978-1-4612-0007-9 |page=315 |url=https://books.google.com/books?id=rHvkBwAAQBAJ&amp;pg=PA315 |language=en}}&lt;/ref&gt;
+
+== Deaths ==
+* [[May 16]] &amp;ndash; [[Emperor Wu of Jin]], first emperor of the [[Jin Dynasty (265-420)|Jin Dynasty]] (b. [[236]])
+
+== References ==
+{{Reflist}}
+
+{{DEFAULTSORT:290}}
+[[Category:290| ]]</text>
+      <sha1>caol032hcqp55ckrkltbd6i3999d4s5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>291</title>
+    <ns>0</ns>
+    <id>43738</id>
+    <revision>
+      <id>917032630</id>
+      <parentid>840607936</parentid>
+      <timestamp>2019-09-21T23:27:31Z</timestamp>
+      <contributor>
+        <ip>110.232.240.35</ip>
+      </contributor>
+      <comment>/* Births */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2101" xml:space="preserve">{{Use mdy dates|date=February 2011}}
+{{Year dab|291|the art and photo gallery in New York|291 (art gallery)|the arts and literary journal published in 1915–1916|291 (journal)}}
+{{unreferenced|date=November 2017}}
+{{Year nav|291}}
+{{M1 year in topic}}
+[[File:JinJar.JPG|thumb|[[Hunping]] jar of the [[Jin Dynasty (265-420)|Jin Dynasty]]]] 
+__NOTOC__
+Year '''291''' ('''[[Roman numerals|CCXCI]]''') was a [[common year starting on Thursday]] (link will display the full calendar) of the [[Julian calendar]]. At the time, it was known as the '''Year of the Consulship of Tiberianus and Dio''' (or, less frequently, '''year 1044 ''[[Ab urbe condita]]'''''). The denomination 291 for this year has been used since the early medieval period, when the [[Anno Domini]] [[calendar era]] became the prevalent method in Europe for naming years.
+
+== Events ==
+&lt;onlyinclude&gt;
+=== By place ===
+==== Roman Empire ====
+* Emperor [[Diocletian]] signs peace treaties with the kingdoms of [[Aksumite Empire|Aksum]] and [[Nubia]].
+
+==== China ====
+* [[War of the Eight Princes]]: After the death of Emperor [[Emperor Wu of Jin|Sima Yan]] (Jin Wudi), a civil war breaks out among the princes and [[duke]]s of the [[Jin Dynasty (265-420)|Jin Dynasty]]. The struggle devastates and depopulates the provinces of northern [[China]].
+&lt;/onlyinclude&gt;
+== Births ==
+* [[Agnes of Rome|Saint Agnes]], Christian [[Christian martyrs|martyress]] (d. c. [[304]])
+* [[Hilarion|Saint Hilarion]], [[anchorite]] and [[saint]] (d. [[371]])  
+* [[Li Xiu]], female general during the [[Jin Dynasty (265-420)|Jin Dynasty]]
+* [[Philomena|Saint Philomena]], Christian martyress (d. c. 304)
+
+== Deaths ==
+* [[Sima Liang]], regent during the reign of [[Emperor Hui of Jin|Sima Yan]]  
+* [[Sima Wei]], prince during the Jin Dynasty (b. [[271]])
+* [[Wei Guan]], general of the [[Cao Wei|Kingdom of Wei]] (b. [[220]])
+* [[Wen Yang (Three Kingdoms)|Wen Yang]], general of the Kingdom of Wei  (b. [[238]])
+* [[Yang Jun (Jin Dynasty)|Yang Jun]], official during the reign of Sima Yan 
+
+== References ==
+{{Reflist}}

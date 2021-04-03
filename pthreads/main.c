@@ -34,7 +34,6 @@ int main(int argc, char *argv[]) {
     struct timespec begin, begin2, end, end2;
     clock_gettime(CLOCK_REALTIME, &begin);
     clock_gettime(CLOCK_REALTIME, &begin2);
-
     char *folderName = argv[1];
     int thread_count = atoi(argv[2]);
     char **files;
@@ -88,7 +87,6 @@ int main(int argc, char *argv[]) {
 void* minHash( void *args){
 
     MinHashParameters *argomenti = (MinHashParameters*) args;
-
     int start_loop = (argomenti->numberOfFiles / argomenti->numberOfThreads) * argomenti->rank;
     int end_loop = (argomenti->numberOfFiles / argomenti->numberOfThreads) * (1+argomenti->rank);
     if (1+argomenti->rank == argomenti->numberOfThreads-1)

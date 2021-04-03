@@ -38,7 +38,7 @@ int find_similarity(int numberOfFiles, char **files, long long unsigned **minhas
         exit(1);
 
     start=omp_get_wtime();
-    #pragma omp parallel for schedule(auto)
+    #pragma omp parallel for schedule(auto) num_threads(global_thread_numb) 
     for(int i=0; i < numberOfFiles; i++){
             get_sketches(i, files_sketches+(i*N_SIGNATURES) , *(minhashDocumenti+i));
     }
@@ -77,7 +77,7 @@ int create_triplets(struct sign_doc* files_sketches, int numberOfFiles, struct d
     long long unsigned signature_curr;
     int signature_succ;
 
-    #pragma omp parallel for private(signature_curr, signature_succ) shared(count, tot) schedule(auto)
+    #pragma omp parallel for private(signature_curr, signature_succ) shared(count, tot) schedule(auto) num_threads(global_thread_numb) 
         for (int i = 0; i < tot; i++) {
 
         signature_curr = files_sketches[i].signature;
@@ -123,7 +123,7 @@ int do_clustering(struct doc_couple* couples, int count) {
 
     int index = 0;
     start = omp_get_wtime();
-    #pragma omp parallel shared(couples) 
+    #pragma omp parallel shared(couples) num_threads(global_thread_numb) 
     {   
         for (int i = 0; i < count; i++) {
             //se è diverso da 0 vuole dire che ancora non l`ho inserito

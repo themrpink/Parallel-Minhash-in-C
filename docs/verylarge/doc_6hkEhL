@@ -1,0 +1,319 @@
+==See also==
+* [[American philosophy]]
+* [[Ernst Simmel]]
+* [[Group narcissism]]
+* [[List of American philosophers]]
+* [[Psychoanalytic sociology]]
+* [[Psychohistory]]
+
+==External links==
+* {{wikiquote-inline}}
+* {{Commonscatinline}}
+* {{Helveticat}}
+* [https://web.archive.org/web/20131102065315/http://www.erich-fromm.de/e/index.php erich-fromm.de] – Erich Fromm Archives; Literary Estate
+* [https://www.fromm-gesellschaft.eu/index.php/en/ International Erich Fromm Society] 
+* Rainer Funk [http://www.logosjournal.com/issue_6.3/funk.htm &quot;Life and Work of Erich Fromm&quot;], ''Logos'', 6:3, Summer 2007
+* [https://web.archive.org/web/20080102075325/http://www.ifefromm.it/ International Foundation Erich Fromm] (Italian)
+* [http://www.hrc.utexas.edu/multimedia/video/2008/wallace/fromm_erich.html hrc.utexas.edu], 1958 Mike Wallace interview
+* [https://zenodo.org/record/10672#.XkxeUCgzbIV Интервью с Майком Уоллесом: в гостях Эрих Фромм], 1958 Mike Wallace interview (Russian) DOI:10.5281/zenodo.10672
+* [http://vault.fbi.gov/Erich%20Fromm FBI file on Erich Fromm]
+* [http://www.panarchy.org/fromm/escapefreedom.html Erich Fromm, Mechanisms of Escape from Freedom] (1942)
+* [https://www.britannica.com/biography/Erich-Fromm Erich Fromm] at [[Encyclopædia Britannica]]
+* [https://fromm-online.org/ Erich Fromm online – Official website about Erich Fromm, his Life and Work: Documents, information about the Institute, Study Center, Foundation, Literary Estate and events.]
+
+{{Critical theory}}
+{{Authority control}}
+
+{{DEFAULTSORT:Fromm, Erich}}
+[[Category:1900 births]]
+[[Category:1980 deaths]]
+[[Category:20th-century German philosophers]]
+[[Category:Academics and writers on narcissism]]
+[[Category:American atheists]]
+[[Category:American democratic socialists]]
+[[Category:American ethicists]]
+[[Category:American expatriates in Switzerland]]
+[[Category:American humanists]]
+[[Category:American Marxists]]
+[[Category:American social psychologists]]
+[[Category:Analysands of Hanns Sachs]]
+[[Category:Anti-consumerists]]
+[[Category:Articles containing video clips]]
+[[Category:Columbia University faculty]]
+[[Category:European democratic socialists]]
+[[Category:Frankfurt School]]
+[[Category:Freudo-Marxism]]
+[[Category:German atheists]]
+[[Category:German anti–nuclear weapons activists]]
+[[Category:Jewish emigrants from Nazi Germany to the United States]]
+[[Category:German humanists]]
+[[Category:German Jews]]
+[[Category:German male writers]]
+[[Category:German psychoanalysts]]
+[[Category:German psychologists]]
+[[Category:Heidelberg University alumni]]
+[[Category:History of psychiatry]]
+[[Category:Jewish atheists]]
+[[Category:Jewish American social scientists]]
+[[Category:Jewish humanists]]
+[[Category:Jewish philosophers]]
+[[Category:Jewish socialists]]
+[[Category:Marxist humanists]]
+[[Category:Marxist theorists]]
+[[Category:Marxist writers]]
+[[Category:Michigan State University faculty]]
+[[Category:National Autonomous University of Mexico faculty]]
+[[Category:New York University alumni]]
+[[Category:Writers from Frankfurt]]
+[[Category:Philosophers of love]]
+[[Category:20th-century psychologists]]</text>
+      <sha1>i6skcr75mejx9zx288qngt51kobi3ef</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Collision (computer science)</title>
+    <ns>0</ns>
+    <id>45344</id>
+    <revision>
+      <id>969484949</id>
+      <parentid>945105967</parentid>
+      <timestamp>2020-07-25T18:29:39Z</timestamp>
+      <contributor>
+        <username>InternetArchiveBot</username>
+        <id>27015025</id>
+      </contributor>
+      <comment>Rescuing 1 sources and tagging 0 as dead.) #IABot (v2.0.1</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="5152" xml:space="preserve">{{Distinguish|text = [[Collision (telecommunications)|Packet collision]] in telecommunications}}
+{{Multiple issues|
+{{One source|date=May 2013}}
+{{More citations needed |date=May 2013}}
+{{Self-published|date=May 2013}}
+}}
+
+In [[computer science]], a '''collision''' or '''clash''' is a situation that occurs when two distinct pieces of [[data]] have the same [[hash function|hash value]], [[checksum]], [[fingerprint (computing)|fingerprint]], or [[cryptographic hash function|cryptographic digest]].&lt;ref name=&quot;Hash_collisions&quot;&gt;{{cite web
+| accessdate = 2011-03-24
+| author = Jered Floyd
+| date = 2008-07-18
+| location = permabit.wordpress.com
+| publisher = Permabits and Petabytes
+| title = What do Hash Collisions Really Mean?
+| quote = For the long explanation on cryptographic hashes and hash collisions, I wrote a column a bit back for SNW Online, &quot;What you need to know about cryptographic hashes and enterprise storage&quot;. The short version is that deduplicating systems that use cryptographic hashes use those hashes to generate shorter &quot;fingerprints&quot; to uniquely identify each piece of data, and determine if that data already exists in the system. The trouble is, by a mathematical rule called the &quot;pigeonhole principle&quot;, you can’t uniquely map any possible files or file chunk to a shorter fingerprint. Statistically, there are multiple possible files that have the same hash.
+| url = https://permabit.wordpress.com/2008/07/18/what-do-hash-collisions-really-mean/}}&lt;/ref&gt;
+
+Due to the possible applications of hash functions in [[data management]] and [[computer security]] (in particular, [[cryptographic hash function]]s), collision avoidance has become a fundamental topic in computer science.
+
+Collisions are unavoidable whenever members of a very large set (such as all possible person names, or all possible [[file (computer)|computer files]]) are [[map (mathematics)|mapped]] to a relatively short bit string. This is merely an instance of the [[pigeonhole principle]].&lt;ref name=&quot;Hash_collisions&quot;/&gt;
+
+The impact of collisions depends on the application. When hash functions and fingerprints are used to identify similar data, such as [[homology (biology)|homologous]] [[DNA]] sequences or similar [[audio file]]s, the functions are designed so as to ''maximize'' the probability of collision between distinct but similar data, using techniques like [[locality-sensitive hashing]].&lt;ref name=&quot;MOMD&quot;&gt;{{cite web|url=http://infolab.stanford.edu/~ullman/mmds.html|title=Mining of Massive Datasets, Ch. 3.|last1=Rajaraman|first1=A.|last2=Ullman|first2=J.|author2-link=Jeffrey Ullman|year=2010}}&lt;/ref&gt; [[Checksum]]s, on the other hand, are designed to minimize the probability of collisions between similar inputs, without regard for collisions between very different inputs.&lt;ref name=crypto&gt;{{Cite journal|last=Al-Kuwari|first=Saif|last2=Davenport|first2=James H.|last3=Bradford|first3=Russell J.|date=2011|title=Cryptographic Hash Functions: Recent Design Trends and Security Notions|url=https://eprint.iacr.org/2011/565}}&lt;/ref&gt;
+
+==Computer security==
+{{See also|Collision attack}}
+Hash functions can map different data to the same hash (by virtue of the [[pigeonhole principle]]), malicious users can take advantage of this to mimic data.&lt;ref&gt;{{cite web
+|last1= Schneier
+|first1= Bruce
+|author-link1= Bruce Schneier
+|title= Cryptanalysis of MD5 and SHA: Time for a New Standard
+|url= https://www.schneier.com/essays/archives/2004/08/cryptanalysis_of_md5.html
+|website= Computerworld
+|accessdate= 2016-04-20
+|quote= Much more than encryption algorithms, one-way hash functions are the workhorses of modern cryptography.
+|archive-url= https://web.archive.org/web/20160316114109/https://www.schneier.com/essays/archives/2004/08/cryptanalysis_of_md5.html
+|archive-date= 2016-03-16
+|url-status= dead
+}}&lt;/ref&gt;
+
+For example; consider a hash function that hashes data by returning the first three characters of the string it is given (i.e. &quot;Password12345&quot; goes to &quot;Pas&quot;). A hacker, who does not know the user's password, could instead enter &quot;Pass&quot; - which would generate the same hash value of &quot;Pas&quot;. Even though the hacker does not know the correct password, they do have a password that gives them the same hash - which would give them access. This type of attack is called a [[preimage attack]].
+
+In practice, security-related applications use cryptographic hash algorithms, which are designed to be long enough for random matches to be unlikely, fast enough that they can be used anywhere, and safe enough that it would be extremely hard to find collisions.&lt;ref name=crypto/&gt;
+
+==See also==
+*[[Birthday attack]]
+*[[Collision attack]] (against cryptographic hash functions)
+*[[Collision resistance]]
+*[[Hash table#Collision resolution|Collision resolution]] (hash tables)
+*[[Cryptographic hash function]]
+*[[Name collision]], accidental use of identical variable names
+*[[Password hash]] (key derivation function)
+*[[Perfect hash function]], a hash function that is free of collisions by design
+*[[Preimage attack]]
+*[[Provably secure hash function]]
+*[[Random oracle]]
+
+==References==
+{{Reflist}}
+
+[[Category:Hashing]]
+
+
+{{Computer-science-stub}}</text>
+      <sha1>ejrey32daywwr266by88qkkfb0jr05k</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Pope Hilarius</title>
+    <ns>0</ns>
+    <id>45345</id>
+    <revision>
+      <id>950180261</id>
+      <parentid>950120727</parentid>
+      <timestamp>2020-04-10T17:06:00Z</timestamp>
+      <contributor>
+        <username>Arjayay</username>
+        <id>5718152</id>
+      </contributor>
+      <minor />
+      <comment>Duplicate word removed</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10348" xml:space="preserve">{{short description|5th century pope}}
+
+{{Infobox Christian leader 
+|type=Pope
+|honorific-prefix=Pope Saint
+|name=Hilarius
+|term_start=19 November 461
+|term_end=29 February 468
+|predecessor=[[Pope Leo I|Leo I]]
+|successor=[[Pope Simplicius|Simplicius]]
+|birth_date=
+|birth_place=[[Sardinia]], [[Western Roman Empire]]
+|death_date=29 February 468&lt;ref&gt;Alban Butler, Paul Burns. ''Butler's Lives of the Saints: February'', p. 266. A&amp;C Black, 1995. {{ISBN|9780860122517}}&lt;/ref&gt;
+|death_place= [[Rome]], [[Western Roman Empire]]
+|buried=[[San Lorenzo fuori le Mura|St. Lawrence outside the Walls]]
+|feast_day=28 February 
+|venerated=[[Catholic Church]] 
+}}
+
+'''Pope Hilarius''' (or '''Hilary''') was the [[bishop of Rome]] from 19 November 461 to his death on 29 February 468.
+
+In 449, Hilarius served as a legate for [[Pope Leo I]] at the [[Second Council of Ephesus]]. His opposition to the condemnation of [[Flavian of Constantinople]] incurred the enmity of [[Pope Dioscorus I of Alexandria|Dioscurus of Alexandria]], who attempted to prevent him from leaving the city. Hilarius was able to make his escape and returned to Rome by an indirect route. He later erected an oratory at the Lateran in honor of [[John the Evangelist]], to whom he attributed his safe passage.
+
+Much of his pontificate was spent in maintaining ecclesiastical discipline in conformity with canon law, and in settling jurisdictional disputes among the bishops of both Gaul and Spain.
+
+==Early career==
+Hilarius was born in [[Sardinia]].&lt;ref&gt;[http://w2.vatican.va/content/vatican/en/holy-father/ilario.html &quot;Hilarius&quot;, Pontiffs, The Holy See]&lt;/ref&gt; As archdeacon under [[Pope Leo I]], he fought vigorously for the rights of the [[Holy See|Roman See]].
+
+In 449, Hilarius and Bishop Julius of Puteoli served as [[papal legates]] to the [[Second Council of Ephesus]]. Pope Leo had sent a letter with the legates to be read at the council. However, the head notary declared that the emperor's letter should be read first and as the Council proceeded, Leo's letter ended up not being read at all. Hilarius vigorously opposed the condemnation of Flavian of Constantinople,&lt;ref name=Kirsch/&gt; pronouncing the single word in Latin, &quot;Contradicitur&quot;, annulling the sentence in Leo's name.&lt;ref name=Chapman&gt;[http://www.newadvent.org/cathen/05019a.htm Chapman, John. &quot;Dioscurus.&quot; The Catholic Encyclopedia] Vol. 5. New York: Robert Appleton Company, 1909. 31 March 2019{{PD-notice}}&lt;/ref&gt;
+
+For this he incurred the displeasure of [[Pope Dioscorus I of Alexandria]], who presided over the synod. Flavian died shortly afterwards, on 11 August 449, from injuries incurred from a physical assault by the followers of Dioscurus. According to a letter to Empress [[Pulcheria]] collected among the letters of Leo I, Hilarius apologized for not delivering to her the pope's letter after the synod, but owing to Dioscurus of Alexandria, who tried to hinder his going either to Rome or to Constantinople, he had great difficulty in making his escape in order to bring to the pontiff the news of the result of the council.&lt;ref name=Kirsch&gt;{{catholic|title=Pope Saint Hilarus|url=http://www.newadvent.org/cathen/07348b.htm|last=Kirsch|first=Johann Peter|volume=7|year=1910|accessdate=31 March 2019|inline=1}}&lt;/ref&gt; Flavian and Eusebius of Dorylaeum appealed to the pope, and their letters were probably taken by Hilarus to Rome.&lt;ref name=Chapman/&gt;
+
+==Papacy==
+As pope, he continued the policy of his predecessor, Leo I, who, in his contest with [[Hilary of Arles]], had obtained from Emperor [[Valentinian III]] a famous rescript of 445 confirming the supremacy of the [[bishop of Rome]]. Hilarius continued to strengthen ecclesiastical government in Gaul and Spain.&lt;ref&gt;[https://catholicsaints.info/new-catholic-dictionary-pope-hilarius/ “Pope Hilarius”. New Catholic Dictionary. CatholicSaints.Info. 11 May 2016]&lt;/ref&gt; 
+
+In Rome, Hilarius worked zealously to counter the new emperor's 467 edict of toleration for schismatic sects, which had been inspired, according to a letter of [[Pope Gelasius I]] by a [[favourite]] of Emperor Anthemius named Philotheus, who espoused the [[Macedonian heretic|Macedonian heresy]]. On one of the emperor's visits to [[St Peter's Basilica]], the pope openly called him to account for his favourite's conduct, exhorting him by the grave of St Peter to promise that he would allow no schismatical assemblies in Rome.&lt;ref name=Kirsch/&gt;&lt;ref name=Barmby/&gt;
+
+===Ecclesiastical disputes===
+Hermes, a former archdeacon of [[Narbonne]], had illegally acquired the bishopric of that town. Two Gallican prelates were dispatched to Rome to lay before the pope this and other matters concerning the Church in Gaul. A Roman synod held on 19 November, 462, passed judgment upon these matters. Hilarius sent an Encyclical advising the provincial bishops of Vienne, Lyons, Narbonne, and the Alps that Hermes was to remain titular bishop of Narbonne, but his episcopal faculties were withheld.&lt;ref name=Kirsch/&gt;
+
+Other decisions expressed in an [[encyclical]] were in the interests of increased discipline. A synod was to be convened yearly by the bishop of [[Arles]], but all important matters were to be submitted to the Apostolic See. No bishop could leave his diocese without a written permission from his metropolitan, with a right of appeal to the Bishop of Arles. Respecting the parishes (''paroeciae'') claimed by Bishop Leontius of Arles as belonging to his jurisdiction, the Gallican bishops could decide, after an investigation. Church property could not be alienated until a synod had looked into the purpose of the sale.&lt;ref name=Kirsch/&gt;
+
+Shortly after this, the pope found himself involved in another diocesan quarrel. In 463, [[Mamertus of Vienne]] had consecrated a [[bishop of Die]], although this Church, by a decree of Leo I, belonged to the metropolitan [[Diocese of Arles]]. When Hilarius heard of it, he deputed Leontius of Arles to summon a great synod of the bishops of several provinces to investigate the matter. The synod took place and, on the strength of the report given him by Bishop Antonius, he issued an edict dated 25 February 464 in which Bishop Veranus was commissioned to warn Mamertus that, if in the future he did not refrain from irregular ordinations, his faculties would be withdrawn. Consequently, the consecration of the Bishop of Die would be sanctioned by Leontius of Arles. Thus the primatial privileges of the See of Arles were upheld as Leo I had defined them.&lt;ref name=Kirsch/&gt;&lt;ref name=Barmby&gt;[http://www.ccel.org/ccel/wace/biodict.html?term=Hilarius,%20bp.%20of%20Rome Barmby, J., &quot;Hilarius, bp. of Rome&quot;, ''A Dictionary of Early Christian Biography'', (Henry Wace ed.), John Murray and Co., London, 1911]&lt;/ref&gt; At the same time, the bishops were admonished not to overstep their boundaries and to assemble in a yearly synod presided over by the Bishop of Arles. The metropolitan rights of the [[See of Embrun]] over the dioceses of the Maritime Alps were protected against the encroachments of a certain Bishop [[Auxanius]], particularly in connection with the two Churches of [[Nice]] and [[Cimiez]].&lt;ref name=Kirsch/&gt;
+
+Hilarius gave decisions to the churches of [[Hispania]], which tended to operate outside the papal orbit in the 5th century. Bishop Silvanus of Calahorra had violated the church laws by his episcopal ordinations, and the pope was asked for his decision. Before an answer came to their petition, the same bishops had recourse to the Holy See for an entirely different matter. Before his death, Nundinarius, Bishop of Barcelona, expressed a wish that Irenaeus might be chosen his successor, and he himself had made Irenaeus bishop of another See. The request was granted and the Synod of Tarragona confirmed the nomination of Irenaeus, after which the bishops sought the pope's approval. The Roman synod of 19 November 465, held in the [[Basilica di Santa Maria Maggiore|Basilica of Santa Maria Maggiore]], which decided that Irenaeus, the nominated bishop, should quit the see of Barcelona and return to his former one, while the Spanish bishops were directed to condone the acts of Silvanus.&lt;ref name=Barmby/&gt; This is the oldest Roman synod whose original records have survived.&lt;ref name=Kirsch/&gt;
+
+===Construction projects===
+Hilarius erected several churches and other buildings in Rome, for which the ''[[Liber Pontificalis]],'' the main source for information about Hilarius, praises him. He also erected a chapel of the Holy Cross in the baptistery, convents, two public baths, and libraries near the [[Basilica of St. Lawrence outside the Walls]].&lt;ref name=Kirsch/&gt; He built two [[oratories]] in the baptistery of the Lateran, one in honor of [[John the Baptist]], the other of John the Apostle,&lt;ref name=Kirsch/&gt; to whom he attributed his safe escape from the Council of Ephesus, thus satisfying the question as to which saints the Lateran had been dedicated.
+
+==Death==
+Hilarius died on 29 February 468 and was buried in Basilica of St. Lawrence outside the Walls. His [[feast day]] is celebrated on 17 November.&lt;ref name=Kirsch/&gt;
+
+==See also==
+{{Portal|Biography|Christianity|History}}
+*[[Hilary of Poitiers]]
+*[[List of Catholic saints]]
+*[[List of popes]]
+*[[Portal:Catholic Church/Patron Archive/February 28|Pope Saint Hilarius, patron saint archive]]
+
+==References==
+{{Reflist}}
+{{commons category|Hilarius}}
+
+== Bibliography ==
+
+* {{cite book|title=Illustres. Vita, morte e miracoli di quaranta personalità sarde|last=Onnis|first=Omar|last2=Mureddu|first2=Manuelle|publisher=Domus de Janas|year=2019|isbn=978-88-97084-90-7|location=Sestu|pages=|language=it|oclc=1124656644}}
+{{s-start}}
+{{s-rel|ca}}
+{{s-bef|before=[[Pope Leo I|Leo I]]}}
+{{s-ttl|title=[[Pope]]|years=461&amp;ndash;468}}
+{{s-aft|after=[[Pope Simplicius|Simplicius]]}}
+{{s-end}}
+
+{{Popes}}
+{{Catholic saints}} 
+{{Authority control}}
+
+{{DEFAULTSORT:Hilarius, Pope}}
+[[Category:468 deaths]]
+[[Category:5th-century archbishops]]
+[[Category:5th-century Christian saints]]
+[[Category:5th-century Romans]]
+[[Category:Burials at San Lorenzo fuori le Mura]]
+[[Category:Sardinian Roman Catholic priests]]
+[[Category:Italian popes]]
+[[Category:Saints from Roman Italy]]
+[[Category:Papal names]]
+[[Category:Papal saints]]
+[[Category:People from Sardinia]]
+[[Category:Popes]]
+[[Category:Year of birth unknown]]
+[[Category:5th-century popes]]</text>
+      <sha1>9z740l1tvph3p81g2llp6w54qkrg5a5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Theories of urban planning</title>
+    <ns>0</ns>
+    <id>45346</id>
+    <revision>
+      <id>978546294</id>
+      <parentid>959917418</parentid>
+      <timestamp>2020-09-15T15:21:33Z</timestamp>
+      <contributor>
+        <username>Citation bot</username>
+        <id>7903804</id>
+      </contributor>
+      <comment>Add: s2cid, author pars. 1-1. Removed parameters. Some additions/deletions were actually parameter name changes. | You can [[WP:UCB|use this bot]] yourself. [[WP:DBUG|Report bugs here]]. | Suggested by SemperIocundus | via #UCB_webform</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="37121" xml:space="preserve">{{Further|History of urban planning|Technical aspects of urban planning}}
+{{Use dmy dates|date=July 2019}}
+{{Use American English|date=April 2015}}
+{{multiple issues|
+{{weasel|date=November 2013}}
+{{Globalize|article|Western culture|date=October 2013}}
+{{essay-like|date=November 2013}}
+}}
+
+[[File:Hongkong central kowloon-full.jpg|thumb|Urban planning designs settlements, from the smallest towns to the largest cities. Shown here is [[Hong Kong]] from Western District overlooking [[Kowloon]], across [[Victoria Harbour]].]]
+
+'''Planning theory''' is the body of scientific concepts, definitions, behavioral relationships, and assumptions that define the body of knowledge of [[urban planning]]. There are nine procedural theories of planning that remain the principal theories of planning procedure today: the Rational-Comprehensive approach, the Incremental approach, the Transformative Incremental (TI) approach, the Transactive approach, the Communicative approach, the Advocacy approach, the Equity approach, the Radical approach, and the Humanist or Phenomenological approach.&lt;ref&gt;{{Cite web | title = How Planners Use Planning Theory| url = http://www.planetizen.com/node/73570/how-planners-use-planning-theory |access-date= 24 April 2015}}&lt;/ref&gt;
+
+==Background==
+The modern origins of urban planning lie in the movement for urban reform that arose as a reaction against the disorder of the [[industrial city]] in the mid-19th century. Urban planning exists in various forms and it addresses many different issues.&lt;ref&gt;{{cite journal |last1=Van Assche |first1=Kristof |last2=Beunen |first2=Raoul |last3=Duineveld |first3=Martijn |last4=de Jong |first4=Harro |title=Co-evolutions of planning and design: Risks and benefits of design perspectives in planning systems |journal=Planning Theory |date=18 September 2012 |volume=12 |issue=2 |pages=177–198 |doi=10.1177/1473095212456771 |s2cid=109970261 }}&lt;/ref&gt; Urban planning can include [[urban renewal]], by adapting urban planning methods to existing cities suffering from decline. Alternatively, it can concern the massive challenges associated with urban growth, particularly in the [[Global South]].&lt;ref&gt;{{Cite book |year=2013 |last1=James |first1=Paul |authorlink1=Paul James (academic) |last2=Holden |first2=Meg |last3=Lewin |first3=Mary |last4=Neilson |first4=Lyndsay |last5=Oakley |first5=Christine |last6=Truter |first6=Art |last7=Wilmoth |first7=David |chapter=Managing Metropolises by Negotiating Mega-Urban Growth |title= Institutional and Social Innovation for Sustainable Urban Development |editor1-first=Harald |editor1-last=Mieg |editor2-first=Klaus |editor2-last=Töpfer |chapter-url=https://www.ingentaconnect.com/content/rout/c3b5f/2013/00000001/00000001/art00015 |publisher=Routledge }}&lt;/ref&gt;
+
+In the late 20th century, the term [[sustainable development]] has come to represent an ideal outcome in the sum of all planning goals.&lt;ref&gt;Wheeler, Stephen (2004). &quot;Planning Sustainable and Livable Cities&quot;, Routledge; 3rd edition.{{page needed|date=April 2019}}&lt;/ref&gt;Sustainable architecture involves renewable materials and energy sources and is increasing in importance as an environmentally friendly solution&lt;ref&gt;{{Cite web|title=Why Sustainable Architecture Is Becoming more Important {{!}} CRL|url=https://c-r-l.com/content-hub/article/sustainable-architecture-designers/|website=c-r-l.com|language=en-US|access-date=2020-05-19}}&lt;/ref&gt;
+
+== Blueprint planning ==
+
+Following the rise of [[Empiricism]] during the [[Industrial Revolution]], the Rational Planning movement (1890–1960) emphasized the improvement of the [[built environment]] based on key spatial factors. Examples of these factors include: exposure to direct sunlight, movement of [[vehicular traffic]], standardized housing units, and proximity to [[open space reserve|green space]].&lt;ref&gt;{{cite book|last=Hall|first=Peter|title=The Cities of Tomorrow|year=2008|publisher=Blackwell Publishing|location=Oxford, UK|isbn=978-0-631-23252-0|pages=13–141}}&lt;/ref&gt; To identify and design for these spatial factors, rational planning relied on a small group of highly specialized technicians, including architects, urban designers, and engineers. Other, less common, but nonetheless influential groups included governmental officials, private developers, and landscape architects. Through the strategies associated with these professions, the rational planning movement developed a collection of techniques for quantitative assessment, predictive modeling, and design. Due to the high level of training required to grasp these methods, however, rational planning fails to provide an avenue for public participation. In both theory and practice, this shortcoming opened rational planning to claims of elitism and social insensitivity.
+
+Although it can be seen as an extension of the sort of civic pragmatism seen in [[James Oglethorpe|Oglethorpe]]'s plan for Savannah or [[William Penn]]'s plan for Philadelphia, the roots of the rational planning movement lie in Britain's [[Sanitary Movement]] (1800–1890).&lt;ref&gt;{{cite book|last=Hall|first=Peter|title=The Cities of Tomorrow|year=2008|publisher=Blackwell|location=Publishing|isbn=978-0-631-23252-0|pages=13–47, 87–141}}&lt;/ref&gt; During this period, advocates such as [[Charles Booth (philanthropist)|Charles Booth]] and [[Ebenezer Howard]] argued for central organized, top-down solutions to the problems of industrializing cities. In keeping with the rising power of industry, the source of the planning authority in the Sanitary Movement included both traditional governmental offices and private development corporations.  In London and its surrounding suburbs, cooperation between these two entities created a network of new communities clustered around the expanding rail system.&lt;ref&gt;{{cite book|last=Hall|first=Peter|title=The Cities of Tomorrow|year=2008|publisher=Blackwell|location=Publishing|isbn=978-0-631-23252-0|pages=48–86}}&lt;/ref&gt; Two of the best examples of these communities are [[Letchworth]] in Hertfordshire and [[Hampstead Garden Suburb]] in Greater London. In both communities, architects [[Raymond Unwin]] and [[Richard Barry Parker]] exemplify the elite, top-down approach associated with the rational planning movement by using the planning process to establish a uniform landscape and architectural style based on an idealized medieval village.
+
+From Britain, the rational planning movement spread out across the world. In areas undergoing industrialization themselves, British influences combined with local movements to create unique reinterpretations of the rational planning process. In Paris, architect [[Le Corbusier]] adopted rational planning's centralized approach and added to it a dedication to quantitative assessment and a love for the automobile. Together, these two factors yielded the influential planning aesthetic known as &quot;[[Towers in the park]]&quot;.  In the United States, [[Frank Lloyd Wright]] similarly identified vehicular mobility as a principal planning metric. However, where Le Corbusier emphasized design through quantitative assessment of spatial processes, Wright identified the insights of local public technicians as the key design criteria. Wright's [[Broadacre City]] provides a vivid expression of what this landscape might look like.
+
+Throughout both the United States and Europe, the rational planning movement declined in the latter half of the 20th century.&lt;ref&gt;{{cite book|title=Planning Futures: New Directions for Planning Theory|url=https://archive.org/details/planningfuturesn00allm|url-access=limited|first=Philip|last=Allmendinger|year=2002|publisher=Routledge|pages=[https://archive.org/details/planningfuturesn00allm/page/n34 20]–25}}&lt;/ref&gt; The reason for the movement's decline was also its strength. By focusing so much on a design by technical elites, rational planning lost touch with the public it hoped to serve. Key events in this decline in the United States include the demolition of the Pruitt-Igoe housing project in St. Louis and the national backlash against urban renewal projects, particularly urban expressway projects.&lt;ref&gt;{{cite book|title=Transportation: A Geographical Analysis|last=Black|first=William R.|page=29|publisher=The Guilford1 Press}}&lt;/ref&gt;
+
+== Synoptic planning ==
+After the “fall” of blueprint planning in the late 1950s and early 1960s, the synoptic model began to emerge as a dominant force in planning. Lane (2005) describes [[synoptic planning]] as having four central elements:
+
+:&quot;(1) an enhanced emphasis on the specification of goals and targets; (2) an emphasis on quantitative analysis and predication of the environment; (3) a concern to identify and evaluate alternative policy options; and (4) the evaluation of means against ends (page 289).&quot;&lt;ref name=&quot;Lane&quot;&gt;{{cite journal |last1=Lane |first1=Marcus B. |title=Public Participation in Planning: an intellectual history |journal=Australian Geographer |date=November 2005 |volume=36 |issue=3 |pages=283–299 |doi=10.1080/00049180500325694 |s2cid=18008094 |url=https://semanticscholar.org/paper/387572fe0b4c2b86e478266dca300f0030666bcf }}&lt;/ref&gt;
+
+[[Public participation]] was first introduced into this model and it was generally integrated into the system process described above. However, the problem was that the idea of a single public interest still dominated attitudes, effectively devaluing the importance of participation because it suggests the idea that the public interest is relatively easy to find and only requires the most minimal form of participation.&lt;ref name=&quot;Lane&quot;/&gt;
+
+Blueprint and synoptic planning both employ what is called the rational paradigm of planning. The rational model is perhaps the most widely accepted model among planning practitioners and scholars and is considered by many to be the orthodox view of planning. As its name clearly suggests, the goal of the rational model is to make planning as rational and systematic as possible. Proponents of this paradigm would generally come up with a list of steps that the planning process can be at least relatively neatly sorted out into and that planning practitioners should go through in order when setting out to plan in virtually any area. As noted above, this paradigm has clear implications for public involvement in planning decisions.&lt;ref name=&quot;Lane&quot;/&gt;
+
+== Participatory planning ==
+[[File:Keskustelutilaisuus Helsingin yleiskaavasta.jpg|thumb|A public consultation event about urban planning in Helsinki]]
+Participatory planning is an urban planning [[paradigm]] that emphasizes involving the entire community in the strategic and management processes of urban planning; or, community-level planning processes, urban or rural. It is often considered as part of [[community development]].&lt;ref name=&quot;REFALPHA&quot;&gt;{{cite web|url=http://www.ifad.org/pub/bsf/cppe/cppe.pdf|title= Comprehensive Participatory Planning and Evaluation|publisher=IFAD|accessdate=2008-10-21| date=December 2000| last1=Lefevre | first1=Pierre|last2=Kolsteren|first2=Patrick| last3=De Wael| first3=Marie-Paule | last4=Byekwaso| first4=Francis | last5= Beghin|first5=Ivan|location=Antwerp, Belgium}}&lt;/ref&gt; Participatory planning aims to harmonize views among all of its participants as well as prevent conflict between opposing parties. In addition, marginalized groups have an opportunity to participate in the planning process.&lt;ref&gt;{{cite journal |last1=McTague |first1=Colleen |last2=Jakubowski |first2=Susan |title=Marching to the beat of a silent drum: Wasted consensus-building and failed neighborhood participatory planning |journal=Applied Geography |date=October 2013 |volume=44 |pages=182–191 |doi=10.1016/j.apgeog.2013.07.019 }}&lt;/ref&gt;

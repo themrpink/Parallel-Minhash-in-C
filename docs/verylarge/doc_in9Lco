@@ -1,0 +1,473 @@
+Since mid-2008, an IPsec Maintenance and Extensions (ipsecme) working group is active at the IETF.&lt;ref&gt;{{cite web|accessdate=2015-10-26|url=https://datatracker.ietf.org/wg/ipsecme/charter/|title=ipsecme charter}}&lt;/ref&gt;&lt;ref&gt;{{cite web|accessdate=2015-10-26|url=https://tools.ietf.org/wg/ipsecme/|title=ipsecme status}}&lt;/ref&gt;
+
+==Alleged NSA interference==
+In 2013, as part of  [[2013 mass surveillance disclosures|Snowden leaks]], it was revealed that the US [[National Security Agency]] had been actively working to &quot;Insert vulnerabilities into commercial encryption systems, IT systems, networks, and endpoint communications devices used by targets&quot; as part of the [[Bullrun (code name)|Bullrun]] program.&lt;ref&gt;{{cite news|url=https://www.nytimes.com/interactive/2013/09/05/us/documents-reveal-nsa-campaign-against-encryption.html|newspaper=New York Times|title=Secret Documents Reveal N.S.A. Campaign Against Encryption}}&lt;/ref&gt; There are allegations that IPsec was a targeted encryption system.&lt;ref name=&quot;gilmore_bullrun&quot;&gt;{{cite web|url=http://www.mail-archive.com/cryptography@metzdowd.com/msg12325.html|title=Re: [Cryptography] Opening Discussion: Speculation on &quot;BULLRUN&quot;|author=John Gilmore}}&lt;/ref&gt;
+
+The OpenBSD IPsec stack came later on and also was widely copied.  In a letter which OpenBSD lead developer [[Theo de Raadt]] received on 11 Dec 2010 from Gregory Perry, it is alleged that Jason Wright and others, working for the FBI, inserted &quot;a number of [[Backdoor (computing)|backdoor]]s and [[side channel]] key leaking mechanisms&quot; into the OpenBSD crypto code. In the forwarded email from 2010, Theo de Raadt did not at first express an official position on the validity of the claims, apart from the implicit endorsement from forwarding the email.&lt;ref&gt;{{cite web|url=http://marc.info/?l=openbsd-tech&amp;m=129236621626462&amp;w=2|title=Allegations regarding OpenBSD IPSEC|author=Theo de Raadt}}&lt;/ref&gt; Jason Wright's response to the allegations: &quot;Every urban legend is made more real by the inclusion of real names, dates, and times. Gregory Perry's email falls into this category. … I will state clearly that I did not add backdoors to the OpenBSD operating system or the OpenBSD crypto framework (OCF).&quot;&lt;ref&gt;{{cite web|url=http://marc.info/?l=openbsd-tech&amp;m=129244045916861&amp;w=2|title=Allegations regarding OpenBSD IPSEC|author=Jason Wright}}&lt;/ref&gt; Some days later, de Raadt commented that &quot;I believe that NETSEC was probably contracted to write backdoors as alleged. … If those were written, I don't believe they made it into our tree.&quot;&lt;ref&gt;{{cite web|url=https://lwn.net/Articles/420858/|title=Update on the OpenBSD IPSEC backdoor allegation|author=Theo de Raadt}}&lt;/ref&gt; This was published before the Snowden leaks.
+
+An alternative explanation put forward by the authors of the [[Logjam (computer security)|Logjam attack]] suggests that the NSA compromised IPsec VPNs by undermining the [[Diffie-Hellman]] algorithm used in the key exchange.  In their paper&lt;ref&gt;{{cite web|url=https://weakdh.org/imperfect-forward-secrecy.pdf|title=Imperfect Forward Secrecy: How Diffie-Hellman Fails in Practice|author1=David Adrian |author2=Karthikeyan Bhargavan |author3=Zakir Durumeric |author4=Pierrick Gaudry |author5=Matthew Green |author6-link=J. Alex Halderman|author6=J. Alex Halderman |author7=Nadia Heninger|author7-link= Nadia Heninger |author8=Drew Springall |author9=Emmanuel Thomé |author10=Luke Valenta |author11=Benjamin VanderSloot |author12=Eric Wustrow |author13=Santiago Zanella-Béguelink |author14=Paul Zimmermann }}&lt;/ref&gt; they allege the NSA specially built a computing cluster to precompute multiplicative subgroups for specific primes and generators, such as for the second Oakley group defined in RFC 2409.  As of May 2015, 90% of addressable IPsec VPNs supported the second Oakley group as part of IKE.  If an organization were to precompute this group, they could derive the keys being exchanged and decrypt traffic without inserting any software backdoors.
+
+A second alternative explanation that was put forward was that the [[Equation Group]] used [[Zero-day (computing)|zero-day exploits]] against several manufacturers' VPN equipment which were validated by [[Kaspersky Lab]] as being tied to the Equation Group&lt;ref&gt;{{Cite news | url = https://arstechnica.com/security/2016/08/code-dumped-online-came-from-omnipotent-nsa-tied-hacking-group/ | title = Confirmed: hacking tool leak came from &quot;omnipotent&quot; NSA-tied group | first = Dan | last = Goodin | date = August 16, 2016 | access-date = August 19, 2016 | newspaper = Ars Technica}}&lt;/ref&gt; and validated by those manufacturers as being real exploits, some of which were zero-day exploits at the time of their exposure.&lt;ref&gt;{{Cite news | url = https://www.theregister.co.uk/2016/08/17/cisco_two_shadow_brokers_vulnerabilities_real/ | first = Iain | last = Thomson | title = Cisco confirms two of the Shadow Brokers' 'NSA' vulns are real | date = August 17, 2016 | access-date = September 16, 2016 | newspaper = [[The Register]]}}&lt;/ref&gt;&lt;ref&gt;{{Cite news | title = Equation Group exploit hits newer Cisco ASA, Juniper Netscreen | url = https://www.theregister.co.uk/2016/08/24/equation_group_exploit_expanded_to_target_cisco_924_asa_boxes/ | first = Darren | last = Pauli | date = August 24, 2016 | access-date=September 16, 2016 | newspaper = [[The Register]]}}&lt;/ref&gt;&lt;ref&gt;{{Cite news | url = https://www.theregister.co.uk/2016/08/18/fortinet_follows_cisco_in_confirming_shadow_broker_vuln/ | title = Fortinet follows Cisco in confirming Shadow Broker vuln | first = Richard | last = Chirgwin | newspaper = [[The Register]] | date = August 18, 2016 | access-date = September 16, 2016}}&lt;/ref&gt; The [[Cisco PIX#Security vulnerabilities|Cisco PIX and ASA]] firewalls had vulnerabilities that were used for wiretapping by the NSA{{citation-needed|date=April 2020}}.
+
+Furthermore, IPsec VPNs using &quot;Aggressive Mode&quot; settings send a hash of the PSK in the clear. This can be and apparently is targeted by the NSA using offline dictionary attacks.&lt;ref&gt;https://weakdh.org/imperfect-forward-secrecy-ccs15.pdf&lt;/ref&gt;&lt;ref&gt;[https://crypto.stackexchange.com/q/27404 What are the problems of IKEv1 aggressive mode (compared to IKEv1 main mode or IKEv2)?]&lt;/ref&gt;&lt;ref&gt;https://nohats.ca/wordpress/blog/2014/12/29/dont-stop-using-ipsec-just-yet/&lt;/ref&gt;
+
+==IETF documentation==
+
+===Standards track===
+* RFC 1829: The ESP DES-CBC Transform
+* RFC 2403: The Use of HMAC-MD5-96 within ESP and AH
+* RFC 2404: The Use of HMAC-SHA-1-96 within ESP and AH
+* RFC 2405: The ESP DES-CBC Cipher Algorithm With Explicit IV
+* RFC 2410: The NULL Encryption Algorithm and Its Use With IPsec
+* RFC 2451: The ESP CBC-Mode Cipher Algorithms
+* RFC 2857: The Use of HMAC-RIPEMD-160-96 within ESP and AH
+* RFC 3526: More Modular Exponential (MODP) Diffie-Hellman groups for Internet Key Exchange (IKE)
+* RFC 3602: The AES-CBC Cipher Algorithm and Its Use with IPsec
+* RFC 3686: Using Advanced Encryption Standard (AES) Counter Mode With IPsec Encapsulating Security Payload (ESP)
+* RFC 3947: Negotiation of NAT-Traversal in the IKE
+* RFC 3948: UDP Encapsulation of IPsec ESP Packets
+* RFC 4106: The Use of Galois/Counter Mode (GCM) in IPsec Encapsulating Security Payload (ESP)
+* RFC 4301: Security Architecture for the Internet Protocol
+* RFC 4302: IP Authentication Header
+* RFC 4303: IP Encapsulating Security Payload
+* RFC 4304: Extended Sequence Number (ESN) Addendum to IPsec Domain of Interpretation (DOI) for Internet Security Association and Key Management Protocol (ISAKMP)
+* RFC 4307: Cryptographic Algorithms for Use in the Internet Key Exchange Version 2 ([[IKEv2]])
+* RFC 4308: Cryptographic Suites for IPsec
+* RFC 4309: Using Advanced Encryption Standard (AES) CCM Mode with IPsec Encapsulating Security Payload (ESP)
+* RFC 4543: The Use of Galois Message Authentication Code (GMAC) in IPsec ESP and AH
+* RFC 4555: IKEv2 Mobility and Multihoming Protocol (MOBIKE)
+* RFC 4806: Online Certificate Status Protocol (OCSP) Extensions to IKEv2
+* RFC 4868: Using HMAC-SHA-256, HMAC-SHA-384, and HMAC-SHA-512 with IPsec
+* RFC 4945: The Internet IP Security PKI Profile of IKEv1/ISAKMP, IKEv2, and PKIX
+* RFC 5280: Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile
+* RFC 5282: Using Authenticated Encryption Algorithms with the Encrypted Payload of the Internet Key Exchange version 2 (IKEv2) Protocol
+* RFC 5386: Better-Than-Nothing Security: An Unauthenticated Mode of IPsec
+* RFC 5529: Modes of Operation for Camellia for Use with IPsec
+* RFC 5685: Redirect Mechanism for the Internet Key Exchange Protocol Version 2 (IKEv2)
+* RFC 5723: Internet Key Exchange Protocol Version 2 (IKEv2) Session Resumption
+* RFC 5857: IKEv2 Extensions to Support Robust Header Compression over IPsec
+* RFC 5858: IPsec Extensions to Support Robust Header Compression over IPsec
+* RFC 7296: Internet Key Exchange Protocol Version 2 (IKEv2)
+* RFC 7321: Cryptographic Algorithm Implementation Requirements and Usage Guidance for Encapsulating Security Payload (ESP) and Authentication Header (AH)
+* RFC 7383: Internet Key Exchange Protocol Version 2 (IKEv2) Message Fragmentation
+* RFC 7427: Signature Authentication in the Internet Key Exchange Version 2 (IKEv2)
+* RFC 7634: ChaCha20, Poly1305, and Their Use in the Internet Key Exchange Protocol (IKE) and IPsec
+
+===Experimental RFCs===
+* RFC 4478: Repeated Authentication in Internet Key Exchange (IKEv2) Protocol
+
+===Informational RFCs===
+* RFC 2367: PF_KEY Interface
+* RFC 2412: The OAKLEY Key Determination Protocol
+* RFC 3706: A Traffic-Based Method of Detecting Dead Internet Key Exchange (IKE) Peers
+* RFC 3715: IPsec-Network Address Translation (NAT) Compatibility Requirements
+* RFC 4621: Design of the IKEv2 Mobility and Multihoming (MOBIKE) Protocol
+* RFC 4809: Requirements for an IPsec Certificate Management Profile
+* RFC 5387: Problem and Applicability Statement for Better-Than-Nothing Security (BTNS)
+* RFC 5856: Integration of Robust Header Compression over IPsec Security Associations
+* RFC 5930: Using Advanced Encryption Standard Counter Mode (AES-CTR) with the Internet Key Exchange version 02 (IKEv2) Protocol
+* RFC 6027: IPsec Cluster Problem Statement
+* RFC 6071: IPsec and IKE Document Roadmap
+* RFC 6379: Suite B Cryptographic Suites for IPsec
+* RFC 6380: Suite B Profile for Internet Protocol Security (IPsec)
+* RFC 6467: Secure Password Framework for Internet Key Exchange Version 2 (IKEv2)
+
+===Best current practice RFCs===
+* RFC 5406: Guidelines for Specifying the Use of IPsec Version 2
+
+===Obsolete/historic RFCs===
+* RFC 1825: Security Architecture for the Internet Protocol (obsoleted by RFC 2401)
+* RFC 1826: IP Authentication Header (obsoleted by RFC 2402)
+* RFC 1827: IP Encapsulating Security Payload (ESP) (obsoleted by RFC 2406)
+* RFC 1828: IP Authentication using Keyed MD5 (historic)
+* RFC 2401: Security Architecture for the Internet Protocol (IPsec overview) (obsoleted by RFC 4301)
+* RFC 2406: IP Encapsulating Security Payload (ESP) (obsoleted by RFC 4303 and RFC 4305)
+* RFC 2407: The Internet IP Security Domain of Interpretation for ISAKMP (obsoleted by RFC 4306)
+* RFC 2409: The Internet Key Exchange (obsoleted by RFC 4306)
+* RFC 4305: Cryptographic Algorithm Implementation Requirements for Encapsulating Security Payload (ESP) and Authentication Header (AH) (obsoleted by RFC 4835)
+* RFC 4306: Internet Key Exchange (IKEv2) Protocol (obsoleted by RFC 5996)
+* RFC 4718: IKEv2 Clarifications and Implementation Guidelines (obsoleted by RFC 7296)
+* RFC 4835: Cryptographic Algorithm Implementation Requirements for Encapsulating Security Payload (ESP) and Authentication Header (AH) (obsoleted by RFC 7321)
+* RFC 5996: Internet Key Exchange Protocol Version 2 (IKEv2) (obsoleted by RFC 7296)
+
+==See also==
+
+* [[Dynamic Multipoint Virtual Private Network]]
+* [[Information security]]
+* [[NAT traversal]]
+* [[Opportunistic encryption]]
+* [[tcpcrypt]]
+
+==References==
+{{Reflist|30em}}
+
+==External links==
+* {{Curlie|Computers/Security/|Computer Security}}
+* [http://www.ietf.org/html.charters/wg-dir.html#Security%20Area All IETF active security WGs]
+** [http://datatracker.ietf.org/wg/ipsecme/ IETF ipsecme WG] (&quot;IP Security Maintenance and Extensions&quot; Working Group)
+** [https://web.archive.org/web/20070416135452/http://www.ietf.org/html.charters/btns-charter.html IETF btns WG] (&quot;Better-Than-Nothing Security&quot; Working Group) (chartered to work on unauthenticated IPsec, IPsec APIs, connection latching)]
+* [http://www.windowsecurity.com/articles/Securing_Data_in_Transit_with_IPSec.html Securing Data in Transit with IPsec] WindowsSecurity.com article by Deb Shinder
+* [http://www.microsoft.com/ipsec IPsec] on Microsoft TechNet
+** [http://www.microsoft.com/downloads/details.aspx?FamilyID=1d4c292c-7998-42e4-8786-789c7b457881&amp;displaylang=en Microsoft IPsec Diagnostic Tool] on Microsoft Download Center
+* [http://www.unixwiz.net/techtips/iguide-ipsec.html An Illustrated Guide to IPsec] by Steve Friedl
+* [https://www.ict.tuwien.ac.at/lva/384.081/infobase/P97-IPsec_v4-7.pdf Security Architecture for IP (IPsec)] Data Communication Lectures by Manfred Lindner Part IPsec
+* [http://www.linuxjournal.com/article/9916 Creating VPNs with IPsec and SSL/TLS] Linux Journal article by Rami Rosen
+
+{{VPN}}
+{{Authority control}}
+
+{{DEFAULTSORT:Ipsec}}
+[[Category:IPsec| ]]
+[[Category:Cryptographic protocols]]
+[[Category:Internet protocols]]
+[[Category:Network layer protocols]]
+[[Category:Tunneling protocols]]</text>
+      <sha1>ncmorm669cdd5ztq4rq3xmdmdrhtrpa</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Telluride, Colorado</title>
+    <ns>0</ns>
+    <id>43345</id>
+    <revision>
+      <id>991012274</id>
+      <parentid>984571089</parentid>
+      <timestamp>2020-11-27T20:14:35Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 27 templates: del empty params (5×); hyphenate params (16×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="37027" xml:space="preserve">{{other uses|Telluride (disambiguation)}}
+{{Coord|display=title|37.939153|-107.816317}}
+{{Infobox settlement
+&lt;!--See the Table at Infobox settlement for all fields and descriptions of usage--&gt;
+&lt;!-- Basic info  ----------------&gt;| name                            = Telluride, Colorado
+| nickname                        = To-Hell-You-Ride
+| settlement_type                 = [[Town]]
+| motto                           = &lt;!-- images and maps  -----------&gt;
+| image_skyline                   = Telluride Colorado.jpg
+| imagesize                       = 250px
+| image_caption                   = Colorado Avenue: As seen from The New Sheridan Hotel
+| image_flag                      = 
+| flag_size                       = 
+| image_seal                      = 
+| seal_size                       = 
+| image_shield                    = 
+| shield_size                     = 
+| image_blank_emblem              = 
+| blank_emblem_type               = 
+| blank_emblem_size               = 
+| image_map                       = File:San Miguel County Colorado Incorporated and Unincorporated areas Telluride Highlighted 0876795.svg
+| mapsize                         = 250x200px
+| map_caption                     = Location of Telluride in San Miguel County, Colorado
+| image_map1                      = 
+| mapsize1                        = 
+| map_caption1                    = 
+| image_dot_map                   = 
+| dot_mapsize                     = 
+| dot_map_caption                 = 
+| dot_x                           = 
+| dot_y                           = 
+| pushpin_map                     = 
+| pushpin_label_position          = 
+| pushpin_map_caption             = 
+| pushpin_mapsize                 = &lt;!-- Location ------------------&gt;
+| subdivision_type                = [[List of sovereign states|Country]]
+| subdivision_name                = United States
+| subdivision_type1               = [[U.S. state|State]]
+| subdivision_name1               = [[Colorado]]
+| subdivision_type2               = [[List of counties in Colorado|County]]&lt;ref name=COMun&gt;{{cite web | url = http://www.dola.state.co.us/dlg/local_governments/municipalities.html | title = Active Colorado Municipalities | publisher = [[Colorado|State of Colorado]], Department of Local Affairs | access-date = 2007-09-01 | url-status = dead | archive-url = https://web.archive.org/web/20091212060308/http://www.dola.state.co.us/dlg/local_governments/municipalities.html | archive-date = 2009-12-12 }}&lt;/ref&gt;
+| subdivision_name2               = [[San Miguel County, Colorado|San Miguel County]] – [[County seat|seat]]&lt;ref name=CountySeatsCO&gt;{{cite web|url=http://www.cdphe.state.co.us/hs/cntyseat.html|title=Colorado County Seats|publisher=[[State of Colorado]], Department of Public Health and Environment|access-date=2007-12-31}}&lt;/ref&gt;
+| subdivision_type3               = 
+| subdivision_name3               = 
+| subdivision_type4               = 
+| subdivision_name4               = &lt;!-- Politics -----------------&gt;
+| government_footnotes            = 
+| government_type                 = [[Colorado municipalities#Home rule municipality|Home Rule Municipality]]&lt;ref name=COMun/&gt;
+| leader_title                    = [[Mayor]]
+| leader_name                     = DeLanie Young &lt;br /&gt;
+{{Collapsible list
+|title       = Town Council
+|title_style =
+|frame_style = border:none; padding: 0;
+|list_style  = text-align:left;display:none;
+|1           =Roberta Peterson&lt;br /&gt;Andrea Benda&lt;br /&gt;Mark Buchsieb&lt;br /&gt;Bob Saunders&lt;br /&gt;Stu Fraser&lt;br /&gt;Jill Masters}}
+| leader_title1                   = &lt;!-- for places with, say, both a mayor and a city manager --&gt;
+| leader_name1                    = 
+| leader_title2                   = 
+| leader_name2                    = 
+| leader_title3                   = 
+| leader_name3                    = 
+| leader_title4                   = 
+| leader_name4                    = 
+| established_title               = Founded
+| established_date                = 1878
+| established_title2              = [[municipal corporation|Incorporated]]
+| established_date2               = 1887-02-10, as the Town&amp;nbsp;of&amp;nbsp;Columbia
+| established_title3              = &lt;!-- Incorporated (city) --&gt;
+| established_date3               = &lt;!-- Area    ---------------------&gt;
+| area_magnitude                  = 1 E9
+| unit_pref                       = Imperial
+| area_footnotes                  = &lt;ref name=&quot;CenPopGazetteer2019&quot;&gt;{{cite web|title=2019 U.S. Gazetteer Files|url=https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2019_Gazetteer/2019_gaz_place_08.txt|publisher=United States Census Bureau|access-date=July 1, 2020}}&lt;/ref&gt;
+| area_total_km2                  = 5.76
+| area_land_km2                   = 5.76
+| area_water_km2                  = 0.00
+| area_total_sq_mi                = 2.22
+| area_land_sq_mi                 = 2.22
+| area_water_sq_mi                = 0.00
+| area_water_percent              = 
+| area_urban_km2                  = 
+| area_urban_sq_mi                = 
+| area_metro_km2                  = 
+| area_metro_sq_mi                = 
+| area_blank1_title               = 
+| area_blank1_km2                 = 
+| area_blank1_sq_mi               = &lt;!-- Population   -----------------------&gt;
+| population_as_of                = [[2010 United States Census|2010]]
+| population_footnotes            = 
+| population_note                 = 
+| population_total                = 2325
+| population_density_km2          = 430.75
+| population_density_sq_mi        = 1115.66
+| population_metro                = 
+| population_density_metro_km2    = 
+| population_density_metro_sq_mi  = 
+| population_urban                = 
+| population_density_urban_km2    = 
+| population_density_urban_sq_mi  = 
+| population_blank1_title         = 
+| population_blank1               = 
+| population_density_blank1_km2   = 
+| population_density_blank1_sq_mi = &lt;!-- General information  ---------------&gt;
+| timezone                        = [[Mountain Standard Time|MST]]
+| utc_offset                      = −7
+| timezone_DST                    = [[Mountain Daylight Time|MDT]]
+| utc_offset_DST                  = −6
+| coordinates                     = {{coord|37|56|21|N|107|48|59|W|region:US-CO|display=inline}}
+| elevation_footnotes             = &lt;!--for references: use &lt;ref&gt; &lt;/ref&gt; tags--&gt;
+| elevation_m                     = 2667
+| elevation_ft                    = 8750
+&lt;!-- Area/postal codes &amp; others --------&gt;
+| postal_code_type                = [[ZIP code]]
+| postal_code                     = 81435
+| area_code                       = [[Area code 970|970]]
+| blank_name                      = [[Federal Information Processing Standard|FIPS code]]
+| blank_info                      = 08-76795
+| blank1_name                     = [[Geographic Names Information System|GNIS]] feature ID
+| blank1_info                     = [http://geonames.usgs.gov/pls/gnispublic/f?p=gnispq:3:::NO::P3_FID:0204747 0204747]
+| website                         = [http://www.telluride-co.gov/ Town of Telluride]
+| footnotes                       = 
+| pop_est_as_of                   = 2019
+| pop_est_footnotes               = &lt;ref name=&quot;USCensusEst2019CenPopScriptOnlyDirtyFixDoNotUse&quot;/&gt;
+| population_est                  = 2479
+}}
+[[File:Telluride from the ski hill.jpg|thumb|Fall colors in Telluride. View from the ski area, 2010]]
+[[File:BESTCO.jpg|thumb|right|A view of a mountain while driving above Telluride on one of its many trails. The town of Telluride sits in the valley. Near the left of the picture is Bridal Veil Falls, with the Generator Station on the cliff above.]]
+
+'''Telluride''' is the [[county seat]] and most populous town of [[San Miguel County, Colorado|San Miguel County]] in the southwestern portion of the U.S. state of [[Colorado]].&lt;ref name=&quot;GR6&quot;&gt;{{cite web|url=http://www.naco.org/Counties/Pages/FindACounty.aspx|access-date=2011-06-07|title=Find a County|publisher=National Association of Counties}}&lt;/ref&gt;  The town is a former [[silver]] [[mining]] camp on the [[San Miguel River (Colorado)|San Miguel River]] in the western [[San Juan Mountains]]. The first gold mining claim was made in the mountains above Telluride in 1875, and early settlement of what is now Telluride followed. The town itself was founded in 1878 as &quot;Columbia&quot;, but due to confusion with a California town of the same name, was renamed Telluride in 1887 for the [[gold telluride]] minerals found in other parts of Colorado. These telluride minerals were never found near Telluride, but the area's mines for some years provided zinc, lead, copper, silver, and other gold ores.
+
+Telluride sits in a [[Canyon|box canyon]]. Steep forested mountains and cliffs surround it, with [[Bridal Veil Falls (Telluride)|Bridal Veil Falls]] situated at the canyon's head. Numerous weathered ruins of old mining operations dot the hillsides. A free [[Gondola lift|gondola]] connects the town with its companion town, [[Mountain Village, Colorado]], at the base of the ski area. Telluride and the surrounding area have featured prominently in popular culture, and it is the subject of several popular songs. It is especially known for its [[ski resort]] and slopes during the winter, as well as an extensive festival schedule during the summer.
+
+The [[Telluride Historic District]], which includes a significant portion of the town, is listed on the [[National Register of Historic Places]] and is also one of [[List of National Historic Landmarks in Colorado|Colorado's 20 National Historic Landmarks]]. The town population was 2,325 in the [[2010 United States Census]].&lt;ref name=&quot;United States Census 2010&quot;&gt;{{cite web | url = https://www.census.gov/2010census/popmap/ipmtext.php | title = 2010 Census Interactive Population Search | publisher = [[United States Census Bureau]], Population Division | access-date = January 4, 2014}}&lt;/ref&gt;
+
+== History ==
+[[File:Gold-245690.jpg|thumb|Historic gold specimen from Telluride]]
+
+===Mining days===
+Gold was first discovered in Colorado near present-day Denver, setting off the [[Pike's Peak Gold Rush|Pike's Peak gold rush of 1858]]. The Smuggler gold vein above Telluride, and placer gold in the [[San Miguel River (Colorado)|San Miguel River]], were discovered in 1875.&lt;ref name=Voynick&gt;Voynick, S.M., 1992, Colorado Gold, Missoula: Mountain Press Publishing Company, {{ISBN|0878424555}}&lt;/ref&gt;{{rp|51,54}}  John Fallon made the first claim in Marshal Basin above Telluride in 1875 and early settlement of Telluride followed. The town itself was founded in 1878. Telluride was originally named &quot;Columbia&quot;, but due to confusion with [[Columbia, California|Columbia]], [[California]], the name was changed by the [[post office]] in 1887. The town was named after valuable ore compounds of the [[chemical element]] [[tellurium]], a [[metalloid]] element which forms natural [[telluride (chemistry)|tellurides]], the most notable of which are telluride ores of gold and silver. Although [[gold telluride]] minerals were never actually found in the mountains near Telluride, the area's [[Mining|mines]] were rich in [[zinc]], [[lead]], [[copper]], silver, and ores which contained gold in other forms.
+
+Telluride began slowly because of its isolated location. In 1881, a [[toll road]] was opened by [[Otto Mears]] which allowed wagons to go where only pack [[mule]]s could go before. This increased the number of people in Telluride, but it was still expensive to get gold-rich [[ore]] out of the valley.
+
+In June 1889, [[Butch Cassidy]], before becoming associated with his gang, &quot;the wild bunch&quot;, robbed the San Miguel Valley Bank in Telluride. This was his first major recorded crime. He exited the bank with [[US$|$]]24,580, and later became famous as a bank robber.&lt;ref&gt;{{cite news|url=https://news.yahoo.com/old-text-wrinkles-did-butch-cassidy-survive-083206159.html|access-date=August 15, 2011|title=Old text, new wrinkles: Did Butch Cassidy survive?|agency=Associated Press|first=Mead|last=Gruver|date=August 15, 2011}}&lt;/ref&gt;
+
+In 1891, the [[Rio Grande Southern]] [[railroad]], also begun by Mears, arrived in Telluride, eventually building a two stall engine house, water facilities, a section house and a bunkhouse, sidings and a depot. It continued further up the valley to end its Telluride branch at Pandora, serving the mines and the town until 1952. The cheaper and consistent transportation for passengers and freight allowed miners and goods to flow into the San Miguel town and ore to flow out to the mills and foundries elsewhere. This brought a brief but unprecedented boom to Telluride before the [[Panic of 1893]].&lt;ref name=NGC_Telluride&gt;{{cite web|last=Clark|first=Jerry|title=Telluride, Colorado – Mile Post 45.1 – Elev. 8,756ft|url=http://www.narrowgauge.org/ngc/html/excursion1/excursion1-telluride.html|work=The Narrow Gauge Circle|publisher=Mark L. Evans|access-date=19 May 2013}}&lt;/ref&gt;
+
+Around the turn of the 20th century, there were serious [[trade union|labor disputes]] in the mines near Telluride. The [[Colorado National Guard]] was called out and there were deaths on both sides. [[trade union|Unions]] were formed as miners joined the [[Western Federation of Miners]] in 1896. 1899 brought big changes as union [[strike action]] led most mines to grant miners $3 a day for an 8-hour day’s work plus a boarding pay of $1 a day. At this time, workers were putting in 10- to 12-hour days and the mines ran 24 hours a day. [[Occupational safety and health|Work conditions]] were treacherous, with mines above 12,000&amp;nbsp;ft, a lack of safety measures, and bitter weather in winter months. Even the [[boarding houses]] were precariously placed on the mountainsides.
+
+[[File:Bridal Veil Falls Telluride CO.jpg|thumb|left|Bridal Veil Falls in Telluride]]
+Telluride's labor unrest occurred against the backdrop of a statewide struggle between miners and mine owners. [[Bulkeley Wells]] was one mine operator considerably hostile to the union. The Telluride Miners' Union was led by [[Vincent Saint John|Vincent St. John]]. The disappearance of mine guard [[William J. Barney]], which Wells declared a &quot;murder&quot;, created much intrigue and national interest. The accusations, animosity, [[gun]]play, and expulsions which followed were part of an ongoing struggle throughout Colorado's mining communities which came to be called the [[Colorado Labor Wars]].
+
+In 1891, Telluride's [[L.L. Nunn]] joined forces with [[George Westinghouse]] to build the [[Ames Hydroelectric Generating Plant]], an [[alternating current]] [[power plant]], near Telluride. (Nunn's home can be found at the corner of Aspen and Columbia Streets; next door is the home he purchased for the &quot;pinheads&quot;{{Citation needed|date=February 2009}} to study hydro-electric engineering.) The plant supplied power to the [[2015 Gold King Mine waste water spill|Gold King Mine]] 3.5 miles away. This was the first successful demonstration of long-distance transmission of industrial-grade alternating current power and used two 100-hp Westinghouse alternators, one working as a generator producing 3,000 volt, 133 Hertz, single-phase AC, and the other used as an AC motor.&lt;ref name=&quot;books.google.com&quot;&gt;{{cite book|url=https://books.google.com/books?id=31O4upzTHQwC&amp;q=In+1891+Telluride+westinghouse+induction+motor&amp;pg=PA39|title=The Foundations of Vacuum Coating Technology|first=D. M.|last=Mattox|date=15 January 2013|publisher=Elsevier Science|isbn=9780080947051|access-date=26 March 2018|via=Google Books}}&lt;/ref&gt; This hydroelectric AC power plant predated the Westinghouse plant at [[Niagara Falls]] by 4 years.&lt;ref name=&quot;books.google.com&quot;/&gt; Nunn and his brother Paul built power plants in Colorado, Utah, Idaho, Montana, Mexico, and the Ontario Power plant at Niagara Falls on the Canadian side. Nunn developed a keen interest in education as part of his electrical power companies, and in conjunction with Cornell University built the [[Telluride House]] at Cornell in 1909 to educate promising students in [[electrical engineering]]. Later, Nunn along with [[Charles Doolittle Walcott|Charles Walcott]], started the non-profit [[Telluride Association]]. Nunn founded [[Deep Springs College]] in 1917. All of Nunn's educational endeavors are going strong today. Each year, the Telluride Tech Festival honors Nunn, inventor [[Nikola Tesla]], and Westinghouse, along with current day technology and science leaders.
+
+Telluride's most famous historic mines are the Tomboy, Pandora, Smuggler-Union, Nellie, and Sheridan mines. Beginning in 1939, the hard-rock mining operations in the Red Mountain and Telluride mining districts began a lengthy [[Consolidation (business)|consolidation]] under the [[Idarado Mine|Idarado Mining Company]] (Idarado), now a division of [[Newmont Mining]]. The consolidation ended in 1953 with Idarado’s acquisition of the Telluride Mines. Idarado kept the underground workings and mill operations open at Telluride’s Pandora hard-rock mine until 1978. When the mine officially closed, the [[snow]] which tormented Telluride's miners became the town's new source of income, in the form of [[skiing]] and tourism. The documentary video &quot;the YX factor&quot; chronicles the transition from mining to skiing and the influx of &quot;[[hippies]]&quot; in the late 1960s and early 1970s in the words of local residents and commentators such as [[Peter Yarrow]] and [[Tom Hayden]].
+
+[[File:AERIAL VIEW OF TELLURIDE SHOWING NEWLY-CUT SKI TRAILS (IN RIGHT FOREGROUND - NARA - 543746.jpg|thumb|upright|Aerial view of newly cut Boomerang Road (May 1972).]]
+
+===Skiing era===
+Mining was Telluride’s only industry until 1972, when the first [[Chairlift|ski lift]] was installed by [[Telluride Ski Resort]] founder [[Joseph T. Zoline]] and his Telluride Ski Corporation (Telco). Zoline bought the land for the future resort in 1969 and began to craft the slopes. Along with his mountain manager, Telluride native Bill &quot;Sr.&quot; Mahoney, they slowly and thoughtfully put together a plan for sustained development of Telluride and the region. As mining phased out and a new service industry phased in, the local population changed sharply. Mining families fled Telluride to settle in places like [[Moab, Utah]], where uranium mining offered hope of continued employment. Mining families were replaced by what locals referred to as &quot;[[hippie]]s&quot;, young people with a 1960s worldview that often clashed with the values of Telluride's old-timers. These newcomers were characterized as idle &quot;trustfunders&quot; drawn to the town for a casual lifestyle and outdoor excitements such as [[hang gliding]], [[Mountaineering|mountain climbing]], and [[kayaking]].
+[[File:Tel2wall.jpg|thumb|A view in Telluride from the ski slopes by Mountain Village.]]
+The new population opposed town growth and economic expansion, including growth due to tourism and skiing. At one point, a serious effort was made to ban cars from the city limits and force visitors to use horse-drawn carts. The 1970s had fluctuating snowfalls and economic recession, but the town's music and film festivals flourished. They exposed hundreds of thousands to the grandeur of the valley for the first time and created iconic associations with elite entertainers. Meanwhile, ski area founder Joe Zoline worked to develop one of the best mountains in North America for expert skiers,{{fact|date=July 2020}} and created infrastructure for tourism that respected Telluride's need to stay small.{{fact|date=July 2020}}
+
+As the final ore carts were rolling out of the Pandora mine, tourists began to discover Telluride's views, skiing, and autumn color changes. After the brutal snow drought of 1976 nearly wiped out the embryonic ski and lodging industry, the town started to rebound economically. In 1978, Ron Allred and his partner Jim Wells bought a stake of the ski area to form the Telluride Company. They expanded the infrastructure by adding a gondola connecting Telluride with the Mountain Village.
+
+The [[Grateful Dead]] played Telluride on 8/16/87 and 8/17/87 riding the recent success of [[In the Dark (Grateful Dead album)]].
+
+During the 1980s, Telluride developed a reputation as &quot;Colorado's best-kept secret&quot;, which paradoxically made it one of the better-known resort communities. Wealthy skiers flocked to the mountain all winter, and sightseers kept hotel rooms full all summer. Telluride also became notorious in the drug counterculture as a drop point for Mexican smugglers and a favorite place for wealthy importers to enjoy downtime. The town was even featured in the hit song by [[Glenn Frey]] from ''[[Miami Vice]]'', &quot;Smugglers Blues&quot;.  Telluride was living up to its Wild West history. This type of attention helped differentiate it from [[Aspen, Colorado|Aspen]]. The festivals and Telluride's bad-boy image attracted celebrities like [[Tom Cruise]], [[Oprah Winfrey]], and [[Oliver Stone]]. By the mid-1990s, Telluride had shed both its mining personality and drug image to establish itself as a premier resort town balancing modern culture with fascinating western history. In 2003, Prospect Bowl, an extension to the ski area opened, providing the resort with many new trails and runs. In 2007–08, the ski area opened some of the most extreme, in-bound, hike-to terrain in the country. Most lifts in the area are high-speed quad chairs capable of holding four passengers. The highest lift on the mountain reaches 12,570 feet.
+[[File:Telluride from gondola.jpg|thumb|right|Telluride from a gondola ascending to Mountain Village.]]
+
+Telluride has a [[free box]] that is well supported by the community.&lt;ref&gt;{{cite news |first=Lise |last=Waring |work=[[The Huffington Post]] |title=The Free Box Provides |url=http://www.huffingtonpost.com/lise-waring/the-free-box-provides_b_603900.html |date=June 9, 2010}}&lt;/ref&gt;
+
+==Geography==
+Telluride has an elevation of {{convert|8750|ft}} in an isolated spot in Southwest Colorado. From the west, Colorado Route 145 is the most common way into Telluride; two other passes enter the town, [[Imogene Pass]] and [[Black Bear Road|Black Bear Pass]].
+
+On the eastern side of town, there are two waterfalls: Ingram Falls, which is visible from town, and [[Bridal Veil Falls (Telluride)|Bridal Veil Falls]] and the Bridal Veil Hydroelectric plant, which are just out of sight from town to the right of Ingram. The power plant house was leased for a period of time by Eric Jacobson, who restored the house and the generator inside. The hydroelectric plant was built in 1895 to power the Smuggler-Union Mine.
+
+The town is served by air transportation via [[Telluride Regional Airport]] (TEX), once the highest elevation commercial airport in the United States at 9,070 feet.&lt;ref&gt;{{cite web|url=https://www.denverpost.com/2017/03/20/aspen-telluride-airport-landings/|title=Aspen, Telluride make list of America's most white-knuckle airport landings|date=20 March 2017|access-date=26 March 2018}}&lt;/ref&gt; The airport is considered challenging by pilots because of frequent adverse weather conditions, high elevation, and the extremely rugged mountain terrain surrounding the airport on nearly all sides. Major airline service is provided seasonally into Montrose (MTJ), approximately {{convert|70|mi}} north by road.
+
+===Climate===
+Telluride has a [[humid continental climate]] (Dfb). The coldest month is January, averaging {{convert|21|F|C}}, and the hottest July, which averages {{convert|59.9|F|C}}. Precipitation peaks as snow in winter and as thunderstorms in summer with a dry period in late spring. Telluride gets decent precipitation all year due to its altitude, averaging {{convert|23|in|cm|abbr=}} of rain and {{convert|177|in|cm|abbr=}} inches of snow per year.
+
+{{Weather box|location = Telluride 4WNW 1981-2010, extremes 1900 to present
+| single line = Y
+| Jan high F = 37.5
+| Feb high F = 39.5
+| Mar high F = 44.5
+| Apr high F = 52.9
+| May high F = 62.6
+| Jun high F = 73.2
+| Jul high F = 77.5
+| Aug high F = 74.7
+| Sep high F = 68.1
+| Oct high F = 58.5
+| Nov high F = 45.5
+| Dec high F = 37.2
+| year high F = 
+| Jan low F = 4.5
+| Feb low F = 8.9
+| Mar low F = 15.7
+| Apr low F = 23.7
+| May low F = 30.8
+| Jun low F = 36.1
+| Jul low F = 42.2
+| Aug low F = 42.3
+| Sep low F = 35.2
+| Oct low F = 25.6
+| Nov low F = 15.5
+| Dec low F = 5.8
+| year low F = 
+| Jan record high F = 58
+| Feb record high F = 65
+| Mar record high F = 73
+| Apr record high F = 78
+| May record high F = 83
+| Jun record high F = 91
+| Jul record high F = 96
+| Aug record high F = 91
+| Sep record high F = 88
+| Oct record high F = 83
+| Nov record high F = 73
+| Dec record high F = 60
+| year record high F = 
+| Jan record low F = −32
+| Feb record low F = −36
+| Mar record low F = −24
+| Apr record low F = −10
+| May record low F = 3
+| Jun record low F = 15
+| Jul record low F = 26
+| Aug record low F = 22
+| Sep record low F = 9
+| Oct record low F = 0
+| Nov record low F = -22
+| Dec record low F = -31
+| year record low F = 
+| precipitation colour = green
+| Jan precipitation inch = 1.49
+| Feb precipitation inch = 1.58
+| Mar precipitation inch = 2.02
+| Apr precipitation inch = 1.94
+| May precipitation inch = 1.81
+| Jun precipitation inch = 1.12
+| Jul precipitation inch = 2.50
+| Aug precipitation inch = 3.02
+| Sep precipitation inch = 2.68
+| Oct precipitation inch = 1.92
+| Nov precipitation inch = 1.87
+| Dec precipitation inch = 1.46
+| year precipitation inch = 
+| Jan snow inch = 27.7
+| Feb snow inch = 26.3
+| Mar snow inch = 34.7
+| Apr snow inch = 20.0
+| May snow inch = 8.3
+| Jun snow inch = 0.4
+| Jul snow inch = 0
+| Aug snow inch = 0
+| Sep snow inch = 1.0
+| Oct snow inch = 8.6
+| Nov snow inch = 24.4
+| Dec snow inch = 25.6
+| year snow inch = 
+| unit precipitation days = 0.01 in
+| Jan precipitation days = 10.0
+| Feb precipitation days = 10.1
+| Mar precipitation days = 11.8
+| Apr precipitation days = 10.5
+| May precipitation days = 8.9
+| Jun precipitation days = 6.9
+| Jul precipitation days = 13.5
+| Aug precipitation days = 16.6
+| Sep precipitation days = 12.2
+| Oct precipitation days = 9.3
+| Nov precipitation days = 8.9
+| Dec precipitation days = 10.0
+| year precipitation days = 
+| unit snow days = 0.1 in
+| Jan snow days = 9.8
+| Feb snow days = 9.4
+| Mar snow days = 10.4
+| Apr snow days = 6.8
+| May snow days = 2.3
+| Jun snow days = 0.1
+| Jul snow days = 0
+| Aug snow days = 0
+| Sep snow days = 0.4
+| Oct snow days = 2.9
+| Nov snow days = 7.2
+| Dec snow days = 9.7
+| year snow days = 
+| source 1 = Nowdata, Telluride 4WNW from Grand Junction area 
+}}
+
+==Demographics==
+{{US Census population
+|1890= 766
+|1900= 2446
+|1910= 1756
+|1920= 1618
+|1930= 512
+|1940= 1337
+|1950= 1101
+|1960= 677
+|1970= 553
+|1980= 1047
+|1990= 1309
+|2000= 2221
+|2010= 2325
+|estyear=2019
+|estimate=2479
+|estref=&lt;ref name=&quot;USCensusEst2019CenPopScriptOnlyDirtyFixDoNotUse&quot;&gt;{{cite web|url=https://www.census.gov/programs-surveys/popest/data/tables.2019.html|date=May 24, 2020|title=Population and Housing Unit Estimates|publisher=United States Census Bureau|access-date=May 27, 2020}}&lt;/ref&gt;
+|footnote=U.S. Decennial Census&lt;ref name=&quot;DecennialCensus&quot;&gt;{{cite web|url=https://www.census.gov/programs-surveys/decennial-census.html|title=Census of Population and Housing|publisher=Census.gov|access-date=June 4, 2015}}&lt;/ref&gt;
+}}
+
+As of the [[census]]&lt;ref name=&quot;GR2&quot;&gt;{{cite web|url=https://www.census.gov|publisher=[[United States Census Bureau]]|access-date=2008-01-31|title=U.S. Census website}}&lt;/ref&gt; of 2000, there were 2,221 people, 1,013 households, and 357 families residing in the town. The [[population density]] was 3,143.3 people per square mile (1,207.8/km{{sup|2}}). There were 1,938 housing units at an average density of 2,742.8 per square mile (1,053.9/km{{sup|2}}). The racial makeup of the town was 92.57% [[White (U.S. Census)|White]], 0.81% [[Native American (U.S. Census)|Native American]], 0.72% [[Asian (U.S. Census)|Asian]], 0.41% [[African American (U.S. Census)|African American]], 4.14% from [[Race (United States Census)|other races]], and 1.35% from two or more races. [[Hispanic (U.S. Census)|Hispanic]] or [[Latino (U.S. Census)|Latino]] of any race were 7.20% of the population.
+
+There were 1,013 households, out of which 19.1% had children under the age of 18 living with them, 25.2% were [[Marriage|married couples]] living together, 6.1% had a female householder with no husband present, and 64.7% were non-families. 31.9% of all households were made up of individuals, and 1.6% had someone living alone who was 65 years of age or older. The average household size was 2.19 and the average family size was 2.79.
+
+In the town, the population was spread out, with 14.3% under the age of 18, 12.2% from 18 to 24, 50.9% from 25 to 44, 20.8% from 45 to 64, and 1.9% who were 65 years of age or older. The median age was 31 years. For every 100 females, there were 122.8 males. For every 100 females age 18 and over, there were 127.4 males.
+
+The median income for a household in the town was $51,938, and the median income for a family was $66,136. Males had a median income of $35,329 versus $30,096 for females. The [[per capita income]] for the town was $38,832. About 8.5% of families and 11.5% of the population were below the [[poverty line]], including 16.2% of those under age 18 and 6.9% of those age 65 or over.
+
+==Tourism==
+[[File:Brunswick Saloon Telluride CO c. 1900.jpg|thumb|Brunswick Saloon, Telluride, circa 1900]]
+Beyond the ski lifts, Telluride is now widely recognized as an all-season resort. Telluride Ski Resort is the main attraction in the winter. But when summer comes around, Telluride transforms into an outdoor recreation hot spot, with tourists visiting to enjoy [[mountain biking]], [[hiking]], river rafting, [[sightseeing]] and more. The Telluride Tourism Board promotes tourism in the region.
+
+Telluride features over 30 hiking trails ranging in difficulty level. Some of the hiking routes include Ajax Peak, Bear Creek Falls, Hope Lake, and Bridal Veil Falls. Hiking season begins in May and lasts until early October, with waterfalls gushing in June and wildflowers at their peak in early July. The trails range from quick and easy runs to multi-day hiking trips that reach an elevation of 14,000 feet. Nearly all the trails feature waterfalls, wildflowers, and high alpine lakes.&lt;ref&gt;{{cite web|url=https://www.telluride.com/activities/hikingrunning|title=Hiking and Running|last=Telluride.com|website=www.telluride.com}}&lt;/ref&gt;
+
+Telluride is also home to many endurance events. The [[Hardrock 100]], held in July, has a major aid station in the town park. The Fall Tilt, a 12-hour downhill mountain biking event, is held in Mountain Village each September. And the 40-mile Telluride Mountain Run loops the town in a wide swath that includes some of the most difficult and scenic trails in the area.
+
+[[File:View of Telluride from Gondola.jpg|thumb|View of Telluride from Gondola]]

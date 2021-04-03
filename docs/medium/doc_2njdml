@@ -1,0 +1,289 @@
+===Rail===
+* [[T-series (Toronto subway)]], a subway car in Toronto, Canada
+* [[North Shore &amp; Western Line]], a commuter rail line in Sydney, Australia
+* [[Île-de-France tramway Line 1]], a.k.a. T1, a tramway near Paris, France
+* [[LSWR T1 class]], an 1888 0-4-4T steam tank locomotives class
+* [[Pennsylvania Railroad class T1]], a 1942 4-4-4-4 steam locomotive class
+* [[Reading T-1]], a 1945 4-8-4 steam locomotive class
+* [[Tatra T1]], a 1951 Czechoslovakian tramcar
+* [[T1 (Istanbul Tram)]], a tram line in Istanbul, Turkey
+* [[Nakano Station (Tokyo)]], station number T-01 in Tokyo Metro Tozai Line
+
+===Ships===
+* [[USS T-1|USS ''T-1'']], several United States Navy ships
+* [[HMNZS Matai (T01)|HMNZS ''Matai'' (T01)]], a Royal New Zealand Navy lighthouse tender of 1941
+* [[MV Transpacific (T-1)|MV ''Transpacific'' (T-1)]], a 1992 US oil tanker
+* [[Yugoslav torpedo boat T1|Yugoslav torpedo boat ''T1'']], a torpedo boat in the Yugoslav Navy, 1921–1941
+* [[T1 tanker]] a mass-produced tanker used during and after World War II
+
+==Tanks and weapons==
+* [[T1 Light Tank]], a U.S. prototype tank
+* [[EE-T1 Osório|EE-T1 ''Osório'']], a 1985 Brazilian main battle tank
+* [[AC NM AE T1 mine]], a Brazilian anti-tank blast mine
+* [[AP NM AE T1 mine]], a Brazilian anti-personnel mine
+* [[G7a torpedo]], a WWII German torpedo
+
+==Mathematics, physics and chemistry==
+* [[T1 Aquarii]], a star
+* [[T1 Carinae]], a star
+* [[Soyuz T-1]], a 1979 space mission
+* [[T1 space|T&lt;sub&gt;1&lt;/sub&gt; spaces]], a topological spaces satisfying the T&lt;sub&gt;1&lt;/sub&gt; separation axiom
+* &lt;math&gt;\mathbb{T}^1&lt;/math&gt;, the 1-[[torus]]
+* The [[Spin-lattice relaxation]] time in [[Nuclear Magnetic Resonance]] and [[Magnetic Resonance Imaging]].
+
+==Other uses==
+* [[T1 General]], a tax form used in Canada
+* [[T-1 visa]], allowing victims of human trafficking to remain in the United States
+* [[Tour T1]], an office skyscraper in La Défense, Paris, France
+* [[T1 Mall of Tallinn]], shopping and entertainment centre in Tallinn, Estonia
+* [[Estonian national road 1]], officially T1, connecting Tallinn and Narva
+* [[Tanzam Highway]], designated T1 in Tanzania
+* [[T1 (esports)]], Korean eSports team.
+* [[Target One]], a Mesoamerican archaeological site in Honduras
+* T1, a tornado intensity rating on the [[TORRO scale]]
+
+==See also==
+* [[1T (disambiguation)]]
+* [[T (disambiguation)]]
+
+{{Letter-Number Combination Disambiguation}}</text>
+      <sha1>i8bl9b0jyuh427zphackrs7q2c6o4go</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>E-carrier</title>
+    <ns>0</ns>
+    <id>46728</id>
+    <revision>
+      <id>982243081</id>
+      <parentid>969958704</parentid>
+      <timestamp>2020-10-06T23:56:08Z</timestamp>
+      <contributor>
+        <ip>122.110.167.248</ip>
+      </contributor>
+      <comment>/* CRC-4 multiframe alignment */ CRC MFAS is 001011 not 0011011, appears to be a copy/paste error from the FAS</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="26350" xml:space="preserve">{{Short description|Telephone transmission carrier system used outside USA}}
+{{Multiple issues|
+{{condense|date=December 2016}}
+{{lead too short|date=December 2016}}
+{{more citations needed|date=September 2016}}
+}}
+The E-carrier is a member of the series of [[carrier system]]s developed for digital transmission of many simultaneous telephone calls by [[time-division multiplexing]]. The [[European Conference of Postal and Telecommunications Administrations]] (CEPT) originally standardized the '''E-carrier''' system, which revised and improved the earlier American [[T-carrier]] technology, and this has now been adopted by the [[International Telecommunication Union]] [[ITU-T|Telecommunication Standardization Sector]] (ITU-T). It was widely adopted in almost all countries outside the US, Canada, and Japan. E-carrier deployments have steadily been replaced by [[Ethernet]] as telecommunication networks transitions towards all IP.
+
+==E1 frame structure==
+An E1 link operates over two separate sets of wires, usually [[unshielded twisted pair]] (balanced cable) or using [[coaxial]] (unbalanced cable). A nominal 3 [[volt]] peak signal is encoded with pulses using a method avoiding long periods without polarity changes. The line data rate is 2.048&amp;nbsp;[[Mbit/s]] ([[full duplex]], i.e. 2.048&amp;nbsp;Mbit/s downstream and 2.048&amp;nbsp;Mbit/s upstream) which is split into 32 timeslots, each being allocated 8&amp;nbsp;[[bit]]s in turn. Thus each timeslot sends and receives an 8-bit [[pulse code modulation|PCM]] sample, usually encoded according to [[A-law algorithm]], 8,000 times per second (8 × 8,000 × 32 = 2,048,000). This is ideal for voice telephone calls where the voice is [[Sampling (signal processing)|sampled]] at that data rate and reconstructed at the other end. The timeslots are numbered from 0 to 31.
+
+The E1 frame defines a cyclical set of 32 time slots of 8 bits. The time slot 0 is devoted to transmission management and time slot 16 for signaling; the rest were assigned originally for voice/data transport.&lt;ref name=autogenerated1&gt;{{cite web|title=Installation and Maintenance of E1 circuits|url=http://www.albedotelecom.com/src/lib/WP-E1-test.pdf|publisher=ALBEDO|accessdate=19 October 2012}}&lt;/ref&gt;
+
+The main characteristics of the 2-Mbit/s frame are described in the following.
+
+[[Image:E1 frame format ITU-T.png|770px|E1 frame format ITU-T]]
+
+===Special timeslots===
+One timeslot (TS0) is reserved for [[Frame synchronization|framing]] purposes, and alternately transmits a fixed pattern. This allows the receiver to lock onto the start of each frame and match up each channel in turn. The standards allow for a full [[cyclic redundancy check]] to be performed across all bits transmitted in each frame, to detect if the circuit is losing bits (information), but this is not always used. An alarm signal may also be transmitted using timeslot TS0. Finally, some bits are reserved for national use.&lt;ref&gt;[http://www.rad.com/Media/6966_E1backgrounder.pdf E1 Environment] {{Webarchive|url=https://web.archive.org/web/20131014084115/http://www.rad.com/Media/6966_E1backgrounder.pdf |date=2013-10-14 }}, RAD data communications University Tutorials&lt;/ref&gt;
+
+One timeslot (TS16) is often reserved for signalling purposes, to control call setup and teardown according to one of several standard telecommunications protocols. This includes [[channel-associated signaling]] (CAS) where a set of bits is used to replicate opening and closing the circuit (as if picking up the telephone receiver and pulsing digits on a rotary phone), or using tone signalling which is passed through on the voice circuits themselves. More recent systems use [[common-channel signaling]] (CCS) such [[Signalling System 7]] (SS7) where no particular timeslot is reserved for signalling purposes, the signalling protocol being transmitted on a freely chosen set of timeslots or on a different physical channel.&lt;ref&gt;{{Cite web |url=http://www.ss7-training.net/sigtran-training/ch08lev1sec5.html |title=Signaling System No. 7 (SS7/C7): Protocol, Architecture, and Services, Lee Dryburgh, Jeff Hewett, 2004 |access-date=2010-05-26 |archive-url=https://web.archive.org/web/20120101182748/http://www.ss7-training.net/sigtran-training/ch08lev1sec5.html |archive-date=2012-01-01 |url-status=dead }}&lt;/ref&gt;
+
+When using E1 frames for data communication, some systems do use those timeslots slightly different, either
+a) TS0: Framing, TS1 -TS32: Data traffic
+This is named Channelized E1, and is used where the framing is required, it allows any of the 32 timeslots to be identified and extracted.
+
+b) TS0 -TS32: Data traffic.
+Often referred to as ClearChannel E1 or Unchannelized, it is used where no framing is required, timeslot extraction is not required and the full bandwidth (2 Mb/s) is required.
+
+====Frame alignment====
+In an E1 channel, communication consists of sending consecutive frames from the transmitter to the receiver. The receiver must receive an indication showing when the first interval of each frame begins, so that, since it knows to which channel the information in each time slot corresponds, it can demultiplex correctly. This way, the bytes received in each slot are assigned to the correct channel. A synchronization process is then established, and it is known as frame alignment.
+
+====Frame-alignment signal====
+In order to implement the frame alignment system so that the receiver of the frame can tell where it begins, there is so called a frame alignment signal (FAS). In the 2&amp;nbsp;Mbit/s frame system, the FAS is a combination of seven fixed bits (&quot;0011011&quot;) transmitted in the first time slot in the frame (time slot zero or TS0). For the alignment mechanism to be maintained, the FAS does not need to be transmitted in every frame. Instead, this signal can be sent in alternate frames (in the first, in the third, in the fifth, and so on). In this case, TS0 is used as the synchronization slot. The TS0 of the rest of the frames is therefore available for other functions, such as the transmission of the alarms.
+
+====Multiframe CRC-4====
+In the TS0 of frames with FAS, the first bit is dedicated to carrying the cyclic redundancy checksum (CRC). It tells us whether there are one or more bit errors in a specific group of data received in the previous block of eight frames known as submultiframe.
+
+====The CRC-4 procedure====
+The aim of this system is to avoid loss of synchronization due to the coincidental appearance of the sequence &quot;0011011&quot; in a time slot other than the TS0 of a frame with FAS. To implement the CRC code in the transmission of 2&amp;nbsp;Mbit/s frames, a CRC-4 multiframe is built, made up of 16 frames. These are then grouped in two blocks of eight frames called submultiframes, over which a CRC checksum or word of four bits (CRC-4) is put in the positions Ci (bits #1, frames with FAS) of the next submultiframe.
+
+At the receiving end, the CRC of each submultiframe is calculated locally and compared to the CRC value received in the next submultiframe. If these do not coincide, one or more bit errors is determined to have been found in the block, and an alarm is sent back to the transmitter, indicating that the block received at the far end contains errors.
+
+=====CRC-4 multiframe alignment=====
+The receiving end has to know which is the first bit of the CRC-4 word (C1). For this reason, a CRC-4 multiframe alignment word is needed. Obviously, the receiver has to be told where the multiframe begins (synchronization). The CRC-4 multiframe alignment word is the set combination &quot;001011&quot;, which is introduced in the first bits of the frames that do not contain the FAS signal.&lt;ref&gt;{{citation |title=E1 Pocket Guide |url=https://web.fe.up.pt/~mleitao/STEL/Tecnico/E1_ACTERNA.pdf |access-date=2017-11-01}}&lt;/ref&gt;
+
+=====Advantages of the CRC-4 method=====
+The CRC-4 method is mainly used to protect the communication against a wrong frame alignment word, and also to provide a certain degree of monitoring of the bit error rate (BER), when this has low values (around 10&lt;sup&gt;−6&lt;/sup&gt;). This method is not suitable for cases in which the BER is around 10&lt;sup&gt;−3&lt;/sup&gt; (where each block contains at least one errored bit).
+
+Another advantage in using the CRC is that all the bits transmitted are checked, unlike those systems that only check seven bits (those of the FAS, which are the only ones known in advance) out of every 51&amp;nbsp;bits (those between one FAS and the next). However, the CRC-4 code is not completely infallible, since there is a probability of around {{frac|1|16}} that an error may occur and not be detected; that is, that 6.25% of the blocks may contain errors that are not detected by the code.
+
+=====Monitoring errors=====
+The aim of monitoring errors is to continuously check transmission quality without disturbing the information traffic and, when this quality is not of the required standard, taking the necessary steps to improve it. Telephone traffic is two way, which
+means that information is transmitted in both directions between the ends of the communication. This in its turn means that two 2&amp;nbsp;Mbit/s channels and two directions for transmission must be considered.
+
+The CRC-4 multiframe alignment word only takes up six of the first eight bits of the TS0 without FAS. There are two bits in every second block or submultiframe, whose task is to indicate block errors in the far end of the communication. The mechanism
+is as follows: Both bits (called E-bits) have &quot;1&quot; as their default value. When the far end of the communication receives a 2&amp;nbsp;Mbit/s frame and detects an erroneous block, it puts a &quot;0&quot; in the E-bit that corresponds to the block in the frame being sent along the return path to the transmitter. This way, the near end of the communication is informed that an erroneous block has been detected, and both ends have the same information: one from the CRC-4 procedure and the other from the E bits. If we number the frames in the multiframe from 0 to 15, the E-bit of frame 13 refers to the submultiframe I (block I) received at the far end, and the E-bit of frame 15 refers to the submultiframe II (block II).
+
+====Supervision bits====
+The bits that are in position 2 of the TS0 in the frame that does not contain the FAS are called supervision bits and are set to “1,” to avoid simulations of the FAS signal.
+
+====NFASs – spare bits====
+The bits of the TS0 that do not contain the FAS in positions 3–8 make up what is known as the non-frame alignment signal or NFAS. This signal is sent in alternate frames (frame 1, frame 3, frame 5, etc.). The first bit of the NFAS (bit 3 of the TS0) is used to indicate that an alarm has occurred at the far end of the communication. When operating normally, it is set to &quot;0&quot;, while a value of &quot;1&quot; indicates an alarm.
+
+The bits in positions 4–8 are spare bits, and they do not have one single application, but can be used in a number of ways, as decided by the telecommunications carrier. In accordance with the ITU-T Rec. G.704, these bits can be used in specific point-to-point applications, or to establish a data link based on messages for operations management, maintenance or monitoring of the transmission quality, and so on. If these spare bits in the NFAS are not used, they must be set to &quot;1&quot; in international links.
+
+====NFAS – alarm bit====
+The method used to transmit the alarm makes use of the fact that in telephone systems, transmission is always two way). Multiplexing/demultiplexing devices (known generically as multiplex devices) are installed at both ends of the communication for the transmission and reception of frames. An alarm must be sent to the transmitter when a device detects either a power failure or a failure of the coder/decoder, in its multiplexer; or any of the following in its demultiplexer: loss of the signal (LOS), loss of frame alignment (LOF), or a BER greater than 10&lt;sup&gt;−3&lt;/sup&gt;.
+
+The remote alarm indication (RAI) is sent in the NFAS of the return frames, with bit 3 set to &quot;1&quot;. The transmitter then considers how serious the alarm is, and goes on generating a series of operations, depending on the type of alarm condition
+detected.
+
+====Signaling channel====
+As well as transmitting information generated by the users of a telephone network, it is also necessary to transmit signaling information. Signaling refers to the protocols that must be established between exchanges so that the users can exchange information between them.
+
+There are signals that indicate when a subscriber has picked up the telephone, when he or she can start to dial a number, and when another subscriber calls, as well as signals that let the communication link be maintained, and so on. In the E1 PCM system, signaling information can be transmitted by two different methods: the common channel signaling (CCS) method and the channel associated signaling (CAS) method. In both cases, the time slot TS16 of the basic 2&amp;nbsp;Mbit/s frame is used to transmit the signaling information.
+
+For CCS signaling, messages of several bytes are transmitted through the 64&amp;nbsp;kbit/s channel provided by the TS16 of the frame, with these messages providing the signaling for all the channels in the frame. Each message contains information that determines the channel that is signaling. The signaling circuits access the 64&amp;nbsp;kbit/s channel of the TS16, and they are also common to all the channels signaled. There are different CCS systems that constitute complex protocols. In the following section and by way of example, channel associated signaling will be looked.
+
+==The plesiochronous digital hierarchy==
+Based on the E1 signal, the ITU defined a hierarchy of [[Plesiochronous Digital Hierarchy|plesiochronous]] signals that enables signals to be transported at rates of up to 140&amp;nbsp;Mbit/s.&lt;ref name=autogenerated1 /&gt; This section describes the characteristics of this hierarchy and the mechanism for dealing with fluctuations in respect to the nominal values of these rates, which are produced as a consequence of the tolerances of the system.
+
+===Higher hierarchical levels===
+As is the case with level 1 of the plesiochronous digital hierarchy (2&amp;nbsp;Mbit/s), the higher levels of multiplexing are carried out bit by bit (unlike the multiplexing of 64&amp;nbsp;kbit/s channels in a 2&amp;nbsp;Mbit/s signal, which is byte by byte), thus making it impossible to identify the lower level frames inside a higher level frame. Recovering the tributary frames requires the signal to be fully demultiplexed.
+
+The higher hierarchical levels (8,448, 34,368, and 139,264&amp;nbsp;kbit/s, etc.; referred to as 8, 34, and 140&amp;nbsp;Mbit/s for simplicity) are obtained by multiplexing four lower level frames within a frame whose nominal transmission rate is more than four times that of the lower level (see Table 3), in order to leave room for the permitted variations in rate (justification bits), as well as the corresponding FAS, alarm, and spare bits.
+
+===E2: multiplexing level 2: 8&amp;nbsp;Mbit/s===
+The 8&amp;nbsp;Mbit/s frame structure is defined in the ITU-T Rec. G.742. The frame is divided into four groups, each of length 212 bits:
+
+* Group I contains the FAS, with sequence &quot;1111010000&quot;; the A-bit (remote alarm); the S-bit (spare); and 200 T-bits (tributary) transporting data.
+* Groups II and III contain a block of four J-bits (justification control) and 208 T-bits transporting data.
+* Group IV contains a block of four J-bits, a block of R-bits (justification opportunity), one per tributary, and 204 T-bits. To check whether R-bits have been used, the J-bits are analyzed in each of the groups II, III, and IV (there are three per tributary). Ideally the R-bit does not carry useful information on 42.4% of the occasions. In other words, this percentage is the probability of justification or the insertion of stuffing bits.
+{| class=&quot;wikitable&quot;
+|+ ' E2 | E2 | ''212 Bits/Row''
+!Group
+! colspan=&quot;4&quot; |Bits
+|-
+!I
+|FAS 1111010000 (10 bits)
+|A
+|S
+|200 Tributary Bits
+|-
+!II
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;3&quot; |208 Tributary Bits
+|-
+!III
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;3&quot; |208 Tributary Bits
+|-
+!IV
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+|&lt;nowiki&gt;R1 | R2 | R3 | R4&lt;/nowiki&gt;
+| colspan=&quot;2&quot; |204 Tributary Bits
+|}
+
+===E3: multiplexing level 3: 34&amp;nbsp;Mbit/s===
+The structure of this frame is described in the ITU-T Rec. G.751 (see Figure 20). As in the previous case, the frame is divided into four groups, each of length 384 bits:
+
+* Group I contains the FAS, with sequence &quot;1111010000&quot;; the A-bit (remote alarm); the S-bit (spare); and 372 T-bits (tributary) transporting data.
+* Groups II and III contain a block of four J-bits (justification control) and 380 T-bits transporting data.
+* Group IV contains a block of four J-bits, a block of R-bits (justification opportunity) one per tributary, and 376 T-bits. To check whether R-bits have been used, the J-bits are analyzed in each of the groups II, III, and IV (there are three per tributary). Ideally the R-bit does not carry useful information on 43.6% of the occasions.
+{| class=&quot;wikitable&quot;
+|+ ' E3 | E3 | ''384 Bits/Row''
+!Group
+! colspan=&quot;4&quot; |Bits
+|-
+!I
+|FAS 1111010000 (10 bits)
+|A
+|S
+|372 Tributary Bits
+|-
+!II
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;3&quot; |380 Tributary Bits
+|-
+!III
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;3&quot; |380 Tributary Bits
+|-
+!IV
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;2&quot; |&lt;nowiki&gt;R1 | R2 | R3 | R4&lt;/nowiki&gt;
+|376 Tributary Bits
+|}
+
+===E4: multiplexing level 4: 140&amp;nbsp;Mbit/s===
+The structure of this frame is described in the ITU-T Rec. G.751 (see Figure 20). In this case, the frame is divided into six groups, each of length 488 bits:
+
+* Group I contains the FAS, with sequence &quot;111110100000&quot;; the A-bit (remote alarm); three S-bits (spare); and 472 T-bits (tributary) transporting data.
+* Groups II, III, IV, and V contain a block of four J-bits (justification control) and 484 T-bits transporting data.
+* Group VI contains a block of four J-bits, a block of R-bits (justification opportunity), one per tributary, and 480 T-bits. To check whether R-bits have been used, the J-bits are analyzed in each of the groups II, III, IV, V, and VI (there are five per tributary). Ideally the R-bit does not carry useful information on 41.9% of the occasions.
+{| class=&quot;wikitable&quot;
+|+ ' E4 | E4 | ''488 Bits/Row''
+!Group
+! colspan=&quot;4&quot; |Bits
+|-
+!I
+|FAS 111110100000 (12 bits)
+|A
+|3 S Bits
+|472 Tributary Bits
+|-
+!II
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;3&quot; |484 Tributary Bits
+|-
+!III
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;3&quot; |484 Tributary Bits
+|-
+!IV
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;3&quot; |484 Tributary Bits
+|-
+!V
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;3&quot; |484 Tributary Bits
+|-
+!VI
+|&lt;nowiki&gt;J1 | J2 | J3 | J4&lt;/nowiki&gt;
+| colspan=&quot;2&quot; |&lt;nowiki&gt;R1 | R2 | R3 | R4&lt;/nowiki&gt;
+|480 Tributary Bits
+|}
+{| class=&quot;wikitable&quot; style=&quot;text-align:center; width:80%;&quot;
+|+ The PDH hierarchy, with four levels from 2 to 140 Mbit/s. Higher rates are not part of the standard.
+|-
+! Level !! Standard !! Rate !! Size !! Frame/s !! Code !! Amplitude !! Attenuation
+|-
+| E1 || G.704/732 || 2.048&amp;nbsp;Mbit/s ± 50&amp;nbsp;ppm || 256&amp;nbsp;bits || 8,000 || HDB3 || 2.37-3.00&amp;nbsp;V || 6&amp;nbsp;dB
+|-
+| E2 || G.742 || 8.448&amp;nbsp;Mbit/s ± 30&amp;nbsp;ppm || 848&amp;nbsp;bits || 9,962.2 || HDB3 || 2.37&amp;nbsp;V|| 6&amp;nbsp;dB
+|-
+| E3 || G.751 || 34.368&amp;nbsp;Mbit/s ± 20&amp;nbsp;ppm || 1536&amp;nbsp;bits || 22,375.0 || HDB3 || 1.00&amp;nbsp;V || 12&amp;nbsp;dB
+|-
+| E4 || G.751 || 139.264&amp;nbsp;Mbit/s ± 15&amp;nbsp;ppm || 2928&amp;nbsp;bits || 47,562.8 || CMI || 1.00&amp;nbsp;V|| 12&amp;nbsp;dB
+|}
+
+===Service bits in higher-level frames===
+In any of the groups containing the FAS in the 8, 34, and 140&amp;nbsp;Mbit/s frames, alarm bits and spare bits are also to be found. These are known as service bits. The A-bits (alarm) carry an alarm indication to the remote multiplexing device, when certain breakdown conditions are detected in the near-end device. The spare bits are designed for national use, and must be set to &quot;1&quot; in digital paths that cross international boundaries.
+
+====Plesiochronous synchronization====
+As far as synchronization is concerned, the multiplexing of plesiochronous signals is not completely trouble free, especially when it comes to demultiplexing the circuits. In a PCM multiplexer of 30 + 2 channels, a sample of the output signal clock
+(1/32) is sent to the coders, so that the input channels are synchronized with the output frame. However, higher level multiplexers receive frames from lower level multiplexers with clocks whose value fluctuates around a nominal frequency value
+within certain margins of tolerance.
+
+The margins are set by the ITU-T recommendations for each hierarchical level. The signals thus formed are almost synchronous, except for differences within the permitted margins of tolerance, and for this reason they are called plesiochronous.
+
+====Positive justification====
+In order to perform bit-by-bit TDM, each higher-order PDH multiplexer has elastic memories in each of its inputs in which the incoming bits from each lower level signal line or tributary are written. Since the tributary signals have different rates, they are asynchronous with respect to each other. To prevent the capacity of the elastic memories from overflowing, the multiplexer reads the incoming bits at the maximum rate permitted within the range of tolerances.
+
+When the rate of the incoming flow in any of the tributary lines is below this reading rate, the multiplexer cannot read any bits from the elastic memory, and so it uses a stuffing bit or justification bit (called justification opportunity) in the output aggregate signal. Its task is that of adapting the signal that enters the multiplexer to the rate at which this signal is transmitted within the output frame (its highest clock value). This type of justification is called positive justification.
+Justification bits, together with other overhead bits, make the output rate higher than the total of the input signals.
+
+====Justification opportunity bits====
+The task of the justification opportunity bits (R-bits) is to be available as extra bits that can be used when the rate of the incoming tributaries is higher than its nominal value (within the margin specified by ITU-T) by an amount that makes this necessary. In this case, the opportunity bit is no longer mere stuffing, but becomes an information bit instead.
+
+In order for the device that receives the multiplexed signal to be able to determine whether a justification opportunity bit contains useful information (i.e. information from a tributary), justification control bits (J-bits) are included in the frame. Each group of control bits refers to one of the tributaries of the frame. All of them will be set to &quot;0&quot; if the associated opportunity bit is carrying useful information; otherwise they will be set to &quot;1&quot;.
+
+Several bits are used instead of just one, to provide protection against possible errors in transmission. On examining the control bits received, if they do not all have the same value, it is decided that they were sent with the majority value (a &quot;1&quot; if there are more 1s than 0s, for instance; it is assumed that there has been an error in the bits that are at 0).

@@ -1,0 +1,2361 @@
+==Theoretical review==
+Zipf's law is most easily observed by [[graph of a function|plotting]] the data on a [[log-log]] graph, with the axes being [[logarithm|log]] (rank order) and log (frequency). For example, the word ''&quot;the&quot;'' (as described above) would appear at ''x'' = log(1), ''y'' = log(69971). It is also possible to plot reciprocal rank against frequency or reciprocal frequency or interword interval against rank.&lt;ref name=Powers1998/&gt; The data conform to Zipf's law to the extent that the plot is [[linear equation|linear]].
+
+Formally, let:
+* ''N'' be the number of elements;
+* ''k'' be their rank;
+* ''s'' be the value of the exponent characterizing the distribution.
+Zipf's law then predicts that out of a population of ''N'' elements, the normalized frequency of the element of rank ''k'', ''f''(''k'';''s'',''N''), is:
+
+:&lt;math&gt;f(k;s,N)=\frac{1/k^s}{\sum\limits_{n=1}^N (1/n^s)}&lt;/math&gt;
+
+Zipf's law holds if the number of elements with a given frequency is a random variable with power law distribution &lt;math&gt;p(f) = \alpha f^{-1-1/s}.&lt;/math&gt;&lt;ref name=Adamic2000&gt;Adamic, Lada A. (2000) [http://www.hpl.hp.com/research/idl/papers/ranking/ranking.html &quot;Zipf, Power-laws, and Pareto - a ranking tutorial&quot;, originally published at] [http://www.parc.xerox.com/istl/groups/iea/papers/ranking/ranking.html .parc.xerox.com] {{webarchive|url=https://web.archive.org/web/20071026062626/http://www.hpl.hp.com/research/idl/papers/ranking/ranking.html |date=2007-10-26 }}&lt;/ref&gt;
+
+It has been claimed that this representation of Zipf's law is more suitable for statistical testing, and in this way it has been analyzed in more than 30,000 English texts. The goodness-of-fit tests yield that only about 15% of the texts are statistically compatible with this form of Zipf's law. Slight variations in the definition of Zipf's law can increase this percentage up to close to 50%.&lt;ref&gt;{{Cite journal|last1 = Moreno-Sánchez|first1 = I|last2 = Font-Clos|first2 = F|last3 = Corral|first3 = A|date = 2016|title = Large-Scale Analysis of Zipf's Law in English Texts|url =|journal = PLOS ONE|volume = 11|issue = 1|pages = e0147073|doi = 10.1371/journal.pone.0147073|pmid =26800025|pmc = 4723055|access-date =|arxiv = 1509.04486|bibcode = 2016PLoSO..1147073M}}&lt;/ref&gt;
+
+In the example of the frequency of words in the English language, ''N'' is the number of words in the English language and, if we use the classic version of Zipf's law, the exponent ''s'' is 1. ''f''(''k'';&amp;nbsp;''s'',''N'') will then be the fraction of the time the ''k''th most common word occurs.
+
+The law may also be written:
+
+:&lt;math&gt;f(k;s,N)=\frac{1}{k^s H_{N,s}}&lt;/math&gt;
+
+where ''H&lt;sub&gt;N,s&lt;/sub&gt;'' is the ''N''th [[generalized harmonic number]].
+
+The simplest case of Zipf's law is a &quot;{{sfrac|1|''f''}}&quot; function. Given a set of Zipfian distributed frequencies, sorted from most common to least common, the second most common frequency will occur half as often as the first, the third most common frequency will occur {{sfrac|1|3}} as often as the first, and the ''n''th most common frequency will occur {{sfrac|1|''n''}} as often as the first. However, this cannot hold exactly, because items must occur an integer number of times; there cannot be 2.5 occurrences of a word. Nevertheless, over fairly wide ranges, and to a fairly good approximation, many natural phenomena obey Zipf's law.
+
+In human languages, word frequencies have a very heavy-tailed distribution, and can therefore be modeled reasonably well by a Zipf distribution with an ''s'' close to 1.
+
+As long as the exponent ''s'' exceeds 1, it is possible for such a law to hold with infinitely many words, since if ''s''&amp;nbsp;&gt;&amp;nbsp;1 then
+:&lt;math&gt;\zeta (s) = \sum_{n=1}^\infty \frac{1}{n^s}&lt;\infty. \!&lt;/math&gt;
+where ''ζ'' is [[Riemann zeta function|Riemann's zeta function]].
+
+==Statistical explanation==
+
+[[File:Zipf 30wiki en labels.png|thumbnail|A plot of the rank versus frequency for the first 10 million words in 30 Wikipedias (dumps from October 2015) in a [[log-log]] scale.]]
+
+Although Zipf's Law holds for all languages, even non-natural ones like [[Esperanto]],&lt;ref&gt;{{cite conference |author1=Bill Manaris |author2=Luca Pellicoro |author3=George Pothering |author4=Harland Hodges |title=INVESTIGATING ESPERANTO'S STATISTICAL PROPORTIONS RELATIVE TO OTHER LANGUAGES USING NEURAL NETWORKS AND ZIPF'S LAW |url=http://www.cs.cofc.edu/~manaris/uploads/Main/IASTED2006.pdf |journal=[[Artificial Intelligence and Applications]] |date=13 February 2006 |location=Innsbruck, Austria |pages=102–108 |url-status=live |archiveurl=https://web.archive.org/web/20160305040450/http://www.cs.cofc.edu/~manaris/uploads/Main/IASTED2006.pdf |archivedate=5 March 2016 }}&lt;/ref&gt; the reason is still not well understood.&lt;ref&gt;[[Léon Brillouin]], ''La science et la théorie de l'information'', 1959, réédité en 1988, traduction anglaise rééditée en 2004&lt;/ref&gt; However, it may be partially explained by the statistical analysis of randomly generated texts. Wentian Li has shown that in a document in which each character has been chosen randomly from a uniform distribution of all letters (plus a space character), the &quot;words&quot; with different lengths follow the macro-trend of the Zipf's law (the more probable words are the shortest with equal probability).&lt;ref&gt;{{cite journal |author=Wentian Li |title=Random Texts Exhibit Zipf's-Law-Like Word Frequency Distribution |journal=[[IEEE Transactions on Information Theory]] |volume=38 |issue=6 |year=1992 |pages=1842–1845 |doi=10.1109/18.165464 |df= |citeseerx=10.1.1.164.8422 }}&lt;/ref&gt;  [[Vitold Belevitch]], in a paper entitled ''On the Statistical Laws of Linguistic Distribution'', offers a mathematical derivation.  He took a large class of well-behaved [[statistical distribution]]s (not only the [[normal distribution]]) and expressed them in terms of rank. He then expanded each expression into a [[Taylor series]]. In every case Belevitch obtained the remarkable result that a first-order truncation of the series resulted in Zipf's law. Further, a second-order truncation of the Taylor series resulted in [[Zipf–Mandelbrot law|Mandelbrot's law]].&lt;ref&gt;[[Peter G. Neumann|Neumann, Peter G.]] [http://www.csl.sri.com/users/neumann/#12a &quot;Statistical metalinguistics and Zipf/Pareto/Mandelbrot&quot;], ''SRI International Computer Science Laboratory'', accessed and [https://web.archive.org/web/20110605012951/http://www.csl.sri.com/users/neumann/ archived] 29 May 2011.&lt;/ref&gt;&lt;ref&gt;{{cite journal
+| author = Belevitch V
+| title = On the statistical laws of linguistic distributions
+| journal = Annales de la Société Scientifique de Bruxelles
+| volume = 73
+| series = I
+| date = 18 December 1959
+| pages = 310–326
+|url           = http://www.csl.sri.com/users/neumann/belevitch.pdf
+|url-status       = live
+}}&lt;/ref&gt;
+
+The [[principle of least effort]] is another possible explanation:
+Zipf himself proposed that neither speakers nor hearers using a given language want to work any harder than necessary to reach understanding, and the process that results in approximately equal distribution of effort leads to the observed Zipf distribution.&lt;ref&gt;{{cite book
+| author = Zipf GK
+| title = Human Behavior and the Principle of Least Effort
+| location = Cambridge, Massachusetts
+| publisher = Addison-Wesley
+| year =1949
+| page = 1
+}}&lt;/ref&gt;&lt;ref&gt;{{cite journal
+ |author1       = Ramon Ferrer i Cancho
+ |author2       = Ricard V. Sole
+ |name-list-style = amp
+ |year          = 2003
+ |title         = Least effort and the origins of scaling in human language
+ |journal       = [[Proceedings of the National Academy of Sciences of the United States of America]]
+ |volume        = 100
+ |pages         = 788–791
+ |issue         = 3
+ |doi           = 10.1073/pnas.0335980100
+ |pmid          = 12540826
+ |pmc           = 298679
+ |bibcode = 2003PNAS..100..788C
+ }}&lt;/ref&gt;
+
+Similarly, [[preferential attachment]] (intuitively, &quot;the rich get richer&quot; or &quot;success breeds success&quot;) that results in the [[Yule–Simon distribution]] has been shown to fit word frequency versus rank in language&lt;ref&gt;{{cite arXiv |title=Scaling laws in human speech, decreasing emergence of new words and a generalized model |df= |eprint = 1412.4846|last1 = Lin|first1 = Ruokuang|last2 = Ma|first2 = Qianli D. Y.|last3 = Bian|first3 = Chunhua|class = cs.CL|year = 2014}}&lt;/ref&gt; and population versus city rank&lt;ref&gt;{{cite journal |title=Test of two hypotheses explaining the size of populations in a system of cities |journal = Journal of Applied Statistics|volume = 42|issue = 12|pages = 2686–2693|df= |arxiv = 1506.08535|doi = 10.1080/02664763.2015.1047744|year = 2015|last1 = Vitanov|first1 = Nikolay K.|last2 = Ausloos|first2 = Marcel|last3 = Bian|first3 = Chunhua|bibcode = 2015arXiv150608535V|s2cid = 10599428}}&lt;/ref&gt; better than Zipf's law. It was originally derived to explain population versus rank in species by Yule, and applied to cities by Simon.
+
+==Related laws==
+
+[[Image:Wikipedia-n-zipf.png|thumb|A plot of word frequency in Wikipedia (November 27, 2006). The plot is in [[log-log]] coordinates. ''x''&amp;nbsp; is rank of a word in the frequency table; ''y''&amp;nbsp; is the total number of the word's occurrences. Most popular words are &quot;the&quot;, &quot;of&quot; and &quot;and&quot;, as expected. Zipf's law corresponds to the middle linear portion of the curve, roughly following the green (1/''x'')&amp;nbsp; line, while the early part is closer to the magenta (1/''x''&lt;sup&gt;0.5&lt;/sup&gt;) line while the later part is closer to the cyan (1/(''k''&amp;nbsp;+&amp;nbsp;''x'')&lt;sup&gt;2.0&lt;/sup&gt;) line. These lines correspond to three distinct parameterizations of the Zipf–Mandelbrot distribution, overall a [[broken power law]] with three segments: a head, middle, and tail.]]
+
+''Zipf's law'' in fact refers more generally to frequency distributions of &quot;rank data&quot;, in which the relative frequency of the ''n''th-ranked item is given by the [[zeta distribution]], 1/(''n''&lt;sup&gt;''s''&lt;/sup&gt;''ζ''(''s'')), where the parameter ''s''&amp;nbsp;&gt;&amp;nbsp;1 indexes the members of this family of [[probability distribution]]s.  Indeed, ''Zipf's law'' is sometimes synonymous with &quot;zeta distribution&quot;, since probability distributions are sometimes called &quot;laws&quot;. This distribution is sometimes called the '''Zipfian''' distribution.
+
+A generalization of Zipf's law is the [[Zipf–Mandelbrot law]], proposed by [[Benoit Mandelbrot]], whose frequencies are:
+
+:&lt;math&gt;f(k;N,q,s)=\frac{[\text{constant}]}{(k+q)^s}.\,&lt;/math&gt;
+
+The &quot;constant&quot; is the reciprocal of the [[Hurwitz zeta function]] evaluated at ''s''. In practice, as easily observable in distribution plots for large corpora, the observed distribution can be modelled more accurately as a sum of separate distributions for different subsets or subtypes of words that follow different parameterizations of the Zipf–Mandelbrot distribution, in particular the closed class of functional words exhibit ''s'' lower than 1, while open-ended vocabulary growth with document size and corpus size require ''s'' greater than 1 for convergence of the [[harmonic series (mathematics)|Generalized Harmonic Series]].&lt;ref name=Powers1998/&gt;
+
+Zipfian distributions can be obtained from [[Pareto distribution]]s by an exchange of variables.&lt;ref name=&quot;Adamic2000&quot;/&gt;
+
+The Zipf distribution is sometimes called the '''discrete Pareto distribution'''&lt;ref&gt;{{cite book|title=Univariate Discrete Distributions|edition=second|year=1992|author1=N. L. Johnson |author2=S. Kotz |author3=A. W. Kemp  |name-list-style=amp |publisher=John Wiley &amp; Sons, Inc.|location=New York|isbn=978-0-471-54897-3|ref=harv}}, p. 466.&lt;/ref&gt; because it is analogous to the continuous [[Pareto distribution]] in the same way that the [[Uniform distribution (discrete)|discrete uniform distribution]] is analogous to the [[Uniform distribution (continuous)|continuous uniform distribution]].
+
+The tail frequencies of the [[Yule–Simon distribution]] are approximately
+
+:&lt;math&gt;f(k;\rho) \approx \frac{[\text{constant}]}{k^{\rho+1}}&lt;/math&gt;
+
+for any choice of ''ρ'' &gt; 0.
+
+In the [[parabolic fractal distribution]], the logarithm of the frequency is a quadratic polynomial of the logarithm of the rank. This can markedly improve the fit over a simple power-law relationship.&lt;ref name=&quot;Galien&quot;&gt;{{cite web |url=http://home.zonnet.nl/galien8/factor/factor.html |title=Factorial randomness: the Laws of Benford and Zipf with respect to the first digit distribution of the factor sequence from the natural numbers |author=Johan Gerard van der Galien |date=2003-11-08 |accessdate=8 July 2016 |archiveurl=https://web.archive.org/web/20070305150334/http://home.zonnet.nl/galien8/factor/factor.html |archivedate=2007-03-05}}&lt;/ref&gt; Like fractal dimension, it is possible to calculate Zipf dimension, which is a useful parameter in the analysis of texts.&lt;ref&gt;Ali Eftekhari (2006) Fractal geometry of texts. ''Journal of Quantitative Linguistic'' 13(2-3): 177–193.&lt;/ref&gt;
+
+It has been argued that [[Benford's law]] is a special bounded case of Zipf's law,&lt;ref name=&quot;Galien&quot;/&gt; with the connection between these two laws being explained by  their both originating from scale invariant functional relations from statistical physics and critical phenomena.&lt;ref&gt;L. Pietronero, E. Tosatti, V. Tosatti, A. Vespignani (2001) Explaining the uneven distribution of numbers in nature: The laws of Benford and Zipf. ''Physica A'' 293: 297–304.&lt;/ref&gt; The ratios of probabilities in Benford's law are not constant. The leading digits of data satisfying Zipf's law with s = 1 satisfy Benford's law.
+{| class=&quot;wikitable&quot; style=&quot;text-align: center;&quot;
+|-
+!&lt;math&gt;n&lt;/math&gt;
+!Benford's law: &lt;math&gt;P(n) = &lt;/math&gt;&lt;br/&gt;&lt;math&gt;\log_{10}(n+1)-\log_{10}(n)&lt;/math&gt;
+!&lt;math&gt;\frac{\log(P(n)/P(n-1))}{\log(n/(n-1))}&lt;/math&gt;
+|-
+| 1
+| 0.30103000
+|  
+|-
+| 2
+| 0.17609126
+| −0.7735840
+|-
+| 3
+| 0.12493874
+| −0.8463832
+|-
+| 4
+| 0.09691001
+| −0.8830605
+|-
+| 5
+| 0.07918125
+| −0.9054412
+|-
+| 6
+| 0.06694679
+| −0.9205788
+|-
+| 7
+| 0.05799195
+| −0.9315169
+|-
+| 8
+| 0.05115252
+| −0.9397966
+|-
+| 9
+| 0.04575749
+| −0.9462848
+|}
+
+== Applications ==
+In [[information theory]], a symbol (event, signal) of probability &lt;math&gt;p&lt;/math&gt; contains &lt;math&gt;-\log_2(1/p)&lt;/math&gt; [[bit]]s of information. Hence, Zipf's law for natural numbers: &lt;math&gt;\Pr(x) \approx 1/x&lt;/math&gt; is equivalent with number &lt;math&gt;x&lt;/math&gt; containing &lt;math&gt;\log_2(x)&lt;/math&gt; bits of information. To add information from a symbol of probability &lt;math&gt;p&lt;/math&gt; into information already stored in a natural number &lt;math&gt;x&lt;/math&gt;, we should go to &lt;math&gt;x'&lt;/math&gt; such that &lt;math&gt;\log_2(x') \approx \log_2(x) + \log_2(1/p)&lt;/math&gt;, or equivalently &lt;math&gt;x' \approx x/p&lt;/math&gt;. For instance, in standard binary system we would have &lt;math&gt;x' = 2x + s&lt;/math&gt;, what is optimal for &lt;math&gt;\Pr(s=0) = \Pr(s=1) = 1/2&lt;/math&gt; probability distribution. Using &lt;math&gt;x' \approx x/p&lt;/math&gt; rule for a general probability distribution is the base of [[Asymmetric Numeral Systems]] family of  [[entropy coding]] methods used in [[data compression]], which state distribution is also governed by Zipf's law.
+
+Zipf's law has been used for extraction of parallel fragments of texts out of comparable corpora.&lt;ref&gt;{{cite conference |url=https://comparable.limsi.fr/bucc2016/pdf/BUCC04.pdf |title=Parallel Document Identification using Zipf's Law |last1=Mohammadi |first1=Mehdi |date=2016 |book-title=Proceedings of the Ninth Workshop on Building and Using Comparable Corpora |pages=21–25 |location=Portorož, Slovenia |conference=LREC 2016 |url-status=live |archiveurl=https://web.archive.org/web/20180323154706/https://comparable.limsi.fr/bucc2016/pdf/BUCC04.pdf |archivedate=2018-03-23 }}&lt;/ref&gt; Zipf's law has also been used by [[Laurance Doyle]] and others at the [[SETI Institute]] as part of the [[search for extraterrestrial intelligence]].&lt;ref&gt;{{Cite journal|last=Doyle|first=Laurance R.|last2=Mao|first2=Tianhua|date=2016-11-18|title=Why Alien Language Would Stand Out Among All the Noise of the Universe|url=http://cosmos.nautil.us/feature/54/listening-for-extraterrestrial-blah-blah|journal=[[Nautilus Quarterly]]|language=en|volume=|pages=|via=}}&lt;/ref&gt;
+
+==See also==
+{{div col|colwidth=20em}}
+* [[1% rule (Internet culture)]]
+* [[Benford's law]]
+* [[Bradford's law]]
+* [[Brevity law]]
+* [[Demographic gravitation]]
+* [[Frequency list]]
+* [[Gibrat's law]]
+* [[Hapax legomenon]]
+* [[Heaps' law]]
+* [[King effect]]
+* [[Lorenz curve]]
+* [[Lotka's law]]
+* [[Menzerath's law]]
+* [[Pareto distribution]]
+* [[Pareto principle]], a.k.a. the &quot;80–20 rule&quot;
+* [[Price's law]]
+* [[Principle of least effort]]
+* [[Rank-size distribution]]
+* [[Stigler's law of eponymy]]
+{{Div col end}}
+
+==References==
+{{Reflist}}
+
+==Further reading==
+Primary:
+* [[George K. Zipf]] (1949) ''Human Behavior and the Principle of Least Effort''. Addison-Wesley. &quot;Online text [https://archive.org/details/in.ernet.dli.2015.90211]&quot; 
+* George K. Zipf (1935) ''The Psychobiology of Language''. Houghton-Mifflin.
+Secondary:
+* Alexander Gelbukh and Grigori Sidorov (2001) [http://www.gelbukh.com/CV/Publications/2001/CICLing-2001-Zipf.htm &quot;Zipf and Heaps Laws’ Coefficients Depend on Language&quot;]. Proc. [[CICLing]]-2001, ''Conference on Intelligent Text Processing and Computational Linguistics'', February 18–24, 2001, Mexico City. Lecture Notes in Computer Science N 2004, {{ISSN|0302-9743}}, {{isbn|3-540-41687-0}}, Springer-Verlag: 332–335.
+* Damián H. Zanette (2006) &quot;[http://xxx.arxiv.org/abs/cs.CL/0406015 Zipf's law and the creation of musical context],&quot; ''Musicae Scientiae 10'': 3–18.
+* Frans J. Van Droogenbroeck (2016), [https://www.academia.edu/24147736/ Handling the Zipf distribution in computerized authorship attribution]
+* Frans J. Van Droogenbroeck (2019), [https://www.academia.edu/40029629 An essential rephrasing of the Zipf-Mandelbrot law to solve authorship attribution applications by Gaussian statistics  ]
+* Kali R. (2003) &quot;The city as a giant component: a random graph approach to Zipf's law,&quot; ''Applied Economics Letters 10'': 717–720(4)
+*{{cite journal |last= Gabaix|first= Xavier|authorlink= Xavier Gabaix|date=August 1999|title= Zipf's Law for Cities: An Explanation |journal= Quarterly Journal of Economics|volume= 114|issue= 3|pages= 739–67|issn= 0033-5533|url= http://pages.stern.nyu.edu/~xgabaix/papers/zipf.pdf|doi= 10.1162/003355399556133|citeseerx= 10.1.1.180.4097}}
+* Axtell, Robert L; [http://www.sciencemag.org/content/293/5536/1818.short Zipf distribution of US firm sizes], Science, 293, 5536, 1818, 2001, American Association for the Advancement of Science
+* Ramu Chenna, Toby Gibson; [http://www.worldcomp-proceedings.com/proc/p2011/BIC4329.pdf Evaluation of the Suitability of a Zipfian Gap Model for Pairwise Sequence Alignment], International Conference on Bioinformatics Computational Biology: 2011.
+* Shyklo A. (2017); [https://ssrn.com/abstract=2918642 Simple Explanation of Zipf's Mystery via New Rank-Share Distribution, Derived from Combinatorics of the Ranking Process], Available at SSRN: https://ssrn.com/abstract=2918642.
+
+==External links==
+{{Library resources box}}
+{{commonscatinline}}
+*{{Cite news | last = Strogatz | first = Steven  | authorlink = Steven Strogatz | title = Guest Column: Math and the City  | date = 2009-05-29 | url = http://judson.blogs.nytimes.com/2009/05/19/math-and-the-city/ | accessdate = 2009-05-29 | work=The New York Times}}—An article on Zipf's law applied to city populations
+*[https://www.theatlantic.com/issues/2002/04/rauch.htm Seeing Around Corners (Artificial societies turn up Zipf's law)]
+*[https://web.archive.org/web/20021018011011/http://planetmath.org/encyclopedia/ZipfsLaw.html PlanetMath article on Zipf's law]
+*[http://www.hubbertpeak.com/laherrere/fractal.htm Distributions de type &quot;fractal parabolique&quot; dans la Nature (French, with English summary)]
+*[https://www.newscientist.com/article.ns?id=mg18524904.300 An analysis of income distribution]
+*[http://www.lexique.org/listes/liste_mots.txt Zipf List of French words]
+*[http://1.1o1.in/en/webtools/semantic-depth Zipf list for English, French, Spanish, Italian, Swedish, Icelandic, Latin, Portuguese and Finnish from Gutenberg Project and online calculator to rank words in texts]
+*[https://arxiv.org/abs/physics/9901035 Citations and the Zipf–Mandelbrot's law]
+*[http://www.geoffkirby.co.uk/ZIPFSLAW.pdf Zipf's Law examples and modelling (1985)]
+*[http://www.nature.com/nature/journal/v474/n7350/full/474164a.html Complex systems: Unzipping Zipf's law (2011)]
+*[http://terrytao.wordpress.com/2009/07/03/benfords-law-zipfs-law-and-the-pareto-distribution/ Benford’s law, Zipf’s law, and the Pareto distribution] by Terence Tao.
+*{{springer|title=Zipf law|id=p/z130110}}
+
+{{ProbDistributions|discrete-finite}}
+
+{{Authority control}}
+
+[[Category:Discrete distributions]]
+[[Category:Computational linguistics]]
+[[Category:Power laws]]
+[[Category:Statistical laws]]
+[[Category:Empirical laws]]
+[[Category:Tails of probability distributions]]
+[[Category:Quantitative linguistics]]
+[[Category:Bibliometrics]]
+[[Category:Corpus linguistics]]
+[[Category:1949 introductions]]</text>
+      <sha1>5mu7a3tcrlacgxoeqw83ealrfd5nfg7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Lophophorate</title>
+    <ns>0</ns>
+    <id>43219</id>
+    <redirect title="Lophophorata" />
+    <revision>
+      <id>862739425</id>
+      <parentid>15938625</parentid>
+      <timestamp>2018-10-06T10:44:48Z</timestamp>
+      <contributor>
+        <username>Lavateraguy</username>
+        <id>1095935</id>
+      </contributor>
+      <comment>redirect to clade rather than structure</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="26" xml:space="preserve">#REDIRECT [[Lophophorata]]</text>
+      <sha1>t9dpjw63gjtedwiygoxlqmv8wanlgq2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>E number</title>
+    <ns>0</ns>
+    <id>43221</id>
+    <revision>
+      <id>990720742</id>
+      <parentid>985670320</parentid>
+      <timestamp>2020-11-26T03:34:42Z</timestamp>
+      <contributor>
+        <username>Monkbot</username>
+        <id>20483999</id>
+      </contributor>
+      <minor />
+      <comment>[[User:Monkbot/task 18|Task 18 (cosmetic)]]: eval 13 templates: del empty params (8×); hyphenate params (21×);</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="66988" xml:space="preserve">{{about|the food additive codes|the constant|e (mathematical constant)|other uses}}
+{{Use dmy dates|date=July 2013}}
+[[File:Riboflavin solution.jpg|thumb|right|upright|A solution of E101 [[riboflavin]] (also known as vitamin B2)]]
+[[File:Monosodium glutamate crystals.jpg|thumb|right|Crystals of E621 [[monosodium glutamate]] (MSG), a flavour enhancer]]
+'''E numbers''' (&quot;E&quot; stands for &quot;Europe&quot;) are codes for substances used as [[food additive]]s for use within the [[European Union]] (EU)&lt;ref&gt;{{cite web|title=Food labels|url=https://www.nhs.uk/live-well/eat-well/how-to-read-food-labels/|work=Live Well|publisher=[[NHS Choices]]|access-date=26 December 2012|url-status=live|archive-url=https://web.archive.org/web/20190526190419/https://www.nhs.uk/live-well/eat-well/how-to-read-food-labels/|archive-date=26 May 2019}}&lt;/ref&gt;&lt;ref&gt;{{cite web|url=https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CONSLEG:1995L0002:20060815:EN:PDF|title=European Parliament and Council Directive No 95/2/EC{{!}}of 20 February 1995{{!}}on food additives other than colours and sweeteners|website=[[EUR-Lex]] {{!}} Access to European Union law|date=15 August 2006|format=PDF|language=en|url-status=live|archive-url=https://web.archive.org/web/20180802223609/https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CONSLEG:1995L0002:20060815:EN:PDF|archive-date=2 August 2018}}&lt;/ref&gt; and [[European Free Trade Association]] (EFTA).&lt;ref&gt;{{cite news|url=http://theconversation.com/explainer-what-are-e-numbers-and-should-you-avoid-them-in-your-diet-43908|title=Explainer: what are E numbers and should you avoid them in your diet?|magazine=The Conversation|author=Matthew Snelson|access-date=18 November 2017|url-status=live|archive-url=https://web.archive.org/web/20190426091006/https://theconversation.com/explainer-what-are-e-numbers-and-should-you-avoid-them-in-your-diet-43908|archive-date=26 April 2019}}&lt;/ref&gt; Commonly found on [[food label]]s, their safety assessment and approval are the responsibility of the [[European Food Safety Authority]] (EFSA).&lt;ref&gt;{{cite web|url=http://www.faia.org.uk/faq2_4.php|title=Frequently Asked Questions {{!}} Why Food Additives|website=Food Additives and Ingredients Association UK &amp; Ireland- Making life taste better|access-date=6 March 2010|url-status=live|archive-url=https://web.archive.org/web/20190601015633/https://www.faia.org.uk/faqs/|archive-date=1 June 2019}}&lt;/ref&gt;
+
+Having a single unified list for food additives was first agreed upon in 1962 with [[food colouring]]. In 1964, the directives for preservatives were added, in 1970 antioxidants were added, in 1974 emulsifiers, stabilisers, thickeners and gelling agents were added as well.&lt;ref&gt;{{cite web|url=http://www.foodlaw.rdg.ac.uk/additive.htm|title=Food Additives in the European Union|website=Foodlaw-Reading {{!}} The University of Reading, UK|author=Dr David Jukes|url-status=live|archive-url=https://web.archive.org/web/20190426091006/http://www.foodlaw.rdg.ac.uk/additive.htm|archive-date=26 April 2019}}&lt;/ref&gt;
+
+==Numbering schemes==
+The numbering scheme follows that of the [[International Numbering System for Food Additives|International Numbering System]] (INS) as determined by the ''[[Codex Alimentarius]]'' committee,&lt;ref name=ncsi&gt;{{cite web | last = [[Codex Alimentarius]] | title = Class Names and the International Numbering System for Food Additives (Ref: CAC/GL #36 publ. 1989, revised 2009, amended 2011)| url = http://www.codexalimentarius.net/download/standards/7/CXG_036e.pdf | access-date = 15 December 2011}}&lt;/ref&gt; though only a subset of the INS additives are approved for use in the European Union as food additives. Outside the European continent plus Russia, E numbers are also encountered on food labelling in other jurisdictions, including the [[Cooperation Council for the Arab States of the Gulf]], South Africa, Australia, New Zealand,&lt;ref&gt;[http://www.foodstandards.gov.au/_srcfiles/Additives%20alpha.pdf Food Standards Australia New Zealand] {{webarchive|url=https://web.archive.org/web/20110406040011/http://www.foodstandards.gov.au/_srcfiles/Additives%20alpha.pdf |date=6 April 2011 }}, website&lt;/ref&gt; Malaysia, Hong Kong,&lt;ref&gt;https://www.cfs.gov.hk/english/food_leg/food_leg_lgfa.html&lt;/ref&gt; [[India]] and [[Israel]]. They are increasingly, though still rarely, found on North American packaging,&lt;ref&gt;See also &quot;[https://www.fda.gov/Food/FoodIngredientsPackaging/FoodAdditives/default.htm Food Additives]&quot;, Food and Drug Administration website&lt;/ref&gt; especially on imported European food products.
+
+==Colloquial use==
+In some European countries, &quot;E number&quot; is sometimes used informally as a pejorative term for artificial food additives, and products may promote themselves as &quot;free of E numbers&quot;. This is incorrect, because many components of natural foods have assigned E numbers (and the number is a synonym for the chemical component), e.g. [[vitamin C]] ([[Ascorbic acid|E300]]) and [[lycopene]] ([[E160d]]), found in [[carrot]]s.
+
+==Classification by numeric range==
+{| class=&quot;wikitable&quot;
+|-
+! E number range
+! Subranges
+! Description
+|-
+!rowspan=&quot;7&quot;| 100–199 ([[#E100–E199 (colours)|full list]])&lt;br/&gt;[[Food coloring|Colours]]
+| style=&quot;text-align:center;&quot;| 100–109 || yellows
+|-
+| style=&quot;text-align:center;&quot;| 110–119 || oranges
+|-
+| style=&quot;text-align:center;&quot;| 120–129 || reds
+|-
+| style=&quot;text-align:center;&quot;| 130–139 || blues and violets
+|-
+| style=&quot;text-align:center;&quot;| 140–149 || greens
+|-
+| style=&quot;text-align:center;&quot;| 150–159 || browns and blacks
+|-
+| style=&quot;text-align:center;&quot;| 160–199 || gold and others
+|-
+!rowspan=&quot;9&quot;| 200–299 ([[#E200–E299 (preservatives)|full list]])&lt;br/&gt;[[Preservative]]s
+| style=&quot;text-align:center;&quot;| 200–209 || [[sorbate]]s
+|-
+| style=&quot;text-align:center;&quot;| 210–219 || [[benzoate]]s
+|-
+| style=&quot;text-align:center;&quot;| 220–229 || [[sulfite]]s
+|-
+| style=&quot;text-align:center;&quot;| 230–239 || [[phenol]]s and [[formate]]s (methanoates)
+|-
+| style=&quot;text-align:center;&quot;| 240–259 || [[nitrate]]s
+|-
+| style=&quot;text-align:center;&quot;| 260–269 || [[acetate]]s (ethanoates)
+|-
+| style=&quot;text-align:center;&quot;| 270–279 || [[lactic acid|lactate]]s
+|-
+| style=&quot;text-align:center;&quot;| 280–289 || [[propionate]]s (propanoates)
+|-
+| style=&quot;text-align:center;&quot;| 290–299 || others
+|-
+!rowspan=&quot;9&quot;| 300–399 ([[#E300–E399 (antioxidants, acidity regulators)|full list]])&lt;br/&gt;[[Antioxidant]]s and [[acidity regulator]]s
+| style=&quot;text-align:center;&quot;| 300–305 || ascorbates ([[vitamin C]])
+|-
+| style=&quot;text-align:center;&quot;| 306–309 || [[Tocopherol]] (vitamin E)
+|-
+| style=&quot;text-align:center;&quot;| 310–319 || [[gallic acid|gallate]]s and [[erythorbate]]s
+|-
+| style=&quot;text-align:center;&quot;| 320–329 || [[lactic acid|lactate]]s
+|-
+| style=&quot;text-align:center;&quot;| 330–339 || [[citrate]]s and [[tartrate]]s
+|-
+| style=&quot;text-align:center;&quot;| 340–349 || [[phosphate]]s
+|-
+| style=&quot;text-align:center;&quot;| 350–359 || [[malate]]s and [[adipate]]s
+|-
+| style=&quot;text-align:center;&quot;| 360–369 || [[succinate]]s and [[fumarate]]s
+|-
+| style=&quot;text-align:center;&quot;| 370–399 || others
+|-
+!rowspan=&quot;9&quot;| 400–499 ([[#E400–E499 (thickeners, stabilisers, emulsifiers)|full list]])&lt;br/&gt;[[Thickener]]s, [[Stabilizer (food)|stabiliser]]s and [[emulsifier]]s
+| style=&quot;text-align:center;&quot;| 400–409 || [[alginate]]s
+|-
+| style=&quot;text-align:center;&quot;| 410–419 || [[natural gum]]s
+|-
+| style=&quot;text-align:center;&quot;| 420–429 || other natural agents
+|-
+| style=&quot;text-align:center;&quot;| 430–439 || [[Polyethylene glycol|polyoxyethene]] compounds
+|-
+| style=&quot;text-align:center;&quot;| 440–449 || natural [[emulsifier]]s
+|-
+| style=&quot;text-align:center;&quot;| 450–459 || [[phosphate]]s
+|-
+| style=&quot;text-align:center;&quot;| 460–469 || [[cellulose]] compounds
+|-
+| style=&quot;text-align:center;&quot;| 470–489 || [[fatty acid]]s and compounds
+|-
+| style=&quot;text-align:center;&quot;| 490–499 || others
+|-
+!rowspan=&quot;7&quot;| 500–599 ([[#E500–E599 (acidity regulators, anti-caking agents)|full list]])&lt;br/&gt;[[pH]] [[acidity regulator|regulators]] and [[anti-caking agent]]s
+| style=&quot;text-align:center;&quot;| 500–509 || [[mineral acid]]s and bases
+|-
+| style=&quot;text-align:center;&quot;| 510–519 || [[chloride]]s and [[sulfate]]s
+|-
+| style=&quot;text-align:center;&quot;| 520–529 || [[sulfate]]s and [[hydroxide]]s
+|-
+| style=&quot;text-align:center;&quot;| 530–549 || [[alkali metal]] compounds
+|-
+| style=&quot;text-align:center;&quot;| 550–559 || [[silicate]]s
+|-
+| style=&quot;text-align:center;&quot;| 570–579 || [[stearic acid|stearates]] and [[gluconate]]s
+|-
+| style=&quot;text-align:center;&quot;| 580–599 || others
+|-
+!rowspan=&quot;3&quot;| 600–699 ([[#E600–E699 (flavour enhancer)|full list]])&lt;br/&gt;[[Flavour enhancer]]s
+| style=&quot;text-align:center;&quot;| 620–629 || [[glutamate]]s and guanylates
+|-
+| style=&quot;text-align:center;&quot;| 630–639 || [[inosinate]]s
+|-
+| style=&quot;text-align:center;&quot;| 640–649 || others
+|-
+!| 700–799 ([[#E700–E799 (antibiotics)|full list]])&lt;br /&gt;[[Antibiotics]]
+| style=&quot;text-align:center;&quot;| 700–713 ||
+|-
+!rowspan=&quot;6&quot;| 900–999 ([[#E900–E999 (glazing agents, gases and sweeteners)|full list]])&lt;br/&gt;[[Glazing agent]]s, gases and [[Sugar substitute|sweetener]]s
+| style=&quot;text-align:center;&quot;| 900–909 || [[wax]]es
+|-
+| style=&quot;text-align:center;&quot;| 910–919 || [[glazing agent|synthetic glazes]]
+|-
+| style=&quot;text-align:center;&quot;| 920–929 || [[improving agent]]s
+|-
+| style=&quot;text-align:center;&quot;| 930–949 || [[packaging gas]]es
+|-
+| style=&quot;text-align:center;&quot;| 950–969 || [[Sugar substitute|sweetener]]s
+|-
+| style=&quot;text-align:center;&quot;| 990–999 || [[foaming agent]]s
+|-
+! 1100–1599  ([[#E1000–E1599 (additional additives)|full list]])&lt;br/&gt;Additional additives
+| style=&quot;text-align:center;&quot;| 1100–1599||New chemicals that do not fall into standard classification schemes
+|}
+NB: Not all examples of a class fall into the given numeric range. Moreover, many chemicals, particularly in the E400–499 range, have a variety of purposes.
+
+==Full list==
+The list shows all components that have or had an E-number assigned, ''even those no longer allowed in the EU''. For an overview of currently allowed additives see [http://www.food.gov.uk/safereating/chemsafe/additivesbranch/enumberlist information provided by the Food Standards Agency of the UK].
+
+==={{anchor|E100–E199}} E100–E199 (colours)===
+{| class=&quot;wikitable sortable&quot; style=&quot;width:100%;&quot;
+|-
+|width=8%|'''Code'''
+|width=40%|'''Name(s)'''
+|width=20%|'''Colour'''
+|width=32%|'''Status'''
+|-
+|E100
+|[[Curcumin]] (from [[turmeric]])
+|Yellow-orange
+|Approved in the EU.&lt;ref name=FSAlist&gt;{{cite web |title=Current EU approved additives and their E Numbers |publisher=[[Food Standards Agency]] |location=United Kingdom |year=2010 |url=http://www.food.gov.uk/safereating/chemsafe/additivesbranch/enumberlist |access-date=26 November 2010}}&lt;/ref&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;&gt;{{cite web |title=Summary of Color Additives for Use in United States in Foods, Drugs, Cosmetics, and Medical Devices |publisher=[[United States Food and Drug Administration]] |url=https://www.fda.gov/ForIndustry/ColorAdditives/ColorAdditiveInventories/ucm115641.htm}}&lt;/ref&gt;
+|-
+|E101
+|[[Riboflavin]] (Vitamin B&lt;sub&gt;2&lt;/sub&gt;), formerly called lactoflavin
+|Yellow-orange
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E101a]]
+|[[Riboflavin-5'-Phosphate]]
+|Yellow-orange
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E102]]
+|[[Tartrazine]] (FD&amp;C Yellow 5)
+|Yellow
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E103]]
+|[[Alkannin]]&lt;ref&gt;[http://www.foodstandards.gov.au/_srcfiles/Additives%20alpha.pdf Additives] {{webarchive|url=https://web.archive.org/web/20110406040011/http://www.foodstandards.gov.au/_srcfiles/Additives%20alpha.pdf |date=6 April 2011 }}, [[Food Standards Australia New Zealand]]&lt;/ref&gt;
+|Red-brown
+|
+|-
+|[[E104]]
+|[[Quinoline Yellow WS]]
+|Dull or greenish yellow
+||Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Undergoing a voluntary phase-out in the UK.{{Citation needed|date=January 2011}}
+|-
+|[[Fast Yellow AB|E105]]
+|[[Fast Yellow AB]]
+|Yellow
+|
+|-
+|[[E106]]
+|[[Riboflavin-5-Sodium Phosphate]]
+|Yellow
+|
+|-
+|E107
+|[[Yellow 2G]]
+|Yellow
+|
+|-
+|E110
+|[[Sunset Yellow FCF]] (Orange Yellow S, FD&amp;C Yellow 6)
+|Yellow-orange
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Banned in [[Norway]].&lt;ref&gt;{{cite news |url=http://www.cbc.ca/news/background/foodsafety/additives.html |work=CBC News |title=Food additives |date=29 September 2008 |archive-url= https://web.archive.org/web/20130909224854/http://www.cbc.ca/news/background/foodsafety/additives.html |archive-date=2013-09-09}}&lt;/ref&gt; Products in the EU require warnings and its use is being phased out.{{Citation needed|date=March 2011}}  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|E111
+|[[Orange GGN]]
+|Orange
+|
+|-
+|E120
+|[[Cochineal]], [[Carminic acid]], [[Carmine]] (Natural Red 4)
+|Crimson
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|E121
+|[[Citrus Red 2]]
+|Dark red
+|Approved in the United States only for use in colouring the skin of oranges.&lt;ref&gt;{{CodeFedReg|21|74|302}}&lt;/ref&gt;
+|-
+|[[E122]]
+|[[Carmoisine]] (azorubine)
+|Red to maroon
+||Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Undergoing a voluntary phase-out in the UK. Currently banned in Canada, Japan, Norway, USA .{{Citation needed|date=October 2010}} EU currently evaluating health risks.{{Citation needed|date=February 2011}}
+|-
+|E123
+|[[Amaranth (dye)|Amaranth]] (FD&amp;C Red 2)
+|Red
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt; Banned in the United States.&lt;ref name=time&gt;{{cite news |title=Death of a Dye |url=http://content.time.com/time/magazine/article/0,9171,945520,00.html |work=[[Time magazine|TIME]] magazine |date=February 2, 1976 |access-date=2019-12-19 }}&lt;/ref&gt;
+|-
+|[[E124]]
+|[[Ponceau 4R]] (Cochineal Red A, Brilliant Scarlet 4R)
+|Red
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|E125
+|[[Ponceau SX]], [[Scarlet GN]]
+|Red
+|Only permitted for externally applied drugs and cosmetics in the US.&lt;ref&gt;{{CodeFedReg|21|81|10}}&lt;/ref&gt;&lt;ref&gt;{{CodeFedReg|21|81|30}}&lt;/ref&gt;&lt;ref&gt;{{CodeFedReg|21|82|304}}&lt;/ref&gt;
+|-
+|E126
+|[[Ponceau 6R]]
+|Red
+|
+|-
+|E127
+|[[Erythrosine]] (FD&amp;C Red 3)
+|Red
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US except for lake variant.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|E128
+|[[Red 2G]]
+|Red or pink
+|
+|-
+|E129
+|[[Allura Red AC]] (FD&amp;C Red 40)
+|Red
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Banned in [[Switzerland]].{{Citation needed|date=October 2010}} Undergoing a voluntary phase out in the UK. Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|E130
+|[[Indanthrene blue RS]]
+|Blue
+|
+|-
+|[[E131]]
+|[[Patent Blue V]]
+|Dark blue
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E132]]
+|[[Indigo carmine]] (indigotine, FD&amp;C Blue 2)
+|Indigo
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E133]]
+|[[Brilliant Blue FCF]] (FD&amp;C Blue 1)
+|Reddish blue
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|E140
+|[[Chlorophyll]]s and [[Chlorophyllin]]s: (i) Chlorophylls (ii) Chlorophyllins
+|Green
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|E141
+|Copper complexes of chlorophylls and chlorophyllins (i) Copper complexes of chlorophylls (ii) Copper complexes of chlorophyllins
+|Green
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E142]]
+|[[Green S]]
+|Green
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E143]]
+|[[Fast Green FCF]] (FD&amp;C Green 3)
+|Green
+|Approved in the US. Banned in the EU.
+|-
+|[[E150a]]
+|[[Caramel coloring|Plain caramel]]
+|Brown
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E150b]]
+|[[Caramel coloring|Caustic sulfite caramel]]
+|Brown
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E150c]]
+|[[Caramel coloring|Ammonia caramel]]
+|Brown
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E150d]]
+|[[Caramel coloring|Sulfite ammonia caramel]]
+|Brown
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E151]]
+|[[Black PN]], [[Brilliant Black BN]]
+|Black
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E152]]
+|[[Carbon black]] (hydrocarbon)
+|Black
+|
+|-
+|[[E153]]
+|[[Vegetable carbon]]
+|Black
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E154]]
+|[[Brown FK]] (kipper brown)
+|Brown
+|Approved in the EU for dyeing kippers only, however appears to no longer be used.&lt;ref&gt;[http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:295:0001:0177:EN:PDF]&lt;/ref&gt;
+|-
+|[[E155]]
+|[[Brown HT]] (chocolate brown HT)
+|Brown
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E160a]]
+|[[Alpha-carotene]], [[Beta-carotene]], [[Gamma-carotene]]
+|Yellow-orange to brown
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E160b]]
+|[[Annatto]], [[bixin]], [[norbixin]]
+|Orange
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E160c]]
+|[[Paprika oleoresin]]: (i) [[capsanthin]], (ii) [[capsorubin]]
+|Red
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E160d]]
+|[[Lycopene]]
+|Bright to deep red
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E160e]]
+|[[Beta-apo-8'-carotenal]] (C 30)
+|Orange-red to yellow
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E160f]]
+|[[Ethyl ester of beta-apo-8'-carotenic acid]] (C 30)
+|Orange-red to yellow
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E161a]]
+|[[Flavoxanthin]]
+|Golden-yellow and brownish
+|
+|-
+|[[E161b]]
+|[[Lutein]]
+|Orange-red to yellow
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E161c]]
+|[[Cryptoxanthin]]
+|Orange-red
+|
+|-
+|[[E161d]]
+|[[Rubixanthin]]
+|Orange-red
+|
+|-
+|[[E161e]]
+|[[Violaxanthin]]
+|Orange
+|
+|-
+|[[E161f]]
+|[[Rhodoxanthin]]
+|Purple
+|
+|-
+|[[E161g]]
+|[[Canthaxanthin]]
+|Violet
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E161h]]
+|[[Zeaxanthin]]
+|Orange-red
+|
+|-
+|[[E161i]]
+|[[Citranaxanthin]]
+|Deep violet
+|
+|-
+|[[E161j]]
+|[[Astaxanthin]]
+|Red
+|
+|-
+|[[E162]]
+|[[Beetroot Red]], [[Betanin]]
+|Red
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E163]]
+|[[Anthocyanins]]
+|[[pH indicator|pH dependent]](Red, green and purple ranges)
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+||[[E164 (E number)|E164]]
+|[[Saffron]]
+|Orange-red&lt;sup&gt;[colour?]&lt;/sup&gt;
+|  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|E170
+|[[Calcium carbonate]], [[Chalk]]
+|White
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E171]]
+|[[Titanium dioxide]]
+|White
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E172]]
+|[[Iron oxide]]s and [[iron hydroxide]]s
+|Brown
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;  Approved in the US for sausage casings.&lt;ref name=&quot;FDA colors&quot;/&gt;
+|-
+|[[E173]]
+|[[Aluminium]]
+|Silver to grey
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E174]]
+|[[Silver]]
+|Silver
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E175 (E number)|E175]]
+|[[Gold]]
+|Gold
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[E180]]
+|[[Pigment Rubine]], [[Lithol Rubine BK]]
+|Red
+|Approved in the EU.&lt;ref name=&quot;FSAlist&quot;/&gt;
+|-
+|[[Tannic acid|E181]]
+|[[Tannin]]
+|Brown
+|
+|-
+|[[E182]]
+|[[Orcein]], [[Orchil]]
+|Purple
+|
+|}
+
+=== {{anchor|E200–E299}} E200–E299 ([[preservative]]s)===
+{| class=&quot;wikitable sortable&quot; style=&quot;width:100%;&quot;
+|-
+|width=8%|'''Code'''
+|width=40%|'''Name(s)'''
+|width=20%|'''Purpose'''
+|width=32%|'''Status'''
+|-
+|E200
+|[[Sorbic acid]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|E201
+|[[Sodium sorbate]]
+|preservative
+|
+|-
+|[[E202]]
+|[[Potassium sorbate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E203]]
+|[[Calcium sorbate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E209]]
+|[[Heptyl p-hydroxybenzoate]]
+|preservative
+|
+|-
+|[[E210]]
+|[[Benzoic acid]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E211]]
+|[[Sodium benzoate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E212]]
+|[[Potassium benzoate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E213]]
+|[[Calcium benzoate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E214]]
+|[[Ethylparaben]] (ethyl para-hydroxybenzoate)
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E215]]
+|[[Sodium ethyl para-hydroxybenzoate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E216]]
+|[[Propylparaben]] (propyl para-hydroxybenzoate)
+|preservative
+|
+|-
+|[[Sodium propyl para-hydroxybenzoate|E217]]
+|[[Sodium propyl para-hydroxybenzoate]]
+|preservative
+|
+|-
+|[[E218]]
+|[[Methylparaben]] (methyl para-hydroxybenzoate)
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E219]]
+|[[Sodium methyl para-hydroxybenzoate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|E220
+|[[Sulfur dioxide]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E221]]
+|[[Sodium sulfite]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E222]]
+|[[Sodium bisulfite]] (sodium hydrogen sulfite)
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E223]]
+|[[Sodium metabisulfite]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E224]]
+|[[Potassium metabisulfite]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E225]]
+|[[Potassium sulfite]]
+|preservative
+|
+|-
+|[[E226]]
+|[[Calcium sulfite]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E227]]
+|[[Calcium hydrogen sulfite]] ([[preservative]])
+|[[firming agent]]
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E228]]
+|[[Potassium hydrogen sulfite]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E230]]
+|[[Biphenyl|Biphenyl, diphenyl]]
+|preservative
+|'''Not''' approved in the EU.
+|-
+|[[2-Phenylphenol|E231]]
+|[[Orthophenyl phenol]]
+|preservative
+|'''Not''' approved in the EU.
+|-
+|[[E232]]
+|[[Sodium orthophenyl phenol]]
+|preservative
+|'''Not''' approved in the EU.
+|-
+|[[Thiabendazole|E233]]
+|[[Thiabendazole]]
+|preservative
+|'''Not''' approved in the EU.
+|-
+|[[Nisin|E234]]
+|[[Nisin]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E235]]
+|[[Natamycin|Natamycin, Pimaracin]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E236]]
+|[[Formic acid]]
+|preservative
+|
+|-
+|[[E237]]
+|[[Sodium formate]]
+|preservative
+|
+|-
+|[[E238]]
+|[[Calcium formate]]
+|preservative
+|
+|-
+|[[E239]]
+|[[Hexamine]] (hexamethylene tetramine)
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E240]]
+|[[Formaldehyde]]
+|preservative
+|
+|-
+|[[E242]]
+|[[Dimethyl dicarbonate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E249]]
+|[[Potassium nitrite]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[Sodium nitrite|E250]]
+|[[Sodium nitrite]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E251]]
+|[[Sodium nitrate]] (Chile saltpetre)
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E252]]
+|[[Potassium nitrate]] (Saltpetre)
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|E260
+|[[Acetic acid]] ([[preservative]])
+|[[acidity regulator]]
+|Approved in the EU.&lt;ref name=FSA6&gt;[http://www.food.gov.uk/safereating/chemsafe/additivesbranch/enumberlist#h_7 Current EU approved additives and their E Numbers], [[Food Standards Agency]], 26 November 2010&lt;/ref&gt;
+|-
+|E261
+|[[Potassium acetate]] ([[preservative]])
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|E262
+|Sodium acetates (i) [[Sodium acetate]] (ii) [[Sodium diacetate]] (sodium hydrogen acetate)
+|preservative, acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Calcium acetate|E263]]
+|[[Calcium acetate]] ([[preservative]])
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Ammonium acetate|E264]]
+|[[Ammonium acetate]]
+|preservative
+|Approved in Australia and New Zealand&lt;ref&gt;Australia New Zealand Food Standards Code {{cite web |url=http://www.comlaw.gov.au/Details/F2011C00827 |title=Standard 1.2.4 - Labelling of ingredients |access-date=2011-10-27}}&lt;/ref&gt;
+|-
+|E265
+|[[Dehydroacetic acid]]
+|preservative
+|
+|-
+|[[E266]]
+|[[Sodium dehydroacetate]]
+|preservative
+|
+|-
+|[[E270]]
+|[[Lactic acid]] (preservative)
+|[[antioxidant]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E280]]
+|[[Propionic acid]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E281]]
+|[[Sodium propionate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E282]]
+|[[Calcium propionate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E283]]
+|[[Potassium propionate]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E284]]
+|[[Boric acid]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E285]]
+|[[Sodium tetraborate|Sodium tetraborate (borax)]]
+|preservative
+|Approved in the EU.&lt;ref name=FSAlist/&gt;
+|-
+|[[E290]]
+|[[Carbon dioxide]]
+|[[acidity regulator]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E296]]
+|[[Malic acid]] (acid)
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E297]]
+|[[Fumaric acid]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|}
+
+==={{anchor|E300–E399}} E300–E399 ([[antioxidant]]s, [[acidity regulator]]s)===
+{| class=&quot;wikitable sortable&quot; style=&quot;width:100%;&quot;
+|-
+|width=8%|'''Code'''
+|width=40%|'''Name(s)'''
+|width=20%|'''Purpose'''
+|width=32%|'''Status'''
+|-
+|[[Ascorbic acid|E300]]
+|[[Ascorbic acid]] ([[Vitamin C]])
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3&gt;[http://www.food.gov.uk/safereating/chemsafe/additivesbranch/enumberlist#h_4 Current EU approved additives and their E Numbers], [[Food Standards Agency]], 26 November 2010&lt;/ref&gt;
+|-
+|[[E301]]
+|[[Sodium ascorbate]]
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E302]]
+|[[Calcium ascorbate]]
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E303]]
+|[[Potassium ascorbate]]
+|antioxidant
+|
+|-
+|[[E304]]
+|[[Fatty acid]] [[ester]]s of [[ascorbic acid]] ([[Ascorbyl palmitate]])
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E305]]
+|[[Ascorbyl stearate]]
+|antioxidant
+|
+|-
+|[[E306]]
+|[[Tocopherol]]s (Vitamin E, natural)
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E307]]
+|[[Alpha-Tocopherol]] (synthetic)
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E308]]
+|[[Gamma-Tocopherol]] (synthetic)
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E309]]
+|[[Delta-Tocopherol]] (synthetic)
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[Propyl gallate|E310]]
+|[[Propyl gallate]]
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[Octyl gallate|E311]]
+|[[Octyl gallate]]
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[Dodecyl gallate|E312]]
+|[[Dodecyl gallate]]
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[Ethyl gallate|E313]]
+|[[Ethyl gallate]]
+|antioxidant
+|
+|-
+|[[Guaiacum|E314]]
+|[[Guaiac resin]]
+|antioxidant
+|
+|-
+|[[E315]]
+|[[Erythorbic acid]]
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E316]]
+|[[Sodium erythorbate]]
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E317]]
+|[[Erythorbin acid]]{{Citation needed|date=June 2018}}
+|antioxidant
+|
+|-
+|[[E318]]
+|[[Calcium erythorbate|Sodium erythorbin]]{{Citation needed|date=June 2018}}
+|antioxidant
+|
+|-
+|[[E319]]
+|[[tert-Butylhydroquinone]] (TBHQ)
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E320]]
+|[[Butylated hydroxyanisole]] (BHA)
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E321]]
+|[[Butylated hydroxytoluene]] (BHT)
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E322]]
+|[[Lecithin]]
+|[[emulsifier]]
+|Approved in the EU.&lt;ref name=FSA5&gt;[http://www.food.gov.uk/safereating/chemsafe/additivesbranch/enumberlist#h_6 Current EU approved additives and their E Numbers], [[Food Standards Agency]], 26 November 2010&lt;/ref&gt;
+|-
+|[[E323]]
+|[[Anoxomer]]
+|antioxidant
+|
+|-
+|[[E324]]
+|[[Ethoxyquin]]
+|antioxidant
+|
+|-
+|[[E325]]
+|[[Sodium lactate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E326]]
+|[[Potassium lactate]] ([[antioxidant]])
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E327]]
+|[[Calcium lactate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E328]]
+|[[Ammonium lactate]]
+|acidity regulator
+|
+|-
+|[[E329]]
+|[[Magnesium lactate]]
+|acidity regulator
+|
+|-
+|[[E330]]
+|[[Citric acid]]
+|[[Stabilizer (food)|acid]], [[acidity regulator]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Sodium citrate|E331]]
+|[[Sodium citrate]]s (i) [[Monosodium citrate]] (ii) [[Disodium citrate]] (iii) [[Trisodium citrate|Sodium citrate]] (trisodium citrate)
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E332]]
+|[[Potassium]] [[citrate]]s (i) [[Monopotassium citrate]] (ii) [[Potassium citrate]] (tripotassium citrate)
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E333]]
+|[[Calcium]] [[citrate]]s (i) [[Monocalcium citrate]] (ii) [[Dicalcium citrate]] (iii) [[Calcium citrate]] (tricalcium citrate)
+|acidity regulator, [[firming agent]], [[sequestrant]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E334]]
+|[[Tartaric acid]] (L(+)-)
+|([[Stabilizer (food)|acid]])
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E335]]
+|[[Sodium tartrate]]s (i) [[Monosodium tartrate]] (ii), [[Disodium tartrate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E336]]
+|[[Potassium]] [[tartrate]]s (i) [[Monopotassium tartrate]] (cream of tartar) (ii) [[Dipotassium tartrate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E337]]
+|[[Sodium potassium tartrate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E338]]
+|[[Phosphoric acid]]
+|[[Stabilizer (food)|acid]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E339]]
+|[[Sodium phosphate]]s (i) [[Monosodium phosphate]] (ii) [[Disodium phosphate]] (iii) [[Trisodium phosphate]]
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E340]]
+|[[Potassium]] [[phosphate]]s (i) [[Monopotassium phosphate]] (ii) [[Dipotassium phosphate]] (iii) [[Tripotassium phosphate]]
+|antioxidant
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E341]]
+|[[Calcium phosphate]]s (i) [[Monocalcium phosphate]] (ii) [[Dicalcium phosphate]] (iii) [[Tricalcium phosphate]]
+|[[anti-caking agent]], [[firming agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E342]]
+|[[Ammonium phosphate]]s: (i) [[monoammonium phosphate]] (ii) [[diammonium phosphate]]
+|
+|
+|-
+|[[E343]]
+|[[Magnesium phosphate]]s (i) [[monomagnesium phosphate]] (ii) [[Dimagnesium phosphate]]
+|[[anti-caking agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt; This additive is under discussion and may be included in a future amendment to the Directive on miscellaneous additives.
+|-
+|[[E344]]
+|[[Lecithin citrate]]
+|acidity regulator
+|
+|-
+|[[E345]]
+|[[Magnesium citrate]]
+|acidity regulator
+|
+|-
+|[[E349]]
+|[[Ammonium malate]]
+|acidity regulator
+|
+|-
+|[[E350 (food additive)|E350]]
+|[[Sodium]] [[malate]]s (i) [[Sodium malate]] (ii) [[Sodium hydrogen malate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E351]]
+|[[Potassium malate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E352]]
+|[[Calcium]] [[malate]]s (i) [[Calcium malate]] (ii) [[Calcium hydrogen malate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[metatartaric acid|E353]]
+|[[Metatartaric acid]]
+|[[emulsifier]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E354]]
+|[[Calcium tartrate]]
+|[[emulsifier]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Adipic acid|E355]]
+|[[Adipic acid]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E356]]
+|[[Sodium adipate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E357]]
+|[[Potassium adipate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E359]]
+|[[Ammonium adipate]]
+|acidity regulator
+|
+|-
+|[[E363]]
+|[[Succinic acid]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Monosodium fumarate|E365]]
+|[[Monosodium fumarate]]
+|acidity regulator
+|
+|-
+|[[E366]]
+|[[Potassium fumarate]]
+|acidity regulator
+|
+|-
+|[[E367]]
+|[[Calcium fumarate]]
+|acidity regulator
+|
+|-
+|[[E368]]
+|[[Ammonium fumarate]]
+|acidity regulator
+|
+|-
+|[[1,4-Heptonolactone|E370]]
+|[[1,4-Heptonolactone]]
+|acidity regulator
+|
+|-
+|[[Niacin|E375]]
+|[[Niacin]]
+|acidity regulator
+|
+|-
+|[[Triammonium citrate|E380]]
+|[[Triammonium citrate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E381]]
+|[[Ammonium ferric citrate]]
+|acidity regulator
+|
+|-
+|[[E383]]
+|[[Calcium glycerylphosphate]]
+|acidity regulator
+|
+|-
+|E384
+|[[Isopropyl citrate]]
+|acidity regulator
+|
+|-
+|[[E385]]
+|[[Calcium disodium ethylene diamine tetraacetate]], (Calcium disodium EDTA)
+|[[sequestrant]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E386]]
+|[[Disodium ethylene diamine tetraacetate]] (Disodium EDTA)
+|[[sequestrant]]
+|
+|-
+|[[E387]]
+|[[Oxystearin]]
+|[[Stabiliser (food)|stabiliser]]
+|
+|-
+|[[E388]]
+|[[Thiodipropionic acid]]
+|
+|
+|-
+|[[E389]]
+|[[Dilauryl thiodipropionate]]
+|
+|
+|-
+|[[E390]]
+|[[Distearyl thiodipropionate]]
+|
+|
+|-
+|[[E391]]
+|[[Phytic acid]]
+|
+|
+|-
+|[[E392]]
+|Extracts of [[rosemary]]
+|
+|Approved in 2010&lt;ref name=FSA2010&gt;[http://www.food.gov.uk/news/newsarchive/2010/nov/additives New additives approved for use], [[Food Standards Agency]], Friday 26 November 2010&lt;/ref&gt;
+|-
+|[[E399]]
+|[[Calcium lactobionate]]
+|
+|
+|}
+
+==={{anchor|E400–E499}} E400–E499 ([[Thickening agent|thickeners]], stabilisers, [[emulsifier]]s)===
+{| class=&quot;wikitable sortable&quot; style=&quot;width:100%;&quot;
+|-
+|width=8%|'''Code'''
+|width=40%|'''Name(s)'''
+|width=20%|'''Purpose'''
+|width=32%|'''Status'''
+|-
+|[[Alginic acid|E400]]
+|[[Alginic acid]] (thickener) (stabiliser) ([[gelling agent]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E401]]
+|[[Sodium alginate]] (thickener) (stabiliser) ([[gelling agent]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E402]]
+|[[Potassium alginate]] (thickener) (stabiliser) ([[gelling agent]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E403]]
+|[[Ammonium alginate]] (thickener) (stabiliser)
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E404]]
+|[[Calcium alginate]] (thickener) (stabiliser) ([[gelling agent]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E405]]
+|[[Propane-1,2-diol alginate]] ([[Propylene glycol alginate]]) (thickener) (stabiliser)
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E406]]
+|[[Agar]] (thickener) ([[gelling agent]])
+|stabiliser
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E407]]
+|[[Carrageenan]] (thickener) (stabiliser) ([[gelling agent]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E407a]]
+|[[Carrageenan|Processed eucheuma seaweed]] (thickener) (stabiliser) ([[gelling agent]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E408]]
+|[[Bakers yeast glycan]]
+|
+|
+|-
+|[[E409]]
+|[[Arabinogalactan]]
+|
+|
+|-
+|[[Locust bean gum|E410]]
+|[[Locust bean gum]] (Carob gum) (thickener) (stabiliser) ([[gelling agent]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[Oat gum|E411]]
+|[[Oat gum]] (thickener)
+|stabiliser
+|
+|-
+|[[Guar gum|E412]]
+|[[Guar gum]] (thickener)
+|stabiliser
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E413]]
+|[[Tragacanth]] (thickener) (stabiliser)
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E414]]
+|[[Acacia gum]] ([[gum arabic]]) (thickener) (stabiliser)
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E415]]
+|[[Xanthan gum]] (thickener)
+|stabiliser
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E416]]
+|[[Karaya gum]] (thickener) (stabiliser)
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E417]]
+|[[Tara gum]] (thickener)
+|stabiliser
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E418]]
+|[[Gellan gum]] (thickener) (stabiliser)
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E419]]
+|[[Gum ghatti]] (thickener) (stabiliser)
+|emulsifier
+|
+|-
+|[[E420]]
+|[[Sorbitol]] (i) Sorbitol (ii) Sorbitol syrup (emulsifier) ([[Sugar substitute|sweetener]])
+|[[humectant]]
+|Approved in the EU.&lt;ref name=FSA4&gt;[http://www.food.gov.uk/safereating/chemsafe/additivesbranch/enumberlist#h_5 Current EU approved additives and their E Numbers], [[Food Standards Agency]], 26 November 2010&lt;/ref&gt;
+|-
+|[[E421]]
+|[[Mannitol]] ([[anti-caking agent]])
+|[[Sugar substitute|sweetener]]
+|Approved in the EU.&lt;ref name=FSA4/&gt;
+|-
+|[[E422]]
+|[[Glycerol]] (emulsifier)
+|[[Sugar substitute|sweetener]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E424]]
+|[[Curdlan]]
+|gelling agent
+|
+|-
+|[[E425]]
+|[[Konjac]] (i) [[Konjac gum]] (ii) [[Konjac glucomannane]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;  May not be used in confectionery owing to choking risk.{{Citation needed|date=January 2011}}
+|-
+|[[E426]]
+|[[Soybean hemicellulose]]
+|
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E427]]
+|[[Cassia gum]]
+|
+|Approved in 2010&lt;ref name=FSA2010/&gt;
+|-
+|[[E429]]
+|[[Peptone]]s
+|
+|
+|-
+|[[Polyoxyethene (8) stearate|E430]]
+|[[Polyoxyethene (8) stearate]] (emulsifier)
+|stabiliser
+|
+|-
+|[[E431]]
+|[[Polyoxyethene (40) stearate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E432]]
+|[[Polyoxyethene (20) sorbitan monolaurate]] ([[polysorbate 20]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E433]]
+|[[Polyoxyethene (20) sorbitan monooleate]] ([[polysorbate 80]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E434]]
+|[[Polyoxyethene (20) sorbitan monopalmitate]] ([[polysorbate 40]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E435]]
+|[[Polyoxyethene (20) sorbitan monostearate]] ([[polysorbate 60]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E436]]
+|[[Polyoxyethene (20) sorbitan tristearate]] ([[polysorbate 65]])
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E440]]
+|[[Pectin]]s (i) pectin (ii) amidated pectin
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E441]]
+|[[Gelatine]] (emulsifier)
+|[[gelling agent]]
+|
+|-
+|[[E442]]
+|[[Ammonium phosphatides]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E443]]
+|[[Brominated vegetable oil]]
+|emulsifier
+|
+|-
+|[[Sucrose acetate isobutyrate|E444]]
+|[[Sucrose acetate isobutyrate]]
+|emulsifier
+|
+|-
+|[[E445]]
+|[[Glycerol esters of wood rosins]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E446]]
+|[[Succistearin]]
+|
+|
+|-
+|[[E450 (food additive)|E450]]
+|[[Diphosphate]]s (i) [[Disodium diphosphate]] (ii) [[Trisodium diphosphate]] (iii) [[Tetrasodium diphosphate]] (iv) [[Dipotassium diphosphate]] (v) [[Tetrapotassium diphosphate]] (vi) [[Dicalcium diphosphate]] (vii) [[Calcium dihydrogen diphosphate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E451]]
+|[[Triphosphate]]s (i) [[Sodium triphosphate]] (pentasodium triphosphate) (ii) [[Pentapotassium triphosphate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E452]]
+|[[Polyphosphate]]s (i) [[Sodium polyphosphate]]s (ii) [[Potassium polyphosphate]]s (iii) [[Sodium calcium polyphosphate]] (iv) [[Calcium polyphosphate]]s (v) [[Ammonium polyphosphate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E459]]
+|[[Beta-cyclodextrin]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E460]]
+|[[Cellulose]] (i) [[Microcrystalline cellulose]] (ii) [[Powdered cellulose]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E461]]
+|[[Methyl cellulose]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E462]]
+|[[Ethyl cellulose]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E463]]
+|[[Hydroxypropyl cellulose]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[Hypromellose|E464]]
+|[[Hypromellose]] (hydroxypropyl methylcellulose)
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E465]]
+|[[Ethyl methyl cellulose]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E466]]
+|[[Carboxymethyl cellulose]], [[Sodium carboxymethyl cellulose]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E467]]
+|[[Ethyl hydroxyethyl cellulose]]
+|
+|
+|-
+|[[E468]]
+|[[Croscarmellose sodium|Crosslinked sodium carboxymethyl cellulose]] (Croscarmellose)
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;  This additive is under discussion and may be included in a future amendment to the Directive on miscellaneous additives
+|-
+|[[E469]]
+|Enzymically [[hydrolysed]] [[carboxymethylcellulose]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E470a]]
+|Sodium, potassium and calcium salts of fatty acids (emulsifier)
+|[[anti-caking agent]]
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E470b]]
+|Magnesium salts of fatty acids (emulsifier)
+|[[anti-caking agent]]
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E471]]
+|[[Mono- and diglycerides of fatty acids]] (glyceryl monostearate, glyceryl distearate)
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E472a]]
+|Acetic acid esters of mono- and diglycerides of fatty acids
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E472b]]
+|Lactic acid esters of mono- and diglycerides of fatty acids
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E472c]]
+|Citric acid esters of mono- and diglycerides of fatty acids
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E472d]]
+|Tartaric acid esters of mono- and diglycerides of fatty acids
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E472e]]
+|[[DATEM|Mono- and diacetyl tartaric acid esters of mono- and diglycerides of fatty acids]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E472f]]
+|Mixed acetic and tartaric acid esters of mono- and diglycerides of fatty acids
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E472g]]
+|[[Succinylated monoglycerides]]
+|emulsifier
+|
+|-
+|[[E473]]
+|Sucrose esters of fatty acids
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[Sucroglyceride|E474]]
+|[[Sucroglyceride]]s
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E475]]
+|Polyglycerol esters of fatty acids
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E476]]
+|[[Polyglycerol polyricinoleate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E477]]
+|Propane-1,2-diol esters of fatty acids, propylene glycol esters of fatty acids
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E478]]
+|Lactylated fatty acid esters of glycerol and propane-1
+|emulsifier
+|
+|-
+|[[E479b]]
+|Thermally oxidized soya bean oil interacted with mono- and diglycerides of fatty acids
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E480]]
+|[[Dioctyl sodium sulfosuccinate]]
+|emulsifier
+|
+|-
+|[[E481]]
+|[[Sodium stearoyl-2-lactylate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E482]]
+|[[Calcium stearoyl-2-lactylate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E483]]
+|[[Stearyl tartrate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E484]]
+|[[Stearyl citrate]]
+|emulsifier
+|
+|-
+|[[E485]]
+|[[Sodium stearoyl fumarate]]
+|emulsifier
+|
+|-
+|[[E486]]
+|[[Calcium stearoyl fumarate]]
+|emulsifier
+|
+|-
+|[[E487]]
+|[[Sodium laurylsulfate]]
+|emulsifier
+|
+|-
+|[[E488]]
+|Ethoxylated Mono- and Di-Glycerides
+|emulsifier
+|
+|-
+|[[E489]]
+|Methyl glucoside-coconut oil ester
+|emulsifier
+|
+|-
+|[[E490]]
+|[[Propane-1,2-diol]]
+|
+|
+|-
+|[[E491]]
+|[[Sorbitan monostearate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E492]]
+|[[Sorbitan tristearate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E493]]
+|[[Sorbitan monolaurate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E494]]
+|[[Sorbitan monooleate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E495]]
+|[[Sorbitan monopalmitate]]
+|emulsifier
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|-
+|[[E496]]
+|[[Sorbitan trioleate]]
+|emulsifier
+|
+|-
+|[[E497]]
+|Polyoxypropylene-polyoxyethylene polymers
+|
+|
+|-
+|[[E498]]
+|Partial polyglycerol esters of polycondensed fatty acids of castor oil
+|
+|
+|-
+|[[E499]]
+|Stigmasterol-rich plant sterols
+|
+|Approved in the EU.&lt;ref name=FSA5/&gt;
+|}
+
+==={{anchor|E500–E599}} E500–E599 ([[acidity regulator]]s, [[anti-caking agent]]s)===
+{| class=&quot;wikitable sortable&quot; style=&quot;width:100%;&quot;
+|-
+|width=8%|'''Code'''
+|width=40%|'''Name(s)'''
+|width=20%|'''Purpose'''
+|width=32%|'''Status'''
+|-
+|E500
+|[[Sodium]] [[carbonate]]s: (i) [[Sodium carbonate]] (ii) [[Sodium bicarbonate]] (Sodium hydrogen carbonate) (iii) [[Sodium sesquicarbonate]] ([[acidity regulator]])
+|[[raising agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|E501
+|[[Potassium]] [[carbonate]]s: (i) [[Potassium carbonate]] (ii) [[Potassium bicarbonate]] (Potassium hydrogen carbonate)
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E503]]
+|[[Ammonium]] [[carbonate]]s: (i) [[Ammonium carbonate]] (ii) [[Ammonium bicarbonate]] (Ammonium hydrogen carbonate)
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E504]]
+|[[Magnesium]] [[carbonate]]s: (i) [[Magnesium carbonate]] (ii) [[Magnesium bicarbonate]] Magnesium hydrogen carbonate
+|acidity regulator, [[anti-caking agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E505]]
+|[[Ferrous carbonate]]
+|acidity regulator
+|
+|-
+|[[E507]]
+|[[Hydrochloric acid]]
+|[[acid]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E508]]
+|[[Potassium chloride]] ([[gelling agent]])
+|[[seasoning]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E509]]
+|[[Calcium chloride]] ([[sequestrant]])
+|[[firming agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Ammonium chloride|E510]]
+|[[Ammonium chloride]], ammonia solution ([[acidity regulator]])
+|[[improving agent]]
+|
+|-
+|[[E511]]
+|[[Magnesium chloride]]
+|[[firming agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E512]]
+|[[Tin(II) chloride|Stannous chloride]]
+|[[antioxidant]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E513]]
+|[[Sulfuric acid]]
+|[[acid]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E514]]
+|[[Sodium]] [[sulfates]] (i) [[Sodium sulfate]] (ii) [[sodium bisulfate]]
+|[[acid]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E515]]
+|[[Potassium]] [[sulfates]] (i) [[potassium sulfate]] (ii) [[potassium bisulfate]]
+|
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E516]]
+|[[Calcium sulfate]]
+|
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E517]]
+|[[Ammonium sulfate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E518]]
+|[[Magnesium sulfate]] (Epsom salts), ([[acidity regulator]])
+|[[firming agent]]
+|
+|-
+|[[E519]]
+|[[Copper(II) sulfate]]
+|[[preservative]]
+|
+|-
+|[[E520]]
+|[[Aluminium sulfate]]
+|[[firming agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E521]]
+|[[Aluminium sodium sulfate]]
+|[[firming agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E522]]
+|[[Aluminium potassium sulfate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E523]]
+|[[Aluminium ammonium sulfate]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E524]]
+|[[Sodium hydroxide]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E525]]
+|[[Potassium hydroxide]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E526]]
+|[[Calcium hydroxide]] ([[acidity regulator]])
+|[[firming agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E527]]
+|[[Ammonium hydroxide]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E528]]
+|[[Magnesium hydroxide]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E529]]
+|[[Calcium oxide]] ([[acidity regulator]])
+|[[improving agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E530]]
+|[[Magnesium oxide]] ([[acidity regulator]])
+|anti-caking agent
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E535]]
+|[[Sodium ferrocyanide]] ([[acidity regulator]])
+|anti-caking agent
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E536]]
+|[[Potassium ferrocyanide]]
+|anti-caking agent
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E537]]
+|[[Ferrous hexacyanomanganate]]
+|anti-caking agent
+|
+|-
+|[[E538]]
+|[[Calcium ferrocyanide]]
+|anti-caking agent
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E539]]
+|[[Sodium thiosulfate]]
+|[[antioxidant]]
+|
+|-
+|[[E540]]
+|[[Dicalcium diphosphate]]{{cn|date=December 2018}} &lt;!-- dicalcium diphosphate is already listed as  E450(vi) --&gt; ([[acidity regulator]])
+|[[emulsifier]]
+|
+|-
+|[[E541]]
+|[[Sodium aluminium phosphate]] (i) Acidic (ii) Basic
+|[[emulsifier]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E542]]
+|[[Bone phosphate]] (Essentiale Calcium Phosphate, Tribasic)
+|anti-caking agent
+|
+|-
+|[[E543]]
+|[[Calcium sodium polyphosphate]]
+|[[emulsifier]]
+|
+|-
+|[[E544]]
+|[[Calcium polyphosphate]]
+|[[emulsifier]]
+|
+|-
+|[[E545]]
+|[[Ammonium polyphosphate]]
+|[[emulsifier]]
+|
+|-
+|[[E550]]
+|[[Sodium]] [[Silicates]] (i) [[Sodium silicate]] (ii) [[Sodium metasilicate]]
+|anti-caking agent
+|
+|-
+|[[E551]]
+|[[Silicon dioxide]] (Silica)
+|anti-caking agent
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E552]]
+|[[Calcium silicate]]
+|anti-caking agent
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E553a]]
+|(i) [[Magnesium silicate]] (ii) [[Magnesium trisilicate]]
+|anti-caking agent
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E553b]]
+|[[Talc]]
+|anti-caking agent
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E554]]
+|[[Sodium aluminosilicate]] (sodium aluminium silicate)
+|anti-caking agent
+|removed from list as per Commission Regulation (EU) No 380/2012 of 3 May 2012 
+|-
+|[[E555]]
+|[[Potassium aluminium silicate]]
+|anti-caking agent
+|removed from list as per Commission Regulation (EU) No 380/2012 of 3 May 2012 
+|-
+|[[E556]]
+|[[Calcium aluminosilicate]] (calcium aluminium silicate)
+|anti-caking agent
+| removed from list as per Commission Regulation (EU) No 380/2012 of 3 May 2012 
+|-
+|[[E557]]
+|[[Hemimorphite|Zinc silicate]]
+|anti-caking agent
+| removed from list as per Commission Regulation (EU) No 380/2012 of 3 May 2012 
+|-
+|[[E558]]
+|[[Bentonite]]
+|anti-caking agent
+| removed from list as per Commission Regulation (EU) No 380/2012 of 3 May 2012 
+|-
+|[[E559]]
+|[[Aluminium silicate]] (Kaolin)
+|anti-caking agent
+|removed from list as per Commission Regulation (EU) No 380/2012 of 3 May 2012
+|-
+|[[E560]]
+|[[Potassium silicate]]
+|anti-caking agent
+|
+|-
+|[[E561]]
+|[[Vermiculite]]
+|
+|
+|-
+|[[Sepiolite|E562]]
+|[[Sepiolite]]
+|
+|
+|-
+|[[E563]]
+|[[Sepiolitic clay]]
+|
+|
+|-
+|[[E565]]
+|[[Lignosulfonate]]s
+|
+|
+|-
+|[[E566]]
+|[[Natrolite-phonolite]]
+|
+|
+|-
+|[[E570]]
+|[[Fatty acids]]
+|anti-caking agent
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Magnesium stearate|E572]]
+|[[Magnesium stearate]], [[calcium stearate]] ([[emulsifier]])
+|anti-caking agent
+|
+|-
+|[[E574]]
+|[[Gluconic acid]]
+|acidity regulator
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E575]]
+|[[Glucono delta-lactone]] ([[acidity regulator]])
+|[[sequestrant]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Gluconic acid|E576]]
+|[[Sodium gluconate]]
+|[[sequestrant]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E577]]
+|[[Potassium gluconate]]
+|[[sequestrant]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E578]]
+|[[Calcium gluconate]]
+|[[firming agent]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E579]]
+|[[Ferrous gluconate]]
+|[[Food coloring|food colouring]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E580]]
+|[[Magnesium gluconate]]
+|
+|
+|-
+|[[E585]]
+|[[Ferrous lactate]]
+|[[Food coloring|food colouring]]
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E586]]
+|[[4-Hexylresorcinol]]
+|[[antioxidant]]
+|Approved in the EU.&lt;ref name=FSA3/&gt;
+|-
+|[[E598]]
+|Synthetic [[calcium aluminates]]
+|
+|
+|-
+|[[E599]]
+|[[Perlite]]
+|
+|
+|}
+
+==={{anchor|E600–E699}} E600–E699 ([[flavour enhancer]])===
+{| class=&quot;wikitable sortable&quot; style=&quot;width:100%;&quot;
+|-
+|width=8%|'''Code'''
+|width=40%|'''Name(s)'''
+|width=20%|'''Purpose'''
+|width=32%|'''Status'''
+|-
+|[[E620]]
+|[[Glutamic acid]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E621]]
+|[[Monosodium glutamate]] (MSG)
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E622]]
+|[[Monopotassium glutamate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E623]]
+|[[Calcium diglutamate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E624]]
+|[[Monoammonium glutamate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E625]]
+|[[Magnesium diglutamate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E626]]
+|[[Guanylic acid]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E627]]
+|[[Disodium guanylate]], sodium guanylate
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E628]]
+|[[Dipotassium guanylate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E629]]
+|[[Calcium guanylate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E630]]
+|[[Inosinic acid]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E631]]
+|[[Disodium inosinate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Dipotassium inosinate|E632]]
+|[[Dipotassium inosinate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Calcium inosinate|E633]]
+|[[Calcium inosinate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E634]]
+|[[Calcium 5'-ribonucleotide]]s
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E635]]
+|[[Disodium 5'-ribonucleotide]]s
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[Maltol|E636]]
+|[[Maltol]]
+|flavour enhancer
+|-
+|[[Ethyl maltol|E637]]
+|[[Ethyl maltol]]
+|flavour enhancer
+|-
+|[[E640]]
+|[[Glycine]] and its sodium salt
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|-
+|[[E650]]
+|[[Zinc acetate]]
+|flavour enhancer
+|Approved in the EU.&lt;ref name=FSA6/&gt;
+|}

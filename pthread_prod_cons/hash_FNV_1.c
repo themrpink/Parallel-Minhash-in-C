@@ -258,10 +258,10 @@ void *get_signatures(void *args){
         tot_shingles = minHash_args.numb_shingles;
         hashed_shingles = (long long unsigned *)malloc(tot_shingles*sizeof(long long unsigned));
 
-     //   #pragma omp parallel private(hash) num_threads(2) 
-      //  {
+        #pragma omp parallel private(hash) num_threads(2) 
+        {
         long long unsigned hash_temp=0;
-       // #pragma omp for reduction(min:minhash) schedule(auto)
+        #pragma omp for reduction(min:minhash) schedule(auto)
             for(int j=0; j < tot_shingles; j++){
                 //lancia la prima funzione di hash su ogni shingle
                 hash_FNV_1a(shingles[j], &hash);
@@ -271,9 +271,9 @@ void *get_signatures(void *args){
                     minhash = hash;
             }
             *signatures=minhash;
-        //    #pragma  omp barrier
+            #pragma  omp barrier
             //applica la funzione di hash con PRIMES_SIZE valori diversi su tutte gli hashed_shingles, e ricava i minhash
-        //    #pragma omp for private(hash_temp) reduction(min:minhash) schedule(auto) 
+            #pragma omp for private(hash_temp) reduction(min:minhash) schedule(auto) 
             for(int i=0; i<PRIMES_SIZE; i++){
                 minhash = MAX_LONG_LONG_U;
                 for(int j=0; j<tot_shingles; j++){
@@ -284,7 +284,7 @@ void *get_signatures(void *args){
                 }
                 *(signatures+i+1)=minhash;
             }
-      //  }
+        }
             
         minHash_args.minhashDocumenti[0] = signatures;
         exectimes(getElapsedTime(&begin, &end), GET_SIGNATURES, SET_TIME);

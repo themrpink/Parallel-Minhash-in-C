@@ -20,11 +20,8 @@
 #define NUMB_THREADS 2
 
 static int totNumbOfFiles = 0;
-
+/*
 void *list_dir(void * args) {
-
-    struct timespec begin, end; 
-    clock_gettime(CLOCK_REALTIME, &begin);
 
     args_list_dir* args_list = (args_list_dir*) args;
     Prod_Cons_Data *files_struct = (Prod_Cons_Data *)args_list->files_struct;
@@ -66,11 +63,9 @@ void *list_dir(void * args) {
             exit(EXITSYSCALLFAIL);
         }
     
-    
-    exectimes(getElapsedTime(&begin, &end), LIST_DIR, SET_TIME);
     return 0;
 }
-
+*/
 int exists(const char *path) {
     struct stat statbuf;
     if (stat(path, &statbuf) == -1) {
@@ -121,7 +116,7 @@ int countNumberOfFiles(const char *nomeDirectory) {
     return numberOfFiles;
 }
 
-
+/*
 void *getFileName(void* args){  
     struct dirent *entry;
     GetFileNameParameters *arg = (GetFileNameParameters *) args;
@@ -154,4 +149,53 @@ void *getFileName(void* args){
 
     }
     return 0;
+}
+
+*/
+
+void *list_dir(void * args) {
+
+    args_list_dir* args_list = (args_list_dir*) args;
+    Prod_Cons_Data *files_struct = (Prod_Cons_Data *)args_list->files_struct;
+
+    char *nomeDirectory =  args_list->nomeDirectory;
+    int numberOfFiles = args_list->numberOfFiles;;
+
+    if (!exists(nomeDirectory) && !isDirectory(nomeDirectory))
+        return 0;
+
+    DIR *elemento;
+    if ((elemento = opendir(nomeDirectory)) == NULL)
+        return 0;
+    
+    struct dirent *entry;
+    const char *figlio;
+    char path[PATH_MAX];
+
+    for(int i=0; i<numberOfFiles; i++) {
+        if ((entry = readdir(elemento)) != NULL) {
+            
+            figlio = entry->d_name; 
+            
+            if (strcmp(figlio, ".") == 0 || strcmp(figlio, "..") == 0) {
+                numberOfFiles++;
+                continue;
+            }
+            
+            snprintf(path, PATH_MAX, "%s/%s", nomeDirectory, figlio);
+
+            if (!isRegularFile(path)) {
+                numberOfFiles++;
+                continue;
+            }
+         
+            producer(files_struct, (void*)strdup(path));
+        }
+
+    }
+
+    if (closedir(elemento) != 0) {
+            exit(EXITSYSCALLFAIL);
+        }
+
 }

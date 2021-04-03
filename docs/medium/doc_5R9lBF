@@ -1,0 +1,226 @@
+Such a definition coincides with that of the ideal gas derivation; also it is this ''definition'' of the thermodynamic temperature that enables us to represent the Carnot efficiency in terms of ''T''&lt;sub&gt;H&lt;/sub&gt; and ''T''&lt;sub&gt;C&lt;/sub&gt;, and hence derive that the (complete) Carnot cycle is isentropic:
+
+: &lt;math&gt;\frac{q_\text{C}}{q_\text{H}} = f(T_\text{H},T_\text{C}) = \frac{T_\text{C}}{T_\text{H}}.\qquad (3).&lt;/math&gt;
+
+Substituting this back into our first formula for efficiency yields a relationship in terms of temperature:
+
+: &lt;math&gt;\textrm{Efficiency} = 1 - \frac{q_\text{C}}{q_\text{H}} = 1 - \frac{T_\text{C}}{T_\text{H}}\qquad (4).&lt;/math&gt;
+
+Notice that for ''T''&lt;sub&gt;C&lt;/sub&gt;=0 the efficiency is 100% and that efficiency becomes greater than 100% for ''T''&lt;sub&gt;C&lt;/sub&gt;&lt;0, which cases are unrealistic. Subtracting the right hand side of Equation 4 from the middle portion and rearranging gives
+
+: &lt;math&gt;\frac {q_\text{H}}{T_\text{H}} - \frac{q_\text{C}}{T_\text{C}} = 0,&lt;/math&gt;
+
+where the negative sign indicates heat ejected from the system. The generalization of this equation is [[Clausius theorem]], which suggests the existence of a [[state function]] ''S'' (i.e., a function which depends only on the state of the system, not on how it reached that state) defined (up to an additive constant) by
+
+: &lt;math&gt;dS = \frac {dq_\mathrm{rev}}{T}\qquad (5),&lt;/math&gt;
+
+where the subscript indicates heat transfer in a reversible process. The function ''S'' corresponds to the [[entropy]] of the system, mentioned previously, and the change of ''S'' around any cycle is zero (as is necessary for any state function). Equation 5 can be rearranged to get an alternative definition for temperature in terms of entropy and heat (to avoid logic loop, we should first define [[statistical entropy|entropy]] through statistical mechanics):
+
+: &lt;math&gt;T = \frac{dq_\mathrm{rev}}{dS}.&lt;/math&gt;
+
+For a system in which the entropy ''S'' is a function ''S''(''E'') of its energy ''E'', the thermodynamic temperature ''T'' is therefore given by
+
+: &lt;math&gt;\frac{1}{T} = \frac{dS}{dE},&lt;/math&gt;
+
+so that the reciprocal of the thermodynamic temperature is the rate of increase of entropy with energy.
+
+== History ==
+* '''Ca. 485 BC:''' [[File:Parmenides.jpg|thumb|200x200px|[[Parmenides]]]][[Parmenides]] in his treatise &quot;On Nature&quot; postulated the existence of ''primum frigidum'', a hypothetical elementary substance source of all cooling or cold in the world.&lt;ref&gt;'' Absolute Zero and the Conquest of Cold '', Shachtman, Tom., Mariner Books, 1999.&lt;/ref&gt;
+* '''1702–1703:''' [[File:Guillaume Amontons.png|thumb|left|75x85px|[[Guillaume Amontons]]]][[Guillaume Amontons]] (1663–1705) published two papers that may be used to credit him as being the first researcher to deduce the existence of a fundamental (thermodynamic) temperature scale featuring an absolute zero. He made the discovery while endeavoring to improve upon the air thermometers in use at the time. His J-tube thermometers comprised a mercury column that was supported by a fixed mass of air entrapped within the sensing portion of the thermometer. In thermodynamic terms, his thermometers relied upon the volume / temperature relationship of gas under constant pressure. His measurements of the boiling point of water and the melting point of ice showed that regardless of the mass of air trapped inside his thermometers or the weight of mercury the air was supporting, the reduction in air volume at the ice point was always the same ratio. This observation led him to posit that a sufficient reduction in temperature would reduce the air volume to zero. In fact, his calculations projected that absolute zero was equivalent to −240&amp;nbsp;°C—only 33.15 degrees short of the true value of −273.15&amp;nbsp;°C.
+* '''1742:''' [[Image:Headshot of Anders Celsius.jpg|thumb|200x200px|[[Anders Celsius]]]][[Anders Celsius]] (1701–1744) created a &quot;backwards&quot; version of the modern Celsius temperature scale. In Celsius's original scale, zero represented the boiling point of water and 100 represented the melting point of ice. In his paper ''Observations of two persistent degrees on a thermometer,'' he recounted his experiments showing that ice's melting point was effectively unaffected by pressure. He also determined with remarkable precision how water's boiling point varied as a function of atmospheric pressure. He proposed that zero on his temperature scale (water's boiling point) would be calibrated at the mean barometric pressure at mean sea level.
+* '''1744:''' [[Image:Carl von Linné.jpg|thumb|left|200x200px|[[Carl Linnaeus]]]]Coincident with the death of Anders Celsius, the famous botanist [[Carl Linnaeus]] (1707–1778) effectively reversed&lt;ref&gt;[http://thermodynamics-information.net/ ''A Brief History of Temperature Measurement''] and; Uppsala University (Sweden), [http://www.linnaeus.uu.se/online/life/6_32.html ''Linnaeus' thermometer'']&lt;/ref&gt; Celsius's scale upon receipt of his first thermometer featuring a scale where zero represented the melting point of ice and 100 represented water's boiling point. The custom-made ''linnaeus-thermometer'', for use in his greenhouses, was made by Daniel Ekström, Sweden's leading maker of scientific instruments at the time. For the next 204 years, the scientific and thermometry communities worldwide referred to this scale as the ''[[centigrade scale]]''. Temperatures on the centigrade scale were often reported simply as ''degrees'' or, when greater specificity was desired, ''[[degrees centigrade]]''. The symbol for temperature values on this scale was °C (in several formats over the years). Because the term ''centigrade'' was also the French-language name for a unit of angular measurement (one-hundredth of a right angle) and had a similar connotation in other languages, the term &quot;[[centesimal degree]]&quot; was used when very precise, unambiguous language was required by international standards bodies such as the [[International Bureau of Weights and Measures]] (''Bureau international des poids et mesures'') (BIPM). The 9th CGPM ([[General Conference on Weights and Measures]] (''Conférence générale des poids et mesures'') and the CIPM ([[International Committee for Weights and Measures]] (''Comité international des poids et mesures'') formally adopted&lt;ref&gt;[http://www.bipm.org/en/committees/cipm/cipm-1948.html bipm.org]&lt;/ref&gt; ''[[degree Celsius]]'' (symbol: °C) in 1948.&lt;ref name=&quot;°CName&quot;&gt;According to ''The Oxford English Dictionary'' (OED), the term &quot;Celsius's thermometer&quot; had been used at least as early as 1797. Further, the term &quot;The Celsius or Centigrade thermometer&quot; was again used in reference to a particular type of thermometer at least as early as 1850. The OED also cites this 1928 reporting of a temperature: &quot;My altitude was about 5,800 metres, the temperature was 28° Celsius&quot;. However, dictionaries seek to find the earliest use of a word or term and are not a useful resource as regards the terminology used throughout the history of science. According to several writings of Dr. Terry Quinn CBE FRS, Director of the BIPM (1988–2004), including ''Temperature Scales from the early days of thermometry to the 21st century'' ([http://www.imeko.org/publications/tc12-2004/PTC12-2004-PL-001.pdf 148&amp;nbsp;kB PDF, here]) as well as ''Temperature'' (2nd Edition / 1990 / Academic Press / 0125696817), the term ''Celsius'' in connection with the centigrade scale was not used whatsoever by the scientific or thermometry communities until after the CIPM and CGPM adopted the term in 1948. The BIPM wasn't even aware that ''degree Celsius'' was in sporadic, non-scientific use before that time. It's also noteworthy that the twelve-volume, 1933 edition of OED did not even have a listing for the word ''Celsius'' (but did have listings for both ''centigrade'' and ''centesimal'' in the context of temperature measurement). The 1948 adoption of ''Celsius'' accomplished three objectives:
+# All common temperature scales would have their units named after someone closely associated with them; namely, Kelvin, Celsius, Fahrenheit, Réaumur and Rankine.
+# Notwithstanding the important contribution of Linnaeus who gave the Celsius scale its modern form, Celsius's name was the obvious choice because it began with the letter C. Thus, the symbol °C that for centuries had been used in association with the name ''centigrade'' could continue to be used and would simultaneously inherit an intuitive association with the new name.
+# The new name eliminated the ambiguity of the term ''centigrade'', freeing it to refer exclusively to the French-language name for the unit of angular measurement.&lt;/ref&gt;
+* '''1777:''' [[File:JHLambert.jpg|thumb|200x200px|[[Johann Heinrich Lambert]]]]In his book ''Pyrometrie'' (Berlin: [http://www.spiess-verlage.de/html/haude___spener.html Haude &amp; Spener], 1779) completed four months before his death, [[Johann Heinrich Lambert]] (1728–1777), sometimes incorrectly referred to as Joseph Lambert, proposed an absolute temperature scale based on the pressure/temperature relationship of a fixed volume of gas. This is distinct from the volume/temperature relationship of gas under constant pressure that Guillaume Amontons discovered 75 years earlier. Lambert stated that absolute zero was the point where a simple straight-line extrapolation reached zero gas pressure and was equal to −270&amp;nbsp;°C.
+* '''Circa 1787:''' [[File:Jacques Alexandre César Charles.jpg|thumb|left|200x200px|[[Jacques Alexandre César Charles]]]]Notwithstanding the work of Guillaume Amontons 85 years earlier, [[Jacques Charles|Jacques Alexandre César Charles]] (1746–1823) is often credited with discovering, but not publishing, that the volume of a gas under constant pressure is proportional to its absolute temperature. The formula he created was ''V''&lt;sub&gt;1&lt;/sub&gt;/''T''&lt;sub&gt;1&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;''V''&lt;sub&gt;2&lt;/sub&gt;/''T''&lt;sub&gt;2&lt;/sub&gt;.
+* '''1802:''' [[File:Gaylussac.jpg|thumb|200x200px|[[Joseph Louis Gay-Lussac]]]][[Joseph Louis Gay-Lussac]] (1778–1850) published work (acknowledging the unpublished lab notes of Jacques Charles fifteen years earlier) describing how the volume of gas under constant pressure changes linearly with its absolute (thermodynamic) temperature. This behavior is called [[Charles's law|Charles's Law]] and is one of the [[gas laws]]. His are the first known formulas to use the number ''273'' for the expansion coefficient of gas relative to the melting point of ice (indicating that absolute zero was equivalent to −273&amp;nbsp;°C).
+* '''1848:''' [[Image:William Thomson 1st Baron Kelvin.jpg|thumb|left|200x200px|[[William Thomson, 1st Baron Kelvin|Lord Kelvin]]]][[William Thomson, 1st Baron Kelvin|William Thomson]], (1824–1907) also known as Lord Kelvin, wrote in his paper, ''[http://zapatopi.net/kelvin/papers/on_an_absolute_thermometric_scale.html On an Absolute Thermometric Scale],'' of the need for a scale whereby ''infinite cold'' (absolute zero) was the scale's null point, and which used the degree Celsius for its unit increment. Like Gay-Lussac, Thomson calculated that absolute zero was equivalent to −273&amp;nbsp;°C on the air thermometers of the time. This absolute scale is known today as the kelvin thermodynamic temperature scale. It's noteworthy that Thomson's value of ''−273'' was actually derived from 0.00366, which was the accepted expansion coefficient of gas per degree Celsius relative to the ice point. The inverse of −0.00366 expressed to five significant digits is −273.22&amp;nbsp;°C which is remarkably close to the true value of −273.15&amp;nbsp;°C.
+* '''1859:''' [[File:Rankine William signature.jpg|thumb|200x200px|[[Macquorn Rankine]]]][[Macquorn Rankine]] (1820–1872) proposed a thermodynamic temperature scale similar to William Thomson's but which used the degree [[Fahrenheit]] for its unit increment. This absolute scale is known today as the [[rankine scale|Rankine]] thermodynamic temperature scale.
+* '''1877–1884:''' [[Image:Boltzmann2.jpg|thumb|left|200x200px|[[Ludwig Boltzmann]]]][[Ludwig Boltzmann]] (1844–1906) made major contributions to thermodynamics through an understanding of the role that particle kinetics and black body radiation played. His name is now attached to several of the formulas used today in thermodynamics.
+* '''Circa 1930s:''' Gas thermometry experiments carefully calibrated to the melting point of ice and boiling point of water showed that absolute zero was equivalent to −273.15&amp;nbsp;°C.
+* '''1948:''' [http://www.bipm.fr/en/CGPM/db/9/3/ Resolution 3] of the 9th CGPM (Conférence Générale des Poids et Mesures, also known as the [[General Conference on Weights and Measures]]) fixed the triple point of water at precisely 0.01&amp;nbsp;°C. At this time, the triple point still had no formal definition for its equivalent kelvin value, which the resolution declared &quot;will be fixed at a later date&quot;. The implication is that ''if'' the value of absolute zero measured in the 1930s was truly −273.15&amp;nbsp;°C, then the triple point of water (0.01&amp;nbsp;°C) was equivalent to 273.16&amp;nbsp;K. Additionally, both the CIPM (Comité international des poids et mesures, also known as the International Committee for Weights and Measures) and the CGPM [http://www.bipm.org/en/committees/cipm/cipm-1948.html formally adopted] the name ''Celsius'' for the ''degree Celsius'' and the ''Celsius temperature scale''.&lt;small&gt;&amp;nbsp;&lt;/small&gt;&lt;ref name=&quot;°CName&quot;/&gt;
+* '''1954:''' [http://www.bipm.fr/en/CGPM/db/10/3/ Resolution 3] of the 10th CGPM gave the kelvin scale its modern definition by choosing the triple point of water as its second defining point{{clarify|reason=what was   the other? The boiling or melting  point of water?|date=September 2020}} and assigned it a temperature of precisely 273.16&amp;nbsp;kelvins (what was actually written 273.16 ''degrees Kelvin'' at the time). This, in combination with Resolution 3 of the 9th CGPM, had the effect of defining absolute zero as being precisely zero kelvins and −273.15&amp;nbsp;°C.
+* '''1967/1968:''' [http://www.bipm.fr/en/CGPM/db/13/3/ Resolution 3] of the 13th CGPM renamed the unit increment of thermodynamic temperature ''kelvin'', symbol K, replacing ''degree absolute'', symbol °K. Further, feeling it useful to more explicitly define the magnitude of the unit increment, the 13th CGPM also decided in [http://www.bipm.fr/en/CGPM/db/13/4/ Resolution 4] that &quot;The kelvin, unit of thermodynamic temperature, is the fraction 1/273.16 of the thermodynamic temperature of the triple point of water&quot;.
+* '''2005:''' The CIPM (Comité International des Poids et Mesures, also known as the [[International Committee for Weights and Measures]]) [http://www.bipm.fr/en/si/si_brochure/chapter2/2-1/kelvin.html affirmed] that for the purposes of delineating the temperature of the triple point of water, the definition of the kelvin thermodynamic temperature scale would refer to water having an isotopic composition defined as being precisely equal to the nominal specification of [[Vienna Standard Mean Ocean Water]].
+* '''2019:''' In November 2018, the 26th General Conference on Weights and Measures (CGPM) changed the definition of the Kelvin by fixing the Boltzmann constant to {{val|1.380649|e=-23}} when expressed in the unit J/K. [[2019 redefinition of the SI base units|This change (and other changes in the definition of SI units)]] was made effective on the 144th anniversary of the Metre Convention, 20 May 2019.
+
+== See also ==
+{{div col|colwidth=22em}}
+
+* [[Absolute hot]]
+* [[Absolute zero]]
+* [[Planck temperature]]
+* [[Hagedorn temperature]]
+* [[Adiabatic process]]
+* [[Black body|Black-body]]
+* [[Boiling]]
+* [[Boltzmann constant]]
+* [[Brownian motion]]
+* [[Carnot heat engine]]
+* [[Chemical bond]]
+* [[Condensation]]
+* [[Convection]]
+* [[Degrees of freedom (physics and chemistry)|Degrees of freedom]]
+* [[Delocalized electron]]
+* [[Diffusion]]
+* [[Elastic collision]]
+* [[Electron]]
+* [[Energy]]
+* [[Energy conversion efficiency]]
+* [[Enthalpy]]
+* [[Entropy]]
+* [[Equipartition theorem]]
+* [[Evaporation]]
+* [[Fahrenheit]]
+* [[First law of thermodynamics]]
+* [[Freezing]]
+* [[Gas laws]]
+* [[Heat]]
+* [[Heat conduction]]
+* [[Heat engine]]
+* [[Heat death of the universe]]
+* [[Internal energy]]
+* [[International System of Quantities]]
+* [[International Temperature Scale of 1990|ITS-90]]
+* [[Ideal gas law]]
+* [[Joule]]
+* [[Kelvin]]
+* [[Kinetic energy]]
+* [[Latent heat]]
+* [[Laws of thermodynamics]]
+* [[Maxwell–Boltzmann distribution]]
+* [[Melting]]
+* [[Mole (unit)|Mole]]
+* [[Molecule]]
+* [[Orders of magnitude (temperature)]]
+* [[Phase transition]]
+* [[Phonon]]
+* [[Planck's law of black body radiation|Planck's law of black-body radiation]]
+* [[Potential energy]]
+* Quantum mechanics:
+** [[Introduction to quantum mechanics]]
+** [[Quantum mechanics|Quantum mechanics (main article)]]
+* [[Rankine scale]]
+* [[Specific heat capacity]]
+* [[Standard enthalpy change of fusion]]
+* [[Standard enthalpy change of vaporization]]
+* [[Stefan-Boltzmann law|Stefan–Boltzmann law]]
+* [[Sublimation (chemistry)|Sublimation]]
+* [[Temperature]]
+* [[Temperature conversion formulas]]
+* [[Thermal conductivity]]
+* [[Thermal radiation]]
+* [[Thermodynamic beta]]
+* [[Thermodynamic equations]]
+* [[Thermodynamic equilibrium]]
+* [[Thermodynamics]]
+* [[:Category:Thermodynamics|Thermodynamics Category (list of articles)]]
+* [[Timeline of heat engine technology]]
+* [[Timeline of temperature and pressure measurement technology]]
+* [[Triple point]]
+* [[Gas constant|Universal gas constant]]
+* [[Vienna Standard Mean Ocean Water]] (VSMOW)
+* [[Wien's displacement law]]
+* [[Mechanical work|Work (Mechanical)]]
+* [[Work (thermodynamics)]]
+* [[Zero-point energy]]
+
+{{div col end}}
+
+==Notes==&lt;!-- NOTE TO EDITORS: This section is internally linked from elsewhere within the article. --&gt;
+
+: ''In the following notes, wherever numeric equalities are shown in ''concise form'', such as {{val|1.85487|(14)|e=43}}, the two digits between the parentheses denotes the [[uncertainty]] at 1-σ (1 [[standard deviation]], 68% confidence level) in the two least significant digits of the [[significand]].''
+
+{{Reflist}}
+
+== External links ==
+* ''[http://www.chm.davidson.edu/ChemistryApplets/KineticMolecularTheory/index.html Kinetic Molecular Theory of Gases.]'' An explanation (with interactive animations) of the kinetic motion of molecules and how it affects matter. By David N. Blauch, [http://www.chm.davidson.edu/ Department of Chemistry], [http://www2.davidson.edu/index.asp Davidson College].
+* ''[http://www.calphysics.org/zpe.html Zero Point Energy and Zero Point Field.]'' A Web site with in-depth explanations of a variety of quantum effects. By Bernard Haisch, of [http://www.calphysics.org/index.html Calphysics Institute].
+
+{{SI base quantities}}
+
+{{DEFAULTSORT:Thermodynamic Temperature}}
+[[Category:Temperature]]
+[[Category:SI base quantities]]
+[[Category:State functions]]</text>
+      <sha1>dl5hlvhf6pemi7citmyxn6dq8maq5bm</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Third-order intercept point</title>
+    <ns>0</ns>
+    <id>41790</id>
+    <revision>
+      <id>972823500</id>
+      <parentid>972823305</parentid>
+      <timestamp>2020-08-14T00:01:56Z</timestamp>
+      <contributor>
+        <ip>12.168.224.50</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10679" xml:space="preserve">In [[telecommunication]]s, a '''third-order intercept point''' ('''IP&lt;sub&gt;3&lt;/sub&gt;''' or '''TOI''') is a specific figure of merit associated with the more general [[intermodulation|'''third-order intermodulation distortion''']] ('''IMD3'''), which is a measure for weakly [[nonlinear system]]s and devices, for example [[Receiver (radio)|receiver]]s, linear [[Electronic amplifier|amplifier]]s and [[Frequency mixer|mixer]]s. It is based on the idea that the device nonlinearity can be modeled using a low-order polynomial, derived by means of [[Taylor series]] expansion. The third-order intercept point relates nonlinear products caused by the third-order nonlinear term to the linearly amplified signal, in contrast to the [[second-order intercept point]] that uses second-order terms.
+
+The intercept point is a purely mathematical concept and does not correspond to a practically occurring physical power level. In many cases, it lies far beyond the damage threshold of the device.
+
+==Definitions==
+Two different definitions for intercept points are in use:
+
+* ''Based on [[harmonic]]s'': The device is tested using a single input tone. The nonlinear products caused by ''n''-th-order nonlinearity appear at ''n'' times the frequency of the input tone.
+* ''Based on [[intermodulation product]]s'': The device is fed with two sine tones one at &lt;math&gt;f_1&lt;/math&gt; and one at &lt;math&gt;f_2&lt;/math&gt;.  When you cube the sum of these sine waves you will get sine waves at various frequencies including &lt;math&gt;(2f_2-f_1)&lt;/math&gt; and &lt;math&gt;(2f_1-f_2)&lt;/math&gt;.  If &lt;math&gt;f_1&lt;/math&gt; and &lt;math&gt;f_2&lt;/math&gt; are large but very close together then &lt;math&gt;(2f_2-f_1)&lt;/math&gt; and &lt;math&gt;(2f_1-f_2)&lt;/math&gt; will be very close to &lt;math&gt;f_1&lt;/math&gt; and &lt;math&gt;f_2&lt;/math&gt;. This two-tone approach has the advantage that it is not restricted to broadband devices and is commonly used for radio receivers.
+
+[[Image:interceptpoint.png|thumb|right|250px|Intercept point definition]]
+The intercept point is obtained graphically by plotting the output power versus the input power both on [[logarithmic scale]]s (e.g., [[decibels]]). Two curves are drawn; one for the linearly amplified signal at an input tone frequency, one for a nonlinear product.
+On a logarithmic scale, the function ''x&lt;sup&gt;n&lt;/sup&gt;'' translates into a straight line with slope of ''n''. Therefore, the linearly amplified signal will exhibit a slope of 1. A third-order nonlinear product will increase by 3&amp;nbsp;dB in power when the input power is raised by 1&amp;nbsp;dB.
+
+Both curves are extended with straight lines of slope 1 and ''n'' (3 for a third-order intercept point). The point where the curves intersect is the intercept point. It can be read off from the input or output power axis, leading to input (IIP3) or output (OIP3) intercept point respectively.
+
+Input and output intercept point differ by the small-signal gain of the device.
+
+[[File:3rd order intermod animation (thumbnail).png|frame|link=File:Two_carrier_3rd_order_intermod_measurement.png#/media/File:Two_carrier_3rd_order_intermod_measurement.png|3rd order intermod animation]]
+
+==Practical considerations==
+
+The concept of intercept point is based on the assumption of a weakly nonlinear system, meaning that higher-order nonlinear terms are small enough to be negligible.
+In practice, the weakly nonlinear assumption may not hold for the upper end of the input power range, be it during measurement or during use of the amplifier. As a consequence, measured or simulated data will deviate from the ideal slope of ''n''.
+The intercept point according to its basic definition should be determined by drawing the straight lines with slope 1 and ''n'' through the measured data at the smallest possible power level (possibly limited towards lower power levels by instrument or device noise).
+It is a frequent mistake to derive intercept points by either changing the slope of the straight lines, or fitting them to points measured at too high power levels. In certain situations such a measure can be useful, but it is not an intercept point according to definition. Its value depends on the measurement conditions that need to be documented, whereas the IP according to definition is mostly unambiguous; although there is some dependency on frequency and tone spacing, depending on the physics of the device under test.
+
+One of the useful applications of third-order intercept point is as a [[rule-of-thumb]] measure to estimate nonlinear products. When comparing systems or devices for linearity, a higher intercept point is better. It can be seen that the spacing between two straight lines with slopes of 3 and 1 closes with slope 2.
+
+For example, assume a device with an [[input-referred]] third-order intercept point of 10 dBm is driven with a test signal of −5 dBm. This power is 15&amp;nbsp;dB below the intercept point, therefore nonlinear products will appear at approximately 2×15&amp;nbsp;dB below the test signal power at the device output (in other words, 3×15&amp;nbsp;dB below the output-referred third-order intercept point).
+
+A rule of thumb that holds for many linear radio-frequency amplifiers is that the 1&amp;nbsp;dB compression point falls approximately 10&amp;nbsp;dB below the third-order intercept point.
+
+==Theory==
+[[Image:Sigmoid4.jpg|Amplifier transfer function|right|thumb|300px]]
+
+The third-order intercept point (TOI) is a property of the device transfer function ''O'' (see diagram).
+This transfer function relates the output signal voltage level to the input signal voltage level. We assume a “linear” device having a transfer function whose small-signal form may be expressed in terms of a power series containing only odd terms, making the transfer function an odd function of input signal voltage, i.e., ''O''(−''s'') = −''O''(''s'').  Where the signals passing through the actual device are modulated sinusoidal voltage waveforms (e.g., RF amplifier), device nonlinearities can be expressed in terms of how they affect individual sinusoidal signal components.  For example, say the input voltage signal is the sine wave
+
+:&lt;math&gt;s(t) = V \cos(\omega t),&lt;/math&gt;
+
+and the device transfer function produces an output of the form
+
+:&lt;math&gt;O(s) = G s - D_3 s^3 + \ldots,&lt;/math&gt;
+
+where ''G'' is the amplifier gain, and ''D''&lt;sub&gt;3&lt;/sub&gt; is cubic distortion. We may substitute the first equation into the second and, using the [[List_of_trigonometric_identities|trigonometric identity]]
+
+:&lt;math&gt;\cos^3(x) = \frac{3}{4}\cos(x) + \frac{1}{4}\cos(3x),&lt;/math&gt;
+
+we obtain the device output voltage waveform as
+
+:&lt;math&gt;O(s(t)) = \left(G V - \frac{3}{4} D_3 V^3\right) \cos(\omega t) - \frac{1}{4} D_3 V^3 \cos(3 \omega t).&lt;/math&gt;
+
+The output waveform contains the original waveform, cos(''ωt''), plus a new harmonic term, cos(3''ωt''), the ''third-order term''.  The coefficient of the cos(''ωt'') harmonic has two terms, one that varies linearly with ''V'' and one that varies with the cube of ''V''. In fact, the coefficient of cos(''ωt'') has nearly the same form as the transfer function, except for the factor ¾ on the cubic term.  In other words, as signal level ''V'' is increased, the level of the cos(''ωt'') term in the output eventually levels off, similar to how the transfer function levels off. Of course, the coefficients of the higher-order harmonics will increase (with increasing ''V'') as the coefficient of the cos(''ωt'') term levels off (the power has to go somewhere).
+
+If we now restrict our attention to the portion of the cos(''ωt'') coefficient that varies linearly with ''V'', and then ask ourselves, at what input voltage level ''V'' will the coefficients of the first- and third-order terms have equal magnitudes (i.e., where the magnitudes intersect), we find that this happens when
+
+:&lt;math&gt;V^2 = \frac{4 G}{3 D_3},&lt;/math&gt;
+
+which is the third-order intercept point (TOI). So, we see that the TOI input power level is simply 4/3 times the ratio of the gain and the cubic distortion term in the device transfer function. The smaller the cubic term is in relation to the gain, the more linear the device is, and the higher the TOI is.  The TOI, being related to the magnitude squared of the input voltage waveform, is a power quantity, typically measured in milliwatts (mW). The TOI is always beyond operational power levels because the output power saturates before reaching this level.
+
+The TOI is closely related to the amplifier's &quot;1 dB compression point&quot;, which is defined as that point at which the ''total'' coefficient of the cos(''ωt'') term is 1&amp;nbsp;dB below the ''linear portion'' of that coefficient. We can relate the 1&amp;nbsp;dB compression point to the TOI as follows. Since 1&amp;nbsp;dB = 20 log&lt;sub&gt;10&lt;/sub&gt; 1.122, we may say, in a voltage sense, that the 1&amp;nbsp;dB compression point occurs when
+
+:&lt;math&gt;1.122 \left(G V - \frac{3}{4}D_3 V^3\right) = G V,&lt;/math&gt;

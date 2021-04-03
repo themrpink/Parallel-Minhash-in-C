@@ -22,7 +22,9 @@
 int global_thread_numb = 2;
 
 int main(int argc, char *argv[]) {
-
+    double start;
+    double  end;
+    start = omp_get_wtime();
     int threads=atoi(argv[2]);
     global_thread_numb=atoi(argv[3]);
     printf("threads: %d\n", threads);
@@ -31,9 +33,6 @@ int main(int argc, char *argv[]) {
     omp_set_dynamic(0);
     omp_set_max_active_levels(3);
 
-    double start;
-    double  end;
-    start = omp_get_wtime();
     char *folderName = argv[1];
     char **files;
     int numberOfFiles = list_dir(folderName, &files);
@@ -44,9 +43,13 @@ int main(int argc, char *argv[]) {
 
     long long unsigned **minhashDocumenti = (long long unsigned **)malloc(numberOfFiles*sizeof (long long unsigned *));
 
-    #pragma omp parallel for schedule(static)
+    #pragma omp parallel for schedule(static, 1)
+    
     for (int i = 0; i < numberOfFiles; i++) {
 
+    double start3;
+    double  end3;
+    start3 = omp_get_wtime();
             long fileSize = 0;
             char *filesContent;
 
@@ -66,11 +69,12 @@ int main(int argc, char *argv[]) {
                 free(shingles[j]);
             free(shingles);
             free(filesContent);
+                
+    end3 = omp_get_wtime();
+    exectimes(end3-start3, MAIN, SET_TIME);
+    
     }
-    
-    end = omp_get_wtime();
-    exectimes(end-start, MAIN, SET_TIME);
-    
+
     double start2 = omp_get_wtime();
     find_similarity(numberOfFiles, files, minhashDocumenti);
     end = omp_get_wtime();
